@@ -167,7 +167,7 @@
     #if BM_TRUNK_CERVICAL_THORACIC_LINK
     RhythmDriverLinear CervicalThroacicRotationLinkDriver(_REDEFINE_VARIABLES=On) = 
     {
-        AnyVector RhythmCoefficients ??= {0.6, 0.4};
+        AnyVector RhythmCoefficients ??= {0.272+0.306, 0.320};
         Measures.Input = {
          AnyKinMeasure& SkullThoraxRotation_ref = ......Interface.Trunk.SkullThoraxRotation;      
          AnyKinMeasure& T12T1_Rot_ref = ......Interface.Trunk.T12T1Rotation;      
@@ -178,7 +178,7 @@
         
     RhythmDriverLinear CervicalThroacicLatBendingLinkDriver(_REDEFINE_VARIABLES=On) = 
     {
-        AnyVector RhythmCoefficients ??= {0.6, 0.4};
+        AnyVector RhythmCoefficients ??= {0.450, 0.275};
         Measures.Input = {
          AnyKinMeasure& SkullThoraxLateralBending_ref = ......Interface.Trunk.SkullThoraxLateralBending;      
          AnyKinMeasure& T12T1_latbend_ref = ......Interface.Trunk.T12T1LateralBending;      
@@ -188,8 +188,8 @@
 
     RhythmDriverBiLinear CervicalThroacicExtensionLinkDriver(NDIM=2, _REDEFINE_VARIABLES=On) = 
     {
-        AnyVector RhythmCoefficients ??= {0.6, -0.4};
-        AnyFloat RhythmCoefficientsNegative ??= {0.7, -0.3};
+        AnyVector RhythmCoefficients ??= {0.383+0.142, -0.217};
+        AnyFloat RhythmCoefficientsNegative ??= {0.311+0.115, -0.144};
         
         // +/- 5 degree interval where rhythm transitions from one set of coefficients to the other
         AnyFloat TransitionInterval ??= 5*pi/180;

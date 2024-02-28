@@ -140,7 +140,8 @@ AnyFolder Flexion = {
    RhythmDriverLinear rhythmC1C0SkullThoraxFlexion( _REDEFINE_VARIABLES=On) = 
    {
      // The -1 is because C1C0Jnt is a revolute jnt and has the opposite signs for output.
-     AnyVector RhythmCoefficients ??= {122/40,-1};
+     // The input variables comes from the ROM graphs. See the  Rhythm documenation
+     AnyVector RhythmCoefficients ??= {0.142+0.382, -0.142};
      
      Measures.Input  = {
        AnyKinMeasure& ref = ...SkullThoraxFlexion;
@@ -220,7 +221,7 @@ AnyFolder Rotation = {
    RhythmDriverLinear rhythmC2C1SkullThoraxRotation( _REDEFINE_VARIABLES=On) = 
    {
      // The -1 is because C2C1 is a revolute jnt and has the opposite signs for output.
-     AnyVector RhythmCoefficients ??= {132/77, -1};
+     AnyVector RhythmCoefficients ??= {0.31+0.27, -0.27};
      
      Measures.Input  = {
        AnyKinMeasure& ref = ...SkullThoraxRotation;
