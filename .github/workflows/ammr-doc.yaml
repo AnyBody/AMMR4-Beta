@@ -3,10 +3,10 @@ name: Documentation build and deploy
 
 on:
   push:
-     branches: [ master ]
+     branches: [ ammr4-beta ]
      tags: ['*']
   pull_request:
-     branches: [ master ]
+     branches: [ ammr4-beta ]
   workflow_dispatch:
 
 concurrency: 
@@ -17,7 +17,7 @@ concurrency:
 jobs:
   build-latest:
     runs-on: ubuntu-latest
-    if: github.repository == 'anybody/ammr' || github.event_name != 'push'
+    if: github.repository == 'anybody/ammr4-beta' || github.event_name != 'push'
   
     steps:
       - uses: actions/checkout@v4
@@ -25,20 +25,20 @@ jobs:
       - uses: prefix-dev/setup-pixi@v0.5.1
         with:
           environments: docs
-          cache-write: ${{ github.event_name == 'push' && github.ref_name == 'master' }}
+          cache-write: ${{ github.event_name == 'push' && github.ref_name == 'ammr4-beta' }}
   
       - name: Link check
+        shell: pixi run -e docs bash {0}
         run: |
           cd Docs
-          pixi run -e docs \
-            sphinx-build -M linkcheck . _build -W --keep-going -a -q 
+          sphinx-build -M linkcheck . _build -W --keep-going -a -q 
                             
       - name: Build Documentation
+        shell: pixi run -e docs bash {0}
         run: |
           cd Docs
-          pixi run -e docs clean
-          pixi run -e docs \
-            sphinx-build -M html . _build -W --keep-going -a -t draft
+          rm -rf _build
+          sphinx-build -M html . _build -W --keep-going -a -t draft
 
       - uses: actions/upload-artifact@v4
         with:
@@ -48,7 +48,7 @@ jobs:
     
   build-tagged:
     runs-on: ubuntu-latest
-    if: (github.repository == 'anybody/ammr' || github.event_name != 'push') && github.ref == 'refs/heads/master'
+    if: (github.repository == 'anybody/ammr4-beta' || github.event_name != 'push') && github.ref == 'refs/heads/ammr4-beta'
   
     steps:
       - uses: actions/checkout@v4
@@ -61,31 +61,16 @@ jobs:
           git checkout $(git describe --tags `git rev-list --tags=ammr* --max-count=1`);
       
       - uses: prefix-dev/setup-pixi@v0.5.1
-        continue-on-error: true
-        id: pixisetup
         with:
             environments: docs
-            cache-write: ${{ github.event_name == 'push' && github.ref_name == 'master' }}
+            cache-write: ${{ github.event_name == 'push' && github.ref_name == 'ammr4-beta' }}
   
       - name: Build Documentation
-        if: steps.pixisetup.outcome == 'success'
+        shell: pixi run -e docs bash {0}
         run: |
           cd Docs
-          pixi run -e docs \
-           sphinx-build -M html . _build -a
-    
-      # Fall back to mamba when buildig old versions
-      - name: Install mamba
-        if: steps.pixisetup.outcome == 'failure'
-        uses: mamba-org/setup-micromamba@v1
-        with:
-          environment-file: Docs/environment.yaml
-            
-      - name: build with mamba
-        if: steps.pixisetup.outcome == 'failure'
-        shell: bash -leo pipefail {0} {0}
-        run: sphinx-build -M html Docs Docs/_build -a
-        
+          sphinx-build -M html . _build -a
+
       - uses: actions/upload-artifact@v4
         with:
           name: tagged-version
@@ -111,7 +96,7 @@ jobs:
 
   deploy:
     needs: prepare-pages
-    if: github.ref == 'refs/heads/master'
+    if: github.ref == 'refs/heads/ammr4-beta'
     runs-on: ubuntu-latest
     permissions:
       pages: write    
