@@ -172,7 +172,7 @@ AnyFolder Abdominal={
       AnyFunTransform3D &Scale = .CavitySegSuperoanterior.Scale;
       AnyRefNode DiaphragmJntNode = {sRel = ..CavitySegSuperoanterior.DiaphragmJntNode.sRel;};      
       AnyRefNode DiaphragmPosteriorBreathNodeRotated = {sRel = ....Segments.T11Seg.MidPoint.sRel; ARel = RotMat (....Segments.T11Seg.MidPoint.sRel, ....Segments.T8Seg.MidPoint.sRel, ....Segments.SternalBodySeg.Xiphoid_DiaphragmNodeR.sRel) * RotMat (-pi/2,z) * RotMat (pi,y);};
-      AnyRefNode DiaphragmAnteriorBreathNodeRotated = {sRel = ....Segments.SternalBodySeg.Xiphoid_DiaphragmNodeR.sRel; ARel = .DiaphragmPosteriorBreathNodeRotated.ARel;};
+      AnyRefNode DiaphragmAnteriorBreathNodeRotated = {sRel = 0.5*(....Segments.SternalBodySeg.Xiphoid_DiaphragmNodeR.sRel+....Segments.SternalBodySeg.Xiphoid_DiaphragmNodeL.sRel); ARel = .DiaphragmPosteriorBreathNodeRotated.ARel;};
       AnyRefNode DiaphragmRLateralNodeRotated = {sRel = ....Segments.Right.R10Seg.MidNode.sRel; ARel = .DiaphragmPosteriorBreathNodeRotated.ARel;};
       AnyRefNode DiaphragmLLateralNodeRotated = {sRel = ....Segments.Left.R10Seg.MidNode.sRel; ARel = .DiaphragmPosteriorBreathNodeRotated.ARel;};
       AnyRefNode Xiphoid_Diaphragm = {sRel = ..CavitySegSuperoanterior.Xiphoid_Diaphragm.sRel;};      
