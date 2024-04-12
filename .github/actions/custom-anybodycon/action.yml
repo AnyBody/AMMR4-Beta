@@ -35,7 +35,7 @@ runs:
 
     - name: Update AnyBodyCon version
       shell: powershell
-      run: cp ${{ runner.temp }}\${{ inputs.custom-anybodycon }} "{{ inputs.target-path }}"
+      run: cp ${{ runner.temp }}\${{ inputs.custom-anybodycon }} "${{ inputs.target-path }}"
 
 
   
