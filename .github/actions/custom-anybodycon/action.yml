@@ -33,11 +33,9 @@ runs:
         download-path: ${{ runner.temp }}
       
 
-    - name: Overwrite existing AnyBodyCon version
-      if: ${{ inputs.overwrite }}
+    - name: Update AnyBodyCon version
       shell: powershell
-      run:  cp ${{ runner.temp }}\${{ inputs.custom-anybodycon }} "${{ inputs.target-path }}"
-
+      run: cp ${{ runner.temp }}\${{ inputs.custom-anybodycon }} "{{ inputs.target-path }}"
 
 
   
