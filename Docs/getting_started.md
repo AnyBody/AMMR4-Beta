@@ -38,14 +38,12 @@ Main =
 {
   // Configure and include the Human Model
   #define BM_LEG_MODEL _LEG_MODEL_TLEM2_
-  #define BM_ARM_LEFT OFF
-  #define BM_ARM_RIGHT OFF
   #include "<ANYBODY_PATH_BODY>/HumanModel.any"
 
   // Compose the model
   AnyFolder Model =
   {
-    AnyFolder& Body = .HumanModel.BodyModel;
+    AnyFolder& Body = .HumanModel;
     AnyFolder Drivers = {...};
     AnyFolder Environment = {...};
   };
