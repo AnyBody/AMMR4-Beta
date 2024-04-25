@@ -76,6 +76,159 @@ AnySurfEllipsoid mesh_Full = {
 };
 
 
+
+
+
+
+
+
+
+
+
+  AnyFloat FrontNodes_sRels = {       
+       Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Right.nn12.sRel,
+       Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Right.nn11.sRel,
+       Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Right.nn10.sRel,
+       Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Right.nn09.sRel,
+       Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Right.nn08.sRel,
+       Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Right.nn07.sRel,
+       Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Right.nn06.sRel,
+       Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Right.nn05.sRel,
+
+       Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Left.nn12.sRel,
+       Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Left.nn11.sRel,
+       Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Left.nn10.sRel,
+       Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Left.nn09.sRel,
+       Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Left.nn08.sRel,
+       Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Left.nn07.sRel,
+       Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Left.nn06.sRel,
+       Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Left.nn05.sRel,
+     } ;
+  AnyFloat FrontNodes_mirror_sRels = {      
+  {2*Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegPosterior.VolumePoints.Right.nn01.sRel[0]-
+  Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Right.nn12.sRel[0],
+  Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Right.nn12.sRel[1],
+  Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Right.nn12.sRel[2],
+},
+{2*Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegPosterior.VolumePoints.Right.nn01.sRel[0]-
+  Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Right.nn11.sRel[0],
+  Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Right.nn11.sRel[1],
+  Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Right.nn11.sRel[2],
+},
+  {2*Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegPosterior.VolumePoints.Right.nn01.sRel[0]-
+  Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Right.nn10.sRel[0],
+  Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Right.nn10.sRel[1],
+  Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Right.nn10.sRel[2],
+},
+  {2*Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegPosterior.VolumePoints.Right.nn01.sRel[0]-
+  Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Right.nn09.sRel[0],
+  Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Right.nn09.sRel[1],
+  Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Right.nn09.sRel[2],
+},
+  {2*Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegPosterior.VolumePoints.Right.nn01.sRel[0]-
+  Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Right.nn08.sRel[0],
+  Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Right.nn08.sRel[1],
+  Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Right.nn08.sRel[2],
+},
+  {2*Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegPosterior.VolumePoints.Right.nn01.sRel[0]-
+  Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Right.nn07.sRel[0],
+  Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Right.nn07.sRel[1],
+  Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Right.nn07.sRel[2],
+},
+  {2*Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegPosterior.VolumePoints.Right.nn01.sRel[0]-
+  Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Right.nn06.sRel[0],
+  Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Right.nn06.sRel[1],
+  Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Right.nn06.sRel[2],
+},
+  {2*Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegPosterior.VolumePoints.Right.nn01.sRel[0]-
+  Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Right.nn05.sRel[0],
+  Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Right.nn05.sRel[1],
+  Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Right.nn05.sRel[2],
+},
+
+  {2*Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegPosterior.VolumePoints.Right.nn01.sRel[0]-
+  Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Left.nn12.sRel[0],
+  Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Left.nn12.sRel[1],
+  Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Left.nn12.sRel[2],
+},
+  {2*Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegPosterior.VolumePoints.Right.nn01.sRel[0]-
+  Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Left.nn11.sRel[0],
+  Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Left.nn11.sRel[1],
+  Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Left.nn11.sRel[2],
+},
+  {2*Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegPosterior.VolumePoints.Right.nn01.sRel[0]-
+  Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Left.nn10.sRel[0],
+  Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Left.nn10.sRel[1],
+  Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Left.nn10.sRel[2],
+},
+  {2*Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegPosterior.VolumePoints.Right.nn01.sRel[0]-
+  Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Left.nn09.sRel[0],
+  Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Left.nn09.sRel[1],
+  Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Left.nn09.sRel[2],
+},
+  {2*Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegPosterior.VolumePoints.Right.nn01.sRel[0]-
+  Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Left.nn08.sRel[0],
+  Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Left.nn08.sRel[1],
+  Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Left.nn08.sRel[2],
+},
+  {2*Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegPosterior.VolumePoints.Right.nn01.sRel[0]-
+  Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Left.nn07.sRel[0],
+  Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Left.nn07.sRel[1],
+  Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Left.nn07.sRel[2],
+},
+  {2*Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegPosterior.VolumePoints.Right.nn01.sRel[0]-
+  Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Left.nn06.sRel[0],
+  Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Left.nn06.sRel[1],
+  Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Left.nn06.sRel[2],
+},
+  {2*Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegPosterior.VolumePoints.Right.nn01.sRel[0]-
+  Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Left.nn05.sRel[0],
+  Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Left.nn05.sRel[1],
+  Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Left.nn05.sRel[2],
+},
+} ;
+
+AnyRefNodeGroup FrontNodes = {
+NodeAmount =16;
+Node_sRels = .FrontNodes_sRels;
+};
+AnyRefNodeGroup FrontNodes_mirror = {
+NodeAmount =16;
+Node_sRels = .FrontNodes_mirror_sRels;
+};
+
+
+
+AnySurfEllipsoidFit mesh3 = 
+{
+  viewRefFrame.Visible = Off;
+  viewNodes.Visible = Off;
+  viewSurface.Visible = On;
+  FixedAxes = On;
+  //AxisSymmetry = Off;
+  //Spherical = Off;
+  Axis = y;
+
+//  AnyFloat Center  = mean(AllPoints');
+AnyFloat ExtraPoints =reshape(arrcat(
+0.5*(Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegPosterior.VolumePoints.Right.nn01.sRel+
+Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegPosterior.VolumePoints.Left.nn01.sRel)+
+{0,0.03,0},
+0.5*(Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegPosterior.VolumePoints.Right.nn01.sRel+
+Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegPosterior.VolumePoints.Left.nn01.sRel)+
+{0,-0.03,0}),{2,3});
+//  Points=arrcat(.anterior_l_mirror.Node_sRels,
+//  .anterior_r_mirror.Node_sRels,
+//  .anterior_l.Node_sRels,
+//  .anterior_r.Node_sRels,
+//  ExtraPoints);
+       Points = arrcat( .FrontNodes_mirror.Node_sRels, .FrontNodes.Node_sRels, ExtraPoints );
+
+};
+
+  AnyDrawPointCloud drw = {Points=.mesh3.Points; PointStyle.Size=0.01; Points3D = On;};
+
+
 AnyRefNode  Right ={ 
   AnyRefNode Center  = {sRel=..ScaleFunction(.....Data.unscaled.ModelParameters.Abdominal._LAYER_.AbdominalCavityPoints.Right.EllipsoidCalculation.Cal.Center);};
   AnyRefNode EP1  = {sRel=..ScaleFunction(.....Data.unscaled.ModelParameters.Abdominal._LAYER_.AbdominalCavityPoints.Right.EllipsoidCalculation.Cal.Point1);};
@@ -99,6 +252,59 @@ AnyRefNode  Right ={
 //      Visible =On;
 //    };
   };
+  
+  AnySurfEllipsoid mesh2 = {
+    sRel =  .ECenterSideEllipsoid.sRel+ {-0.05,0,0.02};
+    ARel = .mesh.ARel * RotMat (-pi/4, z);
+    
+    // AnyDrawRefFrame drw ={};
+    AnyFloat  R1 = 0.5*vnorm(.EP1.sRel-.EP3.sRel);
+    AnyFloat R3 = vnorm(.ECalculatedPoint0.sRel-.ECenterSideEllipsoid.sRel);
+    
+    Radius   ={R1,R3,(R1+R3)/4};
+    //    viewSurface ={
+    //      RGB={0,1,0};
+    //      Visible =On;
+    //    };
+  };
+
+//    AnyFloat FrontNodes_sRels = {       
+//       Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Right.nn12.sRel,
+//       Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Right.nn11.sRel,
+//       Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Right.nn10.sRel,
+//       Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Right.nn09.sRel,
+//       Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Right.nn08.sRel,
+//       Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Right.nn07.sRel,
+//       Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Right.nn06.sRel,
+//       Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Right.nn05.sRel,
+//
+//       Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Left.nn12.sRel,
+//       Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Left.nn11.sRel,
+//       Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Left.nn10.sRel,
+//       Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Left.nn09.sRel,
+//       Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Left.nn08.sRel,
+//       Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Left.nn07.sRel,
+//       Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Left.nn06.sRel,
+//       Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Left.nn05.sRel,
+//     } ;
+
+//  AnySurfEllipsoidFit mesh3_posterior = 
+//{
+//  viewRefFrame.Visible = Off;
+//  viewNodes.Visible = Off;
+//  viewSurface.Visible = On;
+//  //FixedAxes = Off;
+//  AxisSymmetry = On;
+//  //Spherical = Off;
+//  Axis = y;
+//  AnyFloat AllPoints = arrcat(
+//  ) ;
+//  AnyFloat Center  = mean(AllPoints');
+//  AnyFloat ExtraPoints =reshape(arrcat(Center+{0,0.03,0},Center+{0,-0.03,0}),{2,3});
+//  Points=arrcat(AllPoints,ExtraPoints);
+//};
+
+
 };
 
 
@@ -138,7 +344,7 @@ AnyRefNode  Left ={
 
 AnySurfTriCylMesh mesh = {
   
-  viewSurface ={
+  viewSurface ={es
     Visible =On;
     AnyStyleDrawMaterial1 mat ={
       EnableWireframe  =On;

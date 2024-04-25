@@ -2856,11 +2856,12 @@ AnyMuscleShortestPath OEC_3 = {
   #endif
   
   
-  #if MESH_TYPE == "ELLIPSOID_SIDE"
-  AnySurfEllipsoid &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.Left.mesh;
-  #else
-  AnySurfTriCylMesh &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.mesh;
-  #endif
+//  #if MESH_TYPE == "ELLIPSOID_SIDE"
+//  AnySurfEllipsoid &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.Left.mesh;
+//  #else
+//  AnySurfTriCylMesh &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.mesh;
+//  #endif
+  AnySurfEllipsoid &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.mesh3;
 
   
   
@@ -2871,33 +2872,34 @@ AnyMuscleShortestPath OEC_3 = {
   SPLine ={  
     
    
-   #if MESH_TYPE == "ELLIPSOID"
-    AnyMatrix InitWrapPos = {
+//   #if MESH_TYPE == "ELLIPSOID"
+//    AnyMatrix InitWrapPos = {
+//      transf3D({0,.srf1.MajorRadius+.srf1.MinorRadius, 0}, &.srf1),
+//      transf3D({.mesh2.Radius[0],0,0}, &.mesh2),
+//    };
+//    #endif
+//
+//    #if MESH_TYPE == "ELLIPSOID_SIDE"
+//    AnyMatrix InitWrapPos = {
+//       transf3D({0,.srf1.MajorRadius+.srf1.MinorRadius, 0}, &.srf1),
+//  
+//      transf3D({0,.mesh2.Radius[1],0}, &.mesh2),
+//
+//    };
+//    #endif
+//
+//    #if MESH_TYPE == "QUAD"
+//    AnyMatrix InitWrapPos = {
+//      transf3D({0,.srf1.MajorRadius+.srf1.MinorRadius, 0}, &.srf1),
+//      transf3D(.mesh2.Points[floor(.mesh2.MeshSize*0.9)+2*.mesh2.MeshSize*6]+{0.02,0,0}, &.mesh2),
+//    };
+//    #endif
+
+     AnyMatrix InitWrapPos = {
       transf3D({0,.srf1.MajorRadius+.srf1.MinorRadius, 0}, &.srf1),
       transf3D({.mesh2.Radius[0],0,0}, &.mesh2),
     };
-    #endif
-
-    #if MESH_TYPE == "ELLIPSOID_SIDE"
-    AnyMatrix InitWrapPos = {
-       transf3D({0,.srf1.MajorRadius+.srf1.MinorRadius, 0}, &.srf1),
-  
-      transf3D({0,.mesh2.Radius[1],0}, &.mesh2),
-
-    };
-    #endif
-
-
-
-    
-    #if MESH_TYPE == "QUAD"
-    AnyMatrix InitWrapPos = {
-      transf3D({0,.srf1.MajorRadius+.srf1.MinorRadius, 0}, &.srf1),
-      transf3D(.mesh2.Points[floor(.mesh2.MeshSize*0.9)+2*.mesh2.MeshSize*6]+{0.02,0,0}, &.mesh2),
-    };
-    #endif
-
-    
+   
   
   
   
@@ -2921,53 +2923,52 @@ AnyMuscleShortestPath OEC_4 = {
   #endif
   
   
-  #if MESH_TYPE == "ELLIPSOID_SIDE"
-  //AnySurfTriCylMesh &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.mesh;
-  AnySurfEllipsoid &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.Left.mesh;
-  //AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
-  #else
-  //AnySurfTriCylMesh &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.mesh;
-  AnySurfTriCylMesh &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh;
-  //AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
-  #endif
+//  #if MESH_TYPE == "ELLIPSOID_SIDE"
+//  //AnySurfTriCylMesh &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.mesh;
+//  AnySurfEllipsoid &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.Left.mesh;
+//  //AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
+//  #else
+//  //AnySurfTriCylMesh &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.mesh;
+//  AnySurfTriCylMesh &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh;
+//  //AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
+//  #endif
+  AnySurfEllipsoid &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh3;
 
   SPLine.StringMesh=60;
   
   SPLine ={  
  
-    #if MESH_TYPE == "ELLIPSOID"
+//    #if MESH_TYPE == "ELLIPSOID"
+//     AnyMatrix InitWrapPos = {
+//        transf3D({0,.srf1.MajorRadius+.srf1.MinorRadius, 0}, &.srf1),
+//      //transf3D({.mesh2.Radius[0],0,0}, &.mesh2),
+//        transf3D({.mesh3.Radius[0],0,0}, &.mesh3),
+//      //transf3D({.mesh4.Radius[0],0,0}, &.mesh4),
+//     };
+//    #endif
+//    #if MESH_TYPE == "ELLIPSOID_SIDE"
+//    AnyMatrix InitWrapPos = {
+//      transf3D({0,.srf1.MajorRadius+.srf1.MinorRadius, 0}, &.srf1),
+//      transf3D({0,.mesh3.Radius[1],0}, &.mesh3),
+//    };
+//    #endif
+//
+//    #if MESH_TYPE == "QUAD"
+//AnyMatrix InitWrapPos = {
+//      transf3D({0,.srf1.MajorRadius+.srf1.MinorRadius, 0}, &.srf1),
+//    
+//     //  transf3D(.mesh2.Points[floor(.mesh2.MeshSize*0.85)+2*.mesh2.MeshSize*6]+{0.02,0,0}, &.mesh2),
+//     //  transf3D(.mesh3.Points[floor(.mesh3.MeshSize*0.95)+2*.mesh3.MeshSize*6]+{0.02,0,0}, &.mesh3)
+//       transf3D(.mesh4.Points[floor(.mesh4.MeshSize*0.95)+2*.mesh4.MeshSize*6]+{0.02,0,0}, &.mesh4)
+//    };
+//    #endif
      AnyMatrix InitWrapPos = {
         transf3D({0,.srf1.MajorRadius+.srf1.MinorRadius, 0}, &.srf1),
       //transf3D({.mesh2.Radius[0],0,0}, &.mesh2),
         transf3D({.mesh3.Radius[0],0,0}, &.mesh3),
       //transf3D({.mesh4.Radius[0],0,0}, &.mesh4),
      };
-    #endif
-    #if MESH_TYPE == "ELLIPSOID_SIDE"
-    AnyMatrix InitWrapPos = {
-      transf3D({0,.srf1.MajorRadius+.srf1.MinorRadius, 0}, &.srf1),
-      transf3D({0,.mesh3.Radius[1],0}, &.mesh3),
-    };
-    #endif
-
-
-
-    
-    #if MESH_TYPE == "QUAD"
-AnyMatrix InitWrapPos = {
-      transf3D({0,.srf1.MajorRadius+.srf1.MinorRadius, 0}, &.srf1),
-    
-     //  transf3D(.mesh2.Points[floor(.mesh2.MeshSize*0.85)+2*.mesh2.MeshSize*6]+{0.02,0,0}, &.mesh2),
-     //  transf3D(.mesh3.Points[floor(.mesh3.MeshSize*0.95)+2*.mesh3.MeshSize*6]+{0.02,0,0}, &.mesh3)
-       transf3D(.mesh4.Points[floor(.mesh4.MeshSize*0.95)+2*.mesh4.MeshSize*6]+{0.02,0,0}, &.mesh4)
-
-     
-    };
-    #endif
-
-
-    
-    
+   
     InitWrapPosVecArr = {&InitWrapPos};
   };
   viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -2989,42 +2990,48 @@ AnyMuscleShortestPath  OEC_5= {
 //  AnySurfTriCylMesh &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh;
 
   
-  #if MESH_TYPE == "ELLIPSOID_SIDE"
-  AnySurfEllipsoid &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.Left.mesh;
-  #else
-  AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
-  #endif
+//  #if MESH_TYPE == "ELLIPSOID_SIDE"
+//  AnySurfEllipsoid &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.Left.mesh;
+//  #else
+//  AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
+//  #endif
+  AnySurfEllipsoid &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh3;
+  AnySurfEllipsoid &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh3;
 
   
   SPLine.StringMesh=60;
   
   SPLine ={  
     
-     #if MESH_TYPE == "ELLIPSOID"
+//     #if MESH_TYPE == "ELLIPSOID"
+//    AnyMatrix InitWrapPos = {
+//     transf3D({0,.srf0.MajorRadius+.srf0.MinorRadius, 0}, &.srf0),
+//  //    transf3D({.mesh3.Radius[0],0,0}, &.mesh3),
+//        transf3D({.mesh4.Radius[0],0,0}, &.mesh4),
+//    };
+//    #endif
+//    #if MESH_TYPE == "ELLIPSOID_SIDE"
+//    AnyMatrix InitWrapPos = {
+//       transf3D({0,.srf0.MajorRadius+.srf0.MinorRadius, 0}, &.srf0),
+//  
+//      transf3D({0,.mesh4.Radius[1],0}, &.mesh4),
+//
+//    };
+//    #endif
+//
+//    #if MESH_TYPE == "QUAD"
+//AnyMatrix InitWrapPos = {
+// transf3D({0,.srf0.MajorRadius+.srf0.MinorRadius, 0}, &.srf0),
+// //transf3D(.mesh3.Points[floor(.mesh3.MeshSize*0.85)+2*.mesh3.MeshSize*6]+{0.02,0,0}, &.mesh3),
+//       transf3D(.mesh4.Points[floor(.mesh4.MeshSize*0.85)+2*.mesh4.MeshSize*6]+{0.02,0,0}, &.mesh4)
+//    }; 
+//        #endif
     AnyMatrix InitWrapPos = {
      transf3D({0,.srf0.MajorRadius+.srf0.MinorRadius, 0}, &.srf0),
-  //    transf3D({.mesh3.Radius[0],0,0}, &.mesh3),
+      transf3D({.mesh3.Radius[0],0,0}, &.mesh3),
         transf3D({.mesh4.Radius[0],0,0}, &.mesh4),
     };
-    #endif
-    #if MESH_TYPE == "ELLIPSOID_SIDE"
-    AnyMatrix InitWrapPos = {
-       transf3D({0,.srf0.MajorRadius+.srf0.MinorRadius, 0}, &.srf0),
-  
-      transf3D({0,.mesh4.Radius[1],0}, &.mesh4),
 
-    };
-    #endif
-
-
-    
-    #if MESH_TYPE == "QUAD"
-AnyMatrix InitWrapPos = {
- transf3D({0,.srf0.MajorRadius+.srf0.MinorRadius, 0}, &.srf0),
- //transf3D(.mesh3.Points[floor(.mesh3.MeshSize*0.85)+2*.mesh3.MeshSize*6]+{0.02,0,0}, &.mesh3),
-       transf3D(.mesh4.Points[floor(.mesh4.MeshSize*0.85)+2*.mesh4.MeshSize*6]+{0.02,0,0}, &.mesh4)
-    }; 
-        #endif
     InitWrapPosVecArr = {&InitWrapPos};
   };  
   viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -3039,41 +3046,45 @@ AnyMuscleShortestPath OEC_6 = {
  //AnySurfTriCylMesh &mesh4= Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
 //  AnySurfTriCylMesh &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.mesh;
   
-   #if MESH_TYPE == "ELLIPSOID_SIDE"
-  AnySurfEllipsoid &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.Left.mesh;
-  #else
-  AnySurfTriCylMesh &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.mesh;
-  #endif
+//   #if MESH_TYPE == "ELLIPSOID_SIDE"
+//  AnySurfEllipsoid &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.Left.mesh;
+//  #else
+//  AnySurfTriCylMesh &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.mesh;
+//  #endif
+  AnySurfEllipsoid &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh3;
+  AnySurfEllipsoid &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.mesh3;
 
 
   
-  SPLine.StringMesh=60;
+  SPLine.StringMesh=80;
   
   SPLine ={  
-      #if MESH_TYPE == "ELLIPSOID"
+//      #if MESH_TYPE == "ELLIPSOID"
+//    AnyMatrix InitWrapPos = {
+//    //    transf3D({.mesh4.Radius[0],0,0}, &.mesh4),
+//        transf3D({.mesh5.Radius[0],0,0}, &.mesh5),
+//    };
+//    #endif
+//   
+//    #if MESH_TYPE == "ELLIPSOID_SIDE"
+//    AnyMatrix InitWrapPos = {
+//               transf3D({0,.mesh5.Radius[1],0}, &.mesh5),
+//
+//    };
+//    #endif
+//
+//    #if MESH_TYPE == "QUAD"
+//
+//    AnyMatrix InitWrapPos = {
+//      // transf3D(.mesh4.Points[floor(.mesh4.MeshSize*0.8)+2*.mesh4.MeshSize*6]+{0.02,0,0}, &.mesh4),
+//       transf3D(.mesh5.Points[floor(.mesh5.MeshSize*0.85)+2*.mesh5.MeshSize*6]+{0.02,0,0}, &.mesh5)
+//
+//   }; 
+//        #endif
     AnyMatrix InitWrapPos = {
-    //    transf3D({.mesh4.Radius[0],0,0}, &.mesh4),
+        transf3D({.mesh4.Radius[0],0,0}, &.mesh4),
         transf3D({.mesh5.Radius[0],0,0}, &.mesh5),
     };
-    #endif
-   
-    #if MESH_TYPE == "ELLIPSOID_SIDE"
-    AnyMatrix InitWrapPos = {
-               transf3D({0,.mesh5.Radius[1],0}, &.mesh5),
-
-    };
-    #endif
-
-
-    
-    #if MESH_TYPE == "QUAD"
-
-    AnyMatrix InitWrapPos = {
-      // transf3D(.mesh4.Points[floor(.mesh4.MeshSize*0.8)+2*.mesh4.MeshSize*6]+{0.02,0,0}, &.mesh4),
-       transf3D(.mesh5.Points[floor(.mesh5.MeshSize*0.85)+2*.mesh5.MeshSize*6]+{0.02,0,0}, &.mesh5)
-
-   }; 
-        #endif
 
 
     InitWrapPosVecArr = {&InitWrapPos};
@@ -3093,41 +3104,52 @@ AnyMuscleShortestPath OEC_7 = {
 //  AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
 //  AnySurfTriCylMesh &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.mesh;
 //  
-   #if MESH_TYPE == "ELLIPSOID_SIDE"
-   AnySurfEllipsoid &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.Left.mesh;
-   AnySurfEllipsoid  &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.Left.mesh;
-  #else
-  AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
-  AnySurfTriCylMesh &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.mesh;
-  #endif
+//   #if MESH_TYPE == "ELLIPSOID_SIDE"
+//   AnySurfEllipsoid &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.Left.mesh;
+//   AnySurfEllipsoid  &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.Left.mesh;
+//  #else
+//  AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
+//  AnySurfTriCylMesh &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.mesh;
+//  #endif
+
+   AnySurfEllipsoid &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh3;
+   AnySurfEllipsoid &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh3;
+   AnySurfEllipsoid  &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.mesh3;
 
   
-  SPLine.StringMesh=60;
+  SPLine.StringMesh=120;
   SPLine ={  
     
-    #if MESH_TYPE == "ELLIPSOID"
+//    #if MESH_TYPE == "ELLIPSOID"
+//    AnyMatrix InitWrapPos = {
+//      transf3D({.mesh4.Radius[0],0,0}, &.mesh4),
+//      transf3D({.mesh5.Radius[0],0,0}, &.mesh5),
+//    };
+//    #endif
+//    
+//   #if MESH_TYPE == "ELLIPSOID_SIDE"
+//    AnyMatrix InitWrapPos = {
+//            transf3D({0,.mesh4.Radius[1],0}, &.mesh4),
+//               transf3D({0,.mesh5.Radius[1],0}, &.mesh5),
+//
+//    };
+//    #endif
+//
+//        
+//    #if MESH_TYPE == "QUAD"
+//    
+//    AnyMatrix InitWrapPos = {
+//      transf3D(.mesh4.Points[floor(.mesh4.MeshSize*0.8)+2*20*4]+{0.01,0,0}, &.mesh4),
+//      transf3D(.mesh5.Points[floor(.mesh5.MeshSize*0.85)+2*20*4]+{0.01,0,0}, &.mesh5)
+//    }; 
+//    #endif
+
     AnyMatrix InitWrapPos = {
+      transf3D({.mesh3.Radius[0],0,0}, &.mesh3),
       transf3D({.mesh4.Radius[0],0,0}, &.mesh4),
       transf3D({.mesh5.Radius[0],0,0}, &.mesh5),
     };
-    #endif
-    
-   #if MESH_TYPE == "ELLIPSOID_SIDE"
-    AnyMatrix InitWrapPos = {
-            transf3D({0,.mesh4.Radius[1],0}, &.mesh4),
-               transf3D({0,.mesh5.Radius[1],0}, &.mesh5),
 
-    };
-    #endif
-
-        
-    #if MESH_TYPE == "QUAD"
-    
-    AnyMatrix InitWrapPos = {
-      transf3D(.mesh4.Points[floor(.mesh4.MeshSize*0.8)+2*20*4]+{0.01,0,0}, &.mesh4),
-      transf3D(.mesh5.Points[floor(.mesh5.MeshSize*0.85)+2*20*4]+{0.01,0,0}, &.mesh5)
-    }; 
-    #endif
     InitWrapPosVecArr = {&InitWrapPos};
   };  
   viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -3581,42 +3603,47 @@ AnyMuscleShortestPath OIC_6 = {
   //AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
  //AnySurfTriCylMesh  &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.mesh;
 
-    #if MESH_TYPE == "ELLIPSOID_SIDE"
-   AnySurfEllipsoid &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.Left.mesh;
-  #else
-  AnySurfTriCylMesh &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh;
-  #endif
+//    #if MESH_TYPE == "ELLIPSOID_SIDE"
+//   AnySurfEllipsoid &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.Left.mesh;
+//  #else
+//  AnySurfTriCylMesh &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh;
+//  #endif
+    AnySurfEllipsoid &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh3;
 
  
   SPLine.StringMesh=60;
 
   SPLine ={  
    
-  #if MESH_TYPE == "ELLIPSOID"
+//  #if MESH_TYPE == "ELLIPSOID"
+//    AnyMatrix InitWrapPos = {
+//   //   transf3D({.mesh2.Radius[0],0,0}, &.mesh2),
+//      transf3D({.mesh3.Radius[0],0,0}, &.mesh3),
+//    //  transf3D({.mesh4.Radius[0],0,0}, &.mesh4),
+//     // transf3D({.mesh5.Radius[0],0,0}, &.mesh5),
+//    };
+//    #endif
+//       #if MESH_TYPE == "ELLIPSOID_SIDE"
+//    AnyMatrix InitWrapPos = {
+//   
+//      transf3D({0,.mesh3.Radius[1],0}, &.mesh3),
+//      //transf3D({0,.mesh4.Radius[1],0}, &.mesh4),
+//    };
+//    #endif
+//
+//    
+//    #if MESH_TYPE == "QUAD"
+//    AnyMatrix InitWrapPos = {
+//     // transf3D(.mesh2.Points[floor(.mesh2.MeshSize*0.75)+2*.mesh2.MeshSize*6]+{0.02,0,0}, &.mesh2),
+//      transf3D(.mesh3.Points[floor(.mesh3.MeshSize*0.75)+2*.mesh3.MeshSize*6]+{0.02,0,0}, &.mesh3),
+//      transf3D(.mesh4.Points[floor(.mesh4.MeshSize*0.7)+2*.mesh4.MeshSize*6]+{0.02,0,0}, &.mesh4),
+//     // transf3D(.mesh5.Points[floor(.mesh5.MeshSize*0.65)+2*.mesh5.MeshSize*6]+{0.02,0,0}, &.mesh5)
+//    };  
+//    #endif
     AnyMatrix InitWrapPos = {
-   //   transf3D({.mesh2.Radius[0],0,0}, &.mesh2),
       transf3D({.mesh3.Radius[0],0,0}, &.mesh3),
-    //  transf3D({.mesh4.Radius[0],0,0}, &.mesh4),
-     // transf3D({.mesh5.Radius[0],0,0}, &.mesh5),
     };
-    #endif
-       #if MESH_TYPE == "ELLIPSOID_SIDE"
-    AnyMatrix InitWrapPos = {
-   
-      transf3D({0,.mesh3.Radius[1],0}, &.mesh3),
-      //transf3D({0,.mesh4.Radius[1],0}, &.mesh4),
-    };
-    #endif
 
-    
-    #if MESH_TYPE == "QUAD"
-    AnyMatrix InitWrapPos = {
-     // transf3D(.mesh2.Points[floor(.mesh2.MeshSize*0.75)+2*.mesh2.MeshSize*6]+{0.02,0,0}, &.mesh2),
-      transf3D(.mesh3.Points[floor(.mesh3.MeshSize*0.75)+2*.mesh3.MeshSize*6]+{0.02,0,0}, &.mesh3),
-      transf3D(.mesh4.Points[floor(.mesh4.MeshSize*0.7)+2*.mesh4.MeshSize*6]+{0.02,0,0}, &.mesh4),
-     // transf3D(.mesh5.Points[floor(.mesh5.MeshSize*0.65)+2*.mesh5.MeshSize*6]+{0.02,0,0}, &.mesh5)
-    };  
-    #endif
     InitWrapPosVecArr = {&InitWrapPos};
   };
   viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -3632,51 +3659,60 @@ AnyMuscleShortestPath OIC_7 = {
   #endif
   AnyRefNode &Ins = ....Segments.PelvisSeg.Left.ObliquusInternusNode_5;
 
-//  AnySurfTriCylMesh &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.mesh;
-//  AnySurfTriCylMesh &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh;
-//  AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
-// AnySurfTriCylMesh &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.mesh;
- #if MESH_TYPE == "ELLIPSOID_SIDE"
-   AnySurfEllipsoid &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.Left.mesh;
-   AnySurfEllipsoid &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.Left.mesh;
-   AnySurfEllipsoid &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.Left.mesh;
- #else
-    AnySurfTriCylMesh &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.mesh;
-    AnySurfTriCylMesh &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh;
-    AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
-  #endif
+////  AnySurfTriCylMesh &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.mesh;
+////  AnySurfTriCylMesh &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh;
+////  AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
+//// AnySurfTriCylMesh &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.mesh;
+// #if MESH_TYPE == "ELLIPSOID_SIDE"
+//   AnySurfEllipsoid &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.Left.mesh;
+//   AnySurfEllipsoid &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.Left.mesh;
+//   AnySurfEllipsoid &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.Left.mesh;
+// #else
+//    AnySurfTriCylMesh &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.mesh;
+//    AnySurfTriCylMesh &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh;
+//    AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
+//  #endif
+   AnySurfEllipsoid &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.mesh3;
+   AnySurfEllipsoid &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh3;
+   AnySurfEllipsoid &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh3;
 
 
   SPLine.StringMesh=60;
 
   SPLine ={  
   
-   #if MESH_TYPE == "ELLIPSOID"
-    AnyMatrix InitWrapPos = {
+//   #if MESH_TYPE == "ELLIPSOID"
+//    AnyMatrix InitWrapPos = {
+//      transf3D({.mesh2.Radius[0],0,0}, &.mesh2),
+//      transf3D({.mesh3.Radius[0],0,0}, &.mesh3),
+//      transf3D({.mesh4.Radius[0],0,0}, &.mesh4),
+//    //  transf3D({.mesh5.Radius[0],0,0}, &.mesh5),
+//    };
+//    #endif
+//    
+//       #if MESH_TYPE == "ELLIPSOID_SIDE"
+//    AnyMatrix InitWrapPos = {
+//      transf3D({0,.mesh2.Radius[1],0}, &.mesh2),
+//      transf3D({0,.mesh3.Radius[1],0}, &.mesh3),
+//      transf3D({0,.mesh4.Radius[1],0}, &.mesh4),
+//    };
+//    #endif
+//
+//    #if MESH_TYPE == "QUAD"
+//    AnyMatrix InitWrapPos = {
+//      transf3D(.mesh2.Points[floor(.mesh2.MeshSize*0.75)+2*.mesh2.MeshSize*6]+{0.02,0,0}, &.mesh2),
+//      transf3D(.mesh3.Points[floor(.mesh3.MeshSize*0.75)+2*.mesh3.MeshSize*6]+{0.02,0,0}, &.mesh3),
+//      transf3D(.mesh4.Points[floor(.mesh4.MeshSize*0.7)+2*.mesh4.MeshSize*6]+{0.02,0,0}, &.mesh4),
+//     // transf3D(.mesh5.Points[floor(.mesh5.MeshSize*0.65)+2*.mesh5.MeshSize*6]+{0.02,0,0}, &.mesh5)
+//    };  
+//    #endif
+      AnyMatrix InitWrapPos = {
       transf3D({.mesh2.Radius[0],0,0}, &.mesh2),
       transf3D({.mesh3.Radius[0],0,0}, &.mesh3),
       transf3D({.mesh4.Radius[0],0,0}, &.mesh4),
     //  transf3D({.mesh5.Radius[0],0,0}, &.mesh5),
     };
-    #endif
-    
-       #if MESH_TYPE == "ELLIPSOID_SIDE"
-    AnyMatrix InitWrapPos = {
-      transf3D({0,.mesh2.Radius[1],0}, &.mesh2),
-      transf3D({0,.mesh3.Radius[1],0}, &.mesh3),
-      transf3D({0,.mesh4.Radius[1],0}, &.mesh4),
-    };
-    #endif
 
-    #if MESH_TYPE == "QUAD"
-    AnyMatrix InitWrapPos = {
-      transf3D(.mesh2.Points[floor(.mesh2.MeshSize*0.75)+2*.mesh2.MeshSize*6]+{0.02,0,0}, &.mesh2),
-      transf3D(.mesh3.Points[floor(.mesh3.MeshSize*0.75)+2*.mesh3.MeshSize*6]+{0.02,0,0}, &.mesh3),
-      transf3D(.mesh4.Points[floor(.mesh4.MeshSize*0.7)+2*.mesh4.MeshSize*6]+{0.02,0,0}, &.mesh4),
-     // transf3D(.mesh5.Points[floor(.mesh5.MeshSize*0.65)+2*.mesh5.MeshSize*6]+{0.02,0,0}, &.mesh5)
-    };  
-    #endif
-  
     InitWrapPosVecArr = {&InitWrapPos};
   };
   viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -3696,16 +3732,19 @@ AnyMuscleShortestPath OIC_8 = {
  //AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
 // AnySurfTriCylMesh &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.mesh;
 
- #if MESH_TYPE == "ELLIPSOID_SIDE"
-   AnySurfEllipsoid &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.Left.mesh;
-   AnySurfEllipsoid &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.Left.mesh;
-   AnySurfEllipsoid &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.Left.mesh;
- #else
-    AnySurfTriCylMesh &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.mesh;
-    AnySurfTriCylMesh &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh;
-    AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
-  #endif
+// #if MESH_TYPE == "ELLIPSOID_SIDE"
+//   AnySurfEllipsoid &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.Left.mesh;
+//   AnySurfEllipsoid &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.Left.mesh;
+//   AnySurfEllipsoid &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.Left.mesh;
+// #else
+//    AnySurfTriCylMesh &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.mesh;
+//    AnySurfTriCylMesh &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh;
+//    AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
+//  #endif
 
+   AnySurfEllipsoid &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.mesh3;
+   AnySurfEllipsoid &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh3;
+   AnySurfEllipsoid &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh3;
 
 
   SPLine.StringMesh=60;
@@ -3713,31 +3752,37 @@ AnyMuscleShortestPath OIC_8 = {
   SPLine ={  
   StringSurfaceMap={{Off,Off,Off},{On,On,On}};  //no wrap before after via
   
-   #if MESH_TYPE == "ELLIPSOID"
+//   #if MESH_TYPE == "ELLIPSOID"
+//    AnyMatrix InitWrapPos = {
+//      transf3D({.mesh2.Radius[0],0,0}, &.mesh2),
+//      transf3D({.mesh3.Radius[0],0,0}, &.mesh3),
+//      transf3D({.mesh4.Radius[0],0,0}, &.mesh4),
+//  //    transf3D({.mesh5.Radius[0],0,0}, &.mesh5),
+//    };
+//    #endif
+//       #if MESH_TYPE == "ELLIPSOID_SIDE"
+//    AnyMatrix InitWrapPos = {
+//      transf3D({0,.mesh2.Radius[1],0}, &.mesh2),
+//      transf3D({0,.mesh3.Radius[1],0}, &.mesh3),
+//      transf3D({0,.mesh4.Radius[1],0}, &.mesh4),
+//    };
+//    #endif
+//
+//    #if MESH_TYPE == "QUAD"
+//    AnyMatrix InitWrapPos = {
+//       transf3D(.mesh2.Points[floor(.mesh2.MeshSize*0.8)+2*.mesh2.MeshSize*6]+{0.02,0,0}, &.mesh2),
+//       transf3D(.mesh3.Points[floor(.mesh3.MeshSize*0.7)+2*.mesh3.MeshSize*6]+{0.02,0,0}, &.mesh3),
+//      transf3D(.mesh4.Points[floor(.mesh4.MeshSize*0.6)+2*.mesh4.MeshSize*6]+{0.02,0,0}, &.mesh4),
+//  //    transf3D(.mesh5.Points[floor(.mesh5.MeshSize*0.6)+2*.mesh5.MeshSize*6]+{0.02,0,0}, &.mesh5)
+//    }; 
+//  
+//    #endif
     AnyMatrix InitWrapPos = {
       transf3D({.mesh2.Radius[0],0,0}, &.mesh2),
       transf3D({.mesh3.Radius[0],0,0}, &.mesh3),
       transf3D({.mesh4.Radius[0],0,0}, &.mesh4),
   //    transf3D({.mesh5.Radius[0],0,0}, &.mesh5),
     };
-    #endif
-       #if MESH_TYPE == "ELLIPSOID_SIDE"
-    AnyMatrix InitWrapPos = {
-      transf3D({0,.mesh2.Radius[1],0}, &.mesh2),
-      transf3D({0,.mesh3.Radius[1],0}, &.mesh3),
-      transf3D({0,.mesh4.Radius[1],0}, &.mesh4),
-    };
-    #endif
-
-    #if MESH_TYPE == "QUAD"
-    AnyMatrix InitWrapPos = {
-       transf3D(.mesh2.Points[floor(.mesh2.MeshSize*0.8)+2*.mesh2.MeshSize*6]+{0.02,0,0}, &.mesh2),
-       transf3D(.mesh3.Points[floor(.mesh3.MeshSize*0.7)+2*.mesh3.MeshSize*6]+{0.02,0,0}, &.mesh3),
-      transf3D(.mesh4.Points[floor(.mesh4.MeshSize*0.6)+2*.mesh4.MeshSize*6]+{0.02,0,0}, &.mesh4),
-  //    transf3D(.mesh5.Points[floor(.mesh5.MeshSize*0.6)+2*.mesh5.MeshSize*6]+{0.02,0,0}, &.mesh5)
-    }; 
-  
-    #endif
 
     InitWrapPosVecArr = {None,&InitWrapPos};
   };
@@ -3751,60 +3796,69 @@ AnyMuscleShortestPath OIC_8_extra = {
  // AnyRefNode &Via = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L1.BaseSegAnterior.TransversusPoints.Left.nn05;
 
   AnyRefNode &Ins = ....Segments.PelvisSeg.Left.ObliquusInternusNode_6;
-// AnySurfTriCylMesh &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.mesh;
-// AnySurfTriCylMesh &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh;
-// AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
- #if MESH_TYPE == "ELLIPSOID_SIDE"
-   AnySurfEllipsoid &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.Left.mesh;
-   AnySurfEllipsoid &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.Left.mesh;
-   AnySurfEllipsoid &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.Left.mesh;
- #else
-    AnySurfTriCylMesh &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.mesh;
-    AnySurfTriCylMesh &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh;
-    AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
-  #endif
+//// AnySurfTriCylMesh &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.mesh;
+//// AnySurfTriCylMesh &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh;
+//// AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
+// #if MESH_TYPE == "ELLIPSOID_SIDE"
+//   AnySurfEllipsoid &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.Left.mesh;
+//   AnySurfEllipsoid &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.Left.mesh;
+//   AnySurfEllipsoid &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.Left.mesh;
+// #else
+//    AnySurfTriCylMesh &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.mesh;
+//    AnySurfTriCylMesh &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh;
+//    AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
+//  #endif
 
+//   AnySurfEllipsoid &mesh1 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L1.BaseSegAnterior.mesh3;
+   AnySurfEllipsoid &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.mesh3;
+   AnySurfEllipsoid &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh3;
+   AnySurfEllipsoid &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh3;
  
 
-SPLine.StringMesh=60;
+SPLine.StringMesh=100;
 
 SPLine ={  
   //    SolverVersion=3;
  // StringSurfaceMap={{Off,Off,Off,Off},{On,On,On,On}};  //no wrap before after via
   
  
-  #if MESH_TYPE == "ELLIPSOID"
-    AnyMatrix InitWrapPos = {
+//  #if MESH_TYPE == "ELLIPSOID"
+//    AnyMatrix InitWrapPos = {
+//      transf3D({.mesh2.Radius[0],0,0}, &.mesh2),
+//      transf3D({.mesh3.Radius[0],0,0}, &.mesh3),
+//      transf3D({.mesh4.Radius[0],0,0}, &.mesh4),
+//    };
+//    #endif
+//       #if MESH_TYPE == "ELLIPSOID_SIDE"
+//    AnyMatrix InitWrapPos = {
+//      transf3D({0,.mesh2.Radius[1],0}, &.mesh2),
+//      transf3D({0,.mesh3.Radius[1],0}, &.mesh3),
+//      transf3D({0,.mesh4.Radius[1],0}, &.mesh4),
+//    };
+//    #endif
+    
+//    #if MESH_TYPE == "QUAD"
+//  AnyMatrix InitWrapPos = {
+//    //      transf3D({0.0,2*.srf1.MajorRadius,-.srf1.MajorRadius}, &.srf1),
+//    //      transf3D(.mesh1.Points[52]+{0.03,0,0}, &.mesh1),
+//    //   transf3D(.mesh1.Points[floor(.mesh2.MeshSize*0.8)+2*.mesh2.MeshSize*4]+{0.01,0,0}, &.mesh1),
+//    transf3D(.mesh2.Points[floor(.mesh2.MeshSize*0.75)+2*.mesh2.MeshSize*6]+{0.02,0,0}, &.mesh2),
+//    transf3D(.mesh3.Points[floor(.mesh3.MeshSize*0.7)+2*.mesh3.MeshSize*6]+{0.02,0,0}, &.mesh3),
+//     transf3D(.mesh4.Points[floor(.mesh4.MeshSize*0.65)+2*.mesh4.MeshSize*6]+{0.02,0,0}, &.mesh4),
+////     transf3D(mesh.Points[floor(.mesh.MeshSize*4]+{0.01,0,0}, &.mesh),
+//    
+//   //      transf3D(.mesh5.Points[floor(.mesh5.MeshSize*0.65)+2*.mesh5.MeshSize*6]+{0.02,0,0}, &.mesh5)
+//  };  
+//
+//    #endif
+
+     AnyMatrix InitWrapPos = {
+//      transf3D({.mesh1.Radius[0],0,0}, &.mesh1),
       transf3D({.mesh2.Radius[0],0,0}, &.mesh2),
       transf3D({.mesh3.Radius[0],0,0}, &.mesh3),
       transf3D({.mesh4.Radius[0],0,0}, &.mesh4),
     };
-    #endif
-       #if MESH_TYPE == "ELLIPSOID_SIDE"
-    AnyMatrix InitWrapPos = {
-      transf3D({0,.mesh2.Radius[1],0}, &.mesh2),
-      transf3D({0,.mesh3.Radius[1],0}, &.mesh3),
-      transf3D({0,.mesh4.Radius[1],0}, &.mesh4),
-    };
-    #endif
 
-    
-    #if MESH_TYPE == "QUAD"
-  AnyMatrix InitWrapPos = {
-    //      transf3D({0.0,2*.srf1.MajorRadius,-.srf1.MajorRadius}, &.srf1),
-    //      transf3D(.mesh1.Points[52]+{0.03,0,0}, &.mesh1),
-    //   transf3D(.mesh1.Points[floor(.mesh2.MeshSize*0.8)+2*.mesh2.MeshSize*4]+{0.01,0,0}, &.mesh1),
-    transf3D(.mesh2.Points[floor(.mesh2.MeshSize*0.75)+2*.mesh2.MeshSize*6]+{0.02,0,0}, &.mesh2),
-    transf3D(.mesh3.Points[floor(.mesh3.MeshSize*0.7)+2*.mesh3.MeshSize*6]+{0.02,0,0}, &.mesh3),
-     transf3D(.mesh4.Points[floor(.mesh4.MeshSize*0.65)+2*.mesh4.MeshSize*6]+{0.02,0,0}, &.mesh4),
-//     transf3D(mesh.Points[floor(.mesh.MeshSize*4]+{0.01,0,0}, &.mesh),
-    
-   //      transf3D(.mesh5.Points[floor(.mesh5.MeshSize*0.65)+2*.mesh5.MeshSize*6]+{0.02,0,0}, &.mesh5)
-  };  
-
-    #endif
-
- 
  
   InitWrapPosVecArr = {&InitWrapPos}; 
   //InitWrapPosVecArr = {&InitWrapPos};
@@ -3821,22 +3875,26 @@ AnyMuscleShortestPath OIC_9 = {
   AnyRefNode &Org =      ....Abdominal.Layer_L1.BaseSegAnterior.mid;
   AnyRefNode &Ins = ....Segments.PelvisSeg.Left.ObliquusInternusNode_6;
   
-//  AnySurfTriCylMesh &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.mesh;
-//  AnySurfTriCylMesh &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh;
- // AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
-  //AnySurfTriCylMesh &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.mesh;
-  
-  
-   #if MESH_TYPE == "ELLIPSOID_SIDE"
-   AnySurfEllipsoid &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.Left.mesh;
-   AnySurfEllipsoid &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.Left.mesh;
-   AnySurfEllipsoid &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.Left.mesh;
- #else
-    AnySurfTriCylMesh &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.mesh;
-    AnySurfTriCylMesh &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh;
-    AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
-  #endif
+////  AnySurfTriCylMesh &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.mesh;
+////  AnySurfTriCylMesh &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh;
+// // AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
+//  //AnySurfTriCylMesh &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.mesh;
+//  
+//  
+//   #if MESH_TYPE == "ELLIPSOID_SIDE"
+//   AnySurfEllipsoid &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.Left.mesh;
+//   AnySurfEllipsoid &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.Left.mesh;
+//   AnySurfEllipsoid &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.Left.mesh;
+//   AnySurfEllipsoid &meshpelvis = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_Pelvic1.BaseSegAnterior.mesh;
+// #else
+//    AnySurfTriCylMesh &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.mesh;
+//    AnySurfTriCylMesh &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh;
+//    AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
+//  #endif
 
+   AnySurfEllipsoid &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.mesh3;
+   AnySurfEllipsoid &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh3;
+   AnySurfEllipsoid &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh3;
 
   
   SPLine.StringMesh=60;
@@ -3844,36 +3902,43 @@ AnyMuscleShortestPath OIC_9 = {
   SPLine ={  
     
     
-    #if MESH_TYPE == "ELLIPSOID"
-    AnyMatrix InitWrapPos = {
+//    #if MESH_TYPE == "ELLIPSOID"
+//    AnyMatrix InitWrapPos = {
+//      transf3D({.mesh2.Radius[0],0,0}, &.mesh2),
+//      transf3D({.mesh3.Radius[0],0,0}, &.mesh3),
+//      transf3D({.mesh4.Radius[0],0,0}, &.mesh4),
+//   //   transf3D({.mesh5.Radius[0],0,0}, &.mesh5),
+//      
+//    };
+//    #endif
+//    
+//    
+//   #if MESH_TYPE == "ELLIPSOID_SIDE"
+//    AnyMatrix InitWrapPos = {
+//      transf3D({0,.mesh2.Radius[1],0}, &.mesh2),
+//      transf3D({0,.mesh3.Radius[1],0}, &.mesh3),
+//      transf3D({0,.mesh4.Radius[1],0}, &.mesh4),
+//    };
+//    #endif
+//
+//    
+//    
+//    #if MESH_TYPE == "QUAD"
+//    AnyMatrix InitWrapPos = {
+//      transf3D(.mesh2.Points[floor(.mesh2.MeshSize*0.75)+2*.mesh2.MeshSize*6]+{0.02,0,0}, &.mesh2),
+//      transf3D(.mesh3.Points[floor(.mesh3.MeshSize*0.7) +2*.mesh3.MeshSize*6]+{0.02,0,0}, &.mesh3),
+//      transf3D(.mesh4.Points[floor(.mesh4.MeshSize*0.65)+2*.mesh4.MeshSize*6]+{0.02,0,0}, &.mesh4),
+//   //   transf3D(.mesh5.Points[floor(.mesh5.MeshSize*0.6) +2*.mesh5.MeshSize*6]+{0.02,0,0}, &.mesh5)
+//    };
+//    #endif
+        AnyMatrix InitWrapPos = {
       transf3D({.mesh2.Radius[0],0,0}, &.mesh2),
       transf3D({.mesh3.Radius[0],0,0}, &.mesh3),
       transf3D({.mesh4.Radius[0],0,0}, &.mesh4),
    //   transf3D({.mesh5.Radius[0],0,0}, &.mesh5),
       
     };
-    #endif
-    
-    
-   #if MESH_TYPE == "ELLIPSOID_SIDE"
-    AnyMatrix InitWrapPos = {
-      transf3D({0,.mesh2.Radius[1],0}, &.mesh2),
-      transf3D({0,.mesh3.Radius[1],0}, &.mesh3),
-      transf3D({0,.mesh4.Radius[1],0}, &.mesh4),
-    };
-    #endif
 
-    
-    
-    #if MESH_TYPE == "QUAD"
-    AnyMatrix InitWrapPos = {
-      transf3D(.mesh2.Points[floor(.mesh2.MeshSize*0.75)+2*.mesh2.MeshSize*6]+{0.02,0,0}, &.mesh2),
-      transf3D(.mesh3.Points[floor(.mesh3.MeshSize*0.7) +2*.mesh3.MeshSize*6]+{0.02,0,0}, &.mesh3),
-      transf3D(.mesh4.Points[floor(.mesh4.MeshSize*0.65)+2*.mesh4.MeshSize*6]+{0.02,0,0}, &.mesh4),
-   //   transf3D(.mesh5.Points[floor(.mesh5.MeshSize*0.6) +2*.mesh5.MeshSize*6]+{0.02,0,0}, &.mesh5)
-    };
-    #endif
-    
     InitWrapPosVecArr = {&InitWrapPos};
   };
   
@@ -3888,22 +3953,26 @@ AnyMuscleShortestPath OIC_10 = {
   AnyRefNode &Org =      ....Abdominal.Layer_L2.BaseSegAnterior.mid;
   AnyRefNode &Ins = ....Segments.PelvisSeg.Left.ObliquusInternusNode_6;
   
-//  AnySurfTriCylMesh &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh;
-//  AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
-//  AnySurfTriCylMesh &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.mesh;
-  
-   #if MESH_TYPE == "ELLIPSOID_SIDE"
-   AnySurfEllipsoid &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.Left.mesh;
-   AnySurfEllipsoid &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.Left.mesh;
-   AnySurfEllipsoid &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.Left.mesh;
+////  AnySurfTriCylMesh &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh;
+////  AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
+////  AnySurfTriCylMesh &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.mesh;
+//  
+//   #if MESH_TYPE == "ELLIPSOID_SIDE"
+//   AnySurfEllipsoid &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.Left.mesh;
+//   AnySurfEllipsoid &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.Left.mesh;
+//   AnySurfEllipsoid &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.Left.mesh;
+//   AnySurfEllipsoid &meshpelvis = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_Pelvic1.BaseSegAnterior.mesh;
+//
+//   #else
+//    AnySurfTriCylMesh &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh;
+//    AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
+//    AnySurfTriCylMesh &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.mesh;
+//
+//    #endif
 
-   #else
-    AnySurfTriCylMesh &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh;
-    AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
-    AnySurfTriCylMesh &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.mesh;
-
-    #endif
-
+   AnySurfEllipsoid &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh3;
+   AnySurfEllipsoid &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh3;
+//   AnySurfEllipsoid &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.mesh3;
 
   
   SPLine.StringMesh=60;
@@ -3912,39 +3981,46 @@ AnyMuscleShortestPath OIC_10 = {
   SPLine ={  
     
     
-    #if MESH_TYPE == "ELLIPSOID"
-    AnyMatrix InitWrapPos = {
+//    #if MESH_TYPE == "ELLIPSOID"
+//    AnyMatrix InitWrapPos = {
+//      
+//      transf3D({.mesh3.Radius[0],0,0}, &.mesh3),
+//      transf3D({.mesh4.Radius[0],0,0}, &.mesh4),
+//      transf3D({.mesh5.Radius[0],0,0}, &.mesh5),
+//      
+//    };
+//    #endif
+//    
+//   
+//    
+//  #if MESH_TYPE == "ELLIPSOID_SIDE"
+//    AnyMatrix InitWrapPos = {
+//           transf3D({0,.mesh3.Radius[1],0}, &.mesh3),
+//            transf3D({0,.mesh4.Radius[1],0}, &.mesh4),
+//            transf3D({0,.mesh5.Radius[1],0}, &.mesh5),
+//
+//          };
+//    #endif
+//
+//    
+//    
+//    #if MESH_TYPE == "QUAD"
+//    AnyMatrix InitWrapPos = {
+//      
+//      transf3D(.mesh3.Points[floor(.mesh3.MeshSize*0.75)+2*.mesh3.MeshSize*6]+{0.02,0,0}, &.mesh3),
+//      transf3D(.mesh4.Points[floor(.mesh4.MeshSize*0.7)+2*.mesh4.MeshSize*6]+{0.02,0,0}, &.mesh4),
+//      transf3D(.mesh5.Points[floor(.mesh5.MeshSize*0.65)+2*.mesh5.MeshSize*6]+{0.02,0,0}, &.mesh5)
+//    };  
+//    #endif
+    
+     AnyMatrix InitWrapPos = {
       
       transf3D({.mesh3.Radius[0],0,0}, &.mesh3),
       transf3D({.mesh4.Radius[0],0,0}, &.mesh4),
-      transf3D({.mesh5.Radius[0],0,0}, &.mesh5),
+//      transf3D({.mesh5.Radius[0],0,0}, &.mesh5),
       
     };
-    #endif
-    
    
-    
-  #if MESH_TYPE == "ELLIPSOID_SIDE"
-    AnyMatrix InitWrapPos = {
-           transf3D({0,.mesh3.Radius[1],0}, &.mesh3),
-            transf3D({0,.mesh4.Radius[1],0}, &.mesh4),
-            transf3D({0,.mesh5.Radius[1],0}, &.mesh5),
-
-          };
-    #endif
-
-    
-    
-    #if MESH_TYPE == "QUAD"
-    AnyMatrix InitWrapPos = {
-      
-      transf3D(.mesh3.Points[floor(.mesh3.MeshSize*0.75)+2*.mesh3.MeshSize*6]+{0.02,0,0}, &.mesh3),
-      transf3D(.mesh4.Points[floor(.mesh4.MeshSize*0.7)+2*.mesh4.MeshSize*6]+{0.02,0,0}, &.mesh4),
-      transf3D(.mesh5.Points[floor(.mesh5.MeshSize*0.65)+2*.mesh5.MeshSize*6]+{0.02,0,0}, &.mesh5)
-    };  
-    #endif
-    
-    
     
     InitWrapPosVecArr = {&InitWrapPos};
   };
@@ -3961,21 +4037,24 @@ AnyMuscleShortestPath OIC_11 = {
   AnyRefNode &Org = ....Abdominal.Layer_L3.BaseSegAnterior.mid;
   AnyRefNode &Ins = ....Segments.PelvisSeg.Left.ObliquusInternusNode_7;
   
-  //  AnyParamSurf &srf1 =....Abdominal.ObliquusWrapping.WrappingSeg.Layer4WrappingPoints.Left.nn11.Translate.InwardCyl;
-  //  AnyParamSurf &srf2 =....Abdominal.ObliquusWrapping.WrappingSeg.Layer5WrappingPoints.Left.nn08.Translate.InwardCyl;
-//  AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
-//  AnySurfTriCylMesh &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.mesh;
+//  //  AnyParamSurf &srf1 =....Abdominal.ObliquusWrapping.WrappingSeg.Layer4WrappingPoints.Left.nn11.Translate.InwardCyl;
+//  //  AnyParamSurf &srf2 =....Abdominal.ObliquusWrapping.WrappingSeg.Layer5WrappingPoints.Left.nn08.Translate.InwardCyl;
+////  AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
+////  AnySurfTriCylMesh &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.mesh;
+//
+// #if MESH_TYPE == "ELLIPSOID_SIDE"
+//   AnySurfEllipsoid &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.Left.mesh;
+//   AnySurfEllipsoid &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.Left.mesh;
+//   AnySurfEllipsoid &meshpelvis = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_Pelvic1.BaseSegAnterior.mesh;
+//
+//   #else
+//    AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
+//    AnySurfTriCylMesh &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.mesh;
+//
+//    #endif
 
- #if MESH_TYPE == "ELLIPSOID_SIDE"
-   AnySurfEllipsoid &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.Left.mesh;
-   AnySurfEllipsoid &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.Left.mesh;
-
-   #else
-    AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
-    AnySurfTriCylMesh &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.mesh;
-
-    #endif
-
+   AnySurfEllipsoid &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh3;
+   AnySurfEllipsoid &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.mesh3;
 
 
   SPLine.StringMesh=60;
@@ -3983,31 +4062,37 @@ AnyMuscleShortestPath OIC_11 = {
   SPLine ={  
     
     
-    #if MESH_TYPE == "ELLIPSOID"
-    AnyMatrix InitWrapPos = {
+//    #if MESH_TYPE == "ELLIPSOID"
+//    AnyMatrix InitWrapPos = {
+//      
+//      transf3D({.mesh4.Radius[0],0,0}, &.mesh4),
+//      transf3D({.mesh5.Radius[0],0,0}, &.mesh5),
+//      
+//    };
+//    #endif
+//    
+//       #if MESH_TYPE == "ELLIPSOID_SIDE"
+//    AnyMatrix InitWrapPos = {
+//           transf3D({0,.mesh4.Radius[1],0}, &.mesh4),
+//            transf3D({0,.mesh5.Radius[1],0}, &.mesh5),
+//    };
+//    #endif
+//
+//    #if MESH_TYPE == "QUAD"
+//    AnyMatrix InitWrapPos = {
+//      
+//      transf3D(.mesh4.Points[floor(.mesh4.MeshSize*0.75)+2*.mesh4.MeshSize*6]+{0.02,0,0}, &.mesh4),
+//      transf3D(.mesh5.Points[floor(.mesh5.MeshSize*0.65)+2*.mesh5.MeshSize*6]+{0.02,0,0}, &.mesh5)
+//    };  
+//    
+//    #endif
+        AnyMatrix InitWrapPos = {
       
       transf3D({.mesh4.Radius[0],0,0}, &.mesh4),
       transf3D({.mesh5.Radius[0],0,0}, &.mesh5),
       
     };
-    #endif
-    
-       #if MESH_TYPE == "ELLIPSOID_SIDE"
-    AnyMatrix InitWrapPos = {
-           transf3D({0,.mesh4.Radius[1],0}, &.mesh4),
-            transf3D({0,.mesh5.Radius[1],0}, &.mesh5),
-    };
-    #endif
 
-    #if MESH_TYPE == "QUAD"
-    AnyMatrix InitWrapPos = {
-      
-      transf3D(.mesh4.Points[floor(.mesh4.MeshSize*0.75)+2*.mesh4.MeshSize*6]+{0.02,0,0}, &.mesh4),
-      transf3D(.mesh5.Points[floor(.mesh5.MeshSize*0.65)+2*.mesh5.MeshSize*6]+{0.02,0,0}, &.mesh5)
-    };  
-    
-    #endif
-    
     
     InitWrapPosVecArr = {&InitWrapPos};
   };
@@ -4022,15 +4107,17 @@ AnyMuscleShortestPath OIC_12 = {
   AnyRefNode &Ins = ....Segments.PelvisSeg.Left.ObliquusInternusNode_7;
   
   
-//  AnySurfTriCylMesh &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.mesh;
-  
-   #if MESH_TYPE == "ELLIPSOID_SIDE"
-   AnySurfEllipsoid &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.Left.mesh;
-
-   #else
-    AnySurfTriCylMesh &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.mesh;
-
-    #endif
+////  AnySurfTriCylMesh &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.mesh;
+//  
+//   #if MESH_TYPE == "ELLIPSOID_SIDE"
+//   AnySurfEllipsoid &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.Left.mesh;
+//   AnySurfEllipsoid &meshpelvis = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_Pelvic1.BaseSegAnterior.mesh;
+//
+//   #else
+//    AnySurfTriCylMesh &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.mesh;
+//
+//    #endif
+  AnySurfEllipsoid &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.mesh3;
 
   
   SPLine.StringMesh=60;
@@ -4038,26 +4125,29 @@ AnyMuscleShortestPath OIC_12 = {
   SPLine ={  
     
     
-    #if MESH_TYPE == "ELLIPSOID"
-    AnyMatrix InitWrapPos = {
+//    #if MESH_TYPE == "ELLIPSOID"
+//    AnyMatrix InitWrapPos = {
+//      transf3D({.mesh5.Radius[0],0,0}, &.mesh5),
+//    };
+//    #endif
+//       #if MESH_TYPE == "ELLIPSOID_SIDE"
+//    AnyMatrix InitWrapPos = {
+//      transf3D({0,.mesh5.Radius[1],0}, &.mesh5),
+//    };
+//    #endif
+//
+//    
+//    #if MESH_TYPE == "QUAD"
+//    AnyMatrix InitWrapPos = {
+//      
+//      transf3D(.mesh5.Points[floor(.mesh5.MeshSize*0.65)+2*.mesh5.MeshSize*6]+{0.02,0,0}, &.mesh5)
+//    };  
+//    
+//    #endif
+        AnyMatrix InitWrapPos = {
       transf3D({.mesh5.Radius[0],0,0}, &.mesh5),
     };
-    #endif
-       #if MESH_TYPE == "ELLIPSOID_SIDE"
-    AnyMatrix InitWrapPos = {
-      transf3D({0,.mesh5.Radius[1],0}, &.mesh5),
-    };
-    #endif
 
-    
-    #if MESH_TYPE == "QUAD"
-    AnyMatrix InitWrapPos = {
-      
-      transf3D(.mesh5.Points[floor(.mesh5.MeshSize*0.65)+2*.mesh5.MeshSize*6]+{0.02,0,0}, &.mesh5)
-    };  
-    
-    #endif
-    
     
     InitWrapPosVecArr = {&InitWrapPos};
   };
