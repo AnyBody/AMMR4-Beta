@@ -1035,6 +1035,40 @@ Reaction.Type ??={Off,Off,Off,Off,Off};
       SET_DEFAULT_ACTUATOR_VOLUME;
     };
     
+    
+    AnyRecruitedActuator LayerMomentReactionsNonNegative_Extra = {
+      AnyKinMeasureOrg Measures = {
+        AnyKinRotational ThoraxL1 = {
+          AnyRefFrame& r0 = .....Segments.SternalBodySeg;
+          AnyRefFrame& r1 = ....Layer_L1.BaseSegAnterior;
+          Axis1 = x; Axis2 = y; Axis3 = z;
+          Type = RotAxesAngles;
+        };
+        
+        AnyKinRotational L5Pelvis = {
+          AnyRefFrame& r0 = ....Layer_L5.BaseSegAnterior;
+          AnyRefFrame& r1 = ....Layer_Pelvic1.BaseSegAnterior;
+          Axis1 = x; Axis2 = y; Axis3 = z;
+          Type = RotAxesAngles;
+        };
+        
+        MeasureOrganizer = {0,2,3,5}; // to pelvis and thorax
+        //        MeasureOrganizer = {0,2}; // to thorax
+        //        MeasureOrganizer = {3}; // to pelvis
+       
+      }; 
+      Type = NonNegative;
+      Strength = 0.025;
+      SET_DEFAULT_ACTUATOR_VOLUME;
+    };
+    
+    AnyRecruitedActuator LayerMomentReactionsNonPositive_Extra = {
+      AnyKinMeasureOrg &Measures = .LayerMomentReactionsNonNegative_Extra.Measures;
+      Type = NonPositive;
+      Strength = .LayerMomentReactionsNonNegative_Extra.Strength;
+      SET_DEFAULT_ACTUATOR_VOLUME;
+    };
+
     #endif
   }; // Constraints
   
