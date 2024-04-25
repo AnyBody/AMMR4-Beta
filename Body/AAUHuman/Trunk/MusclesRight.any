@@ -3141,7 +3141,7 @@ AnyMuscleShortestPath OEC_7 = {
 //  AnySurfTriCylMesh &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.mesh;
 //  #endif
 
-   AnySurfEllipsoid &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh3;
+//   AnySurfEllipsoid &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh3;
    AnySurfEllipsoid &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh3;
    AnySurfEllipsoid  &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.mesh3;
 
@@ -3174,7 +3174,7 @@ AnyMuscleShortestPath OEC_7 = {
 //    #endif
 
     AnyMatrix InitWrapPos = {
-      transf3D({.mesh3.Radius[0],0,0}, &.mesh3),
+//      transf3D({.mesh3.Radius[0],0,0}, &.mesh3),
       transf3D({.mesh4.Radius[0],0,0}, &.mesh4),
       transf3D({.mesh5.Radius[0],0,0}, &.mesh5),
     };
@@ -3696,7 +3696,7 @@ AnyMuscleShortestPath OIC_7 = {
 //    AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
 //  #endif
 
-   AnySurfEllipsoid &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.mesh3;
+//   AnySurfEllipsoid &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.mesh3;
    AnySurfEllipsoid &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh3;
    AnySurfEllipsoid &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh3;
 
@@ -3731,7 +3731,7 @@ AnyMuscleShortestPath OIC_7 = {
 //    };  
 //    #endif
     AnyMatrix InitWrapPos = {
-      transf3D({.mesh2.Radius[0],0,0}, &.mesh2),
+//      transf3D({.mesh2.Radius[0],0,0}, &.mesh2),
       transf3D({.mesh3.Radius[0],0,0}, &.mesh3),
       transf3D({.mesh4.Radius[0],0,0}, &.mesh4),
     //  transf3D({.mesh5.Radius[0],0,0}, &.mesh5),
@@ -3767,7 +3767,7 @@ AnyMuscleShortestPath OIC_8 = {
 //    AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
 //  #endif
 //#else
-   AnySurfEllipsoid &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.mesh3;
+//   AnySurfEllipsoid &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.mesh3;
    AnySurfEllipsoid &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh3;
    AnySurfEllipsoid &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh3;
 //#endif
@@ -3778,7 +3778,8 @@ AnyMuscleShortestPath OIC_8 = {
   
   SPLine ={  
 //    StringSurfaceMap={{Off,Off,Off,Off},{On,On,On,On}};  //no wrap before after via
-    StringSurfaceMap={{Off,Off,Off},{On,On,On}};  //no wrap before after via
+//    StringSurfaceMap={{Off,Off,Off},{On,On,On}};  //no wrap before after via
+    StringSurfaceMap={{Off,Off},{On,On}};  //no wrap before after via
     
 //    #if MESH_TYPE == "ELLIPSOID"
 //    AnyMatrix InitWrapPos = {
@@ -3806,7 +3807,7 @@ AnyMuscleShortestPath OIC_8 = {
 //    }; 
 //    #endif
         AnyMatrix InitWrapPos = {
-      transf3D({.mesh2.Radius[0],0,0}, &.mesh2),
+//      transf3D({.mesh2.Radius[0],0,0}, &.mesh2),
       transf3D({.mesh3.Radius[0],0,0}, &.mesh3),
       transf3D({.mesh4.Radius[0],0,0}, &.mesh4),
       //    transf3D({.mesh5.Radius[0],0,0}, &.mesh5),
@@ -3854,7 +3855,7 @@ AnyMuscleShortestPath OIC_8_extra = {
 //    AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
 //  #endif
 //   AnySurfEllipsoid &mesh1 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L1.BaseSegAnterior.mesh3;
-   AnySurfEllipsoid &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.mesh3;
+//   AnySurfEllipsoid &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.mesh3;
    AnySurfEllipsoid &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh3;
    AnySurfEllipsoid &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh3;
 
@@ -3899,7 +3900,7 @@ SPLine ={
 //    #endif
     AnyMatrix InitWrapPos = {
 //      transf3D({.mesh1.Radius[0],0,0}, &.mesh1),
-      transf3D({.mesh2.Radius[0],0,0}, &.mesh2),
+//      transf3D({.mesh2.Radius[0],0,0}, &.mesh2),
       transf3D({.mesh3.Radius[0],0,0}, &.mesh3),
       transf3D({.mesh4.Radius[0],0,0}, &.mesh4),
     };
