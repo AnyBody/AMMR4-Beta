@@ -802,16 +802,6 @@ Reaction.Type ??={Off,Off,Off,Off,Off};
         };
       };
       
-      AnySurfSphere mesh = 
-      {
-        //viewRefFrame.Visible = Off;
-        //viewNodes.Visible = Off;
-        sRel = {0.0, 0.03, 0.0};
-        //ARel = {{1.0, 0.0, 0.0}, {0.0, 1.0, 0.0}, {0.0, 0.0, 1.0}};
-        viewSurface.Visible = On;
-        Radius = 0.09;
-      };
-
     };
     AnySeg &CavitySegAnterior = BaseSegAnterior;
   };

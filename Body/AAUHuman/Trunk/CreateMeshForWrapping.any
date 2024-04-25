@@ -253,57 +253,6 @@ AnyRefNode  Right ={
 //    };
   };
   
-  AnySurfEllipsoid mesh2 = {
-    sRel =  .ECenterSideEllipsoid.sRel+ {-0.05,0,0.02};
-    ARel = .mesh.ARel * RotMat (-pi/4, z);
-    
-    // AnyDrawRefFrame drw ={};
-    AnyFloat  R1 = 0.5*vnorm(.EP1.sRel-.EP3.sRel);
-    AnyFloat R3 = vnorm(.ECalculatedPoint0.sRel-.ECenterSideEllipsoid.sRel);
-    
-    Radius   ={R1,R3,(R1+R3)/4};
-    //    viewSurface ={
-    //      RGB={0,1,0};
-    //      Visible =On;
-    //    };
-  };
-
-//    AnyFloat FrontNodes_sRels = {       
-//       Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Right.nn12.sRel,
-//       Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Right.nn11.sRel,
-//       Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Right.nn10.sRel,
-//       Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Right.nn09.sRel,
-//       Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Right.nn08.sRel,
-//       Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Right.nn07.sRel,
-//       Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Right.nn06.sRel,
-//       Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Right.nn05.sRel,
-//
-//       Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Left.nn12.sRel,
-//       Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Left.nn11.sRel,
-//       Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Left.nn10.sRel,
-//       Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Left.nn09.sRel,
-//       Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Left.nn08.sRel,
-//       Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Left.nn07.sRel,
-//       Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Left.nn06.sRel,
-//       Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegAnterior.VolumePoints.Left.nn05.sRel,
-//     } ;
-
-//  AnySurfEllipsoidFit mesh3_posterior = 
-//{
-//  viewRefFrame.Visible = Off;
-//  viewNodes.Visible = Off;
-//  viewSurface.Visible = On;
-//  //FixedAxes = Off;
-//  AxisSymmetry = On;
-//  //Spherical = Off;
-//  Axis = y;
-//  AnyFloat AllPoints = arrcat(
-//  ) ;
-//  AnyFloat Center  = mean(AllPoints');
-//  AnyFloat ExtraPoints =reshape(arrcat(Center+{0,0.03,0},Center+{0,-0.03,0}),{2,3});
-//  Points=arrcat(AllPoints,ExtraPoints);
-//};
-
 
 };
 
@@ -344,7 +293,7 @@ AnyRefNode  Left ={
 
 AnySurfTriCylMesh mesh = {
   
-  viewSurface ={es
+  viewSurface ={
     Visible =On;
     AnyStyleDrawMaterial1 mat ={
       EnableWireframe  =On;
