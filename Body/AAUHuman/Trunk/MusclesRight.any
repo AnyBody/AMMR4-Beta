@@ -2730,7 +2730,7 @@ AnyMuscleShortestPath OEC_6 = {
   // AnyParamSurf &srf1 =....Abdominal.ObliquusWrapping.WrappingSeg.Layer4WrappingPoints.Right.nn09.Translate.VerticalCyl;
  AnyParamSurf &srf2 =....Abdominal.ObliquusWrapping.WrappingSeg.Layer4WrappingPoints.Right.nn10.Translate.OutwardCyl;
   
-  SPLine.StringMesh=60;
+  SPLine.StringMesh=240;
   
   SPLine ={  
     AnyMatrix InitWrapPos = {
@@ -2753,7 +2753,7 @@ AnyMuscleShortestPath OEC_7 = {
   // AnyParamSurf &srf1 =....Abdominal.ObliquusWrapping.WrappingSeg.Layer4WrappingPoints.Right.nn08.Translate.VerticalCyl;
   AnyParamSurf &srf2 =....Abdominal.ObliquusWrapping.WrappingSeg.Layer4WrappingPoints.Right.nn09.Translate.OutwardCyl;
 
-  SPLine.StringMesh=60;
+  SPLine.StringMesh=240;
   
   SPLine ={  
     AnyMatrix InitWrapPos = {
@@ -3411,7 +3411,7 @@ AnyMuscleShortestPath OIC_8 = {
   AnyParamSurf &srf2 =....Abdominal.ObliquusWrapping.WrappingSeg.Layer2WrappingPoints.Right.nn10.Translate.InwardCyl;
   AnyParamSurf &srf3 =....Abdominal.ObliquusWrapping.WrappingSeg.Layer3WrappingPoints.Right.nn08.Translate.InwardCyl;
 
-  SPLine.StringMesh=60;
+  SPLine.StringMesh=240;
 
   SPLine ={  
     AnyMatrix InitWrapPos = {
@@ -3439,7 +3439,7 @@ AnyMuscleShortestPath OIC_8_extra = {
   AnyParamSurf &srf2 =....Abdominal.ObliquusWrapping.WrappingSeg.Layer2WrappingPoints.Right.nn10.Translate.InwardCyl;
   AnyParamSurf &srf3 =....Abdominal.ObliquusWrapping.WrappingSeg.Layer3WrappingPoints.Right.nn08.Translate.InwardCyl;
 
-  SPLine.StringMesh=60;
+  SPLine.StringMesh=240;
 
   SPLine ={  
     AnyMatrix InitWrapPos = {
