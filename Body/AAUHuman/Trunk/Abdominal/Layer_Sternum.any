@@ -1,0 +1,72 @@
+AnyFolder Layer_Sternum = {
+  //      AnySeg &Segref = ...Trunk.Segments.T12Seg;
+  AnyFolder &Data =...Trunk.Data.unscaled.ModelParameters.Abdominal.Layer_L1;    
+  //    AnyRefFrame &MomentProvider = .Layer_L2.BaseSegPosterior;
+  //    BaseSegPosterior = {AnyFileVar OuterInertiaSTL = ...Data.unscaled.STL.FilenameLayer1Inertia;};
+  AnyFolder &layer_above = .Diaphragm.CavitySeg;//...Trunk.ThoracicCavity.Inertia.segment; //...Trunk.Segments.SternalBodySeg; //.Diaphragm.BaseSegAnterior;
+  AnyFolder &layer_below = .Layer_L1.BaseSegAnterior; 
+  AnyFolder &layer_above_inertia =  .Diaphragm.CavitySeg;
+  AnyFolder &layer_below_inertia = .Layer_L1.CavitySegAnterior; 
+  AnySeg &BaseSegAnterior = Main.HumanModel.BodyModel.Trunk.Abdominal.Diaphragm.CavitySegAnterior;
+  
+  BaseSegAnterior = {
+    AnyRefNode Origin = {};
+  };
+  
+  //    #include "Layer.any"
+  
+  AnyFolder LayerConstraints ={
+    AnyVar K_top =1;
+    AnyVar K_bot =2;
+    
+    AnyIntArray   MeasureOrganizer = {0}; 
+    
+    #include "LayerConstraints.any" 
+  };
+};
+
+
+
+Main.HumanModel.BodyModel.Trunk.Abdominal.Diaphragm.Joints = {
+
+//      // CavitySegAnterior Constraints
+      AnyKinEq CavitySegAnteriorConstraint = 
+      {
+       AnyKinMeasureOrg CavitySegAnteriorDOFMeasurs = {
+        AnyKinLinear lin = {
+          Ref = 0;
+          AnyRefNode &ant = ....CavitySeg.LayerConstraintNodes.Nodes_Below_Layer._node0005;
+          AnyRefNode &pos = ....CavitySegAnterior.LayerConstraintNodes.Nodes_Below_Layer._node0005; 
+        };
+        AnyKinRotational rot = {
+          Type = RotAxesAngles;
+          AnyRefNode &ant = ....CavitySeg.LayerConstraintNodes.Nodes_Below_Layer._node0005;
+          AnyRefNode &pos = ....CavitySegAnterior.LayerConstraintNodes.Nodes_Below_Layer._node0005; 
+        };
+      MeasureOrganizer = {1,2,3,4,5};
+    };
+        Reaction.Type = repmat (nDim, Off);
+      };
+         
+//      AnyKinMeasureOrg CavitySegAnteriorPrismaticDOF = {
+//        MeasureOrganizer = {0};
+//        AnyKinLinear mes = {
+//          AnyRefNode &cav = ...CavitySeg.LayerConstraintNodes;
+//          AnyRefNode &cav_ant = ...CavitySegAnterior.LayerConstraintNodes;
+//        };
+//      };
+      
+      // Force connection for CavitySegAnterior 
+      AnyReacForce CavitySegAnteriorKinetic = {
+        AnyKinLinear lin = {
+          Ref = 0;
+          AnyRefNode &ant = ...CavitySeg.LayerConstraintNodes;
+          AnyRefNode &pos = ...CavitySegAnterior.LayerConstraintNodes; 
+        };
+        AnyKinRotational rot = {
+          Type = RotAxesAngles;
+          AnyRefNode &ant = ...CavitySeg.LayerConstraintNodes;
+          AnyRefNode &pos = ...CavitySegAnterior.LayerConstraintNodes; 
+        };
+      };
+    };
