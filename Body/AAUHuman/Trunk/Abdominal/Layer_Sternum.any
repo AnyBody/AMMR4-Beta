@@ -17,7 +17,7 @@ AnyFolder Layer_Sternum = {
   
   AnyFolder LayerConstraints ={
     AnyVar K_top =1;
-    AnyVar K_bot =2;
+    AnyVar K_bot =10;
     
     AnyIntArray   MeasureOrganizer = {0}; 
     
@@ -35,13 +35,13 @@ Main.HumanModel.BodyModel.Trunk.Abdominal.Diaphragm.Joints = {
        AnyKinMeasureOrg CavitySegAnteriorDOFMeasurs = {
         AnyKinLinear lin = {
           Ref = 0;
-          AnyRefNode &ant = ....CavitySeg.LayerConstraintNodes.Nodes_Below_Layer._node0005;
-          AnyRefNode &pos = ....CavitySegAnterior.LayerConstraintNodes.Nodes_Below_Layer._node0005; 
+          AnyRefNode &ref1 = ....CavitySeg.LayerConstraintNodes.Nodes_Below_Layer._node0005;
+          AnyRefNode &ref2 = ....CavitySegAnterior.LayerConstraintNodes.Nodes_Above_Layer._node0005; 
         };
         AnyKinRotational rot = {
           Type = RotAxesAngles;
-          AnyRefNode &ant = ....CavitySeg.LayerConstraintNodes.Nodes_Below_Layer._node0005;
-          AnyRefNode &pos = ....CavitySegAnterior.LayerConstraintNodes.Nodes_Below_Layer._node0005; 
+          AnyRefNode &ref1 = ....CavitySeg.LayerConstraintNodes.Nodes_Below_Layer._node0005;
+          AnyRefNode &ref2 = ....CavitySegAnterior.LayerConstraintNodes.Nodes_Above_Layer._node0005; 
         };
       MeasureOrganizer = {1,2,3,4,5};
     };

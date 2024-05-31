@@ -58,17 +58,14 @@ AnyFolder Pelvis_New = {
   
   BaseSegAnterior = {
     AnyRefNode Origin = {};
-  AnyRefNode mid = {
-    AnyVec3 unscaled = 0.5 * (..Data.AbdominalCavityPoints.Right.Parametric.Fun(1.0) + ..Data.AbdominalCavityPoints.Left.Parametric.Fun(1.0));
-    sRel = .Scale(unscaled);
-  };
+
 
   };
   
   //    #include "Layer.any"
   
   AnyFolder LayerConstraints ={
-    AnyVar K_top =1;
+    AnyVar K_top =10;
     AnyVar K_bot =1;
     
     AnyIntArray   MeasureOrganizer = {0}; 
@@ -85,13 +82,13 @@ Pelvis_New = {
        AnyKinMeasureOrg Measurs = {
         AnyKinLinear lin = {
           Ref = 0;
-          AnyRefNode &ant = ....Layer_Pelvic1.BaseSegAnterior.LayerConstraintNodes.Nodes_Above_Layer._node0005;
-          AnyRefNode &pos = ...BaseSegAnterior.LayerConstraintNodes.Nodes_Below_Layer._node0005; 
+          AnyRefNode &ref1 = ....Layer_Pelvic1.BaseSegAnterior.LayerConstraintNodes.Nodes_Above_Layer._node0005;
+          AnyRefNode &ref2 = ...BaseSegAnterior.LayerConstraintNodes.Nodes_Below_Layer._node0005; 
         };
         AnyKinRotational rot = {
           Type = RotAxesAngles;
-          AnyRefNode &ant = ....Layer_Pelvic1.BaseSegAnterior.LayerConstraintNodes.Nodes_Above_Layer._node0005;
-          AnyRefNode &pos = ...BaseSegAnterior.LayerConstraintNodes.Nodes_Below_Layer._node0005; 
+          AnyRefNode &ref1 = ....Layer_Pelvic1.BaseSegAnterior.LayerConstraintNodes.Nodes_Above_Layer._node0005;
+          AnyRefNode &ref2 = ...BaseSegAnterior.LayerConstraintNodes.Nodes_Below_Layer._node0005; 
         };
       MeasureOrganizer = {1,2,3,4,5};
     };
@@ -123,100 +120,3 @@ Pelvis_New = {
 
 
 
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-//  AnyFolder Pelvis_New = {
-//    AnyVar K_top =1;
-//    AnyVar K_bot =1;
-//    
-//    AnyFolder &Data = ...Trunk.Data.unscaled.ModelParameters.Abdominal.Layer_L5;
-//    
-//    
-//    AnySeg &BaseSegPosterior = ...Trunk.Segments.PelvisSeg;
-////  AnySeg BaseSegPosterior={
-////    Mass = 1e-6;
-////    Jii = {0,0,0};
-////    r0 = ..Layer_L5.BaseSegPosterior.r0;
-////  Axes0 = ..Layer_L5.BaseSegPosterior.Axes0;
-//////  AnyRefNode &AnatomicalFrameTrunk = ...Segments.PelvisSeg.AnatomicalFrameTrunk;
-//////  AnyFunTransform3D& Scale = ...Segments.PelvisSeg.ScaleAbdominal;
-////  
-////};
-//
-//
-//
-////    BaseSegPosterior = {
-////      AnyRefNode Layer1 = {ARel = .AnatomicalFrameTrunk.ARel;};
-////    };
-//    AnyRefNode &LayerRef = BaseSegPosterior.Layer1;
-//    AnyFolder &layer_above = .Layer_L5;
-//    AnyFolder &layer_below =  .Layer_Pelvic1; 
-//
-//
-//
-//AnyFunTransform3D &Scale = BaseSegPosterior.Scale;
-//
-//AnyFunTransform3DLin ScaleAndProjectToLayer = {
-//  PreTransforms = {&.BaseSegPosterior.Scale, &ProjectToYZero};
-//  ScaleMat = eye(3);
-//  Offset = {0, .LayerRef.Origin.sRel[1], 0};  //< Translation to vetebra/layer level
-//  
-//  AnyFunTransform3DLin ProjectToYZero = {
-//    ScaleMat = {{1,0,0},{0,0,0},{0,0,1}}; //< Remove Y component
-//    Offset = zeros(3,1)';
-//  };
-//};
-//
-//  };
-//
-//Pelvis_New = {
-//  
-//  //    #include "Layer.any"
-//  
-//  AnyFolder LayerConstraints ={
-//    AnyVar K_top =1;
-//    AnyVar K_bot =1;
-//    
-//    AnyIntArray   MeasureOrganizer = {0}; 
-//    
-//    #include "LayerConstraints.any" 
-//  };
-//
-//
-//      AnyKinEq BaseSegAnterior_Constraint = 
-//      {
-//       AnyKinMeasureOrg Measurs = {
-//        AnyKinLinear lin = {
-//          Ref = 0;
-//          AnyRefNode &ant = ....Layer_Pelvic1.BaseSegAnterior.LayerConstraintNodes.Nodes_Below_Layer._node0005;
-//          AnyRefNode &pos = ...BaseSegAnterior.LayerConstraintNodes.Nodes_Below_Layer._node0005; 
-//        };
-//        AnyKinRotational rot = {
-//          Type = RotAxesAngles;
-//          AnyRefNode &ant = ....Layer_Pelvic1.BaseSegAnterior.LayerConstraintNodes.Nodes_Below_Layer._node0005;
-//          AnyRefNode &pos = ...BaseSegAnterior.LayerConstraintNodes.Nodes_Below_Layer._node0005; 
-//        };
-//      MeasureOrganizer = {1,2,3,4,5};
-//    };
-//        Reaction.Type = repmat (nDim, Off);
-//      };
-//      
-//      // Force connection for CavitySegAnterior 
-//      AnyReacForce CavitySegAnteriorKinetic = {
-//        AnyKinLinear lin = {
-//          Ref = 0;
-//          AnyRefNode &ant = ...Layer_Pelvic1.BaseSegAnterior.LayerConstraintNodes;
-//          AnyRefNode &pos = ..BaseSegAnterior.LayerConstraintNodes; 
-//        };
-//        AnyKinRotational rot = {
-//          Type = RotAxesAngles;
-//          AnyRefNode &ant = ...Layer_Pelvic1.BaseSegAnterior.LayerConstraintNodes;
-//          AnyRefNode &pos = ..BaseSegAnterior.LayerConstraintNodes; 
-//        };
-//      };
-//    };
-//
