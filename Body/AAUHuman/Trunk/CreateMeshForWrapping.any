@@ -203,7 +203,7 @@ AnySurfEllipsoidFit mesh3 =
 {
   viewRefFrame.Visible = Off;
   viewNodes.Visible = Off;
-  viewSurface.Visible = On;
+  viewSurface.Visible = Off;
   FixedAxes = On;
   //AxisSymmetry = Off;
   //Spherical = Off;
@@ -226,7 +226,7 @@ Main.HumanModel.BodyModel.Trunk.Abdominal._LAYER_.BaseSegPosterior.VolumePoints.
 
 };
 
-  AnyDrawPointCloud drw = {Points=.mesh3.Points; PointStyle.Size=0.01; Points3D = On;};
+//  AnyDrawPointCloud drw = {Points=.mesh3.Points; PointStyle.Size=0.01; Points3D = On;};
 
 
 AnyRefNode  Right ={ 
