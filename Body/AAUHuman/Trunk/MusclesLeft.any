@@ -3117,7 +3117,7 @@ AnyMuscleShortestPath OEC_7 = {
    AnySurfEllipsoid  &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.mesh3;
 
   
-  SPLine.StringMesh=120;
+  SPLine.StringMesh=240;
   SPLine ={  
     
 //    #if MESH_TYPE == "ELLIPSOID"
@@ -3677,7 +3677,7 @@ AnyMuscleShortestPath OIC_7 = {
    AnySurfEllipsoid &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh3;
 
 
-  SPLine.StringMesh=60;
+  SPLine.StringMesh=240;
 
   SPLine ={  
   
