@@ -270,7 +270,7 @@ AnyFolder Abdominal={
       r0 = ..Layer_L1.BaseSegAnterior.r0;
       Axes0 = ..Layer_L1.BaseSegAnterior.Axes0;
 
-      Mass = 1e-5;
+      Mass = 0;
       Jii = {0,0,0};
       AnyFolder &Data = ...Data.unscaled.ModelParameters.Abdominal;
       AnyFunTransform3D &Scale = ...Scaling.GeometricalScaling.Lumbar.ScaleFunction;
