@@ -28,7 +28,7 @@ AnyFolder Cal ={
    AnyFloat Angles = farr(-pi/2,pi/7,8);
    AnyFloat CalculatedPoints = {RadiusOneEllipsoid[0]*sin(Angles)+Center[0],._y*ones(1,8)[0],RadiusOneEllipsoid[2]*cos(Angles)+Center[2]}'  ;
   
-  
+
 // AnyFixedRefFrame Visual_Debug ={
 //    
 //    
