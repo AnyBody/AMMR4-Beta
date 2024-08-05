@@ -18,7 +18,7 @@ concurrency:
 
 jobs:
   test-windows:
-    if: github.repository == 'anybody/ammr'
+    if: github.repository == 'anybody/ammr4-beta'
     runs-on: windows-latest
 
     strategy:
@@ -37,7 +37,7 @@ jobs:
       - uses: prefix-dev/setup-pixi@v0.8.1
         with:
           environments: test
-          cache-write: ${{ github.event_name == 'push' && github.ref_name == 'master' }}
+          cache-write: ${{ github.event_name == 'push' && github.ref_name == 'ammr4-beta' }}
           activate-environment: test
 
         
@@ -64,9 +64,9 @@ jobs:
 
               
   test-linux:
-    if: github.repository == 'anybody/ammr'
+    if: github.repository == 'anybody/ammr4-beta'
     runs-on: ubuntu-latest
-    container: ghcr.io/anybody/anybodycon-github-actions:8.0.3
+    container: ghcr.io/anybody/anybodycon-github-actions:8.0.5rc1
     env:
       ANYBODY_SUPPRESS_DEPRECATION_MESSAGES: "Off"
 
@@ -84,7 +84,7 @@ jobs:
       - uses: prefix-dev/setup-pixi@v0.8.1
         with:
           environments: test
-          cache-write: ${{ github.event_name == 'push' && github.ref_name == 'master' }}
+          cache-write: ${{ github.event_name == 'push' && github.ref_name == 'ammr4-beta' }}
           activate-environment: test
 
 

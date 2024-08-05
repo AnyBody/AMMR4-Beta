@@ -19,11 +19,27 @@ AnyFolder ExtraDrivers = {
   RotationPenetrationCombiDriver ToeDriverRight (
       TARGET_FRAME = Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.Toe1.DistalPhalange1.ToeTip,
       NEUTRAL_ANGLE_MEASURE = Main.HumanModel.BodyModel.Interface.Right.MetatarsoPhalangeal1DorsiFlexion
-      ) = {};
+      ) = {Corners = {
+                       Main.EnvironmentModel.ForcePlates.Plate1.SurfaceCorner_c04,
+                       Main.EnvironmentModel.ForcePlates.Plate1.SurfaceCorner_c03,
+                       Main.EnvironmentModel.ForcePlates.Plate1.SurfaceCorner_c02,
+                       Main.EnvironmentModel.ForcePlates.Plate1.SurfaceCorner_c01,
+                    };
+            Settings.UsePlaneBordersForBoundsCheck = 0;
+            Settings.DepthLowerLimit = 0.01;
+          };
   RotationPenetrationCombiDriver ToeDriverLeft (
       TARGET_FRAME = Main.HumanModel.BodyModel.Left.Leg.Seg.Foot.Toe1.DistalPhalange1.ToeTip,
       NEUTRAL_ANGLE_MEASURE =  Main.HumanModel.BodyModel.Interface.Left.MetatarsoPhalangeal1DorsiFlexion
-      ) = {};
+      ) = {Corners = {
+                       Main.EnvironmentModel.ForcePlates.Plate1.SurfaceCorner_c04,
+                       Main.EnvironmentModel.ForcePlates.Plate1.SurfaceCorner_c03,
+                       Main.EnvironmentModel.ForcePlates.Plate1.SurfaceCorner_c02,
+                       Main.EnvironmentModel.ForcePlates.Plate1.SurfaceCorner_c01,
+                    };
+            Settings.UsePlaneBordersForBoundsCheck = 0;
+            Settings.DepthLowerLimit = 0.01;
+          };
 
   
   

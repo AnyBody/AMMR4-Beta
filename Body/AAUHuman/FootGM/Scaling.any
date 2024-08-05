@@ -170,13 +170,15 @@ AnyFolder InterfaceMorphingDef = {
 };// Interface Morphing
 
 AnyFunTransform3D Scale = {
+  AnyFunTransform3D& GeomScale = ...GeoScaling.Foot.ScaleFunction;
   AnyFolder ScaleAfterInterfaceMorphingDef = {
     #define MACRO_CONSTRUCT_ANATOMICAL_FRAME_s(p, SIGN) 0.5*(p[0]+p[1])
     #define MACRO_CONSTRUCT_ANATOMICAL_FRAME_A(p, SIGN) RotMat(0.5*(p[0]+p[1]),0.5*(p[0]+p[1]) + cross(p[4]-p[3],p[5]-p[3])*SIGN, p[2]) * RotMat(-0.5*pi,z) * RotMat(1*pi,y)
 
     AnyFloat pUnscaled = ..InterfaceMorphingDef.IM_Foot_GM_To_TLEM(..pUnscaled);
-    AnyFunTransform3D& GeomScale = ....GeoScaling.Foot.ScaleFunction;
+    AnyFunTransform3D& GeomScale = .GeomScale;
     AnyVar Sign = ..Sign;
+    Scale = {AnyFunTransform3D& GeomScale = .GeomScale;};
     
     #include "..\Scaling\SegScaleFunWrtAnatomicalFrame.any"
     #undef MACRO_CONSTRUCT_ANATOMICAL_FRAME_s

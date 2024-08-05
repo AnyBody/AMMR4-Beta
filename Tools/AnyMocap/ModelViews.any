@@ -18,7 +18,7 @@ Views = {
         Objects = ObjSearchRecursive("Main.ModelSetup.MocapDrivers","*", "AnyDrawObject");
       };
       AnyDrawGroup All_MarkerArrows = {
-        Objects = ObjSearchRecursive("Main.HumanModel.BodyModel","Arrows.*", "AnyDrawVector");
+        Objects = ObjSearchRecursive("Main.HumanModel.BodyModel","Arrow*", "AnyDrawVector");
       };
       AnyDrawGroup All_Human ={
         Objects = set_difference( ObjSearchRecursive("Main.HumanModel","*", "AnyDrawObject"), .All_Muscles.Objects, .All_MarkerArrows.Objects, .ForceRelatedObjects.Objects);
@@ -31,8 +31,11 @@ Views = {
       };
       AnyDrawGroup All_Muscles = 
       {
-        Objects = arrcat( ObjSearchRecursive("Main.HumanModel.BodyModel","*", "AnyDrawMuscle"),
-                          ObjSearchRecursive("Main.HumanModel.BodyModel.Trunk.Buckle", "*", "AnyDrawParamSurf"));
+        Objects = arrcat(
+          ObjSearchRecursive("Main.HumanModel.BodyModel","*", "AnyDrawMuscle"),
+          ObjSearchRecursive("Main.HumanModel.BodyModel.Trunk.Buckle", "*", "AnyDrawParamSurf"),
+          ObjSearchRecursive("Main.HumanModel.BodyModel.Trunk.Abdominal.Volumes","*", "AnyDrawKinMeasure"),
+        );
       };
       
       AnyDrawGroup All_StickFigure = 
