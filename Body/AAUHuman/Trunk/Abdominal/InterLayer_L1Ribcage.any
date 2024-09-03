@@ -35,8 +35,8 @@ AnyFolder Inter_Layer_L1Ribcage = {
         Node_sRels =....Diaphragm.CavitySeg.LayerConstraintNodes.Nodes_Below_Layer.Node_sRels; 
         NodeDefaults.CreateMotionOutput.r = On;
       };
-      
     };
+    AnyRefNode Xiphoid_Diaphragm = {sRel = ...Diaphragm.CavitySeg.Xiphoid_Diaphragm.sRel;}; 
   };
   
   AnyFolder &Data =...Trunk.Data.unscaled.ModelParameters.Abdominal.Layer_L1;    
@@ -65,14 +65,14 @@ AnyFolder Inter_Layer_L1Ribcage = {
   {
     AnyKinMeasureOrg BaseSegAnteriorDOFMeasurs = {
       AnyKinLinear lin = {
-        Ref = 0;
-        AnyRefNode &ref1 = ....Diaphragm.CavitySeg.LayerConstraintNodes.Nodes_Below_Layer._node0005;
-        AnyRefNode &ref2 = ...BaseSegAnterior.LayerConstraintNodes.Nodes_Above_Layer._node0005; 
+        Ref = 0; 
+        AnyRefNode &ref1 = ....Diaphragm.CavitySeg.Xiphoid_Diaphragm;
+        AnyRefNode &ref2 = ...BaseSegAnterior.Xiphoid_Diaphragm; 
       };
       AnyKinRotational rot = {
         Type = RotAxesAngles;
-        AnyRefNode &ref1 = ....Diaphragm.CavitySeg.LayerConstraintNodes.Nodes_Below_Layer._node0005;
-        AnyRefNode &ref2 = ...BaseSegAnterior.LayerConstraintNodes.Nodes_Above_Layer._node0005; 
+        AnyRefNode &ref1 = ....Diaphragm.CavitySeg.Xiphoid_Diaphragm;
+        AnyRefNode &ref2 = ...BaseSegAnterior.Xiphoid_Diaphragm; 
       };
       MeasureOrganizer = {1,2,3,4,5};
     };
@@ -82,15 +82,15 @@ AnyFolder Inter_Layer_L1Ribcage = {
   // Force connection for BaseSegAnterior 
   AnyReacForce BaseSegAnteriorKinetic = {
     AnyKinLinear lin = {
-      Ref = 0;
-      AnyRefNode &ant = ...Diaphragm.CavitySeg.LayerConstraintNodes;
-      AnyRefNode &pos = ..BaseSegAnterior.LayerConstraintNodes; 
+      Ref = 0; 
+      AnyRefNode &ref1 = ...Diaphragm.CavitySeg.Xiphoid_Diaphragm;
+      AnyRefNode &ref2 = ..BaseSegAnterior.Xiphoid_Diaphragm; 
     };
     AnyKinRotational rot = {
       Type = RotAxesAngles;
-      AnyRefNode &ant = ...Diaphragm.CavitySeg.LayerConstraintNodes;
-      AnyRefNode &pos = ..BaseSegAnterior.LayerConstraintNodes; 
+      AnyRefNode &ref1 = ...Diaphragm.CavitySeg.Xiphoid_Diaphragm;
+      AnyRefNode &ref2 = ..BaseSegAnterior.Xiphoid_Diaphragm; 
     };
   };
-};
+}; // End of Inter_Layer_L1Ribcage
 
