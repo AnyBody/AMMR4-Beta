@@ -64,13 +64,13 @@ AnyFolder Inter_Layer_PelvisL5 = {
     AnyKinMeasureOrg Measurs = {
       AnyKinLinear lin = {
         Ref = 0;
-        AnyRefNode &ref1 = ....Layer_Pelvic1.BaseSegAnterior.LayerConstraintNodes.Nodes_Above_Layer._node0005;
-        AnyRefNode &ref2 = ...BaseSegAnterior.LayerConstraintNodes.Nodes_Below_Layer._node0005; 
+        AnyRefNode &ref1 = ....Layer_Pelvic1.BaseSegAnterior.LayerConstraintNodes.Nodes_Above_Layer;
+        AnyRefNode &ref2 = ...BaseSegAnterior.LayerConstraintNodes.Nodes_Below_Layer; 
       };
       AnyKinRotational rot = {
         Type = RotAxesAngles;
-        AnyRefNode &ref1 = ....Layer_Pelvic1.BaseSegAnterior.LayerConstraintNodes.Nodes_Above_Layer._node0005;
-        AnyRefNode &ref2 = ...BaseSegAnterior.LayerConstraintNodes.Nodes_Below_Layer._node0005; 
+        AnyRefNode &ref1 = ....Layer_Pelvic1.BaseSegAnterior.LayerConstraintNodes.Nodes_Above_Layer;
+        AnyRefNode &ref2 = ...BaseSegAnterior.LayerConstraintNodes.Nodes_Below_Layer; 
       };
       MeasureOrganizer = {1,2,3,4,5};
     };
