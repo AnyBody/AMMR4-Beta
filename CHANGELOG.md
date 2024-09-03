@@ -64,24 +64,67 @@ The default pelvis model used in all models have changed. The pelvis morphology 
   In practice, this means that the morphology of the leg pelvis is moprhed to match the Trunk pelvis.
   Using `_MORPH_TRUNK_TO_LEG_` instead will revert to the old behaviour. 
 
+(ammr-3.0.5-changelog)=
+## AMMR 3.0.5 (2024-??-??)
 
-(ammr-3.0.2-changelog)=
-## AMMR 3.0.2 (2024-**-**)
+### ➕ Added:
+* Added a small class template, [`CreateCoMRefNode`](#Utilities.center-of-mass.createcomrefnode.createcomrefnode),
+  that can be used to create a reference node at the center of mass of a segment with its axes aligned with
+  the principal axes of inertia of the segment.
 
 ### 🩹 Fixed:
-* Fixed default limits in [Range of Motion limits](#Utilities.Kinematic-limits.RangeOfMotionLimits_template.any) class template. The default limits for PelvisThoraxExtension, PelvisThoraxLateralBending,
-  Right/LeftWristFlexion had the upper and lower limits flipped. This is now fixed and a check is added in the class template to catch this kind of error.
-* Fixed a penetration warning for the pectoralis muscles when the thoracic segments is scaled very non-uniformly.
-  The fix involves a small (5 deg) adjustments to the orientation of the pectoralis wrapping surface. 
+* Fixed an issue that prevented switching off drawing of marker arrows in CreateMarkerDriverClass in MoCap models. Updated the search string
+  used in `Main.ModelSetup.Views.All_MarkerArrows.Objects` to correctly pick up the arrow drawing objects.
+
+### 🔧 Changed:
+* Changed the Human-Ground residual implmentation in the MoCap models to use
+  rotatinal measures configured for measuring angual velocities. This change
+  should make the resiuals more robust, and the residual output easier to
+  interpret geometrically. Otherwise, this should not change results. 
+* The Force plates are no longer included in the parameter identification study.
+  It wasn't needed, and this change may speed up the parameter identification
+  process slightly.
+
+
+(ammr-3.0.4-changelog)=
+## AMMR 3.0.4 (2024-07-02)
+[![Zenodo link](https://zenodo.org/badge/DOI/10.5281/zenodo.12592455.svg)](https://doi.org/10.5281/zenodo.12592455)
+
+[![AnyBody link](https://img.shields.io/badge/Included_with_AnyBody-8.0.4-yellowgreen)](https://www.anybodytech.com/resources/customer-downloads/)
+
+### 🩹 Fixed:
+* Fixed an issue in the {ref}`Bike Model example <example_bikemodel>` that
+  included thoracic support in the full body model also.
+* Fixed an issue with the visualization of the marker coordinate system arrows. They now
+  correctly update while running running parameter identification in the MoCap models.
+
+(ammr-3.0.3-changelog)=
+## AMMR 3.0.3 (2024-06-10)
+[![Zenodo link](https://zenodo.org/badge/DOI/10.5281/zenodo.11191711.svg)](https://doi.org/10.5281/zenodo.11191711)
+
+[![AnyBody link](https://img.shields.io/badge/Included_with_AnyBody-8.0.3-yellowgreen)](https://www.anybodytech.com/resources/customer-downloads/)
+
+### 🩹 Fixed:
+* Fixed a penetration warning for the pectoralis muscles when the thoracic
+  segments are scaled very non-uniformly. The fix involves a small (5 deg)
+  adjustment to the orientation of the pectoralis wrapping surface.
+* Fixed default limits in [Range of Motion limits](#Utilities.Kinematic-limits.RangeOfMotionLimits_template.any)
+  class template. The default limits for PelvisThoraxExtension, PelvisThoraxLateralBending,
+  Right/LeftWristFlexion had the upper and lower limits flipped. This is now fixed and a 
+  check is added in the class template to catch this kind of error.
 * Fixed an issue where blinking Windows would appear when loading models stored
   in git repositories. This issue was caused by a python subprocess that queried
   the git repository for branch information.
 * Updated the foot marker position in the Xsens protocol to accommodate the
   changes made to the foot anatomical frame in the TLEM 2.2 leg model. The
-  R/LTOE and R/LTOE2 markers have been moved upwards by 1.5 cm. 
+  R/LTOE and R/LTOE2 markers have been moved upwards by 1.5 cm.
 
 (ammr-3.0.1-changelog)=
 ## AMMR 3.0.1 (2024-02-13)
+[![Zenodo link](https://zenodo.org/badge/DOI/10.5281/zenodo.10803883.svg)](https://doi.org/10.5281/zenodo.10803883)
+
+[![AnyBody link](https://img.shields.io/badge/Included_with_AnyBody-8.0.1-yellowgreen)](https://www.anybodytech.com/download/anybodysetup-8-0-1-11638_x64/)
+
 
 This minor release of AMMR contains no updates to the models compared to the major AMMR 3.0.0 released the previous month. It only has a few minor changes to the documentation and new tolerances in the FDK models. 
 
@@ -95,7 +138,7 @@ This minor release of AMMR contains no updates to the models compared to the maj
 (ammr-3.0-changelog)=
 ## AMMR 3.0 (2024-02-13)
 [![Zenodo link](https://zenodo.org/badge/DOI/10.5281/zenodo.10527958.svg)](https://doi.org/10.5281/zenodo.10527958)
-[![AnyBody link](https://img.shields.io/badge/Included_with_AnyBody-8.0.0-yellowgreen)](https://www.anybodytech.com/resources/customer-downloads/)
+[![AnyBody link](https://img.shields.io/badge/Included_with_AnyBody-8.0.0-yellowgreen)](https://www.anybodytech.com/download/anybodysetup-8-0-0-11540_x64/)
 
 
 ### ✨ Highlights 
@@ -1790,7 +1833,7 @@ the driver values are updated.
 - The model is versioned TLEM 2.1, to indicate the number of changes and
   correction which has been added in the process. The changes and updates to the
   TLEM2 dataset was done in the [Life Long
-  Joints](https://web.archive.org/web/20230323035759/https://lifelongjoints.eu/)
+  Joints](https://web.archive.org/web/20230108081423/https://lifelongjoints.eu/)
   EU research project (paper submitted for publication).
 
 - The most important changes to the TLEM 2 dataset include the following:
