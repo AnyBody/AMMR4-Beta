@@ -1039,7 +1039,7 @@ AnyFolder Abdominal={
     AnyRecruitedActuator LayerMomentReactionsNonPositive = {
       AnyKinMeasureOrg &Measures = .LayerMomentReactionsNonNegative.Measures;
       Type = NonPositive;
-      Strength = 10;
+      Strength = .LayerMomentReactionsNonNegative.Strength;
       SET_DEFAULT_ACTUATOR_VOLUME;
     };
     
