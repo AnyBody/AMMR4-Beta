@@ -509,8 +509,8 @@ AnyFolder Abdominal={
     #include "Layer.any"
 
    AnyFolder LayerConstraints ={
-        AnyVar K_top =1;
-        AnyVar K_bot =5;
+        AnyVar K_top =2;
+        AnyVar K_bot =1;
 
       
         #ifdef RECTUS_MUSCLE_LINE_CONTROL 
@@ -657,7 +657,7 @@ AnyFolder Abdominal={
     AnyFolder &layer_below_inertia = .Layer_Pelvic1.CavitySegAnterior; 
     #include "Layer.any"
     AnyFolder LayerConstraints ={
-      AnyVar K_top =5;
+      AnyVar K_top =1;
       AnyVar K_bot =1;
    
         #ifdef RECTUS_MUSCLE_LINE_CONTROL
@@ -767,7 +767,7 @@ AnyFolder Abdominal={
   
   
   AnyFolder Layer_Pelvic1 = {
-    AnyVar K_top =5;
+    AnyVar K_top =1;
     AnyVar K_bot =1;
     
     AnyFolder &Data = ...Trunk.Data.unscaled.ModelParameters.Abdominal.Layer_L5;
