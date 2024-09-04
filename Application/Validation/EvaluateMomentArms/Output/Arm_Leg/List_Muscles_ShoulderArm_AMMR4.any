@@ -1,0 +1,542 @@
+AnyString shoulder_arm_muscle_folder = "Main.HumanModel.BodyModel." + Side + ".ShoulderArm.Mus.";
+
+AcromioClavicularJoint = {
+  AnyObjectPtr List = arrcat(
+arrcat(
+arrcat(
+    ObjSearch(.shoulder_arm_muscle_folder + "Sternocleidomastoid_caput_clavicular"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Triceps_LH_1"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Triceps_LH_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "biceps_brachii_caput_breve"),
+    ObjSearch(.shoulder_arm_muscle_folder + "biceps_brachii_caput_longum"),
+    ObjSearch(.shoulder_arm_muscle_folder + "coracobrachialis_1"),
+    ObjSearch(.shoulder_arm_muscle_folder + "coracobrachialis_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "coracobrachialis_3"),
+    ObjSearch(.shoulder_arm_muscle_folder + "coracobrachialis_4"),
+    ObjSearch(.shoulder_arm_muscle_folder + "coracobrachialis_5")
+),
+arrcat(
+    ObjSearch(.shoulder_arm_muscle_folder + "coracobrachialis_6"),
+    ObjSearch(.shoulder_arm_muscle_folder + "deltoideus_anterior_part_1"),
+    ObjSearch(.shoulder_arm_muscle_folder + "deltoideus_anterior_part_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "deltoideus_anterior_part_3"),
+    ObjSearch(.shoulder_arm_muscle_folder + "deltoideus_anterior_part_4"),
+    ObjSearch(.shoulder_arm_muscle_folder + "deltoideus_lateral_part_1"),
+    ObjSearch(.shoulder_arm_muscle_folder + "deltoideus_lateral_part_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "deltoideus_lateral_part_3"),
+    ObjSearch(.shoulder_arm_muscle_folder + "deltoideus_lateral_part_4"),
+    ObjSearch(.shoulder_arm_muscle_folder + "deltoideus_posterior_part_1")
+),
+arrcat(
+    ObjSearch(.shoulder_arm_muscle_folder + "deltoideus_posterior_part_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "deltoideus_posterior_part_3"),
+    ObjSearch(.shoulder_arm_muscle_folder + "deltoideus_posterior_part_4"),
+    ObjSearch(.shoulder_arm_muscle_folder + "infraspinatus_1"),
+    ObjSearch(.shoulder_arm_muscle_folder + "infraspinatus_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "infraspinatus_3"),
+    ObjSearch(.shoulder_arm_muscle_folder + "infraspinatus_4"),
+    ObjSearch(.shoulder_arm_muscle_folder + "infraspinatus_5"),
+    ObjSearch(.shoulder_arm_muscle_folder + "infraspinatus_6"),
+    ObjSearch(.shoulder_arm_muscle_folder + "latissimus_dorsi_1")
+),
+arrcat(
+    ObjSearch(.shoulder_arm_muscle_folder + "latissimus_dorsi_10"),
+    ObjSearch(.shoulder_arm_muscle_folder + "latissimus_dorsi_11"),
+    ObjSearch(.shoulder_arm_muscle_folder + "latissimus_dorsi_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "latissimus_dorsi_3"),
+    ObjSearch(.shoulder_arm_muscle_folder + "latissimus_dorsi_4"),
+    ObjSearch(.shoulder_arm_muscle_folder + "latissimus_dorsi_5"),
+    ObjSearch(.shoulder_arm_muscle_folder + "latissimus_dorsi_6"),
+    ObjSearch(.shoulder_arm_muscle_folder + "latissimus_dorsi_7"),
+    ObjSearch(.shoulder_arm_muscle_folder + "latissimus_dorsi_8"),
+    ObjSearch(.shoulder_arm_muscle_folder + "latissimus_dorsi_9")
+),
+arrcat(
+    ObjSearch(.shoulder_arm_muscle_folder + "levator_scapulae_1"),
+    ObjSearch(.shoulder_arm_muscle_folder + "levator_scapulae_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "levator_scapulae_3"),
+    ObjSearch(.shoulder_arm_muscle_folder + "levator_scapulae_4"),
+    ObjSearch(.shoulder_arm_muscle_folder + "pectoralis_major_clavicular_part_1"),
+    ObjSearch(.shoulder_arm_muscle_folder + "pectoralis_major_clavicular_part_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "pectoralis_major_clavicular_part_3"),
+    ObjSearch(.shoulder_arm_muscle_folder + "pectoralis_major_clavicular_part_4"),
+    ObjSearch(.shoulder_arm_muscle_folder + "pectoralis_major_clavicular_part_5"),
+    ObjSearch(.shoulder_arm_muscle_folder + "pectoralis_major_thoracic_part_1")
+),
+arrcat(
+    ObjSearch(.shoulder_arm_muscle_folder + "pectoralis_major_thoracic_part_10"),
+    ObjSearch(.shoulder_arm_muscle_folder + "pectoralis_major_thoracic_part_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "pectoralis_major_thoracic_part_3"),
+    ObjSearch(.shoulder_arm_muscle_folder + "pectoralis_major_thoracic_part_4"),
+    ObjSearch(.shoulder_arm_muscle_folder + "pectoralis_major_thoracic_part_5"),
+    ObjSearch(.shoulder_arm_muscle_folder + "pectoralis_major_thoracic_part_6"),
+    ObjSearch(.shoulder_arm_muscle_folder + "pectoralis_major_thoracic_part_7"),
+    ObjSearch(.shoulder_arm_muscle_folder + "pectoralis_major_thoracic_part_8"),
+    ObjSearch(.shoulder_arm_muscle_folder + "pectoralis_major_thoracic_part_9"),
+    ObjSearch(.shoulder_arm_muscle_folder + "pectoralis_minor_1")
+),
+arrcat(
+    ObjSearch(.shoulder_arm_muscle_folder + "pectoralis_minor_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "pectoralis_minor_3"),
+    ObjSearch(.shoulder_arm_muscle_folder + "rhomboideus_1"),
+    ObjSearch(.shoulder_arm_muscle_folder + "rhomboideus_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "rhomboideus_3"),
+    ObjSearch(.shoulder_arm_muscle_folder + "rhomboideus_4"),
+    ObjSearch(.shoulder_arm_muscle_folder + "rhomboideus_5"),
+    ObjSearch(.shoulder_arm_muscle_folder + "rhomboideus_6"),
+    ObjSearch(.shoulder_arm_muscle_folder + "serratus_anterior_1"),
+    ObjSearch(.shoulder_arm_muscle_folder + "serratus_anterior_2")
+),
+arrcat(
+    ObjSearch(.shoulder_arm_muscle_folder + "serratus_anterior_3"),
+    ObjSearch(.shoulder_arm_muscle_folder + "serratus_anterior_4"),
+    ObjSearch(.shoulder_arm_muscle_folder + "serratus_anterior_5"),
+    ObjSearch(.shoulder_arm_muscle_folder + "serratus_anterior_6"),
+    ObjSearch(.shoulder_arm_muscle_folder + "serratus_anterior_7"),
+    ObjSearch(.shoulder_arm_muscle_folder + "serratus_anterior_8"),
+    ObjSearch(.shoulder_arm_muscle_folder + "serratus_anterior_9"),
+    ObjSearch(.shoulder_arm_muscle_folder + "subscapularis_1"),
+    ObjSearch(.shoulder_arm_muscle_folder + "subscapularis_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "subscapularis_3")
+),
+arrcat(
+    ObjSearch(.shoulder_arm_muscle_folder + "subscapularis_4"),
+    ObjSearch(.shoulder_arm_muscle_folder + "subscapularis_5"),
+    ObjSearch(.shoulder_arm_muscle_folder + "subscapularis_6"),
+    ObjSearch(.shoulder_arm_muscle_folder + "supraspinatus_1"),
+    ObjSearch(.shoulder_arm_muscle_folder + "supraspinatus_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "supraspinatus_3"),
+    ObjSearch(.shoulder_arm_muscle_folder + "supraspinatus_4"),
+    ObjSearch(.shoulder_arm_muscle_folder + "supraspinatus_5"),
+    ObjSearch(.shoulder_arm_muscle_folder + "supraspinatus_6"),
+    ObjSearch(.shoulder_arm_muscle_folder + "teres_major_1")
+),
+arrcat(
+    ObjSearch(.shoulder_arm_muscle_folder + "teres_major_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "teres_major_3"),
+    ObjSearch(.shoulder_arm_muscle_folder + "teres_major_4"),
+    ObjSearch(.shoulder_arm_muscle_folder + "teres_major_5"),
+    ObjSearch(.shoulder_arm_muscle_folder + "teres_major_6"),
+    ObjSearch(.shoulder_arm_muscle_folder + "teres_minor_1"),
+    ObjSearch(.shoulder_arm_muscle_folder + "teres_minor_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "teres_minor_3"),
+    ObjSearch(.shoulder_arm_muscle_folder + "teres_minor_4"),
+    ObjSearch(.shoulder_arm_muscle_folder + "teres_minor_5")
+)
+),
+arrcat(
+arrcat(
+    ObjSearch(.shoulder_arm_muscle_folder + "teres_minor_6"),
+    ObjSearch(.shoulder_arm_muscle_folder + "trapezius_clavicular_part_1"),
+    ObjSearch(.shoulder_arm_muscle_folder + "trapezius_clavicular_part_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "trapezius_clavicular_part_3"),
+    ObjSearch(.shoulder_arm_muscle_folder + "trapezius_clavicular_part_4"),
+    ObjSearch(.shoulder_arm_muscle_folder + "trapezius_clavicular_part_5"),
+    ObjSearch(.shoulder_arm_muscle_folder + "trapezius_clavicular_part_6"),
+    ObjSearch(.shoulder_arm_muscle_folder + "trapezius_scapular_part_1"),
+    ObjSearch(.shoulder_arm_muscle_folder + "trapezius_scapular_part_10"),
+    ObjSearch(.shoulder_arm_muscle_folder + "trapezius_scapular_part_11")
+),
+arrcat(
+    ObjSearch(.shoulder_arm_muscle_folder + "trapezius_scapular_part_12"),
+    ObjSearch(.shoulder_arm_muscle_folder + "trapezius_scapular_part_13"),
+    ObjSearch(.shoulder_arm_muscle_folder + "trapezius_scapular_part_14"),
+    ObjSearch(.shoulder_arm_muscle_folder + "trapezius_scapular_part_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "trapezius_scapular_part_3"),
+    ObjSearch(.shoulder_arm_muscle_folder + "trapezius_scapular_part_4"),
+    ObjSearch(.shoulder_arm_muscle_folder + "trapezius_scapular_part_5"),
+    ObjSearch(.shoulder_arm_muscle_folder + "trapezius_scapular_part_6"),
+    ObjSearch(.shoulder_arm_muscle_folder + "trapezius_scapular_part_7"),
+    ObjSearch(.shoulder_arm_muscle_folder + "trapezius_scapular_part_8")
+),
+arrcat(
+    ObjSearch(.shoulder_arm_muscle_folder + "trapezius_scapular_part_9")
+)
+)
+);
+};
+
+ElbowJoint = {
+  AnyObjectPtr List = arrcat(
+arrcat(
+    ObjSearch(.shoulder_arm_muscle_folder + "Anconeus_1"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Anconeus_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Brach_rad_1"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Brach_rad_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Brachialis_1"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Brachialis_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Extensor_Carpi_Radialis_Brevis"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Extensor_Carpi_Radialis_Longus"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Extensor_Carpi_Ulnaris"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Extensor_Digiti_Minimi")
+),
+arrcat(
+    ObjSearch(.shoulder_arm_muscle_folder + "Extensor_Digitorum__Digit2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Extensor_Digitorum__Digit3"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Extensor_Digitorum__Digit4"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Extensor_Digitorum__Digit5"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Flexor_Carpi_Radialis"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Flexor_Carpi_Ulnaris"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Flexor_Digitorum_Superficialis__Digit2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Flexor_Digitorum_Superficialis__Digit3"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Flexor_Digitorum_Superficialis__Digit4"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Flexor_Digitorum_Superficialis__Digit5")
+),
+arrcat(
+    ObjSearch(.shoulder_arm_muscle_folder + "Palmaris_Longus"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Pronator_teres_caput_humeral_1"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Pronator_teres_caput_humeral_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Supinator_humerus_part_1"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Supinator_humerus_part_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Triceps_LA_1"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Triceps_LA_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Triceps_LH_1"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Triceps_LH_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Triceps_ME_1")
+),
+arrcat(
+    ObjSearch(.shoulder_arm_muscle_folder + "Triceps_ME_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "biceps_brachii_caput_breve"),
+    ObjSearch(.shoulder_arm_muscle_folder + "biceps_brachii_caput_longum")
+)
+);
+};
+
+PronationJoint = {
+  AnyObjectPtr List = arrcat(
+arrcat(
+    ObjSearch(.shoulder_arm_muscle_folder + "Abductor_Pollicis_Longus"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Brach_rad_1"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Brach_rad_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Extensor_Carpi_Radialis_Brevis"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Extensor_Carpi_Radialis_Longus"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Extensor_Carpi_Ulnaris"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Extensor_Digiti_Minimi"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Extensor_Digitorum__Digit2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Extensor_Digitorum__Digit3"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Extensor_Digitorum__Digit4")
+),
+arrcat(
+    ObjSearch(.shoulder_arm_muscle_folder + "Extensor_Digitorum__Digit5"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Extensor_Indicis"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Extensor_Pollicis_Longus"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Flexor_Carpi_Radialis"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Flexor_Carpi_Ulnaris"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Flexor_Digitorum_Profundus__Digit2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Flexor_Digitorum_Profundus__Digit3"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Flexor_Digitorum_Profundus__Digit4"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Flexor_Digitorum_Profundus__Digit5"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Flexor_Digitorum_Superficialis__Digit2")
+),
+arrcat(
+    ObjSearch(.shoulder_arm_muscle_folder + "Flexor_Digitorum_Superficialis__Digit3"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Flexor_Digitorum_Superficialis__Digit4"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Flexor_Digitorum_Superficialis__Digit5"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Palmaris_Longus"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Pron_quadr_1"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Pron_quadr_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Pronator_teres_caput_humeral_1"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Pronator_teres_caput_humeral_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Pronator_teres_caput_ulnare_1"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Supinator_humerus_part_1")
+),
+arrcat(
+    ObjSearch(.shoulder_arm_muscle_folder + "Supinator_humerus_part_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Supinator_ulna_part_1"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Supinator_ulna_part_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "biceps_brachii_caput_breve"),
+    ObjSearch(.shoulder_arm_muscle_folder + "biceps_brachii_caput_longum")
+)
+);
+};
+
+GlenohumeralJoint = {
+  AnyObjectPtr List = arrcat(
+arrcat(
+    ObjSearch(.shoulder_arm_muscle_folder + "Triceps_LH_1"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Triceps_LH_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "biceps_brachii_caput_breve"),
+    ObjSearch(.shoulder_arm_muscle_folder + "biceps_brachii_caput_longum"),
+    ObjSearch(.shoulder_arm_muscle_folder + "coracobrachialis_1"),
+    ObjSearch(.shoulder_arm_muscle_folder + "coracobrachialis_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "coracobrachialis_3"),
+    ObjSearch(.shoulder_arm_muscle_folder + "coracobrachialis_4"),
+    ObjSearch(.shoulder_arm_muscle_folder + "coracobrachialis_5"),
+    ObjSearch(.shoulder_arm_muscle_folder + "coracobrachialis_6")
+),
+arrcat(
+    ObjSearch(.shoulder_arm_muscle_folder + "deltoideus_anterior_part_1"),
+    ObjSearch(.shoulder_arm_muscle_folder + "deltoideus_anterior_part_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "deltoideus_anterior_part_3"),
+    ObjSearch(.shoulder_arm_muscle_folder + "deltoideus_anterior_part_4"),
+    ObjSearch(.shoulder_arm_muscle_folder + "deltoideus_lateral_part_1"),
+    ObjSearch(.shoulder_arm_muscle_folder + "deltoideus_lateral_part_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "deltoideus_lateral_part_3"),
+    ObjSearch(.shoulder_arm_muscle_folder + "deltoideus_lateral_part_4"),
+    ObjSearch(.shoulder_arm_muscle_folder + "deltoideus_posterior_part_1"),
+    ObjSearch(.shoulder_arm_muscle_folder + "deltoideus_posterior_part_2")
+),
+arrcat(
+    ObjSearch(.shoulder_arm_muscle_folder + "deltoideus_posterior_part_3"),
+    ObjSearch(.shoulder_arm_muscle_folder + "deltoideus_posterior_part_4"),
+    ObjSearch(.shoulder_arm_muscle_folder + "infraspinatus_1"),
+    ObjSearch(.shoulder_arm_muscle_folder + "infraspinatus_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "infraspinatus_3"),
+    ObjSearch(.shoulder_arm_muscle_folder + "infraspinatus_4"),
+    ObjSearch(.shoulder_arm_muscle_folder + "infraspinatus_5"),
+    ObjSearch(.shoulder_arm_muscle_folder + "infraspinatus_6"),
+    ObjSearch(.shoulder_arm_muscle_folder + "latissimus_dorsi_1"),
+    ObjSearch(.shoulder_arm_muscle_folder + "latissimus_dorsi_10")
+),
+arrcat(
+    ObjSearch(.shoulder_arm_muscle_folder + "latissimus_dorsi_11"),
+    ObjSearch(.shoulder_arm_muscle_folder + "latissimus_dorsi_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "latissimus_dorsi_3"),
+    ObjSearch(.shoulder_arm_muscle_folder + "latissimus_dorsi_4"),
+    ObjSearch(.shoulder_arm_muscle_folder + "latissimus_dorsi_5"),
+    ObjSearch(.shoulder_arm_muscle_folder + "latissimus_dorsi_6"),
+    ObjSearch(.shoulder_arm_muscle_folder + "latissimus_dorsi_7"),
+    ObjSearch(.shoulder_arm_muscle_folder + "latissimus_dorsi_8"),
+    ObjSearch(.shoulder_arm_muscle_folder + "latissimus_dorsi_9"),
+    ObjSearch(.shoulder_arm_muscle_folder + "pectoralis_major_clavicular_part_1")
+),
+arrcat(
+    ObjSearch(.shoulder_arm_muscle_folder + "pectoralis_major_clavicular_part_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "pectoralis_major_clavicular_part_3"),
+    ObjSearch(.shoulder_arm_muscle_folder + "pectoralis_major_clavicular_part_4"),
+    ObjSearch(.shoulder_arm_muscle_folder + "pectoralis_major_clavicular_part_5"),
+    ObjSearch(.shoulder_arm_muscle_folder + "pectoralis_major_thoracic_part_1"),
+    ObjSearch(.shoulder_arm_muscle_folder + "pectoralis_major_thoracic_part_10"),
+    ObjSearch(.shoulder_arm_muscle_folder + "pectoralis_major_thoracic_part_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "pectoralis_major_thoracic_part_3"),
+    ObjSearch(.shoulder_arm_muscle_folder + "pectoralis_major_thoracic_part_4"),
+    ObjSearch(.shoulder_arm_muscle_folder + "pectoralis_major_thoracic_part_5")
+),
+arrcat(
+    ObjSearch(.shoulder_arm_muscle_folder + "pectoralis_major_thoracic_part_6"),
+    ObjSearch(.shoulder_arm_muscle_folder + "pectoralis_major_thoracic_part_7"),
+    ObjSearch(.shoulder_arm_muscle_folder + "pectoralis_major_thoracic_part_8"),
+    ObjSearch(.shoulder_arm_muscle_folder + "pectoralis_major_thoracic_part_9"),
+    ObjSearch(.shoulder_arm_muscle_folder + "subscapularis_1"),
+    ObjSearch(.shoulder_arm_muscle_folder + "subscapularis_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "subscapularis_3"),
+    ObjSearch(.shoulder_arm_muscle_folder + "subscapularis_4"),
+    ObjSearch(.shoulder_arm_muscle_folder + "subscapularis_5"),
+    ObjSearch(.shoulder_arm_muscle_folder + "subscapularis_6")
+),
+arrcat(
+    ObjSearch(.shoulder_arm_muscle_folder + "supraspinatus_1"),
+    ObjSearch(.shoulder_arm_muscle_folder + "supraspinatus_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "supraspinatus_3"),
+    ObjSearch(.shoulder_arm_muscle_folder + "supraspinatus_4"),
+    ObjSearch(.shoulder_arm_muscle_folder + "supraspinatus_5"),
+    ObjSearch(.shoulder_arm_muscle_folder + "supraspinatus_6"),
+    ObjSearch(.shoulder_arm_muscle_folder + "teres_major_1"),
+    ObjSearch(.shoulder_arm_muscle_folder + "teres_major_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "teres_major_3"),
+    ObjSearch(.shoulder_arm_muscle_folder + "teres_major_4")
+),
+arrcat(
+    ObjSearch(.shoulder_arm_muscle_folder + "teres_major_5"),
+    ObjSearch(.shoulder_arm_muscle_folder + "teres_major_6"),
+    ObjSearch(.shoulder_arm_muscle_folder + "teres_minor_1"),
+    ObjSearch(.shoulder_arm_muscle_folder + "teres_minor_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "teres_minor_3"),
+    ObjSearch(.shoulder_arm_muscle_folder + "teres_minor_4"),
+    ObjSearch(.shoulder_arm_muscle_folder + "teres_minor_5"),
+    ObjSearch(.shoulder_arm_muscle_folder + "teres_minor_6")
+)
+);
+};
+
+SternoClavicularJoint = {
+  AnyObjectPtr List = arrcat(
+arrcat(
+arrcat(
+    ObjSearch(.shoulder_arm_muscle_folder + "Sternocleidomastoid_caput_clavicular"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Triceps_LH_1"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Triceps_LH_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "biceps_brachii_caput_breve"),
+    ObjSearch(.shoulder_arm_muscle_folder + "biceps_brachii_caput_longum"),
+    ObjSearch(.shoulder_arm_muscle_folder + "coracobrachialis_1"),
+    ObjSearch(.shoulder_arm_muscle_folder + "coracobrachialis_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "coracobrachialis_3"),
+    ObjSearch(.shoulder_arm_muscle_folder + "coracobrachialis_4"),
+    ObjSearch(.shoulder_arm_muscle_folder + "coracobrachialis_5")
+),
+arrcat(
+    ObjSearch(.shoulder_arm_muscle_folder + "coracobrachialis_6"),
+    ObjSearch(.shoulder_arm_muscle_folder + "deltoideus_anterior_part_1"),
+    ObjSearch(.shoulder_arm_muscle_folder + "deltoideus_anterior_part_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "deltoideus_anterior_part_3"),
+    ObjSearch(.shoulder_arm_muscle_folder + "deltoideus_anterior_part_4"),
+    ObjSearch(.shoulder_arm_muscle_folder + "deltoideus_lateral_part_1"),
+    ObjSearch(.shoulder_arm_muscle_folder + "deltoideus_lateral_part_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "deltoideus_lateral_part_3"),
+    ObjSearch(.shoulder_arm_muscle_folder + "deltoideus_lateral_part_4"),
+    ObjSearch(.shoulder_arm_muscle_folder + "deltoideus_posterior_part_1")
+),
+arrcat(
+    ObjSearch(.shoulder_arm_muscle_folder + "deltoideus_posterior_part_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "deltoideus_posterior_part_3"),
+    ObjSearch(.shoulder_arm_muscle_folder + "deltoideus_posterior_part_4"),
+    ObjSearch(.shoulder_arm_muscle_folder + "infraspinatus_1"),
+    ObjSearch(.shoulder_arm_muscle_folder + "infraspinatus_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "infraspinatus_3"),
+    ObjSearch(.shoulder_arm_muscle_folder + "infraspinatus_4"),
+    ObjSearch(.shoulder_arm_muscle_folder + "infraspinatus_5"),
+    ObjSearch(.shoulder_arm_muscle_folder + "infraspinatus_6"),
+    ObjSearch(.shoulder_arm_muscle_folder + "latissimus_dorsi_1")
+),
+arrcat(
+    ObjSearch(.shoulder_arm_muscle_folder + "latissimus_dorsi_10"),
+    ObjSearch(.shoulder_arm_muscle_folder + "latissimus_dorsi_11"),
+    ObjSearch(.shoulder_arm_muscle_folder + "latissimus_dorsi_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "latissimus_dorsi_3"),
+    ObjSearch(.shoulder_arm_muscle_folder + "latissimus_dorsi_4"),
+    ObjSearch(.shoulder_arm_muscle_folder + "latissimus_dorsi_5"),
+    ObjSearch(.shoulder_arm_muscle_folder + "latissimus_dorsi_6"),
+    ObjSearch(.shoulder_arm_muscle_folder + "latissimus_dorsi_7"),
+    ObjSearch(.shoulder_arm_muscle_folder + "latissimus_dorsi_8"),
+    ObjSearch(.shoulder_arm_muscle_folder + "latissimus_dorsi_9")
+),
+arrcat(
+    ObjSearch(.shoulder_arm_muscle_folder + "levator_scapulae_1"),
+    ObjSearch(.shoulder_arm_muscle_folder + "levator_scapulae_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "levator_scapulae_3"),
+    ObjSearch(.shoulder_arm_muscle_folder + "levator_scapulae_4"),
+    ObjSearch(.shoulder_arm_muscle_folder + "pectoralis_major_clavicular_part_1"),
+    ObjSearch(.shoulder_arm_muscle_folder + "pectoralis_major_clavicular_part_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "pectoralis_major_clavicular_part_3"),
+    ObjSearch(.shoulder_arm_muscle_folder + "pectoralis_major_clavicular_part_4"),
+    ObjSearch(.shoulder_arm_muscle_folder + "pectoralis_major_clavicular_part_5"),
+    ObjSearch(.shoulder_arm_muscle_folder + "pectoralis_major_thoracic_part_1")
+),
+arrcat(
+    ObjSearch(.shoulder_arm_muscle_folder + "pectoralis_major_thoracic_part_10"),
+    ObjSearch(.shoulder_arm_muscle_folder + "pectoralis_major_thoracic_part_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "pectoralis_major_thoracic_part_3"),
+    ObjSearch(.shoulder_arm_muscle_folder + "pectoralis_major_thoracic_part_4"),
+    ObjSearch(.shoulder_arm_muscle_folder + "pectoralis_major_thoracic_part_5"),
+    ObjSearch(.shoulder_arm_muscle_folder + "pectoralis_major_thoracic_part_6"),
+    ObjSearch(.shoulder_arm_muscle_folder + "pectoralis_major_thoracic_part_7"),
+    ObjSearch(.shoulder_arm_muscle_folder + "pectoralis_major_thoracic_part_8"),
+    ObjSearch(.shoulder_arm_muscle_folder + "pectoralis_major_thoracic_part_9"),
+    ObjSearch(.shoulder_arm_muscle_folder + "pectoralis_minor_1")
+),
+arrcat(
+    ObjSearch(.shoulder_arm_muscle_folder + "pectoralis_minor_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "pectoralis_minor_3"),
+    ObjSearch(.shoulder_arm_muscle_folder + "rhomboideus_1"),
+    ObjSearch(.shoulder_arm_muscle_folder + "rhomboideus_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "rhomboideus_3"),
+    ObjSearch(.shoulder_arm_muscle_folder + "rhomboideus_4"),
+    ObjSearch(.shoulder_arm_muscle_folder + "rhomboideus_5"),
+    ObjSearch(.shoulder_arm_muscle_folder + "rhomboideus_6"),
+    ObjSearch(.shoulder_arm_muscle_folder + "serratus_anterior_1"),
+    ObjSearch(.shoulder_arm_muscle_folder + "serratus_anterior_2")
+),
+arrcat(
+    ObjSearch(.shoulder_arm_muscle_folder + "serratus_anterior_3"),
+    ObjSearch(.shoulder_arm_muscle_folder + "serratus_anterior_4"),
+    ObjSearch(.shoulder_arm_muscle_folder + "serratus_anterior_5"),
+    ObjSearch(.shoulder_arm_muscle_folder + "serratus_anterior_6"),
+    ObjSearch(.shoulder_arm_muscle_folder + "serratus_anterior_7"),
+    ObjSearch(.shoulder_arm_muscle_folder + "serratus_anterior_8"),
+    ObjSearch(.shoulder_arm_muscle_folder + "serratus_anterior_9"),
+    ObjSearch(.shoulder_arm_muscle_folder + "subscapularis_1"),
+    ObjSearch(.shoulder_arm_muscle_folder + "subscapularis_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "subscapularis_3")
+),
+arrcat(
+    ObjSearch(.shoulder_arm_muscle_folder + "subscapularis_4"),
+    ObjSearch(.shoulder_arm_muscle_folder + "subscapularis_5"),
+    ObjSearch(.shoulder_arm_muscle_folder + "subscapularis_6"),
+    ObjSearch(.shoulder_arm_muscle_folder + "supraspinatus_1"),
+    ObjSearch(.shoulder_arm_muscle_folder + "supraspinatus_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "supraspinatus_3"),
+    ObjSearch(.shoulder_arm_muscle_folder + "supraspinatus_4"),
+    ObjSearch(.shoulder_arm_muscle_folder + "supraspinatus_5"),
+    ObjSearch(.shoulder_arm_muscle_folder + "supraspinatus_6"),
+    ObjSearch(.shoulder_arm_muscle_folder + "teres_major_1")
+),
+arrcat(
+    ObjSearch(.shoulder_arm_muscle_folder + "teres_major_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "teres_major_3"),
+    ObjSearch(.shoulder_arm_muscle_folder + "teres_major_4"),
+    ObjSearch(.shoulder_arm_muscle_folder + "teres_major_5"),
+    ObjSearch(.shoulder_arm_muscle_folder + "teres_major_6"),
+    ObjSearch(.shoulder_arm_muscle_folder + "teres_minor_1"),
+    ObjSearch(.shoulder_arm_muscle_folder + "teres_minor_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "teres_minor_3"),
+    ObjSearch(.shoulder_arm_muscle_folder + "teres_minor_4"),
+    ObjSearch(.shoulder_arm_muscle_folder + "teres_minor_5")
+)
+),
+arrcat(
+arrcat(
+    ObjSearch(.shoulder_arm_muscle_folder + "teres_minor_6"),
+    ObjSearch(.shoulder_arm_muscle_folder + "trapezius_clavicular_part_1"),
+    ObjSearch(.shoulder_arm_muscle_folder + "trapezius_clavicular_part_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "trapezius_clavicular_part_3"),
+    ObjSearch(.shoulder_arm_muscle_folder + "trapezius_clavicular_part_4"),
+    ObjSearch(.shoulder_arm_muscle_folder + "trapezius_clavicular_part_5"),
+    ObjSearch(.shoulder_arm_muscle_folder + "trapezius_clavicular_part_6"),
+    ObjSearch(.shoulder_arm_muscle_folder + "trapezius_scapular_part_1"),
+    ObjSearch(.shoulder_arm_muscle_folder + "trapezius_scapular_part_10"),
+    ObjSearch(.shoulder_arm_muscle_folder + "trapezius_scapular_part_11")
+),
+arrcat(
+    ObjSearch(.shoulder_arm_muscle_folder + "trapezius_scapular_part_12"),
+    ObjSearch(.shoulder_arm_muscle_folder + "trapezius_scapular_part_13"),
+    ObjSearch(.shoulder_arm_muscle_folder + "trapezius_scapular_part_14"),
+    ObjSearch(.shoulder_arm_muscle_folder + "trapezius_scapular_part_2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "trapezius_scapular_part_3"),
+    ObjSearch(.shoulder_arm_muscle_folder + "trapezius_scapular_part_4"),
+    ObjSearch(.shoulder_arm_muscle_folder + "trapezius_scapular_part_5"),
+    ObjSearch(.shoulder_arm_muscle_folder + "trapezius_scapular_part_6"),
+    ObjSearch(.shoulder_arm_muscle_folder + "trapezius_scapular_part_7"),
+    ObjSearch(.shoulder_arm_muscle_folder + "trapezius_scapular_part_8")
+),
+arrcat(
+    ObjSearch(.shoulder_arm_muscle_folder + "trapezius_scapular_part_9")
+)
+)
+);
+};
+
+WristJoint = {
+  AnyObjectPtr List = arrcat(
+arrcat(
+    ObjSearch(.shoulder_arm_muscle_folder + "Abductor_Pollicis_Longus"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Extensor_Carpi_Radialis_Brevis"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Extensor_Carpi_Radialis_Longus"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Extensor_Carpi_Ulnaris"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Extensor_Digiti_Minimi"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Extensor_Digitorum__Digit2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Extensor_Digitorum__Digit3"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Extensor_Digitorum__Digit4"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Extensor_Digitorum__Digit5"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Extensor_Indicis")
+),
+arrcat(
+    ObjSearch(.shoulder_arm_muscle_folder + "Extensor_Pollicis_Brevis"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Extensor_Pollicis_Longus"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Flexor_Carpi_Radialis"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Flexor_Carpi_Ulnaris"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Flexor_Digitorum_Profundus__Digit2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Flexor_Digitorum_Profundus__Digit3"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Flexor_Digitorum_Profundus__Digit4"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Flexor_Digitorum_Profundus__Digit5"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Flexor_Digitorum_Superficialis__Digit2"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Flexor_Digitorum_Superficialis__Digit3")
+),
+arrcat(
+    ObjSearch(.shoulder_arm_muscle_folder + "Flexor_Digitorum_Superficialis__Digit4"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Flexor_Digitorum_Superficialis__Digit5"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Flexor_Pollicis_Longus"),
+    ObjSearch(.shoulder_arm_muscle_folder + "Palmaris_Longus")
+)
+);
+};
+

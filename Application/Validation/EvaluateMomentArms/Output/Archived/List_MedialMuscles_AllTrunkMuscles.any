@@ -1,0 +1,203 @@
+#if AMMR_VERSION == 4
+AnyString spine_muscle_folder = "Main.HumanModel.BodyModel.Trunk.Muscles";
+#else
+AnyString spine_muscle_folder = "Main.HumanModel.BodyModel.Trunk.MusclesSpine";
+#endif
+
+PelvisSacrumjnt = {
+  AnyObjectPtr ListAll = ObjSearch("NONE");
+};
+
+L5Sacrumjnt = {
+  AnyObjectPtr ListAll = ObjSearch("NONE");
+};
+
+L4L5jnt = {
+  AnyObjectPtr ListAll = ObjSearch("NONE");
+};
+
+L3L4jnt = {
+  AnyObjectPtr ListAll = ObjSearch("NONE");
+};
+
+L2L3jnt = {
+  AnyObjectPtr ListAll = ObjSearch("NONE");
+};
+
+L1L2jnt = {
+  AnyObjectPtr ListAll = arrcat(
+arrcat(
+    ObjSearch(spine_muscle_folder + ".Spinalis.SPL2T1")
+)
+);
+};
+
+T12L1jnt = {
+  AnyObjectPtr ListAll = arrcat(
+arrcat(
+    ObjSearch(spine_muscle_folder + ".Spinalis.SPL1T2"),
+    ObjSearch(spine_muscle_folder + ".Spinalis.SPL1T3"),
+    ObjSearch(spine_muscle_folder + ".Spinalis.SPL2T1")
+)
+);
+};
+
+T11T12jnt = {
+  AnyObjectPtr ListAll = arrcat(
+arrcat(
+    ObjSearch(spine_muscle_folder + ".Spinalis.SPL1T2"),
+    ObjSearch(spine_muscle_folder + ".Spinalis.SPL1T3"),
+    ObjSearch(spine_muscle_folder + ".Spinalis.SPL2T1"),
+    ObjSearch(spine_muscle_folder + ".Spinalis.SPT12T4"),
+    ObjSearch(spine_muscle_folder + ".Spinalis.SPT12T5")
+)
+);
+};
+
+T10T11jnt = {
+  AnyObjectPtr ListAll = arrcat(
+arrcat(
+    ObjSearch(spine_muscle_folder + ".Spinalis.SPL1T2"),
+    ObjSearch(spine_muscle_folder + ".Spinalis.SPL1T3"),
+    ObjSearch(spine_muscle_folder + ".Spinalis.SPL2T1"),
+    ObjSearch(spine_muscle_folder + ".Spinalis.SPT11T6"),
+    ObjSearch(spine_muscle_folder + ".Spinalis.SPT12T4"),
+    ObjSearch(spine_muscle_folder + ".Spinalis.SPT12T5")
+)
+);
+};
+
+T9T10jnt = {
+  AnyObjectPtr ListAll = arrcat(
+arrcat(
+    ObjSearch(spine_muscle_folder + ".Spinalis.SPL1T2"),
+    ObjSearch(spine_muscle_folder + ".Spinalis.SPL1T3"),
+    ObjSearch(spine_muscle_folder + ".Spinalis.SPL2T1"),
+    ObjSearch(spine_muscle_folder + ".Spinalis.SPT11T6"),
+    ObjSearch(spine_muscle_folder + ".Spinalis.SPT12T4"),
+    ObjSearch(spine_muscle_folder + ".Spinalis.SPT12T5")
+)
+);
+};
+
+T8T9jnt = {
+  AnyObjectPtr ListAll = arrcat(
+arrcat(
+    ObjSearch(spine_muscle_folder + ".Spinalis.SPL1T2"),
+    ObjSearch(spine_muscle_folder + ".Spinalis.SPL1T3"),
+    ObjSearch(spine_muscle_folder + ".Spinalis.SPL2T1"),
+    ObjSearch(spine_muscle_folder + ".Spinalis.SPT11T6"),
+    ObjSearch(spine_muscle_folder + ".Spinalis.SPT12T4"),
+    ObjSearch(spine_muscle_folder + ".Spinalis.SPT12T5")
+)
+);
+};
+
+T7T8jnt = {
+  AnyObjectPtr ListAll = arrcat(
+arrcat(
+    ObjSearch(spine_muscle_folder + ".Spinalis.SPL1T2"),
+    ObjSearch(spine_muscle_folder + ".Spinalis.SPL1T3"),
+    ObjSearch(spine_muscle_folder + ".Spinalis.SPL2T1"),
+    ObjSearch(spine_muscle_folder + ".Spinalis.SPT11T6"),
+    ObjSearch(spine_muscle_folder + ".Spinalis.SPT12T4"),
+    ObjSearch(spine_muscle_folder + ".Spinalis.SPT12T5")
+)
+);
+};
+
+T6T7jnt = {
+  AnyObjectPtr ListAll = arrcat(
+arrcat(
+    ObjSearch(spine_muscle_folder + ".Spinalis.SPL1T2"),
+    ObjSearch(spine_muscle_folder + ".Spinalis.SPL1T3"),
+    ObjSearch(spine_muscle_folder + ".Spinalis.SPL2T1"),
+    ObjSearch(spine_muscle_folder + ".Spinalis.SPT11T6"),
+    ObjSearch(spine_muscle_folder + ".Spinalis.SPT12T4"),
+    ObjSearch(spine_muscle_folder + ".Spinalis.SPT12T5")
+)
+);
+};
+
+T5T6jnt = {
+  AnyObjectPtr ListAll = arrcat(
+arrcat(
+    ObjSearch(spine_muscle_folder + ".Spinalis.SPL1T2"),
+    ObjSearch(spine_muscle_folder + ".Spinalis.SPL1T3"),
+    ObjSearch(spine_muscle_folder + ".Spinalis.SPL2T1"),
+    ObjSearch(spine_muscle_folder + ".Spinalis.SPT12T4"),
+    ObjSearch(spine_muscle_folder + ".Spinalis.SPT12T5")
+)
+);
+};
+
+T4T5jnt = {
+  AnyObjectPtr ListAll = arrcat(
+arrcat(
+    ObjSearch(spine_muscle_folder + ".Spinalis.SPL1T2"),
+    ObjSearch(spine_muscle_folder + ".Spinalis.SPL1T3"),
+    ObjSearch(spine_muscle_folder + ".Spinalis.SPL2T1"),
+    ObjSearch(spine_muscle_folder + ".Spinalis.SPT12T4")
+)
+);
+};
+
+T3T4jnt = {
+  AnyObjectPtr ListAll = arrcat(
+arrcat(
+    ObjSearch(spine_muscle_folder + ".Spinalis.SPL1T2"),
+    ObjSearch(spine_muscle_folder + ".Spinalis.SPL1T3"),
+    ObjSearch(spine_muscle_folder + ".Spinalis.SPL2T1")
+)
+);
+};
+
+T2T3jnt = {
+  AnyObjectPtr ListAll = arrcat(
+arrcat(
+    ObjSearch(spine_muscle_folder + ".Spinalis.SPL1T2"),
+    ObjSearch(spine_muscle_folder + ".Spinalis.SPL2T1")
+)
+);
+};
+
+T1T2jnt = {
+  AnyObjectPtr ListAll = arrcat(
+arrcat(
+    ObjSearch(spine_muscle_folder + ".Spinalis.SPL2T1")
+)
+);
+};
+
+T1C7jnt = {
+  AnyObjectPtr ListAll = ObjSearch("NONE");
+};
+
+C7C6jnt = {
+  AnyObjectPtr ListAll = ObjSearch("NONE");
+};
+
+C6C5jnt = {
+  AnyObjectPtr ListAll = ObjSearch("NONE");
+};
+
+C5C4jnt = {
+  AnyObjectPtr ListAll = ObjSearch("NONE");
+};
+
+C4C3jnt = {
+  AnyObjectPtr ListAll = ObjSearch("NONE");
+};
+
+C3C2jnt = {
+  AnyObjectPtr ListAll = ObjSearch("NONE");
+};
+
+C2C1jnt = {
+  AnyObjectPtr ListAll = ObjSearch("NONE");
+};
+
+C1C0jnt = {
+  AnyObjectPtr ListAll = ObjSearch("NONE");
+};
+

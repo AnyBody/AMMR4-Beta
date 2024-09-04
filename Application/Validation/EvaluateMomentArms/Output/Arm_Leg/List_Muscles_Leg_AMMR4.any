@@ -1,0 +1,279 @@
+AnyString leg_muscle_folder = "Main.HumanModel.BodyModel." + Side + ".Leg.Mus.";
+
+AnkleJoint = {
+  AnyObjectPtr List = arrcat(
+arrcat(
+    ObjSearch(.leg_muscle_folder + "ExtensorDigitorumLongus1"),
+    ObjSearch(.leg_muscle_folder + "ExtensorDigitorumLongus2"),
+    ObjSearch(.leg_muscle_folder + "ExtensorDigitorumLongus3"),
+    ObjSearch(.leg_muscle_folder + "ExtensorDigitorumLongus4"),
+    ObjSearch(.leg_muscle_folder + "ExtensorHallucisLongus1"),
+    ObjSearch(.leg_muscle_folder + "ExtensorHallucisLongus2"),
+    ObjSearch(.leg_muscle_folder + "ExtensorHallucisLongus3"),
+    ObjSearch(.leg_muscle_folder + "FlexorDigitorumLongus1"),
+    ObjSearch(.leg_muscle_folder + "FlexorDigitorumLongus2"),
+    ObjSearch(.leg_muscle_folder + "FlexorDigitorumLongus3")
+),
+arrcat(
+    ObjSearch(.leg_muscle_folder + "FlexorDigitorumLongus4"),
+    ObjSearch(.leg_muscle_folder + "FlexorHallucisLongus1"),
+    ObjSearch(.leg_muscle_folder + "FlexorHallucisLongus2"),
+    ObjSearch(.leg_muscle_folder + "FlexorHallucisLongus3"),
+    ObjSearch(.leg_muscle_folder + "GastrocnemiusLateralis1"),
+    ObjSearch(.leg_muscle_folder + "GastrocnemiusMedialis1"),
+    ObjSearch(.leg_muscle_folder + "PeroneusBrevis1"),
+    ObjSearch(.leg_muscle_folder + "PeroneusBrevis2"),
+    ObjSearch(.leg_muscle_folder + "PeroneusBrevis3"),
+    ObjSearch(.leg_muscle_folder + "PeroneusLongus1")
+),
+arrcat(
+    ObjSearch(.leg_muscle_folder + "PeroneusLongus2"),
+    ObjSearch(.leg_muscle_folder + "PeroneusLongus3"),
+    ObjSearch(.leg_muscle_folder + "Plantaris1"),
+    ObjSearch(.leg_muscle_folder + "SoleusLateralis1"),
+    ObjSearch(.leg_muscle_folder + "SoleusLateralis2"),
+    ObjSearch(.leg_muscle_folder + "SoleusLateralis3"),
+    ObjSearch(.leg_muscle_folder + "SoleusMedialis1"),
+    ObjSearch(.leg_muscle_folder + "SoleusMedialis2"),
+    ObjSearch(.leg_muscle_folder + "SoleusMedialis3"),
+    ObjSearch(.leg_muscle_folder + "TibialisAnterior1")
+),
+arrcat(
+    ObjSearch(.leg_muscle_folder + "TibialisAnterior2"),
+    ObjSearch(.leg_muscle_folder + "TibialisAnterior3"),
+    ObjSearch(.leg_muscle_folder + "TibialisPosteriorLateralis1"),
+    ObjSearch(.leg_muscle_folder + "TibialisPosteriorLateralis2"),
+    ObjSearch(.leg_muscle_folder + "TibialisPosteriorLateralis3"),
+    ObjSearch(.leg_muscle_folder + "TibialisPosteriorMedialis1"),
+    ObjSearch(.leg_muscle_folder + "TibialisPosteriorMedialis2"),
+    ObjSearch(.leg_muscle_folder + "TibialisPosteriorMedialis3")
+)
+);
+};
+
+KneeJoint = {
+  AnyObjectPtr List = arrcat(
+arrcat(
+    ObjSearch(.leg_muscle_folder + "BicepsFemorisCaputBreve1"),
+    ObjSearch(.leg_muscle_folder + "BicepsFemorisCaputBreve2"),
+    ObjSearch(.leg_muscle_folder + "BicepsFemorisCaputBreve3"),
+    ObjSearch(.leg_muscle_folder + "BicepsFemorisCaputLongum1"),
+    ObjSearch(.leg_muscle_folder + "GastrocnemiusLateralis1"),
+    ObjSearch(.leg_muscle_folder + "GastrocnemiusMedialis1"),
+    ObjSearch(.leg_muscle_folder + "Gracilis1"),
+    ObjSearch(.leg_muscle_folder + "Gracilis2"),
+    ObjSearch(.leg_muscle_folder + "Plantaris1"),
+    ObjSearch(.leg_muscle_folder + "Popliteus1")
+),
+arrcat(
+    ObjSearch(.leg_muscle_folder + "Popliteus2"),
+    ObjSearch(.leg_muscle_folder + "Popliteus3"),
+    ObjSearch(.leg_muscle_folder + "RectusFemoris1"),
+    ObjSearch(.leg_muscle_folder + "RectusFemoris2"),
+    ObjSearch(.leg_muscle_folder + "Sartorius1"),
+    ObjSearch(.leg_muscle_folder + "Semimembranosus1"),
+    ObjSearch(.leg_muscle_folder + "Semimembranosus2"),
+    ObjSearch(.leg_muscle_folder + "Semimembranosus3"),
+    ObjSearch(.leg_muscle_folder + "Semitendinosus1"),
+    ObjSearch(.leg_muscle_folder + "TensorFasciaeLatae1")
+),
+arrcat(
+    ObjSearch(.leg_muscle_folder + "TensorFasciaeLatae2"),
+    ObjSearch(.leg_muscle_folder + "VastusIntermedius1"),
+    ObjSearch(.leg_muscle_folder + "VastusIntermedius2"),
+    ObjSearch(.leg_muscle_folder + "VastusIntermedius3"),
+    ObjSearch(.leg_muscle_folder + "VastusIntermedius4"),
+    ObjSearch(.leg_muscle_folder + "VastusIntermedius5"),
+    ObjSearch(.leg_muscle_folder + "VastusIntermedius6"),
+    ObjSearch(.leg_muscle_folder + "VastusLateralisInferior1"),
+    ObjSearch(.leg_muscle_folder + "VastusLateralisInferior2"),
+    ObjSearch(.leg_muscle_folder + "VastusLateralisInferior3")
+),
+arrcat(
+    ObjSearch(.leg_muscle_folder + "VastusLateralisInferior4"),
+    ObjSearch(.leg_muscle_folder + "VastusLateralisInferior5"),
+    ObjSearch(.leg_muscle_folder + "VastusLateralisInferior6"),
+    ObjSearch(.leg_muscle_folder + "VastusLateralisSuperior1"),
+    ObjSearch(.leg_muscle_folder + "VastusLateralisSuperior2"),
+    ObjSearch(.leg_muscle_folder + "VastusMedialisInferior1"),
+    ObjSearch(.leg_muscle_folder + "VastusMedialisInferior2"),
+    ObjSearch(.leg_muscle_folder + "VastusMedialisMid1"),
+    ObjSearch(.leg_muscle_folder + "VastusMedialisMid2"),
+    ObjSearch(.leg_muscle_folder + "VastusMedialisSuperior1")
+),
+arrcat(
+    ObjSearch(.leg_muscle_folder + "VastusMedialisSuperior2"),
+    ObjSearch(.leg_muscle_folder + "VastusMedialisSuperior3"),
+    ObjSearch(.leg_muscle_folder + "VastusMedialisSuperior4")
+)
+);
+};
+
+HipJoint = {
+  AnyObjectPtr List = arrcat(
+arrcat(
+    ObjSearch(.leg_muscle_folder + "AdductorBrevisDistal1"),
+    ObjSearch(.leg_muscle_folder + "AdductorBrevisDistal2"),
+    ObjSearch(.leg_muscle_folder + "AdductorBrevisMid1"),
+    ObjSearch(.leg_muscle_folder + "AdductorBrevisMid2"),
+    ObjSearch(.leg_muscle_folder + "AdductorBrevisProximal1"),
+    ObjSearch(.leg_muscle_folder + "AdductorBrevisProximal2"),
+    ObjSearch(.leg_muscle_folder + "AdductorLongus1"),
+    ObjSearch(.leg_muscle_folder + "AdductorLongus2"),
+    ObjSearch(.leg_muscle_folder + "AdductorLongus3"),
+    ObjSearch(.leg_muscle_folder + "AdductorLongus4")
+),
+arrcat(
+    ObjSearch(.leg_muscle_folder + "AdductorLongus5"),
+    ObjSearch(.leg_muscle_folder + "AdductorLongus6"),
+    ObjSearch(.leg_muscle_folder + "AdductorMagnusDistal1"),
+    ObjSearch(.leg_muscle_folder + "AdductorMagnusDistal2"),
+    ObjSearch(.leg_muscle_folder + "AdductorMagnusDistal3"),
+    ObjSearch(.leg_muscle_folder + "AdductorMagnusMid1"),
+    ObjSearch(.leg_muscle_folder + "AdductorMagnusMid2"),
+    ObjSearch(.leg_muscle_folder + "AdductorMagnusMid3"),
+    ObjSearch(.leg_muscle_folder + "AdductorMagnusMid4"),
+    ObjSearch(.leg_muscle_folder + "AdductorMagnusMid5")
+),
+arrcat(
+    ObjSearch(.leg_muscle_folder + "AdductorMagnusMid6"),
+    ObjSearch(.leg_muscle_folder + "AdductorMagnusProximal1"),
+    ObjSearch(.leg_muscle_folder + "AdductorMagnusProximal2"),
+    ObjSearch(.leg_muscle_folder + "AdductorMagnusProximal3"),
+    ObjSearch(.leg_muscle_folder + "AdductorMagnusProximal4"),
+    ObjSearch(.leg_muscle_folder + "BicepsFemorisCaputLongum1"),
+    ObjSearch(.leg_muscle_folder + "GemellusInferior1"),
+    ObjSearch(.leg_muscle_folder + "GemellusSuperior1"),
+    ObjSearch(.leg_muscle_folder + "GluteusMaximusInferior1"),
+    ObjSearch(.leg_muscle_folder + "GluteusMaximusInferior2")
+),
+arrcat(
+    ObjSearch(.leg_muscle_folder + "GluteusMaximusInferior3"),
+    ObjSearch(.leg_muscle_folder + "GluteusMaximusInferior4"),
+    ObjSearch(.leg_muscle_folder + "GluteusMaximusInferior5"),
+    ObjSearch(.leg_muscle_folder + "GluteusMaximusInferior6"),
+    ObjSearch(.leg_muscle_folder + "GluteusMaximusSuperior1"),
+    ObjSearch(.leg_muscle_folder + "GluteusMaximusSuperior2"),
+    ObjSearch(.leg_muscle_folder + "GluteusMaximusSuperior3"),
+    ObjSearch(.leg_muscle_folder + "GluteusMaximusSuperior4"),
+    ObjSearch(.leg_muscle_folder + "GluteusMaximusSuperior5"),
+    ObjSearch(.leg_muscle_folder + "GluteusMaximusSuperior6")
+),
+arrcat(
+    ObjSearch(.leg_muscle_folder + "GluteusMediusAnterior1"),
+    ObjSearch(.leg_muscle_folder + "GluteusMediusAnterior2"),
+    ObjSearch(.leg_muscle_folder + "GluteusMediusAnterior3"),
+    ObjSearch(.leg_muscle_folder + "GluteusMediusAnterior4"),
+    ObjSearch(.leg_muscle_folder + "GluteusMediusAnterior5"),
+    ObjSearch(.leg_muscle_folder + "GluteusMediusAnterior6"),
+    ObjSearch(.leg_muscle_folder + "GluteusMediusPosterior1"),
+    ObjSearch(.leg_muscle_folder + "GluteusMediusPosterior2"),
+    ObjSearch(.leg_muscle_folder + "GluteusMediusPosterior3"),
+    ObjSearch(.leg_muscle_folder + "GluteusMediusPosterior4")
+),
+arrcat(
+    ObjSearch(.leg_muscle_folder + "GluteusMediusPosterior5"),
+    ObjSearch(.leg_muscle_folder + "GluteusMediusPosterior6"),
+    ObjSearch(.leg_muscle_folder + "GluteusMinimusAnterior1"),
+    ObjSearch(.leg_muscle_folder + "GluteusMinimusMid1"),
+    ObjSearch(.leg_muscle_folder + "GluteusMinimusPosterior1"),
+    ObjSearch(.leg_muscle_folder + "Gracilis1"),
+    ObjSearch(.leg_muscle_folder + "Gracilis2"),
+    ObjSearch(.leg_muscle_folder + "IliacusLateralis1"),
+    ObjSearch(.leg_muscle_folder + "IliacusLateralis2"),
+    ObjSearch(.leg_muscle_folder + "IliacusMedialis1")
+),
+arrcat(
+    ObjSearch(.leg_muscle_folder + "IliacusMedialis2"),
+    ObjSearch(.leg_muscle_folder + "IliacusMid1"),
+    ObjSearch(.leg_muscle_folder + "IliacusMid2"),
+    ObjSearch(.leg_muscle_folder + "ObturatorExternusInferior1"),
+    ObjSearch(.leg_muscle_folder + "ObturatorExternusInferior2"),
+    ObjSearch(.leg_muscle_folder + "ObturatorExternusSuperior1"),
+    ObjSearch(.leg_muscle_folder + "ObturatorExternusSuperior2"),
+    ObjSearch(.leg_muscle_folder + "ObturatorExternusSuperior3"),
+    ObjSearch(.leg_muscle_folder + "ObturatorInternus1"),
+    ObjSearch(.leg_muscle_folder + "ObturatorInternus2")
+),
+arrcat(
+    ObjSearch(.leg_muscle_folder + "ObturatorInternus3"),
+    ObjSearch(.leg_muscle_folder + "ObturatorInternus4"),
+    ObjSearch(.leg_muscle_folder + "ObturatorInternus5"),
+    ObjSearch(.leg_muscle_folder + "ObturatorInternus6"),
+    ObjSearch(.leg_muscle_folder + "Pectineus1"),
+    ObjSearch(.leg_muscle_folder + "Pectineus2"),
+    ObjSearch(.leg_muscle_folder + "Pectineus3"),
+    ObjSearch(.leg_muscle_folder + "Pectineus4"),
+    ObjSearch(.leg_muscle_folder + "Piriformis1"),
+    ObjSearch(.leg_muscle_folder + "QuadratusFemoris1")
+),
+arrcat(
+    ObjSearch(.leg_muscle_folder + "QuadratusFemoris2"),
+    ObjSearch(.leg_muscle_folder + "QuadratusFemoris3"),
+    ObjSearch(.leg_muscle_folder + "QuadratusFemoris4"),
+    ObjSearch(.leg_muscle_folder + "RectusFemoris1"),
+    ObjSearch(.leg_muscle_folder + "RectusFemoris2"),
+    ObjSearch(.leg_muscle_folder + "Sartorius1"),
+    ObjSearch(.leg_muscle_folder + "Semimembranosus1"),
+    ObjSearch(.leg_muscle_folder + "Semimembranosus2"),
+    ObjSearch(.leg_muscle_folder + "Semimembranosus3"),
+    ObjSearch(.leg_muscle_folder + "Semitendinosus1")
+),
+arrcat(
+    ObjSearch(.leg_muscle_folder + "TensorFasciaeLatae1"),
+    ObjSearch(.leg_muscle_folder + "TensorFasciaeLatae2")
+)
+);
+};
+
+SubTalarJoint = {
+  AnyObjectPtr List = arrcat(
+arrcat(
+    ObjSearch(.leg_muscle_folder + "ExtensorDigitorumLongus1"),
+    ObjSearch(.leg_muscle_folder + "ExtensorDigitorumLongus2"),
+    ObjSearch(.leg_muscle_folder + "ExtensorDigitorumLongus3"),
+    ObjSearch(.leg_muscle_folder + "ExtensorDigitorumLongus4"),
+    ObjSearch(.leg_muscle_folder + "ExtensorHallucisLongus1"),
+    ObjSearch(.leg_muscle_folder + "ExtensorHallucisLongus2"),
+    ObjSearch(.leg_muscle_folder + "ExtensorHallucisLongus3"),
+    ObjSearch(.leg_muscle_folder + "FlexorDigitorumLongus1"),
+    ObjSearch(.leg_muscle_folder + "FlexorDigitorumLongus2"),
+    ObjSearch(.leg_muscle_folder + "FlexorDigitorumLongus3")
+),
+arrcat(
+    ObjSearch(.leg_muscle_folder + "FlexorDigitorumLongus4"),
+    ObjSearch(.leg_muscle_folder + "FlexorHallucisLongus1"),
+    ObjSearch(.leg_muscle_folder + "FlexorHallucisLongus2"),
+    ObjSearch(.leg_muscle_folder + "FlexorHallucisLongus3"),
+    ObjSearch(.leg_muscle_folder + "GastrocnemiusLateralis1"),
+    ObjSearch(.leg_muscle_folder + "GastrocnemiusMedialis1"),
+    ObjSearch(.leg_muscle_folder + "PeroneusBrevis1"),
+    ObjSearch(.leg_muscle_folder + "PeroneusBrevis2"),
+    ObjSearch(.leg_muscle_folder + "PeroneusBrevis3"),
+    ObjSearch(.leg_muscle_folder + "PeroneusLongus1")
+),
+arrcat(
+    ObjSearch(.leg_muscle_folder + "PeroneusLongus2"),
+    ObjSearch(.leg_muscle_folder + "PeroneusLongus3"),
+    ObjSearch(.leg_muscle_folder + "Plantaris1"),
+    ObjSearch(.leg_muscle_folder + "SoleusLateralis1"),
+    ObjSearch(.leg_muscle_folder + "SoleusLateralis2"),
+    ObjSearch(.leg_muscle_folder + "SoleusLateralis3"),
+    ObjSearch(.leg_muscle_folder + "SoleusMedialis1"),
+    ObjSearch(.leg_muscle_folder + "SoleusMedialis2"),
+    ObjSearch(.leg_muscle_folder + "SoleusMedialis3"),
+    ObjSearch(.leg_muscle_folder + "TibialisAnterior1")
+),
+arrcat(
+    ObjSearch(.leg_muscle_folder + "TibialisAnterior2"),
+    ObjSearch(.leg_muscle_folder + "TibialisAnterior3"),
+    ObjSearch(.leg_muscle_folder + "TibialisPosteriorLateralis1"),
+    ObjSearch(.leg_muscle_folder + "TibialisPosteriorLateralis2"),
+    ObjSearch(.leg_muscle_folder + "TibialisPosteriorLateralis3"),
+    ObjSearch(.leg_muscle_folder + "TibialisPosteriorMedialis1"),
+    ObjSearch(.leg_muscle_folder + "TibialisPosteriorMedialis2"),
+    ObjSearch(.leg_muscle_folder + "TibialisPosteriorMedialis3")
+)
+);
+};
+

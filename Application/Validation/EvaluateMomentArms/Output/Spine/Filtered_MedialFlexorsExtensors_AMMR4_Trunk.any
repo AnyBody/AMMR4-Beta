@@ -1,0 +1,203 @@
+#if AMMR_VERSION == 4
+AnyString spine_muscle_folder = "Main.HumanModel.BodyModel.Trunk.Muscles";
+#else
+AnyString spine_muscle_folder = "Main.HumanModel.BodyModel.Trunk.MusclesSpine";
+#endif
+
+AnyFolder SacrumPelvisJnt = {
+  AnyObjectPtr ListFlexors = ObjSearch("NONE");
+  AnyObjectPtr ListExtensors = ObjSearch("NONE");
+};
+
+AnyFolder L5SacrumJnt = {
+  AnyObjectPtr ListFlexors = ObjSearch("NONE");
+  AnyObjectPtr ListExtensors = ObjSearch("NONE");
+};
+
+AnyFolder L4L5Jnt = {
+  AnyObjectPtr ListFlexors = ObjSearch("NONE");
+  AnyObjectPtr ListExtensors = ObjSearch("NONE");
+};
+
+AnyFolder L3L4Jnt = {
+  AnyObjectPtr ListFlexors = ObjSearch("NONE");
+  AnyObjectPtr ListExtensors = ObjSearch("NONE");
+};
+
+AnyFolder L2L3Jnt = {
+  AnyObjectPtr ListFlexors = ObjSearch("NONE");
+  AnyObjectPtr ListExtensors = ObjSearch("NONE");
+};
+
+AnyFolder L1L2Jnt = {
+  AnyObjectPtr ListFlexors = ObjSearch("NONE");
+  AnyObjectPtr ListExtensors = arrcat(
+    ObjSearch(.spine_muscle_folder + ".Spinalis.SPL2T1")
+);
+};
+
+AnyFolder T12L1Jnt = {
+  AnyObjectPtr ListFlexors = ObjSearch("NONE");
+  AnyObjectPtr ListExtensors = arrcat(
+    ObjSearch(.spine_muscle_folder + ".Spinalis.SPL1T2"),
+    ObjSearch(.spine_muscle_folder + ".Spinalis.SPL1T3"),
+    ObjSearch(.spine_muscle_folder + ".Spinalis.SPL2T1")
+);
+};
+
+AnyFolder T11T12Jnt = {
+  AnyObjectPtr ListFlexors = ObjSearch("NONE");
+  AnyObjectPtr ListExtensors = arrcat(
+    ObjSearch(.spine_muscle_folder + ".Spinalis.SPL1T2"),
+    ObjSearch(.spine_muscle_folder + ".Spinalis.SPL1T3"),
+    ObjSearch(.spine_muscle_folder + ".Spinalis.SPL2T1"),
+    ObjSearch(.spine_muscle_folder + ".Spinalis.SPT12T4"),
+    ObjSearch(.spine_muscle_folder + ".Spinalis.SPT12T5")
+);
+};
+
+AnyFolder T10T11Jnt = {
+  AnyObjectPtr ListFlexors = ObjSearch("NONE");
+  AnyObjectPtr ListExtensors = arrcat(
+    ObjSearch(.spine_muscle_folder + ".Spinalis.SPL1T2"),
+    ObjSearch(.spine_muscle_folder + ".Spinalis.SPL1T3"),
+    ObjSearch(.spine_muscle_folder + ".Spinalis.SPL2T1"),
+    ObjSearch(.spine_muscle_folder + ".Spinalis.SPT11T6"),
+    ObjSearch(.spine_muscle_folder + ".Spinalis.SPT12T4"),
+    ObjSearch(.spine_muscle_folder + ".Spinalis.SPT12T5")
+);
+};
+
+AnyFolder T9T10Jnt = {
+  AnyObjectPtr ListFlexors = ObjSearch("NONE");
+  AnyObjectPtr ListExtensors = arrcat(
+    ObjSearch(.spine_muscle_folder + ".Spinalis.SPL1T2"),
+    ObjSearch(.spine_muscle_folder + ".Spinalis.SPL1T3"),
+    ObjSearch(.spine_muscle_folder + ".Spinalis.SPL2T1"),
+    ObjSearch(.spine_muscle_folder + ".Spinalis.SPT11T6"),
+    ObjSearch(.spine_muscle_folder + ".Spinalis.SPT12T4"),
+    ObjSearch(.spine_muscle_folder + ".Spinalis.SPT12T5")
+);
+};
+
+AnyFolder T8T9Jnt = {
+  AnyObjectPtr ListFlexors = ObjSearch("NONE");
+  AnyObjectPtr ListExtensors = arrcat(
+    ObjSearch(.spine_muscle_folder + ".Spinalis.SPL1T2"),
+    ObjSearch(.spine_muscle_folder + ".Spinalis.SPL1T3"),
+    ObjSearch(.spine_muscle_folder + ".Spinalis.SPL2T1"),
+    ObjSearch(.spine_muscle_folder + ".Spinalis.SPT11T6"),
+    ObjSearch(.spine_muscle_folder + ".Spinalis.SPT12T4"),
+    ObjSearch(.spine_muscle_folder + ".Spinalis.SPT12T5")
+);
+};
+
+AnyFolder T7T8Jnt = {
+  AnyObjectPtr ListFlexors = ObjSearch("NONE");
+  AnyObjectPtr ListExtensors = arrcat(
+    ObjSearch(.spine_muscle_folder + ".Spinalis.SPL1T2"),
+    ObjSearch(.spine_muscle_folder + ".Spinalis.SPL1T3"),
+    ObjSearch(.spine_muscle_folder + ".Spinalis.SPL2T1"),
+    ObjSearch(.spine_muscle_folder + ".Spinalis.SPT11T6"),
+    ObjSearch(.spine_muscle_folder + ".Spinalis.SPT12T4"),
+    ObjSearch(.spine_muscle_folder + ".Spinalis.SPT12T5")
+);
+};
+
+AnyFolder T6T7Jnt = {
+  AnyObjectPtr ListFlexors = ObjSearch("NONE");
+  AnyObjectPtr ListExtensors = arrcat(
+    ObjSearch(.spine_muscle_folder + ".Spinalis.SPL1T2"),
+    ObjSearch(.spine_muscle_folder + ".Spinalis.SPL1T3"),
+    ObjSearch(.spine_muscle_folder + ".Spinalis.SPL2T1"),
+    ObjSearch(.spine_muscle_folder + ".Spinalis.SPT11T6"),
+    ObjSearch(.spine_muscle_folder + ".Spinalis.SPT12T4"),
+    ObjSearch(.spine_muscle_folder + ".Spinalis.SPT12T5")
+);
+};
+
+AnyFolder T5T6Jnt = {
+  AnyObjectPtr ListFlexors = ObjSearch("NONE");
+  AnyObjectPtr ListExtensors = arrcat(
+    ObjSearch(.spine_muscle_folder + ".Spinalis.SPL1T2"),
+    ObjSearch(.spine_muscle_folder + ".Spinalis.SPL1T3"),
+    ObjSearch(.spine_muscle_folder + ".Spinalis.SPL2T1"),
+    ObjSearch(.spine_muscle_folder + ".Spinalis.SPT12T4"),
+    ObjSearch(.spine_muscle_folder + ".Spinalis.SPT12T5")
+);
+};
+
+AnyFolder T4T5Jnt = {
+  AnyObjectPtr ListFlexors = ObjSearch("NONE");
+  AnyObjectPtr ListExtensors = arrcat(
+    ObjSearch(.spine_muscle_folder + ".Spinalis.SPL1T2"),
+    ObjSearch(.spine_muscle_folder + ".Spinalis.SPL1T3"),
+    ObjSearch(.spine_muscle_folder + ".Spinalis.SPL2T1"),
+    ObjSearch(.spine_muscle_folder + ".Spinalis.SPT12T4")
+);
+};
+
+AnyFolder T3T4Jnt = {
+  AnyObjectPtr ListFlexors = ObjSearch("NONE");
+  AnyObjectPtr ListExtensors = arrcat(
+    ObjSearch(.spine_muscle_folder + ".Spinalis.SPL1T2"),
+    ObjSearch(.spine_muscle_folder + ".Spinalis.SPL1T3"),
+    ObjSearch(.spine_muscle_folder + ".Spinalis.SPL2T1")
+);
+};
+
+AnyFolder T2T3Jnt = {
+  AnyObjectPtr ListFlexors = ObjSearch("NONE");
+  AnyObjectPtr ListExtensors = arrcat(
+    ObjSearch(.spine_muscle_folder + ".Spinalis.SPL1T2"),
+    ObjSearch(.spine_muscle_folder + ".Spinalis.SPL2T1")
+);
+};
+
+AnyFolder T1T2Jnt = {
+  AnyObjectPtr ListFlexors = ObjSearch("NONE");
+  AnyObjectPtr ListExtensors = arrcat(
+    ObjSearch(.spine_muscle_folder + ".Spinalis.SPL2T1")
+);
+};
+
+AnyFolder C7T1Jnt = {
+  AnyObjectPtr ListFlexors = ObjSearch("NONE");
+  AnyObjectPtr ListExtensors = ObjSearch("NONE");
+};
+
+AnyFolder C6C7Jnt = {
+  AnyObjectPtr ListFlexors = ObjSearch("NONE");
+  AnyObjectPtr ListExtensors = ObjSearch("NONE");
+};
+
+AnyFolder C5C6Jnt = {
+  AnyObjectPtr ListFlexors = ObjSearch("NONE");
+  AnyObjectPtr ListExtensors = ObjSearch("NONE");
+};
+
+AnyFolder C4C5Jnt = {
+  AnyObjectPtr ListFlexors = ObjSearch("NONE");
+  AnyObjectPtr ListExtensors = ObjSearch("NONE");
+};
+
+AnyFolder C3C4Jnt = {
+  AnyObjectPtr ListFlexors = ObjSearch("NONE");
+  AnyObjectPtr ListExtensors = ObjSearch("NONE");
+};
+
+AnyFolder C2C3Jnt = {
+  AnyObjectPtr ListFlexors = ObjSearch("NONE");
+  AnyObjectPtr ListExtensors = ObjSearch("NONE");
+};
+
+AnyFolder C1C2Jnt = {
+  AnyObjectPtr ListFlexors = ObjSearch("NONE");
+  AnyObjectPtr ListExtensors = ObjSearch("NONE");
+};
+
+AnyFolder C0C1Jnt = {
+  AnyObjectPtr ListFlexors = ObjSearch("NONE");
+  AnyObjectPtr ListExtensors = ObjSearch("NONE");
+};
+
