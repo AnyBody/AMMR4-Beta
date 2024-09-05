@@ -5628,7 +5628,7 @@ AnyFolder Thorax = {
   AnyVar BodyMass = 75;  ///< This is a body mass that the trunk dataset is based on
 
   AnyVar UBHeight =  0.50; //Upperbody height
-  AnyVar Height = 0.620233;///< Height computed from the L5SacrumJnt to C1 node
+  AnyVar Height = vnorm( .C1.C1C0JntNode_pos - .L5.L5SacrumJntNode_pos);///< Height computed from the L5SacrumJnt to C1 node
   AnyVar Width = 0.3881839;///< Shoulder width
   AnyVar Depth = 0.1870;///< Horizontal distance between (midpoint of LTptT8S3Via3NodeL and LTptT8S3Via3NodeR) and (midpoint of RACP_CO6ViaNodeR and RACP_CO6ViaNodeL)
   
