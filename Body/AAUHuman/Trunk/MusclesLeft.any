@@ -386,8 +386,12 @@ AnyFolder ErectorSpinae = {
     AnyMuscleModel &MusMdl = ....MuscleModels.Left.ErectorSpinae.ILplL1CI;
     AnyRefNode &Org = ....Segments.L1Seg.ILplL1CINodeL;
     AnyRefNode &Via1 = ....Segments.L2Seg.ILplL1CIViaNodeL;
+    #ifndef REMOVE_ERECTORSPINAE_L3VIA
     AnyRefNode &Via2 = ....Segments.L3Seg.ILplL1CIViaNodeL;
-//    AnyRefNode &Via3 = ....Segments.L4Seg.ILplL1CIViaNodeL;
+    #endif
+    #ifndef REMOVE_ERECTORSPINAE_L4VIA
+    AnyRefNode &Via3 = ....Segments.L4Seg.ILplL1CIViaNodeL;
+    #endif
     AnyRefNode &Ins = ....Segments.PelvisSeg.ILplL1CINodeL;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
@@ -395,8 +399,12 @@ AnyFolder ErectorSpinae = {
   AnyMuscleViaPoint ILplL2CI = {
     AnyMuscleModel &MusMdl = ....MuscleModels.Left.ErectorSpinae.ILplL2CI;
     AnyRefNode &Org = ....Segments.L2Seg.ILplL2CINodeL;
+    #ifndef REMOVE_ERECTORSPINAE_L3VIA
     AnyRefNode &Via1 = ....Segments.L3Seg.ILplL2CIViaNodeL;
-//    AnyRefNode &Via2 = ....Segments.L4Seg.ILplL2CIViaNodeL;
+    #endif
+    #ifndef REMOVE_ERECTORSPINAE_L4VIA
+    AnyRefNode &Via2 = ....Segments.L4Seg.ILplL2CIViaNodeL;
+    #endif
     AnyRefNode &Ins = ....Segments.PelvisSeg.ILplL2CINodeL;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
@@ -419,7 +427,9 @@ AnyFolder ErectorSpinae = {
     AnyMuscleModel &MusMdl = ....MuscleModels.Left.ErectorSpinae.LTplL1SIPS;
     AnyRefNode &Org = ....Segments.L1Seg.LTplL1SIPSNodeL;
     AnyRefNode &Via1 = ....Segments.L2Seg.LTplL1SIPSViaNodeL;
+    #ifndef REMOVE_ERECTORSPINAE_L3VIA
     AnyRefNode &Via2 = ....Segments.L3Seg.LTplL1SIPSViaNodeL;    
+    #endif
     AnyRefNode &Ins = ....Segments.PelvisSeg.LTplL1SIPSNodeL;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
@@ -427,7 +437,9 @@ AnyFolder ErectorSpinae = {
   AnyMuscleViaPoint LTplL2SIPS = {
     AnyMuscleModel &MusMdl = ....MuscleModels.Left.ErectorSpinae.LTplL2SIPS;
     AnyRefNode &Org = ....Segments.L2Seg.LTplL2SIPSNodeL;
+    #ifndef REMOVE_ERECTORSPINAE_L3VIA
     AnyRefNode &Via1 = ....Segments.L3Seg.LTplL2SIPSViaNodeL;
+    #endif
     AnyRefNode &Ins = ....Segments.PelvisSeg.LTplL2SIPSNodeL;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
@@ -464,7 +476,9 @@ AnyFolder ErectorSpinae = {
     AnyRefNode &Via6 = ....Segments.Left.R12Seg.ILptC5SIPSVia6NodeL;
     AnyRefNode &Via7 = ....Segments.L1Seg.ILptC5SIPSVia7NodeL;
     AnyRefNode &Via8 = ....Segments.L2Seg.ILptC5SIPSVia8NodeL;
+    #ifndef REMOVE_ERECTORSPINAE_L3VIA
     AnyRefNode &Via9 = ....Segments.L3Seg.ILptC5SIPSVia9NodeL;
+    #endif
     AnyRefNode &Ins = ....Segments.PelvisSeg.ILptC5SIPSNodeL;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
@@ -479,7 +493,9 @@ AnyFolder ErectorSpinae = {
     AnyRefNode &Via5 = ....Segments.Left.R12Seg.ILptC6SIPSVia5NodeL;
     AnyRefNode &Via6 = ....Segments.L1Seg.ILptC6SIPSVia6NodeL;
     AnyRefNode &Via7 = ....Segments.L2Seg.ILptC6SIPSVia7NodeL;
+    #ifndef REMOVE_ERECTORSPINAE_L3VIA
     AnyRefNode &Via8 = ....Segments.L3Seg.ILptC6SIPSVia8NodeL;
+    #endif
     AnyRefNode &Ins = ....Segments.PelvisSeg.ILptC6SIPSNodeL;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
@@ -493,7 +509,9 @@ AnyFolder ErectorSpinae = {
     AnyRefNode &Via4 = ....Segments.Left.R12Seg.ILptC7CIVia4NodeL;
     AnyRefNode &Via5 = ....Segments.L1Seg.ILptC7CIVia5NodeL;
     AnyRefNode &Via6 = ....Segments.L2Seg.ILptC7CIVia6NodeL;
-    AnyRefNode &Via7 = ....Segments.L3Seg.ILptC7CIVia7NodeL;    
+    #ifndef REMOVE_ERECTORSPINAE_L3VIA
+    AnyRefNode &Via7 = ....Segments.L3Seg.ILptC7CIVia7NodeL;
+    #endif
     AnyRefNode &Ins = ....Segments.PelvisSeg.ILptC7CINodeL;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
@@ -506,7 +524,9 @@ AnyFolder ErectorSpinae = {
     AnyRefNode &Via3 = ....Segments.Left.R12Seg.ILptC8CIVia3NodeL;
     AnyRefNode &Via4 = ....Segments.L1Seg.ILptC8CIVia4NodeL;
     AnyRefNode &Via5 = ....Segments.L2Seg.ILptC8CIVia5NodeL;
-    AnyRefNode &Via6 = ....Segments.L3Seg.ILptC8CIVia6NodeL;    
+    #ifndef REMOVE_ERECTORSPINAE_L3VIA
+    AnyRefNode &Via6 = ....Segments.L3Seg.ILptC8CIVia6NodeL;
+    #endif
     AnyRefNode &Ins = ....Segments.PelvisSeg.ILptC8CINodeL;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
@@ -518,7 +538,9 @@ AnyFolder ErectorSpinae = {
     AnyRefNode &Via2 = ....Segments.Left.R12Seg.ILptC9CIVia2NodeL;
     AnyRefNode &Via3 = ....Segments.L1Seg.ILptC9CIVia3NodeL;
     AnyRefNode &Via4 = ....Segments.L2Seg.ILptC9CIVia4NodeL;
+    #ifndef REMOVE_ERECTORSPINAE_L3VIA
     AnyRefNode &Via5 = ....Segments.L3Seg.ILptC9CIVia5NodeL; 
+    #endif
     AnyRefNode &Ins = ....Segments.PelvisSeg.ILptC9CINodeL;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
@@ -529,7 +551,9 @@ AnyFolder ErectorSpinae = {
     AnyRefNode &Via1 = ....Segments.Left.R12Seg.ILptC10CIVia1NodeL;
     AnyRefNode &Via2 = ....Segments.L1Seg.ILptC10CIVia2NodeL;
     AnyRefNode &Via3 = ....Segments.L2Seg.ILptC10CIVia3NodeL;
-    AnyRefNode &Via4 = ....Segments.L3Seg.ILptC10CIVia4NodeL;    
+    #ifndef REMOVE_ERECTORSPINAE_L3VIA
+    AnyRefNode &Via4 = ....Segments.L3Seg.ILptC10CIVia4NodeL; 
+    #endif
     AnyRefNode &Ins = ....Segments.PelvisSeg.ILptC10CINodeL;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
@@ -539,7 +563,9 @@ AnyFolder ErectorSpinae = {
     AnyRefNode &Org = ....Segments.Left.R11Seg.ILptC11CINodeL;
     AnyRefNode &Via1 = ....Segments.L1Seg.ILptC11CIVia1NodeL;
     AnyRefNode &Via2 = ....Segments.L2Seg.ILptC11CIVia2NodeL;
+    #ifndef REMOVE_ERECTORSPINAE_L3VIA
     AnyRefNode &Via3 = ....Segments.L3Seg.ILptC11CIVia3NodeL;
+    #endif
     AnyRefNode &Ins = ....Segments.PelvisSeg.ILptC11CINodeL;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
@@ -549,7 +575,9 @@ AnyFolder ErectorSpinae = {
     AnyRefNode &Org = ....Segments.Left.R12Seg.ILptC12CINodeL;
     AnyRefNode &Via1 = ....Segments.L1Seg.ILptC12CIVia1NodeL;
     AnyRefNode &Via2 = ....Segments.L2Seg.ILptC12CIVia2NodeL;
+    #ifndef REMOVE_ERECTORSPINAE_L3VIA
     AnyRefNode &Via3 = ....Segments.L3Seg.ILptC12CIVia3NodeL;
+    #endif
     AnyRefNode &Ins = ....Segments.PelvisSeg.ILptC12CINodeL;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
