@@ -1,6 +1,4 @@
-#define SPLINE_MUSCLE_UPPER(N) gteqfun(repmat(1,N, iarr(1, N))', repmat(1,N, iarr(1, N)))
-#define SPLINE_MUSCLE_POLY_LENGTH(P) sum(vnorm((arrcat(zeros(1,SizesOf(P)[0]-1), eye(SizesOf(P)[0]-1)')' - arrcat(eye(SizesOf(P)[0]-1)', zeros(1,SizesOf(P)[0]-1))')*P))
-  
+
 
 #class_template SplineMuscle_CreateElement (__CLASS__=AnyMuscleViaPoint, NAME1,NAME2){
       AnyRefNode &Org = .OriginSegment.NAME1##_Org.NAME2;
@@ -316,10 +314,10 @@
 
 AnyInt   Origin_Size = SizesOf(ORIGIN_POINTS)[0];
 AnyInt   Insertion_Size = SizesOf(INSERTION_POINTS)[0];
-AnyFloat Origin_Accum_L = arrcat(0.0,vnorm((DIFFMAT(Origin_Size))*ORIGIN_POINTS)*(SPLINE_MUSCLE_UPPER(Origin_Size-1)));
-AnyFloat Insertion_Accum_L = arrcat(0.0,vnorm((DIFFMAT(Insertion_Size))*INSERTION_POINTS)*(SPLINE_MUSCLE_UPPER(Insertion_Size-1)));
-AnyFloat Origin_L = SPLINE_MUSCLE_POLY_LENGTH(ORIGIN_POINTS);
-AnyFloat Insertion_L = SPLINE_MUSCLE_POLY_LENGTH(INSERTION_POINTS);
+AnyFloat Origin_Accum_L = arrcat(0.0,vnorm((DIFFMAT(Origin_Size))*ORIGIN_POINTS)*(TRI(Origin_Size-1)'));
+AnyFloat Insertion_Accum_L = arrcat(0.0,vnorm((DIFFMAT(Insertion_Size))*INSERTION_POINTS)*(TRI(Insertion_Size-1)'));
+AnyFloat Origin_L = TOTAL_POLYLINE_LENGTH(ORIGIN_POINTS);
+AnyFloat Insertion_L = TOTAL_POLYLINE_LENGTH(INSERTION_POINTS);
 AnyFloat Origin_REL_L =  Origin_Accum_L/Origin_L;
 AnyFloat Insertion_REL_L = Insertion_Accum_L/Insertion_L;
 
