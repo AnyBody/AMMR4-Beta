@@ -219,7 +219,7 @@ AnyFolder Rotation = {
    
    RhythmDriverLinear rhythmC2C1SkullThoraxRotation( _REDEFINE_VARIABLES=On) = 
    {
-     AnyVector RhythmCoefficients ??= {132/77, 0.7967};
+     AnyVector RhythmCoefficients ??= {0.2721+0.3061, 0.2721};
      
      Measures.Input  = {
        AnyKinMeasure& ref = ...SkullThoraxRotation;
