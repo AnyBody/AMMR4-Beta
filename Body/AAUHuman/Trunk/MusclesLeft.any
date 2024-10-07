@@ -5809,8 +5809,9 @@ AnyFolder ThoracicMultifidi = {
   };
 };
 
-#if BM_TRUNK_THORACIC_MODEL == _THORACIC_MODEL_FLEXIBLE_
+
 AnyFolder RotatoresBrevis = {
+#if BM_TRUNK_THORACIC_MODEL == _THORACIC_MODEL_FLEXIBLE_
   AnyMuscleViaPoint RotatoresBrevisT1C7 =   {
     AnyMuscleModel &MusMdl = ....MuscleModels.Left.RotatoresBrevis.RotatoresBrevis_1;
     AnyRefFrame &Org = ....Segments.T1Seg.Left.RotatoresBrevisT1C7Node;
@@ -5895,9 +5896,133 @@ AnyFolder RotatoresBrevis = {
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
+  #endif
+    AnyMuscleViaPoint RotatoresBrevisL1T12 =   {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.RotatoresBrevis.Rotatores_lumbar;
+    AnyRefFrame &Org = ....Segments.L1Seg.LTplL1SIPSNodeL;
+    AnyRefFrame &Ins = ....Segments.T12Seg.MFL3T12NodeLIns;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    viewForce.Visible ??= Off;
+  };
+  AnyMuscleViaPoint RotatoresBrevisL2L1 =   {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.RotatoresBrevis.Rotatores_lumbar;
+    AnyRefFrame &Org = ....Segments.L2Seg.LTplL2SIPSNodeL;
+    AnyRefFrame &Ins = ....Segments.L1Seg.LTptT3L3Via10NodeL;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    viewForce.Visible ??= Off;
+  };
+  AnyMuscleViaPoint RotatoresBrevisL2L3 =   {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.RotatoresBrevis.Rotatores_lumbar;
+    AnyRefFrame &Org = ....Segments.L3Seg.LTplL3SIPSNodeL;
+    AnyRefFrame &Ins = ....Segments.L2Seg.LTptT6S1Via8NodeL;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    viewForce.Visible ??= Off;
+  };
+  AnyMuscleViaPoint RotatoresBrevisL3L4 =   {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.RotatoresBrevis.Rotatores_lumbar;
+    AnyRefFrame &Org = ....Segments.L4Seg.LTplL4SIPSNodeL;
+    AnyRefFrame &Ins = ....Segments.L3Seg.LTptT5L5Via10NodeL;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    viewForce.Visible ??= Off;
+  };
+  AnyMuscleViaPoint RotatoresBrevisL4L5 =   {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.RotatoresBrevis.Rotatores_lumbar;
+    AnyRefFrame &Org = ....Segments.L5Seg.TransversusInsNode_L;
+    AnyRefFrame &Ins = ....Segments.L4Seg.MFdL4S1NodeL;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    viewForce.Visible ??= Off;
+  };
+  AnyMuscleViaPoint RotatoresBrevisL5Sacrum =   {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.RotatoresBrevis.Rotatores_lumbar;
+    AnyRefFrame &Org = ....Segments.SacrumSeg.MFdL4S1NodeL;
+    AnyRefFrame &Ins = ....Segments.L5Seg.MFmL5SacrumNodeL;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    viewForce.Visible ??= Off;
+  };
+
+  AnyMuscleViaPoint Intertransversarii_lumborum_L1L2 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.RotatoresBrevis.Rotatores_lumbar;
+    AnyRefFrame &Org = ....Segments.L2Seg.LTplL2SIPSNodeL;
+    AnyRefFrame &Ins = ....Segments.L1Seg.LTplL1SIPSNodeL;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    viewForce.Visible ??= Off;
+  };
+  AnyMuscleViaPoint Intertransversarii_lumborum_L2L3 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.RotatoresBrevis.Rotatores_lumbar;
+    AnyRefFrame &Org = ....Segments.L3Seg.LTplL3SIPSNodeL;
+    AnyRefFrame &Ins = ....Segments.L2Seg.LTplL2SIPSNodeL;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    viewForce.Visible ??= Off;
+  };
+  AnyMuscleViaPoint Intertransversarii_lumborum_L3L4 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.RotatoresBrevis.Rotatores_lumbar;
+    AnyRefFrame &Org = ....Segments.L3Seg.LTplL3SIPSNodeL;
+    AnyRefFrame &Ins = ....Segments.L4Seg.LTplL4SIPSNodeL;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    viewForce.Visible ??= Off;
+  };
+  AnyMuscleViaPoint Intertransversarii_lumborum_L4L5 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.RotatoresBrevis.Rotatores_lumbar;
+    AnyRefFrame &Org = ....Segments.L4Seg.LTplL4SIPSNodeL;
+    AnyRefFrame &Ins = ....Segments.L5Seg.TransversusInsNode_L;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    viewForce.Visible ??= Off;
+  };
+  AnyMuscleViaPoint Intertransversarii_lumborum_L5Sacrum = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.RotatoresBrevis.Rotatores_lumbar;
+    AnyRefFrame &Org = ....Segments.L5Seg.TransversusInsNode_L;
+    AnyRefFrame &Ins = ....Segments.SacrumSeg.MFdL4S1NodeL;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    viewForce.Visible ??= Off;
+  };
+  
+  AnyMuscleViaPoint Interspinales_lumborum_L5Sacrum = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.RotatoresBrevis.Rotatores_lumbar;
+    AnyRefFrame &Org = ....Segments.L5Seg.MFtsL5SacrumNodeL;
+    AnyRefFrame &Ins = ....Segments.SacrumSeg.MFtsL4SacrumViaNodeL;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    viewForce.Visible ??= Off;
+  };
+  AnyMuscleViaPoint Interspinales_lumborum_L4L5 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.RotatoresBrevis.Rotatores_lumbar;
+    AnyRefFrame &Org = ....Segments.L4Seg.LSNode;
+    AnyRefFrame &Ins = ....Segments.L5Seg.MFtsL5SacrumNodeL;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    viewForce.Visible ??= Off;
+  };
+  AnyMuscleViaPoint Interspinales_lumborum_L3L4 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.RotatoresBrevis.Rotatores_lumbar;
+    AnyRefFrame &Org = ....Segments.L3Seg.LSNode;
+    AnyRefFrame &Ins = ....Segments.L4Seg.LSNode;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    viewForce.Visible ??= Off;
+  };
+  AnyMuscleViaPoint Interspinales_lumborum_L2L3 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.RotatoresBrevis.Rotatores_lumbar;
+    AnyRefFrame &Org = ....Segments.L2Seg.LSNode;
+    AnyRefFrame &Ins = ....Segments.L3Seg.LSNode;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    viewForce.Visible ??= Off;
+  };
+  AnyMuscleViaPoint Interspinales_lumborum_L1L2 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.RotatoresBrevis.Rotatores_lumbar;
+    AnyRefFrame &Org = ....Segments.L1Seg.LSNode;
+    AnyRefFrame &Ins = ....Segments.L2Seg.LSNode;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    viewForce.Visible ??= Off;
+  };
+  AnyMuscleViaPoint Interspinales_lumborum_T12L1 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.RotatoresBrevis.Rotatores_lumbar;
+    AnyRefFrame &Org = ....Segments.T12Seg.SPL2T1Via2Node;
+    AnyRefFrame &Ins = ....Segments.L1Seg.LSNode;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    viewForce.Visible ??= Off;
+  };
+
 };
 
 AnyFolder RotatoresLongus = {
+#if BM_TRUNK_THORACIC_MODEL == _THORACIC_MODEL_FLEXIBLE_
   AnyMuscleViaPoint RotatoresLongusT2C7 =   {
     AnyMuscleModel &MusMdl = ....MuscleModels.Left.RotatoresLongus.RotatoresLongus_1;
     AnyRefFrame &Org = ....Segments.T2Seg.Left.RotatoresLongusT2C7Node;
@@ -5975,8 +6100,54 @@ AnyFolder RotatoresLongus = {
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
+#endif
+  
+      AnyMuscleViaPoint RotatoresBrevisL1T11 =   {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.RotatoresBrevis.Rotatores_lumbar;
+    AnyRefFrame &Org = ....Segments.L1Seg.LTplL1SIPSNodeL;
+    AnyRefFrame &Ins = ....Segments.T11Seg.Left.RotatoresBrevisT12T11Node;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    viewForce.Visible ??= Off;
+  };
+  AnyMuscleViaPoint RotatoresBrevisL2T12 =   {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.RotatoresBrevis.Rotatores_lumbar;
+    AnyRefFrame &Org = ....Segments.L2Seg.LTplL2SIPSNodeL;
+    AnyRefFrame &Ins = ....Segments.T12Seg.MFL3T12NodeLIns;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    viewForce.Visible ??= Off;
+  };
+AnyMuscleViaPoint RotatoresBrevisL1T3 =   {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.RotatoresBrevis.Rotatores_lumbar;
+    AnyRefFrame &Org = ....Segments.L1Seg.LTptT3L3Via10NodeL;
+    AnyRefFrame &Ins = ....Segments.L3Seg.LTplL3SIPSNodeL;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    viewForce.Visible ??= Off;
+  };
+  AnyMuscleViaPoint RotatoresBrevisL2L4 =   {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.RotatoresBrevis.Rotatores_lumbar;
+    AnyRefFrame &Org = ....Segments.L4Seg.LTplL4SIPSNodeL;
+    AnyRefFrame &Ins = ....Segments.L2Seg.LTptT6S1Via8NodeL;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    viewForce.Visible ??= Off;
+  };
+  AnyMuscleViaPoint RotatoresBrevisL3L5 =   {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.RotatoresBrevis.Rotatores_lumbar;
+    AnyRefFrame &Org = ....Segments.L5Seg.TransversusInsNode_L;
+    AnyRefFrame &Ins = ....Segments.L3Seg.LTptT5L5Via10NodeL;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    viewForce.Visible ??= Off;
+  };
+  AnyMuscleViaPoint RotatoresBrevisL4Sacrum =   {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.RotatoresBrevis.Rotatores_lumbar;
+    AnyRefFrame &Org = ....Segments.L4Seg.MFdL4S1NodeL;
+    AnyRefFrame &Ins = ....Segments.SacrumSeg.MFdL4S1NodeL;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    viewForce.Visible ??= Off;
+  };
+
 };
 
+#if BM_TRUNK_THORACIC_MODEL == _THORACIC_MODEL_FLEXIBLE_
 AnyFolder TransversusThoracis = {
   AnyMuscleViaPoint TrThR2S = {
     AnyMuscleModel &MusMdl = ....MuscleModels.Left.TransversusThoracis.TransvThModel_1;

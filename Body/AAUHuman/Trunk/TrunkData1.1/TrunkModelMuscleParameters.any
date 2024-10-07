@@ -7062,6 +7062,25 @@ AnyFolder Muscles =
       AnyFloat Fcfast ??= DesignVar(0.4); ///< Factor for determining shortening speed at optimum length
     };
     #endif
+    
+    #if BM_TRUNK_MUSCLES
+    AnyFolder Rotatores_lumbar = 
+    {
+      AnyString Muscle = "RotatoresBrevis"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
+      AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
+      AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
+      AnyFloat MuscleVolume ??= .Volume*0.060282; ///< Volume of the muscle (ml) (the fraction of the group volume is based on the strength of the previous model)
+      AnyFloat MuscleVolumeSIScaled ??= ..VolumeUnitFactor*VolumeScaleFactor*MuscleVolume; ///< Scaled Volume of the muscle in SI base unit (m^3)
+      AnyFloat OptimalFiberlength ??= _FIBER_LENGTH_DESIGNVAR(0.018699); ///< Optimal working length of the muscle fiber (m)
+      AnyFloat TotalTendonLength ??= _TENDON_LENGTH_DESIGNVAR(0.01);///< The total tendon length (m)
+      AnyFloat K1 ??= DesignVar(10); ///< K1 constant in the muscle model.  Factor for determining shortening speed at optimum length
+      AnyFloat K2 ??= DesignVar(1); ///< K2 constant in the muscle model.  Factor for determining shortening speed at optimum length
+      AnyFloat Epsilon0 ??= DesignVar(0.053); ///< Epsilon bar in the muscle model. Represents tendon strain at F0
+      AnyFloat Fcfast ??= DesignVar(0.4); ///< Factor for determining shortening speed at optimum length
+    };
+    #endif
+
   }; // RotatoresBrevis group
   AnyFolder RotatoresLongus = 
   {
