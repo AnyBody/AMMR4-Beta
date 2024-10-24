@@ -915,7 +915,7 @@ AnyFolder ErectorSpinae = {
   // Iliocostalis Thoracis
   AnyMuscleViaPoint ITC7R7 = {
     AnyMuscleModel &MusMdl = ....MuscleModels.Left.ErectorSpinae.ITC7R7;
-    AnyRefNode &Org = ....Segments.T1Seg.ITC7R7NodeLOrg;
+    AnyRefNode &Org = ....Segments.C7Seg.Left.ITC7R7NodeOrg;
     AnyRefNode &Via1 = ....Segments.Left.R1Seg.ITC7R7Via1NodeL;
     AnyRefNode &Via2 = ....Segments.Left.R2Seg.ITC7R7Via2NodeL;
     AnyRefNode &Via3 = ....Segments.Left.R3Seg.ITC7R7Via3NodeL;
