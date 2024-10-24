@@ -3942,7 +3942,7 @@ AnyMuscleShortestPath OIC_8 = {
 };
 
 AnyMuscleShortestPath OIC_8_extra = {
-  AnyMuscleModel &MusMdl = ....MuscleModels.Left.ObliquusInternus.OIC_8;
+  AnyMuscleModel &MusMdl = ....MuscleModels.Left.ObliquusInternus.OIC_8_extra;
   AnyRefNode &Org = ....Segments.SternalBodySeg.RACP_Via_2_L;
  // AnyRefNode &Via = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L1.BaseSegAnterior.TransversusPoints.Left.nn05;
 
