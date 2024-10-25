@@ -50,9 +50,11 @@ Trunk={
   };
   #endif
    
-  JointMuscles = {
-    AnyComponentDefinition CDef = {};
-  };
+  #if BM_TRUNK_MUSCLES == OFF
+    JointMuscles = {
+      AnyComponentDefinition CDef = {};
+    };
+  #endif
   
   // segments
   Segments = {
