@@ -783,3 +783,9 @@
 #define _BM_PARAM_DEFINED_
 #endif
 #endif
+
+#ifdef BM_COMPATIBILITY_30_MUSCLE_STRUCTURE
+#ifndef _BM_PARAM_DEFINED_
+#define _BM_PARAM_DEFINED_
+#endif
+#endif
