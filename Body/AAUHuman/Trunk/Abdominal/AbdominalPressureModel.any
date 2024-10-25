@@ -3,17 +3,13 @@
 #define RECTUS_MUSCLE_LINE_CONTROL
 
 /// The abdominal model consists of a series of layers with individual volumes and pressure muscles
-AnyFolder Abdominal={  
-  
-  
+AnyFolder Abdominal = {   
   
   AnyFolder Parameters ={
     AnyVar LayerMeasureSplineStart= 0.6;
     AnyInt LayerMeasureAmount=6;
   };
-  
-
-  
+    
 //  #if BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
   #include "..\NodesForThoracicCavity.any"
   AnyKinVolumeCylMesh Volume = {

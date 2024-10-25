@@ -24,8 +24,8 @@ AnyRefNode EllipsoidCenterE  = {sRel=.ScaleFunction(....Data.unscaled.ModelParam
 AnySurfCylinder mesh = {
   sRel =  .EllipsoidCenterE.sRel+{0,0,-0.5*Length};
   Radius    = vnorm(.EllipsoidPoint2E.sRel-.EllipsoidCenterE.sRel);
-Length= 2*  vnorm(.EllipsoidPoint1E.sRel-.EllipsoidCenterE.sRel);
-
+  Length= 2*  vnorm(.EllipsoidPoint1E.sRel-.EllipsoidCenterE.sRel);
+  
   //viewSurface ={
   //  Visible =On;
   //};
@@ -70,9 +70,9 @@ AnySurfEllipsoid mesh_Full = {
   AnyFloat  R1 = vnorm(.EllipsoidPoint2.sRel-.EllipsoidCenter.sRel);
   AnyFloat R3 = vnorm(.EllipsoidPoint1.sRel-.EllipsoidCenter.sRel);
   Radius   ={R1,(R1+R3)/6,R3};
-//  viewSurface ={
-//   Visible =On;
-//  };
+  //  viewSurface ={
+  //   Visible =On;
+  //  };
 };
 
 
@@ -94,10 +94,10 @@ AnyRefNode  Right ={
     AnyFloat R3 = vnorm(.ECalculatedPoint0.sRel-.ECenterSideEllipsoid.sRel);
     
     Radius   ={R1,R3,(R1+R3)/4};
-//    viewSurface ={
-//      RGB={0,1,0};
-//      Visible =On;
-//    };
+    //    viewSurface ={
+    //      RGB={0,1,0};
+    //      Visible =On;
+    //    };
   };
 };
 
@@ -120,10 +120,10 @@ AnyRefNode  Left ={
     AnyFloat R3 = vnorm(.ECalculatedPoint0.sRel-.ECenterSideEllipsoid.sRel);
     
     Radius   ={R1,R3,(R1+R3)/4};
-//    viewSurface ={
-//      RGB={0,1,0};
-//      Visible =On;
-//    };
+    //    viewSurface ={
+    //      RGB={0,1,0};
+    //      Visible =On;
+    //    };
   };
 };
 
@@ -171,9 +171,6 @@ AnySurfTriCylMesh mesh = {
   AnyFloat SmallBottomRing = ( 0.8*    reshape(repmat( MeshSize*2,center_bottom ),{MeshSize*2,3})+0.2*
   arrcat(....Data.unscaled.ModelParameters.Abdominal.AllLayers.AbdominalPoints.calculations.Right._LAYER_.inner_points[10],
   flip(....Data.unscaled.ModelParameters.Abdominal.AllLayers.AbdominalPoints.calculations.Left._LAYER_.inner_points[10],0)));
-  
-  
-  
   
   AnyInt MeshSize=....Data.unscaled.ModelParameters.Abdominal.AllLayers.AbdominalPoints.calculations.Right._LAYER_.n_points;
   Points =.ScaleFunction (
@@ -266,11 +263,6 @@ AnySurfTriMesh mesh = {
   flip(....Data.unscaled.ModelParameters.Abdominal.AllLayers.AbdominalPoints.calculations.Left._LAYER_.inner_points[10],0)));
   
   
-  
-  
-  
-  
-  
   AnyInt MeshSize=....Data.unscaled.ModelParameters.Abdominal.AllLayers.AbdominalPoints.calculations.Right._LAYER_.n_points;
   Points =.ScaleFunction (
   arrcat(
@@ -309,14 +301,8 @@ AnySurfTriMesh mesh = {
   ) 
   ) ; 
   
-  
-  
-  
-  Triangles = 
-  {
-    
-    
-    //          {1092, 1093, 1015}, 
+  Triangles = {  
+    //{1092, 1093, 1015}, 
     //{1093, 1094, 1016}, 
     //{1094, 1095, 1017}, 
     //{1095, 1096, 1018}, 
@@ -2428,18 +2414,9 @@ AnySurfTriMesh mesh = {
     {231, 154, 153}, 
     {232, 155, 154}, 
     {233, 78, 155}, 
-    
-    
-    
-    
-    
-    
-  };
-  
-  
-  
-  
+  }; 
 };
 #endif
+
 
 
