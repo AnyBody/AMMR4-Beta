@@ -44,29 +44,29 @@ AnyFolder Segments = {
 
 
 /* Joint muscle section */
-AnyFolder JointMuscles = {
-  AnyFolder Cervical = {};
-  AnyFolder Thorax = {};
-  AnyFolder CostoSternal = {};
-  AnyFolder Lumbar = {};
-
-  #if (BM_TRUNK_MUSCLES == _MUSCLES_NONE_) & (BM_TRUNK_THORACIC_MODEL != _THORACIC_MODEL_RIGID_) & (BM_TRUNK_THORACIC_MODEL != _THORACIC_MODEL_USERDEFINED_)
-    // TODO get jnt muscles working.
-    //Thorax = {#include "JointMusclesThoracic.any"} //Adds muscles to the joints in the thoracic spine  
-  #endif
-
-
-  #if (BM_TRUNK_THORACIC_MODEL != _THORACIC_MODEL_FLEXIBLE_)
-  // TODO get working.
-  // for now costosternal joint muscles are always on to account for residual
-  //CostoSternal = {#include "JointMusclesRibCage.any"}; //Adds muscles to the joints for the ribs
-  #endif
-
-  #if BM_TRUNK_MUSCLES == OFF
+#if BM_TRUNK_MUSCLES == OFF
+  AnyFolder JointMuscles = {
+    AnyFolder Cervical = {};
+    AnyFolder Thorax = {};
+    AnyFolder CostoSternal = {};
+    AnyFolder Lumbar = {};
+  
+    #if (BM_TRUNK_MUSCLES == _MUSCLES_NONE_) & (BM_TRUNK_THORACIC_MODEL != _THORACIC_MODEL_RIGID_) & (BM_TRUNK_THORACIC_MODEL != _THORACIC_MODEL_USERDEFINED_)
+      // TODO get jnt muscles working.
+      //Thorax = {#include "JointMusclesThoracic.any"} //Adds muscles to the joints in the thoracic spine  
+    #endif
+  
+  
+    #if (BM_TRUNK_THORACIC_MODEL != _THORACIC_MODEL_FLEXIBLE_)
+    // TODO get working.
+    // for now costosternal joint muscles are always on to account for residual
+    //CostoSternal = {#include "JointMusclesRibCage.any"}; //Adds muscles to the joints for the ribs
+    #endif
+  
     Lumbar = {#include "JointMusclesLumbar.any"}; //Adds muscles to the joints in the lumbar spine
     Cervical = {#include "JointMusclesCervical.any"}; //Adds muscles to the joints in the cervical spine
-  #endif
-};
+  };
+#endif
 
 
 AnyFolder Joints = {
