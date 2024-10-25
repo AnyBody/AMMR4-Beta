@@ -1,7 +1,12 @@
 
 AnyDoc _AMMR_BETA_INFO_ = 
 {
-   Hidden = On;
+  #if (ANYBODY_V1 > 8)|(ANYBODY_V1 == 8 & ANYBODY_V2 >= 2)
+    // 'Hidden' member is deprecated in newer verison
+  #else
+    Hidden = On;
+  #endif
+
    #ifpathexists "../../../../.git"
 
    #ifdef ANYBODY_PATH_PYTHONHOME
