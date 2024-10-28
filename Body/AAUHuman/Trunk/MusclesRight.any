@@ -1,9 +1,15 @@
 
 //#define  OBLIQUUS_WRAP_ON_CYLS    //with this statement it will use wrapping on cylinders 
 
+
+
+
+
 #if BM_TRUNK_MUSCLES
 
 #if BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
+
+
 MuscleGroup Transversus = {
 AnyMuscleViaPoint TransversusL1 = {
     AnyMuscleModel &MusMdl = ....MuscleModels.Right.Transversus.Transversus_1;
@@ -1016,9 +1022,9 @@ MuscleGroup ErectorSpinae = {
 
  
 
-AnyFolder InterCostalisExternal = 
+MuscleGroup InterCostalisExternal = 
   {
-    Muscle_template_Simple IC_Ext_R1R2(
+    SplineMuscle_CreateMuscle IC_Ext_R1R2(
       CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE),
       OriginSegment=....Segments.Right.R1Seg,
       ORIGIN_POINTS=....Data.unscaled.ModelParameters.R1.Right.IC_R1_Ext_Inf.Points,
@@ -1118,11 +1124,11 @@ AnyFolder InterCostalisExternal =
     )={};
   };
 
-  AnyFolder InterCostalisInternal = 
+  MuscleGroup InterCostalisInternal = 
   {
   
   
-    Muscle_template_Simple IC_Int_R1R2 (
+    SplineMuscle_CreateMuscle IC_Int_R1R2 (
       CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE),
       OriginSegment=....Segments.Right.R1Seg,
       ORIGIN_POINTS=....Data.unscaled.ModelParameters.R1.Right.IC_R1_Int_Inf.Points,
@@ -1145,6 +1151,8 @@ AnyFolder InterCostalisExternal =
 
       };
     };
+    
+
     
     SplineMuscle_CreateMuscle IC_Int_R2R3 (
      CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
@@ -1363,10 +1371,10 @@ AnyFolder InterCostalisExternal =
   
   
 
-  AnyFolder InnermostInterCostalis = 
+  MuscleGroup InnermostInterCostalis = 
   {
 
-    Muscle_template_Simple IC_Inn_R1R2(
+    SplineMuscle_CreateMuscle IC_Inn_R1R2(
        CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE),
         OriginSegment=....Segments.Right.R1Seg,
       ORIGIN_POINTS=....Data.unscaled.ModelParameters.R1.Right.IC_R1_Inn_Inf.Points,
@@ -1464,19 +1472,31 @@ AnyFolder InterCostalisExternal =
       INSERTION_POINTS=....Data.unscaled.ModelParameters.R12.Right.IC_R12_Inn_Sup.Points,
       MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R11R12
     )={};
+  
   };
-#endif
+ #endif
 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
   #if IC_TYPE != OLD  
   //  #if IC_TYPE== MULTI_OFFSET
 
   
-  AnyFolder InnermostInterCostalis ={
+  MuscleGroup InnermostInterCostalis ={
   
     
     
- Muscle_template_Simple_Angle_MultiOffset IC_Inn_R1R2 (
+ SplineMuscle_CreateMuscleMultiOffset IC_Inn_R1R2 (
       CREATE_ELEMENTS= IC_MULTIPLIER*IC_SIZE,
       OriginSegment=....Segments.Right.R1Seg,
       ORIGIN_POINTS=....Segments.Right.R1Seg.IC_points.Inn_InfPoints,
@@ -1485,7 +1505,7 @@ AnyFolder InterCostalisExternal =
       MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R1R2
     )={DesiredAngle = 0;};
 
-   Muscle_template_Simple_Angle_MultiOffset IC_Inn_R2R3 (
+   SplineMuscle_CreateMuscleMultiOffset IC_Inn_R2R3 (
      CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+3),
       OriginSegment=....Segments.Right.R2Seg,
       ORIGIN_POINTS=....Segments.Right.R2Seg.IC_points.Inn_InfPoints,
@@ -1495,7 +1515,7 @@ AnyFolder InterCostalisExternal =
     )={DesiredAngle = 0;};
 
     
-     Muscle_template_Simple_Angle_MultiOffset IC_Inn_R3R4 (
+     SplineMuscle_CreateMuscleMultiOffset IC_Inn_R3R4 (
      CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+3),
       OriginSegment=....Segments.Right.R3Seg,
       ORIGIN_POINTS=....Segments.Right.R3Seg.IC_points.Inn_InfPoints,
@@ -1504,7 +1524,7 @@ AnyFolder InterCostalisExternal =
       MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R3R4
     )={DesiredAngle = 0;};
 
-   Muscle_template_Simple_Angle_MultiOffset IC_Inn_R4R5 (
+   SplineMuscle_CreateMuscleMultiOffset IC_Inn_R4R5 (
      CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+3),
       OriginSegment=....Segments.Right.R4Seg,
       ORIGIN_POINTS=....Segments.Right.R4Seg.IC_points.Inn_InfPoints,
@@ -1514,7 +1534,7 @@ AnyFolder InterCostalisExternal =
     )={DesiredAngle = 0;};
 
     
-       Muscle_template_Simple_Angle_MultiOffset IC_Inn_R5R6 (
+       SplineMuscle_CreateMuscleMultiOffset IC_Inn_R5R6 (
     CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+3),
       OriginSegment=....Segments.Right.R5Seg,
       ORIGIN_POINTS=....Segments.Right.R5Seg.IC_points.Inn_InfPoints,
@@ -1524,7 +1544,7 @@ AnyFolder InterCostalisExternal =
     )={DesiredAngle = 0;};
 
     
-       Muscle_template_Simple_Angle_MultiOffset IC_Inn_R6R7 (
+       SplineMuscle_CreateMuscleMultiOffset IC_Inn_R6R7 (
      CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+3),
       OriginSegment=....Segments.Right.R6Seg,
       ORIGIN_POINTS=....Segments.Right.R6Seg.IC_points.Inn_InfPoints,
@@ -1533,7 +1553,7 @@ AnyFolder InterCostalisExternal =
       MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R6R7
     )={DesiredAngle = 0;};
     
-       Muscle_template_Simple_Angle_MultiOffset IC_Inn_R7R8 (
+       SplineMuscle_CreateMuscleMultiOffset IC_Inn_R7R8 (
      CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+3),
       OriginSegment=....Segments.Right.R7Seg,
       ORIGIN_POINTS=....Segments.Right.R7Seg.IC_points.Inn_InfPoints,
@@ -1543,7 +1563,7 @@ AnyFolder InterCostalisExternal =
     )={DesiredAngle = 0;};
 
 
-       Muscle_template_Simple_Angle_MultiOffset IC_Inn_R8R9 (
+       SplineMuscle_CreateMuscleMultiOffset IC_Inn_R8R9 (
       CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+3),
       OriginSegment=....Segments.Right.R8Seg,
       ORIGIN_POINTS=....Segments.Right.R8Seg.IC_points.Inn_InfPoints,
@@ -1552,7 +1572,7 @@ AnyFolder InterCostalisExternal =
       MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R8R9
     )={DesiredAngle = 0;};
 
-    Muscle_template_Simple_Angle_MultiOffset IC_Inn_R9R10 (
+    SplineMuscle_CreateMuscleMultiOffset IC_Inn_R9R10 (
      CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+3),
       OriginSegment=....Segments.Right.R9Seg,
       ORIGIN_POINTS=....Segments.Right.R9Seg.IC_points.Inn_InfPoints,
@@ -1561,7 +1581,7 @@ AnyFolder InterCostalisExternal =
       MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R9R10
     )={DesiredAngle = 0;};
  
-    Muscle_template_Simple_Angle_MultiOffset IC_Inn_R10R11 (
+    SplineMuscle_CreateMuscleMultiOffset IC_Inn_R10R11 (
    CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE),
       OriginSegment=....Segments.Right.R10Seg,
       ORIGIN_POINTS=....Segments.Right.R10Seg.IC_points.Inn_InfPoints,
@@ -1571,7 +1591,7 @@ AnyFolder InterCostalisExternal =
     )={DesiredAngle = 0;};
 
     
-       Muscle_template_Simple_Angle_MultiOffset IC_Inn_R11R12 (
+       SplineMuscle_CreateMuscleMultiOffset IC_Inn_R11R12 (
       CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE-4),
       OriginSegment=....Segments.Right.R11Seg,
       ORIGIN_POINTS=....Segments.Right.R11Seg.IC_points.Inn_InfPoints,
@@ -1583,9 +1603,13 @@ AnyFolder InterCostalisExternal =
 };
 
   
-    MuscleGroup InternalInterCostalis(searchString="*.*") = {
   
- Muscle_template_Simple_Angle_MultiOffset IC_Int_R1R2 (
+  
+  
+  MuscleGroup InternalInterCostalis ={
+  
+  
+ SplineMuscle_CreateMuscleMultiOffset IC_Int_R1R2 (
       CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1-3),
       OriginSegment=....Segments.Right.R1Seg,
       ORIGIN_POINTS=....Segments.Right.R1Seg.IC_points.Int_InfPoints,
@@ -1612,7 +1636,7 @@ AnyFolder InterCostalisExternal =
     
     };
 
-   Muscle_template_Simple_Angle_MultiOffset IC_Int_R2R3 (
+   SplineMuscle_CreateMuscleMultiOffset IC_Int_R2R3 (
      CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
       OriginSegment=....Segments.Right.R2Seg,
       ORIGIN_POINTS=....Segments.Right.R2Seg.IC_points.Int_InfPoints,
@@ -1639,7 +1663,7 @@ AnyFolder InterCostalisExternal =
     };
 
     
-     Muscle_template_Simple_Angle_MultiOffset IC_Int_R3R4 (
+     SplineMuscle_CreateMuscleMultiOffset IC_Int_R3R4 (
      CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
       OriginSegment=....Segments.Right.R3Seg,
       ORIGIN_POINTS=....Segments.Right.R3Seg.IC_points.Int_InfPoints,
@@ -1649,20 +1673,21 @@ AnyFolder InterCostalisExternal =
     )={ 
       DesiredAngle=-45;
         NumberOfElements =  IC_MULTIPLIER*(IC_SIZE+1);
-        AnyMuscleViaPoint elem_sternum= {
-          AnyRefNode &Org = .....Segments.SternalBodySeg.Right_IC_Int_R3R4_elem_sternum;
-          AnyRefNode &Ins = .InsertionSegment.IC_Int_R3R4_elem_sternum;
-          AnyMuscleModel MusMdl = {
-            F0=..MuscleModel.F0/..NumberOfElements;
-            Lf0=..MuscleModel.F0; 
-            Vol0=..MuscleModel.Vol0/..NumberOfElements;
-          };
-          viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-          // AnyDrawPLine drwLine ={AnyFloat RGB_Red={1,0,0};AnyFloat RGB_Green={0,1,0};RGB=iffun(gtfun(.LmtDot,0),RGB_Red,RGB_Green);Thickness=0.005;};
-        };    
-      };
+ AnyMuscleViaPoint elem_sternum= {
+        AnyRefNode &Org = .....Segments.SternalBodySeg.Right_IC_Int_R3R4_elem_sternum;
+        AnyRefNode &Ins = .InsertionSegment.IC_Int_R3R4_elem_sternum;
+        AnyMuscleModel MusMdl = {
+          F0=..MuscleModel.F0/..NumberOfElements;
+          Lf0=..MuscleModel.F0; 
+          Vol0=..MuscleModel.Vol0/..NumberOfElements;
+        };
+        viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+       // AnyDrawPLine drwLine ={AnyFloat RGB_Red={1,0,0};AnyFloat RGB_Green={0,1,0};RGB=iffun(gtfun(.LmtDot,0),RGB_Red,RGB_Green);Thickness=0.005;};
+      };    
 
-   Muscle_template_Simple_Angle_MultiOffset IC_Int_R4R5 (
+    };
+
+   SplineMuscle_CreateMuscleMultiOffset IC_Int_R4R5 (
     CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
       OriginSegment=....Segments.Right.R4Seg,
       ORIGIN_POINTS=....Segments.Right.R4Seg.IC_points.Int_InfPoints,
@@ -1686,7 +1711,7 @@ AnyFolder InterCostalisExternal =
     };
 
     
-       Muscle_template_Simple_Angle_MultiOffset IC_Int_R5R6 (
+       SplineMuscle_CreateMuscleMultiOffset IC_Int_R5R6 (
     CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
       OriginSegment=....Segments.Right.R5Seg,
       ORIGIN_POINTS=....Segments.Right.R5Seg.IC_points.Int_InfPoints,
@@ -1712,7 +1737,7 @@ AnyFolder InterCostalisExternal =
     };
 
     
-       Muscle_template_Simple_Angle_MultiOffset IC_Int_R6R7 (
+       SplineMuscle_CreateMuscleMultiOffset IC_Int_R6R7 (
        CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
       OriginSegment=....Segments.Right.R6Seg,
       ORIGIN_POINTS=....Segments.Right.R6Seg.IC_points.Int_InfPoints,
@@ -1736,7 +1761,7 @@ AnyMuscleViaPoint elem_sternum= {
       };    
 };
     
-       Muscle_template_Simple_Angle_MultiOffset IC_Int_R7R8 (
+       SplineMuscle_CreateMuscleMultiOffset IC_Int_R7R8 (
        CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
       OriginSegment=....Segments.Right.R7Seg,
       ORIGIN_POINTS=....Segments.Right.R7Seg.IC_points.Int_InfPoints,
@@ -1765,7 +1790,7 @@ AnyMuscleViaPoint elem_sternum= {
  };
 
 
-       Muscle_template_Simple_Angle_MultiOffset IC_Int_R8R9 (
+       SplineMuscle_CreateMuscleMultiOffset IC_Int_R8R9 (
        CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
       OriginSegment=....Segments.Right.R8Seg,
       ORIGIN_POINTS=....Segments.Right.R8Seg.IC_points.Int_InfPoints,
@@ -1791,7 +1816,7 @@ AnyMuscleViaPoint elem_sternum= {
       }; 
     };
     
-    Muscle_template_Simple_Angle_MultiOffset IC_Int_R9R10 (
+    SplineMuscle_CreateMuscleMultiOffset IC_Int_R9R10 (
        CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
       OriginSegment=....Segments.Right.R9Seg,
       ORIGIN_POINTS=....Segments.Right.R9Seg.IC_points.Int_InfPoints,
@@ -1818,7 +1843,7 @@ AnyMuscleViaPoint elem_sternum= {
     };
 
     
-       Muscle_template_Simple_Angle_MultiOffset IC_Int_R10R11 (
+       SplineMuscle_CreateMuscleMultiOffset IC_Int_R10R11 (
        CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE),
       OriginSegment=....Segments.Right.R10Seg,
       ORIGIN_POINTS=....Segments.Right.R10Seg.IC_points.Int_InfPoints,
@@ -1838,10 +1863,13 @@ AnyMuscleViaPoint elem_sternum= {
     )={DesiredAngle=-45;};
   };
 
-
-  MuscleGroup ExternalInterCostalis(searchString="*.*") = {
   
- Muscle_template_Simple_Angle_MultiOffset IC_Ext_R1R2 (
+  
+  
+  MuscleGroup ExternalInterCostalis ={
+  
+  
+ SplineMuscle_CreateMuscleMultiOffset IC_Ext_R1R2 (
        CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
       OriginSegment=....Segments.Right.R1Seg,
       ORIGIN_POINTS=....Segments.Right.R1Seg.IC_points.Ext_InfPoints,
@@ -1850,7 +1878,7 @@ AnyMuscleViaPoint elem_sternum= {
       MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R1R2
     )={DesiredAngle=45;};
 
-   Muscle_template_Simple_Angle_MultiOffset IC_Ext_R2R3 (
+   SplineMuscle_CreateMuscleMultiOffset IC_Ext_R2R3 (
        CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
       OriginSegment=....Segments.Right.R2Seg,
       ORIGIN_POINTS=....Segments.Right.R2Seg.IC_points.Ext_InfPoints,
@@ -1860,7 +1888,7 @@ AnyMuscleViaPoint elem_sternum= {
     )={DesiredAngle=45;};
 
     
-     Muscle_template_Simple_Angle_MultiOffset IC_Ext_R3R4 (
+     SplineMuscle_CreateMuscleMultiOffset IC_Ext_R3R4 (
        CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
       OriginSegment=....Segments.Right.R3Seg,
       ORIGIN_POINTS=....Segments.Right.R3Seg.IC_points.Ext_InfPoints,
@@ -1869,7 +1897,7 @@ AnyMuscleViaPoint elem_sternum= {
       MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R3R4
     )={DesiredAngle=45;};
 
-   Muscle_template_Simple_Angle_MultiOffset IC_Ext_R4R5 (
+   SplineMuscle_CreateMuscleMultiOffset IC_Ext_R4R5 (
        CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
       OriginSegment=....Segments.Right.R4Seg,
       ORIGIN_POINTS=....Segments.Right.R4Seg.IC_points.Ext_InfPoints,
@@ -1879,7 +1907,7 @@ AnyMuscleViaPoint elem_sternum= {
     )={DesiredAngle=45;};
 
     
-       Muscle_template_Simple_Angle_MultiOffset IC_Ext_R5R6 (
+       SplineMuscle_CreateMuscleMultiOffset IC_Ext_R5R6 (
        CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
       OriginSegment=....Segments.Right.R5Seg,
       ORIGIN_POINTS=....Segments.Right.R5Seg.IC_points.Ext_InfPoints,
@@ -1889,7 +1917,7 @@ AnyMuscleViaPoint elem_sternum= {
     )={DesiredAngle=45;};
 
     
-       Muscle_template_Simple_Angle_MultiOffset IC_Ext_R6R7 (
+       SplineMuscle_CreateMuscleMultiOffset IC_Ext_R6R7 (
        CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
       OriginSegment=....Segments.Right.R6Seg,
       ORIGIN_POINTS=....Segments.Right.R6Seg.IC_points.Ext_InfPoints,
@@ -1898,7 +1926,7 @@ AnyMuscleViaPoint elem_sternum= {
       MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R6R7
     )={DesiredAngle=45;};
     
-       Muscle_template_Simple_Angle_MultiOffset IC_Ext_R7R8 (
+       SplineMuscle_CreateMuscleMultiOffset IC_Ext_R7R8 (
        CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
       OriginSegment=....Segments.Right.R7Seg,
       ORIGIN_POINTS=....Segments.Right.R7Seg.IC_points.Ext_InfPoints,
@@ -1908,7 +1936,7 @@ AnyMuscleViaPoint elem_sternum= {
     )={DesiredAngle=45;};
 
 
-       Muscle_template_Simple_Angle_MultiOffset IC_Ext_R8R9 (
+       SplineMuscle_CreateMuscleMultiOffset IC_Ext_R8R9 (
        CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
       OriginSegment=....Segments.Right.R8Seg,
       ORIGIN_POINTS=....Segments.Right.R8Seg.IC_points.Ext_InfPoints,
@@ -1916,7 +1944,7 @@ AnyMuscleViaPoint elem_sternum= {
       INSERTION_POINTS=....Segments.Right.R9Seg.IC_points.Ext_SupPoints,
       MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R8R9
     )={DesiredAngle=45;};
-     Muscle_template_Simple_Angle_MultiOffset IC_Ext_R9R10 (
+     SplineMuscle_CreateMuscleMultiOffset IC_Ext_R9R10 (
        CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
       OriginSegment=....Segments.Right.R9Seg,
       ORIGIN_POINTS=....Segments.Right.R9Seg.IC_points.Ext_InfPoints,
@@ -1926,7 +1954,7 @@ AnyMuscleViaPoint elem_sternum= {
     )={DesiredAngle=45;};
 
     
-    Muscle_template_Simple_Angle_MultiOffset IC_Ext_R10R11 (
+    SplineMuscle_CreateMuscleMultiOffset IC_Ext_R10R11 (
        CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE),
       OriginSegment=....Segments.Right.R10Seg,
       ORIGIN_POINTS=....Segments.Right.R10Seg.IC_points.Ext_InfPoints,
@@ -1936,7 +1964,7 @@ AnyMuscleViaPoint elem_sternum= {
     )={DesiredAngle=45;};
 
     
-       Muscle_template_Simple_Angle_MultiOffset IC_Ext_R11R12 (
+       SplineMuscle_CreateMuscleMultiOffset IC_Ext_R11R12 (
        CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE-4),
       OriginSegment=....Segments.Right.R11Seg,
       ORIGIN_POINTS=....Segments.Right.R11Seg.IC_points.Ext_InfPoints,
@@ -1945,8 +1973,33 @@ AnyMuscleViaPoint elem_sternum= {
       MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R11R12
     )={DesiredAngle=45;};
   };
+
+  
 #endif
 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+  
+  
+  
+  
 #endif
 
 MuscleGroup LevatorCostarum = {
@@ -2247,7 +2300,8 @@ MuscleGroup LongusCapitis = {
   };
 };
 
-AnyFolder LongusColli = {
+MuscleGroup LongusColli = {
+  // LongusColliVertical
   AnyMuscleViaPoint LongusColliT3C6 = {
     AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongusColli.LongusColliT3C6;
     AnyRefNode &Org = ....Segments.T3Seg.Right.LongusColliT3C6Node;
