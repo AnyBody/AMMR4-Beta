@@ -89,7 +89,7 @@ AnyKinStudy Study = {
     AnyFolder Abscissa = { 
       AnyVar JointAngle =  not(not(..Model.Drivers.ArmDriver.DriverVel))*..Model.Drivers.ArmMeasure.Pos'*180/pi  ;    
     };
-    #define _CODE_MACRO_(name) AnyVar name = ( ..Model.MusRef.name.Strength);    
+    #define _CODE_MACRO_(muscle, branch) AnyVar branch = ( ..Model.MusRef.muscle.branch.Strength); 
     #include "armmuscles_for_output.any"
     #undef _CODE_MACRO_
   };
@@ -98,7 +98,7 @@ AnyKinStudy Study = {
     AnyFolder Abscissa = { 
       AnyVar JointAngle =  not(not(..Model.Drivers.ArmDriver.DriverVel))*..Model.Drivers.ArmMeasure.Pos'*180/pi  ;    
     };
-    #define _CODE_MACRO_(name) AnyVar name = ( ..Model.MusRef.name.PennationAngle * 180/pi);    
+    #define _CODE_MACRO_(muscle, branch) AnyVar branch = ( ..Model.MusRef.muscle.branch.PennationAngle * 180/pi);    
     #include "armmuscles_for_output.any"
     #undef _CODE_MACRO_
   };
@@ -107,7 +107,7 @@ AnyKinStudy Study = {
     AnyFolder Abscissa = { 
       AnyVar JointAngle =  not(not(..Model.Drivers.ArmDriver.DriverVel))*..Model.Drivers.ArmMeasure.Pos'*180/pi  ;    
     };
-    #define _CODE_MACRO_(name) AnyVar name = ( -1*..Model.MusRef.name.LmtDot/..Model.Drivers.AngularVelocity);    
+    #define _CODE_MACRO_(muscle, branch) AnyVar branch = ( -1*..Model.MusRef.muscle.branch.LmtDot/..Model.Drivers.AngularVelocity);    
     #include "armmuscles_for_output.any"
     #undef _CODE_MACRO_
   };
