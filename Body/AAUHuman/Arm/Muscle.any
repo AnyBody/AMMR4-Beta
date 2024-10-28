@@ -649,7 +649,7 @@ MuscleGroup Coracobrachialis = {
     };
   };
 
-  MuscleGroup DeltoidAnterior = {
+  MuscleGroup DeltoideusAnterior = {
     AnyMuscleShortestPath deltoideus_anterior_part_1 = {
       AnyMuscleModel &MusMdl = ...MuscleModels.deltoideus_anterior_part_1; 
       AnyRefNode &Org = ...Seg.Clavicula.O_deltoideus_anterior_part_1; 
