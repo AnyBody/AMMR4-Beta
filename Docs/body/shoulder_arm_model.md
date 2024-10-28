@@ -21,11 +21,11 @@ glenohumeral joint angles, also known as a "Shoulder rhythms".
 The AnyBody shoulder model's rhythm can be switched on
 and off, the full details of which can be seen in this report
 [Shoulder Rhythm
-Report](https://paperpile.com/shared/TUqWjt).
+Report](https://paperpile.com/shared/sQXLyvQsQRfauvB5T9lxyqg).
 
 ```{raw} html
 <video width="45%" style="display:block; margin: 0 auto;" controls autoplay loop>
-    <source src="../_static/ShouderArm_rotalting_model.mp4" type="video/mp4">
+    <source src="../_static/ShoulderArm_rotating_model.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
 <!--<img src="../_static/ShoulderCloseupBack.jpg" alt="Smiley face" width="45%">-->

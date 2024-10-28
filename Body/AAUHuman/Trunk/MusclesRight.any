@@ -388,8 +388,12 @@ MuscleGroup ErectorSpinae = {
     AnyMuscleModel &MusMdl = ....MuscleModels.Right.ErectorSpinae.ILplL1CI;
     AnyRefNode &Org = ....Segments.L1Seg.ILplL1CINodeR;
     AnyRefNode &Via1 = ....Segments.L2Seg.ILplL1CIViaNodeR;
+    #ifndef REMOVE_ERECTORSPINAE_L3VIA
     AnyRefNode &Via2 = ....Segments.L3Seg.ILplL1CIViaNodeR;
+    #endif
+    #ifndef REMOVE_ERECTORSPINAE_L4VIA
     AnyRefNode &Via3 = ....Segments.L4Seg.ILplL1CIViaNodeR;
+    #endif
     AnyRefNode &Ins = ....Segments.PelvisSeg.ILplL1CINodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
@@ -397,8 +401,12 @@ MuscleGroup ErectorSpinae = {
   AnyMuscleViaPoint ILplL2CI = {
     AnyMuscleModel &MusMdl = ....MuscleModels.Right.ErectorSpinae.ILplL2CI;
     AnyRefNode &Org = ....Segments.L2Seg.ILplL2CINodeR;
+    #ifndef REMOVE_ERECTORSPINAE_L3VIA
     AnyRefNode &Via1 = ....Segments.L3Seg.ILplL2CIViaNodeR;
+    #endif
+    #ifndef REMOVE_ERECTORSPINAE_L4VIA
     AnyRefNode &Via2 = ....Segments.L4Seg.ILplL2CIViaNodeR;
+    #endif
     AnyRefNode &Ins = ....Segments.PelvisSeg.ILplL2CINodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
@@ -421,7 +429,9 @@ MuscleGroup ErectorSpinae = {
     AnyMuscleModel &MusMdl = ....MuscleModels.Right.ErectorSpinae.LTplL1SIPS;
     AnyRefNode &Org = ....Segments.L1Seg.LTplL1SIPSNodeR;
     AnyRefNode &Via1 = ....Segments.L2Seg.LTplL1SIPSViaNodeR;
+    #ifndef REMOVE_ERECTORSPINAE_L3VIA
     AnyRefNode &Via2 = ....Segments.L3Seg.LTplL1SIPSViaNodeR;    
+    #endif
     AnyRefNode &Ins = ....Segments.PelvisSeg.LTplL1SIPSNodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
@@ -429,7 +439,9 @@ MuscleGroup ErectorSpinae = {
   AnyMuscleViaPoint LTplL2SIPS = {
     AnyMuscleModel &MusMdl = ....MuscleModels.Right.ErectorSpinae.LTplL2SIPS;
     AnyRefNode &Org = ....Segments.L2Seg.LTplL2SIPSNodeR;
+    #ifndef REMOVE_ERECTORSPINAE_L3VIA
     AnyRefNode &Via1 = ....Segments.L3Seg.LTplL2SIPSViaNodeR;
+    #endif
     AnyRefNode &Ins = ....Segments.PelvisSeg.LTplL2SIPSNodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
@@ -466,7 +478,9 @@ MuscleGroup ErectorSpinae = {
     AnyRefNode &Via6 = ....Segments.Right.R12Seg.ILptC5SIPSVia6NodeR;
     AnyRefNode &Via7 = ....Segments.L1Seg.ILptC5SIPSVia7NodeR;
     AnyRefNode &Via8 = ....Segments.L2Seg.ILptC5SIPSVia8NodeR;
+    #ifndef REMOVE_ERECTORSPINAE_L3VIA
     AnyRefNode &Via9 = ....Segments.L3Seg.ILptC5SIPSVia9NodeR;
+    #endif
     AnyRefNode &Ins = ....Segments.PelvisSeg.ILptC5SIPSNodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
@@ -481,7 +495,9 @@ MuscleGroup ErectorSpinae = {
     AnyRefNode &Via5 = ....Segments.Right.R12Seg.ILptC6SIPSVia5NodeR;
     AnyRefNode &Via6 = ....Segments.L1Seg.ILptC6SIPSVia6NodeR;
     AnyRefNode &Via7 = ....Segments.L2Seg.ILptC6SIPSVia7NodeR;
+    #ifndef REMOVE_ERECTORSPINAE_L3VIA
     AnyRefNode &Via8 = ....Segments.L3Seg.ILptC6SIPSVia8NodeR;
+    #endif
     AnyRefNode &Ins = ....Segments.PelvisSeg.ILptC6SIPSNodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
@@ -495,7 +511,9 @@ MuscleGroup ErectorSpinae = {
     AnyRefNode &Via4 = ....Segments.Right.R12Seg.ILptC7CIVia4NodeR;
     AnyRefNode &Via5 = ....Segments.L1Seg.ILptC7CIVia5NodeR;
     AnyRefNode &Via6 = ....Segments.L2Seg.ILptC7CIVia6NodeR;
+    #ifndef REMOVE_ERECTORSPINAE_L3VIA
     AnyRefNode &Via7 = ....Segments.L3Seg.ILptC7CIVia7NodeR;    
+    #endif
     AnyRefNode &Ins = ....Segments.PelvisSeg.ILptC7CINodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
@@ -508,7 +526,9 @@ MuscleGroup ErectorSpinae = {
     AnyRefNode &Via3 = ....Segments.Right.R12Seg.ILptC8CIVia3NodeR;
     AnyRefNode &Via4 = ....Segments.L1Seg.ILptC8CIVia4NodeR;
     AnyRefNode &Via5 = ....Segments.L2Seg.ILptC8CIVia5NodeR;
+    #ifndef REMOVE_ERECTORSPINAE_L3VIA
     AnyRefNode &Via6 = ....Segments.L3Seg.ILptC8CIVia6NodeR;    
+    #endif
     AnyRefNode &Ins = ....Segments.PelvisSeg.ILptC8CINodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
@@ -520,7 +540,9 @@ MuscleGroup ErectorSpinae = {
     AnyRefNode &Via2 = ....Segments.Right.R12Seg.ILptC9CIVia2NodeR;
     AnyRefNode &Via3 = ....Segments.L1Seg.ILptC9CIVia3NodeR;
     AnyRefNode &Via4 = ....Segments.L2Seg.ILptC9CIVia4NodeR;
+    #ifndef REMOVE_ERECTORSPINAE_L3VIA
     AnyRefNode &Via5 = ....Segments.L3Seg.ILptC9CIVia5NodeR; 
+    #endif
     AnyRefNode &Ins = ....Segments.PelvisSeg.ILptC9CINodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
@@ -531,7 +553,9 @@ MuscleGroup ErectorSpinae = {
     AnyRefNode &Via1 = ....Segments.Right.R12Seg.ILptC10CIVia1NodeR;
     AnyRefNode &Via2 = ....Segments.L1Seg.ILptC10CIVia2NodeR;
     AnyRefNode &Via3 = ....Segments.L2Seg.ILptC10CIVia3NodeR;
+    #ifndef REMOVE_ERECTORSPINAE_L3VIA
     AnyRefNode &Via4 = ....Segments.L3Seg.ILptC10CIVia4NodeR;    
+    #endif
     AnyRefNode &Ins = ....Segments.PelvisSeg.ILptC10CINodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
@@ -541,7 +565,9 @@ MuscleGroup ErectorSpinae = {
     AnyRefNode &Org = ....Segments.Right.R11Seg.ILptC11CINodeR;
     AnyRefNode &Via1 = ....Segments.L1Seg.ILptC11CIVia1NodeR;
     AnyRefNode &Via2 = ....Segments.L2Seg.ILptC11CIVia2NodeR;
+    #ifndef REMOVE_ERECTORSPINAE_L3VIA
     AnyRefNode &Via3 = ....Segments.L3Seg.ILptC11CIVia3NodeR;
+    #endif
     AnyRefNode &Ins = ....Segments.PelvisSeg.ILptC11CINodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
@@ -551,7 +577,9 @@ MuscleGroup ErectorSpinae = {
     AnyRefNode &Org = ....Segments.Right.R12Seg.ILptC12CINodeR;
     AnyRefNode &Via1 = ....Segments.L1Seg.ILptC12CIVia1NodeR;
     AnyRefNode &Via2 = ....Segments.L2Seg.ILptC12CIVia2NodeR;
+    #ifndef REMOVE_ERECTORSPINAE_L3VIA
     AnyRefNode &Via3 = ....Segments.L3Seg.ILptC12CIVia3NodeR;
+    #endif
     AnyRefNode &Ins = ....Segments.PelvisSeg.ILptC12CINodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
@@ -889,7 +917,7 @@ MuscleGroup ErectorSpinae = {
   // Iliocostalis Thoracis
   AnyMuscleViaPoint ITC7R7 = {
     AnyMuscleModel &MusMdl = ....MuscleModels.Right.ErectorSpinae.ITC7R7;
-    AnyRefNode &Org = ....Segments.T1Seg.ITC7R7NodeROrg;
+    AnyRefNode &Org = ....Segments.C7Seg.Right.ITC7R7NodeOrg;
     AnyRefNode &Via1 = ....Segments.Right.R1Seg.ITC7R7Via1NodeR;
     AnyRefNode &Via2 = ....Segments.Right.R2Seg.ITC7R7Via2NodeR;
     AnyRefNode &Via3 = ....Segments.Right.R3Seg.ITC7R7Via3NodeR;
@@ -988,7 +1016,8 @@ MuscleGroup ErectorSpinae = {
 
  
 
-  MuscleGroup InterCostalisExternal(searchString="*.*") = {
+AnyFolder InterCostalisExternal = 
+  {
     Muscle_template_Simple IC_Ext_R1R2(
       CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE),
       OriginSegment=....Segments.Right.R1Seg,
@@ -998,7 +1027,7 @@ MuscleGroup ErectorSpinae = {
       MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R1R2
     )={};
     
-    Muscle_template_Simple IC_Ext_R2R3 (
+    SplineMuscle_CreateMuscle IC_Ext_R2R3 (
       CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
       OriginSegment=....Segments.Right.R2Seg,
       ORIGIN_POINTS=....Data.unscaled.ModelParameters.R2.Right.IC_R2_Ext_Inf.Points,
@@ -1007,7 +1036,7 @@ MuscleGroup ErectorSpinae = {
       MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R2R3
     )={};
     
-    Muscle_template_Simple IC_Ext_R3R4 (
+    SplineMuscle_CreateMuscle IC_Ext_R3R4 (
       CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
       OriginSegment=....Segments.Right.R3Seg,
       ORIGIN_POINTS=....Data.unscaled.ModelParameters.R3.Right.IC_R3_Ext_Inf.Points,
@@ -1016,7 +1045,7 @@ MuscleGroup ErectorSpinae = {
       MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R3R4
     )={};
     
-    Muscle_template_Simple IC_Ext_R4R5 (
+    SplineMuscle_CreateMuscle IC_Ext_R4R5 (
       CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
       OriginSegment=....Segments.Right.R4Seg,
       ORIGIN_POINTS=....Data.unscaled.ModelParameters.R4.Right.IC_R4_Ext_Inf.Points,
@@ -1025,7 +1054,7 @@ MuscleGroup ErectorSpinae = {
       MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R4R5
     )={};
         
-    Muscle_template_Simple IC_Ext_R5R6 (
+    SplineMuscle_CreateMuscle IC_Ext_R5R6 (
       CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
       OriginSegment=....Segments.Right.R5Seg,
       ORIGIN_POINTS=....Data.unscaled.ModelParameters.R5.Right.IC_R5_Ext_Inf.Points,
@@ -1034,7 +1063,7 @@ MuscleGroup ErectorSpinae = {
       MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R5R6
     )={};
     
-    Muscle_template_Simple IC_Ext_R6R7 (
+    SplineMuscle_CreateMuscle IC_Ext_R6R7 (
       CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
       OriginSegment=....Segments.Right.R6Seg,
       ORIGIN_POINTS=....Data.unscaled.ModelParameters.R6.Right.IC_R6_Ext_Inf.Points,
@@ -1043,7 +1072,7 @@ MuscleGroup ErectorSpinae = {
       MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R6R7
     )={};
         
-    Muscle_template_Simple IC_Ext_R7R8 (
+    SplineMuscle_CreateMuscle IC_Ext_R7R8 (
       CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
       OriginSegment=....Segments.Right.R7Seg,
       ORIGIN_POINTS=....Data.unscaled.ModelParameters.R7.Right.IC_R7_Ext_Inf.Points,
@@ -1052,7 +1081,7 @@ MuscleGroup ErectorSpinae = {
       MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R7R8
     )={};
     
-    Muscle_template_Simple IC_Ext_R8R9 (
+    SplineMuscle_CreateMuscle IC_Ext_R8R9 (
       CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
       OriginSegment=....Segments.Right.R8Seg,
       ORIGIN_POINTS=....Data.unscaled.ModelParameters.R8.Right.IC_R8_Ext_Inf.Points,
@@ -1061,7 +1090,7 @@ MuscleGroup ErectorSpinae = {
       MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R8R9
     )={};
           
-    Muscle_template_Simple IC_Ext_R9R10 (
+    SplineMuscle_CreateMuscle IC_Ext_R9R10 (
       CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
       OriginSegment=....Segments.Right.R9Seg,
       ORIGIN_POINTS=....Data.unscaled.ModelParameters.R9.Right.IC_R9_Ext_Inf.Points,
@@ -1070,7 +1099,7 @@ MuscleGroup ErectorSpinae = {
       MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R9R10
     )={};
       
-    Muscle_template_Simple IC_Ext_R10R11 (
+    SplineMuscle_CreateMuscle IC_Ext_R10R11 (
       CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE),
       OriginSegment=....Segments.Right.R10Seg,
       ORIGIN_POINTS=....Data.unscaled.ModelParameters.R10.Right.IC_R10_Ext_Inf.Points,
@@ -1079,7 +1108,7 @@ MuscleGroup ErectorSpinae = {
       MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R10R11
     )={};
     
-    Muscle_template_Simple IC_Ext_R11R12 (
+    SplineMuscle_CreateMuscle IC_Ext_R11R12 (
       CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE-2),
       OriginSegment=....Segments.Right.R11Seg,
       ORIGIN_POINTS=....Data.unscaled.ModelParameters.R11.Right.IC_R11_Ext_Inf.Points,
@@ -1089,7 +1118,10 @@ MuscleGroup ErectorSpinae = {
     )={};
   };
 
-  MuscleGroup InterCostalisInternal(searchString="*.*") = {
+  AnyFolder InterCostalisInternal = 
+  {
+  
+  
     Muscle_template_Simple IC_Int_R1R2 (
       CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE),
       OriginSegment=....Segments.Right.R1Seg,
@@ -1114,7 +1146,7 @@ MuscleGroup ErectorSpinae = {
       };
     };
     
-    Muscle_template_Simple IC_Int_R2R3 (
+    SplineMuscle_CreateMuscle IC_Int_R2R3 (
      CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
       OriginSegment=....Segments.Right.R2Seg,
       ORIGIN_POINTS=....Data.unscaled.ModelParameters.R2.Right.IC_R2_Int_Inf.Points,
@@ -1137,7 +1169,7 @@ MuscleGroup ErectorSpinae = {
       };    
     };
         
-    Muscle_template_Simple IC_Int_R3R4 (
+    SplineMuscle_CreateMuscle IC_Int_R3R4 (
     CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
       OriginSegment=....Segments.Right.R3Seg,
       ORIGIN_POINTS=....Data.unscaled.ModelParameters.R3.Right.IC_R3_Int_Inf.Points,
@@ -1160,7 +1192,7 @@ MuscleGroup ErectorSpinae = {
       };    
     };
         
-    Muscle_template_Simple IC_Int_R4R5 (
+    SplineMuscle_CreateMuscle IC_Int_R4R5 (
     CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
     OriginSegment=....Segments.Right.R4Seg,
       ORIGIN_POINTS=....Data.unscaled.ModelParameters.R4.Right.IC_R4_Int_Inf.Points,
@@ -1183,7 +1215,7 @@ MuscleGroup ErectorSpinae = {
       };    
     };
     
-    Muscle_template_Simple IC_Int_R5R6 (
+    SplineMuscle_CreateMuscle IC_Int_R5R6 (
        CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
         OriginSegment=....Segments.Right.R5Seg,
       ORIGIN_POINTS=....Data.unscaled.ModelParameters.R5.Right.IC_R5_Int_Inf.Points,
@@ -1206,7 +1238,7 @@ MuscleGroup ErectorSpinae = {
       };    
     };
       
-    Muscle_template_Simple IC_Int_R6R7 (
+    SplineMuscle_CreateMuscle IC_Int_R6R7 (
      CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
         OriginSegment=....Segments.Right.R6Seg,
       ORIGIN_POINTS=....Data.unscaled.ModelParameters.R6.Right.IC_R6_Int_Inf.Points,
@@ -1229,7 +1261,7 @@ MuscleGroup ErectorSpinae = {
       };    
     };
     
-    Muscle_template_Simple IC_Int_R7R8 (
+    SplineMuscle_CreateMuscle IC_Int_R7R8 (
      CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
         OriginSegment=....Segments.Right.R7Seg,
       ORIGIN_POINTS=....Data.unscaled.ModelParameters.R7.Right.IC_R7_Int_Inf.Points,
@@ -1256,7 +1288,7 @@ MuscleGroup ErectorSpinae = {
       };
     };
       
-    Muscle_template_Simple IC_Int_R8R9 (
+    SplineMuscle_CreateMuscle IC_Int_R8R9 (
        CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
         OriginSegment=....Segments.Right.R8Seg,
       ORIGIN_POINTS=....Data.unscaled.ModelParameters.R8.Right.IC_R8_Int_Inf.Points,
@@ -1281,7 +1313,7 @@ MuscleGroup ErectorSpinae = {
       };    
     };
         
-    Muscle_template_Simple IC_Int_R9R10 (
+    SplineMuscle_CreateMuscle IC_Int_R9R10 (
       CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
         OriginSegment=....Segments.Right.R9Seg,
       ORIGIN_POINTS=....Data.unscaled.ModelParameters.R9.Right.IC_R9_Int_Inf.Points,
@@ -1306,7 +1338,7 @@ MuscleGroup ErectorSpinae = {
       };    
     };
     
-    Muscle_template_Simple IC_Int_R10R11 (
+    SplineMuscle_CreateMuscle IC_Int_R10R11 (
        CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE),
         OriginSegment=....Segments.Right.R10Seg,
       ORIGIN_POINTS=....Data.unscaled.ModelParameters.R10.Right.IC_R10_Int_Inf.Points,
@@ -1315,7 +1347,7 @@ MuscleGroup ErectorSpinae = {
       MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisInternal.IC_Int_R10R11
     )={};
         
-    Muscle_template_Simple IC_Int_R11R12 (
+    SplineMuscle_CreateMuscle IC_Int_R11R12 (
        CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE-1),
         OriginSegment=....Segments.Right.R11Seg,
       ORIGIN_POINTS=....Data.unscaled.ModelParameters.R11.Right.IC_R11_Int_Inf.Points,
@@ -1324,8 +1356,16 @@ MuscleGroup ErectorSpinae = {
       MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisInternal.IC_Int_R11R12
     )={};
   };
+  
+  
+  
+  
+  
+  
 
-  MuscleGroup InnermostInterCostalis(searchString="*.*") = {
+  AnyFolder InnermostInterCostalis = 
+  {
+
     Muscle_template_Simple IC_Inn_R1R2(
        CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE),
         OriginSegment=....Segments.Right.R1Seg,
@@ -1335,7 +1375,7 @@ MuscleGroup ErectorSpinae = {
       MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R1R2
     )={};
     
-    Muscle_template_Simple IC_Inn_R2R3 (
+    SplineMuscle_CreateMuscle IC_Inn_R2R3 (
       CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
         OriginSegment=....Segments.Right.R2Seg,
       ORIGIN_POINTS=....Data.unscaled.ModelParameters.R2.Right.IC_R2_Inn_Inf.Points,
@@ -1344,7 +1384,7 @@ MuscleGroup ErectorSpinae = {
       MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R2R3
     )={};
     
-    Muscle_template_Simple IC_Inn_R3R4 (
+    SplineMuscle_CreateMuscle IC_Inn_R3R4 (
        CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
         OriginSegment=....Segments.Right.R3Seg,
       ORIGIN_POINTS=....Data.unscaled.ModelParameters.R3.Right.IC_R3_Inn_Inf.Points,
@@ -1353,7 +1393,7 @@ MuscleGroup ErectorSpinae = {
       MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R3R4
     )={};
     
-    Muscle_template_Simple IC_Inn_R4R5 (
+    SplineMuscle_CreateMuscle IC_Inn_R4R5 (
        CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
         OriginSegment=....Segments.Right.R4Seg,
       ORIGIN_POINTS=....Data.unscaled.ModelParameters.R4.Right.IC_R4_Inn_Inf.Points,
@@ -1362,7 +1402,7 @@ MuscleGroup ErectorSpinae = {
       MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R4R5
     )={};
         
-    Muscle_template_Simple IC_Inn_R5R6 (
+    SplineMuscle_CreateMuscle IC_Inn_R5R6 (
        CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
         OriginSegment=....Segments.Right.R5Seg,
       ORIGIN_POINTS=....Data.unscaled.ModelParameters.R5.Right.IC_R5_Inn_Inf.Points,
@@ -1371,7 +1411,7 @@ MuscleGroup ErectorSpinae = {
       MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R5R6
     )={};
     
-    Muscle_template_Simple IC_Inn_R6R7 (
+    SplineMuscle_CreateMuscle IC_Inn_R6R7 (
       CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
         OriginSegment=....Segments.Right.R6Seg,
       ORIGIN_POINTS=....Data.unscaled.ModelParameters.R6.Right.IC_R6_Inn_Inf.Points,
@@ -1380,7 +1420,7 @@ MuscleGroup ErectorSpinae = {
       MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R6R7
     )={};
         
-    Muscle_template_Simple IC_Inn_R7R8 (
+    SplineMuscle_CreateMuscle IC_Inn_R7R8 (
         CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
         OriginSegment=....Segments.Right.R7Seg,
       ORIGIN_POINTS=....Data.unscaled.ModelParameters.R7.Right.IC_R7_Inn_Inf.Points,
@@ -1389,7 +1429,7 @@ MuscleGroup ErectorSpinae = {
       MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R7R8
     )={};
     
-    Muscle_template_Simple IC_Inn_R8R9 (
+    SplineMuscle_CreateMuscle IC_Inn_R8R9 (
        CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
         OriginSegment=....Segments.Right.R8Seg,
       ORIGIN_POINTS=....Data.unscaled.ModelParameters.R8.Right.IC_R8_Inn_Inf.Points,
@@ -1398,7 +1438,7 @@ MuscleGroup ErectorSpinae = {
       MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R8R9
     )={};
           
-    Muscle_template_Simple IC_Inn_R9R10 (
+    SplineMuscle_CreateMuscle IC_Inn_R9R10 (
        CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
         OriginSegment=....Segments.Right.R9Seg,
       ORIGIN_POINTS=....Data.unscaled.ModelParameters.R9.Right.IC_R9_Inn_Inf.Points,
@@ -1407,7 +1447,7 @@ MuscleGroup ErectorSpinae = {
       MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R9R10
     )={};
       
-    Muscle_template_Simple IC_Inn_R10R11 (
+    SplineMuscle_CreateMuscle IC_Inn_R10R11 (
        CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE),
         OriginSegment=....Segments.Right.R10Seg,
       ORIGIN_POINTS=....Data.unscaled.ModelParameters.R10.Right.IC_R10_Inn_Inf.Points,
@@ -1416,7 +1456,7 @@ MuscleGroup ErectorSpinae = {
       MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R10R11
     )={};
     
-    Muscle_template_Simple IC_Inn_R11R12 (
+    SplineMuscle_CreateMuscle IC_Inn_R11R12 (
         CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE-2),
         OriginSegment=....Segments.Right.R11Seg,
       ORIGIN_POINTS=....Data.unscaled.ModelParameters.R11.Right.IC_R11_Inn_Inf.Points,
@@ -1431,172 +1471,183 @@ MuscleGroup ErectorSpinae = {
   #if IC_TYPE != OLD  
   //  #if IC_TYPE== MULTI_OFFSET
 
-    MuscleGroup InnermostInterCostalis(searchString="IC*.*") = {
-
-      Muscle_template_Simple_Angle_MultiOffset IC_Inn_R1R2 (
-        CREATE_ELEMENTS= IC_MULTIPLIER*IC_SIZE,
-        OriginSegment=....Segments.Right.R1Seg,
-        ORIGIN_POINTS=....Segments.Right.R1Seg.IC_points.Inn_InfPoints,
-        InsertionSegment=....Segments.Right.R2Seg,
-        INSERTION_POINTS=....Segments.Right.R2Seg.IC_points.Inn_SupPoints,
-        MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R1R2
-      )={DesiredAngle = 0;};
-
-    Muscle_template_Simple_Angle_MultiOffset IC_Inn_R2R3 (
-      CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+3),
-        OriginSegment=....Segments.Right.R2Seg,
-        ORIGIN_POINTS=....Segments.Right.R2Seg.IC_points.Inn_InfPoints,
-        InsertionSegment=....Segments.Right.R3Seg,
-        INSERTION_POINTS=....Segments.Right.R3Seg.IC_points.Inn_SupPoints,
-        MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R2R3
-      )={DesiredAngle = 0;};
-
-      
-      Muscle_template_Simple_Angle_MultiOffset IC_Inn_R3R4 (
-      CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+3),
-        OriginSegment=....Segments.Right.R3Seg,
-        ORIGIN_POINTS=....Segments.Right.R3Seg.IC_points.Inn_InfPoints,
-        InsertionSegment=....Segments.Right.R4Seg,
-        INSERTION_POINTS=....Segments.Right.R4Seg.IC_points.Inn_SupPoints,
-        MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R3R4
-      )={DesiredAngle = 0;};
-
-    Muscle_template_Simple_Angle_MultiOffset IC_Inn_R4R5 (
-      CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+3),
-        OriginSegment=....Segments.Right.R4Seg,
-        ORIGIN_POINTS=....Segments.Right.R4Seg.IC_points.Inn_InfPoints,
-        InsertionSegment=....Segments.Right.R5Seg,
-        INSERTION_POINTS=....Segments.Right.R5Seg.IC_points.Inn_SupPoints,
-        MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R4R5
-      )={DesiredAngle = 0;};
-
-      
-        Muscle_template_Simple_Angle_MultiOffset IC_Inn_R5R6 (
-      CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+3),
-        OriginSegment=....Segments.Right.R5Seg,
-        ORIGIN_POINTS=....Segments.Right.R5Seg.IC_points.Inn_InfPoints,
-        InsertionSegment=....Segments.Right.R6Seg,
-        INSERTION_POINTS=....Segments.Right.R6Seg.IC_points.Inn_SupPoints,
-        MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R5R6
-      )={DesiredAngle = 0;};
-
-      
-        Muscle_template_Simple_Angle_MultiOffset IC_Inn_R6R7 (
-      CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+3),
-        OriginSegment=....Segments.Right.R6Seg,
-        ORIGIN_POINTS=....Segments.Right.R6Seg.IC_points.Inn_InfPoints,
-        InsertionSegment=....Segments.Right.R7Seg,
-        INSERTION_POINTS=....Segments.Right.R7Seg.IC_points.Inn_SupPoints,
-        MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R6R7
-      )={DesiredAngle = 0;};
-      
-        Muscle_template_Simple_Angle_MultiOffset IC_Inn_R7R8 (
-      CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+3),
-        OriginSegment=....Segments.Right.R7Seg,
-        ORIGIN_POINTS=....Segments.Right.R7Seg.IC_points.Inn_InfPoints,
-        InsertionSegment=....Segments.Right.R8Seg,
-        INSERTION_POINTS=....Segments.Right.R8Seg.IC_points.Inn_SupPoints,
-        MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R7R8
-      )={DesiredAngle = 0;};
-
-
-        Muscle_template_Simple_Angle_MultiOffset IC_Inn_R8R9 (
-        CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+3),
-        OriginSegment=....Segments.Right.R8Seg,
-        ORIGIN_POINTS=....Segments.Right.R8Seg.IC_points.Inn_InfPoints,
-        InsertionSegment=....Segments.Right.R9Seg,
-        INSERTION_POINTS=....Segments.Right.R9Seg.IC_points.Inn_SupPoints,
-        MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R8R9
-      )={DesiredAngle = 0;};
-
-      Muscle_template_Simple_Angle_MultiOffset IC_Inn_R9R10 (
-      CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+3),
-        OriginSegment=....Segments.Right.R9Seg,
-        ORIGIN_POINTS=....Segments.Right.R9Seg.IC_points.Inn_InfPoints,
-        InsertionSegment=....Segments.Right.R10Seg,
-        INSERTION_POINTS=....Segments.Right.R10Seg.IC_points.Inn_SupPoints,
-        MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R9R10
-      )={DesiredAngle = 0;};
   
-      Muscle_template_Simple_Angle_MultiOffset IC_Inn_R10R11 (
-    CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE),
-        OriginSegment=....Segments.Right.R10Seg,
-        ORIGIN_POINTS=....Segments.Right.R10Seg.IC_points.Inn_InfPoints,
-        InsertionSegment=....Segments.Right.R11Seg,
-        INSERTION_POINTS=....Segments.Right.R11Seg.IC_points.Inn_SupPoints,
-        MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R10R11
-      )={DesiredAngle = 0;};
+  AnyFolder InnermostInterCostalis ={
+  
+    
+    
+ Muscle_template_Simple_Angle_MultiOffset IC_Inn_R1R2 (
+      CREATE_ELEMENTS= IC_MULTIPLIER*IC_SIZE,
+      OriginSegment=....Segments.Right.R1Seg,
+      ORIGIN_POINTS=....Segments.Right.R1Seg.IC_points.Inn_InfPoints,
+      InsertionSegment=....Segments.Right.R2Seg,
+      INSERTION_POINTS=....Segments.Right.R2Seg.IC_points.Inn_SupPoints,
+      MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R1R2
+    )={DesiredAngle = 0;};
 
-      
-        Muscle_template_Simple_Angle_MultiOffset IC_Inn_R11R12 (
-        CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE-4),
-        OriginSegment=....Segments.Right.R11Seg,
-        ORIGIN_POINTS=....Segments.Right.R11Seg.IC_points.Inn_InfPoints,
-        InsertionSegment=....Segments.Right.R12Seg,
-        INSERTION_POINTS=....Segments.Right.R12Seg.IC_points.Inn_SupPoints,
-        MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R11R12
-      )={DesiredAngle = 0;};
-    };
+   Muscle_template_Simple_Angle_MultiOffset IC_Inn_R2R3 (
+     CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+3),
+      OriginSegment=....Segments.Right.R2Seg,
+      ORIGIN_POINTS=....Segments.Right.R2Seg.IC_points.Inn_InfPoints,
+      InsertionSegment=....Segments.Right.R3Seg,
+      INSERTION_POINTS=....Segments.Right.R3Seg.IC_points.Inn_SupPoints,
+      MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R2R3
+    )={DesiredAngle = 0;};
+
+    
+     Muscle_template_Simple_Angle_MultiOffset IC_Inn_R3R4 (
+     CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+3),
+      OriginSegment=....Segments.Right.R3Seg,
+      ORIGIN_POINTS=....Segments.Right.R3Seg.IC_points.Inn_InfPoints,
+      InsertionSegment=....Segments.Right.R4Seg,
+      INSERTION_POINTS=....Segments.Right.R4Seg.IC_points.Inn_SupPoints,
+      MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R3R4
+    )={DesiredAngle = 0;};
+
+   Muscle_template_Simple_Angle_MultiOffset IC_Inn_R4R5 (
+     CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+3),
+      OriginSegment=....Segments.Right.R4Seg,
+      ORIGIN_POINTS=....Segments.Right.R4Seg.IC_points.Inn_InfPoints,
+      InsertionSegment=....Segments.Right.R5Seg,
+      INSERTION_POINTS=....Segments.Right.R5Seg.IC_points.Inn_SupPoints,
+      MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R4R5
+    )={DesiredAngle = 0;};
+
+    
+       Muscle_template_Simple_Angle_MultiOffset IC_Inn_R5R6 (
+    CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+3),
+      OriginSegment=....Segments.Right.R5Seg,
+      ORIGIN_POINTS=....Segments.Right.R5Seg.IC_points.Inn_InfPoints,
+      InsertionSegment=....Segments.Right.R6Seg,
+      INSERTION_POINTS=....Segments.Right.R6Seg.IC_points.Inn_SupPoints,
+      MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R5R6
+    )={DesiredAngle = 0;};
+
+    
+       Muscle_template_Simple_Angle_MultiOffset IC_Inn_R6R7 (
+     CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+3),
+      OriginSegment=....Segments.Right.R6Seg,
+      ORIGIN_POINTS=....Segments.Right.R6Seg.IC_points.Inn_InfPoints,
+      InsertionSegment=....Segments.Right.R7Seg,
+      INSERTION_POINTS=....Segments.Right.R7Seg.IC_points.Inn_SupPoints,
+      MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R6R7
+    )={DesiredAngle = 0;};
+    
+       Muscle_template_Simple_Angle_MultiOffset IC_Inn_R7R8 (
+     CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+3),
+      OriginSegment=....Segments.Right.R7Seg,
+      ORIGIN_POINTS=....Segments.Right.R7Seg.IC_points.Inn_InfPoints,
+      InsertionSegment=....Segments.Right.R8Seg,
+      INSERTION_POINTS=....Segments.Right.R8Seg.IC_points.Inn_SupPoints,
+      MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R7R8
+    )={DesiredAngle = 0;};
+
+
+       Muscle_template_Simple_Angle_MultiOffset IC_Inn_R8R9 (
+      CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+3),
+      OriginSegment=....Segments.Right.R8Seg,
+      ORIGIN_POINTS=....Segments.Right.R8Seg.IC_points.Inn_InfPoints,
+      InsertionSegment=....Segments.Right.R9Seg,
+      INSERTION_POINTS=....Segments.Right.R9Seg.IC_points.Inn_SupPoints,
+      MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R8R9
+    )={DesiredAngle = 0;};
+
+    Muscle_template_Simple_Angle_MultiOffset IC_Inn_R9R10 (
+     CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+3),
+      OriginSegment=....Segments.Right.R9Seg,
+      ORIGIN_POINTS=....Segments.Right.R9Seg.IC_points.Inn_InfPoints,
+      InsertionSegment=....Segments.Right.R10Seg,
+      INSERTION_POINTS=....Segments.Right.R10Seg.IC_points.Inn_SupPoints,
+      MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R9R10
+    )={DesiredAngle = 0;};
+ 
+    Muscle_template_Simple_Angle_MultiOffset IC_Inn_R10R11 (
+   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE),
+      OriginSegment=....Segments.Right.R10Seg,
+      ORIGIN_POINTS=....Segments.Right.R10Seg.IC_points.Inn_InfPoints,
+      InsertionSegment=....Segments.Right.R11Seg,
+      INSERTION_POINTS=....Segments.Right.R11Seg.IC_points.Inn_SupPoints,
+      MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R10R11
+    )={DesiredAngle = 0;};
+
+    
+       Muscle_template_Simple_Angle_MultiOffset IC_Inn_R11R12 (
+      CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE-4),
+      OriginSegment=....Segments.Right.R11Seg,
+      ORIGIN_POINTS=....Segments.Right.R11Seg.IC_points.Inn_InfPoints,
+      InsertionSegment=....Segments.Right.R12Seg,
+      INSERTION_POINTS=....Segments.Right.R12Seg.IC_points.Inn_SupPoints,
+      MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R11R12
+    )={DesiredAngle = 0;};
+
+};
 
   
     MuscleGroup InternalInterCostalis(searchString="*.*") = {
   
-      Muscle_template_Simple_Angle_MultiOffset IC_Int_R1R2 (
-        CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1-3),
-        OriginSegment=....Segments.Right.R1Seg,
-        ORIGIN_POINTS=....Segments.Right.R1Seg.IC_points.Int_InfPoints,
-        InsertionSegment=....Segments.Right.R2Seg,
-        INSERTION_POINTS=....Segments.Right.R2Seg.IC_points.Int_SupPoints,
-        MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R1R2
-      )={
-        DesiredAngle =-45;
-        NumberOfElements = IC_MULTIPLIER*(IC_SIZE+1-3);
-      //The Last element is defined manually
-        AnyMuscleViaPoint elem_sternum = {
-          AnyRefNode &Org = .....Segments.SternumSeg.Right_IC_Int_R1R2_elem_sternum;
-          AnyRefNode &Ins = .InsertionSegment.IC_Int_R1R2_elem_sternum;
-          AnyMuscleModel MusMdl = {
-            F0=..MuscleModel.F0/..NumberOfElements;
-            Lf0=..MuscleModel.F0; 
-            Vol0=..MuscleModel.Vol0/..NumberOfElements;
-          };
-          viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-          //AnyDrawPLine drwLine ={AnyFloat RGB_Red={1,0,0};AnyFloat RGB_Green={0,1,0};RGB=iffun(gtfun(.LmtDot,0),RGB_Red,RGB_Green);Thickness=0.005;};
-        };      
+ Muscle_template_Simple_Angle_MultiOffset IC_Int_R1R2 (
+      CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1-3),
+      OriginSegment=....Segments.Right.R1Seg,
+      ORIGIN_POINTS=....Segments.Right.R1Seg.IC_points.Int_InfPoints,
+      InsertionSegment=....Segments.Right.R2Seg,
+      INSERTION_POINTS=....Segments.Right.R2Seg.IC_points.Int_SupPoints,
+      MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R1R2
+    )={
+      DesiredAngle =-45;
+      NumberOfElements = IC_MULTIPLIER*(IC_SIZE+1-3);
+     //The Last element is defined manually
+      AnyMuscleViaPoint elem_sternum = {
+        AnyRefNode &Org = .....Segments.SternumSeg.Right_IC_Int_R1R2_elem_sternum;
+        AnyRefNode &Ins = .InsertionSegment.IC_Int_R1R2_elem_sternum;
+        AnyMuscleModel MusMdl = {
+          F0=..MuscleModel.F0/..NumberOfElements;
+          Lf0=..MuscleModel.F0; 
+          Vol0=..MuscleModel.Vol0/..NumberOfElements;
+        };
+        viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+        //AnyDrawPLine drwLine ={AnyFloat RGB_Red={1,0,0};AnyFloat RGB_Green={0,1,0};RGB=iffun(gtfun(.LmtDot,0),RGB_Red,RGB_Green);Thickness=0.005;};
       };
 
-    Muscle_template_Simple_Angle_MultiOffset IC_Int_R2R3 (
-        CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
-        OriginSegment=....Segments.Right.R2Seg,
-        ORIGIN_POINTS=....Segments.Right.R2Seg.IC_points.Int_InfPoints,
-        InsertionSegment=....Segments.Right.R3Seg,
-        INSERTION_POINTS=....Segments.Right.R3Seg.IC_points.Int_SupPoints,
-        MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R2R3
-      )={
-        DesiredAngle=-45;
-        NumberOfElements =  IC_MULTIPLIER*(IC_SIZE+1);
-        AnyMuscleViaPoint elem_sternum= {
-          AnyRefNode &Org = .....Segments.SternalBodySeg.Right_IC_Int_R2R3_elem_sternum;
-          AnyRefNode &Ins = .InsertionSegment.IC_Int_R2R3_elem_sternum;
-          AnyMuscleModel MusMdl = {
-            F0=..MuscleModel.F0/..NumberOfElements;
-            Lf0=..MuscleModel.F0; 
-            Vol0=..MuscleModel.Vol0/..NumberOfElements;
-          };
-          viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-          //AnyDrawPLine drwLine ={AnyFloat RGB_Red={1,0,0};AnyFloat RGB_Green={0,1,0};RGB=iffun(gtfun(.LmtDot,0),RGB_Red,RGB_Green);Thickness=0.005;};
-        };          
-      };
-      
-      Muscle_template_Simple_Angle_MultiOffset IC_Int_R3R4 (
-        CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
-        OriginSegment=....Segments.Right.R3Seg,
-        ORIGIN_POINTS=....Segments.Right.R3Seg.IC_points.Int_InfPoints,
-        InsertionSegment=....Segments.Right.R4Seg,
-        INSERTION_POINTS=....Segments.Right.R4Seg.IC_points.Int_SupPoints,
-        MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R3R4
-      )={ 
-        DesiredAngle=-45;
+    
+    
+    };
+
+   Muscle_template_Simple_Angle_MultiOffset IC_Int_R2R3 (
+     CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
+      OriginSegment=....Segments.Right.R2Seg,
+      ORIGIN_POINTS=....Segments.Right.R2Seg.IC_points.Int_InfPoints,
+      InsertionSegment=....Segments.Right.R3Seg,
+      INSERTION_POINTS=....Segments.Right.R3Seg.IC_points.Int_SupPoints,
+      MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R2R3
+    )={
+      DesiredAngle=-45;
+      NumberOfElements =  IC_MULTIPLIER*(IC_SIZE+1);
+ AnyMuscleViaPoint elem_sternum= {
+        AnyRefNode &Org = .....Segments.SternalBodySeg.Right_IC_Int_R2R3_elem_sternum;
+        AnyRefNode &Ins = .InsertionSegment.IC_Int_R2R3_elem_sternum;
+        AnyMuscleModel MusMdl = {
+          F0=..MuscleModel.F0/..NumberOfElements;
+          Lf0=..MuscleModel.F0; 
+          Vol0=..MuscleModel.Vol0/..NumberOfElements;
+        };
+        viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+     //AnyDrawPLine drwLine ={AnyFloat RGB_Red={1,0,0};AnyFloat RGB_Green={0,1,0};RGB=iffun(gtfun(.LmtDot,0),RGB_Red,RGB_Green);Thickness=0.005;};
+
+      };    
+
+    
+    };
+
+    
+     Muscle_template_Simple_Angle_MultiOffset IC_Int_R3R4 (
+     CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
+      OriginSegment=....Segments.Right.R3Seg,
+      ORIGIN_POINTS=....Segments.Right.R3Seg.IC_points.Int_InfPoints,
+      InsertionSegment=....Segments.Right.R4Seg,
+      INSERTION_POINTS=....Segments.Right.R4Seg.IC_points.Int_SupPoints,
+      MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R3R4
+    )={ 
+      DesiredAngle=-45;
         NumberOfElements =  IC_MULTIPLIER*(IC_SIZE+1);
         AnyMuscleViaPoint elem_sternum= {
           AnyRefNode &Org = .....Segments.SternalBodySeg.Right_IC_Int_R3R4_elem_sternum;
@@ -1611,134 +1662,137 @@ MuscleGroup ErectorSpinae = {
         };    
       };
 
-    Muscle_template_Simple_Angle_MultiOffset IC_Int_R4R5 (
-        CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
-        OriginSegment=....Segments.Right.R4Seg,
-        ORIGIN_POINTS=....Segments.Right.R4Seg.IC_points.Int_InfPoints,
-        InsertionSegment=....Segments.Right.R5Seg,
-        INSERTION_POINTS=....Segments.Right.R5Seg.IC_points.Int_SupPoints,
-        MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R4R5
-      )={
-        DesiredAngle=-45;
-        NumberOfElements =  IC_MULTIPLIER*(IC_SIZE+1);
-        AnyMuscleViaPoint elem_sternum= {
-          AnyRefNode &Org = .....Segments.SternalBodySeg.Right_IC_Int_R4R5_elem_sternum;
-          AnyRefNode &Ins = .InsertionSegment.IC_Int_R4R5_elem_sternum;
-          AnyMuscleModel MusMdl = {
-            F0=..MuscleModel.F0/..NumberOfElements;
-            Lf0=..MuscleModel.F0; 
-            Vol0=..MuscleModel.Vol0/..NumberOfElements;
-          };
-          viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-        //  AnyDrawPLine drwLine ={AnyFloat RGB_Red={1,0,0};AnyFloat RGB_Green={0,1,0};RGB=iffun(gtfun(.LmtDot,0),RGB_Red,RGB_Green);Thickness=0.005;};
-        };  
-      };
-      
-      Muscle_template_Simple_Angle_MultiOffset IC_Int_R5R6 (
-        CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
-        OriginSegment=....Segments.Right.R5Seg,
-        ORIGIN_POINTS=....Segments.Right.R5Seg.IC_points.Int_InfPoints,
-        InsertionSegment=....Segments.Right.R6Seg,
-        INSERTION_POINTS=....Segments.Right.R6Seg.IC_points.Int_SupPoints,
-        MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R5R6
-      )={
-        DesiredAngle=-45;
-        NumberOfElements =  IC_MULTIPLIER*(IC_SIZE+1);
-        AnyMuscleViaPoint elem_sternum= {
-          AnyRefNode &Org = .....Segments.SternalBodySeg.Right_IC_Int_R5R6_elem_sternum;
-          AnyRefNode &Ins = .InsertionSegment.IC_Int_R5R6_elem_sternum;
-          AnyMuscleModel MusMdl = {
-            F0=..MuscleModel.F0/..NumberOfElements;
-            Lf0=..MuscleModel.F0; 
-            Vol0=..MuscleModel.Vol0/..NumberOfElements;
-          };
-          viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-          // AnyDrawPLine drwLine ={AnyFloat RGB_Red={1,0,0};AnyFloat RGB_Green={0,1,0};RGB=iffun(gtfun(.LmtDot,0),RGB_Red,RGB_Green);Thickness=0.005;};
-        };    
-      };
-      
-      Muscle_template_Simple_Angle_MultiOffset IC_Int_R6R7 (
-        CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
-        OriginSegment=....Segments.Right.R6Seg,
-        ORIGIN_POINTS=....Segments.Right.R6Seg.IC_points.Int_InfPoints,
-        InsertionSegment=....Segments.Right.R7Seg,
-        INSERTION_POINTS=....Segments.Right.R7Seg.IC_points.Int_SupPoints,
-        MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R6R7
-      )={
-        DesiredAngle=-45;
-        NumberOfElements =  IC_MULTIPLIER*(IC_SIZE+1);
-        AnyMuscleViaPoint elem_sternum= {
-          AnyRefNode &Org = .....Segments.SternalBodySeg.Right_IC_Int_R6R7_elem_sternum;
-          AnyRefNode &Ins = .InsertionSegment.IC_Int_R6R7_elem_sternum;
-          AnyMuscleModel MusMdl = {
-            F0=..MuscleModel.F0/..NumberOfElements;
-            Lf0=..MuscleModel.F0; 
-            Vol0=..MuscleModel.Vol0/..NumberOfElements;
-          };
-          viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-          //AnyDrawPLine drwLine ={AnyFloat RGB_Red={1,0,0};AnyFloat RGB_Green={0,1,0};RGB=iffun(gtfun(.LmtDot,0),RGB_Red,RGB_Green);Thickness=0.005;};
-        };    
-      };
-    
-      Muscle_template_Simple_Angle_MultiOffset IC_Int_R7R8 (
-        CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
-        OriginSegment=....Segments.Right.R7Seg,
-        ORIGIN_POINTS=....Segments.Right.R7Seg.IC_points.Int_InfPoints,
-        InsertionSegment=....Segments.Right.R8Seg,
-        INSERTION_POINTS=....Segments.Right.R8Seg.IC_points.Int_SupPoints,
-        MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R7R8
-      )={
-        DesiredAngle=-45;
-        NumberOfElements =  IC_MULTIPLIER*(IC_SIZE+1);
-        AnyMuscleViaPoint elem_sternum= {
-        
-          #if BM_TRUNK_THORACIC_STERNUM_TOPOLOGY == 4
-            AnyRefNode &Org = .....Segments.Right.CostalCartilageSeg.Right_IC_Int_R7R8_elem_sternum;
-          #else 
-            AnyRefNode &Org = .....Segments.SternalBodySeg.Right_IC_Int_R7R8_elem_sternum;
-          #endif
-          
-          AnyRefNode &Ins = .InsertionSegment.IC_Int_R7R8_elem_sternum;
-          AnyMuscleModel MusMdl = {
-            F0=..MuscleModel.F0/..NumberOfElements;
-            Lf0=..MuscleModel.F0; 
-            Vol0=..MuscleModel.Vol0/..NumberOfElements;
-          };
-          viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-          //AnyDrawPLine drwLine ={AnyFloat RGB_Red={1,0,0};AnyFloat RGB_Green={0,1,0};RGB=iffun(gtfun(.LmtDot,0),RGB_Red,RGB_Green);Thickness=0.005;};
+   Muscle_template_Simple_Angle_MultiOffset IC_Int_R4R5 (
+    CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
+      OriginSegment=....Segments.Right.R4Seg,
+      ORIGIN_POINTS=....Segments.Right.R4Seg.IC_points.Int_InfPoints,
+      InsertionSegment=....Segments.Right.R5Seg,
+      INSERTION_POINTS=....Segments.Right.R5Seg.IC_points.Int_SupPoints,
+      MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R4R5
+    )={
+      DesiredAngle=-45;
+     NumberOfElements =  IC_MULTIPLIER*(IC_SIZE+1);
+ AnyMuscleViaPoint elem_sternum= {
+        AnyRefNode &Org = .....Segments.SternalBodySeg.Right_IC_Int_R4R5_elem_sternum;
+        AnyRefNode &Ins = .InsertionSegment.IC_Int_R4R5_elem_sternum;
+        AnyMuscleModel MusMdl = {
+          F0=..MuscleModel.F0/..NumberOfElements;
+          Lf0=..MuscleModel.F0; 
+          Vol0=..MuscleModel.Vol0/..NumberOfElements;
         };
-      };
+        viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+     //  AnyDrawPLine drwLine ={AnyFloat RGB_Red={1,0,0};AnyFloat RGB_Green={0,1,0};RGB=iffun(gtfun(.LmtDot,0),RGB_Red,RGB_Green);Thickness=0.005;};
+      };  
+    };
 
-      Muscle_template_Simple_Angle_MultiOffset IC_Int_R8R9 (
-        CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
-        OriginSegment=....Segments.Right.R8Seg,
-        ORIGIN_POINTS=....Segments.Right.R8Seg.IC_points.Int_InfPoints,
-        InsertionSegment=....Segments.Right.R9Seg,
-        INSERTION_POINTS=....Segments.Right.R9Seg.IC_points.Int_SupPoints,
-        MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R8R9
-      )={
-        DesiredAngle=-45;
-        NumberOfElements =  IC_MULTIPLIER*(IC_SIZE+1);
-        AnyMuscleViaPoint elem_sternum= {
-        
-          #if BM_TRUNK_THORACIC_STERNUM_TOPOLOGY == 4
-            AnyRefNode &Org = .....Segments.Right.CostalCartilageSeg.Right_IC_Int_R8R9_elem_sternum;
-          #else
-            AnyRefNode &Org = .....Segments.SternalBodySeg.Right_IC_Int_R8R9_elem_sternum;
-          #endif
-        
-          AnyRefNode &Ins = .InsertionSegment.IC_Int_R8R9_elem_sternum;
-          AnyMuscleModel MusMdl = {
-            F0=..MuscleModel.F0/..NumberOfElements;
-            Lf0=..MuscleModel.F0; 
-            Vol0=..MuscleModel.Vol0/..NumberOfElements;
-          };
-          viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-        }; 
+    
+       Muscle_template_Simple_Angle_MultiOffset IC_Int_R5R6 (
+    CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
+      OriginSegment=....Segments.Right.R5Seg,
+      ORIGIN_POINTS=....Segments.Right.R5Seg.IC_points.Int_InfPoints,
+      InsertionSegment=....Segments.Right.R6Seg,
+      INSERTION_POINTS=....Segments.Right.R6Seg.IC_points.Int_SupPoints,
+      MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R5R6
+    )={
+      DesiredAngle=-45;
+      NumberOfElements =  IC_MULTIPLIER*(IC_SIZE+1);
+      AnyMuscleViaPoint elem_sternum= {
+        AnyRefNode &Org = .....Segments.SternalBodySeg.Right_IC_Int_R5R6_elem_sternum;
+        AnyRefNode &Ins = .InsertionSegment.IC_Int_R5R6_elem_sternum;
+        AnyMuscleModel MusMdl = {
+          F0=..MuscleModel.F0/..NumberOfElements;
+          Lf0=..MuscleModel.F0; 
+          Vol0=..MuscleModel.Vol0/..NumberOfElements;
+        };
+        viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+   // AnyDrawPLine drwLine ={AnyFloat RGB_Red={1,0,0};AnyFloat RGB_Green={0,1,0};RGB=iffun(gtfun(.LmtDot,0),RGB_Red,RGB_Green);Thickness=0.005;};
+
+      };    
+
+    };
+
+    
+       Muscle_template_Simple_Angle_MultiOffset IC_Int_R6R7 (
+       CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
+      OriginSegment=....Segments.Right.R6Seg,
+      ORIGIN_POINTS=....Segments.Right.R6Seg.IC_points.Int_InfPoints,
+      InsertionSegment=....Segments.Right.R7Seg,
+      INSERTION_POINTS=....Segments.Right.R7Seg.IC_points.Int_SupPoints,
+      MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R6R7
+    )={
+      DesiredAngle=-45;
+      NumberOfElements =  IC_MULTIPLIER*(IC_SIZE+1);
+AnyMuscleViaPoint elem_sternum= {
+        AnyRefNode &Org = .....Segments.SternalBodySeg.Right_IC_Int_R6R7_elem_sternum;
+        AnyRefNode &Ins = .InsertionSegment.IC_Int_R6R7_elem_sternum;
+        AnyMuscleModel MusMdl = {
+          F0=..MuscleModel.F0/..NumberOfElements;
+          Lf0=..MuscleModel.F0; 
+          Vol0=..MuscleModel.Vol0/..NumberOfElements;
+        };
+        viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+        //AnyDrawPLine drwLine ={AnyFloat RGB_Red={1,0,0};AnyFloat RGB_Green={0,1,0};RGB=iffun(gtfun(.LmtDot,0),RGB_Red,RGB_Green);Thickness=0.005;};
+
+      };    
+};
+    
+       Muscle_template_Simple_Angle_MultiOffset IC_Int_R7R8 (
+       CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
+      OriginSegment=....Segments.Right.R7Seg,
+      ORIGIN_POINTS=....Segments.Right.R7Seg.IC_points.Int_InfPoints,
+      InsertionSegment=....Segments.Right.R8Seg,
+      INSERTION_POINTS=....Segments.Right.R8Seg.IC_points.Int_SupPoints,
+      MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R7R8
+    )={
+      DesiredAngle=-45;
+    NumberOfElements =  IC_MULTIPLIER*(IC_SIZE+1);
+ AnyMuscleViaPoint elem_sternum= {
+        #if BM_TRUNK_THORACIC_STERNUM_TOPOLOGY == 4
+          AnyRefNode &Org = .....Segments.Right.CostalCartilageSeg.Right_IC_Int_R7R8_elem_sternum;
+        #else 
+          AnyRefNode &Org = .....Segments.SternalBodySeg.Right_IC_Int_R7R8_elem_sternum;
+        #endif
+        AnyRefNode &Ins = .InsertionSegment.IC_Int_R7R8_elem_sternum;
+        AnyMuscleModel MusMdl = {
+          F0=..MuscleModel.F0/..NumberOfElements;
+          Lf0=..MuscleModel.F0; 
+          Vol0=..MuscleModel.Vol0/..NumberOfElements;
+        };
+        viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+      //AnyDrawPLine drwLine ={AnyFloat RGB_Red={1,0,0};AnyFloat RGB_Green={0,1,0};RGB=iffun(gtfun(.LmtDot,0),RGB_Red,RGB_Green);Thickness=0.005;};
+
       };
+ };
+
+
+       Muscle_template_Simple_Angle_MultiOffset IC_Int_R8R9 (
+       CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
+      OriginSegment=....Segments.Right.R8Seg,
+      ORIGIN_POINTS=....Segments.Right.R8Seg.IC_points.Int_InfPoints,
+      InsertionSegment=....Segments.Right.R9Seg,
+      INSERTION_POINTS=....Segments.Right.R9Seg.IC_points.Int_SupPoints,
+      MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R8R9
+    )={
+      DesiredAngle=-45;
+       NumberOfElements =  IC_MULTIPLIER*(IC_SIZE+1);
+      AnyMuscleViaPoint elem_sternum= {
+      #if BM_TRUNK_THORACIC_STERNUM_TOPOLOGY == 4
+        AnyRefNode &Org = .....Segments.Right.CostalCartilageSeg.Right_IC_Int_R8R9_elem_sternum;
+      #else
+        AnyRefNode &Org = .....Segments.SternalBodySeg.Right_IC_Int_R8R9_elem_sternum;
+      #endif
+        AnyRefNode &Ins = .InsertionSegment.IC_Int_R8R9_elem_sternum;
+        AnyMuscleModel MusMdl = {
+          F0=..MuscleModel.F0/..NumberOfElements;
+          Lf0=..MuscleModel.F0; 
+          Vol0=..MuscleModel.Vol0/..NumberOfElements;
+        };
+        viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+      }; 
+    };
     
     Muscle_template_Simple_Angle_MultiOffset IC_Int_R9R10 (
-      CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
+       CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
       OriginSegment=....Segments.Right.R9Seg,
       ORIGIN_POINTS=....Segments.Right.R9Seg.IC_points.Int_InfPoints,
       InsertionSegment=....Segments.Right.R10Seg,
@@ -1764,8 +1818,8 @@ MuscleGroup ErectorSpinae = {
     };
 
     
-    Muscle_template_Simple_Angle_MultiOffset IC_Int_R10R11 (
-      CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE),
+       Muscle_template_Simple_Angle_MultiOffset IC_Int_R10R11 (
+       CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE),
       OriginSegment=....Segments.Right.R10Seg,
       ORIGIN_POINTS=....Segments.Right.R10Seg.IC_points.Int_InfPoints,
       InsertionSegment=....Segments.Right.R11Seg,
@@ -1774,7 +1828,7 @@ MuscleGroup ErectorSpinae = {
     )={DesiredAngle=-45;};
 
     
-       Muscle_template_Simple_Angle_MultiOffset IC_Int_R11R12 (
+       SplineMuscle_CreateMuscleMultiOffset IC_Int_R11R12 (
        CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE-4),
       OriginSegment=....Segments.Right.R11Seg,
       ORIGIN_POINTS=....Segments.Right.R11Seg.IC_points.Int_InfPoints,
@@ -1787,8 +1841,8 @@ MuscleGroup ErectorSpinae = {
 
   MuscleGroup ExternalInterCostalis(searchString="*.*") = {
   
-    Muscle_template_Simple_Angle_MultiOffset IC_Ext_R1R2 (
-      CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
+ Muscle_template_Simple_Angle_MultiOffset IC_Ext_R1R2 (
+       CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
       OriginSegment=....Segments.Right.R1Seg,
       ORIGIN_POINTS=....Segments.Right.R1Seg.IC_points.Ext_InfPoints,
       InsertionSegment=....Segments.Right.R2Seg,
@@ -1796,8 +1850,8 @@ MuscleGroup ErectorSpinae = {
       MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R1R2
     )={DesiredAngle=45;};
 
-    Muscle_template_Simple_Angle_MultiOffset IC_Ext_R2R3 (
-      CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
+   Muscle_template_Simple_Angle_MultiOffset IC_Ext_R2R3 (
+       CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
       OriginSegment=....Segments.Right.R2Seg,
       ORIGIN_POINTS=....Segments.Right.R2Seg.IC_points.Ext_InfPoints,
       InsertionSegment=....Segments.Right.R3Seg,
@@ -1806,8 +1860,8 @@ MuscleGroup ErectorSpinae = {
     )={DesiredAngle=45;};
 
     
-    Muscle_template_Simple_Angle_MultiOffset IC_Ext_R3R4 (
-      CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
+     Muscle_template_Simple_Angle_MultiOffset IC_Ext_R3R4 (
+       CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
       OriginSegment=....Segments.Right.R3Seg,
       ORIGIN_POINTS=....Segments.Right.R3Seg.IC_points.Ext_InfPoints,
       InsertionSegment=....Segments.Right.R4Seg,
@@ -1815,8 +1869,8 @@ MuscleGroup ErectorSpinae = {
       MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R3R4
     )={DesiredAngle=45;};
 
-    Muscle_template_Simple_Angle_MultiOffset IC_Ext_R4R5 (
-      CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
+   Muscle_template_Simple_Angle_MultiOffset IC_Ext_R4R5 (
+       CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
       OriginSegment=....Segments.Right.R4Seg,
       ORIGIN_POINTS=....Segments.Right.R4Seg.IC_points.Ext_InfPoints,
       InsertionSegment=....Segments.Right.R5Seg,
@@ -1825,8 +1879,8 @@ MuscleGroup ErectorSpinae = {
     )={DesiredAngle=45;};
 
     
-    Muscle_template_Simple_Angle_MultiOffset IC_Ext_R5R6 (
-      CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
+       Muscle_template_Simple_Angle_MultiOffset IC_Ext_R5R6 (
+       CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
       OriginSegment=....Segments.Right.R5Seg,
       ORIGIN_POINTS=....Segments.Right.R5Seg.IC_points.Ext_InfPoints,
       InsertionSegment=....Segments.Right.R6Seg,
@@ -1835,8 +1889,8 @@ MuscleGroup ErectorSpinae = {
     )={DesiredAngle=45;};
 
     
-    Muscle_template_Simple_Angle_MultiOffset IC_Ext_R6R7 (
-      CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
+       Muscle_template_Simple_Angle_MultiOffset IC_Ext_R6R7 (
+       CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
       OriginSegment=....Segments.Right.R6Seg,
       ORIGIN_POINTS=....Segments.Right.R6Seg.IC_points.Ext_InfPoints,
       InsertionSegment=....Segments.Right.R7Seg,
@@ -1844,8 +1898,8 @@ MuscleGroup ErectorSpinae = {
       MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R6R7
     )={DesiredAngle=45;};
     
-    Muscle_template_Simple_Angle_MultiOffset IC_Ext_R7R8 (
-      CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
+       Muscle_template_Simple_Angle_MultiOffset IC_Ext_R7R8 (
+       CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
       OriginSegment=....Segments.Right.R7Seg,
       ORIGIN_POINTS=....Segments.Right.R7Seg.IC_points.Ext_InfPoints,
       InsertionSegment=....Segments.Right.R8Seg,
@@ -1854,17 +1908,16 @@ MuscleGroup ErectorSpinae = {
     )={DesiredAngle=45;};
 
 
-    Muscle_template_Simple_Angle_MultiOffset IC_Ext_R8R9 (
-      CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
+       Muscle_template_Simple_Angle_MultiOffset IC_Ext_R8R9 (
+       CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
       OriginSegment=....Segments.Right.R8Seg,
       ORIGIN_POINTS=....Segments.Right.R8Seg.IC_points.Ext_InfPoints,
       InsertionSegment=....Segments.Right.R9Seg,
       INSERTION_POINTS=....Segments.Right.R9Seg.IC_points.Ext_SupPoints,
       MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R8R9
     )={DesiredAngle=45;};
-    
-    Muscle_template_Simple_Angle_MultiOffset IC_Ext_R9R10 (
-      CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
+     Muscle_template_Simple_Angle_MultiOffset IC_Ext_R9R10 (
+       CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
       OriginSegment=....Segments.Right.R9Seg,
       ORIGIN_POINTS=....Segments.Right.R9Seg.IC_points.Ext_InfPoints,
       InsertionSegment=....Segments.Right.R10Seg,
@@ -1874,7 +1927,7 @@ MuscleGroup ErectorSpinae = {
 
     
     Muscle_template_Simple_Angle_MultiOffset IC_Ext_R10R11 (
-      CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE),
+       CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE),
       OriginSegment=....Segments.Right.R10Seg,
       ORIGIN_POINTS=....Segments.Right.R10Seg.IC_points.Ext_InfPoints,
       InsertionSegment=....Segments.Right.R11Seg,
@@ -1883,8 +1936,8 @@ MuscleGroup ErectorSpinae = {
     )={DesiredAngle=45;};
 
     
-    Muscle_template_Simple_Angle_MultiOffset IC_Ext_R11R12 (
-      CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE-4),
+       Muscle_template_Simple_Angle_MultiOffset IC_Ext_R11R12 (
+       CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE-4),
       OriginSegment=....Segments.Right.R11Seg,
       ORIGIN_POINTS=....Segments.Right.R11Seg.IC_points.Ext_InfPoints,
       InsertionSegment=....Segments.Right.R12Seg,
@@ -2194,7 +2247,7 @@ MuscleGroup LongusCapitis = {
   };
 };
 
-MuscleGroup LongusColli = {
+AnyFolder LongusColli = {
   AnyMuscleViaPoint LongusColliT3C6 = {
     AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongusColli.LongusColliT3C6;
     AnyRefNode &Org = ....Segments.T3Seg.Right.LongusColliT3C6Node;
@@ -2215,6 +2268,31 @@ MuscleGroup LongusColli = {
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
+  AnyMuscleViaPoint LongusColliT2C3 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongusColli.LongusColliT2C3;
+    AnyRefNode &Org = ....Segments.T2Seg.Right.LongusColliT2C5Node;
+    AnyRefNode &Via1 = ....Segments.T1Seg.Right.LongusColliT1C4Node;
+    AnyRefNode &Via2 = ....Segments.C7Seg.Right.LongusColliT1C4Node;
+    AnyRefNode &Via3 = ....Segments.C6Seg.Right.LongusColliT1C4Node;
+    AnyRefNode &Via4 = ....Segments.C5Seg.Right.LongusColliT1C4Node;
+    AnyRefNode &Via5 = ....Segments.C4Seg.Right.LongusColliC7C3Node;
+    AnyRefNode &Ins = ....Segments.C3Seg.Right.LongusColliC7C3Node;
+    viewMuscle = {#include "<ANYBODY_PATH_BODY>/drawSettings/MusDrawSettings.any"};
+    viewForce.Visible ??= Off;
+  };
+  AnyMuscleViaPoint LongusColliT2C2 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongusColli.LongusColliT2C2;
+    AnyRefNode &Org = ....Segments.T2Seg.Right.LongusColliT2C5Node;
+    AnyRefNode &Via1 = ....Segments.T1Seg.Right.LongusColliT1C4Node;
+    AnyRefNode &Via2 = ....Segments.C7Seg.Right.LongusColliT1C4Node;
+    AnyRefNode &Via3 = ....Segments.C6Seg.Right.LongusColliT1C4Node;
+    AnyRefNode &Via4 = ....Segments.C5Seg.Right.LongusColliT1C4Node;
+    AnyRefNode &Via5 = ....Segments.C4Seg.Right.LongusColliC7C3Node;
+    AnyRefNode &Via6 = ....Segments.C3Seg.Right.LongusColliC7C3Node;
+    AnyRefNode &Ins = ....Segments.C2Seg.Right.LongusColliC6C2Node;
+    viewMuscle = {#include "<ANYBODY_PATH_BODY>/drawSettings/MusDrawSettings.any"};
+    viewForce.Visible ??= Off;
+  };
   AnyMuscleViaPoint LongusColliT1C4 = {
     AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongusColli.LongusColliT1C4;
     AnyRefNode &Org = ....Segments.T1Seg.Right.LongusColliT1C4Node;
@@ -2223,6 +2301,29 @@ MuscleGroup LongusColli = {
     AnyRefNode &Via3 = ....Segments.C5Seg.Right.LongusColliT1C4Node;
     AnyRefNode &Ins = ....Segments.C4Seg.Right.LongusColliT1C4Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    viewForce.Visible ??= Off;
+  };
+  AnyMuscleViaPoint LongusColliT1C3 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongusColli.LongusColliT1C3;
+    AnyRefNode &Org = ....Segments.T1Seg.Right.LongusColliT1C4Node;
+    AnyRefNode &Via1 = ....Segments.C7Seg.Right.LongusColliT1C4Node;
+    AnyRefNode &Via2 = ....Segments.C6Seg.Right.LongusColliT1C4Node;
+    AnyRefNode &Via3 = ....Segments.C5Seg.Right.LongusColliT1C4Node;
+    AnyRefNode &Via4 = ....Segments.C4Seg.Right.LongusColliC7C3Node;
+    AnyRefNode &Ins = ....Segments.C3Seg.Right.LongusColliC7C3Node;
+    viewMuscle = {#include "<ANYBODY_PATH_BODY>/drawSettings/MusDrawSettings.any"};
+    viewForce.Visible ??= Off;
+  };
+  AnyMuscleViaPoint LongusColliT1C2 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongusColli.LongusColliT1C2;
+    AnyRefNode &Org = ....Segments.T1Seg.Right.LongusColliT1C4Node;
+    AnyRefNode &Via1 = ....Segments.C7Seg.Right.LongusColliT1C4Node;
+    AnyRefNode &Via2 = ....Segments.C6Seg.Right.LongusColliT1C4Node;
+    AnyRefNode &Via3 = ....Segments.C5Seg.Right.LongusColliT1C4Node;
+    AnyRefNode &Via4 = ....Segments.C4Seg.Right.LongusColliC7C3Node;
+    AnyRefNode &Via5 = ....Segments.C3Seg.Right.LongusColliC7C3Node;
+    AnyRefNode &Ins = ....Segments.C2Seg.Right.LongusColliC6C2Node;
+    viewMuscle = {#include "<ANYBODY_PATH_BODY>/drawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint LongusColliC7C3 = {
@@ -2254,6 +2355,79 @@ MuscleGroup LongusColli = {
     AnyRefNode &Ins = ....Segments.C1Seg.Right.LongusColliC5C1Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
+  };
+  // LongusColliSuperiorOblique
+  AnyMuscleViaPoint LongusColliSuperiorObliqueC3C1 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongusColli.LongusColliSuperiorObliqueC3C1;
+    AnyRefNode &Org = ....Segments.C3Seg.LongusCapitisC3C0NodeR;
+    AnyRefNode &Ins = ....Segments.C1Seg.Right.LongusColliC5C1Node;
+    viewMuscle = {#include "<ANYBODY_PATH_BODY>/drawSettings/MusDrawSettings.any"};
+    viewForce.Visible ??= Off;                
+  };
+  AnyMuscleViaPoint LongusColliSuperiorObliqueC4C1 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongusColli.LongusColliSuperiorObliqueC4C1;
+    AnyRefNode &Org = ....Segments.C4Seg.LongusCapitisC4C0NodeR;
+    AnyRefNode &Ins = ....Segments.C1Seg.Right.LongusColliC5C1Node;
+    viewMuscle = {#include "<ANYBODY_PATH_BODY>/drawSettings/MusDrawSettings.any"};
+    viewForce.Visible ??= Off;                
+  };
+  AnyMuscleViaPoint LongusColliSuperiorObliqueC5C1 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongusColli.LongusColliSuperiorObliqueC5C1;
+    AnyRefNode &Org = ....Segments.C5Seg.LongusCapitisC5C0NodeR;
+    AnyRefNode &Ins = ....Segments.C1Seg.Right.LongusColliC5C1Node;
+    viewMuscle = {#include "<ANYBODY_PATH_BODY>/drawSettings/MusDrawSettings.any"};
+    viewForce.Visible ??= Off;                
+  };
+  AnyMuscleViaPoint LongusColliSuperiorObliqueC4C2 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongusColli.LongusColliSuperiorObliqueC4C2;
+    AnyRefNode &Org = ....Segments.C4Seg.LongusCapitisC4C0NodeR;
+    AnyRefNode &Ins = ....Segments.C2Seg.Right.LongusColliC6C2Node;
+    viewMuscle = {#include "<ANYBODY_PATH_BODY>/drawSettings/MusDrawSettings.any"};
+    viewForce.Visible ??= Off;                
+  };
+  AnyMuscleViaPoint LongusColliSuperiorObliqueC5C2 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongusColli.LongusColliSuperiorObliqueC5C2;
+    AnyRefNode &Org = ....Segments.C5Seg.LongusCapitisC5C0NodeR;
+    AnyRefNode &Ins = ....Segments.C2Seg.Right.LongusColliC6C2Node;
+    viewMuscle = {#include "<ANYBODY_PATH_BODY>/drawSettings/MusDrawSettings.any"};
+    viewForce.Visible ??= Off;                
+  };
+  AnyMuscleViaPoint LongusColliSuperiorObliqueC6C2 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongusColli.LongusColliSuperiorObliqueC6C2;
+    AnyRefNode &Org = ....Segments.C6Seg.LongusCapitisC6C0NodeR;
+    AnyRefNode &Ins = ....Segments.C2Seg.Right.LongusColliC6C2Node;
+    viewMuscle = {#include "<ANYBODY_PATH_BODY>/drawSettings/MusDrawSettings.any"};
+    viewForce.Visible ??= Off;                
+  };
+  AnyMuscleViaPoint LongusColliSuperiorObliqueC6C3 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongusColli.LongusColliSuperiorObliqueC6C3;
+    AnyRefNode &Org = ....Segments.C6Seg.LongusCapitisC6C0NodeR;
+    AnyRefNode &Ins = ....Segments.C3Seg.Right.LongusColliC7C3Node;
+    viewMuscle = {#include "<ANYBODY_PATH_BODY>/drawSettings/MusDrawSettings.any"};
+    viewForce.Visible ??= Off;                
+  };
+
+// LongusColliInferiorOblique
+  AnyMuscleViaPoint LongusColliInferiorObliqueT1C6 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongusColli.LongusColliInferiorObliqueT1C6;
+    AnyRefNode &Org = ....Segments.T1Seg.Right.LongusColliT1C4Node;
+    AnyRefNode &Ins = ....Segments.C6Seg.LongusCapitisC6C0NodeR;
+    viewMuscle = {#include "<ANYBODY_PATH_BODY>/drawSettings/MusDrawSettings.any"};
+    viewForce.Visible ??= Off;                
+  };
+  AnyMuscleViaPoint LongusColliInferiorObliqueT2C6 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongusColli.LongusColliInferiorObliqueT2C6;
+    AnyRefNode &Org = ....Segments.T2Seg.Right.LongusColliT2C5Node;
+    AnyRefNode &Ins = ....Segments.C6Seg.LongusCapitisC6C0NodeR;
+    viewMuscle = {#include "<ANYBODY_PATH_BODY>/drawSettings/MusDrawSettings.any"};
+    viewForce.Visible ??= Off;                
+  };
+  AnyMuscleViaPoint LongusColliInferiorObliqueT2C5 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongusColli.LongusColliInferiorObliqueT2C5;
+    AnyRefNode &Org = ....Segments.T2Seg.Right.LongusColliT2C5Node;
+    AnyRefNode &Ins = ....Segments.C5Seg.LongusCapitisC5C0NodeR;
+    viewMuscle = {#include "<ANYBODY_PATH_BODY>/drawSettings/MusDrawSettings.any"};
+    viewForce.Visible ??= Off;                
   };
 };
 
@@ -2652,7 +2826,7 @@ AnyMuscleShortestPath OEC_6 = {
   // AnyParamSurf &srf1 =....Abdominal.ObliquusWrapping.WrappingSeg.Layer4WrappingPoints.Right.nn09.Translate.VerticalCyl;
  AnyParamSurf &srf2 =....Abdominal.ObliquusWrapping.WrappingSeg.Layer4WrappingPoints.Right.nn10.Translate.OutwardCyl;
   
-  SPLine.StringMesh=60;
+  SPLine.StringMesh=240;
   
   SPLine ={  
     AnyMatrix InitWrapPos = {
@@ -2675,7 +2849,7 @@ AnyMuscleShortestPath OEC_7 = {
   // AnyParamSurf &srf1 =....Abdominal.ObliquusWrapping.WrappingSeg.Layer4WrappingPoints.Right.nn08.Translate.VerticalCyl;
   AnyParamSurf &srf2 =....Abdominal.ObliquusWrapping.WrappingSeg.Layer4WrappingPoints.Right.nn09.Translate.OutwardCyl;
 
-  SPLine.StringMesh=60;
+  SPLine.StringMesh=240;
   
   SPLine ={  
     AnyMatrix InitWrapPos = {
@@ -2802,11 +2976,12 @@ AnyMuscleShortestPath OEC_3 = {
   #endif
   
   
-  #if MESH_TYPE == "ELLIPSOID_SIDE"
-  AnySurfEllipsoid &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.Right.mesh;
-  #else
-  AnySurfTriCylMesh &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.mesh;
-  #endif
+//  #if MESH_TYPE == "ELLIPSOID_SIDE"
+//  AnySurfEllipsoid &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.Right.mesh;
+//  #else
+//  AnySurfTriCylMesh &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.mesh;
+//  #endif
+  AnySurfEllipsoid &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.mesh3;
 
   
   
@@ -2817,35 +2992,35 @@ AnyMuscleShortestPath OEC_3 = {
   SPLine ={  
     
    
-   #if MESH_TYPE == "ELLIPSOID"
+//   #if MESH_TYPE == "ELLIPSOID"
+//    AnyMatrix InitWrapPos = {
+//      transf3D({0,.srf1.MajorRadius+.srf1.MinorRadius, 0}, &.srf1),
+//      transf3D({.mesh2.Radius[0],0,0}, &.mesh2),
+//    };
+//    #endif
+//
+//    #if MESH_TYPE == "ELLIPSOID_SIDE"
+//    AnyMatrix InitWrapPos = {
+//       transf3D({0,.srf1.MajorRadius+.srf1.MinorRadius, 0}, &.srf1),
+//  
+//      transf3D({0,.mesh2.Radius[1],0}, &.mesh2),
+//
+//    };
+//    #endif
+//    
+//    #if MESH_TYPE == "QUAD"
+//    AnyMatrix InitWrapPos = {
+//      transf3D({0,.srf1.MajorRadius+.srf1.MinorRadius, 0}, &.srf1),
+//      transf3D(.mesh2.Points[floor(.mesh2.MeshSize*0.9)+2*.mesh2.MeshSize*6]+{0.02,0,0}, &.mesh2),
+//    };
+//    #endif
+
+    
     AnyMatrix InitWrapPos = {
       transf3D({0,.srf1.MajorRadius+.srf1.MinorRadius, 0}, &.srf1),
       transf3D({.mesh2.Radius[0],0,0}, &.mesh2),
     };
-    #endif
-
-    #if MESH_TYPE == "ELLIPSOID_SIDE"
-    AnyMatrix InitWrapPos = {
-       transf3D({0,.srf1.MajorRadius+.srf1.MinorRadius, 0}, &.srf1),
-  
-      transf3D({0,.mesh2.Radius[1],0}, &.mesh2),
-
-    };
-    #endif
-
-
-
-    
-    #if MESH_TYPE == "QUAD"
-    AnyMatrix InitWrapPos = {
-      transf3D({0,.srf1.MajorRadius+.srf1.MinorRadius, 0}, &.srf1),
-      transf3D(.mesh2.Points[floor(.mesh2.MeshSize*0.9)+2*.mesh2.MeshSize*6]+{0.02,0,0}, &.mesh2),
-    };
-    #endif
-
-    
-  
-  
+ 
   
   InitWrapPosVecArr = {&InitWrapPos};    
   };
@@ -2867,53 +3042,54 @@ AnyMuscleShortestPath OEC_4 = {
   #endif
   
   
-  #if MESH_TYPE == "ELLIPSOID_SIDE"
-  //AnySurfTriCylMesh &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.mesh;
-  AnySurfEllipsoid &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.Right.mesh;
-  //AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
-  #else
-  //AnySurfTriCylMesh &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.mesh;
-  AnySurfTriCylMesh &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh;
-  //AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
-  #endif
+//  #if MESH_TYPE == "ELLIPSOID_SIDE"
+//  //AnySurfTriCylMesh &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.mesh;
+//  AnySurfEllipsoid &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.Right.mesh;
+//  //AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
+//  #else
+//  //AnySurfTriCylMesh &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.mesh;
+//  AnySurfTriCylMesh &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh;
+//  //AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
+//  #endif
+  AnySurfEllipsoid &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh3;
 
   SPLine.StringMesh=60;
   
   SPLine ={  
  
-    #if MESH_TYPE == "ELLIPSOID"
+//    #if MESH_TYPE == "ELLIPSOID"
+//     AnyMatrix InitWrapPos = {
+//        transf3D({0,.srf1.MajorRadius+.srf1.MinorRadius, 0}, &.srf1),
+//      //transf3D({.mesh2.Radius[0],0,0}, &.mesh2),
+//        transf3D({.mesh3.Radius[0],0,0}, &.mesh3),
+//      //transf3D({.mesh4.Radius[0],0,0}, &.mesh4),
+//     };
+//    #endif
+//    #if MESH_TYPE == "ELLIPSOID_SIDE"
+//    AnyMatrix InitWrapPos = {
+//      transf3D({0,.srf1.MajorRadius+.srf1.MinorRadius, 0}, &.srf1),
+//      transf3D({0,.mesh3.Radius[1],0}, &.mesh3),
+//    };
+//    #endif
+//   
+//    #if MESH_TYPE == "QUAD"
+//AnyMatrix InitWrapPos = {
+//      transf3D({0,.srf1.MajorRadius+.srf1.MinorRadius, 0}, &.srf1),
+//    
+//     //  transf3D(.mesh2.Points[floor(.mesh2.MeshSize*0.85)+2*.mesh2.MeshSize*6]+{0.02,0,0}, &.mesh2),
+//     //  transf3D(.mesh3.Points[floor(.mesh3.MeshSize*0.95)+2*.mesh3.MeshSize*6]+{0.02,0,0}, &.mesh3)
+//       transf3D(.mesh4.Points[floor(.mesh4.MeshSize*0.95)+2*.mesh4.MeshSize*6]+{0.02,0,0}, &.mesh4)
+//
+//     
+//    };
+//    #endif
      AnyMatrix InitWrapPos = {
         transf3D({0,.srf1.MajorRadius+.srf1.MinorRadius, 0}, &.srf1),
       //transf3D({.mesh2.Radius[0],0,0}, &.mesh2),
         transf3D({.mesh3.Radius[0],0,0}, &.mesh3),
       //transf3D({.mesh4.Radius[0],0,0}, &.mesh4),
      };
-    #endif
-    #if MESH_TYPE == "ELLIPSOID_SIDE"
-    AnyMatrix InitWrapPos = {
-      transf3D({0,.srf1.MajorRadius+.srf1.MinorRadius, 0}, &.srf1),
-      transf3D({0,.mesh3.Radius[1],0}, &.mesh3),
-    };
-    #endif
-
-
-
-    
-    #if MESH_TYPE == "QUAD"
-AnyMatrix InitWrapPos = {
-      transf3D({0,.srf1.MajorRadius+.srf1.MinorRadius, 0}, &.srf1),
-    
-     //  transf3D(.mesh2.Points[floor(.mesh2.MeshSize*0.85)+2*.mesh2.MeshSize*6]+{0.02,0,0}, &.mesh2),
-     //  transf3D(.mesh3.Points[floor(.mesh3.MeshSize*0.95)+2*.mesh3.MeshSize*6]+{0.02,0,0}, &.mesh3)
-       transf3D(.mesh4.Points[floor(.mesh4.MeshSize*0.95)+2*.mesh4.MeshSize*6]+{0.02,0,0}, &.mesh4)
-
-     
-    };
-    #endif
-
-
-    
-    
+  
     InitWrapPosVecArr = {&InitWrapPos};
   };
   viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -2935,42 +3111,50 @@ AnyMuscleShortestPath  OEC_5= {
 //  AnySurfTriCylMesh &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh;
 
   
-  #if MESH_TYPE == "ELLIPSOID_SIDE"
-  AnySurfEllipsoid &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.Right.mesh;
-  #else
-  AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
-  #endif
+//  #if MESH_TYPE == "ELLIPSOID_SIDE"
+//  AnySurfEllipsoid &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.Right.mesh;
+//  #else
+//  AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
+//  #endif
+  AnySurfEllipsoid &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh3;
+  AnySurfEllipsoid &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh3;
 
   
-  SPLine.StringMesh=60;
+  SPLine.StringMesh=240;
   
   SPLine ={  
     
-     #if MESH_TYPE == "ELLIPSOID"
+//     #if MESH_TYPE == "ELLIPSOID"
+//    AnyMatrix InitWrapPos = {
+//     transf3D({0,.srf0.MajorRadius+.srf0.MinorRadius, 0}, &.srf0),
+//  //    transf3D({.mesh3.Radius[0],0,0}, &.mesh3),
+//        transf3D({.mesh4.Radius[0],0,0}, &.mesh4),
+//    };
+//    #endif
+//    #if MESH_TYPE == "ELLIPSOID_SIDE"
+//    AnyMatrix InitWrapPos = {
+//       transf3D({0,.srf0.MajorRadius+.srf0.MinorRadius, 0}, &.srf0),
+//  
+//      transf3D({0,.mesh4.Radius[1],0}, &.mesh4),
+//
+//    };
+//    #endif
+//
+//
+//    
+//    #if MESH_TYPE == "QUAD"
+//AnyMatrix InitWrapPos = {
+// transf3D({0,.srf0.MajorRadius+.srf0.MinorRadius, 0}, &.srf0),
+// //transf3D(.mesh3.Points[floor(.mesh3.MeshSize*0.85)+2*.mesh3.MeshSize*6]+{0.02,0,0}, &.mesh3),
+//       transf3D(.mesh4.Points[floor(.mesh4.MeshSize*0.85)+2*.mesh4.MeshSize*6]+{0.02,0,0}, &.mesh4)
+//    }; 
+//        #endif
     AnyMatrix InitWrapPos = {
      transf3D({0,.srf0.MajorRadius+.srf0.MinorRadius, 0}, &.srf0),
-  //    transf3D({.mesh3.Radius[0],0,0}, &.mesh3),
+        transf3D({.mesh3.Radius[0],0,0}, &.mesh3),
         transf3D({.mesh4.Radius[0],0,0}, &.mesh4),
     };
-    #endif
-    #if MESH_TYPE == "ELLIPSOID_SIDE"
-    AnyMatrix InitWrapPos = {
-       transf3D({0,.srf0.MajorRadius+.srf0.MinorRadius, 0}, &.srf0),
-  
-      transf3D({0,.mesh4.Radius[1],0}, &.mesh4),
 
-    };
-    #endif
-
-
-    
-    #if MESH_TYPE == "QUAD"
-AnyMatrix InitWrapPos = {
- transf3D({0,.srf0.MajorRadius+.srf0.MinorRadius, 0}, &.srf0),
- //transf3D(.mesh3.Points[floor(.mesh3.MeshSize*0.85)+2*.mesh3.MeshSize*6]+{0.02,0,0}, &.mesh3),
-       transf3D(.mesh4.Points[floor(.mesh4.MeshSize*0.85)+2*.mesh4.MeshSize*6]+{0.02,0,0}, &.mesh4)
-    }; 
-        #endif
     InitWrapPosVecArr = {&InitWrapPos};
   };  
   viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -2985,41 +3169,47 @@ AnyMuscleShortestPath OEC_6 = {
  //AnySurfTriCylMesh &mesh4= Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
 //  AnySurfTriCylMesh &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.mesh;
   
-   #if MESH_TYPE == "ELLIPSOID_SIDE"
-  AnySurfEllipsoid &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.Right.mesh;
-  #else
-  AnySurfTriCylMesh &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.mesh;
-  #endif
+//   #if MESH_TYPE == "ELLIPSOID_SIDE"
+//  AnySurfEllipsoid &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.Right.mesh;
+//  #else
+//  AnySurfTriCylMesh &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.mesh;
+//  #endif
+  AnySurfEllipsoid &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh3;
+  AnySurfEllipsoid &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.mesh3;
 
 
   
-  SPLine.StringMesh=60;
+  SPLine.StringMesh=240;
   
   SPLine ={  
-      #if MESH_TYPE == "ELLIPSOID"
+//      #if MESH_TYPE == "ELLIPSOID"
+//    AnyMatrix InitWrapPos = {
+//    //    transf3D({.mesh4.Radius[0],0,0}, &.mesh4),
+//        transf3D({.mesh5.Radius[0],0,0}, &.mesh5),
+//    };
+//    #endif
+//   
+//    #if MESH_TYPE == "ELLIPSOID_SIDE"
+//    AnyMatrix InitWrapPos = {
+//               transf3D({0,.mesh5.Radius[1],0}, &.mesh5),
+//
+//    };
+//    #endif
+//
+//
+//    
+//    #if MESH_TYPE == "QUAD"
+//
+//    AnyMatrix InitWrapPos = {
+//      // transf3D(.mesh4.Points[floor(.mesh4.MeshSize*0.8)+2*.mesh4.MeshSize*6]+{0.02,0,0}, &.mesh4),
+//       transf3D(.mesh5.Points[floor(.mesh5.MeshSize*0.85)+2*.mesh5.MeshSize*6]+{0.02,0,0}, &.mesh5)
+//
+//   }; 
+//        #endif
     AnyMatrix InitWrapPos = {
-    //    transf3D({.mesh4.Radius[0],0,0}, &.mesh4),
+        transf3D({.mesh4.Radius[0],0,0}, &.mesh4),
         transf3D({.mesh5.Radius[0],0,0}, &.mesh5),
     };
-    #endif
-   
-    #if MESH_TYPE == "ELLIPSOID_SIDE"
-    AnyMatrix InitWrapPos = {
-               transf3D({0,.mesh5.Radius[1],0}, &.mesh5),
-
-    };
-    #endif
-
-
-    
-    #if MESH_TYPE == "QUAD"
-
-    AnyMatrix InitWrapPos = {
-      // transf3D(.mesh4.Points[floor(.mesh4.MeshSize*0.8)+2*.mesh4.MeshSize*6]+{0.02,0,0}, &.mesh4),
-       transf3D(.mesh5.Points[floor(.mesh5.MeshSize*0.85)+2*.mesh5.MeshSize*6]+{0.02,0,0}, &.mesh5)
-
-   }; 
-        #endif
 
 
     InitWrapPosVecArr = {&InitWrapPos};
@@ -3039,41 +3229,52 @@ AnyMuscleShortestPath OEC_7 = {
 //  AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
 //  AnySurfTriCylMesh &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.mesh;
 //  
-   #if MESH_TYPE == "ELLIPSOID_SIDE"
-   AnySurfEllipsoid &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.Right.mesh;
-   AnySurfEllipsoid  &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.Right.mesh;
-  #else
-  AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
-  AnySurfTriCylMesh &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.mesh;
-  #endif
+//   #if MESH_TYPE == "ELLIPSOID_SIDE"
+//   AnySurfEllipsoid &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.Right.mesh;
+//   AnySurfEllipsoid  &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.Right.mesh;
+//  #else
+//  AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
+//  AnySurfTriCylMesh &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.mesh;
+//  #endif
+
+//   AnySurfEllipsoid &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh3;
+   AnySurfEllipsoid &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh3;
+   AnySurfEllipsoid  &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.mesh3;
 
   
-  SPLine.StringMesh=60;
+  SPLine.StringMesh=240;
   SPLine ={  
     
-    #if MESH_TYPE == "ELLIPSOID"
+//    #if MESH_TYPE == "ELLIPSOID"
+//    AnyMatrix InitWrapPos = {
+//      transf3D({.mesh4.Radius[0],0,0}, &.mesh4),
+//      transf3D({.mesh5.Radius[0],0,0}, &.mesh5),
+//    };
+//    #endif
+//    
+//   #if MESH_TYPE == "ELLIPSOID_SIDE"
+//    AnyMatrix InitWrapPos = {
+//            transf3D({0,.mesh4.Radius[1],0}, &.mesh4),
+//               transf3D({0,.mesh5.Radius[1],0}, &.mesh5),
+//
+//    };
+//    #endif
+//
+//        
+//    #if MESH_TYPE == "QUAD"
+//    
+//    AnyMatrix InitWrapPos = {
+//      transf3D(.mesh4.Points[floor(.mesh4.MeshSize*0.8)+2*20*4]+{0.01,0,0}, &.mesh4),
+//      transf3D(.mesh5.Points[floor(.mesh5.MeshSize*0.85)+2*20*4]+{0.01,0,0}, &.mesh5)
+//    }; 
+//    #endif
+
     AnyMatrix InitWrapPos = {
+//      transf3D({.mesh3.Radius[0],0,0}, &.mesh3),
       transf3D({.mesh4.Radius[0],0,0}, &.mesh4),
       transf3D({.mesh5.Radius[0],0,0}, &.mesh5),
     };
-    #endif
-    
-   #if MESH_TYPE == "ELLIPSOID_SIDE"
-    AnyMatrix InitWrapPos = {
-            transf3D({0,.mesh4.Radius[1],0}, &.mesh4),
-               transf3D({0,.mesh5.Radius[1],0}, &.mesh5),
 
-    };
-    #endif
-
-        
-    #if MESH_TYPE == "QUAD"
-    
-    AnyMatrix InitWrapPos = {
-      transf3D(.mesh4.Points[floor(.mesh4.MeshSize*0.8)+2*20*4]+{0.01,0,0}, &.mesh4),
-      transf3D(.mesh5.Points[floor(.mesh5.MeshSize*0.85)+2*20*4]+{0.01,0,0}, &.mesh5)
-    }; 
-    #endif
     InitWrapPosVecArr = {&InitWrapPos};
   };  
   viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -3306,7 +3507,7 @@ AnyMuscleShortestPath OIC_8 = {
   AnyParamSurf &srf2 =....Abdominal.ObliquusWrapping.WrappingSeg.Layer2WrappingPoints.Right.nn10.Translate.InwardCyl;
   AnyParamSurf &srf3 =....Abdominal.ObliquusWrapping.WrappingSeg.Layer3WrappingPoints.Right.nn08.Translate.InwardCyl;
 
-  SPLine.StringMesh=60;
+  SPLine.StringMesh=240;
 
   SPLine ={  
     AnyMatrix InitWrapPos = {
@@ -3334,7 +3535,7 @@ AnyMuscleShortestPath OIC_8_extra = {
   AnyParamSurf &srf2 =....Abdominal.ObliquusWrapping.WrappingSeg.Layer2WrappingPoints.Right.nn10.Translate.InwardCyl;
   AnyParamSurf &srf3 =....Abdominal.ObliquusWrapping.WrappingSeg.Layer3WrappingPoints.Right.nn08.Translate.InwardCyl;
 
-  SPLine.StringMesh=60;
+  SPLine.StringMesh=240;
 
   SPLine ={  
     AnyMatrix InitWrapPos = {
@@ -3520,41 +3721,47 @@ AnyMuscleShortestPath OIC_6 = {
   //AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
  //AnySurfTriCylMesh  &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.mesh;
 
-  #if MESH_TYPE == "ELLIPSOID_SIDE"
-    AnySurfEllipsoid &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.Right.mesh;
-  #else
-    AnySurfTriCylMesh &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh;
-  #endif
+//  #if MESH_TYPE == "ELLIPSOID_SIDE"
+//    AnySurfEllipsoid &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.Right.mesh;
+//  #else
+//    AnySurfTriCylMesh &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh;
+//  #endif
+    AnySurfEllipsoid &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh3;
 
   SPLine.StringMesh=60;
 
   SPLine ={  
    
-  #if MESH_TYPE == "ELLIPSOID"
-    AnyMatrix InitWrapPos = {
-   //   transf3D({.mesh2.Radius[0],0,0}, &.mesh2),
-      transf3D({.mesh3.Radius[0],0,0}, &.mesh3),
-    //  transf3D({.mesh4.Radius[0],0,0}, &.mesh4),
-     // transf3D({.mesh5.Radius[0],0,0}, &.mesh5),
-    };
-    #endif
-       #if MESH_TYPE == "ELLIPSOID_SIDE"
-    AnyMatrix InitWrapPos = {
-   
-      transf3D({0,.mesh3.Radius[1],0}, &.mesh3),
-      //transf3D({0,.mesh4.Radius[1],0}, &.mesh4),
-    };
-    #endif
+//  #if MESH_TYPE == "ELLIPSOID"
+//    AnyMatrix InitWrapPos = {
+//   //   transf3D({.mesh2.Radius[0],0,0}, &.mesh2),
+//      transf3D({.mesh3.Radius[0],0,0}, &.mesh3),
+//    //  transf3D({.mesh4.Radius[0],0,0}, &.mesh4),
+//     // transf3D({.mesh5.Radius[0],0,0}, &.mesh5),
+//    };
+//    #endif
+//       #if MESH_TYPE == "ELLIPSOID_SIDE"
+//    AnyMatrix InitWrapPos = {
+//   
+//      transf3D({0,.mesh3.Radius[1],0}, &.mesh3),
+//      //transf3D({0,.mesh4.Radius[1],0}, &.mesh4),
+//    };
+//    #endif
+//
+//    
+//    #if MESH_TYPE == "QUAD"
+//    AnyMatrix InitWrapPos = {
+//     // transf3D(.mesh2.Points[floor(.mesh2.MeshSize*0.75)+2*.mesh2.MeshSize*6]+{0.02,0,0}, &.mesh2),
+//      transf3D(.mesh3.Points[floor(.mesh3.MeshSize*0.75)+2*.mesh3.MeshSize*6]+{0.02,0,0}, &.mesh3),
+//      transf3D(.mesh4.Points[floor(.mesh4.MeshSize*0.7)+2*.mesh4.MeshSize*6]+{0.02,0,0}, &.mesh4),
+//     // transf3D(.mesh5.Points[floor(.mesh5.MeshSize*0.65)+2*.mesh5.MeshSize*6]+{0.02,0,0}, &.mesh5)
+//    };  
+//    #endif
 
-    
-    #if MESH_TYPE == "QUAD"
     AnyMatrix InitWrapPos = {
-     // transf3D(.mesh2.Points[floor(.mesh2.MeshSize*0.75)+2*.mesh2.MeshSize*6]+{0.02,0,0}, &.mesh2),
-      transf3D(.mesh3.Points[floor(.mesh3.MeshSize*0.75)+2*.mesh3.MeshSize*6]+{0.02,0,0}, &.mesh3),
-      transf3D(.mesh4.Points[floor(.mesh4.MeshSize*0.7)+2*.mesh4.MeshSize*6]+{0.02,0,0}, &.mesh4),
-     // transf3D(.mesh5.Points[floor(.mesh5.MeshSize*0.65)+2*.mesh5.MeshSize*6]+{0.02,0,0}, &.mesh5)
-    };  
-    #endif
+      transf3D({.mesh3.Radius[0],0,0}, &.mesh3),
+    };
+
     InitWrapPosVecArr = {&InitWrapPos};
   };
   viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -3570,51 +3777,62 @@ AnyMuscleShortestPath OIC_7 = {
   #endif
   AnyRefNode &Ins = ....Segments.PelvisSeg.Right.ObliquusInternusNode_5;
 
-//  AnySurfTriCylMesh &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.mesh;
-//  AnySurfTriCylMesh &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh;
-//  AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
-// AnySurfTriCylMesh &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.mesh;
- #if MESH_TYPE == "ELLIPSOID_SIDE"
-   AnySurfEllipsoid &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.Right.mesh;
-   AnySurfEllipsoid &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.Right.mesh;
-   AnySurfEllipsoid &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.Right.mesh;
- #else
-    AnySurfTriCylMesh &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.mesh;
-    AnySurfTriCylMesh &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh;
-    AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
-  #endif
+////  AnySurfTriCylMesh &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.mesh;
+////  AnySurfTriCylMesh &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh;
+////  AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
+//// AnySurfTriCylMesh &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.mesh;
+// #if MESH_TYPE == "ELLIPSOID_SIDE"
+//   AnySurfEllipsoid &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.Right.mesh;
+//   AnySurfEllipsoid &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.Right.mesh;
+//   AnySurfEllipsoid &mesh3_extra = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.Right.mesh2;
+//   AnySurfEllipsoid &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.Right.mesh;
+// #else
+//    AnySurfTriCylMesh &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.mesh;
+//    AnySurfTriCylMesh &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh;
+//    AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
+//  #endif
 
+//   AnySurfEllipsoid &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.mesh3;
+   AnySurfEllipsoid &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh3;
+   AnySurfEllipsoid &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh3;
 
-  SPLine.StringMesh=60;
+  SPLine.StringMesh=240;
 
   SPLine ={  
   
-   #if MESH_TYPE == "ELLIPSOID"
+//   #if MESH_TYPE == "ELLIPSOID"
+//    AnyMatrix InitWrapPos = {
+//      transf3D({.mesh2.Radius[0],0,0}, &.mesh2),
+//      transf3D({.mesh3.Radius[0],0,0}, &.mesh3),
+//      transf3D({.mesh4.Radius[0],0,0}, &.mesh4),
+//    //  transf3D({.mesh5.Radius[0],0,0}, &.mesh5),
+//    };
+//    #endif
+//    
+//       #if MESH_TYPE == "ELLIPSOID_SIDE"
+//    AnyMatrix InitWrapPos = {
+//      transf3D({0,.mesh2.Radius[1],0}, &.mesh2),
+//      transf3D({0,.mesh3.Radius[1],0}, &.mesh3),
+////      transf3D({0,.mesh3_extra.Radius[1],0}, &.mesh3_extra),
+//      transf3D({0,.mesh4.Radius[1],0}, &.mesh4),
+//    };
+//    #endif
+//
+//    #if MESH_TYPE == "QUAD"
+//    AnyMatrix InitWrapPos = {
+//      transf3D(.mesh2.Points[floor(.mesh2.MeshSize*0.75)+2*.mesh2.MeshSize*6]+{0.02,0,0}, &.mesh2),
+//      transf3D(.mesh3.Points[floor(.mesh3.MeshSize*0.75)+2*.mesh3.MeshSize*6]+{0.02,0,0}, &.mesh3),
+//      transf3D(.mesh4.Points[floor(.mesh4.MeshSize*0.7)+2*.mesh4.MeshSize*6]+{0.02,0,0}, &.mesh4),
+//     // transf3D(.mesh5.Points[floor(.mesh5.MeshSize*0.65)+2*.mesh5.MeshSize*6]+{0.02,0,0}, &.mesh5)
+//    };  
+//    #endif
     AnyMatrix InitWrapPos = {
-      transf3D({.mesh2.Radius[0],0,0}, &.mesh2),
+//      transf3D({.mesh2.Radius[0],0,0}, &.mesh2),
       transf3D({.mesh3.Radius[0],0,0}, &.mesh3),
       transf3D({.mesh4.Radius[0],0,0}, &.mesh4),
     //  transf3D({.mesh5.Radius[0],0,0}, &.mesh5),
     };
-    #endif
-    
-       #if MESH_TYPE == "ELLIPSOID_SIDE"
-    AnyMatrix InitWrapPos = {
-      transf3D({0,.mesh2.Radius[1],0}, &.mesh2),
-      transf3D({0,.mesh3.Radius[1],0}, &.mesh3),
-      transf3D({0,.mesh4.Radius[1],0}, &.mesh4),
-    };
-    #endif
 
-    #if MESH_TYPE == "QUAD"
-    AnyMatrix InitWrapPos = {
-      transf3D(.mesh2.Points[floor(.mesh2.MeshSize*0.75)+2*.mesh2.MeshSize*6]+{0.02,0,0}, &.mesh2),
-      transf3D(.mesh3.Points[floor(.mesh3.MeshSize*0.75)+2*.mesh3.MeshSize*6]+{0.02,0,0}, &.mesh3),
-      transf3D(.mesh4.Points[floor(.mesh4.MeshSize*0.7)+2*.mesh4.MeshSize*6]+{0.02,0,0}, &.mesh4),
-     // transf3D(.mesh5.Points[floor(.mesh5.MeshSize*0.65)+2*.mesh5.MeshSize*6]+{0.02,0,0}, &.mesh5)
-    };  
-    #endif
-  
     InitWrapPosVecArr = {&InitWrapPos};
   };
   viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -3624,125 +3842,74 @@ AnyMuscleShortestPath OIC_7 = {
 
 AnyMuscleShortestPath OIC_8 = {
   AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.OIC_8;
-  AnyRefNode &Org = ....Segments.SternalBodySeg.Xiphoid_DiaphragmNodeR;
-  AnyRefNode &Via = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L1.BaseSegAnterior.TransversusPoints.Right.nn06;
-
-  AnyRefNode &Ins = ....Segments.PelvisSeg.Right.ObliquusInternusNode_6;
-
- //AnySurfTriCylMesh &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.mesh;
- //AnySurfTriCylMesh &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh;
- //AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
-// AnySurfTriCylMesh &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.mesh;
-
- #if MESH_TYPE == "ELLIPSOID_SIDE"
-   AnySurfEllipsoid &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.Right.mesh;
-   AnySurfEllipsoid &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.Right.mesh;
-   AnySurfEllipsoid &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.Right.mesh;
- #else
-    AnySurfTriCylMesh &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.mesh;
-    AnySurfTriCylMesh &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh;
-    AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
-  #endif
-
-
-
-  SPLine.StringMesh=60;
- 
-  SPLine ={  
-  StringSurfaceMap={{Off,Off,Off},{On,On,On}};  //no wrap before after via
-  
-   #if MESH_TYPE == "ELLIPSOID"
-    AnyMatrix InitWrapPos = {
-      transf3D({.mesh2.Radius[0],0,0}, &.mesh2),
-      transf3D({.mesh3.Radius[0],0,0}, &.mesh3),
-      transf3D({.mesh4.Radius[0],0,0}, &.mesh4),
-  //    transf3D({.mesh5.Radius[0],0,0}, &.mesh5),
-    };
-    #endif
-       #if MESH_TYPE == "ELLIPSOID_SIDE"
-    AnyMatrix InitWrapPos = {
-      transf3D({0,.mesh2.Radius[1],0}, &.mesh2),
-      transf3D({0,.mesh3.Radius[1],0}, &.mesh3),
-      transf3D({0,.mesh4.Radius[1],0}, &.mesh4),
-    };
-    #endif
-
-    #if MESH_TYPE == "QUAD"
-    AnyMatrix InitWrapPos = {
-       transf3D(.mesh2.Points[floor(.mesh2.MeshSize*0.8)+2*.mesh2.MeshSize*6]+{0.02,0,0}, &.mesh2),
-       transf3D(.mesh3.Points[floor(.mesh3.MeshSize*0.7)+2*.mesh3.MeshSize*6]+{0.02,0,0}, &.mesh3),
-      transf3D(.mesh4.Points[floor(.mesh4.MeshSize*0.6)+2*.mesh4.MeshSize*6]+{0.02,0,0}, &.mesh4),
-  //    transf3D(.mesh5.Points[floor(.mesh5.MeshSize*0.6)+2*.mesh5.MeshSize*6]+{0.02,0,0}, &.mesh5)
-    }; 
-  
-    #endif
-
-    InitWrapPosVecArr = {None,&InitWrapPos};
-  };
-  viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-  viewForce.Visible ??= Off;
-};
-
-AnyMuscleShortestPath OIC_8_extra = {
-  AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.OIC_8;
   AnyRefNode &Org = ....Segments.SternalBodySeg.RACP_Via_2_R;
  // AnyRefNode &Via = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L1.BaseSegAnterior.TransversusPoints.Right.nn05;
 
   AnyRefNode &Ins = ....Segments.PelvisSeg.Right.ObliquusInternusNode_6;
-// AnySurfTriCylMesh &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.mesh;
-// AnySurfTriCylMesh &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh;
-// AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
- #if MESH_TYPE == "ELLIPSOID_SIDE"
-   AnySurfEllipsoid &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.Right.mesh;
-   AnySurfEllipsoid &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.Right.mesh;
-   AnySurfEllipsoid &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.Right.mesh;
- #else
-    AnySurfTriCylMesh &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.mesh;
-    AnySurfTriCylMesh &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh;
-    AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
-  #endif
+//// AnySurfTriCylMesh &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.mesh;
+//// AnySurfTriCylMesh &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh;
+//// AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
+// #if MESH_TYPE == "ELLIPSOID_SIDE"
+//   AnySurfEllipsoid &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.Right.mesh;
+//   AnySurfEllipsoid &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.Right.mesh;
+//   AnySurfEllipsoid &mesh3_extra = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.Right.mesh2;
+//   AnySurfEllipsoid &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.Right.mesh;
+// #else
+//    AnySurfTriCylMesh &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.mesh;
+//    AnySurfTriCylMesh &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh;
+//    AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
+//  #endif
+//   AnySurfEllipsoid &mesh1 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L1.BaseSegAnterior.mesh3;
+//   AnySurfEllipsoid &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.mesh3;
+   AnySurfEllipsoid &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh3;
+   AnySurfEllipsoid &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh3;
 
  
 
-SPLine.StringMesh=60;
+SPLine.StringMesh=240;
 
 SPLine ={  
   //    SolverVersion=3;
  // StringSurfaceMap={{Off,Off,Off,Off},{On,On,On,On}};  //no wrap before after via
   
  
-  #if MESH_TYPE == "ELLIPSOID"
+//  #if MESH_TYPE == "ELLIPSOID"
+//    AnyMatrix InitWrapPos = {
+//      transf3D({.mesh2.Radius[0],0,0}, &.mesh2),
+//      transf3D({.mesh3.Radius[0],0,0}, &.mesh3),
+//      transf3D({.mesh4.Radius[0],0,0}, &.mesh4),
+//    };
+//    #endif
+//       #if MESH_TYPE == "ELLIPSOID_SIDE"
+//    AnyMatrix InitWrapPos = {
+//      transf3D({0,.mesh2.Radius[1],0}, &.mesh2),
+//      transf3D({0,.mesh3.Radius[1],0},&.mesh3), 
+////      transf3D({0,.mesh3_extra.Radius[1],0},&.mesh3_extra), 
+//      transf3D({0,.mesh4.Radius[1],0}, &.mesh4),
+//    };
+//    #endif
+//    
+//    #if MESH_TYPE == "QUAD"
+//  AnyMatrix InitWrapPos = {
+//    //      transf3D({0.0,2*.srf1.MajorRadius,-.srf1.MajorRadius}, &.srf1),
+//    //      transf3D(.mesh1.Points[52]+{0.03,0,0}, &.mesh1),
+//    //   transf3D(.mesh1.Points[floor(.mesh2.MeshSize*0.8)+2*.mesh2.MeshSize*4]+{0.01,0,0}, &.mesh1),
+//    transf3D(.mesh2.Points[floor(.mesh2.MeshSize*0.75)+2*.mesh2.MeshSize*6]+{0.02,0,0}, &.mesh2),
+//    transf3D(.mesh3.Points[floor(.mesh3.MeshSize*0.7)+2*.mesh3.MeshSize*6]+{0.02,0,0}, &.mesh3),
+//     transf3D(.mesh4.Points[floor(.mesh4.MeshSize*0.65)+2*.mesh4.MeshSize*6]+{0.02,0,0}, &.mesh4),
+////     transf3D(mesh.Points[floor(.mesh.MeshSize*4]+{0.01,0,0}, &.mesh),
+//    
+//   //      transf3D(.mesh5.Points[floor(.mesh5.MeshSize*0.65)+2*.mesh5.MeshSize*6]+{0.02,0,0}, &.mesh5)
+//  };  
+//
+//    #endif
     AnyMatrix InitWrapPos = {
-      transf3D({.mesh2.Radius[0],0,0}, &.mesh2),
+//      transf3D({.mesh1.Radius[0],0,0}, &.mesh1),
+//      transf3D({.mesh2.Radius[0],0,0}, &.mesh2),
       transf3D({.mesh3.Radius[0],0,0}, &.mesh3),
       transf3D({.mesh4.Radius[0],0,0}, &.mesh4),
     };
-    #endif
-       #if MESH_TYPE == "ELLIPSOID_SIDE"
-    AnyMatrix InitWrapPos = {
-      transf3D({0,.mesh2.Radius[1],0}, &.mesh2),
-      transf3D({0,.mesh3.Radius[1],0},&.mesh3), 
-      transf3D({0,.mesh4.Radius[1],0}, &.mesh4),
-    };
-    #endif
 
-    
-    #if MESH_TYPE == "QUAD"
-  AnyMatrix InitWrapPos = {
-    //      transf3D({0.0,2*.srf1.MajorRadius,-.srf1.MajorRadius}, &.srf1),
-    //      transf3D(.mesh1.Points[52]+{0.03,0,0}, &.mesh1),
-    //   transf3D(.mesh1.Points[floor(.mesh2.MeshSize*0.8)+2*.mesh2.MeshSize*4]+{0.01,0,0}, &.mesh1),
-    transf3D(.mesh2.Points[floor(.mesh2.MeshSize*0.75)+2*.mesh2.MeshSize*6]+{0.02,0,0}, &.mesh2),
-    transf3D(.mesh3.Points[floor(.mesh3.MeshSize*0.7)+2*.mesh3.MeshSize*6]+{0.02,0,0}, &.mesh3),
-     transf3D(.mesh4.Points[floor(.mesh4.MeshSize*0.65)+2*.mesh4.MeshSize*6]+{0.02,0,0}, &.mesh4),
-//     transf3D(mesh.Points[floor(.mesh.MeshSize*4]+{0.01,0,0}, &.mesh),
-    
-   //      transf3D(.mesh5.Points[floor(.mesh5.MeshSize*0.65)+2*.mesh5.MeshSize*6]+{0.02,0,0}, &.mesh5)
-  };  
-
-    #endif
-
- 
  
   InitWrapPosVecArr = {&InitWrapPos}; 
   
@@ -3752,9 +3919,99 @@ viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
 viewForce.Visible ??= Off;
 };
 
-
 AnyMuscleShortestPath OIC_9 = {
   AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.OIC_9;
+  AnyRefNode &Org = ....Segments.SternalBodySeg.Xiphoid_DiaphragmNodeR;
+  AnyRefNode &Via = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L1.BaseSegAnterior.TransversusPoints.Right.nn06;
+
+  AnyRefNode &Ins = ....Segments.PelvisSeg.Right.ObliquusInternusNode_6;
+
+ //AnySurfTriCylMesh &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.mesh;
+ //AnySurfTriCylMesh &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh;
+ //AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
+// AnySurfTriCylMesh &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.mesh;
+//#ifndef WRAPPING_TEST
+// #if MESH_TYPE == "ELLIPSOID_SIDE"
+//   AnySurfEllipsoid &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.Right.mesh;
+//   AnySurfEllipsoid &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.Right.mesh;
+//   AnySurfEllipsoid &mesh3_extra = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.Right.mesh2;
+//   AnySurfEllipsoid &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.Right.mesh;
+// #else
+//    AnySurfTriCylMesh &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.mesh;
+//    AnySurfTriCylMesh &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh;
+//    AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
+//  #endif
+//#else
+//   AnySurfEllipsoid &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.mesh3;
+   AnySurfEllipsoid &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh3;
+   AnySurfEllipsoid &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh3;
+//#endif
+
+
+  SPLine.StringMesh=240;
+//  #ifndef WRAPPING_TEST
+  
+  SPLine ={  
+//    StringSurfaceMap={{Off,Off,Off,Off},{On,On,On,On}};  //no wrap before after via
+//    StringSurfaceMap={{Off,Off,Off},{On,On,On}};  //no wrap before after via
+    StringSurfaceMap={{Off,Off},{On,On}};  //no wrap before after via
+    
+//    #if MESH_TYPE == "ELLIPSOID"
+//    AnyMatrix InitWrapPos = {
+//      transf3D({.mesh2.Radius[0],0,0}, &.mesh2),
+//      transf3D({.mesh3.Radius[0],0,0}, &.mesh3),
+//      transf3D({.mesh4.Radius[0],0,0}, &.mesh4),
+//      //    transf3D({.mesh5.Radius[0],0,0}, &.mesh5),
+//    };
+//    #endif
+//    #if MESH_TYPE == "ELLIPSOID_SIDE"
+//    AnyMatrix InitWrapPos = {
+//      transf3D({0,.mesh2.Radius[1],0}, &.mesh2),
+//      transf3D({0,.mesh3.Radius[1],0}, &.mesh3),
+////      transf3D({0,.mesh3_extra.Radius[1],0}, &.mesh3_extra),
+//      transf3D({0,.mesh4.Radius[1],0}, &.mesh4),
+//    };
+//    #endif
+//    
+//    #if MESH_TYPE == "QUAD"
+//    AnyMatrix InitWrapPos = {
+//      transf3D(.mesh2.Points[floor(.mesh2.MeshSize*0.8)+2*.mesh2.MeshSize*6]+{0.02,0,0}, &.mesh2),
+//      transf3D(.mesh3.Points[floor(.mesh3.MeshSize*0.7)+2*.mesh3.MeshSize*6]+{0.02,0,0}, &.mesh3),
+//      transf3D(.mesh4.Points[floor(.mesh4.MeshSize*0.6)+2*.mesh4.MeshSize*6]+{0.02,0,0}, &.mesh4),
+//      //    transf3D(.mesh5.Points[floor(.mesh5.MeshSize*0.6)+2*.mesh5.MeshSize*6]+{0.02,0,0}, &.mesh5)
+//    }; 
+//    #endif
+        AnyMatrix InitWrapPos = {
+//      transf3D({.mesh2.Radius[0],0,0}, &.mesh2),
+      transf3D({.mesh3.Radius[0],0,0}, &.mesh3),
+      transf3D({.mesh4.Radius[0],0,0}, &.mesh4),
+      //    transf3D({.mesh5.Radius[0],0,0}, &.mesh5),
+    };
+
+        InitWrapPosVecArr = {None,&InitWrapPos};
+  };
+
+//    #else
+//    SPLine ={  
+//      StringSurfaceMap={{Off},{On}};  //no wrap before after via
+//      
+//      #if MESH_TYPE == "ELLIPSOID_SIDE"
+//      AnyMatrix InitWrapPos = {
+//        transf3D({0,.mesh3_extra.Radius[1],0}, &.mesh3_extra),
+//      };
+//      #endif
+//      
+//      
+//
+//    InitWrapPosVecArr = {None,&InitWrapPos};
+//  };
+//  #endif
+  viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+  viewForce.Visible ??= Off;
+};
+
+AnyMuscleShortestPath OIC_10 = {
+  AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.OIC_10;
   AnyRefNode &Org =      ....Abdominal.Layer_L1.BaseSegAnterior.mid;
   AnyRefNode &Ins = ....Segments.PelvisSeg.Right.ObliquusInternusNode_6;
   
@@ -3764,53 +4021,64 @@ AnyMuscleShortestPath OIC_9 = {
   //AnySurfTriCylMesh &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.mesh;
   
   
-   #if MESH_TYPE == "ELLIPSOID_SIDE"
-   AnySurfEllipsoid &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.Right.mesh;
-   AnySurfEllipsoid &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.Right.mesh;
-   AnySurfEllipsoid &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.Right.mesh;
- #else
-    AnySurfTriCylMesh &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.mesh;
-    AnySurfTriCylMesh &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh;
-    AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
-  #endif
+//   #if MESH_TYPE == "ELLIPSOID_SIDE"
+//   AnySurfEllipsoid &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.Right.mesh;
+//   AnySurfEllipsoid &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.Right.mesh;
+//   AnySurfEllipsoid &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.Right.mesh;
+////   AnySurfEllipsoid &meshpelvis = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_Pelvic1.BaseSegAnterior.mesh;
+// #else
+//    AnySurfTriCylMesh &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.mesh;
+//    AnySurfTriCylMesh &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh;
+//    AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
+//  #endif
 
+   AnySurfEllipsoid &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.mesh3;
+   AnySurfEllipsoid &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh3;
+   AnySurfEllipsoid &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh3;
 
   
-  SPLine.StringMesh=60;
+  SPLine.StringMesh=240;
   
   SPLine ={  
     
     
-    #if MESH_TYPE == "ELLIPSOID"
-    AnyMatrix InitWrapPos = {
+//    #if MESH_TYPE == "ELLIPSOID"
+//    AnyMatrix InitWrapPos = {
+//      transf3D({.mesh2.Radius[0],0,0}, &.mesh2),
+//      transf3D({.mesh3.Radius[0],0,0}, &.mesh3),
+//      transf3D({.mesh4.Radius[0],0,0}, &.mesh4),
+//   //   transf3D({.mesh5.Radius[0],0,0}, &.mesh5),
+//      
+//    };
+//    #endif
+//    
+//    
+//   #if MESH_TYPE == "ELLIPSOID_SIDE"
+//    AnyMatrix InitWrapPos = {
+//      transf3D({0,.mesh2.Radius[1],0}, &.mesh2),
+//      transf3D({0,.mesh3.Radius[1],0}, &.mesh3),
+//      transf3D({0,.mesh4.Radius[1],0}, &.mesh4),
+//    };
+//    #endif
+//
+//    
+//    
+//    #if MESH_TYPE == "QUAD"
+//    AnyMatrix InitWrapPos = {
+//      transf3D(.mesh2.Points[floor(.mesh2.MeshSize*0.75)+2*.mesh2.MeshSize*6]+{0.02,0,0}, &.mesh2),
+//      transf3D(.mesh3.Points[floor(.mesh3.MeshSize*0.7) +2*.mesh3.MeshSize*6]+{0.02,0,0}, &.mesh3),
+//      transf3D(.mesh4.Points[floor(.mesh4.MeshSize*0.65)+2*.mesh4.MeshSize*6]+{0.02,0,0}, &.mesh4),
+//   //   transf3D(.mesh5.Points[floor(.mesh5.MeshSize*0.6) +2*.mesh5.MeshSize*6]+{0.02,0,0}, &.mesh5)
+//    };
+//    #endif
+     AnyMatrix InitWrapPos = {
       transf3D({.mesh2.Radius[0],0,0}, &.mesh2),
       transf3D({.mesh3.Radius[0],0,0}, &.mesh3),
       transf3D({.mesh4.Radius[0],0,0}, &.mesh4),
    //   transf3D({.mesh5.Radius[0],0,0}, &.mesh5),
       
     };
-    #endif
-    
-    
-   #if MESH_TYPE == "ELLIPSOID_SIDE"
-    AnyMatrix InitWrapPos = {
-      transf3D({0,.mesh2.Radius[1],0}, &.mesh2),
-      transf3D({0,.mesh3.Radius[1],0}, &.mesh3),
-      transf3D({0,.mesh4.Radius[1],0}, &.mesh4),
-    };
-    #endif
 
-    
-    
-    #if MESH_TYPE == "QUAD"
-    AnyMatrix InitWrapPos = {
-      transf3D(.mesh2.Points[floor(.mesh2.MeshSize*0.75)+2*.mesh2.MeshSize*6]+{0.02,0,0}, &.mesh2),
-      transf3D(.mesh3.Points[floor(.mesh3.MeshSize*0.7) +2*.mesh3.MeshSize*6]+{0.02,0,0}, &.mesh3),
-      transf3D(.mesh4.Points[floor(.mesh4.MeshSize*0.65)+2*.mesh4.MeshSize*6]+{0.02,0,0}, &.mesh4),
-   //   transf3D(.mesh5.Points[floor(.mesh5.MeshSize*0.6) +2*.mesh5.MeshSize*6]+{0.02,0,0}, &.mesh5)
-    };
-    #endif
-    
     InitWrapPosVecArr = {&InitWrapPos};
   };
   
@@ -3820,68 +4088,78 @@ AnyMuscleShortestPath OIC_9 = {
 };
 
 
-AnyMuscleShortestPath OIC_10 = {
-  AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.OIC_10;
+AnyMuscleShortestPath OIC_11 = {
+  AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.OIC_11;
   AnyRefNode &Org =      ....Abdominal.Layer_L2.BaseSegAnterior.mid;
   AnyRefNode &Ins = ....Segments.PelvisSeg.Right.ObliquusInternusNode_6;
   
-//  AnySurfTriCylMesh &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh;
-//  AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
-//  AnySurfTriCylMesh &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.mesh;
+////  AnySurfTriCylMesh &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh;
+////  AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
+////  AnySurfTriCylMesh &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.mesh;
+//  
+//   #if MESH_TYPE == "ELLIPSOID_SIDE"
+//   AnySurfEllipsoid &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.Right.mesh;
+//   AnySurfEllipsoid &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.Right.mesh;
+//   AnySurfEllipsoid &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.Right.mesh;
+////   AnySurfEllipsoid &meshpelvis = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_Pelvic1.BaseSegAnterior.mesh;
+//
+//   #else
+//    AnySurfTriCylMesh &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh;
+//    AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
+//    AnySurfTriCylMesh &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.mesh;
+//
+//    #endif
+
+   AnySurfEllipsoid &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh3;
+   AnySurfEllipsoid &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh3;
+//   AnySurfEllipsoid &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.mesh3;
+
   
-   #if MESH_TYPE == "ELLIPSOID_SIDE"
-   AnySurfEllipsoid &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.Right.mesh;
-   AnySurfEllipsoid &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.Right.mesh;
-   AnySurfEllipsoid &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.Right.mesh;
-
-   #else
-    AnySurfTriCylMesh &mesh3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegAnterior.mesh;
-    AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
-    AnySurfTriCylMesh &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.mesh;
-
-    #endif
-
-
-  
-  SPLine.StringMesh=60;
+  SPLine.StringMesh=300;
   
   
   SPLine ={  
     
     
-    #if MESH_TYPE == "ELLIPSOID"
-    AnyMatrix InitWrapPos = {
+//    #if MESH_TYPE == "ELLIPSOID"
+//    AnyMatrix InitWrapPos = {
+//      
+//      transf3D({.mesh3.Radius[0],0,0}, &.mesh3),
+//      transf3D({.mesh4.Radius[0],0,0}, &.mesh4),
+//      transf3D({.mesh5.Radius[0],0,0}, &.mesh5),
+//      
+//    };
+//    #endif
+//    
+//   
+//    
+//  #if MESH_TYPE == "ELLIPSOID_SIDE"
+//    AnyMatrix InitWrapPos = {
+//           transf3D({0,.mesh3.Radius[1],0}, &.mesh3),
+//            transf3D({0,.mesh4.Radius[1],0}, &.mesh4),
+//            transf3D({0,.mesh5.Radius[1],0}, &.mesh5),
+//
+//          };
+//    #endif
+//
+//    
+//    
+//    #if MESH_TYPE == "QUAD"
+//    AnyMatrix InitWrapPos = {
+//      
+//      transf3D(.mesh3.Points[floor(.mesh3.MeshSize*0.75)+2*.mesh3.MeshSize*6]+{0.02,0,0}, &.mesh3),
+//      transf3D(.mesh4.Points[floor(.mesh4.MeshSize*0.7)+2*.mesh4.MeshSize*6]+{0.02,0,0}, &.mesh4),
+//      transf3D(.mesh5.Points[floor(.mesh5.MeshSize*0.65)+2*.mesh5.MeshSize*6]+{0.02,0,0}, &.mesh5)
+//    };  
+//    #endif
+       AnyMatrix InitWrapPos = {
       
       transf3D({.mesh3.Radius[0],0,0}, &.mesh3),
       transf3D({.mesh4.Radius[0],0,0}, &.mesh4),
-      transf3D({.mesh5.Radius[0],0,0}, &.mesh5),
+//      transf3D({.mesh5.Radius[0],0,0}, &.mesh5),
       
     };
-    #endif
-    
-   
-    
-  #if MESH_TYPE == "ELLIPSOID_SIDE"
-    AnyMatrix InitWrapPos = {
-           transf3D({0,.mesh3.Radius[1],0}, &.mesh3),
-            transf3D({0,.mesh4.Radius[1],0}, &.mesh4),
-            transf3D({0,.mesh5.Radius[1],0}, &.mesh5),
-
-          };
-    #endif
-
-    
-    
-    #if MESH_TYPE == "QUAD"
-    AnyMatrix InitWrapPos = {
-      
-      transf3D(.mesh3.Points[floor(.mesh3.MeshSize*0.75)+2*.mesh3.MeshSize*6]+{0.02,0,0}, &.mesh3),
-      transf3D(.mesh4.Points[floor(.mesh4.MeshSize*0.7)+2*.mesh4.MeshSize*6]+{0.02,0,0}, &.mesh4),
-      transf3D(.mesh5.Points[floor(.mesh5.MeshSize*0.65)+2*.mesh5.MeshSize*6]+{0.02,0,0}, &.mesh5)
-    };  
-    #endif
-    
-    
+ 
     
     InitWrapPosVecArr = {&InitWrapPos};
   };
@@ -3893,8 +4171,8 @@ AnyMuscleShortestPath OIC_10 = {
 
 //
 
-AnyMuscleShortestPath OIC_11 = {
-  AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.OIC_11;
+AnyMuscleShortestPath OIC_12 = {
+  AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.OIC_12;
   AnyRefNode &Org = ....Abdominal.Layer_L3.BaseSegAnterior.mid;
   AnyRefNode &Ins = ....Segments.PelvisSeg.Right.ObliquusInternusNode_7;
   
@@ -3903,49 +4181,57 @@ AnyMuscleShortestPath OIC_11 = {
 //  AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
 //  AnySurfTriCylMesh &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.mesh;
 
- #if MESH_TYPE == "ELLIPSOID_SIDE"
-   AnySurfEllipsoid &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.Right.mesh;
-   AnySurfEllipsoid &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.Right.mesh;
+// #if MESH_TYPE == "ELLIPSOID_SIDE"
+//   AnySurfEllipsoid &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.Right.mesh;
+//   AnySurfEllipsoid &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.Right.mesh;
+////   AnySurfEllipsoid &meshpelvis = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_Pelvic1.BaseSegAnterior.mesh;
+//
+//   #else
+//    AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
+//    AnySurfTriCylMesh &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.mesh;
+//
+//    #endif
+   AnySurfEllipsoid &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh3;
+   AnySurfEllipsoid &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.mesh3;
 
-   #else
-    AnySurfTriCylMesh &mesh4 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
-    AnySurfTriCylMesh &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.mesh;
-
-    #endif
 
 
-
-  SPLine.StringMesh=60;
+  SPLine.StringMesh=240;
   
   SPLine ={  
     
     
-    #if MESH_TYPE == "ELLIPSOID"
-    AnyMatrix InitWrapPos = {
+//    #if MESH_TYPE == "ELLIPSOID"
+//    AnyMatrix InitWrapPos = {
+//      
+//      transf3D({.mesh4.Radius[0],0,0}, &.mesh4),
+//      transf3D({.mesh5.Radius[0],0,0}, &.mesh5),
+//      
+//    };
+//    #endif
+//    
+//       #if MESH_TYPE == "ELLIPSOID_SIDE"
+//    AnyMatrix InitWrapPos = {
+//           transf3D({0,.mesh4.Radius[1],0}, &.mesh4),
+//            transf3D({0,.mesh5.Radius[1],0}, &.mesh5),
+//    };
+//    #endif
+//
+//    #if MESH_TYPE == "QUAD"
+//    AnyMatrix InitWrapPos = {
+//      
+//      transf3D(.mesh4.Points[floor(.mesh4.MeshSize*0.75)+2*.mesh4.MeshSize*6]+{0.02,0,0}, &.mesh4),
+//      transf3D(.mesh5.Points[floor(.mesh5.MeshSize*0.65)+2*.mesh5.MeshSize*6]+{0.02,0,0}, &.mesh5)
+//    };  
+//    
+//    #endif
+     AnyMatrix InitWrapPos = {
       
       transf3D({.mesh4.Radius[0],0,0}, &.mesh4),
       transf3D({.mesh5.Radius[0],0,0}, &.mesh5),
       
     };
-    #endif
-    
-       #if MESH_TYPE == "ELLIPSOID_SIDE"
-    AnyMatrix InitWrapPos = {
-           transf3D({0,.mesh4.Radius[1],0}, &.mesh4),
-            transf3D({0,.mesh5.Radius[1],0}, &.mesh5),
-    };
-    #endif
-
-    #if MESH_TYPE == "QUAD"
-    AnyMatrix InitWrapPos = {
-      
-      transf3D(.mesh4.Points[floor(.mesh4.MeshSize*0.75)+2*.mesh4.MeshSize*6]+{0.02,0,0}, &.mesh4),
-      transf3D(.mesh5.Points[floor(.mesh5.MeshSize*0.65)+2*.mesh5.MeshSize*6]+{0.02,0,0}, &.mesh5)
-    };  
-    
-    #endif
-    
-    
+     
     InitWrapPosVecArr = {&InitWrapPos};
   };
   viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -3953,21 +4239,22 @@ AnyMuscleShortestPath OIC_11 = {
 };
 
 
-AnyMuscleShortestPath OIC_12 = {
-  AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.OIC_12;
+AnyMuscleShortestPath OIC_13 = {
+  AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.OIC_13;
   AnyRefNode &Org =      ....Abdominal.Layer_L4.BaseSegAnterior.mid;
   AnyRefNode &Ins = ....Segments.PelvisSeg.Right.ObliquusInternusNode_7;
   
   
 //  AnySurfTriCylMesh &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.mesh;
   
-   #if MESH_TYPE == "ELLIPSOID_SIDE"
-   AnySurfEllipsoid &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.Right.mesh;
-
-   #else
-    AnySurfTriCylMesh &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.mesh;
-
-    #endif
+//   #if MESH_TYPE == "ELLIPSOID_SIDE"
+//   AnySurfEllipsoid &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.Right.mesh;
+////   AnySurfEllipsoid &meshpelvis = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_Pelvic1.BaseSegAnterior.mesh;
+//   #else
+//    AnySurfTriCylMesh &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.mesh;
+//
+//    #endif
+   AnySurfEllipsoid &mesh5 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L5.BaseSegAnterior.mesh3;
 
   
   SPLine.StringMesh=60;
@@ -3975,27 +4262,28 @@ AnyMuscleShortestPath OIC_12 = {
   SPLine ={  
     
     
-    #if MESH_TYPE == "ELLIPSOID"
-    AnyMatrix InitWrapPos = {
+//    #if MESH_TYPE == "ELLIPSOID"
+//    AnyMatrix InitWrapPos = {
+//      transf3D({.mesh5.Radius[0],0,0}, &.mesh5),
+//    };
+//    #endif
+//       #if MESH_TYPE == "ELLIPSOID_SIDE"
+//    AnyMatrix InitWrapPos = {
+//      transf3D({0,.mesh5.Radius[1],0}, &.mesh5),
+//    };
+//    #endif
+//    
+//    #if MESH_TYPE == "QUAD"
+//    AnyMatrix InitWrapPos = {
+//      
+//      transf3D(.mesh5.Points[floor(.mesh5.MeshSize*0.65)+2*.mesh5.MeshSize*6]+{0.02,0,0}, &.mesh5)
+//    };  
+//    
+//    #endif    
+        AnyMatrix InitWrapPos = {
       transf3D({.mesh5.Radius[0],0,0}, &.mesh5),
     };
-    #endif
-       #if MESH_TYPE == "ELLIPSOID_SIDE"
-    AnyMatrix InitWrapPos = {
-      transf3D({0,.mesh5.Radius[1],0}, &.mesh5),
-    };
-    #endif
 
-    
-    #if MESH_TYPE == "QUAD"
-    AnyMatrix InitWrapPos = {
-      
-      transf3D(.mesh5.Points[floor(.mesh5.MeshSize*0.65)+2*.mesh5.MeshSize*6]+{0.02,0,0}, &.mesh5)
-    };  
-    
-    #endif
-    
-    
     InitWrapPosVecArr = {&InitWrapPos};
   };
   
@@ -4003,8 +4291,8 @@ AnyMuscleShortestPath OIC_12 = {
   viewForce.Visible ??= Off;
 };
 
-AnyMuscleViaPoint  OIC_13= {
-  AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.OIC_13;
+AnyMuscleViaPoint  OIC_14= {
+  AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.OIC_14;
   AnyRefNode &Org = ....Abdominal.Layer_L5.BaseSegAnterior.mid;
   AnyRefNode &Ins = ....Segments.PelvisSeg.Right.ObliquusInternusNode_8;
   
