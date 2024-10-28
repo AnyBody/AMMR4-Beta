@@ -1,180 +1,180 @@
-_CODE_MACRO_(Extensor_Indicis)
-_CODE_MACRO_(Abductor_Pollicis_Longus)
-_CODE_MACRO_(Extensor_Pollicis_Brevis)
-_CODE_MACRO_(Extensor_Pollicis_Longus)
-_CODE_MACRO_(Extensor_Carpi_Radialis_Longus)
-_CODE_MACRO_(Extensor_Carpi_Radialis_Brevis)
-_CODE_MACRO_(Extensor_Carpi_Ulnaris)
-_CODE_MACRO_(Flexor_Carpi_Ulnaris)
-_CODE_MACRO_(Flexor_Carpi_Radialis)
-_CODE_MACRO_(Palmaris_Longus)
-_CODE_MACRO_(Flexor_Digitorum_Superficialis__Digit5)
-_CODE_MACRO_(Flexor_Digitorum_Superficialis__Digit4)
-_CODE_MACRO_(Flexor_Digitorum_Superficialis__Digit3)
-_CODE_MACRO_(Flexor_Digitorum_Superficialis__Digit2)
-_CODE_MACRO_(Flexor_Digitorum_Profundus__Digit5)
-_CODE_MACRO_(Flexor_Digitorum_Profundus__Digit4)
-_CODE_MACRO_(Flexor_Digitorum_Profundus__Digit3)
-_CODE_MACRO_(Flexor_Digitorum_Profundus__Digit2)
-_CODE_MACRO_(Extensor_Digitorum__Digit5)
-_CODE_MACRO_(Extensor_Digitorum__Digit4)
-_CODE_MACRO_(Extensor_Digitorum__Digit3)
-_CODE_MACRO_(Extensor_Digitorum__Digit2)
-_CODE_MACRO_(Extensor_Digiti_Minimi)
-_CODE_MACRO_(Flexor_Pollicis_Longus)
-_CODE_MACRO_(biceps_brachii_caput_breve)
-_CODE_MACRO_(biceps_brachii_caput_longum)
-_CODE_MACRO_(Brach_rad_1)
-_CODE_MACRO_(Brach_rad_2)
-_CODE_MACRO_(Pronator_teres_caput_humeral_1)
-_CODE_MACRO_(Pronator_teres_caput_humeral_2)
-_CODE_MACRO_(Pronator_teres_caput_ulnare_1)
-_CODE_MACRO_(Supinator_humerus_part_1)
-_CODE_MACRO_(Supinator_humerus_part_2)
-_CODE_MACRO_(Supinator_ulna_part_1)
-_CODE_MACRO_(Supinator_ulna_part_2)
-_CODE_MACRO_(Pron_quadr_1)
-_CODE_MACRO_(Pron_quadr_2)
-_CODE_MACRO_(Brachialis_1)
-_CODE_MACRO_(Brachialis_2)
-_CODE_MACRO_(Triceps_LH_1)
-_CODE_MACRO_(Triceps_LH_2)
-_CODE_MACRO_(Triceps_ME_1)
-_CODE_MACRO_(Triceps_ME_2)
-_CODE_MACRO_(Triceps_LA_1)
-_CODE_MACRO_(Triceps_LA_2)
-_CODE_MACRO_(Anconeus_1)
-_CODE_MACRO_(Anconeus_2)
-_CODE_MACRO_(coracobrachialis_1)
-_CODE_MACRO_(coracobrachialis_2)
-_CODE_MACRO_(coracobrachialis_3)
-_CODE_MACRO_(coracobrachialis_4)
-_CODE_MACRO_(coracobrachialis_5)
-_CODE_MACRO_(coracobrachialis_6)
+AnyFolder ExtensorIndicis = {_CODE_MACRO_(Extensor_Indicis)};
+AnyFolder AbductorPollicis = {_CODE_MACRO_(Abductor_Pollicis_Longus)};
+AnyFolder ExtensorPollicis = {_CODE_MACRO_(Extensor_Pollicis_Brevis)};
+ExtensorPollicis = {_CODE_MACRO_(Extensor_Pollicis_Longus)};
+AnyFolder ExtensorCarpiRadialis = {_CODE_MACRO_(Extensor_Carpi_Radialis_Longus)};
+ExtensorCarpiRadialis = {_CODE_MACRO_(Extensor_Carpi_Radialis_Brevis)};
+AnyFolder ExtensorCarpiUlnaris = {_CODE_MACRO_(Extensor_Carpi_Ulnaris)};
+AnyFolder FlexorCarpiUlnaris = {_CODE_MACRO_(Flexor_Carpi_Ulnaris)};
+AnyFolder FlexorCarpiRadialis = {_CODE_MACRO_(Flexor_Carpi_Radialis)};
+AnyFolder PalmarisLongus = {_CODE_MACRO_(Palmaris_Longus)};
+AnyFolder FlexorDigitorumSuperficialis = {_CODE_MACRO_(Flexor_Digitorum_Superficialis__Digit5)};
+FlexorDigitorumSuperficialis = {_CODE_MACRO_(Flexor_Digitorum_Superficialis__Digit4)};
+FlexorDigitorumSuperficialis = {_CODE_MACRO_(Flexor_Digitorum_Superficialis__Digit3)};
+FlexorDigitorumSuperficialis = {_CODE_MACRO_(Flexor_Digitorum_Superficialis__Digit2)};
+AnyFolder FlexorDigitorumProfundus = {_CODE_MACRO_(Flexor_Digitorum_Profundus__Digit5)};
+FlexorDigitorumProfundus = {_CODE_MACRO_(Flexor_Digitorum_Profundus__Digit4)};
+FlexorDigitorumProfundus = {_CODE_MACRO_(Flexor_Digitorum_Profundus__Digit3)};
+FlexorDigitorumProfundus = {_CODE_MACRO_(Flexor_Digitorum_Profundus__Digit2)};
+AnyFolder ExtensorDigitorum = {_CODE_MACRO_(Extensor_Digitorum__Digit5)};
+ExtensorDigitorum = {_CODE_MACRO_(Extensor_Digitorum__Digit4)};
+ExtensorDigitorum = {_CODE_MACRO_(Extensor_Digitorum__Digit3)};
+ExtensorDigitorum = {_CODE_MACRO_(Extensor_Digitorum__Digit2)};
+AnyFolder ExtensorDigitiMinimi = {_CODE_MACRO_(Extensor_Digiti_Minimi)};
+AnyFolder FlexorPollicisLongus = {_CODE_MACRO_(Flexor_Pollicis_Longus)};
+AnyFolder BicepsBrachii = {_CODE_MACRO_(biceps_brachii_caput_breve)};
+BicepsBrachii = {_CODE_MACRO_(biceps_brachii_caput_longum)};
+AnyFolder Brachioradialis = {_CODE_MACRO_(Brach_rad_1)};
+Brachioradialis = {_CODE_MACRO_(Brach_rad_2)};
+AnyFolder PronatorTeres = {_CODE_MACRO_(Pronator_teres_caput_humeral_1)};
+PronatorTeres = {_CODE_MACRO_(Pronator_teres_caput_humeral_2)};
+PronatorTeres = {_CODE_MACRO_(Pronator_teres_caput_ulnare_1)};
+AnyFolder Supinator = {_CODE_MACRO_(Supinator_humerus_part_1)};
+Supinator = {_CODE_MACRO_(Supinator_humerus_part_2)};
+Supinator = {_CODE_MACRO_(Supinator_ulna_part_1)};
+Supinator = {_CODE_MACRO_(Supinator_ulna_part_2)};
+AnyFolder PronatorQuadratus = {_CODE_MACRO_(Pron_quadr_1)};
+PronatorQuadratus = {_CODE_MACRO_(Pron_quadr_2)};
+AnyFolder Brachialis = {_CODE_MACRO_(Brachialis_1)};
+Brachialis = {_CODE_MACRO_(Brachialis_2)};
+AnyFolder Triceps = {_CODE_MACRO_(Triceps_LH_1)};
+Triceps = {_CODE_MACRO_(Triceps_LH_2)};
+Triceps = {_CODE_MACRO_(Triceps_ME_1)};
+Triceps = {_CODE_MACRO_(Triceps_ME_2)};
+Triceps = {_CODE_MACRO_(Triceps_LA_1)};
+Triceps = {_CODE_MACRO_(Triceps_LA_2)};
+AnyFolder Anconeus = {_CODE_MACRO_(Anconeus_1)};
+Anconeus = {_CODE_MACRO_(Anconeus_2)};
+AnyFolder Coracobrachialis = {_CODE_MACRO_(coracobrachialis_1)};
+Coracobrachialis = {_CODE_MACRO_(coracobrachialis_2)};
+Coracobrachialis = {_CODE_MACRO_(coracobrachialis_3)};
+Coracobrachialis = {_CODE_MACRO_(coracobrachialis_4)};
+Coracobrachialis = {_CODE_MACRO_(coracobrachialis_5)};
+Coracobrachialis = {_CODE_MACRO_(coracobrachialis_6)};
 #if BM_ARM_DELTOID_WRAPPING == _DELTOID_WRAPPING_RAKE_
-_CODE_MACRO_(deltoideus_scapular_part_1)
-_CODE_MACRO_(deltoideus_scapular_part_2)
-_CODE_MACRO_(deltoideus_scapular_part_3)
-_CODE_MACRO_(deltoideus_scapular_part_4)
-_CODE_MACRO_(deltoideus_scapular_part_5)
-_CODE_MACRO_(deltoideus_scapular_part_6)
-_CODE_MACRO_(deltoideus_clavicular_part_1)
-_CODE_MACRO_(deltoideus_clavicular_part_2)
-_CODE_MACRO_(deltoideus_clavicular_part_3)
-_CODE_MACRO_(deltoideus_clavicular_part_4)
-_CODE_MACRO_(deltoideus_clavicular_part_5)
-_CODE_MACRO_(deltoideus_clavicular_part_6)
+AnyFolder DeltoideusScapular = {_CODE_MACRO_(deltoideus_scapular_part_1)};
+DeltoideusScapular = {_CODE_MACRO_(deltoideus_scapular_part_2)};
+DeltoideusScapular = {_CODE_MACRO_(deltoideus_scapular_part_3)};
+DeltoideusScapular = {_CODE_MACRO_(deltoideus_scapular_part_4)};
+DeltoideusScapular = {_CODE_MACRO_(deltoideus_scapular_part_5)};
+DeltoideusScapular = {_CODE_MACRO_(deltoideus_scapular_part_6)};
+AnyFolder DeltoideusClavicular = {_CODE_MACRO_(deltoideus_clavicular_part_1)};
+DeltoideusClavicular = {_CODE_MACRO_(deltoideus_clavicular_part_2)};
+DeltoideusClavicular = {_CODE_MACRO_(deltoideus_clavicular_part_3)};
+DeltoideusClavicular = {_CODE_MACRO_(deltoideus_clavicular_part_4)};
+DeltoideusClavicular = {_CODE_MACRO_(deltoideus_clavicular_part_5)};
+DeltoideusClavicular = {_CODE_MACRO_(deltoideus_clavicular_part_6)};
 #else
-_CODE_MACRO_(deltoideus_posterior_part_1)
-_CODE_MACRO_(deltoideus_posterior_part_2)
-_CODE_MACRO_(deltoideus_posterior_part_3)
-_CODE_MACRO_(deltoideus_posterior_part_4)
-_CODE_MACRO_(deltoideus_lateral_part_1)
-_CODE_MACRO_(deltoideus_lateral_part_2)
-_CODE_MACRO_(deltoideus_lateral_part_3)
-_CODE_MACRO_(deltoideus_lateral_part_4)
-_CODE_MACRO_(deltoideus_anterior_part_1)
-_CODE_MACRO_(deltoideus_anterior_part_2)
-_CODE_MACRO_(deltoideus_anterior_part_3)
-_CODE_MACRO_(deltoideus_anterior_part_4)
+AnyFolder DeltoideusPosterior = {_CODE_MACRO_(deltoideus_posterior_part_1)};
+DeltoideusPosterior = {_CODE_MACRO_(deltoideus_posterior_part_2)};
+DeltoideusPosterior = {_CODE_MACRO_(deltoideus_posterior_part_3)};
+DeltoideusPosterior = {_CODE_MACRO_(deltoideus_posterior_part_4)};
+AnyFolder DeltoideusLateral = {_CODE_MACRO_(deltoideus_lateral_part_1)};
+DeltoideusLateral = {_CODE_MACRO_(deltoideus_lateral_part_2)};
+DeltoideusLateral = {_CODE_MACRO_(deltoideus_lateral_part_3)};
+DeltoideusLateral = {_CODE_MACRO_(deltoideus_lateral_part_4)};
+AnyFolder DeltoideusAnterior = {_CODE_MACRO_(deltoideus_anterior_part_1)};
+DeltoideusAnterior = {_CODE_MACRO_(deltoideus_anterior_part_2)};
+DeltoideusAnterior = {_CODE_MACRO_(deltoideus_anterior_part_3)};
+DeltoideusAnterior = {_CODE_MACRO_(deltoideus_anterior_part_4)};
 #endif
-_CODE_MACRO_(infraspinatus_1)
-_CODE_MACRO_(infraspinatus_2)
-_CODE_MACRO_(infraspinatus_3)
-_CODE_MACRO_(infraspinatus_4)
-_CODE_MACRO_(infraspinatus_5)
-_CODE_MACRO_(infraspinatus_6)
-_CODE_MACRO_(latissimus_dorsi_1)
-_CODE_MACRO_(latissimus_dorsi_2)
-_CODE_MACRO_(latissimus_dorsi_3)
-_CODE_MACRO_(latissimus_dorsi_4)
-_CODE_MACRO_(latissimus_dorsi_5)
-_CODE_MACRO_(latissimus_dorsi_6)
-_CODE_MACRO_(latissimus_dorsi_7)
-_CODE_MACRO_(latissimus_dorsi_8)
-_CODE_MACRO_(latissimus_dorsi_9)
-_CODE_MACRO_(latissimus_dorsi_10)
-_CODE_MACRO_(latissimus_dorsi_11)
-_CODE_MACRO_(pectoralis_major_thoracic_part_1)
-_CODE_MACRO_(pectoralis_major_thoracic_part_2)
-_CODE_MACRO_(pectoralis_major_thoracic_part_3)
-_CODE_MACRO_(pectoralis_major_thoracic_part_4)
-_CODE_MACRO_(pectoralis_major_thoracic_part_5)
-_CODE_MACRO_(pectoralis_major_thoracic_part_6)
-_CODE_MACRO_(pectoralis_major_thoracic_part_7)
-_CODE_MACRO_(pectoralis_major_thoracic_part_8)
-_CODE_MACRO_(pectoralis_major_thoracic_part_9)
-_CODE_MACRO_(pectoralis_major_thoracic_part_10)
-_CODE_MACRO_(pectoralis_major_clavicular_part_1)
-_CODE_MACRO_(pectoralis_major_clavicular_part_2)
-_CODE_MACRO_(pectoralis_major_clavicular_part_3)
-_CODE_MACRO_(pectoralis_major_clavicular_part_4)
-_CODE_MACRO_(pectoralis_major_clavicular_part_5)
-_CODE_MACRO_(subscapularis_1)
-_CODE_MACRO_(subscapularis_2)
-_CODE_MACRO_(subscapularis_3)
-_CODE_MACRO_(subscapularis_4)
-_CODE_MACRO_(subscapularis_5)
-_CODE_MACRO_(subscapularis_6)
-_CODE_MACRO_(supraspinatus_1)
-_CODE_MACRO_(supraspinatus_2)
-_CODE_MACRO_(supraspinatus_3)
-_CODE_MACRO_(supraspinatus_4)
-_CODE_MACRO_(supraspinatus_5)
-_CODE_MACRO_(supraspinatus_6)
-_CODE_MACRO_(teres_major_1)
-_CODE_MACRO_(teres_major_2)
-_CODE_MACRO_(teres_major_3)
-_CODE_MACRO_(teres_major_4)
-_CODE_MACRO_(teres_major_5)
-_CODE_MACRO_(teres_major_6)
-_CODE_MACRO_(teres_minor_1)
-_CODE_MACRO_(teres_minor_2)
-_CODE_MACRO_(teres_minor_3)
-_CODE_MACRO_(teres_minor_4)
-_CODE_MACRO_(teres_minor_5)
-_CODE_MACRO_(teres_minor_6)
-_CODE_MACRO_(levator_scapulae_1)
-_CODE_MACRO_(levator_scapulae_2)
-_CODE_MACRO_(levator_scapulae_3)
-_CODE_MACRO_(levator_scapulae_4)
-_CODE_MACRO_(pectoralis_minor_1)
-_CODE_MACRO_(pectoralis_minor_2)
-_CODE_MACRO_(pectoralis_minor_3)
-_CODE_MACRO_(rhomboideus_1)
-_CODE_MACRO_(rhomboideus_2)
-_CODE_MACRO_(rhomboideus_3)
-_CODE_MACRO_(rhomboideus_4)
-_CODE_MACRO_(rhomboideus_5)
-_CODE_MACRO_(rhomboideus_6)
-_CODE_MACRO_(serratus_anterior_1)
-_CODE_MACRO_(serratus_anterior_2)
-_CODE_MACRO_(serratus_anterior_3)
-_CODE_MACRO_(serratus_anterior_4)
-_CODE_MACRO_(serratus_anterior_5)
-_CODE_MACRO_(serratus_anterior_6)
-_CODE_MACRO_(serratus_anterior_7)
-_CODE_MACRO_(serratus_anterior_8)
-_CODE_MACRO_(serratus_anterior_9)
-_CODE_MACRO_(trapezius_scapular_part_1)
-_CODE_MACRO_(trapezius_scapular_part_2)
-_CODE_MACRO_(trapezius_scapular_part_3)
-_CODE_MACRO_(trapezius_scapular_part_4)
-_CODE_MACRO_(trapezius_scapular_part_5)
-_CODE_MACRO_(trapezius_scapular_part_6)
-_CODE_MACRO_(trapezius_scapular_part_7)
-_CODE_MACRO_(trapezius_scapular_part_8)
-_CODE_MACRO_(trapezius_scapular_part_9)
-_CODE_MACRO_(trapezius_scapular_part_10)
-_CODE_MACRO_(trapezius_scapular_part_11)
-_CODE_MACRO_(trapezius_scapular_part_12)
-_CODE_MACRO_(trapezius_scapular_part_13)
-_CODE_MACRO_(trapezius_scapular_part_14)
-_CODE_MACRO_(Sternocleidomastoid_caput_clavicular)
-_CODE_MACRO_(Sternocleidomastoid_caput_Sternum)
-_CODE_MACRO_(trapezius_clavicular_part_1)
-_CODE_MACRO_(trapezius_clavicular_part_2)
-_CODE_MACRO_(trapezius_clavicular_part_3)
-_CODE_MACRO_(trapezius_clavicular_part_4)
-_CODE_MACRO_(trapezius_clavicular_part_5)
-_CODE_MACRO_(trapezius_clavicular_part_6)
+AnyFolder Infraspinatus = {_CODE_MACRO_(infraspinatus_1)};
+Infraspinatus = {_CODE_MACRO_(infraspinatus_2)};
+Infraspinatus = {_CODE_MACRO_(infraspinatus_3)};
+Infraspinatus = {_CODE_MACRO_(infraspinatus_4)};
+Infraspinatus = {_CODE_MACRO_(infraspinatus_5)};
+Infraspinatus = {_CODE_MACRO_(infraspinatus_6)};
+AnyFolder LatissimusDorsi = {_CODE_MACRO_(latissimus_dorsi_1)};
+LatissimusDorsi = {_CODE_MACRO_(latissimus_dorsi_2)};
+LatissimusDorsi = {_CODE_MACRO_(latissimus_dorsi_3)};
+LatissimusDorsi = {_CODE_MACRO_(latissimus_dorsi_4)};
+LatissimusDorsi = {_CODE_MACRO_(latissimus_dorsi_5)};
+LatissimusDorsi = {_CODE_MACRO_(latissimus_dorsi_6)};
+LatissimusDorsi = {_CODE_MACRO_(latissimus_dorsi_7)};
+LatissimusDorsi = {_CODE_MACRO_(latissimus_dorsi_8)};
+LatissimusDorsi = {_CODE_MACRO_(latissimus_dorsi_9)};
+LatissimusDorsi = {_CODE_MACRO_(latissimus_dorsi_10)};
+LatissimusDorsi = {_CODE_MACRO_(latissimus_dorsi_11)};
+AnyFolder PectoralisMajorThoracic = {_CODE_MACRO_(pectoralis_major_thoracic_part_1)};
+PectoralisMajorThoracic = {_CODE_MACRO_(pectoralis_major_thoracic_part_2)};
+PectoralisMajorThoracic = {_CODE_MACRO_(pectoralis_major_thoracic_part_3)};
+PectoralisMajorThoracic = {_CODE_MACRO_(pectoralis_major_thoracic_part_4)};
+PectoralisMajorThoracic = {_CODE_MACRO_(pectoralis_major_thoracic_part_5)};
+PectoralisMajorThoracic = {_CODE_MACRO_(pectoralis_major_thoracic_part_6)};
+PectoralisMajorThoracic = {_CODE_MACRO_(pectoralis_major_thoracic_part_7)};
+PectoralisMajorThoracic = {_CODE_MACRO_(pectoralis_major_thoracic_part_8)};
+PectoralisMajorThoracic = {_CODE_MACRO_(pectoralis_major_thoracic_part_9)};
+PectoralisMajorThoracic = {_CODE_MACRO_(pectoralis_major_thoracic_part_10)};
+AnyFolder PectoralisMajorClavicular = {_CODE_MACRO_(pectoralis_major_clavicular_part_1)};
+PectoralisMajorClavicular = {_CODE_MACRO_(pectoralis_major_clavicular_part_2)};
+PectoralisMajorClavicular = {_CODE_MACRO_(pectoralis_major_clavicular_part_3)};
+PectoralisMajorClavicular = {_CODE_MACRO_(pectoralis_major_clavicular_part_4)};
+PectoralisMajorClavicular = {_CODE_MACRO_(pectoralis_major_clavicular_part_5)};
+AnyFolder Subscapularis = {_CODE_MACRO_(subscapularis_1)};
+Subscapularis = {_CODE_MACRO_(subscapularis_2)};
+Subscapularis = {_CODE_MACRO_(subscapularis_3)};
+Subscapularis = {_CODE_MACRO_(subscapularis_4)};
+Subscapularis = {_CODE_MACRO_(subscapularis_5)};
+Subscapularis = {_CODE_MACRO_(subscapularis_6)};
+AnyFolder Supraspinatus = {_CODE_MACRO_(supraspinatus_1)};
+Supraspinatus = {_CODE_MACRO_(supraspinatus_2)};
+Supraspinatus = {_CODE_MACRO_(supraspinatus_3)};
+Supraspinatus = {_CODE_MACRO_(supraspinatus_4)};
+Supraspinatus = {_CODE_MACRO_(supraspinatus_5)};
+Supraspinatus = {_CODE_MACRO_(supraspinatus_6)};
+AnyFolder TeresMajor = {_CODE_MACRO_(teres_major_1)};
+TeresMajor = {_CODE_MACRO_(teres_major_2)};
+TeresMajor = {_CODE_MACRO_(teres_major_3)};
+TeresMajor = {_CODE_MACRO_(teres_major_4)};
+TeresMajor = {_CODE_MACRO_(teres_major_5)};
+TeresMajor = {_CODE_MACRO_(teres_major_6)};
+AnyFolder TeresMinor = {_CODE_MACRO_(teres_minor_1)};
+TeresMinor = {_CODE_MACRO_(teres_minor_2)};
+TeresMinor = {_CODE_MACRO_(teres_minor_3)};
+TeresMinor = {_CODE_MACRO_(teres_minor_4)};
+TeresMinor = {_CODE_MACRO_(teres_minor_5)};
+TeresMinor = {_CODE_MACRO_(teres_minor_6)};
+AnyFolder LevatorScapulae = {_CODE_MACRO_(levator_scapulae_1)};
+LevatorScapulae = {_CODE_MACRO_(levator_scapulae_2)};
+LevatorScapulae = {_CODE_MACRO_(levator_scapulae_3)};
+LevatorScapulae = {_CODE_MACRO_(levator_scapulae_4)};
+AnyFolder PectoralisMinor = {_CODE_MACRO_(pectoralis_minor_1)};
+PectoralisMinor = {_CODE_MACRO_(pectoralis_minor_2)};
+PectoralisMinor = {_CODE_MACRO_(pectoralis_minor_3)};
+AnyFolder Rhomboideus = {_CODE_MACRO_(rhomboideus_1)};
+Rhomboideus = {_CODE_MACRO_(rhomboideus_2)};
+Rhomboideus = {_CODE_MACRO_(rhomboideus_3)};
+Rhomboideus = {_CODE_MACRO_(rhomboideus_4)};
+Rhomboideus = {_CODE_MACRO_(rhomboideus_5)};
+Rhomboideus = {_CODE_MACRO_(rhomboideus_6)};
+AnyFolder SerratusAnterior = {_CODE_MACRO_(serratus_anterior_1)};
+SerratusAnterior = {_CODE_MACRO_(serratus_anterior_2)};
+SerratusAnterior = {_CODE_MACRO_(serratus_anterior_3)};
+SerratusAnterior = {_CODE_MACRO_(serratus_anterior_4)};
+SerratusAnterior = {_CODE_MACRO_(serratus_anterior_5)};
+SerratusAnterior = {_CODE_MACRO_(serratus_anterior_6)};
+SerratusAnterior = {_CODE_MACRO_(serratus_anterior_7)};
+SerratusAnterior = {_CODE_MACRO_(serratus_anterior_8)};
+SerratusAnterior = {_CODE_MACRO_(serratus_anterior_9)};
+AnyFolder TrapeziusScapular = {_CODE_MACRO_(trapezius_scapular_part_1)};
+TrapeziusScapular = {_CODE_MACRO_(trapezius_scapular_part_2)};
+TrapeziusScapular = {_CODE_MACRO_(trapezius_scapular_part_3)};
+TrapeziusScapular = {_CODE_MACRO_(trapezius_scapular_part_4)};
+TrapeziusScapular = {_CODE_MACRO_(trapezius_scapular_part_5)};
+TrapeziusScapular = {_CODE_MACRO_(trapezius_scapular_part_6)};
+TrapeziusScapular = {_CODE_MACRO_(trapezius_scapular_part_7)};
+TrapeziusScapular = {_CODE_MACRO_(trapezius_scapular_part_8)};
+TrapeziusScapular = {_CODE_MACRO_(trapezius_scapular_part_9)};
+TrapeziusScapular = {_CODE_MACRO_(trapezius_scapular_part_10)};
+TrapeziusScapular = {_CODE_MACRO_(trapezius_scapular_part_11)};
+TrapeziusScapular = {_CODE_MACRO_(trapezius_scapular_part_12)};
+TrapeziusScapular = {_CODE_MACRO_(trapezius_scapular_part_13)};
+TrapeziusScapular = {_CODE_MACRO_(trapezius_scapular_part_14)};
+AnyFolder Sternocleidomastoid = {_CODE_MACRO_(Sternocleidomastoid_caput_clavicular)};
+Sternocleidomastoid = {_CODE_MACRO_(Sternocleidomastoid_caput_Sternum)};
+AnyFolder TrapeziusClavicular = {_CODE_MACRO_(trapezius_clavicular_part_1)};
+TrapeziusClavicular = {_CODE_MACRO_(trapezius_clavicular_part_2)};
+TrapeziusClavicular = {_CODE_MACRO_(trapezius_clavicular_part_3)};
+TrapeziusClavicular = {_CODE_MACRO_(trapezius_clavicular_part_4)};
+TrapeziusClavicular = {_CODE_MACRO_(trapezius_clavicular_part_5)};
+TrapeziusClavicular = {_CODE_MACRO_(trapezius_clavicular_part_6)};
