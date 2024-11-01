@@ -64,6 +64,9 @@ The default pelvis model used in all models have changed. The pelvis morphology 
 
   In practice, this means that the morphology of the leg pelvis is moprhed to match the Trunk pelvis.
   Using `_MORPH_TRUNK_TO_LEG_` instead will revert to the old behaviour. 
+* The wrapping surface for muscles at the wrist has been changed to an ellipsoid from a cylinder. This avoids
+  penetration of muscle in the wrapping surface in postures involving both flexion/extension and abduction/adduction at
+  the wrist.
 
 (ammr-3.1.0-changelog)=
 ## AMMR 3.1.0 (2024-??-??)
