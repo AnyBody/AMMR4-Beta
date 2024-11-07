@@ -109,6 +109,9 @@ You can [enable backwards compatibility](changes-to-muscles-locations) by settin
 * Corrected the PelvisGround rotation drivers in the {ref}`Free Posture Static
   example<example_freeposture>`. The X and Z rotation drivers were previously
   mixed up and are now properly assigned.
+* Fixed a spelling typo in the disc stiffness BM control statements. The
+  `BM_TRUNK_*_DISC_STIFNESS` parameters have been renamed to `BM_TRUNK_*_DISC_STIFFNESS`. 
+  The mispelled parameter names have been deprecated. 
 
 ### 🔧 Changed:
 * Updated the insertion and origin points of the Gluteus Medius to ensure
@@ -122,6 +125,10 @@ You can [enable backwards compatibility](changes-to-muscles-locations) by settin
 * Excluded force plates from the parameter identification study, as they were
   unnecessary. This change may slightly speed up the parameter identification
   process.
+* The wrapping surface for muscles at the wrist has been changed to an ellipsoid
+  from a cylinder. This lowers the risk of muscle via points prenetrating the
+  wrapping surface in postures involving both flexion/extension and
+  abduction/adduction at the wrist.
 
 (ammr-3.0.4-changelog)=
 ## AMMR 3.0.4 (2024-07-02)
