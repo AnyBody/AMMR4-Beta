@@ -1,24 +1,3 @@
-
-AnyRevoluteJoint Ankle = {
-  Axis = z; //flexion extension
-  AnyRefNode &ShankNode = ..Seg.Shank.AnkleJoint;
-  AnyRefNode &FootNode  = ..Seg.Foot.Talus.AnkleJoint;
-  //ShankNode ={AnyDrawRefFrame drw={RGB={0,1,0};};};
-  Constraints.Reaction ={#include "DrawForceInJoint.any"};
-  
-};
-
-AnyRevoluteJoint SubTalar = {
-  Axis =  z; //inversion eversion 
-  AnyRefNode &TalusNode = ..Seg.Foot.Talus.SubTalarJoint;
-  AnyRefNode &FootNode  = ..Seg.Foot.Calcaneus.SubTalarJoint;
-  //TalusNode ={AnyDrawRefFrame drw={RGB={1,0,0};};};
-  Constraints.Reaction ={#include "DrawForceInJoint.any"};
-  
-};  
-
-
-
 AnyFolder Foot = {
   
   //************************************************
