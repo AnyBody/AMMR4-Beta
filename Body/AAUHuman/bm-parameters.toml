@@ -1237,6 +1237,13 @@ descr = "Switch for the mannequin driver being active or not"
 nicename = "Right Ankle Subtalar Eversion"
 opt = [ "ON", "OFF", "BM_MANNEQUIN_DRIVER_DEFAULT",]
 
+[parameters.BM_MANNEQUIN_DRIVER_TOES_FLEXION_RIGHT]
+default = "BM_MANNEQUIN_DRIVER_DEFAULT"
+valuetype = "integer"
+descr = "Switch for the mannequin driver being active or not"
+nicename = "Right Toes Flexion"
+opt = [ "ON", "OFF", "BM_MANNEQUIN_DRIVER_DEFAULT",]
+
 [parameters.BM_MANNEQUIN_DRIVER_HIP_FLEXION_LEFT]
 default = "BM_MANNEQUIN_DRIVER_DEFAULT"
 valuetype = "integer"
@@ -1285,6 +1292,13 @@ default = "BM_MANNEQUIN_DRIVER_DEFAULT"
 valuetype = "integer"
 descr = "Switch for the mannequin driver being active or not"
 nicename = "Left Ankle Subtalar Eversion"
+opt = [ "ON", "OFF", "BM_MANNEQUIN_DRIVER_DEFAULT",]
+
+[parameters.BM_MANNEQUIN_DRIVER_TOES_FLEXION_LEFT]
+default = "BM_MANNEQUIN_DRIVER_DEFAULT"
+valuetype = "integer"
+descr = "Switch for the mannequin driver being active or not"
+nicename = "Left Toes Flexion"
 opt = [ "ON", "OFF", "BM_MANNEQUIN_DRIVER_DEFAULT",]
 
 [parameters.BM_JOINT_TYPE_HIP_RIGHT]

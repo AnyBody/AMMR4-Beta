@@ -2061,6 +2061,25 @@ Switch for the mannequin driver being active or not
 ::::
 
 
+::::{dropdown} `BM_MANNEQUIN_DRIVER_TOES_FLEXION_RIGHT`
+:animate: fade-in-slide-down
+:margin: 0 0 3 3
+
+```{ammr:bm_statement} BM_MANNEQUIN_DRIVER_TOES_FLEXION_RIGHT
+
+Switch for the mannequin driver being active or not
+
+:Default: {any}`BM_MANNEQUIN_DRIVER_DEFAULT`
+:Example: `#define BM_MANNEQUIN_DRIVER_TOES_FLEXION_RIGHT BM_MANNEQUIN_DRIVER_DEFAULT`
+:Options:
+  - {any}`ON` -> Switch ON
+  - {any}`OFF` -> Switch OFF
+  - {any}`BM_MANNEQUIN_DRIVER_DEFAULT` -> 
+
+```
+::::
+
+
 ::::{dropdown} `BM_MANNEQUIN_DRIVER_HIP_FLEXION_LEFT`
 :animate: fade-in-slide-down
 :margin: 0 0 3 3
@@ -2186,6 +2205,25 @@ Switch for the mannequin driver being active or not
 
 :Default: {any}`BM_MANNEQUIN_DRIVER_DEFAULT`
 :Example: `#define BM_MANNEQUIN_DRIVER_ANKLE_SUBTALAR_EVERSION_LEFT BM_MANNEQUIN_DRIVER_DEFAULT`
+:Options:
+  - {any}`ON` -> Switch ON
+  - {any}`OFF` -> Switch OFF
+  - {any}`BM_MANNEQUIN_DRIVER_DEFAULT` -> 
+
+```
+::::
+
+
+::::{dropdown} `BM_MANNEQUIN_DRIVER_TOES_FLEXION_LEFT`
+:animate: fade-in-slide-down
+:margin: 0 0 3 3
+
+```{ammr:bm_statement} BM_MANNEQUIN_DRIVER_TOES_FLEXION_LEFT
+
+Switch for the mannequin driver being active or not
+
+:Default: {any}`BM_MANNEQUIN_DRIVER_DEFAULT`
+:Example: `#define BM_MANNEQUIN_DRIVER_TOES_FLEXION_LEFT BM_MANNEQUIN_DRIVER_DEFAULT`
 :Options:
   - {any}`ON` -> Switch ON
   - {any}`OFF` -> Switch OFF
