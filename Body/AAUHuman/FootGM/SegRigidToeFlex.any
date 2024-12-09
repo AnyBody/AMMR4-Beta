@@ -107,7 +107,7 @@ AnySeg RigidPart = {
 //***********************
 
 AnySeg Toe1 = {
-  r0 ??= .Metatarsal1.MtPhalJoint.sRel*.Metatarsal1.ARel'+.RigidPart.r0-ProximalPhalange1.MtPhalJoint.sRel*ProximalPhalange1.ARel';
+  r0 ??= .Metatarsal1.MtPhalJoint.sRel*.Metatarsal1.Axes0'+.RigidPart.r0-ProximalPhalange1.MtPhalJoint.sRel*ProximalPhalange1.Axes0';
   UseInertiaObjects = On;
   AnyFunTransform3D &Scale = .Scale;
   AnyFunTransform3D& GeomScale = .GeomScale;
@@ -130,7 +130,7 @@ AnySeg Toe1 = {
 //***********************
 
 AnySeg Toe2 = {
-  r0 ??= .Metatarsal2.MtPhalJoint.sRel*.Metatarsal2.ARel'+.RigidPart.r0-ProximalPhalange2.MtPhalJoint.sRel*ProximalPhalange2.ARel';
+  r0 ??= .Metatarsal2.MtPhalJoint.sRel*.Metatarsal2.Axes0'+.RigidPart.r0-ProximalPhalange2.MtPhalJoint.sRel*ProximalPhalange2.Axes0';
   UseInertiaObjects = On;
   AnyFunTransform3D &Scale = .Scale;
   AnyFunTransform3D& GeomScale = .GeomScale;
@@ -158,7 +158,7 @@ AnySeg Toe2 = {
 //***********************
 
 AnySeg Toe3 = {
-  r0 ??= .Metatarsal3.MtPhalJoint.sRel*.Metatarsal3.ARel'+.RigidPart.r0-ProximalPhalange3.MtPhalJoint.sRel*ProximalPhalange3.ARel';
+  r0 ??= .Metatarsal3.MtPhalJoint.sRel*.Metatarsal3.Axes0'+.RigidPart.r0-ProximalPhalange3.MtPhalJoint.sRel*ProximalPhalange3.Axes0';
   UseInertiaObjects = On;
   AnyFunTransform3D &Scale = .Scale;
   AnyFunTransform3D& GeomScale = .GeomScale;
@@ -186,7 +186,7 @@ AnySeg Toe3 = {
 //***********************
 
 AnySeg Toe4 = {
-  r0 ??= .Metatarsal4.MtPhalJoint.sRel*.Metatarsal4.ARel'+.RigidPart.r0-ProximalPhalange4.MtPhalJoint.sRel*ProximalPhalange4.ARel';
+  r0 ??= .Metatarsal4.MtPhalJoint.sRel*.Metatarsal4.Axes0'+.RigidPart.r0-ProximalPhalange4.MtPhalJoint.sRel*ProximalPhalange4.Axes0';
   UseInertiaObjects = On;
   AnyFunTransform3D &Scale = .Scale;
   AnyFunTransform3D& GeomScale = .GeomScale;
@@ -214,7 +214,7 @@ AnySeg Toe4 = {
 //***********************
 
 AnySeg Toe5 = {
-  r0 ??= .Metatarsal5.MtPhalJoint.sRel*.Metatarsal5.ARel'+.RigidPart.r0-ProximalPhalange5.MtPhalJoint.sRel*ProximalPhalange5.ARel';
+  r0 ??= .Metatarsal5.MtPhalJoint.sRel*.Metatarsal5.Axes0'+.RigidPart.r0-ProximalPhalange5.MtPhalJoint.sRel*ProximalPhalange5.Axes0';
   UseInertiaObjects = On;
   AnyFunTransform3D &Scale = .Scale;
   AnyFunTransform3D& GeomScale = .GeomScale;
