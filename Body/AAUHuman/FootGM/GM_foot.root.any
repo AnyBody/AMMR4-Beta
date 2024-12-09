@@ -21,6 +21,7 @@
       #include "BoneDrawings.any"
       #include "LigAndMusNodes.any"
       #include "PressureContactNodes.any"
+      #include "MusControlSeg.any"
     };    
     #include "SegNodes.any"
     AnyFolder &Talus = Foot.Talus; // for compatibility with TLEM 2.2
@@ -46,7 +47,6 @@
     #endif
     AnyFolder Foot = {
       #include "Foot_Mus.any"
-      #include "MusControlSeg.any"
     };
   };  
 
