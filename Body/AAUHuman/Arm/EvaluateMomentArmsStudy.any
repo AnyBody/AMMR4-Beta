@@ -139,20 +139,21 @@ ModelViews = {
 
 AnyOperationSequence Run = 
 {
-  AnyOperationMacro SetView = 
-  {
-    MacroStr = { "classoperation " + CompleteNameOf(&..ModelViews.Views.SelectedView) + strquote("Set View") };
-  };
-  AnyOperation &Study = .Study.Kinematics;
-  #ifdef ANYBODY_PATH_OUTPUT
-  AnyOperationMacro Save = 
-  {
-    MacroStr = {
-      "classoperation " + CompleteNameOf(&..Study.Output) + strquote("Save data") 
-      + " --type=" + strquote("Deep") +" --file=" + strquote(
-      ANYBODY_PATH_OUTPUT + ..OutputFileName + ".anydata.h5")
+    AnyOperationMacro SetView = 
+    {
+      MacroStr = { "classoperation " + CompleteNameOf(&..ModelViews.Views.SelectedView) + strquote("Set View") };
     };
-  };
-  #endif
+    AnyOperation &Study = .Study.Kinematics;
+
 };
 
+#ifdef ANYBODY_PATH_OUTPUT
+AnyOperationMacro Save = 
+{
+  MacroStr = {
+    "classoperation " + CompleteNameOf(&.Study.Output) + strquote("Save data") 
+    + " --type=" + strquote("Deep") +" --file=" + strquote(
+    ANYBODY_PATH_OUTPUT + .OutputFileName + ".anydata.h5")
+  };
+};
+#endif
