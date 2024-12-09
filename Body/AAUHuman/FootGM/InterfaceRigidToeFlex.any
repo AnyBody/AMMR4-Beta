@@ -3,41 +3,6 @@
 //the right and left side
 
 
-AnyKinMeasureLinComb AnklePlantarFlexion = {
-  AnyKinRotational RotMeasure = {
-    Type=RotAxesAngles;
-    Axis1 = z; Axis2 = x; Axis3 = y; 
-    AnyRefNode &ShankNode = ...Seg.Shank.AnkleJoint;
-    AnyRefNode &FootNode  = ...Seg.Foot.Talus.AnkleJoint;
-  };
-  Coef = {{-1,0,0}};
-  OutDim = 1;
-};
-
-AnyKinMeasureOrg SubTalarEversion={
-  
-  AnyFolder &Talus = ..Seg.Foot.Talus.SubTalarJoint;
-  Talus ={
-    AnyRefNode RotNode={
-      ARel={{0,....Sign*-1,0},{....Sign*1,0,0},{0,0,1}};
-    };
-  };
-  AnyFolder &Foot = ..Seg.Foot.SubTalarJoint;
-  Foot ={
-    AnyRefNode RotNode={
-      ARel={{....Sign*1,0,0},{0,....Sign*1,0},{0,0,1}};
-    };
-  };
-  AnyKinRotational Ankle = {
-    Type=RotAxesAngles;
-    AnyRefNode &TalusNode = ...Seg.Foot.Talus.SubTalarJoint;
-    AnyRefNode &SubTalarNode  = ...Seg.Foot.SubTalarJoint;
-   
-  }; // End of SubTalar
-  MeasureOrganizer={0};
-};
-
-
 //Toes
 AnyKinMeasureOrg MetatarsoPhalangeal1DorsiFlexion = {
   AnyFolder &Metatarsal1 = ..Seg.Foot.Metatarsal1.MtPhalJoint;
