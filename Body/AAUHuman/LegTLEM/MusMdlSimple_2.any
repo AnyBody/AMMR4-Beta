@@ -2577,7 +2577,7 @@ AnyMuscleModel VastusMedialisSuperior4Par =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel AbductorHallucis =
 {
@@ -2594,7 +2594,7 @@ AnyMuscleModel AbductorHallucis =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel FlexorHallucisBrevisLateralis_1 =
 {
@@ -2611,7 +2611,7 @@ AnyMuscleModel FlexorHallucisBrevisLateralis_1 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel FlexorHallucisBrevisLateralis_2 =
 {
@@ -2628,7 +2628,7 @@ AnyMuscleModel FlexorHallucisBrevisLateralis_2 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel FlexorHallucisBrevisMedialis =
 {
@@ -2645,7 +2645,7 @@ AnyMuscleModel FlexorHallucisBrevisMedialis =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel AdductorHallucisOblique1 =
 {
@@ -2662,7 +2662,7 @@ AnyMuscleModel AdductorHallucisOblique1 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel AdductorHallucisOblique2 =
 {
@@ -2679,7 +2679,7 @@ AnyMuscleModel AdductorHallucisOblique2 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel AdductorHallucisOblique3 =
 {
@@ -2696,7 +2696,7 @@ AnyMuscleModel AdductorHallucisOblique3 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel AdductorHallucisOblique4 =
 {
@@ -2713,7 +2713,7 @@ AnyMuscleModel AdductorHallucisOblique4 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel AdductorHallucisOblique5 =
 {
@@ -2730,7 +2730,7 @@ AnyMuscleModel AdductorHallucisOblique5 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel AdductorHallucisTransverse1 =
 {
@@ -2747,7 +2747,7 @@ AnyMuscleModel AdductorHallucisTransverse1 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel AdductorHallucisTransverse2 =
 {
@@ -2764,7 +2764,7 @@ AnyMuscleModel AdductorHallucisTransverse2 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel AdductorHallucisTransverse3 =
 {
@@ -2781,7 +2781,7 @@ AnyMuscleModel AdductorHallucisTransverse3 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel ExtensorHallucisBrevis =
 {
@@ -2798,7 +2798,7 @@ AnyMuscleModel ExtensorHallucisBrevis =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel DorsalInterosseous1Part1 =
 {
@@ -2815,7 +2815,7 @@ AnyMuscleModel DorsalInterosseous1Part1 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel DorsalInterosseous1Part2 =
 {
@@ -2832,7 +2832,7 @@ AnyMuscleModel DorsalInterosseous1Part2 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel DorsalInterosseous2Part1 =
 {
@@ -2849,7 +2849,7 @@ AnyMuscleModel DorsalInterosseous2Part1 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel DorsalInterosseous2Part2 =
 {
@@ -2866,7 +2866,7 @@ AnyMuscleModel DorsalInterosseous2Part2 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel DorsalInterosseous3Part1 =
 {
@@ -2883,7 +2883,7 @@ AnyMuscleModel DorsalInterosseous3Part1 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel DorsalInterosseous3Part2 =
 {
@@ -2900,7 +2900,7 @@ AnyMuscleModel DorsalInterosseous3Part2 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel DorsalInterosseous4Part1 =
 {
@@ -2917,7 +2917,7 @@ AnyMuscleModel DorsalInterosseous4Part1 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel DorsalInterosseous4Part2 =
 {
@@ -2934,7 +2934,7 @@ AnyMuscleModel DorsalInterosseous4Part2 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel ExtensorDigitoriumBrevis2 =
 {
@@ -2951,7 +2951,7 @@ AnyMuscleModel ExtensorDigitoriumBrevis2 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel ExtensorDigitoriumBrevis3 =
 {
@@ -2968,7 +2968,7 @@ AnyMuscleModel ExtensorDigitoriumBrevis3 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel ExtensorDigitoriumBrevis4 =
 {
@@ -2985,7 +2985,7 @@ AnyMuscleModel ExtensorDigitoriumBrevis4 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel PlantarInterosseous1 =
 {
@@ -3002,7 +3002,7 @@ AnyMuscleModel PlantarInterosseous1 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel PlantarInterosseous2Part1 =
 {
@@ -3019,7 +3019,7 @@ AnyMuscleModel PlantarInterosseous2Part1 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel PlantarInterosseous2Part2 =
 {
@@ -3036,7 +3036,7 @@ AnyMuscleModel PlantarInterosseous2Part2 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel PlantarInterosseous2Part3 =
 {
@@ -3053,7 +3053,7 @@ AnyMuscleModel PlantarInterosseous2Part3 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel PlantarInterosseous3Part1 =
 {
@@ -3070,7 +3070,7 @@ AnyMuscleModel PlantarInterosseous3Part1 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel PlantarInterosseous3Part2 =
 {
@@ -3087,7 +3087,7 @@ AnyMuscleModel PlantarInterosseous3Part2 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel PlantarInterosseous3Part3 =
 {
@@ -3104,7 +3104,7 @@ AnyMuscleModel PlantarInterosseous3Part3 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel FlexorDigitorumBrevis2 =
 {
@@ -3121,7 +3121,7 @@ AnyMuscleModel FlexorDigitorumBrevis2 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel FlexorDigitorumBrevis3 =
 {
@@ -3138,7 +3138,7 @@ AnyMuscleModel FlexorDigitorumBrevis3 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel FlexorDigitorumBrevis4 =
 {
@@ -3155,7 +3155,7 @@ AnyMuscleModel FlexorDigitorumBrevis4 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel FlexorDigitorumBrevis5 =
 {
@@ -3172,7 +3172,7 @@ AnyMuscleModel FlexorDigitorumBrevis5 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel QuadratusPlantarMedialis1 =
 {
@@ -3189,7 +3189,7 @@ AnyMuscleModel QuadratusPlantarMedialis1 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel QuadratusPlantarMedialis2 =
 {
@@ -3206,7 +3206,7 @@ AnyMuscleModel QuadratusPlantarMedialis2 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel QuadratusPlantarMedialis3 =
 {
@@ -3223,7 +3223,7 @@ AnyMuscleModel QuadratusPlantarMedialis3 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel QuadratusPlantarLateralis1 =
 {
@@ -3240,7 +3240,7 @@ AnyMuscleModel QuadratusPlantarLateralis1 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel QuadratusPlantarLateralis2 =
 {
@@ -3257,7 +3257,7 @@ AnyMuscleModel QuadratusPlantarLateralis2 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel QuadratusPlantarLateralis3 =
 {
@@ -3274,7 +3274,7 @@ AnyMuscleModel QuadratusPlantarLateralis3 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel Lumbrical2 =
 {
@@ -3291,7 +3291,7 @@ AnyMuscleModel Lumbrical2 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel Lumbrical3 =
 {
@@ -3308,7 +3308,7 @@ AnyMuscleModel Lumbrical3 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel Lumbrical4 =
 {
@@ -3325,7 +3325,7 @@ AnyMuscleModel Lumbrical4 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel Lumbrical5 =
 {
@@ -3342,7 +3342,7 @@ AnyMuscleModel Lumbrical5 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel AbductorDigitiMinimi1 =
 {
@@ -3359,7 +3359,7 @@ AnyMuscleModel AbductorDigitiMinimi1 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel AbductorDigitiMinimi2 =
 {
@@ -3376,7 +3376,7 @@ AnyMuscleModel AbductorDigitiMinimi2 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel AbductorDigitiMinimi3 =
 {
@@ -3393,7 +3393,7 @@ AnyMuscleModel AbductorDigitiMinimi3 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel FlexorDigitiMinimiBrevis =
 {
@@ -3410,7 +3410,7 @@ AnyMuscleModel FlexorDigitiMinimiBrevis =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel FlexorDigitorumLongusToe2Tendon =
 {
@@ -3427,7 +3427,7 @@ AnyMuscleModel FlexorDigitorumLongusToe2Tendon =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel FlexorDigitorumLongusToe3Tendon =
 {
@@ -3444,7 +3444,7 @@ AnyMuscleModel FlexorDigitorumLongusToe3Tendon =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel FlexorDigitorumLongusToe4Tendon =
 {
@@ -3461,7 +3461,7 @@ AnyMuscleModel FlexorDigitorumLongusToe4Tendon =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel FlexorDigitorumLongusToe5Tendon =
 {
@@ -3478,7 +3478,7 @@ AnyMuscleModel FlexorDigitorumLongusToe5Tendon =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel ExtensorDigitorumLongusToe2TendonPart1 =
 {
@@ -3495,7 +3495,7 @@ AnyMuscleModel ExtensorDigitorumLongusToe2TendonPart1 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel ExtensorDigitorumLongusToe2TendonPart2 =
 {
@@ -3512,7 +3512,7 @@ AnyMuscleModel ExtensorDigitorumLongusToe2TendonPart2 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel ExtensorDigitorumLongusToe2TendonPart3 =
 {
@@ -3529,7 +3529,7 @@ AnyMuscleModel ExtensorDigitorumLongusToe2TendonPart3 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel ExtensorDigitorumLongusToe2TendonPart4 =
 {
@@ -3546,7 +3546,7 @@ AnyMuscleModel ExtensorDigitorumLongusToe2TendonPart4 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel ExtensorDigitorumLongusToe3TendonPart1 =
 {
@@ -3563,7 +3563,7 @@ AnyMuscleModel ExtensorDigitorumLongusToe3TendonPart1 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel ExtensorDigitorumLongusToe3TendonPart2 =
 {
@@ -3580,7 +3580,7 @@ AnyMuscleModel ExtensorDigitorumLongusToe3TendonPart2 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel ExtensorDigitorumLongusToe3TendonPart3 =
 {
@@ -3597,7 +3597,7 @@ AnyMuscleModel ExtensorDigitorumLongusToe3TendonPart3 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel ExtensorDigitorumLongusToe3TendonPart4 =
 {
@@ -3614,7 +3614,7 @@ AnyMuscleModel ExtensorDigitorumLongusToe3TendonPart4 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel ExtensorDigitorumLongusToe4TendonPart1 =
 {
@@ -3631,7 +3631,7 @@ AnyMuscleModel ExtensorDigitorumLongusToe4TendonPart1 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel ExtensorDigitorumLongusToe4TendonPart2 =
 {
@@ -3648,7 +3648,7 @@ AnyMuscleModel ExtensorDigitorumLongusToe4TendonPart2 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel ExtensorDigitorumLongusToe4TendonPart3 =
 {
@@ -3665,7 +3665,7 @@ AnyMuscleModel ExtensorDigitorumLongusToe4TendonPart3 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel ExtensorDigitorumLongusToe4TendonPart4 =
 {
@@ -3682,7 +3682,7 @@ AnyMuscleModel ExtensorDigitorumLongusToe4TendonPart4 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel ExtensorDigitorumLongusToe5TendonPart1 =
 {
@@ -3699,7 +3699,7 @@ AnyMuscleModel ExtensorDigitorumLongusToe5TendonPart1 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel ExtensorDigitorumLongusToe5TendonPart2 =
 {
@@ -3716,7 +3716,7 @@ AnyMuscleModel ExtensorDigitorumLongusToe5TendonPart2 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel ExtensorDigitorumLongusToe5TendonPart3 =
 {
@@ -3733,7 +3733,7 @@ AnyMuscleModel ExtensorDigitorumLongusToe5TendonPart3 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel ExtensorDigitorumLongusToe5TendonPart4 =
 {
@@ -3750,7 +3750,7 @@ AnyMuscleModel ExtensorDigitorumLongusToe5TendonPart4 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel ExtensorHallucisLongusTendonPart1 =
 {
@@ -3767,7 +3767,7 @@ AnyMuscleModel ExtensorHallucisLongusTendonPart1 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel ExtensorHallucisLongusTendonPart2 =
 {
@@ -3784,7 +3784,7 @@ AnyMuscleModel ExtensorHallucisLongusTendonPart2 =
 
 
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+#if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyMuscleModel ExtensorHallucisLongusTendonPart3 =
 {
