@@ -45,6 +45,11 @@ ModelParameters = {
     AnyVec3 ToeLateralContactNode = ..Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(.Foot.ToeLateralContactNode);
 
     AnyFolder Talus = {
+      
+      AnyVar MassStandard = .MassStandard*0.20286341; //calculated from volume ratio
+      AnyVar Density = .Density;
+      AnyVar LengthStandard = 0.133*.LengthStandard;
+      
       AnyVec3 LateralMalleolus = .LateralMalleolus;      
       AnyVec3 MedialMalleolus = .MedialMalleolus;
       AnyVec3 Metatarsal1PlantarNode = .Metatarsal1PlantarNode;

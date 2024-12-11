@@ -1,14 +1,16 @@
  
 AnyVar MassS = ..MassScaling.Foot.MassScale;
-AnyVar MassStandard = ..StandardParameters.Foot.Mass;
-AnyVar Mass = MassS*MassStandard;
+AnyVar MassStandard = ..StandardParameters.FootGM.Mass-..StandardParameters.FootGM.Talus.Mass;  ///< Standard mass of foot excluding talus
+AnyVar Mass = MassS*MassStandard; ///< Scaled mass of foot excluding talus
+AnyVar MassStandardFootWithTalus = ..StandardParameters.FootGM.Mass; ///< Standard mass of foot with talus
+AnyVar MassFootWithTalus = ..MassScaling.Foot.MassScale*MassStandard + ..MassScaling.Talus.MassScale*..StandardParameters.FootGM.Talus.Mass; ///< Scaled mass of foot with talus
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 Talus = {
   AnyInertiaMatrix Inertia = {
-    AnyVar MassS = ....MassScaling.Foot.MassScale;
-    AnyVar MassStandard = ....StandardParameters.Foot.Mass*0.20286341; //calculated from volume ratio
+    AnyVar MassS = ....MassScaling.Talus.MassScale;
+    AnyVar MassStandard = ....StandardParameters.FootGM.Mass*0.20286341; //calculated from volume ratio
     Mass = MassS*MassStandard;
     
     //AnyDrawSeg Draw = {};
@@ -28,7 +30,7 @@ Talus = {
 Calcaneus = {
   AnyInertiaMatrix Inertia = {
     AnyVar MassS = ....MassScaling.Foot.MassScale;
-    AnyVar MassStandard = ....StandardParameters.Foot.Mass*0.360683468;
+    AnyVar MassStandard = ....StandardParameters.FootGM.Mass*0.360683468;
     Mass = MassS*MassStandard;
     
     sCoM = .Scale({0.01294929, 0.08385631, ....Sign*0.002736367});
@@ -48,7 +50,7 @@ Calcaneus = {
 Cuboid = {
   AnyInertiaMatrix Inertia = {
     AnyVar MassS = ....MassScaling.Foot.MassScale;
-    AnyVar MassStandard = ....StandardParameters.Foot.Mass*0.071723351;
+    AnyVar MassStandard = ....StandardParameters.FootGM.Mass*0.071723351;
     Mass = MassS*MassStandard;
     
     //AnyDrawRefFrame Drw = {ScaleXYZ={1,1,1}*0.1;};
@@ -67,7 +69,7 @@ Cuboid = {
 Navicular = {
   AnyInertiaMatrix Inertia = {
     AnyVar MassS = ....MassScaling.Foot.MassScale;
-    AnyVar MassStandard = ....StandardParameters.Foot.Mass*0.048581127;
+    AnyVar MassStandard = ....StandardParameters.FootGM.Mass*0.048581127;
     Mass = MassS*MassStandard;
     
     //AnyDrawRefFrame Drw = {ScaleXYZ={1,1,1}*0.1;};
@@ -86,7 +88,7 @@ Navicular = {
 MedialCuneiform = {
   AnyInertiaMatrix Inertia = {
     AnyVar MassS = ....MassScaling.Foot.MassScale;
-    AnyVar MassStandard = ....StandardParameters.Foot.Mass*0.048888141;
+    AnyVar MassStandard = ....StandardParameters.FootGM.Mass*0.048888141;
     Mass = MassS*MassStandard;
     
     //AnyDrawRefFrame Drw = {ScaleXYZ={1,1,1}*0.1;};
@@ -105,7 +107,7 @@ MedialCuneiform = {
 IntermediateCuneiform = {
   AnyInertiaMatrix Inertia = {
     AnyVar MassS = ....MassScaling.Foot.MassScale;
-    AnyVar MassStandard = ....StandardParameters.Foot.Mass*0.011344111;
+    AnyVar MassStandard = ....StandardParameters.FootGM.Mass*0.011344111;
     Mass = MassS*MassStandard;
     
     //AnyDrawRefFrame Drw = {ScaleXYZ={1,1,1}*0.1;};
@@ -124,7 +126,7 @@ IntermediateCuneiform = {
 LateralCuneiform = {
   AnyInertiaMatrix Inertia = {
     AnyVar MassS = ....MassScaling.Foot.MassScale;
-    AnyVar MassStandard = ....StandardParameters.Foot.Mass*0.021885718;
+    AnyVar MassStandard = ....StandardParameters.FootGM.Mass*0.021885718;
     Mass = MassS*MassStandard;
     
     //AnyDrawRefFrame Drw = {ScaleXYZ={1,1,1}*0.1;};
@@ -148,7 +150,7 @@ LateralCuneiform = {
 Metatarsal1 = {
   AnyInertiaMatrix Inertia = {
     AnyVar MassS = ....MassScaling.Foot.MassScale;
-    AnyVar MassStandard = ....StandardParameters.Foot.Mass*0.079950498;
+    AnyVar MassStandard = ....StandardParameters.FootGM.Mass*0.079950498;
     Mass = MassS*MassStandard;
     
     //AnyDrawRefFrame Drw = {ScaleXYZ={1,1,1}*0.1;};
@@ -172,7 +174,7 @@ Metatarsal1 = {
 Metatarsal2 = {
   AnyInertiaMatrix Inertia = {
     AnyVar MassS = ....MassScaling.Foot.MassScale;
-    AnyVar MassStandard = ....StandardParameters.Foot.Mass*0.022272746;
+    AnyVar MassStandard = ....StandardParameters.FootGM.Mass*0.022272746;
     Mass = MassS*MassStandard;
     
     //AnyDrawRefFrame Drw = {ScaleXYZ={1,1,1}*0.1;};
@@ -196,7 +198,7 @@ Metatarsal2 = {
 Metatarsal3 = {
   AnyInertiaMatrix Inertia = {
     AnyVar MassS = ....MassScaling.Foot.MassScale;
-    AnyVar MassStandard = ....StandardParameters.Foot.Mass*0.018827431;
+    AnyVar MassStandard = ....StandardParameters.FootGM.Mass*0.018827431;
     Mass = MassS*MassStandard;
     
     //AnyDrawSeg Draw = {};
@@ -219,7 +221,7 @@ Metatarsal3 = {
 Metatarsal4 = {
   AnyInertiaMatrix Inertia = {
     AnyVar MassS = ....MassScaling.Foot.MassScale;
-    AnyVar MassStandard = ....StandardParameters.Foot.Mass*0.017399045;
+    AnyVar MassStandard = ....StandardParameters.FootGM.Mass*0.017399045;
     Mass = MassS*MassStandard;
     
     //AnyDrawSeg Draw = {};
@@ -242,7 +244,7 @@ Metatarsal4 = {
 Metatarsal5 = {
   AnyInertiaMatrix Inertia = {
     AnyVar MassS = ....MassScaling.Foot.MassScale;
-    AnyVar MassStandard = ....StandardParameters.Foot.Mass*0.038130794;
+    AnyVar MassStandard = ....StandardParameters.FootGM.Mass*0.038130794;
     Mass = MassS*MassStandard;
     
     //AnyDrawSeg Draw = {};
@@ -270,7 +272,7 @@ Metatarsal5 = {
 ProximalPhalange1 = {
   AnyInertiaMatrix Inertia = {
     AnyVar MassS = ....MassScaling.Foot.MassScale;
-    AnyVar MassStandard = ....StandardParameters.Foot.Mass*0.017790222;
+    AnyVar MassStandard = ....StandardParameters.FootGM.Mass*0.017790222;
     Mass = MassS*MassStandard;
     
     //AnyDrawSeg Draw = {};
@@ -293,7 +295,7 @@ ProximalPhalange1 = {
 ProximalPhalange2 = {
   AnyInertiaMatrix Inertia = {
     AnyVar MassS = ....MassScaling.Foot.MassScale;
-    AnyVar MassStandard = ....StandardParameters.Foot.Mass*0.007562741;
+    AnyVar MassStandard = ....StandardParameters.FootGM.Mass*0.007562741;
     Mass = MassS*MassStandard;
     
     //AnyDrawSeg Draw = {};
@@ -316,7 +318,7 @@ ProximalPhalange2 = {
 ProximalPhalange3 = {
   AnyInertiaMatrix Inertia = {
     AnyVar MassS = ....MassScaling.Foot.MassScale;
-    AnyVar MassStandard = ....StandardParameters.Foot.Mass*0.006408771;
+    AnyVar MassStandard = ....StandardParameters.FootGM.Mass*0.006408771;
     Mass = MassS*MassStandard;
     
     //AnyDrawSeg Draw = {};
@@ -339,7 +341,7 @@ ProximalPhalange3 = {
 ProximalPhalange4 = {
   AnyInertiaMatrix Inertia = {
     AnyVar MassS = ....MassScaling.Foot.MassScale;
-    AnyVar MassStandard = ....StandardParameters.Foot.Mass*0.00596366;
+    AnyVar MassStandard = ....StandardParameters.FootGM.Mass*0.00596366;
     Mass = MassS*MassStandard;
     
     //AnyDrawSeg Draw = {};
@@ -362,7 +364,7 @@ ProximalPhalange4 = {
 ProximalPhalange5 = {
   AnyInertiaMatrix Inertia = {    
     AnyVar MassS = ....MassScaling.Foot.MassScale;
-    AnyVar MassStandard = ....StandardParameters.Foot.Mass*0.00440014;
+    AnyVar MassStandard = ....StandardParameters.FootGM.Mass*0.00440014;
     Mass = MassS*MassStandard;
     
     //AnyDrawSeg Draw = {};
@@ -390,7 +392,7 @@ ProximalPhalange5 = {
 MiddlePhalange2 = {
   AnyInertiaMatrix Inertia = {    
     AnyVar MassS = ....MassScaling.Foot.MassScale;
-    AnyVar MassStandard = ....StandardParameters.Foot.Mass*0.001591376;
+    AnyVar MassStandard = ....StandardParameters.FootGM.Mass*0.001591376;
     Mass = MassS*MassStandard;
     
     //AnyDrawSeg Draw = {};
@@ -413,7 +415,7 @@ MiddlePhalange2 = {
 MiddlePhalange3 = {
   AnyInertiaMatrix Inertia = {
     AnyVar MassS = ....MassScaling.Foot.MassScale;
-    AnyVar MassStandard = ....StandardParameters.Foot.Mass*0.001243466;
+    AnyVar MassStandard = ....StandardParameters.FootGM.Mass*0.001243466;
     Mass = MassS*MassStandard;
     
     //AnyDrawSeg Draw = {};
@@ -436,7 +438,7 @@ MiddlePhalange3 = {
 MiddlePhalange4 = {
   AnyInertiaMatrix Inertia = {
     AnyVar MassS = ....MassScaling.Foot.MassScale;
-    AnyVar MassStandard = ....StandardParameters.Foot.Mass*0.001188346;
+    AnyVar MassStandard = ....StandardParameters.FootGM.Mass*0.001188346;
     Mass = MassS*MassStandard;
     
     //AnyDrawSeg Draw = {};
@@ -459,7 +461,7 @@ MiddlePhalange4 = {
 MiddlePhalange5 = {
   AnyInertiaMatrix Inertia = {
     AnyVar MassS = ....MassScaling.Foot.MassScale;
-    AnyVar MassStandard = ....StandardParameters.Foot.Mass*0.000644255;
+    AnyVar MassStandard = ....StandardParameters.FootGM.Mass*0.000644255;
     Mass = MassS*MassStandard;
     
     //AnyDrawSeg Draw = {};
@@ -487,7 +489,7 @@ MiddlePhalange5 = {
 DistalPhalange1 = {
   AnyInertiaMatrix Inertia = {
     AnyVar MassS = ....MassScaling.Foot.MassScale;
-    AnyVar MassStandard = ....StandardParameters.Foot.Mass*0.008262117;
+    AnyVar MassStandard = ....StandardParameters.FootGM.Mass*0.008262117;
     Mass = MassS*MassStandard;
     
     //AnyDrawSeg Draw = {};
@@ -510,7 +512,7 @@ DistalPhalange1 = {
 DistalPhalange2 = {
   AnyInertiaMatrix Inertia = {
     AnyVar MassS = ....MassScaling.Foot.MassScale;
-    AnyVar MassStandard = ....StandardParameters.Foot.Mass*0.000724269;
+    AnyVar MassStandard = ....StandardParameters.FootGM.Mass*0.000724269;
     Mass = MassS*MassStandard;
     
     //AnyDrawSeg Draw = {};
@@ -533,7 +535,7 @@ DistalPhalange2 = {
 DistalPhalange3 = {
   AnyInertiaMatrix Inertia = {
     AnyVar MassS = ....MassScaling.Foot.MassScale;
-    AnyVar MassStandard = ....StandardParameters.Foot.Mass*0.000608694;
+    AnyVar MassStandard = ....StandardParameters.FootGM.Mass*0.000608694;
     Mass = MassS*MassStandard;
     
     //AnyDrawSeg Draw = {};
@@ -556,7 +558,7 @@ DistalPhalange3 = {
 DistalPhalange4 = {
   AnyInertiaMatrix Inertia = {
     AnyVar MassS = ....MassScaling.Foot.MassScale;
-    AnyVar MassStandard = ....StandardParameters.Foot.Mass*0.000541127;
+    AnyVar MassStandard = ....StandardParameters.FootGM.Mass*0.000541127;
     Mass = MassS*MassStandard;
     
     //AnyDrawSeg Draw = {};
@@ -579,7 +581,7 @@ DistalPhalange4 = {
 DistalPhalange5 = {
   AnyInertiaMatrix Inertia = {
     AnyVar MassS = ....MassScaling.Foot.MassScale;
-    AnyVar MassStandard = ....StandardParameters.Foot.Mass*0.000520976;
+    AnyVar MassStandard = ....StandardParameters.FootGM.Mass*0.000520976;
     Mass = MassS*MassStandard;
     
     //AnyDrawSeg Draw = {};
