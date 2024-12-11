@@ -1,5 +1,5 @@
 //define = [ 
-//    {'BM_COMPATIBILITY_30_MUSCLE_STRUCTURE':'ON'},
+//    {'BM_COMPATIBILITY_MUSCLE_STRUCTURE':'ON'},
 //    {'BM_COMPATIBILITY_24_TRUNK_SELECTED_OUTPUTS_JRF':'ON'},
 //]
 
@@ -7,7 +7,7 @@
 
 #ifndef TEST_NAME
 // #define BM_COMPATIBILITY_24_TRUNK_SELECTED_OUTPUTS_JRF ON
- #define BM_COMPATIBILITY_30_MUSCLE_STRUCTURE ON
+ #define BM_COMPATIBILITY_MUSCLE_STRUCTURE ON
 #endif
 
 
@@ -37,7 +37,7 @@ Main = {
   AnyObjectPtr arm_muscles_30_location = ObjFilterByClass(ObjRefResolve(ObjFilterByClass(ObjSearch("Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.*"), "AnyRefObject")), "AnyMuscle");
   AnyInt OldStructure = bool(NumElemOf(arm_muscles_30_location));
 
-  #if BM_COMPATIBILITY_30_MUSCLE_STRUCTURE == ON
+  #if BM_COMPATIBILITY_MUSCLE_STRUCTURE == ON
       AnyInt testOldStructureFound = assert(OldStructure);
   #else
     AnyInt testOldStructureNotFound = assert(not(OldStructure));

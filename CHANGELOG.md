@@ -17,7 +17,7 @@ The default pelvis morphology now comes from trunk pelivs. The toplogy remain un
 Muscles elements are now grouped into folders representing the physiological muscles. 
 You can [enable backwards compatibility](changes-to-muscles-locations) by setting:
 ```AnyScriptDoc
-#define BM_COMPATIBILITY_30_MUSCLE_STRUCTURE ON
+#define BM_COMPATIBILITY_MUSCLE_STRUCTURE ON
 ```
 :::
 
@@ -89,7 +89,7 @@ You can [enable backwards compatibility](changes-to-muscles-locations) by settin
   muscles (e.g., all Soleus Medial elements are collected in a Soleus Medial folder). This
   change affects the path to the actual muscle elements throughout the model. The complete
   AMMR has been updated to support this. To allow users a smooth transition to the new
-  structure, a `BM_COMPATIBILITY_30_MUSCLE_STRUCTURE` switch has been temporarily
+  structure, a `BM_COMPATIBILITY_MUSCLE_STRUCTURE` switch has been temporarily
   introduced. This switch will create backward-compatible references to the muscles as
   they are defined in AMMR 3.x. This BM switch will be deprecated in a future AMMR
   version.
