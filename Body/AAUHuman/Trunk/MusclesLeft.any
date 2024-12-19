@@ -1004,26 +1004,26 @@ MuscleGroup ErectorSpinae = {
     AnyRefNode &Org = ....Segments.C4Seg.Left.ICptR3C4Node;
     AnyRefNode &Via1 = ....Segments.C7Seg.Left.ICptR3C4Via1Node;
     AnyRefNode &Via2 = ....Segments.T1Seg.Left.ICptR3C4Via2Node;
-    AnyRefNode &Ins = ....Segments.ThoraxSeg.Left.R3.ICptR3C4Node;
+    AnyRefNode &Ins = ....Segments.Left.R3Seg.ICptR3C4Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint ICptR4C5 = {
     AnyMuscleModel &MusMdl = ....MuscleModels.Left.ErectorSpinae.ICptR4C5;
     AnyRefNode &Org = ....Segments.C5Seg.Left.ICptR4C5Node;
-    AnyRefNode &Via1 = ....Segments.ThoraxSeg.Left.R1.ICptR4C5Via1Node;
-    AnyRefNode &Via2 = ....Segments.ThoraxSeg.Left.R3.ICptR4C5Via2Node;
-    AnyRefNode &Ins = ....Segments.ThoraxSeg.Left.R4.ICptR4C5Node;
+    AnyRefNode &Via1 = ....Segments.Left.R1Seg.ICptR4C5Via1Node;
+    AnyRefNode &Via2 = ....Segments.Left.R3Seg.ICptR4C5Via2Node;
+    AnyRefNode &Ins = ....Segments.Left.R4Seg.ICptR4C5Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint ICptR5C6 = {
     AnyMuscleModel &MusMdl = ....MuscleModels.Left.ErectorSpinae.ICptR5C6;
     AnyRefNode &Org = ....Segments.C6Seg.Left.ICptR5C6Node;
-    AnyRefNode &Via1 = ....Segments.ThoraxSeg.Left.R1.ICptR5C6Via1Node;
-    AnyRefNode &Via2 = ....Segments.ThoraxSeg.Left.R3.ICptR5C6Via2Node;
-    AnyRefNode &Via3 = ....Segments.ThoraxSeg.Left.R4.ICptR5C6Via3Node;
-    AnyRefNode &Ins = ....Segments.ThoraxSeg.Left.R5.ICptR5C6Node;
+    AnyRefNode &Via1 = ....Segments.Left.R1Seg.ICptR5C6Via1Node;
+    AnyRefNode &Via2 = ....Segments.Left.R3Seg.ICptR5C6Via2Node;
+    AnyRefNode &Via3 = ....Segments.Left.R4Seg.ICptR5C6Via3Node;
+    AnyRefNode &Ins = ....Segments.Left.R5Seg.ICptR5C6Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
