@@ -1,0 +1,27 @@
+/**
+  Class Template for providing the folder structure of the body model
+*/
+#class_template BodyModelFolderStructure() {
+  AnyFolder Trunk = {
+    AnyFolder Right = {};
+    AnyFolder Left = {};
+  };
+  AnyFolder Right = {
+    AnyFolder ShoulderArm = {};
+    AnyFolder Leg = {
+      AnyFolder Hip = {};
+      AnyFolder Knee = {};
+      AnyFolder Ankle = {};
+      AnyFolder SubTalar = {};
+    };
+  };
+  AnyFolder Left = {
+    AnyFolder ShoulderArm = {};
+    AnyFolder Leg = {
+      AnyFolder Hip = {};
+      AnyFolder Knee = {};
+      AnyFolder Ankle = {};
+      AnyFolder SubTalar = {};
+    };
+  };
+};

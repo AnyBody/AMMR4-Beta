@@ -1,0 +1,110 @@
+/** 
+  Class template for creating a model that can be used to calibrate the legs 
+*/
+#class_template LegCalibrationModel(Side, BodyModelRef) {
+  AnyComponentDefinition CDef = {};
+  
+  #var AnyFloat HipPositions;
+  #var AnyFloat KneePositions;
+  #var AnyFloat AnklePositions;
+  #var AnyFloat SubTalarPositions;
+  
+  AnyFolder &Pelvis = BodyModelRef.Trunk.Segments.PelvisSeg;
+  AnyFolder &Sacrum = BodyModelRef.Trunk.Segments.SacrumSeg;
+  AnyFolder &Thorax = BodyModelRef.Trunk.Segments.ThoraxSeg;
+  
+  AnySeg &L1 = BodyModelRef.Trunk.Segments.L1Seg;
+  AnySeg &L2 = BodyModelRef.Trunk.Segments.L2Seg;
+  AnySeg &L3 = BodyModelRef.Trunk.Segments.L3Seg;
+  AnySeg &L4 = BodyModelRef.Trunk.Segments.L4Seg;
+  AnySeg &L5 = BodyModelRef.Trunk.Segments.L5Seg;
+  
+  AnyFolder &LumbarJoints = BodyModelRef.Trunk.Joints.Lumbar;
+  
+  AnyFolder &LegSegments = BodyModelRef.Side.Leg.Seg;
+  AnyFolder &LegJoints = BodyModelRef.Side.Leg.Jnt;
+  
+  AnyFolder &Muscles = BodyModelRef.Side.Leg.Mus;
+  
+  // Constraints
+  AnyFixedRefFrame ground = {
+    AnyRefNode node = {
+      ARel = ..Pelvis.Axes0;
+      sRel = ..Pelvis.r0;
+    };
+  };
+  
+  AnyKinEq ThoraxFix = {
+    AnyKinMeasure& PelvisThoraxExtension = BodyModelRef.Interface.Trunk.PelvisThoraxExtension;
+    AnyKinMeasure& PelvisThoraxLateralBending = BodyModelRef.Interface.Trunk.PelvisThoraxLateralBending;
+    AnyKinMeasure& PelvisThoraxRotation = BodyModelRef.Interface.Trunk.PelvisThoraxRotation;
+  };
+  
+  AnyKinEq PelvisFix = {
+    AnyKinLinear Lin = {
+      AnyRefFrame &ground = ..ground.node;
+      AnyRefFrame &Pelvis = ..Pelvis;
+    };
+    AnyKinRotational Rot = {
+      Type = RotAxesAngles;
+      AnyRefFrame &ground = ..ground.node;
+      AnyRefFrame &Pelvis = ..Pelvis;
+    };
+  };
+  
+  AnyKinEqInterPolDriver Hip = {
+    AnyKinRotational &Spherical = .BodyModelRef.Interface.Side.HipFlexion.HipMeasure;
+    Type = PiecewiseLinear;
+    T = linspace(0,1,SizesOf(Data)[1]);
+    Data = .HipPositions * pi/180;
+    Reaction.Type = {Off, Off, Off};
+  };
+  
+  AnyKinEqInterPolDriver Knee = {
+    AnyKinMeasure& Hinge = .BodyModelRef.Interface.Side.KneeFlexion;
+    Type = PiecewiseLinear;
+    T = linspace(0,1,SizesOf(Data)[1]);
+    Data = {.KneePositions} * pi/180;
+    Reaction.Type = {Off};
+  };
+  
+  AnyKinEqInterPolDriver Ankle = {
+    AnyKinMeasure& Hinge = .BodyModelRef.Interface.Side.AnklePlantarFlexion;
+    Type = PiecewiseLinear;
+    T = linspace(0,1,SizesOf(Data)[1]);
+    Data = {.AnklePositions} * pi/180;
+    Reaction.Type = {Off};
+  };
+  
+  AnyKinEqInterPolDriver SubTalar = {
+    AnyKinMeasure& Hinge = .BodyModelRef.Interface.Side.SubTalarEversion;
+    Type = PiecewiseLinear;
+    T = linspace(0,1,SizesOf(Data)[1]);
+    Data = {.SubTalarPositions} * pi/180;
+    Reaction.Type = {Off};
+  };
+};
+
+
+/**
+  Class template for creating calibrationstudies with same settings
+ */
+#class_template LegCalibrationStudy(
+  __CLASS__ = AnyBodyCalibrationStudy,
+  BodyModelRef,
+  Side,
+) {
+  // Study settings
+  FiberAndTendonLengthAdjustment.CalibrateTendonAtMaxForceOnOff = Off;
+  Kinematics.SmallStepAssumptionOnOff = Off;
+  InitialConditions.SmallStepAssumptionOnOff = Off;
+  Kinematics.PosAnalysisOnlyOnOff = On;
+  InitialConditions.PosAnalysisOnlyOnOff = On;
+  
+  LegCalibrationModel ModelRef(Side=Side, BodyModelRef=BodyModelRef) = {
+    HipPositions = .HipPositions;
+    KneePositions = .KneePositions;
+    AnklePositions = .AnklePositions;
+    SubTalarPositions = .SubTalarPositions;
+  };
+};

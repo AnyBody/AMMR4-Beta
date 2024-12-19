@@ -1,0 +1,85 @@
+/** 
+  Folder containing the range of motion for the joints in the body model. The folder
+  also contains Predefined Positions for each joint. Can be used by calibration
+  studies. Hip positions are {Flexion/Extension, Abduction/Adduction,
+  Internal/External Rotation} angles Knee positions are {Flexion/Extension} angles
+  Ankle positions are {Plantar/Dorsi flexion, Inversion/Eversion} angles
+*/
+BodyModelFolderStructure RangeOfMotion() = {
+  Right.Leg.Hip = {
+    // TODO: bke - TBC DO we want more levels for the degree of freedom?
+    // Hip.ExternalRotation = {AnyFloat Min, AnyFloat Max}; ??
+    AnyVar MaxExternalRotationAngle ??= 30;
+    AnyVar MaxInternalRotationAngle ??= -30;
+    AnyVar MaxAdductionAngle ??= -15;
+    AnyVar MaxAdductionInExtensionAngle ??= -10;
+    AnyVar MaxAbductionAngle ??= 40;
+    AnyVar MaxFlexionAngle ??= 120;
+    AnyVar MaxExtensionAngle ??= -20;
+    AnyVar MaxExtensionInAdductionAngle ??= -10;
+    AnyVar MaxFlexionInAbductionAngle ??= 90;
+    AnyVar MinFlexionInAdduction ??= 5;  
+
+    // Hip positions
+    AnyFloat Neutral ??= { 0, 0, 0 }; 
+    AnyFloat InternallyRotated ??= { 0, 0, MaxInternalRotationAngle };
+    AnyFloat ExternallyRotated ??= { 0, 0, MaxExternalRotationAngle };
+    AnyFloat Adduction ??= { MinFlexionInAdduction,  MaxAdductionAngle, 0};
+    AnyFloat Flexed ??= { MaxFlexionAngle,  0, 0};
+    AnyFloat FlexedAndAdducted ??= { MaxFlexionAngle,  MaxAdductionAngle, 0};
+    AnyFloat FlexedAndAbducted ??= { MaxFlexionInAbductionAngle,  MaxAbductionAngle, 0};
+    AnyFloat Extended ??= { MaxExtensionAngle,  0, 0};
+    AnyFloat ExtendedAndAdducted ??= { MaxExtensionInAdductionAngle,  MaxAdductionInExtensionAngle, 0};
+    AnyFloat AbductedAndExternallyRotated ??= {0,  MaxAbductionAngle,  MaxExternalRotationAngle};
+  };
+
+  Right.Leg.Knee = {
+    AnyVar MaxFlexionAngle ??= 130;
+    AnyVar MaxExtensionAngle ??= -3;
+  };
+
+  Right.Leg.Ankle = {
+    AnyVar MaxPlantarFlexionAngle ??= 45;
+    AnyVar MaxDorsiFlexionAngle ??= -20;
+    AnyVar MaxInversionAngle ??= 15;
+    AnyVar MaxEversionAngle ??= -20;
+  };
+
+  // Left side is by default a mirror of the right side
+  Left.Leg.Hip = {
+    AnyVar MaxExternalRotationAngle ??= ...Right.Leg.Hip.MaxExternalRotationAngle;
+    AnyVar MaxInternalRotationAngle ??= ...Right.Leg.Hip.MaxInternalRotationAngle;
+    AnyVar MaxAdductionAngle ??= ...Right.Leg.Hip.MaxAdductionAngle;
+    AnyVar MaxAdductionInExtensionAngle ??= ...Right.Leg.Hip.MaxAdductionInExtensionAngle;
+    AnyVar MaxAbductionAngle ??= ...Right.Leg.Hip.MaxAbductionAngle;
+    AnyVar MaxFlexionAngle ??= ...Right.Leg.Hip.MaxFlexionAngle;
+    AnyVar MaxExtensionAngle ??= ...Right.Leg.Hip.MaxExtensionAngle;
+    AnyVar MaxExtensionInAdductionAngle ??= ...Right.Leg.Hip.MaxExtensionInAdductionAngle;
+    AnyVar MaxFlexionInAbductionAngle ??= ...Right.Leg.Hip.MaxFlexionInAbductionAngle;
+    AnyVar MinFlexionInAdduction ??= ...Right.Leg.Hip.MinFlexionInAdduction;
+
+    // Hip positions
+    AnyFloat Neutral ??= ...Right.Leg.Hip.Neutral;
+    AnyFloat InternallyRotated ??= ...Right.Leg.Hip.InternallyRotated;
+    AnyFloat ExternallyRotated ??= ...Right.Leg.Hip.ExternallyRotated;
+    AnyFloat Adduction ??= ...Right.Leg.Hip.Adduction;
+    AnyFloat Flexed ??= ...Right.Leg.Hip.Flexed;
+    AnyFloat FlexedAndAdducted ??= ...Right.Leg.Hip.FlexedAndAdducted;
+    AnyFloat FlexedAndAbducted ??= ...Right.Leg.Hip.FlexedAndAbducted;
+    AnyFloat Extended ??= ...Right.Leg.Hip.Extended;
+    AnyFloat ExtendedAndAdducted ??= ...Right.Leg.Hip.ExtendedAndAdducted;
+    AnyFloat AbductedAndExternallyRotated ??= ...Right.Leg.Hip.AbductedAndExternallyRotated;
+};
+
+  Left.Leg.Knee = {
+    AnyVar MaxFlexionAngle ??= ...Right.Leg.Knee.MaxFlexionAngle;
+    AnyVar MaxExtensionAngle ??= ...Right.Leg.Knee.MaxExtensionAngle;
+  };
+
+  Left.Leg.Ankle = {
+    AnyVar MaxPlantarFlexionAngle ??= ...Right.Leg.Ankle.MaxPlantarFlexionAngle;
+    AnyVar MaxDorsiFlexionAngle ??= ...Right.Leg.Ankle.MaxDorsiFlexionAngle;
+    AnyVar MaxInversionAngle ??= ...Right.Leg.Ankle.MaxInversionAngle;
+    AnyVar MaxEversionAngle ??= ...Right.Leg.Ankle.MaxEversionAngle;
+  };
+};
