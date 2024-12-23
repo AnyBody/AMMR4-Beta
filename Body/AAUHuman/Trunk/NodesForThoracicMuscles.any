@@ -109,7 +109,6 @@ Segments.T1Seg = {
   AnyRefNode C7Tip ={sRel= .Scale(.Data.T1.C7Tip_pos);};
   //Longi Colli node
   Right = {
-    AnyRefNode ICptR3C4Via2Node   = {sRel = .Scale(..Data.T1.Right.ICptR3C4Via2Node_pos);};
     AnyRefNode LongusColliT3C6Node = {sRel = .Scale(..Data.T1.Right.LongusColliT3C6Node_pos);};
     AnyRefNode LongusColliT2C5Node = {sRel = .Scale(..Data.T1.Right.LongusColliT2C5Node_pos);};
     AnyRefNode LongusColliT1C4Node = {sRel = .Scale(..Data.T1.Right.LongusColliT1C4Node_pos);};
@@ -127,7 +126,6 @@ Segments.T1Seg = {
     AnyRefNode RotatoresLongusT3T1Node = {sRel = ..Scale(..Data.Thorax.Right.RotatoresLongusT3T1InsNode_pos);};
   };
   Left = {
-    AnyRefNode ICptR3C4Via2Node   = {sRel = .Scale(..Data.T1.Left.ICptR3C4Via2Node_pos);};
     AnyRefNode LongusColliT3C6Node = {sRel = .Scale(..Data.T1.Left.LongusColliT3C6Node_pos);};
     AnyRefNode LongusColliT2C5Node = {sRel = .Scale(..Data.T1.Left.LongusColliT2C5Node_pos);};
     AnyRefNode LongusColliT1C4Node = {sRel = .Scale(..Data.T1.Left.LongusColliT1C4Node_pos);};

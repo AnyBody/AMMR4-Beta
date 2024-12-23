@@ -114,6 +114,7 @@ AnyFolder C4 = {
   
   AnyFolder Right = {
     AnyFloat ICptR3C4Node_pos        = {0.0151032, 0.535258, 0.0192697};
+    AnyFloat ICptR6C4Node_pos        = {0.0118247, 0.530065, 0.022127};
     AnyFloat LongusColliT1C4Node_pos = {0.04200000, 0.5250000, 0.008000000};
     AnyFloat LongusColliC7C3Node_pos = {0.04200000, 0.5250000, 0.008000000};
     AnyFloat LongusColliC6C2Node_pos = {0.04200000, 0.5250000, 0.008000000};
@@ -133,6 +134,7 @@ AnyFolder C4 = {
 
   AnyFolder Left = {
     AnyFloat ICptR3C4Node_pos        = .Right.ICptR3C4Node_pos * ..MirrorTransform;
+    AnyFloat ICptR6C4Node_pos        = .Right.ICptR6C4Node_pos * ..MirrorTransform;
     AnyFloat LongusColliT1C4Node_pos = .Right.LongusColliT1C4Node_pos * ..MirrorTransform;
     AnyFloat LongusColliC7C3Node_pos = .Right.LongusColliC7C3Node_pos * ..MirrorTransform;
     AnyFloat LongusColliC6C2Node_pos = .Right.LongusColliC6C2Node_pos * ..MirrorTransform;
@@ -267,7 +269,10 @@ AnyFolder C7 = {
   AnyFloat SuperiorEndplatePosteriorNode_pos = {0.017800, 0.480000, 0.000000};
   
   AnyFolder Right = {
-    AnyFloat ICptR3C4Via1Node_pos    = {-0.013, 0.495, 0.032};
+    AnyFloat ICptR3C4Via1Node_pos    = {-0.0145, 0.496, 0.032};
+    AnyFloat ICptR4C5Via1Node_pos    = {-0.0140, 0.495, 0.034};
+    AnyFloat ICptR5C6Via1Node_pos    = {-0.0135, 0.494, 0.036};
+    AnyFloat ICptR6C4Via1Node_pos    = {-0.0130, 0.493, 0.038};
     AnyFloat LongusColliT3C6Node_pos = {0.03000000, 0.4660000, 0.008000000};
     AnyFloat LongusColliT2C5Node_pos = {0.03000000, 0.4660000, 0.008000000};
     AnyFloat LongusColliT1C4Node_pos = {0.03000000, 0.4660000, 0.008000000};
@@ -294,6 +299,9 @@ AnyFolder C7 = {
 
   AnyFolder Left = {
     AnyFloat ICptR3C4Via1Node_pos    = .Right.ICptR3C4Via1Node_pos * ..MirrorTransform;
+    AnyFloat ICptR4C5Via1Node_pos    = .Right.ICptR4C5Via1Node_pos * ..MirrorTransform;
+    AnyFloat ICptR5C6Via1Node_pos    = .Right.ICptR5C6Via1Node_pos * ..MirrorTransform;
+    AnyFloat ICptR6C4Via1Node_pos    = .Right.ICptR6C4Via1Node_pos * ..MirrorTransform;
     AnyFloat LongusColliT3C6Node_pos = .Right.LongusColliT3C6Node_pos * ..MirrorTransform;
     AnyFloat LongusColliT2C5Node_pos = .Right.LongusColliT2C5Node_pos * ..MirrorTransform;
     AnyFloat LongusColliT1C4Node_pos = .Right.LongusColliT1C4Node_pos * ..MirrorTransform;
