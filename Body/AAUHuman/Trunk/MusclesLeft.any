@@ -1037,7 +1037,7 @@ MuscleGroup ErectorSpinae = {
     AnyRefNode &Via3 = ....Segments.Left.R3Seg.ICptR6C4Via3Node;
     AnyRefNode &Via4 = ....Segments.Left.R4Seg.ICptR6C4Via4Node;
     AnyRefNode &Via5 = ....Segments.Left.R5Seg.ICptR6C4Via5Node;
-    AnyRefNode &Ins = ....Segments.ThoraxSeg.Left.R6.ICptR6C4Node;
+    AnyRefNode &Ins = ....Segments.Left.R6Seg.ICptR6C4Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
