@@ -2,7 +2,7 @@ LegCalibrationStudy LegCalibration1Left(
   BodyModelRef=Main.HumanModel.BodyModel,
   Side=Left,
 ) = {
-  nStep = SizesOf(HipPositions)[1];
+  nStep = .LegCalibration1Right.nStep;
   
   MuscleArr = ObjSearch(
     &..BodyModel.Left.Leg.Mus,
@@ -19,10 +19,10 @@ LegCalibrationStudy LegCalibration1Left(
   RminMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMinDefault);
   RmaxMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMaxDefault);
   
-  AnyFloat HipPositions = .LegCalibration1Right.HipPositions;
-  AnyFloat KneePositions = .LegCalibration1Right.KneePositions;
-  AnyFloat AnklePositions = .LegCalibration1Right.AnklePositions;
-  AnyFloat SubTalarPositions = .LegCalibration1Right.SubTalarPositions;
+  AnyObjectPtrArray HipPositions = .LegCalibration1Right.HipPositions;
+  AnyObjectPtrArray KneePositions = .LegCalibration1Right.KneePositions;
+  AnyObjectPtrArray AnklePositions = .LegCalibration1Right.AnklePositions;
+  AnyObjectPtrArray SubTalarPositions = .LegCalibration1Right.SubTalarPositions;
 };
 
 
@@ -30,7 +30,7 @@ LegCalibrationStudy LegCalibration2Left(
   BodyModelRef=Main.HumanModel.BodyModel,
   Side=Left,
 ) = {
-  nStep = SizesOf(HipPositions)[1];
+  nStep = .LegCalibration2Right.nStep;
   
   MuscleArr = ObjSearch(
     &..BodyModel.Left.Leg.Mus,
@@ -47,17 +47,17 @@ LegCalibrationStudy LegCalibration2Left(
   RminMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMinDefault);
   RmaxMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMaxDefault);
   
-  AnyFloat HipPositions = .LegCalibration2Right.HipPositions;
-  AnyFloat KneePositions = .LegCalibration2Right.KneePositions;
-  AnyFloat AnklePositions = .LegCalibration2Right.AnklePositions;
-  AnyFloat SubTalarPositions = .LegCalibration2Right.SubTalarPositions;
+  AnyObjectPtrArray HipPositions = .LegCalibration2Right.HipPositions;
+  AnyObjectPtrArray KneePositions = .LegCalibration2Right.KneePositions;
+  AnyObjectPtrArray AnklePositions = .LegCalibration2Right.AnklePositions;
+  AnyObjectPtrArray SubTalarPositions = .LegCalibration2Right.SubTalarPositions;
 };
 
 LegCalibrationStudy LegCalibration3Left(
   BodyModelRef=Main.HumanModel.BodyModel,
   Side=Left,
 ) = {
-  nStep = SizesOf(HipPositions)[1];
+  nStep = .LegCalibration3Right.nStep;
   
   MuscleArr = ObjSearch(
     &..BodyModel.Left.Leg.Mus,
@@ -70,17 +70,17 @@ LegCalibrationStudy LegCalibration3Left(
   RminMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMinDefault);
   RmaxMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMaxDefault);
   
-  AnyFloat HipPositions = .LegCalibration3Right.HipPositions;
-  AnyFloat KneePositions = .LegCalibration3Right.KneePositions;
-  AnyFloat AnklePositions = .LegCalibration3Right.AnklePositions;
-  AnyFloat SubTalarPositions = .LegCalibration3Right.SubTalarPositions;
+  AnyObjectPtrArray HipPositions = .LegCalibration3Right.HipPositions;
+  AnyObjectPtrArray KneePositions = .LegCalibration3Right.KneePositions;
+  AnyObjectPtrArray AnklePositions = .LegCalibration3Right.AnklePositions;
+  AnyObjectPtrArray SubTalarPositions = .LegCalibration3Right.SubTalarPositions;
 };
 
 LegCalibrationStudy LegCalibration4Left(
   BodyModelRef=Main.HumanModel.BodyModel,
   Side=Left,
 ) = {
-  nStep = SizesOf(HipPositions)[1];
+  nStep = .LegCalibration4Right.nStep;
   
   MuscleArr = ObjSearch(
     &..BodyModel.Left.Leg.Mus,
@@ -93,17 +93,17 @@ LegCalibrationStudy LegCalibration4Left(
   RminMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMinDefault);
   RmaxMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMaxDefault);
   
-  AnyFloat HipPositions = .LegCalibration4Right.HipPositions;
-  AnyFloat KneePositions = .LegCalibration4Right.KneePositions;
-  AnyFloat AnklePositions = .LegCalibration4Right.AnklePositions;
-  AnyFloat SubTalarPositions = .LegCalibration4Right.SubTalarPositions;
+  AnyObjectPtrArray HipPositions = .LegCalibration4Right.HipPositions;
+  AnyObjectPtrArray KneePositions = .LegCalibration4Right.KneePositions;
+  AnyObjectPtrArray AnklePositions = .LegCalibration4Right.AnklePositions;
+  AnyObjectPtrArray SubTalarPositions = .LegCalibration4Right.SubTalarPositions;
 };
 
 LegCalibrationStudy LegCalibration5Left(
   BodyModelRef=Main.HumanModel.BodyModel,
   Side=Left,
 ) = {
-  nStep = SizesOf(HipPositions)[1];
+  nStep = .LegCalibration5Right.nStep;
   
   MuscleArr = ObjSearch(
     &..BodyModel.Left.Leg.Mus,
@@ -120,17 +120,17 @@ LegCalibrationStudy LegCalibration5Left(
   RminMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMinDefault);
   RmaxMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMaxDefault);
   
-  AnyFloat HipPositions = .LegCalibration5Right.HipPositions;
-  AnyFloat KneePositions = .LegCalibration5Right.KneePositions;
-  AnyFloat AnklePositions = .LegCalibration5Right.AnklePositions;
-  AnyFloat SubTalarPositions = .LegCalibration5Right.SubTalarPositions;
+  AnyObjectPtrArray HipPositions = .LegCalibration5Right.HipPositions;
+  AnyObjectPtrArray KneePositions = .LegCalibration5Right.KneePositions;
+  AnyObjectPtrArray AnklePositions = .LegCalibration5Right.AnklePositions;
+  AnyObjectPtrArray SubTalarPositions = .LegCalibration5Right.SubTalarPositions;
 };
 
 LegCalibrationStudy LegCalibration6Left(
   BodyModelRef=Main.HumanModel.BodyModel,
   Side=Left,
 ) = {
-  nStep = SizesOf(HipPositions)[1];
+  nStep = .LegCalibration6Right.nStep;
   
   MuscleArr = ObjSearch(
     &..BodyModel.Left.Leg.Mus,
@@ -144,17 +144,17 @@ LegCalibrationStudy LegCalibration6Left(
   RminMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMinDefault);
   RmaxMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMaxDefault);
   
-  AnyFloat HipPositions = .LegCalibration6Right.HipPositions;
-  AnyFloat KneePositions = .LegCalibration6Right.KneePositions;
-  AnyFloat AnklePositions = .LegCalibration6Right.AnklePositions;
-  AnyFloat SubTalarPositions = .LegCalibration6Right.SubTalarPositions;
+  AnyObjectPtrArray HipPositions = .LegCalibration6Right.HipPositions;
+  AnyObjectPtrArray KneePositions = .LegCalibration6Right.KneePositions;
+  AnyObjectPtrArray AnklePositions = .LegCalibration6Right.AnklePositions;
+  AnyObjectPtrArray SubTalarPositions = .LegCalibration6Right.SubTalarPositions;
 };
 
 LegCalibrationStudy LegCalibration7Left(
   BodyModelRef=Main.HumanModel.BodyModel,
   Side=Left,
 ) = {
-  nStep = SizesOf(HipPositions)[1];
+  nStep = .LegCalibration7Right.nStep;
   
   MuscleArr = ObjSearch(
     &..BodyModel.Left.Leg.Mus,
@@ -175,10 +175,10 @@ LegCalibrationStudy LegCalibration7Left(
   RminMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMinDefault);
   RmaxMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMaxDefault);
   
-  AnyFloat HipPositions = .LegCalibration7Right.HipPositions;
-  AnyFloat KneePositions = .LegCalibration7Right.KneePositions;
-  AnyFloat AnklePositions = .LegCalibration7Right.AnklePositions;
-  AnyFloat SubTalarPositions = .LegCalibration7Right.SubTalarPositions;
+  AnyObjectPtrArray HipPositions = .LegCalibration7Right.HipPositions;
+  AnyObjectPtrArray KneePositions = .LegCalibration7Right.KneePositions;
+  AnyObjectPtrArray AnklePositions = .LegCalibration7Right.AnklePositions;
+  AnyObjectPtrArray SubTalarPositions = .LegCalibration7Right.SubTalarPositions;
 };
 
 CalibrationSequence = {

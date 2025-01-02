@@ -4,10 +4,10 @@
 #class_template LegCalibrationModel(Side, BodyModelRef) {
   AnyComponentDefinition CDef = {};
   
-  #var AnyFloat HipPositions;
-  #var AnyFloat KneePositions;
-  #var AnyFloat AnklePositions;
-  #var AnyFloat SubTalarPositions;
+  #var AnyObjectPtr HipPositions;
+  #var AnyObjectPtr KneePositions;
+  #var AnyObjectPtr AnklePositions;
+  #var AnyObjectPtr SubTalarPositions;
   
   AnyFolder &Pelvis = BodyModelRef.Trunk.Segments.PelvisSeg;
   AnyFolder &Sacrum = BodyModelRef.Trunk.Segments.SacrumSeg;
@@ -56,32 +56,40 @@
     AnyKinRotational &Spherical = .BodyModelRef.Interface.Side.HipFlexion.HipMeasure;
     Type = PiecewiseLinear;
     T = linspace(0,1,SizesOf(Data)[1]);
-    Data = .HipPositions * pi/180;
+    Data = Obj2Num(.HipPositions)' * pi/180;
     Reaction.Type = {Off, Off, Off};
+    AnyInt expect_nPos_to_match_nStep = warn(eqfun(NumElemOf(T), ..nStep), strformat("The number of calibration positions (Data) in the: " + NameOf(ObjGetParent(0)) + " driver does not match the number of positions (nStep) in the study."));
+    
   };
   
   AnyKinEqInterPolDriver Knee = {
     AnyKinMeasure& Hinge = .BodyModelRef.Interface.Side.KneeFlexion;
     Type = PiecewiseLinear;
     T = linspace(0,1,SizesOf(Data)[1]);
-    Data = {.KneePositions} * pi/180;
+    Data = {Obj2Num(.KneePositions)} * pi/180;
     Reaction.Type = {Off};
+    AnyInt expect_nPos_to_match_nStep = warn(eqfun(NumElemOf(T), ..nStep), strformat("The number of calibration positions (Data) in the: " + NameOf(ObjGetParent(0)) + " driver does not match the number of positions (nStep) in the study."));
+    
   };
   
   AnyKinEqInterPolDriver Ankle = {
     AnyKinMeasure& Hinge = .BodyModelRef.Interface.Side.AnklePlantarFlexion;
     Type = PiecewiseLinear;
     T = linspace(0,1,SizesOf(Data)[1]);
-    Data = {.AnklePositions} * pi/180;
+    Data = {Obj2Num(.AnklePositions)} * pi/180;
     Reaction.Type = {Off};
+    AnyInt expect_nPos_to_match_nStep = warn(eqfun(NumElemOf(T), ..nStep), strformat("The number of calibration positions (Data) in the: " + NameOf(ObjGetParent(0)) + " driver does not match the number of positions (nStep) in the study."));
+    
   };
   
   AnyKinEqInterPolDriver SubTalar = {
     AnyKinMeasure& Hinge = .BodyModelRef.Interface.Side.SubTalarEversion;
     Type = PiecewiseLinear;
     T = linspace(0,1,SizesOf(Data)[1]);
-    Data = {.SubTalarPositions} * pi/180;
+    Data = {Obj2Num(.SubTalarPositions)} * pi/180;
     Reaction.Type = {Off};
+    AnyInt expect_nPos_to_match_nStep = warn(eqfun(NumElemOf(T), ..nStep), strformat("The number of calibration positions (Data) in the: " + NameOf(ObjGetParent(0)) + " driver does not match the number of positions (nStep) in the study."));
+    
   };
 };
 
@@ -108,3 +116,4 @@
     SubTalarPositions = .SubTalarPositions;
   };
 };
+
