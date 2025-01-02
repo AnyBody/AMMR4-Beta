@@ -34,11 +34,13 @@ BodyModelFolderStructure RangeOfMotion() = {
   };
 
   Right.Leg.Knee = {
+    AnyVar Neutral ??= 0;
     AnyVar MaxFlexionAngle ??= 130;
     AnyVar MaxExtensionAngle ??= -3;
   };
 
   Right.Leg.Ankle = {
+    AnyVar Neutral ??= 0;
     AnyVar MaxPlantarFlexionAngle ??= 45;
     AnyVar MaxDorsiFlexionAngle ??= -20;
     AnyVar MaxInversionAngle ??= 15;
@@ -72,11 +74,13 @@ BodyModelFolderStructure RangeOfMotion() = {
 };
 
   Left.Leg.Knee = {
+    AnyVar Neutral ??= ...Right.Leg.Knee.Neutral;
     AnyVar MaxFlexionAngle ??= ...Right.Leg.Knee.MaxFlexionAngle;
     AnyVar MaxExtensionAngle ??= ...Right.Leg.Knee.MaxExtensionAngle;
   };
 
   Left.Leg.Ankle = {
+    AnyVar Neutral ??= ...Right.Leg.Ankle.Neutral;
     AnyVar MaxPlantarFlexionAngle ??= ...Right.Leg.Ankle.MaxPlantarFlexionAngle;
     AnyVar MaxDorsiFlexionAngle ??= ...Right.Leg.Ankle.MaxDorsiFlexionAngle;
     AnyVar MaxInversionAngle ??= ...Right.Leg.Ankle.MaxInversionAngle;
