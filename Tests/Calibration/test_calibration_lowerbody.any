@@ -13,7 +13,6 @@
 //ignore_errors = ['Currently, no room for tendon']
 //fatal_warnings = [
 //    "Penetration of surface",
-//    "The tendon/fiber length was calibrated but with issues",
 //]
 
 #include "libdef.any"
@@ -31,14 +30,9 @@
 
 #define BM_LEG_MUSCLES_RIGHT _MUSCLES_3E_HILL_
 
-#define BM_LEG_MUSCLES_LEFT _MUSCLES_3E_HILL_
-#define BM_LEG_LEFT ON
+#define BM_LEG_LEFT OFF
 #define BM_ARM_RIGHT OFF
 #define BM_ARM_LEFT OFF
-
-#if BM_CALIBRATION_TYPE == 3
-#define BM_MANNEQUIN_DRIVER_HIP_FLEXION_RIGHT OFF
-#endif
 
 
 Main = 
@@ -46,11 +40,25 @@ Main =
   
   #include "<ANYBODY_PATH_BODY>/HumanModel.any"  
   
-  AnyOperation& RunTest = Main.HumanModel.Calibration.CalibrationSequence;
+  AnyOperation& RunTest = RunAnalysis;
+  AnyOperationSequence RunAnalysis = {
+    AnyOperation& Calibration = Main.HumanModel.Calibration.CalibrationSequence;
+    
+    #if (BM_CALIBRATION_TYPE == 3) & (BM_LEG_MODEL == _LEG_MODEL_TLEM2_)
+      AnyOperation& HipFlexExtRoM = Main.HipFlexExtRoM.InverseDynamics;
+      AnyOperation& HipAddAbdRoM = Main.HipAddAbdRoM.InverseDynamics;
+      AnyOperation& HipRotRoM = Main.HipRotRoM.InverseDynamics;
+      AnyOperation& KneeFlexExtRoM = Main.KneeFlexExtRoM.InverseDynamics;
+      AnyOperation& AnkleFlexRoM = Main.AnkleFlexRoM.InverseDynamics;
+      AnyOperation& AnkleEverInverRoM = Main.AnkleEverInverRoM.InverseDynamics;
+    #endif
+  };   
   
-  #if BM_CALIBRATION_TYPE == 3
-  AnyBodyStudy PostCalibrationStudy = {
-    nStep = 100;
+  /// Template to create a study for the leg - user must provide a driver.
+  #class_template RoMStudy(__CLASS__ = AnyBodyStudy) {
+    Kinematics.SolverType = KinSolOverDeterminate;
+    InitialConditions.SolverType = Kinematics.SolverType;
+    nStep = 5;
     Gravity = {0, 0, 0};
     InverseDynamics.Criterion.UpperBoundOnOff = Off;
     AnyFolder &Model = Main.HumanModel.BodyModelWithDefaultDrivers;
@@ -79,7 +87,11 @@ Main =
         AnyRefFrame &Pelvis = Main.HumanModel.BodyModel.Trunk.Segments.PelvisSeg;
       };
     };
-    
+  };
+
+  
+  #if BM_CALIBRATION_TYPE == 3
+  RoMStudy HipFlexExtRoM() = {
     AnyKinEqInterPolDriver Hip = {
       AnyKinMeasure &measure = Main.HumanModel.BodyModel.Interface.Right.HipFlexion;
       Type = PiecewiseLinear;
@@ -94,6 +106,82 @@ Main =
       Reaction.Type = {Off};
     };
   };
+  RoMStudy HipAddAbdRoM() = {    
+    AnyKinEqInterPolDriver Hip = {
+      AnyKinMeasure &measure = Main.HumanModel.BodyModel.Interface.Right.HipAbduction;
+      Type = PiecewiseLinear;
+      T = linspace(0,1,.nStep);
+      Data = {
+        linspace(
+        Main.HumanModel.Calibration.RangeOfMotion.Right.Leg.Hip.MaxAdductionAngle,
+        Main.HumanModel.Calibration.RangeOfMotion.Right.Leg.Hip.MaxAbductionAngle,
+        .nStep
+        ) * pi/180
+      };
+      Reaction.Type = {Off};
+    };
+  };
+  RoMStudy HipRotRoM() = {    
+    AnyKinEqInterPolDriver Hip = {
+      AnyKinMeasure &measure = Main.HumanModel.BodyModel.Interface.Right.HipExternalRotation;
+      Type = PiecewiseLinear;
+      T = linspace(0,1,.nStep);
+      Data = {
+        linspace(
+        Main.HumanModel.Calibration.RangeOfMotion.Right.Leg.Hip.MaxExternalRotationAngle,
+        Main.HumanModel.Calibration.RangeOfMotion.Right.Leg.Hip.MaxInternalRotationAngle,
+        .nStep
+        ) * pi/180
+      };
+      Reaction.Type = {Off};
+    };
+  };
+  RoMStudy KneeFlexExtRoM() = {    
+    AnyKinEqInterPolDriver Knee = {
+      AnyKinMeasure &measure = Main.HumanModel.BodyModel.Interface.Right.KneeFlexion;
+      Type = PiecewiseLinear;
+      T = linspace(0,1,.nStep);
+      Data = {
+        linspace(
+        Main.HumanModel.Calibration.RangeOfMotion.Right.Leg.Knee.MaxExtensionAngle,
+        Main.HumanModel.Calibration.RangeOfMotion.Right.Leg.Knee.MaxFlexionAngle,
+        .nStep
+        ) * pi/180
+      };
+      Reaction.Type = {Off};
+    };
+  };
+  RoMStudy AnkleFlexRoM() = {    
+    AnyKinEqInterPolDriver Ankle = {
+      AnyKinMeasure &measure = Main.HumanModel.BodyModel.Interface.Right.AnklePlantarFlexion;
+      Type = PiecewiseLinear;
+      T = linspace(0,1,.nStep);
+      Data = {
+        linspace(
+        Main.HumanModel.Calibration.RangeOfMotion.Right.Leg.Ankle.MaxPlantarFlexionAngle,
+        Main.HumanModel.Calibration.RangeOfMotion.Right.Leg.Ankle.MaxDorsiFlexionAngle,
+        .nStep
+        ) * pi/180
+      };
+      Reaction.Type = {Off};
+    };
+  };
+  RoMStudy AnkleEverInverRoM() = {    
+    AnyKinEqInterPolDriver Ankle = {
+      AnyKinMeasure &measure = Main.HumanModel.BodyModel.Interface.Right.SubTalarEversion;
+      Type = PiecewiseLinear;
+      T = linspace(0,1,.nStep);
+      Data = {
+        linspace(
+        Main.HumanModel.Calibration.RangeOfMotion.Right.Leg.Ankle.MaxEversionAngle,
+        Main.HumanModel.Calibration.RangeOfMotion.Right.Leg.Ankle.MaxInversionAngle,
+        .nStep
+        ) * pi/180
+      };
+      Reaction.Type = {Off};
+    };
+  };
+
   #endif
 };
 
