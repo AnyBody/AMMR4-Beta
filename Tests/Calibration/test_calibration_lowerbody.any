@@ -90,7 +90,7 @@ Main =
   };
 
   
-  #if BM_CALIBRATION_TYPE == 3
+  #if (BM_CALIBRATION_TYPE == 3) & (BM_LEG_MODEL == _LEG_MODEL_TLEM2_)
   RoMStudy HipFlexExtRoM() = {
     AnyKinEqInterPolDriver Hip = {
       AnyKinMeasure &measure = Main.HumanModel.BodyModel.Interface.Right.HipFlexion;
