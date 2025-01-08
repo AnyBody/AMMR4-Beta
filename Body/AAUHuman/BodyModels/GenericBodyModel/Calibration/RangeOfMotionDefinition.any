@@ -25,6 +25,7 @@ BodyModelFolderStructure RangeOfMotion() = {
     AnyFloat InternallyRotated ??= { 0, 0, MaxInternalRotationAngle };
     AnyFloat ExternallyRotated ??= { 0, 0, MaxExternalRotationAngle };
     AnyFloat Adduction ??= { MinFlexionInAdduction,  MaxAdductionAngle, 0};
+    AnyFloat Abduction ??= { 0,  MaxAbductionAngle, 0};
     AnyFloat Flexed ??= { MaxFlexionAngle,  0, 0};
     AnyFloat FlexedAndAdducted ??= { MaxFlexionAngle,  MaxAdductionAngle, 0};
     AnyFloat FlexedAndAbducted ??= { MaxFlexionInAbductionAngle,  MaxAbductionAngle, 0};
