@@ -21,6 +21,36 @@ BodyModelFolderStructure RangeOfMotion() = {
     AnyVar MaxPelvisSacrumLateralBendingAngle ??= ...BodyModel.Trunk.Data.RangeOfMotion.MaxPelvisSacrumLateralBendingAngle;
     AnyVar MinPelvisSacrumLateralBendingAngle ??= ...BodyModel.Trunk.Data.RangeOfMotion.MinPelvisSacrumLateralBendingAngle;
   };
+  
+  #if BM_ARM_RIGHT
+    Right.ShoulderArm.Shoulder = {
+      AnyVar MaxGlenohumeralFlexionAngle ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Shoulder.MaxGlenohumeralFlexionAngle;
+      AnyVar MaxGlenohumeralExtensionAngle ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Shoulder.MaxGlenohumeralExtensionAngle;
+      AnyVar MaxGlenohumeralAbductionAngle ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Shoulder.MaxGlenohumeralAbductionAngle;
+      AnyVar MaxGlenohumeralAdductionAngle ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Shoulder.MaxGlenohumeralAdductionAngle;
+      AnyVar MaxGlenohumeralExternalRotationAngle ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Shoulder.MaxGlenohumeralExternalRotationAngle;
+      AnyVar MaxGlenohumeralInternalRotationAngle ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Shoulder.MaxGlenohumeralInternalRotationAngle;
+      AnyVar MaxScapulaClaviculaElevationAngle ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Shoulder.MaxScapulaClaviculaElevationAngle;
+      AnyVar MaxScapulaClaviculaDepressionAngle ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Shoulder.MaxScapulaClaviculaDepressionAngle;
+      AnyVar MaxScapulaClaviculaProtractionAngle ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Shoulder.MaxScapulaClaviculaProtractionAngle;
+      AnyVar MaxScapulaClaviculaRetractionAngle ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Shoulder.MaxScapulaClaviculaRetractionAngle;
+    };  
+  
+    Right.ShoulderArm.Elbow = {
+      AnyVar MaxFlexionAngle ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Elbow.MaxFlexionAngle;
+      AnyVar MaxExtensionAngle ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Elbow.MaxExtensionAngle;
+      AnyVar MaxPronationAngle ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Elbow.MaxPronationAngle;
+      AnyVar MaxSupinationAngle ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Elbow.MaxSupinationAngle;
+    };
+    
+    Right.ShoulderArm.Wrist = {
+      AnyVar MaxFlexionAngle ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Wrist.MaxFlexionAngle;
+      AnyVar MaxExtensionAngle ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Wrist.MaxExtensionAngle;
+      AnyVar MaxAbductionAngle ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Wrist.MaxAbductionAngle;
+      AnyVar MaxAdductionAngle ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Wrist.MaxAdductionAngle;
+    };
+  #endif
+    
   #if BM_LEG_RIGHT
     Right.Leg.Hip = {
       AnyVar MaxExternalRotationAngle ??= .....BodyModel.Right.Leg.Data.RangeOfMotion.Hip.MaxExternalRotationAngle;
@@ -60,6 +90,35 @@ BodyModelFolderStructure RangeOfMotion() = {
       AnyVar MaxDorsiFlexionAngle ??= .....BodyModel.Right.Leg.Data.RangeOfMotion.Ankle.MaxDorsiFlexionAngle;
       AnyVar MaxInversionAngle ??= .....BodyModel.Right.Leg.Data.RangeOfMotion.Ankle.MaxInversionAngle;
       AnyVar MaxEversionAngle ??= .....BodyModel.Right.Leg.Data.RangeOfMotion.Ankle.MaxEversionAngle;
+    };
+  #endif
+
+  #if BM_ARM_LEFT
+    Left.ShoulderArm.Shoulder = {
+      AnyVar MaxGlenohumeralFlexionAngle ??= ...Right.ShoulderArm.Shoulder.MaxGlenohumeralFlexionAngle;
+      AnyVar MaxGlenohumeralExtensionAngle ??= ...Right.ShoulderArm.Shoulder.MaxGlenohumeralExtensionAngle;
+      AnyVar MaxGlenohumeralAbductionAngle ??= ...Right.ShoulderArm.Shoulder.MaxGlenohumeralAbductionAngle;
+      AnyVar MaxGlenohumeralAdductionAngle ??= ...Right.ShoulderArm.Shoulder.MaxGlenohumeralAdductionAngle;
+      AnyVar MaxGlenohumeralExternalRotationAngle ??= ...Right.ShoulderArm.Shoulder.MaxGlenohumeralExternalRotationAngle;
+      AnyVar MaxGlenohumeralInternalRotationAngle ??= ...Right.ShoulderArm.Shoulder.MaxGlenohumeralInternalRotationAngle;
+      AnyVar MaxScapulaClaviculaElevationAngle ??= ...Right.ShoulderArm.Shoulder.MaxScapulaClaviculaElevationAngle;
+      AnyVar MaxScapulaClaviculaDepressionAngle ??= ...Right.ShoulderArm.Shoulder.MaxScapulaClaviculaDepressionAngle;
+      AnyVar MaxScapulaClaviculaProtractionAngle ??= ...Right.ShoulderArm.Shoulder.MaxScapulaClaviculaProtractionAngle;
+      AnyVar MaxScapulaClaviculaRetractionAngle ??= ...Right.ShoulderArm.Shoulder.MaxScapulaClaviculaRetractionAngle;
+    };  
+  
+    Left.ShoulderArm.Elbow = {
+      AnyVar MaxFlexionAngle ??= ...Right.ShoulderArm.Elbow.MaxFlexionAngle;
+      AnyVar MaxExtensionAngle ??= ...Right.ShoulderArm.Elbow.MaxExtensionAngle;
+      AnyVar MaxPronationAngle ??= ...Right.ShoulderArm.Elbow.MaxPronationAngle;
+      AnyVar MaxSupinationAngle ??= ...Right.ShoulderArm.Elbow.MaxSupinationAngle;
+    };
+    
+    Left.ShoulderArm.Wrist = {
+      AnyVar MaxFlexionAngle ??= ...Right.ShoulderArm.Wrist.MaxFlexionAngle;
+      AnyVar MaxExtensionAngle ??= ...Right.ShoulderArm.Wrist.MaxExtensionAngle;
+      AnyVar MaxAbductionAngle ??= ...Right.ShoulderArm.Wrist.MaxAbductionAngle;
+      AnyVar MaxAdductionAngle ??= ...Right.ShoulderArm.Wrist.MaxAdductionAngle;
     };
   #endif
   

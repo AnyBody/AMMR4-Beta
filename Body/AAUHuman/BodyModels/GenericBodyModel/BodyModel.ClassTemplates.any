@@ -5,7 +5,11 @@
   AnyFolder Trunk = {
   };
   AnyFolder Right = {
-    AnyFolder ShoulderArm = {};
+    AnyFolder ShoulderArm = {
+      AnyFolder Shoulder = {};
+      AnyFolder Elbow = {};
+      AnyFolder Wrist = {};
+    };
     AnyFolder Leg = {
       AnyFolder Hip = {};
       AnyFolder Knee = {};
@@ -14,7 +18,11 @@
     };
   };
   AnyFolder Left = {
-    AnyFolder ShoulderArm = {};
+    AnyFolder ShoulderArm = {
+      AnyFolder Shoulder = {};
+      AnyFolder Elbow = {};
+      AnyFolder Wrist = {};
+    };
     AnyFolder Leg = {
       AnyFolder Hip = {};
       AnyFolder Knee = {};
