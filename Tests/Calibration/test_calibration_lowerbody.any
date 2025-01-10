@@ -18,16 +18,14 @@
 #include "libdef.any"
 
 #ifndef TEST_NAME
-#define BM_LEG_MODEL 2
-#define BM_CALIBRATION_TYPE 3
-#define TEST_NAME "test_calibration_lowerbody.any_1"   
+  #define BM_LEG_MODEL 2
+  #define BM_CALIBRATION_TYPE 3
+  #define TEST_NAME "test_calibration_lowerbody.any_1"   
 #endif
 
 
 #define BM_SCALING _SCALING_NONE_
-// comment
 #define BM_LEG_TRUNK_INTERFACE _MORPH_TRUNK_TO_LEG_
-
 #define BM_LEG_MUSCLES_RIGHT _MUSCLES_3E_HILL_
 
 #define BM_LEG_LEFT OFF

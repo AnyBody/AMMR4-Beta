@@ -2,7 +2,6 @@
 Right = {
 
   AnyFolder Leg = {    
-    AnyVar Sign = 1;
 
     #ifdef SignRef
       #undef SignRef
@@ -16,6 +15,7 @@ Right = {
         AnyFolder &STL = ..Seg.STL;
         AnyFolder &StandardParameters = .....ScalingLaw.StandardParameters.Right;
       };
+      #include "<BM_LEG_TLEM_PATH>/rangeOfMotion.any"
       AnyFolder MassDistribution = {}; ///< To be implemented!
     };
     
@@ -41,9 +41,7 @@ Right = {
     AnyFolder &MassScaling = ...Scaling.MassScaling.Right;
     AnyFolder &FiberLengthScaling = ...Scaling.FiberLengthScaling.Right;
     AnyFolder &StrengthScaling = ...Scaling.StrengthScaling.Right;
-    
-    //AnyRefFrame &HipNodeRef = ..Trunk.Segments.PelvisSeg.Right;
-    
+        
     AnyFolder BonesOpacity = {
       AnyVar Foot = Main.DrawSettings.BonesOpacity.RightFoot;
       AnyVar Shank = Main.DrawSettings.BonesOpacity.RightShank;
@@ -75,7 +73,8 @@ Right = {
         #include "<BM_LEG_TLEM_PATH>\LegMoments.any"
       };            
     #endif
-
+    
+    AnyVar Sign = 1;
   }; //End Leg
 };
 

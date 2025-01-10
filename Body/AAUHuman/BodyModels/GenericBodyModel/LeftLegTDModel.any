@@ -2,7 +2,7 @@
 Left = {
   
   AnyFolder Leg = {  
-    AnyVar Sign = -1;
+    
 
     #ifdef SignRef
       #undef SignRef
@@ -15,6 +15,7 @@ Left = {
         AnyFolder &STL = ..Seg.STL;
         AnyFolder &StandardParameters = .....ScalingLaw.StandardParameters.Right;
       };
+      #include "<BM_LEG_TLEM_PATH>/rangeOfMotion.any"
       AnyFolder MassDistribution = {}; ///< To be implemented!
     };
     
@@ -71,6 +72,7 @@ Left = {
       };            
     #endif
     
+    AnyVar Sign = -1;
   }; //End Leg
 };
 
