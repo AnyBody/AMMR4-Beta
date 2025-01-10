@@ -15,7 +15,11 @@ Right = {
         AnyFolder &STL = ..Seg.STL;
         AnyFolder &StandardParameters = .....ScalingLaw.StandardParameters.Right;
       };
-      #include "<BM_LEG_TLEM_PATH>/rangeOfMotion.any"
+
+      #if BM_LEG_MODEL == _LEG_MODEL_TLEM2_
+        #include "<BM_LEG_TLEM_PATH>/rangeOfMotion.any"
+      #endif
+      
       AnyFolder MassDistribution = {}; ///< To be implemented!
     };
     

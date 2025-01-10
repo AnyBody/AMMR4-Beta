@@ -84,8 +84,7 @@ AnyFolder Calibration={
     #include "../../Arm/Calibration/CalibrationSequenceRight2Par.any"
   #endif
   #if BM_CALIBRATION_TYPE == _EXPERIMENTAL_CALIBRATION_TYPE_2PAR_
-    // 2Par PEFactor will be set here
-    #include "../../Arm/Calibration/CalibrationSequenceRight2Par.any"
+
   #endif
   #if BM_CALIBRATION_TYPE == _CALIBRATION_TYPE_CUSTOM_
     // Allow user to implement their own calibration
@@ -101,8 +100,7 @@ AnyFolder Calibration={
     #include "../../Arm/Calibration/CalibrationSequenceLeft2Par.any"
   #endif
   #if BM_CALIBRATION_TYPE == _EXPERIMENTAL_CALIBRATION_TYPE_2PAR_
-    // 2Par PEFactor will be set here
-    #include "../../Arm/Calibration/CalibrationSequenceLeft2Par.any"
+
   #endif
   #if BM_CALIBRATION_TYPE == _CALIBRATION_TYPE_CUSTOM_
     // Allow user to implement their own calibration
@@ -118,8 +116,7 @@ AnyFolder Calibration={
     #include "../../Trunk/Calibration/MuscleCalibrationSequence2Par.any"
   #endif
   #if BM_CALIBRATION_TYPE == _EXPERIMENTAL_CALIBRATION_TYPE_2PAR_
-    // 2Par PEFactor will be set here
-    #include "../../Trunk/Calibration/MuscleCalibrationSequence2Par.any"
+
   #endif
   #if BM_CALIBRATION_TYPE == _CALIBRATION_TYPE_CUSTOM_
     // Allow user to implement their own calibration
