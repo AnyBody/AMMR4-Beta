@@ -1,11 +1,26 @@
 /** 
-  Folder containing the range of motion for the joints in the body model. The folder
-  also contains Predefined Positions for each joint. Can be used by calibration
-  studies. Hip positions are {Flexion/Extension, Abduction/Adduction,
-  Internal/External Rotation} angles Knee positions are {Flexion/Extension} angles
-  Ankle positions are {Plantar/Dorsi flexion, Inversion/Eversion} angles
+  Folder containing the range of motion used for calibration.
+  By Default the values are taken from the data defined in the BodyModel.
 */
 BodyModelFolderStructure RangeOfMotion() = {
+  Trunk = {
+    AnyVar MaxSkullThoraxFlexionAngle ??= ...BodyModel.Trunk.Data.RangeOfMotion.MaxSkullThoraxFlexionAngle;
+    AnyVar MaxSkullThoraxExtensionAngle ??= ...BodyModel.Trunk.Data.RangeOfMotion.MaxSkullThoraxExtensionAngle;
+    AnyVar MaxSkullThoraxLateralBendingAngle ??= ...BodyModel.Trunk.Data.RangeOfMotion.MaxSkullThoraxLateralBendingAngle;
+    AnyVar MinSkullThoraxLateralBendingAngle ??= ...BodyModel.Trunk.Data.RangeOfMotion.MinSkullThoraxLateralBendingAngle;
+    AnyVar MaxSkullThoraxAxialRotationAngle ??= ...BodyModel.Trunk.Data.RangeOfMotion.MaxSkullThoraxAxialRotationAngle;
+    AnyVar MinSkullThoraxAxialRotationAngle ??= ...BodyModel.Trunk.Data.RangeOfMotion.MinSkullThoraxAxialRotationAngle;
+    AnyVar MaxPelvisThoraxFlexionAngle ??= ...BodyModel.Trunk.Data.RangeOfMotion.MaxPelvisThoraxFlexionAngle;
+    AnyVar MaxPelvisThoraxExtensionAngle ??= ...BodyModel.Trunk.Data.RangeOfMotion.MaxPelvisThoraxExtensionAngle;
+    AnyVar MaxPelvisThoraxLateralBendingAngle ??= ...BodyModel.Trunk.Data.RangeOfMotion.MaxPelvisThoraxLateralBendingAngle;
+    AnyVar MinPelvisThoraxLateralBendingAngle ??= ...BodyModel.Trunk.Data.RangeOfMotion.MinPelvisThoraxLateralBendingAngle;
+    AnyVar MaxPelvisThoraxAxialRotationAngle ??= ...BodyModel.Trunk.Data.RangeOfMotion.MaxPelvisThoraxAxialRotationAngle;
+    AnyVar MinPelvisThoraxAxialRotationAngle ??= ...BodyModel.Trunk.Data.RangeOfMotion.MinPelvisThoraxAxialRotationAngle;
+    AnyVar MaxPelvisSacrumFlexionAngle ??= ...BodyModel.Trunk.Data.RangeOfMotion.MaxPelvisSacrumFlexionAngle;
+    AnyVar MaxPelvisSacrumExtensionAngle ??= ...BodyModel.Trunk.Data.RangeOfMotion.MaxPelvisSacrumExtensionAngle;
+    AnyVar MaxPelvisSacrumLateralBendingAngle ??= ...BodyModel.Trunk.Data.RangeOfMotion.MaxPelvisSacrumLateralBendingAngle;
+    AnyVar MinPelvisSacrumLateralBendingAngle ??= ...BodyModel.Trunk.Data.RangeOfMotion.MinPelvisSacrumLateralBendingAngle;
+  };
   #if BM_LEG_RIGHT
     Right.Leg.Hip = {
       AnyVar MaxExternalRotationAngle ??= .....BodyModel.Right.Leg.Data.RangeOfMotion.Hip.MaxExternalRotationAngle;
