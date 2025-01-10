@@ -42,15 +42,22 @@ Main =
   
   AnyOperation& RunTest = RunAnalysis;
   AnyOperationSequence RunAnalysis = {
+    #if (BM_CALIBRATION_TYPE == 3) & (BM_LEG_MODEL == _LEG_MODEL_TLEM2_)
+    AnyOperation& StorePCSABeforeCal = .StrengthTest.SetPCSA;
+    #endif
+
     AnyOperation& Calibration = Main.HumanModel.Calibration.CalibrationSequence;
     
     #if (BM_CALIBRATION_TYPE == 3) & (BM_LEG_MODEL == _LEG_MODEL_TLEM2_)
-      AnyOperation& HipFlexExtRoM = Main.HipFlexExtRoM.InverseDynamics;
-      AnyOperation& HipAddAbdRoM = Main.HipAddAbdRoM.InverseDynamics;
-      AnyOperation& HipRotRoM = Main.HipRotRoM.InverseDynamics;
-      AnyOperation& KneeFlexExtRoM = Main.KneeFlexExtRoM.InverseDynamics;
-      AnyOperation& AnkleFlexRoM = Main.AnkleFlexRoM.InverseDynamics;
-      AnyOperation& AnkleEverInverRoM = Main.AnkleEverInverRoM.InverseDynamics;
+    AnyOperation& UpdatePCSAValues = .StrengthTest.UpdateValues;
+    AnyOperation& SetTestTrigger = .StrengthTest.SetTestTrigger;
+    AnyOperation& RunTest = .StrengthTest.UpdateValues;
+    AnyOperation& HipFlexExtRoM = Main.HipFlexExtRoM.InverseDynamics;
+    AnyOperation& HipAddAbdRoM = Main.HipAddAbdRoM.InverseDynamics;
+    AnyOperation& HipRotRoM = Main.HipRotRoM.InverseDynamics;
+    AnyOperation& KneeFlexExtRoM = Main.KneeFlexExtRoM.InverseDynamics;
+    AnyOperation& AnkleFlexRoM = Main.AnkleFlexRoM.InverseDynamics;
+    AnyOperation& AnkleEverInverRoM = Main.AnkleEverInverRoM.InverseDynamics;
     #endif
   };   
   
@@ -88,9 +95,45 @@ Main =
       };
     };
   };
-
+  
   
   #if (BM_CALIBRATION_TYPE == 3) & (BM_LEG_MODEL == _LEG_MODEL_TLEM2_)
+  
+  AnyFolder StrengthTest = {
+    AnyOperationMacro UpdateValues = {
+      MacroStr = {"classoperation Main " + strquote("Update Values")};
+    };
+    AnyOperationSetValue SetTestTrigger = {
+      AnyInt dummy = 1;
+      Source = {&dummy};
+      Target = {&.TestTrigger};
+    };
+
+    AnyOperationSetValue SetPCSA = {
+      Source = {&.PCSAValues};
+      Target = {&.PCSAsBeforeCal};
+    };
+    AnyInt TestTrigger = DesignVar(0);
+    AnyObjectPtrArray MuscleModels = ObjSearch(&Main.HumanModel.BodyModel.Right.Leg.MuscleModels, "*", "AnyMuscleModel");
+    AnyObjectPtrArray PCSAs = ObjGetMember(MuscleModels, "PCSA");
+    AnyFloat PCSAValues = Obj2Num(PCSAs);
+    AnyFloat PCSAsBeforeCal = DesignVar(zeros(NumElemOf(PCSAValues)));
+    AnyFloat PCSADiff = PCSAsBeforeCal - PCSAValues;
+    AnyString paired = transpose({strval(PCSADiff), CompleteNameOf(PCSAs)});
+
+    AnyInt test_PCSA_before_after_cal = expect(
+        orfun(
+          not(TestTrigger),
+          ltfun(abs(PCSADiff), 0.1)
+        )
+      );
+    
+    AnyObjectPtrArray Muscles = ObjSearch(&Main.HumanModel.BodyModel.Right.Leg.Mus, "*.*", "AnyMuscle");
+    AnyObjectPtrArray Strengths = ObjGetMember(Muscles, "Strength");
+    AnyFloat StrengthValues = Obj2Num(Strengths);
+    AnyFloat StrengthsAfterCal = StrengthValues;
+  };
+  
   RoMStudy HipFlexExtRoM() = {
     AnyKinEqInterPolDriver Hip = {
       AnyKinMeasure &measure = Main.HumanModel.BodyModel.Interface.Right.HipFlexion;
@@ -181,6 +224,7 @@ Main =
       Reaction.Type = {Off};
     };
   };
-
+  
   #endif
 };
+
