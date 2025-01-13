@@ -11,13 +11,14 @@
 //   [
 //    {'BM_CALIBRATION_TYPE':'1'},
 //    {'BM_CALIBRATION_TYPE':'2'},
+//    {'BM_CALIBRATION_TYPE':'3'},
 //   ]
 //)
 //
 #include "libdef.any"
 
 #ifndef TEST_NAME
-  #define BM_CALIBRATION_TYPE 2
+  #define BM_CALIBRATION_TYPE 3
   #define TEST_NAME "test_calibration_upperbody.any_1"
 #endif
 

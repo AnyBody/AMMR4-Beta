@@ -123,7 +123,8 @@ Main =
         orfun(
           not(TestTrigger),
           ltfun(abs(PCSADiff), 0.1)
-        )
+        ),
+        "The PCSA of some muscles have significantly changed after calibration!",
       );
     
     AnyObjectPtrArray Muscles = ObjSearch(&Main.HumanModel.BodyModel.Right.Leg.Mus, "*.*", "AnyMuscle");
