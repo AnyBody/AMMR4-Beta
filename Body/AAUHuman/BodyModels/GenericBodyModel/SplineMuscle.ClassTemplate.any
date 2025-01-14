@@ -1,27 +1,17 @@
 
-/* Template to generate a 3E muscle model for a single elem muscle */
-#class_template SingleElement3EMuscleModel (__CLASS__=AnyMuscleModel3E){
-  F0 = ..MuscleModel.F0/..NumberOfElements;
-  Lf0 = ..MuscleModel.F0;
-  Vol0 = ..MuscleModel.Vol0/..NumberOfElements;
-  Lt0 = ..MuscleModel.Lt0;
-  Fcfast = ..MuscleModel.Fcfast;
-  Epsilon0 = ..MuscleModel.Epsilon0;
-};
+
 
 #class_template SplineMuscle_CreateElement (__CLASS__=AnyMuscleViaPoint, NAME1,NAME2, USE_3E_MUS_MDL=USE_3E_MUS_MDL){
       AnyRefNode &Org = .OriginSegment.NAME1##_Org.NAME2;
       AnyRefNode &Ins = .InsertionSegment.NAME1##_Ins.NAME2;
-      
-      #if USE_3E_MUS_MDL
-        SingleElement3EMuscleModel MusMdl() = {};
-      #else
-        AnyMuscleModel MusMdl = {
-          F0=..MuscleModel.F0/..NumberOfElements;
-          Lf0=..MuscleModel.F0; 
-          Vol0=..MuscleModel.Vol0/..NumberOfElements;
-        };
-      #endif
+
+      // No 3E muscle model is implemented here since muscles implemented with this are
+      // assumed not to have any Range of Motion
+      AnyMuscleModel MusMdl = {
+        F0=..MuscleModel.F0/..NumberOfElements;
+        Lf0=..MuscleModel.F0; 
+        Vol0=..MuscleModel.Vol0/..NumberOfElements;
+      };
 
       viewForce.Visible=Off; 
       viewMuscle = {#include "../../DrawSettings/MusDrawSettings.any"};
