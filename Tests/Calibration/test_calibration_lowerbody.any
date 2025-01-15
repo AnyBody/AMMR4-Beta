@@ -40,27 +40,21 @@ Main =
   
   AnyOperation& RunTest = RunAnalysis;
   AnyOperationSequence RunAnalysis = {
-    #if (BM_CALIBRATION_TYPE == 3) & (BM_LEG_MODEL == _LEG_MODEL_TLEM2_)
-    AnyOperation& StorePCSABeforeCal = .StrengthTest.SetPCSA;
-    #endif
 
     AnyOperation& Calibration = Main.HumanModel.Calibration.CalibrationSequence;
     
     #if (BM_CALIBRATION_TYPE == 3) & (BM_LEG_MODEL == _LEG_MODEL_TLEM2_)
-    AnyOperation& UpdatePCSAValues = .StrengthTest.UpdateValues;
-    AnyOperation& SetTestTrigger = .StrengthTest.SetTestTrigger;
-    AnyOperation& RunTest = .StrengthTest.UpdateValues;
-    AnyOperation& HipFlexExtRoM = Main.HipFlexExtRoM.InverseDynamics;
-    AnyOperation& HipAddAbdRoM = Main.HipAddAbdRoM.InverseDynamics;
-    AnyOperation& HipRotRoM = Main.HipRotRoM.InverseDynamics;
-    AnyOperation& KneeFlexExtRoM = Main.KneeFlexExtRoM.InverseDynamics;
-    AnyOperation& AnkleFlexRoM = Main.AnkleFlexRoM.InverseDynamics;
-    AnyOperation& AnkleEverInverRoM = Main.AnkleEverInverRoM.InverseDynamics;
+      AnyOperation& HipFlexExtRoM = Main.HipFlexExtRoM.InverseDynamics;
+      AnyOperation& HipAddAbdRoM = Main.HipAddAbdRoM.InverseDynamics;
+      AnyOperation& HipRotRoM = Main.HipRotRoM.InverseDynamics;
+      AnyOperation& KneeFlexExtRoM = Main.KneeFlexExtRoM.InverseDynamics;
+      AnyOperation& AnkleFlexRoM = Main.AnkleFlexRoM.InverseDynamics;
+      AnyOperation& AnkleEverInverRoM = Main.AnkleEverInverRoM.InverseDynamics;
     #endif
   };   
   
   /// Template to create a study for the leg - user must provide a driver.
-  #class_template RoMStudy(__CLASS__ = AnyBodyStudy) {
+  #class_template RoMTestStudy(__CLASS__ = AnyBodyStudy) {
     Kinematics.SolverType = KinSolOverDeterminate;
     InitialConditions.SolverType = Kinematics.SolverType;
     nStep = 5;
@@ -92,13 +86,39 @@ Main =
         AnyRefFrame &Pelvis = Main.HumanModel.BodyModel.Trunk.Segments.PelvisSeg;
       };
     };
+    
+    // tests
+    AnyObjectPtrArray muscles_from_cal_studies = flattenptr(ObjSearchRecursive(&Main.HumanModel.Calibration, "MuscleArr"));
+    AnyFolder Calculations = {
+      AnyObjectPtrArray passive_forces = ObjGetMember(.muscles_from_cal_studies, "Fp");
+      AnyFloat passive_forces_vals = Obj2Num(passive_forces);
+      AnyObjectPtrArray strengths = ObjGetMember(.muscles_from_cal_studies, "Strength");
+      AnyFloat strengths_vals = Obj2Num(strengths);
+      AnyObjectPtrArray cal_rmax = ObjSearchRecursive(&Main.HumanModel.Calibration, "RmaxMuscleFiber");
+      AnyFloat cal_rmax_vals = Obj2NumFlatten(cal_rmax);
+      AnyFloat passive_force_thresholds = mult(strengths_vals, (cal_rmax_vals-1));
+      AnyString passive_force_paired_look_up = transpose({CompleteNameOf(.muscles_from_cal_studies), strval(passive_forces_vals), strval(passive_force_thresholds), strval(.test_passive_forces)});
+    };
+  
+    AnyInt test_passive_forces = expect(orfun(
+      not(Main.TestTrigger),
+      lteqfun(Calculations.passive_forces_vals, Calculations.passive_force_thresholds),
+      ),
+      "Muscles have to large passive forces!"
+    );
+    
+    InverseDynamics.PreOperation = {
+      AnyOperation &EnableTests = Main.SetTestTrigger;
+      AnyOperation &UpdateValues = Main.UpdateValues;
+    };
+    
+    InverseDynamics.PostOperation = { AnyOperation &ResetTestTrigger = Main.ResetTestTrigger;};
   };
   
   
   #if (BM_CALIBRATION_TYPE == 3) & (BM_LEG_MODEL == _LEG_MODEL_TLEM2_)
-  
-  AnyFolder StrengthTest = {
-    AnyOperationMacro UpdateValues = {
+  AnyInt TestTrigger = DesignVar(0);  
+  AnyOperationMacro UpdateValues = {
       MacroStr = {"classoperation Main " + strquote("Update Values")};
     };
     AnyOperationSetValue SetTestTrigger = {
@@ -106,124 +126,103 @@ Main =
       Source = {&dummy};
       Target = {&.TestTrigger};
     };
-
-    AnyOperationSetValue SetPCSA = {
-      Source = {&.PCSAValues};
-      Target = {&.PCSAsBeforeCal};
+    AnyOperationSetValue ResetTestTrigger = {
+      AnyInt dummy = 0;
+      Source = {&dummy};
+      Target = {&.TestTrigger};
     };
-    AnyInt TestTrigger = DesignVar(0);
-    AnyObjectPtrArray MuscleModels = ObjSearch(&Main.HumanModel.BodyModel.Right.Leg.MuscleModels, "*", "AnyMuscleModel");
-    AnyObjectPtrArray PCSAs = ObjGetMember(MuscleModels, "PCSA");
-    AnyFloat PCSAValues = Obj2Num(PCSAs);
-    AnyFloat PCSAsBeforeCal = DesignVar(zeros(NumElemOf(PCSAValues)));
-    AnyFloat PCSADiff = PCSAsBeforeCal - PCSAValues;
-    AnyString paired = transpose({strval(PCSADiff), CompleteNameOf(PCSAs)});
 
-    AnyInt test_PCSA_before_after_cal = expect(
-        orfun(
-          not(TestTrigger),
-          ltfun(abs(PCSADiff), 0.1)
-        ),
-        "The PCSA of some muscles have significantly changed after calibration!",
-      );
-    
-    AnyObjectPtrArray Muscles = ObjSearch(&Main.HumanModel.BodyModel.Right.Leg.Mus, "*.*", "AnyMuscle");
-    AnyObjectPtrArray Strengths = ObjGetMember(Muscles, "Strength");
-    AnyFloat StrengthValues = Obj2Num(Strengths);
-    AnyFloat StrengthsAfterCal = StrengthValues;
-  };
   
-  RoMStudy HipFlexExtRoM() = {
+  RoMTestStudy HipFlexExtRoM() = {
     AnyKinEqInterPolDriver Hip = {
       AnyKinMeasure &measure = Main.HumanModel.BodyModel.Interface.Right.HipFlexion;
       Type = PiecewiseLinear;
       T = linspace(0,1,.nStep);
       Data = {
         linspace(
-        Main.HumanModel.Calibration.RangeOfMotion.Right.Leg.Hip.MaxExtensionAngle,
-        Main.HumanModel.Calibration.RangeOfMotion.Right.Leg.Hip.MaxFlexionAngle,
+        Main.HumanModel.BodyModel.Right.Leg.Data.RangeOfMotion.Hip.MaxExtensionAngle,
+        Main.HumanModel.BodyModel.Right.Leg.Data.RangeOfMotion.Hip.MaxFlexionAngle,
         .nStep
         ) * pi/180
       };
       Reaction.Type = {Off};
     };
   };
-  RoMStudy HipAddAbdRoM() = {    
+  RoMTestStudy HipAddAbdRoM() = {    
     AnyKinEqInterPolDriver Hip = {
       AnyKinMeasure &measure = Main.HumanModel.BodyModel.Interface.Right.HipAbduction;
       Type = PiecewiseLinear;
       T = linspace(0,1,.nStep);
       Data = {
         linspace(
-        Main.HumanModel.Calibration.RangeOfMotion.Right.Leg.Hip.MaxAdductionAngle,
-        Main.HumanModel.Calibration.RangeOfMotion.Right.Leg.Hip.MaxAbductionAngle,
+        Main.HumanModel.BodyModel.Right.Leg.Data.RangeOfMotion.Hip.MaxAdductionAngle,
+        Main.HumanModel.BodyModel.Right.Leg.Data.RangeOfMotion.Hip.MaxAbductionAngle,
         .nStep
         ) * pi/180
       };
       Reaction.Type = {Off};
     };
   };
-  RoMStudy HipRotRoM() = {    
+  RoMTestStudy HipRotRoM() = {    
     AnyKinEqInterPolDriver Hip = {
       AnyKinMeasure &measure = Main.HumanModel.BodyModel.Interface.Right.HipExternalRotation;
       Type = PiecewiseLinear;
       T = linspace(0,1,.nStep);
       Data = {
         linspace(
-        Main.HumanModel.Calibration.RangeOfMotion.Right.Leg.Hip.MaxExternalRotationAngle,
-        Main.HumanModel.Calibration.RangeOfMotion.Right.Leg.Hip.MaxInternalRotationAngle,
+        Main.HumanModel.BodyModel.Right.Leg.Data.RangeOfMotion.Hip.MaxExternalRotationAngle,
+        Main.HumanModel.BodyModel.Right.Leg.Data.RangeOfMotion.Hip.MaxInternalRotationAngle,
         .nStep
         ) * pi/180
       };
       Reaction.Type = {Off};
     };
   };
-  RoMStudy KneeFlexExtRoM() = {    
+  RoMTestStudy KneeFlexExtRoM() = {    
     AnyKinEqInterPolDriver Knee = {
       AnyKinMeasure &measure = Main.HumanModel.BodyModel.Interface.Right.KneeFlexion;
       Type = PiecewiseLinear;
       T = linspace(0,1,.nStep);
       Data = {
         linspace(
-        Main.HumanModel.Calibration.RangeOfMotion.Right.Leg.Knee.MaxExtensionAngle,
-        Main.HumanModel.Calibration.RangeOfMotion.Right.Leg.Knee.MaxFlexionAngle,
+        Main.HumanModel.BodyModel.Right.Leg.Data.RangeOfMotion.Knee.MaxExtensionAngle,
+        Main.HumanModel.BodyModel.Right.Leg.Data.RangeOfMotion.Knee.MaxFlexionAngle,
         .nStep
         ) * pi/180
       };
       Reaction.Type = {Off};
     };
   };
-  RoMStudy AnkleFlexRoM() = {    
+  RoMTestStudy AnkleFlexRoM() = {    
     AnyKinEqInterPolDriver Ankle = {
       AnyKinMeasure &measure = Main.HumanModel.BodyModel.Interface.Right.AnklePlantarFlexion;
       Type = PiecewiseLinear;
       T = linspace(0,1,.nStep);
       Data = {
         linspace(
-        Main.HumanModel.Calibration.RangeOfMotion.Right.Leg.Ankle.MaxPlantarFlexionAngle,
-        Main.HumanModel.Calibration.RangeOfMotion.Right.Leg.Ankle.MaxDorsiFlexionAngle,
+        Main.HumanModel.BodyModel.Right.Leg.Data.RangeOfMotion.Ankle.MaxPlantarFlexionAngle,
+        Main.HumanModel.BodyModel.Right.Leg.Data.RangeOfMotion.Ankle.MaxDorsiFlexionAngle,
         .nStep
         ) * pi/180
       };
       Reaction.Type = {Off};
     };
   };
-  RoMStudy AnkleEverInverRoM() = {    
+  RoMTestStudy AnkleEverInverRoM() = {    
     AnyKinEqInterPolDriver Ankle = {
       AnyKinMeasure &measure = Main.HumanModel.BodyModel.Interface.Right.SubTalarEversion;
       Type = PiecewiseLinear;
       T = linspace(0,1,.nStep);
       Data = {
         linspace(
-        Main.HumanModel.Calibration.RangeOfMotion.Right.Leg.Ankle.MaxEversionAngle,
-        Main.HumanModel.Calibration.RangeOfMotion.Right.Leg.Ankle.MaxInversionAngle,
+        Main.HumanModel.BodyModel.Right.Leg.Data.RangeOfMotion.Ankle.MaxEversionAngle,
+        Main.HumanModel.BodyModel.Right.Leg.Data.RangeOfMotion.Ankle.MaxInversionAngle,
         .nStep
         ) * pi/180
       };
       Reaction.Type = {Off};
     };
   };
-  
   #endif
 };
 
