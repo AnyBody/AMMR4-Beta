@@ -3218,8 +3218,8 @@ MuscleGroup ObliquusExternus = {
       //   }; 
       //        #endif
       AnyMatrix InitWrapPos = {
-        transf3D({.mesh4.Radius[0],0,0}, &.mesh4),
-        transf3D({.mesh5.Radius[0],0,0}, &.mesh5),
+        transf3D({.mesh4.Radius[0],0,-.mesh4.Radius[2]}, &.mesh4),
+        transf3D({.mesh5.Radius[0],0,-.mesh5.Radius[2]}, &.mesh5),
       };
       
       
@@ -3282,8 +3282,8 @@ MuscleGroup ObliquusExternus = {
       
       AnyMatrix InitWrapPos = {
         //      transf3D({.mesh3.Radius[0],0,0}, &.mesh3),
-        transf3D({.mesh4.Radius[0],0,0}, &.mesh4),
-        transf3D({.mesh5.Radius[0],0,0}, &.mesh5),
+        transf3D({.mesh4.Radius[0],0,-.mesh4.Radius[2]}, &.mesh4),
+        transf3D({.mesh5.Radius[0],0,-.mesh5.Radius[2]}, &.mesh5),
       };
       
       InitWrapPosVecArr = {&InitWrapPos};
@@ -3763,7 +3763,7 @@ MuscleGroup ObliquusInternus = {
       //    };  
       //    #endif
       AnyMatrix InitWrapPos = {
-        transf3D({.mesh3.Radius[0],0,0}, &.mesh3),
+        transf3D({.mesh3.Radius[0],0,-.mesh3.Radius[2]}, &.mesh3),
       };
       
       InitWrapPosVecArr = {&InitWrapPos};
@@ -3830,8 +3830,8 @@ MuscleGroup ObliquusInternus = {
       //    #endif
       AnyMatrix InitWrapPos = {
         //      transf3D({.mesh2.Radius[0],0,0}, &.mesh2),
-        transf3D({.mesh3.Radius[0],0,0}, &.mesh3),
-        transf3D({.mesh4.Radius[0],0,0}, &.mesh4),
+        transf3D({.mesh3.Radius[0],0,-.mesh3.Radius[2]}, &.mesh3),
+        transf3D({.mesh4.Radius[0],0,-.mesh4.Radius[2]}, &.mesh4),
         //  transf3D({.mesh5.Radius[0],0,0}, &.mesh5),
       };
       
@@ -3907,8 +3907,8 @@ MuscleGroup ObliquusInternus = {
       AnyMatrix InitWrapPos = {
         //      transf3D({.mesh1.Radius[0],0,0}, &.mesh1),
         //      transf3D({.mesh2.Radius[0],0,0}, &.mesh2),
-        transf3D({.mesh3.Radius[0],0,0}, &.mesh3),
-        transf3D({.mesh4.Radius[0],0,0}, &.mesh4),
+        transf3D({.mesh3.Radius[0],0,-.mesh3.Radius[2]}, &.mesh3),
+        transf3D({.mesh4.Radius[0],0,-.mesh4.Radius[2]}, &.mesh4),
       };
       
       
@@ -3981,8 +3981,8 @@ MuscleGroup ObliquusInternus = {
       //    #endif
       AnyMatrix InitWrapPos = {
         //      transf3D({.mesh2.Radius[0],0,0}, &.mesh2),
-        transf3D({.mesh3.Radius[0],0,0}, &.mesh3),
-        transf3D({.mesh4.Radius[0],0,0}, &.mesh4),
+        transf3D({.mesh3.Radius[0],0,-.mesh3.Radius[2]}, &.mesh3),
+        transf3D({.mesh4.Radius[0],0,-.mesh4.Radius[2]}, &.mesh4),
         //    transf3D({.mesh5.Radius[0],0,0}, &.mesh5),
       };
       
@@ -4054,9 +4054,9 @@ MuscleGroup ObliquusInternus = {
       //    };
       //    #endif
       AnyMatrix InitWrapPos = {
-        transf3D({.mesh2.Radius[0],0,0}, &.mesh2),
-        transf3D({.mesh3.Radius[0],0,0}, &.mesh3),
-        transf3D({.mesh4.Radius[0],0,0}, &.mesh4),
+        transf3D({.mesh2.Radius[0],0,-.mesh2.Radius[2]}, &.mesh2),
+        transf3D({.mesh3.Radius[0],0,-.mesh3.Radius[2]}, &.mesh3),
+        transf3D({.mesh4.Radius[0],0,-.mesh4.Radius[2]}, &.mesh4),
         //   transf3D({.mesh5.Radius[0],0,0}, &.mesh5),
         
       };
@@ -4137,8 +4137,8 @@ MuscleGroup ObliquusInternus = {
       
       AnyMatrix InitWrapPos = {
         
-        transf3D({.mesh3.Radius[0],0,0}, &.mesh3),
-        transf3D({.mesh4.Radius[0],0,0}, &.mesh4),
+        transf3D({.mesh3.Radius[0],0,-.mesh3.Radius[2]}, &.mesh3),
+        transf3D({.mesh4.Radius[0],0,-.mesh4.Radius[2]}, &.mesh4),
         //      transf3D({.mesh5.Radius[0],0,0}, &.mesh5),
         
       };
@@ -4210,8 +4210,8 @@ MuscleGroup ObliquusInternus = {
       //    #endif
       AnyMatrix InitWrapPos = {
         
-        transf3D({.mesh4.Radius[0],0,0}, &.mesh4),
-        transf3D({.mesh5.Radius[0],0,0}, &.mesh5),
+        transf3D({.mesh4.Radius[0],0,-.mesh4.Radius[2]}, &.mesh4),
+        transf3D({.mesh5.Radius[0],0,-.mesh5.Radius[2]}, &.mesh5),
         
       };
       
@@ -4267,7 +4267,7 @@ MuscleGroup ObliquusInternus = {
       //    
       //    #endif
       AnyMatrix InitWrapPos = {
-        transf3D({.mesh5.Radius[0],0,0}, &.mesh5),
+        transf3D({.mesh5.Radius[0],0,-.mesh5.Radius[2]}, &.mesh5),
       };
       
       
