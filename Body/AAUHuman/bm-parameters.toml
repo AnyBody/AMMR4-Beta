@@ -552,6 +552,11 @@ valuetype = "integer"
 descr = "Parameter defining the foot model used."
 opt = [ "_FOOT_MODEL_NONE_", "_FOOT_MODEL_DEFAULT_", "_FOOT_MODEL_TOE_FLEX_GM_", "_FOOT_MODEL_DETAILED_GM_",]
 
+[parameters.BM_FOOT_MODEL_TOE_FLEX_GM_REACTION]
+default = "ON"
+valuetype = "integer"
+descr = "Parameter defining the existing of reaction on toes when using _FOOT_MODEL_TOE_FLEX_GM_."
+
 [parameters.BM_FOOT_MODEL_LIGAMENTS]
 default = "OFF"
 valuetype = "integer"

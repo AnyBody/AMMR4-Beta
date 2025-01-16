@@ -27,6 +27,11 @@
 #define BM_FOOT_MODEL _FOOT_MODEL_DEFAULT_
 #endif
 
+// Parameter defining the existing of reaction on toes when using _FOOT_MODEL_TOE_FLEX_GM_.
+#ifndef BM_FOOT_MODEL_TOE_FLEX_GM_REACTION
+#define BM_FOOT_MODEL_TOE_FLEX_GM_REACTION ON
+#endif
+
 // Parameter for switching the foot ligaments On/Off.
 #ifndef BM_FOOT_MODEL_LIGAMENTS
 #define BM_FOOT_MODEL_LIGAMENTS OFF

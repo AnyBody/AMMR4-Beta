@@ -19,6 +19,10 @@
  #undef BM_FOOT_MODEL
  #endif
   
+ #ifdef BM_FOOT_MODEL_TOE_FLEX_GM_REACTION
+ #undef BM_FOOT_MODEL_TOE_FLEX_GM_REACTION
+ #endif
+  
  #ifdef BM_FOOT_MODEL_LIGAMENTS
  #undef BM_FOOT_MODEL_LIGAMENTS
  #endif

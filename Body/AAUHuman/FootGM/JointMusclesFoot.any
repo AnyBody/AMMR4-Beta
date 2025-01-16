@@ -6,57 +6,64 @@ AnyFolder JointStrengthFoot={
 };
 
 AnyFolder MtProxPh1={
-  AnyFolder Extension={
-    AnyKinMeasure& DOF = ...InterfaceFolder.MetatarsoPhalangeal1DorsiFlexion;
-    AnyFolder Object={
-      AnyVector Strength={...JointStrengthFoot.Extension,...JointStrengthFoot.Flexion}; 
-      AnyInt dof= 0; 
-      #include "<ANYBODY_PATH_MODELUTILS>/Diagnostics/DiagnosticMuscle2.any"  
-    };
+  AnyKinMeasure& DOF = ..InterfaceFolder.MetatarsoPhalangeal1DorsiFlexion;
+  AnyFolder Object={
+    AnyVector Strength={..JointStrengthFoot.Extension,..JointStrengthFoot.Flexion}; 
+    AnyInt dof= 0; 
+    #include "<ANYBODY_PATH_MODELUTILS>/Diagnostics/DiagnosticMuscle2.any" 
   };
+  #if BM_FOOT_MODEL_TOE_FLEX_GM_REACTION == ON
+  AnyReacForce ToeReactionForce = { AnyKinMeasure& Ref=.DOF; };
+  #endif
 };
 
+
 AnyFolder MtProxPh2={
-  AnyFolder Extension={
-    AnyKinMeasure& DOF = ...InterfaceFolder.MetatarsoPhalangeal2DorsiFlexion;
-    AnyFolder Object={
-      AnyVector Strength={...JointStrengthFoot.Extension,...JointStrengthFoot.Flexion}; 
-      AnyInt dof= 0; 
-      #include "<ANYBODY_PATH_MODELUTILS>/Diagnostics/DiagnosticMuscle2.any"  
-    };
+  AnyKinMeasure& DOF = ..InterfaceFolder.MetatarsoPhalangeal2DorsiFlexion;
+  AnyFolder Object={
+    AnyVector Strength={..JointStrengthFoot.Extension,..JointStrengthFoot.Flexion}; 
+    AnyInt dof= 0; 
+    #include "<ANYBODY_PATH_MODELUTILS>/Diagnostics/DiagnosticMuscle2.any"  
   };
+  #if BM_FOOT_MODEL_TOE_FLEX_GM_REACTION == ON
+  AnyReacForce ToeReactionForce = { AnyKinMeasure& Ref=.DOF; };
+  #endif
 };
 
 AnyFolder MtProxPh3={
-  AnyFolder Extension={
-    AnyKinMeasure& DOF = ...InterfaceFolder.MetatarsoPhalangeal3DorsiFlexion;
-    AnyFolder Object={
-      AnyVector Strength={...JointStrengthFoot.Extension,...JointStrengthFoot.Flexion}; 
-      AnyInt dof= 0; 
-      #include "<ANYBODY_PATH_MODELUTILS>/Diagnostics/DiagnosticMuscle2.any"  
-    };
+  AnyKinMeasure& DOF = ..InterfaceFolder.MetatarsoPhalangeal3DorsiFlexion;
+  AnyFolder Object={
+    AnyVector Strength={..JointStrengthFoot.Extension,..JointStrengthFoot.Flexion}; 
+    AnyInt dof= 0; 
+    #include "<ANYBODY_PATH_MODELUTILS>/Diagnostics/DiagnosticMuscle2.any"  
   };
+  #if BM_FOOT_MODEL_TOE_FLEX_GM_REACTION == ON
+  AnyReacForce ToeReactionForce = { AnyKinMeasure& Ref=.DOF; };
+  #endif
 };
 
 AnyFolder MtProxPh4={
-  AnyFolder Extension={
-    AnyKinMeasure& DOF = ...InterfaceFolder.MetatarsoPhalangeal4DorsiFlexion;
-    AnyFolder Object={
-      AnyVector Strength={...JointStrengthFoot.Extension,...JointStrengthFoot.Flexion}; 
-      AnyInt dof= 0; 
-      #include "<ANYBODY_PATH_MODELUTILS>/Diagnostics/DiagnosticMuscle2.any"  
-    };
+  AnyKinMeasure& DOF = ..InterfaceFolder.MetatarsoPhalangeal4DorsiFlexion;
+  AnyFolder Object={
+    AnyVector Strength={..JointStrengthFoot.Extension,..JointStrengthFoot.Flexion}; 
+    AnyInt dof= 0; 
+    #include "<ANYBODY_PATH_MODELUTILS>/Diagnostics/DiagnosticMuscle2.any"  
   };
+  #if BM_FOOT_MODEL_TOE_FLEX_GM_REACTION == ON
+  AnyReacForce ToeReactionForce = { AnyKinMeasure& Ref=.DOF; };
+  #endif
 };
 
 AnyFolder MtProxPh5={
-  AnyFolder Extension={
-    AnyKinMeasure& DOF = ...InterfaceFolder.MetatarsoPhalangeal5DorsiFlexion;
-    AnyFolder Object={
-      AnyVector Strength={...JointStrengthFoot.Extension,...JointStrengthFoot.Flexion}; 
-      AnyInt dof= 0; 
-      #include "<ANYBODY_PATH_MODELUTILS>/Diagnostics/DiagnosticMuscle2.any"  
-    };
+  AnyKinMeasure& DOF = ..InterfaceFolder.MetatarsoPhalangeal5DorsiFlexion;
+  AnyFolder Object={
+    AnyVector Strength={..JointStrengthFoot.Extension,..JointStrengthFoot.Flexion}; 
+    AnyInt dof= 0; 
+    #include "<ANYBODY_PATH_MODELUTILS>/Diagnostics/DiagnosticMuscle2.any"  
   };
+  #if BM_FOOT_MODEL_TOE_FLEX_GM_REACTION == ON
+  AnyReacForce ToeReactionForce = { AnyKinMeasure& Ref=.DOF; };
+  #endif
 };
-  
+
+

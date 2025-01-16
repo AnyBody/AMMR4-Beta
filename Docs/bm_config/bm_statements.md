@@ -151,6 +151,23 @@ Parameter defining the foot model used.
 ::::
 
 
+::::{dropdown} `BM_FOOT_MODEL_TOE_FLEX_GM_REACTION`
+:animate: fade-in-slide-down
+:margin: 0 0 3 3
+
+```{ammr:bm_statement} BM_FOOT_MODEL_TOE_FLEX_GM_REACTION
+
+Parameter defining the existing of reaction on toes when using _FOOT_MODEL_TOE_FLEX_GM_.
+
+:Default: ON
+:Example: `#define BM_FOOT_MODEL_TOE_FLEX_GM_REACTION ON`
+:Options: {ammr:bm_constant}`ON`/{ammr:bm_constant}`OFF`
+
+
+```
+::::
+
+
 ::::{dropdown} `BM_FOOT_MODEL_LIGAMENTS`
 :animate: fade-in-slide-down
 :margin: 0 0 3 3
