@@ -4139,7 +4139,7 @@ MuscleGroup ObliquusInternus = {
     
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
-    #include "MusclesSharedCode.any"    
+    #include "MusclesSharedCode_SPLine.any"
   };
   
   
