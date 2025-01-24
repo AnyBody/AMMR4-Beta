@@ -931,6 +931,7 @@ MuscleGroup ErectorSpinae = {
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
+  #if BM_TRUNK_THORACIC_MODEL == _THORACIC_MODEL_FLEXIBLE_
   AnyMuscleViaPoint ITR1R7 = {
     AnyMuscleModel &MusMdl = ....MuscleModels.Right.ErectorSpinae.ITR1R7;
     AnyRefNode &Org = ....Segments.Right.R1Seg.ITR1R7NodeROrg;
@@ -1003,6 +1004,7 @@ MuscleGroup ErectorSpinae = {
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
+  #endif
   // Iliocostalis Cervicis
   AnyMuscleViaPoint ICptR3C4 = {
     AnyMuscleModel &MusMdl = ....MuscleModels.Right.ErectorSpinae.ICptR3C4;
@@ -1986,6 +1988,7 @@ MuscleGroup LevatorCostarum = {
     viewForce.Visible ??= Off;
   };
   
+  #if BM_TRUNK_THORACIC_MODEL == _THORACIC_MODEL_FLEXIBLE_
   AnyMuscleViaPoint LCBrT1R2 = {
     AnyMuscleModel &MusMdl = ....MuscleModels.Right.LevatorCostarum.LCModel_2;
     AnyRefNode &S4 = ....Segments.T1Seg.LCBrT1R2ROrg;
@@ -2122,7 +2125,7 @@ MuscleGroup LevatorCostarum = {
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
-  
+  #endif
 }; 
 
 MuscleGroup LongissimusCapitis = {  
@@ -2966,6 +2969,7 @@ MuscleGroup ObliquusExternus = {
     };
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
+    #include "MusclesSharedCode_SPLine.any"
   };
   
   AnyMuscleShortestPath OEC_2 = {
@@ -2989,6 +2993,7 @@ MuscleGroup ObliquusExternus = {
     };  
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
+    #include "MusclesSharedCode_SPLine.any"
   };
   
   
@@ -3054,6 +3059,7 @@ MuscleGroup ObliquusExternus = {
     };
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
+    #include "MusclesSharedCode_SPLine.any"
   };
   
   
@@ -3122,6 +3128,7 @@ MuscleGroup ObliquusExternus = {
     };
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
+    #include "MusclesSharedCode_SPLine.any"
   };
   
   
@@ -3187,6 +3194,7 @@ MuscleGroup ObliquusExternus = {
     };  
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
+    #include "MusclesSharedCode_SPLine.any"
   };
   
   //
@@ -3245,6 +3253,7 @@ MuscleGroup ObliquusExternus = {
     
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any" };
     viewForce.Visible ??= Off;
+    #include "MusclesSharedCode_SPLine.any"
   };
   
   
@@ -3307,6 +3316,7 @@ MuscleGroup ObliquusExternus = {
     };  
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
+    #include "MusclesSharedCode_SPLine.any"
   };
   
   
@@ -3316,6 +3326,7 @@ MuscleGroup ObliquusExternus = {
     AnyRefNode &Ins =    ....Segments.PelvisSeg.Right.ObliquusInternusNode_8;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
+    #include "MusclesSharedCode.any"
   };
   
   
@@ -3325,6 +3336,7 @@ MuscleGroup ObliquusExternus = {
     AnyRefNode &Ins =    ....Segments.PelvisSeg.Right.ObliquusInternusNode_9;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
+    #include "MusclesSharedCode.any"
   };
   
   
@@ -3334,6 +3346,7 @@ MuscleGroup ObliquusExternus = {
     AnyRefNode &Ins =    ....Segments.PelvisSeg.Right.ObliquusInternusNode_7;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
+    #include "MusclesSharedCode.any"
   };
   
   
@@ -3343,6 +3356,7 @@ MuscleGroup ObliquusExternus = {
     AnyRefNode &Ins =    ....Segments.PelvisSeg.Right.ObliquusInternusNode_5;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
+    #include "MusclesSharedCode.any"
   };
   
   
@@ -3352,6 +3366,7 @@ MuscleGroup ObliquusExternus = {
     AnyRefNode &Ins =    ....Segments.PelvisSeg.Right.ObliquusInternusNode_4;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
+    #include "MusclesSharedCode.any"
   };
   
   
@@ -3697,6 +3712,7 @@ MuscleGroup ObliquusInternus = {
     AnyRefNode &Ins = ....Segments.PelvisSeg.Right.ObliquusInternusNode_1;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
+    #include "MusclesSharedCode.any"
   };
   
   
@@ -3706,6 +3722,7 @@ MuscleGroup ObliquusInternus = {
     AnyRefNode &Ins = ....Segments.PelvisSeg.Right.ObliquusInternusNode_2;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
+    #include "MusclesSharedCode.any"
   };
   
   
@@ -3715,6 +3732,7 @@ MuscleGroup ObliquusInternus = {
     AnyRefNode &Ins = ....Segments.PelvisSeg.Right.ObliquusInternusNode_3;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
+    #include "MusclesSharedCode.any"
   };
   
   
@@ -3724,6 +3742,7 @@ MuscleGroup ObliquusInternus = {
     AnyRefNode &Ins = ....Segments.PelvisSeg.Right.ObliquusInternusNode_4;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
+    #include "MusclesSharedCode.any"
   };
   
   
@@ -3733,6 +3752,7 @@ MuscleGroup ObliquusInternus = {
     AnyRefNode &Ins = ....Segments.PelvisSeg.Right.ObliquusInternusNode_4_1;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
+    #include "MusclesSharedCode.any"
   };
   
   
@@ -3794,6 +3814,7 @@ MuscleGroup ObliquusInternus = {
     };
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
+    #include "MusclesSharedCode_SPLine.any"
   };
   
   AnyMuscleShortestPath OIC_7 = {
@@ -3865,6 +3886,7 @@ MuscleGroup ObliquusInternus = {
     };
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
+    #include "MusclesSharedCode_SPLine.any"
   };
   
   
@@ -3945,6 +3967,7 @@ MuscleGroup ObliquusInternus = {
     };
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
+    #include "MusclesSharedCode_SPLine.any"
   };
   
   AnyMuscleShortestPath OIC_9 = {
@@ -4036,6 +4059,7 @@ MuscleGroup ObliquusInternus = {
     //  #endif
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
+    #include "MusclesSharedCode_SPLine.any"
   };
   
   AnyMuscleShortestPath OIC_10 = {
@@ -4112,7 +4136,7 @@ MuscleGroup ObliquusInternus = {
     
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
-    
+    #include "MusclesSharedCode_SPLine.any"
   };
   
   
@@ -4194,6 +4218,7 @@ MuscleGroup ObliquusInternus = {
     
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
+    #include "MusclesSharedCode_SPLine.any"
   };
   
   
@@ -4264,6 +4289,7 @@ MuscleGroup ObliquusInternus = {
     };
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
+    #include "MusclesSharedCode_SPLine.any"
   };
   
   
@@ -4317,6 +4343,7 @@ MuscleGroup ObliquusInternus = {
     
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
+    #include "MusclesSharedCode_SPLine.any"
   };
   
   AnyMuscleViaPoint  OIC_14= {
@@ -4338,6 +4365,7 @@ MuscleGroup ObliquusInternus = {
     //  
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
+    #include "MusclesSharedCode.any"
   };
   #endif
   
@@ -5298,6 +5326,7 @@ MuscleGroup SemispinalisCervicis = {
 
 MuscleGroup SemispinalisThoracis = {
   
+  #if BM_TRUNK_THORACIC_MODEL == _THORACIC_MODEL_FLEXIBLE_
   AnyMuscleViaPoint SSTT12T4 = 
   {
     AnyMuscleModel &MusMdl = ....MuscleModels.Right.SemispinalisThoracis.SSTT12T4;
@@ -5347,7 +5376,7 @@ MuscleGroup SemispinalisThoracis = {
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
-  
+  #endif
   AnyMuscleViaPoint SSTT8C7 = 
   {
     AnyMuscleModel &MusMdl = ....MuscleModels.Right.SemispinalisThoracis.SSTT8C7;
@@ -5378,6 +5407,7 @@ MuscleGroup SerratusPosteriorSuperior = {
     viewForce.Visible ??= Off;
   };
   
+  #if BM_TRUNK_THORACIC_MODEL == _THORACIC_MODEL_FLEXIBLE_
   AnyMuscleViaPoint SPSR3T1 = {
     AnyMuscleModel &MusMdl = ....MuscleModels.Right.SerratusPosteriorSuperior.SPSR3T1;
     AnyRefNode &T1 = ....Segments.T1Seg.O_serratus_posterior_superior_T1R;
@@ -5401,6 +5431,7 @@ MuscleGroup SerratusPosteriorSuperior = {
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
+  #endif
 };
 
 MuscleGroup SerratusPosteriorInferior = {
@@ -5422,7 +5453,7 @@ MuscleGroup SerratusPosteriorInferior = {
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
-  
+  #if BM_TRUNK_THORACIC_MODEL == _THORACIC_MODEL_FLEXIBLE_
   AnyMuscleViaPoint SPIT12R10 = {
     AnyMuscleModel &MusMdl = ....MuscleModels.Right.SerratusPosteriorInferior.SPIT12R10;
     AnyRefNode &T12 = ....Segments.T12Seg.O_serratus_posterior_inferior_T12R;
@@ -5440,6 +5471,7 @@ MuscleGroup SerratusPosteriorInferior = {
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
+  #endif
 };
 
 MuscleGroup SpleniusCapitis = {
@@ -5646,6 +5678,7 @@ MuscleGroup Subcostalis = {
 #endif
 
 MuscleGroup ThoracicMultifidi = {
+  #if BM_TRUNK_THORACIC_MODEL == _THORACIC_MODEL_FLEXIBLE_
   AnyMuscleViaPoint MFT4T1 =   {
     AnyMuscleModel &MusMdl = ....MuscleModels.Right.ThoracicMultifidi.MFT4T1;
     AnyRefFrame &Org = ....Segments.T4Seg.MFT4T1NodeROrg;
@@ -5837,7 +5870,7 @@ MuscleGroup ThoracicMultifidi = {
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
-  
+  #endif
   AnyMuscleViaPoint MFL1T8 =   {
     AnyMuscleModel &MusMdl = ....MuscleModels.Right.ThoracicMultifidi.MFL1T8;
     AnyRefFrame &Org = ....Segments.L1Seg.MFL1T8NodeROrg;
@@ -5946,7 +5979,6 @@ MuscleGroup ThoracicMultifidi = {
   };
 };
 
-#if BM_TRUNK_THORACIC_MODEL == _THORACIC_MODEL_FLEXIBLE_
 MuscleGroup RotatoresBrevis = {
   AnyMuscleViaPoint RotatoresBrevisT1C7 =   {
     AnyMuscleModel &MusMdl = ....MuscleModels.Right.RotatoresBrevis.RotatoresBrevis_1;
@@ -5955,6 +5987,7 @@ MuscleGroup RotatoresBrevis = {
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
+  #if BM_TRUNK_THORACIC_MODEL == _THORACIC_MODEL_FLEXIBLE_
   AnyMuscleViaPoint RotatoresBrevisT2T1 =   {
     AnyMuscleModel &MusMdl = ....MuscleModels.Right.RotatoresBrevis.RotatoresBrevis_2;
     AnyRefFrame &Org = ....Segments.T2Seg.Right.RotatoresBrevisT2T1Node;
@@ -6032,6 +6065,7 @@ MuscleGroup RotatoresBrevis = {
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
+  #endif
 };
 
 MuscleGroup RotatoresLongus = {
@@ -6042,6 +6076,7 @@ MuscleGroup RotatoresLongus = {
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
+  #if BM_TRUNK_THORACIC_MODEL == _THORACIC_MODEL_FLEXIBLE_
   AnyMuscleViaPoint RotatoresLongusT3T1 =   {
     AnyMuscleModel &MusMdl = ....MuscleModels.Right.RotatoresLongus.RotatoresLongus_2;
     AnyRefFrame &Org = ....Segments.T3Seg.Right.RotatoresLongusT3T1Node;
@@ -6112,8 +6147,10 @@ MuscleGroup RotatoresLongus = {
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
+  #endif
 };
 
+#if BM_TRUNK_THORACIC_MODEL == _THORACIC_MODEL_FLEXIBLE_
 MuscleGroup TransversusThoracis = {
   AnyMuscleViaPoint TrThR2S = {
     AnyMuscleModel &MusMdl = ....MuscleModels.Right.TransversusThoracis.TransvThModel_1;
