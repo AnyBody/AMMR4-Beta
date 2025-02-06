@@ -776,9 +776,7 @@ AnyFolder Abdominal = {
 
     BaseSegPosterior = {
       AnyRefNode Layer1 = {ARel = .AnatomicalFrameTrunk.ARel;};
-      AnyRefNode &JntNode1 = ....Trunk.Segments.PelvisSeg.PelvicLayer1_JntNode;
     };
-    AnyRefNode &JntNodeRef = BaseSegPosterior.JntNode1;
     AnyRefNode &LayerRef = BaseSegPosterior.Layer1;
     #if BM_TRUNK_EXPERIMENTAL_INTER_LAYER_L5PELVIC == OFF
     AnyFolder &layer_above = .Layer_L5;
@@ -818,9 +816,7 @@ AnyFolder Abdominal = {
     AnySeg &BaseSegPosterior = .Layer_Pelvic1.BaseSegPosterior;   
     BaseSegPosterior ={
       AnyRefNode Layer2 = {ARel = .AnatomicalFrameTrunk.ARel;};
-      AnyRefNode &JntNode2 = ....Trunk.Segments.PelvisSeg.PelvicLayer2_JntNode;
     };
-    AnyRefNode &JntNodeRef = BaseSegPosterior.JntNode2;
     AnyRefNode &LayerRef = BaseSegPosterior.Layer2;
     AnyFolder &layer_above = .Layer_Pelvic1;
     AnyFolder &layer_below =  .Layer_Pelvic3; 
@@ -838,9 +834,7 @@ AnyFolder Abdominal = {
     AnySeg &BaseSegPosterior = .Layer_Pelvic1.BaseSegPosterior;   
     BaseSegPosterior ={
       AnyRefNode Layer3 = {ARel = .AnatomicalFrameTrunk.ARel;};
-      AnyRefNode &JntNode3 = ....Trunk.Segments.PelvisSeg.PelvicLayer3_JntNode;
     };
-    AnyRefNode &JntNodeRef = BaseSegPosterior.JntNode3;
     AnyRefNode &LayerRef = BaseSegPosterior.Layer3;
     AnyFolder &layer_above = .Layer_Pelvic2;
     AnyFolder &layer_below =  .Layer_Pelvic4; 
@@ -953,38 +947,38 @@ AnyFolder Abdominal = {
   AnyFolder Layer_Pelvic_Constraints_RectusLine ={
     
 
-    AnySeg Dummy ={
-      AnyRefNode JntNode={
-        sRel = ....Segments.PelvisSeg.RA_1_R.sRel;
-        ARel =  RotMat (sRel, ...Layer_Pelvic1.BaseSegAnterior.mid.sRel, sRel+{0.1,0,0})* RotMat (-pi/2,z)*RotMat(pi,y);
-      };
-      Mass=0;Jii={0,0,0};
-      r0 = ...Segments.PelvisSeg.r0;
-      Axes0 = ...Segments.PelvisSeg.Axes0;
-    };
-    AnySphericalJoint Jnt ={
-      AnyRefNode &ref=  ...Segments.PelvisSeg.RA_1_R;
-      AnyRefNode &ref2=.Dummy.JntNode;
-    };
-    AnyReacForce Jnt_Rot_Reactions ={
-      AnySphericalJoint &ref=.Jnt;
-    };
-    AnyKinEq ConXZ ={
-      AnyKinMeasureOrg OrgXZ ={
-        MeasureOrganizer={0,2};
-        AnyKinLinear Lin={
-          Ref=0;
-          AnyRefNode &ref2 = ...Dummy.JntNode;
-          AnyRefNode &ref1 = ....Layer_Pelvic1.BaseSegAnterior.mid;
-        };
-      };
-      AnyKinMeasureOrg OrgY ={
-        MeasureOrganizer={1};
-        AnySphericalJoint &ref=..Jnt;
-      };
-      Reaction.Type={Off,Off,Off};
-      
-    };
+//    AnySeg Dummy ={
+//      AnyRefNode JntNode={
+//        sRel = ....Segments.PelvisSeg.RA_1_R.sRel;
+//        ARel =  RotMat (sRel, ...Layer_Pelvic1.BaseSegAnterior.mid.sRel, sRel+{0.1,0,0})* RotMat (-pi/2,z)*RotMat(pi,y);
+//      };
+//      Mass=0;Jii={0,0,0};
+//      r0 = ...Segments.PelvisSeg.r0;
+//      Axes0 = ...Segments.PelvisSeg.Axes0;
+//    };
+//    AnySphericalJoint Jnt ={
+//      AnyRefNode &ref=  ...Segments.PelvisSeg.RA_1_R;
+//      AnyRefNode &ref2=.Dummy.JntNode;
+//    };
+//    AnyReacForce Jnt_Rot_Reactions ={
+//      AnySphericalJoint &ref=.Jnt;
+//    };
+//    AnyKinEq ConXZ ={
+//      AnyKinMeasureOrg OrgXZ ={
+//        MeasureOrganizer={0,2};
+//        AnyKinLinear Lin={
+//          Ref=0;
+//          AnyRefNode &ref2 = ...Dummy.JntNode;
+//          AnyRefNode &ref1 = ....Layer_Pelvic1.BaseSegAnterior.mid;
+//        };
+//      };
+//      AnyKinMeasureOrg OrgY ={
+//        MeasureOrganizer={1};
+//        AnySphericalJoint &ref=..Jnt;
+//      };
+//      Reaction.Type={Off,Off,Off};
+//      
+//    };
     
     AnyFolder Layer_Pelvic1 ={
       AnyRefFrame &LayerNode = ..Layer_Pelvic1.BaseSegAnterior.mid;
@@ -1007,12 +1001,12 @@ AnyFolder Abdominal = {
     
     AnyKinEqSimpleDriver LayerDrivers ={
       AnyKinMeasure &ref1=.Layer_Pelvic1.Norm;
-      AnyKinMeasure &ref2=.Layer_Pelvic2.DistPelvis;
-      AnyKinMeasure &ref3=.Layer_Pelvic3.DistPelvis;
+      AnyKinMeasure &ref2=.Layer_Pelvic2.Norm;
+      AnyKinMeasure &ref3=.Layer_Pelvic3.Norm;
       
-      DriverPos ={0,0,0};
-      DriverVel ={0,0,0};
-      Reaction.Type={On,On,On};  //we do not have muscles in the area yet so reactions need to be on...
+      DriverPos = repmat(nDim,0);
+      DriverVel = repmat(nDim,0);
+      Reaction.Type=repmat(nDim,On);  //we do not have muscles in the area yet so reactions need to be on...
     }; 
     
     
