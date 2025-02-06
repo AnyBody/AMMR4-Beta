@@ -776,7 +776,9 @@ AnyFolder Abdominal = {
 
     BaseSegPosterior = {
       AnyRefNode Layer1 = {ARel = .AnatomicalFrameTrunk.ARel;};
+      AnyRefNode &JntNode1 = ....Trunk.Segments.PelvisSeg.PelvicLayer1_JntNode;
     };
+    AnyRefNode &JntNodeRef = BaseSegPosterior.JntNode1;
     AnyRefNode &LayerRef = BaseSegPosterior.Layer1;
     #if BM_TRUNK_EXPERIMENTAL_INTER_LAYER_L5PELVIC == OFF
     AnyFolder &layer_above = .Layer_L5;
@@ -817,6 +819,7 @@ AnyFolder Abdominal = {
     BaseSegPosterior ={
       AnyRefNode Layer2 = {ARel = .AnatomicalFrameTrunk.ARel;};
     };
+    AnyRefNode &JntNodeRef = BaseSegPosterior.JntNode2;
     AnyRefNode &LayerRef = BaseSegPosterior.Layer2;
     AnyFolder &layer_above = .Layer_Pelvic1;
     AnyFolder &layer_below =  .Layer_Pelvic3; 
@@ -834,7 +837,9 @@ AnyFolder Abdominal = {
     AnySeg &BaseSegPosterior = .Layer_Pelvic1.BaseSegPosterior;   
     BaseSegPosterior ={
       AnyRefNode Layer3 = {ARel = .AnatomicalFrameTrunk.ARel;};
+      AnyRefNode &JntNode3 = ....Trunk.Segments.PelvisSeg.PelvicLayer3_JntNode;
     };
+    AnyRefNode &JntNodeRef = BaseSegPosterior.JntNode3;
     AnyRefNode &LayerRef = BaseSegPosterior.Layer3;
     AnyFolder &layer_above = .Layer_Pelvic2;
     AnyFolder &layer_below =  .Layer_Pelvic4; 
