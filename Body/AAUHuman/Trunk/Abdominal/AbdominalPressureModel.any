@@ -819,7 +819,6 @@ AnyFolder Abdominal = {
     BaseSegPosterior ={
       AnyRefNode Layer2 = {ARel = .AnatomicalFrameTrunk.ARel;};
     };
-    AnyRefNode &JntNodeRef = BaseSegPosterior.JntNode2;
     AnyRefNode &LayerRef = BaseSegPosterior.Layer2;
     AnyFolder &layer_above = .Layer_Pelvic1;
     AnyFolder &layer_below =  .Layer_Pelvic3; 
