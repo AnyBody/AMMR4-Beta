@@ -109,10 +109,32 @@ Pelvis = {
     {-0.0735202, 0.05591577, 0.1074162}
   };
 
-  
+   AnyFloat AbVolumeIntefaceMorphingRightPoints = {
+    {-0.007075075, 0.07240884, 0.01488382}, 
+    {-0.01505633, 0.0688867, 0.05872649}, 
+    {-0.03036532, 0.06213082, 0.09954405}, 
+    {0.006071832, 0.04261761, 0.01488382}, 
+    {-0.002179691, 0.0389762, 0.05852316}, 
+    {-0.01781544, 0.03207613, 0.09864677}, 
+    {0.01288042, 0.01003475, 0.01559456}, 
+    {0.008032369, 0.007895302, 0.06023583}, 
+    {-0.002831556, 0.003101038, 0.1016137}, 
+    {0.01940133, -0.03040646, 0.01252677}, 
+    {0.01197412, -0.03368409, 0.04714041}, 
+    {-0.001983866, -0.03984377, 0.07709727}, 
+    {0.02344099, -0.07163656, 0.008679993}, 
+    {0.008702318, -0.07814075, 0.03578591}
+  };
+ 
   AnyMat33 LeftMirror = { {1, 0, 0}, {0, 1, 0}, {0, 0, -1}};
   
-  AnyMatrix points_RBF_unscaled = arrcat(SacralInterfaceMorphingPoints, PelvicIntefaceMorphingRightPoints, PelvicIntefaceMorphingRightPoints*LeftMirror);
+  AnyMatrix points_RBF_unscaled = arrcat(
+  SacralInterfaceMorphingPoints,
+  PelvicIntefaceMorphingRightPoints,
+  PelvicIntefaceMorphingRightPoints*LeftMirror,
+  AbVolumeIntefaceMorphingRightPoints,
+  AbVolumeIntefaceMorphingRightPoints*LeftMirror
+);
 
   AnyMatrix GluteusWrappingSurfacePoints = {{-0.04011+0.020, 0.12595-0.02, 0.013490+0.03} * .TF' - FrameOffset,
                                             {-0.02738+0.015,-0.06247-0.02,-0.03611-0.05} * .TF' - FrameOffset };

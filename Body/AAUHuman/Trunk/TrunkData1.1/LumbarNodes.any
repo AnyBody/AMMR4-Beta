@@ -25,8 +25,8 @@ AnyFolder Pelvis = {
     {-0.0512493, -0.081406, 0.00761028}
   };
   
-  AnyFloat AbVolumeInterfaceMorphingPointsPickedRight =
-  {{0.142822, 0.01874092, 0.01488382}, 
+  AnyFloat AbVolumeInterfaceMorphingPointsPickedRight ={
+    {0.142822, 0.01874092, 0.01488382}, 
     {0.1340981, 0.01874092, 0.05872649}, 
     {0.1173647, 0.01874092, 0.09954405}, 
     {0.142822, -0.01382222, 0.01488382}, 
@@ -39,7 +39,8 @@ AnyFolder Pelvis = {
     {0.1174161, -0.08601176, 0.04714041}, 
     {0.1021594, -0.08601176, 0.07709727}, 
     {0.1125841, -0.1253631, 0.008679993}, 
-    {0.0964741, -0.1253631, 0.03578591}};
+    {0.0964741, -0.1253631, 0.03578591}
+  };
 
   //Trick to ensure symmetry on Z
   AnyFloat SacralInterfaceMorphingPoints = arrcat(
