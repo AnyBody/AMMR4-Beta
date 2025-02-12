@@ -24,6 +24,22 @@ AnyFolder Pelvis = {
     {-0.0471807, -0.105513, 0.00555406},
     {-0.0512493, -0.081406, 0.00761028}
   };
+  
+  AnyFloat AbVolumeInterfaceMorphingPointsPickedRight =
+  {{0.142822, 0.01874092, 0.01488382}, 
+    {0.1340981, 0.01874092, 0.05872649}, 
+    {0.1173647, 0.01874092, 0.09954405}, 
+    {0.142822, -0.01382222, 0.01488382}, 
+    {0.1338027, -0.01382222, 0.05852316}, 
+    {0.1167121, -0.01382222, 0.09864677}, 
+    {0.1358961, -0.04638036, 0.01559456}, 
+    {0.130597, -0.04638036, 0.06023583}, 
+    {0.1187223, -0.04638036, 0.1016137}, 
+    {0.1255344, -0.08601176, 0.01252677}, 
+    {0.1174161, -0.08601176, 0.04714041}, 
+    {0.1021594, -0.08601176, 0.07709727}, 
+    {0.1125841, -0.1253631, 0.008679993}, 
+    {0.0964741, -0.1253631, 0.03578591}};
 
   //Trick to ensure symmetry on Z
   AnyFloat SacralInterfaceMorphingPoints = arrcat(
@@ -37,7 +53,10 @@ AnyFolder Pelvis = {
   AnyMatrix points_RBF_unscaled = arrcat(
     SacralInterfaceMorphingPoints,
     Right.PelvicInterfaceMorphingPoints,
-    Right.PelvicInterfaceMorphingPoints * {{1,0,0},{0,1,0},{0,0,-1}}
+    Right.PelvicInterfaceMorphingPoints * {{1,0,0},{0,1,0},{0,0,-1}},
+    AbVolumeInterfaceMorphingPointsPickedRight,
+    AbVolumeInterfaceMorphingPointsPickedRight * {{1,0,0},{0,1,0},{0,0,-1}}
+
   );
 
   AnyFloat HipJointsCenterTD_pos = {0.050000, -0.1150000, 0};
