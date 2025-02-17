@@ -6,9 +6,9 @@ AnyFolder RangeOfMotion = {
     AnyVar MaxPelvisThoraxFlexionAngle = -250;
     AnyVar MaxPelvisThoraxExtensionAngle = 280;
     AnyVar MaxPelvisThoraxLateralBendingAngle = 150;
-//    AnyVar MinPelvisThoraxLateralBendingAngle = -150;
+    AnyVar MinPelvisThoraxLateralBendingAngle = -150;
     AnyVar MaxPelvisThoraxAxialRotationAngle = 190;
-//    AnyVar MinPelvisThoraxAxialRotationAngle = -190;
+    AnyVar MinPelvisThoraxAxialRotationAngle = -190;
   };
   AnyFolder ROM_InverseDynamics_FlexibleThorax = {
     // Range of Motion of InverseDynamics with flexible thorax
@@ -24,16 +24,18 @@ AnyFolder RangeOfMotion = {
     AnyVar MaxPelvisThoraxFlexionAngle = -110;
     AnyVar MaxPelvisThoraxExtensionAngle = 50;
     AnyVar MaxPelvisThoraxLateralBendingAngle = 60;
-    AnyVar MaxPelvisThoraxAxialRotationAngle = 80;
+    AnyVar MinPelvisThoraxLateralBendingAngle = -60;
+   AnyVar MaxPelvisThoraxAxialRotationAngle = 80;
+   AnyVar MinPelvisThoraxAxialRotationAngle = -80;
   };
   AnyFolder ROM_Kinematics_RigidThorax = {
     // Range of Motion of Kinematics with rigid thorax
     AnyVar MaxPelvisThoraxFlexionAngle = -110;
     AnyVar MaxPelvisThoraxExtensionAngle = 270;
     AnyVar MaxPelvisThoraxLateralBendingAngle = 210;
-//    AnyVar MinPelvisThoraxLateralBendingAngle = -210;
+    AnyVar MinPelvisThoraxLateralBendingAngle = -210;
     AnyVar MaxPelvisThoraxAxialRotationAngle = 150;
-//    AnyVar MinPelvisThoraxAxialRotationAngle = -160;
+    AnyVar MinPelvisThoraxAxialRotationAngle = -160;
   };
   AnyFolder ROM_InverseDynamics_RigidThorax = {
     // Range of Motion of Kinematics with rigid thorax
@@ -49,7 +51,9 @@ AnyFolder RangeOfMotion = {
     AnyVar MaxPelvisThoraxFlexionAngle = -110;
     AnyVar MaxPelvisThoraxExtensionAngle = 50;
     AnyVar MaxPelvisThoraxLateralBendingAngle = 60;
+    AnyVar MinPelvisThoraxLateralBendingAngle = -60;
     AnyVar MaxPelvisThoraxAxialRotationAngle = 80;
+   AnyVar MinPelvisThoraxAxialRotationAngle = -80;
   };
 
   // AnyFolder Right = {};

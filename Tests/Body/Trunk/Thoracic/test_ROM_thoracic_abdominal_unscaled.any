@@ -164,12 +164,46 @@ Main = {
     tEnd = 10.0; Gravity = {0, -9.81, 0}; nStep = 10;
   };
   
+  AnyBodyStudy Study_CoupledMotion = {
+    AnyFolder& Model = Main.Model;
+    AnyFolder& BodyModel = Main.HumanModel.BodyModel;
+    
+    #if BM_TRUNK_THORACIC_MODEL == _THORACIC_MODEL_FLEXIBLE_
+    AnyVar DownScaleROM = 0.9; //we downscale the ROM in this study... ideally we would want to know more about coupling between DOF
+    #else
+    AnyVar DownScaleROM = 0.7; //we downscale the ROM in this study... ideally we would want to know more about coupling between DOF
+    #endif
+    
+    SimpleFourierDriver Trunk_Extension = {
+      AnyKinMeasure &ref1 = .BodyModel.Interface.Trunk.PelvisThoraxExtension;
+      RangeOfMotion = .DownScaleROM*{..RangeOfMotion.ROM_InverseDynamics_FlexibleThorax.MaxPelvisThoraxFlexionAngle, ..RangeOfMotion.ROM_InverseDynamics_FlexibleThorax.MaxPelvisThoraxExtensionAngle}*pi/180;
+      Freq = 1/(.tEnd-.tStart);
+    };
+    
+    SimpleFourierDriver Trunk_LateralBending = {
+      AnyKinMeasure &ref1 = .BodyModel.Interface.Trunk.PelvisThoraxLateralBending;
+      RangeOfMotion = .DownScaleROM*{..RangeOfMotion.ROM_InverseDynamics_FlexibleThorax.MinPelvisThoraxLateralBendingAngle, ..RangeOfMotion.ROM_InverseDynamics_FlexibleThorax.MaxPelvisThoraxLateralBendingAngle}*pi/180;
+      Freq = 4/(.tEnd-.tStart);
+      Phase = -90*pi/180;
+    };
+    
+    SimpleFourierDriver Trunk_AxialRotation = {
+      AnyKinMeasure &ref1 = .BodyModel.Interface.Trunk.PelvisThoraxRotation;
+      RangeOfMotion = .DownScaleROM*{..RangeOfMotion.ROM_InverseDynamics_FlexibleThorax.MinPelvisThoraxAxialRotationAngle, ..RangeOfMotion.ROM_InverseDynamics_FlexibleThorax.MaxPelvisThoraxAxialRotationAngle}*pi/180;
+      Freq = 2*1/(.tEnd-.tStart);
+      Phase = 90*pi/180;
+    };
+
+    tEnd = 10.0; Gravity = {0, -9.81, 0}; nStep = 50;
+  };
+  
   AnyOperationSequence RunTest ={
     #if ROM_TEST_MODE == KINEMATICS
     AnyOperation &Flexion = .Study_Flexion.Kinematics; 
     AnyOperation &Extension = .Study_Extension.Kinematics; 
     AnyOperation &Lateral = .Study_LateralBending.Kinematics; 
     AnyOperation &Axial = .Study_AxialRotation.Kinematics; 
+    AnyOperation &Coupled = .Study_CoupledMotion.Kinematics; 
     #endif
     #if ROM_TEST_MODE == INVERSEDYNAMICS
     AnyOperation &Flexion = .Study_Flexion.InverseDynamics; 
