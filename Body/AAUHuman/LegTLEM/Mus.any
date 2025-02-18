@@ -160,6 +160,28 @@
     };  
   };
 
+  MuscleGroup Plantaris = {
+    AnyMuscleShortestPath Plantaris1 = {
+      AnyMuscleModel &MusMdl = ...MuscleModels.Plantaris1Par;
+      AnyRefNode &Org = ...Seg.Thigh.Plantaris1Node;
+      AnySurface &srf = ...Seg.Thigh.GastroWrapSurf.cyl; 
+      AnySurface &srf1 = ...Seg.Shank.AchillesWrapping1.Cyl; 
+      AnySurface &srf2 = ...Seg.Shank.AchillesWrapping2.Cyl;   
+      AnyRefNode &Via1 = ...Seg.Foot.Calcaneus.Plantaris1SuperiorNode;
+      AnyRefNode &Ins = ...Seg.Foot.Calcaneus.Plantaris1Node;
+      SPLine = {
+        StringMesh = 30;
+        AnyMatrix InitWrapPos = {
+          transf3D({1.1*.srf.Radius, ....Sign*1.1*.srf.Radius, 0.5*.srf.Length }, &.srf ) ,
+          transf3D({1.005*.srf1.Radius, 0, 0.5*.srf1.Length }, &.srf1 ) ,
+          transf3D({-1.005*.srf2.Radius, 0, 0.5*.srf2.Length }, &.srf2 )
+        };
+        InitWrapPosVecArr = {&InitWrapPos, None};
+      };
+      viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    };
+  };
+
   #if BM_FOOT_MODEL == _FOOT_MODEL_DEFAULT_
   
   MuscleGroup FlexorDigitorumLongus() = {
@@ -1880,31 +1902,6 @@ MuscleGroup Pectineus = {
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 };
-
-
-#if BM_FOOT_MODEL == _FOOT_MODEL_DEFAULT_  
-  MuscleGroup Plantaris = {
-    AnyMuscleShortestPath Plantaris1 = {
-      AnyMuscleModel &MusMdl = ...MuscleModels.Plantaris1Par;
-      AnyRefNode &Org = ...Seg.Thigh.Plantaris1Node;
-      AnySurface &srf = ...Seg.Thigh.GastroWrapSurf.cyl; 
-      AnySurface &srf1 = ...Seg.Shank.AchillesWrapping1.Cyl; 
-      AnySurface &srf2 = ...Seg.Shank.AchillesWrapping2.Cyl;   
-      AnyRefNode &Via1 = ...Seg.Foot.Plantaris1SuperiorNode;
-      AnyRefNode &Ins = ...Seg.Foot.Plantaris1Node;
-      SPLine = {
-        StringMesh = 30;
-        AnyMatrix InitWrapPos = {
-          transf3D({1.1*.srf.Radius, ....Sign*1.1*.srf.Radius, 0.5*.srf.Length }, &.srf ) ,
-          transf3D({1.005*.srf1.Radius, 0, 0.5*.srf1.Length }, &.srf1 ) ,
-          transf3D({-1.005*.srf2.Radius, 0, 0.5*.srf2.Length }, &.srf2 )
-        };
-        InitWrapPosVecArr = {&InitWrapPos, None};
-      };
-      viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-    };
-  };
-#endif
 
 MuscleGroup Popliteus = {
   AnyMuscleViaPoint Popliteus1 = {
