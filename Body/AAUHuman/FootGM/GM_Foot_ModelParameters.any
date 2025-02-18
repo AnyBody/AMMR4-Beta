@@ -24,8 +24,8 @@ ModelParameters = {
     AnyVar HeelHeight=0.05;  //measured from floor to ankle joint
     
     
-    AnyVec3 LateralMalleolus = {0.0449248, 0.07027722, 0.02751965}*.TF';
-    AnyVec3 MedialMalleolus = {0.0553215, 0.06030982, -0.02834151}*.TF';
+    AnyVec3 LateralMalleolus = {0.0429171, 0.0815658, 0.032548}*.TF'; // LatMal - estimated from skin
+    AnyVec3 MedialMalleolus = {0.0604137, 0.063059, -0.040193}*.TF'; // MedMal - estimated from skin
     AnyVec3 Metatarsal1PlantarNode = {-0.01293344, -0.05830658, -0.01899186}*.TF';
     AnyVec3 Metatarsal2PlantarNode = {-0.007463424, -0.06155794, 0.01020253}*.TF';
     AnyVec3 Metatarsal5PlantarNode = {-0.01524367, -0.03055783, 0.04927201}*.TF';
