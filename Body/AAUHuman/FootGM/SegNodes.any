@@ -206,45 +206,83 @@ Foot = {
     
     AnyRefNode TendonCalcaneousNode= 
     {
-      //    AnyDrawRefFrame drw={ScaleXYZ={0.01,0.01,0.01};RGB={0,0,0};};
-      //sRel = .Scale({-0.01+0.01702725, 0.01+0.1094617, ....Sign*(0.0008899511+.02)});
-      sRel = .Scale(.Data.TendonCalcaneousNode);      
+      sRel = .Scale(.Data.TendonCalcaneousNode); // from TLEM
     };
     AnyRefNode SoleusMedialis1Node= 
     {
-      sRel = .TendonCalcaneousNode.sRel; //{0.027, 0.103, ....Sign*-0.005}*.ScaleMat;
+      sRel = .Scale(.Data.SoleusMedialis1Node); // from TLEM
     };
     AnyRefNode SoleusMedialis2Node= 
     {
-      sRel = .TendonCalcaneousNode.sRel; //{0.027, 0.103, ....Sign*-0.005}*.ScaleMat;
+      sRel = .Scale(.Data.SoleusMedialis2Node); // from TLEM
     };
     AnyRefNode SoleusMedialis3Node= 
     {
-      sRel = .TendonCalcaneousNode.sRel; //{0.027, 0.103, ....Sign*-0.005}*.ScaleMat;
+      sRel = .Scale(.Data.SoleusMedialis3Node); // from TLEM
     };
     AnyRefNode SoleusLateralis1Node= 
     {
-      sRel = .TendonCalcaneousNode.sRel; //{0.027, 0.107, ....Sign*0.007}*.ScaleMat;
+      sRel = .Scale(.Data.SoleusLateralis1Node); // from TLEM
     };
     AnyRefNode SoleusLateralis2Node= 
     {
-      sRel = .TendonCalcaneousNode.sRel; //{0.027, 0.107, ....Sign*0.007}*.ScaleMat;
+      sRel = .Scale(.Data.SoleusLateralis2Node); // from TLEM
     };
     AnyRefNode SoleusLateralis3Node= 
     {
-      sRel = .TendonCalcaneousNode.sRel; //{0.027, 0.107, ....Sign*0.007}*.ScaleMat;
+      sRel = .Scale(.Data.SoleusLateralis3Node); // from TLEM
     };
     AnyRefNode GastrocnemiusLateralis1Node= 
     {
-      sRel = .TendonCalcaneousNode.sRel; //{0.027, 0.107, ....Sign*0.007}*.ScaleMat;
+      sRel = .Scale(.Data.GastrocnemiusLateralis1Node); // from TLEM
     };
     AnyRefNode GastrocnemiusMedialis1Node= 
     {
-      sRel = .TendonCalcaneousNode.sRel; //{0.020, 0.111, ....Sign*0.001}*.ScaleMat;
+      sRel = .Scale(.Data.GastrocnemiusMedialis1Node); // from TLEM
     };
     AnyRefNode Plantaris1Node= 
     {
-      sRel = .TendonCalcaneousNode.sRel; //{0.029, 0.102, ....Sign*-0.003}*.ScaleMat;
+      sRel = .Scale(.Data.Plantaris1Node); // from TLEM
+    };
+    AnyRefNode TendonCalcaneousSuperiorNode= 
+    {
+      sRel = .Scale(.Data.TendonCalcaneousSuperiorNode); // from TLEM
+    };
+    AnyRefNode SoleusMedialis1SuperiorNode= 
+    {
+      sRel = .Scale(.Data.SoleusMedialis1SuperiorNode); // from TLEM
+    };
+    AnyRefNode SoleusMedialis2SuperiorNode= 
+    {
+      sRel = .Scale(.Data.SoleusMedialis2SuperiorNode); // from TLEM
+    };
+    AnyRefNode SoleusMedialis3SuperiorNode= 
+    {
+      sRel = .Scale(.Data.SoleusMedialis3SuperiorNode); // from TLEM
+    };
+    AnyRefNode SoleusLateralis1SuperiorNode= 
+    {
+      sRel = .Scale(.Data.SoleusLateralis1SuperiorNode); // from TLEM
+    };
+    AnyRefNode SoleusLateralis2SuperiorNode= 
+    {
+      sRel = .Scale(.Data.SoleusLateralis2SuperiorNode); // from TLEM
+    };
+    AnyRefNode SoleusLateralis3SuperiorNode= 
+    {
+      sRel = .Scale(.Data.SoleusLateralis3SuperiorNode); // from TLEM
+    };
+    AnyRefNode GastrocnemiusLateralis1SuperiorNode= 
+    {
+      sRel = .Scale(.Data.GastrocnemiusLateralis1SuperiorNode); // from TLEM
+    };
+    AnyRefNode GastrocnemiusMedialis1SuperiorNode= 
+    {
+      sRel = .Scale(.Data.GastrocnemiusMedialis1SuperiorNode); // from TLEM
+    };
+    AnyRefNode Plantaris1SuperiorNode= 
+    {
+      sRel = .Scale(.Data.Plantaris1SuperiorNode); // from TLEM
     };
     AnyRefNode FlexorHallucisLongusViaNode6= 
     {

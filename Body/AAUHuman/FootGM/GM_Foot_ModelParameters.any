@@ -43,7 +43,7 @@ ModelParameters = {
     AnyVec3 HeelContactNodeMedial = ..Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(.Foot.HeelContactNodeLow + {0.02, 0.0, ..Sign*-0.015});
     AnyVec3 ToeMedialContactNode = ..Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(.Foot.ToeMedialContactNode);
     AnyVec3 ToeLateralContactNode = ..Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(.Foot.ToeLateralContactNode);
-
+    
     AnyFolder Talus = {
       
       AnyVar MassStandard = .MassStandard*0.20286341; //calculated from volume ratio
@@ -89,7 +89,33 @@ ModelParameters = {
       //***********************
       //Muscles nodes
       //***********************
-      AnyVec3 TendonCalcaneousNode = {0.01702725, 0.1094617, (0.0008899511)} *..TF';
+      // Muscle nodes from TLEM 2 dataset transformed to GM Foot segmental frame.
+      AnyVec3 TendonCalcaneousNode = ...Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(..Foot.TendonCalcaneousNode);
+      AnyVec3 TendonCalcaneousMedialisNode = ...Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(..Foot.TendonCalcaneousMedialisNode);
+      AnyVec3 TendonCalcaneousLateralisNode = ...Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(..Foot.TendonCalcaneousLateralisNode);
+      AnyVec3 GastrocnemiusLateralis1Node = ...Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(..Foot.GastrocnemiusLateralis1Node);
+      AnyVec3 GastrocnemiusMedialis1Node =  ...Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(..Foot.GastrocnemiusMedialis1Node);
+      AnyVec3 Plantaris1Node = ...Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(..Foot.Plantaris1Node);
+      AnyVec3 SoleusMedialis1Node = ...Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(..Foot.SoleusMedialis1Node);
+      AnyVec3 SoleusMedialis2Node = ...Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(..Foot.SoleusMedialis2Node);
+      AnyVec3 SoleusMedialis3Node = ...Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(..Foot.SoleusMedialis3Node);
+      AnyVec3 SoleusLateralis1Node = ...Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(..Foot.SoleusLateralis1Node);
+      AnyVec3 SoleusLateralis2Node = ...Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(..Foot.SoleusLateralis2Node);
+      AnyVec3 SoleusLateralis3Node = ...Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(..Foot.SoleusLateralis3Node);
+      
+      AnyVec3 TendonCalcaneousSuperiorNode = ...Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(..Foot.TendonCalcaneousSuperiorNode);
+      AnyVec3 TendonCalcaneousMedialisSuperiorNode = ...Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(..Foot.TendonCalcaneousMedialisSuperiorNode);
+      AnyVec3 TendonCalcaneousLateralisSuperiorNode = ...Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(..Foot.TendonCalcaneousLateralisSuperiorNode);
+      AnyVec3 GastrocnemiusLateralis1SuperiorNode = ...Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(..Foot.GastrocnemiusLateralis1SuperiorNode);
+      AnyVec3 GastrocnemiusMedialis1SuperiorNode = ...Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(..Foot. GastrocnemiusMedialis1SuperiorNode);
+      AnyVec3 Plantaris1SuperiorNode = ...Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(..Foot.Plantaris1SuperiorNode);
+      AnyVec3 SoleusMedialis1SuperiorNode = ...Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(..Foot.SoleusMedialis1SuperiorNode);
+      AnyVec3 SoleusMedialis2SuperiorNode = ...Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(..Foot.SoleusMedialis2SuperiorNode);
+      AnyVec3 SoleusMedialis3SuperiorNode = ...Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(..Foot.SoleusMedialis3SuperiorNode);
+      AnyVec3 SoleusLateralis1SuperiorNode = ...Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(..Foot.SoleusLateralis1SuperiorNode);
+      AnyVec3 SoleusLateralis2SuperiorNode = ...Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(..Foot.SoleusLateralis2SuperiorNode);
+      AnyVec3 SoleusLateralis3SuperiorNode = ...Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(..Foot.SoleusLateralis3SuperiorNode);
+      
       AnyVec3 FlexorHallucisLongusViaNode6 = {0.02368694+0.0, 0.0760648-0.005, (-0.01597639+0.00)}*..TF';
       AnyVec3 FlexorHallucisLongusViaNode7 = {0.02368694-0.01, 0.0760648-0.02, (-0.01597639+0.005)}*..TF';
       AnyVec3 FlexorHallucisLongusViaNode8 = {0.01211299, 0.04574652, -0.01602832}*..TF';
