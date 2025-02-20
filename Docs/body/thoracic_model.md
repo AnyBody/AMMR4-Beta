@@ -1,32 +1,25 @@
-(thoracic-model)=
+(Ribcage and thoracic spine model)=
 
-# Thoracic spine model
+# Ribcage and thoracic spine model
 
-:::{admonition} **Unreleased model:** 
-:class: caution
-The model is under development and not yet included in the managed model repository.
-The model is used in various research projects and access to the model can be given on request. Please
-[contact us](mailto:sales@anybodytech.com) if you are interested in this work.
-:::
+The present generic thoracic model extends the state-of-the-art by introducing a kinematically determinate rigid-body model controlled by full spine DOFs, enabling the simulation of activities such as breathing and curved spine motions (e.g., scoliosis) with detailed ribcage kinematics. Designed for improved usability in clinical and motion capture applications, the model has a wide Range of Motion (ROM) and accommodates severe deformities without locking, thanks to nonlinear constraints and redundancy handling. The model supports direct and inverse kinematics, offering flexibility in input options.
 
+The new model builds on a previously developed thoracic spine model [1]. This thoracic spine model consists of the thoracic vertebral column (12 vertebrae) and the ribcage, including individual ribs (24 ribs) and a two-part sternum. The multiple segments interconnected by joints replicate the physiological connections and load transfer mechanisms.
 
-```{image} _static/Detailed-thorax.png
+## Kinematics
+The kinematic constraints of the thorax are summarized as follows:
+
+- **Vertebra constraints:** The intervertebral joints of the spine, adopted from previous work, are modeled as spherical joints. These joint angles can be adjusted to set the model’s posture.
+- **Rib constraints:** The costovertebral (CV) connections between the vertebrae and ribs are also defined as spherical joints. For each rib, three rotational Averaging measure (AvgM) constraints were established. Detailed information is provided in the published paper [2].
+- **Sternum constraints:** A revolute joint was defined between the manubrium and the sternal body, allowing rotation around the mediolateral axis. This DOF enables ribcage movements independent of spinal posture, e.g., for breathing. Additionally, three linear and three rotational AvgM constraints were defined for the entire sternum, with further details provided in the published paper [2].
+
+```{image} _static/Ribcage_Constraints.jpg 
+    :width: 60%
+    :align: center  
 ```
 
-The thoracic spine model consists of the thoracic vertebral column and the
-ribcage, including individual ribs and a two part sternum. The many segments interconnected by joints
-replicates the physiological connection and load transfer mechanisms.
-
-
-
-## Kinematics and spine rhythms 
-
-The thoracic vertebral column contains 12 vertebrae with 3 DoF spherical joints
-in between each 2 vertebrae, connecting to the cervical spine through a
-spherical joint at T1C7 levels, and a spherical joint to the lumbar spine at
-T12L1 levels. Costovertebral and sternocostal joint are also represented through
-kinematic joints. All vertebra are linked with rhythm drivers to allow easy use. 
-
+## Spine rhythms 
+To drive the thoracic model, only the thoracic spine needs to be controlled, while the ribcage follows the spine as it is kinematically determinate due to the constraints. However, the thoracic spine consists of 12 vertebrae, each requiring three rotational drivers. To simplify usage, we introduced rhythms, which are constraints that link the rotational DOFs of the intervertebral joints. As a result, all vertebrae are linked with rhythm drivers, requiring input for only three spine rotational DOFs (flexion/extension, lateral bending, and axial rotation). Below is a video demonstrating how the rhythms work.
 
 ```{raw} html
 <video width="100%" style="display:block; margin: 0 auto;" controls autoplay loop>
@@ -35,14 +28,45 @@ Your browser does not support the video tag.
 </video>
 ```
 
+
+## Example of the model
+Here are some examples of the thoracic model [2].
+
+<div style="display: flex; justify-content: center; gap: 10px;">
+    <video width="45%" controls autoplay loop>
+        <source src="../_static/Thoracic_AR.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <video width="45%" controls autoplay loop>
+        <source src="../_static/Thoracic_LB.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+<div style="display: flex; justify-content: center; gap: 10px;">
+    <video width="45%" controls autoplay loop>
+        <source src="../_static/Thoracic_FE.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <video width="45%" controls autoplay loop>
+        <source src="../_static/Thoracic_Scoliosis_PA.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+
+
 ## Muscles configurations
-
-The majority of the muscle fascicles are defined for the thoracic column, ribcage region 
-as well as a diaphragm muscles to simulatate breathing and abdominal volume pressure. 
+The majority of the muscle fascicles are defined for the thoracic column and ribcage region. 
 
 
-```{image} _static/Detailed-thorax2.png
-```
+<div style="display: flex; justify-content: center; gap: 10px;">
+    <img src="../_static/Thoracic_muscle_front.png" width="30%" alt="Thoracic Muscle Front">
+    <img src="../_static/Thoracic_muscle_back.png" width="30%" alt="Thoracic Muscle Back">
+    <img src="../_static/Thoracic_muscle_iso.png" width="30%" alt="Thoracic Muscle Iso">
+</div>
+
+
 
 
 % .. image:: _static/thoracic.png
@@ -55,13 +79,13 @@ The detailed thoracic model can be controlled using the `BM_*` statements like t
 
 
 ```{code-block} AnyScriptDoc
-:emphasize-lines: 3
+:emphasize-lines: 2
 
 #define BM_TRUNK_THORACIC_MODEL _THORACIC_MODEL_RIGID_
 #define BM_TRUNK_THORACIC_MODEL _THORACIC_MODEL_FLEXIBLE_
 #define BM_TRUNK_THORACIC_MODEL _THORACIC_MODEL_USERDEFINED_
 
-#define BM_TRUNK_CAVITY_MODEL _CAVITY_MODEL_VOLUME_  //Enables the new abdominal volume model
+model
 
 ```
 
@@ -69,10 +93,7 @@ The detailed thoracic model can be controlled using the `BM_*` statements like t
 ```{rst-class} without-title
 ```
 
-:::{note}
-**Planned for AMMR 4.0:** The model is scheduled to be released together with AMMR 4.0, but is available on GitHub at https://github.com/anybody/ammr.
-Otherwise, for early access please [contact us](mailto:sales@anybodytech.com).
-:::
+
 
 
 
@@ -86,8 +107,5 @@ Otherwise, for early access please [contact us](mailto:sales@anybodytech.com).
 
 ## References
 
-- Ignasiak, D., Dendorfer, S., Fergusson, S.J. (2016), "Thoracolumbar spine model with
-  articulated ribcage for the prediction of dynamic spinal loading",
-  Journal of Biomechanics, vol. 49 (6), pp. 959-966.
-- Shayestehpour, H., Toerholm, S.,  Lund, M.E., Rasmussen, J. (To be submitted), "A generic detailed multibody thoracic spine and ribcage model."
-  Journal of Multibody system dynamics.
+- 1. [Shayestehpour, H., Rasmussen, J., Galibarov, P., Wong, C.: An articulated spine and ribcage kinematic model for simulation of scoliosis deformities. Multibody Syst. Dyn. 53, 115–134 (2021).](https://doi.org/10.1007/s11044-021-09787-9)
+- 2. [Shayestehpour, H., Tørholm, S., Damsgaard, M., Lund, M., Wong, C., Rasmussen, J.: A generic detailed multibody thoracic spine and ribcage model](http://dx.doi.org/10.1007/s11044-024-10034-0)
