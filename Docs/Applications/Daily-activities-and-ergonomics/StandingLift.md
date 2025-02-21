@@ -1,5 +1,5 @@
 ---
-gallery_title: "Standing Model"
+gallery_title: "Lifting Model"
 gallery_image: "/Applications/images/StandingLift.webp"
 ---
 

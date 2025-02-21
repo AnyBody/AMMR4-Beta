@@ -11,7 +11,7 @@ gallery_image: "/Applications/images/StandingModel.webp"
 <img src="/Applications/images/StandingModel.webp" width="70%" align="center">
 ````
 
-A full-body model that which uses a center of mass drivers to keep balance and Ground Reaction Force prediction for contact with the ground.
+A full-body model that uses center of mass drivers to maintain balance and predicts ground reaction forces for contact with the ground.
 
 The model has the following features which makes it a good starting point for creating new models.
 
