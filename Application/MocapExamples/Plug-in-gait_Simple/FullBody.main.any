@@ -11,3 +11,40 @@
 
 // Include the AnyMoCap Framwork
 #include "<ANYMOCAP_MODEL>"
+
+Main = {
+  HumanModel.BodyModel.Trunk.Segments.PelvisSeg = {
+    AnyDrawPointCloud points_RBF_TrunkPelvis_Unscaled = 
+    {
+      //Visible = On;
+      //Opacity = 1.0;
+      //Pickable = On;
+      //PickableZOrdering = 0;
+      RGB = {1, 0, 0};
+          ScaleXYZ = {0.025, 0.025, 0.025}*100;
+      //Transparency = 1.0;
+      //Face = 2.0;
+      Points = 
+      arrcat (
+      Main.HumanModel.BodyModel.Trunk.Data.unscaled.ModelParameters.Pelvis.SacralInterfaceMorphingPointsPickedMidline,
+      Main.HumanModel.BodyModel.Trunk.Data.unscaled.ModelParameters.Pelvis.SacralInterfaceMorphingPointsPickedRight,
+);
+Points3D = On;
+      //PointNames = ;
+      //VectorFieldRGBs = ;
+      //Vectors3D = Off;
+      //PointToPointVectors = Off;
+      //AnyStyleDrawMaterial &<Insert name0> = <Insert object reference (or full object definition)>;
+      //AnyStyleDrawMaterial &<Insert name1> = <Insert object reference (or full object definition)>; You can make any number of AnyStyleDrawMaterial objects!
+    };
+  
+//      AnyRefNodeGroup nodes =  {
+//        NodeAmount = 15;
+//        Node_sRels = arrcat(Main.HumanModel.BodyModel.Trunk.Data.unscaled.ModelParameters.Pelvis.SacralInterfaceMorphingPointsPickedMidline,
+//          Main.HumanModel.BodyModel.Trunk.Data.unscaled.ModelParameters.Pelvis.SacralInterfaceMorphingPointsPickedRight);
+//        AnyDrawNodes drw = {
+//          ScaleXYZ = {0.025, 0.025, 0.025}*0.1;
+//        }; };
+
+  };
+};
