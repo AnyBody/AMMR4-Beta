@@ -296,7 +296,7 @@ linkcheck_ignore = [
 linkcheck_allowed_redirects = {
     "https://doi.org.*": ".*",
     "https://dx.doi.org.*": ".*",
-     "https://youtu.be": ".*",
+     "https://youtu.be.*": ".*",
 }
 
 
