@@ -1,6 +1,6 @@
-(abdominal-pressure-model)=
+(Abdominal Pressure Model)=
 
-# Abdominal pressure model
+# Abdominal Pressure Model
 
 This model introduces intra-abdominal and intra-thoracic pressure, along with the diaphragm, which balance pressure balance between them.
 
@@ -14,6 +14,7 @@ Here are some examples of different postures of the abdominal pressure model.
 ## Pressure model
 The transversus abdominis, obliquus, and rectus abdominis muscles wrap around the abdominal volumes, exerting posterior pressure. The diaphragm muscles support upward pressure transmission to the ribcage, while the pelvic floor absorbs downward pressure. This pressure model generates an extensor moment on the ribcage, integrating detailed muscle configurations.
 
+<!-- This part is commented out for now. But later we can add it to the documentation
 ## Diaphragm model
 Beside holding the pressure and transfering the force to the ribcage, the diaphragm mechanism can move inferosuperiorly according to anatomy and simulate breathing.
  
@@ -22,7 +23,7 @@ Beside holding the pressure and transfering the force to the ribcage, the diaphr
     <source src="../_static/Diaphragm_Moving_sagittal.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
-```
+```-->
 
 <!-- This part is not ready in the model yet. So the explanation is hidden in the HTML.
 
