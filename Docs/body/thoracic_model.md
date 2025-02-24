@@ -1,17 +1,23 @@
-(Ribcage and thoracic spine model)=
+(Ribcage and Thoracic Spine Model)=
 
-# Ribcage and thoracic spine model
+# Ribcage and Thoracic Spine Model
 
-The present generic ribcage and thoracic model has been published in [Shayestehpour, H., Tørholm, S., Damsgaard, M., Lund, M., Wong, C., Rasmussen, J.: A generic detailed multibody thoracic spine and ribcage model](https://dx.doi.org/10.1007/s11044-024-10034-0). This model extends the state-of-the-art by introducing a kinematically determinate rigid-body model controlled by full spine DOFs, enabling the simulation of activities such as breathing and curved spine motions (e.g., scoliosis) with detailed ribcage kinematics. Designed for improved usability in clinical and motion capture applications, the model has a wide Range of Motion (ROM) and accommodates severe deformities without locking, thanks to nonlinear constraints and redundancy handling. The model supports direct and inverse kinematics, offering flexibility in input options.
+The present generic ribcage and thoracic model has been published in [Shayestehpour, H., Tørholm, S., Damsgaard, M., Lund, M., Wong, C., Rasmussen, J.: A generic detailed multibody thoracic spine and ribcage model](https://dx.doi.org/10.1007/s11044-024-10034-0). This model extends the state-of-the-art by introducing a kinematically determinate rigid-body model controlled by full spine DOFs, enabling the simulation of activities such as curved spine motions (e.g., scoliosis) with detailed ribcage kinematics. Designed for improved usability in clinical and motion capture applications, the model has a wide Range of Motion (ROM) and accommodates severe deformities without locking, thanks to nonlinear constraints and redundancy handling. The model supports direct and inverse kinematics, offering flexibility in input options.
 
 The new model builds on a previously developed thoracic spine model [1](https://doi.org/10.1007/s11044-021-09787-9). This thoracic spine model consists of the thoracic vertebral column (12 vertebrae) and the ribcage, including individual ribs (24 ribs) and a two-part sternum. The multiple segments interconnected by joints replicate the physiological connections and load transfer mechanisms.
+
+Here is a full view of the flexible thoracic model together with the new {doc}`abdominal pressure model <abdominal_model>`.
+<video width="100%" style="display:block; margin: 0 auto;" controls autoplay loop>
+    <source src="../_static/ThoracicSpine_rotating_model.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
 
 ## Kinematics
 The kinematic constraints of the thorax are summarized as follows:
 
 - **Vertebra constraints:** The intervertebral joints of the spine, adopted from previous work, are modeled as spherical joints. These joint angles can be adjusted to set the model’s posture.
 - **Rib constraints:** The costovertebral (CV) connections between the vertebrae and ribs are also defined as spherical joints. For each rib, three rotational Averaging measure (AvgM) constraints were established. Detailed information is provided in the [paper](https://dx.doi.org/10.1007/s11044-024-10034-0).
-- **Sternum constraints:** A revolute joint was defined between the manubrium and the sternal body, allowing rotation around the mediolateral axis. This DOF enables ribcage movements independent of spinal posture, e.g., for breathing. Additionally, three linear and three rotational AvgM constraints were defined for the entire sternum, with further details provided in the [paper](https://dx.doi.org/10.1007/s11044-024-10034-0).
+- **Sternum constraints:** A revolute joint was defined between the manubrium and the sternal body, allowing rotation around the mediolateral axis. This DOF enables ribcage movements independent of spinal posture. Additionally, three linear and three rotational AvgM constraints were defined for the entire sternum, with further details provided in the [paper](https://dx.doi.org/10.1007/s11044-024-10034-0).
 
 ```{image} _static/Ribcage_Constraints.jpg 
     :width: 60%
@@ -30,7 +36,7 @@ Your browser does not support the video tag.
 
 
 ## Example of the model
-Here are some examples of the [new thoracic model](https://dx.doi.org/10.1007/s11044-024-10034-0).
+Here are some examples of the new thoracic model.
 
 <div style="display: flex; justify-content: center; gap: 10px;">
     <video width="45%" controls autoplay loop>
@@ -57,16 +63,14 @@ Here are some examples of the [new thoracic model](https://dx.doi.org/10.1007/s1
 
 
 ## Muscles configurations
-The majority of the muscle fascicles are defined for the thoracic column and ribcage region. 
+The muscle configuration of the model has been greatly expanded in both the spine and abdominal regions, with a total of 1,222 muscle fascicles for the thoracic spine.
 
 
 <div style="display: flex; justify-content: center; gap: 10px;">
-    <img src="../_static/Thoracic_muscle_front.png" width="30%" alt="Thoracic Muscle Front">
-    <img src="../_static/Thoracic_muscle_back.png" width="30%" alt="Thoracic Muscle Back">
-    <img src="../_static/Thoracic_muscle_iso.png" width="30%" alt="Thoracic Muscle Iso">
+    <img src="../_static/Thoracic_muscle_front.png" width="20%" alt="Thoracic Muscle Front">
+    <img src="../_static/Thoracic_muscle_back.png" width="20%" alt="Thoracic Muscle Back">
+    <img src="../_static/Thoracic_muscle_iso.png" width="20%" alt="Thoracic Muscle Iso">
 </div>
-
-
 
 
 ## Example Configuration
