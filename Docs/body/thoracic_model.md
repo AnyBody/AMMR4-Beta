@@ -2,7 +2,7 @@
 
 # Ribcage and thoracic spine model
 
-The present generic ribcage and thoracic model has been published in [Shayestehpour, H., Tørholm, S., Damsgaard, M., Lund, M., Wong, C., Rasmussen, J.: A generic detailed multibody thoracic spine and ribcage model](http://dx.doi.org/10.1007/s11044-024-10034-0). This model extends the state-of-the-art by introducing a kinematically determinate rigid-body model controlled by full spine DOFs, enabling the simulation of activities such as breathing and curved spine motions (e.g., scoliosis) with detailed ribcage kinematics. Designed for improved usability in clinical and motion capture applications, the model has a wide Range of Motion (ROM) and accommodates severe deformities without locking, thanks to nonlinear constraints and redundancy handling. The model supports direct and inverse kinematics, offering flexibility in input options.
+The present generic ribcage and thoracic model has been published in [Shayestehpour, H., Tørholm, S., Damsgaard, M., Lund, M., Wong, C., Rasmussen, J.: A generic detailed multibody thoracic spine and ribcage model](https://dx.doi.org/10.1007/s11044-024-10034-0). This model extends the state-of-the-art by introducing a kinematically determinate rigid-body model controlled by full spine DOFs, enabling the simulation of activities such as breathing and curved spine motions (e.g., scoliosis) with detailed ribcage kinematics. Designed for improved usability in clinical and motion capture applications, the model has a wide Range of Motion (ROM) and accommodates severe deformities without locking, thanks to nonlinear constraints and redundancy handling. The model supports direct and inverse kinematics, offering flexibility in input options.
 
 The new model builds on a previously developed thoracic spine model [1](https://doi.org/10.1007/s11044-021-09787-9). This thoracic spine model consists of the thoracic vertebral column (12 vertebrae) and the ribcage, including individual ribs (24 ribs) and a two-part sternum. The multiple segments interconnected by joints replicate the physiological connections and load transfer mechanisms.
 
@@ -10,8 +10,8 @@ The new model builds on a previously developed thoracic spine model [1](https://
 The kinematic constraints of the thorax are summarized as follows:
 
 - **Vertebra constraints:** The intervertebral joints of the spine, adopted from previous work, are modeled as spherical joints. These joint angles can be adjusted to set the model’s posture.
-- **Rib constraints:** The costovertebral (CV) connections between the vertebrae and ribs are also defined as spherical joints. For each rib, three rotational Averaging measure (AvgM) constraints were established. Detailed information is provided in the [paper](http://dx.doi.org/10.1007/s11044-024-10034-0).
-- **Sternum constraints:** A revolute joint was defined between the manubrium and the sternal body, allowing rotation around the mediolateral axis. This DOF enables ribcage movements independent of spinal posture, e.g., for breathing. Additionally, three linear and three rotational AvgM constraints were defined for the entire sternum, with further details provided in the [paper](http://dx.doi.org/10.1007/s11044-024-10034-0).
+- **Rib constraints:** The costovertebral (CV) connections between the vertebrae and ribs are also defined as spherical joints. For each rib, three rotational Averaging measure (AvgM) constraints were established. Detailed information is provided in the [paper](https://dx.doi.org/10.1007/s11044-024-10034-0).
+- **Sternum constraints:** A revolute joint was defined between the manubrium and the sternal body, allowing rotation around the mediolateral axis. This DOF enables ribcage movements independent of spinal posture, e.g., for breathing. Additionally, three linear and three rotational AvgM constraints were defined for the entire sternum, with further details provided in the [paper](https://dx.doi.org/10.1007/s11044-024-10034-0).
 
 ```{image} _static/Ribcage_Constraints.jpg 
     :width: 60%
@@ -30,7 +30,7 @@ Your browser does not support the video tag.
 
 
 ## Example of the model
-Here are some examples of the [new thoracic model](http://dx.doi.org/10.1007/s11044-024-10034-0).
+Here are some examples of the [new thoracic model](https://dx.doi.org/10.1007/s11044-024-10034-0).
 
 <div style="display: flex; justify-content: center; gap: 10px;">
     <video width="45%" controls autoplay loop>
