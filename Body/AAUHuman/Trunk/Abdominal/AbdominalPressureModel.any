@@ -11,7 +11,6 @@ AnyFolder Abdominal = {
   };
   
   
-  //  #if BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
   #include "..\NodesForThoracicCavity.any"
   AnyKinVolumeCylMesh Volume = {
     //      #include "<ANYBODY_PATH_MODELUTILS>/DrawSettings/KinematicVolume.any"
@@ -23,7 +22,6 @@ AnyFolder Abdominal = {
       .Edges.Edge8
     });     
   };
-  //  #endif
  
   /// The Diaphragm is part of the abdominal model and introduces it's own layers
   /// It is also part of the Thoracic cavity model
@@ -83,23 +81,12 @@ AnyFolder Abdominal = {
         };
         
         Node_sRels = Obj2Num(ObjGetMember(segmental_refframes, "sRel")) + 0*.r0[0]; 
-        //        #if BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
         AnyInt n_levels = 4;
         
         /// We included cavity volumes of 8, 9, 10 levels, since the most superior postion of the diaphragm is approximately in the 8th level.
         AnyObjectPtr segmental_refframes = unique(
         take(...Volume.CylMesh, iarr(0, SizesOf(...Volume.CylMesh)[0]-1), 0)
-        //          take(...Volume.CylMesh, iarr(4,2), 0)
         );
-        
-        //        #else
-        //        AnyInt n_levels = 4;
-        //        AnyObjectPtr segmental_refframes = arrcat(
-        //        ...Edges.Edge8,
-        //        ...Edges.Edge9,
-        //        ...Edges.Edge10,
-        //        );
-        //        #endif
       }; 
       
     };
@@ -924,41 +911,7 @@ AnyFolder Abdominal = {
   #ifdef PELVIC_LAYER_MOVES 
   #ifdef RECTUS_MUSCLE_LINE_CONTROL
   AnyFolder Layer_Pelvic_Constraints_RectusLine ={
-    
-
-//    AnySeg Dummy ={
-//      AnyRefNode JntNode={
-//        sRel = ....Segments.PelvisSeg.RA_1_R.sRel;
-//        ARel =  RotMat (sRel, ...Layer_Pelvic1.BaseSegAnterior.mid.sRel, sRel+{0.1,0,0})* RotMat (-pi/2,z)*RotMat(pi,y);
-//      };
-//      Mass=0;Jii={0,0,0};
-//      r0 = ...Segments.PelvisSeg.r0;
-//      Axes0 = ...Segments.PelvisSeg.Axes0;
-//    };
-//    AnySphericalJoint Jnt ={
-//      AnyRefNode &ref=  ...Segments.PelvisSeg.RA_1_R;
-//      AnyRefNode &ref2=.Dummy.JntNode;
-//    };
-//    AnyReacForce Jnt_Rot_Reactions ={
-//      AnySphericalJoint &ref=.Jnt;
-//    };
-//    AnyKinEq ConXZ ={
-//      AnyKinMeasureOrg OrgXZ ={
-//        MeasureOrganizer={0,2};
-//        AnyKinLinear Lin={
-//          Ref=0;
-//          AnyRefNode &ref2 = ...Dummy.JntNode;
-//          AnyRefNode &ref1 = ....Layer_Pelvic1.BaseSegAnterior.mid;
-//        };
-//      };
-//      AnyKinMeasureOrg OrgY ={
-//        MeasureOrganizer={1};
-//        AnySphericalJoint &ref=..Jnt;
-//      };
-//      Reaction.Type={Off,Off,Off};
-//      
-//    };
-    
+        
     AnyFolder Layer_Pelvic1 ={
       AnyRefFrame &LayerNode = ..Layer_Pelvic1.BaseSegAnterior.mid;
       AnyKinMeasureOrg MeasureLayer ={ MeasureOrganizer={0}; AnyKinMeasure &MeasureLayer = ...Layer_Pelvic1.PelvicLayer_BaseSegAnterior;};
@@ -1008,12 +961,6 @@ AnyFolder Abdominal = {
 //    // instead as a single muscle. 
     AnyRecruitedActuator LayerMomentReactionsNonNegative = {
       AnyKinMeasureOrg Measures = {
-//        AnyKinRotational ThoraxL1 = {
-//          AnyRefFrame& r0 = .....Segments.SternalBodySeg;
-//          AnyRefFrame& r1 = ....Layer_L1.BaseSegAnterior;
-//          Axis1 = x; Axis2 = y; Axis3 = z;
-//          Type = RotAxesAngles;
-//        };
         AnyKinRotational L1L2 = {
           AnyRefFrame& r0 = ....Layer_L1.BaseSegAnterior;
           AnyRefFrame& r1 = ....Layer_L2.BaseSegAnterior;
@@ -1038,7 +985,7 @@ AnyFolder Abdominal = {
           Axis1 = x; Axis2 = y; Axis3 = z;
           Type = RotAxesAngles;
         };
-//        MeasureOrganizer = {0,2,3,5,6,8,9,11}; //{0,2,3,5,6,8,9,11,12,14};
+//        MeasureOrganizer = {0,2,3,5,6,8,9,11};
         
       }; 
       Type = NonNegative;
@@ -1070,10 +1017,7 @@ AnyFolder Abdominal = {
           Type = RotAxesAngles;
         };
         
-        MeasureOrganizer = {0,2,3,5}; // to pelvis and thorax
-        //        MeasureOrganizer = {0,2}; // to thorax
-        //        MeasureOrganizer = {3}; // to pelvis
-       
+        MeasureOrganizer = {0,2,3,5}; // to pelvis and thorax       
       }; 
       Type = NonNegative;
       Strength = 0.025;
