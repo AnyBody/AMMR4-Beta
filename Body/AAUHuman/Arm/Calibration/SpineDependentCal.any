@@ -9,7 +9,7 @@ AnyFolder SpineDependentCal ={
   AnyFolder &SegSideCal = .SideHumanFolderRef.ShoulderArm.Seg;
   AnyFolder &JointsSideCal = .SideHumanFolderRef.ShoulderArm.Jnt;
 
-  AnyFolder &MusCalSide =  .SideHumanFolderRef.ShoulderArm.Mus;
+  AnyFolder &MusCalSide =  .SideHumanFolderRef.ShoulderArm.Muscles;
   AnyFolder &MusParCalSide =  .SideHumanFolderRef.ShoulderArm.MuscleModels;
   
   AnyFixedRefFrame ground = 
@@ -267,7 +267,7 @@ AnyFolder SpineDependentCal ={
     };
   #endif
   
-  AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.ShoulderArm.Mus);
+  AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.ShoulderArm.Muscles);
   
   AnyObjectPtrArray levator_scapulaeMuscles = ObjSearch(MusPrefix+".levator_scapulae*", "AnyMuscle");
   AnyFloat  levator_scapulaeRmin = repmat(NumElemOf(levator_scapulaeMuscles), ..RMin);

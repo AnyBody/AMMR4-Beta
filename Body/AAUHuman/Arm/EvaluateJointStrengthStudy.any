@@ -26,7 +26,7 @@ AnyFolder Model = {
   AnyFolder &LumbarJntRef = .....BodyModel.Trunk.Joints.Lumbar;
   AnyFolder &ArmSegSideRef = .SideBodyModelRef.ShoulderArm.Seg;
   AnyFolder &ArmJntsRef =  .SideBodyModelRef.ShoulderArm.Jnt;
-  AnyFolder &MusRef = .SideBodyModelRef.ShoulderArm.Mus;
+  AnyFolder &MusRef = .SideBodyModelRef.ShoulderArm.Muscles;
   
  AnyFixedRefFrame ground = {
    AnyRefNode node = { 

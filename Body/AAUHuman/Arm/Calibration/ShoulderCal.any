@@ -9,7 +9,7 @@ AnyFolder ShoulderCal ={
   AnyFolder &SegSideCal = .SideHumanFolderRef.ShoulderArm.Seg;
   AnyFolder &JointsSideCal = .SideHumanFolderRef.ShoulderArm.Jnt;
 
-  AnyFolder &MusCalSide =  .SideHumanFolderRef.ShoulderArm.Mus;
+  AnyFolder &MusCalSide =  .SideHumanFolderRef.ShoulderArm.Muscles;
   AnyFolder &MusParCalSide =  .SideHumanFolderRef.ShoulderArm.MuscleModels;
   
   AnyFixedRefFrame ground = {
@@ -255,7 +255,7 @@ AnyFolder ShoulderCal ={
     };
   #endif
   
-  AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.ShoulderArm.Mus);
+  AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.ShoulderArm.Muscles);
   
   AnyObjectPtrArray coracobrachialisMuscles = ObjSearch(MusPrefix+".coracobrachialis*", "AnyMuscle");
   AnyFloat  coracobrachialisRmin = repmat(NumElemOf(coracobrachialisMuscles), ..RMin);

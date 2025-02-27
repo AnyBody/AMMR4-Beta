@@ -19,14 +19,14 @@ AnyFolder ArmCal5 ={
   AnyFolder &JointsSideCal = .SideHumanFolderRef.ShoulderArm.Jnt;
   
   #if BM_ARM_DELTOID_WRAPPING == _DELTOID_WRAPPING_RAKE_
-  AnyFolder& DeltoidRakeRef = .SideHumanFolderRef.ShoulderArm.Mus.ArtificialRake;
+  AnyFolder& DeltoidRakeRef = .SideHumanFolderRef.ShoulderArm.Muscles.ArtificialRake;
   #else
-  AnyFolder& DeltoidWrappingPosteriorRef = .SideHumanFolderRef.ShoulderArm.Mus.DeltoidWrappingPosterior;
-  AnyFolder& DeltoidWrappingLateralRef = .SideHumanFolderRef.ShoulderArm.Mus.DeltoidWrappingLateral;
-  AnyFolder& DeltoidWrappingAnteriorRef = .SideHumanFolderRef.ShoulderArm.Mus.DeltoidWrappingAnterior;
+  AnyFolder& DeltoidWrappingPosteriorRef = .SideHumanFolderRef.ShoulderArm.Muscles.DeltoidWrappingPosterior;
+  AnyFolder& DeltoidWrappingLateralRef = .SideHumanFolderRef.ShoulderArm.Muscles.DeltoidWrappingLateral;
+  AnyFolder& DeltoidWrappingAnteriorRef = .SideHumanFolderRef.ShoulderArm.Muscles.DeltoidWrappingAnterior;
   #endif
   
-  AnyFolder& LastissimusWrappingRef = .SideHumanFolderRef.ShoulderArm.Mus.LatissimusDorsiWrapping;
+  AnyFolder& LastissimusWrappingRef = .SideHumanFolderRef.ShoulderArm.Muscles.LatissimusDorsiWrapping;
   
   AnyFolder &MusParCalSide =  .SideHumanFolderRef.ShoulderArm.MuscleModels;
   
@@ -76,7 +76,7 @@ AnyFolder ArmCal5 ={
     };
     DriverPos = {-0.7605314, 0.3203484}; 
     DriverVel = {-0.0,-0.0};
-    Reaction.Type={Off,Off};
+    Reaction.Type = {Off,Off};
   };
   #endif
   
@@ -85,7 +85,7 @@ AnyFolder ArmCal5 ={
     AnyKinMeasure& WA = ..SideInterfaceFolderRef.WristAbduction;
     DriverPos = {0,0};
     DriverVel = {0,0};
-    Reaction.Type={On,On};
+    Reaction.Type = {On,On};
   };
   
   AnyKinEqSimpleDriver FEDriver ={
@@ -242,7 +242,7 @@ AnyFolder ArmCal5 ={
     };
   #endif 
   
-  AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.ShoulderArm.Mus);
+  AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.ShoulderArm.Muscles);
 
 
    AnyObjectPtrArray latissimus_dorsi_Muscles = ObjSearch(MusPrefix+".latissimus_dorsi_*", "AnyMuscle");

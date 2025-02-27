@@ -173,9 +173,12 @@ AnyFolder ModelParameters = {
   #include "<BM_ARM_DATASET_PATH>/ArmModelMuscleParameters.any"
 };
 
-
+AnyFolder Muscles = {};
 AnyFolder MuscleModels = {};
-AnyFolder Mus = {};
+
+#if BM_COMPATIBILITY_BODYMODEL_STRUCTURE == ON
+  AnyFolder &Mus = Muscles;
+#endif
 
 #ifndef BM_ARM_DETAILED_HAND
   #define BM_ARM_DETAILED_HAND OFF
@@ -244,7 +247,7 @@ AnyFolder Jnt ={
 
 //Muscles for the arm
 #if (_LEFT_RIGHT_ == "Right" & BM_ARM_RIGHT == ON & (BM_ARM_MUSCLES_RIGHT > OFF )) | (_LEFT_RIGHT_ == "Left" & BM_ARM_LEFT == ON & (BM_ARM_MUSCLES_LEFT > OFF)) 
-Mus ={ 
+Muscles ={ 
     #include "Muscle.any"
 }; //End Mus
 
@@ -263,7 +266,7 @@ MuscleModels = {
 
 #endif
 
-Mus = {
+Muscles = {
   //These files contains wrapping geometries and attachement nodes for the muscles
   //This way of structuring makes it possible to have models using the same kinematics but 
   //using different muscle configurations, since all muscle nodes and geometry has been 

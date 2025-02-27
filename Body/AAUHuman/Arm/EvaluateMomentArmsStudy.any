@@ -9,7 +9,7 @@ AnyFolder Model = {
   AnyFolder &LumbarSegRef = .....BodyModel.Trunk.Segments;
   AnyFolder &ArmSegSideRef = .SideBodyModelRef.ShoulderArm.Seg;
   AnyFolder &ArmJntsRef =  .SideBodyModelRef.ShoulderArm.Jnt;
-  AnyFolder &MusRef = .SideBodyModelRef.ShoulderArm.Mus;
+  AnyFolder &MusRef = .SideBodyModelRef.ShoulderArm.Muscles;
   
   
   AnyFixedRefFrame ground = {

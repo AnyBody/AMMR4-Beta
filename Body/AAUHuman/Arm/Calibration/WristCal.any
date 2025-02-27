@@ -9,7 +9,7 @@ AnyFolder WristCal ={
   AnyFolder &SegSideCal = .SideHumanFolderRef.ShoulderArm.Seg;
   AnyFolder &JointsSideCal = .SideHumanFolderRef.ShoulderArm.Jnt;
 
-  AnyFolder &MusCalSide =  .SideHumanFolderRef.ShoulderArm.Mus;
+  AnyFolder &MusCalSide =  .SideHumanFolderRef.ShoulderArm.Muscles;
   AnyFolder &MusParCalSide =  .SideHumanFolderRef.ShoulderArm.MuscleModels;
   
   AnyFixedRefFrame ground = {
@@ -242,7 +242,7 @@ AnyFolder WristCal ={
     };
   #endif
   
-  AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.ShoulderArm.Mus);
+AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.ShoulderArm.Muscles);
   
   AnyObjectPtrArray biceps_brachii_caput_breveMuscles = ObjSearch(MusPrefix+".biceps_brachii_caput_breve*", "AnyMuscle");
   AnyFloat  biceps_brachii_caput_breveRmin = repmat(NumElemOf(biceps_brachii_caput_breveMuscles), ..RMin);
