@@ -24,7 +24,7 @@ AnyFolder Model = {
   AnyFolder &CervicalSpineJntRef = .....BodyModel.Trunk.Joints.Cervical;
   AnyFolder &CervicalSpineSegRef = .....BodyModel.Trunk.Segments;
   AnyFolder &LumbarJntRef = .....BodyModel.Trunk.Joints.Lumbar;
-  AnyFolder &ArmSegSideRef = .SideBodyModelRef.ShoulderArm.Seg;
+  AnyFolder &ArmSegSideRef = .SideBodyModelRef.ShoulderArm.Segments;
   AnyFolder &ArmJntsRef =  .SideBodyModelRef.ShoulderArm.Joints;
   AnyFolder &MusRef = .SideBodyModelRef.ShoulderArm.Muscles;
   

@@ -111,7 +111,7 @@ Right.ShoulderArm = {
   AnyComponentDefinition CDef = {};
   
   #if BM_ARM_DETAILED_HAND == ON
-    Seg.Hand = {
+    Segments.Hand = {
       AnyComponentDefinition CDef = {
         SubGroupRegexSearch = "^(Finger\d{1})\.([_[:alnum:]]+)\.([_[:alnum:]]+).*?";
         SubGroupRegexReplace = "$1/$3";
@@ -133,7 +133,7 @@ Left.ShoulderArm = {
   AnyComponentDefinition CDef = {};
   
   #if BM_ARM_DETAILED_HAND == ON
-    Seg.Hand = {
+    Segments.Hand = {
       AnyComponentDefinition CDef = {
         SubGroupRegexSearch = "^(Finger\d{1})\.([_[:alnum:]]+)\.([_[:alnum:]]+).*?";
         SubGroupRegexReplace = "$1/$3";

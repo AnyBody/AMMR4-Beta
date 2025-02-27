@@ -13,8 +13,8 @@ AnyFolder Model = {
   AnyFolder SpineMusLeftRef = {};
   #endif
   
-  AnyFolder &ArmSegLeftRef = ....BodyModel.Left.ShoulderArm.Seg;
-  AnyFolder &ArmSegRightRef = ....BodyModel.Right.ShoulderArm.Seg;
+  AnyFolder &ArmSegLeftRef = ....BodyModel.Left.ShoulderArm.Segments;
+  AnyFolder &ArmSegRightRef = ....BodyModel.Right.ShoulderArm.Segments;
   
   AnyFolder &ArmJntsRightRef = ....BodyModel.Right.ShoulderArm.Joints;
   AnyFolder &ArmJntsLeftRef = ....BodyModel.Left.ShoulderArm.Joints;

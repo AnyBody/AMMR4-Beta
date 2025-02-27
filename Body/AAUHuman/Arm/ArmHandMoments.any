@@ -29,10 +29,10 @@
 
 
 AnyForceMomentMeasure2 ElbowPronationNetMoment = {
-  AnyRefNode &ref1 =..Seg.Ulna.ps2.RotNode;
-  AnySeg &seg1 =..Seg.Radius;      
-  AnySeg &seg2 =..Seg.Hand.Carpals;  
-  AnySeg &seg3 =..Seg.WristJointSeg;
+  AnyRefNode &ref1 =..Segments.Ulna.ps2.RotNode;
+  AnySeg &seg1 =..Segments.Radius;      
+  AnySeg &seg2 =..Segments.Hand.Carpals;  
+  AnySeg &seg3 =..Segments.WristJointSeg;
   
   AnyReacForce &jnt1=..Jnt.WristJointFlexion.Constraints.Reaction;
   AnyReacForce &jnt1Bis=..Jnt.WristJointDeviation.Constraints.Reaction;
@@ -41,7 +41,7 @@ AnyForceMomentMeasure2 ElbowPronationNetMoment = {
   #include  "..\..\..\Body\AAUHuman\Arm\ArmMuscleNames.any"
   
   //    //Make transformation to the radius.ps2.rotnode coordinate system
-  //    AnyRefNode &ref2=.ShoulderArm.Seg.Radius.PointPS2.RotNode;
+  //    AnyRefNode &ref2=.ShoulderArm.Segments.Radius.PointPS2.RotNode;
   //    
   //    AnyVec3 Mlocal=M*ref2.Axes;
   //    AnyVar ElbowPronation=Mlocal[0];
@@ -62,12 +62,12 @@ AnyForceMomentMeasure2 ElbowPronationNetMoment = {
 
 
 AnyForceMomentMeasure2 ElbowFlexionNetMoment = {
-  AnyRefNode &ref=..Seg.Humerus.fe.RotNode;      
+  AnyRefNode &ref=..Segments.Humerus.fe.RotNode;      
   
-  AnySeg &seg1=..Seg.Ulna;   
-  AnySeg &seg2=..Seg.Radius;      
-  AnySeg &seg3=..Seg.Hand.Carpals;  
-  AnySeg &seg4 =..Seg.WristJointSeg;
+  AnySeg &seg1=..Segments.Ulna;   
+  AnySeg &seg2=..Segments.Radius;      
+  AnySeg &seg3=..Segments.Hand.Carpals;  
+  AnySeg &seg4 =..Segments.WristJointSeg;
   
   AnyReacForce &jnt1=..Jnt.WristJointFlexion.Constraints.Reaction;
   AnyReacForce &jnt1Bis=..Jnt.WristJointDeviation.Constraints.Reaction;
@@ -79,7 +79,7 @@ AnyForceMomentMeasure2 ElbowFlexionNetMoment = {
   
   
   //    Make transformation to the radius.ps2.rotnode coordinate system
-  //    AnyRefNode &ref2=.ShoulderArm.Seg.Humerus.fe.RotNode;
+  //    AnyRefNode &ref2=.ShoulderArm.Segments.Humerus.fe.RotNode;
   //    
   //    AnyVec3 Mlocal=M*ref2.Axes;
   //    AnyVar ElbowFlexion=Mlocal[0];
@@ -99,9 +99,9 @@ AnyForceMomentMeasure2 ElbowFlexionNetMoment = {
 
 
 AnyForceMomentMeasure2 GHNetMoment = {
-  AnyRefNode &ref=..Seg.Humerus.gh.RotNode;      
+  AnyRefNode &ref=..Segments.Humerus.gh.RotNode;      
   
-  AnySeg &seg0=..Seg.Humerus;  
+  AnySeg &seg0=..Segments.Humerus;  
   #if BM_ARM_DELTOID_WRAPPING == _DELTOID_WRAPPING_RAKE_
   AnySeg &seg5=..Mus.ArtificialRake.DeltoidMuscleConnector;
   AnySeg &seg6=..Mus.ArtificialRake.DeltoidMuscleRotControlSeg;
@@ -110,10 +110,10 @@ AnyForceMomentMeasure2 GHNetMoment = {
   AnySeg &seg5b=..Mus.DeltoidWrappingLateral.WrappingSegment;
   AnySeg &seg5c=..Mus.DeltoidWrappingAnterior.WrappingSegment;
   #endif
-  AnySeg &seg1=..Seg.Ulna;   
-  AnySeg &seg2=..Seg.Radius;      
-  AnySeg &seg3=..Seg.Hand.Carpals;    
-  AnySeg &seg4 =..Seg.WristJointSeg;
+  AnySeg &seg1=..Segments.Ulna;   
+  AnySeg &seg2=..Segments.Radius;      
+  AnySeg &seg3=..Segments.Hand.Carpals;    
+  AnySeg &seg4 =..Segments.WristJointSeg;
   
   AnyReacForce &jnt1=..Jnt.WristJointFlexion.Constraints.Reaction;
   AnyReacForce &jnt1Bis=..Jnt.WristJointDeviation.Constraints.Reaction;
@@ -137,7 +137,7 @@ AnyForceMomentMeasure2 GHNetMoment = {
   
   
   //    //Make transformation to the Humerus.gh.RotNode coordinate system
-  //    AnyRefNode &ref2=..Seg.Humerus.gh.RotNode;
+  //    AnyRefNode &ref2=..Segments.Humerus.gh.RotNode;
   //    
   //    AnyVec3 Mlocal=M*ref2.Axes;
   //    AnyVar ElbowFlexion=Mlocal[0];
@@ -162,30 +162,30 @@ AnyForceMomentMeasure2 GHNetMoment = {
 
 
 AnyForceMomentMeasure2 WristFlexionNetMomentMuscles = {
-  AnyRefNode &ref =..Seg.Radius.wj.RotNode;
-  AnySeg &seg1 =..Seg.WristJointSeg;
-  AnySeg &seg2 =..Seg.Hand.Carpals;  
-  AnySeg &seg3 =..Seg.Hand.Finger1.Seg.MCPJointSeg;
-  AnySeg &seg4 =..Seg.Hand.Finger1.Seg.CMCJointSeg;
-  AnySeg &seg5 =..Seg.Hand.Finger1.Seg.Metacarpal;
-  AnySeg &seg6 =..Seg.Hand.Finger1.Seg.ProximalPhalanx;
-  AnySeg &seg7 =..Seg.Hand.Finger1.Seg.DistalPhalanx;
-  AnySeg &seg8 =..Seg.Hand.Finger2.Seg.Metacarpal;
-  AnySeg &seg9 =..Seg.Hand.Finger2.Seg.ProximalPhalanx;
-  AnySeg &seg10 =..Seg.Hand.Finger2.Seg.MiddlePhalanx;
-  AnySeg &seg11 =..Seg.Hand.Finger2.Seg.DistalPhalanx;
-  AnySeg &seg12 =..Seg.Hand.Finger3.Seg.Metacarpal;
-  AnySeg &seg13 =..Seg.Hand.Finger3.Seg.ProximalPhalanx;
-  AnySeg &seg14 =..Seg.Hand.Finger3.Seg.MiddlePhalanx;
-  AnySeg &seg15 =..Seg.Hand.Finger3.Seg.DistalPhalanx;
-  AnySeg &seg16 =..Seg.Hand.Finger4.Seg.Metacarpal;
-  AnySeg &seg17 =..Seg.Hand.Finger4.Seg.ProximalPhalanx;
-  AnySeg &seg18 =..Seg.Hand.Finger4.Seg.MiddlePhalanx;
-  AnySeg &seg19 =..Seg.Hand.Finger4.Seg.DistalPhalanx;
-  AnySeg &seg20 =..Seg.Hand.Finger5.Seg.Metacarpal;
-  AnySeg &seg21 =..Seg.Hand.Finger5.Seg.ProximalPhalanx;
-  AnySeg &seg22 =..Seg.Hand.Finger5.Seg.MiddlePhalanx;
-  AnySeg &seg23 =..Seg.Hand.Finger5.Seg.DistalPhalanx;
+  AnyRefNode &ref =..Segments.Radius.wj.RotNode;
+  AnySeg &seg1 =..Segments.WristJointSeg;
+  AnySeg &seg2 =..Segments.Hand.Carpals;  
+  AnySeg &seg3 =..Segments.Hand.Finger1.Seg.MCPJointSeg;
+  AnySeg &seg4 =..Segments.Hand.Finger1.Seg.CMCJointSeg;
+  AnySeg &seg5 =..Segments.Hand.Finger1.Seg.Metacarpal;
+  AnySeg &seg6 =..Segments.Hand.Finger1.Seg.ProximalPhalanx;
+  AnySeg &seg7 =..Segments.Hand.Finger1.Seg.DistalPhalanx;
+  AnySeg &seg8 =..Segments.Hand.Finger2.Seg.Metacarpal;
+  AnySeg &seg9 =..Segments.Hand.Finger2.Seg.ProximalPhalanx;
+  AnySeg &seg10 =..Segments.Hand.Finger2.Seg.MiddlePhalanx;
+  AnySeg &seg11 =..Segments.Hand.Finger2.Seg.DistalPhalanx;
+  AnySeg &seg12 =..Segments.Hand.Finger3.Seg.Metacarpal;
+  AnySeg &seg13 =..Segments.Hand.Finger3.Seg.ProximalPhalanx;
+  AnySeg &seg14 =..Segments.Hand.Finger3.Seg.MiddlePhalanx;
+  AnySeg &seg15 =..Segments.Hand.Finger3.Seg.DistalPhalanx;
+  AnySeg &seg16 =..Segments.Hand.Finger4.Seg.Metacarpal;
+  AnySeg &seg17 =..Segments.Hand.Finger4.Seg.ProximalPhalanx;
+  AnySeg &seg18 =..Segments.Hand.Finger4.Seg.MiddlePhalanx;
+  AnySeg &seg19 =..Segments.Hand.Finger4.Seg.DistalPhalanx;
+  AnySeg &seg20 =..Segments.Hand.Finger5.Seg.Metacarpal;
+  AnySeg &seg21 =..Segments.Hand.Finger5.Seg.ProximalPhalanx;
+  AnySeg &seg22 =..Segments.Hand.Finger5.Seg.MiddlePhalanx;
+  AnySeg &seg23 =..Segments.Hand.Finger5.Seg.DistalPhalanx;
   
   
   
@@ -213,29 +213,29 @@ AnyForceMomentMeasure2 WristFlexionNetMomentMuscles = {
 
 
 AnyForceMomentMeasure2 WristAbductionNetMomentMuscles = {
-  AnyRefNode &ref =..Seg.WristJointSeg.RadialUlnarDeviation.RotNode;
-  AnySeg &seg2 =..Seg.Hand.Carpals;  
-  AnySeg &seg3 =..Seg.Hand.Finger1.Seg.MCPJointSeg;
-  AnySeg &seg4 =..Seg.Hand.Finger1.Seg.CMCJointSeg;
-  AnySeg &seg5 =..Seg.Hand.Finger1.Seg.Metacarpal;
-  AnySeg &seg6 =..Seg.Hand.Finger1.Seg.ProximalPhalanx;
-  AnySeg &seg7 =..Seg.Hand.Finger1.Seg.DistalPhalanx;
-  AnySeg &seg8 =..Seg.Hand.Finger2.Seg.Metacarpal;
-  AnySeg &seg9 =..Seg.Hand.Finger2.Seg.ProximalPhalanx;
-  AnySeg &seg10 =..Seg.Hand.Finger2.Seg.MiddlePhalanx;
-  AnySeg &seg11 =..Seg.Hand.Finger2.Seg.DistalPhalanx;
-  AnySeg &seg12 =..Seg.Hand.Finger3.Seg.Metacarpal;
-  AnySeg &seg13 =..Seg.Hand.Finger3.Seg.ProximalPhalanx;
-  AnySeg &seg14 =..Seg.Hand.Finger3.Seg.MiddlePhalanx;
-  AnySeg &seg15 =..Seg.Hand.Finger3.Seg.DistalPhalanx;
-  AnySeg &seg16 =..Seg.Hand.Finger4.Seg.Metacarpal;
-  AnySeg &seg17 =..Seg.Hand.Finger4.Seg.ProximalPhalanx;
-  AnySeg &seg18 =..Seg.Hand.Finger4.Seg.MiddlePhalanx;
-  AnySeg &seg19 =..Seg.Hand.Finger4.Seg.DistalPhalanx;
-  AnySeg &seg20 =..Seg.Hand.Finger5.Seg.Metacarpal;
-  AnySeg &seg21 =..Seg.Hand.Finger5.Seg.ProximalPhalanx;
-  AnySeg &seg22 =..Seg.Hand.Finger5.Seg.MiddlePhalanx;
-  AnySeg &seg23 =..Seg.Hand.Finger5.Seg.DistalPhalanx;
+  AnyRefNode &ref =..Segments.WristJointSeg.RadialUlnarDeviation.RotNode;
+  AnySeg &seg2 =..Segments.Hand.Carpals;  
+  AnySeg &seg3 =..Segments.Hand.Finger1.Seg.MCPJointSeg;
+  AnySeg &seg4 =..Segments.Hand.Finger1.Seg.CMCJointSeg;
+  AnySeg &seg5 =..Segments.Hand.Finger1.Seg.Metacarpal;
+  AnySeg &seg6 =..Segments.Hand.Finger1.Seg.ProximalPhalanx;
+  AnySeg &seg7 =..Segments.Hand.Finger1.Seg.DistalPhalanx;
+  AnySeg &seg8 =..Segments.Hand.Finger2.Seg.Metacarpal;
+  AnySeg &seg9 =..Segments.Hand.Finger2.Seg.ProximalPhalanx;
+  AnySeg &seg10 =..Segments.Hand.Finger2.Seg.MiddlePhalanx;
+  AnySeg &seg11 =..Segments.Hand.Finger2.Seg.DistalPhalanx;
+  AnySeg &seg12 =..Segments.Hand.Finger3.Seg.Metacarpal;
+  AnySeg &seg13 =..Segments.Hand.Finger3.Seg.ProximalPhalanx;
+  AnySeg &seg14 =..Segments.Hand.Finger3.Seg.MiddlePhalanx;
+  AnySeg &seg15 =..Segments.Hand.Finger3.Seg.DistalPhalanx;
+  AnySeg &seg16 =..Segments.Hand.Finger4.Seg.Metacarpal;
+  AnySeg &seg17 =..Segments.Hand.Finger4.Seg.ProximalPhalanx;
+  AnySeg &seg18 =..Segments.Hand.Finger4.Seg.MiddlePhalanx;
+  AnySeg &seg19 =..Segments.Hand.Finger4.Seg.DistalPhalanx;
+  AnySeg &seg20 =..Segments.Hand.Finger5.Seg.Metacarpal;
+  AnySeg &seg21 =..Segments.Hand.Finger5.Seg.ProximalPhalanx;
+  AnySeg &seg22 =..Segments.Hand.Finger5.Seg.MiddlePhalanx;
+  AnySeg &seg23 =..Segments.Hand.Finger5.Seg.DistalPhalanx;
   
   #include  "..\..\..\Body\AAUHuman\Arm\ArmMuscleNames.any"
   
@@ -261,31 +261,31 @@ AnyForceMomentMeasure2 WristAbductionNetMomentMuscles = {
 
 
 AnyForceMomentMeasure2 ElbowPronationNetMomentMuscles = {
-  AnyRefNode &ref =..Seg.Ulna.ps2.RotNode;
-  AnySeg &seg1 =..Seg.Radius;  
-  AnySeg &seg2 =..Seg.WristJointSeg;
-  AnySeg &seg3 =..Seg.Hand.Carpals;  
-  AnySeg &seg4 =..Seg.Hand.Finger1.Seg.MCPJointSeg;
-  AnySeg &seg5 =..Seg.Hand.Finger1.Seg.CMCJointSeg;
-  AnySeg &seg6 =..Seg.Hand.Finger1.Seg.Metacarpal;
-  AnySeg &seg7 =..Seg.Hand.Finger1.Seg.ProximalPhalanx;
-  AnySeg &seg8 =..Seg.Hand.Finger1.Seg.DistalPhalanx;
-  AnySeg &seg9 =..Seg.Hand.Finger2.Seg.Metacarpal;
-  AnySeg &seg10 =..Seg.Hand.Finger2.Seg.ProximalPhalanx;
-  AnySeg &seg11 =..Seg.Hand.Finger2.Seg.MiddlePhalanx;
-  AnySeg &seg12 =..Seg.Hand.Finger2.Seg.DistalPhalanx;
-  AnySeg &seg13 =..Seg.Hand.Finger3.Seg.Metacarpal;
-  AnySeg &seg14 =..Seg.Hand.Finger3.Seg.ProximalPhalanx;
-  AnySeg &seg15 =..Seg.Hand.Finger3.Seg.MiddlePhalanx;
-  AnySeg &seg16 =..Seg.Hand.Finger3.Seg.DistalPhalanx;
-  AnySeg &seg17 =..Seg.Hand.Finger4.Seg.Metacarpal;
-  AnySeg &seg18 =..Seg.Hand.Finger4.Seg.ProximalPhalanx;
-  AnySeg &seg19 =..Seg.Hand.Finger4.Seg.MiddlePhalanx;
-  AnySeg &seg20 =..Seg.Hand.Finger4.Seg.DistalPhalanx;
-  AnySeg &seg21 =..Seg.Hand.Finger5.Seg.Metacarpal;
-  AnySeg &seg22 =..Seg.Hand.Finger5.Seg.ProximalPhalanx;
-  AnySeg &seg23 =..Seg.Hand.Finger5.Seg.MiddlePhalanx;
-  AnySeg &seg24 =..Seg.Hand.Finger5.Seg.DistalPhalanx;
+  AnyRefNode &ref =..Segments.Ulna.ps2.RotNode;
+  AnySeg &seg1 =..Segments.Radius;  
+  AnySeg &seg2 =..Segments.WristJointSeg;
+  AnySeg &seg3 =..Segments.Hand.Carpals;  
+  AnySeg &seg4 =..Segments.Hand.Finger1.Seg.MCPJointSeg;
+  AnySeg &seg5 =..Segments.Hand.Finger1.Seg.CMCJointSeg;
+  AnySeg &seg6 =..Segments.Hand.Finger1.Seg.Metacarpal;
+  AnySeg &seg7 =..Segments.Hand.Finger1.Seg.ProximalPhalanx;
+  AnySeg &seg8 =..Segments.Hand.Finger1.Seg.DistalPhalanx;
+  AnySeg &seg9 =..Segments.Hand.Finger2.Seg.Metacarpal;
+  AnySeg &seg10 =..Segments.Hand.Finger2.Seg.ProximalPhalanx;
+  AnySeg &seg11 =..Segments.Hand.Finger2.Seg.MiddlePhalanx;
+  AnySeg &seg12 =..Segments.Hand.Finger2.Seg.DistalPhalanx;
+  AnySeg &seg13 =..Segments.Hand.Finger3.Seg.Metacarpal;
+  AnySeg &seg14 =..Segments.Hand.Finger3.Seg.ProximalPhalanx;
+  AnySeg &seg15 =..Segments.Hand.Finger3.Seg.MiddlePhalanx;
+  AnySeg &seg16 =..Segments.Hand.Finger3.Seg.DistalPhalanx;
+  AnySeg &seg17 =..Segments.Hand.Finger4.Seg.Metacarpal;
+  AnySeg &seg18 =..Segments.Hand.Finger4.Seg.ProximalPhalanx;
+  AnySeg &seg19 =..Segments.Hand.Finger4.Seg.MiddlePhalanx;
+  AnySeg &seg20 =..Segments.Hand.Finger4.Seg.DistalPhalanx;
+  AnySeg &seg21 =..Segments.Hand.Finger5.Seg.Metacarpal;
+  AnySeg &seg22 =..Segments.Hand.Finger5.Seg.ProximalPhalanx;
+  AnySeg &seg23 =..Segments.Hand.Finger5.Seg.MiddlePhalanx;
+  AnySeg &seg24 =..Segments.Hand.Finger5.Seg.DistalPhalanx;
     
   #include  "..\..\..\Body\AAUHuman\Arm\ArmMuscleNames.any"
   
@@ -310,33 +310,33 @@ AnyForceMomentMeasure2 ElbowPronationNetMomentMuscles = {
 
 
 AnyForceMomentMeasure2 ElbowFlexionNetMomentMuscles = {
-  AnyRefNode &ref=..Seg.Humerus.fe.RotNode;      
+  AnyRefNode &ref=..Segments.Humerus.fe.RotNode;      
   
-  AnySeg &seg1=..Seg.Ulna;   
-  AnySeg &seg2=..Seg.Radius;  
-  AnySeg &seg3 =..Seg.WristJointSeg;
-  AnySeg &seg4 =..Seg.Hand.Carpals;  
-  AnySeg &seg5 =..Seg.Hand.Finger1.Seg.MCPJointSeg;
-  AnySeg &seg6 =..Seg.Hand.Finger1.Seg.CMCJointSeg;
-  AnySeg &seg7 =..Seg.Hand.Finger1.Seg.Metacarpal;
-  AnySeg &seg8 =..Seg.Hand.Finger1.Seg.ProximalPhalanx;
-  AnySeg &seg9 =..Seg.Hand.Finger1.Seg.DistalPhalanx;
-  AnySeg &seg10 =..Seg.Hand.Finger2.Seg.Metacarpal;
-  AnySeg &seg11 =..Seg.Hand.Finger2.Seg.ProximalPhalanx;
-  AnySeg &seg12 =..Seg.Hand.Finger2.Seg.MiddlePhalanx;
-  AnySeg &seg13 =..Seg.Hand.Finger2.Seg.DistalPhalanx;
-  AnySeg &seg14 =..Seg.Hand.Finger3.Seg.Metacarpal;
-  AnySeg &seg15 =..Seg.Hand.Finger3.Seg.ProximalPhalanx;
-  AnySeg &seg16 =..Seg.Hand.Finger3.Seg.MiddlePhalanx;
-  AnySeg &seg17 =..Seg.Hand.Finger3.Seg.DistalPhalanx;
-  AnySeg &seg18 =..Seg.Hand.Finger4.Seg.Metacarpal;
-  AnySeg &seg19 =..Seg.Hand.Finger4.Seg.ProximalPhalanx;
-  AnySeg &seg20 =..Seg.Hand.Finger4.Seg.MiddlePhalanx;
-  AnySeg &seg21 =..Seg.Hand.Finger4.Seg.DistalPhalanx;
-  AnySeg &seg22 =..Seg.Hand.Finger5.Seg.Metacarpal;
-  AnySeg &seg23 =..Seg.Hand.Finger5.Seg.ProximalPhalanx;
-  AnySeg &seg24 =..Seg.Hand.Finger5.Seg.MiddlePhalanx;
-  AnySeg &seg25 =..Seg.Hand.Finger5.Seg.DistalPhalanx;
+  AnySeg &seg1=..Segments.Ulna;   
+  AnySeg &seg2=..Segments.Radius;  
+  AnySeg &seg3 =..Segments.WristJointSeg;
+  AnySeg &seg4 =..Segments.Hand.Carpals;  
+  AnySeg &seg5 =..Segments.Hand.Finger1.Seg.MCPJointSeg;
+  AnySeg &seg6 =..Segments.Hand.Finger1.Seg.CMCJointSeg;
+  AnySeg &seg7 =..Segments.Hand.Finger1.Seg.Metacarpal;
+  AnySeg &seg8 =..Segments.Hand.Finger1.Seg.ProximalPhalanx;
+  AnySeg &seg9 =..Segments.Hand.Finger1.Seg.DistalPhalanx;
+  AnySeg &seg10 =..Segments.Hand.Finger2.Seg.Metacarpal;
+  AnySeg &seg11 =..Segments.Hand.Finger2.Seg.ProximalPhalanx;
+  AnySeg &seg12 =..Segments.Hand.Finger2.Seg.MiddlePhalanx;
+  AnySeg &seg13 =..Segments.Hand.Finger2.Seg.DistalPhalanx;
+  AnySeg &seg14 =..Segments.Hand.Finger3.Seg.Metacarpal;
+  AnySeg &seg15 =..Segments.Hand.Finger3.Seg.ProximalPhalanx;
+  AnySeg &seg16 =..Segments.Hand.Finger3.Seg.MiddlePhalanx;
+  AnySeg &seg17 =..Segments.Hand.Finger3.Seg.DistalPhalanx;
+  AnySeg &seg18 =..Segments.Hand.Finger4.Seg.Metacarpal;
+  AnySeg &seg19 =..Segments.Hand.Finger4.Seg.ProximalPhalanx;
+  AnySeg &seg20 =..Segments.Hand.Finger4.Seg.MiddlePhalanx;
+  AnySeg &seg21 =..Segments.Hand.Finger4.Seg.DistalPhalanx;
+  AnySeg &seg22 =..Segments.Hand.Finger5.Seg.Metacarpal;
+  AnySeg &seg23 =..Segments.Hand.Finger5.Seg.ProximalPhalanx;
+  AnySeg &seg24 =..Segments.Hand.Finger5.Seg.MiddlePhalanx;
+  AnySeg &seg25 =..Segments.Hand.Finger5.Seg.DistalPhalanx;
   
   #include  "..\..\..\Body\AAUHuman\Arm\ArmMuscleNames.any"
   
@@ -360,9 +360,9 @@ AnyForceMomentMeasure2 ElbowFlexionNetMomentMuscles = {
 
 
 AnyForceMomentMeasure2 GHNetMomentMuscles = {
-  AnyRefNode &ref=..Seg.Scapula.gh.RotNode;
+  AnyRefNode &ref=..Segments.Scapula.gh.RotNode;
   
-  AnySeg &seg0=..Seg.Humerus;   
+  AnySeg &seg0=..Segments.Humerus;   
   #if BM_ARM_DELTOID_WRAPPING == _DELTOID_WRAPPING_RAKE_
   AnySeg &seg4=..Mus.ArtificialRake.DeltoidMuscleConnector;
   AnySeg &seg5=..Mus.ArtificialRake.DeltoidMuscleRotControlSeg;
@@ -372,31 +372,31 @@ AnyForceMomentMeasure2 GHNetMomentMuscles = {
   AnySeg &seg4c=..Mus.DeltoidWrappingAnterior.WrappingSegment;
   #endif
   
-  AnySeg &seg1=..Seg.Ulna;   
-  AnySeg &seg2=..Seg.Radius;   
-  AnySeg &seg6 =..Seg.WristJointSeg;
-  AnySeg &seg7 =..Seg.Hand.Carpals;  
-  AnySeg &seg8 =..Seg.Hand.Finger1.Seg.MCPJointSeg;
-  AnySeg &seg9 =..Seg.Hand.Finger1.Seg.CMCJointSeg;
-  AnySeg &seg10 =..Seg.Hand.Finger1.Seg.Metacarpal;
-  AnySeg &seg11 =..Seg.Hand.Finger1.Seg.ProximalPhalanx;
-  AnySeg &seg12 =..Seg.Hand.Finger1.Seg.DistalPhalanx;
-  AnySeg &seg13 =..Seg.Hand.Finger2.Seg.Metacarpal;
-  AnySeg &seg14 =..Seg.Hand.Finger2.Seg.ProximalPhalanx;
-  AnySeg &seg15 =..Seg.Hand.Finger2.Seg.MiddlePhalanx;
-  AnySeg &seg16 =..Seg.Hand.Finger2.Seg.DistalPhalanx;
-  AnySeg &seg17 =..Seg.Hand.Finger3.Seg.Metacarpal;
-  AnySeg &seg18 =..Seg.Hand.Finger3.Seg.ProximalPhalanx;
-  AnySeg &seg19 =..Seg.Hand.Finger3.Seg.MiddlePhalanx;
-  AnySeg &seg20 =..Seg.Hand.Finger3.Seg.DistalPhalanx;
-  AnySeg &seg21 =..Seg.Hand.Finger4.Seg.Metacarpal;
-  AnySeg &seg22 =..Seg.Hand.Finger4.Seg.ProximalPhalanx;
-  AnySeg &seg23 =..Seg.Hand.Finger4.Seg.MiddlePhalanx;
-  AnySeg &seg24 =..Seg.Hand.Finger4.Seg.DistalPhalanx;
-  AnySeg &seg25 =..Seg.Hand.Finger5.Seg.Metacarpal;
-  AnySeg &seg26 =..Seg.Hand.Finger5.Seg.ProximalPhalanx;
-  AnySeg &seg27 =..Seg.Hand.Finger5.Seg.MiddlePhalanx;
-  AnySeg &seg28 =..Seg.Hand.Finger5.Seg.DistalPhalanx;
+  AnySeg &seg1=..Segments.Ulna;   
+  AnySeg &seg2=..Segments.Radius;   
+  AnySeg &seg6 =..Segments.WristJointSeg;
+  AnySeg &seg7 =..Segments.Hand.Carpals;  
+  AnySeg &seg8 =..Segments.Hand.Finger1.Seg.MCPJointSeg;
+  AnySeg &seg9 =..Segments.Hand.Finger1.Seg.CMCJointSeg;
+  AnySeg &seg10 =..Segments.Hand.Finger1.Seg.Metacarpal;
+  AnySeg &seg11 =..Segments.Hand.Finger1.Seg.ProximalPhalanx;
+  AnySeg &seg12 =..Segments.Hand.Finger1.Seg.DistalPhalanx;
+  AnySeg &seg13 =..Segments.Hand.Finger2.Seg.Metacarpal;
+  AnySeg &seg14 =..Segments.Hand.Finger2.Seg.ProximalPhalanx;
+  AnySeg &seg15 =..Segments.Hand.Finger2.Seg.MiddlePhalanx;
+  AnySeg &seg16 =..Segments.Hand.Finger2.Seg.DistalPhalanx;
+  AnySeg &seg17 =..Segments.Hand.Finger3.Seg.Metacarpal;
+  AnySeg &seg18 =..Segments.Hand.Finger3.Seg.ProximalPhalanx;
+  AnySeg &seg19 =..Segments.Hand.Finger3.Seg.MiddlePhalanx;
+  AnySeg &seg20 =..Segments.Hand.Finger3.Seg.DistalPhalanx;
+  AnySeg &seg21 =..Segments.Hand.Finger4.Seg.Metacarpal;
+  AnySeg &seg22 =..Segments.Hand.Finger4.Seg.ProximalPhalanx;
+  AnySeg &seg23 =..Segments.Hand.Finger4.Seg.MiddlePhalanx;
+  AnySeg &seg24 =..Segments.Hand.Finger4.Seg.DistalPhalanx;
+  AnySeg &seg25 =..Segments.Hand.Finger5.Seg.Metacarpal;
+  AnySeg &seg26 =..Segments.Hand.Finger5.Seg.ProximalPhalanx;
+  AnySeg &seg27 =..Segments.Hand.Finger5.Seg.MiddlePhalanx;
+  AnySeg &seg28 =..Segments.Hand.Finger5.Seg.DistalPhalanx;
   
   
   #include  "..\..\..\Body\AAUHuman\Arm\ArmMuscleNames.any"
@@ -426,13 +426,13 @@ AnyForceMomentMeasure2 GHNetMomentMuscles = {
 AnyForceMomentMeasure ElbowJointReactionMoments = 
 {
   AnyForceBase &Force = ..Jnt.HumeroUlnarJoint.Constraints.Reaction;
-  AnyRefFrame &Humerusfe = ..Seg.Humerus.fe;
+  AnyRefFrame &Humerusfe = ..Segments.Humerus.fe;
   AnyVec3 Mlocal = M*Humerusfe.Axes;
 };
 
 AnyForceMomentMeasure WristJointReactionMoments = 
 {
   AnyForceBase &Force = ..Jnt.WristJointFlexion.Constraints.Reaction;
-  AnyRefFrame &Radiuswj = ..Seg.Radius.wj;
+  AnyRefFrame &Radiuswj = ..Segments.Radius.wj;
   AnyVec3 Mlocal = M*Radiuswj.Axes;
 };

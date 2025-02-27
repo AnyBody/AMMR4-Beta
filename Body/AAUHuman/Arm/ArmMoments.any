@@ -25,15 +25,15 @@
 
 
 AnyForceMomentMeasure2 GHNetMoment = {
-  AnyRefNode &ref=..Seg.Scapula.gh.RotNode;
+  AnyRefNode &ref=..Segments.Scapula.gh.RotNode;
 
   AnyObjectPtr  pArrSegments = arrcat(
-  ObjSearch("..Seg.Humerus","AnySeg"),
-  ObjSearch("..Seg.Ulna","AnySeg"),
-  ObjSearch("..Seg.Radius","AnySeg"),
-  ObjSearch("..Seg.WristJointSeg","AnySeg"),
-  ObjSearch("..Seg.Hand", "AnySeg"),
-  ObjSearchRecursive("..Seg.Hand","*", "AnySeg")
+  ObjSearch("..Segments.Humerus","AnySeg"),
+  ObjSearch("..Segments.Ulna","AnySeg"),
+  ObjSearch("..Segments.Radius","AnySeg"),
+  ObjSearch("..Segments.WristJointSeg","AnySeg"),
+  ObjSearch("..Segments.Hand", "AnySeg"),
+  ObjSearchRecursive("..Segments.Hand","*", "AnySeg")
   );
   IncludeSegments =pArrSegments;
   
@@ -55,14 +55,14 @@ AnyForceMomentMeasure2 GHNetMoment = {
 
 
 AnyForceMomentMeasure2 ElbowFlexionNetMoment = {
-  AnyRefNode &ref=..Seg.Humerus.fe.RotNode;      
+  AnyRefNode &ref=..Segments.Humerus.fe.RotNode;      
   
   AnyObjectPtr  pArrSegments = arrcat(
-  ObjSearch("..Seg.Ulna","AnySeg"),
-  ObjSearch("..Seg.Radius","AnySeg"),
-  ObjSearch("..Seg.WristJointSeg","AnySeg"),
-  ObjSearch("..Seg.Hand", "AnySeg"),
-  ObjSearchRecursive("..Seg.Hand","*", "AnySeg")
+  ObjSearch("..Segments.Ulna","AnySeg"),
+  ObjSearch("..Segments.Radius","AnySeg"),
+  ObjSearch("..Segments.WristJointSeg","AnySeg"),
+  ObjSearch("..Segments.Hand", "AnySeg"),
+  ObjSearchRecursive("..Segments.Hand","*", "AnySeg")
   );
   IncludeSegments =pArrSegments;
   
@@ -81,13 +81,13 @@ AnyForceMomentMeasure2 ElbowFlexionNetMoment = {
 };
 
 AnyForceMomentMeasure2 ElbowPronationNetMoment = {
-  AnyRefNode &ref =..Seg.Ulna.ps2.RotNode;
+  AnyRefNode &ref =..Segments.Ulna.ps2.RotNode;
   
   AnyObjectPtr  pArrSegments = arrcat(
-  ObjSearch("..Seg.Radius","AnySeg"),
-  ObjSearch("..Seg.WristJointSeg","AnySeg"),
-  ObjSearch("..Seg.Hand", "AnySeg"),
-  ObjSearchRecursive("..Seg.Hand","*", "AnySeg")
+  ObjSearch("..Segments.Radius","AnySeg"),
+  ObjSearch("..Segments.WristJointSeg","AnySeg"),
+  ObjSearch("..Segments.Hand", "AnySeg"),
+  ObjSearchRecursive("..Segments.Hand","*", "AnySeg")
   );
   IncludeSegments =pArrSegments;
   
@@ -109,12 +109,12 @@ AnyForceMomentMeasure2 ElbowPronationNetMoment = {
 
 
 AnyForceMomentMeasure2 WristFlexionNetMoment = {
-  AnyRefNode &ref =..Seg.Radius.wj.RotNode;
+  AnyRefNode &ref =..Segments.Radius.wj.RotNode;
   
   AnyObjectPtr  pArrSegments = arrcat(
-  ObjSearch("..Seg.WristJointSeg","AnySeg"),
-  ObjSearch("..Seg.Hand", "AnySeg"),
-  ObjSearchRecursive("..Seg.Hand","*", "AnySeg")
+  ObjSearch("..Segments.WristJointSeg","AnySeg"),
+  ObjSearch("..Segments.Hand", "AnySeg"),
+  ObjSearchRecursive("..Segments.Hand","*", "AnySeg")
   );
   IncludeSegments =pArrSegments;
   
@@ -138,12 +138,12 @@ AnyForceMomentMeasure2 WristFlexionNetMoment = {
 
 
 AnyForceMomentMeasure2 WristAbductionNetMoment = {
-  AnyRefNode &ref =..Seg.WristJointSeg.RadialUlnarDeviation.RotNode;
+  AnyRefNode &ref =..Segments.WristJointSeg.RadialUlnarDeviation.RotNode;
   
   
   AnyObjectPtr  pArrSegments = arrcat(
-  ObjSearch("..Seg.Hand", "AnySeg"),
-  ObjSearchRecursive("..Seg.Hand","*", "AnySeg")
+  ObjSearch("..Segments.Hand", "AnySeg"),
+  ObjSearchRecursive("..Segments.Hand","*", "AnySeg")
   );
   IncludeSegments =pArrSegments;
   
@@ -170,15 +170,15 @@ AnyForceMomentMeasure2 WristAbductionNetMoment = {
 //The same measures as above without the joint reactions 
 //******************************************************
 AnyForceMomentMeasure2 GHNetMomentMuscles = {
-  AnyRefNode &ref=..Seg.Scapula.gh.RotNode;
+  AnyRefNode &ref=..Segments.Scapula.gh.RotNode;
   
   AnyObjectPtr  pArrSegments = arrcat(
-  ObjSearch("..Seg.Humerus","AnySeg"),
-  ObjSearch("..Seg.Ulna","AnySeg"),
-  ObjSearch("..Seg.Radius","AnySeg"),
-  ObjSearch("..Seg.WristJointSeg","AnySeg"),
-   ObjSearch("..Seg.Hand", "AnySeg"),
-  ObjSearchRecursive("..Seg.Hand","*", "AnySeg")
+  ObjSearch("..Segments.Humerus","AnySeg"),
+  ObjSearch("..Segments.Ulna","AnySeg"),
+  ObjSearch("..Segments.Radius","AnySeg"),
+  ObjSearch("..Segments.WristJointSeg","AnySeg"),
+   ObjSearch("..Segments.Hand", "AnySeg"),
+  ObjSearchRecursive("..Segments.Hand","*", "AnySeg")
   );
   IncludeSegments =pArrSegments;
   
@@ -203,14 +203,14 @@ AnyForceMomentMeasure2 GHNetMomentMuscles = {
 
 
 AnyForceMomentMeasure2 ElbowFlexionNetMomentMuscles = {
-  AnyRefNode &ref=..Seg.Humerus.fe.RotNode;      
+  AnyRefNode &ref=..Segments.Humerus.fe.RotNode;      
   
   AnyObjectPtr  pArrSegments = arrcat(
-  ObjSearch("..Seg.Ulna","AnySeg"),
-  ObjSearch("..Seg.Radius","AnySeg"),
-  ObjSearch("..Seg.WristJointSeg","AnySeg"),
-  ObjSearch("..Seg.Hand", "AnySeg"),
-  ObjSearchRecursive("..Seg.Hand","*", "AnySeg")
+  ObjSearch("..Segments.Ulna","AnySeg"),
+  ObjSearch("..Segments.Radius","AnySeg"),
+  ObjSearch("..Segments.WristJointSeg","AnySeg"),
+  ObjSearch("..Segments.Hand", "AnySeg"),
+  ObjSearchRecursive("..Segments.Hand","*", "AnySeg")
   );
   IncludeSegments =pArrSegments;
   
@@ -228,12 +228,12 @@ AnyForceMomentMeasure2 ElbowFlexionNetMomentMuscles = {
 };
 
 AnyForceMomentMeasure2 ElbowPronationNetMomentMuscles = {
-  AnyRefNode &ref =..Seg.Ulna.ps2.RotNode;
+  AnyRefNode &ref =..Segments.Ulna.ps2.RotNode;
   AnyObjectPtr  pArrSegments = arrcat(
-  ObjSearch("..Seg.Radius","AnySeg"),
-  ObjSearch("..Seg.WristJointSeg","AnySeg"),
-  ObjSearch("..Seg.Hand", "AnySeg"),
-  ObjSearchRecursive("..Seg.Hand","*", "AnySeg")
+  ObjSearch("..Segments.Radius","AnySeg"),
+  ObjSearch("..Segments.WristJointSeg","AnySeg"),
+  ObjSearch("..Segments.Hand", "AnySeg"),
+  ObjSearchRecursive("..Segments.Hand","*", "AnySeg")
   );
   IncludeSegments =pArrSegments;
   
@@ -253,12 +253,12 @@ AnyForceMomentMeasure2 ElbowPronationNetMomentMuscles = {
 };
 
 AnyForceMomentMeasure2 WristFlexionNetMomentMuscles = {
-  AnyRefNode &ref =..Seg.Radius.wj.RotNode;
+  AnyRefNode &ref =..Segments.Radius.wj.RotNode;
   
   AnyObjectPtr  pArrSegments = arrcat(
-  ObjSearch("..Seg.WristJointSeg","AnySeg"),
-  ObjSearch("..Seg.Hand", "AnySeg"),
-  ObjSearchRecursive("..Seg.Hand","*", "AnySeg")
+  ObjSearch("..Segments.WristJointSeg","AnySeg"),
+  ObjSearch("..Segments.Hand", "AnySeg"),
+  ObjSearchRecursive("..Segments.Hand","*", "AnySeg")
   );
   IncludeSegments =pArrSegments;
   
@@ -280,11 +280,11 @@ AnyForceMomentMeasure2 WristFlexionNetMomentMuscles = {
 
 
 AnyForceMomentMeasure2 WristAbductionNetMomentMuscles = {
-  AnyRefNode &ref =..Seg.WristJointSeg.RadialUlnarDeviation.RotNode;
+  AnyRefNode &ref =..Segments.WristJointSeg.RadialUlnarDeviation.RotNode;
   
   AnyObjectPtr  pArrSegments = arrcat(
-  ObjSearch("..Seg.Hand", "AnySeg"),
-  ObjSearchRecursive("..Seg.Hand","*", "AnySeg")
+  ObjSearch("..Segments.Hand", "AnySeg"),
+  ObjSearchRecursive("..Segments.Hand","*", "AnySeg")
   );
   IncludeSegments =pArrSegments;
   
@@ -305,13 +305,13 @@ AnyForceMomentMeasure2 WristAbductionNetMomentMuscles = {
 
 AnyForceMomentMeasure ElbowJointReactionMoments = {
   AnyForceBase &Force = ..Joints.HumeroUlnarJoint.Constraints.Reaction;
-  AnyRefFrame &Humerusfe = ..Seg.Humerus.fe;
+  AnyRefFrame &Humerusfe = ..Segments.Humerus.fe;
   AnyVec3 Mlocal = M*Humerusfe.Axes;
 };
 
 AnyForceMomentMeasure WristJointReactionMoments = 
 {
   AnyForceBase &Force = ..Joints.WristJointFlexion.Constraints.Reaction;
-  AnyRefFrame &Radiuswj = ..Seg.Radius.wj;
+  AnyRefFrame &Radiuswj = ..Segments.Radius.wj;
   AnyVec3 Mlocal = M*Radiuswj.Axes;
 };
