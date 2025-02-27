@@ -151,7 +151,7 @@ Left.ShoulderArm = {
 #if BM_LEG_RIGHT == ON
 Right.Leg = {
   AnyComponentDefinition CDef = {};
-  Joints = {AnyComponentDefinition CDef = {};};
+  Jnt = {AnyComponentDefinition CDef = {};};
   #if BM_LEG_MUSCLES_RIGHT == OFF
   JointMuscles = {AnyComponentDefinition CDef = {};};
   #endif
@@ -160,7 +160,7 @@ Right.Leg = {
 #if BM_LEG_LEFT == ON
 Left.Leg = {
   AnyComponentDefinition CDef = {};
-  Joints = {AnyComponentDefinition CDef = {};};
+  Jnt = {AnyComponentDefinition CDef = {};};
   #if BM_LEG_MUSCLES_LEFT == OFF
   JointMuscles = {AnyComponentDefinition CDef = {};};
   #endif
