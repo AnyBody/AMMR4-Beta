@@ -73,7 +73,7 @@ AnySeg Clavicula ={
   
   
   AnyDrawSurf DrwSurf = {
-    FileName = ...STL.FileNameClavicula;
+    FileName = ...Data.unscaled.STL.FileNameClavicula;
     RGB??=...ColorRef.Segments;
     ScaleXYZ={1,1,1}*.Mirror;
     AnyFunTransform3D& Scale = .Scale;
@@ -146,7 +146,7 @@ AnySeg Scapula ={
   JaboutCoMOnOff = On;
   
   AnyDrawSurf DrwSurf = {
-    FileName = ...STL.FileNameScapula;
+    FileName = ...Data.unscaled.STL.FileNameScapula;
     RGB??=...ColorRef.Segments;
     ScaleXYZ={1,1,1}*.Mirror;
     AnyFunTransform3D& Scale = .Scale;
@@ -253,7 +253,7 @@ AnySeg Humerus ={
   AnyRefNode& ScalingNode = AnatomicalFrame;
 
   AnyDrawSurf DrwSurf = {
-    FileName = ...STL.FileNameHumerus;
+    FileName = ...Data.unscaled.STL.FileNameHumerus;
     RGB ??=...ColorRef.Segments;
     ScaleXYZ={1,1,1}*.Mirror;
     AnyFunTransform3D& Scale = .Scale;
@@ -355,7 +355,7 @@ AnySeg Ulna ={
   };
   
   AnyDrawSurf DrwSurf = {
-    FileName = ...STL.FileNameUlna;
+    FileName = ...Data.unscaled.STL.FileNameUlna;
     RGB =...ColorRef.Segments;
     ScaleXYZ={1,1,1}*.Mirror;
     AnyFunTransform3D& Scale = .Scale;
@@ -448,7 +448,7 @@ AnySeg Radius ={
   
   
   AnyDrawSurf DrwSurf = {
-    FileName = ...STL.FileNameRadius;
+    FileName = ...Data.unscaled.STL.FileNameRadius;
     RGB ??= ...ColorRef.Segments;
     ScaleXYZ={1,1,1}*.Mirror;
     AnyFunTransform3D& Scale = .Scale;
