@@ -158,7 +158,10 @@ AnyDoc ArmDoc ={
 
 AnyFolder Data = {
   AnyFolder unscaled = {
-    AnyFolder &ModelParameters = ..ModelParameters;
+    AnyFolder ModelParameters = {
+      #include "<BM_ARM_DATASET_PATH>/ArmModelParameters.any"
+      #include "<BM_ARM_DATASET_PATH>/ArmModelMuscleParameters.any"
+    };
     AnyFolder STL = {#include "<BM_ARM_DATASET_PATH>/STL/STL.any"};
     AnyFolder StandardParameters = {
       #include "..\BodyModels\Include\BodyParameters.any"
@@ -168,15 +171,11 @@ AnyFolder Data = {
   #include "rangeOfMotion.any"
 };
 
-AnyFolder ModelParameters = {
-  #include "<BM_ARM_DATASET_PATH>/ArmModelParameters.any"
-  #include "<BM_ARM_DATASET_PATH>/ArmModelMuscleParameters.any"
-};
-
 AnyFolder Muscles = {};
 AnyFolder MuscleModels = {};
 
 #if BM_COMPATIBILITY_BODYMODEL_STRUCTURE == ON
+  AnyFolder &ModelParameters = Data.unscaled.ModelParameters;
   AnyFolder &Mus = Muscles;
   AnyFolder &Jnt = Joints;
   AnyFolder &Seg = Segments;
