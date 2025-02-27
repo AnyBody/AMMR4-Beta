@@ -304,14 +304,14 @@ AnyForceMomentMeasure2 WristAbductionNetMomentMuscles = {
 };
 
 AnyForceMomentMeasure ElbowJointReactionMoments = {
-  AnyForceBase &Force = ..Jnt.HumeroUlnarJoint.Constraints.Reaction;
+  AnyForceBase &Force = ..Joints.HumeroUlnarJoint.Constraints.Reaction;
   AnyRefFrame &Humerusfe = ..Seg.Humerus.fe;
   AnyVec3 Mlocal = M*Humerusfe.Axes;
 };
 
 AnyForceMomentMeasure WristJointReactionMoments = 
 {
-  AnyForceBase &Force = ..Jnt.WristJointFlexion.Constraints.Reaction;
+  AnyForceBase &Force = ..Joints.WristJointFlexion.Constraints.Reaction;
   AnyRefFrame &Radiuswj = ..Seg.Radius.wj;
   AnyVec3 Mlocal = M*Radiuswj.Axes;
 };

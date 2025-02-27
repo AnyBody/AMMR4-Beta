@@ -19,7 +19,7 @@ AnyFolder ArmCal3 ={
   AnyFolder &Cylinder=  .SideHumanFolderRef.ShoulderArm.Muscles.Pectoralis_minor1_cyl.Cylinder;
   
   AnyFolder &SegSideCal = .SideHumanFolderRef.ShoulderArm.Seg;
-  AnyFolder &JointsSideCal = .SideHumanFolderRef.ShoulderArm.Jnt;
+  AnyFolder &JointsSideCal = .SideHumanFolderRef.ShoulderArm.Joints;
   
   #if BM_ARM_DELTOID_WRAPPING == _DELTOID_WRAPPING_RAKE_
   AnyFolder& DeltoidRakeRef = .SideHumanFolderRef.ShoulderArm.Muscles.ArtificialRake;

@@ -8,7 +8,7 @@ AnyFolder Model = {
   AnyFolder &LumbarJntRef = .....BodyModel.Trunk.Joints.Lumbar;
   AnyFolder &LumbarSegRef = .....BodyModel.Trunk.Segments;
   AnyFolder &ArmSegSideRef = .SideBodyModelRef.ShoulderArm.Seg;
-  AnyFolder &ArmJntsRef =  .SideBodyModelRef.ShoulderArm.Jnt;
+  AnyFolder &ArmJntsRef =  .SideBodyModelRef.ShoulderArm.Joints;
   AnyFolder &MusRef = .SideBodyModelRef.ShoulderArm.Muscles;
   
   

@@ -12,7 +12,7 @@ AnyFolder ArmCal1 ={
 
   
   AnyFolder &SegSideCal = .SideHumanFolderRef.ShoulderArm.Seg;
-  AnyFolder &JointsSideCal = .SideHumanFolderRef.ShoulderArm.Jnt;
+  AnyFolder &JointsSideCal = .SideHumanFolderRef.ShoulderArm.Joints;
   
   #if BM_ARM_DELTOID_WRAPPING == _DELTOID_WRAPPING_RAKE_
   AnyFolder& DeltoidRakeRef = .SideHumanFolderRef.ShoulderArm.Muscles.ArtificialRake;

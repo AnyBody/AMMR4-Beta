@@ -8,7 +8,7 @@ AnyFolder ArmCal0 ={
   AnyFolder &LumbarCervicalJoints =  ...BodyModel.Trunk.Joints.Cervical;
   
   AnyFolder &SegSideCal = .SideHumanFolderRef.ShoulderArm.Seg;
-  AnyFolder &JointsSideCal = .SideHumanFolderRef.ShoulderArm.Jnt;
+  AnyFolder &JointsSideCal = .SideHumanFolderRef.ShoulderArm.Joints;
 
   AnyFolder &MusCalSide =  .SideHumanFolderRef.ShoulderArm.Muscles;
   AnyFolder &MusParCalSide =  .SideHumanFolderRef.ShoulderArm.MuscleModels;

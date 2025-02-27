@@ -16,8 +16,8 @@ AnyFolder Model = {
   AnyFolder &ArmSegLeftRef = ....BodyModel.Left.ShoulderArm.Seg;
   AnyFolder &ArmSegRightRef = ....BodyModel.Right.ShoulderArm.Seg;
   
-  AnyFolder &ArmJntsRightRef = ....BodyModel.Right.ShoulderArm.Jnt;
-  AnyFolder &ArmJntsLeftRef = ....BodyModel.Left.ShoulderArm.Jnt;
+  AnyFolder &ArmJntsRightRef = ....BodyModel.Right.ShoulderArm.Joints;
+  AnyFolder &ArmJntsLeftRef = ....BodyModel.Left.ShoulderArm.Joints;
   
   AnyFolder &MusRightRef = ....BodyModel.Right.ShoulderArm.Muscles;
   AnyFolder &MusLeftRef = ....BodyModel.Left.ShoulderArm.Muscles;
