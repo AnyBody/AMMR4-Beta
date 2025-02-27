@@ -174,7 +174,6 @@ AnyFolder ModelParameters = {
 };
 
 
-#include "ScapulaContactElipsoid.any"
 AnyFolder MuscleModels = {};
 AnyFolder Mus = {};
 
@@ -311,4 +310,5 @@ MannequinValuesFolder ={
   #include "MannequinValuesFromModel.any"
 };
 
+#include "ScapulaContactElipsoid.any"
 
