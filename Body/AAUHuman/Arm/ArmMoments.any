@@ -38,10 +38,10 @@ AnyForceMomentMeasure2 GHNetMoment = {
   IncludeSegments =pArrSegments;
   
   
-  AnyObjectPtr  pArrReactions = arrcat(ObjSearchRecursive("..Jnt", "*", "AnyForceBase"));
+  AnyObjectPtr  pArrReactions = arrcat(ObjSearchRecursive("..Joints", "*", "AnyForceBase"));
   AnyObjectPtr  pArrMuscles = arrcat(
   ObjSearchRecursive("..Muscles", "*", "AnyMuscle"),
-  ObjSearchRecursive("..Jnt.GHReactions", "*", "AnyMuscle"),
+  ObjSearchRecursive("..Joints.GHReactions", "*", "AnyMuscle"),
   ObjSearchRecursive("..JointMuscles","*", "AnyMuscle")
   );
   IncludeForces = arrcat(pArrMuscles,pArrReactions); 
@@ -66,10 +66,10 @@ AnyForceMomentMeasure2 ElbowFlexionNetMoment = {
   );
   IncludeSegments =pArrSegments;
   
-  AnyObjectPtr  pArrReactions = arrcat(ObjSearchRecursive("..Jnt", "*", "AnyForceBase"));
+  AnyObjectPtr  pArrReactions = arrcat(ObjSearchRecursive("..Joints", "*", "AnyForceBase"));
   AnyObjectPtr  pArrMuscles = arrcat(
   ObjSearchRecursive("..Muscles", "*", "AnyMuscle"),
-  ObjSearchRecursive("..Jnt.GHReactions", "*", "AnyMuscle"),
+  ObjSearchRecursive("..Joints.GHReactions", "*", "AnyMuscle"),
   ObjSearchRecursive("..JointMuscles","*", "AnyMuscle")
   );
   IncludeForces = arrcat(pArrMuscles,pArrReactions); 
@@ -91,10 +91,10 @@ AnyForceMomentMeasure2 ElbowPronationNetMoment = {
   );
   IncludeSegments =pArrSegments;
   
-  AnyObjectPtr  pArrReactions = arrcat(ObjSearchRecursive("..Jnt", "*", "AnyForceBase"));
+  AnyObjectPtr  pArrReactions = arrcat(ObjSearchRecursive("..Joints", "*", "AnyForceBase"));
   AnyObjectPtr  pArrMuscles = arrcat(
   ObjSearchRecursive("..Muscles", "*", "AnyMuscle"),
-  ObjSearchRecursive("..Jnt.GHReactions", "*", "AnyMuscle"),
+  ObjSearchRecursive("..Joints.GHReactions", "*", "AnyMuscle"),
   ObjSearchRecursive("..JointMuscles","*", "AnyMuscle")
   );
   IncludeForces = arrcat(pArrMuscles,pArrReactions); 
@@ -120,10 +120,10 @@ AnyForceMomentMeasure2 WristFlexionNetMoment = {
   
   
   
-  AnyObjectPtr  pArrReactions = arrcat(ObjSearchRecursive("..Jnt", "*", "AnyForceBase"));
+  AnyObjectPtr  pArrReactions = arrcat(ObjSearchRecursive("..Joints", "*", "AnyForceBase"));
   AnyObjectPtr  pArrMuscles = arrcat(
   ObjSearchRecursive("..Muscles", "*", "AnyMuscle"),
-  ObjSearchRecursive("..Jnt.GHReactions", "*", "AnyMuscle"),
+  ObjSearchRecursive("..Joints.GHReactions", "*", "AnyMuscle"),
   ObjSearchRecursive("..JointMuscles","*", "AnyMuscle")
   );
   IncludeForces = arrcat(pArrMuscles,pArrReactions); 
@@ -148,10 +148,10 @@ AnyForceMomentMeasure2 WristAbductionNetMoment = {
   IncludeSegments =pArrSegments;
   
   
-  AnyObjectPtr  pArrReactions = arrcat(ObjSearchRecursive("..Jnt", "*", "AnyForceBase"));
+  AnyObjectPtr  pArrReactions = arrcat(ObjSearchRecursive("..Joints", "*", "AnyForceBase"));
   AnyObjectPtr  pArrMuscles = arrcat(
   ObjSearchRecursive("..Muscles", "*", "AnyMuscle"),
-  ObjSearchRecursive("..Jnt.GHReactions", "*", "AnyMuscle"),
+  ObjSearchRecursive("..Joints.GHReactions", "*", "AnyMuscle"),
   ObjSearchRecursive("..JointMuscles","*", "AnyMuscle")
   );
   IncludeForces = arrcat(pArrMuscles,pArrReactions); 
@@ -186,7 +186,7 @@ AnyForceMomentMeasure2 GHNetMomentMuscles = {
   
   AnyObjectPtr  pArrMuscles = arrcat(
   ObjSearchRecursive("..Muscles", "*", "AnyMuscle"),
-  ObjSearchRecursive("..Jnt.GHReactions", "*", "AnyMuscle"),
+  ObjSearchRecursive("..Joints.GHReactions", "*", "AnyMuscle"),
   ObjSearchRecursive("..JointMuscles","*", "AnyMuscle")
   );
   IncludeForces = pArrMuscles; 
@@ -216,7 +216,7 @@ AnyForceMomentMeasure2 ElbowFlexionNetMomentMuscles = {
   
   AnyObjectPtr  pArrMuscles = arrcat(
   ObjSearchRecursive("..Muscles", "*", "AnyMuscle"),
-  ObjSearchRecursive("..Jnt.GHReactions", "*", "AnyMuscle"),
+  ObjSearchRecursive("..Joints.GHReactions", "*", "AnyMuscle"),
   ObjSearchRecursive("..JointMuscles","*", "AnyMuscle")
   );
   IncludeForces = pArrMuscles; 
@@ -240,7 +240,7 @@ AnyForceMomentMeasure2 ElbowPronationNetMomentMuscles = {
   
   AnyObjectPtr  pArrMuscles = arrcat(
   ObjSearchRecursive("..Muscles", "*", "AnyMuscle"),
-  ObjSearchRecursive("..Jnt.GHReactions", "*", "AnyMuscle"),
+  ObjSearchRecursive("..Joints.GHReactions", "*", "AnyMuscle"),
   ObjSearchRecursive("..JointMuscles","*", "AnyMuscle")
   );
   IncludeForces = pArrMuscles; 
@@ -264,7 +264,7 @@ AnyForceMomentMeasure2 WristFlexionNetMomentMuscles = {
   
   AnyObjectPtr  pArrMuscles = arrcat(
   ObjSearchRecursive("..Muscles", "*", "AnyMuscle"),
-  ObjSearchRecursive("..Jnt.GHReactions", "*", "AnyMuscle"),
+  ObjSearchRecursive("..Joints.GHReactions", "*", "AnyMuscle"),
   ObjSearchRecursive("..JointMuscles","*", "AnyMuscle")
   );
   IncludeForces = pArrMuscles; 
@@ -290,7 +290,7 @@ AnyForceMomentMeasure2 WristAbductionNetMomentMuscles = {
   
   AnyObjectPtr  pArrMuscles = arrcat(
   ObjSearchRecursive("..Muscles", "*", "AnyMuscle"),
-  ObjSearchRecursive("..Jnt.GHReactions", "*", "AnyMuscle"),
+  ObjSearchRecursive("..Joints.GHReactions", "*", "AnyMuscle"),
   ObjSearchRecursive("..JointMuscles","*", "AnyMuscle")
   );
   IncludeForces = pArrMuscles; 
