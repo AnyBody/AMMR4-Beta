@@ -40,11 +40,12 @@
   #else
   Mus = 
   {
-    #if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
-    #include "MusRigidToeFlex.any"
-    #else
+//    #if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+//    #include "MusRigidToeFlex.any"
+//    #else
+//    #include "Mus.any"
+//    #endif
     #include "Mus.any"
-    #endif
     AnyFolder Foot = {
       #include "Foot_Mus.any"
     };
