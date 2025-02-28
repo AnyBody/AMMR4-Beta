@@ -380,6 +380,7 @@ linkcheck_allowed_redirects = {
     "https://doi.org.*": ".*",
     "https://dx.doi.org.*": ".*",
     "https://www.anybodytech.com/download/anybodysetup.*": ".*",
+    "https://youtu.be": ".*",
 }
 
 def setup(app):
