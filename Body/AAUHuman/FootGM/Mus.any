@@ -475,6 +475,17 @@ Foot = {
       AnyDrawMuscle DrwMus = {    #include "MusLigamentDrawSettings.any" 
       };
     };
+    
+  //AnyMuscleActivityConstraint FlexorDigitorumLongusInterTendonLink = 
+  //{
+  //  AnyMuscle &muscle0 = .FlexorDigitorumLongusToe2Tendon;
+  //  AnyMuscle &muscle1 = .FlexorDigitorumLongusToe3Tendon;
+  //  AnyMuscle &muscle2 = .FlexorDigitorumLongusToe4Tendon;
+  //  AnyMuscle &muscle3 = .FlexorDigitorumLongusToe5Tendon;
+  //  nCon = 3;
+  //  Coef = {{-1,1,0,0},{-1,0,1,0},{-1,0,0,1}};
+  //  Const = {0,0,0};
+  //};    
   };
   
   
@@ -713,7 +724,7 @@ Foot = {
   
   
   
-  AnyFolder ExtensorDigitorumActivityConstraints = {
+  AnyFolder ExtensorDigitorumTendonActivityConstraints = {
     //AnyMuscleActivityConstraint ExtensorDigitorumLongusInterTendonLink = 
     //{
     //  AnyMuscle &muscle0 = .ExtensorDigitorumLongusToe2Tendon;
@@ -1256,7 +1267,7 @@ Foot = {
     };
   };
   
-  AnyFolder ExtensorHallucisActivityConstraints = {
+  AnyFolder ExtensorHallucisTendonActivityConstraints = {
     
     AnyFolder ExtensorHallucisLongusMuscleTendonLink = {
       
@@ -1367,333 +1378,324 @@ Foot = {
 #if BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_
 
 
-Foot = {
-
-
-//AnyMuscleActivityConstraint FlexorDigitorumLongusInterTendonLink = 
-//{
-//  AnyMuscle &muscle0 = .FlexorDigitorumLongusToe2Tendon;
-//  AnyMuscle &muscle1 = .FlexorDigitorumLongusToe3Tendon;
-//  AnyMuscle &muscle2 = .FlexorDigitorumLongusToe4Tendon;
-//  AnyMuscle &muscle3 = .FlexorDigitorumLongusToe5Tendon;
-//  nCon = 3;
-//  Coef = {{-1,1,0,0},{-1,0,1,0},{-1,0,0,1}};
-//  Const = {0,0,0};
-//};
-
-
-
+Foot = {  
   
-AnyMuscleViaPoint TibialisPosteriorNavicularTendon = {
-  AnyMuscleModel MusMdl = {F0 = 2000;};
-  AnyRefNode &Via9 = ...Seg.Foot.Calcaneus.TibialisPosteriorMedialisViaNode9;
-  AnyRefNode &Via10 = ...Seg.Foot.Calcaneus.TibialisPosteriorViaNode10;
-  AnyRefNode &Ins = ...Seg.Foot.Navicular.TibialisPosteriorNode;
-    #include "MuscleForceDrawing.any"
-  AnyDrawMuscle DrwMus = {    #include "MusLigamentDrawSettings.any"   };
-};
-
-AnyMuscleViaPoint TibialisPosteriorMedCuneiTendon = {
-  AnyMuscleModel MusMdl = {F0 = 2000;};
-  AnyRefNode &Via9 = ...Seg.Foot.Calcaneus.TibialisPosteriorMedialisViaNode9;
-  AnyRefNode &Via10 = ...Seg.Foot.Calcaneus.TibialisPosteriorViaNode10;
-//  AnyRefNode &Via11 = ..Seg.Foot.Navicular.TibialisPosteriorViaNode11;
-  AnyRefNode &Ins = ...Seg.Foot.MedialCuneiform.TibialisPosteriorNode;
-    #include "MuscleForceDrawing.any"
-  AnyDrawMuscle DrwMus = {    #include "MusLigamentDrawSettings.any"   };
-};
-
-AnyMuscleViaPoint TibialisPosteriorIntCuneiTendon = {
-  AnyMuscleModel MusMdl = {F0 = 2000;};
-  AnyRefNode &Via9 = ...Seg.Foot.Calcaneus.TibialisPosteriorMedialisViaNode9;
-  AnyRefNode &Via10 = ...Seg.Foot.Calcaneus.TibialisPosteriorViaNode10;
-//  AnyRefNode &Via11 = ..Seg.Foot.Navicular.TibialisPosteriorViaNode11;
-  AnyRefNode &Ins = ...Seg.Foot.IntermediateCuneiform.TibialisPosteriorNode;
-    #include "MuscleForceDrawing.any"
-  AnyDrawMuscle DrwMus = {    #include "MusLigamentDrawSettings.any"   };
-};
-
-AnyMuscleViaPoint TibialisPosteriorLatCuneiTendon = {
-  AnyMuscleModel MusMdl = {F0 = 2000;};
-  AnyRefNode &Via9 = ...Seg.Foot.Calcaneus.TibialisPosteriorMedialisViaNode9;
-  AnyRefNode &Via10 = ...Seg.Foot.Calcaneus.TibialisPosteriorViaNode10;
-//  AnyRefNode &Via11 = ..Seg.Foot.Navicular.TibialisPosteriorViaNode11;
-  AnyRefNode &Ins = ...Seg.Foot.LateralCuneiform.TibialisPosteriorNode;
-  AnyDrawMuscle DrwMus = {    #include "MusLigamentDrawSettings.any"   };
-};
-
-AnyMuscleViaPoint TibialisPosteriorCuboidTendon = {
-  AnyMuscleModel MusMdl = {F0 = 2000;};
-  AnyRefNode &Via9 = ...Seg.Foot.Calcaneus.TibialisPosteriorMedialisViaNode9;
-  AnyRefNode &Via10 = ...Seg.Foot.Calcaneus.TibialisPosteriorViaNode10;
-//  AnyRefNode &Via11 = ..Seg.Foot.Navicular.TibialisPosteriorViaNode11;
-  AnyRefNode &Ins = ...Seg.Foot.Cuboid.TibialisPosteriorNode;
+  MuscleGroup TibialisPosteriorTendon() = {
+    AnyMuscleViaPoint TibialisPosteriorNavicularTendon = {
+      AnyMuscleModel MusMdl = {F0 = 2000;};
+      AnyRefNode &Via9 = ....Seg.Foot.Calcaneus.TibialisPosteriorMedialisViaNode9;
+      AnyRefNode &Via10 = ....Seg.Foot.Calcaneus.TibialisPosteriorViaNode10;
+      AnyRefNode &Ins = ....Seg.Foot.Navicular.TibialisPosteriorNode;
+      #include "MuscleForceDrawing.any"
+      AnyDrawMuscle DrwMus = {    #include "MusLigamentDrawSettings.any"   };
+    };
+    
+    AnyMuscleViaPoint TibialisPosteriorMedCuneiTendon = {
+      AnyMuscleModel MusMdl = {F0 = 2000;};
+      AnyRefNode &Via9 = ....Seg.Foot.Calcaneus.TibialisPosteriorMedialisViaNode9;
+      AnyRefNode &Via10 = ....Seg.Foot.Calcaneus.TibialisPosteriorViaNode10;
+      //  AnyRefNode &Via11 = ..Seg.Foot.Navicular.TibialisPosteriorViaNode11;
+      AnyRefNode &Ins = ....Seg.Foot.MedialCuneiform.TibialisPosteriorNode;
+      #include "MuscleForceDrawing.any"
+      AnyDrawMuscle DrwMus = {    #include "MusLigamentDrawSettings.any"   };
+    };
+    
+    AnyMuscleViaPoint TibialisPosteriorIntCuneiTendon = {
+      AnyMuscleModel MusMdl = {F0 = 2000;};
+      AnyRefNode &Via9 = ....Seg.Foot.Calcaneus.TibialisPosteriorMedialisViaNode9;
+      AnyRefNode &Via10 = ....Seg.Foot.Calcaneus.TibialisPosteriorViaNode10;
+      //  AnyRefNode &Via11 = ..Seg.Foot.Navicular.TibialisPosteriorViaNode11;
+      AnyRefNode &Ins = ....Seg.Foot.IntermediateCuneiform.TibialisPosteriorNode;
+      #include "MuscleForceDrawing.any"
+      AnyDrawMuscle DrwMus = {    #include "MusLigamentDrawSettings.any"   };
+    };
+    
+    AnyMuscleViaPoint TibialisPosteriorLatCuneiTendon = {
+      AnyMuscleModel MusMdl = {F0 = 2000;};
+      AnyRefNode &Via9 = ....Seg.Foot.Calcaneus.TibialisPosteriorMedialisViaNode9;
+      AnyRefNode &Via10 = ....Seg.Foot.Calcaneus.TibialisPosteriorViaNode10;
+      //  AnyRefNode &Via11 = ..Seg.Foot.Navicular.TibialisPosteriorViaNode11;
+      AnyRefNode &Ins = ....Seg.Foot.LateralCuneiform.TibialisPosteriorNode;
+      AnyDrawMuscle DrwMus = {    #include "MusLigamentDrawSettings.any"   };
+    };
+    
+    AnyMuscleViaPoint TibialisPosteriorCuboidTendon = {
+      AnyMuscleModel MusMdl = {F0 = 2000;};
+      AnyRefNode &Via9 = ....Seg.Foot.Calcaneus.TibialisPosteriorMedialisViaNode9;
+      AnyRefNode &Via10 = ....Seg.Foot.Calcaneus.TibialisPosteriorViaNode10;
+      //  AnyRefNode &Via11 = ..Seg.Foot.Navicular.TibialisPosteriorViaNode11;
+      AnyRefNode &Ins = ....Seg.Foot.Cuboid.TibialisPosteriorNode;
       #include "MuscleForceDrawing.any"      
       AnyDrawMuscle DrwMus = {    #include "MusLigamentDrawSettings.any"   };
-};
-
-AnyMuscleViaPoint TibialisPosteriorMt2Tendon = {
-  AnyMuscleModel MusMdl = {F0 = 2000;};
-  AnyRefNode &Via9 = ...Seg.Foot.Calcaneus.TibialisPosteriorMedialisViaNode9;
-  AnyRefNode &Via10 = ...Seg.Foot.Calcaneus.TibialisPosteriorViaNode10;
-//  AnyRefNode &Via11 = ..Seg.Foot.Navicular.TibialisPosteriorViaNode11;
-  AnyRefNode &Ins = ...Seg.Foot.Metatarsal2.TibialisPosteriorNode;
+    };
+    
+    AnyMuscleViaPoint TibialisPosteriorMt2Tendon = {
+      AnyMuscleModel MusMdl = {F0 = 2000;};
+      AnyRefNode &Via9 = ....Seg.Foot.Calcaneus.TibialisPosteriorMedialisViaNode9;
+      AnyRefNode &Via10 = ....Seg.Foot.Calcaneus.TibialisPosteriorViaNode10;
+      //  AnyRefNode &Via11 = ..Seg.Foot.Navicular.TibialisPosteriorViaNode11;
+      AnyRefNode &Ins = ....Seg.Foot.Metatarsal2.TibialisPosteriorNode;
       #include "MuscleForceDrawing.any"      
       AnyDrawMuscle DrwMus = {    #include "MusLigamentDrawSettings.any"   };
-};
-
-AnyMuscleViaPoint TibialisPosteriorMt3Tendon = {
-  AnyMuscleModel MusMdl = {F0 = 2000;};
-  AnyRefNode &Via9 = ...Seg.Foot.Calcaneus.TibialisPosteriorMedialisViaNode9;
-  AnyRefNode &Via10 = ...Seg.Foot.Calcaneus.TibialisPosteriorViaNode10;
-//  AnyRefNode &Via11 = ..Seg.Foot.Navicular.TibialisPosteriorViaNode11;
-  AnyRefNode &Ins = ...Seg.Foot.Metatarsal3.TibialisPosteriorNode;
+    };
+    
+    AnyMuscleViaPoint TibialisPosteriorMt3Tendon = {
+      AnyMuscleModel MusMdl = {F0 = 2000;};
+      AnyRefNode &Via9 = ....Seg.Foot.Calcaneus.TibialisPosteriorMedialisViaNode9;
+      AnyRefNode &Via10 = ....Seg.Foot.Calcaneus.TibialisPosteriorViaNode10;
+      //  AnyRefNode &Via11 = ..Seg.Foot.Navicular.TibialisPosteriorViaNode11;
+      AnyRefNode &Ins = ....Seg.Foot.Metatarsal3.TibialisPosteriorNode;
       #include "MuscleForceDrawing.any"   
       AnyDrawMuscle DrwMus = {    #include "MusLigamentDrawSettings.any"   };
-};
-
-AnyMuscleViaPoint TibialisPosteriorMt4Tendon = {
-  AnyMuscleModel MusMdl = {F0 = 2000;};
-  AnyRefNode &Via9 = ...Seg.Foot.Calcaneus.TibialisPosteriorMedialisViaNode9;
-  AnyRefNode &Via10 = ...Seg.Foot.Calcaneus.TibialisPosteriorViaNode10;
-//  AnyRefNode &Via11 = ..Seg.Foot.Navicular.TibialisPosteriorViaNode11;
-  AnyRefNode &Ins = ...Seg.Foot.Metatarsal4.TibialisPosteriorNode;
+    };
+    
+    AnyMuscleViaPoint TibialisPosteriorMt4Tendon = {
+      AnyMuscleModel MusMdl = {F0 = 2000;};
+      AnyRefNode &Via9 = ....Seg.Foot.Calcaneus.TibialisPosteriorMedialisViaNode9;
+      AnyRefNode &Via10 = ....Seg.Foot.Calcaneus.TibialisPosteriorViaNode10;
+      //  AnyRefNode &Via11 = ..Seg.Foot.Navicular.TibialisPosteriorViaNode11;
+      AnyRefNode &Ins = ....Seg.Foot.Metatarsal4.TibialisPosteriorNode;
       #include "MuscleForceDrawing.any"      
       AnyDrawMuscle DrwMus = {    #include "MusLigamentDrawSettings.any"   };
-};
+    };
+    
+    //To be added if usefull (present 64%)
+    //AnyMuscleViaPoint TibialisPosteriorMt5Tendon = {
+    //  AnyMuscleModel MusMdl = {F0 = 2000;};
+    //  AnyRefNode &Via9 = ..Seg.Foot.Calcaneus.TibialisPosteriorMedialisViaNode9;
+    //  AnyRefNode &Via10 = ..Seg.Foot.Calcaneus.TibialisPosteriorViaNode10;
+    //  AnyRefNode &Via11 = ..Seg.Foot.Navicular.TibialisPosteriorViaNode11;
+    //  AnyRefNode &Ins = ..Seg.Foot.Metatarsal5.TibialisPosteriorNode;
+    //      #include "MuscleForceDrawing.any"      AnyDrawMuscle DrwMus = {
+    //    #include "MusLigamentDrawSettings.any" 
+    //  };
+    //};
+    
+  };
+  
+  
+  AnyFolder TibialisPosteriorTendonActivityConstraints = {
+    
+    AnyMuscleActivityConstraint TibialisPosteriorMuscleTendonLink1 = 
+    {
+      AnyMuscle &muscle0 = ..TibialisPosteriorTendon.TibialisPosteriorNavicularTendon;
+      AnyMuscle &muscle1 = ..TibialisPosteriorTendon.TibialisPosteriorMedCuneiTendon;
+      AnyMuscle &muscle2 = ..TibialisPosteriorTendon.TibialisPosteriorIntCuneiTendon;
+      AnyMuscle &muscle3 = ..TibialisPosteriorTendon.TibialisPosteriorLatCuneiTendon;
+      AnyMuscle &muscle4 = ..TibialisPosteriorTendon.TibialisPosteriorCuboidTendon;
+      AnyMuscle &muscle5 = ..TibialisPosteriorTendon.TibialisPosteriorMt2Tendon;
+      AnyMuscle &muscle6 = ..TibialisPosteriorTendon.TibialisPosteriorMt3Tendon;
+      AnyMuscle &muscle7 = ..TibialisPosteriorTendon.TibialisPosteriorMt4Tendon;
+      AnyMuscle &muscle8 = ...TibialisPosteriorLateralis.TibialisPosteriorLateralis1;
+      AnyMuscle &muscle9 = ...TibialisPosteriorLateralis.TibialisPosteriorLateralis2;
+      AnyMuscle &muscle10 = ...TibialisPosteriorLateralis.TibialisPosteriorLateralis3;
+      AnyMuscle &muscle11 = ...TibialisPosteriorMedialis.TibialisPosteriorMedialis1;
+      AnyMuscle &muscle12 = ...TibialisPosteriorMedialis.TibialisPosteriorMedialis2;
+      AnyMuscle &muscle13 = ...TibialisPosteriorMedialis.TibialisPosteriorMedialis3;
+      nCon = 1;
+      CType = NonNegative;
+      Coef = {{-muscle0.MusMdl.F0,
+          -muscle1.MusMdl.F0,
+          -muscle2.MusMdl.F0,
+          -muscle3.MusMdl.F0,
+          -muscle4.MusMdl.F0,
+          -muscle5.MusMdl.F0,
+          -muscle6.MusMdl.F0,
+          -muscle7.MusMdl.F0,
+          muscle8.MusMdl.F0,
+          muscle9.MusMdl.F0,
+          muscle10.MusMdl.F0,
+          muscle11.MusMdl.F0,
+          muscle12.MusMdl.F0,
+          muscle13.MusMdl.F0
+        }};
+      Const = {0};
+    };
+    
+    
+    AnyMuscleActivityConstraint TibialisPosteriorMuscleTendonLink2 = 
+    {
+      AnyMuscle &muscle0 = ..TibialisPosteriorTendon.TibialisPosteriorNavicularTendon;
+      AnyMuscle &muscle1 = ..TibialisPosteriorTendon.TibialisPosteriorMedCuneiTendon;
+      AnyMuscle &muscle2 = ..TibialisPosteriorTendon.TibialisPosteriorIntCuneiTendon;
+      AnyMuscle &muscle3 = ..TibialisPosteriorTendon.TibialisPosteriorLatCuneiTendon;
+      AnyMuscle &muscle4 = ..TibialisPosteriorTendon.TibialisPosteriorCuboidTendon;
+      AnyMuscle &muscle5 = ..TibialisPosteriorTendon.TibialisPosteriorMt2Tendon;
+      AnyMuscle &muscle6 = ..TibialisPosteriorTendon.TibialisPosteriorMt3Tendon;
+      AnyMuscle &muscle7 = ..TibialisPosteriorTendon.TibialisPosteriorMt4Tendon;
+      AnyMuscle &muscle8 = ...TibialisPosteriorLateralis.TibialisPosteriorLateralis1;
+      AnyMuscle &muscle9 = ...TibialisPosteriorLateralis.TibialisPosteriorLateralis2;
+      AnyMuscle &muscle10 = ...TibialisPosteriorLateralis.TibialisPosteriorLateralis3;
+      AnyMuscle &muscle11 = ...TibialisPosteriorMedialis.TibialisPosteriorMedialis1;
+      AnyMuscle &muscle12 = ...TibialisPosteriorMedialis.TibialisPosteriorMedialis2;
+      AnyMuscle &muscle13 = ...TibialisPosteriorMedialis.TibialisPosteriorMedialis3;
+      nCon = 1;
+      CType = NonPositive;
+      Coef = {{-muscle0.MusMdl.F0,
+          -muscle1.MusMdl.F0,
+          -muscle2.MusMdl.F0,
+          -muscle3.MusMdl.F0,
+          -muscle4.MusMdl.F0,
+          -muscle5.MusMdl.F0,
+          -muscle6.MusMdl.F0,
+          -muscle7.MusMdl.F0,
+          muscle8.MusMdl.F0,
+          muscle9.MusMdl.F0,
+          muscle10.MusMdl.F0,
+          muscle11.MusMdl.F0,
+          muscle12.MusMdl.F0,
+          muscle13.MusMdl.F0
+        }};
+      Const = -0.2*{...TibialisPosteriorLateralis.TibialisPosteriorLateralis1.MusMdl.F0 + ...TibialisPosteriorLateralis.TibialisPosteriorLateralis2.MusMdl.F0 + ...TibialisPosteriorLateralis.TibialisPosteriorLateralis3.MusMdl.F0
+        +...TibialisPosteriorMedialis.TibialisPosteriorMedialis1.MusMdl.F0 + ...TibialisPosteriorMedialis.TibialisPosteriorMedialis2.MusMdl.F0 + ...TibialisPosteriorMedialis.TibialisPosteriorMedialis3.MusMdl.F0};
+    };
+    
+    
+    AnyMuscleActivityConstraint TibialisPosteriorMuscleTendonLink3 = 
+    {
+      AnyMuscle &muscle0 = ..TibialisPosteriorTendon.TibialisPosteriorNavicularTendon;
+      AnyMuscle &muscle1 = ..TibialisPosteriorTendon.TibialisPosteriorMedCuneiTendon;
+      nCon = 1;
+      CType = NonNegative;
+      Coef = {{-muscle0.MusMdl.F0,
+          -muscle1.MusMdl.F0
+        }};
+      Const = 0.65*{...TibialisPosteriorLateralis.TibialisPosteriorLateralis1.MusMdl.F0 + ...TibialisPosteriorLateralis.TibialisPosteriorLateralis2.MusMdl.F0 + ...TibialisPosteriorLateralis.TibialisPosteriorLateralis3.MusMdl.F0
+        +...TibialisPosteriorMedialis.TibialisPosteriorMedialis1.MusMdl.F0 + ...TibialisPosteriorMedialis.TibialisPosteriorMedialis2.MusMdl.F0 + ...TibialisPosteriorMedialis.TibialisPosteriorMedialis3.MusMdl.F0};
+    };
+    
+    
+    AnyMuscleActivityConstraint TibialisPosteriorMuscleTendonLink4 = 
+    {
+      AnyMuscle &muscle0 = ..TibialisPosteriorTendon.TibialisPosteriorIntCuneiTendon;
+      AnyMuscle &muscle1 = ..TibialisPosteriorTendon.TibialisPosteriorLatCuneiTendon;
+      AnyMuscle &muscle2 = ..TibialisPosteriorTendon.TibialisPosteriorCuboidTendon;
+      AnyMuscle &muscle3 = ..TibialisPosteriorTendon.TibialisPosteriorMt2Tendon;
+      AnyMuscle &muscle4 = ..TibialisPosteriorTendon.TibialisPosteriorMt3Tendon;
+      AnyMuscle &muscle5 = ..TibialisPosteriorTendon.TibialisPosteriorMt4Tendon;
+      nCon = 1;
+      CType = NonNegative;
+      Coef = {{-muscle0.MusMdl.F0,
+          -muscle1.MusMdl.F0,
+          -muscle2.MusMdl.F0,
+          -muscle3.MusMdl.F0,
+          -muscle4.MusMdl.F0,
+          -muscle5.MusMdl.F0
+        }};
+      Const = 0.15*{...TibialisPosteriorLateralis.TibialisPosteriorLateralis1.MusMdl.F0 + ...TibialisPosteriorLateralis.TibialisPosteriorLateralis2.MusMdl.F0 + ...TibialisPosteriorLateralis.TibialisPosteriorLateralis3.MusMdl.F0
+        +...TibialisPosteriorMedialis.TibialisPosteriorMedialis1.MusMdl.F0 + ...TibialisPosteriorMedialis.TibialisPosteriorMedialis2.MusMdl.F0 + ...TibialisPosteriorMedialis.TibialisPosteriorMedialis3.MusMdl.F0};
+    };
+    
+  };
 
-//To be added if usefull (present 64%)
-//AnyMuscleViaPoint TibialisPosteriorMt5Tendon = {
-//  AnyMuscleModel MusMdl = {F0 = 2000;};
-//  AnyRefNode &Via9 = ..Seg.Foot.Calcaneus.TibialisPosteriorMedialisViaNode9;
-//  AnyRefNode &Via10 = ..Seg.Foot.Calcaneus.TibialisPosteriorViaNode10;
-//  AnyRefNode &Via11 = ..Seg.Foot.Navicular.TibialisPosteriorViaNode11;
-//  AnyRefNode &Ins = ..Seg.Foot.Metatarsal5.TibialisPosteriorNode;
-//      #include "MuscleForceDrawing.any"      AnyDrawMuscle DrwMus = {
-//    #include "MusLigamentDrawSettings.any" 
-//  };
-//};
-
-
-
-
-
-
-AnyMuscleActivityConstraint TibialisPosteriorMuscleTendonLink1 = 
-{
-  AnyMuscle &muscle0 = .TibialisPosteriorNavicularTendon;
-  AnyMuscle &muscle1 = .TibialisPosteriorMedCuneiTendon;
-  AnyMuscle &muscle2 = .TibialisPosteriorIntCuneiTendon;
-  AnyMuscle &muscle3 = .TibialisPosteriorLatCuneiTendon;
-  AnyMuscle &muscle4 = .TibialisPosteriorCuboidTendon;
-  AnyMuscle &muscle5 = .TibialisPosteriorMt2Tendon;
-  AnyMuscle &muscle6 = .TibialisPosteriorMt3Tendon;
-  AnyMuscle &muscle7 = .TibialisPosteriorMt4Tendon;
-  AnyMuscle &muscle8 = ..TibialisPosteriorLateralis.TibialisPosteriorLateralis1;
-  AnyMuscle &muscle9 = ..TibialisPosteriorLateralis.TibialisPosteriorLateralis2;
-  AnyMuscle &muscle10 = ..TibialisPosteriorLateralis.TibialisPosteriorLateralis3;
-  AnyMuscle &muscle11 = ..TibialisPosteriorMedialis.TibialisPosteriorMedialis1;
-  AnyMuscle &muscle12 = ..TibialisPosteriorMedialis.TibialisPosteriorMedialis2;
-  AnyMuscle &muscle13 = ..TibialisPosteriorMedialis.TibialisPosteriorMedialis3;
-  nCon = 1;
-  CType = NonNegative;
-  Coef = {{-muscle0.MusMdl.F0,
-           -muscle1.MusMdl.F0,
-           -muscle2.MusMdl.F0,
-           -muscle3.MusMdl.F0,
-           -muscle4.MusMdl.F0,
-           -muscle5.MusMdl.F0,
-           -muscle6.MusMdl.F0,
-           -muscle7.MusMdl.F0,
-            muscle8.MusMdl.F0,
-            muscle9.MusMdl.F0,
-            muscle10.MusMdl.F0,
-            muscle11.MusMdl.F0,
-            muscle12.MusMdl.F0,
-            muscle13.MusMdl.F0
-         }};
-  Const = {0};
-};
-
-
-AnyMuscleActivityConstraint TibialisPosteriorMuscleTendonLink2 = 
-{
-  AnyMuscle &muscle0 = .TibialisPosteriorNavicularTendon;
-  AnyMuscle &muscle1 = .TibialisPosteriorMedCuneiTendon;
-  AnyMuscle &muscle2 = .TibialisPosteriorIntCuneiTendon;
-  AnyMuscle &muscle3 = .TibialisPosteriorLatCuneiTendon;
-  AnyMuscle &muscle4 = .TibialisPosteriorCuboidTendon;
-  AnyMuscle &muscle5 = .TibialisPosteriorMt2Tendon;
-  AnyMuscle &muscle6 = .TibialisPosteriorMt3Tendon;
-  AnyMuscle &muscle7 = .TibialisPosteriorMt4Tendon;
-  AnyMuscle &muscle8 = ..TibialisPosteriorLateralis.TibialisPosteriorLateralis1;
-  AnyMuscle &muscle9 = ..TibialisPosteriorLateralis.TibialisPosteriorLateralis2;
-  AnyMuscle &muscle10 = ..TibialisPosteriorLateralis.TibialisPosteriorLateralis3;
-  AnyMuscle &muscle11 = ..TibialisPosteriorMedialis.TibialisPosteriorMedialis1;
-  AnyMuscle &muscle12 = ..TibialisPosteriorMedialis.TibialisPosteriorMedialis2;
-  AnyMuscle &muscle13 = ..TibialisPosteriorMedialis.TibialisPosteriorMedialis3;
-  nCon = 1;
-  CType = NonPositive;
-  Coef = {{-muscle0.MusMdl.F0,
-           -muscle1.MusMdl.F0,
-           -muscle2.MusMdl.F0,
-           -muscle3.MusMdl.F0,
-           -muscle4.MusMdl.F0,
-           -muscle5.MusMdl.F0,
-           -muscle6.MusMdl.F0,
-           -muscle7.MusMdl.F0,
-            muscle8.MusMdl.F0,
-            muscle9.MusMdl.F0,
-            muscle10.MusMdl.F0,
-            muscle11.MusMdl.F0,
-            muscle12.MusMdl.F0,
-            muscle13.MusMdl.F0
-         }};
-  Const = -0.2*{..TibialisPosteriorLateralis.TibialisPosteriorLateralis1.MusMdl.F0 + ..TibialisPosteriorLateralis.TibialisPosteriorLateralis2.MusMdl.F0 + ..TibialisPosteriorLateralis.TibialisPosteriorLateralis3.MusMdl.F0
-  +..TibialisPosteriorMedialis.TibialisPosteriorMedialis1.MusMdl.F0 + ..TibialisPosteriorMedialis.TibialisPosteriorMedialis2.MusMdl.F0 + ..TibialisPosteriorMedialis.TibialisPosteriorMedialis3.MusMdl.F0};
-};
-
-
-AnyMuscleActivityConstraint TibialisPosteriorMuscleTendonLink3 = 
-{
-  AnyMuscle &muscle0 = .TibialisPosteriorNavicularTendon;
-  AnyMuscle &muscle1 = .TibialisPosteriorMedCuneiTendon;
-  nCon = 1;
-  CType = NonNegative;
-  Coef = {{-muscle0.MusMdl.F0,
-           -muscle1.MusMdl.F0
-         }};
-  Const = 0.65*{..TibialisPosteriorLateralis.TibialisPosteriorLateralis1.MusMdl.F0 + ..TibialisPosteriorLateralis.TibialisPosteriorLateralis2.MusMdl.F0 + ..TibialisPosteriorLateralis.TibialisPosteriorLateralis3.MusMdl.F0
-  +..TibialisPosteriorMedialis.TibialisPosteriorMedialis1.MusMdl.F0 + ..TibialisPosteriorMedialis.TibialisPosteriorMedialis2.MusMdl.F0 + ..TibialisPosteriorMedialis.TibialisPosteriorMedialis3.MusMdl.F0};
-};
-
-
-AnyMuscleActivityConstraint TibialisPosteriorMuscleTendonLink4 = 
-{
-  AnyMuscle &muscle0 = .TibialisPosteriorIntCuneiTendon;
-  AnyMuscle &muscle1 = .TibialisPosteriorLatCuneiTendon;
-  AnyMuscle &muscle2 = .TibialisPosteriorCuboidTendon;
-  AnyMuscle &muscle3 = .TibialisPosteriorMt2Tendon;
-  AnyMuscle &muscle4 = .TibialisPosteriorMt3Tendon;
-  AnyMuscle &muscle5 = .TibialisPosteriorMt4Tendon;
-  nCon = 1;
-  CType = NonNegative;
-  Coef = {{-muscle0.MusMdl.F0,
-           -muscle1.MusMdl.F0,
-           -muscle2.MusMdl.F0,
-           -muscle3.MusMdl.F0,
-           -muscle4.MusMdl.F0,
-           -muscle5.MusMdl.F0
-         }};
-  Const = 0.15*{..TibialisPosteriorLateralis.TibialisPosteriorLateralis1.MusMdl.F0 + ..TibialisPosteriorLateralis.TibialisPosteriorLateralis2.MusMdl.F0 + ..TibialisPosteriorLateralis.TibialisPosteriorLateralis3.MusMdl.F0
-  +..TibialisPosteriorMedialis.TibialisPosteriorMedialis1.MusMdl.F0 + ..TibialisPosteriorMedialis.TibialisPosteriorMedialis2.MusMdl.F0 + ..TibialisPosteriorMedialis.TibialisPosteriorMedialis3.MusMdl.F0};
-};
-
-AnyMuscleViaPoint TibialisAnteriorMedCuneiTendon = {
-  AnyMuscleModel MusMdl = {F0 = 2000;};
-  AnyRefNode &Via2 = ...Seg.Foot.Navicular.TibialisAnteriorViaNode2;
-  AnyRefNode &Via3 = ...Seg.Foot.MedialCuneiform.TibialisAnteriorViaNode3;
-  AnyRefNode &Ins = ...Seg.Foot.MedialCuneiform.TibialisAnteriorNode;
+  MuscleGroup TibialisAnteriorTendon()= {
+    AnyMuscleViaPoint TibialisAnteriorMedCuneiTendon = {
+      AnyMuscleModel MusMdl = {F0 = 2000;};
+      AnyRefNode &Via2 = ....Seg.Foot.Navicular.TibialisAnteriorViaNode2;
+      AnyRefNode &Via3 = ....Seg.Foot.MedialCuneiform.TibialisAnteriorViaNode3;
+      AnyRefNode &Ins = ....Seg.Foot.MedialCuneiform.TibialisAnteriorNode;
       #include "MuscleForceDrawing.any"      
       AnyDrawMuscle DrwMus = {
-    #include "MusLigamentDrawSettings.any" 
-  };
-};
-
-AnyMuscleViaPoint TibialisAnteriorMt1Tendon = {
-  AnyMuscleModel MusMdl = {F0 = 2000;};
-  AnyRefNode &Via2 = ...Seg.Foot.Navicular.TibialisAnteriorViaNode2;
-  AnyRefNode &Via3 = ...Seg.Foot.MedialCuneiform.TibialisAnteriorViaNode3;
-  AnyRefNode &Ins = ...Seg.Foot.Metatarsal1.TibialisAnteriorNode;
+        #include "MusLigamentDrawSettings.any" 
+      };
+    };
+    
+    AnyMuscleViaPoint TibialisAnteriorMt1Tendon = {
+      AnyMuscleModel MusMdl = {F0 = 2000;};
+      AnyRefNode &Via2 = ....Seg.Foot.Navicular.TibialisAnteriorViaNode2;
+      AnyRefNode &Via3 = ....Seg.Foot.MedialCuneiform.TibialisAnteriorViaNode3;
+      AnyRefNode &Ins = ....Seg.Foot.Metatarsal1.TibialisAnteriorNode;
       #include "MuscleForceDrawing.any"      
       AnyDrawMuscle DrwMus = {
-    #include "MusLigamentDrawSettings.any" 
+        #include "MusLigamentDrawSettings.any" 
+      };
+    };
   };
-};
-
-
-AnyMuscleActivityConstraint TibialisAnteriorInterTendonLink = 
-{
-  AnyMuscle &muscle0 = .TibialisAnteriorMedCuneiTendon;
-  AnyMuscle &muscle1 = .TibialisAnteriorMt1Tendon;
-  nCon = 1;
-  Coef = {{-1,1}};
-  Const = {0};
-};
-
-
-
-AnyMuscleActivityConstraint TibialisAnteriorMuscleTendonLink = 
-{
-  AnyMuscle &muscle0 = .TibialisAnteriorMedCuneiTendon;
-  AnyMuscle &muscle1 = .TibialisAnteriorMt1Tendon;
-  AnyMuscle &muscle2 = ..TibialisAnterior.TibialisAnterior1;
-  AnyMuscle &muscle3 = ..TibialisAnterior.TibialisAnterior2;
-  AnyMuscle &muscle4 = ..TibialisAnterior.TibialisAnterior3;
-  nCon = 1;
-  Coef = {{
-      -muscle0.MusMdl.F0,
-      -muscle1.MusMdl.F0,
-      muscle2.MusMdl.F0,
-      muscle3.MusMdl.F0,
-      muscle4.MusMdl.F0
-    }};
-  Const = {0};
-};
-
-AnyMuscleViaPoint PeroneusLongusMedCuneiTendon = {
-  AnyMuscleModel MusMdl = {F0 = 2000;};
-  AnyRefNode &Via2 = ...Seg.Foot.Cuboid.PeroneusLongusViaNode6;
-  AnyRefNode &Via3 = ...Seg.Foot.Cuboid.PeroneusLongusViaNode7;
-  AnyRefNode &Ins = ...Seg.Foot.MedialCuneiform.PeroneusLongusNode;
+  
+  AnyFolder TibialisAnteriorTendonActivityConstraints = {
+    AnyMuscleActivityConstraint TibialisAnteriorInterTendonLink = 
+    {
+      AnyMuscle &muscle0 = ..TibialisAnteriorTendon.TibialisAnteriorMedCuneiTendon;
+      AnyMuscle &muscle1 = ..TibialisAnteriorTendon.TibialisAnteriorMt1Tendon;
+      nCon = 1;
+      Coef = {{-1,1}};
+      Const = {0};
+    };
+    
+    
+    
+    AnyMuscleActivityConstraint TibialisAnteriorMuscleTendonLink = 
+    {
+      AnyMuscle &muscle0 = ..TibialisAnteriorTendon.TibialisAnteriorMedCuneiTendon;
+      AnyMuscle &muscle1 = ..TibialisAnteriorTendon.TibialisAnteriorMt1Tendon;
+      AnyMuscle &muscle2 = ...TibialisAnterior.TibialisAnterior1;
+      AnyMuscle &muscle3 = ...TibialisAnterior.TibialisAnterior2;
+      AnyMuscle &muscle4 = ...TibialisAnterior.TibialisAnterior3;
+      nCon = 1;
+      Coef = {{
+          -muscle0.MusMdl.F0,
+          -muscle1.MusMdl.F0,
+          muscle2.MusMdl.F0,
+          muscle3.MusMdl.F0,
+          muscle4.MusMdl.F0
+        }};
+      Const = {0};
+    };
+  };
+  
+  MuscleGroup PeroneusLongusTendon() = {
+    AnyMuscleViaPoint PeroneusLongusMedCuneiTendon = {
+      AnyMuscleModel MusMdl = {F0 = 2000;};
+      AnyRefNode &Via2 = ....Seg.Foot.Cuboid.PeroneusLongusViaNode6;
+      AnyRefNode &Via3 = ....Seg.Foot.Cuboid.PeroneusLongusViaNode7;
+      AnyRefNode &Ins = ....Seg.Foot.MedialCuneiform.PeroneusLongusNode;
       #include "MuscleForceDrawing.any"      
       AnyDrawMuscle DrwMus = {
-    #include "MusLigamentDrawSettings.any" 
-  };
-};
-
-
-AnyMuscleViaPoint PeroneusLongusMt1Tendon = {
-  AnyMuscleModel MusMdl = {F0 = 2000;};
-  AnyRefNode &Via2 = ...Seg.Foot.Cuboid.PeroneusLongusViaNode6;
-  AnyRefNode &Via3 = ...Seg.Foot.Cuboid.PeroneusLongusViaNode7;
-  AnyRefNode &Ins = ...Seg.Foot.Metatarsal1.PeroneusLongusNode;
+        #include "MusLigamentDrawSettings.any" 
+      };
+    };
+    
+    
+    AnyMuscleViaPoint PeroneusLongusMt1Tendon = {
+      AnyMuscleModel MusMdl = {F0 = 2000;};
+      AnyRefNode &Via2 = ....Seg.Foot.Cuboid.PeroneusLongusViaNode6;
+      AnyRefNode &Via3 = ....Seg.Foot.Cuboid.PeroneusLongusViaNode7;
+      AnyRefNode &Ins = ....Seg.Foot.Metatarsal1.PeroneusLongusNode;
       #include "MuscleForceDrawing.any"      
       AnyDrawMuscle DrwMus = {
-    #include "MusLigamentDrawSettings.any" 
+        #include "MusLigamentDrawSettings.any" 
+      };
+    };
   };
-};
-
-
-
-AnyMuscleActivityConstraint PeroneusLongusInterTendonLink = 
-{
-  AnyMuscle &muscle0 = .PeroneusLongusMedCuneiTendon;
-  AnyMuscle &muscle1 = .PeroneusLongusMt1Tendon;
-  nCon = 1;
-  Coef = {{-1,1}};
-  Const = {0};
-};
-
-
-AnyMuscleActivityConstraint PeroneusLongusMuscleTendonLink = 
-{
-  AnyMuscle &muscle0 = .PeroneusLongusMedCuneiTendon;
-  AnyMuscle &muscle1 = .PeroneusLongusMt1Tendon;
-  AnyMuscle &muscle2 = ..PeroneusLongus.PeroneusLongus1;
-  AnyMuscle &muscle3 = ..PeroneusLongus.PeroneusLongus2;
-  AnyMuscle &muscle4 = ..PeroneusLongus.PeroneusLongus3;
-  nCon = 1;
-  Coef = {{-muscle0.MusMdl.F0,
-      -muscle1.MusMdl.F0,
-      muscle2.MusMdl.F0,
-      muscle3.MusMdl.F0,
-      muscle4.MusMdl.F0
-    }};
-  Const = {0};
-};
-
-
+  
+  AnyFolder PeroneusLongusTendonActivityConstraints = {
+    AnyMuscleActivityConstraint PeroneusLongusInterTendonLink = 
+    {
+      AnyMuscle &muscle0 = ..PeroneusLongusTendon.PeroneusLongusMedCuneiTendon;
+      AnyMuscle &muscle1 = ..PeroneusLongusTendon.PeroneusLongusMt1Tendon;
+      nCon = 1;
+      Coef = {{-1,1}};
+      Const = {0};
+    };
+    
+    
+    AnyMuscleActivityConstraint PeroneusLongusMuscleTendonLink = 
+    {
+      AnyMuscle &muscle0 = ..PeroneusLongusTendon.PeroneusLongusMedCuneiTendon;
+      AnyMuscle &muscle1 = ..PeroneusLongusTendon.PeroneusLongusMt1Tendon;
+      AnyMuscle &muscle2 = ...PeroneusLongus.PeroneusLongus1;
+      AnyMuscle &muscle3 = ...PeroneusLongus.PeroneusLongus2;
+      AnyMuscle &muscle4 = ...PeroneusLongus.PeroneusLongus3;
+      nCon = 1;
+      Coef = {{-muscle0.MusMdl.F0,
+          -muscle1.MusMdl.F0,
+          muscle2.MusMdl.F0,
+          muscle3.MusMdl.F0,
+          muscle4.MusMdl.F0
+        }};
+      Const = {0};
+    };
+  };
 
 //AnyMuscleViaPoint PeroneusTertius1 = {
 //  AnyMuscleModel &MusMdl = ..MuscleModels.PeroneusTertius1Par;
@@ -1730,7 +1732,6 @@ AnyMuscleActivityConstraint PeroneusLongusMuscleTendonLink =
 //    AnyDrawMuscle DrwMus = {#include "<ANYBODY_PATH_BODY>/DrawSettings/MusDrawSettings.any"
 //  };
 //};
-
 
 
 
