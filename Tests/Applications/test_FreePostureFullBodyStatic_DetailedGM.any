@@ -1,0 +1,18 @@
+#include "../libdef.any"
+
+#include "../../Application/Examples/FreePostureGMFoot/FreePostureFullBodyStaticGMFoot.Main.any"
+
+
+Main = 
+{
+#ifndef CREATE_IMAGE
+  AnyOperation& RunTest = Main.RunApplication;
+  Study = { FixTestStudyConfig TestStudyConfig = {  }; };
+#else
+  #include "../Cameras.any"
+  AnyOperation& CameraInitPos = Main.Study.InitialConditions;
+  LoadTimeCam.CameraLookAtPoint = {0,0.85,0};
+  LoadTimeCam.CameraFieldOfView = DesignVar(1.9);
+  LoadTimeCam.CameraDirection  = {0,0,1};
+#endif
+};
