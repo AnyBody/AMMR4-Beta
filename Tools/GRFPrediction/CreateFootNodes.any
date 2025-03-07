@@ -2,7 +2,12 @@
 #undef __CREATE_CC_NODE__
 #endif
 
-#define __CREATE_CC_NODE__(REF,IDX,NAME) AnyRefNode &Node##IDX = foot_ref.REF.Node##IDX##NAME; foot_ref.REF = {AnyRefNode Node##IDX##NAME = {sRel = ...Targets[IDX]*...NewCoordSys_ARel' +...NewCoordSys_sRel;  AnyDrawNode Drw = { Visible= ....NodesVisible; RGB = ....NodesRGB; ScaleXYZ= ....NodesScale; Opacity = ....NodesOpacity; }; }; };
+#define __CREATE_CC_NODE__(REF,IDX,NAME) AnyRefNode &Node##IDX = foot_ref.REF.Node##IDX##NAME; \
+                                        foot_ref.REF = {\
+                                          AnyRefNode Node##IDX##NAME = {sRel = ...Targets[IDX]*...NewCoordSys_ARel' +...NewCoordSys_sRel; ARel = ...NewCoordSys_ARel;  \
+                                            AnyDrawNode Drw = { Visible= ....NodesVisible; RGB = ....NodesRGB; ScaleXYZ= ....NodesScale; Opacity = ....NodesOpacity; }; };\
+                                        };\
+                                        foot_ref.ConditionalContact_Nodes##NAME = {AnyRefNode &Node##IDX = .REF.Node##IDX##NAME;};
 
 
 
@@ -60,6 +65,10 @@
     ( Sources - (NewCoordSys_sRel'*{Unit_Array})')* NewCoordSys_ARel * ProjectionMat 
     + (Offset_Dist*Offset_Vec'*{Unit_Array})';
   
+    foot_ref = {
+      AnyFolder ConditionalContact_Nodes##NAME = {};
+    };
+
     __CREATE_CC_NODE__(Calcaneus         ,0,NAME)
     __CREATE_CC_NODE__(ProximalPhalange1 ,1,NAME)
     __CREATE_CC_NODE__(ProximalPhalange5 ,2,NAME)
