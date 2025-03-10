@@ -306,22 +306,25 @@ AnyFolder IntertarsalGlidingJoints = {
   
   
   AnyFolder Contact_ContactSeg1Driver2 ={
-    AnyGeneralMuscle mus1 =  {
+    AnyRecruitedActuator RecAct1 =  {
       AnyKinPointSurface &ref =..ContactSeg1Driver2.Ellipsoid_n1; 
-      ForceDirection = 1;
-      AnyMuscleModel Model = { F0 = 1000; };
+      Type = NonNegative;
+      Strength ??= 1000;
+      SET_DEFAULT_ACTUATOR_VOLUME;
       #include "DrawForceInJoint.any" 
     };
-    AnyGeneralMuscle mus2 =  {
+    AnyRecruitedActuator RecAct2 =  {
       AnyKinPointSurface &ref =..ContactSeg1Driver2.Ellipsoid_n2; 
-      ForceDirection = 1;
-      AnyMuscleModel Model = { F0 = 1000; };
+      Type = NonNegative;
+      Strength ??= 1000;
+      SET_DEFAULT_ACTUATOR_VOLUME;
       #include "DrawForceInJoint.any"
     };
-    AnyGeneralMuscle mus3 =  {
+    AnyRecruitedActuator RecAct3 =  {
       AnyKinPointSurface &ref =..ContactSeg1Driver2.Ellipsoid_n3; 
-      ForceDirection = 1;
-      AnyMuscleModel Model = { F0=1000; };
+      Type = NonNegative;
+      Strength ??= 1000;
+      SET_DEFAULT_ACTUATOR_VOLUME;
       #include "DrawForceInJoint.any"
     };
     
@@ -437,21 +440,27 @@ AnyFolder IntertarsalGlidingJoints = {
   
   
   AnyFolder Contact_ContactSeg2Driver2 ={
-    AnyGeneralMuscle mus1 =  {
+    AnyRecruitedActuator RecAct1 =  {
       AnyKinPointSurface &ref =..ContactSeg2Driver2.Ellipsoid_n1; 
-      ForceDirection = 1;
-      AnyMuscleModel Model = { F0=1000; };
-      #include "DrawForceInJoint.any" };
-    AnyGeneralMuscle mus2 =  {
+      Type = NonNegative;
+      Strength ??= 1000;
+      SET_DEFAULT_ACTUATOR_VOLUME;
+      #include "DrawForceInJoint.any" 
+    };
+    AnyRecruitedActuator RecAct2 =  {
       AnyKinPointSurface &ref =..ContactSeg2Driver2.Ellipsoid_n2; 
-      ForceDirection = 1;
-      AnyMuscleModel Model = { F0=1000; };
-      #include "DrawForceInJoint.any" };
-    AnyGeneralMuscle mus3 =  {
+      Type = NonNegative;
+      Strength ??= 1000;
+      SET_DEFAULT_ACTUATOR_VOLUME;
+      #include "DrawForceInJoint.any" 
+    };
+    AnyRecruitedActuator RecAct3 =  {
       AnyKinPointSurface &ref =..ContactSeg2Driver2.Ellipsoid_n3; 
-      ForceDirection = 1;
-      AnyMuscleModel Model = { F0=1000; };
-      #include "DrawForceInJoint.any"};
+      Type = NonNegative;
+      Strength ??= 1000;
+      SET_DEFAULT_ACTUATOR_VOLUME;
+      #include "DrawForceInJoint.any"
+    };
     
   };
   
@@ -702,22 +711,28 @@ AnyFolder IntertarsalGlidingJoints = {
   };
   
   
-  AnyFolder Contact_ContactSeg3Driver2 ={
-    AnyGeneralMuscle mus1 =  {
+  AnyFolder Contact_ContactSeg3Driver2 ={    
+    AnyRecruitedActuator RecAct1 =  {
       AnyKinPointSurface &ref =..ContactSeg3Driver2.Ellipsoid_n1; 
-      ForceDirection = 1;
-      AnyMuscleModel Model = { F0=1000; };
-      #include "DrawForceInJoint.any" };
-    AnyGeneralMuscle mus2 =  {
+      Type = NonNegative;
+      Strength ??= 1000;
+      SET_DEFAULT_ACTUATOR_VOLUME;
+      #include "DrawForceInJoint.any" 
+    };
+    AnyRecruitedActuator RecAct2 =  {
       AnyKinPointSurface &ref =..ContactSeg3Driver2.Ellipsoid_n2; 
-      ForceDirection = 1;
-      AnyMuscleModel Model = { F0=1000; };
-      #include "DrawForceInJoint.any" };
-    AnyGeneralMuscle mus3 =  {
+      Type = NonNegative;
+      Strength ??= 1000;
+      SET_DEFAULT_ACTUATOR_VOLUME;
+      #include "DrawForceInJoint.any" 
+    };
+    AnyRecruitedActuator RecAct3 =  {
       AnyKinPointSurface &ref =..ContactSeg3Driver2.Ellipsoid_n3; 
-      ForceDirection = 1;
-      AnyMuscleModel Model = { F0=1000; };
-      #include "DrawForceInJoint.any"};
+      Type = NonNegative;
+      Strength ??= 1000;
+      SET_DEFAULT_ACTUATOR_VOLUME;
+      #include "DrawForceInJoint.any"
+    };
     
   };
   
