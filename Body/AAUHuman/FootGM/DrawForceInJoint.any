@@ -1,7 +1,7 @@
 #ifdef FORCE_VIEW 
 
 AnyDrawForce DrawForceJnt ={
-  ForceScale=Main.DrawSettings.ForceScale;
+  ForceScale??=2*0.0000075;
   ReactionForceColor ={0,0,0};
   AppliedForceColor= ReactionForceColor;
 };
