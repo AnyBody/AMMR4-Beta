@@ -855,7 +855,7 @@ Foot = {
   
   Metatarsal1 = {
     
-    AnyFolder &FootType = ...FootType;
+    AnyFolder &FootType = .FootType;
     
     AnyVar Sign = .Sign;
     AnyFolder &Data = .Data.Metatarsal1;
@@ -1457,7 +1457,7 @@ Foot = {
   
   ProximalPhalange1 = {
     
-    AnyFolder &FootType = ...FootType;
+    AnyFolder &FootType = .FootType;
     
     AnyVar Sign = .Sign;
     AnyFolder &Data = .Data.ProximalPhalange1;
@@ -2048,7 +2048,7 @@ Foot = {
     
   DistalPhalange1 = {
     
-    AnyFolder &FootType = ...FootType;
+    AnyFolder &FootType = .FootType;
     
     AnyVar Sign = .Sign;
     AnyFolder &Data = .Data.DistalPhalange1;

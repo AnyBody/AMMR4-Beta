@@ -1,13 +1,3 @@
-
-  AnyFolder FootType = {
-    AnyVar MetaScaleVal ??= 1.0;
-    AnyVar ProxScaleVal ??= 1.0;
-    AnyVar DistScaleVal ??= 1.0;
-    AnyMat33 MetaScale ??= {{1,0,0},{0,MetaScaleVal,0},{0,0,1}};
-    AnyMat33 ProxPhalScale ??= {{1,0,0},{0,ProxScaleVal,0},{0,0,1}};           
-    AnyMat33 DistPhalScale ??= {{1,0,0},{0,DistScaleVal,0},{0,0,1}};
-  };
-  
   Seg = 
   {
     AnyFolder Foot = {
@@ -22,6 +12,14 @@
       #include "LigAndMusNodes.any"
       #include "PressureContactNodes.any"
       #include "MusControlSeg.any"
+      AnyFolder FootType = {
+        AnyVar MetaScaleVal ??= 1.0;
+        AnyVar ProxScaleVal ??= 1.0;
+        AnyVar DistScaleVal ??= 1.0;
+        AnyMat33 MetaScale ??= {{1,0,0},{0,MetaScaleVal,0},{0,0,1}};
+        AnyMat33 ProxPhalScale ??= {{1,0,0},{0,ProxScaleVal,0},{0,0,1}};           
+        AnyMat33 DistPhalScale ??= {{1,0,0},{0,DistScaleVal,0},{0,0,1}};
+      };
     };    
     #include "SegNodes.any"
     AnyFolder &Talus = Foot.Talus; // for compatibility with TLEM 2.2
