@@ -386,12 +386,18 @@ MuscleGroup ErectorSpinae = {
   AnyMuscleViaPoint ILplL1CI = {
     AnyMuscleModel &MusMdl = ....MuscleModels.Left.ErectorSpinae.ILplL1CI;
     AnyRefNode &Org = ....Segments.L1Seg.ILplL1CINodeL;
+    #ifdef ERECTORSPINAE_VIANODES_LAYER
+    AnyRefNode &Via1 = ....Abdominal.Layer_L3.BaseSegPosterior.ILplL1CIViaNodeL;
+    #else
     AnyRefNode &Via1 = ....Segments.L2Seg.ILplL1CIViaNodeL;
+    #endif
     #ifndef REMOVE_ERECTORSPINAE_L3VIA
     AnyRefNode &Via2 = ....Segments.L3Seg.ILplL1CIViaNodeL;
+//AnyRefNode &Via2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegPosterior.ILplL1CIViaNodeL;
     #endif
     #ifndef REMOVE_ERECTORSPINAE_L4VIA
     AnyRefNode &Via3 = ....Segments.L4Seg.ILplL1CIViaNodeL;
+//AnyRefNode &Via3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegPosterior.ILplL1CIViaNodeL;
     #endif
     AnyRefNode &Ins = ....Segments.PelvisSeg.ILplL1CINodeL;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -427,7 +433,11 @@ MuscleGroup ErectorSpinae = {
   AnyMuscleViaPoint LTplL1SIPS = {
     AnyMuscleModel &MusMdl = ....MuscleModels.Left.ErectorSpinae.LTplL1SIPS;
     AnyRefNode &Org = ....Segments.L1Seg.LTplL1SIPSNodeL;
+    #ifdef ERECTORSPINAE_VIANODES_LAYER
+    AnyRefNode &Via1 = ....Abdominal.Layer_L3.BaseSegPosterior.LTplL1SIPSViaNodeL;
+    #else
     AnyRefNode &Via1 = ....Segments.L2Seg.LTplL1SIPSViaNodeL;
+    #endif
     #ifndef REMOVE_ERECTORSPINAE_L3VIA
     AnyRefNode &Via2 = ....Segments.L3Seg.LTplL1SIPSViaNodeL;    
     #endif
@@ -475,8 +485,13 @@ MuscleGroup ErectorSpinae = {
     AnyRefNode &Via4 = ....Segments.Left.R9Seg.ILptC5SIPSVia4NodeL;
     AnyRefNode &Via5 = ....Segments.Left.R10Seg.ILptC5SIPSVia5NodeL;
     AnyRefNode &Via6 = ....Segments.Left.R12Seg.ILptC5SIPSVia6NodeL;
+    #ifdef ERECTORSPINAE_VIANODES_LAYER
+    AnyRefNode &Via7 = ....Abdominal.Layer_L2.BaseSegPosterior.ILptC5SIPSVia7NodeL;
+    AnyRefNode &Via8 = ....Abdominal.Layer_L3.BaseSegPosterior.ILptC5SIPSVia8NodeL;
+    #else
     AnyRefNode &Via7 = ....Segments.L1Seg.ILptC5SIPSVia7NodeL;
     AnyRefNode &Via8 = ....Segments.L2Seg.ILptC5SIPSVia8NodeL;
+    #endif
     #ifndef REMOVE_ERECTORSPINAE_L3VIA
     AnyRefNode &Via9 = ....Segments.L3Seg.ILptC5SIPSVia9NodeL;
     #endif
@@ -492,8 +507,13 @@ MuscleGroup ErectorSpinae = {
     AnyRefNode &Via3 = ....Segments.Left.R9Seg.ILptC6SIPSVia3NodeL;
     AnyRefNode &Via4 = ....Segments.Left.R10Seg.ILptC6SIPSVia4NodeL;
     AnyRefNode &Via5 = ....Segments.Left.R12Seg.ILptC6SIPSVia5NodeL;
+    #ifdef ERECTORSPINAE_VIANODES_LAYER
+    AnyRefNode &Via6 = ....Abdominal.Layer_L2.BaseSegPosterior.ILptC6SIPSVia6NodeL;
+    AnyRefNode &Via7 = ....Abdominal.Layer_L3.BaseSegPosterior.ILptC6SIPSVia7NodeL;
+    #else
     AnyRefNode &Via6 = ....Segments.L1Seg.ILptC6SIPSVia6NodeL;
     AnyRefNode &Via7 = ....Segments.L2Seg.ILptC6SIPSVia7NodeL;
+    #endif
     #ifndef REMOVE_ERECTORSPINAE_L3VIA
     AnyRefNode &Via8 = ....Segments.L3Seg.ILptC6SIPSVia8NodeL;
     #endif
@@ -508,8 +528,13 @@ MuscleGroup ErectorSpinae = {
     AnyRefNode &Via2 = ....Segments.Left.R9Seg.ILptC7CIVia2NodeL;
     AnyRefNode &Via3 = ....Segments.Left.R10Seg.ILptC7CIVia3NodeL;
     AnyRefNode &Via4 = ....Segments.Left.R12Seg.ILptC7CIVia4NodeL;
+    #ifdef ERECTORSPINAE_VIANODES_LAYER
+    AnyRefNode &Via5 = ....Abdominal.Layer_L2.BaseSegPosterior.ILptC7CIVia5NodeL;
+    AnyRefNode &Via6 = ....Abdominal.Layer_L3.BaseSegPosterior.ILptC7CIVia6NodeL;
+    #else
     AnyRefNode &Via5 = ....Segments.L1Seg.ILptC7CIVia5NodeL;
     AnyRefNode &Via6 = ....Segments.L2Seg.ILptC7CIVia6NodeL;
+    #endif
     #ifndef REMOVE_ERECTORSPINAE_L3VIA
     AnyRefNode &Via7 = ....Segments.L3Seg.ILptC7CIVia7NodeL;
     #endif
@@ -523,8 +548,13 @@ MuscleGroup ErectorSpinae = {
     AnyRefNode &Via1 = ....Segments.Left.R9Seg.ILptC8CIVia1NodeL;
     AnyRefNode &Via2 = ....Segments.Left.R10Seg.ILptC8CIVia2NodeL;
     AnyRefNode &Via3 = ....Segments.Left.R12Seg.ILptC8CIVia3NodeL;
+    #ifdef ERECTORSPINAE_VIANODES_LAYER
+    AnyRefNode &Via4 = ....Abdominal.Layer_L2.BaseSegPosterior.ILptC8CIVia4NodeL;
+    AnyRefNode &Via5 = ....Abdominal.Layer_L3.BaseSegPosterior.ILptC8CIVia5NodeL;
+    #else
     AnyRefNode &Via4 = ....Segments.L1Seg.ILptC8CIVia4NodeL;
     AnyRefNode &Via5 = ....Segments.L2Seg.ILptC8CIVia5NodeL;
+    #endif
     #ifndef REMOVE_ERECTORSPINAE_L3VIA
     AnyRefNode &Via6 = ....Segments.L3Seg.ILptC8CIVia6NodeL;
     #endif
@@ -537,8 +567,13 @@ MuscleGroup ErectorSpinae = {
     AnyRefNode &Org = ....Segments.Left.R9Seg.ILptC9CINodeL;
     AnyRefNode &Via1 = ....Segments.Left.R10Seg.ILptC9CIVia1NodeL;
     AnyRefNode &Via2 = ....Segments.Left.R12Seg.ILptC9CIVia2NodeL;
+    #ifdef ERECTORSPINAE_VIANODES_LAYER
+    AnyRefNode &Via3 = ....Abdominal.Layer_L2.BaseSegPosterior.ILptC9CIVia3NodeL;
+    AnyRefNode &Via4 = ....Abdominal.Layer_L3.BaseSegPosterior.ILptC9CIVia4NodeL;
+    #else
     AnyRefNode &Via3 = ....Segments.L1Seg.ILptC9CIVia3NodeL;
     AnyRefNode &Via4 = ....Segments.L2Seg.ILptC9CIVia4NodeL;
+    #endif
     #ifndef REMOVE_ERECTORSPINAE_L3VIA
     AnyRefNode &Via5 = ....Segments.L3Seg.ILptC9CIVia5NodeL; 
     #endif
@@ -550,8 +585,13 @@ MuscleGroup ErectorSpinae = {
     AnyMuscleModel &MusMdl = ....MuscleModels.Left.ErectorSpinae.ILptC10CI;
     AnyRefNode &Org = ....Segments.Left.R10Seg.ILptC10CINodeL;
     AnyRefNode &Via1 = ....Segments.Left.R12Seg.ILptC10CIVia1NodeL;
+    #ifdef ERECTORSPINAE_VIANODES_LAYER
+    AnyRefNode &Via2 = ....Abdominal.Layer_L2.BaseSegPosterior.ILptC10CIVia2NodeL;
+    AnyRefNode &Via3 = ....Abdominal.Layer_L3.BaseSegPosterior.ILptC10CIVia3NodeL;
+    #else
     AnyRefNode &Via2 = ....Segments.L1Seg.ILptC10CIVia2NodeL;
     AnyRefNode &Via3 = ....Segments.L2Seg.ILptC10CIVia3NodeL;
+    #endif
     #ifndef REMOVE_ERECTORSPINAE_L3VIA
     AnyRefNode &Via4 = ....Segments.L3Seg.ILptC10CIVia4NodeL; 
     #endif
@@ -562,8 +602,15 @@ MuscleGroup ErectorSpinae = {
   AnyMuscleViaPoint ILptC11CI = {
     AnyMuscleModel &MusMdl = ....MuscleModels.Left.ErectorSpinae.ILptC11CI;
     AnyRefNode &Org = ....Segments.Left.R11Seg.ILptC11CINodeL;
+    #ifdef ERECTORSPINAE_VIANODES_LAYER
+//    AnyRefNode &Via1 = ....Abdominal.Layer_L1.BaseSegPosterior.ILptC11CIVia1NodeL;
+//    AnyRefNode &Via2 = ....Abdominal.Layer_L2.BaseSegPosterior.ILptC11CIVia2NodeL;
+    AnyRefNode &Via1 = ....Abdominal.Layer_L2.BaseSegPosterior.ILptC11CIVia1NodeL;
+    AnyRefNode &Via2 = ....Abdominal.Layer_L3.BaseSegPosterior.ILptC11CIVia2NodeL;
+    #else
     AnyRefNode &Via1 = ....Segments.L1Seg.ILptC11CIVia1NodeL;
     AnyRefNode &Via2 = ....Segments.L2Seg.ILptC11CIVia2NodeL;
+    #endif
     #ifndef REMOVE_ERECTORSPINAE_L3VIA
     AnyRefNode &Via3 = ....Segments.L3Seg.ILptC11CIVia3NodeL;
     #endif
@@ -574,10 +621,18 @@ MuscleGroup ErectorSpinae = {
   AnyMuscleViaPoint ILptC12CI = {
     AnyMuscleModel &MusMdl = ....MuscleModels.Left.ErectorSpinae.ILptC12CI;
     AnyRefNode &Org = ....Segments.Left.R12Seg.ILptC12CINodeL;
+    #ifdef ERECTORSPINAE_VIANODES_LAYER
+//    AnyRefNode &Via1 = ....Abdominal.Layer_L1.BaseSegPosterior.ILptC12CIVia1NodeL;
+//    AnyRefNode &Via2 = ....Abdominal.Layer_L2.BaseSegPosterior.ILptC12CIVia2NodeL;
+    AnyRefNode &Via1 = ....Abdominal.Layer_L2.BaseSegPosterior.ILptC12CIVia1NodeL;
+    AnyRefNode &Via2 = ....Abdominal.Layer_L3.BaseSegPosterior.ILptC12CIVia2NodeL;
+    #else
     AnyRefNode &Via1 = ....Segments.L1Seg.ILptC12CIVia1NodeL;
     AnyRefNode &Via2 = ....Segments.L2Seg.ILptC12CIVia2NodeL;
+    #endif
     #ifndef REMOVE_ERECTORSPINAE_L3VIA
     AnyRefNode &Via3 = ....Segments.L3Seg.ILptC12CIVia3NodeL;
+//AnyRefNode &Via3 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L3.BaseSegPosterior.ILptC12CIVia3NodeL;
     #endif
     AnyRefNode &Ins = ....Segments.PelvisSeg.ILptC12CINodeL;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -744,11 +799,19 @@ MuscleGroup ErectorSpinae = {
     AnyRefNode &Org = ....Segments.Left.R10Seg.LTptT10SacrumNodeL;
     AnyRefNode &Via1 = ....Segments.Left.R11Seg.LTptT10SacrumVia1NodeL;
     AnyRefNode &Via2 = ....Segments.Left.R12Seg.LTptT10SacrumVia2NodeL;
+    #ifdef ERECTORSPINAE_VIANODES_LAYER
+    AnyRefNode &Via3 = ....Abdominal.Layer_L2.BaseSegPosterior.LTptT10SacrumVia3NodeL;
+    AnyRefNode &Via4 = ....Abdominal.Layer_L3.BaseSegPosterior.LTptT10SacrumVia4NodeL;
+    AnyRefNode &Via5 = ....Abdominal.Layer_L4.BaseSegPosterior.LTptT10SacrumVia5NodeL;
+    AnyRefNode &Via6 = ....Abdominal.Layer_L5.BaseSegPosterior.LTptT10SacrumVia6NodeL;
+    AnyRefNode &Via7 = ....Abdominal.Layer_L5.BaseSegPosterior.LTptT10SacrumVia7NodeL;
+    #else
     AnyRefNode &Via3 = ....Segments.L1Seg.LTptT10SacrumVia3NodeL;
     AnyRefNode &Via4 = ....Segments.L2Seg.LTptT10SacrumVia4NodeL;
     AnyRefNode &Via5 = ....Segments.L3Seg.LTptT10SacrumVia5NodeL;
     AnyRefNode &Via6 = ....Segments.L4Seg.LTptT10SacrumVia6NodeL;
     AnyRefNode &Via7 = ....Segments.L5Seg.LTptT10SacrumVia7NodeL;
+    #endif
     AnyRefNode &Ins = ....Segments.SacrumSeg.LTptT10SacrumNodeL;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
@@ -879,11 +942,19 @@ MuscleGroup ErectorSpinae = {
     AnyRefNode &Org = ....Segments.Left.R10Seg.LTptT10SacrumNodeL;
     AnyRefNode &Via1 = ....Segments.Left.R11Seg.LTptT10SacrumVia1NodeL;
     AnyRefNode &Via2 = ....Segments.Left.R12Seg.LTptT10SacrumVia2NodeL;
+    #ifdef ERECTORSPINAE_VIANODES_LAYER
+    AnyRefNode &Via3 = ....Abdominal.Layer_L2.BaseSegPosterior.LTptT10SacrumVia3NodeL;
+    AnyRefNode &Via4 = ....Abdominal.Layer_L3.BaseSegPosterior.LTptT10SacrumVia4NodeL;
+    AnyRefNode &Via5 = ....Abdominal.Layer_L4.BaseSegPosterior.LTptT10SacrumVia5NodeL;
+    AnyRefNode &Via6 = ....Abdominal.Layer_L5.BaseSegPosterior.LTptT10SacrumVia6NodeL;
+    AnyRefNode &Via7 = ....Abdominal.Layer_L5.BaseSegPosterior.LTptT10SacrumVia7NodeL;
+    #else
     AnyRefNode &Via3 = ....Segments.L1Seg.LTptT10SacrumVia3NodeL;
     AnyRefNode &Via4 = ....Segments.L2Seg.LTptT10SacrumVia4NodeL;
     AnyRefNode &Via5 = ....Segments.L3Seg.LTptT10SacrumVia5NodeL;
     AnyRefNode &Via6 = ....Segments.L4Seg.LTptT10SacrumVia6NodeL;
     AnyRefNode &Via7 = ....Segments.L5Seg.LTptT10SacrumVia7NodeL;
+    #endif
     AnyRefNode &Ins = ....Segments.SacrumSeg.LTptT10SacrumNodeL;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
@@ -892,11 +963,19 @@ MuscleGroup ErectorSpinae = {
     AnyMuscleModel &MusMdl = ....MuscleModels.Left.ErectorSpinae.LTptT11Sacrum;
     AnyRefNode &Org = ....Segments.Left.R11Seg.LTptT11SacrumNodeL;
     AnyRefNode &Via1 = ....Segments.Left.R12Seg.LTptT11SacrumVia1NodeL;
+    #ifdef ERECTORSPINAE_VIANODES_LAYER
+    AnyRefNode &Via2 = ....Abdominal.Layer_L2.BaseSegPosterior.LTptT11SacrumVia2NodeL;
+    AnyRefNode &Via3 = ....Abdominal.Layer_L3.BaseSegPosterior.LTptT11SacrumVia3NodeL;
+    AnyRefNode &Via4 = ....Abdominal.Layer_L4.BaseSegPosterior.LTptT11SacrumVia4NodeL;
+    AnyRefNode &Via5 = ....Abdominal.Layer_L5.BaseSegPosterior.LTptT11SacrumVia5NodeL;
+    AnyRefNode &Via6 = ....Abdominal.Layer_L5.BaseSegPosterior.LTptT11SacrumVia6NodeL;
+    #else
     AnyRefNode &Via2 = ....Segments.L1Seg.LTptT11SacrumVia2NodeL;
     AnyRefNode &Via3 = ....Segments.L2Seg.LTptT11SacrumVia3NodeL;
     AnyRefNode &Via4 = ....Segments.L3Seg.LTptT11SacrumVia4NodeL;
     AnyRefNode &Via5 = ....Segments.L4Seg.LTptT11SacrumVia5NodeL;
     AnyRefNode &Via6 = ....Segments.L5Seg.LTptT11SacrumVia6NodeL;
+    #endif
     AnyRefNode &Ins = ....Segments.SacrumSeg.LTptT11SacrumNodeL;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
@@ -904,11 +983,19 @@ MuscleGroup ErectorSpinae = {
   AnyMuscleViaPoint LTptT12Sacrum = {
     AnyMuscleModel &MusMdl = ....MuscleModels.Left.ErectorSpinae.LTptT12Sacrum;
     AnyRefNode &Org = ....Segments.Left.R12Seg.LTptT12SacrumNodeL;
+    #ifdef ERECTORSPINAE_VIANODES_LAYER
+    AnyRefNode &Via1 = ....Abdominal.Layer_L2.BaseSegPosterior.LTptT12SacrumVia1NodeL;
+    AnyRefNode &Via2 = ....Abdominal.Layer_L3.BaseSegPosterior.LTptT12SacrumVia2NodeL;
+    AnyRefNode &Via3 = ....Abdominal.Layer_L4.BaseSegPosterior.LTptT12SacrumVia3NodeL;
+    AnyRefNode &Via4 = ....Abdominal.Layer_L5.BaseSegPosterior.LTptT12SacrumVia4NodeL;
+    AnyRefNode &Via5 = ....Abdominal.Layer_L5.BaseSegPosterior.LTptT12SacrumVia5NodeL;
+    #else
     AnyRefNode &Via1 = ....Segments.L1Seg.LTptT12SacrumVia1NodeL;
     AnyRefNode &Via2 = ....Segments.L2Seg.LTptT12SacrumVia2NodeL;
     AnyRefNode &Via3 = ....Segments.L3Seg.LTptT12SacrumVia3NodeL;
     AnyRefNode &Via4 = ....Segments.L4Seg.LTptT12SacrumVia4NodeL;
     AnyRefNode &Via5 = ....Segments.L5Seg.LTptT12SacrumVia5NodeL;
+    #endif
     AnyRefNode &Ins = ....Segments.SacrumSeg.LTptT12SacrumNodeL;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
