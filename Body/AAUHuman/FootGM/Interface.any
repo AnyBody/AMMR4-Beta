@@ -2,6 +2,7 @@
 //the added rotnodes are needed to be able to have the same rotation definitions for 
 //the right and left side
 
+#if BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_
 
 AnyKinMeasureOrg CalcaneoCuboidDorsiFlexion = {
   AnyFolder &Calcaneus = ..Seg.Foot.Calcaneus.CalcaneoCuboidJoint;
@@ -327,7 +328,7 @@ AnyKinMeasureOrg TarsoMetatarsal5Abduction = {
 //};
 
 
-
+#endif //BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_
 
 
 
@@ -353,11 +354,13 @@ AnyKinMeasureOrg MetatarsoPhalangeal1DorsiFlexion = {
   };
   MeasureOrganizer={0};//z
 }; 
+
+#if BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_
 AnyKinMeasureOrg MetatarsoPhalangeal1Abduction = {
   AnyKinRotational &Rot =.MetatarsoPhalangeal1DorsiFlexion.Rot; 
   MeasureOrganizer={1};//y
 };
-
+#endif
 
 
 
@@ -384,11 +387,13 @@ AnyKinMeasureOrg MetatarsoPhalangeal2DorsiFlexion = {
   };
   MeasureOrganizer={0};//z
 }; 
+
+#if BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_
 AnyKinMeasureOrg MetatarsoPhalangeal2Abduction = {
   AnyKinRotational &Rot =.MetatarsoPhalangeal2DorsiFlexion.Rot; 
   MeasureOrganizer={1};//y
 };
-
+#endif
 
 
 
@@ -415,11 +420,13 @@ AnyKinMeasureOrg MetatarsoPhalangeal3DorsiFlexion = {
   };
   MeasureOrganizer={0};//z
 }; 
+
+#if BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_
 AnyKinMeasureOrg MetatarsoPhalangeal3Abduction = {
   AnyKinRotational &Rot =.MetatarsoPhalangeal3DorsiFlexion.Rot; 
   MeasureOrganizer={1};//y
 };
-
+#endif
 
 
 
@@ -446,11 +453,13 @@ AnyKinMeasureOrg MetatarsoPhalangeal4DorsiFlexion = {
   };
   MeasureOrganizer={0};//z
 }; 
+
+#if BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_
 AnyKinMeasureOrg MetatarsoPhalangeal4Abduction = {
   AnyKinRotational &Rot =.MetatarsoPhalangeal4DorsiFlexion.Rot; 
   MeasureOrganizer={1};//y
 };
-
+#endif
 
 
 
@@ -476,6 +485,8 @@ AnyKinMeasureOrg MetatarsoPhalangeal5DorsiFlexion = {
   };
   MeasureOrganizer={0};//z
 }; 
+
+#if BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_
 AnyKinMeasureOrg MetatarsoPhalangeal5Abduction = {
   AnyKinRotational &Rot =.MetatarsoPhalangeal5DorsiFlexion.Rot; 
   MeasureOrganizer={1};//y
@@ -635,3 +646,4 @@ AnyKinMeasureOrg TaloNavicularEversionJntMus ={
 //  MeasureOrganizer={2};//x
 //};
 
+#endif //BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_
