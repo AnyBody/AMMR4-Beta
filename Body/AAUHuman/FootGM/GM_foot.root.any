@@ -48,14 +48,11 @@
       
   #if BM_FOOT_MODEL_LIGAMENTS == ON
   AnyFolder Ligaments = {
-    #if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
-    #include "LigamentsNewRigidToeFlex.any"
-    #include "LigamentsTarsalRigidToeFlex.any"
-    #else
     #include "LigamentsNew.any"
+    #if BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_
     #include "LigamentsPhalangeal.any"
-    #include "LigamentsTarsal.any"
     #endif
+    #include "LigamentsTarsal.any"
   };
   #else
   AnyFolder JointMusclesFoot = {

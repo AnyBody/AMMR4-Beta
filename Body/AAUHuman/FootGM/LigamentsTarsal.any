@@ -24,12 +24,13 @@ AnyFolder LigamentsTarsal = {
   //References for conditional strength of artificial muscles above.
   //AnyFolder &MtTransversumProfundumLigRef = .MtTransversumProfundum;
   AnyFolder &TibioNavicularLigRef = .CollateralMedial.TibioNavicular;
+  #if BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_
   AnyFolder &CalcaneoNavicularPlantar1LigRef = .CalcaneoNavicularPlantar.CalcaneoNavicularPlantar1;
   AnyFolder &CalcaneoNavicularPlantar2LigRef = .CalcaneoNavicularPlantar.CalcaneoNavicularPlantar2;
   AnyFolder &CalcaneoNavicularPlantar3LigRef = .CalcaneoNavicularPlantar.CalcaneoNavicularPlantar3;
   AnyFolder &CalcaneoCuboidPlantar1LigRef = .CalcaneoCuboidPlantar.CalcaneoCuboidPlantar1;
   AnyFolder &CalcaneoCuboidPlantar2LigRef = .CalcaneoCuboidPlantar.CalcaneoCuboidPlantar2;
-  
+  #endif
   
   
   AnyLigamentViaPoint TaloNavicularDorsal1Lig= {
@@ -55,7 +56,7 @@ AnyFolder LigamentsTarsal = {
     #include "LigParms.any"
   };
   
-  
+  #if BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_
   AnyLigamentViaPoint CalcaneoNavicularBifurcateLig = {
     
     AnyRefFrame &ref1 = .Seg.Calcaneus.LigBifurcateNode;
@@ -1181,7 +1182,7 @@ AnyFolder LigamentsTarsal = {
     #include "LigParms.any"
     
   };
-  
+  #endif // BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_
   
 }; // LigamentsTarsal
 
