@@ -11,7 +11,7 @@
 
 MuscleGroup FlexorDigitorumLongusToeTendon() = {
   AnyMuscleViaPoint FlexorDigitorumLongusToe2Tendon = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.FlexorDigitorumLongusToe2Tendon;
+    AnyMuscleModel MusMdl = {F0 = 2000;};
     //AnyRefNode &Via8 = ....Seg.Foot.FDL.FDLDummySeg.FlexorDigitorumLongusViaNode8;
     AnyRefNode &ViaLB = ....Seg.Foot.FDL.FDLDummySeg.LB2_Org;
     AnyRefNode &Via9 = ....Seg.Foot.Metatarsal2.FlexorDigitorumLongusViaNode9;
@@ -23,7 +23,7 @@ MuscleGroup FlexorDigitorumLongusToeTendon() = {
   };
   
   AnyMuscleViaPoint FlexorDigitorumLongusToe3Tendon = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.FlexorDigitorumLongusToe3Tendon;
+    AnyMuscleModel MusMdl = {F0 = 2000;};
     //AnyRefNode &Via8 = ....Seg.Foot.FDL.FDLDummySeg.FlexorDigitorumLongusViaNode8;
     AnyRefNode &ViaLB = ....Seg.Foot.FDL.FDLDummySeg.LB3_Org;
     AnyRefNode &Via12 = ....Seg.Foot.Metatarsal3.FlexorDigitorumLongusViaNode12;
@@ -35,7 +35,7 @@ MuscleGroup FlexorDigitorumLongusToeTendon() = {
   };
   
   AnyMuscleViaPoint FlexorDigitorumLongusToe4Tendon = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.FlexorDigitorumLongusToe4Tendon;
+    AnyMuscleModel MusMdl = {F0 = 2000;};
     //AnyRefNode &Via8 = ....Seg.Foot.FDL.FDLDummySeg.FlexorDigitorumLongusViaNode8;
     AnyRefNode &ViaLB = ....Seg.Foot.FDL.FDLDummySeg.LB4_Org;
     AnyRefNode &Via15 = ....Seg.Foot.Metatarsal4.FlexorDigitorumLongusViaNode15;
@@ -47,7 +47,7 @@ MuscleGroup FlexorDigitorumLongusToeTendon() = {
   };
   
   AnyMuscleViaPoint FlexorDigitorumLongusToe5Tendon = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.FlexorDigitorumLongusToe5Tendon;
+    AnyMuscleModel MusMdl = {F0 = 2000;};
     //AnyRefNode &Via8 = ....Seg.Foot.FDL.FDLDummySeg.FlexorDigitorumLongusViaNode8;
     AnyRefNode &ViaLB = ....Seg.Foot.FDL.FDLDummySeg.LB5_Org;
     AnyRefNode &Via18 = ....Seg.Foot.Metatarsal5.FlexorDigitorumLongusViaNode18;
@@ -88,7 +88,7 @@ MuscleGroup ExtensorDigitorumLongusToeTendon() = {
   };
   
   AnyMuscleViaPoint ExtensorDigitorumLongusToe2TendonPart1 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.ExtensorDigitorumLongusToe2TendonPart1;
+    AnyMuscleModel MusMdl = {F0 = 2000;};
     AnyRefNode &Via6 = ....Seg.Foot.Metatarsal2.ExtensorDigitorumLongusViaNode6;
     AnyRefNode &Via7 = ....Seg.Foot.ProximalPhalange2.ExtensorDigitorumLongusViaNode7;
     AnyRefNode &Via8 = ....Seg.Foot.MiddlePhalange2.ExtensorDigitorumLongusViaNode8;
@@ -100,7 +100,7 @@ MuscleGroup ExtensorDigitorumLongusToeTendon() = {
   };
   
   AnyMuscleViaPoint ExtensorDigitorumLongusToe2TendonPart2 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.ExtensorDigitorumLongusToe2TendonPart2;
+    AnyMuscleModel MusMdl = {F0 = 2000;};
     AnyRefNode &Via6 = ....Seg.Foot.Metatarsal2.ExtensorDigitorumLongusViaNode6;
     AnyRefNode &Via7 = ....Seg.Foot.ProximalPhalange2.ExtensorDigitorumLongusViaNode7;
     AnyRefNode &Ins = ....Seg.Foot.MiddlePhalange2.ExtensorDigitorumLongusNode;
@@ -111,7 +111,7 @@ MuscleGroup ExtensorDigitorumLongusToeTendon() = {
   };
   
   AnyMuscleViaPoint ExtensorDigitorumLongusToe2TendonPart3 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.ExtensorDigitorumLongusToe2TendonPart3;
+    AnyMuscleModel MusMdl = {F0 = 2000;};
     AnyRefNode &Via6 = ....Seg.Foot.Metatarsal2.ExtensorDigitorumLongusViaNode6;
     AnyRefNode &Ins = ....Seg.Foot.ProximalPhalange2.DI2_Ins;
     #include "MuscleForceDrawing.any"      
@@ -121,7 +121,7 @@ MuscleGroup ExtensorDigitorumLongusToeTendon() = {
   };
   
   AnyMuscleViaPoint ExtensorDigitorumLongusToe2TendonPart4 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.ExtensorDigitorumLongusToe2TendonPart4;
+    AnyMuscleModel MusMdl = {F0 = 2000;};
     AnyRefNode &Via6 = ....Seg.Foot.Metatarsal2.ExtensorDigitorumLongusViaNode6;
     AnyRefNode &Ins = ....Seg.Foot.ProximalPhalange2.DI1_Ins;
     #include "MuscleForceDrawing.any"      
@@ -146,7 +146,7 @@ MuscleGroup ExtensorDigitorumLongusToeTendon() = {
   };
   
   AnyMuscleViaPoint ExtensorDigitorumLongusToe3TendonPart1 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.ExtensorDigitorumLongusToe3TendonPart1;
+    AnyMuscleModel MusMdl = {F0 = 2000;};
     AnyRefNode &Via9 = ....Seg.Foot.Metatarsal3.ExtensorDigitorumLongusViaNode9;
     AnyRefNode &Via10 = ....Seg.Foot.ProximalPhalange3.ExtensorDigitorumLongusViaNode10;
     AnyRefNode &Via11 = ....Seg.Foot.MiddlePhalange3.ExtensorDigitorumLongusViaNode11;
@@ -158,7 +158,7 @@ MuscleGroup ExtensorDigitorumLongusToeTendon() = {
   };
   
   AnyMuscleViaPoint ExtensorDigitorumLongusToe3TendonPart2 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.ExtensorDigitorumLongusToe3TendonPart2;
+    AnyMuscleModel MusMdl = {F0 = 2000;};
     AnyRefNode &Via9 = ....Seg.Foot.Metatarsal3.ExtensorDigitorumLongusViaNode9;
     AnyRefNode &Via10 = ....Seg.Foot.ProximalPhalange3.ExtensorDigitorumLongusViaNode10;
     AnyRefNode &Ins = ....Seg.Foot.MiddlePhalange3.ExtensorDigitorumLongusNode;
@@ -169,7 +169,7 @@ MuscleGroup ExtensorDigitorumLongusToeTendon() = {
   };
   
   AnyMuscleViaPoint ExtensorDigitorumLongusToe3TendonPart3 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.ExtensorDigitorumLongusToe3TendonPart3;
+    AnyMuscleModel MusMdl = {F0 = 2000;};
     AnyRefNode &Via9 = ....Seg.Foot.Metatarsal3.ExtensorDigitorumLongusViaNode9;
     AnyRefNode &Ins = ....Seg.Foot.ProximalPhalange3.DI3_Ins;
     #include "MuscleForceDrawing.any"      
@@ -179,7 +179,7 @@ MuscleGroup ExtensorDigitorumLongusToeTendon() = {
   };
   
   AnyMuscleViaPoint ExtensorDigitorumLongusToe3TendonPart4 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.ExtensorDigitorumLongusToe3TendonPart4;
+    AnyMuscleModel MusMdl = {F0 = 2000;};
     AnyRefNode &Via9 = ....Seg.Foot.Metatarsal3.ExtensorDigitorumLongusViaNode9;
     AnyRefNode &Ins = ....Seg.Foot.ProximalPhalange3.PI1_Ins;
     #include "MuscleForceDrawing.any"      
@@ -204,7 +204,7 @@ MuscleGroup ExtensorDigitorumLongusToeTendon() = {
   };
   
   AnyMuscleViaPoint ExtensorDigitorumLongusToe4TendonPart1 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.ExtensorDigitorumLongusToe4TendonPart1;
+    AnyMuscleModel MusMdl = {F0 = 2000;};
     AnyRefNode &Via12 = ....Seg.Foot.Metatarsal4.ExtensorDigitorumLongusViaNode12;
     AnyRefNode &Via13 = ....Seg.Foot.ProximalPhalange4.ExtensorDigitorumLongusViaNode13;
     AnyRefNode &Via14 = ....Seg.Foot.MiddlePhalange4.ExtensorDigitorumLongusViaNode14;
@@ -215,7 +215,7 @@ MuscleGroup ExtensorDigitorumLongusToeTendon() = {
   };
   
   AnyMuscleViaPoint ExtensorDigitorumLongusToe4TendonPart2 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.ExtensorDigitorumLongusToe4TendonPart2;
+    AnyMuscleModel MusMdl = {F0 = 2000;};
     AnyRefNode &Via12 = ....Seg.Foot.Metatarsal4.ExtensorDigitorumLongusViaNode12;
     AnyRefNode &Via13 = ....Seg.Foot.ProximalPhalange4.ExtensorDigitorumLongusViaNode13;
     AnyRefNode &Ins = ....Seg.Foot.MiddlePhalange4.ExtensorDigitorumLongusNode;
@@ -226,7 +226,7 @@ MuscleGroup ExtensorDigitorumLongusToeTendon() = {
   };
   
   AnyMuscleViaPoint ExtensorDigitorumLongusToe4TendonPart3 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.ExtensorDigitorumLongusToe4TendonPart3;
+    AnyMuscleModel MusMdl = {F0 = 2000;};
     AnyRefNode &Via12 = ....Seg.Foot.Metatarsal4.ExtensorDigitorumLongusViaNode12;
     AnyRefNode &Ins = ....Seg.Foot.ProximalPhalange4.DI4_Ins;
     #include "MuscleForceDrawing.any"      
@@ -236,7 +236,7 @@ MuscleGroup ExtensorDigitorumLongusToeTendon() = {
   };
   
   AnyMuscleViaPoint ExtensorDigitorumLongusToe4TendonPart4 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.ExtensorDigitorumLongusToe4TendonPart4;
+    AnyMuscleModel MusMdl = {F0 = 2000;};
     AnyRefNode &Via12 = ....Seg.Foot.Metatarsal4.ExtensorDigitorumLongusViaNode12;
     AnyRefNode &Ins = ....Seg.Foot.ProximalPhalange4.PI2_Ins;
     #include "MuscleForceDrawing.any"      
@@ -261,7 +261,7 @@ MuscleGroup ExtensorDigitorumLongusToeTendon() = {
   };
   
   AnyMuscleViaPoint ExtensorDigitorumLongusToe5TendonPart1 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.ExtensorDigitorumLongusToe5TendonPart1;
+    AnyMuscleModel MusMdl = {F0 = 2000;};
     AnyRefNode &Via15 = ....Seg.Foot.Metatarsal5.ExtensorDigitorumLongusViaNode15;
     AnyRefNode &Via16 = ....Seg.Foot.ProximalPhalange5.ExtensorDigitorumLongusViaNode16;
     AnyRefNode &Via17 = ....Seg.Foot.MiddlePhalange5.ExtensorDigitorumLongusViaNode17;
@@ -273,7 +273,7 @@ MuscleGroup ExtensorDigitorumLongusToeTendon() = {
   };
   
   AnyMuscleViaPoint ExtensorDigitorumLongusToe5TendonPart2 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.ExtensorDigitorumLongusToe5TendonPart2;
+    AnyMuscleModel MusMdl = {F0 = 2000;};
     AnyRefNode &Via15 = ....Seg.Foot.Metatarsal5.ExtensorDigitorumLongusViaNode15;
     AnyRefNode &Via16 = ....Seg.Foot.ProximalPhalange5.ExtensorDigitorumLongusViaNode16;
     AnyRefNode &Ins = ....Seg.Foot.MiddlePhalange5.ExtensorDigitorumLongusNode;
@@ -284,7 +284,7 @@ MuscleGroup ExtensorDigitorumLongusToeTendon() = {
   };
   
   AnyMuscleViaPoint ExtensorDigitorumLongusToe5TendonPart3 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.ExtensorDigitorumLongusToe5TendonPart3;
+    AnyMuscleModel MusMdl = {F0 = 2000;};
     AnyRefNode &Via15 = ....Seg.Foot.Metatarsal5.ExtensorDigitorumLongusViaNode15;
     AnyRefNode &Ins = ....Seg.Foot.ProximalPhalange5.ABDM_Ins;
     #include "MuscleForceDrawing.any"      
@@ -294,7 +294,7 @@ MuscleGroup ExtensorDigitorumLongusToeTendon() = {
   };
   
   AnyMuscleViaPoint ExtensorDigitorumLongusToe5TendonPart4 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.ExtensorDigitorumLongusToe5TendonPart4;
+    AnyMuscleModel MusMdl = {F0 = 2000;};
     AnyRefNode &Via15 = ....Seg.Foot.Metatarsal5.ExtensorDigitorumLongusViaNode15;
     AnyRefNode &Ins = ....Seg.Foot.ProximalPhalange5.PI3_Ins;
     #include "MuscleForceDrawing.any"      
@@ -819,7 +819,7 @@ AnyFolder ExtensorDigitorumTendonActivityConstraints = {
 
 MuscleGroup ExtensorHallucisLongusTendon() = {
   AnyMuscleViaPoint ExtensorHallucisLongusTendonPart1 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.ExtensorHallucisLongusTendonPart1;
+    AnyMuscleModel MusMdl = {F0 = 2000;};
     AnyRefNode &Via9 = ....Seg.Foot.Metatarsal1.ExtensorHallucisLongusViaNode9;
     AnyRefNode &Via10 = ....Seg.Foot.ProximalPhalange1.ExtensorHallucisLongusViaNode10;
     AnyRefNode &Ins = ....Seg.Foot.DistalPhalange1.ExtensorHallucisLongus1Node;
@@ -830,7 +830,7 @@ MuscleGroup ExtensorHallucisLongusTendon() = {
   };
   
   AnyMuscleViaPoint ExtensorHallucisLongusTendonPart2 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.ExtensorHallucisLongusTendonPart2;
+    AnyMuscleModel MusMdl = {F0 = 2000;};
     AnyRefNode &Via9 = ....Seg.Foot.Metatarsal1.ExtensorHallucisLongusViaNode9;
     AnyRefNode &Ins = ....Seg.Foot.ProximalPhalange1.ADHT_Ins;
     #include "MuscleForceDrawing.any"      
@@ -840,7 +840,7 @@ MuscleGroup ExtensorHallucisLongusTendon() = {
   };
   
   AnyMuscleViaPoint ExtensorHallucisLongusTendonPart3 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.ExtensorHallucisLongusTendonPart3;
+    AnyMuscleModel MusMdl = {F0 = 2000;};
     AnyRefNode &Via9 = ....Seg.Foot.Metatarsal1.ExtensorHallucisLongusViaNode9;
     AnyRefNode &Ins = ....Seg.Foot.ProximalPhalange1.ABDH_Ins;
     #include "MuscleForceDrawing.any"      
