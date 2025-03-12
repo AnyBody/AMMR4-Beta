@@ -1,4 +1,13 @@
 Layer_L1.BaseSegPosterior= {
+  ///^ The new via-nodes of the erector spinae muscles were placed on the layers instead of the vertebrae, but use the same position data as before.
+  ///^ Since the nodes were originally defined at the same height as the spinous process of the vertebrae, they were moved to a layer below to be closer
+  ///^ to the center of the layer joint longitudinally. Note that since we used the old data, the via-nodes are not exactly at the same height as the
+  ///^ layer joints. However, with the new implementation, the model is less sensitive to the location of the via-nodes than before, as the layers are
+  ///^ connected to each other with three rotationally recruited actuators, and the abdominal muscles help balance this interconnected layer structure.
+  ///^ In the previous implementation, the via-nodes were placed on the vertebrae with a moment arm relative to the center of the vertebra or
+  ///^ intervertebral joint, making the model more sensitive to changes in the via-node position.
+
+
   AnyRefNode ILptC5SIPSVia6NodeR = {sRel = ..Segref.ScaleAbdominal(....Data.unscaled.ModelParameters.R12.Right.ILptC5SIPSVia6Node_pos);};
   AnyRefNode ILptC5SIPSVia6NodeL = {sRel = ..Segref.ScaleAbdominal(....Data.unscaled.ModelParameters.R12.Left.ILptC5SIPSVia6Node_pos);};
   AnyRefNode ILptC6SIPSVia5NodeR = {sRel = ..Segref.ScaleAbdominal(....Data.unscaled.ModelParameters.R12.Right.ILptC6SIPSVia5Node_pos);};
@@ -18,6 +27,14 @@ Layer_L1.BaseSegPosterior= {
 };
 
 Layer_L2.BaseSegPosterior= {
+  ///^ The new via-nodes of the erector spinae muscles were placed on the layers instead of the vertebrae, but use the same position data as before.
+  ///^ Since the nodes were originally defined at the same height as the spinous process of the vertebrae, they were moved to a layer below to be closer
+  ///^ to the center of the layer joint longitudinally. Note that since we used the old data, the via-nodes are not exactly at the same height as the
+  ///^ layer joints. However, with the new implementation, the model is less sensitive to the location of the via-nodes than before, as the layers are
+  ///^ connected to each other with three rotationally recruited actuators, and the abdominal muscles help balance this interconnected layer structure.
+  ///^ In the previous implementation, the via-nodes were placed on the vertebrae with a moment arm relative to the center of the vertebra or
+  ///^ intervertebral joint, making the model more sensitive to changes in the via-node position.
+
   AnyRefNode ILptC5SIPSVia7NodeR = {sRel = ..Segref.ScaleAbdominal(....Data.unscaled.ModelParameters.L1.Right.ILptC5SIPSVia7Node_pos);};
   AnyRefNode ILptC5SIPSVia7NodeL = {sRel = ..Segref.ScaleAbdominal(....Data.unscaled.ModelParameters.L1.Left.ILptC5SIPSVia7Node_pos);};
   AnyRefNode ILptC6SIPSVia6NodeR = {sRel = ..Segref.ScaleAbdominal(....Data.unscaled.ModelParameters.L1.Right.ILptC6SIPSVia6Node_pos);};
@@ -44,6 +61,14 @@ Layer_L2.BaseSegPosterior= {
 };
 
 Layer_L3.BaseSegPosterior= {
+  ///^ The new via-nodes of the erector spinae muscles were placed on the layers instead of the vertebrae, but use the same position data as before.
+  ///^ Since the nodes were originally defined at the same height as the spinous process of the vertebrae, they were moved to a layer below to be closer
+  ///^ to the center of the layer joint longitudinally. Note that since we used the old data, the via-nodes are not exactly at the same height as the
+  ///^ layer joints. However, with the new implementation, the model is less sensitive to the location of the via-nodes than before, as the layers are
+  ///^ connected to each other with three rotationally recruited actuators, and the abdominal muscles help balance this interconnected layer structure.
+  ///^ In the previous implementation, the via-nodes were placed on the vertebrae with a moment arm relative to the center of the vertebra or
+  ///^ intervertebral joint, making the model more sensitive to changes in the via-node position.
+
   AnyRefNode ILplL1CIViaNodeR = {sRel = ..Segref.ScaleAbdominal(....Data.unscaled.ModelParameters.L2.Right.ILplL1CIViaNode_pos);};
   AnyRefNode ILplL1CIViaNodeL = {sRel = ..Segref.ScaleAbdominal(....Data.unscaled.ModelParameters.L2.Left.ILplL1CIViaNode_pos);};
   AnyRefNode LTplL1SIPSViaNodeR = {sRel = ..Segref.ScaleAbdominal(....Data.unscaled.ModelParameters.L2.Right.LTplL1SIPSViaNode_pos);};
@@ -74,6 +99,14 @@ Layer_L3.BaseSegPosterior= {
 };
 
 Layer_L4.BaseSegPosterior= {
+  ///^ The new via-nodes of the erector spinae muscles were placed on the layers instead of the vertebrae, but use the same position data as before.
+  ///^ Since the nodes were originally defined at the same height as the spinous process of the vertebrae, they were moved to a layer below to be closer
+  ///^ to the center of the layer joint longitudinally. Note that since we used the old data, the via-nodes are not exactly at the same height as the
+  ///^ layer joints. However, with the new implementation, the model is less sensitive to the location of the via-nodes than before, as the layers are
+  ///^ connected to each other with three rotationally recruited actuators, and the abdominal muscles help balance this interconnected layer structure.
+  ///^ In the previous implementation, the via-nodes were placed on the vertebrae with a moment arm relative to the center of the vertebra or
+  ///^ intervertebral joint, making the model more sensitive to changes in the via-node position.
+
   AnyRefNode LTptT10SacrumVia5NodeR = {sRel = ..Segref.ScaleAbdominal(....Data.unscaled.ModelParameters.L3.Right.LTptT10SacrumVia5Node_pos);};
   AnyRefNode LTptT10SacrumVia5NodeL = {sRel = ..Segref.ScaleAbdominal(....Data.unscaled.ModelParameters.L3.Left.LTptT10SacrumVia5Node_pos);};
   AnyRefNode LTptT11SacrumVia4NodeR = {sRel = ..Segref.ScaleAbdominal(....Data.unscaled.ModelParameters.L3.Right.LTptT11SacrumVia4Node_pos);};
@@ -83,6 +116,14 @@ Layer_L4.BaseSegPosterior= {
 };
 
 Layer_L5.BaseSegPosterior= {
+  ///^ The new via-nodes of the erector spinae muscles were placed on the layers instead of the vertebrae, but use the same position data as before.
+  ///^ Since the nodes were originally defined at the same height as the spinous process of the vertebrae, they were moved to a layer below to be closer
+  ///^ to the center of the layer joint longitudinally. Note that since we used the old data, the via-nodes are not exactly at the same height as the
+  ///^ layer joints. However, with the new implementation, the model is less sensitive to the location of the via-nodes than before, as the layers are
+  ///^ connected to each other with three rotationally recruited actuators, and the abdominal muscles help balance this interconnected layer structure.
+  ///^ In the previous implementation, the via-nodes were placed on the vertebrae with a moment arm relative to the center of the vertebra or
+  ///^ intervertebral joint, making the model more sensitive to changes in the via-node position.
+
   AnyRefNode LTptT10SacrumVia6NodeR = {sRel = ..Segref.ScaleAbdominal(....Data.unscaled.ModelParameters.L4.Right.LTptT10SacrumVia6Node_pos);};
   AnyRefNode LTptT10SacrumVia6NodeL = {sRel = ..Segref.ScaleAbdominal(....Data.unscaled.ModelParameters.L4.Left.LTptT10SacrumVia6Node_pos);};
   AnyRefNode LTptT10SacrumVia7NodeR = {sRel = ..Segref.ScaleAbdominal(....Data.unscaled.ModelParameters.L5.Right.LTptT10SacrumVia7Node_pos);};
