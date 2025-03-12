@@ -4,7 +4,7 @@
 //Right foot drivers
 //************************
 
-  
+  #if BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_
 
   //************************************************
   //              DriverIntertarsal
@@ -195,7 +195,7 @@
 
     };
     
-  
+
   //************************************************
   //              DriverJntMtPhal
   //************************************************
@@ -215,8 +215,25 @@
       }*pi/180;
       Reaction.Type = {Off, Off};
     };
-
     
+   #endif
+   
+   #if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
+    AnyKinEqSimpleDriver JntMtPhal1Right = 
+    {
+      AnyKinMeasure &ref2 = Main.HumanModel.BodyModel.Interface.Right.MetatarsoPhalangeal1DorsiFlexion;
+      DriverPos = {
+      .JntPos.Right.Foot.MetatarsoPhalangeal1DorsiFlexion
+      }*pi/180;
+      DriverVel = {
+      .JntVel.Right.Foot.MetatarsoPhalangeal1DorsiFlexion
+      }*pi/180;
+      Reaction.Type = {Off};
+    };
+   #endif    
+    
+   #if BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_
+
     AnyKinEqSimpleDriver JntMtPhal2Right = 
     {
       AnyKinMeasure &ref1 = Main.HumanModel.BodyModel.Interface.Right.MetatarsoPhalangeal2Abduction;
@@ -372,6 +389,7 @@
       Reaction.Type = {Off};
     };
     
+   #endif
 
 
 
