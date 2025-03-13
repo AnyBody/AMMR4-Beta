@@ -1,6 +1,13 @@
 // EXAMPLE of MarkerProcol file for the BVH Xsens virtual stickfigure.
 
 #define MOCAP_PROTOCOL_NAME "XSENS_BVH_TOETIP"
+// Right toes are driven using RotationPenetrationCombiDriver class template in #include "ExtraDrivers.any"
+// as a demo to show another option of driving the toes without measured motion capture data. Feel free
+// to use the marker by uncommenting the line below.
+
+//#define _RTTIP
+#define _LTTIP
+
 
 CreateMarkerDriver  HEAD(
 MarkerPlacement=Trunk.Segments.SkullSeg,
@@ -442,7 +449,7 @@ ScaleMarkerPosOnOff =ON,
 USE_BVH_INPUT = ON
 ) = 
 {
- sRelOpt =  {0.14, -0.095, -0.02};
+ sRelOpt =  {0.14, -0.08, -0.02};
  sRelOnBVH = {0.02, 0, 0 };
 }; 
 
@@ -458,10 +465,26 @@ ScaleMarkerPosOnOff =ON,
 USE_BVH_INPUT = ON
 ) = 
 {
- sRelOpt =  {0.14, -0.095, 0.05};
+ sRelOpt =  {0.14, -0.08, 0.05};
  sRelOnBVH = {-0.05, 0, 0 };
 }; 
 
+
+#ifdef _RTTIP
+CreateMarkerDriver RTTIP(
+MarkerPlacement= Right.Leg.Seg.Foot.DistalPhalange1,
+PlaceMarkerAt=AnatomicalFrame,
+MarkerPlacementBVH= Main.ModelSetup.BVHFileData.Model.Hips.RightHip.RightKnee.RightAnkle.RightToe.Seg.End_Site,
+OptX=OFF,OptY=OFF,OptZ=OFF,  
+WeightX=1,WeightY=1,WeightZ=1,
+ScaleMarkerPosOnOff =ON,
+USE_BVH_INPUT = ON
+) = 
+{
+ sRelOpt =  {0.14, -0.08, -0.0} + {0.065,-0.01,0};
+ sRelOnBVH = {0.0, 0, 0 };
+};
+#endif
 
 
 CreateMarkerDriver LKJC(
@@ -522,7 +545,7 @@ ScaleMarkerPosOnOff =ON,
 USE_BVH_INPUT = ON
 ) = 
 {
- sRelOpt =  {0.14, -0.095, 0.02}; 
+ sRelOpt =  {0.14, -0.08, 0.02}; 
  sRelOnBVH = {-0.02, 0, 0 };
 };
 
@@ -538,10 +561,12 @@ ScaleMarkerPosOnOff =ON,
 USE_BVH_INPUT = ON
 ) = 
 {
- sRelOpt =  {0.14, -0.095, -0.05};
+ sRelOpt =  {0.14, -0.08, -0.05};
  sRelOnBVH = {0.05, 0, 0 };
 };
 
+
+#ifdef _LTTIP
 CreateMarkerDriver LTTIP(
 MarkerPlacement= Left.Leg.Seg.Foot.DistalPhalange1,
 PlaceMarkerAt=AnatomicalFrame,
@@ -552,6 +577,7 @@ ScaleMarkerPosOnOff =ON,
 USE_BVH_INPUT = ON
 ) = 
 {
- sRelOpt =  {0.14, -0.095, -0.0} + {0.065,-0.01,0};
+ sRelOpt =  {0.14, -0.08, -0.0} + {0.065,-0.01,0};
  sRelOnBVH = {0.0, 0, 0 };
 };
+#endif
