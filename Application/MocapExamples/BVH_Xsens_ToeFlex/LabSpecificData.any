@@ -18,7 +18,6 @@ Main.ModelSetup.LabSpecificData = {
 
 
  // Include the class template for adding rotation-penetration-combi-driver
- #include "<ANYBODY_PATH_MODELUTILS>/KinematicLimits/RotationPenetrationCombiDriver_template.any"
  #path MOCAP_EXTRA_DRIVERS_FILE "ExtraDrivers.any"
  
  #define MOCAP_USE_GRF_PREDICTION ON
