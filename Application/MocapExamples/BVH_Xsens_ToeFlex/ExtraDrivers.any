@@ -20,8 +20,8 @@ AnyFolder ExtraDrivers = {
   // Left foot toes are driven by the toe tip marker!
   #if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
   // RotationPenetrationCombiDriver class template creates soft drivers that drive rotational 
-  // and linear measures to ensure that the rotational measure is normally at zero unless it 
-  // deviates to prevent penetration of a target frame in a box shaped space. 
+  // and linear measures to ensure that the rotational measure (toe flexion) is normally at zero  
+  // unless it deviates to prevent penetration of a target frame (toe tip) in a box shaped space. 
   // The flexion extension of the toes is linked in the toe flex GM foot model.
   // This class template is used to drive the flexion extension of right toes. They normally 
   // stay at the neutral angle, but extend to prevent penetration with the ground during toe-off.

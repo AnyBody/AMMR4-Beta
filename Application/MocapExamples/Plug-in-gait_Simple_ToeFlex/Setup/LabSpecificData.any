@@ -11,24 +11,9 @@ Main.ModelSetup.LabSpecificData = {
  #path MOCAP_EXTRA_DRIVERS_FILE "ExtraDrivers.any"
  
  #path MOCAP_C3DSETTINGS "C3DSettings.any"
- 
- #ifdef USE_GRF_PREDICTION
-  // This switch ensure that the AnyMoCap sets the appropriate settings 
-  // for the GRF prediction (e.g. residuals, solvers etc.)
-  #define MOCAP_USE_GRF_PREDICTION ON
-  // Include the GRF prediction force plates.
-  #path MOCAP_FORCE_PLATE_FILE "ForcePlates_GRFPrediction.any"
-  
-  // GRF prediction models run with more numerical stability using a second order 
-  // criterion. This is due to the big difference in strength of recruited actuators
-  // (artificial muscles) which is used as contract element under the feet 
-  // (high strength) and human-ground residuals (low strength)
-  Main.Studies.InverseDynamicStudy.InverseDynamics.Criterion.Power = 2;
-  
- #else
-  // Use normal force plates
-  #path MOCAP_FORCE_PLATE_FILE "ForcePlates.any"
- #endif
+   
+ // Use normal force plates
+ #path MOCAP_FORCE_PLATE_FILE "ForcePlates.any"
  
  Gravity = 9.81*{0,-1,0};
   
