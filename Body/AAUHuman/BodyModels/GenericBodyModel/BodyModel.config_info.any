@@ -117,9 +117,9 @@ AnyMessage msg_BM_TRUNK_THORACIC_MODEL = { TriggerPreProcess = On; Type = MSG_Me
 AnyMessage msg_BM_TRUNK_CAVITY_MODEL = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_TRUNK_CAVITY_MODEL);};
 #endif
 
-#ifdef BM_ERECTORSPINAE_VIANODES
+#ifdef BM_EXPERIMENTAL_ERECTORSPINAE_VIANODES
 // New via-nodes of the erector spinae muscles were placed on the layers instead of the vertebrae.
-AnyMessage msg_BM_ERECTORSPINAE_VIANODES = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_ERECTORSPINAE_VIANODES);};
+AnyMessage msg_BM_EXPERIMENTAL_ERECTORSPINAE_VIANODES = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_EXPERIMENTAL_ERECTORSPINAE_VIANODES);};
 #endif
 
 #ifdef BM_TRUNK_DIAGPHRAM_FIXED_POSITION
@@ -729,9 +729,9 @@ AnyIntVar value_BM_TRUNK_THORACIC_MODEL=BM_TRUNK_THORACIC_MODEL;
 AnyIntVar value_BM_TRUNK_CAVITY_MODEL=BM_TRUNK_CAVITY_MODEL;
 #endif
 
-#ifdef BM_ERECTORSPINAE_VIANODES
+#ifdef BM_EXPERIMENTAL_ERECTORSPINAE_VIANODES
 // New via-nodes of the erector spinae muscles were placed on the layers instead of the vertebrae.
-AnyIntVar value_BM_ERECTORSPINAE_VIANODES=BM_ERECTORSPINAE_VIANODES;
+AnyIntVar value_BM_EXPERIMENTAL_ERECTORSPINAE_VIANODES=BM_EXPERIMENTAL_ERECTORSPINAE_VIANODES;
 #endif
 
 #ifdef BM_TRUNK_DIAGPHRAM_FIXED_POSITION
