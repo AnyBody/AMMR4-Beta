@@ -498,24 +498,12 @@ Via-nodes on erector spinae placed on the layers instead of vertebrae. The via-n
 
 
 
-::::{dropdown} `_REMOVE_L3L4_VIANODES_`
-:animate: fade-in-slide-down
-:margin: 0 0 2 2
-
-:::{ammr:bm_constant} _REMOVE_L3L4_VIANODES_
-:value: 1
-The via-nodes of erector spinae on L3 and L4 are removed.
-:::
-::::
-
-
-
 ::::{dropdown} `_ERECTORSPINAE_VIANODES_VERTEBRA_`
 :animate: fade-in-slide-down
 :margin: 0 0 2 2
 
 :::{ammr:bm_constant} _ERECTORSPINAE_VIANODES_VERTEBRA_
-:value: 2
+:value: 1
 Via-nodes on erector spinae placed on the vertebrae.
 :::
 ::::
