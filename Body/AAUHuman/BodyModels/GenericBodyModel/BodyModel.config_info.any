@@ -634,7 +634,7 @@ AnyMessage msg_BM_COMPATIBILITY_MUSCLE_STRUCTURE = { TriggerPreProcess = On; Typ
 
 #ifdef BM_COMPATIBILITY_BODYMODEL_STRUCTURE
 // A compatability switch to add the model tree structure of the BodyModel folders from AMMR <4. Use this option to easily load older models.
-AnyMessage BM_COMPATIBILITY_BODYMODEL_STRUCTURE = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_COMPATIBILITY_BODYMODEL_STRUCTURE);};
+AnyMessage msg_BM_COMPATIBILITY_BODYMODEL_STRUCTURE = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_COMPATIBILITY_BODYMODEL_STRUCTURE);};
 #endif
 
 
@@ -1267,6 +1267,11 @@ AnyIntVar value_BM_COMPATIBILITY_24_TRUNK_SELECTED_OUTPUTS_JRF=BM_COMPATIBILITY_
 #ifdef BM_COMPATIBILITY_MUSCLE_STRUCTURE
 // A compatability switch to add the model tree structure of the muscles from AMMR 4. Use this option to easily load older models.
 AnyIntVar value_BM_COMPATIBILITY_MUSCLE_STRUCTURE=BM_COMPATIBILITY_MUSCLE_STRUCTURE;
+#endif
+
+#ifdef BM_COMPATIBILITY_BODYMODEL_STRUCTURE
+// A compatability switch to add the model tree structure of the BodyModel folders from AMMR <4. Use this option to easily load older models.
+AnyIntVar value_BM_COMPATIBILITY_BODYMODEL_STRUCTURE=BM_COMPATIBILITY_BODYMODEL_STRUCTURE;
 #endif
 
 

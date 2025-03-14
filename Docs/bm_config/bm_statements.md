@@ -466,6 +466,7 @@ The type of thoracic/ribcage model used in the model.
   - {any}`_THORACIC_MODEL_RIGID_` -> A completely rigid model of the thoracic spine and ribcage.
   - {any}`_THORACIC_MODEL_FLEXIBLE_` -> A full model of the thorax and ribcage with a kinematically determinate set of drivers.
   - {any}`_THORACIC_MODEL_USERDEFINED_` -> A full model of the thorax and ribcage where drivers/rythmns are specified by the users.
+  - {any}`_THORACIC_MODEL_FLEXIBLE_KINEMATIC_ONLY_` -> A kinematic flexible model of the thorax and ribcage with a kinematically determinate set of drivers. No muscles in thoracic region and instead the reactions are ON in the ribcage and thoracic spine.
 
 ```
 ::::
@@ -2555,6 +2556,23 @@ A compatability switch to add the model tree structure of the muscles from AMMR 
 
 :Default: OFF
 :Example: `#define BM_COMPATIBILITY_MUSCLE_STRUCTURE OFF`
+:Options: {ammr:bm_constant}`ON`/{ammr:bm_constant}`OFF`
+
+
+```
+::::
+
+
+::::{dropdown} `BM_COMPATIBILITY_BODYMODEL_STRUCTURE`
+:animate: fade-in-slide-down
+:margin: 0 0 3 3
+
+```{ammr:bm_statement} BM_COMPATIBILITY_BODYMODEL_STRUCTURE
+
+A compatability switch to add the model tree structure of the BodyModel folders from AMMR <4. Use this option to easily load older models.
+
+:Default: OFF
+:Example: `#define BM_COMPATIBILITY_BODYMODEL_STRUCTURE OFF`
 :Options: {ammr:bm_constant}`ON`/{ammr:bm_constant}`OFF`
 
 
