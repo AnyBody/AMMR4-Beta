@@ -144,6 +144,7 @@ Parameter defining the foot model used.
 :Options:
   - {any}`_FOOT_MODEL_NONE_` -> Switch off foot model"
   - {any}`_FOOT_MODEL_DEFAULT_` -> Switch for using the default foot model
+  - {any}`_FOOT_MODEL_RIGID_GM_` -> Switch for using the GM foot model in the rigid configuration
   - {any}`_FOOT_MODEL_TOE_FLEX_GM_` -> Switch for using the GM foot model with toe flexion
   - {any}`_FOOT_MODEL_DETAILED_GM_` -> Switch for using the detailed GM foot model
 
@@ -2536,6 +2537,23 @@ A compatability switch to add the model tree structure of the muscles from AMMR 
 
 :Default: OFF
 :Example: `#define BM_COMPATIBILITY_MUSCLE_STRUCTURE OFF`
+:Options: {ammr:bm_constant}`ON`/{ammr:bm_constant}`OFF`
+
+
+```
+::::
+
+
+::::{dropdown} `BM_COMPATIBILITY_BODYMODEL_STRUCTURE`
+:animate: fade-in-slide-down
+:margin: 0 0 3 3
+
+```{ammr:bm_statement} BM_COMPATIBILITY_BODYMODEL_STRUCTURE
+
+A compatability switch to add the model tree structure of the BodyModel folders from AMMR <4. Use this option to easily load older models.
+
+:Default: OFF
+:Example: `#define BM_COMPATIBILITY_BODYMODEL_STRUCTURE OFF`
 :Options: {ammr:bm_constant}`ON`/{ammr:bm_constant}`OFF`
 
 
