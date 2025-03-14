@@ -47,6 +47,16 @@ AnyMessage msg_BM_DRAWSETTINGS_SKIP = { TriggerPreProcess = On; Type = MSG_Messa
 AnyMessage msg_BM_FOOT_MODEL = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_FOOT_MODEL);};
 #endif
 
+#ifdef BM_FOOT_MODEL_TOE_FLEX_GM_REACTION
+// Parameter defining the existing of reaction on toes when using _FOOT_MODEL_TOE_FLEX_GM_.
+AnyMessage msg_BM_FOOT_MODEL_TOE_FLEX_GM_REACTION = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_FOOT_MODEL_TOE_FLEX_GM_REACTION);};
+#endif
+
+#ifdef BM_FOOT_MODEL_LIGAMENTS
+// Parameter for switching the foot ligaments On/Off.
+AnyMessage msg_BM_FOOT_MODEL_LIGAMENTS = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_FOOT_MODEL_LIGAMENTS);};
+#endif
+
 #ifdef BM_LEG_MODEL
 // Parameter defining the Leg model used.
 AnyMessage msg_BM_LEG_MODEL = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_LEG_MODEL);};
@@ -115,6 +125,11 @@ AnyMessage msg_BM_TRUNK_THORACIC_MODEL = { TriggerPreProcess = On; Type = MSG_Me
 #ifdef BM_TRUNK_CAVITY_MODEL
 // The type of thoracic/ribcage model used in the model.
 AnyMessage msg_BM_TRUNK_CAVITY_MODEL = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_TRUNK_CAVITY_MODEL);};
+#endif
+
+#ifdef BM_EXPERIMENTAL_ERECTORSPINAE_VIANODES
+// New via-nodes of the erector spinae muscles were placed on the layers instead of the vertebrae.
+AnyMessage msg_BM_EXPERIMENTAL_ERECTORSPINAE_VIANODES = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_EXPERIMENTAL_ERECTORSPINAE_VIANODES);};
 #endif
 
 #ifdef BM_TRUNK_DIAGPHRAM_FIXED_POSITION
@@ -502,6 +517,11 @@ AnyMessage msg_BM_MANNEQUIN_DRIVER_ANKLE_FLEXION_RIGHT = { TriggerPreProcess = O
 AnyMessage msg_BM_MANNEQUIN_DRIVER_ANKLE_SUBTALAR_EVERSION_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_ANKLE_SUBTALAR_EVERSION_RIGHT);};
 #endif
 
+#ifdef BM_MANNEQUIN_DRIVER_TOES_FLEXION_RIGHT
+// Switch for the mannequin driver being active or not
+AnyMessage msg_BM_MANNEQUIN_DRIVER_TOES_FLEXION_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_TOES_FLEXION_RIGHT);};
+#endif
+
 #ifdef BM_MANNEQUIN_DRIVER_HIP_FLEXION_LEFT
 // Switch for the mannequin driver being active or not
 AnyMessage msg_BM_MANNEQUIN_DRIVER_HIP_FLEXION_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_HIP_FLEXION_LEFT);};
@@ -530,6 +550,11 @@ AnyMessage msg_BM_MANNEQUIN_DRIVER_ANKLE_FLEXION_LEFT = { TriggerPreProcess = On
 #ifdef BM_MANNEQUIN_DRIVER_ANKLE_SUBTALAR_EVERSION_LEFT
 // Switch for the mannequin driver being active or not
 AnyMessage msg_BM_MANNEQUIN_DRIVER_ANKLE_SUBTALAR_EVERSION_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_ANKLE_SUBTALAR_EVERSION_LEFT);};
+#endif
+
+#ifdef BM_MANNEQUIN_DRIVER_TOES_FLEXION_LEFT
+// Switch for the mannequin driver being active or not
+AnyMessage msg_BM_MANNEQUIN_DRIVER_TOES_FLEXION_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_TOES_FLEXION_LEFT);};
 #endif
 
 #ifdef BM_JOINT_TYPE_HIP_RIGHT
@@ -607,6 +632,11 @@ AnyMessage msg_BM_COMPATIBILITY_24_TRUNK_SELECTED_OUTPUTS_JRF = { TriggerPreProc
 AnyMessage msg_BM_COMPATIBILITY_MUSCLE_STRUCTURE = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_COMPATIBILITY_MUSCLE_STRUCTURE);};
 #endif
 
+#ifdef BM_COMPATIBILITY_BODYMODEL_STRUCTURE
+// A compatability switch to add the model tree structure of the BodyModel folders from AMMR <4. Use this option to easily load older models.
+AnyMessage BM_COMPATIBILITY_BODYMODEL_STRUCTURE = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_COMPATIBILITY_BODYMODEL_STRUCTURE);};
+#endif
+
 
 }; // AnyFolder Messages
 #endif
@@ -652,6 +682,16 @@ AnyIntVar value_BM_DRAWSETTINGS_SKIP=BM_DRAWSETTINGS_SKIP;
 #ifdef BM_FOOT_MODEL
 // Parameter defining the foot model used.
 AnyIntVar value_BM_FOOT_MODEL=BM_FOOT_MODEL;
+#endif
+
+#ifdef BM_FOOT_MODEL_TOE_FLEX_GM_REACTION
+// Parameter defining the existing of reaction on toes when using _FOOT_MODEL_TOE_FLEX_GM_.
+AnyIntVar value_BM_FOOT_MODEL_TOE_FLEX_GM_REACTION=BM_FOOT_MODEL_TOE_FLEX_GM_REACTION;
+#endif
+
+#ifdef BM_FOOT_MODEL_LIGAMENTS
+// Parameter for switching the foot ligaments On/Off.
+AnyIntVar value_BM_FOOT_MODEL_LIGAMENTS=BM_FOOT_MODEL_LIGAMENTS;
 #endif
 
 #ifdef BM_LEG_MODEL
@@ -722,6 +762,11 @@ AnyIntVar value_BM_TRUNK_THORACIC_MODEL=BM_TRUNK_THORACIC_MODEL;
 #ifdef BM_TRUNK_CAVITY_MODEL
 // The type of thoracic/ribcage model used in the model.
 AnyIntVar value_BM_TRUNK_CAVITY_MODEL=BM_TRUNK_CAVITY_MODEL;
+#endif
+
+#ifdef BM_EXPERIMENTAL_ERECTORSPINAE_VIANODES
+// New via-nodes of the erector spinae muscles were placed on the layers instead of the vertebrae.
+AnyIntVar value_BM_EXPERIMENTAL_ERECTORSPINAE_VIANODES=BM_EXPERIMENTAL_ERECTORSPINAE_VIANODES;
 #endif
 
 #ifdef BM_TRUNK_DIAGPHRAM_FIXED_POSITION
@@ -1109,6 +1154,11 @@ AnyIntVar value_BM_MANNEQUIN_DRIVER_ANKLE_FLEXION_RIGHT=BM_MANNEQUIN_DRIVER_ANKL
 AnyIntVar value_BM_MANNEQUIN_DRIVER_ANKLE_SUBTALAR_EVERSION_RIGHT=BM_MANNEQUIN_DRIVER_ANKLE_SUBTALAR_EVERSION_RIGHT;
 #endif
 
+#ifdef BM_MANNEQUIN_DRIVER_TOES_FLEXION_RIGHT
+// Switch for the mannequin driver being active or not
+AnyIntVar value_BM_MANNEQUIN_DRIVER_TOES_FLEXION_RIGHT=BM_MANNEQUIN_DRIVER_TOES_FLEXION_RIGHT;
+#endif
+
 #ifdef BM_MANNEQUIN_DRIVER_HIP_FLEXION_LEFT
 // Switch for the mannequin driver being active or not
 AnyIntVar value_BM_MANNEQUIN_DRIVER_HIP_FLEXION_LEFT=BM_MANNEQUIN_DRIVER_HIP_FLEXION_LEFT;
@@ -1137,6 +1187,11 @@ AnyIntVar value_BM_MANNEQUIN_DRIVER_ANKLE_FLEXION_LEFT=BM_MANNEQUIN_DRIVER_ANKLE
 #ifdef BM_MANNEQUIN_DRIVER_ANKLE_SUBTALAR_EVERSION_LEFT
 // Switch for the mannequin driver being active or not
 AnyIntVar value_BM_MANNEQUIN_DRIVER_ANKLE_SUBTALAR_EVERSION_LEFT=BM_MANNEQUIN_DRIVER_ANKLE_SUBTALAR_EVERSION_LEFT;
+#endif
+
+#ifdef BM_MANNEQUIN_DRIVER_TOES_FLEXION_LEFT
+// Switch for the mannequin driver being active or not
+AnyIntVar value_BM_MANNEQUIN_DRIVER_TOES_FLEXION_LEFT=BM_MANNEQUIN_DRIVER_TOES_FLEXION_LEFT;
 #endif
 
 #ifdef BM_JOINT_TYPE_HIP_RIGHT

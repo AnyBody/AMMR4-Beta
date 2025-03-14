@@ -126,25 +126,49 @@ Switch to use leg model: "Leg"
 
 
 
+::::{dropdown} `_FOOT_MODEL_NONE_`
+:animate: fade-in-slide-down
+:margin: 0 0 2 2
+
+:::{ammr:bm_constant} _FOOT_MODEL_NONE_
+:value: 0
+Switch off foot model"
+:::
+::::
+
+
+
 ::::{dropdown} `_FOOT_MODEL_DEFAULT_`
 :animate: fade-in-slide-down
 :margin: 0 0 2 2
 
 :::{ammr:bm_constant} _FOOT_MODEL_DEFAULT_
-:value: 0
+:value: 1
 Switch for using the default foot model
 :::
 ::::
 
 
 
-::::{dropdown} `_FOOT_MODEL_NONE_`
+::::{dropdown} `_FOOT_MODEL_TOE_FLEX_GM_`
 :animate: fade-in-slide-down
 :margin: 0 0 2 2
 
-:::{ammr:bm_constant} _FOOT_MODEL_NONE_
-:value: 1
-Switch for using the GM foot model"
+:::{ammr:bm_constant} _FOOT_MODEL_TOE_FLEX_GM_
+:value: 2
+Switch for using the GM foot model with toe flexion
+:::
+::::
+
+
+
+::::{dropdown} `_FOOT_MODEL_DETAILED_GM_`
+:animate: fade-in-slide-down
+:margin: 0 0 2 2
+
+:::{ammr:bm_constant} _FOOT_MODEL_DETAILED_GM_
+:value: 3
+Switch for using the detailed GM foot model
 :::
 ::::
 
@@ -481,6 +505,42 @@ The old buckle implementation of the abdominal pressure.
 :::{ammr:bm_constant} _CAVITY_MODEL_VOLUME_
 :value: 1
 A volume measure implementation of the pressure in the abdominal cavity and lungs.
+:::
+::::
+
+
+
+::::{dropdown} `_ERECTORSPINAE_VIANODES_LAYER_AND_REMOVE_L3L4_VIANODES_`
+:animate: fade-in-slide-down
+:margin: 0 0 2 2
+
+:::{ammr:bm_constant} _ERECTORSPINAE_VIANODES_LAYER_AND_REMOVE_L3L4_VIANODES_
+:value: 0
+Via-nodes on erector spinae placed on the layers instead of vertebrae. The via-nodes on L3 and L4 are removed.
+:::
+::::
+
+
+
+::::{dropdown} `_REMOVE_L3L4_VIANODES_`
+:animate: fade-in-slide-down
+:margin: 0 0 2 2
+
+:::{ammr:bm_constant} _REMOVE_L3L4_VIANODES_
+:value: 1
+The via-nodes of erector spinae on L3 and L4 are removed.
+:::
+::::
+
+
+
+::::{dropdown} `_ERECTORSPINAE_VIANODES_VERTEBRA_`
+:animate: fade-in-slide-down
+:margin: 0 0 2 2
+
+:::{ammr:bm_constant} _ERECTORSPINAE_VIANODES_VERTEBRA_
+:value: 2
+Via-nodes on erector spinae placed on the vertebrae.
 :::
 ::::
 

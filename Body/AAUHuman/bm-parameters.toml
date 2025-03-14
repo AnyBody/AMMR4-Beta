@@ -61,15 +61,25 @@ valuetype = "integer"
 descr = "Switch to use leg model: \"Leg\""
 nicename = "Simple Leg"
 
-[constants._FOOT_MODEL_DEFAULT_]
+[constants._FOOT_MODEL_NONE_]
 default = "0"
+valuetype = "integer"
+descr = "Switch off foot model\""
+
+[constants._FOOT_MODEL_DEFAULT_]
+default = "1"
 valuetype = "integer"
 descr = "Switch for using the default foot model"
 
-[constants._FOOT_MODEL_NONE_]
-default = "1"
+[constants._FOOT_MODEL_TOE_FLEX_GM_]
+default = "2"
 valuetype = "integer"
-descr = "Switch for using the GM foot model\""
+descr = "Switch for using the GM foot model with toe flexion"
+
+[constants._FOOT_MODEL_DETAILED_GM_]
+default = "3"
+valuetype = "integer"
+descr = "Switch for using the detailed GM foot model"
 
 [constants._ELLIPSOID_CONTACT_]
 default = "1"
@@ -230,6 +240,24 @@ default = "1"
 valuetype = "integer"
 descr = "A volume measure implementation of the pressure in the abdominal cavity and lungs."
 nicename = "Volume model"
+
+[constants._ERECTORSPINAE_VIANODES_LAYER_AND_REMOVE_L3L4_VIANODES_]
+default = "0"
+valuetype = "integer"
+descr = "Via-nodes on erector spinae placed on the layers instead of vertebrae. The via-nodes on L3 and L4 are removed."
+nicename = "Via-nodes on layers"
+
+[constants._REMOVE_L3L4_VIANODES_]
+default = "1"
+valuetype = "integer"
+descr = "The via-nodes of erector spinae on L3 and L4 are removed."
+nicename = "L3/L4 via-nodes removed"
+
+[constants._ERECTORSPINAE_VIANODES_VERTEBRA_]
+default = "2"
+valuetype = "integer"
+descr = "Via-nodes on erector spinae placed on the vertebrae."
+nicename = "Via-nodes on vertebrae"
 
 [constants._RHYTHM_SOFT_]
 default = "2"
@@ -545,7 +573,18 @@ descr = "A flag to switch on/off inclusion of the draw settings (may be needed i
 default = "_FOOT_MODEL_DEFAULT_"
 valuetype = "integer"
 descr = "Parameter defining the foot model used."
-opt = [ "_FOOT_MODEL_DEFAULT_", "_FOOT_MODEL_NONE_",]
+opt = [ "_FOOT_MODEL_NONE_", "_FOOT_MODEL_DEFAULT_", "_FOOT_MODEL_TOE_FLEX_GM_", "_FOOT_MODEL_DETAILED_GM_",]
+
+[parameters.BM_FOOT_MODEL_TOE_FLEX_GM_REACTION]
+default = "ON"
+valuetype = "integer"
+descr = "Parameter defining the existing of reaction on toes when using _FOOT_MODEL_TOE_FLEX_GM_."
+
+[parameters.BM_FOOT_MODEL_LIGAMENTS]
+default = "OFF"
+valuetype = "integer"
+descr = "Parameter for switching the foot ligaments On/Off."
+opt = [ "OFF", "ON"]
 
 [parameters.BM_LEG_MODEL]
 default = "_LEG_MODEL_TLEM2_"
@@ -654,6 +693,12 @@ default = "_CAVITY_MODEL_VOLUME_"
 valuetype = "integer"
 descr = "The type of thoracic/ribcage model used in the model."
 opt = ["_CAVITY_MODEL_BUCKLE_", "_CAVITY_MODEL_VOLUME_"]
+
+[parameters.BM_EXPERIMENTAL_ERECTORSPINAE_VIANODES]
+default = "_ERECTORSPINAE_VIANODES_LAYER_AND_REMOVE_L3L4_VIANODES_"
+valuetype = "integer"
+descr = "New via-nodes of the erector spinae muscles were placed on the layers instead of the vertebrae."
+opt = ["_ERECTORSPINAE_VIANODES_LAYER_AND_REMOVE_L3L4_VIANODES_", "_REMOVE_L3L4_VIANODES_", "_ERECTORSPINAE_VIANODES_VERTEBRA_"]
 
 [parameters.BM_TRUNK_DIAGPHRAM_FIXED_POSITION]
 default = "ON"
@@ -1226,6 +1271,13 @@ descr = "Switch for the mannequin driver being active or not"
 nicename = "Right Ankle Subtalar Eversion"
 opt = [ "ON", "OFF", "BM_MANNEQUIN_DRIVER_DEFAULT",]
 
+[parameters.BM_MANNEQUIN_DRIVER_TOES_FLEXION_RIGHT]
+default = "BM_MANNEQUIN_DRIVER_DEFAULT"
+valuetype = "integer"
+descr = "Switch for the mannequin driver being active or not"
+nicename = "Right Toes Flexion"
+opt = [ "ON", "OFF", "BM_MANNEQUIN_DRIVER_DEFAULT",]
+
 [parameters.BM_MANNEQUIN_DRIVER_HIP_FLEXION_LEFT]
 default = "BM_MANNEQUIN_DRIVER_DEFAULT"
 valuetype = "integer"
@@ -1274,6 +1326,13 @@ default = "BM_MANNEQUIN_DRIVER_DEFAULT"
 valuetype = "integer"
 descr = "Switch for the mannequin driver being active or not"
 nicename = "Left Ankle Subtalar Eversion"
+opt = [ "ON", "OFF", "BM_MANNEQUIN_DRIVER_DEFAULT",]
+
+[parameters.BM_MANNEQUIN_DRIVER_TOES_FLEXION_LEFT]
+default = "BM_MANNEQUIN_DRIVER_DEFAULT"
+valuetype = "integer"
+descr = "Switch for the mannequin driver being active or not"
+nicename = "Left Toes Flexion"
 opt = [ "ON", "OFF", "BM_MANNEQUIN_DRIVER_DEFAULT",]
 
 [parameters.BM_JOINT_TYPE_HIP_RIGHT]
@@ -1369,4 +1428,9 @@ descr = "A compatability switch to include the trunk selected outputs joint reac
 default = "OFF"
 valuetype = "integer"
 descr = "A compatability switch to add the model tree structure of the muscles from AMMR 4. Use this option to easily load older models."
+
+[parameters.BM_COMPATIBILITY_BODYMODEL_STRUCTURE]
+default = "OFF"
+valuetype = "integer"
+descr = "A compatability switch to add the model tree structure of the BodyModel folders from AMMR <4. Use this option to easily load older models."
 

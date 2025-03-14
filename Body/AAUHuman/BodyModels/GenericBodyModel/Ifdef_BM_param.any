@@ -58,6 +58,18 @@
 #endif
 #endif
 
+#ifdef BM_FOOT_MODEL_TOE_FLEX_GM_REACTION
+#ifndef _BM_PARAM_DEFINED_
+#define _BM_PARAM_DEFINED_
+#endif
+#endif
+
+#ifdef BM_FOOT_MODEL_LIGAMENTS
+#ifndef _BM_PARAM_DEFINED_
+#define _BM_PARAM_DEFINED_
+#endif
+#endif
+
 #ifdef BM_LEG_MODEL
 #ifndef _BM_PARAM_DEFINED_
 #define _BM_PARAM_DEFINED_
@@ -155,6 +167,12 @@
 #endif
 
 #ifdef BM_TRUNK_CAVITY_MODEL
+#ifndef _BM_PARAM_DEFINED_
+#define _BM_PARAM_DEFINED_
+#endif
+#endif
+
+#ifdef BM_EXPERIMENTAL_ERECTORSPINAE_VIANODES
 #ifndef _BM_PARAM_DEFINED_
 #define _BM_PARAM_DEFINED_
 #endif
@@ -670,6 +688,12 @@
 #endif
 #endif
 
+#ifdef BM_MANNEQUIN_DRIVER_TOES_FLEXION_RIGHT
+#ifndef _BM_PARAM_DEFINED_
+#define _BM_PARAM_DEFINED_
+#endif
+#endif
+
 #ifdef BM_MANNEQUIN_DRIVER_HIP_FLEXION_LEFT
 #ifndef _BM_PARAM_DEFINED_
 #define _BM_PARAM_DEFINED_
@@ -707,6 +731,12 @@
 #endif
 
 #ifdef BM_MANNEQUIN_DRIVER_ANKLE_SUBTALAR_EVERSION_LEFT
+#ifndef _BM_PARAM_DEFINED_
+#define _BM_PARAM_DEFINED_
+#endif
+#endif
+
+#ifdef BM_MANNEQUIN_DRIVER_TOES_FLEXION_LEFT
 #ifndef _BM_PARAM_DEFINED_
 #define _BM_PARAM_DEFINED_
 #endif
@@ -803,6 +833,12 @@
 #endif
 
 #ifdef BM_COMPATIBILITY_MUSCLE_STRUCTURE
+#ifndef _BM_PARAM_DEFINED_
+#define _BM_PARAM_DEFINED_
+#endif
+#endif
+
+#ifdef BM_COMPATIBILITY_BODYMODEL_STRUCTURE
 #ifndef _BM_PARAM_DEFINED_
 #define _BM_PARAM_DEFINED_
 #endif

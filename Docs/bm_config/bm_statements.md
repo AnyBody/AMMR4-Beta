@@ -142,8 +142,45 @@ Parameter defining the foot model used.
 :Default: {any}`_FOOT_MODEL_DEFAULT_`
 :Example: `#define BM_FOOT_MODEL _FOOT_MODEL_DEFAULT_`
 :Options:
+  - {any}`_FOOT_MODEL_NONE_` -> Switch off foot model"
   - {any}`_FOOT_MODEL_DEFAULT_` -> Switch for using the default foot model
-  - {any}`_FOOT_MODEL_NONE_` -> Switch for using the GM foot model"
+  - {any}`_FOOT_MODEL_TOE_FLEX_GM_` -> Switch for using the GM foot model with toe flexion
+  - {any}`_FOOT_MODEL_DETAILED_GM_` -> Switch for using the detailed GM foot model
+
+```
+::::
+
+
+::::{dropdown} `BM_FOOT_MODEL_TOE_FLEX_GM_REACTION`
+:animate: fade-in-slide-down
+:margin: 0 0 3 3
+
+```{ammr:bm_statement} BM_FOOT_MODEL_TOE_FLEX_GM_REACTION
+
+Parameter defining the existing of reaction on toes when using _FOOT_MODEL_TOE_FLEX_GM_.
+
+:Default: ON
+:Example: `#define BM_FOOT_MODEL_TOE_FLEX_GM_REACTION ON`
+:Options: {ammr:bm_constant}`ON`/{ammr:bm_constant}`OFF`
+
+
+```
+::::
+
+
+::::{dropdown} `BM_FOOT_MODEL_LIGAMENTS`
+:animate: fade-in-slide-down
+:margin: 0 0 3 3
+
+```{ammr:bm_statement} BM_FOOT_MODEL_LIGAMENTS
+
+Parameter for switching the foot ligaments On/Off.
+
+:Default: OFF
+:Example: `#define BM_FOOT_MODEL_LIGAMENTS OFF`
+:Options:
+  - {any}`OFF` -> Switch OFF
+  - {any}`ON` -> Switch ON
 
 ```
 ::::
@@ -447,6 +484,25 @@ The type of thoracic/ribcage model used in the model.
 :Options:
   - {any}`_CAVITY_MODEL_BUCKLE_` -> The old buckle implementation of the abdominal pressure.
   - {any}`_CAVITY_MODEL_VOLUME_` -> A volume measure implementation of the pressure in the abdominal cavity and lungs.
+
+```
+::::
+
+
+::::{dropdown} `BM_EXPERIMENTAL_ERECTORSPINAE_VIANODES`
+:animate: fade-in-slide-down
+:margin: 0 0 3 3
+
+```{ammr:bm_statement} BM_EXPERIMENTAL_ERECTORSPINAE_VIANODES
+
+New via-nodes of the erector spinae muscles were placed on the layers instead of the vertebrae.
+
+:Default: {any}`_ERECTORSPINAE_VIANODES_LAYER_AND_REMOVE_L3L4_VIANODES_`
+:Example: `#define BM_EXPERIMENTAL_ERECTORSPINAE_VIANODES _ERECTORSPINAE_VIANODES_LAYER_AND_REMOVE_L3L4_VIANODES_`
+:Options:
+  - {any}`_ERECTORSPINAE_VIANODES_LAYER_AND_REMOVE_L3L4_VIANODES_` -> Via-nodes on erector spinae placed on the layers instead of vertebrae. The via-nodes on L3 and L4 are removed.
+  - {any}`_REMOVE_L3L4_VIANODES_` -> The via-nodes of erector spinae on L3 and L4 are removed.
+  - {any}`_ERECTORSPINAE_VIANODES_VERTEBRA_` -> Via-nodes on erector spinae placed on the vertebrae.
 
 ```
 ::::
@@ -2042,6 +2098,25 @@ Switch for the mannequin driver being active or not
 ::::
 
 
+::::{dropdown} `BM_MANNEQUIN_DRIVER_TOES_FLEXION_RIGHT`
+:animate: fade-in-slide-down
+:margin: 0 0 3 3
+
+```{ammr:bm_statement} BM_MANNEQUIN_DRIVER_TOES_FLEXION_RIGHT
+
+Switch for the mannequin driver being active or not
+
+:Default: {any}`BM_MANNEQUIN_DRIVER_DEFAULT`
+:Example: `#define BM_MANNEQUIN_DRIVER_TOES_FLEXION_RIGHT BM_MANNEQUIN_DRIVER_DEFAULT`
+:Options:
+  - {any}`ON` -> Switch ON
+  - {any}`OFF` -> Switch OFF
+  - {any}`BM_MANNEQUIN_DRIVER_DEFAULT` -> 
+
+```
+::::
+
+
 ::::{dropdown} `BM_MANNEQUIN_DRIVER_HIP_FLEXION_LEFT`
 :animate: fade-in-slide-down
 :margin: 0 0 3 3
@@ -2167,6 +2242,25 @@ Switch for the mannequin driver being active or not
 
 :Default: {any}`BM_MANNEQUIN_DRIVER_DEFAULT`
 :Example: `#define BM_MANNEQUIN_DRIVER_ANKLE_SUBTALAR_EVERSION_LEFT BM_MANNEQUIN_DRIVER_DEFAULT`
+:Options:
+  - {any}`ON` -> Switch ON
+  - {any}`OFF` -> Switch OFF
+  - {any}`BM_MANNEQUIN_DRIVER_DEFAULT` -> 
+
+```
+::::
+
+
+::::{dropdown} `BM_MANNEQUIN_DRIVER_TOES_FLEXION_LEFT`
+:animate: fade-in-slide-down
+:margin: 0 0 3 3
+
+```{ammr:bm_statement} BM_MANNEQUIN_DRIVER_TOES_FLEXION_LEFT
+
+Switch for the mannequin driver being active or not
+
+:Default: {any}`BM_MANNEQUIN_DRIVER_DEFAULT`
+:Example: `#define BM_MANNEQUIN_DRIVER_TOES_FLEXION_LEFT BM_MANNEQUIN_DRIVER_DEFAULT`
 :Options:
   - {any}`ON` -> Switch ON
   - {any}`OFF` -> Switch OFF
