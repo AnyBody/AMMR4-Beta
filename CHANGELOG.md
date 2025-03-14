@@ -113,7 +113,7 @@ You can [enable backwards compatibility](changes-to-bodymodel-folders) by settin
 * Many of the key folders inside the Leg and Arm models have been renamed to create a unified structure across the full bodymodel. To bring back the old structure we have temporarily included a backward compatibility switch `BM_COMPATIBILITY_BODYMODEL_STRUCTURE` To ensure a smooth transition.
 
 (ammr-3.1.0-changelog)=
-## AMMR 3.1.0 (2024-??-??)
+## AMMR 3.1.0 Beta (2025-??-??)
 
 ### ➕ Added:
 * Introduced a new class template,
