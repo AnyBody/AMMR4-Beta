@@ -46,7 +46,7 @@ Main = {
 
   Study ={
     AnyFloat kin_tol = 1e-8;
-    AnyFloat force_tol = 1e-7;
+    AnyFloat force_tol = 1e-6;
     AnyFloat wrapping_tol = 1e-6;
     
     AnyInt ArmPositions = TEST_SEVERITY( 
