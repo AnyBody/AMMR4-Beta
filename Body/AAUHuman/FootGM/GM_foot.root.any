@@ -31,9 +31,10 @@
   
   Jnt = {
     #if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
-    #include "JntRigidToeFlex.any"
-    #else
-    #include "Jnt.any"
+      #include "JntRigidToeFlex.any"
+    #endif
+    #if BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_ 
+      #include "Jnt.any"
     #endif
   };
   
@@ -52,6 +53,7 @@
 
   #endif
       
+  #if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
   #if BM_FOOT_MODEL_LIGAMENTS == ON
   AnyFolder Ligaments = {
     #include "LigamentsNew.any"
@@ -63,12 +65,16 @@
   #else
   AnyFolder JointMusclesFoot = {
     #include "JointMusclesFoot.any"
-  };  
+  };
+  #endif
   #endif
   
+  #if (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
   InterfaceFolder ={
     #include "Interface.any"
   };
+  #endif
+  
   #if BM_FOOT_MODEL == _FOOT_MODEL_RIGID_GM_
     #include "InitialPositionsRigid.any"
   #endif
