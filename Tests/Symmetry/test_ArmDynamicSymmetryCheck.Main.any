@@ -45,9 +45,11 @@ Main = {
   OPERATION_TEST_TRIGGER(Main.Study.InverseDynamics.PreOperation, Main.TestTrigger);
 
   Study ={
+    
+    Main.Study.InverseDynamics.Criterion.Type = MR_Quadratic;
     AnyFloat kin_tol = 2*Kinematics.KinematicTol;
     AnyFloat force_tol = 2*InverseDynamics.Criterion.SolverTolerance*InverseDynamics.Criterion.SolverNearSolutionFactor;
-    InverseDynamics.Criterion.SolverNearSolutionFactor = 10;
+    InverseDynamics.Criterion.SolverNearSolutionFactor = 1;
     
     AnyFloat wrapping_tol = 1e-6;
     
