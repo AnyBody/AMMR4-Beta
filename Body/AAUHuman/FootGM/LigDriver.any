@@ -34,8 +34,6 @@ AnyDrawPLine DrawLig_size = {
 };
 
 
-#ifdef LIGAMENT_DRIVER
-
 
 
 AnyFolder LigamentDriver ={
@@ -203,7 +201,6 @@ AnyFolder LigamentDriver ={
 };
 
 
-#endif
 
 //make color dependin on force
 //#if InverseDynamicModel 
