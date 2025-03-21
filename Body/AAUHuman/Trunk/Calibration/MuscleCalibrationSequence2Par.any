@@ -23,7 +23,7 @@ AnyFolder ThoraxMuscleCalibration={
     AnyFolder& LeftThigh = ...BodyModel.Left.Leg.Seg.Thigh;
     AnyFolder& LeftHipJoint =  ...BodyModel.Left.Leg.Jnt.Hip;
     #endif
-    #if BM_LEG_MODEL & BM_LEG_LEFT
+    #if BM_LEG_MODEL & BM_LEG_RIGHT
     AnyFolder& RightThigh = ...BodyModel.Right.Leg.Seg.Thigh;
     AnyFolder& RightHipJoint =  ...BodyModel.Right.Leg.Jnt.Hip;
     #endif
@@ -102,8 +102,6 @@ AnyFolder ThoraxMuscleCalibration={
     };
     
     #if BM_LEG_RIGHT != OFF
-      AnyFolder &HJR = Main.HumanModel.BodyModel.Right.Leg.Jnt.Hip;
-      AnyFolder &RightThigh =  ...BodyModel.Right.Leg.Seg.Thigh;
       AnyKinEq RightHipDriver = {
         AnyKinMeasure& PelvisThoraxExtension = ....BodyModel.Interface.Right.HipAbduction;
         AnyKinMeasure& PelvisThoraxLateralBending = ....BodyModel.Interface.Right.HipFlexion;
@@ -112,8 +110,6 @@ AnyFolder ThoraxMuscleCalibration={
     #endif  
 
     #if BM_LEG_LEFT != OFF
-      AnyFolder &HJL = Main.HumanModel.BodyModel.Left.Leg.Jnt.Hip;
-      AnyFolder &LeftThigh =  ...BodyModel.Left.Leg.Seg.Thigh;
       AnyKinEq LeftHipDriver = {
         AnyKinMeasure& PelvisThoraxExtension = ....BodyModel.Interface.Left.HipAbduction;
         AnyKinMeasure& PelvisThoraxLateralBending = ....BodyModel.Interface.Left.HipFlexion;
