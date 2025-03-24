@@ -85,7 +85,10 @@ AnyKinEq PelvisFix = {
       #include "LegCalFootDrivers.any"
     #endif
   #endif
-
+  
+  AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.Leg.Mus);
+  
+  AnyObjectPtrArray FootMuscles = ObjSearchRecursive(MusPrefix+".Foot", "*", "AnyMuscle&");
 };
 
 
@@ -101,6 +104,7 @@ AnyBodyCalibrationStudy LegCalibrationStudy1 = {
   MuscleArr = set_difference(
       ObjSearchRecursive(CompleteNameOf(&.SideHumanFolderRef.Leg.Mus),"*", "AnyMuscle&"),
     arrcat(
+        ref.FootMuscles,
       ..CALIBRATION_STUDY_REF(2).MuscleArr,
       ..CALIBRATION_STUDY_REF(3).MuscleArr,
       ..CALIBRATION_STUDY_REF(5).MuscleArr,
