@@ -62,6 +62,24 @@
     #endif
     #include "LigamentsTarsal.any"
   };
+  Main.HumanModel.Calibration = {
+    #if _LEFT_RIGHT_ == "Right"
+      AnyFolder RightFootLigamentCalibration = {
+        #include "cal\FootCalibrationStudies.any"
+      };
+      CalibrationSequence = {
+        AnyOperation &LigCalFootRight = .RightFootLigamentCalibration.FootCalibrationSequence;
+      };
+    #endif
+    #if _LEFT_RIGHT_ == "Left"
+      AnyFolder LeftFootLigamentCalibration = {
+        #include "cal\FootCalibrationStudies.any"
+      };
+      CalibrationSequence = {
+        AnyOperation &LigCalFootLeft = .LeftFootLigamentCalibration.FootCalibrationSequence;
+      };
+    #endif
+  };
   #else
   AnyFolder JointMusclesFoot = {
     #include "JointMusclesFoot.any"
