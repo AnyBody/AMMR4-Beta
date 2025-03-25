@@ -1,22 +1,21 @@
 
 
 
-#if Side == "right"
+#if _LEFT_RIGHT_ == "Right"
   AnyFolder &SideRef = Main.HumanModel.BodyModel.Right;
   AnyFolder &SideInterfaceRef = Main.HumanModel.BodyModel.Interface.Right;
 #endif
 
 
 
-#if Side == "left"
+#if _LEFT_RIGHT_ == "Left"
   AnyFolder &SideRef= HumanModel.BodyModel.Left;
   AnyFolder &SideInterfaceRef = HumanModel.BodyModel.Interface.Left;
 #endif
 
-
 AnyFolder FootCal3 ={
   
-  AnyFolder &Pelvis =Main.HumanModel.BodyModel.Trunk.SegmentsLumbar.PelvisSeg; //This is a reference to the folder which holds the human part of the model
+  AnyFolder &Pelvis =Main.HumanModel.BodyModel.Trunk.Segments.PelvisSeg; //This is a reference to the folder which holds the human part of the model
   
   AnyFolder &LegSegSide =.SideRef.Leg.Seg; //This is a reference to the folder which holds the human part of the model
   AnyFolder &JointsCal = .SideRef.Leg.Jnt;
@@ -45,34 +44,21 @@ AnyFolder FootCal3 ={
   
     
   AnyKinEqSimpleDriver LegDriverRight = {
-    #if Side == "right"
+    #if _LEFT_RIGHT_ == "Right"
       AnyKinMeasure &Joint = Main.HumanModel.BodyModel.Right.Leg.JntDOF;
     #endif
     
-    #if Side == "left"
-    AnyKinMeasure &Joint = ..HumanModel.BodyModel.Left.Leg.JntDOF;
+    #if _LEFT_RIGHT_ == "Left"
+    AnyKinMeasure &Joint = Main.HumanModel.BodyModel.Left.Leg.JntDOF;
     
     #endif
     
     
     
-    DriverPos = {0,0.0,0,0}; //-15 degrees dorsal flexion
-    DriverVel = {0.0,0.0,0,0};
-    Reaction.Type = {Off,Off,Off,Off};
+    DriverPos = {0,0.0,0,0,0,0}; 
+    DriverVel = {0.0,0.0,0,0,0,0};
+    Reaction.Type = {Off,Off,Off,Off,Off,Off};
   };
-   AnyKinEqSimpleDriver AnkleDriver = {
-    AnyKinMeasure &Joint = ..SideRef.Leg.Jnt.Ankle;
-    DriverPos = {0}; 
-    DriverVel = {0.0};
-    Reaction.Type = {Off};
-  };
-   AnyKinEqSimpleDriver SubTalar= {
-    AnyKinMeasure &Joint = ..SideRef.Leg.Jnt.SubTalar;
-    DriverPos = {0}; 
-    DriverVel = {0.0};
-    Reaction.Type = {Off};
-  };
-
 
   
   
@@ -85,7 +71,7 @@ AnyFolder FootCal3 ={
     
     
     
-    AnyKinMeasure &ref1 = ..SideInterfaceRef .TaloNavicularEversion;
+    AnyKinMeasure &ref1 = ..SideInterfaceRef.TaloNavicularEversion;
     AnyKinMeasure &ref2 = ..SideInterfaceRef.TaloNavicularAbduction;
     AnyKinMeasure &ref3 = ..SideInterfaceRef.TaloNavicularDorsiFlexion;
     DriverPos = {0,0,0}*pi/180;
@@ -347,19 +333,16 @@ AnyFolder FootCal3 ={
 AnyBodyCalibrationStudy FootCalibrationStudy3 = {
   AnyFolder &ref=.FootCal3; 
   nStep = 1;
+  
   MechObjectExclude = 
+    arrcat( 
+      {&Main.HumanModel.BodyModel.Trunk.Segments.SacrumSeg},
+      ObjSearch(".SideRef.Leg.Ligaments.*.*.*.*", "AnyKinEqSimpleDriver"),
+      ObjSearch(".SideRef.Leg.Ligaments.*.*.*", "AnyKinEqSimpleDriver"),
+      ObjSearch(".SideRef.Leg.Ligaments.*.*.*.*", "AnyKinEqSimpleDriver"),
+      ObjSearch(".SideRef.Leg.Ligaments.*.*.*.*.*", "AnyKinEqSimpleDriver")
+    ); 
     
-arrcat( 
-{&Main.HumanModel.BodyModel.Trunk.SegmentsLumbar.SacrumSeg},
- ObjSearch(".SideRef.Leg.Ligaments.*.*.*.*", "AnyKinEqSimpleDriver"),
- ObjSearch(".SideRef.Leg.Ligaments.*.*.*", "AnyKinEqSimpleDriver"),
- ObjSearch(".SideRef.Leg.Ligaments.*.*.*.*", "AnyKinEqSimpleDriver"),
-
- ObjSearch(".SideRef.Leg.Ligaments.*.*.*.*.*", "AnyKinEqSimpleDriver")
- 
-  ); 
-
-              
 };
 //
 
@@ -452,4 +435,3 @@ AnyOperationSetValue SetLigPretenstionLigamentsPhalangealDorsal ={
   Target = ObjSearch("Main.HumanModel.BodyModel.Right.Leg.Ligaments.LigamentsPhalangealDorsal.*.LigMdl.L0", "AnyFloat");
   Source = ObjSearch("Main.HumanModel.BodyModel.Right.Leg.Ligaments.LigamentsPhalangealDorsal.*.LigMdl.L0_Pretension", "AnyFloat");
 };
-
