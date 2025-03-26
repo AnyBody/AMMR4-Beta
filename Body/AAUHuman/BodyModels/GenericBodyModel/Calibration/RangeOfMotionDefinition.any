@@ -34,6 +34,21 @@ BodyModelFolderStructure RangeOfMotion() = {
       AnyVar MaxScapulaClaviculaDepressionAngle ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Shoulder.MaxScapulaClaviculaDepressionAngle;
       AnyVar MaxScapulaClaviculaProtractionAngle ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Shoulder.MaxScapulaClaviculaProtractionAngle;
       AnyVar MaxScapulaClaviculaRetractionAngle ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Shoulder.MaxScapulaClaviculaRetractionAngle;
+
+      // Shoulder positions
+      AnyFloat Neutral ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Shoulder.Neutral;
+      AnyFloat Flexed ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Shoulder.Flexed;
+      AnyFloat Extended ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Shoulder.Extended;
+      AnyFloat Abducted ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Shoulder.Abducted;
+      AnyFloat Adducted ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Shoulder.Adducted;
+      AnyFloat ExternallyRotated ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Shoulder.ExternallyRotated;
+      AnyFloat InternallyRotated ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Shoulder.InternallyRotated;
+      AnyFloat FlexedAndExternallyRotated ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Shoulder.FlexedAndExternallyRotated;
+      AnyFloat FlexedAndInternallyRotated ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Shoulder.FlexedAndInternallyRotated;
+      AnyFloat ExtendedAndExternallyRotated ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Shoulder.ExtendedAndExternallyRotated;
+      AnyFloat ExtendedAndInternallyRotated ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Shoulder.ExtendedAndInternallyRotated;
+      AnyFloat FlexedAndAdducted ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Shoulder.FlexedAndAdducted;
+      AnyFloat FlexedAndAbducted ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Shoulder.FlexedAndAbducted;
     };  
   
     Right.ShoulderArm.Elbow = {
@@ -41,6 +56,7 @@ BodyModelFolderStructure RangeOfMotion() = {
       AnyVar MaxExtensionAngle ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Elbow.MaxExtensionAngle;
       AnyVar MaxPronationAngle ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Elbow.MaxPronationAngle;
       AnyVar MaxSupinationAngle ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Elbow.MaxSupinationAngle;
+      AnyVar Neutral ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Elbow.Neutral;
     };
     
     Right.ShoulderArm.Wrist = {
@@ -48,6 +64,7 @@ BodyModelFolderStructure RangeOfMotion() = {
       AnyVar MaxExtensionAngle ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Wrist.MaxExtensionAngle;
       AnyVar MaxAbductionAngle ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Wrist.MaxAbductionAngle;
       AnyVar MaxAdductionAngle ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Wrist.MaxAdductionAngle;
+      AnyVar Neutral ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Wrist.Neutral;
     };
   #endif
     
@@ -105,6 +122,21 @@ BodyModelFolderStructure RangeOfMotion() = {
       AnyVar MaxScapulaClaviculaDepressionAngle ??= ...Right.ShoulderArm.Shoulder.MaxScapulaClaviculaDepressionAngle;
       AnyVar MaxScapulaClaviculaProtractionAngle ??= ...Right.ShoulderArm.Shoulder.MaxScapulaClaviculaProtractionAngle;
       AnyVar MaxScapulaClaviculaRetractionAngle ??= ...Right.ShoulderArm.Shoulder.MaxScapulaClaviculaRetractionAngle;
+      
+      // Shoulder positions
+      AnyFloat Neutral ??= ...Right.ShoulderArm.Shoulder.Neutral;
+      AnyFloat Flexed ??= ...Right.ShoulderArm.Shoulder.Flexed;
+      AnyFloat Extended ??= ...Right.ShoulderArm.Shoulder.Extended;
+      AnyFloat Abducted ??= ...Right.ShoulderArm.Shoulder.Abducted;
+      AnyFloat Adducted ??= ...Right.ShoulderArm.Shoulder.Adducted;
+      AnyFloat ExternallyRotated ??= ...Right.ShoulderArm.Shoulder.ExternallyRotated;
+      AnyFloat InternallyRotated ??= ...Right.ShoulderArm.Shoulder.InternallyRotated;
+      AnyFloat FlexedAndExternallyRotated ??= ...Right.ShoulderArm.Shoulder.FlexedAndExternallyRotated;
+      AnyFloat FlexedAndInternallyRotated ??= ...Right.ShoulderArm.Shoulder.FlexedAndInternallyRotated;
+      AnyFloat ExtendedAndExternallyRotated ??= ...Right.ShoulderArm.Shoulder.ExtendedAndExternallyRotated;
+      AnyFloat ExtendedAndInternallyRotated ??= ...Right.ShoulderArm.Shoulder.ExtendedAndInternallyRotated;
+      AnyFloat FlexedAndAdducted ??= ...Right.ShoulderArm.Shoulder.FlexedAndAdducted;
+      AnyFloat FlexedAndAbducted ??= ...Right.ShoulderArm.Shoulder.FlexedAndAbducted;
     };  
   
     Left.ShoulderArm.Elbow = {

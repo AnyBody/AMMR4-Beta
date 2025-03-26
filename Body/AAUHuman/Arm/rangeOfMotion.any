@@ -12,6 +12,22 @@ AnyFolder RangeOfMotion = {
     AnyVar MaxScapulaClaviculaDepressionAngle = -5;
     AnyVar MaxScapulaClaviculaProtractionAngle = 15;
     AnyVar MaxScapulaClaviculaRetractionAngle = -36;
+    
+    // Shoulder positions
+    AnyFloat Neutral = {0,0,0};
+    AnyFloat Flexed = {MaxGlenohumeralFlexionAngle, 0, 0};
+    AnyFloat Extended = {MaxGlenohumeralExtensionAngle, 0, 0};
+    AnyFloat Abducted = {0, MaxGlenohumeralAbductionAngle, 0};
+    AnyFloat Adducted = {0, MaxGlenohumeralAdductionAngle, 0};
+    AnyFloat ExternallyRotated = {0, 0, MaxGlenohumeralExternalRotationAngle};
+    AnyFloat InternallyRotated = {0, 0, MaxGlenohumeralInternalRotationAngle};
+    AnyFloat FlexedAndExternallyRotated = {MaxGlenohumeralFlexionAngle, 0, MaxGlenohumeralExternalRotationAngle};
+    AnyFloat FlexedAndInternallyRotated = {MaxGlenohumeralFlexionAngle, 0, MaxGlenohumeralInternalRotationAngle};
+    AnyFloat ExtendedAndExternallyRotated = {MaxGlenohumeralExtensionAngle, 0, MaxGlenohumeralExternalRotationAngle};
+    AnyFloat ExtendedAndInternallyRotated = {MaxGlenohumeralExtensionAngle, 0, MaxGlenohumeralInternalRotationAngle};
+    AnyFloat FlexedAndAdducted = {MaxGlenohumeralFlexionAngle, MaxGlenohumeralAdductionAngle, 0};
+    AnyFloat FlexedAndAbducted = {MaxGlenohumeralFlexionAngle, MaxGlenohumeralAbductionAngle, 0};
+
   };
   
   AnyFolder Elbow = {
@@ -19,6 +35,7 @@ AnyFolder RangeOfMotion = {
     AnyVar MaxExtensionAngle = 0;
     AnyVar MaxPronationAngle = 90;
     AnyVar MaxSupinationAngle = -90;
+    AnyVar Neutral = 0;
   };
   
   AnyFolder Wrist = {
@@ -26,5 +43,6 @@ AnyFolder RangeOfMotion = {
     AnyVar MaxExtensionAngle = -70;
     AnyVar MaxAbductionAngle = 20;
     AnyVar MaxAdductionAngle = -35;
+    AnyVar Neutral = 0;
   };
 };
