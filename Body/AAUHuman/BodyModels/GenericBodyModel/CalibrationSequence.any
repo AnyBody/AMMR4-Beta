@@ -84,7 +84,7 @@ AnyFolder Calibration={
     #include "../../Arm/Calibration/CalibrationSequenceRight2Par.any"
   #endif
   #if BM_CALIBRATION_TYPE == _EXPERIMENTAL_CALIBRATION_TYPE_2PAR_
-
+    #include "../../Arm/Calibration/2ParRightCalStudies.any"
   #endif
   #if BM_CALIBRATION_TYPE == _CALIBRATION_TYPE_CUSTOM_
     // Allow user to implement their own calibration
@@ -100,7 +100,7 @@ AnyFolder Calibration={
     #include "../../Arm/Calibration/CalibrationSequenceLeft2Par.any"
   #endif
   #if BM_CALIBRATION_TYPE == _EXPERIMENTAL_CALIBRATION_TYPE_2PAR_
-
+    #include "../../Arm/Calibration/2ParLeftCalStudies.any"
   #endif
   #if BM_CALIBRATION_TYPE == _CALIBRATION_TYPE_CUSTOM_
     // Allow user to implement their own calibration
