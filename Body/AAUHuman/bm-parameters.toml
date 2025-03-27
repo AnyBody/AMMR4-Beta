@@ -585,12 +585,6 @@ default = "ON"
 valuetype = "integer"
 descr = "Parameter defining the existing of reaction on toes when using _FOOT_MODEL_TOE_FLEX_GM_."
 
-[parameters.BM_FOOT_MODEL_LIGAMENTS]
-default = "OFF"
-valuetype = "integer"
-descr = "Parameter for switching the foot ligaments On/Off."
-opt = [ "OFF", "ON"]
-
 [parameters.BM_LEG_MODEL]
 default = "_LEG_MODEL_TLEM2_"
 valuetype = "integer"

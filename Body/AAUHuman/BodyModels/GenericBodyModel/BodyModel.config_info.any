@@ -52,11 +52,6 @@ AnyMessage msg_BM_FOOT_MODEL = { TriggerPreProcess = On; Type = MSG_Message; Mes
 AnyMessage msg_BM_FOOT_MODEL_TOE_FLEX_GM_REACTION = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_FOOT_MODEL_TOE_FLEX_GM_REACTION);};
 #endif
 
-#ifdef BM_FOOT_MODEL_LIGAMENTS
-// Parameter for switching the foot ligaments On/Off.
-AnyMessage msg_BM_FOOT_MODEL_LIGAMENTS = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_FOOT_MODEL_LIGAMENTS);};
-#endif
-
 #ifdef BM_LEG_MODEL
 // Parameter defining the Leg model used.
 AnyMessage msg_BM_LEG_MODEL = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_LEG_MODEL);};
@@ -687,11 +682,6 @@ AnyIntVar value_BM_FOOT_MODEL=BM_FOOT_MODEL;
 #ifdef BM_FOOT_MODEL_TOE_FLEX_GM_REACTION
 // Parameter defining the existing of reaction on toes when using _FOOT_MODEL_TOE_FLEX_GM_.
 AnyIntVar value_BM_FOOT_MODEL_TOE_FLEX_GM_REACTION=BM_FOOT_MODEL_TOE_FLEX_GM_REACTION;
-#endif
-
-#ifdef BM_FOOT_MODEL_LIGAMENTS
-// Parameter for switching the foot ligaments On/Off.
-AnyIntVar value_BM_FOOT_MODEL_LIGAMENTS=BM_FOOT_MODEL_LIGAMENTS;
 #endif
 
 #ifdef BM_LEG_MODEL

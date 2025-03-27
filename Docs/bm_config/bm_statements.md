@@ -169,24 +169,6 @@ Parameter defining the existing of reaction on toes when using _FOOT_MODEL_TOE_F
 ::::
 
 
-::::{dropdown} `BM_FOOT_MODEL_LIGAMENTS`
-:animate: fade-in-slide-down
-:margin: 0 0 3 3
-
-```{ammr:bm_statement} BM_FOOT_MODEL_LIGAMENTS
-
-Parameter for switching the foot ligaments On/Off.
-
-:Default: OFF
-:Example: `#define BM_FOOT_MODEL_LIGAMENTS OFF`
-:Options:
-  - {any}`OFF` -> Switch OFF
-  - {any}`ON` -> Switch ON
-
-```
-::::
-
-
 ::::{dropdown} `BM_LEG_MODEL`
 :animate: fade-in-slide-down
 :margin: 0 0 3 3
