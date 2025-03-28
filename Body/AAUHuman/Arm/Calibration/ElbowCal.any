@@ -256,7 +256,7 @@ AnyFolder ElbowCal ={
   
   AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.ShoulderArm.Muscles);
   
-  AnyObjectPtrArray biceps_brachii_caput_breveMuscles = ObjSearch(MusPrefix+".*.biceps_brachii_caput_br*", "AnyMuscle");
+  AnyObjectPtrArray biceps_brachii_caput_breveMuscles = ObjSearch(MusPrefix+".*.biceps_brachii_caput_bre*", "AnyMuscle");
   AnyFloat  biceps_brachii_caput_breveRmin = repmat(NumElemOf(biceps_brachii_caput_breveMuscles), ..RMin);
   AnyFloat  biceps_brachii_caput_breveRmax = repmat(NumElemOf(biceps_brachii_caput_breveMuscles), ..RMax);
 
