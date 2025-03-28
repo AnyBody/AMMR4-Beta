@@ -12,9 +12,10 @@ AnyFolder RangeOfMotion = {
     AnyVar MaxScapulaClaviculaDepressionAngle = -5;
     AnyVar MaxScapulaClaviculaProtractionAngle = 15;
     AnyVar MaxScapulaClaviculaRetractionAngle = -36;
+    AnyVar Neutral = 0;
     
     // Shoulder positions
-    AnyFloat Neutral = {0,0,0};
+    AnyFloat Neutral = {Neutral, Neutral, Neutral};
     AnyFloat Flexed = {MaxGlenohumeralFlexionAngle, 0, 0};
     AnyFloat Extended = {MaxGlenohumeralExtensionAngle, 0, 0};
     AnyFloat Abducted = {0, MaxGlenohumeralAbductionAngle, 0};

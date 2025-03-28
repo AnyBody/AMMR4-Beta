@@ -12,9 +12,10 @@ AnyFolder RangeOfMotion = {
     AnyVar MaxExtensionInAdductionAngle = -10;
     AnyVar MaxFlexionInAbductionAngle = 90;
     AnyVar MinFlexionInAdduction = 5;
+    AnyVar Neutral = 0;
     
     // Hip positions
-    AnyFloat Neutral = { 0, 0, 0 };
+    AnyFloat Neutral = { Neutral, Neutral, Neutral };
     AnyFloat InternallyRotated = { 0, 0, MaxInternalRotationAngle };
     AnyFloat ExternallyRotated = { 0, 0, MaxExternalRotationAngle };
     AnyFloat Adduction = { MinFlexionInAdduction,  MaxAdductionAngle, 0};
