@@ -37,19 +37,13 @@ valuetype = "integer"
 descr = "Switch off a leg"
 
 [constants._LEG_MODEL_TLEM_]
-default = "2"
-valuetype = "integer"
-descr = "Switch to use leg model: \"TLEM 2\""
-nicename = "TLEM Leg v2"
-
-[constants._LEG_MODEL_TLEM2_]
-default = "2"
+default = "1"
 valuetype = "integer"
 descr = "Switch to use leg model: \"TLEM 2\""
 nicename = "TLEM Leg v2"
 
 [constants._LEG_MODEL_TLEM1_]
-default = "1"
+default = "4"
 deprecated = "true"
 valuetype = "integer"
 descr = "Switch to use leg model: \"TLEM 1\""
@@ -587,10 +581,10 @@ descr = "Parameter for switching the foot ligaments On/Off."
 opt = [ "OFF", "ON"]
 
 [parameters.BM_LEG_MODEL]
-default = "_LEG_MODEL_TLEM2_"
+default = "_LEG_MODEL_TLEM_"
 valuetype = "integer"
 descr = "Parameter defining the Leg model used."
-opt = [ "OFF", "_LEG_MODEL_TLEM2_", "_LEG_MODEL_TLEM_", "_LEG_MODEL_TLEM1_", "_LEG_MODEL_LEG_",]
+opt = [ "OFF", "_LEG_MODEL_TLEM_", "_LEG_MODEL_TLEM_", "_LEG_MODEL_TLEM1_", "_LEG_MODEL_LEG_",]
 
 [parameters.BM_LEG_MODEL_IS_TLEM]
 default = ""

@@ -57,8 +57,8 @@
 
 
 // Parameter defining the Leg model used.
-// #define  BM_LEG_MODEL _LEG_MODEL_TLEM2_
-// Possible values: OFF, _LEG_MODEL_TLEM2_, _LEG_MODEL_TLEM_, _LEG_MODEL_TLEM1_, _LEG_MODEL_LEG_, 
+// #define  BM_LEG_MODEL _LEG_MODEL_TLEM_
+// Possible values: OFF, _LEG_MODEL_TLEM_, _LEG_MODEL_TLEM_, _LEG_MODEL_TLEM1_, _LEG_MODEL_LEG_, 
 
 
 // Read only parameter to check if Leg Model is a variant of the TLEM model.
@@ -626,6 +626,7 @@
 // A compatability switch to add the model tree structure of the muscles from AMMR 4. Use this option to easily load older models.
 // #define  BM_COMPATIBILITY_MUSCLE_STRUCTURE OFF
 // Possible values: ON, OFF
+
 
 // A compatability switch to add the model tree structure of the BodyModel folders from AMMR <4. Use this option to easily load older models.
 // #define  BM_COMPATIBILITY_BODYMODEL_STRUCTURE OFF

@@ -26,7 +26,7 @@ full list of configuration parameters.
 :::
 
 ```AnyScriptDoc
-#define BM_LEG_MODEL _LEG_MODEL_TLEM2_
+#define BM_LEG_MODEL _LEG_MODEL_TLEM_
 #define BM_LEG_RIGHT ON
 #define BM_LEG_LEFT OFF
 #define BM_LEG_MUSCLE _MUSCLES_3E_HILL_

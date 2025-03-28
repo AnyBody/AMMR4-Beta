@@ -1,7 +1,6 @@
 //define = (
 //   [
-//    {'BM_LEG_MODEL':'_LEG_MODEL_TLEM1_'},
-//    {'BM_LEG_MODEL':'_LEG_MODEL_TLEM2_'},
+//    {'BM_LEG_MODEL':'_LEG_MODEL_TLEM_'},
 //    {'BM_LEG_MODEL':'_LEG_MODEL_LEG_'},
 //   ],
 //   [
@@ -43,7 +42,7 @@ Main =
 
     AnyOperation& Calibration = Main.HumanModel.Calibration.CalibrationSequence;
     
-    #if (BM_CALIBRATION_TYPE == 3) & (BM_LEG_MODEL == _LEG_MODEL_TLEM2_)
+    #if (BM_CALIBRATION_TYPE == 3) & (BM_LEG_MODEL == _LEG_MODEL_TLEM_)
       AnyOperation& HipFlexExtRoM = Main.HipFlexExtRoM.InverseDynamics;
       AnyOperation& HipAddAbdRoM = Main.HipAddAbdRoM.InverseDynamics;
       AnyOperation& HipRotRoM = Main.HipRotRoM.InverseDynamics;
@@ -116,7 +115,7 @@ Main =
   };
   
   
-  #if (BM_CALIBRATION_TYPE == 3) & (BM_LEG_MODEL == _LEG_MODEL_TLEM2_)
+  #if (BM_CALIBRATION_TYPE == 3) & (BM_LEG_MODEL == _LEG_MODEL_TLEM_)
   AnyInt TestTrigger = DesignVar(0);  
   AnyOperationMacro UpdateValues = {
       MacroStr = {"classoperation Main " + strquote("Update Values")};
