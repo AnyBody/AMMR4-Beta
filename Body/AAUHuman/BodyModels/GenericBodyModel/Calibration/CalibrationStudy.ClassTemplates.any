@@ -92,6 +92,8 @@
   AnyComponentDefinition CDef = {};
   
   #var AnyObjectPtr ShoulderPositions;
+  #var AnyObjectPtr ScapulaElevationPositions;
+  #var AnyObjectPtr ScapulaProtractionPositions;
   #var AnyObjectPtr ElbowFlexionPositions;
   #var AnyObjectPtr ElbowPronationPositions;
   #var AnyObjectPtr WristFlexionPositions;
@@ -150,7 +152,7 @@
     AnyKinMeasure& Hinge = .BodyModelRef.Interface.Side.ScapulaThoraxProtraction;
     Type = PiecewiseLinear;
     T = linspace(0,1,SizesOf(Data)[1]);
-    Data = {Obj2Num(.ElbowFlexionPositions)} * pi/180;
+    Data = {Obj2Num(.ScapulaProtractionPositions)} * pi/180;
     Reaction.Type = {Off};
     AnyInt expect_nPos_to_match_nStep = warn(eqfun(NumElemOf(T), ..nStep), strformat("The number of calibration positions (Data) in the: " + NameOf(ObjGetParent(0)) + " driver does not match the number of positions (nStep) in the study."));
   };
@@ -159,7 +161,7 @@
     AnyKinMeasure& Hinge = .BodyModelRef.Interface.Side.ScapulaThoraxElevation;
     Type = PiecewiseLinear;
     T = linspace(0,1,SizesOf(Data)[1]);
-    Data = {Obj2Num(.ElbowFlexionPositions)} * pi/180;
+    Data = {Obj2Num(.ScapulaElevationPositions)} * pi/180;
     Reaction.Type = {Off};
     AnyInt expect_nPos_to_match_nStep = warn(eqfun(NumElemOf(T), ..nStep), strformat("The number of calibration positions (Data) in the: " + NameOf(ObjGetParent(0)) + " driver does not match the number of positions (nStep) in the study."));
   };
@@ -244,6 +246,8 @@
   
   ArmCalibrationModel ModelRef(Side=Side, BodyModelRef=BodyModelRef) = {
     ShoulderPositions = .ShoulderPositions;
+    ScapulaElevationPositions = .ScapulaElevationPositions;
+    ScapulaProtractionPositions = .ScapulaProtractionPositions;
     ElbowFlexionPositions = .ElbowFlexionPositions;
     ElbowPronationPositions = .ElbowPronationPositions;
     WristFlexionPositions = .WristFlexionPositions;

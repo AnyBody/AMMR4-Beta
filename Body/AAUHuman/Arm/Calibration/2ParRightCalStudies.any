@@ -41,6 +41,16 @@ ArmCalibrationStudy ArmCalibration1Right(
     &.RangeOfMotion.Right.ShoulderArm.Shoulder.FlexedAndAdducted,
     &.RangeOfMotion.Right.ShoulderArm.Shoulder.FlexedAndAbducted,
   });
+
+  AnyObjectPtrArray ScapulaElevationPositions = flatten({
+    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Shoulder.MaxScapulaClaviculaElevationAngle),
+    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Shoulder.MaxScapulaClaviculaDepressionAngle)
+  });
+  
+  AnyObjectPtrArray ScapulaProtractionPositions = flatten({
+    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Shoulder.MaxScapulaClaviculaProtractionAngle),
+    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Shoulder.MaxScapulaClaviculaRetractionAngle)
+  });
   
   AnyObjectPtrArray ElbowFlexionPositions = flatten({
     repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Elbow.MaxFlexionAngle), 
@@ -96,13 +106,27 @@ ArmCalibrationStudy ArmCalibration2Right(
     &.RangeOfMotion.Right.ShoulderArm.Shoulder.Flexed,
     &.RangeOfMotion.Right.ShoulderArm.Shoulder.Extended,
   });
+
+  AnyObjectPtrArray ScapulaElevationPositions = flatten({
+    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Shoulder.MaxScapulaClaviculaElevationAngle),
+    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Shoulder.MaxScapulaClaviculaDepressionAngle)
+  });
   
+  AnyObjectPtrArray ScapulaProtractionPositions = flatten({
+    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Shoulder.MaxScapulaClaviculaProtractionAngle),
+    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Shoulder.MaxScapulaClaviculaRetractionAngle)
+  });
+
   AnyObjectPtrArray ElbowFlexionPositions = flatten({
     repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Elbow.MaxFlexionAngle), 
     repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Elbow.MaxExtensionAngle)
   });
 
-  AnyObjectPtrArray ElbowPronationPositions = repmat(nPos, &.RangeOfMotion.Right.ShoulderArm.Elbow.Neutral);
+  AnyObjectPtrArray ElbowPronationPositions = flatten({
+    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Elbow.MaxPronationAngle),
+    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Elbow.MaxSupinationAngle)
+  });
+
   AnyObjectPtrArray WristFlexionPositions = repmat(nPos, &.RangeOfMotion.Right.ShoulderArm.Wrist.Neutral);
   AnyObjectPtrArray WristAbductionPositions = repmat(nPos, &.RangeOfMotion.Right.ShoulderArm.Wrist.Neutral);
 
@@ -146,6 +170,16 @@ ArmCalibrationStudy ArmCalibration3Right(
   AnyObjectPtrArray ShoulderPositions = repmat(2,{
     &.RangeOfMotion.Right.ShoulderArm.Shoulder.Flexed,
     &.RangeOfMotion.Right.ShoulderArm.Shoulder.Extended,
+  });
+  
+  AnyObjectPtrArray ScapulaElevationPositions = flatten({
+    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Shoulder.MaxScapulaClaviculaElevationAngle),
+    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Shoulder.MaxScapulaClaviculaDepressionAngle)
+  });
+  
+  AnyObjectPtrArray ScapulaProtractionPositions = flatten({
+    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Shoulder.MaxScapulaClaviculaProtractionAngle),
+    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Shoulder.MaxScapulaClaviculaRetractionAngle)
   });
   
   AnyObjectPtrArray ElbowFlexionPositions = flatten({
@@ -203,6 +237,16 @@ ArmCalibrationStudy ArmCalibration4Right(
     &.RangeOfMotion.Right.ShoulderArm.Shoulder.Extended,
   });
   
+  AnyObjectPtrArray ScapulaElevationPositions = flatten({
+    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Shoulder.MaxScapulaClaviculaElevationAngle),
+    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Shoulder.MaxScapulaClaviculaDepressionAngle)
+  });
+  
+  AnyObjectPtrArray ScapulaProtractionPositions = flatten({
+    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Shoulder.MaxScapulaClaviculaProtractionAngle),
+    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Shoulder.MaxScapulaClaviculaRetractionAngle)
+  });
+
   AnyObjectPtrArray ElbowFlexionPositions = flatten({
     repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Elbow.MaxFlexionAngle), 
     repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Elbow.MaxExtensionAngle)
@@ -253,6 +297,16 @@ ArmCalibrationStudy ArmCalibration5Right(
   AnyObjectPtrArray ShoulderPositions = repmat(2,{
     &.RangeOfMotion.Right.ShoulderArm.Shoulder.Flexed,
     &.RangeOfMotion.Right.ShoulderArm.Shoulder.Extended,
+  });
+
+  AnyObjectPtrArray ScapulaElevationPositions = flatten({
+    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Shoulder.MaxScapulaClaviculaElevationAngle),
+    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Shoulder.MaxScapulaClaviculaDepressionAngle)
+  });
+  
+  AnyObjectPtrArray ScapulaProtractionPositions = flatten({
+    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Shoulder.MaxScapulaClaviculaProtractionAngle),
+    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Shoulder.MaxScapulaClaviculaRetractionAngle)
   });
   
   AnyObjectPtrArray ElbowFlexionPositions = flatten({
@@ -315,14 +369,35 @@ ArmCalibrationStudy ArmCalibration6Right(
     &.RangeOfMotion.Right.ShoulderArm.Shoulder.Extended,
   });
   
+  AnyObjectPtrArray ScapulaElevationPositions = flatten({
+    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Shoulder.MaxScapulaClaviculaElevationAngle),
+    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Shoulder.MaxScapulaClaviculaDepressionAngle)
+  });
+  
+  AnyObjectPtrArray ScapulaProtractionPositions = flatten({
+    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Shoulder.MaxScapulaClaviculaProtractionAngle),
+    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Shoulder.MaxScapulaClaviculaRetractionAngle)
+  });
+
   AnyObjectPtrArray ElbowFlexionPositions = flatten({
     repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Elbow.MaxFlexionAngle), 
     repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Elbow.MaxExtensionAngle)
   });
 
-  AnyObjectPtrArray ElbowPronationPositions = repmat(nPos, &.RangeOfMotion.Right.ShoulderArm.Elbow.Neutral);
-  AnyObjectPtrArray WristFlexionPositions = repmat(nPos, &.RangeOfMotion.Right.ShoulderArm.Wrist.Neutral);
-  AnyObjectPtrArray WristAbductionPositions = repmat(nPos, &.RangeOfMotion.Right.ShoulderArm.Wrist.Neutral);
+  AnyObjectPtrArray ElbowPronationPositions = flatten({
+    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Elbow.MaxPronationAngle),
+    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Elbow.MaxSupinationAngle)
+  });
+  
+  AnyObjectPtrArray WristFlexionPositions = flatten({
+    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Wrist.MaxFlexionAngle),
+    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Wrist.MaxExtensionAngle)
+  });
+
+  AnyObjectPtrArray WristAbductionPositions = flatten({
+    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Wrist.MaxAbductionAngle),
+    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Wrist.MaxAdductionAngle)
+  });
 
   #if BM_ARM_DETAILED_HAND
     ModelRef = { #include "DetailedHandDrivers.any" };
