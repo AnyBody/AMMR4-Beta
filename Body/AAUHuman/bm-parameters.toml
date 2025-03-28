@@ -644,6 +644,25 @@ descr = "Parameter to define muscle behavior of the right leg"
 nicename = "Right"
 opt = [ "OFF", "_MUSCLES_SIMPLE_", "_MUSCLES_3E_HILL_", "BM_LEG_MUSCLES_BOTH",]
 
+[parameters.BM_FOOT_MUSCLES_BOTH]
+default = "_MUSCLES_SIMPLE_"
+valuetype = "integer"
+descr = "Parameter to define muscle behavior of both right and left foot"
+opt = [ "OFF", "_MUSCLES_SIMPLE_", "_MUSCLES_3E_HILL_",]
+
+[parameters.BM_FOOT_MUSCLES_LEFT]
+default = "BM_FOOT_MUSCLES_BOTH"
+valuetype = "integer"
+descr = "Parameter to define muscle behavior of the left foot"
+nicename = "Left"
+opt = [ "OFF", "_MUSCLES_SIMPLE_", "_MUSCLES_3E_HILL_", "BM_FOOT_MUSCLES_BOTH",]
+
+[parameters.BM_FOOT_MUSCLES_RIGHT]
+default = "BM_FOOT_MUSCLES_BOTH"
+valuetype = "integer"
+descr = "Parameter to define muscle behavior of the right foot"
+nicename = "Right"
+opt = [ "OFF", "_MUSCLES_SIMPLE_", "_MUSCLES_3E_HILL_", "BM_FOOT_MUSCLES_BOTH",]
 
 [parameters.BM_LEG_DATASET]
 type = "#path"

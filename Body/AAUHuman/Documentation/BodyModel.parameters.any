@@ -95,6 +95,21 @@
 // Possible values: OFF, _MUSCLES_SIMPLE_, _MUSCLES_3E_HILL_, BM_LEG_MUSCLES_BOTH, 
 
 
+// Parameter to define muscle behavior of both right and left foot
+// #define  BM_FOOT_MUSCLES_BOTH _MUSCLES_SIMPLE_
+// Possible values: OFF, _MUSCLES_SIMPLE_, _MUSCLES_3E_HILL_, 
+
+
+// Parameter to define muscle behavior of the left foot
+// #define  BM_FOOT_MUSCLES_LEFT BM_FOOT_MUSCLES_BOTH
+// Possible values: OFF, _MUSCLES_SIMPLE_, _MUSCLES_3E_HILL_, BM_FOOT_MUSCLES_BOTH, 
+
+
+// Parameter to define muscle behavior of the right foot
+// #define  BM_FOOT_MUSCLES_RIGHT BM_FOOT_MUSCLES_BOTH
+// Possible values: OFF, _MUSCLES_SIMPLE_, _MUSCLES_3E_HILL_, BM_FOOT_MUSCLES_BOTH, 
+
+
 // Path to specify the underlying dataset. This currently only affects the TLEM based models. Valid options depends on which model (TLEM1/2) is used, and what dataset are available. If not specified, this will be configure automatically.
 // #path  BM_LEG_DATASET 
 
