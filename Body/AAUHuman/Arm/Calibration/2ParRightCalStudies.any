@@ -2,7 +2,7 @@ ArmCalibrationStudy ArmCalibration1Right(
   BodyModelRef=Main.HumanModel.BodyModel,
   Side=Right,
 ) = {
-  nStep = nPos;
+  nStep = NumElemOf(ShoulderPositions);
   
   MuscleArr = ObjSearch(
     &..BodyModel.Right.ShoulderArm.Muscles,
@@ -25,9 +25,8 @@ ArmCalibrationStudy ArmCalibration1Right(
   
   RminMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMinDefault);
   RmaxMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMaxDefault);
-  
-  AnyInt nPos = NumElemOf(ShoulderPositions);
-  AnyObjectPtrArray ShoulderPositions = repmat(2,{
+
+  ShoulderPositions = repmat(2,{
     &.RangeOfMotion.Right.ShoulderArm.Shoulder.Flexed,
     &.RangeOfMotion.Right.ShoulderArm.Shoulder.Extended,
     &.RangeOfMotion.Right.ShoulderArm.Shoulder.Abducted,
@@ -42,387 +41,29 @@ ArmCalibrationStudy ArmCalibration1Right(
     &.RangeOfMotion.Right.ShoulderArm.Shoulder.FlexedAndAbducted,
   });
 
-  AnyObjectPtrArray ScapulaElevationPositions = flatten({
-    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Shoulder.MaxScapulaClaviculaElevationAngle),
-    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Shoulder.MaxScapulaClaviculaDepressionAngle)
+  ScapulaElevationPositions = flatten({
+    repmat(round(nStep/2), &.RangeOfMotion.Right.ShoulderArm.Shoulder.MaxScapulaClaviculaElevationAngle),
+    repmat(round(nStep/2), &.RangeOfMotion.Right.ShoulderArm.Shoulder.MaxScapulaClaviculaDepressionAngle)
   });
   
-  AnyObjectPtrArray ScapulaProtractionPositions = flatten({
-    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Shoulder.MaxScapulaClaviculaProtractionAngle),
-    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Shoulder.MaxScapulaClaviculaRetractionAngle)
+  ScapulaProtractionPositions = flatten({
+    repmat(round(nStep/2), &.RangeOfMotion.Right.ShoulderArm.Shoulder.MaxScapulaClaviculaProtractionAngle),
+    repmat(round(nStep/2), &.RangeOfMotion.Right.ShoulderArm.Shoulder.MaxScapulaClaviculaRetractionAngle)
   });
   
-  AnyObjectPtrArray ElbowFlexionPositions = flatten({
-    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Elbow.MaxFlexionAngle), 
-    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Elbow.MaxExtensionAngle)
+  ElbowFlexionPositions = flatten({
+    repmat(round(nStep/2), &.RangeOfMotion.Right.ShoulderArm.Elbow.MaxFlexionAngle), 
+    repmat(round(nStep/2), &.RangeOfMotion.Right.ShoulderArm.Elbow.MaxExtensionAngle)
   });
 
-  AnyObjectPtrArray ElbowPronationPositions = repmat(nPos, &.RangeOfMotion.Right.ShoulderArm.Elbow.Neutral);
-  AnyObjectPtrArray WristFlexionPositions = repmat(nPos, &.RangeOfMotion.Right.ShoulderArm.Wrist.Neutral);
-  AnyObjectPtrArray WristAbductionPositions = repmat(nPos, &.RangeOfMotion.Right.ShoulderArm.Wrist.Neutral);
+  ElbowPronationPositions = repmat(nStep, &.RangeOfMotion.Right.ShoulderArm.Elbow.Neutral);
+  WristFlexionPositions = repmat(nStep, &.RangeOfMotion.Right.ShoulderArm.Wrist.Neutral);
+  WristAbductionPositions = repmat(nStep, &.RangeOfMotion.Right.ShoulderArm.Wrist.Neutral);
 
-  #if BM_ARM_DETAILED_HAND
-    ModelRef = { #include "DetailedHandDrivers.any" };
-  #endif
-
-  #if BM_ARM_SHOULDER_RHYTHM
-    ModelRef = {
-      // Exclude the shoulder rythm, since the drivers handles all DOFs.
-      AnyMechObjectExcluder ExcludeShoulderRhythm ={
-        Objects = arrcat(
-        &.Joints.ClaviculaProtractionDriver,
-        &.Joints.ClaviculaElevationDriver,
-        ObjSearch(&.Joints, "ClaviculaAxialRotationDriver")
-        );
-      };
-    };
-  #endif
 };
 
-ArmCalibrationStudy ArmCalibration2Right(
-  BodyModelRef=Main.HumanModel.BodyModel,
-  Side=Right,
-) = {
-  nStep = nPos;
-  
-  MuscleArr = ObjSearch(
-    &..BodyModel.Right.ShoulderArm.Muscles,
-    {
-      "Anconeus.*",
-      "BicepsBrachii.*",
-      "Brachialis.*",
-      "Brachioradialis.*",
-      "Coracobrachialis.*",
-      "Triceps.*",
-    }, 
-    "AnyMuscle"
-  );
-  
-  RminMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMinDefault);
-  RmaxMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMaxDefault);
-  
-  AnyInt nPos = NumElemOf(ShoulderPositions);
-  AnyObjectPtrArray ShoulderPositions = repmat(2,{
-    &.RangeOfMotion.Right.ShoulderArm.Shoulder.Flexed,
-    &.RangeOfMotion.Right.ShoulderArm.Shoulder.Extended,
-  });
-
-  AnyObjectPtrArray ScapulaElevationPositions = flatten({
-    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Shoulder.MaxScapulaClaviculaElevationAngle),
-    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Shoulder.MaxScapulaClaviculaDepressionAngle)
-  });
-  
-  AnyObjectPtrArray ScapulaProtractionPositions = flatten({
-    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Shoulder.MaxScapulaClaviculaProtractionAngle),
-    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Shoulder.MaxScapulaClaviculaRetractionAngle)
-  });
-
-  AnyObjectPtrArray ElbowFlexionPositions = flatten({
-    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Elbow.MaxFlexionAngle), 
-    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Elbow.MaxExtensionAngle)
-  });
-
-  AnyObjectPtrArray ElbowPronationPositions = flatten({
-    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Elbow.MaxPronationAngle),
-    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Elbow.MaxSupinationAngle)
-  });
-
-  AnyObjectPtrArray WristFlexionPositions = repmat(nPos, &.RangeOfMotion.Right.ShoulderArm.Wrist.Neutral);
-  AnyObjectPtrArray WristAbductionPositions = repmat(nPos, &.RangeOfMotion.Right.ShoulderArm.Wrist.Neutral);
-
-  #if BM_ARM_DETAILED_HAND
-    ModelRef = { #include "DetailedHandDrivers.any" };
-  #endif
-
-  #if BM_ARM_SHOULDER_RHYTHM
-    ModelRef = {
-      // Exclude the shoulder rythm, since the drivers handles all DOFs.
-      AnyMechObjectExcluder ExcludeShoulderRhythm = {
-        Objects = arrcat(
-        &.Joints.ClaviculaProtractionDriver,
-        &.Joints.ClaviculaElevationDriver,
-        ObjSearch(&.Joints, "ClaviculaAxialRotationDriver")
-        );
-      };
-    };
-  #endif
-};
-
-ArmCalibrationStudy ArmCalibration3Right(
-  BodyModelRef=Main.HumanModel.BodyModel,
-  Side=Right,
-) = {
-  nStep = nPos;
-  
-  MuscleArr = ObjSearch(
-    &..BodyModel.Right.ShoulderArm.Muscles,
-    {
-      "AbductorPollicis.*",
-      "FlexorPollicisLongus.*",
-    }, 
-    "AnyMuscle"
-  );
-  
-  RminMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMinDefault);
-  RmaxMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMaxDefault);
-  
-  AnyInt nPos = NumElemOf(ShoulderPositions);
-  AnyObjectPtrArray ShoulderPositions = repmat(2,{
-    &.RangeOfMotion.Right.ShoulderArm.Shoulder.Flexed,
-    &.RangeOfMotion.Right.ShoulderArm.Shoulder.Extended,
-  });
-  
-  AnyObjectPtrArray ScapulaElevationPositions = flatten({
-    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Shoulder.MaxScapulaClaviculaElevationAngle),
-    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Shoulder.MaxScapulaClaviculaDepressionAngle)
-  });
-  
-  AnyObjectPtrArray ScapulaProtractionPositions = flatten({
-    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Shoulder.MaxScapulaClaviculaProtractionAngle),
-    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Shoulder.MaxScapulaClaviculaRetractionAngle)
-  });
-  
-  AnyObjectPtrArray ElbowFlexionPositions = flatten({
-    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Elbow.MaxFlexionAngle), 
-    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Elbow.MaxExtensionAngle)
-  });
-
-  AnyObjectPtrArray ElbowPronationPositions = repmat(nPos, &.RangeOfMotion.Right.ShoulderArm.Elbow.Neutral);
-  AnyObjectPtrArray WristFlexionPositions = repmat(nPos, &.RangeOfMotion.Right.ShoulderArm.Wrist.Neutral);
-  AnyObjectPtrArray WristAbductionPositions = repmat(nPos, &.RangeOfMotion.Right.ShoulderArm.Wrist.Neutral);
-
-  #if BM_ARM_DETAILED_HAND
-    ModelRef = { #include "DetailedHandDrivers.any" };
-  #endif
-
-  #if BM_ARM_SHOULDER_RHYTHM
-    ModelRef = {
-      // Exclude the shoulder rythm, since the drivers handles all DOFs.
-      AnyMechObjectExcluder ExcludeShoulderRhythm = {
-        Objects = arrcat(
-        &.Joints.ClaviculaProtractionDriver,
-        &.Joints.ClaviculaElevationDriver,
-        ObjSearch(&.Joints, "ClaviculaAxialRotationDriver")
-        );
-      };
-    };
-  #endif
-};
-
-ArmCalibrationStudy ArmCalibration4Right(
-  BodyModelRef=Main.HumanModel.BodyModel,
-  Side=Right,
-) = {
-  nStep = nPos;
-  
-  MuscleArr = ObjSearch(
-    &..BodyModel.Right.ShoulderArm.Muscles,
-    {
-      "Rhomboideus.*",
-      "Sternocleidomastoid.*",
-      "TeresMajor.*",
-      "TeresMinor.*",
-      "TrapeziusClavicular.*",
-      "TrapeziusScapular.*",
-    }, 
-    "AnyMuscle"
-  );
-  
-  RminMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMinDefault);
-  RmaxMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMaxDefault);
-  
-  AnyInt nPos = NumElemOf(ShoulderPositions);
-  AnyObjectPtrArray ShoulderPositions = repmat(2,{
-    &.RangeOfMotion.Right.ShoulderArm.Shoulder.Flexed,
-    &.RangeOfMotion.Right.ShoulderArm.Shoulder.Extended,
-  });
-  
-  AnyObjectPtrArray ScapulaElevationPositions = flatten({
-    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Shoulder.MaxScapulaClaviculaElevationAngle),
-    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Shoulder.MaxScapulaClaviculaDepressionAngle)
-  });
-  
-  AnyObjectPtrArray ScapulaProtractionPositions = flatten({
-    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Shoulder.MaxScapulaClaviculaProtractionAngle),
-    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Shoulder.MaxScapulaClaviculaRetractionAngle)
-  });
-
-  AnyObjectPtrArray ElbowFlexionPositions = flatten({
-    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Elbow.MaxFlexionAngle), 
-    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Elbow.MaxExtensionAngle)
-  });
-
-  AnyObjectPtrArray ElbowPronationPositions = repmat(nPos, &.RangeOfMotion.Right.ShoulderArm.Elbow.Neutral);
-  AnyObjectPtrArray WristFlexionPositions = repmat(nPos, &.RangeOfMotion.Right.ShoulderArm.Wrist.Neutral);
-  AnyObjectPtrArray WristAbductionPositions = repmat(nPos, &.RangeOfMotion.Right.ShoulderArm.Wrist.Neutral);
-
-  #if BM_ARM_DETAILED_HAND
-    ModelRef = { #include "DetailedHandDrivers.any" };
-  #endif
-
-  #if BM_ARM_SHOULDER_RHYTHM
-    ModelRef = {
-      // Exclude the shoulder rythm, since the drivers handles all DOFs.
-      AnyMechObjectExcluder ExcludeShoulderRhythm = {
-        Objects = arrcat(
-        &.Joints.ClaviculaProtractionDriver,
-        &.Joints.ClaviculaElevationDriver,
-        ObjSearch(&.Joints, "ClaviculaAxialRotationDriver")
-        );
-      };
-    };
-  #endif
-};
-
-ArmCalibrationStudy ArmCalibration5Right(
-  BodyModelRef=Main.HumanModel.BodyModel,
-  Side=Right,
-) = {
-  nStep = nPos;
-  
-  MuscleArr = ObjSearch(
-    &..BodyModel.Right.ShoulderArm.Muscles,
-    {
-      "PronatorQuadratus.*",
-      "PronatorTeres.*",
-      "Supinator.*",
-    }, 
-    "AnyMuscle"
-  );
-  
-  RminMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMinDefault);
-  RmaxMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMaxDefault);
-  
-  AnyInt nPos = NumElemOf(ShoulderPositions);
-  AnyObjectPtrArray ShoulderPositions = repmat(2,{
-    &.RangeOfMotion.Right.ShoulderArm.Shoulder.Flexed,
-    &.RangeOfMotion.Right.ShoulderArm.Shoulder.Extended,
-  });
-
-  AnyObjectPtrArray ScapulaElevationPositions = flatten({
-    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Shoulder.MaxScapulaClaviculaElevationAngle),
-    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Shoulder.MaxScapulaClaviculaDepressionAngle)
-  });
-  
-  AnyObjectPtrArray ScapulaProtractionPositions = flatten({
-    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Shoulder.MaxScapulaClaviculaProtractionAngle),
-    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Shoulder.MaxScapulaClaviculaRetractionAngle)
-  });
-  
-  AnyObjectPtrArray ElbowFlexionPositions = flatten({
-    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Elbow.MaxFlexionAngle), 
-    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Elbow.MaxExtensionAngle)
-  });
-
-  AnyObjectPtrArray ElbowPronationPositions = repmat(nPos, &.RangeOfMotion.Right.ShoulderArm.Elbow.Neutral);
-  AnyObjectPtrArray WristFlexionPositions = repmat(nPos, &.RangeOfMotion.Right.ShoulderArm.Wrist.Neutral);
-  AnyObjectPtrArray WristAbductionPositions = repmat(nPos, &.RangeOfMotion.Right.ShoulderArm.Wrist.Neutral);
-
-  #if BM_ARM_DETAILED_HAND
-    ModelRef = { #include "DetailedHandDrivers.any" };
-  #endif
-
-  #if BM_ARM_SHOULDER_RHYTHM
-    ModelRef = {
-      // Exclude the shoulder rythm, since the drivers handles all DOFs.
-      AnyMechObjectExcluder ExcludeShoulderRhythm = {
-        Objects = arrcat(
-        &.Joints.ClaviculaProtractionDriver,
-        &.Joints.ClaviculaElevationDriver,
-        ObjSearch(&.Joints, "ClaviculaAxialRotationDriver")
-        );
-      };
-    };
-  #endif
-};
-
-ArmCalibrationStudy ArmCalibration6Right(
-  BodyModelRef=Main.HumanModel.BodyModel,
-  Side=Right,
-) = {
-  nStep = nPos;
-  
-  MuscleArr = ObjSearch(
-    &..BodyModel.Right.ShoulderArm.Muscles,
-    {
-      "ExtensorCarpiRadialis.*",
-      "ExtensorCarpiUlnaris.*",
-      "ExtensorDigitiMinimi.*",
-      "ExtensorDigitorum.*",
-      "ExtensorIndicis.*",
-      "ExtensorPollicis.*",
-      "FlexorCarpiRadialis.*",
-      "FlexorCarpiUlnaris.*",
-      "FlexorDigitorumProfundus.*",
-      "FlexorDigitorumSuperficialis.*",
-      "PalmarisLongus.*",
-    }, 
-    "AnyMuscle"
-  );
-  
-  RminMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMinDefault);
-  RmaxMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMaxDefault);
-  
-  AnyInt nPos = NumElemOf(ShoulderPositions);
-  AnyObjectPtrArray ShoulderPositions = repmat(2,{
-    &.RangeOfMotion.Right.ShoulderArm.Shoulder.Flexed,
-    &.RangeOfMotion.Right.ShoulderArm.Shoulder.Extended,
-  });
-  
-  AnyObjectPtrArray ScapulaElevationPositions = flatten({
-    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Shoulder.MaxScapulaClaviculaElevationAngle),
-    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Shoulder.MaxScapulaClaviculaDepressionAngle)
-  });
-  
-  AnyObjectPtrArray ScapulaProtractionPositions = flatten({
-    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Shoulder.MaxScapulaClaviculaProtractionAngle),
-    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Shoulder.MaxScapulaClaviculaRetractionAngle)
-  });
-
-  AnyObjectPtrArray ElbowFlexionPositions = flatten({
-    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Elbow.MaxFlexionAngle), 
-    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Elbow.MaxExtensionAngle)
-  });
-
-  AnyObjectPtrArray ElbowPronationPositions = flatten({
-    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Elbow.MaxPronationAngle),
-    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Elbow.MaxSupinationAngle)
-  });
-  
-  AnyObjectPtrArray WristFlexionPositions = flatten({
-    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Wrist.MaxFlexionAngle),
-    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Wrist.MaxExtensionAngle)
-  });
-
-  AnyObjectPtrArray WristAbductionPositions = flatten({
-    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Wrist.MaxAbductionAngle),
-    repmat(round(nPos/2), &.RangeOfMotion.Right.ShoulderArm.Wrist.MaxAdductionAngle)
-  });
-
-  #if BM_ARM_DETAILED_HAND
-    ModelRef = { #include "DetailedHandDrivers.any" };
-  #endif
-
-  #if BM_ARM_SHOULDER_RHYTHM
-    ModelRef = {
-      // Exclude the shoulder rythm, since the drivers handles all DOFs.
-      AnyMechObjectExcluder ExcludeShoulderRhythm = {
-        Objects = arrcat(
-        &.Joints.ClaviculaProtractionDriver,
-        &.Joints.ClaviculaElevationDriver,
-        ObjSearch(&.Joints, "ClaviculaAxialRotationDriver")
-        );
-      };
-    };
-  #endif
-};
 
 
 CalibrationSequence = {
   AnyOperation &ArmCal1Right = .ArmCalibration1Right.FiberAndTendonLengthAdjustment;
-  AnyOperation &ArmCal2Right = .ArmCalibration2Right.FiberAndTendonLengthAdjustment;
-  AnyOperation &ArmCal3Right = .ArmCalibration3Right.FiberAndTendonLengthAdjustment;
-  AnyOperation &ArmCal4Right = .ArmCalibration4Right.FiberAndTendonLengthAdjustment;
-  AnyOperation &ArmCal5Right = .ArmCalibration5Right.FiberAndTendonLengthAdjustment;
-  AnyOperation &ArmCal6Right = .ArmCalibration6Right.FiberAndTendonLengthAdjustment;
 };

@@ -1,20 +1,9 @@
-/** 
-  Class template for creating a model that can be used to calibrate the legs 
-*/
-#class_template LegCalibrationModel(Side, BodyModelRef) {
-  AnyComponentDefinition CDef = {};
-  
-  #var AnyObjectPtr HipPositions;
-  #var AnyObjectPtr KneePositions;
-  #var AnyObjectPtr AnklePositions;
-  #var AnyObjectPtr SubTalarPositions;
+
+#class_template TrunkCalibrationModel(Side, BodyModelRef) {
   
   AnyFolder &TrunkSegments = BodyModelRef.Trunk.Segments;
   AnyFolder &TrunkJoints = BodyModelRef.Trunk.Joints;
   
-  AnyFolder &LegSegments = BodyModelRef.Side.Leg.Seg;
-  AnyFolder &LegJoints = BodyModelRef.Side.Leg.Jnt;
-    
   // Constraints
   AnyFixedRefFrame ground = {
     AnyRefNode node = {
@@ -43,165 +32,41 @@
       AnyRefFrame &Pelvis = ..TrunkSegments.PelvisSeg;
     };
   };
-  
-  AnyKinEqInterPolDriver Hip = {
-    AnyKinRotational &Spherical = .BodyModelRef.Interface.Side.HipFlexion.HipMeasure;
-    Type = PiecewiseLinear;
-    T = linspace(0,1,SizesOf(Data)[1]);
-    Data = Obj2Num(.HipPositions)' * pi/180;
-    Reaction.Type = {Off, Off, Off};
-    AnyInt expect_nPos_to_match_nStep = warn(eqfun(NumElemOf(T), ..nStep), strformat("The number of calibration positions (Data) in the: " + NameOf(ObjGetParent(0)) + " driver does not match the number of positions (nStep) in the study."));
-    
-  };
-  
-  AnyKinEqInterPolDriver Knee = {
-    AnyKinMeasure& Hinge = .BodyModelRef.Interface.Side.KneeFlexion;
-    Type = PiecewiseLinear;
-    T = linspace(0,1,SizesOf(Data)[1]);
-    Data = {Obj2Num(.KneePositions)} * pi/180;
-    Reaction.Type = {Off};
-    AnyInt expect_nPos_to_match_nStep = warn(eqfun(NumElemOf(T), ..nStep), strformat("The number of calibration positions (Data) in the: " + NameOf(ObjGetParent(0)) + " driver does not match the number of positions (nStep) in the study."));
-    
-  };
-  
-  AnyKinEqInterPolDriver Ankle = {
-    AnyKinMeasure& Hinge = .BodyModelRef.Interface.Side.AnklePlantarFlexion;
-    Type = PiecewiseLinear;
-    T = linspace(0,1,SizesOf(Data)[1]);
-    Data = {Obj2Num(.AnklePositions)} * pi/180;
-    Reaction.Type = {Off};
-    AnyInt expect_nPos_to_match_nStep = warn(eqfun(NumElemOf(T), ..nStep), strformat("The number of calibration positions (Data) in the: " + NameOf(ObjGetParent(0)) + " driver does not match the number of positions (nStep) in the study."));
-    
-  };
-  
-  AnyKinEqInterPolDriver SubTalar = {
-    AnyKinMeasure& Hinge = .BodyModelRef.Interface.Side.SubTalarEversion;
-    Type = PiecewiseLinear;
-    T = linspace(0,1,SizesOf(Data)[1]);
-    Data = {Obj2Num(.SubTalarPositions)} * pi/180;
-    Reaction.Type = {Off};
-    AnyInt expect_nPos_to_match_nStep = warn(eqfun(NumElemOf(T), ..nStep), strformat("The number of calibration positions (Data) in the: " + NameOf(ObjGetParent(0)) + " driver does not match the number of positions (nStep) in the study."));
-    
-  };
 };
 
-/** 
-  Class template for creating a model that can be used to calibrate the arms 
+
+/**
+  Class template to create a driver for a single-DoF measure in a calibration study.
 */
-#class_template ArmCalibrationModel(Side, BodyModelRef) {
-  AnyComponentDefinition CDef = {};
-  
-  #var AnyObjectPtr ShoulderPositions;
-  #var AnyObjectPtr ScapulaElevationPositions;
-  #var AnyObjectPtr ScapulaProtractionPositions;
-  #var AnyObjectPtr ElbowFlexionPositions;
-  #var AnyObjectPtr ElbowPronationPositions;
-  #var AnyObjectPtr WristFlexionPositions;
-  #var AnyObjectPtr WristAbductionPositions;
-  
-  AnyFolder &TrunkSegments = BodyModelRef.Trunk.Segments;  
-  AnyFolder &TrunkJoints = BodyModelRef.Trunk.Joints;
-  
-  AnyFolder &Segments = BodyModelRef.Side.ShoulderArm.Segments;
-  AnyFolder &Joints = BodyModelRef.Side.ShoulderArm.Joints;
-
-  // The Muscles folder contain segments and constraints for some wrapping muscles
-  // e.g. Deltoid, Pectoralis Minor, etc.
-  AnyFolder &Muscles = BodyModelRef.Side.ShoulderArm.Muscles;
-
-  // Constraints
-  AnyFixedRefFrame ground = {
-    AnyRefNode node = {
-      ARel = ..TrunkSegments.PelvisSeg.Axes0;
-      sRel = ..TrunkSegments.PelvisSeg.r0;
-    };
-  };
-  
-  AnyKinEq ThoraxFix = {
-    AnyKinMeasure& PelvisThoraxExtension = BodyModelRef.Interface.Trunk.PelvisThoraxExtension;
-    AnyKinMeasure& PelvisThoraxLateralBending = BodyModelRef.Interface.Trunk.PelvisThoraxLateralBending;
-    AnyKinMeasure& PelvisThoraxRotation = BodyModelRef.Interface.Trunk.PelvisThoraxRotation;
-    AnyKinMeasure& SkullThoraxFlexion = BodyModelRef.Interface.Trunk.SkullThoraxFlexion;
-    AnyKinMeasure& SkullThoraxRotation = BodyModelRef.Interface.Trunk.SkullThoraxRotation;
-    AnyKinMeasure& SkullThoraxLateralBending = BodyModelRef.Interface.Trunk.SkullThoraxLateralBending;
-  };
-  
-  AnyKinEq PelvisFix = {
-    AnyKinLinear Lin = {
-      AnyRefFrame &ground = ..ground.node;
-      AnyRefFrame &Pelvis = ..TrunkSegments.PelvisSeg;
-    };
-    AnyKinRotational Rot = {
-      Type = RotAxesAngles;
-      AnyRefFrame &ground = ..ground.node;
-      AnyRefFrame &Pelvis = ..TrunkSegments.PelvisSeg;
-    };
-  };
-  
-
-  AnyKinEqInterPolDriver Shoulder = {
-    AnyKinRotational &Spherical = .BodyModelRef.Interface.Side.GlenohumeralFlexion.GHMeasure;
-    Type = PiecewiseLinear;
-    T = linspace(0,1,SizesOf(Data)[1]);
-    Data = Obj2Num(.ShoulderPositions)' * pi/180;
-    Reaction.Type = {Off, Off, Off};
-    AnyInt expect_nPos_to_match_nStep = warn(eqfun(NumElemOf(T), ..nStep), strformat("The number of calibration positions (Data) in the: " + NameOf(ObjGetParent(0)) + " driver does not match the number of positions (nStep) in the study."));
-  };
-  
-  AnyKinEqInterPolDriver ScapulaProtraction = {
-    AnyKinMeasure& Hinge = .BodyModelRef.Interface.Side.ScapulaThoraxProtraction;
-    Type = PiecewiseLinear;
-    T = linspace(0,1,SizesOf(Data)[1]);
-    Data = {Obj2Num(.ScapulaProtractionPositions)} * pi/180;
-    Reaction.Type = {Off};
-    AnyInt expect_nPos_to_match_nStep = warn(eqfun(NumElemOf(T), ..nStep), strformat("The number of calibration positions (Data) in the: " + NameOf(ObjGetParent(0)) + " driver does not match the number of positions (nStep) in the study."));
-  };
-  
-  AnyKinEqInterPolDriver ScapulaElevation = {
-    AnyKinMeasure& Hinge = .BodyModelRef.Interface.Side.ScapulaThoraxElevation;
-    Type = PiecewiseLinear;
-    T = linspace(0,1,SizesOf(Data)[1]);
-    Data = {Obj2Num(.ScapulaElevationPositions)} * pi/180;
-    Reaction.Type = {Off};
-    AnyInt expect_nPos_to_match_nStep = warn(eqfun(NumElemOf(T), ..nStep), strformat("The number of calibration positions (Data) in the: " + NameOf(ObjGetParent(0)) + " driver does not match the number of positions (nStep) in the study."));
-  };
-
-  AnyKinEqInterPolDriver ElbowFlexion = {
-    AnyKinMeasure& Hinge = .BodyModelRef.Interface.Side.ElbowFlexion;
-    Type = PiecewiseLinear;
-    T = linspace(0,1,SizesOf(Data)[1]);
-    Data = {Obj2Num(.ElbowFlexionPositions)} * pi/180;
-    Reaction.Type = {Off};
-    AnyInt expect_nPos_to_match_nStep = warn(eqfun(NumElemOf(T), ..nStep), strformat("The number of calibration positions (Data) in the: " + NameOf(ObjGetParent(0)) + " driver does not match the number of positions (nStep) in the study."));
-  };
- 
-  AnyKinEqInterPolDriver ElbowPronation = {
-    AnyKinMeasure& Hinge = .BodyModelRef.Interface.Side.ElbowPronation;
-    Type = PiecewiseLinear;
-    T = linspace(0,1,SizesOf(Data)[1]);
-    Data = {Obj2Num(.ElbowPronationPositions)} * pi/180;
-    Reaction.Type = {Off};
-    AnyInt expect_nPos_to_match_nStep = warn(eqfun(NumElemOf(T), ..nStep), strformat("The number of calibration positions (Data) in the: " + NameOf(ObjGetParent(0)) + " driver does not match the number of positions (nStep) in the study."));
-  };
-  
-  AnyKinEqInterPolDriver WristFlexion = {
-    AnyKinMeasure& Hinge = .BodyModelRef.Interface.Side.WristFlexion;
-    Type = PiecewiseLinear;
-    T = linspace(0,1,SizesOf(Data)[1]);
-    Data = {Obj2Num(.WristFlexionPositions)} * pi/180;
-    Reaction.Type = {Off};
-    AnyInt expect_nPos_to_match_nStep = warn(eqfun(NumElemOf(T), ..nStep), strformat("The number of calibration positions (Data) in the: " + NameOf(ObjGetParent(0)) + " driver does not match the number of positions (nStep) in the study."));
-  };
-  
-  AnyKinEqInterPolDriver WristAbduction = {
-    AnyKinMeasure& Hinge = .BodyModelRef.Interface.Side.WristAbduction;
-    Type = PiecewiseLinear;
-    T = linspace(0,1,SizesOf(Data)[1]);
-    Data = {Obj2Num(.WristAbductionPositions)} * pi/180;
-    Reaction.Type = {Off};
-    AnyInt expect_nPos_to_match_nStep = warn(eqfun(NumElemOf(T), ..nStep), strformat("The number of calibration positions (Data) in the: " + NameOf(ObjGetParent(0)) + " driver does not match the number of positions (nStep) in the study."));
-  };
+#class_template SingleDoFCalDriver(
+  __CLASS__ = AnyKinEqInterPolDriver,
+  Measure,
+  DriverData
+) {
+  Type = PiecewiseLinear;
+  T = linspace(0,1,SizesOf(Data)[1]);
+  Reaction.Type = repmat(nDim, Off);
+  Data = {Obj2Num(DriverData)} * pi/180;
+  AnyKinMeasure& MeasureRef = Measure;
+  AnyInt expect_nPos_to_match_nStep = warn(eqfun(NumElemOf(T), .nStep), strformat("The number of calibration positions (Data) in the: " + NameOf(ObjGetParent(0)) + " driver does not match the number of positions (nStep) in the study."));
 };
+
+/**
+  Class template to create a driver for a multi-DoF measure in a calibration study.
+*/
+#class_template MultiDoFCalDriver(
+  __CLASS__ = AnyKinEqInterPolDriver,
+  Measure,
+  DriverData
+) {
+  Type = PiecewiseLinear;
+  T = linspace(0,1,SizesOf(Data)[1]);
+  Reaction.Type = repmat(nDim, Off);
+  Data = Obj2Num(DriverData)' * pi/180; ///< TODO: Refactor the data structure to join the template with the single-DoF version!
+  AnyKinMeasure& MeasureRef = Measure;
+  AnyInt expect_nPos_to_match_nStep = warn(eqfun(NumElemOf(T), .nStep), strformat("The number of calibration positions (Data) in the: " + NameOf(ObjGetParent(0)) + " driver does not match the number of positions (nStep) in the study."));
+};
+
 
 
 /**
@@ -219,12 +84,35 @@
   Kinematics.PosAnalysisOnlyOnOff = On;
   InitialConditions.PosAnalysisOnlyOnOff = On;
   
-  LegCalibrationModel ModelRef(Side=Side, BodyModelRef=BodyModelRef) = {
-    HipPositions = .HipPositions;
-    KneePositions = .KneePositions;
-    AnklePositions = .AnklePositions;
-    SubTalarPositions = .SubTalarPositions;
-  };
+  #var AnyObjectPtr HipPositions;
+  #var AnyObjectPtr KneePositions;
+  #var AnyObjectPtr AnklePositions;
+  #var AnyObjectPtr SubTalarPositions;
+  
+  AnyFolder &Segments = BodyModelRef.Side.Leg.Seg;
+  AnyFolder &Joints = BodyModelRef.Side.Leg.Jnt;
+  
+  TrunkCalibrationModel TrunkModel(Side = Side, BodyModelRef = BodyModelRef) = {};
+  
+  MultiDoFCalDriver Hip(
+  Measure = BodyModelRef.Interface.Side.HipFlexion.HipMeasure,
+  DriverData = .HipPositions
+  ) ={};
+  
+  SingleDoFCalDriver Knee(
+  Measure = BodyModelRef.Interface.Side.KneeFlexion,
+  DriverData = .KneePositions
+  ) ={};
+  
+  SingleDoFCalDriver Ankle(
+  Measure = BodyModelRef.Interface.Side.AnklePlantarFlexion,
+  DriverData = .AnklePositions
+  ) ={};
+  
+  SingleDoFCalDriver SubTalar(
+  Measure = BodyModelRef.Interface.Side.SubTalarEversion,
+  DriverData = .SubTalarPositions
+  ) ={};
 };
 
 
@@ -244,13 +132,57 @@
   Kinematics.PosAnalysisOnlyOnOff = On;
   InitialConditions.PosAnalysisOnlyOnOff = On;
   
-  ArmCalibrationModel ModelRef(Side=Side, BodyModelRef=BodyModelRef) = {
-    ShoulderPositions = .ShoulderPositions;
-    ScapulaElevationPositions = .ScapulaElevationPositions;
-    ScapulaProtractionPositions = .ScapulaProtractionPositions;
-    ElbowFlexionPositions = .ElbowFlexionPositions;
-    ElbowPronationPositions = .ElbowPronationPositions;
-    WristFlexionPositions = .WristFlexionPositions;
-    WristAbductionPositions = .WristAbductionPositions;
-  };
+  #var AnyObjectPtr ShoulderPositions;
+  #var AnyObjectPtr ScapulaElevationPositions;
+  #var AnyObjectPtr ScapulaProtractionPositions;
+  #var AnyObjectPtr ElbowFlexionPositions;
+  #var AnyObjectPtr ElbowPronationPositions;
+  #var AnyObjectPtr WristFlexionPositions;
+  #var AnyObjectPtr WristAbductionPositions;
+  
+  AnyFolder &Segments = BodyModelRef.Side.ShoulderArm.Segments;
+  AnyFolder &Joints = BodyModelRef.Side.ShoulderArm.Joints;
+  
+  // The Muscles folder contain segments and constraints for some wrapping muscles
+  // e.g. Deltoid, Pectoralis Minor, etc.
+  AnyFolder &Muscles = BodyModelRef.Side.ShoulderArm.Muscles;
+  
+  TrunkCalibrationModel TrunkModel(Side = Side, BodyModelRef = BodyModelRef) = {};
+  
+  MultiDoFCalDriver Shoulder(
+  Measure = BodyModelRef.Interface.Side.GlenohumeralFlexion.GHMeasure,
+  DriverData = .ShoulderPositions
+  ) ={};
+  
+  SingleDoFCalDriver ScapulaProtraction(
+  Measure = BodyModelRef.Interface.Side.ScapulaThoraxProtraction,
+  DriverData = .ScapulaProtractionPositions
+  ) ={};
+  
+  SingleDoFCalDriver ScapulaElevation(
+  Measure = BodyModelRef.Interface.Side.ScapulaThoraxElevation,
+  DriverData = .ScapulaElevationPositions
+  ) ={};
+  
+  SingleDoFCalDriver ElbowFlexion(
+  Measure = BodyModelRef.Interface.Side.ElbowFlexion,
+  DriverData = .ElbowFlexionPositions
+  ) ={};
+  
+  SingleDoFCalDriver ElbowPronation(
+  Measure = BodyModelRef.Interface.Side.ElbowPronation,
+  DriverData = .ElbowPronationPositions
+  ) ={};
+  
+  SingleDoFCalDriver WristFlexion(
+  Measure = BodyModelRef.Interface.Side.WristFlexion,
+  DriverData = .WristFlexionPositions
+  ) ={};
+  
+  SingleDoFCalDriver WristAbduction(
+  Measure = BodyModelRef.Interface.Side.WristAbduction,
+  DriverData = .WristAbductionPositions
+  ) ={};
+  
+  #include "BMDependentObjects.any"
 };
