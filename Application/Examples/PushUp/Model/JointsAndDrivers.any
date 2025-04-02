@@ -89,7 +89,7 @@ AnyFolder JointsAndDrivers={
 
    AnyKinMeasure& Jnt = .ChestHeightOrg;
    
-   AnyFloat RangeOfMotion = DesignVar({0.32,0.48});
+   AnyFloat RangeOfMotion = DesignVar({0.07,0.48});
    AnyVar Phase = 180;
    Freq = 0.5;
    Type = Cos;
