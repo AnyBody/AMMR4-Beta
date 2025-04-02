@@ -117,7 +117,7 @@
 
 #ifdef BM_LEG_MODEL
 #if BM_LEG_MODEL == _LEG_MODEL_TLEM1_
-   AnyInt deprecated_TLEM1_model = warn(0, strformat("\n"+
+   AnyInt deprecated_TLEM1_model = assert(0, strformat("\n"+
       "------------------------------------------------------------------------------------------------------\n"+
       "    The Twente Lower Extremity Model v.1 (TLEM1) model was deprecated in AMMR3 and removed from AMMR4. "+
       "    \n"+

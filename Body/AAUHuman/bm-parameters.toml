@@ -43,6 +43,8 @@ descr = "Switch to use leg model: \"TLEM 2\""
 nicename = "TLEM Leg v2"
 
 [constants._LEG_MODEL_TLEM1_]
+# This has been redefined to integer value of 4 to cactch cases where 
+# users were just setting BM_LEG_MODEL to ON, as ON had the same value as TLEM1 before
 default = "4"
 deprecated = "true"
 valuetype = "integer"
@@ -584,7 +586,7 @@ opt = [ "OFF", "ON"]
 default = "_LEG_MODEL_TLEM_"
 valuetype = "integer"
 descr = "Parameter defining the Leg model used."
-opt = [ "OFF", "_LEG_MODEL_TLEM_", "_LEG_MODEL_TLEM_", "_LEG_MODEL_TLEM1_", "_LEG_MODEL_LEG_",]
+opt = [ "OFF", "_LEG_MODEL_TLEM_", "_LEG_MODEL_LEG_",]
 
 [parameters.BM_LEG_MODEL_IS_TLEM]
 default = ""

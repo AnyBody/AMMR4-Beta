@@ -199,8 +199,6 @@ Parameter defining the Leg model used.
 :Options:
   - {any}`OFF` -> Switch OFF
   - {any}`_LEG_MODEL_TLEM_` -> Switch to use leg model: "TLEM 2"
-  - {any}`_LEG_MODEL_TLEM_` -> Switch to use leg model: "TLEM 2"
-  - {any}`_LEG_MODEL_TLEM1_` -> Switch to use leg model: "TLEM 1"
   - {any}`_LEG_MODEL_LEG_` -> Switch to use leg model: "Leg"
 
 ```
