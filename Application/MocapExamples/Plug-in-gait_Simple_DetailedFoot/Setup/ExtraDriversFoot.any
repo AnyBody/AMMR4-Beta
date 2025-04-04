@@ -9,8 +9,8 @@ AnyFolder ExtraDrivers = {
 
   AnyKinEqSimpleDriver LateralBendDriver ={
     AnyKinLinear lin ={
-      AnySeg &ref1=  .....HumanModel.BodyModel.Trunk.SegmentsLumbar.PelvisSeg;
-      AnySeg &ref2=  .....HumanModel.BodyModel.Trunk.SegmentsThorax.SkullSeg;
+      AnySeg &ref1=  .....HumanModel.BodyModel.Trunk.Segments.PelvisSeg;
+      AnySeg &ref2=  .....HumanModel.BodyModel.Trunk.Segments.SkullSeg;
     };
     DriverPos={0,0};
     DriverVel={0,0};

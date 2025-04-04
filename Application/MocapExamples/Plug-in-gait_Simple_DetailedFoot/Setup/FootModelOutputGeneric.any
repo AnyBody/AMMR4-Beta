@@ -21,14 +21,14 @@ AnyFolder ModelOutputQA ={
     
     AnyFolder AchillesTendon  ={
       AnyFloat AchillesTendonTotal =
-      Main.HumanModel.BodyModel.Right.Leg.Mus.SoleusMedialis1.Ft+
-      Main.HumanModel.BodyModel.Right.Leg.Mus.SoleusMedialis2.Ft+
-      Main.HumanModel.BodyModel.Right.Leg.Mus.SoleusMedialis3.Ft+
-      Main.HumanModel.BodyModel.Right.Leg.Mus.SoleusLateralis1.Ft+
-      Main.HumanModel.BodyModel.Right.Leg.Mus.SoleusLateralis2.Ft+
-      Main.HumanModel.BodyModel.Right.Leg.Mus.SoleusLateralis3.Ft+
-      Main.HumanModel.BodyModel.Right.Leg.Mus.GastrocnemiusLateralis1.Ft+
-      Main.HumanModel.BodyModel.Right.Leg.Mus.GastrocnemiusMedialis1.Ft;
+      Main.HumanModel.BodyModel.Right.Leg.Mus.SoleusMedialis.SoleusMedialis1.Ft+
+      Main.HumanModel.BodyModel.Right.Leg.Mus.SoleusMedialis.SoleusMedialis2.Ft+
+      Main.HumanModel.BodyModel.Right.Leg.Mus.SoleusMedialis.SoleusMedialis3.Ft+
+      Main.HumanModel.BodyModel.Right.Leg.Mus.SoleusLateralis.SoleusLateralis1.Ft+
+      Main.HumanModel.BodyModel.Right.Leg.Mus.SoleusLateralis.SoleusLateralis2.Ft+
+      Main.HumanModel.BodyModel.Right.Leg.Mus.SoleusLateralis.SoleusLateralis3.Ft+
+      Main.HumanModel.BodyModel.Right.Leg.Mus.GastrocnemiusLateralis.GastrocnemiusLateralis1.Ft+
+      Main.HumanModel.BodyModel.Right.Leg.Mus.GastrocnemiusMedialis.GastrocnemiusMedialis1.Ft;
       AnyFloat AchillesTendonBW=AchillesTendonTotal/(Main.HumanModel.Anthropometrics.BodyMass*9.81);
     }; 
   };
