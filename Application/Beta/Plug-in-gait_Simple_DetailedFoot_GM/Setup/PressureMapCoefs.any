@@ -226,7 +226,7 @@ AnyMatrix FootPressureNodeMatInitial = {
     
     AnyVector FootPressureNodeCoeffVec =  PressureFun(FootPressureNodeMat, 
                                                       iffun(eqfun(Main.Studies.MarkerTracking.iStep,0),0.0,Main.Studies.MarkerTracking.t - Main.Studies.MarkerTracking.tStart),
-                                                      ANYBODY_PATH_MAINFILEDIR + "/Input/" + Main.ModelSetup.TrialSpecificData.TrialFileName + "-PressureData.txt");
+                                                      MOCAP_PATH_MAINFILEDIR + "/Input/" + Main.ModelSetup.TrialSpecificData.TrialFileName + "-PressureData.txt");
    
     AnyOutputFile CoeffVecOutput =  {
       FileName = "../Input/" + Main.ModelSetup.TrialSpecificData.TrialFileName + "-CoeffVec.txt";

@@ -10,7 +10,7 @@
     };
   };
   
-  AnyVector FootLocationCooVec =  FootLocationFun(ANYBODY_PATH_MAINFILEDIR + "/Input/" +Main.ModelSetup.TrialSpecificData.TrialFileName+ "-PressureData.txt");
+  AnyVector FootLocationCooVec =  FootLocationFun(MOCAP_PATH_MAINFILEDIR + "/Input/" +Main.ModelSetup.TrialSpecificData.TrialFileName+ "-PressureData.txt");
   
   
   AnyFolder &GlobalRef = .GlobalRef;
