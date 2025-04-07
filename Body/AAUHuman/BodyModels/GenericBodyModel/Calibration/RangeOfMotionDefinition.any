@@ -93,12 +93,16 @@ BodyModelFolderStructure RangeOfMotion() = {
       AnyFloat Extended ??= .....BodyModel.Right.Leg.Data.RangeOfMotion.Hip.Extended;
       AnyFloat ExtendedAndAdducted ??= .....BodyModel.Right.Leg.Data.RangeOfMotion.Hip.ExtendedAndAdducted;
       AnyFloat AbductedAndExternallyRotated ??= .....BodyModel.Right.Leg.Data.RangeOfMotion.Hip.AbductedAndExternallyRotated;
+
+      AnyObjectPtr ActiveRoM ??= .....BodyModel.Right.Leg.Data.RangeOfMotion.Hip.ActiveRoM;
     };
   
     Right.Leg.Knee = {
       AnyVar Neutral ??= .....BodyModel.Right.Leg.Data.RangeOfMotion.Knee.Neutral;
       AnyVar MaxFlexionAngle ??= .....BodyModel.Right.Leg.Data.RangeOfMotion.Knee.MaxFlexionAngle;
       AnyVar MaxExtensionAngle ??= .....BodyModel.Right.Leg.Data.RangeOfMotion.Knee.MaxExtensionAngle;
+
+      AnyObjectPtr ActiveRoM ??= .....BodyModel.Right.Leg.Data.RangeOfMotion.Knee.ActiveRoM;
     };
   
     Right.Leg.Ankle = {
@@ -107,6 +111,8 @@ BodyModelFolderStructure RangeOfMotion() = {
       AnyVar MaxDorsiFlexionAngle ??= .....BodyModel.Right.Leg.Data.RangeOfMotion.Ankle.MaxDorsiFlexionAngle;
       AnyVar MaxInversionAngle ??= .....BodyModel.Right.Leg.Data.RangeOfMotion.Ankle.MaxInversionAngle;
       AnyVar MaxEversionAngle ??= .....BodyModel.Right.Leg.Data.RangeOfMotion.Ankle.MaxEversionAngle;
+
+      AnyObjectPtr ActiveRoM ??= .....BodyModel.Right.Leg.Data.RangeOfMotion.Ankle.ActiveRoM;
     };
   #endif
 
@@ -173,18 +179,23 @@ BodyModelFolderStructure RangeOfMotion() = {
       AnyFloat InternallyRotated ??= ...Right.Leg.Hip.InternallyRotated;
       AnyFloat ExternallyRotated ??= ...Right.Leg.Hip.ExternallyRotated;
       AnyFloat Adduction ??= ...Right.Leg.Hip.Adduction;
+      AnyFloat Abduction ??= ...Right.Leg.Hip.Abduction;
       AnyFloat Flexed ??= ...Right.Leg.Hip.Flexed;
       AnyFloat FlexedAndAdducted ??= ...Right.Leg.Hip.FlexedAndAdducted;
       AnyFloat FlexedAndAbducted ??= ...Right.Leg.Hip.FlexedAndAbducted;
       AnyFloat Extended ??= ...Right.Leg.Hip.Extended;
       AnyFloat ExtendedAndAdducted ??= ...Right.Leg.Hip.ExtendedAndAdducted;
       AnyFloat AbductedAndExternallyRotated ??= ...Right.Leg.Hip.AbductedAndExternallyRotated;
+
+      AnyObjectPtr ActiveRoM ??= ...Right.Leg.Hip.ActiveRoM;
   };
   
     Left.Leg.Knee = {
       AnyVar Neutral ??= ...Right.Leg.Knee.Neutral;
       AnyVar MaxFlexionAngle ??= ...Right.Leg.Knee.MaxFlexionAngle;
       AnyVar MaxExtensionAngle ??= ...Right.Leg.Knee.MaxExtensionAngle;
+
+      AnyObjectPtr ActiveRoM ??= ...Right.Leg.Knee.ActiveRoM;
     };
   
     Left.Leg.Ankle = {
@@ -193,6 +204,8 @@ BodyModelFolderStructure RangeOfMotion() = {
       AnyVar MaxDorsiFlexionAngle ??= ...Right.Leg.Ankle.MaxDorsiFlexionAngle;
       AnyVar MaxInversionAngle ??= ...Right.Leg.Ankle.MaxInversionAngle;
       AnyVar MaxEversionAngle ??= ...Right.Leg.Ankle.MaxEversionAngle;
+
+      AnyObjectPtr ActiveRoM ??= ...Right.Leg.Ankle.ActiveRoM;
     };
   #endif
 };
