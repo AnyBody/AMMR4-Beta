@@ -39,9 +39,9 @@ Main =
   
   AnyOperationSequence  TestRunApplication = 
   {
-    AnyOperation& ParameterId =  Main.RunAnalysis.LoadParameters;
+    AnyOperation& ParameterId =  Main.RunParameterIdentification;
     AnyOperation& init = Main.Studies.MarkerTracking.InitialConditions;
-    AnyOperation& RunAnalysis = Main.RunAnalysis.InverseDynamics; 
+    AnyOperation& RunAnalysis = Main.RunAnalysis;
   };
 
   #ifndef CREATE_IMAGE
