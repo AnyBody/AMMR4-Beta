@@ -43,10 +43,10 @@ TwoParCalibrationStudy RightCal2HipSpine(
     "AnyMuscle"
   );
 
-  HipPositions = repmat(2, flattenptr(&.RangeOfMotion.Right.Leg.Hip.Neutral));
-  TrunkFlexionPositions = repmat(2, flattenptr(&.RangeOfMotion.Trunk.Neutral));
-  TrunkLateralBendingPositions = repmat(2, flattenptr(&.RangeOfMotion.Trunk.Neutral));
-  TrunkRotationPositions = repmat(2, flattenptr(&.RangeOfMotion.Trunk.Neutral));
+  HipPositions = repmat(2, flattenptr(&.RangeOfMotion.Right.Leg.Hip.ActiveRoM));
+  TrunkFlexionPositions = repmat(10, flattenptr(&.RangeOfMotion.Trunk.ActiveRoMThoraxFlexion));
+  TrunkLateralBendingPositions = repmat(10, flattenptr(&.RangeOfMotion.Trunk.ActiveRoMThoraxLateralBending));
+  TrunkRotationPositions = repmat(10, flattenptr(&.RangeOfMotion.Trunk.ActiveRoMThoraxAxialRotation));
 };
 
 TwoParCalibrationStudy RightCal3HipKnee(

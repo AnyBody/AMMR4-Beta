@@ -21,7 +21,13 @@ BodyModelFolderStructure RangeOfMotion() = {
     AnyVar MaxPelvisSacrumLateralBendingAngle ??= ...BodyModel.Trunk.Data.RangeOfMotion.MaxPelvisSacrumLateralBendingAngle;
     AnyVar MinPelvisSacrumLateralBendingAngle ??= ...BodyModel.Trunk.Data.RangeOfMotion.MinPelvisSacrumLateralBendingAngle;
     AnyVar Neutral ??= ...BodyModel.Trunk.Data.RangeOfMotion.Neutral;
-    
+
+    AnyObjectPtr ActiveRoMThoraxFlexion ??= ...BodyModel.Trunk.Data.RangeOfMotion.ActiveRoMThoraxFlexion;
+    AnyObjectPtr ActiveRoMThoraxLateralBending ??= ...BodyModel.Trunk.Data.RangeOfMotion.ActiveRoMThoraxLateralBending;
+    AnyObjectPtr ActiveRoMThoraxAxialRotation ??= ...BodyModel.Trunk.Data.RangeOfMotion.ActiveRoMThoraxAxialRotation;
+    AnyObjectPtr ActiveRoMSkullFlexion ??= ...BodyModel.Trunk.Data.RangeOfMotion.ActiveRoMSkullFlexion;
+    AnyObjectPtr ActiveRoMSkullLateralBending ??= ...BodyModel.Trunk.Data.RangeOfMotion.ActiveRoMSkullLateralBending;
+    AnyObjectPtr ActiveRoMSkullAxialRotation ??= ...BodyModel.Trunk.Data.RangeOfMotion.ActiveRoMSkullAxialRotation;    
   };
   
   #if BM_ARM_RIGHT
