@@ -79,7 +79,7 @@
 
 // Parameter to define muscle behavior of both right and left foot
 #ifndef BM_FOOT_MUSCLES_BOTH
-#define BM_FOOT_MUSCLES_BOTH _MUSCLES_SIMPLE_
+#define BM_FOOT_MUSCLES_BOTH BM_LEG_MUSCLES_BOTH
 #endif
 
 // Parameter to define muscle behavior of the left foot

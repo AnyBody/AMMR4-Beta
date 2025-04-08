@@ -645,7 +645,7 @@ nicename = "Right"
 opt = [ "OFF", "_MUSCLES_SIMPLE_", "_MUSCLES_3E_HILL_", "BM_LEG_MUSCLES_BOTH",]
 
 [parameters.BM_FOOT_MUSCLES_BOTH]
-default = "_MUSCLES_SIMPLE_"
+default = "BM_LEG_MUSCLES_BOTH"
 valuetype = "integer"
 descr = "Parameter to define muscle behavior of both right and left foot"
 opt = [ "OFF", "_MUSCLES_SIMPLE_", "_MUSCLES_3E_HILL_",]

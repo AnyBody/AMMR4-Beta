@@ -342,8 +342,8 @@ Parameter to define muscle behavior of the right leg
 
 Parameter to define muscle behavior of both right and left foot
 
-:Default: {any}`_MUSCLES_SIMPLE_`
-:Example: `#define BM_FOOT_MUSCLES_BOTH _MUSCLES_SIMPLE_`
+:Default: {any}`BM_LEG_MUSCLES_BOTH`
+:Example: `#define BM_FOOT_MUSCLES_BOTH BM_LEG_MUSCLES_BOTH`
 :Options:
   - {any}`OFF` -> Switch OFF
   - {any}`_MUSCLES_SIMPLE_` -> Constant to use simple muscles
