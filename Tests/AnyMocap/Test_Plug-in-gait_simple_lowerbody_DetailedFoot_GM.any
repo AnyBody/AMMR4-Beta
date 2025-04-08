@@ -13,9 +13,10 @@
 
 #path MOCAP_PATH_MAINFILEDIR "../../Application/Beta/Plug-in-gait_Simple_DetailedFoot_GM"
 #path MOCAP_PATH_MAINFILE "<MOCAP_PATH_MAINFILEDIR>/LowerExtremity.main.any"
-#define MOCAP_NAME_MAINFILEDIR "Plug-in-gait_Simple"
+#define MOCAP_NAME_MAINFILEDIR "Plug-in-gait_Simple_DetailedFoot_GM"
 
-
+#define N_STEP_KINEMATICS 10
+#define N_STEP 10
 
 #ifdef TEST_NAME
 #define  MOCAP_TEST_FILENAME_PREFIX  TEST_NAME + "_"
@@ -39,9 +40,11 @@ Main =
   
   AnyOperationSequence  TestRunApplication = 
   {
-    AnyOperation& ParameterId =  Main.RunAnalysis.LoadParameters;
-    AnyOperation& init = Main.Studies.MarkerTracking.InitialConditions;
-    AnyOperation& RunAnalysis = Main.RunAnalysis.InverseDynamics; 
+    AnyOperation& ParameterId =  Main.GMFoot_RunParamOptimization;
+    AnyOperation& LoadParam = Main.GMFoot_RunMarkerTrackingAndInverse.LoadParameters;
+    AnyOperation& LigCal = Main.GMFoot_RunMarkerTrackingAndInverse.LigamentCal; 
+    AnyOperation& MarkerTracking = Main.GMFoot_RunMarkerTrackingAndInverse.MarkerTracking;
+    AnyOperation& InverseDynamics = Main.GMFoot_RunMarkerTrackingAndInverse.InverseDynamics; 
   };
 
   #ifndef CREATE_IMAGE
