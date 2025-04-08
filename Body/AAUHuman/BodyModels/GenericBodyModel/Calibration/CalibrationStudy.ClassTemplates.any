@@ -31,189 +31,15 @@ __CLASS__ = AnyKinEqInterPolDriver,
   AnyInt expect_nPos_to_match_nStep = warn(eqfun(NumElemOf(T), .nStep), strformat("The number of calibration positions (Data) in the: " + NameOf(ObjGetParent(0)) + " driver does not match the number of positions (nStep) in the study."));
 };
 
-#class_template TrunkCalibrationModel(Side, BodyModelRef) {
-  
-  AnyVar nStep = .nStep;
-  
-  #var AnyObjectPtr TrunkFlexionPositions = repmat(.nStep, &..RangeOfMotion.Trunk.Neutral);
-  #var AnyObjectPtr TrunkLateralBendingPositions = repmat(.nStep, &..RangeOfMotion.Trunk.Neutral);
-  #var AnyObjectPtr TrunkRotationPositions = repmat(.nStep, &..RangeOfMotion.Trunk.Neutral);
-  #var AnyObjectPtr SkullFlexionPositions = repmat(.nStep, &..RangeOfMotion.Trunk.Neutral);
-  #var AnyObjectPtr SkullLateralBendingPositions = repmat(.nStep, &..RangeOfMotion.Trunk.Neutral);
-  #var AnyObjectPtr SkullRotationPositions = repmat(.nStep, &..RangeOfMotion.Trunk.Neutral);
-
-  AnyFolder &TrunkSegments = BodyModelRef.Trunk.Segments;
-  AnyFolder &TrunkJoints = BodyModelRef.Trunk.Joints;
-  
-  // Constraints
-  AnyFixedRefFrame ground = {
-    AnyRefNode node = {
-      ARel = ..TrunkSegments.PelvisSeg.Axes0;
-      sRel = ..TrunkSegments.PelvisSeg.r0;
-    };
-  };
-  
-  SingleDoFCalDriver TrunkFlexion(
-      Measure = BodyModelRef.Interface.Trunk.PelvisThoraxExtension,
-      DriverData = .TrunkFlexionPositions
-  ) ={};
-
-  SingleDoFCalDriver TrunkLateralBending(
-      Measure = BodyModelRef.Interface.Trunk.PelvisThoraxLateralBending,
-      DriverData = .TrunkLateralBendingPositions
-  ) ={};
-
-  SingleDoFCalDriver TrunkRotation(
-      Measure = BodyModelRef.Interface.Trunk.PelvisThoraxRotation,
-      DriverData = .TrunkRotationPositions
-  ) ={};
-
-  SingleDoFCalDriver SkullFlexion(
-      Measure = BodyModelRef.Interface.Trunk.SkullThoraxFlexion,
-      DriverData = .SkullFlexionPositions
-  ) ={};
-
-  SingleDoFCalDriver SkullLateralBending(
-      Measure = BodyModelRef.Interface.Trunk.SkullThoraxLateralBending,
-      DriverData = .SkullLateralBendingPositions
-  ) ={};
-
-  SingleDoFCalDriver SkullRotation(
-      Measure = BodyModelRef.Interface.Trunk.SkullThoraxRotation,
-      DriverData = .SkullRotationPositions
-  ) ={};
-  
-  AnyKinEq PelvisFix = {
-    AnyKinLinear Lin = {
-      AnyRefFrame &ground = ..ground.node;
-      AnyRefFrame &Pelvis = ..TrunkSegments.PelvisSeg;
-    };
-    AnyKinRotational Rot = {
-      Type = RotAxesAngles;
-      AnyRefFrame &ground = ..ground.node;
-      AnyRefFrame &Pelvis = ..TrunkSegments.PelvisSeg;
-    };
-  };
-};
-
 
 /**
-  Class template for creating calibrationstudies with same settings
- */
-#class_template LegCalibrationStudy(
-  __CLASS__ = AnyBodyCalibrationStudy,
-  BodyModelRef,
-  Side,
-) {
-  // Study settings
-  FiberAndTendonLengthAdjustment.CalibrateTendonAtMaxForceOnOff = Off;
-  Kinematics.SmallStepAssumptionOnOff = Off;
-  InitialConditions.SmallStepAssumptionOnOff = Off;
-  Kinematics.PosAnalysisOnlyOnOff = On;
-  InitialConditions.PosAnalysisOnlyOnOff = On;
-  
-  #var AnyObjectPtr HipPositions;
-  #var AnyObjectPtr KneePositions;
-  #var AnyObjectPtr AnklePositions;
-  #var AnyObjectPtr SubTalarPositions;
-  
-  AnyFolder &Segments = BodyModelRef.Side.Leg.Seg;
-  AnyFolder &Joints = BodyModelRef.Side.Leg.Jnt;
-  
-  TrunkCalibrationModel TrunkModel(Side = Side, BodyModelRef = BodyModelRef) = {};
-  
-  MultiDoFCalDriver Hip(
-    Measure = BodyModelRef.Interface.Side.HipFlexion.HipMeasure,
-    DriverData = .HipPositions
-  ) ={};
-  
-  SingleDoFCalDriver Knee(
-    Measure = BodyModelRef.Interface.Side.KneeFlexion,
-    DriverData = .KneePositions
-  ) ={};
-  
-  SingleDoFCalDriver Ankle(
-    Measure = BodyModelRef.Interface.Side.AnklePlantarFlexion,
-    DriverData = .AnklePositions
-  ) ={};
-  
-  SingleDoFCalDriver SubTalar(
-    Measure = BodyModelRef.Interface.Side.SubTalarEversion,
-    DriverData = .SubTalarPositions
-  ) ={};
-};
+  Class template for creating calibration studies for the bodymodel.
 
-
-/**
-  Class template for creating calibrationstudies with same settings
+  The template accepts arguments that define which DoF to include in the calibration study.
+  Enabling a DoF will create a driver for the DoF and add it to the calibration study.
+  The user will be required to provide an array of positions for each DoF that is enabled.
+  The positions are defined in degrees and will be converted to radians in the driver.
 */
-#class_template ArmCalibrationStudy(
-  __CLASS__ = AnyBodyCalibrationStudy,
-  BodyModelRef,
-  Side,
-) {
-  // Study settings
-  FiberAndTendonLengthAdjustment.CalibrateTendonAtMaxForceOnOff = Off;
-  Kinematics.SmallStepAssumptionOnOff = Off;
-  InitialConditions.SmallStepAssumptionOnOff = Off;
-  Kinematics.PosAnalysisOnlyOnOff = On;
-  InitialConditions.PosAnalysisOnlyOnOff = On;
-  
-  #var AnyObjectPtr ShoulderPositions;
-  #var AnyObjectPtr ScapulaElevationPositions;
-  #var AnyObjectPtr ScapulaProtractionPositions;
-  #var AnyObjectPtr ElbowFlexionPositions;
-  #var AnyObjectPtr ElbowPronationPositions;
-  #var AnyObjectPtr WristFlexionPositions;
-  #var AnyObjectPtr WristAbductionPositions;
-  
-  AnyFolder &Segments = BodyModelRef.Side.ShoulderArm.Segments;
-  AnyFolder &Joints = BodyModelRef.Side.ShoulderArm.Joints;
-  
-  // The Muscles folder contain segments and constraints for some wrapping muscles
-  // e.g. Deltoid, Pectoralis Minor, etc.
-  AnyFolder &Muscles = BodyModelRef.Side.ShoulderArm.Muscles;
-  
-  TrunkCalibrationModel TrunkModel(Side = Side, BodyModelRef = BodyModelRef) = {};
-  
-  MultiDoFCalDriver Shoulder(
-    Measure = BodyModelRef.Interface.Side.GlenohumeralFlexion.GHMeasure,
-    DriverData = .ShoulderPositions
-  ) ={};
-  
-  SingleDoFCalDriver ScapulaProtraction(
-    Measure = BodyModelRef.Interface.Side.ScapulaThoraxProtraction,
-    DriverData = .ScapulaProtractionPositions
-  ) ={};
-  
-  SingleDoFCalDriver ScapulaElevation(
-    Measure = BodyModelRef.Interface.Side.ScapulaThoraxElevation,
-    DriverData = .ScapulaElevationPositions
-  ) ={};
-  
-  SingleDoFCalDriver ElbowFlexion(
-    Measure = BodyModelRef.Interface.Side.ElbowFlexion,
-    DriverData = .ElbowFlexionPositions
-  ) ={};
-  
-  SingleDoFCalDriver ElbowPronation(
-    Measure = BodyModelRef.Interface.Side.ElbowPronation,
-    DriverData = .ElbowPronationPositions
-  ) ={};
-  
-  SingleDoFCalDriver WristFlexion(
-    Measure = BodyModelRef.Interface.Side.WristFlexion,
-    DriverData = .WristFlexionPositions
-  ) ={};
-  
-  SingleDoFCalDriver WristAbduction(
-    Measure = BodyModelRef.Interface.Side.WristAbduction,
-    DriverData = .WristAbductionPositions
-  ) ={};
-  
-  #include "BMDependentObjects.any"
-};
-
 #class_template TwoParCalibrationStudy(
   __CLASS__ = AnyBodyCalibrationStudy,
   BodyModelRef,
@@ -243,6 +69,7 @@ __CLASS__ = AnyKinEqInterPolDriver,
   Kinematics.PosAnalysisOnlyOnOff = On;
   InitialConditions.PosAnalysisOnlyOnOff = On;
 
+  // Default values for Rmin and Rmax
   #var RminMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMinDefault);
   #var RmaxMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMaxDefault);
   
@@ -337,7 +164,7 @@ __CLASS__ = AnyKinEqInterPolDriver,
     AnyObjectPtr SkullRotationPositions = repmat(nStep, &.RangeOfMotion.Trunk.Neutral);
   #endif
 
-  
+  // Arm
   #if (SHOULDER == On) | (SCAPULAELEVATION == On) | (SCAPULAPROTRACTION == On) | (ELBOWFLEXION == On) | (ELBOWPRONATION == On) | (WRISTFLEXION == On) | (WRISTABDUCTION == On)
     AnyFolder &ArmSegments = BodyModelRef.Side.ShoulderArm.Segments;
     AnyFolder &ArmJoints = BodyModelRef.Side.ShoulderArm.Joints;
@@ -392,13 +219,13 @@ __CLASS__ = AnyKinEqInterPolDriver,
     #if SCAPULAELEVATION == On
       #var AnyObjectPtr ScapulaElevationPositions;
     #else
-      AnyObjectPtr ScapulaElevationPositions = repmat(nStep, &.RangeOfMotion.Side.ShoulderArm.Shoulder.Neutral);
+      AnyObjectPtr ScapulaElevationPositions = repmat(nStep, &.RangeOfMotion.Side.ShoulderArm.Shoulder.ScapulaNeutral);
     #endif
 
     #if SCAPULAPROTRACTION == On
       #var AnyObjectPtr ScapulaProtractionPositions;
     #else
-      AnyObjectPtr ScapulaProtractionPositions = repmat(nStep, &.RangeOfMotion.Side.ShoulderArm.Shoulder.Neutral);
+      AnyObjectPtr ScapulaProtractionPositions = repmat(nStep, &.RangeOfMotion.Side.ShoulderArm.Shoulder.ScapulaNeutral);
     #endif
 
     #if ELBOWFLEXION == On

@@ -42,7 +42,8 @@ BodyModelFolderStructure RangeOfMotion() = {
       AnyVar MaxScapulaClaviculaDepressionAngle ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Shoulder.MaxScapulaClaviculaDepressionAngle;
       AnyVar MaxScapulaClaviculaProtractionAngle ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Shoulder.MaxScapulaClaviculaProtractionAngle;
       AnyVar MaxScapulaClaviculaRetractionAngle ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Shoulder.MaxScapulaClaviculaRetractionAngle;
-
+      AnyVar ScapulaNeutral ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Shoulder.ScapulaNeutral;
+      
       // Shoulder positions
       AnyFloat Neutral ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Shoulder.Neutral;
       AnyFloat Flexed ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Shoulder.Flexed;
@@ -57,6 +58,8 @@ BodyModelFolderStructure RangeOfMotion() = {
       AnyFloat ExtendedAndInternallyRotated ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Shoulder.ExtendedAndInternallyRotated;
       AnyFloat FlexedAndAdducted ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Shoulder.FlexedAndAdducted;
       AnyFloat FlexedAndAbducted ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Shoulder.FlexedAndAbducted;
+
+      AnyObjectPtr ActiveRoM ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Shoulder.ActiveRoM;
     };  
   
     Right.ShoulderArm.Elbow = {
@@ -65,6 +68,8 @@ BodyModelFolderStructure RangeOfMotion() = {
       AnyVar MaxPronationAngle ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Elbow.MaxPronationAngle;
       AnyVar MaxSupinationAngle ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Elbow.MaxSupinationAngle;
       AnyVar Neutral ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Elbow.Neutral;
+
+      AnyObjectPtr ActiveRoM ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Elbow.ActiveRoM;
     };
     
     Right.ShoulderArm.Wrist = {
@@ -73,6 +78,8 @@ BodyModelFolderStructure RangeOfMotion() = {
       AnyVar MaxAbductionAngle ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Wrist.MaxAbductionAngle;
       AnyVar MaxAdductionAngle ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Wrist.MaxAdductionAngle;
       AnyVar Neutral ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Wrist.Neutral;
+
+      AnyObjectPtr ActiveRoM ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Wrist.ActiveRoM;
     };
   #endif
     
@@ -136,6 +143,7 @@ BodyModelFolderStructure RangeOfMotion() = {
       AnyVar MaxScapulaClaviculaDepressionAngle ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Shoulder.MaxScapulaClaviculaDepressionAngle;
       AnyVar MaxScapulaClaviculaProtractionAngle ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Shoulder.MaxScapulaClaviculaProtractionAngle;
       AnyVar MaxScapulaClaviculaRetractionAngle ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Shoulder.MaxScapulaClaviculaRetractionAngle;
+      AnyVar ScapulaNeutral ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Shoulder.ScapulaNeutral;
       
       // Shoulder positions
       AnyFloat Neutral ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Shoulder.Neutral;
@@ -151,6 +159,8 @@ BodyModelFolderStructure RangeOfMotion() = {
       AnyFloat ExtendedAndInternallyRotated ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Shoulder.ExtendedAndInternallyRotated;
       AnyFloat FlexedAndAdducted ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Shoulder.FlexedAndAdducted;
       AnyFloat FlexedAndAbducted ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Shoulder.FlexedAndAbducted;
+
+      AnyObjectPtr ActiveRoM ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Shoulder.ActiveRoM;
     };  
   
     Left.ShoulderArm.Elbow = {
@@ -158,6 +168,9 @@ BodyModelFolderStructure RangeOfMotion() = {
       AnyVar MaxExtensionAngle ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Elbow.MaxExtensionAngle;
       AnyVar MaxPronationAngle ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Elbow.MaxPronationAngle;
       AnyVar MaxSupinationAngle ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Elbow.MaxSupinationAngle;
+      AnyVar Neutral ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Elbow.Neutral;
+
+      AnyObjectPtr ActiveRoM ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Elbow.ActiveRoM;
     };
     
     Left.ShoulderArm.Wrist = {
@@ -165,6 +178,9 @@ BodyModelFolderStructure RangeOfMotion() = {
       AnyVar MaxExtensionAngle ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Wrist.MaxExtensionAngle;
       AnyVar MaxAbductionAngle ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Wrist.MaxAbductionAngle;
       AnyVar MaxAdductionAngle ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Wrist.MaxAdductionAngle;
+      AnyVar Neutral ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Wrist.Neutral;
+
+      AnyObjectPtr ActiveRoM ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Wrist.ActiveRoM;
     };
   #endif
   

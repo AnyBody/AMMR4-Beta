@@ -1,8 +1,9 @@
-ArmCalibrationStudy ArmCalibration1Left(
+TwoParCalibrationStudy LeftCal1Shoulder(
   BodyModelRef = Main.HumanModel.BodyModel,
 Side = Left,
+SHOULDER = On
 ) = {
-  nStep = .ArmCalibration1Right.nStep;
+  nStep = NumElemOf(ShoulderPositions);
   
   MuscleArr = ObjSearch(
   &..BodyModel.Left.ShoulderArm.Muscles,
@@ -23,20 +24,30 @@ Side = Left,
   "AnyMuscle"
   );
   
-  RminMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMinDefault);
-  RmaxMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMaxDefault);
+  ShoulderPositions = flattenptr(&.RangeOfMotion.Left.ShoulderArm.Shoulder.ActiveRoM);
+};
+
+TwoParCalibrationStudy LeftCal2Elbow(
+  BodyModelRef = Main.HumanModel.BodyModel,
+  Side = Left,
+  ELBOWFLEXION = On
+) = {
+  nStep = NumElemOf(ElbowFlexionPositions);
   
-  ShoulderPositions = .ArmCalibration1Right.ShoulderPositions;
-  ScapulaElevationPositions = .ArmCalibration1Right.ScapulaElevationPositions;
-  ScapulaProtractionPositions = .ArmCalibration1Right.ScapulaProtractionPositions;
-  ElbowFlexionPositions = .ArmCalibration1Right.ElbowFlexionPositions;
-  ElbowPronationPositions = .ArmCalibration1Right.ElbowPronationPositions;
-  WristFlexionPositions = .ArmCalibration1Right.WristFlexionPositions;
-  WristAbductionPositions = .ArmCalibration1Right.WristAbductionPositions;
+  MuscleArr = ObjSearch(
+  &..BodyModel.Left.ShoulderArm.Muscles,
+  {
+    "Anoconeus.*",
+    "BicepsBrachii.*",
+    "Brachialis.*",
+    "Brachioradialis.*",
+    "Coracobrachialis.*",
+    "Triceps.*",
+  },
+  "AnyMuscle"
+  );
+  
+  ElbowFlexionPositions = flattenptr(&.RangeOfMotion.Left.ShoulderArm.Elbow.ActiveRoM);
 };
 
 
-
-CalibrationSequence = {
-  AnyOperation &ArmCal1Left = .ArmCalibration1Left.FiberAndTendonLengthAdjustment;
-};

@@ -1,6 +1,7 @@
-ArmCalibrationStudy ArmCalibration1Right(
+TwoParCalibrationStudy RightCal1Shoulder(
   BodyModelRef=Main.HumanModel.BodyModel,
   Side=Right,
+  SHOULDER = On,
 ) = {
   nStep = NumElemOf(ShoulderPositions);
   
@@ -23,47 +24,5 @@ ArmCalibrationStudy ArmCalibration1Right(
     "AnyMuscle"
   );
   
-  RminMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMinDefault);
-  RmaxMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMaxDefault);
-
-  ShoulderPositions = repmat(2,{
-    &.RangeOfMotion.Right.ShoulderArm.Shoulder.Flexed,
-    &.RangeOfMotion.Right.ShoulderArm.Shoulder.Extended,
-    &.RangeOfMotion.Right.ShoulderArm.Shoulder.Abducted,
-    &.RangeOfMotion.Right.ShoulderArm.Shoulder.Adducted,
-    &.RangeOfMotion.Right.ShoulderArm.Shoulder.ExternallyRotated,
-    &.RangeOfMotion.Right.ShoulderArm.Shoulder.InternallyRotated,
-    &.RangeOfMotion.Right.ShoulderArm.Shoulder.FlexedAndExternallyRotated,
-    &.RangeOfMotion.Right.ShoulderArm.Shoulder.FlexedAndInternallyRotated,
-    &.RangeOfMotion.Right.ShoulderArm.Shoulder.ExtendedAndExternallyRotated,
-    &.RangeOfMotion.Right.ShoulderArm.Shoulder.ExtendedAndInternallyRotated,
-    &.RangeOfMotion.Right.ShoulderArm.Shoulder.FlexedAndAdducted,
-    &.RangeOfMotion.Right.ShoulderArm.Shoulder.FlexedAndAbducted,
-  });
-
-  ScapulaElevationPositions = flatten({
-    repmat(round(nStep/2), &.RangeOfMotion.Right.ShoulderArm.Shoulder.MaxScapulaClaviculaElevationAngle),
-    repmat(round(nStep/2), &.RangeOfMotion.Right.ShoulderArm.Shoulder.MaxScapulaClaviculaDepressionAngle)
-  });
-  
-  ScapulaProtractionPositions = flatten({
-    repmat(round(nStep/2), &.RangeOfMotion.Right.ShoulderArm.Shoulder.MaxScapulaClaviculaProtractionAngle),
-    repmat(round(nStep/2), &.RangeOfMotion.Right.ShoulderArm.Shoulder.MaxScapulaClaviculaRetractionAngle)
-  });
-  
-  ElbowFlexionPositions = flatten({
-    repmat(round(nStep/2), &.RangeOfMotion.Right.ShoulderArm.Elbow.MaxFlexionAngle), 
-    repmat(round(nStep/2), &.RangeOfMotion.Right.ShoulderArm.Elbow.MaxExtensionAngle)
-  });
-
-  ElbowPronationPositions = repmat(nStep, &.RangeOfMotion.Right.ShoulderArm.Elbow.Neutral);
-  WristFlexionPositions = repmat(nStep, &.RangeOfMotion.Right.ShoulderArm.Wrist.Neutral);
-  WristAbductionPositions = repmat(nStep, &.RangeOfMotion.Right.ShoulderArm.Wrist.Neutral);
-
-};
-
-
-
-CalibrationSequence = {
-  AnyOperation &ArmCal1Right = .ArmCalibration1Right.FiberAndTendonLengthAdjustment;
+  ShoulderPositions = flattenptr(&.RangeOfMotion.Right.ShoulderArm.Shoulder.ActiveRoM);
 };
