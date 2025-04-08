@@ -1,6 +1,7 @@
-LegCalibrationStudy RightCal1Hip(
+TwoParCalibrationStudy RightCal1Hip(
   BodyModelRef=Main.HumanModel.BodyModel,
   Side=Right,
+  HIP = On
 ) = {
   nStep = NumElemOf(HipPositions);
   
@@ -20,19 +21,17 @@ LegCalibrationStudy RightCal1Hip(
     }, 
     "AnyMuscle"
   );
-  
-  RminMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMinDefault);
-  RmaxMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMaxDefault);
 
   HipPositions = repmat(2, flattenptr(&.RangeOfMotion.Right.Leg.Hip.ActiveRoM));
-  KneePositions = repmat(nStep, &.RangeOfMotion.Right.Leg.Knee.Neutral);
-  AnklePositions = repmat(nStep, &.RangeOfMotion.Right.Leg.Ankle.Neutral);
-  SubTalarPositions = repmat(nStep, &.RangeOfMotion.Right.Leg.Ankle.Neutral);
 };
 
-LegCalibrationStudy RightCal2HipSpine(
+TwoParCalibrationStudy RightCal2HipSpine(
   BodyModelRef=Main.HumanModel.BodyModel,
   Side=Right,
+  HIP = On,
+  TRUNKFLEXION = On,
+  TRUNKLATERALBENDING = On,
+  TRUNKROTATION = On,
 ) = {
   nStep = NumElemOf(HipPositions);
   
@@ -43,19 +42,18 @@ LegCalibrationStudy RightCal2HipSpine(
     }, 
     "AnyMuscle"
   );
-  
-  RminMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMinDefault);
-  RmaxMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMaxDefault);
 
-  HipPositions = repmat(2, flattenptr(&.RangeOfMotion.Right.Leg.Hip.ActiveRoM));
-  KneePositions = repmat(nStep, &.RangeOfMotion.Right.Leg.Knee.Neutral);
-  AnklePositions = repmat(nStep, &.RangeOfMotion.Right.Leg.Ankle.Neutral);
-  SubTalarPositions = repmat(nStep, &.RangeOfMotion.Right.Leg.Ankle.Neutral);
+  HipPositions = repmat(2, flattenptr(&.RangeOfMotion.Right.Leg.Hip.Neutral));
+  TrunkFlexionPositions = repmat(2, flattenptr(&.RangeOfMotion.Trunk.Neutral));
+  TrunkLateralBendingPositions = repmat(2, flattenptr(&.RangeOfMotion.Trunk.Neutral));
+  TrunkRotationPositions = repmat(2, flattenptr(&.RangeOfMotion.Trunk.Neutral));
 };
 
-LegCalibrationStudy RightCal3HipKnee(
+TwoParCalibrationStudy RightCal3HipKnee(
   BodyModelRef=Main.HumanModel.BodyModel,
   Side=Right,
+  HIP = On,
+  KNEE = On,
 ) = {
   nStep = NumElemOf(HipPositions);
   
@@ -72,19 +70,15 @@ LegCalibrationStudy RightCal3HipKnee(
     }, 
     "AnyMuscle"
   );
-  
-  RminMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMinDefault);
-  RmaxMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMaxDefault);
 
   HipPositions = repmat(2, flattenptr(&.RangeOfMotion.Right.Leg.Hip.ActiveRoM));
   KneePositions = repmat(10, flattenptr(&.RangeOfMotion.Right.Leg.Knee.ActiveRoM));
-  AnklePositions = repmat(nStep, &.RangeOfMotion.Right.Leg.Ankle.Neutral);
-  SubTalarPositions = repmat(nStep, &.RangeOfMotion.Right.Leg.Ankle.Neutral);
 };
 
-LegCalibrationStudy RightCal4Knee(
+TwoParCalibrationStudy RightCal4Knee(
   BodyModelRef=Main.HumanModel.BodyModel,
   Side=Right,
+  KNEE = On,
 ) = {
   nStep = NumElemOf(KneePositions);
   
@@ -97,19 +91,15 @@ LegCalibrationStudy RightCal4Knee(
     }, 
     "AnyMuscle"
   );
-  
-  RminMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMinDefault);
-  RmaxMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMaxDefault);
 
-  HipPositions = repmat(nStep, &.RangeOfMotion.Right.Leg.Hip.Neutral);
   KneePositions = repmat(2, flattenptr(&.RangeOfMotion.Right.Leg.Knee.ActiveRoM));
-  AnklePositions = repmat(nStep, &.RangeOfMotion.Right.Leg.Ankle.Neutral);
-  SubTalarPositions = repmat(nStep, &.RangeOfMotion.Right.Leg.Ankle.Neutral);
 };
 
-LegCalibrationStudy RightCal5AnkleKnee(
+TwoParCalibrationStudy RightCal5AnkleKnee(
   BodyModelRef=Main.HumanModel.BodyModel,
   Side=Right,
+  KNEE = On,
+  ANKLE = On,
 ) = {
   nStep = NumElemOf(AnklePositions);
   
@@ -122,19 +112,15 @@ LegCalibrationStudy RightCal5AnkleKnee(
     }, 
     "AnyMuscle"
   );
-  
-  RminMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMinDefault);
-  RmaxMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMaxDefault);
 
-  HipPositions = repmat(nStep, &.RangeOfMotion.Right.Leg.Hip.Neutral);
   KneePositions = repmat(4, flattenptr(&.RangeOfMotion.Right.Leg.Knee.ActiveRoM));
   AnklePositions = repmat(2, flattenptr(&.RangeOfMotion.Right.Leg.Ankle.ActiveRoM));
-  SubTalarPositions = repmat(nStep, &.RangeOfMotion.Right.Leg.Ankle.Neutral);
 };
 
-LegCalibrationStudy RightCal6Ankle(
+TwoParCalibrationStudy RightCal6Ankle(
   BodyModelRef=Main.HumanModel.BodyModel,
   Side=Right,
+  ANKLE = On,
 ) = {
   nStep = NumElemOf(AnklePositions);
   MuscleArr = ObjSearch(
@@ -148,21 +134,15 @@ LegCalibrationStudy RightCal6Ankle(
     "AnyMuscle"
   );
   
-  RminMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMinDefault);
-  RmaxMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMaxDefault);
-
-  HipPositions = repmat(nStep, &.RangeOfMotion.Right.Leg.Hip.Neutral);
-  KneePositions = repmat(nStep, &.RangeOfMotion.Right.Leg.Knee.Neutral);
   AnklePositions = repmat(2, flattenptr(&.RangeOfMotion.Right.Leg.Ankle.ActiveRoM));
-  SubTalarPositions = repmat(nStep, &.RangeOfMotion.Right.Leg.Ankle.Neutral);
 };
 
 
 CalibrationSequence = {
   AnyOperation &LegCal1Right = .RightCal1Hip.FiberAndTendonLengthAdjustment;
-  // AnyOperation &LegCal2Right = .RightCal2HipSpine.FiberAndTendonLengthAdjustment;
-  // AnyOperation &LegCal3Right = .RightCal3HipKnee.FiberAndTendonLengthAdjustment;
-  // AnyOperation &LegCal4Right = .RightCal4Knee.FiberAndTendonLengthAdjustment;
-  // AnyOperation &LegCal5Right = .RightCal5AnkleKnee.FiberAndTendonLengthAdjustment;
-  // AnyOperation &LegCal6Right = .RightCal6Ankle.FiberAndTendonLengthAdjustment;
+  AnyOperation &LegCal2Right = .RightCal2HipSpine.FiberAndTendonLengthAdjustment;
+  AnyOperation &LegCal3Right = .RightCal3HipKnee.FiberAndTendonLengthAdjustment;
+  AnyOperation &LegCal4Right = .RightCal4Knee.FiberAndTendonLengthAdjustment;
+  AnyOperation &LegCal5Right = .RightCal5AnkleKnee.FiberAndTendonLengthAdjustment;
+  AnyOperation &LegCal6Right = .RightCal6Ankle.FiberAndTendonLengthAdjustment;
 };

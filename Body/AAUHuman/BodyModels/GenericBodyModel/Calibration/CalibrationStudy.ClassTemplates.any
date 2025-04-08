@@ -3,14 +3,14 @@
   Class template to create a driver for a single-DoF measure in a calibration study.
 */
 #class_template SingleDoFCalDriver(
-  __CLASS__ = AnyKinEqInterPolDriver,
+__CLASS__ = AnyKinEqInterPolDriver,
   Measure,
   DriverData
 ) {
   Type = PiecewiseLinear;
   T = linspace(0,1,SizesOf(Data)[1]);
-  Reaction.Type = repmat(nDim, Off);
-  Data = {Obj2Num(DriverData)} * pi/180;
+    Reaction.Type = repmat(nDim, Off);
+    Data = {Obj2Num(DriverData)} * pi/180;
   AnyKinMeasure& MeasureRef = Measure;
   AnyInt expect_nPos_to_match_nStep = warn(eqfun(NumElemOf(T), .nStep), strformat("The number of calibration positions (Data) in the: " + NameOf(ObjGetParent(0)) + " driver does not match the number of positions (nStep) in the study."));
 };
@@ -19,14 +19,14 @@
   Class template to create a driver for a multi-DoF measure in a calibration study.
 */
 #class_template MultiDoFCalDriver(
-  __CLASS__ = AnyKinEqInterPolDriver,
+__CLASS__ = AnyKinEqInterPolDriver,
   Measure,
   DriverData
 ) {
   Type = PiecewiseLinear;
   T = linspace(0,1,SizesOf(Data)[1]);
-  Reaction.Type = repmat(nDim, Off);
-  Data = Obj2Num(DriverData)' * pi/180; ///< TODO: Refactor the data structure to join the template with the single-DoF version!
+    Reaction.Type = repmat(nDim, Off);
+    Data = Obj2Num(DriverData)' * pi/180; ///< TODO: Refactor the data structure to join the template with the single-DoF version!
   AnyKinMeasure& MeasureRef = Measure;
   AnyInt expect_nPos_to_match_nStep = warn(eqfun(NumElemOf(T), .nStep), strformat("The number of calibration positions (Data) in the: " + NameOf(ObjGetParent(0)) + " driver does not match the number of positions (nStep) in the study."));
 };
@@ -123,23 +123,23 @@
   TrunkCalibrationModel TrunkModel(Side = Side, BodyModelRef = BodyModelRef) = {};
   
   MultiDoFCalDriver Hip(
-  Measure = BodyModelRef.Interface.Side.HipFlexion.HipMeasure,
-  DriverData = .HipPositions
+    Measure = BodyModelRef.Interface.Side.HipFlexion.HipMeasure,
+    DriverData = .HipPositions
   ) ={};
   
   SingleDoFCalDriver Knee(
-  Measure = BodyModelRef.Interface.Side.KneeFlexion,
-  DriverData = .KneePositions
+    Measure = BodyModelRef.Interface.Side.KneeFlexion,
+    DriverData = .KneePositions
   ) ={};
   
   SingleDoFCalDriver Ankle(
-  Measure = BodyModelRef.Interface.Side.AnklePlantarFlexion,
-  DriverData = .AnklePositions
+    Measure = BodyModelRef.Interface.Side.AnklePlantarFlexion,
+    DriverData = .AnklePositions
   ) ={};
   
   SingleDoFCalDriver SubTalar(
-  Measure = BodyModelRef.Interface.Side.SubTalarEversion,
-  DriverData = .SubTalarPositions
+    Measure = BodyModelRef.Interface.Side.SubTalarEversion,
+    DriverData = .SubTalarPositions
   ) ={};
 };
 
@@ -177,39 +177,302 @@
   TrunkCalibrationModel TrunkModel(Side = Side, BodyModelRef = BodyModelRef) = {};
   
   MultiDoFCalDriver Shoulder(
-  Measure = BodyModelRef.Interface.Side.GlenohumeralFlexion.GHMeasure,
-  DriverData = .ShoulderPositions
+    Measure = BodyModelRef.Interface.Side.GlenohumeralFlexion.GHMeasure,
+    DriverData = .ShoulderPositions
   ) ={};
   
   SingleDoFCalDriver ScapulaProtraction(
-  Measure = BodyModelRef.Interface.Side.ScapulaThoraxProtraction,
-  DriverData = .ScapulaProtractionPositions
+    Measure = BodyModelRef.Interface.Side.ScapulaThoraxProtraction,
+    DriverData = .ScapulaProtractionPositions
   ) ={};
   
   SingleDoFCalDriver ScapulaElevation(
-  Measure = BodyModelRef.Interface.Side.ScapulaThoraxElevation,
-  DriverData = .ScapulaElevationPositions
+    Measure = BodyModelRef.Interface.Side.ScapulaThoraxElevation,
+    DriverData = .ScapulaElevationPositions
   ) ={};
   
   SingleDoFCalDriver ElbowFlexion(
-  Measure = BodyModelRef.Interface.Side.ElbowFlexion,
-  DriverData = .ElbowFlexionPositions
+    Measure = BodyModelRef.Interface.Side.ElbowFlexion,
+    DriverData = .ElbowFlexionPositions
   ) ={};
   
   SingleDoFCalDriver ElbowPronation(
-  Measure = BodyModelRef.Interface.Side.ElbowPronation,
-  DriverData = .ElbowPronationPositions
+    Measure = BodyModelRef.Interface.Side.ElbowPronation,
+    DriverData = .ElbowPronationPositions
   ) ={};
   
   SingleDoFCalDriver WristFlexion(
-  Measure = BodyModelRef.Interface.Side.WristFlexion,
-  DriverData = .WristFlexionPositions
+    Measure = BodyModelRef.Interface.Side.WristFlexion,
+    DriverData = .WristFlexionPositions
   ) ={};
   
   SingleDoFCalDriver WristAbduction(
-  Measure = BodyModelRef.Interface.Side.WristAbduction,
-  DriverData = .WristAbductionPositions
+    Measure = BodyModelRef.Interface.Side.WristAbduction,
+    DriverData = .WristAbductionPositions
   ) ={};
   
   #include "BMDependentObjects.any"
+};
+
+#class_template TwoParCalibrationStudy(
+  __CLASS__ = AnyBodyCalibrationStudy,
+  BodyModelRef,
+  Side,
+  TRUNKFLEXION = Off,
+  TRUNKLATERALBENDING = Off,
+  TRUNKROTATION = Off,
+  SKULLFLEXION = Off,
+  SKULLLATERALBENDING = Off,
+  SKULLROTATION = Off,
+  SHOULDER = Off,
+  SCAPULAELEVATION = Off,
+  SCAPULAPROTRACTION = Off,
+  ELBOWFLEXION = Off,
+  ELBOWPRONATION = Off,
+  WRISTFLEXION = Off,
+  WRISTABDUCTION = Off,
+  HIP = Off,
+  KNEE = Off,
+  ANKLE = Off,
+  SUBTALAR = Off,
+) {
+  // Study settings
+  FiberAndTendonLengthAdjustment.CalibrateTendonAtMaxForceOnOff = Off;
+  Kinematics.SmallStepAssumptionOnOff = Off;
+  InitialConditions.SmallStepAssumptionOnOff = Off;
+  Kinematics.PosAnalysisOnlyOnOff = On;
+  InitialConditions.PosAnalysisOnlyOnOff = On;
+
+  #var RminMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMinDefault);
+  #var RmaxMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMaxDefault);
+  
+  // Constraint to ground
+  AnyFixedRefFrame Ground = {
+    AnyRefNode node = {
+      ARel = ..TrunkSegments.PelvisSeg.Axes0;
+      sRel = ..TrunkSegments.PelvisSeg.r0;
+    };
+  };
+
+  AnyKinEq PelvisToGroundFix = {
+    AnyKinLinear Lin = {
+      AnyRefFrame &ground = ..Ground.node;
+      AnyRefFrame &Pelvis = ..TrunkSegments.PelvisSeg;
+    };
+    AnyKinRotational Rot = {
+      Type = RotAxesAngles;
+      AnyRefFrame &ground = ..Ground.node;
+      AnyRefFrame &Pelvis = ..TrunkSegments.PelvisSeg;
+    };
+  };
+
+  // The Trunk is always needed to fixate the model to the world
+  // Users can still activate the DoF and overwrite the positions in the calibration study
+  AnyFolder &TrunkSegments = BodyModelRef.Trunk.Segments;
+  AnyFolder &TrunkJoints = BodyModelRef.Trunk.Joints;
+
+  SingleDoFCalDriver TrunkFlexion(
+    Measure = BodyModelRef.Interface.Trunk.PelvisThoraxExtension,
+    DriverData = .TrunkFlexionPositions
+  ) ={};
+  
+  SingleDoFCalDriver TrunkLateralBending(
+    Measure = BodyModelRef.Interface.Trunk.PelvisThoraxLateralBending,
+    DriverData = .TrunkLateralBendingPositions
+  ) ={};
+  
+  SingleDoFCalDriver TrunkRotation(
+    Measure = BodyModelRef.Interface.Trunk.PelvisThoraxRotation,
+    DriverData = .TrunkRotationPositions
+  ) ={};
+  
+  SingleDoFCalDriver SkullFlexion(
+    Measure = BodyModelRef.Interface.Trunk.SkullThoraxFlexion,
+    DriverData = .SkullFlexionPositions
+  ) ={};
+  
+  SingleDoFCalDriver SkullLateralBending(
+    Measure = BodyModelRef.Interface.Trunk.SkullThoraxLateralBending,
+    DriverData = .SkullLateralBendingPositions
+  ) ={};
+  
+  SingleDoFCalDriver SkullRotation(
+    Measure = BodyModelRef.Interface.Trunk.SkullThoraxRotation,
+    DriverData = .SkullRotationPositions
+  ) ={};
+
+  #if TRUNKFLEXION == On
+    #var AnyObjectPtr TrunkFlexionPositions;
+  #else
+    AnyObjectPtr TrunkFlexionPositions = repmat(nStep, &.RangeOfMotion.Trunk.Neutral);
+  #endif
+    
+  #if TRUNKLATERALBENDING == On
+    #var AnyObjectPtr TrunkLateralBendingPositions;
+  #else
+    AnyObjectPtr TrunkLateralBendingPositions = repmat(nStep, &.RangeOfMotion.Trunk.Neutral);
+  #endif
+
+  #if TRUNKROTATION == On
+    #var AnyObjectPtr TrunkRotationPositions;
+  #else
+    AnyObjectPtr TrunkRotationPositions = repmat(nStep, &.RangeOfMotion.Trunk.Neutral);
+  #endif
+
+  #if SKULLFLEXION == On
+    #var AnyObjectPtr SkullFlexionPositions; 
+  #else
+    AnyObjectPtr SkullFlexionPositions = repmat(nStep, &.RangeOfMotion.Trunk.Neutral);
+  #endif
+
+  #if SKULLLATERALBENDING == On
+    #var AnyObjectPtr SkullLateralBendingPositions; 
+  #else
+    AnyObjectPtr SkullLateralBendingPositions = repmat(nStep, &.RangeOfMotion.Trunk.Neutral);
+  #endif
+
+  #if SKULLROTATION == On
+    #var AnyObjectPtr SkullRotationPositions; 
+  #else
+    AnyObjectPtr SkullRotationPositions = repmat(nStep, &.RangeOfMotion.Trunk.Neutral);
+  #endif
+
+  
+  #if (SHOULDER == On) | (SCAPULAELEVATION == On) | (SCAPULAPROTRACTION == On) | (ELBOWFLEXION == On) | (ELBOWPRONATION == On) | (WRISTFLEXION == On) | (WRISTABDUCTION == On)
+    AnyFolder &ArmSegments = BodyModelRef.Side.ShoulderArm.Segments;
+    AnyFolder &ArmJoints = BodyModelRef.Side.ShoulderArm.Joints;
+    
+    // The Muscles folder contain segments and constraints for some wrapping muscles
+    // e.g. Deltoid, Pectoralis Minor, etc.
+    AnyFolder &ArmMuscles = BodyModelRef.Side.ShoulderArm.Muscles;
+
+    #include "BMDependentObjects.any"
+
+    MultiDoFCalDriver Shoulder(
+      Measure = BodyModelRef.Interface.Side.GlenohumeralFlexion.GHMeasure,
+      DriverData = .ShoulderPositions
+    ) ={};
+
+    SingleDoFCalDriver ScapulaElevation(
+      Measure = BodyModelRef.Interface.Side.ScapulaThoraxElevation,
+      DriverData = .ScapulaElevationPositions
+    ) ={};
+
+    SingleDoFCalDriver ScapulaProtraction(
+      Measure = BodyModelRef.Interface.Side.ScapulaThoraxProtraction,
+      DriverData = .ScapulaProtractionPositions
+    ) ={};
+
+    SingleDoFCalDriver ElbowFlexion(
+      Measure = BodyModelRef.Interface.Side.ElbowFlexion,
+      DriverData = .ElbowFlexionPositions
+    ) ={};
+
+    SingleDoFCalDriver ElbowPronation(
+      Measure = BodyModelRef.Interface.Side.ElbowPronation,
+      DriverData = .ElbowPronationPositions
+    ) ={};
+
+    SingleDoFCalDriver WristFlexion(
+      Measure = BodyModelRef.Interface.Side.WristFlexion,
+      DriverData = .WristFlexionPositions
+    ) ={};
+
+    SingleDoFCalDriver WristAbduction(
+      Measure = BodyModelRef.Interface.Side.WristAbduction,
+      DriverData = .WristAbductionPositions
+    ) ={};
+
+    #if SHOULDER == On
+      #var AnyObjectPtr ShoulderPositions;
+    #else
+      AnyObjectPtr ShoulderPositions = repmat(nStep, &.RangeOfMotion.Side.ShoulderArm.Shoulder.Neutral);
+    #endif
+
+    #if SCAPULAELEVATION == On
+      #var AnyObjectPtr ScapulaElevationPositions;
+    #else
+      AnyObjectPtr ScapulaElevationPositions = repmat(nStep, &.RangeOfMotion.Side.ShoulderArm.Shoulder.Neutral);
+    #endif
+
+    #if SCAPULAPROTRACTION == On
+      #var AnyObjectPtr ScapulaProtractionPositions;
+    #else
+      AnyObjectPtr ScapulaProtractionPositions = repmat(nStep, &.RangeOfMotion.Side.ShoulderArm.Shoulder.Neutral);
+    #endif
+
+    #if ELBOWFLEXION == On
+      #var AnyObjectPtr ElbowFlexionPositions;
+    #else
+      AnyObjectPtr ElbowFlexionPositions = repmat(nStep, &.RangeOfMotion.Side.ShoulderArm.Elbow.Neutral);
+    #endif
+
+    #if ELBOWPRONATION == On
+      #var AnyObjectPtr ElbowPronationPositions;
+    #else
+      AnyObjectPtr ElbowPronationPositions = repmat(nStep, &.RangeOfMotion.Side.ShoulderArm.Elbow.Neutral);
+    #endif
+
+    #if WRISTFLEXION == On
+      #var AnyObjectPtr WristFlexionPositions;
+    #else
+      AnyObjectPtr WristFlexionPositions = repmat(nStep, &.RangeOfMotion.Side.ShoulderArm.Wrist.Neutral);
+    #endif
+
+    #if WRISTABDUCTION == On
+      #var AnyObjectPtr WristAbductionPositions;
+    #else
+      AnyObjectPtr WristAbductionPositions = repmat(nStep, &.RangeOfMotion.Side.ShoulderArm.Wrist.Neutral);
+    #endif
+  #endif
+
+  // Leg
+  #if (HIP == On) | (KNEE == On) | (ANKLE == On) | (SUBTALAR == On)
+    AnyFolder &LegSegments = BodyModelRef.Side.Leg.Seg;
+    AnyFolder &LegJoints = BodyModelRef.Side.Leg.Jnt;
+  
+    MultiDoFCalDriver Hip(
+      Measure = BodyModelRef.Interface.Side.HipFlexion.HipMeasure,
+      DriverData = .HipPositions
+    ) ={};  
+
+    SingleDoFCalDriver Knee(
+      Measure = BodyModelRef.Interface.Side.KneeFlexion,
+      DriverData = .KneePositions
+    ) ={};
+
+    SingleDoFCalDriver Ankle(
+      Measure = BodyModelRef.Interface.Side.AnklePlantarFlexion,
+      DriverData = .AnklePositions
+    ) ={};
+
+    SingleDoFCalDriver SubTalar(
+      Measure = BodyModelRef.Interface.Side.SubTalarEversion,
+      DriverData = .SubTalarPositions
+    ) ={};
+
+    #if HIP == On
+      #var AnyObjectPtr HipPositions;
+    #else
+      AnyObjectPtr HipPositions = repmat(nStep, &.RangeOfMotion.Side.Leg.Hip.Neutral);
+    #endif
+
+    #if KNEE == On
+      #var AnyObjectPtr KneePositions;
+      #else
+        AnyObjectPtr KneePositions = repmat(nStep, &.RangeOfMotion.Side.Leg.Knee.Neutral);
+    #endif
+
+    #if ANKLE == On
+      #var AnyObjectPtr AnklePositions;
+      #else
+        AnyObjectPtr AnklePositions = repmat(nStep, &.RangeOfMotion.Side.Leg.Ankle.Neutral);
+    #endif
+
+    #if SUBTALAR == On
+      #var AnyObjectPtr SubTalarPositions;
+      #else
+        AnyObjectPtr SubTalarPositions = repmat(nStep, &.RangeOfMotion.Side.Leg.Ankle.Neutral);
+    #endif
+  #endif
 };

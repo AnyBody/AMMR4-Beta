@@ -120,94 +120,94 @@ BodyModelFolderStructure RangeOfMotion() = {
 
   #if BM_ARM_LEFT
     Left.ShoulderArm.Shoulder = {
-      AnyVar MaxGlenohumeralFlexionAngle ??= ...Right.ShoulderArm.Shoulder.MaxGlenohumeralFlexionAngle;
-      AnyVar MaxGlenohumeralExtensionAngle ??= ...Right.ShoulderArm.Shoulder.MaxGlenohumeralExtensionAngle;
-      AnyVar MaxGlenohumeralAbductionAngle ??= ...Right.ShoulderArm.Shoulder.MaxGlenohumeralAbductionAngle;
-      AnyVar MaxGlenohumeralAdductionAngle ??= ...Right.ShoulderArm.Shoulder.MaxGlenohumeralAdductionAngle;
-      AnyVar MaxGlenohumeralExternalRotationAngle ??= ...Right.ShoulderArm.Shoulder.MaxGlenohumeralExternalRotationAngle;
-      AnyVar MaxGlenohumeralInternalRotationAngle ??= ...Right.ShoulderArm.Shoulder.MaxGlenohumeralInternalRotationAngle;
-      AnyVar MaxScapulaClaviculaElevationAngle ??= ...Right.ShoulderArm.Shoulder.MaxScapulaClaviculaElevationAngle;
-      AnyVar MaxScapulaClaviculaDepressionAngle ??= ...Right.ShoulderArm.Shoulder.MaxScapulaClaviculaDepressionAngle;
-      AnyVar MaxScapulaClaviculaProtractionAngle ??= ...Right.ShoulderArm.Shoulder.MaxScapulaClaviculaProtractionAngle;
-      AnyVar MaxScapulaClaviculaRetractionAngle ??= ...Right.ShoulderArm.Shoulder.MaxScapulaClaviculaRetractionAngle;
+      AnyVar MaxGlenohumeralFlexionAngle ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Shoulder.MaxGlenohumeralFlexionAngle;
+      AnyVar MaxGlenohumeralExtensionAngle ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Shoulder.MaxGlenohumeralExtensionAngle;
+      AnyVar MaxGlenohumeralAbductionAngle ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Shoulder.MaxGlenohumeralAbductionAngle;
+      AnyVar MaxGlenohumeralAdductionAngle ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Shoulder.MaxGlenohumeralAdductionAngle;
+      AnyVar MaxGlenohumeralExternalRotationAngle ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Shoulder.MaxGlenohumeralExternalRotationAngle;
+      AnyVar MaxGlenohumeralInternalRotationAngle ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Shoulder.MaxGlenohumeralInternalRotationAngle;
+      AnyVar MaxScapulaClaviculaElevationAngle ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Shoulder.MaxScapulaClaviculaElevationAngle;
+      AnyVar MaxScapulaClaviculaDepressionAngle ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Shoulder.MaxScapulaClaviculaDepressionAngle;
+      AnyVar MaxScapulaClaviculaProtractionAngle ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Shoulder.MaxScapulaClaviculaProtractionAngle;
+      AnyVar MaxScapulaClaviculaRetractionAngle ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Shoulder.MaxScapulaClaviculaRetractionAngle;
       
       // Shoulder positions
-      AnyFloat Neutral ??= ...Right.ShoulderArm.Shoulder.Neutral;
-      AnyFloat Flexed ??= ...Right.ShoulderArm.Shoulder.Flexed;
-      AnyFloat Extended ??= ...Right.ShoulderArm.Shoulder.Extended;
-      AnyFloat Abducted ??= ...Right.ShoulderArm.Shoulder.Abducted;
-      AnyFloat Adducted ??= ...Right.ShoulderArm.Shoulder.Adducted;
-      AnyFloat ExternallyRotated ??= ...Right.ShoulderArm.Shoulder.ExternallyRotated;
-      AnyFloat InternallyRotated ??= ...Right.ShoulderArm.Shoulder.InternallyRotated;
-      AnyFloat FlexedAndExternallyRotated ??= ...Right.ShoulderArm.Shoulder.FlexedAndExternallyRotated;
-      AnyFloat FlexedAndInternallyRotated ??= ...Right.ShoulderArm.Shoulder.FlexedAndInternallyRotated;
-      AnyFloat ExtendedAndExternallyRotated ??= ...Right.ShoulderArm.Shoulder.ExtendedAndExternallyRotated;
-      AnyFloat ExtendedAndInternallyRotated ??= ...Right.ShoulderArm.Shoulder.ExtendedAndInternallyRotated;
-      AnyFloat FlexedAndAdducted ??= ...Right.ShoulderArm.Shoulder.FlexedAndAdducted;
-      AnyFloat FlexedAndAbducted ??= ...Right.ShoulderArm.Shoulder.FlexedAndAbducted;
+      AnyFloat Neutral ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Shoulder.Neutral;
+      AnyFloat Flexed ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Shoulder.Flexed;
+      AnyFloat Extended ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Shoulder.Extended;
+      AnyFloat Abducted ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Shoulder.Abducted;
+      AnyFloat Adducted ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Shoulder.Adducted;
+      AnyFloat ExternallyRotated ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Shoulder.ExternallyRotated;
+      AnyFloat InternallyRotated ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Shoulder.InternallyRotated;
+      AnyFloat FlexedAndExternallyRotated ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Shoulder.FlexedAndExternallyRotated;
+      AnyFloat FlexedAndInternallyRotated ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Shoulder.FlexedAndInternallyRotated;
+      AnyFloat ExtendedAndExternallyRotated ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Shoulder.ExtendedAndExternallyRotated;
+      AnyFloat ExtendedAndInternallyRotated ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Shoulder.ExtendedAndInternallyRotated;
+      AnyFloat FlexedAndAdducted ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Shoulder.FlexedAndAdducted;
+      AnyFloat FlexedAndAbducted ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Shoulder.FlexedAndAbducted;
     };  
   
     Left.ShoulderArm.Elbow = {
-      AnyVar MaxFlexionAngle ??= ...Right.ShoulderArm.Elbow.MaxFlexionAngle;
-      AnyVar MaxExtensionAngle ??= ...Right.ShoulderArm.Elbow.MaxExtensionAngle;
-      AnyVar MaxPronationAngle ??= ...Right.ShoulderArm.Elbow.MaxPronationAngle;
-      AnyVar MaxSupinationAngle ??= ...Right.ShoulderArm.Elbow.MaxSupinationAngle;
+      AnyVar MaxFlexionAngle ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Elbow.MaxFlexionAngle;
+      AnyVar MaxExtensionAngle ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Elbow.MaxExtensionAngle;
+      AnyVar MaxPronationAngle ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Elbow.MaxPronationAngle;
+      AnyVar MaxSupinationAngle ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Elbow.MaxSupinationAngle;
     };
     
     Left.ShoulderArm.Wrist = {
-      AnyVar MaxFlexionAngle ??= ...Right.ShoulderArm.Wrist.MaxFlexionAngle;
-      AnyVar MaxExtensionAngle ??= ...Right.ShoulderArm.Wrist.MaxExtensionAngle;
-      AnyVar MaxAbductionAngle ??= ...Right.ShoulderArm.Wrist.MaxAbductionAngle;
-      AnyVar MaxAdductionAngle ??= ...Right.ShoulderArm.Wrist.MaxAdductionAngle;
+      AnyVar MaxFlexionAngle ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Wrist.MaxFlexionAngle;
+      AnyVar MaxExtensionAngle ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Wrist.MaxExtensionAngle;
+      AnyVar MaxAbductionAngle ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Wrist.MaxAbductionAngle;
+      AnyVar MaxAdductionAngle ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Wrist.MaxAdductionAngle;
     };
   #endif
   
   #if BM_LEG_LEFT & (BM_LEG_MODEL == _LEG_MODEL_TLEM2_)
     // Left side is by default a mirror of the right side
     Left.Leg.Hip = {
-      AnyVar MaxExternalRotationAngle ??= ...Right.Leg.Hip.MaxExternalRotationAngle;
-      AnyVar MaxInternalRotationAngle ??= ...Right.Leg.Hip.MaxInternalRotationAngle;
-      AnyVar MaxAdductionAngle ??= ...Right.Leg.Hip.MaxAdductionAngle;
-      AnyVar MaxAdductionInExtensionAngle ??= ...Right.Leg.Hip.MaxAdductionInExtensionAngle;
-      AnyVar MaxAbductionAngle ??= ...Right.Leg.Hip.MaxAbductionAngle;
-      AnyVar MaxFlexionAngle ??= ...Right.Leg.Hip.MaxFlexionAngle;
-      AnyVar MaxExtensionAngle ??= ...Right.Leg.Hip.MaxExtensionAngle;
-      AnyVar MaxExtensionInAdductionAngle ??= ...Right.Leg.Hip.MaxExtensionInAdductionAngle;
-      AnyVar MaxFlexionInAbductionAngle ??= ...Right.Leg.Hip.MaxFlexionInAbductionAngle;
-      AnyVar MinFlexionInAdduction ??= ...Right.Leg.Hip.MinFlexionInAdduction;
+      AnyVar MaxExternalRotationAngle ??= .....BodyModel.Left.Leg.Data.RangeOfMotion.Hip.MaxExternalRotationAngle;
+      AnyVar MaxInternalRotationAngle ??= .....BodyModel.Left.Leg.Data.RangeOfMotion.Hip.MaxInternalRotationAngle;
+      AnyVar MaxAdductionAngle ??= .....BodyModel.Left.Leg.Data.RangeOfMotion.Hip.MaxAdductionAngle;
+      AnyVar MaxAdductionInExtensionAngle ??= .....BodyModel.Left.Leg.Data.RangeOfMotion.Hip.MaxAdductionInExtensionAngle;
+      AnyVar MaxAbductionAngle ??= .....BodyModel.Left.Leg.Data.RangeOfMotion.Hip.MaxAbductionAngle;
+      AnyVar MaxFlexionAngle ??= .....BodyModel.Left.Leg.Data.RangeOfMotion.Hip.MaxFlexionAngle;
+      AnyVar MaxExtensionAngle ??= .....BodyModel.Left.Leg.Data.RangeOfMotion.Hip.MaxExtensionAngle;
+      AnyVar MaxExtensionInAdductionAngle ??= .....BodyModel.Left.Leg.Data.RangeOfMotion.Hip.MaxExtensionInAdductionAngle;
+      AnyVar MaxFlexionInAbductionAngle ??= .....BodyModel.Left.Leg.Data.RangeOfMotion.Hip.MaxFlexionInAbductionAngle;
+      AnyVar MinFlexionInAdduction ??= .....BodyModel.Left.Leg.Data.RangeOfMotion.Hip.MinFlexionInAdduction;
   
       // Hip positions
-      AnyFloat Neutral ??= ...Right.Leg.Hip.Neutral;
-      AnyFloat InternallyRotated ??= ...Right.Leg.Hip.InternallyRotated;
-      AnyFloat ExternallyRotated ??= ...Right.Leg.Hip.ExternallyRotated;
-      AnyFloat Adduction ??= ...Right.Leg.Hip.Adduction;
-      AnyFloat Abduction ??= ...Right.Leg.Hip.Abduction;
-      AnyFloat Flexed ??= ...Right.Leg.Hip.Flexed;
-      AnyFloat FlexedAndAdducted ??= ...Right.Leg.Hip.FlexedAndAdducted;
-      AnyFloat FlexedAndAbducted ??= ...Right.Leg.Hip.FlexedAndAbducted;
-      AnyFloat Extended ??= ...Right.Leg.Hip.Extended;
-      AnyFloat ExtendedAndAdducted ??= ...Right.Leg.Hip.ExtendedAndAdducted;
-      AnyFloat AbductedAndExternallyRotated ??= ...Right.Leg.Hip.AbductedAndExternallyRotated;
+      AnyFloat Neutral ??= .....BodyModel.Left.Leg.Data.RangeOfMotion.Hip.Neutral;
+      AnyFloat InternallyRotated ??= .....BodyModel.Left.Leg.Data.RangeOfMotion.Hip.InternallyRotated;
+      AnyFloat ExternallyRotated ??= .....BodyModel.Left.Leg.Data.RangeOfMotion.Hip.ExternallyRotated;
+      AnyFloat Adduction ??= .....BodyModel.Left.Leg.Data.RangeOfMotion.Hip.Adduction;
+      AnyFloat Abduction ??= .....BodyModel.Left.Leg.Data.RangeOfMotion.Hip.Abduction;
+      AnyFloat Flexed ??= .....BodyModel.Left.Leg.Data.RangeOfMotion.Hip.Flexed;
+      AnyFloat FlexedAndAdducted ??= .....BodyModel.Left.Leg.Data.RangeOfMotion.Hip.FlexedAndAdducted;
+      AnyFloat FlexedAndAbducted ??= .....BodyModel.Left.Leg.Data.RangeOfMotion.Hip.FlexedAndAbducted;
+      AnyFloat Extended ??= .....BodyModel.Left.Leg.Data.RangeOfMotion.Hip.Extended;
+      AnyFloat ExtendedAndAdducted ??= .....BodyModel.Left.Leg.Data.RangeOfMotion.Hip.ExtendedAndAdducted;
+      AnyFloat AbductedAndExternallyRotated ??= .....BodyModel.Left.Leg.Data.RangeOfMotion.Hip.AbductedAndExternallyRotated;
 
-      AnyObjectPtr ActiveRoM ??= ...Right.Leg.Hip.ActiveRoM;
+      AnyObjectPtr ActiveRoM ??= .....BodyModel.Left.Leg.Data.RangeOfMotion.Hip.ActiveRoM;
   };
   
     Left.Leg.Knee = {
-      AnyVar Neutral ??= ...Right.Leg.Knee.Neutral;
-      AnyVar MaxFlexionAngle ??= ...Right.Leg.Knee.MaxFlexionAngle;
-      AnyVar MaxExtensionAngle ??= ...Right.Leg.Knee.MaxExtensionAngle;
+      AnyVar Neutral ??= .....BodyModel.Left.Leg.Data.RangeOfMotion.Knee.Neutral;
+      AnyVar MaxFlexionAngle ??= .....BodyModel.Left.Leg.Data.RangeOfMotion.Knee.MaxFlexionAngle; 
+      AnyVar MaxExtensionAngle ??= .....BodyModel.Left.Leg.Data.RangeOfMotion.Knee.MaxExtensionAngle;
 
-      AnyObjectPtr ActiveRoM ??= ...Right.Leg.Knee.ActiveRoM;
+      AnyObjectPtr ActiveRoM ??= .....BodyModel.Left.Leg.Data.RangeOfMotion.Knee.ActiveRoM;
     };
   
     Left.Leg.Ankle = {
-      AnyVar Neutral ??= ...Right.Leg.Ankle.Neutral;
-      AnyVar MaxPlantarFlexionAngle ??= ...Right.Leg.Ankle.MaxPlantarFlexionAngle;
-      AnyVar MaxDorsiFlexionAngle ??= ...Right.Leg.Ankle.MaxDorsiFlexionAngle;
-      AnyVar MaxInversionAngle ??= ...Right.Leg.Ankle.MaxInversionAngle;
-      AnyVar MaxEversionAngle ??= ...Right.Leg.Ankle.MaxEversionAngle;
+      AnyVar Neutral ??= .....BodyModel.Left.Leg.Data.RangeOfMotion.Ankle.Neutral;
+      AnyVar MaxPlantarFlexionAngle ??= .....BodyModel.Left.Leg.Data.RangeOfMotion.Ankle.MaxPlantarFlexionAngle;
+      AnyVar MaxDorsiFlexionAngle ??= .....BodyModel.Left.Leg.Data.RangeOfMotion.Ankle.MaxDorsiFlexionAngle;
+      AnyVar MaxInversionAngle ??= .....BodyModel.Left.Leg.Data.RangeOfMotion.Ankle.MaxInversionAngle;
+      AnyVar MaxEversionAngle ??= .....BodyModel.Left.Leg.Data.RangeOfMotion.Ankle.MaxEversionAngle;
 
-      AnyObjectPtr ActiveRoM ??= ...Right.Leg.Ankle.ActiveRoM;
+      AnyObjectPtr ActiveRoM ??= .....BodyModel.Left.Leg.Data.RangeOfMotion.Ankle.ActiveRoM;
     };
   #endif
 };
