@@ -98,3 +98,15 @@
       "-------------------------------------------------------------------------------------------------------"));
 
 #endif
+
+//
+// Foot model related logic
+//
+#if (BM_FOOT_MODEL == _FOOT_MODEL_RIGID_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
+
+  AnyInt bm_foot_model_gm_notice1= notice(0, strformat("\n"+
+      "------------------------------------------------------------------------------------------------------\n"+
+      "    Please note that GM foot model is currently in a beta state. \n"+
+      "-------------------------------------------------------------------------------------------------------"));
+
+#endif
