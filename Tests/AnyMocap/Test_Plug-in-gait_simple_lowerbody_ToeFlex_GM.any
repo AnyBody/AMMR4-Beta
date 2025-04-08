@@ -13,9 +13,12 @@
 
 #path MOCAP_PATH_MAINFILEDIR "../../Application/Beta/Plug-in-gait_Simple_ToeFlex_GM"
 #path MOCAP_PATH_MAINFILE "<MOCAP_PATH_MAINFILEDIR>/LowerExtremity.main.any"
-#define MOCAP_NAME_MAINFILEDIR "Plug-in-gait_Simple"
+#define MOCAP_NAME_MAINFILEDIR "Plug-in-gait_Simple_ToeFlex_GM"
 
-
+//// Run Analysis with a reduced number of time steps
+//// to make test go faster. 
+#define N_STEP_KINEMATICS 10
+#define N_STEP 15
 
 #ifdef TEST_NAME
 #define  MOCAP_TEST_FILENAME_PREFIX  TEST_NAME + "_"
