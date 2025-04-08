@@ -41,7 +41,8 @@ The GM foot model can be used in one of the following configurations:
   for toe flexion when comparing to the rigid foot. This model can improve kinematics in applications such as gait by allowing 
   bending of toes. The motion of the toes can be driven by motion capture data, for example, by using a toe tip marker, or 
   automatically through a new class template that prevents penetration of the toes with the ground. Each metatarsophalangeal 
-  joint carries reaction force to compensate for the lack of ligaments in this model. 
+  joint carries joint actuators and reaction force to compensate for the lack of ligaments in this model. The reactions can be
+  optionally switched off by setting ```#define BM_FOOT_MODEL_TOE_FLEX_GM_REACTION OFF```
   
   (IMAGE + GIF)
 
@@ -64,8 +65,15 @@ The GM foot model can be used in one of the following configurations:
 Your browser does not support the video tag.
 </video>
 ```
+```Update Video Above```
 
+## Muscle Switch:
 
+The muscle behavior in the GM foot model can be controlled by switches for the foot muscle, for example, ```#define BM_FOOT_MUSCLES_BOTH _MUSCLES_SIMPLE_```.
+Currently, the GM foot model can work with simple muscle model. The switch allows the foot muscles to be set to 3 element Hill muscle model, 
+however the user must provide a calibration routine for the Hill muscle models in the foot.
+This switch allows the user to control the foot muscles independently of the leg muscles. Please note that the foot muscles can only be included 
+if leg muscles are also enabled.
 
 
 ## Usage:

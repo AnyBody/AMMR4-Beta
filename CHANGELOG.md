@@ -56,7 +56,7 @@ You can [enable backwards compatibility](changes-to-bodymodel-folders) by settin
 * A new abdominal model was added to replace the old 'buckle' model. 
   It uses a new kinematic volume measure from AnyBody 7.5 to model the abdominal pressure 
   and includes new oblique, rectus and tranversus muscles. The new abdominal model is 
-  more robust and allows a bigger range of motion of the trunk. See the {ref}`documentaiton page <Abdominal Pressure Model>` 
+  more robust and allows a bigger range of motion of the trunk. See the {ref}`documentation page <Abdominal Pressure Model>` 
   for more info about the abdominal model. 
 
   It is possible to revert ot the old buckle implmenation with switch {bm_statement}`_CAVITY_MODEL_BUCKLE_`. 
@@ -66,7 +66,8 @@ You can [enable backwards compatibility](changes-to-bodymodel-folders) by settin
   parameters as the TLEM foot. The muscle parameters of the foot instead come from the GM foot. The GM foot models are available 
   in multiple configurations: rigid foot (which will eventually become the default foot), toe flexion configuration 
   (which has linked flexion extension degree of freedom for all toes), and the full-blown detailed foot model with 
-  26 segments. See the {ref}`documentation page <GM Foot Model>` for more info.
+  26 segments. The GM foot model is also accompanied by new switches, for example, {bm_statement}`BM_FOOT_MUSCLES_BOTH` to 
+  control the muscle behavior in GM foot model. See the {ref}`documentation page <GM Foot Model>` for more info.
 
 * A new system for handling mass and inertia calculation for segments in the
   Trunk. Now we utilize the new inertia classes derived from `AnyInertia`. The
