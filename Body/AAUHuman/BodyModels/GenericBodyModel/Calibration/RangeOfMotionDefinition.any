@@ -20,6 +20,8 @@ BodyModelFolderStructure RangeOfMotion() = {
     AnyVar MaxPelvisSacrumExtensionAngle ??= ...BodyModel.Trunk.Data.RangeOfMotion.MaxPelvisSacrumExtensionAngle;
     AnyVar MaxPelvisSacrumLateralBendingAngle ??= ...BodyModel.Trunk.Data.RangeOfMotion.MaxPelvisSacrumLateralBendingAngle;
     AnyVar MinPelvisSacrumLateralBendingAngle ??= ...BodyModel.Trunk.Data.RangeOfMotion.MinPelvisSacrumLateralBendingAngle;
+    AnyVar Neutral ??= ...BodyModel.Trunk.Data.RangeOfMotion.Neutral;
+    
   };
   
   #if BM_ARM_RIGHT

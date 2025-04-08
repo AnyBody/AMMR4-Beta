@@ -1,40 +1,4 @@
 
-#class_template TrunkCalibrationModel(Side, BodyModelRef) {
-  
-  AnyFolder &TrunkSegments = BodyModelRef.Trunk.Segments;
-  AnyFolder &TrunkJoints = BodyModelRef.Trunk.Joints;
-  
-  // Constraints
-  AnyFixedRefFrame ground = {
-    AnyRefNode node = {
-      ARel = ..TrunkSegments.PelvisSeg.Axes0;
-      sRel = ..TrunkSegments.PelvisSeg.r0;
-    };
-  };
-  
-  AnyKinEq ThoraxFix = {
-    AnyKinMeasure& PelvisThoraxExtension = BodyModelRef.Interface.Trunk.PelvisThoraxExtension;
-    AnyKinMeasure& PelvisThoraxLateralBending = BodyModelRef.Interface.Trunk.PelvisThoraxLateralBending;
-    AnyKinMeasure& PelvisThoraxRotation = BodyModelRef.Interface.Trunk.PelvisThoraxRotation;
-    AnyKinMeasure& SkullThoraxFlexion = BodyModelRef.Interface.Trunk.SkullThoraxFlexion;
-    AnyKinMeasure& SkullThoraxRotation = BodyModelRef.Interface.Trunk.SkullThoraxRotation;
-    AnyKinMeasure& SkullThoraxLateralBending = BodyModelRef.Interface.Trunk.SkullThoraxLateralBending;
-  };
-  
-  AnyKinEq PelvisFix = {
-    AnyKinLinear Lin = {
-      AnyRefFrame &ground = ..ground.node;
-      AnyRefFrame &Pelvis = ..TrunkSegments.PelvisSeg;
-    };
-    AnyKinRotational Rot = {
-      Type = RotAxesAngles;
-      AnyRefFrame &ground = ..ground.node;
-      AnyRefFrame &Pelvis = ..TrunkSegments.PelvisSeg;
-    };
-  };
-};
-
-
 /**
   Class template to create a driver for a single-DoF measure in a calibration study.
 */
@@ -67,6 +31,70 @@
   AnyInt expect_nPos_to_match_nStep = warn(eqfun(NumElemOf(T), .nStep), strformat("The number of calibration positions (Data) in the: " + NameOf(ObjGetParent(0)) + " driver does not match the number of positions (nStep) in the study."));
 };
 
+#class_template TrunkCalibrationModel(Side, BodyModelRef) {
+  
+  AnyVar nStep = .nStep;
+  
+  #var AnyObjectPtr TrunkFlexionPositions = repmat(.nStep, &..RangeOfMotion.Trunk.Neutral);
+  #var AnyObjectPtr TrunkLateralBendingPositions = repmat(.nStep, &..RangeOfMotion.Trunk.Neutral);
+  #var AnyObjectPtr TrunkRotationPositions = repmat(.nStep, &..RangeOfMotion.Trunk.Neutral);
+  #var AnyObjectPtr SkullFlexionPositions = repmat(.nStep, &..RangeOfMotion.Trunk.Neutral);
+  #var AnyObjectPtr SkullLateralBendingPositions = repmat(.nStep, &..RangeOfMotion.Trunk.Neutral);
+  #var AnyObjectPtr SkullRotationPositions = repmat(.nStep, &..RangeOfMotion.Trunk.Neutral);
+
+  AnyFolder &TrunkSegments = BodyModelRef.Trunk.Segments;
+  AnyFolder &TrunkJoints = BodyModelRef.Trunk.Joints;
+  
+  // Constraints
+  AnyFixedRefFrame ground = {
+    AnyRefNode node = {
+      ARel = ..TrunkSegments.PelvisSeg.Axes0;
+      sRel = ..TrunkSegments.PelvisSeg.r0;
+    };
+  };
+  
+  SingleDoFCalDriver TrunkFlexion(
+      Measure = BodyModelRef.Interface.Trunk.PelvisThoraxExtension,
+      DriverData = .TrunkFlexionPositions
+  ) ={};
+
+  SingleDoFCalDriver TrunkLateralBending(
+      Measure = BodyModelRef.Interface.Trunk.PelvisThoraxLateralBending,
+      DriverData = .TrunkLateralBendingPositions
+  ) ={};
+
+  SingleDoFCalDriver TrunkRotation(
+      Measure = BodyModelRef.Interface.Trunk.PelvisThoraxRotation,
+      DriverData = .TrunkRotationPositions
+  ) ={};
+
+  SingleDoFCalDriver SkullFlexion(
+      Measure = BodyModelRef.Interface.Trunk.SkullThoraxFlexion,
+      DriverData = .SkullFlexionPositions
+  ) ={};
+
+  SingleDoFCalDriver SkullLateralBending(
+      Measure = BodyModelRef.Interface.Trunk.SkullThoraxLateralBending,
+      DriverData = .SkullLateralBendingPositions
+  ) ={};
+
+  SingleDoFCalDriver SkullRotation(
+      Measure = BodyModelRef.Interface.Trunk.SkullThoraxRotation,
+      DriverData = .SkullRotationPositions
+  ) ={};
+  
+  AnyKinEq PelvisFix = {
+    AnyKinLinear Lin = {
+      AnyRefFrame &ground = ..ground.node;
+      AnyRefFrame &Pelvis = ..TrunkSegments.PelvisSeg;
+    };
+    AnyKinRotational Rot = {
+      Type = RotAxesAngles;
+      AnyRefFrame &ground = ..ground.node;
+      AnyRefFrame &Pelvis = ..TrunkSegments.PelvisSeg;
+    };
+  };
+};
 
 
 /**
@@ -123,7 +151,6 @@
   __CLASS__ = AnyBodyCalibrationStudy,
   BodyModelRef,
   Side,
-  
 ) {
   // Study settings
   FiberAndTendonLengthAdjustment.CalibrateTendonAtMaxForceOnOff = Off;
