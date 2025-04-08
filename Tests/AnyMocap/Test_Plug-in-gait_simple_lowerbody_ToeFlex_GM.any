@@ -17,8 +17,8 @@
 
 //// Run Analysis with a reduced number of time steps
 //// to make test go faster. 
-#define N_STEP_KINEMATICS 10
-#define N_STEP 15
+#define N_STEP_KINEMATICS 20
+#define N_STEP 20
 
 #ifdef TEST_NAME
 #define  MOCAP_TEST_FILENAME_PREFIX  TEST_NAME + "_"
