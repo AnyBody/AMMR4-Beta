@@ -59,7 +59,9 @@ BodyModelFolderStructure RangeOfMotion() = {
       AnyFloat FlexedAndAdducted ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Shoulder.FlexedAndAdducted;
       AnyFloat FlexedAndAbducted ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Shoulder.FlexedAndAbducted;
 
-      AnyObjectPtr ActiveRoM ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Shoulder.ActiveRoM;
+      AnyObjectPtr ActiveRoMShoulder ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Shoulder.ActiveRoMShoulder;
+      AnyObjectPtr ActiveRoMScapulaElevation ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Shoulder.ActiveRoMScapulaElevation;
+      AnyObjectPtr ActiveRoMScapulaProtraction ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Shoulder.ActiveRoMScapulaProtraction;
     };  
   
     Right.ShoulderArm.Elbow = {
@@ -69,7 +71,8 @@ BodyModelFolderStructure RangeOfMotion() = {
       AnyVar MaxSupinationAngle ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Elbow.MaxSupinationAngle;
       AnyVar Neutral ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Elbow.Neutral;
 
-      AnyObjectPtr ActiveRoM ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Elbow.ActiveRoM;
+      AnyObjectPtr ActiveRoMFlexion ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Elbow.ActiveRoMFlexion;
+      AnyObjectPtr ActiveRoMPronation ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Elbow.ActiveRoMPronation;
     };
     
     Right.ShoulderArm.Wrist = {
@@ -79,7 +82,8 @@ BodyModelFolderStructure RangeOfMotion() = {
       AnyVar MaxAdductionAngle ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Wrist.MaxAdductionAngle;
       AnyVar Neutral ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Wrist.Neutral;
 
-      AnyObjectPtr ActiveRoM ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Wrist.ActiveRoM;
+      AnyObjectPtr ActiveRoMFlexion ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Wrist.ActiveRoMFlexion;
+      AnyObjectPtr ActiveRoMAbduction ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Wrist.ActiveRoMAbduction;
     };
   #endif
     
@@ -160,7 +164,9 @@ BodyModelFolderStructure RangeOfMotion() = {
       AnyFloat FlexedAndAdducted ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Shoulder.FlexedAndAdducted;
       AnyFloat FlexedAndAbducted ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Shoulder.FlexedAndAbducted;
 
-      AnyObjectPtr ActiveRoM ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Shoulder.ActiveRoM;
+      AnyObjectPtr ActiveRoMShoulder ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Shoulder.ActiveRoMShoulder;
+      AnyObjectPtr ActiveRoMScapulaElevation ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Shoulder.ActiveRoMScapulaElevation;
+      AnyObjectPtr ActiveRoMScapulaProtraction ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Shoulder.ActiveRoMScapulaProtraction;
     };  
   
     Left.ShoulderArm.Elbow = {
@@ -170,7 +176,8 @@ BodyModelFolderStructure RangeOfMotion() = {
       AnyVar MaxSupinationAngle ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Elbow.MaxSupinationAngle;
       AnyVar Neutral ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Elbow.Neutral;
 
-      AnyObjectPtr ActiveRoM ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Elbow.ActiveRoM;
+      AnyObjectPtr ActiveRoMFlexion ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Elbow.ActiveRoMFlexion;
+      AnyObjectPtr ActiveRoMPronation ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Elbow.ActiveRoMPronation;
     };
     
     Left.ShoulderArm.Wrist = {
@@ -180,7 +187,8 @@ BodyModelFolderStructure RangeOfMotion() = {
       AnyVar MaxAdductionAngle ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Wrist.MaxAdductionAngle;
       AnyVar Neutral ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Wrist.Neutral;
 
-      AnyObjectPtr ActiveRoM ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Wrist.ActiveRoM;
+      AnyObjectPtr ActiveRoMFlexion ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Wrist.ActiveRoMFlexion;
+      AnyObjectPtr ActiveRoMAbduction ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Wrist.ActiveRoMAbduction;
     };
   #endif
   

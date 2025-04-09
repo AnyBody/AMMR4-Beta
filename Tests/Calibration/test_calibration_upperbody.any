@@ -45,7 +45,8 @@ Main =
   AnyObjectPtrArray muscles_right = unique(flattenptr(ObjSearchRecursive(&Main.HumanModel.BodyModel.Right.ShoulderArm.Muscles, "*", "AnyMuscle")));
   AnyObjectPtrArray muscles_left = unique(flattenptr(ObjSearchRecursive(&Main.HumanModel.BodyModel.Left.ShoulderArm.Muscles, "*", "AnyMuscle")));
   AnyObjectPtrArray muscles_from_model = arrcat(muscles_right, muscles_left);
-
+  AnyObjectPtr diff = set_difference(muscles_from_model, muscles_from_cal_studies);
+  
   AnyInt test_all_mus_in_cal = expect(
     eqfun(
     NumElemOf(muscles_from_cal_studies),
