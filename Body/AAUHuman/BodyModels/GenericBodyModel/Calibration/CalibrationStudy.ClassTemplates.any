@@ -63,7 +63,7 @@ __CLASS__ = AnyKinEqInterPolDriver,
   SUBTALAR = Off,
 ) {
   // Study settings
-  FiberAndTendonLengthAdjustment.CalibrateTendonAtMaxForceOnOff = Off;
+  FiberAndTendonLengthAdjustment.CalibrateTendonAtMaxForceOnOff = On;
   Kinematics.SmallStepAssumptionOnOff = Off;
   InitialConditions.SmallStepAssumptionOnOff = Off;
   Kinematics.PosAnalysisOnlyOnOff = On;

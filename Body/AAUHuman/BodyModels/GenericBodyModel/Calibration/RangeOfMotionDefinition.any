@@ -131,7 +131,8 @@ BodyModelFolderStructure RangeOfMotion() = {
       AnyVar MaxInversionAngle ??= .....BodyModel.Right.Leg.Data.RangeOfMotion.Ankle.MaxInversionAngle;
       AnyVar MaxEversionAngle ??= .....BodyModel.Right.Leg.Data.RangeOfMotion.Ankle.MaxEversionAngle;
 
-      AnyObjectPtr ActiveRoM ??= .....BodyModel.Right.Leg.Data.RangeOfMotion.Ankle.ActiveRoM;
+      AnyObjectPtr ActiveRoMFlexion ??= .....BodyModel.Right.Leg.Data.RangeOfMotion.Ankle.ActiveRoMFlexion;
+      AnyObjectPtr ActiveRoMEversion ??= .....BodyModel.Right.Leg.Data.RangeOfMotion.Ankle.ActiveRoMEversion;
     };
   #endif
 
@@ -237,7 +238,9 @@ BodyModelFolderStructure RangeOfMotion() = {
       AnyVar MaxInversionAngle ??= .....BodyModel.Left.Leg.Data.RangeOfMotion.Ankle.MaxInversionAngle;
       AnyVar MaxEversionAngle ??= .....BodyModel.Left.Leg.Data.RangeOfMotion.Ankle.MaxEversionAngle;
 
-      AnyObjectPtr ActiveRoM ??= .....BodyModel.Left.Leg.Data.RangeOfMotion.Ankle.ActiveRoM;
+      AnyObjectPtr ActiveRoMFlexion ??= .....BodyModel.Left.Leg.Data.RangeOfMotion.Ankle.ActiveRoMFlexion;
+      AnyObjectPtr ActiveRoMEversion ??= .....BodyModel.Left.Leg.Data.RangeOfMotion.Ankle.ActiveRoMEversion;
+
     };
   #endif
 };

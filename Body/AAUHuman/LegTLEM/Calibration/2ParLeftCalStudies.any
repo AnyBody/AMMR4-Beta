@@ -113,14 +113,15 @@ ANKLE = On,
   "AnyMuscle"
   );
   
-  KneePositions = repmat(4, flattenptr(&.RangeOfMotion.Left.Leg.Knee.ActiveRoM));
-  AnklePositions = repmat(2, flattenptr(&.RangeOfMotion.Left.Leg.Ankle.ActiveRoM));
+  KneePositions = repmat(3, flattenptr(&.RangeOfMotion.Left.Leg.Knee.ActiveRoM));
+  AnklePositions = repmat(2, flattenptr(&.RangeOfMotion.Left.Leg.Ankle.ActiveRoMFlexion));
 };
 
 TwoParCalibrationStudy LeftCal6Ankle(
 BodyModelRef = Main.HumanModel.BodyModel,
 Side = Left,
 ANKLE = On,
+SUBTALAR = On,
 ) = {
   nStep = NumElemOf(AnklePositions);
   MuscleArr = ObjSearch(
@@ -134,7 +135,8 @@ ANKLE = On,
   "AnyMuscle"
   );
   
-  AnklePositions = repmat(2, flattenptr(&.RangeOfMotion.Left.Leg.Ankle.ActiveRoM));
+  AnklePositions = repmat(3, flattenptr(&.RangeOfMotion.Left.Leg.Ankle.ActiveRoMFlexion));
+  SubTalarPositions = repmat(3, flattenptr(&.RangeOfMotion.Left.Leg.Ankle.ActiveRoMEversion));
 };
 
 

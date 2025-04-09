@@ -61,10 +61,15 @@ AnyFolder RangeOfMotion = {
     AnyVar MaxInversionAngle = 15;
     AnyVar MaxEversionAngle = -20;
 
-    AnyObjectPtrArray ActiveRoM = {
+    AnyObjectPtrArray ActiveRoMFlexion = {
       &MaxPlantarFlexionAngle,
+      &Neutral,
       &MaxDorsiFlexionAngle,
+    };
+
+    AnyObjectPtrArray ActiveRoMEversion = {
       &MaxInversionAngle,
+      &Neutral,
       &MaxEversionAngle,
     };
   };
