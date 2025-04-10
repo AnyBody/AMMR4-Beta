@@ -1,5 +1,16 @@
 #ifndef _ANYMOCAP_AUTOMATIC_INITIAL_POSITION_OF_BODY_ANY_
 #define _ANYMOCAP_AUTOMATIC_INITIAL_POSITION_OF_BODY_ANY_
+/*
+---
+group: MoCap
+topic: Markers
+descr: Set the initial position of body parts based on the position of the markers in the C3D file.
+---
+
+See below for more details
+
+*/
+
 
 #class_template AutoPelvisPos(
 RASIS=RASI,
@@ -74,16 +85,47 @@ MANNEQUIN_FOLDER = Main.HumanModel.Mannequin
 };
 
 
-
-#class_template AutoPelvisPos2(
+// This templates is used to set the initial position of the pelvis based on the
+// markers in the C3D file.
+//
+// It sets the HumanModel.Mannequin.Posture.PelvisPosX, PelvisPosY, PelvisPosZ,
+// PelvisRotX, PelvisRotY, PelvisRotZ variables so initial position of the model is closer
+// the true position hence helping the kinematic solver.
+// :::{rubric} For example
+// :::
+//
+// :::{code-block} AnyScript
+// SetInitialPelvisPosture AutoPelvisPos = {
+  //     PelvisMarkers = {"RASI", "LASI", "RPSIS", "LPSIS"};
+// };
+// :::
+//
+#class_template SetInitialPelvisPosture(
 C3D_OBJECT=Main.ModelSetup.C3DFileData,
 PELVIS_SEG = Main.HumanModel.BodyModel.Trunk.Segments.PelvisSeg,
 MANNEQUIN_FOLDER = Main.HumanModel.Mannequin
 ) {
+
+//Class template arguments:
+//---------------------------
+// SetInitialPelvisPosture#C3D_OBJECT
+//    (Optional) The C3D object where markers are found. Default is Main.ModelSetup.C3DFileData.
+// SetInitialPelvisPosture#PELVIS_SEG
+//    (Optional) The pelvis segment. Default is Main.HumanModel.BodyModel.Trunk.Segments.PelvisSeg.
+// SetInitialPelvisPosture#MANNEQUIN_FOLDER
+//    (Optional) The mannequin folder. Default is Main.HumanModel.Mannequin
+
+
+// SetInitialPelvisPosture
+/// The pelvis marker labels used when calulating the pelvis position.
+/// The labels must be in the C3D file, and a minimum of 4 markers are required.
   #var AnyString PelvisMarkers;
+  
+  // SetInitialPelvisPosture
+  /// The time at which the pelvis position is calculated.
   #var AnyFloat Time = Main.Studies.MarkerTracking.tStart;
   
-    AnyFunTransform3DLin2 RigidBodyTransform= {
+    AnyFunTransform3DLin2 CalculateRigidBodyTransform= {
         AnyInt nMarkersIn = NumElemOf(.PelvisMarkers);
         AnyInt NotEnoughMarkersSpecified = assert(gtfun(nMarkersIn,3), "AutoPelvisPos2 currently requires 4 markers");
       
@@ -107,10 +149,10 @@ MANNEQUIN_FOLDER = Main.HumanModel.Mannequin
         AnyFloat Rot= take(TransformationMatrix, {{0,1,2},{4,5,6},{8,9,10}});
     };
   
-      #var AnyVec3 PelvisPos = RigidBodyTransform.Lin + (PELVIS_SEG.AnatomicalFrameTrunk.sRel * PELVIS_SEG.Axes0');
-      #var AnyMat33 PelvisRotMat = RigidBodyTransform.Rot * PELVIS_SEG.AnatomicalFrameTrunk.ARel;
+      #var AnyVec3 PelvisPos = CalculateRigidBodyTransform.Lin + (PELVIS_SEG.AnatomicalFrameTrunk.sRel * PELVIS_SEG.Axes0');
+      #var AnyMat33 PelvisRotMat = CalculateRigidBodyTransform.Rot * PELVIS_SEG.AnatomicalFrameTrunk.ARel;
                             
-    AnyFolder PelvisRotations = 
+    AnyFolder CalculateRotAxesAngles =
     {
        AnyVar yRot1 = asin(-.PelvisRotMat[2][0]);
        AnyVar yRot2 = pi - yRot1;
@@ -139,15 +181,11 @@ MANNEQUIN_FOLDER = Main.HumanModel.Mannequin
       PelvisPosY = DesignVar(.PelvisPos[1]);
       PelvisPosZ = DesignVar(.PelvisPos[2]);
 
-      PelvisRotX = DesignVar(.PelvisRotations.xRot*180/pi);
-      PelvisRotY = DesignVar(.PelvisRotations.yRot*180/pi);
-      PelvisRotZ = DesignVar(.PelvisRotations.zRot*180/pi);
+      PelvisRotX = DesignVar(.CalculateRotAxesAngles.xRot*180/pi);
+      PelvisRotY = DesignVar(.CalculateRotAxesAngles.yRot*180/pi);
+      PelvisRotZ = DesignVar(.CalculateRotAxesAngles.zRot*180/pi);
     };
 };
-
-
-
-
 
 
 
