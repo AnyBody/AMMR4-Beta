@@ -127,7 +127,7 @@ MANNEQUIN_FOLDER = Main.HumanModel.Mannequin
   
     AnyFunTransform3DLin2 CalculateRigidBodyTransform= {
         AnyInt nMarkersIn = NumElemOf(.PelvisMarkers);
-        AnyInt NotEnoughMarkersSpecified = assert(gtfun(nMarkersIn,3), "AutoPelvisPos2 currently requires 4 markers");
+        AnyInt NotEnoughMarkersSpecified = assert(gtfun(nMarkersIn,2), "AutoPelvisPos2 currently requires 3 markers");
       
         AnyString PelvisMarkersNames = repmat(nMarkersIn, {CompleteNameOf(&PELVIS_SEG)+"."})+ .PelvisMarkers + repmat(nMarkersIn, {"_Marker.sRel"});
         AnyString C3dMarkerNames = repmat(nMarkersIn, {CompleteNameOf(&C3D_OBJECT)+".Points.Markers."})+ .PelvisMarkers + repmat(nMarkersIn, {".Pos"});
