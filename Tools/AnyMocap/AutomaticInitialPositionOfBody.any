@@ -143,8 +143,8 @@ C3D_OBJECT=Main.ModelSetup.C3DFileData,
         AnyInt nMarkersIn = NumElemOf(.Markers);
         AnyInt NotEnoughMarkersSpecified = assert(gtfun(nMarkersIn,2), "SegmentPosFromMarkers currently requires 3 markers");
       
-        AnyString MarkersNames = repmat(nMarkersIn, {CompleteNameOf(&SEGMENT)+"."})+ .Markers + repmat(nMarkersIn, {"_Marker.sRel"});
-        AnyString C3dMarkerNames = repmat(nMarkersIn, {CompleteNameOf(&C3D_OBJECT)+".Points.Markers."})+ .Markers + repmat(nMarkersIn, {".Pos"});
+        AnyString MarkerNamesModel = repmat(nMarkersIn, {CompleteNameOf(&SEGMENT)+"."})+ .Markers + repmat(nMarkersIn, {"_Marker.sRel"});
+        AnyString MarkerNamesC3D = repmat(nMarkersIn, {CompleteNameOf(&C3D_OBJECT)+".Points.Markers."})+ .Markers + repmat(nMarkersIn, {".Pos"});
 
         AnyInt nMarkersFound = SizesOf(Points0)[0];
         AnyInt MissingMarkers = warn(eqfun(nMarkersFound, nMarkersIn), "Some markers were not found");
@@ -157,8 +157,8 @@ C3D_OBJECT=Main.ModelSetup.C3DFileData,
         AnyInt start_idx = round( max({0.0,  min({closest_idx, nC3d } )}));
   
         
-        Points0 = Obj2Num(ObjSearch(MarkersNames));
-        Points1 = reshape(take(Obj2Num(ObjSearch(C3dMarkerNames)), {start_idx}, 1), {nMarkersFound,3});
+        Points0 = Obj2Num(ObjSearch(MarkerNamesModel));
+        Points1 = reshape(take(Obj2Num(ObjSearch(MarkerNamesC3D)), {start_idx}, 1), {nMarkersFound,3});
         AnyFloat Lin= take(TransformationMatrix, {3,7,11}); 
         AnyFloat Rot= take(TransformationMatrix, {{0,1,2},{4,5,6},{8,9,10}});
     };
