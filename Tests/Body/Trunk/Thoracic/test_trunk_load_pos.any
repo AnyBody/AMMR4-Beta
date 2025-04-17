@@ -14,7 +14,6 @@
 //  ],
 //  [
 //    {'BM_TRUNK_THORACIC_MODEL': '_THORACIC_MODEL_RIGID_'},
-//    {'BM_TRUNK_THORACIC_MODEL': '_THORACIC_MODEL_FLEXIBLE_KINEMATIC_ONLY_'},
 //    {'BM_TRUNK_THORACIC_MODEL': '_THORACIC_MODEL_FLEXIBLE_'},
 //  ],
 //)
@@ -32,7 +31,7 @@
 #endif
 
 // Ensure zero posture when using flexible thorax
-#if BM_TRUNK_THORACIC_MODEL == _THORACIC_MODEL_FLEXIBLE_ | BM_TRUNK_THORACIC_MODEL == _THORACIC_MODEL_FLEXIBLE_KINEMATIC_ONLY_
+#if BM_TRUNK_THORACIC_MODEL == _THORACIC_MODEL_FLEXIBLE_
   #define BM_MANNEQUIN_DRIVER_PELVIS_THORAX_EXTENSION OFF
   #define BM_MANNEQUIN_DRIVER_PELVIS_THORAX_ROTATION OFF
   #define BM_MANNEQUIN_DRIVER_PELVIS_THORAX_LATERAL_BENDING OFF
@@ -254,7 +253,7 @@ Main = {
     Main.HumanModel.Mannequin.Posture.PelvisPosZ = Main.HumanModel.BodyModel.Trunk.Segments.PelvisSeg.AnatomicalFrameTrunk.sRel[2];
     
     // Set spine to zero when using the flexible thorax
-    #if BM_TRUNK_THORACIC_MODEL == _THORACIC_MODEL_FLEXIBLE_ | BM_TRUNK_THORACIC_MODEL == _THORACIC_MODEL_FLEXIBLE_KINEMATIC_ONLY_
+    #if BM_TRUNK_THORACIC_MODEL == _THORACIC_MODEL_FLEXIBLE_
     
       Main.HumanModel.Mannequin.Posture.PelvisT12Extension = 0;
       Main.HumanModel.Mannequin.Posture.T12T1Extension = 0;
