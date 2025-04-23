@@ -391,7 +391,7 @@ SPLINE_MUSLE_OFFSET(.DesiredAngle,.Origin_REL_L,Fun_Insertion_Extend,Fun_Origin_
 //Make interpolated offset function
 AnyFunInterpol InsertionFun_Offset = { 
    T= linspace(0,1.0,.Insertion_Size);
-   Type=Bspline;  
+   Type=PiecewiseLinear;  
    Data={ linspace(0,1,.Insertion_Size)+.Offsets.Offset/.Insertion_L};
 };  
   
