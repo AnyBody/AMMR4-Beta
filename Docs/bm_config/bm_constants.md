@@ -426,42 +426,6 @@ A full model of the thorax and ribcage where drivers/rythmns are specified by th
 
 
 
-::::{dropdown} `_RIBCAGE_CC_ACTUATORS_`
-:animate: fade-in-slide-down
-:margin: 0 0 2 2
-
-:::{ammr:bm_constant} _RIBCAGE_CC_ACTUATORS_
-:value: 0
-3-direction Recruited actuators in CC (costochondral) joints.
-:::
-::::
-
-
-
-::::{dropdown} `_RIBCAGE_CC_REACTION_`
-:animate: fade-in-slide-down
-:margin: 0 0 2 2
-
-:::{ammr:bm_constant} _RIBCAGE_CC_REACTION_
-:value: 1
-Z-direction reaction in CC (costochondral) joints, which is along the relavant rib, togehter with having the rib-sternum averaging constraints reaction ON
-:::
-::::
-
-
-
-::::{dropdown} `_RIBCAGE_CC_ZACTUATORS_STERNUMREACTION_`
-:animate: fade-in-slide-down
-:margin: 0 0 2 2
-
-:::{ammr:bm_constant} _RIBCAGE_CC_ZACTUATORS_STERNUMREACTION_
-:value: 2
-Z-direction actuators in CC (costochondral) joints, which is along the relavant rib, togehter with having the rib-sternum averaging constraints reaction ON
-:::
-::::
-
-
-
 ::::{dropdown} `_CAVITY_MODEL_BUCKLE_`
 :animate: fade-in-slide-down
 :margin: 0 0 2 2

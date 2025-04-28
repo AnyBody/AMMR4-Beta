@@ -413,26 +413,6 @@ Internal swtich to enable a different implementation of the Rectus Abdominis mus
 ::::
 
 
-::::{dropdown} `BM_TRUNK_EXPERIMENTAL_RIBCAGE_REACTION`
-:animate: fade-in-slide-down
-:margin: 0 0 3 3
-
-```{ammr:bm_statement} BM_TRUNK_EXPERIMENTAL_RIBCAGE_REACTION
-:deprecated:
-
-Internal swtich to change the ribcage reaction between three versions
-
-:Default: {any}`_RIBCAGE_CC_ZACTUATORS_STERNUMREACTION_`
-:Example: `#define BM_TRUNK_EXPERIMENTAL_RIBCAGE_REACTION _RIBCAGE_CC_ZACTUATORS_STERNUMREACTION_`
-:Options:
-  - {any}`_RIBCAGE_CC_ACTUATORS_` -> 3-direction Recruited actuators in CC (costochondral) joints.
-  - {any}`_RIBCAGE_CC_REACTION_` -> Z-direction reaction in CC (costochondral) joints, which is along the relavant rib, togehter with having the rib-sternum averaging constraints reaction ON
-  - {any}`_RIBCAGE_CC_ZACTUATORS_STERNUMREACTION_` -> Z-direction actuators in CC (costochondral) joints, which is along the relavant rib, togehter with having the rib-sternum averaging constraints reaction ON
-
-```
-::::
-
-
 ::::{dropdown} `BM_TRUNK_THORACIC_MODEL`
 :animate: fade-in-slide-down
 :margin: 0 0 3 3
