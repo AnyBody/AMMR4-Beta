@@ -426,30 +426,6 @@ A full model of the thorax and ribcage where drivers/rythmns are specified by th
 
 
 
-::::{dropdown} `_FLOATING_RIBEND_KINETICS_OFF_`
-:animate: fade-in-slide-down
-:margin: 0 0 2 2
-
-:::{ammr:bm_constant} _FLOATING_RIBEND_KINETICS_OFF_
-:value: 0
- No recruited actuators to rib end of Floating ribs (rib11, rib12).
-:::
-::::
-
-
-
-::::{dropdown} `_FLOATING_RIBEND_KINETICS_ENDRIBS_`
-:animate: fade-in-slide-down
-:margin: 0 0 2 2
-
-:::{ammr:bm_constant} _FLOATING_RIBEND_KINETICS_ENDRIBS_
-:value: 1
- Add recruited actuators to rib end of Floating ribs (rib11, rib12).
-:::
-::::
-
-
-
 ::::{dropdown} `_RIBCAGE_CC_ACTUATORS_`
 :animate: fade-in-slide-down
 :margin: 0 0 2 2

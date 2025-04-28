@@ -413,25 +413,6 @@ Internal swtich to enable a different implementation of the Rectus Abdominis mus
 ::::
 
 
-::::{dropdown} `BM_TRUNK_EXPERIMENTAL_FLOATINGRIBS_KINETICS`
-:animate: fade-in-slide-down
-:margin: 0 0 3 3
-
-```{ammr:bm_statement} BM_TRUNK_EXPERIMENTAL_FLOATINGRIBS_KINETICS
-:deprecated:
-
-Internal swtich to enable a recruited actuators on the rib end of floating ribs (rib11, rib12).
-
-:Default: {any}`_FLOATING_RIBEND_KINETICS_ENDRIBS_`
-:Example: `#define BM_TRUNK_EXPERIMENTAL_FLOATINGRIBS_KINETICS _FLOATING_RIBEND_KINETICS_ENDRIBS_`
-:Options:
-  - {any}`_FLOATING_RIBEND_KINETICS_OFF_` ->  No recruited actuators to rib end of Floating ribs (rib11, rib12).
-  - {any}`_FLOATING_RIBEND_KINETICS_ENDRIBS_` ->  Add recruited actuators to rib end of Floating ribs (rib11, rib12).
-
-```
-::::
-
-
 ::::{dropdown} `BM_TRUNK_EXPERIMENTAL_RIBCAGE_REACTION`
 :animate: fade-in-slide-down
 :margin: 0 0 3 3
@@ -2555,6 +2536,23 @@ A compatability switch to add the model tree structure of the muscles from AMMR 
 
 :Default: OFF
 :Example: `#define BM_COMPATIBILITY_MUSCLE_STRUCTURE OFF`
+:Options: {ammr:bm_constant}`ON`/{ammr:bm_constant}`OFF`
+
+
+```
+::::
+
+
+::::{dropdown} `BM_COMPATIBILITY_BODYMODEL_STRUCTURE`
+:animate: fade-in-slide-down
+:margin: 0 0 3 3
+
+```{ammr:bm_statement} BM_COMPATIBILITY_BODYMODEL_STRUCTURE
+
+A compatability switch to add the model tree structure of the BodyModel folders from AMMR <4. Use this option to easily load older models.
+
+:Default: OFF
+:Example: `#define BM_COMPATIBILITY_BODYMODEL_STRUCTURE OFF`
 :Options: {ammr:bm_constant}`ON`/{ammr:bm_constant}`OFF`
 
 

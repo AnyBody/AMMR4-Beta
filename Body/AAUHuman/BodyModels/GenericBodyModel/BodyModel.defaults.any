@@ -97,11 +97,6 @@
 #define BM_TRUNK_EXPERIMENTAL_RECTUS_ABDOMINIS ON
 #endif
 
-// Internal swtich to enable a recruited actuators on the rib end of floating ribs (rib11, rib12).
-#ifndef BM_TRUNK_EXPERIMENTAL_FLOATINGRIBS_KINETICS
-#define BM_TRUNK_EXPERIMENTAL_FLOATINGRIBS_KINETICS _FLOATING_RIBEND_KINETICS_ENDRIBS_
-#endif
-
 // Internal swtich to change the ribcage reaction between three versions
 #ifndef BM_TRUNK_EXPERIMENTAL_RIBCAGE_REACTION
 #define BM_TRUNK_EXPERIMENTAL_RIBCAGE_REACTION _RIBCAGE_CC_ZACTUATORS_STERNUMREACTION_

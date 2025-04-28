@@ -48,7 +48,7 @@ AnyReacForce ReactionCC_Z = {Type = {Off, Off, On}; AnyKinMeasure &CCAligned = .
 // Actuators for floating ribs
 #ifdef FLOATING_RIBEND_ACTUATOR
 
-#if BM_TRUNK_MUSCLES == ON & (BM_TRUNK_EXPERIMENTAL_FLOATINGRIBS_KINETICS == _FLOATING_RIBEND_KINETICS_ENDRIBS_)
+#if BM_TRUNK_MUSCLES == ON
 AnyRecruitedActuator EndRibReactionForce = {
   AnyKinMeasureOrg Measure = 
   {

@@ -199,18 +199,6 @@ valuetype = "integer"
 descr = "A full model of the thorax and ribcage where drivers/rythmns are specified by the users."
 nicename = "Rigid thorax"
 
-[constants._FLOATING_RIBEND_KINETICS_OFF_]
-default = "0"
-valuetype = "integer"
-descr = " No recruited actuators to rib end of Floating ribs (rib11, rib12)."
-nicename = "Floating ribs"
-
-[constants._FLOATING_RIBEND_KINETICS_ENDRIBS_]
-default = "1"
-valuetype = "integer"
-descr = " Add recruited actuators to rib end of Floating ribs (rib11, rib12)."
-nicename = "Floating ribs"
-
 [constants._RIBCAGE_CC_ACTUATORS_]
 default = "0"
 valuetype = "integer"
@@ -667,13 +655,6 @@ deprecated = "true"
 valuetype = "integer"
 descr = "Internal swtich to enable a different implementation of the Rectus Abdominis muscles."
 opt = [ "OFF", "ON"]
-
-[parameters.BM_TRUNK_EXPERIMENTAL_FLOATINGRIBS_KINETICS]
-default = "_FLOATING_RIBEND_KINETICS_ENDRIBS_"
-deprecated = "true"
-valuetype = "integer"
-descr = "Internal swtich to enable a recruited actuators on the rib end of floating ribs (rib11, rib12)."
-opt = [ "_FLOATING_RIBEND_KINETICS_OFF_", "_FLOATING_RIBEND_KINETICS_ENDRIBS_"]
 
 [parameters.BM_TRUNK_EXPERIMENTAL_RIBCAGE_REACTION]
 default = "_RIBCAGE_CC_ZACTUATORS_STERNUMREACTION_"
