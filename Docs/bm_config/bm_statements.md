@@ -455,45 +455,6 @@ Internal swtich to enable a different implementation of the Rectus Abdominis mus
 ::::
 
 
-::::{dropdown} `BM_TRUNK_EXPERIMENTAL_FLOATINGRIBS_KINETICS`
-:animate: fade-in-slide-down
-:margin: 0 0 3 3
-
-```{ammr:bm_statement} BM_TRUNK_EXPERIMENTAL_FLOATINGRIBS_KINETICS
-:deprecated:
-
-Internal swtich to enable a recruited actuators on the rib end of floating ribs (rib11, rib12).
-
-:Default: {any}`_FLOATING_RIBEND_KINETICS_ENDRIBS_`
-:Example: `#define BM_TRUNK_EXPERIMENTAL_FLOATINGRIBS_KINETICS _FLOATING_RIBEND_KINETICS_ENDRIBS_`
-:Options:
-  - {any}`_FLOATING_RIBEND_KINETICS_OFF_` ->  No recruited actuators to rib end of Floating ribs (rib11, rib12).
-  - {any}`_FLOATING_RIBEND_KINETICS_ENDRIBS_` ->  Add recruited actuators to rib end of Floating ribs (rib11, rib12).
-
-```
-::::
-
-
-::::{dropdown} `BM_TRUNK_EXPERIMENTAL_RIBCAGE_REACTION`
-:animate: fade-in-slide-down
-:margin: 0 0 3 3
-
-```{ammr:bm_statement} BM_TRUNK_EXPERIMENTAL_RIBCAGE_REACTION
-:deprecated:
-
-Internal swtich to change the ribcage reaction between three versions
-
-:Default: {any}`_RIBCAGE_CC_ZACTUATORS_STERNUMREACTION_`
-:Example: `#define BM_TRUNK_EXPERIMENTAL_RIBCAGE_REACTION _RIBCAGE_CC_ZACTUATORS_STERNUMREACTION_`
-:Options:
-  - {any}`_RIBCAGE_CC_ACTUATORS_` -> 3-direction Recruited actuators in CC (costochondral) joints.
-  - {any}`_RIBCAGE_CC_REACTION_` -> Z-direction reaction in CC (costochondral) joints, which is along the relavant rib, togehter with having the rib-sternum averaging constraints reaction ON
-  - {any}`_RIBCAGE_CC_ZACTUATORS_STERNUMREACTION_` -> Z-direction actuators in CC (costochondral) joints, which is along the relavant rib, togehter with having the rib-sternum averaging constraints reaction ON
-
-```
-::::
-
-
 ::::{dropdown} `BM_TRUNK_THORACIC_MODEL`
 :animate: fade-in-slide-down
 :margin: 0 0 3 3
@@ -508,6 +469,7 @@ The type of thoracic/ribcage model used in the model.
   - {any}`_THORACIC_MODEL_RIGID_` -> A completely rigid model of the thoracic spine and ribcage.
   - {any}`_THORACIC_MODEL_FLEXIBLE_` -> A full model of the thorax and ribcage with a kinematically determinate set of drivers.
   - {any}`_THORACIC_MODEL_USERDEFINED_` -> A full model of the thorax and ribcage where drivers/rythmns are specified by the users.
+  - {any}`_THORACIC_MODEL_FLEXIBLE_KINEMATIC_ONLY_` -> A kinematic flexible model of the thorax and ribcage with a kinematically determinate set of drivers. No muscles in thoracic region and instead the reactions are ON in the ribcage and thoracic spine.
 
 ```
 ::::
@@ -526,25 +488,6 @@ The type of thoracic/ribcage model used in the model.
 :Options:
   - {any}`_CAVITY_MODEL_BUCKLE_` -> The old buckle implementation of the abdominal pressure.
   - {any}`_CAVITY_MODEL_VOLUME_` -> A volume measure implementation of the pressure in the abdominal cavity and lungs.
-
-```
-::::
-
-
-::::{dropdown} `BM_EXPERIMENTAL_ERECTORSPINAE_VIANODES`
-:animate: fade-in-slide-down
-:margin: 0 0 3 3
-
-```{ammr:bm_statement} BM_EXPERIMENTAL_ERECTORSPINAE_VIANODES
-
-New via-nodes of the erector spinae muscles were placed on the layers instead of the vertebrae.
-
-:Default: {any}`_ERECTORSPINAE_VIANODES_LAYER_AND_REMOVE_L3L4_VIANODES_`
-:Example: `#define BM_EXPERIMENTAL_ERECTORSPINAE_VIANODES _ERECTORSPINAE_VIANODES_LAYER_AND_REMOVE_L3L4_VIANODES_`
-:Options:
-  - {any}`_ERECTORSPINAE_VIANODES_LAYER_AND_REMOVE_L3L4_VIANODES_` -> Via-nodes on erector spinae placed on the layers instead of vertebrae. The via-nodes on L3 and L4 are removed.
-  - {any}`_REMOVE_L3L4_VIANODES_` -> The via-nodes of erector spinae on L3 and L4 are removed.
-  - {any}`_ERECTORSPINAE_VIANODES_VERTEBRA_` -> Via-nodes on erector spinae placed on the vertebrae.
 
 ```
 ::::
