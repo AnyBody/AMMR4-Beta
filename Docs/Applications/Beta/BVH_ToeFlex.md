@@ -1,11 +1,11 @@
 ---
-gallery_title: "BVH driven with Toe Flexion"
+gallery_title: "BVH driven model with Toe Flexion"
 gallery_image: "/Applications/images/BVH_ToeFlex_GM.webp"
 ---
 
 (sphx_glr_auto_examples_Mocap_plot_BVH_toe_flexion.py)=
 (example_mocap_bvh_toe_flexion)=
-# BVH driven with Toe Flexion
+# BVH driven model with Toe Flexion
 
 ````{sidebar} **Example**
 <img src="/Applications/images/BVH_ToeFlex_GM.webp" width="70%" align="center">
