@@ -43,6 +43,12 @@ valuetype = "integer"
 descr = "Switch to use leg model: \"TLEM 2\""
 nicename = "TLEM Leg v2"
 
+[constants._LEG_MODEL_TLEM2_]
+default = "1"
+valuetype = "integer"
+descr = "Switch to use leg model: \"TLEM 2\""
+nicename = "TLEM Leg v2"
+
 [constants._LEG_MODEL_TLEM1_]
 # This has been redefined to integer value of 4 to cactch cases where 
 # users were just setting BM_LEG_MODEL to ON, as ON had the same value as TLEM1 before
