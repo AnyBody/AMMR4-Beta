@@ -27,6 +27,11 @@ nodes on the foot, intrinsic muscles, joints, and ligaments of the foot come fro
 foot model. The extrinsic muscles come from the TLEM leg model of the AMMR, however their via-points 
 and insertion on the foot come from the GM foot model.
 
+:::{seealso}
+:class: margin
+The {doc}`Foot configuration parameters <../bm_config/foot>` for a
+full list of configuration parameters.
+:::
 
 The GM foot model can be used in one of the following configurations:
 -	Rigid: ```#define BM_FOOT_MODEL _FOOT_MODEL_RIGID_GM_```: This is the equivalent of the current default foot model with ankle 
@@ -114,6 +119,7 @@ Main = {
    // #define BM_FOOT_MODEL _FOOT_MODEL_RIGID_GM_
    // #define BM_FOOT_MODEL _FOOT_MODEL_DETAILED_GM_
   
+};
 ```
 
 ## Model structure
