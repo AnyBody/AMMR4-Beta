@@ -52,11 +52,6 @@ AnyMessage msg_BM_FOOT_MODEL = { TriggerPreProcess = On; Type = MSG_Message; Mes
 AnyMessage msg_BM_FOOT_MODEL_TOE_FLEX_GM_REACTION = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_FOOT_MODEL_TOE_FLEX_GM_REACTION);};
 #endif
 
-#ifdef BM_FOOT_MODEL_LIGAMENTS
-// Parameter for switching the foot ligaments On/Off.
-AnyMessage msg_BM_FOOT_MODEL_LIGAMENTS = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_FOOT_MODEL_LIGAMENTS);};
-#endif
-
 #ifdef BM_LEG_MODEL
 // Parameter defining the Leg model used.
 AnyMessage msg_BM_LEG_MODEL = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_LEG_MODEL);};
@@ -102,6 +97,21 @@ AnyMessage msg_BM_LEG_MUSCLES_LEFT = { TriggerPreProcess = On; Type = MSG_Messag
 AnyMessage msg_BM_LEG_MUSCLES_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_LEG_MUSCLES_RIGHT);};
 #endif
 
+#ifdef BM_FOOT_MUSCLES_BOTH
+// Parameter to define muscle behavior of both right and left foot
+AnyMessage msg_BM_FOOT_MUSCLES_BOTH = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_FOOT_MUSCLES_BOTH);};
+#endif
+
+#ifdef BM_FOOT_MUSCLES_LEFT
+// Parameter to define muscle behavior of the left foot
+AnyMessage msg_BM_FOOT_MUSCLES_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_FOOT_MUSCLES_LEFT);};
+#endif
+
+#ifdef BM_FOOT_MUSCLES_RIGHT
+// Parameter to define muscle behavior of the right foot
+AnyMessage msg_BM_FOOT_MUSCLES_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_FOOT_MUSCLES_RIGHT);};
+#endif
+
 #ifdef BM_LEG_DATASET
 // Path to specify the underlying dataset. This currently only affects the TLEM based models. Valid options depends on which model (TLEM1/2) is used, and what dataset are available. If not specified, this will be configure automatically.
 AnyMessage msg_BM_LEG_DATASET = { TriggerPreProcess = On; Type = MSG_Message; Message = BM_LEG_DATASET;};
@@ -125,11 +135,6 @@ AnyMessage msg_BM_TRUNK_THORACIC_MODEL = { TriggerPreProcess = On; Type = MSG_Me
 #ifdef BM_TRUNK_CAVITY_MODEL
 // The type of thoracic/ribcage model used in the model.
 AnyMessage msg_BM_TRUNK_CAVITY_MODEL = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_TRUNK_CAVITY_MODEL);};
-#endif
-
-#ifdef BM_EXPERIMENTAL_ERECTORSPINAE_VIANODES
-// New via-nodes of the erector spinae muscles were placed on the layers instead of the vertebrae.
-AnyMessage msg_BM_EXPERIMENTAL_ERECTORSPINAE_VIANODES = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_EXPERIMENTAL_ERECTORSPINAE_VIANODES);};
 #endif
 
 #ifdef BM_TRUNK_DIAGPHRAM_FIXED_POSITION
@@ -689,11 +694,6 @@ AnyIntVar value_BM_FOOT_MODEL=BM_FOOT_MODEL;
 AnyIntVar value_BM_FOOT_MODEL_TOE_FLEX_GM_REACTION=BM_FOOT_MODEL_TOE_FLEX_GM_REACTION;
 #endif
 
-#ifdef BM_FOOT_MODEL_LIGAMENTS
-// Parameter for switching the foot ligaments On/Off.
-AnyIntVar value_BM_FOOT_MODEL_LIGAMENTS=BM_FOOT_MODEL_LIGAMENTS;
-#endif
-
 #ifdef BM_LEG_MODEL
 // Parameter defining the Leg model used.
 AnyIntVar value_BM_LEG_MODEL=BM_LEG_MODEL;
@@ -739,6 +739,21 @@ AnyIntVar value_BM_LEG_MUSCLES_LEFT=BM_LEG_MUSCLES_LEFT;
 AnyIntVar value_BM_LEG_MUSCLES_RIGHT=BM_LEG_MUSCLES_RIGHT;
 #endif
 
+#ifdef BM_FOOT_MUSCLES_BOTH
+// Parameter to define muscle behavior of both right and left foot
+AnyIntVar value_BM_FOOT_MUSCLES_BOTH=BM_FOOT_MUSCLES_BOTH;
+#endif
+
+#ifdef BM_FOOT_MUSCLES_LEFT
+// Parameter to define muscle behavior of the left foot
+AnyIntVar value_BM_FOOT_MUSCLES_LEFT=BM_FOOT_MUSCLES_LEFT;
+#endif
+
+#ifdef BM_FOOT_MUSCLES_RIGHT
+// Parameter to define muscle behavior of the right foot
+AnyIntVar value_BM_FOOT_MUSCLES_RIGHT=BM_FOOT_MUSCLES_RIGHT;
+#endif
+
 #ifdef BM_LEG_DATASET
 // Path to specify the underlying dataset. This currently only affects the TLEM based models. Valid options depends on which model (TLEM1/2) is used, and what dataset are available. If not specified, this will be configure automatically.
 AnyStringVar value_BM_LEG_DATASET=BM_LEG_DATASET;
@@ -762,11 +777,6 @@ AnyIntVar value_BM_TRUNK_THORACIC_MODEL=BM_TRUNK_THORACIC_MODEL;
 #ifdef BM_TRUNK_CAVITY_MODEL
 // The type of thoracic/ribcage model used in the model.
 AnyIntVar value_BM_TRUNK_CAVITY_MODEL=BM_TRUNK_CAVITY_MODEL;
-#endif
-
-#ifdef BM_EXPERIMENTAL_ERECTORSPINAE_VIANODES
-// New via-nodes of the erector spinae muscles were placed on the layers instead of the vertebrae.
-AnyIntVar value_BM_EXPERIMENTAL_ERECTORSPINAE_VIANODES=BM_EXPERIMENTAL_ERECTORSPINAE_VIANODES;
 #endif
 
 #ifdef BM_TRUNK_DIAGPHRAM_FIXED_POSITION
