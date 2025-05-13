@@ -940,11 +940,11 @@ Constant to switch linear disc spring on in the spine
 
 
 
-::::{dropdown} `CONST_DISC_STIFFNESS_NONLINEAR `
+::::{dropdown} `CONST_DISC_STIFFNESS_NONLINEAR`
 :animate: fade-in-slide-down
 :margin: 0 0 2 2
 
-:::{ammr:bm_constant} CONST_DISC_STIFFNESS_NONLINEAR 
+:::{ammr:bm_constant} CONST_DISC_STIFFNESS_NONLINEAR
 :value: 2
 :deprecated:
 Constant to switch nonlinear disc spring on in the spine
