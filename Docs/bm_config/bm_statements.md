@@ -524,8 +524,8 @@ The topology of the sternum segment, i.e. number of segments into which sternum 
 :Default: 2
 :Example: `#define BM_TRUNK_THORACIC_STERNUM_TOPOLOGY 2`
 :Options:
-  - {any}`2` -> 
-  - {any}`4` -> 
+  - {any}`_STERNUM_2_SEG_` -> The topology of the sternum segment, This specifies that the sternum is devided in 2 segments.
+  - {any}`_STERNUM_4_SEG_` -> The topology of the sternum segment, This specifies that the sternum is devided in 4 segments.
 
 ```
 ::::

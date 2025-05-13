@@ -89,6 +89,18 @@ Switch to use leg model: "TLEM 2"
 
 
 
+::::{dropdown} `_LEG_MODEL_TLEM2_`
+:animate: fade-in-slide-down
+:margin: 0 0 2 2
+
+:::{ammr:bm_constant} _LEG_MODEL_TLEM2_
+:value: 1
+Switch to use leg model: "TLEM 2"
+:::
+::::
+
+
+
 ::::{dropdown} `_LEG_MODEL_TLEM1_`
 :animate: fade-in-slide-down
 :margin: 0 0 2 2
@@ -433,6 +445,30 @@ A full model of the thorax and ribcage where drivers/rythmns are specified by th
 :::{ammr:bm_constant} _THORACIC_MODEL_FLEXIBLE_KINEMATIC_ONLY_
 :value: 3
 A kinematic flexible model of the thorax and ribcage with a kinematically determinate set of drivers. No muscles in thoracic region and instead the reactions are ON in the ribcage and thoracic spine.
+:::
+::::
+
+
+
+::::{dropdown} `_STERNUM_2_SEG_`
+:animate: fade-in-slide-down
+:margin: 0 0 2 2
+
+:::{ammr:bm_constant} _STERNUM_2_SEG_
+:value: 2
+The topology of the sternum segment, This specifies that the sternum is devided in 2 segments.
+:::
+::::
+
+
+
+::::{dropdown} `_STERNUM_4_SEG_`
+:animate: fade-in-slide-down
+:margin: 0 0 2 2
+
+:::{ammr:bm_constant} _STERNUM_4_SEG_
+:value: 4
+The topology of the sternum segment, This specifies that the sternum is devided in 4 segments.
 :::
 ::::
 
