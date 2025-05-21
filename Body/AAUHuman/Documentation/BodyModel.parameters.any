@@ -43,17 +43,12 @@
 
 // Parameter defining the foot model used.
 // #define  BM_FOOT_MODEL _FOOT_MODEL_DEFAULT_
-// Possible values: _FOOT_MODEL_NONE_, _FOOT_MODEL_DEFAULT_, _FOOT_MODEL_TOE_FLEX_GM_, _FOOT_MODEL_DETAILED_GM_, 
+// Possible values: _FOOT_MODEL_NONE_, _FOOT_MODEL_DEFAULT_, _FOOT_MODEL_RIGID_GM_, _FOOT_MODEL_TOE_FLEX_GM_, _FOOT_MODEL_DETAILED_GM_, 
 
 
 // Parameter defining the existing of reaction on toes when using _FOOT_MODEL_TOE_FLEX_GM_.
 // #define  BM_FOOT_MODEL_TOE_FLEX_GM_REACTION ON
 // Possible values: ON, OFF
-
-
-// Parameter for switching the foot ligaments On/Off.
-// #define  BM_FOOT_MODEL_LIGAMENTS OFF
-// Possible values: OFF, ON, 
 
 
 // Parameter defining the Leg model used.
@@ -100,6 +95,21 @@
 // Possible values: OFF, _MUSCLES_SIMPLE_, _MUSCLES_3E_HILL_, BM_LEG_MUSCLES_BOTH, 
 
 
+// Parameter to define muscle behavior of both right and left foot
+// #define  BM_FOOT_MUSCLES_BOTH BM_LEG_MUSCLES_BOTH
+// Possible values: OFF, _MUSCLES_SIMPLE_, _MUSCLES_3E_HILL_, 
+
+
+// Parameter to define muscle behavior of the left foot
+// #define  BM_FOOT_MUSCLES_LEFT BM_FOOT_MUSCLES_BOTH
+// Possible values: OFF, _MUSCLES_SIMPLE_, _MUSCLES_3E_HILL_, BM_FOOT_MUSCLES_BOTH, 
+
+
+// Parameter to define muscle behavior of the right foot
+// #define  BM_FOOT_MUSCLES_RIGHT BM_FOOT_MUSCLES_BOTH
+// Possible values: OFF, _MUSCLES_SIMPLE_, _MUSCLES_3E_HILL_, BM_FOOT_MUSCLES_BOTH, 
+
+
 // Path to specify the underlying dataset. This currently only affects the TLEM based models. Valid options depends on which model (TLEM1/2) is used, and what dataset are available. If not specified, this will be configure automatically.
 // #path  BM_LEG_DATASET 
 
@@ -114,17 +124,12 @@
 
 // The type of thoracic/ribcage model used in the model.
 // #define  BM_TRUNK_THORACIC_MODEL _THORACIC_MODEL_RIGID_
-// Possible values: _THORACIC_MODEL_RIGID_, _THORACIC_MODEL_FLEXIBLE_, _THORACIC_MODEL_USERDEFINED_, 
+// Possible values: _THORACIC_MODEL_RIGID_, _THORACIC_MODEL_FLEXIBLE_, _THORACIC_MODEL_USERDEFINED_, _THORACIC_MODEL_FLEXIBLE_KINEMATIC_ONLY_, 
 
 
 // The type of thoracic/ribcage model used in the model.
 // #define  BM_TRUNK_CAVITY_MODEL _CAVITY_MODEL_VOLUME_
 // Possible values: _CAVITY_MODEL_BUCKLE_, _CAVITY_MODEL_VOLUME_, 
-
-
-// New via-nodes of the erector spinae muscles were placed on the layers instead of the vertebrae.
-// #define  BM_EXPERIMENTAL_ERECTORSPINAE_VIANODES _ERECTORSPINAE_VIANODES_LAYER_AND_REMOVE_L3L4_VIANODES_
-// Possible values: _ERECTORSPINAE_VIANODES_LAYER_AND_REMOVE_L3L4_VIANODES_, _REMOVE_L3L4_VIANODES_, _ERECTORSPINAE_VIANODES_VERTEBRA_, 
 
 
 // Switch to control a fix on the diaphragm position. To simulate breathing this needs to be disabled, and replaced by an other driver on `Trunk.Abdominal.Diaphragm.Joints.AbdominalLayerBase_DiaphragmBase`.
@@ -626,6 +631,7 @@
 // A compatability switch to add the model tree structure of the muscles from AMMR 4. Use this option to easily load older models.
 // #define  BM_COMPATIBILITY_MUSCLE_STRUCTURE OFF
 // Possible values: ON, OFF
+
 
 // A compatability switch to add the model tree structure of the BodyModel folders from AMMR <4. Use this option to easily load older models.
 // #define  BM_COMPATIBILITY_BODYMODEL_STRUCTURE OFF
