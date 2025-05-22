@@ -20,7 +20,7 @@ ensures that toes bend to prevent penetration with the ground at toe-off, while 
 stay in the neutral posture otherwise.
 
 <!-- See https://sphinxcontrib-video.readthedocs.io/en/latest/quickstart.html -->
-:::{video} ../../Body/_static/FootGaitNormal_1_ToeFlex_GM.webm
+:::{video} ../../body/_static/FootGaitNormal_1_ToeFlex_GM.webm
 :autoplay:
 :loop:
 :muted:
