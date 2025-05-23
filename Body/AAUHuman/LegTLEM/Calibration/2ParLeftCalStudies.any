@@ -1,7 +1,7 @@
 TwoParCalibrationStudy LeftCal1Hip(
-BodyModelRef = Main.HumanModel.BodyModel,
-Side = Left,
-HIP = On
+  BodyModelRef = Main.HumanModel.BodyModel,
+  Side = Left,
+  HIP = On
 ) = {
   nStep = NumElemOf(HipPositions);
   
@@ -26,12 +26,12 @@ HIP = On
 };
 
 TwoParCalibrationStudy LeftCal2HipSpine(
-BodyModelRef = Main.HumanModel.BodyModel,
-Side = Left,
-HIP = On,
-TRUNKFLEXION = On,
-TRUNKLATERALBENDING = On,
-TRUNKROTATION = On,
+  BodyModelRef = Main.HumanModel.BodyModel,
+  Side = Left,
+  HIP = On,
+  TRUNKFLEXION = On,
+  TRUNKLATERALBENDING = On,
+  TRUNKROTATION = On,
 ) = {
   nStep = NumElemOf(HipPositions);
   
@@ -50,10 +50,10 @@ TRUNKROTATION = On,
 };
 
 TwoParCalibrationStudy LeftCal3HipKnee(
-BodyModelRef = Main.HumanModel.BodyModel,
-Side = Left,
-HIP = On,
-KNEE = On,
+  BodyModelRef = Main.HumanModel.BodyModel,
+  Side = Left,
+  HIP = On,
+  KNEE = On,
 ) = {
   nStep = NumElemOf(HipPositions);
   
@@ -76,9 +76,9 @@ KNEE = On,
 };
 
 TwoParCalibrationStudy LeftCal4Knee(
-BodyModelRef = Main.HumanModel.BodyModel,
-Side = Left,
-KNEE = On,
+  BodyModelRef = Main.HumanModel.BodyModel,
+  Side = Left,
+  KNEE = On,
 ) = {
   nStep = NumElemOf(KneePositions);
   
@@ -96,10 +96,10 @@ KNEE = On,
 };
 
 TwoParCalibrationStudy LeftCal5AnkleKnee(
-BodyModelRef = Main.HumanModel.BodyModel,
-Side = Left,
-KNEE = On,
-ANKLE = On,
+  BodyModelRef = Main.HumanModel.BodyModel,
+  Side = Left,
+  KNEE = On,
+  ANKLE = On,
 ) = {
   nStep = NumElemOf(AnklePositions);
   
@@ -118,10 +118,10 @@ ANKLE = On,
 };
 
 TwoParCalibrationStudy LeftCal6Ankle(
-BodyModelRef = Main.HumanModel.BodyModel,
-Side = Left,
-ANKLE = On,
-SUBTALAR = On,
+  BodyModelRef = Main.HumanModel.BodyModel,
+  Side = Left,
+  ANKLE = On,
+  SUBTALAR = On,
 ) = {
   nStep = NumElemOf(AnklePositions);
   MuscleArr = ObjSearch(
