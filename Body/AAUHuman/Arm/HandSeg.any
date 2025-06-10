@@ -18,32 +18,13 @@ r0=.WristJointSeg.RadioCarpalDeviation.sRel*.WristJointSeg.Axes0'+.WristJointSeg
  r0=.Radius.RadioCarpal.sRel*.Radius.Axes0'+.Radius.r0-Ref.RadioCarpalFlexion.sRel*Axes0';
 #endif
 
-  //viewInertia.Visible = On;
+  
   UseInertiaObjects = On;
 
   #include "../DrawSettings/Nodes.any"
   
   AnyFolder &Data = ..Data.unscaled.ModelParameters.HandSeg.SimpleHandSeg;
   
-//  AnyVar MassS = ..MassScaling.Hand.MassScale;
-//  
-//  AnyVar MassStandard = ..StandardParameters.Hand.Mass; // Veeger1997 subject no.4. 
-//  
-//  Mass = MassS*MassStandard;
-//  
-//  AnyVar LengthStandard = 0.1;// Guesstimate..
-//  
-//  AnyVar Length = 0.1; // Guesstimate..
-//  AnyVar Radius = (Mass/(pi*Length*..StandardParameters.Hand.Density))^0.5;
-//  
-//  AnyVar Ixx = 0.25*Mass*Radius*Radius + 1/12*Mass*Length*Length;
-//  AnyVar Iyy = 0.5*Mass*Radius*Radius;
-//  AnyVar Izz = Ixx; 
-//  Jii = {Ixx,Iyy,Izz};
-//  
-//  sCoM=Scale(Data.sCoM_pos);
-//  JaboutCoMOnOff = On;
-
 
 
 AnyInertiaSolid BoneInertiaObject = {
