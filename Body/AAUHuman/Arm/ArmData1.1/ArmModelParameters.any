@@ -104,21 +104,17 @@ AnyFolder Humerus = {
   AnyFloat HumerusBoneGeometryNode_pos = {0.001379000, -0.008999000, 0.009119000};
   AnyFloat DeltoidConnectorCenter_pos = {0.0000000, 0.0000000, 0.0000000};
   AnyFloat gh_pos = {0.0000000, 0.0000000, 0.0000000};
-  //AnyFloat em_pos = {-0.030510, -0.311210 , 0.000000}+OffSet;
-  // AnyFloat el_pos = {0.030510, -0.306605 , 0.000000}+OffSet;
   
   AnyFloat em_pos ={-0.029131-0.005, -0.320209-0.024, 0.009119-0.004};
   AnyFloat el_pos = {0.031889+0.002, -0.315604-0.028, 0.009119-0.002};  
   
    
-  AnyVar Corrector_for_debug =0;  //"should" be 1  to correspond to old model  
-  AnyFloat EpicondylusHumerusMedialis_pos= {-0.029131-0.005, -0.340047, Corrector_for_debug*0.001202};
-  AnyFloat EpicondylusHumerusLateralis_pos={0.031889+0.002, -0.340047, Corrector_for_debug*0.001202};
+  AnyFloat EpicondylusHumerusMedialis_pos= {-0.029131-0.005, -0.340047, 0};
+  AnyFloat EpicondylusHumerusLateralis_pos={0.031889+0.002, -0.340047, 0};
    
-  // {0.004451, -0.340047, 0.001202}
    
-  //NOTE TEMP 
-  AnyFloat fe_pos = {Corrector_for_debug*0.004451, -0.340047,Corrector_for_debug* 0.001202}; // {(0.013072-.01), -0.331048 , -0.007917}+OffSet;  
+
+  AnyFloat fe_pos = {0, -0.340047,0};
   
   AnyFloat art_tub_minus_pos = {0.014, 0.009 , -0.03}+OffSet;
   AnyFloat art_tub_majus_pos = {0.021, 0.009 , -0.02}+OffSet;  
@@ -292,9 +288,6 @@ AnyFolder Radius = {
   AnyFloat sCoM_pos ={-0.43*.Ulna.Length,0,0};                                  
 
   
-  //AnyFloat NeutralPositionOnUlna_pos = {0.04281200, 0.01483900, 0.0000000};
-  //AnyFloat NeutralPositionOnUlna_rot = {{-0.145873, -0.989303, -0.000001}, {0.989303, -0.145873, 0.000001}, {-0.000001, -0.000000, 1.000000}};
-
   
   
 
@@ -306,16 +299,13 @@ AnyFloat  UlnaStyloNeutralConf_pos  = {-0.22795437507266197, 0.00514352213163321
 AnyFloat MCP2InNeutralConf_hand_pos = {-0.32359275373351543, -0.032672690398258604, 0.010000000000000057};
 AnyFloat MCP5InNeutralConf_hand_pos = {-0.30375161998612393, 0.02205691230099481, 0.0050000000000000322};
 
-//Main.Study.InitialConditions.MeasuresBetweenSegsForNodesTransfers.Radius_Points.MCP2InNeutralConf_hand.Pos = {-0.32359275373351548, -0.032672690398258653, 0.009999999999999995};
-//Main.Study.InitialConditions.MeasuresBetweenSegsForNodesTransfers.Radius_Points.MCP5InNeutralConf_hand.Pos = {-0.30375161998612393, 0.022056912300994738, 0.0050000000000000114};
 
 
   AnyFloat ProximalRadioUlnar_pos=PointPS2_pos;  //renaming 
   AnyFloat DistalRadioUlnar_pos=PS_pos;  //renaming   
   AnyFloat ProximalRadiusUlnaReac_pos = ProximalRadioUlnar_pos + {0.025,0,0}*RotMat(ProximalRadioUlnar_pos, DistalRadioUlnar_pos, rs_pos)';  //renaming
-AnyFloat RadioStylo_pos =rs_pos; //renameing
+AnyFloat RadioStylo_pos =rs_pos; //renaming
   
-// AnyFloat HumerusUlnaJointInNeutralConf_pos = {0.034023196903829545, 0.00066087641269497663, -0.013778397610301092};
 
 
   
@@ -449,12 +439,6 @@ AnyFolder Ulna = {
   
   
 
-//  AnyFloat MedialHumerusCondyleInNeutralConf_pos  = {0.033889000008996951, 0.0080000000022712008,0};
-//  AnyFloat LateralHumerusCondyleInNeutralConf_pos =  {-0.034130999991003053, 0.0080000000022713048, 0};
-//  AnyFloat RadioStyloInNeutralConf_pos = {0.023544178546152175, 0.27674962191976493, -0.049334307372629282};  
-//  AnyFloat wj_InNeutralConf_pos = {0.023781294516091935, 0.27664003340395094, -0.021104181302767769};
-//  
-  
   
   AnyFloat MedialHumerusCondyleInNeutralConf_pos = {0.033889000008997014, 0.0080000000022714332, -1.5043374498271574e-17};
  AnyFloat LateralHumerusCondyleInNeutralConf_pos  = {-0.034130999991003053, 0.0080000000022712216, 4.29941675891665e-18};
@@ -815,11 +799,8 @@ AnyFolder HandSeg = {
   AnyFolder SimpleHandSeg = {
   
     
-AnyFloat RadiolStyloInNeutralConf_pos = {-0.0037770523714494957, -0.025879007478445123, -0.010000000000000007};
-AnyFloat UlnaStyloInNeutralConf_pos = {-0.0074079760834491063, 0.02128069017521415, 0.0054305663948998675};
-
-//Main.Study.InitialConditions.MeasuresBetweenSegsForNodesTransfers.Hand_Points.RadioalStyloInNeutralConf_radius.Pos = {-0.0037770523714494232, -0.025879007478445116, -0.010000000000000009};
-//Main.Study.InitialConditions.MeasuresBetweenSegsForNodesTransfers.Hand_Points.UlnaStyloInNeutralConf_ulna.Pos = {-0.0073908740279913588, 0.021284928985295437, 0.005429570510302047};
+  AnyFloat RadiolStyloInNeutralConf_pos = {-0.0037770523714494957, -0.025879007478445123, -0.010000000000000007};
+  AnyFloat UlnaStyloInNeutralConf_pos = {-0.0074079760834491063, 0.02128069017521415, 0.0054305663948998675};
 
 
    AnyFloat MCP1_Distal_pos                                 = {-0.05  ,-0.06  ,-0.01    };
