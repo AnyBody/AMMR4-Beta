@@ -65,12 +65,6 @@ AnyFloat Points0 = {
   };
 
   AnyFunTransform3D& GeomScale = Scale;
-
-//This is a node representing scaling coordinate system on trunk
-//  AnyRefNode NeutralPositionOnPelvis ={
-//    sRel = .Scale.T0.RigidBodyTransform.lin;
-//    ARel = .Scale.T0.RigidBodyTransform.rot;
-//  };
   
   #include "../DrawSettings/Nodes.any"
   
@@ -167,18 +161,9 @@ AnySeg Scapula ={
   };
 
   
-
-//  AnyRefNode ScalingNode =  {
-//    sRel=.AnatomicalFrame.sRel;
-//    ARel = .Scale.T0.RigidBodyTransform.rot;
-//  };
   
   AnyRefNode& MoCapMarkerFrameAMMR24 = AnatomicalFrame;///< For backwards Compatibility with AMMR 2.4 MoCap Marker protocols
   
-//  AnyRefNode NeutralPositionOnPelvis={
-//    sRel = .Scale.T0.RigidBodyTransform.lin;
-//    ARel = .Scale.T0.RigidBodyTransform.rot;
-//  };
   
    AnyFunTransform3D& GeomScale = Scale;
 
@@ -256,7 +241,6 @@ AnySeg Scapula ={
   #endif
   AnyRefNode gh = {
     sRel = .Scale(.Data.gh_pos*.Mirror);
-    //AnyDrawRefFrame drw={};
     #include "../DrawSettings/BML.any"
     #include "../DrawSettings/JointAxesDistal.any"
   };
@@ -344,11 +328,6 @@ AnySeg Humerus ={
   AnyRefNode& ScalingNode = AnatomicalFrame;
   AnyFunTransform3D& GeomScale = Scale;
   
-// Note made yet will extrapolate a lot...   
-//  AnyRefNode PosturalFrame =  {
-//      sRel =.gh.sRel;
-//    Use rotmat and   WJinNeutralConf_Pos, medial and lateral condyles...
-//    };
 
   
   AnyDrawSurf DrwSurf = {
@@ -693,24 +672,6 @@ AnySeg Radius ={
 
 
  
-//  AnyRefNode AnatomicalFrame =  {
-//    //^ The anatomical frame is separate from the scaling frame
-//    // The anatomical frame uses the 
-//    //^ We use different definition for scaling and anatomical frames to ensure the consistent 
-//    //^ scaling between radius and ulna segments.
-//    AnyFloat pUnscaledAnatomicalFrame = { .Data.LateralHumerusCondyleInNeutralConf_pos, .Data.rs_pos , .Data.UlnaStyloNeutralConf_pos }*.Mirror;
-//    AnyVar Sign = .Sign;
-//    #define MACRO_CONSTRUCT_ANATOMICAL_FRAME_s(p, SIGN) p[0]
-//    #define MACRO_CONSTRUCT_ANATOMICAL_FRAME_A(p, SIGN) RotMat(p[0],p[1] ,p[2]) *RotMat(0.5*(SIGN-1)*pi,y)  
-//    
-//    AnyFloat pScaled = .Scale(pUnscaledAnatomicalFrame); 
-//    
-//    sRel = MACRO_CONSTRUCT_ANATOMICAL_FRAME_s(pScaled, .Sign);
-//    ARel = MACRO_CONSTRUCT_ANATOMICAL_FRAME_A(pScaled, .Sign);
-//    AnyVec3 sRelUnscaled = MACRO_CONSTRUCT_ANATOMICAL_FRAME_s(.pUnscaled, .Sign); ///< Generic unscaled position of shank ScalingNode
-//  };
-//  #undef MACRO_CONSTRUCT_ANATOMICAL_FRAME_s
-//  #undef MACRO_CONSTRUCT_ANATOMICAL_FRAME_A
   
   
   AnyRefNode PointHumeralRadioJoint = {
