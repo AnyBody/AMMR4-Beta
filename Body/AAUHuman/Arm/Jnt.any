@@ -59,16 +59,17 @@ AnySphericalJoint GlenoHumeralJoint = {
 ///Definition of the HumeroUlnarJoint (elbow flexion extension).
 AnyRevoluteJoint HumeroUlnarJoint = {
   Axis = x;
-  AnyRefNode &HumerusFE = ..Segments.Humerus.fe;
-  AnyRefNode &UlnaFE = ..Segments.Ulna.fe;
+  AnyRefNode &HumerusFE = ..Segments.Humerus.HumeroUlnar;
+  AnyRefNode &UlnaFE = ..Segments.Ulna.HumeroUlnar;
 };
 
+ #ifndef NEW_PRONATIONSUPINATION_JNT
 
 /// This binds one DOF between humerus and Radius. Since AnyBody
 /// does not have a 5 DOF joint type we implement in manually here.
 AnyFolder HumeroRadialJoint = {
    AnyKinLinear Linear = {
-     AnyRefNode &RadiusPs = ...Segments.Radius.PointHumeralRadialJoint;
+     AnyRefNode &RadiusPs = ...Segments.Radius.PointHumeralRadioJoint;
      AnyRefNode &UlnaPs = ...Segments.Humerus.fe; 
      Ref = 0;
    };
@@ -79,6 +80,8 @@ AnyFolder HumeroRadialJoint = {
      Reaction.Type = {Off};
    };
 
+  
+   
   // Since the previous implementation implemented reaction forces   
   // between some explicit points 'ps2Reac' we do the same here. 
    AnyReacForce ReacForce = 
@@ -95,6 +98,9 @@ AnyFolder HumeroRadialJoint = {
    };
 
 };
+
+
+
 
 
 AnyTransSphericalJoint ProximalRadioUlnarJoint = { 
@@ -141,23 +147,116 @@ AnyTransSphericalJoint DistalRadioUlnarJoint = {
     Axis = y;
 }; 
 
+#else 
+
+/// This binds one DOF between humerus and Radius. Since AnyBody
+/// does not have a 5 DOF joint type we implement in manually here.
+AnyFolder HumeroRadialJoint = {
+   AnyKinLinear Linear = {
+     AnyRefNode &RadiusPs = ...Segments.Radius.PointHumeralRadioJoint;
+     AnyRefNode &UlnaPs = ...Segments.Humerus.HumeroUlnar; 
+     Ref = 0;
+   };
+   AnyKinEq Constraints = {
+     AnyKinMeasure& Linear  = .Linear;
+     MeasureOrganizer = {0};
+     // Reactions are implemented explicitly below
+     Reaction.Type = {Off};
+   };
+
+  
+   
+  // Since the previous implementation implemented reaction forces   
+  // between some explicit points 'ProximalRadiusUlnaReac' we do the same here. 
+   AnyReacForce ReacForce =    {
+     AnyKinMeasureOrg RadiusHumerus = {
+       MeasureOrganizer = {0};
+       AnyKinLinear Lin =        {
+         Ref = 0;
+         AnyRefFrame &Radius = .....Segments.Radius.ProximalRadiusUlnaReac;
+         AnyRefFrame &Humerus = .....Segments.Humerus.HumeroUlnar;
+       };
+     };
+   };
+};
+
+AnyTransSphericalJoint ProximalRadioUlnarJoint = { 
+  AnyRefNode &RadiusPs = ..Segments.Radius.ProximalRadioUlnar;
+  AnyRefNode &UlnaPs = ..Segments.Ulna.ProximalRadioUlnar; 
+  // Reactions are disabled, because the are implemented explicitly below. 
+  Constraints.Reaction.Type={Off,Off};
+  Axis = x;
+  Orientation = {
+    // These settings are kept to mimic the previous  
+    // implementation from the PSRotProximal measure.
+    Axis1 = x;
+    Axis2 = y;
+    Axis3 = z;
+    Type = RotAxesAngles;
+  };
+  
+  // Since the previous implementation implemented reaction forces   
+  // between some explicit points 'ps2Reac' we do the same here. 
+  AnyReacForce ReacForce =   {
+    AnyKinMeasureOrg RadiusUlna = {
+      MeasureOrganizer = {1,2};
+      AnyKinLinear Lin = {
+        Ref = 0;
+        AnyRefFrame &Ulna = .....Segments.Ulna.ProximalRadiusUlnaReac;
+        AnyRefFrame &Radius = .....Segments.Radius.ProximalRadiusUlnaReac;
+      };
+    };
+  };
+};
+
+AnyTransSphericalJoint DistalRadioUlnarJoint = {
+    AnyRefNode &UlnaPs = ..Segments.Ulna.DistalRadioUlnar;
+    AnyRefNode &RadiusPs = ..Segments.Radius.DistalRadioUlnar;
+    Axis = x;
+}; 
 
 
 
 
+#endif
 
+
+
+#ifndef WRIST_EXPERIMENTAL
 ////Definition of wrist joint
-AnyRevoluteJoint WristJointFlexion = {
-  Axis = y; //flexion extension
-  AnyRefNode &radius_wj = ..Segments.Radius.wj;
-  AnyRefNode &hand_wj =..Segments.WristJointSeg.FlexionExtensionAxis;
+
+AnyRevoluteJoint RadioCarpalJointFlexion = {
+  Axis = x; //flexion extension
+  AnyRefNode &radius = ..Segments.Radius.RadioCarpal;
+  AnyRefNode &hand =..Segments.WristJointSeg.RadioCarpalFlexion;
 };//End WristJoint
 
-AnyRevoluteJoint WristJointDeviation = {
-  Axis = z; //radial ulnar deviation
-  AnyRefNode &radius_wj = ..Segments.WristJointSeg.RadialUlnarDeviation;
-  AnyRefNode &hand_wj =..Segments.Hand.HandRef.wj;
+AnyRevoluteJoint RadioCarpalJointDeviation = {
+ Axis = z; //Radio ulnar deviation
+ AnyRefNode &radius = ..Segments.WristJointSeg.RadioCarpalDeviation;
+ AnyRefNode &hand =..Segments.Hand.HandRef.RadioCarpalDeviation;
 };//End WristJoint
+#endif
+
+#ifdef WRIST_EXPERIMENTAL
+AnyUniversalJoint RadioCarpalJointFlexionDeviation = {
+  Axis1 = x; //flexion extension
+  Axis2 = z; //abduction
+  AnyRefNode &radius = ..Segments.Radius.RadioCarpal;
+  AnyRefNode &hand =..Segments.Hand.HandRef.RadioCarpalFlexion;
+};//End WristJoint
+
+AnyKinMeasureOrg RadioCarpalJointFlexion ={
+AnyRevoluteJoint &ref=.RadioCarpalJointFlexionDeviation;
+MeasureOrganizer ={0};
+};
+AnyKinMeasureOrg RadioCarpalJointDeviation ={
+AnyRevoluteJoint &ref=.RadioCarpalJointFlexionDeviation;
+MeasureOrganizer ={1};
+};
+#endif
+
+
 
 
 
@@ -348,3 +447,9 @@ AnyKinMeasureOrg PS = {
   AnyKinRotational &Jnt = .ProximalRadioUlnarJoint.Orientation;
   MeasureOrganizer = {0};
 };
+
+
+//Deprecated use RadioCarpalJointFlexion instead, left here for backwards compatibility. 
+AnyRevoluteJoint &WristJointFlexion = RadioCarpalJointFlexion;
+//Deprecated use RadioCarpalJointDeviation instead, left here for backwards compatibility. 
+AnyRevoluteJoint &WristJointDeviation = RadioCarpalJointDeviation;
