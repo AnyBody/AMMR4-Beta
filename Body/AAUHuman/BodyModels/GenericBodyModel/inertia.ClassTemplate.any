@@ -14,6 +14,23 @@ This allows the density to be variable to make the overall Mass of the body corr
   inertiaObject.Density = iffun(enableMassCorrection, Main.HumanModel.BodyModel.Trunk.Data.MassDistribution.mass_scale, 1.0) * DensityTheoretical;
 };
 
+#class_template BodyMassCorrectionGeneric(
+
+){
+  #var AnyVar Mass_Scale =1;
+  /// Litterature based density
+  AnyFloatVar DensityTheoretical ??= Main.HumanModel.BodyModel.Trunk.Data.unscaled.ModelParameters.AdiposeTissueDensity;
+  
+  /// Setting to determine if this inertia is part of the mass correction
+  AnySwitchVar enableMassCorrection ??= On;
+  
+  // Calculated Density accounting for correct mass distribution throughout whole body region
+  AnyFolder &inertiaObject = #parent;
+  inertiaObject.Density = iffun(enableMassCorrection, Mass_Scale, 1.0) * DensityTheoretical;
+};
+
+
+
 /* 
   Template to make inertia objects that are not based on geometry compatible with the mass correction calculation
   This is used for the inertia objects of type AnyInertiaMatrix that do no have Density and Volume properties
