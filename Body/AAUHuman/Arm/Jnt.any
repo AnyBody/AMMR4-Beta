@@ -63,91 +63,6 @@ AnyRevoluteJoint HumeroUlnarJoint = {
   AnyRefNode &UlnaFE = ..Segments.Ulna.HumeroUlnar;
 };
 
- #ifndef NEW_PRONATIONSUPINATION_JNT
-
-/// This binds one DOF between humerus and Radius. Since AnyBody
-/// does not have a 5 DOF joint type we implement in manually here.
-AnyFolder HumeroRadialJoint = {
-   AnyKinLinear Linear = {
-     AnyRefNode &RadiusPs = ...Segments.Radius.PointHumeralRadioJoint;
-     AnyRefNode &UlnaPs = ...Segments.Humerus.fe; 
-     Ref = 0;
-   };
-   AnyKinEq Constraints = {
-     AnyKinMeasure& Linear  = .Linear;
-     MeasureOrganizer = {0};
-     // Reactions are implemented explicitly below
-     Reaction.Type = {Off};
-   };
-
-  
-   
-  // Since the previous implementation implemented reaction forces   
-  // between some explicit points 'ps2Reac' we do the same here. 
-   AnyReacForce ReacForce = 
-   {
-     AnyKinMeasureOrg RadiusHumerus = {
-       MeasureOrganizer = {0};
-       AnyKinLinear Lin = 
-       {
-         Ref = 0;
-         AnyRefFrame &Radius = .....Segments.Radius.PS2Reac;
-         AnyRefFrame &Humerus = .....Segments.Humerus.fe;
-       };
-     };
-   };
-
-};
-
-
-
-
-
-AnyTransSphericalJoint ProximalRadioUlnarJoint = { 
-  AnyRefNode &RadiusPs = ..Segments.Radius.PointPS2;
-  AnyRefNode &UlnaPs = ..Segments.Ulna.ps2; 
-  // Reactions are disabled, because the are implemented explicitly below. 
-  Constraints.Reaction.Type={Off,Off};
-  Axis = x;
-  Orientation = {
-    // These settings are kept to mimic the previous  
-    // implementation from the PSRotProximal measure.
-    Axis1 = x;
-    Axis2 = y;
-    Axis3 = z;
-    Type = RotAxesAngles;
-  };
-  
-  // Since the previous implementation implemented reaction forces   
-  // between some explicit points 'ps2Reac' we do the same here. 
-  AnyReacForce ReacForce = 
-  {
-    AnyKinMeasureOrg RadiusUlna = {
-      MeasureOrganizer = {0,2};
-      AnyKinLinear Lin = 
-      {
-        Ref = 0;
-        AnyRefFrame &Ulna = .....Segments.Ulna.ps2Reac;
-        AnyRefFrame &Radius = .....Segments.Radius.PS2Reac;
-      };
-    };
-  };
-
-};
-
-
-
-
-
-
-
-AnyTransSphericalJoint DistalRadioUlnarJoint = {
-    AnyRefNode &UlnaPs = ..Segments.Ulna.ps2_usRot;
-    AnyRefNode &RadiusPs = ..Segments.Radius.PS;
-    Axis = y;
-}; 
-
-#else 
 
 /// This binds one DOF between humerus and Radius. Since AnyBody
 /// does not have a 5 DOF joint type we implement in manually here.
@@ -218,7 +133,7 @@ AnyTransSphericalJoint DistalRadioUlnarJoint = {
 
 
 
-#endif
+
 
 
 
