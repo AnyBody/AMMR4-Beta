@@ -66,13 +66,13 @@ AnyKinMeasureOrg SternoClavicularAxialRotation_Postural ={
 AnyFolder SternoClavicular = {
   ///^ Follows the ISB recommendations for definitions of joint coordinate systems of the Sterno Clavicula Joint
   ///^ See section 2.4.2 in https://doi.org/10.1016/j.jbiomech.2004.05.042
-
-AnyKinMeasureLinComb Protraction ={
+  
+  AnyKinMeasureLinComb Protraction ={
     
-  AnyRefNode &sternum_scj = .....Trunk.Segments.SternumSeg._SIDE_.scj;
-     sternum_scj={
-       AnyRefNode ISB_Coord={};
-     };
+    AnyRefNode &sternum_scj = .....Trunk.Segments.SternumSeg._SIDE_.scj;
+    sternum_scj={
+      AnyRefNode ISB_Coord={};
+    };
     
     AnyKinRotational SCRot = {
       AnyRefNode &thorax_sc = .sternum_scj.ISB_Coord;
@@ -85,73 +85,68 @@ AnyKinMeasureLinComb Protraction ={
     OutDim = 1;
     Coef = {{...Sign*1,0,0}};
   };
-
+  
   AnyKinMeasureLinComb Elevation ={
     AnyKinRotational &ref=.Protraction.SCRot;
-       OutDim = 1;
-       Coef = {{0,...Sign*-1,0}};
+    OutDim = 1;
+    Coef = {{0,...Sign*-1,0}};
   };
-
+  
   AnyKinMeasureLinComb BackwardAxialRotation ={
     AnyKinRotational &ref=.Protraction.SCRot;
-       OutDim = 1;
-       Coef = {{0,0,1}};
+    OutDim = 1;
+    Coef = {{0,0,1}};
   };
-
+  
 };
 
 
 
-AnyFolder AcromioClavicular = 
-{
+AnyFolder AcromioClavicular = {
   //^ Follows the ISB recommendations for definitions of joint coordinate systems of the Acromio-clavicula joint
   //^ See section 2.4.3 in https://doi.org/10.1016/j.jbiomech.2004.05.042
-
+  
   AnyKinMeasureLinComb Protraction ={
-     
-     AnyFolder& Calvicula = ...Segments.Clavicula;
-     Calvicula.AnatomicalFrame = { 
-       AnyRefNode ISB_Coord ={
-       //  ARel={{0, 0,......Sign*1}, {0, ......Sign*1,0}, {-1, 0,0}};
-       };
-     };
-     
-     AnyFolder& Scapula = ...Segments.Scapula;
-     Scapula.AnatomicalFrame = {
-       AnyRefNode ISB_Coord = {
-        // ARel={{ 0, 0,......Sign*1}, { 0, ......Sign*1,0}, {-1, 0,0}};
-       };
-     };
-     Calvicula.acj = {
-          AnyRefNode RotNode={ ARel={{......Sign*1,0,0},  {0,1,0},      {0,0,......Sign*1}};};
-       };
-     Scapula.acj = {
-          AnyRefNode RotNode={ ARel={{......Sign*1,0,0},  {0,1,0},      {0,0,......Sign*1}};};
-       };
-     
-     AnyKinRotational ACRot = {
-       AnyRefNode &clavicula = .Calvicula.AnatomicalFrame.ISB_Coord;    
-       AnyRefNode &scapula = .Scapula.AnatomicalFrame.ISB_Coord;
-       Type = RotAxesAngles;
-       Axis1 = y;
-       Axis2 = x;
-       Axis3 = z;
-     };
-     OutDim = 1;
-     Coef = {{...Sign*1,0,0}};
-   };
-   
-   AnyKinMeasureLinComb MedialRotation ={
-     AnyKinRotational &ref=.Protraction.ACRot;
-     OutDim = 1;
-     Coef = {{0,...Sign*1,0}};  
-   };
-   
-   AnyKinMeasureLinComb PosteriorTilt ={
-     AnyKinRotational &ref=.Protraction.ACRot;
-     OutDim = 1;
-     Coef = {{0,0,1}};  
-   };
+    
+    AnyFolder& Calvicula = ...Segments.Clavicula;
+    Calvicula.AnatomicalFrame = { 
+      AnyRefNode ISB_Coord ={     };
+    };
+    
+    AnyFolder& Scapula = ...Segments.Scapula;
+    Scapula.AnatomicalFrame = {
+      AnyRefNode ISB_Coord = {      };
+    };
+    Calvicula.acj = {
+      AnyRefNode RotNode={ ARel={{......Sign*1,0,0},  {0,1,0},      {0,0,......Sign*1}};};
+    };
+    Scapula.acj = {
+      AnyRefNode RotNode={ ARel={{......Sign*1,0,0},  {0,1,0},      {0,0,......Sign*1}};};
+    };
+    
+    AnyKinRotational ACRot = {
+      AnyRefNode &clavicula = .Calvicula.AnatomicalFrame.ISB_Coord;    
+      AnyRefNode &scapula = .Scapula.AnatomicalFrame.ISB_Coord;
+      Type = RotAxesAngles;
+      Axis1 = y;
+      Axis2 = x;
+      Axis3 = z;
+    };
+    OutDim = 1;
+    Coef = {{...Sign*1,0,0}};
+  };
+  
+  AnyKinMeasureLinComb MedialRotation ={
+    AnyKinRotational &ref=.Protraction.ACRot;
+    OutDim = 1;
+    Coef = {{0,...Sign*1,0}};  
+  };
+  
+  AnyKinMeasureLinComb PosteriorTilt ={
+    AnyKinRotational &ref=.Protraction.ACRot;
+    OutDim = 1;
+    Coef = {{0,0,1}};  
+  };
 };
 
 AnyFolder ScapulaHumerus = 
@@ -159,35 +154,35 @@ AnyFolder ScapulaHumerus =
   //^ Follows the ISB recommendations for definitions of joint coordinate systems of the Acromio-clavicula joint
   //^ See section 2.4.4 in https://doi.org/10.1016/j.jbiomech.2004.05.042
   
-   AnyKinMeasureLinComb PlaneOfElevation ={
-     
-     AnyFolder& Humerus = ...Segments.Humerus.AnatomicalFrame;
-     Humerus = {
-       AnyRefNode ISB_Coord = {ARel={{ 0, 0, 1}, { 0, 1,0}, {-1, 0,0}}; };
-     };
-     AnyKinRotational GHRot = {
-       AnyRefNode &scapula = ....Segments.Scapula.AnatomicalFrame.ISB_Coord;
-       AnyRefNode &Humerus = .Humerus.ISB_Coord;
-       Type = RotAxesAngles;
-       Axis1 = y;
-       Axis2 = x;
-       Axis3 = y;
-     };
-     OutDim = 1;
-     Coef = {{...Sign*1,0,0}};
-   };
-   
-   AnyKinMeasureLinComb Elevation ={
-     AnyKinRotational &ref=.PlaneOfElevation.GHRot;
-     OutDim = 1;
-     Coef = {{0,...Sign*-1,0}};  
-   };
-   
-   AnyKinMeasureLinComb InternalAxialRotation ={
-     AnyKinRotational &ref=.PlaneOfElevation.GHRot;
-     OutDim = 1;
-     Coef = {{0,0,...Sign*1}};  
-   };
+  AnyKinMeasureLinComb PlaneOfElevation ={
+    
+    AnyFolder& Humerus = ...Segments.Humerus.AnatomicalFrame;
+    Humerus = {
+      AnyRefNode ISB_Coord = {ARel={{ 0, 0, 1}, { 0, 1,0}, {-1, 0,0}}; };
+    };
+    AnyKinRotational GHRot = {
+      AnyRefNode &scapula = ....Segments.Scapula.AnatomicalFrame.ISB_Coord;
+      AnyRefNode &Humerus = .Humerus.ISB_Coord;
+      Type = RotAxesAngles;
+      Axis1 = y;
+      Axis2 = x;
+      Axis3 = y;
+    };
+    OutDim = 1;
+    Coef = {{...Sign*1,0,0}};
+  };
+  
+  AnyKinMeasureLinComb Elevation ={
+    AnyKinRotational &ref=.PlaneOfElevation.GHRot;
+    OutDim = 1;
+    Coef = {{0,...Sign*-1,0}};  
+  };
+  
+  AnyKinMeasureLinComb InternalAxialRotation ={
+    AnyKinRotational &ref=.PlaneOfElevation.GHRot;
+    OutDim = 1;
+    Coef = {{0,0,...Sign*1}};  
+  };
 };
 
 AnyFolder ThoraxScapula = 
@@ -195,32 +190,32 @@ AnyFolder ThoraxScapula =
   //^ Follows the ISB recommendations for definitions of joint coordinate systems of the scapula relative to thorax
   //^ See section 2.4.6 in https://doi.org/10.1016/j.jbiomech.2004.05.042
   
-   AnyKinMeasureLinComb Protraction ={
-        
-     AnyKinRotational ACRot = {
-       AnyRefNode &thorax  = ......Trunk.Segments.SternumSeg._SIDE_.scj.ISB_Coord;
-       
-       AnyRefNode &scapula = ....Segments.Scapula.AnatomicalFrame.ISB_Coord;
-       Type = RotAxesAngles;
-       Axis1 = y;
-       Axis2 = x;
-       Axis3 = z;
-     };
-     OutDim = 1;
-     Coef = {{...Sign*1,0,0}};
-   };
-   
-   AnyKinMeasureLinComb MedialRotation ={
-     AnyKinRotational &ref=.Protraction.ACRot;
-     OutDim = 1;
-     Coef = {{0,...Sign*1,0}};  
-   };
-   
-   AnyKinMeasureLinComb PosteriorTilt ={
-     AnyKinRotational &ref=.Protraction.ACRot;
-     OutDim = 1;
-     Coef = {{0,0,1}};  
-   };
+  AnyKinMeasureLinComb Protraction ={
+    
+    AnyKinRotational ACRot = {
+      AnyRefNode &thorax  = ......Trunk.Segments.SternumSeg._SIDE_.scj.ISB_Coord;
+      
+      AnyRefNode &scapula = ....Segments.Scapula.AnatomicalFrame.ISB_Coord;
+      Type = RotAxesAngles;
+      Axis1 = y;
+      Axis2 = x;
+      Axis3 = z;
+    };
+    OutDim = 1;
+    Coef = {{...Sign*1,0,0}};
+  };
+  
+  AnyKinMeasureLinComb MedialRotation ={
+    AnyKinRotational &ref=.Protraction.ACRot;
+    OutDim = 1;
+    Coef = {{0,...Sign*1,0}};  
+  };
+  
+  AnyKinMeasureLinComb PosteriorTilt ={
+    AnyKinRotational &ref=.Protraction.ACRot;
+    OutDim = 1;
+    Coef = {{0,0,1}};  
+  };
 };
 
 
@@ -228,10 +223,10 @@ AnyFolder ThoraxHumerus =
 {
   //^ Follows the ISB recommendations for definitions of joint coordinate systems of the Humerus relative to Thorax
   //^ See section 2.4.7 in https://doi.org/10.1016/j.jbiomech.2004.05.042   
-   
+  
   AnyKinMeasureOrg PlaneOfElevation ={
     AnyRefNode &ThoraxShoulderISB  = .....Trunk.Segments.SternumSeg._SIDE_.scj.ISB_Coord;
-
+    
     AnyRefNode& HumerusISB = ...Segments.Humerus.AnatomicalFrame.ISB_Coord;
     
     AnyFolder& gh=...Segments.Humerus.gh ;
@@ -246,7 +241,7 @@ AnyFolder ThoraxHumerus =
     AnyKinRotational GHRot = {
       AnyRefNode& ref1  = .ThoraxShoulderISB.RotNodeElevPlane;
       AnyRefNode& ref2  = .HumerusISB.RotNodeElevPlane;
-  
+      
       Type = RotAxesAngles;
       Axis1 = y;
       Axis2 = x;
@@ -254,17 +249,17 @@ AnyFolder ThoraxHumerus =
     };
     MeasureOrganizer = {0};
   };
-
-   AnyKinMeasureOrg Elevation ={
+  
+  AnyKinMeasureOrg Elevation ={
     AnyKinRotational& ref=.PlaneOfElevation.GHRot;
     MeasureOrganizer = {1};
-   };
+  };
   
   AnyKinMeasureOrg InternalAxialRotation ={
     AnyKinRotational& ref=.PlaneOfElevation.GHRot;
     MeasureOrganizer ={2};
   };
-
+  
 };
 
 AnyKinMeasureOrg ScapulaThoraxProtraction = 
@@ -309,7 +304,7 @@ AnyKinMeasureOrg GlenohumeralFlexion ={
   AnyKinRotational GHMeasure ={
     AnyRefNode &ref1  = ...ShoulderRef.RotNode;
     AnyRefNode &ref2  = ...Segments.Humerus.gh.RotNode;
- 
+    
     Type=RotAxesAngles;
     Axis1=x;
     Axis2=z;
@@ -317,8 +312,8 @@ AnyKinMeasureOrg GlenohumeralFlexion ={
     
   };
   MeasureOrganizer ={1};
-
- 
+  
+  
 };
 
 AnyKinMeasureOrg GlenohumeralExternalRotation ={
@@ -343,13 +338,13 @@ AnyKinMeasureOrg GlenohumeralFlexionJntMus ={
   AnyKinRotational GHMeasure ={
     AnyRefNode &ref1  = ...Segments.Scapula.gh.RotNode;
     AnyRefNode &ref2  = ...Segments.Humerus.gh.RotNode;
- 
+    
     AngVelOnOff = On;
     Type=RotAxesAngles;
-//    Axis1=x;
-//    Axis2=z;
-//    Axis3=y;
-// The measure is now a xyz vector
+    //    Axis1=x;
+    //    Axis2=z;
+    //    Axis3=y;
+    // The measure is now a xyz vector
     
   };
   MeasureOrganizer ={2};
@@ -386,10 +381,7 @@ AnyKinMeasureOrg ElbowFlexion= {
   AnyKinRotational  Rot= {
     AnyRefNode &HumerusFE = ...Segments.Humerus.HumeroUlnar.RotNode;
     AnyRefNode &UlnaFE = ...Segments.Ulna.HumeroUlnar.RotNode;
-   
-//    AnyRefNode &HumerusFE = ...Segments.Humerus.HumeroUlnar;
-//    AnyRefNode &UlnaFE = ...Segments.Ulna.HumeroUlnar;
-
+    
     Type=RotAxesAngles;
   };
   MeasureOrganizer={2}; //this cooresponds to x  (remember z y x is default)
@@ -399,23 +391,9 @@ AnyKinMeasureOrg ElbowFlexion= {
 
 AnyKinMeasureOrg ElbowPronation={
   
-//  AnyFolder &ulna=..Segments.Ulna.ps2 ;
-//  ulna ={
-//    AnyRefNode RotNode={ 
-//      ARel={{0,1,0},{-....Sign*1,0,0},{0,0,....Sign*1}};
-//    };
-//  };
-//  AnyFolder &radius=..Segments.Radius.PointPS2;
-//  radius ={
-//    AnyRefNode RotNode={ 
-//      ARel=RotMat(-....Sign*30*pi/180,x)*{{....Sign*1,0,0},{0,....Sign*1,0},{0,0,1}};
-//    };
-//  };
   
   AnyKinRotational PSRotProximal = {
     Type = RotAxesAngles;
-//    AnyRefNode &UlnaPs = ...Segments.Ulna.ps2.RotNode;
-//    AnyRefNode &RadiusPs = ...Segments.Radius.PointPS2.RotNode;
     
     AnyRefNode &Ulna_Radius_RadioUlnar = ...Segments.Ulna.ProximalRadioUlnar;
     AnyRefNode &Radius_RadioUlnar = ...Segments.Radius.ProximalRadioUlnar;
@@ -460,13 +438,13 @@ AnyKinMeasureOrg WristFlexion ={
   AnyFolder &radius=..Segments.Radius.RadioCarpal;
   radius ={
     AnyRefNode RotNode={ 
-    ARel=RotMat(0.5*(1-....Sign)*pi,y)*RotMat(0.5*(1+....Sign)*pi,x);   //Right side pi Left side 0
-};
+      ARel=RotMat(0.5*(1-....Sign)*pi,y)*RotMat(0.5*(1+....Sign)*pi,x);   //Right side pi Left side 0
+    };
   };
   AnyFolder &Hand= ..Segments.Hand.HandRef.RadioCarpalFlexion;
   Hand ={
     AnyRefNode RotNode={ 
-ARel=RotMat(0.5*(1-....Sign)*pi,y)*RotMat(0.5*(1+....Sign)*pi,x);   //Right side pi Left side 2pi  0
+      ARel=RotMat(0.5*(1-....Sign)*pi,y)*RotMat(0.5*(1+....Sign)*pi,x);   //Right side pi Left side 2pi  0
     };
   };
   AnyKinRotational WristJoint = {
@@ -504,116 +482,96 @@ AnyKinMeasureOrg WristAbduction ={
 /// clinical point of view. 
 RotVectorMeasures = 
 {
-    AnyKinRotational ThoraxClavicula = 
-    {
-       Type = RotVector;
-       AnyRefNode &ref1  = .....Trunk.Segments.SternumSeg._SIDE_.scj;
-
-       AnyRefFrame &ref2 = ...Segments.Clavicula.scj.RotNode;
-    };  
-    AnyKinRotational ClaviculaScapula = 
-    {
-       Type = RotVector;
-       AnyRefFrame &ref1 = ...Segments.Clavicula.acj.RotNode;
-       AnyRefFrame &ref2 = ...Segments.Scapula.acj.RotNode;
-    };  
-    AnyKinRotational ScapulaHumerus = 
-    {
-       Type = RotVector;
-       AnyRefFrame &ref1 = ...Segments.Scapula.gh.RotNode;
-       AnyRefFrame &ref2 = ...Segments.Humerus.gh.RotNode;
-    };
-    AnyKinMeasureOrg HumerusUlna = {
-      AnyKinRotational rot = 
-      {
-         Type = RotVector;
-         AnyRefFrame &ref1 = ....Segments.Humerus.HumeroUlnar;
-         AnyRefFrame &ref2 = ....Segments.Ulna.HumeroUlnar;
-      };
-      MeasureOrganizer = {0}; 
-    };
-    AnyKinMeasureOrg UlnaRadius = {
-      AnyKinRotational rot = 
-      {
-         Type = RotVector;
-//         AnyRefFrame &ref1 = ....Segments.Ulna.ps2.RotNode;
-//         AnyRefFrame &ref2 = ....Segments.Radius.PointPS2.RotNode;
-   AnyRefNode &Ulna_Radius_RadioUlnar = ....Segments.Ulna.ProximalRadioUlnar;
-    AnyRefNode &Radius_RadioUlnar = ....Segments.Radius.ProximalRadioUlnar;
-
-
-      };
-      MeasureOrganizer = {0}; 
-    };
-//    AnyKinMeasureOrg RadiusWrist = {
-//      AnyKinRotational rot = 
-//      {
-//         Type = RotVector;
-//         AnyRefFrame &ref1 = ....Segments.Radius.wj.RotNode;
-//         AnyRefFrame &ref2 = ....Segments.WristJointSeg.RadioCarpalFlexion.RotNode;
-//      };
-//      MeasureOrganizer = {1}; 
-//    };
-
-
-
-#ifndef WRIST_EXPERIMENTAL
-
- AnyKinMeasureOrg RadiusWrist = {
-      AnyKinRotational rot = 
-      {
-         Type = RotVector;
-         AnyRefNode &radius = ....Segments.Radius.RadioCarpal;
-  AnyRefNode &hand =....Segments.WristJointSeg.RadioCarpalFlexion;
-
-         
-//         AnyRefFrame &ref1 = ....Segments.Radius.wj.RotNode;
-//         AnyRefFrame &ref2 = ....Segments.WristJointSeg.RadioCarpalFlexion.RotNode;
-      };
-      MeasureOrganizer = {0}; 
-    };
-
-
-    AnyKinMeasureOrg WristHand = {
-      AnyKinRotational rot = 
-      {
-         Type = RotVector;
-//         AnyRefFrame &ref1 = ....Segments.WristJointSeg.RadialCarpalDeviation.RotNode;
-//         AnyRefFrame &ref2 = ....Segments.Hand.HandRef.wj.RotNode;
-           AnyRefFrame &ref1 = ....Segments.WristJointSeg.RadioCarpalDeviation;
-         AnyRefFrame &ref2 = ....Segments.Hand.HandRef.RadioCarpalDeviation;
-
-         
-      };
-      MeasureOrganizer = {2}; 
-    };
-#endif    
-
-
-
-
-#ifdef WRIST_EXPERIMENTAL
-  AnyKinMeasureOrg RadiusWrist = {
-      AnyKinRotational rot =       {
-         Type = RotVector;
-         AnyRefNode &radius = ....Segments.Radius.RadioCarpal;
-        AnyRefNode &hand =....Segments.Hand.HandRef.RadioCarpalFlexion;
-      };
-      MeasureOrganizer = {0}; 
-    };
-
-    AnyKinMeasureOrg WristHand = {
-      AnyKinRotational rot =  {
-         Type = RotVector;
-         AnyRefNode &radius = ....Segments.Radius.RadioCarpal;
-        AnyRefNode &hand =....Segments.Hand.HandRef.RadioCarpalFlexion;
-      };
-      MeasureOrganizer = {2}; 
-    };
-#endif    
-
-
+  AnyKinRotational ThoraxClavicula = 
+  {
+    Type = RotVector;
+    AnyRefNode &ref1  = .....Trunk.Segments.SternumSeg._SIDE_.scj;
+    
+    AnyRefFrame &ref2 = ...Segments.Clavicula.scj.RotNode;
+  };  
+  AnyKinRotational ClaviculaScapula = 
+  {
+    Type = RotVector;
+    AnyRefFrame &ref1 = ...Segments.Clavicula.acj.RotNode;
+    AnyRefFrame &ref2 = ...Segments.Scapula.acj.RotNode;
+  };  
+  AnyKinRotational ScapulaHumerus = 
+  {
+    Type = RotVector;
+    AnyRefFrame &ref1 = ...Segments.Scapula.gh.RotNode;
+    AnyRefFrame &ref2 = ...Segments.Humerus.gh.RotNode;
   };
+  AnyKinMeasureOrg HumerusUlna = {
+    AnyKinRotational rot = 
+    {
+      Type = RotVector;
+      AnyRefFrame &ref1 = ....Segments.Humerus.HumeroUlnar;
+      AnyRefFrame &ref2 = ....Segments.Ulna.HumeroUlnar;
+    };
+    MeasureOrganizer = {0}; 
+  };
+  AnyKinMeasureOrg UlnaRadius = {
+    AnyKinRotational rot = 
+    {
+      Type = RotVector;
+      AnyRefNode &Ulna_Radius_RadioUlnar = ....Segments.Ulna.ProximalRadioUlnar;
+      AnyRefNode &Radius_RadioUlnar = ....Segments.Radius.ProximalRadioUlnar;
+      
+      
+    };
+    MeasureOrganizer = {0}; 
+  };
+  
+  #ifndef WRIST_EXPERIMENTAL
+  
+  AnyKinMeasureOrg RadiusWrist = {
+    AnyKinRotational rot = 
+    {
+      Type = RotVector;
+      AnyRefNode &radius = ....Segments.Radius.RadioCarpal;
+      AnyRefNode &hand =....Segments.WristJointSeg.RadioCarpalFlexion;
+      
+      
+    };
+    MeasureOrganizer = {0}; 
+  };
+  
+  
+  AnyKinMeasureOrg WristHand = {
+    AnyKinRotational rot =      {
+      Type = RotVector;
+      AnyRefFrame &ref1 = ....Segments.WristJointSeg.RadioCarpalDeviation;
+      AnyRefFrame &ref2 = ....Segments.Hand.HandRef.RadioCarpalDeviation;
+    };
+    MeasureOrganizer = {2}; 
+  };
+  #endif    
+  
+  
+  
+  
+  #ifdef WRIST_EXPERIMENTAL
+  AnyKinMeasureOrg RadiusWrist = {
+    AnyKinRotational rot =       {
+      Type = RotVector;
+      AnyRefNode &radius = ....Segments.Radius.RadioCarpal;
+      AnyRefNode &hand =....Segments.Hand.HandRef.RadioCarpalFlexion;
+    };
+    MeasureOrganizer = {0}; 
+  };
+  
+  AnyKinMeasureOrg WristHand = {
+    AnyKinRotational rot =  {
+      Type = RotVector;
+      AnyRefNode &radius = ....Segments.Radius.RadioCarpal;
+      AnyRefNode &hand =....Segments.Hand.HandRef.RadioCarpalFlexion;
+    };
+    MeasureOrganizer = {2}; 
+  };
+  #endif    
+  
+  
+};
 
 
 #if !((BM_ARM_RIGHT & BM_ARM_DETAILED_HAND) | (BM_ARM_LEFT & BM_ARM_DETAILED_HAND))
