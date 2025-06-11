@@ -49,5 +49,9 @@ AnyFolder MassDistribution = {
   AnyFloat corrected_mass = sum(Obj2Num(DesignVar(ObjGetMember(inertia_objects, "Mass"))));
   
   AnyFloat mass_diff_after_corr = required_mass - corrected_mass;
-  AnyInt test_trunk_mass = warn(ltfun(abs(mass_diff_after_corr), 1e-8), "Trunk mass is not equal to input mass from Anthropometrics folder");
+
+  //When using SCALING_NONE there is no mass adjustments being made...
+  #if BM_SCALING !=_SCALING_NONE_
+    AnyInt test_trunk_mass = warn(ltfun(abs(mass_diff_after_corr), 1e-8), "Trunk mass is not equal to input mass from Anthropometrics folder");
+  #endif
 };
