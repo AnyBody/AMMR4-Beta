@@ -1,3 +1,6 @@
+
+#include "<AMMR_TOOLS>/ModelUtilities\SolidModeling/MeshClasses.any"
+
 // This file contains segment inertia properties and geometry used for muscle wrapping.
 // The file includes a number of segment files which contains muscles attachment points and 
 // bonylandmarks.
@@ -441,6 +444,13 @@ AnySeg Ulna ={
       RGB={0,1,1};
       Visible=Off;
     };
+    
+    
+    
+   
+    
+    
+    
     
     // We need to subtract bone form
     // outer since that encapsulates the whole volume
