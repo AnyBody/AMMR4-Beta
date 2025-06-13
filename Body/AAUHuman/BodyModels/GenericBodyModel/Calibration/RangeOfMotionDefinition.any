@@ -1,4 +1,4 @@
-/** 
+/**
   Folder containing the range of motion used for calibration.
   By Default the values are taken from the data defined in the BodyModel.
 */
@@ -27,9 +27,9 @@ BodyModelFolderStructure RangeOfMotion() = {
     AnyObjectPtr ActiveRoMThoraxAxialRotation ??= ...BodyModel.Trunk.Data.RangeOfMotion.ActiveRoMThoraxAxialRotation;
     AnyObjectPtr ActiveRoMSkullFlexion ??= ...BodyModel.Trunk.Data.RangeOfMotion.ActiveRoMSkullFlexion;
     AnyObjectPtr ActiveRoMSkullLateralBending ??= ...BodyModel.Trunk.Data.RangeOfMotion.ActiveRoMSkullLateralBending;
-    AnyObjectPtr ActiveRoMSkullAxialRotation ??= ...BodyModel.Trunk.Data.RangeOfMotion.ActiveRoMSkullAxialRotation;    
+    AnyObjectPtr ActiveRoMSkullAxialRotation ??= ...BodyModel.Trunk.Data.RangeOfMotion.ActiveRoMSkullAxialRotation;
   };
-  
+
   #if BM_ARM_RIGHT
     Right.ShoulderArm.Shoulder = {
       AnyVar MaxGlenohumeralFlexionAngle ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Shoulder.MaxGlenohumeralFlexionAngle;
@@ -43,7 +43,7 @@ BodyModelFolderStructure RangeOfMotion() = {
       AnyVar MaxScapulaClaviculaProtractionAngle ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Shoulder.MaxScapulaClaviculaProtractionAngle;
       AnyVar MaxScapulaClaviculaRetractionAngle ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Shoulder.MaxScapulaClaviculaRetractionAngle;
       AnyVar ScapulaNeutral ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Shoulder.ScapulaNeutral;
-      
+
       // Shoulder positions
       AnyFloat Neutral ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Shoulder.Neutral;
       AnyFloat Flexed ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Shoulder.Flexed;
@@ -62,8 +62,8 @@ BodyModelFolderStructure RangeOfMotion() = {
       AnyObjectPtr ActiveRoMShoulder ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Shoulder.ActiveRoMShoulder;
       AnyObjectPtr ActiveRoMScapulaElevation ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Shoulder.ActiveRoMScapulaElevation;
       AnyObjectPtr ActiveRoMScapulaProtraction ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Shoulder.ActiveRoMScapulaProtraction;
-    };  
-  
+    };
+
     Right.ShoulderArm.Elbow = {
       AnyVar MaxFlexionAngle ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Elbow.MaxFlexionAngle;
       AnyVar MaxExtensionAngle ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Elbow.MaxExtensionAngle;
@@ -74,7 +74,7 @@ BodyModelFolderStructure RangeOfMotion() = {
       AnyObjectPtr ActiveRoMFlexion ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Elbow.ActiveRoMFlexion;
       AnyObjectPtr ActiveRoMPronation ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Elbow.ActiveRoMPronation;
     };
-    
+
     Right.ShoulderArm.Wrist = {
       AnyVar MaxFlexionAngle ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Wrist.MaxFlexionAngle;
       AnyVar MaxExtensionAngle ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Wrist.MaxExtensionAngle;
@@ -86,7 +86,7 @@ BodyModelFolderStructure RangeOfMotion() = {
       AnyObjectPtr ActiveRoMAbduction ??= .....BodyModel.Right.ShoulderArm.Data.RangeOfMotion.Wrist.ActiveRoMAbduction;
     };
   #endif
-    
+
   #if BM_LEG_RIGHT & (BM_LEG_MODEL == _LEG_MODEL_TLEM_)
     Right.Leg.Hip = {
       AnyVar MaxExternalRotationAngle ??= .....BodyModel.Right.Leg.Data.RangeOfMotion.Hip.MaxExternalRotationAngle;
@@ -99,9 +99,9 @@ BodyModelFolderStructure RangeOfMotion() = {
       AnyVar MaxExtensionInAdductionAngle ??= .....BodyModel.Right.Leg.Data.RangeOfMotion.Hip.MaxExtensionInAdductionAngle;
       AnyVar MaxFlexionInAbductionAngle ??= .....BodyModel.Right.Leg.Data.RangeOfMotion.Hip.MaxFlexionInAbductionAngle;
       AnyVar MinFlexionInAdduction ??= .....BodyModel.Right.Leg.Data.RangeOfMotion.Hip.MinFlexionInAdduction;
-  
+
       // Hip positions
-      AnyFloat Neutral ??= .....BodyModel.Right.Leg.Data.RangeOfMotion.Hip.Neutral; 
+      AnyFloat Neutral ??= .....BodyModel.Right.Leg.Data.RangeOfMotion.Hip.Neutral;
       AnyFloat InternallyRotated ??= .....BodyModel.Right.Leg.Data.RangeOfMotion.Hip.InternallyRotated;
       AnyFloat ExternallyRotated ??= .....BodyModel.Right.Leg.Data.RangeOfMotion.Hip.ExternallyRotated;
       AnyFloat Adduction ??= .....BodyModel.Right.Leg.Data.RangeOfMotion.Hip.Adduction;
@@ -115,7 +115,7 @@ BodyModelFolderStructure RangeOfMotion() = {
 
       AnyObjectPtr ActiveRoM ??= .....BodyModel.Right.Leg.Data.RangeOfMotion.Hip.ActiveRoM;
     };
-  
+
     Right.Leg.Knee = {
       AnyVar Neutral ??= .....BodyModel.Right.Leg.Data.RangeOfMotion.Knee.Neutral;
       AnyVar MaxFlexionAngle ??= .....BodyModel.Right.Leg.Data.RangeOfMotion.Knee.MaxFlexionAngle;
@@ -123,7 +123,7 @@ BodyModelFolderStructure RangeOfMotion() = {
 
       AnyObjectPtr ActiveRoM ??= .....BodyModel.Right.Leg.Data.RangeOfMotion.Knee.ActiveRoM;
     };
-  
+
     Right.Leg.Ankle = {
       AnyVar Neutral ??= .....BodyModel.Right.Leg.Data.RangeOfMotion.Ankle.Neutral;
       AnyVar MaxPlantarFlexionAngle ??= .....BodyModel.Right.Leg.Data.RangeOfMotion.Ankle.MaxPlantarFlexionAngle;
@@ -149,7 +149,7 @@ BodyModelFolderStructure RangeOfMotion() = {
       AnyVar MaxScapulaClaviculaProtractionAngle ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Shoulder.MaxScapulaClaviculaProtractionAngle;
       AnyVar MaxScapulaClaviculaRetractionAngle ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Shoulder.MaxScapulaClaviculaRetractionAngle;
       AnyVar ScapulaNeutral ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Shoulder.ScapulaNeutral;
-      
+
       // Shoulder positions
       AnyFloat Neutral ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Shoulder.Neutral;
       AnyFloat Flexed ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Shoulder.Flexed;
@@ -168,8 +168,8 @@ BodyModelFolderStructure RangeOfMotion() = {
       AnyObjectPtr ActiveRoMShoulder ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Shoulder.ActiveRoMShoulder;
       AnyObjectPtr ActiveRoMScapulaElevation ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Shoulder.ActiveRoMScapulaElevation;
       AnyObjectPtr ActiveRoMScapulaProtraction ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Shoulder.ActiveRoMScapulaProtraction;
-    };  
-  
+    };
+
     Left.ShoulderArm.Elbow = {
       AnyVar MaxFlexionAngle ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Elbow.MaxFlexionAngle;
       AnyVar MaxExtensionAngle ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Elbow.MaxExtensionAngle;
@@ -180,7 +180,7 @@ BodyModelFolderStructure RangeOfMotion() = {
       AnyObjectPtr ActiveRoMFlexion ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Elbow.ActiveRoMFlexion;
       AnyObjectPtr ActiveRoMPronation ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Elbow.ActiveRoMPronation;
     };
-    
+
     Left.ShoulderArm.Wrist = {
       AnyVar MaxFlexionAngle ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Wrist.MaxFlexionAngle;
       AnyVar MaxExtensionAngle ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Wrist.MaxExtensionAngle;
@@ -192,7 +192,7 @@ BodyModelFolderStructure RangeOfMotion() = {
       AnyObjectPtr ActiveRoMAbduction ??= .....BodyModel.Left.ShoulderArm.Data.RangeOfMotion.Wrist.ActiveRoMAbduction;
     };
   #endif
-  
+
   #if BM_LEG_LEFT & (BM_LEG_MODEL == _LEG_MODEL_TLEM_)
     // Left side is by default a mirror of the right side
     Left.Leg.Hip = {
@@ -206,7 +206,7 @@ BodyModelFolderStructure RangeOfMotion() = {
       AnyVar MaxExtensionInAdductionAngle ??= .....BodyModel.Left.Leg.Data.RangeOfMotion.Hip.MaxExtensionInAdductionAngle;
       AnyVar MaxFlexionInAbductionAngle ??= .....BodyModel.Left.Leg.Data.RangeOfMotion.Hip.MaxFlexionInAbductionAngle;
       AnyVar MinFlexionInAdduction ??= .....BodyModel.Left.Leg.Data.RangeOfMotion.Hip.MinFlexionInAdduction;
-  
+
       // Hip positions
       AnyFloat Neutral ??= .....BodyModel.Left.Leg.Data.RangeOfMotion.Hip.Neutral;
       AnyFloat InternallyRotated ??= .....BodyModel.Left.Leg.Data.RangeOfMotion.Hip.InternallyRotated;
@@ -222,15 +222,15 @@ BodyModelFolderStructure RangeOfMotion() = {
 
       AnyObjectPtr ActiveRoM ??= .....BodyModel.Left.Leg.Data.RangeOfMotion.Hip.ActiveRoM;
   };
-  
+
     Left.Leg.Knee = {
       AnyVar Neutral ??= .....BodyModel.Left.Leg.Data.RangeOfMotion.Knee.Neutral;
-      AnyVar MaxFlexionAngle ??= .....BodyModel.Left.Leg.Data.RangeOfMotion.Knee.MaxFlexionAngle; 
+      AnyVar MaxFlexionAngle ??= .....BodyModel.Left.Leg.Data.RangeOfMotion.Knee.MaxFlexionAngle;
       AnyVar MaxExtensionAngle ??= .....BodyModel.Left.Leg.Data.RangeOfMotion.Knee.MaxExtensionAngle;
 
       AnyObjectPtr ActiveRoM ??= .....BodyModel.Left.Leg.Data.RangeOfMotion.Knee.ActiveRoM;
     };
-  
+
     Left.Leg.Ankle = {
       AnyVar Neutral ??= .....BodyModel.Left.Leg.Data.RangeOfMotion.Ankle.Neutral;
       AnyVar MaxPlantarFlexionAngle ??= .....BodyModel.Left.Leg.Data.RangeOfMotion.Ankle.MaxPlantarFlexionAngle;

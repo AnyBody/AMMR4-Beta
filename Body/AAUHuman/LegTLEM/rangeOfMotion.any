@@ -12,7 +12,7 @@ AnyFolder RangeOfMotion = {
     AnyVar MaxExtensionInAdductionAngle = -10;
     AnyVar MaxFlexionInAbductionAngle = 90;
     AnyVar MinFlexionInAdduction = 5;
-    
+
     // Hip positions
     AnyFloat Neutral = { 0, 0, 0 };
     AnyFloat InternallyRotated = { 0, 0, MaxInternalRotationAngle };
@@ -40,9 +40,9 @@ AnyFolder RangeOfMotion = {
       &ExtendedAndAdducted,
       &AbductedAndExternallyRotated,
     };
-  
+
   };
-  
+
   AnyFolder Knee = {
     AnyVar Neutral = 0;
     AnyVar MaxFlexionAngle = 130;
@@ -53,7 +53,7 @@ AnyFolder RangeOfMotion = {
       &MaxExtensionAngle,
     };
   };
-  
+
   AnyFolder Ankle = {
     AnyVar Neutral = 0;
     AnyVar MaxPlantarFlexionAngle = 45;

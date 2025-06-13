@@ -72,7 +72,7 @@ __CLASS__ = AnyKinEqInterPolDriver,
   // Default values for Rmin and Rmax
   #var RminMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMinDefault);
   #var RmaxMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMaxDefault);
-  
+
   // Constraint to ground
   AnyFixedRefFrame Ground = {
     AnyRefNode node = {
@@ -102,27 +102,27 @@ __CLASS__ = AnyKinEqInterPolDriver,
     Measure = BodyModelRef.Interface.Trunk.PelvisThoraxExtension,
     DriverData = .TrunkFlexionPositions
   ) ={};
-  
+
   SingleDoFCalDriver TrunkLateralBending(
     Measure = BodyModelRef.Interface.Trunk.PelvisThoraxLateralBending,
     DriverData = .TrunkLateralBendingPositions
   ) ={};
-  
+
   SingleDoFCalDriver TrunkRotation(
     Measure = BodyModelRef.Interface.Trunk.PelvisThoraxRotation,
     DriverData = .TrunkRotationPositions
   ) ={};
-  
+
   SingleDoFCalDriver SkullFlexion(
     Measure = BodyModelRef.Interface.Trunk.SkullThoraxFlexion,
     DriverData = .SkullFlexionPositions
   ) ={};
-  
+
   SingleDoFCalDriver SkullLateralBending(
     Measure = BodyModelRef.Interface.Trunk.SkullThoraxLateralBending,
     DriverData = .SkullLateralBendingPositions
   ) ={};
-  
+
   SingleDoFCalDriver SkullRotation(
     Measure = BodyModelRef.Interface.Trunk.SkullThoraxRotation,
     DriverData = .SkullRotationPositions
@@ -133,7 +133,7 @@ __CLASS__ = AnyKinEqInterPolDriver,
   #else
     AnyObjectPtr TrunkFlexionPositions = repmat(nStep, &.RangeOfMotion.Trunk.Neutral);
   #endif
-    
+
   #if TRUNKLATERALBENDING == On
     #var AnyObjectPtr TrunkLateralBendingPositions;
   #else
@@ -147,19 +147,19 @@ __CLASS__ = AnyKinEqInterPolDriver,
   #endif
 
   #if SKULLFLEXION == On
-    #var AnyObjectPtr SkullFlexionPositions; 
+    #var AnyObjectPtr SkullFlexionPositions;
   #else
     AnyObjectPtr SkullFlexionPositions = repmat(nStep, &.RangeOfMotion.Trunk.Neutral);
   #endif
 
   #if SKULLLATERALBENDING == On
-    #var AnyObjectPtr SkullLateralBendingPositions; 
+    #var AnyObjectPtr SkullLateralBendingPositions;
   #else
     AnyObjectPtr SkullLateralBendingPositions = repmat(nStep, &.RangeOfMotion.Trunk.Neutral);
   #endif
 
   #if SKULLROTATION == On
-    #var AnyObjectPtr SkullRotationPositions; 
+    #var AnyObjectPtr SkullRotationPositions;
   #else
     AnyObjectPtr SkullRotationPositions = repmat(nStep, &.RangeOfMotion.Trunk.Neutral);
   #endif
@@ -168,7 +168,7 @@ __CLASS__ = AnyKinEqInterPolDriver,
   #if (SHOULDER == On) | (SCAPULAELEVATION == On) | (SCAPULAPROTRACTION == On) | (ELBOWFLEXION == On) | (ELBOWPRONATION == On) | (WRISTFLEXION == On) | (WRISTABDUCTION == On)
     AnyFolder &ArmSegments = BodyModelRef.Side.ShoulderArm.Segments;
     AnyFolder &ArmJoints = BodyModelRef.Side.ShoulderArm.Joints;
-    
+
     // The Muscles folder contain segments and constraints for some wrapping muscles
     // e.g. Deltoid, Pectoralis Minor, etc.
     AnyFolder &ArmMuscles = BodyModelRef.Side.ShoulderArm.Muscles;
@@ -257,11 +257,11 @@ __CLASS__ = AnyKinEqInterPolDriver,
   #if (HIP == On) | (KNEE == On) | (ANKLE == On) | (SUBTALAR == On)
     AnyFolder &LegSegments = BodyModelRef.Side.Leg.Seg;
     AnyFolder &LegJoints = BodyModelRef.Side.Leg.Jnt;
-  
+
     MultiDoFCalDriver Hip(
       Measure = BodyModelRef.Interface.Side.HipFlexion.HipMeasure,
       DriverData = .HipPositions
-    ) ={};  
+    ) ={};
 
     SingleDoFCalDriver Knee(
       Measure = BodyModelRef.Interface.Side.KneeFlexion,

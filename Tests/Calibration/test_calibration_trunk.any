@@ -45,9 +45,9 @@
 #define BM_ARM_LEFT OFF
 
 
-Main = 
+Main =
 {
-  #include "<ANYBODY_PATH_BODY>/HumanModel.any"  
+  #include "<ANYBODY_PATH_BODY>/HumanModel.any"
 
   AnyOperation& RunTest = Main.HumanModel.Calibration.CalibrationSequence;
 
@@ -57,10 +57,10 @@ Main =
   #if BM_CALIBRATION_TYPE != _EXPERIMENTAL_CALIBRATION_TYPE_2PAR_
     AnyObjectPtrArray muscles_from_cal_studies = unique(flattenptr(ObjSearchRecursive(&Main.HumanModel.Calibration, "MuscleArr")));
     AnyObjectPtrArray muscles_from_model = set_difference(
-      ObjSearchRecursive(&Main.HumanModel.BodyModel.Trunk.Muscles, "*", "AnyMuscle", 3), 
+      ObjSearchRecursive(&Main.HumanModel.BodyModel.Trunk.Muscles, "*", "AnyMuscle", 3),
       ObjSearch(&Main.HumanModel.BodyModel.Trunk.Muscles, "*.PelvicFloor.*")
     );
-  
+
     AnyInt test_all_mus_in_cal = expect(
       eqfun(
       NumElemOf(muscles_from_cal_studies),
