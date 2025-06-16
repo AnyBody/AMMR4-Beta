@@ -175,8 +175,8 @@ See below for more details
   #endif
   
   
-  AnyRefFrame &Limb1 = LIMB1;
-  AnyRefFrame &Limb2 = LIMB2;
+  AnyFolder &Limb1 = LIMB1;
+  AnyFolder &Limb2 = LIMB2;
   
   
   #var AnySwitch Switch_DrawForceVectorFromCOP = On;
@@ -475,9 +475,9 @@ See below for more details
     
     AnyFolder PlateFootReactions = {
       AnyRefFrame& ref1=..ForcePlate.ForcePlateSeg;
-      AnyRefFrame&ref2=..Limb1;
+      AnyFolder& ref2=..Limb1;
       #var AnyVar Strength =.InContactStrength;
-      #include "<ANYBODY_PATH_TOOLBOX>/Mocap/ArtificialMuscleConnection.any"
+      #include "<ANYBODY_PATH_TOOLBOX>/Mocap/PlateFootConnection.any"
     };
     
     AnyFolder PlateGroundReactions={
@@ -519,9 +519,9 @@ See below for more details
     
     AnyFolder PlateFootReactions={
       AnyRefFrame& ref1=..ForcePlate.ForcePlateSeg;
-      AnyRefFrame& ref2=..Limb2;
+      AnyFolder& ref2=..Limb2;
       #var AnyVar Strength=.InContactStrength;
-      #include "<ANYBODY_PATH_TOOLBOX>/Mocap/ArtificialMuscleConnection.any"
+      #include "<ANYBODY_PATH_TOOLBOX>/Mocap/PlateFootConnection.any"
     };
     
     

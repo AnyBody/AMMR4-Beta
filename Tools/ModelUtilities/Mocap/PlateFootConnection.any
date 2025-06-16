@@ -1,0 +1,194 @@
+      
+ AnyRecruitedActuator RecruitedReaction1 = {
+   AnyKinLinear Lin={
+     Ref=0;
+     RefFrames = {
+       repmat(11,&..ref1),
+       {
+       &..ref2.Calcaneus,
+//       &..ref2.Cuboid,
+//       &..ref2.Navicular,
+//       &..ref2.MedialCuneiform,
+//       &..ref2.IntermediateCuneiform,
+//       &..ref2.LateralCuneiform,
+       &..ref2.Metatarsal1,
+       &..ref2.Metatarsal2,
+       &..ref2.Metatarsal3,
+       &..ref2.Metatarsal4,
+       &..ref2.Metatarsal5,
+//       &..ref2.ProximalPhalange1,
+//       &..ref2.ProximalPhalange2,
+//       &..ref2.ProximalPhalange3,
+//       &..ref2.ProximalPhalange4,
+//       &..ref2.ProximalPhalange5,
+//       &..ref2.MiddlePhalange2,
+//       &..ref2.MiddlePhalange3,
+//       &..ref2.MiddlePhalange4,
+//       &..ref2.MiddlePhalange5,
+//       &..ref2.MiddlePhalange5,
+       &..ref2.DistalPhalange1,
+       &..ref2.DistalPhalange2,
+       &..ref2.DistalPhalange3,
+       &..ref2.DistalPhalange4,
+       &..ref2.DistalPhalange5,
+       }
+     };
+   };
+   AnyKinRotational Rot1={
+     AnyRefFrame &ref1=..ref1;
+     AnyRefFrame &ref2=..ref2.Calcaneus;
+     Type=RotAxesAngles;
+   };
+   AnyKinRotational Rot2={
+     AnyRefFrame &ref1=..ref1;
+     AnyRefFrame &ref2=..ref2.Metatarsal1;
+     Type=RotAxesAngles;
+   };
+   AnyKinRotational Rot3={
+     AnyRefFrame &ref1=..ref1;
+     AnyRefFrame &ref2=..ref2.Metatarsal2;
+     Type=RotAxesAngles;
+   };
+   AnyKinRotational Rot4={
+     AnyRefFrame &ref1=..ref1;
+     AnyRefFrame &ref2=..ref2.Metatarsal3;
+     Type=RotAxesAngles;
+   };
+   AnyKinRotational Rot5={
+     AnyRefFrame &ref1=..ref1;
+     AnyRefFrame &ref2=..ref2.Metatarsal4;
+     Type=RotAxesAngles;
+   };
+   AnyKinRotational Rot6={
+     AnyRefFrame &ref1=..ref1;
+     AnyRefFrame &ref2=..ref2.Metatarsal5;
+     Type=RotAxesAngles;
+   };
+   AnyKinRotational Rot7={
+     AnyRefFrame &ref1=..ref1;
+     AnyRefFrame &ref2=..ref2.DistalPhalange1;
+     Type=RotAxesAngles;
+   };
+   AnyKinRotational Rot8={
+     AnyRefFrame &ref1=..ref1;
+     AnyRefFrame &ref2=..ref2.DistalPhalange2;
+     Type=RotAxesAngles;
+   };
+   AnyKinRotational Rot9={
+     AnyRefFrame &ref1=..ref1;
+     AnyRefFrame &ref2=..ref2.DistalPhalange3;
+     Type=RotAxesAngles;
+   };
+   AnyKinRotational Rot10={
+     AnyRefFrame &ref1=..ref1;
+     AnyRefFrame &ref2=..ref2.DistalPhalange4;
+     Type=RotAxesAngles;
+   };
+   AnyKinRotational Rot11={
+     AnyRefFrame &ref1=..ref1;
+     AnyRefFrame &ref2=..ref2.DistalPhalange5;
+     Type=RotAxesAngles;
+   };
+   Type = NonPositive; 
+   Strength=.Strength;
+   SET_DEFAULT_ACTUATOR_VOLUME;        
+ };
+ 
+
+ AnyRecruitedActuator RecruitedReaction2 = {
+   AnyKinLinear Lin={
+     Ref=0;
+     RefFrames = {
+       repmat(11,&..ref1),
+       {
+       &..ref2.Calcaneus,
+//       &..ref2.Cuboid,
+//       &..ref2.Navicular,
+//       &..ref2.MedialCuneiform,
+//       &..ref2.IntermediateCuneiform,
+//       &..ref2.LateralCuneiform,
+       &..ref2.Metatarsal1,
+       &..ref2.Metatarsal2,
+       &..ref2.Metatarsal3,
+       &..ref2.Metatarsal4,
+       &..ref2.Metatarsal5,
+//       &..ref2.ProximalPhalange1,
+//       &..ref2.ProximalPhalange2,
+//       &..ref2.ProximalPhalange3,
+//       &..ref2.ProximalPhalange4,
+//       &..ref2.ProximalPhalange5,
+//       &..ref2.MiddlePhalange2,
+//       &..ref2.MiddlePhalange3,
+//       &..ref2.MiddlePhalange4,
+//       &..ref2.MiddlePhalange5,
+//       &..ref2.MiddlePhalange5,
+       &..ref2.DistalPhalange1,
+       &..ref2.DistalPhalange2,
+       &..ref2.DistalPhalange3,
+       &..ref2.DistalPhalange4,
+       &..ref2.DistalPhalange5,
+       }
+     };
+   };
+   AnyKinRotational Rot1={
+     AnyRefFrame &ref1=..ref1;
+     AnyRefFrame &ref2=..ref2.Calcaneus;
+     Type=RotAxesAngles;
+   };
+   AnyKinRotational Rot2={
+     AnyRefFrame &ref1=..ref1;
+     AnyRefFrame &ref2=..ref2.Metatarsal1;
+     Type=RotAxesAngles;
+   };
+   AnyKinRotational Rot3={
+     AnyRefFrame &ref1=..ref1;
+     AnyRefFrame &ref2=..ref2.Metatarsal2;
+     Type=RotAxesAngles;
+   };
+   AnyKinRotational Rot4={
+     AnyRefFrame &ref1=..ref1;
+     AnyRefFrame &ref2=..ref2.Metatarsal3;
+     Type=RotAxesAngles;
+   };
+   AnyKinRotational Rot5={
+     AnyRefFrame &ref1=..ref1;
+     AnyRefFrame &ref2=..ref2.Metatarsal4;
+     Type=RotAxesAngles;
+   };
+   AnyKinRotational Rot6={
+     AnyRefFrame &ref1=..ref1;
+     AnyRefFrame &ref2=..ref2.Metatarsal5;
+     Type=RotAxesAngles;
+   };
+   AnyKinRotational Rot7={
+     AnyRefFrame &ref1=..ref1;
+     AnyRefFrame &ref2=..ref2.DistalPhalange1;
+     Type=RotAxesAngles;
+   };
+   AnyKinRotational Rot8={
+     AnyRefFrame &ref1=..ref1;
+     AnyRefFrame &ref2=..ref2.DistalPhalange2;
+     Type=RotAxesAngles;
+   };
+   AnyKinRotational Rot9={
+     AnyRefFrame &ref1=..ref1;
+     AnyRefFrame &ref2=..ref2.DistalPhalange3;
+     Type=RotAxesAngles;
+   };
+   AnyKinRotational Rot10={
+     AnyRefFrame &ref1=..ref1;
+     AnyRefFrame &ref2=..ref2.DistalPhalange4;
+     Type=RotAxesAngles;
+   };
+   AnyKinRotational Rot11={
+     AnyRefFrame &ref1=..ref1;
+     AnyRefFrame &ref2=..ref2.DistalPhalange5;
+     Type=RotAxesAngles;
+   };
+   Type = NonNegative; 
+   Strength=.Strength;
+   SET_DEFAULT_ACTUATOR_VOLUME;        
+ };
+
+
+
