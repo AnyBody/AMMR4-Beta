@@ -58,6 +58,19 @@ AnyKinDriver JntDriverTrunkFull = {
   AnyKinMeasureOrg& T3T4 =...BodyModel.Interface.Trunk.IntervertebralAngles.T3T4.Jnt;
   AnyKinMeasureOrg& T2T3 =...BodyModel.Interface.Trunk.IntervertebralAngles.T2T3.Jnt;
   AnyKinMeasureOrg& T1T2 =...BodyModel.Interface.Trunk.IntervertebralAngles.T1T2.Jnt;
+#else
+  // Defines dummy measures for the rigid Thorax. Note that these are not driven.
+  AnyKinMeasureOrg& DUMMY1 =...BodyModel.Interface.Trunk.IntervertebralAngles.L1L2.Jnt;
+  AnyKinMeasureOrg& DUMMY2 =...BodyModel.Interface.Trunk.IntervertebralAngles.L1L2.Jnt;
+  AnyKinMeasureOrg& DUMMY3 =...BodyModel.Interface.Trunk.IntervertebralAngles.L1L2.Jnt;
+  AnyKinMeasureOrg& DUMMY4 =...BodyModel.Interface.Trunk.IntervertebralAngles.L1L2.Jnt;
+  AnyKinMeasureOrg& DUMMY5 =...BodyModel.Interface.Trunk.IntervertebralAngles.L1L2.Jnt;
+  AnyKinMeasureOrg& DUMMY6 =...BodyModel.Interface.Trunk.IntervertebralAngles.L1L2.Jnt;
+  AnyKinMeasureOrg& DUMMY7 =...BodyModel.Interface.Trunk.IntervertebralAngles.L1L2.Jnt;
+  AnyKinMeasureOrg& DUMMY8 =...BodyModel.Interface.Trunk.IntervertebralAngles.L1L2.Jnt;
+  AnyKinMeasureOrg& DUMMY9 =...BodyModel.Interface.Trunk.IntervertebralAngles.L1L2.Jnt;
+  AnyKinMeasureOrg& DUMMY10 =...BodyModel.Interface.Trunk.IntervertebralAngles.L1L2.Jnt;
+  AnyKinMeasureOrg& DUMMY11 =...BodyModel.Interface.Trunk.IntervertebralAngles.L1L2.Jnt;
 #endif
   AnyKinMeasureOrg& T1C7 =...BodyModel.Interface.Trunk.IntervertebralAngles.T1C7.Jnt;
   AnyKinMeasureOrg& C7C6 =...BodyModel.Interface.Trunk.IntervertebralAngles.C7C6.Jnt;
@@ -68,6 +81,9 @@ AnyKinDriver JntDriverTrunkFull = {
   AnyKinMeasureOrg& C2C1 =...BodyModel.Interface.Trunk.IntervertebralAngles.C2C1.Jnt;
   AnyKinMeasureOrg& C1C0 =...BodyModel.Interface.Trunk.IntervertebralAngles.C1C0.Jnt;
   Reaction.Type = repmat(nDim, Off);
+#if BM_TRUNK_THORACIC_MODEL == _THORACIC_MODEL_RIGID_
+  MeasureOrganizer = arrcat(iarr(0,26), iarr(60,79));
+#endif
 };
 
 

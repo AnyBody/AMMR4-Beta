@@ -13,7 +13,7 @@
 AnyFolder JointAngleOutputs = {
 
   AnyString BaseName = TEMP_PATH+"/"+ MOCAP_TEST_FILENAME_PREFIX + MOCAP_OUTPUT_FILENAME_PREFIX + Main.ModelSetup.TrialSpecificData.TrialFileName;
-  AnyVec3 ZeroVar = {0,0,0};
+  AnyVec3 ZeroVar = {0,0,0}+0*.t;
 
   JointAngleOuputFile OutputFile_TrunkFull =
   {
@@ -43,6 +43,18 @@ AnyFolder JointAngleOutputs = {
       &..BodyModel.Interface.Trunk.IntervertebralAngles.T3T4.Jnt.Pos,
       &..BodyModel.Interface.Trunk.IntervertebralAngles.T2T3.Jnt.Pos,
       &..BodyModel.Interface.Trunk.IntervertebralAngles.T1T2.Jnt.Pos,
+#else
+      &.ZeroVar,
+      &.ZeroVar,
+      &.ZeroVar,
+      &.ZeroVar,
+      &.ZeroVar,
+      &.ZeroVar,
+      &.ZeroVar,
+      &.ZeroVar,
+      &.ZeroVar,
+      &.ZeroVar,
+      &.ZeroVar,
 #endif
       &..BodyModel.Interface.Trunk.IntervertebralAngles.T1C7.Jnt.Pos,
       &..BodyModel.Interface.Trunk.IntervertebralAngles.C7C6.Jnt.Pos,
