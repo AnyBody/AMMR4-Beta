@@ -1,5 +1,12 @@
 AnyFolder SymmetryCheck= {
 
+  AnyVec3 MirrorPlane ??= {1,1,-1};
+  AnyMat33   MirrorMatrix ??= diag(MirrorPlane);
+  
+  
+
+  
+  
   #if (BM_ARM_RIGHT != OFF) & (BM_ARM_LEFT != OFF)
     AnyFolder Arm ={
       AnyFolder Kinematics = {      
@@ -10,7 +17,7 @@ AnyFolder SymmetryCheck= {
           Array2 = ObjSearchRecursive(
             "Main.HumanModel.BodyModel.Left.ShoulderArm.Segments", "r","AnyFloat", 10
           );
-          MirrorMatrix = diag({1,1,-1});
+          MirrorMatrix = ...MirrorMatrix;
         };
         ComparePtrArrays wraps() = {
           Array1 = ObjSearchRecursive(
@@ -19,8 +26,8 @@ AnyFolder SymmetryCheck= {
           Array2 = ObjSearchRecursive(
             "Main.HumanModel.BodyModel.Left.ShoulderArm.Muscles", "r","AnyFloat", 10
           );
-          MirrorMatrix = diag({1,1,-1});
-        };
+          MirrorMatrix = ...MirrorMatrix;
+        };  
       };
       
       AnyFolder Inertia ={
@@ -105,20 +112,24 @@ AnyFolder SymmetryCheck= {
             Array2 = ObjGetMember(.left_muscles, "Ft");
           };  
         };
-      #endif
+
 
       AnyFolder Wrapping = {
         AnyObjectPtrArray Array1 = ObjSearchRecursive("Main.HumanModel.BodyModel.Right.ShoulderArm.Muscles", "*.P");
         AnyObjectPtrArray Array2 = ObjSearchRecursive("Main.HumanModel.BodyModel.Left.ShoulderArm.Muscles", "*.P");
-        AnyFloat MirrorMatrix = reshape(repmat(SizesOf(Array1Values)[0] * SizesOf(Array1Values)[1], {1,1,-1}), SizesOf(Array1Values));
+        AnyFloat MirrorMatrix = reshape(repmat(SizesOf(Array1Values)[0] * SizesOf(Array1Values)[1], ..MirrorPlane), SizesOf(Array1Values));
         AnyFloat Array1Values = Obj2Num(Array1);
         AnyFloat Array2Values = mult(Obj2Num(Array2),  MirrorMatrix);
 
         AnyFloat AbsDifference = abs(Array1Values - Array2Values);
         AnyFloat SortedDifference = ObjSort(flatten(AbsDifference));
       };
+     #endif
+
     };
+   
   #endif
+
   
   #if (BM_LEG_RIGHT != OFF) & (BM_LEG_LEFT != OFF)
     AnyFolder Leg = {
@@ -132,7 +143,7 @@ AnyFolder SymmetryCheck= {
               ObjSearchRecursive("Main.HumanModel.BodyModel.Left.Leg", "r","AnyFloat", 10),
               ObjSearchRecursive("Main.HumanModel.BodyModel.Left.Leg", "Cyl.r","AnyFloat", 10)
           );
-          MirrorMatrix = diag({1,1,-1});
+           MirrorMatrix = ...MirrorMatrix;
         };
       };
       
@@ -144,7 +155,10 @@ AnyFolder SymmetryCheck= {
           };
           AnyKinCoM Thigh = {AnySeg &ref= Main.HumanModel.BodyModel.Right.Leg.Seg.Thigh;};
           AnyKinCoM Shank = {AnySeg &ref= Main.HumanModel.BodyModel.Right.Leg.Seg.Shank;};
-          AnyKinCoM Talus = {AnySeg &ref= Main.HumanModel.BodyModel.Right.Leg.Seg.Talus;};
+          //old leg has no talus
+          #if BM_LEG_MODEL != _LEG_MODEL_LEG_
+            AnyKinCoM Talus = {AnySeg &ref= Main.HumanModel.BodyModel.Right.Leg.Seg.Talus;};
+          #endif
           AnyKinCoM Foot = {AnySeg &ref= Main.HumanModel.BodyModel.Right.Leg.Seg.Foot;}; 
           
         };
@@ -157,7 +171,9 @@ AnyFolder SymmetryCheck= {
           
           AnyKinCoM Thigh ={   AnySeg  &ref= Main.HumanModel.BodyModel.Left.Leg.Seg.Thigh;      };
           AnyKinCoM Shank={   AnySeg  &ref= Main.HumanModel.BodyModel.Left.Leg.Seg.Shank;      };
-          AnyKinCoM Talus={   AnySeg  &ref= Main.HumanModel.BodyModel.Left.Leg.Seg.Talus;      };
+        #if BM_LEG_MODEL != _LEG_MODEL_LEG_
+            AnyKinCoM Talus={   AnySeg  &ref= Main.HumanModel.BodyModel.Left.Leg.Seg.Talus;      };
+        #endif
           AnyKinCoM Foot={   AnySeg  &ref= Main.HumanModel.BodyModel.Left.Leg.Seg.Foot;      }; 
         };
         
@@ -165,11 +181,14 @@ AnyFolder SymmetryCheck= {
           AnyFloat CoMDif =(.Right.CoMAll.Pos-.Left.CoMAll.Pos)* {{1,0,0},{0,1,0},{0,0,0}};
           AnyFloat Thigh =(.Right.Thigh.Pos-.Left.Thigh.Pos)* {{1,0,0},{0,1,0},{0,0,0}};
           AnyFloat Shank=(.Right.Shank.Pos-.Left.Shank.Pos)* {{1,0,0},{0,1,0},{0,0,0}};
+        #if BM_LEG_MODEL != _LEG_MODEL_LEG_
           AnyFloat Talus=(.Right.Talus.Pos-.Left.Talus.Pos)* {{1,0,0},{0,1,0},{0,0,0}};
+        #endif
           AnyFloat Foot=(.Right.Foot.Pos-.Left.Foot.Pos)* {{1,0,0},{0,1,0},{0,0,0}};
         };
       };  
-      #if BM_LEG_MUSCLES_BOTH == OFF
+      #if  ((BM_LEG_MUSCLES_RIGHT != OFF) & (BM_LEG_MUSCLES_LEFT != OFF))
+
         AnyFolder JntMuscle ={
           ComparePtrArrays ft() = {
             Array1 = ObjGetMember(
@@ -185,9 +204,10 @@ AnyFolder SymmetryCheck= {
           };
         };  
       #endif
-      
-      #if BM_LEG_MUSCLES_BOTH == ON
-      
+         
+
+      #if  ((BM_LEG_MUSCLES_RIGHT == ON) & (BM_LEG_MUSCLES_LEFT == ON))
+
         AnyFolder Muscle ={
           AnyObjectPtrArray right_muscles = ObjSearchRecursive(
             "Main.HumanModel.BodyModel.Right.Leg.Mus", "*", "AnyMuscle"
@@ -213,18 +233,22 @@ AnyFolder SymmetryCheck= {
             Array2 = ObjGetMember(.left_muscles, "Ft");
           };
         };
-      #endif 
-
-      AnyFolder Wrapping = {
+     
+      
+       AnyFolder Wrapping = {
         AnyObjectPtrArray Array1 = ObjSearchRecursive("Main.HumanModel.BodyModel.Right.Leg.Mus", "*.P");
         AnyObjectPtrArray Array2 = ObjSearchRecursive("Main.HumanModel.BodyModel.Left.Leg.Mus", "*.P");
-        AnyFloat MirrorMatrix = reshape(repmat(SizesOf(Array1Values)[0] * SizesOf(Array1Values)[1], {1,1,-1}), SizesOf(Array1Values));
+        AnyFloat MirrorMatrix = reshape(repmat(SizesOf(Array1Values)[0] * SizesOf(Array1Values)[1], ..MirrorPlane), SizesOf(Array1Values));
         AnyFloat Array1Values = Obj2Num(Array1);
         AnyFloat Array2Values = mult(Obj2Num(Array2),  MirrorMatrix);
 
         AnyFloat AbsDifference = abs(Array1Values - Array2Values);
         AnyFloat SortedDifference = ObjSort(flatten(AbsDifference));
       };
+
+      #endif 
+
+     
     };
   #endif
   
@@ -235,7 +259,7 @@ AnyFolder SymmetryCheck= {
         ComparePtrArrays abdom_pos() = {
           Array1 = ObjSearchRecursive("Main.HumanModel.BodyModel.Trunk.Abdominal", "*.Right.*.r");
           Array2 = ObjSearchRecursive("Main.HumanModel.BodyModel.Trunk.Abdominal", "*.Left.*.r");
-          MirrorMatrix = diag({1,1,-1});
+         MirrorMatrix = ...MirrorMatrix;
         };
       #endif
       
@@ -248,7 +272,7 @@ AnyFolder SymmetryCheck= {
           ObjSearchRecursive("Main.HumanModel.BodyModel.Trunk", "*L.r","AnyFloat", 10),
           ObjSearchRecursive("Main.HumanModel.BodyModel.Trunk.Muscles.Left", "*.r", "AnyFloat")
         );
-        MirrorMatrix = diag({1,1,-1});
+      MirrorMatrix = ...MirrorMatrix;
       };
     };
     
@@ -261,7 +285,7 @@ AnyFolder SymmetryCheck= {
         ComparePtrArrays rib_inertia_pos() = {
           Array1 = ObjGetMember(ObjSearchRecursive("Main.HumanModel.BodyModel.Trunk.Segments.Right", "*", "AnyInertia"), "r");
           Array2 = ObjGetMember(ObjSearchRecursive("Main.HumanModel.BodyModel.Trunk.Segments.Left", "*", "AnyInertia"), "r");
-          MirrorMatrix = diag({1,1,-1});
+          MirrorMatrix = ...MirrorMatrix;
         };
         
         AnyFolder sCoM_compare = {
@@ -273,7 +297,7 @@ AnyFolder SymmetryCheck= {
           ComparePtrArrays scoms() = {
             Array1 = .right;
             Array2 = .left;
-            MirrorMatrix = diag({1,1,-1});
+          MirrorMatrix = ...MirrorMatrix;
           };
           
           /// Segments and nested objects that have a scom with z-axis=0
@@ -339,8 +363,8 @@ AnyFolder SymmetryCheck= {
         ComparePtrArrays actuators() = {
           Array1 = ObjSearchRecursive("Main.HumanModel.BodyModel.Trunk.Joints.RibCage.Right", "*.Fout");
           Array2 = ObjSearchRecursive("Main.HumanModel.BodyModel.Trunk.Joints.RibCage.Left", "*.Fout");
-          MirrorMatrix = diag({1, 1, -1, 1, 1, -1});
-        };
+         MirrorMatrix = diag(arrcat(..MirrorPlane,..MirrorPlane));
+      };
       #endif
     };
 
@@ -349,7 +373,7 @@ AnyFolder SymmetryCheck= {
     AnyFolder Wrapping = {
       AnyObjectPtrArray Array1 = ObjSearchRecursive("Main.HumanModel.BodyModel.Trunk.Muscles.Right", "*.P");
       AnyObjectPtrArray Array2 = ObjSearchRecursive("Main.HumanModel.BodyModel.Trunk.Muscles.Left", "*.P");
-      AnyFloat MirrorMatrix = reshape(repmat(SizesOf(Array1Values)[0] * SizesOf(Array1Values)[1], {1,1,-1}), SizesOf(Array1Values));
+      AnyFloat MirrorMatrix = reshape(repmat(SizesOf(Array1Values)[0] * SizesOf(Array1Values)[1], ..MirrorPlane), SizesOf(Array1Values));
       AnyFloat Array1Values = Obj2Num(Array1);
       AnyFloat Array2Values = mult(Obj2Num(Array2),  MirrorMatrix);
 
