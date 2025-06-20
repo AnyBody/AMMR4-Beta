@@ -293,11 +293,15 @@ AnySeg Humerus ={
       Pos2=..fe.sRel;
       Pos3=..em.sRel-..el.sRel;
       RotationNo=9;
-      PointsNo=20;
+      Sphere1PointsNo=5;
+      Sphere2PointsNo=5;
+      LinePointsNo=10;
       RGB={0,1,1};
       Visible=Off;
+      Direction=..Sign;
     };
-    
+       
+
     // We need to subtract bone form
     // outer since that encapsulates the whole volume
     AnySurfSTL negativeBoneInertia = {
@@ -440,14 +444,16 @@ AnySeg Ulna ={
       
       Pos3={0,0,1};  
       RotationNo=9;
-      PointsNo=20;
-      RGB={0,1,1};
+   Sphere1PointsNo=5;
+      Sphere2PointsNo=5;
+      LinePointsNo=10;
+         RGB={0,1,1};
       Visible=Off;
+         Direction=..Sign;
+
     };
     
-    
-    
-   
+  
     
     
     
@@ -631,11 +637,17 @@ AnySeg Radius ={
       
       Pos3={0,0,1};  
       RotationNo=9;
-      PointsNo=20;
-      RGB={0,1,1};
+   Sphere1PointsNo=5;
+      Sphere2PointsNo=5;
+      LinePointsNo=10;
+         RGB={0,1,1};
       Visible=Off;
+         Direction=..Sign;
+
     };
     
+
+
     // We need to subtract bone form
     // outer since that encapsulates the whole volume
     AnySurfSTL negativeBoneInertia = {
@@ -783,8 +795,11 @@ AnySeg WristJointSeg ={
   Mass=0;
   Jii={0,0,0};
   AnyFunTransform3D &Scale = .Hand.Scale;  //This small seg scales with the hand
-  r0=.Radius.RadioCarpal.sRel*.Radius.Axes0'+.Radius.r0-RadioCarpalFlexion.sRel*Axes0';
-  
+    r0=.Radius.RadioCarpal.sRel*.Radius.Axes0'+.Radius.r0-RadioCarpalFlexion.sRel*Axes0';
+//#if  BM_ARM_DETAILED_HAND == ON
+//  AnyRefNode RadioCarpalFlexion={sRel={0.00,0,0};};
+//  AnyRefNode RadioCarpalDeviation={sRel={-0.005,0,0};};
+//#else
   AnyRefNode RadioCarpalFlexion={
     sRel = ..Hand.Ref.RadioCarpalFlexion.sRel;  
     ARel =..Hand.Ref.RadioCarpalFlexion.ARel;  
@@ -793,6 +808,9 @@ AnySeg WristJointSeg ={
     sRel=..Hand.Ref.RadioCarpalDeviation.sRel;
     ARel =..Hand.Ref.RadioCarpalDeviation.ARel;  
   };  
+  
+//#endif
+  
 };
 #endif
 
