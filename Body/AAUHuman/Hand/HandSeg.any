@@ -49,6 +49,7 @@
 
 //Include nodes for muscles
 
+AnyFolder &Ref= Carpals;
 
 CarpalsRef = {
   //It is used for wrapping of the flexor muscles.
@@ -57,7 +58,7 @@ CarpalsRef = {
   
   AnyRefNode FlexorMuscleCyl = { 
     
-    sRel = ..Carpals.wj.sRel-.Scale({0,0.07,....Sign*0})-...WristJointSeg.RadialUlnarDeviation.sRel*{{1,0,0},{0,1,0},{0,0,....Sign*1}};
+    sRel = ..Carpals.wj.sRel-.Scale({0,0.07,....Sign*0})-...WristJointSeg.RadioCarpalDeviation.sRel*{{1,0,0},{0,1,0},{0,0,....Sign*1}};
     
     AnyVec3 P1= sRel;
     AnyVec3 P3 =P1+ .Scale({0.0,0.0,....Sign*0.0115});//*...Sign;
@@ -340,8 +341,10 @@ Finger5MetaRef = {
     AnySeg Carpals={
       Mass= .HandMass/6;
       Jii={0,0,0};
-      r0 = ..WristJointSeg.RadialUlnarDeviation.sRel*..WristJointSeg.Axes0'+..WristJointSeg.r0; 
-     
+      r0 = ..WristJointSeg.RadioCarpalDeviation.sRel*..WristJointSeg.Axes0'+..WristJointSeg.r0; 
+     AnyFolder &Data = ...Data.unscaled.ModelParameters.HandSeg.SimpleHandSeg;
+ AnyMat33 Mirror={{1,0,0},{0,1,0},{0,0,...Sign}};
+
 //      Axes0 = .WristJointSeg.Axes0*RotMat(90/180*pi,x)*RotMat(..Sign*15/180*pi,y)*RotMat(-90/180*pi,z);
       //AnyDrawRefFrame drw1={RGB={0,0,1}; ScaleXYZ={0.15,0.15,0.15};};
       
@@ -360,9 +363,21 @@ Finger5MetaRef = {
         AnyFunTransform3D &Scale =.Scale;
       };
       
-      
-      
-      AnyRefNode wj={ 
+    AnyRefNode RadioCarpalFlexion = {
+    //Wrist joint location
+    sRel =..Scale(.Data.RadioCarpalFlexion_pos*.Mirror );
+    /// wrist joint flexion axis is defined from joint center pointing to radialStylo and using the MCP2 and MCP5 midpoint 
+    ARel = RotMat(sRel,.Scale(.Data.RadiolStyloInNeutralConf_pos*.Mirror),  0.5*(.Scale(.Data.MCP2_Distal_pos*.Mirror)+ .Scale(.Data.MCP5_Distal_pos*.Mirror)))*RotMat(0.5*pi,y);
+  };
+
+  AnyRefNode RadioCarpalDeviation = {
+    // wrist joint is defined from the two epicondyle bony landmarks
+    sRel =.Scale(.Data.RadioCarpalDeviation_pos*.Mirror );
+    ARel =.RadioCarpalFlexion.ARel*RotMat(0.5*pi,z)*RotMat(pi,x);  //note here we re-use the axis from RadioCarpalFlexion but flip it around this ensures the flexion and deviation axes are orthogonal
+  };
+
+    
+     AnyRefNode wj={ 
         sRel=.Scale({-0.005,0.005,....Sign*-0.005} + {0.005, -0.001433, ....Sign*0.001099}); //corrected
         
         
