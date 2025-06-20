@@ -2,7 +2,7 @@
 #define TOOLS_MODELUTILITIES_SOLIDMODELING_MESHCLASSES
 
 //This mesh can create a mesh spanned by two spheres and a cone
-//
+
 #class_template TwoSphereConeMesh (
 __CLASS__ = AnySurfTriCylMesh ,
 ADD_NODEGROUP = "Off" 
@@ -15,15 +15,22 @@ ADD_NODEGROUP = "Off"
   #var AnyFloat Pos2 ={0,0,0}; //sphere2 position
   #var AnyFloat Pos3 ={0,0,0}; //points used to define reference node created by mesh 
   
-  #var AnyInt PointsNo=40;  //total number of points along length of mesh
+  
+  
+  
+    
+   #var AnyInt Sphere1PointsNo; 
+   #var AnyInt Sphere2PointsNo;
+   #var AnyInt LinePointsNo;
+
   
   //  #var AnyInt Sphere1PointsNo=floor(3*(100/10)); 
   //  #var AnyInt Sphere2PointsNo=floor(3*(100/10));
   //  #var AnyInt LinePointsNo=floor(4*(100/10));
   
-  #var AnyInt Sphere1PointsNo=floor(PointsNo*Calculations.d1/Calculations.TotalLength);//Points used for sphere1 
-  #var AnyInt Sphere2PointsNo=floor(PointsNo*Calculations.d2/Calculations.TotalLength);//Points used for sphere2 
-  #var AnyInt LinePointsNo=floor(PointsNo*Calculations.d3/Calculations.TotalLength);   //Points used for line section
+//  #var AnyInt Sphere1PointsNo=floor(PointsNo*Calculations.d1/Calculations.TotalLength);//Points used for sphere1   
+//  #var AnyInt Sphere2PointsNo=floor(PointsNo*Calculations.d2/Calculations.TotalLength);//Points used for sphere2 
+//  #var AnyInt LinePointsNo=floor(PointsNo*Calculations.d3/Calculations.TotalLength);   //Points used for line section
   
   
   #var AnyInt RotationNo=20;  //number of angle discretizations
@@ -37,6 +44,11 @@ ADD_NODEGROUP = "Off"
   #var AnyFloat End_Surf_Angle=2*pi;
   
   #var AnySwitchVar Visible = On;
+  
+  #var AnyFloat Direction = 1;
+
+  AnyInt PointsNo=  Sphere1PointsNo +Sphere2PointsNo+LinePointsNo; //total number of points along length of mesh
+
   
   AnyFolder Calculations ={
     //frm https://www.quora.com/How-do-I-find-the-plane-equation-which-is-tangent-to-two-spheres
@@ -120,8 +132,12 @@ ADD_NODEGROUP = "Off"
     AnyInt Size = .PointsNo; 
     
     AnyInt   number_of_points =.RotationNo;
-    AnyFloat angles = farr(.Start_Surf_Angle,(.End_Surf_Angle-.Start_Surf_Angle)/(number_of_points-iffun(eqfun(.End_Surf_Angle-.Start_Surf_Angle,2*pi),0,1)),number_of_points);
+    AnyFloat angles_temp = farr(.Start_Surf_Angle,(.End_Surf_Angle-.Start_Surf_Angle)/(number_of_points-iffun(eqfun(.End_Surf_Angle-.Start_Surf_Angle,2*pi),0,1)),number_of_points);
+    AnyFloat angles_reverse = arrcat(angles_temp[0],take(flip(angles_temp),iarr(0,1,.RotationNo-2)));  //we flip angles depending on direction ... and "bump" vector one to ensure same start.. this is because start and end is not identical we skip one.. to avoid triangles of zero size
+
     
+    AnyFloat angles= iffun(eqfun(.Direction,1),angles_temp,angles_reverse);
+
     //now we start setting up points for each ring in cyl mesh 
     //for each x val we do a full rotation
     //here we create x values matrix
@@ -135,6 +151,11 @@ ADD_NODEGROUP = "Off"
     AnyFloat Py1_2 = reshape(Py1_1,{number_of_points,SizesOf(Py1)[0]})';
     AnyFloat temp   = reshape(repmat(SizesOf(Py1)[0],cos(angles)),{SizesOf(Py1)[0],number_of_points});
     AnyFloat PointsRingsy = flatten( mult(temp,Py1_2));
+   
+
+   
+
+
     
     //here we create z values matrix
     AnyFloat Pz1   = Py1;
@@ -150,20 +171,20 @@ ADD_NODEGROUP = "Off"
   sRel = Pos1;
   ARel = RotMat(sRel,Pos2,sRel+Pos3);
  
-  //     Enable for visual debug
-  //      AnyDrawPointCloud Line2D ={
-  //        Points=.Calculations.PointsCombined;
-  //        Points3D=On;    
-  //        PointStyle.Size=0.011;
-  //        RGB={0,0,1};
-  //      };
-  //      
-  //      AnyDrawPointCloud Line3DRotated ={
-  //        Points=.Calculations.all;
-  //        Points3D=On;    
-  //        PointStyle.Size=0.010;
-  //        RGB={1,0,0};
-  //      };
+//       Enable for visual debug
+        AnyDrawPointCloud Line2D ={
+          Points=.Calculations.PointsCombined;
+          Points3D=On;    
+          PointStyle.Size=0.011;
+          RGB={0,0,1};
+        };
+//        
+//        AnyDrawPointCloud Line3DRotated ={
+//          Points=.Calculations.all;
+//          Points3D=On;    
+//          PointStyle.Size=0.010;
+//          RGB={1,0,0};
+//        };
   //      
   //      AnyRefNode TangentPoint1={sRel=...Calculations.TangentPoint1;AnyDrawRefFrame drw ={};};
   //      AnyRefNode TangentPoint2={sRel=...Calculations.TangentPoint2;AnyDrawRefFrame drw ={};};
@@ -172,6 +193,9 @@ ADD_NODEGROUP = "Off"
   viewSurface.Visible=Visible;
   viewSurface.RGB=RGB;
   viewSurface.Opacity=Opacity;
+  
+  TriangleDirection = iffun(eqfun(Direction,1),RotCounterclockwise,RotClockwise);
+
   
   Points=Calculations.all;
   AnyIntArray indicies_ = iarr(0,Calculations.number_of_points*Calculations.Size-1);
