@@ -24,12 +24,12 @@
 
 // Switch for automatic display of all configuration values
 // #define  BM_CONFIG_MESSAGES OFF
-// Possible values: ON, OFF
+// Possible values: ON, OFF, 
 
 
 // Switch for enabling configuration value information in the model tree
 // #define  BM_CONFIG_VALUES OFF
-// Possible values: ON, OFF
+// Possible values: ON, OFF, 
 
 
 // A file with draw settings
@@ -38,27 +38,22 @@
 
 // A flag to switch on/off inclusion of the draw settings (may be needed in case of two human models)
 // #define  BM_DRAWSETTINGS_SKIP OFF
-// Possible values: ON, OFF
+// Possible values: ON, OFF, 
 
 
 // Parameter defining the foot model used.
 // #define  BM_FOOT_MODEL _FOOT_MODEL_DEFAULT_
-// Possible values: _FOOT_MODEL_NONE_, _FOOT_MODEL_DEFAULT_, _FOOT_MODEL_TOE_FLEX_GM_, _FOOT_MODEL_DETAILED_GM_, 
+// Possible values: _FOOT_MODEL_NONE_, _FOOT_MODEL_DEFAULT_, _FOOT_MODEL_RIGID_GM_, _FOOT_MODEL_TOE_FLEX_GM_, _FOOT_MODEL_DETAILED_GM_, 
 
 
 // Parameter defining the existing of reaction on toes when using _FOOT_MODEL_TOE_FLEX_GM_.
 // #define  BM_FOOT_MODEL_TOE_FLEX_GM_REACTION ON
-// Possible values: ON, OFF
-
-
-// Parameter for switching the foot ligaments On/Off.
-// #define  BM_FOOT_MODEL_LIGAMENTS OFF
-// Possible values: OFF, ON, 
+// Possible values: ON, OFF, 
 
 
 // Parameter defining the Leg model used.
-// #define  BM_LEG_MODEL _LEG_MODEL_TLEM2_
-// Possible values: OFF, _LEG_MODEL_TLEM2_, _LEG_MODEL_TLEM_, _LEG_MODEL_TLEM1_, _LEG_MODEL_LEG_, 
+// #define  BM_LEG_MODEL _LEG_MODEL_TLEM_
+// Possible values: OFF, _LEG_MODEL_TLEM_, _LEG_MODEL_LEG_, 
 
 
 // Read only parameter to check if Leg Model is a variant of the TLEM model.
@@ -100,6 +95,21 @@
 // Possible values: OFF, _MUSCLES_SIMPLE_, _MUSCLES_3E_HILL_, BM_LEG_MUSCLES_BOTH, 
 
 
+// Parameter to define muscle behavior of both right and left foot
+// #define  BM_FOOT_MUSCLES_BOTH BM_LEG_MUSCLES_BOTH
+// Possible values: OFF, _MUSCLES_SIMPLE_, _MUSCLES_3E_HILL_, 
+
+
+// Parameter to define muscle behavior of the left foot
+// #define  BM_FOOT_MUSCLES_LEFT BM_FOOT_MUSCLES_BOTH
+// Possible values: OFF, _MUSCLES_SIMPLE_, _MUSCLES_3E_HILL_, BM_FOOT_MUSCLES_BOTH, 
+
+
+// Parameter to define muscle behavior of the right foot
+// #define  BM_FOOT_MUSCLES_RIGHT BM_FOOT_MUSCLES_BOTH
+// Possible values: OFF, _MUSCLES_SIMPLE_, _MUSCLES_3E_HILL_, BM_FOOT_MUSCLES_BOTH, 
+
+
 // Path to specify the underlying dataset. This currently only affects the TLEM based models. Valid options depends on which model (TLEM1/2) is used, and what dataset are available. If not specified, this will be configure automatically.
 // #path  BM_LEG_DATASET 
 
@@ -114,7 +124,7 @@
 
 // The type of thoracic/ribcage model used in the model.
 // #define  BM_TRUNK_THORACIC_MODEL _THORACIC_MODEL_RIGID_
-// Possible values: _THORACIC_MODEL_RIGID_, _THORACIC_MODEL_FLEXIBLE_, _THORACIC_MODEL_USERDEFINED_, 
+// Possible values: _THORACIC_MODEL_RIGID_, _THORACIC_MODEL_FLEXIBLE_, _THORACIC_MODEL_USERDEFINED_, _THORACIC_MODEL_FLEXIBLE_KINEMATIC_ONLY_, 
 
 
 // The type of thoracic/ribcage model used in the model.
@@ -122,18 +132,14 @@
 // Possible values: _CAVITY_MODEL_BUCKLE_, _CAVITY_MODEL_VOLUME_, 
 
 
-// New via-nodes of the erector spinae muscles were placed on the layers instead of the vertebrae.
-// #define  BM_EXPERIMENTAL_ERECTORSPINAE_VIANODES _ERECTORSPINAE_VIANODES_LAYER_AND_REMOVE_L3L4_VIANODES_
-// Possible values: _ERECTORSPINAE_VIANODES_LAYER_AND_REMOVE_L3L4_VIANODES_, _REMOVE_L3L4_VIANODES_, _ERECTORSPINAE_VIANODES_VERTEBRA_, 
-
-
 // Switch to control a fix on the diaphragm position. To simulate breathing this needs to be disabled, and replaced by an other driver on `Trunk.Abdominal.Diaphragm.Joints.AbdominalLayerBase_DiaphragmBase`.
 // #define  BM_TRUNK_DIAGPHRAM_FIXED_POSITION ON
-// Possible values: ON, OFF
+// Possible values: ON, OFF, 
 
 
 // The topology of the sternum segment, i.e. number of segments into which sternum is split. Current options are 2, or 4 segments. 
 // #define  BM_TRUNK_THORACIC_STERNUM_TOPOLOGY 2
+// Possible values: _STERNUM_2_SEG_, _STERNUM_4_SEG_, 
 
 
 // Definition of the type of all spine muscles.
@@ -222,12 +228,12 @@
 
 // Switch for the left arm model being present or not.
 // #define  BM_ARM_LEFT ON
-// Possible values: ON, OFF
+// Possible values: ON, OFF, 
 
 
 // Switch for the right arm model being present or not.
 // #define  BM_ARM_RIGHT ON
-// Possible values: ON, OFF
+// Possible values: ON, OFF, 
 
 
 // Switch for the shoulder rhythm constraints. ON indicate that the rhythm is a hard contraint while _RHYTHM_SOFT_ will make the rhythm as soft kinematic contraint.
@@ -242,7 +248,7 @@
 
 // Switch for enabling the detailed hand.
 // #define  BM_ARM_DETAILED_HAND OFF
-// Possible values: ON, OFF
+// Possible values: ON, OFF, 
 
 
 // Switch for deltoid wrapping. Setting this to OFF or _DELTOID_WRAPPING_RAKE_ will revert to the older rake based implementation of the deltoid.
@@ -276,12 +282,12 @@
 
 // Setting of the default value for all mannequin drivers.
 // #define  BM_MANNEQUIN_DRIVER_DEFAULT ON
-// Possible values: ON, OFF
+// Possible values: ON, OFF, 
 
 
 // By default constraint type of mannequin drivers will be soft.
 // #define  BM_MANNEQUIN_DRIVER_WEAK_SWITCH ON
-// Possible values: ON, OFF
+// Possible values: ON, OFF, 
 
 
 // Keyword for the interface morhping between the trunk and the leg pelvis segments.
@@ -611,7 +617,7 @@
 
 // A switch to use different ref. frame than the default global reference frame
 // #define  BM_GLOBAL_REFERENCE_FRAME_SWITCH OFF
-// Possible values: ON, OFF
+// Possible values: ON, OFF, 
 
 
 // An object path leading to the selected global reference frame
@@ -620,14 +626,15 @@
 
 // A compatability switch to include the trunk selected outputs joint reaction force from AMMR 2.4
 // #define  BM_COMPATIBILITY_24_TRUNK_SELECTED_OUTPUTS_JRF OFF
-// Possible values: ON, OFF
+// Possible values: ON, OFF, 
 
 
 // A compatability switch to add the model tree structure of the muscles from AMMR 4. Use this option to easily load older models.
 // #define  BM_COMPATIBILITY_MUSCLE_STRUCTURE OFF
-// Possible values: ON, OFF
+// Possible values: ON, OFF, 
+
 
 // A compatability switch to add the model tree structure of the BodyModel folders from AMMR <4. Use this option to easily load older models.
 // #define  BM_COMPATIBILITY_BODYMODEL_STRUCTURE OFF
-// Possible values: ON, OFF
+// Possible values: ON, OFF, 
 

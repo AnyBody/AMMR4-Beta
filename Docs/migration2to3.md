@@ -43,6 +43,12 @@ argument) this problem will often not occur.
 Changes to the anatomical frame of the foot and talus segment may have resulted
 in slight movement of markers. Adjust the Y component as necessary to maintain
 the desired marker position and joint angle output.
+(update_shank_marker_ammr3)=
+#### Shank markers
+
+The coordinate system used for scaling shank have been changed slightly. Scaling no longer takes place 
+in the shank anatomical frame, but in a frame that is aligned with the femur scaling frame. 
+This may affect markers placed on the shank segment, which is not set releative to some bony landmark. 
 
 
 ## Load time errors

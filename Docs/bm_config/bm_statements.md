@@ -77,8 +77,9 @@ Switch for automatic display of all configuration values
 
 :Default: OFF
 :Example: `#define BM_CONFIG_MESSAGES OFF`
-:Options: {ammr:bm_constant}`ON`/{ammr:bm_constant}`OFF`
-
+:Options:
+  - {any}`ON` -> Switch ON
+  - {any}`OFF` -> Switch OFF
 
 ```
 ::::
@@ -94,8 +95,9 @@ Switch for enabling configuration value information in the model tree
 
 :Default: OFF
 :Example: `#define BM_CONFIG_VALUES OFF`
-:Options: {ammr:bm_constant}`ON`/{ammr:bm_constant}`OFF`
-
+:Options:
+  - {any}`ON` -> Switch ON
+  - {any}`OFF` -> Switch OFF
 
 ```
 ::::
@@ -124,8 +126,9 @@ A flag to switch on/off inclusion of the draw settings (may be needed in case of
 
 :Default: OFF
 :Example: `#define BM_DRAWSETTINGS_SKIP OFF`
-:Options: {ammr:bm_constant}`ON`/{ammr:bm_constant}`OFF`
-
+:Options:
+  - {any}`ON` -> Switch ON
+  - {any}`OFF` -> Switch OFF
 
 ```
 ::::
@@ -144,6 +147,7 @@ Parameter defining the foot model used.
 :Options:
   - {any}`_FOOT_MODEL_NONE_` -> Switch off foot model"
   - {any}`_FOOT_MODEL_DEFAULT_` -> Switch for using the default foot model
+  - {any}`_FOOT_MODEL_RIGID_GM_` -> Switch for using the GM foot model in the rigid configuration
   - {any}`_FOOT_MODEL_TOE_FLEX_GM_` -> Switch for using the GM foot model with toe flexion
   - {any}`_FOOT_MODEL_DETAILED_GM_` -> Switch for using the detailed GM foot model
 
@@ -161,26 +165,9 @@ Parameter defining the existing of reaction on toes when using _FOOT_MODEL_TOE_F
 
 :Default: ON
 :Example: `#define BM_FOOT_MODEL_TOE_FLEX_GM_REACTION ON`
-:Options: {ammr:bm_constant}`ON`/{ammr:bm_constant}`OFF`
-
-
-```
-::::
-
-
-::::{dropdown} `BM_FOOT_MODEL_LIGAMENTS`
-:animate: fade-in-slide-down
-:margin: 0 0 3 3
-
-```{ammr:bm_statement} BM_FOOT_MODEL_LIGAMENTS
-
-Parameter for switching the foot ligaments On/Off.
-
-:Default: OFF
-:Example: `#define BM_FOOT_MODEL_LIGAMENTS OFF`
 :Options:
-  - {any}`OFF` -> Switch OFF
   - {any}`ON` -> Switch ON
+  - {any}`OFF` -> Switch OFF
 
 ```
 ::::
@@ -194,13 +181,11 @@ Parameter for switching the foot ligaments On/Off.
 
 Parameter defining the Leg model used.
 
-:Default: {any}`_LEG_MODEL_TLEM2_`
-:Example: `#define BM_LEG_MODEL _LEG_MODEL_TLEM2_`
+:Default: {any}`_LEG_MODEL_TLEM_`
+:Example: `#define BM_LEG_MODEL _LEG_MODEL_TLEM_`
 :Options:
   - {any}`OFF` -> Switch OFF
-  - {any}`_LEG_MODEL_TLEM2_` -> Switch to use leg model: "TLEM 2"
   - {any}`_LEG_MODEL_TLEM_` -> Switch to use leg model: "TLEM 2"
-  - {any}`_LEG_MODEL_TLEM1_` -> Switch to use leg model: "TLEM 1"
   - {any}`_LEG_MODEL_LEG_` -> Switch to use leg model: "Leg"
 
 ```
@@ -351,6 +336,65 @@ Parameter to define muscle behavior of the right leg
 ::::
 
 
+::::{dropdown} `BM_FOOT_MUSCLES_BOTH`
+:animate: fade-in-slide-down
+:margin: 0 0 3 3
+
+```{ammr:bm_statement} BM_FOOT_MUSCLES_BOTH
+
+Parameter to define muscle behavior of both right and left foot
+
+:Default: {any}`BM_LEG_MUSCLES_BOTH`
+:Example: `#define BM_FOOT_MUSCLES_BOTH BM_LEG_MUSCLES_BOTH`
+:Options:
+  - {any}`OFF` -> Switch OFF
+  - {any}`_MUSCLES_SIMPLE_` -> Constant to use simple muscles
+  - {any}`_MUSCLES_3E_HILL_` -> Constant to use 3 element Hill-type muscle
+
+```
+::::
+
+
+::::{dropdown} `BM_FOOT_MUSCLES_LEFT`
+:animate: fade-in-slide-down
+:margin: 0 0 3 3
+
+```{ammr:bm_statement} BM_FOOT_MUSCLES_LEFT
+
+Parameter to define muscle behavior of the left foot
+
+:Default: {any}`BM_FOOT_MUSCLES_BOTH`
+:Example: `#define BM_FOOT_MUSCLES_LEFT BM_FOOT_MUSCLES_BOTH`
+:Options:
+  - {any}`OFF` -> Switch OFF
+  - {any}`_MUSCLES_SIMPLE_` -> Constant to use simple muscles
+  - {any}`_MUSCLES_3E_HILL_` -> Constant to use 3 element Hill-type muscle
+  - {any}`BM_FOOT_MUSCLES_BOTH` -> 
+
+```
+::::
+
+
+::::{dropdown} `BM_FOOT_MUSCLES_RIGHT`
+:animate: fade-in-slide-down
+:margin: 0 0 3 3
+
+```{ammr:bm_statement} BM_FOOT_MUSCLES_RIGHT
+
+Parameter to define muscle behavior of the right foot
+
+:Default: {any}`BM_FOOT_MUSCLES_BOTH`
+:Example: `#define BM_FOOT_MUSCLES_RIGHT BM_FOOT_MUSCLES_BOTH`
+:Options:
+  - {any}`OFF` -> Switch OFF
+  - {any}`_MUSCLES_SIMPLE_` -> Constant to use simple muscles
+  - {any}`_MUSCLES_3E_HILL_` -> Constant to use 3 element Hill-type muscle
+  - {any}`BM_FOOT_MUSCLES_BOTH` -> 
+
+```
+::::
+
+
 ::::{dropdown} `BM_LEG_DATASET`
 :animate: fade-in-slide-down
 :margin: 0 0 3 3
@@ -413,45 +457,6 @@ Internal swtich to enable a different implementation of the Rectus Abdominis mus
 ::::
 
 
-::::{dropdown} `BM_TRUNK_EXPERIMENTAL_FLOATINGRIBS_KINETICS`
-:animate: fade-in-slide-down
-:margin: 0 0 3 3
-
-```{ammr:bm_statement} BM_TRUNK_EXPERIMENTAL_FLOATINGRIBS_KINETICS
-:deprecated:
-
-Internal swtich to enable a recruited actuators on the rib end of floating ribs (rib11, rib12).
-
-:Default: {any}`_FLOATING_RIBEND_KINETICS_ENDRIBS_`
-:Example: `#define BM_TRUNK_EXPERIMENTAL_FLOATINGRIBS_KINETICS _FLOATING_RIBEND_KINETICS_ENDRIBS_`
-:Options:
-  - {any}`_FLOATING_RIBEND_KINETICS_OFF_` ->  No recruited actuators to rib end of Floating ribs (rib11, rib12).
-  - {any}`_FLOATING_RIBEND_KINETICS_ENDRIBS_` ->  Add recruited actuators to rib end of Floating ribs (rib11, rib12).
-
-```
-::::
-
-
-::::{dropdown} `BM_TRUNK_EXPERIMENTAL_RIBCAGE_REACTION`
-:animate: fade-in-slide-down
-:margin: 0 0 3 3
-
-```{ammr:bm_statement} BM_TRUNK_EXPERIMENTAL_RIBCAGE_REACTION
-:deprecated:
-
-Internal swtich to change the ribcage reaction between three versions
-
-:Default: {any}`_RIBCAGE_CC_ZACTUATORS_STERNUMREACTION_`
-:Example: `#define BM_TRUNK_EXPERIMENTAL_RIBCAGE_REACTION _RIBCAGE_CC_ZACTUATORS_STERNUMREACTION_`
-:Options:
-  - {any}`_RIBCAGE_CC_ACTUATORS_` -> 3-direction Recruited actuators in CC (costochondral) joints.
-  - {any}`_RIBCAGE_CC_REACTION_` -> Z-direction reaction in CC (costochondral) joints, which is along the relavant rib, togehter with having the rib-sternum averaging constraints reaction ON
-  - {any}`_RIBCAGE_CC_ZACTUATORS_STERNUMREACTION_` -> Z-direction actuators in CC (costochondral) joints, which is along the relavant rib, togehter with having the rib-sternum averaging constraints reaction ON
-
-```
-::::
-
-
 ::::{dropdown} `BM_TRUNK_THORACIC_MODEL`
 :animate: fade-in-slide-down
 :margin: 0 0 3 3
@@ -466,6 +471,7 @@ The type of thoracic/ribcage model used in the model.
   - {any}`_THORACIC_MODEL_RIGID_` -> A completely rigid model of the thoracic spine and ribcage.
   - {any}`_THORACIC_MODEL_FLEXIBLE_` -> A full model of the thorax and ribcage with a kinematically determinate set of drivers.
   - {any}`_THORACIC_MODEL_USERDEFINED_` -> A full model of the thorax and ribcage where drivers/rythmns are specified by the users.
+  - {any}`_THORACIC_MODEL_FLEXIBLE_KINEMATIC_ONLY_` -> A kinematic flexible model of the thorax and ribcage with a kinematically determinate set of drivers. No muscles in thoracic region and instead the reactions are ON in the ribcage and thoracic spine.
 
 ```
 ::::
@@ -489,25 +495,6 @@ The type of thoracic/ribcage model used in the model.
 ::::
 
 
-::::{dropdown} `BM_EXPERIMENTAL_ERECTORSPINAE_VIANODES`
-:animate: fade-in-slide-down
-:margin: 0 0 3 3
-
-```{ammr:bm_statement} BM_EXPERIMENTAL_ERECTORSPINAE_VIANODES
-
-New via-nodes of the erector spinae muscles were placed on the layers instead of the vertebrae.
-
-:Default: {any}`_ERECTORSPINAE_VIANODES_LAYER_AND_REMOVE_L3L4_VIANODES_`
-:Example: `#define BM_EXPERIMENTAL_ERECTORSPINAE_VIANODES _ERECTORSPINAE_VIANODES_LAYER_AND_REMOVE_L3L4_VIANODES_`
-:Options:
-  - {any}`_ERECTORSPINAE_VIANODES_LAYER_AND_REMOVE_L3L4_VIANODES_` -> Via-nodes on erector spinae placed on the layers instead of vertebrae. The via-nodes on L3 and L4 are removed.
-  - {any}`_REMOVE_L3L4_VIANODES_` -> The via-nodes of erector spinae on L3 and L4 are removed.
-  - {any}`_ERECTORSPINAE_VIANODES_VERTEBRA_` -> Via-nodes on erector spinae placed on the vertebrae.
-
-```
-::::
-
-
 ::::{dropdown} `BM_TRUNK_DIAGPHRAM_FIXED_POSITION`
 :animate: fade-in-slide-down
 :margin: 0 0 3 3
@@ -518,8 +505,9 @@ Switch to control a fix on the diaphragm position. To simulate breathing this ne
 
 :Default: ON
 :Example: `#define BM_TRUNK_DIAGPHRAM_FIXED_POSITION ON`
-:Options: {ammr:bm_constant}`ON`/{ammr:bm_constant}`OFF`
-
+:Options:
+  - {any}`ON` -> Switch ON
+  - {any}`OFF` -> Switch OFF
 
 ```
 ::::
@@ -535,6 +523,9 @@ The topology of the sternum segment, i.e. number of segments into which sternum 
 
 :Default: 2
 :Example: `#define BM_TRUNK_THORACIC_STERNUM_TOPOLOGY 2`
+:Options:
+  - {any}`_STERNUM_2_SEG_` -> The topology of the sternum segment, This specifies that the sternum is devided in 2 segments.
+  - {any}`_STERNUM_4_SEG_` -> The topology of the sternum segment, This specifies that the sternum is devided in 4 segments.
 
 ```
 ::::
@@ -931,8 +922,9 @@ Switch for the left arm model being present or not.
 
 :Default: ON
 :Example: `#define BM_ARM_LEFT ON`
-:Options: {ammr:bm_constant}`ON`/{ammr:bm_constant}`OFF`
-
+:Options:
+  - {any}`ON` -> Switch ON
+  - {any}`OFF` -> Switch OFF
 
 ```
 ::::
@@ -984,8 +976,9 @@ Switch for the right arm model being present or not.
 
 :Default: ON
 :Example: `#define BM_ARM_RIGHT ON`
-:Options: {ammr:bm_constant}`ON`/{ammr:bm_constant}`OFF`
-
+:Options:
+  - {any}`ON` -> Switch ON
+  - {any}`OFF` -> Switch OFF
 
 ```
 ::::
@@ -1075,8 +1068,9 @@ Switch for enabling the detailed hand.
 
 :Default: OFF
 :Example: `#define BM_ARM_DETAILED_HAND OFF`
-:Options: {ammr:bm_constant}`ON`/{ammr:bm_constant}`OFF`
-
+:Options:
+  - {any}`ON` -> Switch ON
+  - {any}`OFF` -> Switch OFF
 
 ```
 ::::
@@ -1202,8 +1196,9 @@ Setting of the default value for all mannequin drivers.
 
 :Default: ON
 :Example: `#define BM_MANNEQUIN_DRIVER_DEFAULT ON`
-:Options: {ammr:bm_constant}`ON`/{ammr:bm_constant}`OFF`
-
+:Options:
+  - {any}`ON` -> Switch ON
+  - {any}`OFF` -> Switch OFF
 
 ```
 ::::
@@ -1219,8 +1214,9 @@ By default constraint type of mannequin drivers will be soft.
 
 :Default: ON
 :Example: `#define BM_MANNEQUIN_DRIVER_WEAK_SWITCH ON`
-:Options: {ammr:bm_constant}`ON`/{ammr:bm_constant}`OFF`
-
+:Options:
+  - {any}`ON` -> Switch ON
+  - {any}`OFF` -> Switch OFF
 
 ```
 ::::
@@ -2506,8 +2502,9 @@ A switch to use different ref. frame than the default global reference frame
 
 :Default: OFF
 :Example: `#define BM_GLOBAL_REFERENCE_FRAME_SWITCH OFF`
-:Options: {ammr:bm_constant}`ON`/{ammr:bm_constant}`OFF`
-
+:Options:
+  - {any}`ON` -> Switch ON
+  - {any}`OFF` -> Switch OFF
 
 ```
 ::::
@@ -2538,8 +2535,9 @@ A compatability switch to include the trunk selected outputs joint reaction forc
 
 :Default: OFF
 :Example: `#define BM_COMPATIBILITY_24_TRUNK_SELECTED_OUTPUTS_JRF OFF`
-:Options: {ammr:bm_constant}`ON`/{ammr:bm_constant}`OFF`
-
+:Options:
+  - {any}`ON` -> Switch ON
+  - {any}`OFF` -> Switch OFF
 
 ```
 ::::
@@ -2555,8 +2553,27 @@ A compatability switch to add the model tree structure of the muscles from AMMR 
 
 :Default: OFF
 :Example: `#define BM_COMPATIBILITY_MUSCLE_STRUCTURE OFF`
-:Options: {ammr:bm_constant}`ON`/{ammr:bm_constant}`OFF`
+:Options:
+  - {any}`ON` -> Switch ON
+  - {any}`OFF` -> Switch OFF
 
+```
+::::
+
+
+::::{dropdown} `BM_COMPATIBILITY_BODYMODEL_STRUCTURE`
+:animate: fade-in-slide-down
+:margin: 0 0 3 3
+
+```{ammr:bm_statement} BM_COMPATIBILITY_BODYMODEL_STRUCTURE
+
+A compatability switch to add the model tree structure of the BodyModel folders from AMMR <4. Use this option to easily load older models.
+
+:Default: OFF
+:Example: `#define BM_COMPATIBILITY_BODYMODEL_STRUCTURE OFF`
+:Options:
+  - {any}`ON` -> Switch ON
+  - {any}`OFF` -> Switch OFF
 
 ```
 ::::

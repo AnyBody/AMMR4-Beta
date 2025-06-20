@@ -82,7 +82,7 @@ Switch off a leg
 :margin: 0 0 2 2
 
 :::{ammr:bm_constant} _LEG_MODEL_TLEM_
-:value: 2
+:value: 1
 Switch to use leg model: "TLEM 2"
 :::
 ::::
@@ -94,7 +94,7 @@ Switch to use leg model: "TLEM 2"
 :margin: 0 0 2 2
 
 :::{ammr:bm_constant} _LEG_MODEL_TLEM2_
-:value: 2
+:value: 1
 Switch to use leg model: "TLEM 2"
 :::
 ::::
@@ -106,7 +106,7 @@ Switch to use leg model: "TLEM 2"
 :margin: 0 0 2 2
 
 :::{ammr:bm_constant} _LEG_MODEL_TLEM1_
-:value: 1
+:value: 4
 :deprecated:
 Switch to use leg model: "TLEM 1"
 :::
@@ -150,12 +150,24 @@ Switch for using the default foot model
 
 
 
+::::{dropdown} `_FOOT_MODEL_RIGID_GM_`
+:animate: fade-in-slide-down
+:margin: 0 0 2 2
+
+:::{ammr:bm_constant} _FOOT_MODEL_RIGID_GM_
+:value: 2
+Switch for using the GM foot model in the rigid configuration
+:::
+::::
+
+
+
 ::::{dropdown} `_FOOT_MODEL_TOE_FLEX_GM_`
 :animate: fade-in-slide-down
 :margin: 0 0 2 2
 
 :::{ammr:bm_constant} _FOOT_MODEL_TOE_FLEX_GM_
-:value: 2
+:value: 3
 Switch for using the GM foot model with toe flexion
 :::
 ::::
@@ -167,7 +179,7 @@ Switch for using the GM foot model with toe flexion
 :margin: 0 0 2 2
 
 :::{ammr:bm_constant} _FOOT_MODEL_DETAILED_GM_
-:value: 3
+:value: 4
 Switch for using the detailed GM foot model
 :::
 ::::
@@ -426,61 +438,37 @@ A full model of the thorax and ribcage where drivers/rythmns are specified by th
 
 
 
-::::{dropdown} `_FLOATING_RIBEND_KINETICS_OFF_`
+::::{dropdown} `_THORACIC_MODEL_FLEXIBLE_KINEMATIC_ONLY_`
 :animate: fade-in-slide-down
 :margin: 0 0 2 2
 
-:::{ammr:bm_constant} _FLOATING_RIBEND_KINETICS_OFF_
-:value: 0
- No recruited actuators to rib end of Floating ribs (rib11, rib12).
+:::{ammr:bm_constant} _THORACIC_MODEL_FLEXIBLE_KINEMATIC_ONLY_
+:value: 3
+A kinematic flexible model of the thorax and ribcage with a kinematically determinate set of drivers. No muscles in thoracic region and instead the reactions are ON in the ribcage and thoracic spine.
 :::
 ::::
 
 
 
-::::{dropdown} `_FLOATING_RIBEND_KINETICS_ENDRIBS_`
+::::{dropdown} `_STERNUM_2_SEG_`
 :animate: fade-in-slide-down
 :margin: 0 0 2 2
 
-:::{ammr:bm_constant} _FLOATING_RIBEND_KINETICS_ENDRIBS_
-:value: 1
- Add recruited actuators to rib end of Floating ribs (rib11, rib12).
-:::
-::::
-
-
-
-::::{dropdown} `_RIBCAGE_CC_ACTUATORS_`
-:animate: fade-in-slide-down
-:margin: 0 0 2 2
-
-:::{ammr:bm_constant} _RIBCAGE_CC_ACTUATORS_
-:value: 0
-3-direction Recruited actuators in CC (costochondral) joints.
-:::
-::::
-
-
-
-::::{dropdown} `_RIBCAGE_CC_REACTION_`
-:animate: fade-in-slide-down
-:margin: 0 0 2 2
-
-:::{ammr:bm_constant} _RIBCAGE_CC_REACTION_
-:value: 1
-Z-direction reaction in CC (costochondral) joints, which is along the relavant rib, togehter with having the rib-sternum averaging constraints reaction ON
-:::
-::::
-
-
-
-::::{dropdown} `_RIBCAGE_CC_ZACTUATORS_STERNUMREACTION_`
-:animate: fade-in-slide-down
-:margin: 0 0 2 2
-
-:::{ammr:bm_constant} _RIBCAGE_CC_ZACTUATORS_STERNUMREACTION_
+:::{ammr:bm_constant} _STERNUM_2_SEG_
 :value: 2
-Z-direction actuators in CC (costochondral) joints, which is along the relavant rib, togehter with having the rib-sternum averaging constraints reaction ON
+The topology of the sternum segment, This specifies that the sternum is devided in 2 segments.
+:::
+::::
+
+
+
+::::{dropdown} `_STERNUM_4_SEG_`
+:animate: fade-in-slide-down
+:margin: 0 0 2 2
+
+:::{ammr:bm_constant} _STERNUM_4_SEG_
+:value: 4
+The topology of the sternum segment, This specifies that the sternum is devided in 4 segments.
 :::
 ::::
 
@@ -505,42 +493,6 @@ The old buckle implementation of the abdominal pressure.
 :::{ammr:bm_constant} _CAVITY_MODEL_VOLUME_
 :value: 1
 A volume measure implementation of the pressure in the abdominal cavity and lungs.
-:::
-::::
-
-
-
-::::{dropdown} `_ERECTORSPINAE_VIANODES_LAYER_AND_REMOVE_L3L4_VIANODES_`
-:animate: fade-in-slide-down
-:margin: 0 0 2 2
-
-:::{ammr:bm_constant} _ERECTORSPINAE_VIANODES_LAYER_AND_REMOVE_L3L4_VIANODES_
-:value: 0
-Via-nodes on erector spinae placed on the layers instead of vertebrae. The via-nodes on L3 and L4 are removed.
-:::
-::::
-
-
-
-::::{dropdown} `_REMOVE_L3L4_VIANODES_`
-:animate: fade-in-slide-down
-:margin: 0 0 2 2
-
-:::{ammr:bm_constant} _REMOVE_L3L4_VIANODES_
-:value: 1
-The via-nodes of erector spinae on L3 and L4 are removed.
-:::
-::::
-
-
-
-::::{dropdown} `_ERECTORSPINAE_VIANODES_VERTEBRA_`
-:animate: fade-in-slide-down
-:margin: 0 0 2 2
-
-:::{ammr:bm_constant} _ERECTORSPINAE_VIANODES_VERTEBRA_
-:value: 2
-Via-nodes on erector spinae placed on the vertebrae.
 :::
 ::::
 
@@ -1012,11 +964,11 @@ Constant to switch linear disc spring on in the spine
 
 
 
-::::{dropdown} `CONST_DISC_STIFFNESS_NONLINEAR `
+::::{dropdown} `CONST_DISC_STIFFNESS_NONLINEAR`
 :animate: fade-in-slide-down
 :margin: 0 0 2 2
 
-:::{ammr:bm_constant} CONST_DISC_STIFFNESS_NONLINEAR 
+:::{ammr:bm_constant} CONST_DISC_STIFFNESS_NONLINEAR
 :value: 2
 :deprecated:
 Constant to switch nonlinear disc spring on in the spine
