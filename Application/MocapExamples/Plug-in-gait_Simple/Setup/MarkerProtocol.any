@@ -380,10 +380,12 @@ UseC3DWeightResiduals=ON
 CreateMarkerDriver RSHO (
 MarkerPlacement=Right.ShoulderArm.Segments.Scapula,
 PlaceMarkerAt=AnatomicalFrame,
-OptX=ON,OptY=OFF,OptZ=OFF,
+OptX=OFF,OptY=OFF,OptZ=ON,
 UseC3DWeightResiduals=ON
 ) = {
-  sRelOpt = {0.00,-0.005,0.015};
+ // sRelOpt = {0.00,-0.005,0.015};
+  sRelOpt = 0*{-0.015,0.005,0.0};
+
 };
 #endif
 
@@ -392,10 +394,12 @@ UseC3DWeightResiduals=ON
 CreateMarkerDriver LSHO (
 MarkerPlacement=Left.ShoulderArm.Segments.Scapula, 
 PlaceMarkerAt=AnatomicalFrame,
-OptX=ON,OptY=OFF,OptZ=OFF,
+OptX=OFF,OptY=OFF,OptZ=ON,
 UseC3DWeightResiduals=ON
 ) = {
-  sRelOpt = {0.00,0.005,0.015};
+ // sRelOpt = {0.00,0.005,0.015};
+   sRelOpt = 0*{-0.015,0.005,0.0};
+
 };
 #endif
 
@@ -408,7 +412,8 @@ PlaceMarkerAt=AnatomicalFrame,
 OptX=ON,OptY=ON,OptZ=ON,
 UseC3DWeightResiduals=ON
 ) = {
-  sRelOpt ={0.03,-0.24,0.01}; 
+  //sRelOpt ={0.03,-0.24,0.01}; 
+  sRelOpt ={0.01,-0.24,0.03}; 
 };
 #endif
 
@@ -421,7 +426,9 @@ PlaceMarkerAt=AnatomicalFrame,
 OptX=ON,OptY=ON,OptZ=ON,
 UseC3DWeightResiduals=ON
 ) = {
-  sRelOpt ={-0.03,-0.19,0.01}; 
+//  sRelOpt ={-0.03,-0.19,0.01}; 
+  sRelOpt ={0.01,-0.19,-0.03}; 
+
 };
 #endif
 
@@ -434,7 +441,9 @@ PlaceMarkerAt=AnatomicalFrame,
 OptX=OFF,OptY=OFF,OptZ=OFF,
 UseC3DWeightResiduals=ON
 ) = {
-  sRelOpt = {0.045,-0.325, 0.010};
+//  sRelOpt = {0.045,-0.325, 0.010};
+  sRelOpt = {-0.01,-0.325, 0.045};
+
 };
 #endif
 
@@ -447,7 +456,8 @@ PlaceMarkerAt=AnatomicalFrame,
 OptX=OFF,OptY=OFF,OptZ=OFF,
 UseC3DWeightResiduals=ON
 ) = {
-  sRelOpt = {-0.045,-0.325, 0.010};
+//  sRelOpt = {-0.045,-0.325, 0.010};
+  sRelOpt = {-0.01,-0.325, -0.045};
 };
 #endif
 
@@ -460,7 +470,8 @@ PlaceMarkerAt=AnatomicalFrame,
 OptX=ON,OptY=ON,OptZ=ON,
 UseC3DWeightResiduals=ON
 ) = {
-  sRelOpt = {-0.13, 0.03, 0.01};
+//  sRelOpt = {-0.13, 0.03, 0.01};  
+sRelOpt = {-0.03,-0.2, -0.01};
 };
 #endif
 
@@ -472,7 +483,9 @@ PlaceMarkerAt=AnatomicalFrame,
 OptX=ON,OptY=ON,OptZ=ON,
 UseC3DWeightResiduals=ON
 ) = {
-  sRelOpt = {-0.13, -0.03, 0.01};
+  //sRelOpt = {-0.13, -0.03, 0.01};
+sRelOpt = {-0.03, -0.13, 0.01};
+
 };
 #endif
 
@@ -480,11 +493,11 @@ UseC3DWeightResiduals=ON
 // Marker on the Right Wrist A
 CreateMarkerDriver RWRA (
 MarkerPlacement=Right.ShoulderArm.Segments.Radius, 
-PlaceMarkerAt=AnatomicalFrame,
+PlaceMarkerAt=RadiusStylo,
 OptX=OFF,OptY=OFF,OptZ=OFF,
 UseC3DWeightResiduals=ON
 ) = {
-  sRelOpt = {-0.21, -0.05, 0.01};
+  sRelOpt = 0*{-0.21, -0.05, 0.01};
 };
 #endif
 
@@ -492,12 +505,12 @@ UseC3DWeightResiduals=ON
 // Marker on the Right Wrist B
 CreateMarkerDriver RWRB (
 MarkerPlacement=Right.ShoulderArm.Segments.Radius,
-PlaceMarkerAt=AnatomicalFrame,
+PlaceMarkerAt=UlnaStylo,
 OptX=ON ,OptY=ON,OptZ=OFF,  
 WeightX=0.1,WeightY=0.1,WeightZ=0.1,
 UseC3DWeightResiduals=ON
 ) = {
-  sRelOpt = {-0.22, 0.05, 0.025};
+  sRelOpt =0* {-0.22, 0.05, 0.025};
 };
 #endif
 
@@ -505,11 +518,11 @@ UseC3DWeightResiduals=ON
 // Marker on the Left Wrist A
 CreateMarkerDriver LWRA (
 MarkerPlacement=Left.ShoulderArm.Segments.Radius,
-PlaceMarkerAt=AnatomicalFrame,
+PlaceMarkerAt=RadiusStylo,
 OptX=OFF,OptY=OFF,OptZ=OFF,
 UseC3DWeightResiduals=ON
 ) = {
-  sRelOpt = {-0.21, 0.05, 0.01};
+  sRelOpt = 0*{-0.21, 0.05, 0.01};
 };
 #endif
 
@@ -517,12 +530,12 @@ UseC3DWeightResiduals=ON
 // Marker on the Left Wrist B
 CreateMarkerDriver LWRB (
 MarkerPlacement=Left.ShoulderArm.Segments.Radius, 
-PlaceMarkerAt=AnatomicalFrame,
+PlaceMarkerAt=UlnaStylo,
 OptX=ON  ,OptY=ON ,OptZ=OFF,  
 WeightX=0.1,WeightY=0.1,WeightZ=0.1,
 UseC3DWeightResiduals=ON
 ) = {
-  sRelOpt = {-0.22, -0.05, 0.025};
+  sRelOpt = 0*{-0.22, -0.05, 0.025};
 };
 #endif
 
@@ -532,10 +545,11 @@ UseC3DWeightResiduals=ON
 CreateMarkerDriver RFIN (
 MarkerPlacement=Right.ShoulderArm.Segments.Hand, 
 PlaceMarkerAt=AnatomicalFrame,
-OptX=ON ,OptY=OFF,OptZ=OFF,
+OptX=OFF ,OptY=ON,OptZ=OFF,
 UseC3DWeightResiduals=ON
 ) = {
-  sRelOpt = {-0.065,-0.03,0.02};
+  //sRelOpt = {-0.065,-0.03,0.02};
+  sRelOpt = {-0.02,-0.065,-0.0};
 };
 #endif
 
@@ -545,10 +559,12 @@ UseC3DWeightResiduals=ON
 CreateMarkerDriver LFIN (
 MarkerPlacement=Left.ShoulderArm.Segments.Hand, 
 PlaceMarkerAt=AnatomicalFrame,
-OptX=ON ,OptY=OFF,OptZ=OFF,
+OptX=OFF ,OptY=ON,OptZ=OFF,
 UseC3DWeightResiduals=ON
 ) = {
-  sRelOpt = {-0.065,-0.03,-0.02};
+ // sRelOpt = {-0.065,-0.03,-0.02};
+ sRelOpt = {-0.02,-0.065,0.0};
+
 };
 #endif
 
