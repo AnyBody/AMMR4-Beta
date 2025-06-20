@@ -67,6 +67,8 @@ AnyKinEq HipBackFlexionRhythm = {
     OutDim = 1;
     Coef = {{1, 0.4} };  
   }; 
+   Reaction.Type = repmat(nDim, Off);
+
 };
 
 
