@@ -158,7 +158,9 @@ AnyFolder ScapulaHumerus =
     
     AnyFolder& Humerus = ...Segments.Humerus.AnatomicalFrame;
     Humerus = {
-      AnyRefNode ISB_Coord = {ARel={{ 0, 0, 1}, { 0, 1,0}, {-1, 0,0}}; };
+      AnyRefNode ISB_Coord = {
+      //  ARel={{ 0, 0, 1}, { 0, 1,0}, {-1, 0,0}}; 
+      };
     };
     AnyKinRotational GHRot = {
       AnyRefNode &scapula = ....Segments.Scapula.AnatomicalFrame.ISB_Coord;
