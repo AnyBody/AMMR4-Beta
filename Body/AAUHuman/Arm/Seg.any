@@ -2,100 +2,100 @@
 #include "<AMMR_TOOLS>/ModelUtilities\SolidModeling/MeshClasses.any"
 
 // This file contains segment inertia properties and geometry used for muscle wrapping.
-// The file includes a number of segment files which contains muscles attachment points and 
+// The file includes a number of segment files which contains muscles attachment points and
 // bonylandmarks.
 
-///Clavicula segment definition 
+///Clavicula segment definition
 AnySeg Clavicula ={
   AnyVar Sign = ..Sign;
   AnyFolder &Data = ..Data.unscaled.ModelParameters.Clavicula;
-  
+
   AnyMat33 Mirror={{1,0,0},{0,..Sign*1,0},{0,0,1}};
   AnyRefNode& MoCapMarkerFrameAMMR24 = AnatomicalFrame;///< For backwards Compatibility with AMMR 2.4 MoCap Marker protocols
-  
+
   r0 = ....Trunk.Segments.SternumSeg.r0 + ....Trunk.Segments.SternumSeg._SIDE_.scj.sRel*....Trunk.Segments.SternumSeg.Axes0'  - scj.sRel*Axes0';
   Axes0= ....Trunk.Segments.ThoraxSeg.Axes0*Scale.T0.RigidBodyTransform.rot';
-  
+
   UseInertiaObjects = On;
-    
+
   ///Clavicula and scapula are scaled together with thorax
   ///here we make a rigid body transformation to thorax scaling node preform the scaling and transfer back to segment frame again
-  Scale = {AnyFunTransform3D& GeomScale = ......Scaling.GeometricalScaling.Thorax.ScaleFunction;}; 
+  Scale = {AnyFunTransform3D& GeomScale = ......Scaling.GeometricalScaling.Thorax.ScaleFunction;};
 
 AnyFloat Points0 = {
-    ....Trunk.Data.unscaled.ModelParameters.Thorax._SIDE_.scj_InNeutralConf_pos, 
+    ....Trunk.Data.unscaled.ModelParameters.Thorax._SIDE_.scj_InNeutralConf_pos,
     ....Trunk.Data.unscaled.ModelParameters.Thorax._SIDE_.acj_InNeutralConf_pos,
     ....Trunk.Data.unscaled.ModelParameters.Thorax._SIDE_.O_deltoideus_anterior_part_1_Clavicula_InNeutralConf_pos,
     ....Trunk.Data.unscaled.ModelParameters.Thorax._SIDE_.I_trapezius_clavicular_part_3_Clavicula_InNeutralConf_pos,
   };
   AnyFloat  Points1 = {Data.scj_pos, Data.acj_pos, Data.O_deltoideus_anterior_part_1_pos,Data.I_trapezius_clavicular_part_3_pos}*Mirror;
   #include "..\Scaling\SegScaleFunWrtAnatomicalFrame_RigidBodyTransformation.any"
-  
-  
+
+
   //#define MACRO_CONSTRUCT_ANATOMICAL_FRAME_A(p, SIGN) RotMat(p[0],p[1], p[2])*RotMat(0.5*pi,y)*RotMat(0.5*(SIGN-1)*pi,y)
   AnyRefNode AnatomicalFrame =  {
     //^ The anatomical frame is separate from the scaling frame
-    // The anatomical frame uses the 
-    //^ We use different definition for scaling and anatomical frames to ensure the consistent 
+    // The anatomical frame uses the
+    //^ We use different definition for scaling and anatomical frames to ensure the consistent
     //^ scaling between radius and ulna segments.
-    
+
     AnyFloat pUnscaledAnatomicalFrame = {.Data.scj_pos, .Data.acj_pos, .Data.scj_y_pos}*.Mirror;
-    
+
     AnyVar Sign = .Sign;
     #define MACRO_CONSTRUCT_ANATOMICAL_FRAME_s(p, SIGN) p[0]
    // #define MACRO_CONSTRUCT_ANATOMICAL_FRAME_A(p, SIGN) RotMat(p[0],p[1], p[2])*RotMat(0.5*(SIGN-1)*pi,x)
    #define MACRO_CONSTRUCT_ANATOMICAL_FRAME_A(p, SIGN) RotMat(p[0],p[1], p[2])*RotMat(0.5*pi,y)*RotMat(0.5*(SIGN-1)*pi,y)
-    
-    AnyFloat pScaled = .Scale(pUnscaledAnatomicalFrame); 
-    
+
+    AnyFloat pScaled = .Scale(pUnscaledAnatomicalFrame);
+
     sRel = MACRO_CONSTRUCT_ANATOMICAL_FRAME_s(pScaled, .Sign);
     ARel = MACRO_CONSTRUCT_ANATOMICAL_FRAME_A(pScaled, .Sign);
-    
+
     #undef MACRO_CONSTRUCT_ANATOMICAL_FRAME_s
     #undef MACRO_CONSTRUCT_ANATOMICAL_FRAME_A
   };
-  
-  //This frame can be used to drive the shoulder girdle to zero 
+
+  //This frame can be used to drive the shoulder girdle to zero
   AnyRefNode PosturalFrame = {
     sRel=.scj.sRel;
     ARel =.ScalingNode.ARel;
   };
-    
-   
+
+
   AnyRefNode ScalingNode={
     sRel = .Scale.T0.RigidBodyTransform.lin;
     ARel = .Scale.T0.RigidBodyTransform.rot;
   };
 
   AnyFunTransform3D& GeomScale = Scale;
-  
+
   #include "../DrawSettings/Nodes.any"
-  
-  
-  
+
+
+
   AnyInertiaSolid BoneInertiaObject = {
     BodyMassCorrectionGeneric massCorrection() = {
       Mass_Scale=....Data.MassDistribution.mass_scale;
       DensityTheoretical = ....Data.unscaled.ModelParameters.BoneDensity;
       enableMassCorrection = On;
     };
-    AnySurfSTL surface = { 
+    AnySurfSTL surface = {
       FileName = ....Data.unscaled.STL.FileNameClavicula;
       AnyFunTransform3D &scale = ..Scale;
       ScaleXYZ={1,1,1}*..Mirror;
     };
   };
-  
-  
+
+
   AnyRefNode ac = {sRel = .Scale(.Data.ac_pos*.Mirror);};
-  
+
   AnyRefNode acj = {    sRel = .Scale(.Data.acj_pos*.Mirror);    #include "../DrawSettings/JointAxesDistal.any"    };
   AnyRefNode scj = {    sRel = .Scale(.Data.scj_pos*.Mirror);    #include "../DrawSettings/JointAxesProximal.any"  };
 
-  AnyRefNode conoid = {sRel = .Scale(.Data.conoid_pos*.Mirror);};  
+  AnyRefNode conoid = {sRel = .Scale(.Data.conoid_pos*.Mirror);};
   AnyRefNode trapezoid = {sRel = .Scale(.Data.trapezoid_pos*.Mirror);};
-  
-  
+
+
   AnyDrawSurf DrwSurf = {
     FileName = ...Data.unscaled.STL.FileNameClavicula;
     RGB??=...ColorRef.Segments;
@@ -105,84 +105,84 @@ AnyFloat Points0 = {
   };
 };
 
-///Scapula segment definition 
+///Scapula segment definition
 AnySeg Scapula ={
   AnyVar Sign = ..Sign;
-  
+
   AnyFolder &Data = ..Data.unscaled.ModelParameters.Scapula;
   AnyMat33 Mirror={{1,0,0},{0,1*..Sign,0},{0,0,1}};
-  
+
   r0 = .Clavicula.acj.sRel*.Clavicula.Axes0'+.Clavicula.r0 -  acj.sRel*Axes0';
   Axes0= ....Trunk.Segments.ThoraxSeg.Axes0*Scale.T0.RigidBodyTransform.rot';
-  
+
   UseInertiaObjects = On;
 
-  
- Scale = {AnyFunTransform3D& GeomScale = ......Scaling.GeometricalScaling.Thorax.ScaleFunction;}; 
+
+ Scale = {AnyFunTransform3D& GeomScale = ......Scaling.GeometricalScaling.Thorax.ScaleFunction;};
 
  AnyFloat Points0 = {
-    ....Trunk.Data.unscaled.ModelParameters.Thorax._SIDE_.ts_InNeutralConf_pos, 
+    ....Trunk.Data.unscaled.ModelParameters.Thorax._SIDE_.ts_InNeutralConf_pos,
     ....Trunk.Data.unscaled.ModelParameters.Thorax._SIDE_.aa_InNeutralConf_pos,
     ....Trunk.Data.unscaled.ModelParameters.Thorax._SIDE_.ai_InNeutralConf_pos,
     ....Trunk.Data.unscaled.ModelParameters.Thorax._SIDE_.acj_InNeutralConf_pos,
   };
   AnyFloat  Points1 = {Data.ts_pos, Data.aa_pos, Data.ai_pos,Data.acj_pos}*Mirror;
   #include "..\Scaling\SegScaleFunWrtAnatomicalFrame_2.any"
-  
+
   AnyRefNode AnatomicalFrame =  {
     //^ The anatomical frame is separate from the scaling frame
-    // The anatomical frame uses the 
-    //^ We use different definition for scaling and anatomical frames to ensure the consistent 
+    // The anatomical frame uses the
+    //^ We use different definition for scaling and anatomical frames to ensure the consistent
     //^ scaling between radius and ulna segments.
-    
+
     AnyFloat pUnscaledAnatomicalFrame = {.Data.ts_pos, .Data.aa_pos, .Data.ai_pos}*.Mirror;
-    
+
     AnyVar Sign = .Sign;
     #define MACRO_CONSTRUCT_ANATOMICAL_FRAME_s(p, SIGN) p[1]
     #define MACRO_CONSTRUCT_ANATOMICAL_FRAME_A(p, SIGN) RotMat(p[0],p[1],p[2])*RotMat(0.5*pi,y)*RotMat(pi,z)*RotMat(0.5*(SIGN-1)*pi,y)
-    
-    AnyFloat pScaled = .Scale(pUnscaledAnatomicalFrame); 
-    
+
+    AnyFloat pScaled = .Scale(pUnscaledAnatomicalFrame);
+
     sRel = MACRO_CONSTRUCT_ANATOMICAL_FRAME_s(pScaled, .Sign);
     ARel = MACRO_CONSTRUCT_ANATOMICAL_FRAME_A(pScaled, .Sign);
-    
+
     #undef MACRO_CONSTRUCT_ANATOMICAL_FRAME_s
     #undef MACRO_CONSTRUCT_ANATOMICAL_FRAME_A
   };
-  
-  
-  //This frame can be used to drive the shoulder girdle to zero 
+
+
+  //This frame can be used to drive the shoulder girdle to zero
   AnyRefNode PosturalFrame = {
     sRel=.acj.sRel;
     ARel =.Scale.T0.RigidBodyTransform.rot;
   };
-  
-  
+
+
   AnyRefNode ScalingNode={
     sRel = .Scale.T0.RigidBodyTransform.lin;
     ARel = .Scale.T0.RigidBodyTransform.rot;
   };
 
-  
-  
+
+
   AnyRefNode& MoCapMarkerFrameAMMR24 = AnatomicalFrame;///< For backwards Compatibility with AMMR 2.4 MoCap Marker protocols
-  
-  
+
+
    AnyFunTransform3D& GeomScale = Scale;
 
 
   #include "../DrawSettings/Nodes.any"
   #include "../DrawSettings/SegmentAxes.any"
-  
 
- 
+
+
   AnyInertiaSolid BoneInertiaObject = {
     BodyMassCorrectionGeneric massCorrection() = {
       Mass_Scale=....Data.MassDistribution.mass_scale;
       DensityTheoretical = ....Data.unscaled.ModelParameters.BoneDensity;
       enableMassCorrection = Off;
     };
-    AnySurfSTL surface = { 
+    AnySurfSTL surface = {
       FileName = ....Data.unscaled.STL.FileNameScapula;
       AnyFunTransform3D &scale = ..Scale;
       ScaleXYZ={1,1,1}*..Mirror;
@@ -197,35 +197,35 @@ AnySeg Scapula ={
     AnyFunTransform3D& Scale = .Scale;
     Opacity ??= ...BonesOpacity.Scapula;
   };
-  
+
   AnyRefNode MuscleConnectorPlaneNode ={ sRel= .Scale(.Data.MuscleConnectorPlaneNode_pos*.Mirror);};
-  
-  AnyRefNode ac = {   
+
+  AnyRefNode ac = {
     sRel = .Scale(.Data.ac_pos*.Mirror);
     #include "../DrawSettings/BML.any"
     #include "../DrawSettings/JointAxesProximal.any"
-    
+
   };
-  
+
   AnyRefNode acj = {sRel = .Scale(.Data.acj_pos*.Mirror);};
-  
+
   /// Used for scapula sliding on the thorax
   /// when BM_ARM_THORAX_SCAPULA_CONTACT == _ELLIPSOID_CONTACT_
   AnyRefNode ScapulaSlidingTS = {
     sRel = .Scale((.Data.ts_pos+ {0,0,-0.015})*.Mirror);
     #include "../DrawSettings/BML.any"
-  };  
-  
+  };
+
   AnyRefNode ScapulaSlidingAI = {
     sRel = .Scale((.Data.ai_pos +{-0.00,0.000,-0.008})*.Mirror);
     #include "../DrawSettings/BML.any"
-  };  
-  
+  };
+
   AnyRefNode ts = {
     sRel = .Scale(.Data.ts_pos*.Mirror);
     #include "../DrawSettings/BML.any"
   };
-  
+
   AnyRefNode ai= {
     sRel = .Scale(.Data.ai_pos*.Mirror);
     #include "../DrawSettings/BML.any"
@@ -234,7 +234,7 @@ AnySeg Scapula ={
     sRel = .Scale(.Data.aa_pos*.Mirror);
     #include "../DrawSettings/BML.any"
   };
-  
+
   #if BM_ARM_DELTOID_WRAPPING
   AnyRefNode coronoid= {
     //^ Node used for the anterior deltoid wrapping surface scaling
@@ -247,40 +247,40 @@ AnySeg Scapula ={
     #include "../DrawSettings/BML.any"
     #include "../DrawSettings/JointAxesDistal.any"
   };
-  
+
   AnyVec3 ConoidStd=Data.conoid_pos;
-  
-  AnyRefNode conoid = {sRel = .Scale(.Data.conoid_pos*.Mirror);};  
+
+  AnyRefNode conoid = {sRel = .Scale(.Data.conoid_pos*.Mirror);};
   AnyRefNode trapezoid = {sRel = .Scale(.Data.trapezoid_pos*.Mirror);};
-  
-  
-  
+
+
+
 }; //Scapula
 
 ///Humerus segment definition
 AnySeg Humerus ={
-  
+
   AnyFolder &Data = ..Data.unscaled.ModelParameters.Humerus;
   AnyMat33 Mirror={{..Sign,0,0},{0,1,0},{0,0,1}};
   r0=.Scapula.gh.sRel*.Scapula.Axes0'+.Scapula.r0;
-  
+
   #include "../DrawSettings/Nodes.any"
-  
+
   UseInertiaObjects = On;
-  
+
   AnyInertiaSolid BoneInertiaObject = {
     BodyMassCorrectionGeneric massCorrection() = {
       Mass_Scale=....Data.MassDistribution.mass_scale;
       DensityTheoretical = ....Data.unscaled.ModelParameters.BoneDensity;
       enableMassCorrection = Off;
     };
-    AnySurfSTL surface = { 
+    AnySurfSTL surface = {
       FileName = ....Data.unscaled.STL.FileNameHumerus;
       AnyFunTransform3D &scale = ..Scale;
       ScaleXYZ={1,1,1}*..Mirror;
     };
   };
-  
+
   // Outer inertia representing skin
   AnyInertiaSolid OuterInertiaObject = {
     BodyMassCorrectionGeneric massCorrection() = {
@@ -300,7 +300,7 @@ AnySeg Humerus ={
       Visible=Off;
       Direction=..Sign;
     };
-       
+
 
     // We need to subtract bone form
     // outer since that encapsulates the whole volume
@@ -311,16 +311,16 @@ AnySeg Humerus ={
       ScaleXYZ={1,1,1}*..Mirror;
     };
   };
-  
-  
+
+
   AnyFloat pUnscaled = {Data.gh_pos, Data.EpicondylusHumerusMedialis_pos, Data.EpicondylusHumerusLateralis_pos}*Mirror;
   Scale = {AnyFunTransform3D& GeomScale = ...Scaling.Humerus.ScaleFunction;};
   AnyVar Sign = ..Sign;
   #define MACRO_CONSTRUCT_ANATOMICAL_FRAME_s(p, SIGN) p[0]
   #define MACRO_CONSTRUCT_ANATOMICAL_FRAME_A(p, SIGN) RotMat(p[0],0.5*(p[1]+p[2]), p[1]) * RotMat(pi*0.5,x) * RotMat(pi*0.5,z) * RotMat(0.5*(SIGN-1)*pi,y)
   #include "..\Scaling\SegScaleFunWrtAnatomicalFrame.any"
-  
- 
+
+
   AnyRefNode AnatomicalFrame =  {
     AnyFloat pScaled = .Scale(.pUnscaled);
     sRel = MACRO_CONSTRUCT_ANATOMICAL_FRAME_s(pScaled, .Sign);
@@ -330,27 +330,27 @@ AnySeg Humerus ={
   };
   #undef MACRO_CONSTRUCT_ANATOMICAL_FRAME_s
   #undef MACRO_CONSTRUCT_ANATOMICAL_FRAME_A
-  
+
   AnyRefNode& MoCapMarkerFrameAMMR24 = AnatomicalFrame;///< For backwards Compatibility with AMMR 2.4 MoCap Marker protocols
   AnyRefNode& ScalingNode = AnatomicalFrame;
   AnyFunTransform3D& GeomScale = Scale;
-  
 
-  
+
+
   AnyDrawSurf DrwSurf = {
     FileName = ...Data.unscaled.STL.FileNameHumerus;
     RGB ??=...ColorRef.Segments;
     ScaleXYZ={1,1,1}*.Mirror;
     AnyFunTransform3D& Scale = .Scale;
-    
+
     Opacity ??= ...BonesOpacity.Humerus;
   };
-  
+
   #if BM_ARM_DELTOID_WRAPPING == _DELTOID_WRAPPING_RAKE_
   AnyRefNode DeltoidConnectorCenter = {sRel=.art_tub_minus_tub_majus.sRel;};
   #endif
-  
-  
+
+
   AnyRefNode gh = {
     sRel = .Scale(.Data.gh_pos*.Mirror);
     #include "../DrawSettings/BML.any"
@@ -362,74 +362,74 @@ AnySeg Humerus ={
   AnyRefNode el = {sRel = .Scale(.Data.el_pos*.Mirror);
     #include "../DrawSettings/BML.any"
   };
-  
-  
+
+
   AnyRefNode EpicondylusHumerusMedialis = {sRel = .Scale(.Data.EpicondylusHumerusMedialis_pos*.Mirror);
     #include "../DrawSettings/BML.any"
   };
   AnyRefNode EpicondylusHumerusLateralis = {sRel = .Scale(.Data.EpicondylusHumerusLateralis_pos*.Mirror);
     #include "../DrawSettings/BML.any"
   };
-  
-  //Axis for flexion extension joint data 
+
+  //Axis for flexion extension joint data
   AnyRefNode fe= {
     sRel = .Scale(.Data.fe_pos*.Mirror);
     ARel = {
       {...Sign*-1,...Sign*-0,0.0},
       {0,1,...Sign*0.0},
       {-0.000000,0.0,...Sign*-1}};
-    
+
     #include "../DrawSettings/JointAxesDistal.any"
-      
+
   };
-  
-  
-  //Axis for flexion extension joint data 
+
+
+  //Axis for flexion extension joint data
   AnyRefNode HumeroUlnar = {
-    //Joint defined using bony landmarks like corresponding to 
+    //Joint defined using bony landmarks like corresponding to
     // _JOINT_TYPE_BONY_LANDMARK_  in the leg
     AnyVec3 sRelUnscaled = 0.5*(.Data.EpicondylusHumerusLateralis_pos*.Mirror + .Data.EpicondylusHumerusMedialis_pos*.Mirror);
     AnyMat33 ARelUnscaled = RotMat({0.0,0,0}, .Sign*(-.Data.EpicondylusHumerusLateralis_pos*.Mirror + .Data.EpicondylusHumerusMedialis_pos*.Mirror), .AnatomicalFrame.ARelUnscaled'[1])                             ;
-    
+
     /// Elbow flexion  joint location. Defined from the two epicondyle bony landmarks
     sRel =0.5*(.Scale(.Data.EpicondylusHumerusLateralis_pos*.Mirror) + .Scale(.Data.EpicondylusHumerusMedialis_pos*.Mirror));
     /// Elbow joint orientation. Defined from the two epicondyle bony landmarks
     ARel = RotMat({0.0,0,0}, .Sign*(-.Scale(.Data.EpicondylusHumerusLateralis_pos*.Mirror) + .Scale(.Data.EpicondylusHumerusMedialis_pos*.Mirror)), .AnatomicalFrame.ARel'[1]);
-    
+
     #include "../DrawSettings/JointAxesDistal.any"
-    
-  
+
+
   };
-  
+
 }; // Humerus
 
 
 
 AnySeg Ulna ={
-  
+
   AnyFolder &Data = ..Data.unscaled.ModelParameters.Ulna;
   AnyMat33 Mirror={{1,0,0},{0,..Sign,0},{0,0,1}};
-  
+
   r0=.Humerus.HumeroUlnar.sRel*.Humerus.Axes0'+.Humerus.r0-HumeroUlnar.sRel*Axes0';
-  
+
   #include "../DrawSettings/Nodes.any"
-  
+
   UseInertiaObjects = On;
-  
-  
+
+
   AnyInertiaSolid BoneInertiaObject = {
     BodyMassCorrectionGeneric massCorrection() = {
       Mass_Scale=....Data.MassDistribution.mass_scale;
       DensityTheoretical = ....Data.unscaled.ModelParameters.BoneDensity;
       enableMassCorrection = Off;
     };
-    AnySurfSTL surface = { 
+    AnySurfSTL surface = {
       FileName = ....Data.unscaled.STL.FileNameUlna;
       AnyFunTransform3D &scale = ..Scale;
       ScaleXYZ={1,1,1}*..Mirror;
     };
   };
-  
+
   // Outer inertia representing skin
   AnyInertiaSolid OuterInertiaObject = {
     BodyMassCorrectionGeneric massCorrection() = {
@@ -437,12 +437,12 @@ AnySeg Ulna ={
       DensityTheoretical = Main.HumanModel.BodyModel.Trunk.Data.unscaled.ModelParameters.AdiposeTissueDensity*0.5; //Note we multiply by 0.5 because ulna and radius should share mass
     };
     TwoSphereConeMesh OuterMesh ( ADD_NODEGROUP = "On" ) ={
-      Radius1=0.5*vnorm(..Scale(..Data.MedialHumerusCondyleInNeutralConf_pos*..Mirror)-..Scale(..Data.LateralHumerusCondyleInNeutralConf_pos*..Mirror)); 
+      Radius1=0.5*vnorm(..Scale(..Data.MedialHumerusCondyleInNeutralConf_pos*..Mirror)-..Scale(..Data.LateralHumerusCondyleInNeutralConf_pos*..Mirror));
       Pos1=0.5*(..Scale(..Data.MedialHumerusCondyleInNeutralConf_pos*..Mirror)+..Scale(..Data.LateralHumerusCondyleInNeutralConf_pos*..Mirror));
-      Radius2=0.5*vnorm(..Scale(..Data.MedialHumerusCondyleInNeutralConf_pos*..Mirror)-..Scale(..Data.LateralHumerusCondyleInNeutralConf_pos*..Mirror)); 
+      Radius2=0.5*vnorm(..Scale(..Data.MedialHumerusCondyleInNeutralConf_pos*..Mirror)-..Scale(..Data.LateralHumerusCondyleInNeutralConf_pos*..Mirror));
       Pos2=0.5*(..Scale(..Data.UlnaStylo_pos*..Mirror)+..Scale(..Data.RadioStyloInNeutralConf_pos*..Mirror));
-      
-      Pos3={0,0,1};  
+
+      Pos3={0,0,1};
       RotationNo=9;
    Sphere1PointsNo=5;
       Sphere2PointsNo=5;
@@ -452,12 +452,12 @@ AnySeg Ulna ={
          Direction=..Sign;
 
     };
-    
-  
-    
-    
-    
-    
+
+
+
+
+
+
     // We need to subtract bone form
     // outer since that encapsulates the whole volume
     AnySurfSTL negativeBoneInertia = {
@@ -467,7 +467,7 @@ AnySeg Ulna ={
       ScaleXYZ={1,1,1}*..Mirror;
     };
   };
-  
+
   AnyRefNode MedialHumerusCondyleInNeutralConf = {sRel = .Scale(.Data.MedialHumerusCondyleInNeutralConf_pos*.Mirror);
     #include "../DrawSettings/BML.any"
   };
@@ -477,39 +477,39 @@ AnySeg Ulna ={
   AnyRefNode RadioStyloInNeutralConf = {sRel = .Scale(.Data.RadioStyloInNeutralConf_pos*.Mirror);
     #include "../DrawSettings/BML.any"
   };
-  
-  
-  
-  
+
+
+
+
   AnyFloat pUnscaled = { Data.MedialHumerusCondyleInNeutralConf_pos, Data.LateralHumerusCondyleInNeutralConf_pos,Data.us_pos,Data.RadioStyloInNeutralConf_pos }*Mirror;
-  
+
  AnyFunTransform3D& GeomScale = ..Scaling.Ulna.ScaleFunction;
   Scale = {AnyFunTransform3D& GeomScale = .GeomScale;};
-  
+
   AnyVar Sign = ..Sign;
-  
+
   #define MACRO_CONSTRUCT_ANATOMICAL_FRAME_s(p, SIGN) 0.5*( p[0]+p[1])
-  #define MACRO_CONSTRUCT_ANATOMICAL_FRAME_A(p, SIGN) RotMat(0.5*(p[0]+p[1]),0.5*(p[2]+p[3]) ,(p[1]))* RotMat(pi*0.5,z) *RotMat(0.5*pi,y)* RotMat(0.5*(SIGN-1)*pi,y)  
-  
+  #define MACRO_CONSTRUCT_ANATOMICAL_FRAME_A(p, SIGN) RotMat(0.5*(p[0]+p[1]),0.5*(p[2]+p[3]) ,(p[1]))* RotMat(pi*0.5,z) *RotMat(0.5*pi,y)* RotMat(0.5*(SIGN-1)*pi,y)
+
   #include "..\Scaling\SegScaleFunWrtAnatomicalFrame.any"
-  
+
   AnyRefNode AnatomicalFrame =  {
     AnyFloat pScaled = .Scale(.pUnscaled);
     sRel = MACRO_CONSTRUCT_ANATOMICAL_FRAME_s(pScaled, .Sign);
     ARel = MACRO_CONSTRUCT_ANATOMICAL_FRAME_A(pScaled, .Sign);
-    AnyVec3 sRelUnscaled = MACRO_CONSTRUCT_ANATOMICAL_FRAME_s(.pUnscaled, .Sign); 
+    AnyVec3 sRelUnscaled = MACRO_CONSTRUCT_ANATOMICAL_FRAME_s(.pUnscaled, .Sign);
     AnyMat33 ARelUnscaled = MACRO_CONSTRUCT_ANATOMICAL_FRAME_A(.pUnscaled, .Sign);
   };
   #undef MACRO_CONSTRUCT_ANATOMICAL_FRAME_s
   #undef MACRO_CONSTRUCT_ANATOMICAL_FRAME_A
-  
+
   AnyRefNode& ScalingNode = AnatomicalFrame;
 
 
-  
-  
-  
-  
+
+
+
+
   AnyRefNode HumeroUlnar = {
     //  corresponding to _JOINT_TYPE_BONY_LANDMARK_ in the leg
     AnyVec3 sRelUnscaled = 0.5*(.Data.LateralHumerusCondyleInNeutralConf_pos*.Mirror + .Data.MedialHumerusCondyleInNeutralConf_pos*.Mirror);
@@ -522,9 +522,9 @@ AnySeg Ulna ={
     ARel = RotMat({0,0,0.0},.Sign*(.Scale(-.Data.LateralHumerusCondyleInNeutralConf_pos*.Mirror) + .Scale(.Data.MedialHumerusCondyleInNeutralConf_pos*.Mirror)),
     .AnatomicalFrame.ARel'[1]);
   };
-  
-  
-  
+
+
+
   AnyDrawSurf DrwSurf = {
     FileName = ...Data.unscaled.STL.FileNameUlna;
     RGB =...ColorRef.Segments;
@@ -532,42 +532,42 @@ AnySeg Ulna ={
     AnyFunTransform3D& Scale = .Scale;
     Opacity ??= ...BonesOpacity.Ulna;
   };
-  
-  
+
+
   AnyRefNode UlnaStylo = {
     sRel = .Scale(.Data.us_pos*.Mirror);
     #include "../DrawSettings/BML.any"
   };
-  
-  
-  
+
+
+
   AnyRefNode ProximalRadioUlnar ={
     sRel = .Scale(.Data.ProximalRadioUlnar_pos*.Mirror);
     ARel =RotMat(sRel,.Scale(.Data.DistalRadioUlnar_pos*.Mirror),.Data.LateralHumerusCondyleInNeutralConf_pos*.Mirror)*RotMat(0.5*(...Sign+1)*pi,y);
   };
-  
- 
+
+
   AnyRefNode DistalRadioUlnar ={
     sRel =.Scale(.Data.DistalRadioUlnar_pos*.Mirror);
     ARel =.ProximalRadioUlnar.ARel;
   };
-  
+
   AnyRefNode ProximalRadiusUlnaReac ={
     sRel =.Scale(.Data.ProximalRadiusUlnaReac_pos*.Mirror);
     ARel =.ProximalRadioUlnar.ARel;
   };
-  
-  
-  
-  
-  
-  //Deprecated nodes 
-  AnyRefNode fe = { sRel=.Scale(.Data.fe_pos*.Mirror); 
+
+
+
+
+
+  //Deprecated nodes
+  AnyRefNode fe = { sRel=.Scale(.Data.fe_pos*.Mirror);
     #include "../DrawSettings/JointAxesProximal.any"
   };
-  
+
   // Node used for defining proximal ps joint
-  AnyRefNode ps2 = { 
+  AnyRefNode ps2 = {
     sRel=.Scale(.Data.ps2_pos*.Mirror);
     ARel=RotMat(sRel,.us.sRel,.ol.sRel)*RotMat(pi,y)*RotMat(pi/2,z);
   };
@@ -591,51 +591,51 @@ AnySeg Ulna ={
   AnyRefNode ps = {
     sRel = .Scale(.Data.ps_pos*.Mirror);
   };
-  
-  
+
+
 }; // Ulna
 
 
 
 AnySeg Radius ={
-  
+
   AnyFolder &Data = ..Data.unscaled.ModelParameters.Radius;
   AnyMat33 Mirror={{1,0,0},{0,..Sign,0},{0,0,1}};
-  
+
   r0=.Ulna.r0+.Ulna.ProximalRadioUlnar.sRel*.Ulna.Axes0'-ProximalRadioUlnar.sRel*Axes0';
-  
+
   #include "../DrawSettings/Nodes.any"
-  
+
   UseInertiaObjects = On;
-  
-  
+
+
   AnyInertiaSolid BoneInertiaObject = {
     BodyMassCorrectionGeneric massCorrection() = {
       Mass_Scale=....Data.MassDistribution.mass_scale;
       DensityTheoretical = ....Data.unscaled.ModelParameters.BoneDensity;
       enableMassCorrection = Off;
     };
-    AnySurfSTL surface = { 
+    AnySurfSTL surface = {
       FileName = ....Data.unscaled.STL.FileNameRadius;
       AnyFunTransform3D &scale = ..Scale;
       ScaleXYZ={1,1,1}*..Mirror;
     };
   };
-  
-  
+
+
   // Outer inertia representing skin
   AnyInertiaSolid OuterInertiaObject = {
     BodyMassCorrectionGeneric massCorrection() = {
       Mass_Scale=....Data.MassDistribution.mass_scale;
-      DensityTheoretical = Main.HumanModel.BodyModel.Trunk.Data.unscaled.ModelParameters.AdiposeTissueDensity*0.5; //Note we multiply by 0.5 because ulna and radius shares same outer shape 
+      DensityTheoretical = Main.HumanModel.BodyModel.Trunk.Data.unscaled.ModelParameters.AdiposeTissueDensity*0.5; //Note we multiply by 0.5 because ulna and radius shares same outer shape
     };
     TwoSphereConeMesh OuterMesh ( ADD_NODEGROUP = "On" ) ={
-      Radius1=0.5*vnorm(..Scale(..Data.MedialHumerusCondyleInNeutralConf_pos*..Mirror)-..Scale(..Data.LateralHumerusCondyleInNeutralConf_pos*..Mirror)); 
+      Radius1=0.5*vnorm(..Scale(..Data.MedialHumerusCondyleInNeutralConf_pos*..Mirror)-..Scale(..Data.LateralHumerusCondyleInNeutralConf_pos*..Mirror));
       Pos1=0.5*(..Scale(..Data.MedialHumerusCondyleInNeutralConf_pos*..Mirror)+..Scale(..Data.LateralHumerusCondyleInNeutralConf_pos*..Mirror));
       Radius2 =0.5*vnorm(..Scale(..Data.MedialHumerusCondyleInNeutralConf_pos*..Mirror)-..Scale(..Data.LateralHumerusCondyleInNeutralConf_pos*..Mirror));
       Pos2=0.5*(..Scale(..Data.UlnaStyloNeutralConf_pos*..Mirror)+..Scale(..Data.RadioStylo_pos*..Mirror));
-      
-      Pos3={0,0,1};  
+
+      Pos3={0,0,1};
       RotationNo=9;
    Sphere1PointsNo=5;
       Sphere2PointsNo=5;
@@ -645,7 +645,7 @@ AnySeg Radius ={
          Direction=..Sign;
 
     };
-    
+
 
 
     // We need to subtract bone form
@@ -657,29 +657,29 @@ AnySeg Radius ={
       ScaleXYZ={1,1,1}*..Mirror;
     };
   };
-  
+
   ////visual check..
   //  AnyRefNode MedialHumerusCondyleInNeutralConf ={  sRel =.Data.MedialHumerusCondyleInNeutralConf_pos;  };
   //  AnyRefNode LateralHumerusCondyleInNeutralConf ={  sRel =.Data.LateralHumerusCondyleInNeutralConf_pos;  };
   //  AnyRefNode UlnaInNeutralConf ={  sRel =.Data.UlnaStyloNeutralConf_pos;  };
-  
+
   AnyFloat pUnscaled = { Data.MedialHumerusCondyleInNeutralConf_pos, Data.LateralHumerusCondyleInNeutralConf_pos,Data.UlnaStyloNeutralConf_pos,Data.rs_pos }*Mirror;
-  
+
   AnyDrawPointCloud drw ={
     Points=. pUnscaled ;
     Points3D =On;
     PointStyle.Size=.005;
-    
+
   };
   AnyFunTransform3D& GeomScale = ..Scaling.Radius.ScaleFunction;
   Scale = {AnyFunTransform3D& GeomScale = .GeomScale;};
-  
+
   AnyVar Sign = ..Sign;
-  
+
   #define MACRO_CONSTRUCT_ANATOMICAL_FRAME_s(p, SIGN) 0.5*( p[0]+p[1])
-  #define MACRO_CONSTRUCT_ANATOMICAL_FRAME_A(p, SIGN) RotMat(0.5*(p[0]+p[1]),0.5*(p[2]+p[3]) ,(p[1])) * RotMat(pi*0.5,z) *RotMat(0.5*pi,y)*RotMat(0.5*(SIGN-1)*pi,y)  
+  #define MACRO_CONSTRUCT_ANATOMICAL_FRAME_A(p, SIGN) RotMat(0.5*(p[0]+p[1]),0.5*(p[2]+p[3]) ,(p[1])) * RotMat(pi*0.5,z) *RotMat(0.5*pi,y)*RotMat(0.5*(SIGN-1)*pi,y)
   #include "..\Scaling\SegScaleFunWrtAnatomicalFrame.any"
-  
+
   AnyRefNode ScalingNode =  {
     AnyFloat pScaled = .Scale(.pUnscaled);
     sRel = MACRO_CONSTRUCT_ANATOMICAL_FRAME_s(pScaled, .Sign);
@@ -689,36 +689,36 @@ AnySeg Radius ={
   };
   #undef MACRO_CONSTRUCT_ANATOMICAL_FRAME_s
   #undef MACRO_CONSTRUCT_ANATOMICAL_FRAME_A
-  
+
   AnyRefNode &AnatomicalFrame =  ScalingNode;
 
 
- 
-  
-  
+
+
+
   AnyRefNode PointHumeralRadioJoint = {
     #include "../DrawSettings/JointAxesProximal.any"
     sRel = .Scale(.Data.PointHumeroRadioJoint_pos*.Mirror);
     ARel =.ProximalRadioUlnar.ARel;
   };
-  
+
   AnyRefNode ProximalRadioUlnar ={
     sRel = .Scale(.Data.ProximalRadioUlnar_pos*.Mirror);
-    ARel =RotMat(sRel,.Scale(.Data.DistalRadioUlnar_pos*.Mirror),.Data.LateralHumerusCondyleInNeutralConf_pos*.Mirror)*RotMat(0.5*(...Sign+1)*pi,y); 
+    ARel =RotMat(sRel,.Scale(.Data.DistalRadioUlnar_pos*.Mirror),.Data.LateralHumerusCondyleInNeutralConf_pos*.Mirror)*RotMat(0.5*(...Sign+1)*pi,y);
   };
-  
+
   AnyRefNode DistalRadioUlnar ={
     sRel =.Scale(.Data.DistalRadioUlnar_pos*.Mirror);
     ARel =.ProximalRadioUlnar.ARel;
   };
-  
+
   AnyRefNode ProximalRadiusUlnaReac ={
     sRel =.Scale(.Data.ProximalRadiusUlnaReac_pos*.Mirror);
     ARel =.ProximalRadioUlnar.ARel;
   };
-  
-  
- 
+
+
+
   AnyRefNode RadioCarpal= {
     /// wrist joint is defined from the two epicondyle bony landmarks
     sRel =.Scale(.Data.wj_pos*.Mirror );
@@ -739,8 +739,8 @@ AnySeg Radius ={
     #include "../DrawSettings/BML.any"
   };
 
-  
-  
+
+
   AnyDrawSurf DrwSurf = {
     FileName = ...Data.unscaled.STL.FileNameRadius;
     RGB ??= ...ColorRef.Segments;
@@ -748,27 +748,27 @@ AnySeg Radius ={
     AnyFunTransform3D& Scale = .Scale;
     Opacity ??= ...BonesOpacity.Radius;
   };
-  
-  
-  
+
+
+
   ///Deprecated node use PointHumeralRadioJoint instead
   AnyRefNode PointPS2 = {
     #include "../DrawSettings/JointAxesProximal.any"
     sRel = .Scale(.Data.PointPS2_pos*.Mirror);
   };
-  
+
   ///Deprecated node use ProximalRadiusUlnaReac instead
   AnyRefNode PS2Reac = {
     sRel = .Scale(.Data.PS2Reac_pos*.Mirror);
     ARel = RotMat(.PointPS2.sRel, .PS.sRel, .rs.sRel);
   };
-  
+
   ///Deprecated node use RadiusStylo instead
   AnyRefNode rs = {
     sRel = .Scale(.Data.rs_pos*.Mirror);
     #include "../DrawSettings/BML.any"
   };
-  
+
   ///Deprecated node ProximalRadioUlnar
   AnyRefNode PS = {
     #include "../DrawSettings/JointAxesProximal.any"
@@ -782,15 +782,15 @@ AnySeg Radius ={
     sRel = .Scale(.Data.wj_pos*.Mirror);
     #include "../DrawSettings/BML.any"
   };
-  
-  
+
+
 }; // Radius
 
 
 
 #ifndef WRIST_EXPERIMENTAL
 //This seg is introduced because the flexion extension axis in the wrist is not coincident with the Radio ulnar deviation axis
-//Sources for the 5 mm "A kinematic model of the upper limb based on the visible human project (VHP) image dataset, Pandy et.al. 1999" 
+//Sources for the 5 mm "A kinematic model of the upper limb based on the visible human project (VHP) image dataset, Pandy et.al. 1999"
 AnySeg WristJointSeg ={
   Mass=0;
   Jii={0,0,0};
@@ -801,16 +801,16 @@ AnySeg WristJointSeg ={
 //  AnyRefNode RadioCarpalDeviation={sRel={-0.005,0,0};};
 //#else
   AnyRefNode RadioCarpalFlexion={
-    sRel = ..Hand.Ref.RadioCarpalFlexion.sRel;  
-    ARel =..Hand.Ref.RadioCarpalFlexion.ARel;  
+    sRel = ..Hand.Ref.RadioCarpalFlexion.sRel;
+    ARel =..Hand.Ref.RadioCarpalFlexion.ARel;
   };
   AnyRefNode RadioCarpalDeviation={
     sRel=..Hand.Ref.RadioCarpalDeviation.sRel;
-    ARel =..Hand.Ref.RadioCarpalDeviation.ARel;  
-  };  
-  
+    ARel =..Hand.Ref.RadioCarpalDeviation.ARel;
+  };
+
 //#endif
-  
+
 };
 #endif
 

@@ -4,10 +4,10 @@
 
 #include "../../Application/Examples/PushUp/PushUp.main.any"
 
-Main = 
+Main =
 {
-  
-  //check symmetry in model 
+
+  //check symmetry in model
    AnyInt TestTrigger = DesignVar(0);
 OPERATION_TEST_TRIGGER(Main.Study.InverseDynamics.PreOperation, Main.TestTrigger);
 AnyFolder &StudyRef = Study;
@@ -15,9 +15,9 @@ StudyRef ={
   SymmetryCheck.MirrorPlane = {1,1,-1};
   CheckModel.force_tol=4e-3;  //model has high loads... needs higher tol
   #include "../Symmetry/DynamicTest/Model/CheckFullBody.any"
-}; 
+};
 
-  
+
 #ifndef CREATE_IMAGE
   AnyOperation& RunTest = Main.RunApplication;
   Study = { FixTestStudyConfig TestStudyConfig = {  }; };

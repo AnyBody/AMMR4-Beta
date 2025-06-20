@@ -10,16 +10,16 @@
 
 #include "../../Application/Examples/AirlinePassenger/AirlinePassenger.main.any"
 
-Main = 
+Main =
 {
-  //check symmetry in model 
+  //check symmetry in model
  AnyInt TestTrigger = DesignVar(0);
 OPERATION_TEST_TRIGGER(Main.Study.InverseDynamics.PreOperation, Main.TestTrigger);
 AnyFolder &StudyRef = Study;
 StudyRef ={
   SymmetryCheck.MirrorPlane = {1,1,-1};
   #include "../Symmetry/DynamicTest/Model/CheckFullBody.any"
-}; 
+};
 
 
 #ifndef CREATE_IMAGE
@@ -27,10 +27,10 @@ StudyRef ={
   Study = { FixTestStudyConfig TestStudyConfig = {  }; };
 #else
   #include "../Cameras.any"
-  // Use a a spical time for the initial position picture.   
-  AnyOperationSequence CameraInitPos = 
+  // Use a a spical time for the initial position picture.
+  AnyOperationSequence CameraInitPos =
   {
-     AnyOperationSetValue setTime = 
+     AnyOperationSetValue setTime =
      {
        AnyFloat t_custom  = 33;
        Source = {&t_custom};

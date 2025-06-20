@@ -4,10 +4,10 @@
 
 #include "../../Application/Examples/BenchPress/BenchPress.Main.any"
 
-Main = 
+Main =
 {
- 
-  
+
+
 AnyInt TestTrigger = DesignVar(0);
 OPERATION_TEST_TRIGGER(Main.Study.InverseDynamics.PreOperation, Main.TestTrigger);
 AnyFolder &StudyRef = TestStudy;
@@ -15,23 +15,23 @@ AnyFolder &StudyRef = TestStudy;
 StudyRef ={
   SymmetryCheck.MirrorPlane = {1,1,-1};
   #include "../Symmetry/DynamicTest/Model/CheckFullBody.any"
-}; 
+};
 
-  
-  
+
+
   // Recreate the study to make test run faster
-  AnyOperationSequence TestRunApplication = 
+  AnyOperationSequence TestRunApplication =
   {
      AnyOperation& Calibration = Main.RunApplication.CalibrationAnal;
      AnyOperation& Inv = Main.TestStudy.InverseDynamics;
-  };   
+  };
   AnyBodyStudy TestStudy = {
     AnyFolder &Model = .Model;
     tEnd = 10.0;
     Gravity = {0.0, -9.81, 0.0};
     nStep = 10;
-  }; // End of study  
-  
+  }; // End of study
+
 
 
 #ifndef CREATE_IMAGE

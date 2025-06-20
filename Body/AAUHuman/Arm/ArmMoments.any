@@ -2,23 +2,23 @@
 
 //Elbowpronation
 //ElbowFlexion
-//Glenohumeral 
+//Glenohumeral
 
 //The measures named:
-//  ElbowPronationNetMoment 
+//  ElbowPronationNetMoment
 //  ElbowFlexionNetMoment
 //  GHNetMoment
 //will measure the moments and forces supplied by the muscles spanning these and on top of these
 //moments and force the forces and moments from the constraints in the joints will be added.
-//The resulting force and moment are equal to the to total moment and force which 
+//The resulting force and moment are equal to the to total moment and force which
 //could replace both the muscles spanning the joint and the joints reactions.
 
 //The measures named:
-//  ElbowPronationNetMomentMuscles 
+//  ElbowPronationNetMomentMuscles
 //  ElbowFlexionNetMomentMuscles
 //  GHNetMomentMuscles
 //will measure ONLY the moments and forces supplied by the muscles spanning these joint and not the moments and forces which from the constraints in the joints.
-//The resulting force and moment are equal to the to total moment and force which 
+//The resulting force and moment are equal to the to total moment and force which
 //are supplied by the muscles.
 
 //In both cases the resulting force and moment is given in the global coordinate system.
@@ -36,17 +36,17 @@ AnyForceMomentMeasure2 GHNetMoment = {
   ObjSearchRecursive("..Segments.Hand","*", "AnySeg")
   );
   IncludeSegments =pArrSegments;
-  
-  
+
+
   AnyObjectPtr  pArrReactions = arrcat(ObjSearchRecursive("..Joints", "*", "AnyForceBase"));
   AnyObjectPtr  pArrMuscles = arrcat(
   ObjSearchRecursive("..Muscles", "*", "AnyMuscle"),
   ObjSearchRecursive("..Joints.GHReactions", "*", "AnyMuscle"),
   ObjSearchRecursive("..JointMuscles","*", "AnyMuscle")
   );
-  IncludeForces = arrcat(pArrMuscles,pArrReactions); 
-  
-  //Make transformation to the Scapula.gh.RotNode coordinate system      
+  IncludeForces = arrcat(pArrMuscles,pArrReactions);
+
+  //Make transformation to the Scapula.gh.RotNode coordinate system
   AnyVec3 Mlocal=M*ref.Axes;
   AnyVar GHAbduction=Mlocal[0];
   AnyVar GHFlexion=Mlocal[2];
@@ -55,8 +55,8 @@ AnyForceMomentMeasure2 GHNetMoment = {
 
 
 AnyForceMomentMeasure2 ElbowFlexionNetMoment = {
-  AnyRefNode &ref=..Segments.Humerus.HumeroUlnar; //fe.RotNode;      
-  
+  AnyRefNode &ref=..Segments.Humerus.HumeroUlnar; //fe.RotNode;
+
   AnyObjectPtr  pArrSegments = arrcat(
   ObjSearch("..Segments.Ulna","AnySeg"),
   ObjSearch("..Segments.Radius","AnySeg"),
@@ -65,24 +65,24 @@ AnyForceMomentMeasure2 ElbowFlexionNetMoment = {
   ObjSearchRecursive("..Segments.Hand","*", "AnySeg")
   );
   IncludeSegments =pArrSegments;
-  
+
   AnyObjectPtr  pArrReactions = arrcat(ObjSearchRecursive("..Joints", "*", "AnyForceBase"));
   AnyObjectPtr  pArrMuscles = arrcat(
   ObjSearchRecursive("..Muscles", "*", "AnyMuscle"),
   ObjSearchRecursive("..Joints.GHReactions", "*", "AnyMuscle"),
   ObjSearchRecursive("..JointMuscles","*", "AnyMuscle")
   );
-  IncludeForces = arrcat(pArrMuscles,pArrReactions); 
-  
+  IncludeForces = arrcat(pArrMuscles,pArrReactions);
+
   //Make transformation to the Humerus.fe.rotnode coordinate system
   AnyVec3 Mlocal=M*ref.Axes;
   AnyVar ElbowFlexion=Mlocal[0];
-  
+
 };
 
 AnyForceMomentMeasure2 ElbowPronationNetMoment = {
   AnyRefNode &ref =..Segments.Ulna.ProximalRadioUlnar; //ps2.RotNode;
-  
+
   AnyObjectPtr  pArrSegments = arrcat(
   ObjSearch("..Segments.Radius","AnySeg"),
   ObjSearch("..Segments.WristJointSeg","AnySeg"),
@@ -90,19 +90,19 @@ AnyForceMomentMeasure2 ElbowPronationNetMoment = {
   ObjSearchRecursive("..Segments.Hand","*", "AnySeg")
   );
   IncludeSegments =pArrSegments;
-  
+
   AnyObjectPtr  pArrReactions = arrcat(ObjSearchRecursive("..Joints", "*", "AnyForceBase"));
   AnyObjectPtr  pArrMuscles = arrcat(
   ObjSearchRecursive("..Muscles", "*", "AnyMuscle"),
   ObjSearchRecursive("..Joints.GHReactions", "*", "AnyMuscle"),
   ObjSearchRecursive("..JointMuscles","*", "AnyMuscle")
   );
-  IncludeForces = arrcat(pArrMuscles,pArrReactions); 
-  
-  //Make transformation to the radius.ps2.rotnode coordinate system      
+  IncludeForces = arrcat(pArrMuscles,pArrReactions);
+
+  //Make transformation to the radius.ps2.rotnode coordinate system
   AnyVec3 Mlocal=M*ref.Axes;
   AnyVar ElbowPronation=Mlocal[0];
-  
+
 };
 
 
@@ -111,30 +111,30 @@ AnyForceMomentMeasure2 ElbowPronationNetMoment = {
 AnyForceMomentMeasure2 WristFlexionNetMoment = {
   //AnyRefNode &ref =..Segments.Radius.wj.RotNode;
   AnyRefNode &ref =..Segments.Radius.RadioCarpal.RotNode;
-  
+
   AnyObjectPtr  pArrSegments = arrcat(
   ObjSearch("..Segments.WristJointSeg","AnySeg"),
   ObjSearch("..Segments.Hand", "AnySeg"),
   ObjSearchRecursive("..Segments.Hand","*", "AnySeg")
   );
   IncludeSegments =pArrSegments;
-  
-  
-  
+
+
+
   AnyObjectPtr  pArrReactions = arrcat(ObjSearchRecursive("..Joints", "*", "AnyForceBase"));
   AnyObjectPtr  pArrMuscles = arrcat(
   ObjSearchRecursive("..Muscles", "*", "AnyMuscle"),
   ObjSearchRecursive("..Joints.GHReactions", "*", "AnyMuscle"),
   ObjSearchRecursive("..JointMuscles","*", "AnyMuscle")
   );
-  IncludeForces = arrcat(pArrMuscles,pArrReactions); 
-  
-  
-  //Make transformation to the Radius.wj.rotnode coordinate system      
+  IncludeForces = arrcat(pArrMuscles,pArrReactions);
+
+
+  //Make transformation to the Radius.wj.rotnode coordinate system
   AnyVec3 Mlocal=M*ref.Axes;
   AnyVar WristFlexion=Mlocal[0];
 
-  
+
 };
 
 
@@ -146,23 +146,23 @@ AnyForceMomentMeasure2 WristAbductionNetMoment = {
   #ifdef WRIST_EXPERIMENTAL
     AnyRefNode &ref =..Segments.Radius.RadioCarpal;
 #endif
-  
+
   AnyObjectPtr  pArrSegments = arrcat(
   ObjSearch("..Segments.Hand", "AnySeg"),
   ObjSearchRecursive("..Segments.Hand","*", "AnySeg")
   );
   IncludeSegments =pArrSegments;
-  
-  
+
+
   AnyObjectPtr  pArrReactions = arrcat(ObjSearchRecursive("..Joints", "*", "AnyForceBase"));
   AnyObjectPtr  pArrMuscles = arrcat(
   ObjSearchRecursive("..Muscles", "*", "AnyMuscle"),
   ObjSearchRecursive("..Joints.GHReactions", "*", "AnyMuscle"),
   ObjSearchRecursive("..JointMuscles","*", "AnyMuscle")
   );
-  IncludeForces = arrcat(pArrMuscles,pArrReactions); 
-  
-  //Make transformation to the WristJointSeg.RadialUlnarDeviation.rotnode coordinate system      
+  IncludeForces = arrcat(pArrMuscles,pArrReactions);
+
+  //Make transformation to the WristJointSeg.RadialUlnarDeviation.rotnode coordinate system
   AnyVec3 Mlocal=M*ref.Axes;
   AnyVar WristAbduction=Mlocal[2];
 
@@ -172,11 +172,11 @@ AnyForceMomentMeasure2 WristAbductionNetMoment = {
 
 
 
-//The same measures as above without the joint reactions 
+//The same measures as above without the joint reactions
 //******************************************************
 AnyForceMomentMeasure2 GHNetMomentMuscles = {
   AnyRefNode &ref=..Segments.Scapula.gh.RotNode;
-  
+
   AnyObjectPtr  pArrSegments = arrcat(
   ObjSearch("..Segments.Humerus","AnySeg"),
   ObjSearch("..Segments.Ulna","AnySeg"),
@@ -186,30 +186,30 @@ AnyForceMomentMeasure2 GHNetMomentMuscles = {
   ObjSearchRecursive("..Segments.Hand","*", "AnySeg")
   );
   IncludeSegments =pArrSegments;
-  
-  
-  
+
+
+
   AnyObjectPtr  pArrMuscles = arrcat(
   ObjSearchRecursive("..Muscles", "*", "AnyMuscle"),
   ObjSearchRecursive("..Joints.GHReactions", "*", "AnyMuscle"),
   ObjSearchRecursive("..JointMuscles","*", "AnyMuscle")
   );
-  IncludeForces = pArrMuscles; 
-  
-  
-  //Make transformation to the Scapula.gh.RotNode coordinate system      
+  IncludeForces = pArrMuscles;
+
+
+  //Make transformation to the Scapula.gh.RotNode coordinate system
   AnyVec3 Mlocal=M*ref.Axes;
   AnyVar GHAbduction=Mlocal[0];
   AnyVar GHFlexion=Mlocal[2];
   AnyVar GHExternalRotation=Mlocal[1];
-  
-  
+
+
 };
 
 
 AnyForceMomentMeasure2 ElbowFlexionNetMomentMuscles = {
-  AnyRefNode &ref=..Segments.Humerus.HumeroUlnar; 
-  
+  AnyRefNode &ref=..Segments.Humerus.HumeroUlnar;
+
   AnyObjectPtr  pArrSegments = arrcat(
   ObjSearch("..Segments.Ulna","AnySeg"),
   ObjSearch("..Segments.Radius","AnySeg"),
@@ -218,22 +218,22 @@ AnyForceMomentMeasure2 ElbowFlexionNetMomentMuscles = {
   ObjSearchRecursive("..Segments.Hand","*", "AnySeg")
   );
   IncludeSegments =pArrSegments;
-  
+
   AnyObjectPtr  pArrMuscles = arrcat(
   ObjSearchRecursive("..Muscles", "*", "AnyMuscle"),
   ObjSearchRecursive("..Joints.GHReactions", "*", "AnyMuscle"),
   ObjSearchRecursive("..JointMuscles","*", "AnyMuscle")
   );
-  IncludeForces = pArrMuscles; 
-  
+  IncludeForces = pArrMuscles;
+
   //Make transformation to the Humerus.fe.rotnode coordinate system
   AnyVec3 Mlocal=M*ref.Axes;
   AnyVar ElbowFlexion=Mlocal[0];
-  
+
 };
 
 AnyForceMomentMeasure2 ElbowPronationNetMomentMuscles = {
- AnyRefNode &ref=..Segments.Humerus.HumeroUlnar; 
+ AnyRefNode &ref=..Segments.Humerus.HumeroUlnar;
   AnyObjectPtr  pArrSegments = arrcat(
   ObjSearch("..Segments.Radius","AnySeg"),
   ObjSearch("..Segments.WristJointSeg","AnySeg"),
@@ -241,47 +241,47 @@ AnyForceMomentMeasure2 ElbowPronationNetMomentMuscles = {
   ObjSearchRecursive("..Segments.Hand","*", "AnySeg")
   );
   IncludeSegments =pArrSegments;
-  
-  
+
+
   AnyObjectPtr  pArrMuscles = arrcat(
   ObjSearchRecursive("..Muscles", "*", "AnyMuscle"),
   ObjSearchRecursive("..Joints.GHReactions", "*", "AnyMuscle"),
   ObjSearchRecursive("..JointMuscles","*", "AnyMuscle")
   );
-  IncludeForces = pArrMuscles; 
-  
-  
-  //Make transformation to the ..Segments.Humerus.HumeroUlnar  coordinate system      
+  IncludeForces = pArrMuscles;
+
+
+  //Make transformation to the ..Segments.Humerus.HumeroUlnar  coordinate system
   AnyVec3 Mlocal=M*ref.Axes;
   AnyVar ElbowPronation=Mlocal[0];
-  
+
 };
 
 AnyForceMomentMeasure2 WristFlexionNetMomentMuscles = {
 
   AnyRefNode &ref =..Segments.Radius.RadioCarpal.RotNode;
-  
+
   AnyObjectPtr  pArrSegments = arrcat(
   ObjSearch("..Segments.WristJointSeg","AnySeg"),
   ObjSearch("..Segments.Hand", "AnySeg"),
   ObjSearchRecursive("..Segments.Hand","*", "AnySeg")
   );
   IncludeSegments =pArrSegments;
-  
+
   AnyObjectPtr  pArrMuscles = arrcat(
   ObjSearchRecursive("..Muscles", "*", "AnyMuscle"),
   ObjSearchRecursive("..Joints.GHReactions", "*", "AnyMuscle"),
   ObjSearchRecursive("..JointMuscles","*", "AnyMuscle")
   );
-  IncludeForces = pArrMuscles; 
-  
-  
-  
-  //Make transformation to the Radius.wj.rotnode coordinate system      
+  IncludeForces = pArrMuscles;
+
+
+
+  //Make transformation to the Radius.wj.rotnode coordinate system
   AnyVec3 Mlocal=M*ref.Axes;
     AnyVar WristFlexion=Mlocal[0];
 
-  
+
 };
 
 
@@ -294,27 +294,27 @@ AnyForceMomentMeasure2 WristAbductionNetMomentMuscles = {
     AnyRefNode &ref =..Segments.Radius.RadioCarpal;
 #endif
 
-    
-    
+
+
   AnyObjectPtr  pArrSegments = arrcat(
   ObjSearch("..Segments.Hand", "AnySeg"),
   ObjSearchRecursive("..Segments.Hand","*", "AnySeg")
   );
   IncludeSegments =pArrSegments;
-  
+
   AnyObjectPtr  pArrMuscles = arrcat(
   ObjSearchRecursive("..Muscles", "*", "AnyMuscle"),
   ObjSearchRecursive("..Joints.GHReactions", "*", "AnyMuscle"),
   ObjSearchRecursive("..JointMuscles","*", "AnyMuscle")
   );
-  IncludeForces = pArrMuscles; 
-  
-  
-  //Make transformation to the WristJointSeg.RadialUlnarDeviation.rotnode coordinate system      
+  IncludeForces = pArrMuscles;
+
+
+  //Make transformation to the WristJointSeg.RadialUlnarDeviation.rotnode coordinate system
   AnyVec3 Mlocal=M*ref.Axes;
   AnyVar WristAbduction=Mlocal[2];
-  
-  
+
+
 };
 
 AnyForceMomentMeasure ElbowJointReactionMoments = {
@@ -323,7 +323,7 @@ AnyForceMomentMeasure ElbowJointReactionMoments = {
   AnyVec3 Mlocal = M*Humerusfe.Axes;
 };
 
-AnyForceMomentMeasure WristJointReactionMoments = 
+AnyForceMomentMeasure WristJointReactionMoments =
 {
  #ifndef WRIST_EXPERIMENTAL
   AnyForceBase &Force = ..Joints.WristJointFlexion.Constraints.Reaction;
