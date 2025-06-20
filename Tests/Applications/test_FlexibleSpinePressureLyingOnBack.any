@@ -11,6 +11,17 @@
 Main = 
 {  
   
+  
+  
+    
+AnyFolder &StudyRef = Study;
+StudyRef ={
+  SymmetryCheck.MirrorPlane = {1,1,-1};
+  #include "../Symmetry/DynamicTest/Model/CheckFullBody.any"
+}; 
+
+  
+  
   Main.Study = 
   {
     AnyVar RefValue = 111.4;
