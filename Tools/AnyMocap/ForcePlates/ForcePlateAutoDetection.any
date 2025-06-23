@@ -337,7 +337,7 @@ See below for more details
             EmissionRGB = {0.1,0.1,0.1};
             SpecularRGB = {0.00,0.00,0.00};
             Shininess = 0.1;
-            RGB = {1, 1, 1}*(1 - 0.7*......ColorScale);
+            RGB = {1*(1-0.5*......ColorScale), 1, 1};
           };
           PickableZOrdering = -1;
           FileName = "box";

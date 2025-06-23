@@ -120,6 +120,8 @@ You can [enable backwards compatibility](changes-to-bodymodel-folders) by settin
 
 * Many of the key folders inside the Leg and Arm models have been renamed to create a unified structure across the full bodymodel. To bring back the old structure we have temporarily included a backward compatibility switch `BM_COMPATIBILITY_BODYMODEL_STRUCTURE` To ensure a smooth transition.
 
+* The color of force plates in C3D-based MoCap models has been adjusted to better distinguish between 
+  when the foot is in contact with the force plate and when it is not.
 
 ### Removed:
 
