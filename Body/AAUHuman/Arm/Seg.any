@@ -127,7 +127,7 @@ AnySeg Scapula ={
     ....Trunk.Data.unscaled.ModelParameters.Thorax._SIDE_.acj_InNeutralConf_pos,
   };
   AnyFloat  Points1 = {Data.ts_pos, Data.aa_pos, Data.ai_pos,Data.acj_pos}*Mirror;
-  #include "..\Scaling\SegScaleFunWrtAnatomicalFrame_2.any"
+  #include "..\Scaling\SegScaleFunWrtAnatomicalFrame_RigidBodyTransformation.any"
 
   AnyRefNode AnatomicalFrame =  {
     //^ The anatomical frame is separate from the scaling frame
