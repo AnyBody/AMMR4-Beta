@@ -172,12 +172,12 @@ ADD_NODEGROUP = "Off"
   ARel = RotMat(sRel,Pos2,sRel+Pos3);
  
 //       Enable for visual debug
-        AnyDrawPointCloud Line2D ={
-          Points=.Calculations.PointsCombined;
-          Points3D=On;    
-          PointStyle.Size=0.011;
-          RGB={0,0,1};
-        };
+//        AnyDrawPointCloud Line2D ={
+//          Points=.Calculations.PointsCombined;
+//          Points3D=On;    
+//          PointStyle.Size=0.011;
+//          RGB={0,0,1};
+//        };
 //        
 //        AnyDrawPointCloud Line3DRotated ={
 //          Points=.Calculations.all;
