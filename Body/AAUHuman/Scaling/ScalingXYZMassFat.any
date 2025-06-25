@@ -323,8 +323,8 @@ defined in a special file that contains segmental scaling vectors.
 
         AnyFunTransform3DLin ScaleFunction = {
           ScaleMat = {
-            {.LengthScale, 0.0, 0.0}, // long axis
-            {0.0, .WidthScale, 0.0},  // mediolateral width
+            {.WidthScale, 0.0, 0.0}, // long axis
+            {0.0, .LengthScale, 0.0},  // mediolateral width
             {0.0, 0.0, .DepthScale}   // depth
           };
           Offset = {0,0,0};
