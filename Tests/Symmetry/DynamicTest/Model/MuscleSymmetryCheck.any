@@ -43,7 +43,7 @@ AnyFolder SymmetryCheck= {
           AnyKinCoM Humerus = {AnySeg &ref= Main.HumanModel.BodyModel.Right.ShoulderArm.Segments.Humerus;};
           AnyKinCoM Ulna = {AnySeg &ref= Main.HumanModel.BodyModel.Right.ShoulderArm.Segments.Ulna;};
           AnyKinCoM Radius = {AnySeg &ref= Main.HumanModel.BodyModel.Right.ShoulderArm.Segments.Radius;};
-          AnyKinCoM Hand = {AnySeg &ref= Main.HumanModel.BodyModel.Right.ShoulderArm.Segments.Hand;};
+          AnyKinCoM Hand = {AnyFolder &ref= Main.HumanModel.BodyModel.Right.ShoulderArm.Segments.Hand;};
         };
 
         AnyFolder Left ={
@@ -57,7 +57,7 @@ AnyFolder SymmetryCheck= {
           AnyKinCoM Humerus = {AnySeg &ref= Main.HumanModel.BodyModel.Left.ShoulderArm.Segments.Humerus;};
           AnyKinCoM Ulna = {AnySeg &ref= Main.HumanModel.BodyModel.Left.ShoulderArm.Segments.Ulna;};
           AnyKinCoM Radius = {AnySeg &ref= Main.HumanModel.BodyModel.Left.ShoulderArm.Segments.Radius;};
-          AnyKinCoM Hand = {AnySeg &ref= Main.HumanModel.BodyModel.Left.ShoulderArm.Segments.Hand;};
+          AnyKinCoM Hand = {AnyFolder &ref= Main.HumanModel.BodyModel.Left.ShoulderArm.Segments.Hand;};
         };
 
         AnyFolder Comparison ={
