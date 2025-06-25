@@ -187,7 +187,7 @@ AnyFolder SymmetryCheck= {
           AnyFloat Foot=(.Right.Foot.Pos-.Left.Foot.Pos)* {{1,0,0},{0,1,0},{0,0,0}};
         };
       };
-      #if  ((BM_LEG_MUSCLES_RIGHT != OFF) & (BM_LEG_MUSCLES_LEFT != OFF))
+      #if  ((BM_ARM_MUSCLES_RIGHT == OFF) & (BM_ARM_MUSCLES_LEFT == OFF))
 
         AnyFolder JntMuscle ={
           ComparePtrArrays ft() = {
