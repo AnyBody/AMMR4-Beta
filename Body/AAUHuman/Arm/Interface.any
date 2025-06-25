@@ -41,7 +41,7 @@ AnyKinMeasureOrg SternoClavicularAxialRotation ={
 //This measure will be zero when SC protraction and SternoClavicularProtraction is -23 and SternoClavicularElevationVec is 11.5
 AnyKinMeasureOrg SternoClavicularProtraction_Postural = {
   AnyKinRotational SCRot = {
-    AnyRefNode &thorax = .....Trunk.Segments.ThoraxSeg.ScalingNode;
+    AnyRefNode &thorax = .....Trunk.Segments.PelvisSeg.ScalingNode;
     AnyRefNode &clavicula = ...Segments.Clavicula.PosturalFrame;
     Type = RotAxesAngles;
     Axis1 = x;
