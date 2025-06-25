@@ -154,7 +154,7 @@ Main ={
       
       AnyMessage InitposDiff_Clavicula_Right_Warning = {
         AnyFloat pos1 = Main.HumanModel.BodyModel.Right.ShoulderArm.Segments.Clavicula.Axes0*Main.HumanModel.BodyModel.Right.ShoulderArm.Segments.Clavicula.ScalingNode.ARel;
-        AnyFloat pos2 = Main.HumanModel.BodyModel.Trunk.Segments.ThoraxSeg.Axes0*Main.HumanModel.BodyModel.Trunk.Segments.ThoraxSeg.ScalingNode.ARel;
+        AnyFloat pos2 = Main.HumanModel.BodyModel.Trunk.Segments.PelvisSeg.Axes0*Main.HumanModel.BodyModel.Trunk.Segments.PelvisSeg.ScalingNode.ARel;
         AnyFloat max_diff =max(max(pos1-pos2));
         TriggerRuntime  = iffun(ltfun(max_diff,0.000001),Off,On);  
         Type = MSG_Error;
@@ -163,7 +163,7 @@ Main ={
       
       AnyMessage InitposDiff_Scapula_Right_Warning = {
         AnyFloat pos1 = Main.HumanModel.BodyModel.Right.ShoulderArm.Segments.Scapula.Axes0*Main.HumanModel.BodyModel.Right.ShoulderArm.Segments.Scapula.ScalingNode.ARel;
-        AnyFloat pos2 = Main.HumanModel.BodyModel.Trunk.Segments.ThoraxSeg.Axes0*Main.HumanModel.BodyModel.Trunk.Segments.ThoraxSeg.ScalingNode.ARel;
+        AnyFloat pos2 = Main.HumanModel.BodyModel.Trunk.Segments.PelvisSeg.Axes0*Main.HumanModel.BodyModel.Trunk.Segments.PelvisSeg.ScalingNode.ARel;
         AnyFloat max_diff =max(max(pos1-pos2));
         TriggerRuntime  = iffun(ltfun(max_diff,0.000001),Off,On);  
         Type = MSG_Error;
@@ -192,7 +192,7 @@ Main ={
    
       AnyMessage InitposDiff_Clavicula_Left_Warning = {
         AnyFloat pos1 = Main.HumanModel.BodyModel.Left.ShoulderArm.Segments.Clavicula.Axes0*Main.HumanModel.BodyModel.Left.ShoulderArm.Segments.Clavicula.ScalingNode.ARel;
-        AnyFloat pos2 = Main.HumanModel.BodyModel.Trunk.Segments.ThoraxSeg.Axes0*Main.HumanModel.BodyModel.Trunk.Segments.ThoraxSeg.ScalingNode.ARel;
+        AnyFloat pos2 = Main.HumanModel.BodyModel.Trunk.Segments.PelvisSeg.Axes0*Main.HumanModel.BodyModel.Trunk.Segments.PelvisSeg.ScalingNode.ARel;
         AnyFloat max_diff =max(max(pos1-pos2));
         TriggerRuntime  = iffun(ltfun(max_diff,0.000001),Off,On);  
         Type = MSG_Error;
@@ -201,7 +201,7 @@ Main ={
       
       AnyMessage InitposDiff_Scapula_Left_Warning = {
         AnyFloat pos1 = Main.HumanModel.BodyModel.Left.ShoulderArm.Segments.Scapula.Axes0*Main.HumanModel.BodyModel.Left.ShoulderArm.Segments.Scapula.ScalingNode.ARel;
-        AnyFloat pos2 = Main.HumanModel.BodyModel.Trunk.Segments.ThoraxSeg.Axes0*Main.HumanModel.BodyModel.Trunk.Segments.ThoraxSeg.ScalingNode.ARel;
+        AnyFloat pos2 = Main.HumanModel.BodyModel.Trunk.Segments.PelvisSeg.Axes0*Main.HumanModel.BodyModel.Trunk.Segments.PelvisSeg.ScalingNode.ARel;
         AnyFloat max_diff =max(max(pos1-pos2));
         TriggerRuntime  = iffun(ltfun(max_diff,0.000001),Off,On);  
         Type = MSG_Error;
@@ -237,7 +237,7 @@ Main ={
       AnyMessage ScalingNode_Lin_Thorax_Clavicula_Right_Warning = {
         AnyKinLinear lin ={
           AnyRefFrame  &ref1 = Main.HumanModel.BodyModel.Right.ShoulderArm.Segments.Clavicula.ScalingNode;
-          AnyRefFrame  &ref2 = Main.HumanModel.BodyModel.Trunk.Segments.ThoraxSeg.ScalingNode;
+          AnyRefFrame  &ref2 = Main.HumanModel.BodyModel.Trunk.Segments.PelvisSeg.ScalingNode;
         };
         AnyFloat max_diff = max(lin.Pos);
         TriggerRuntime  = andfun(System.LoadedModel.LoadComplete,iffun(ltfun(max_diff,0.000001),Off,On));  //note tol needs to be higher than kin tol... error accumulates in joints.. this is like measuing on an open "closed" chain
@@ -249,7 +249,7 @@ Main ={
       AnyMessage ScalingNode_Rot_Thorax_Clavicula_Right_Warning = {
         AnyKinRotational rot ={
           AnyRefFrame  &ref1 = Main.HumanModel.BodyModel.Right.ShoulderArm.Segments.Clavicula.ScalingNode;
-          AnyRefFrame  &ref2 = Main.HumanModel.BodyModel.Trunk.Segments.ThoraxSeg.ScalingNode;
+          AnyRefFrame  &ref2 = Main.HumanModel.BodyModel.Trunk.Segments.PelvisSeg.ScalingNode;
           Type=RotAxesAngles;
         };
         AnyFloat max_diff = max(rot.Pos);
@@ -262,7 +262,7 @@ Main ={
       AnyMessage ScalingNode_Lin_Thorax_Scapula_Right_Warning = {
         AnyKinLinear lin ={
           AnyRefFrame  &ref1 = Main.HumanModel.BodyModel.Right.ShoulderArm.Segments.Scapula.ScalingNode;
-          AnyRefFrame  &ref2 = Main.HumanModel.BodyModel.Trunk.Segments.ThoraxSeg.ScalingNode;
+          AnyRefFrame  &ref2 = Main.HumanModel.BodyModel.Trunk.Segments.PelvisSeg.ScalingNode;
         };
         AnyFloat max_diff = max(lin.Pos);
         TriggerRuntime  = andfun(System.LoadedModel.LoadComplete,iffun(ltfun(max_diff,0.000001),Off,On));  
@@ -273,7 +273,7 @@ Main ={
       AnyMessage ScalingNode_Rot_Thorax_Scapula_Right_Warning = {
         AnyKinRotational rot ={
           AnyRefFrame  &ref1 = Main.HumanModel.BodyModel.Right.ShoulderArm.Segments.Scapula.ScalingNode;
-          AnyRefFrame  &ref2 = Main.HumanModel.BodyModel.Trunk.Segments.ThoraxSeg.ScalingNode;
+          AnyRefFrame  &ref2 = Main.HumanModel.BodyModel.Trunk.Segments.PelvisSeg.ScalingNode;
           Type=RotAxesAngles;
         };
         AnyFloat max_diff = max(rot.Pos);
@@ -286,7 +286,7 @@ Main ={
       AnyMessage ScalingNode_Lin_Thorax_Clavicula_Left_Warning = {
         AnyKinLinear lin ={
           AnyRefFrame  &ref1 = Main.HumanModel.BodyModel.Left.ShoulderArm.Segments.Clavicula.ScalingNode;
-          AnyRefFrame  &ref2 = Main.HumanModel.BodyModel.Trunk.Segments.ThoraxSeg.ScalingNode;
+          AnyRefFrame  &ref2 = Main.HumanModel.BodyModel.Trunk.Segments.PelvisSeg.ScalingNode;
         };
         AnyFloat max_diff = max(lin.Pos);
         TriggerRuntime  = andfun(System.LoadedModel.LoadComplete,iffun(ltfun(max_diff,0.000001),Off,On));  
@@ -300,7 +300,7 @@ Main ={
       AnyMessage ScalingNode_Rot_Thorax_Clavicula_Left_Warning = {
         AnyKinRotational rot ={
           AnyRefFrame  &ref1 = Main.HumanModel.BodyModel.Left.ShoulderArm.Segments.Clavicula.ScalingNode;
-          AnyRefFrame  &ref2 = Main.HumanModel.BodyModel.Trunk.Segments.ThoraxSeg.ScalingNode;
+          AnyRefFrame  &ref2 = Main.HumanModel.BodyModel.Trunk.Segments.PelvisSeg.ScalingNode;
           Type=RotAxesAngles;
         };
         AnyFloat max_diff = max(rot.Pos);
@@ -313,7 +313,7 @@ Main ={
       AnyMessage ScalingNode_Lin_Thorax_Scapula_Left_Warning = {
         AnyKinLinear lin ={
           AnyRefFrame  &ref1 = Main.HumanModel.BodyModel.Left.ShoulderArm.Segments.Scapula.ScalingNode;
-          AnyRefFrame  &ref2 = Main.HumanModel.BodyModel.Trunk.Segments.ThoraxSeg.ScalingNode;
+          AnyRefFrame  &ref2 = Main.HumanModel.BodyModel.Trunk.Segments.PelvisSeg.ScalingNode;
         };
         AnyFloat max_diff = max(lin.Pos);
         TriggerRuntime  = andfun(System.LoadedModel.LoadComplete,iffun(ltfun(max_diff,0.000001),Off,On));  
@@ -324,7 +324,7 @@ Main ={
       AnyMessage ScalingNode_Rot_Thorax_Scapula_Left_Warning = {
         AnyKinRotational rot ={
           AnyRefFrame  &ref1 = Main.HumanModel.BodyModel.Left.ShoulderArm.Segments.Scapula.ScalingNode;
-          AnyRefFrame  &ref2 = Main.HumanModel.BodyModel.Trunk.Segments.ThoraxSeg.ScalingNode;
+          AnyRefFrame  &ref2 = Main.HumanModel.BodyModel.Trunk.Segments.PelvisSeg.ScalingNode;
           Type=RotAxesAngles;
         };
         AnyFloat max_diff = max(rot.Pos);
