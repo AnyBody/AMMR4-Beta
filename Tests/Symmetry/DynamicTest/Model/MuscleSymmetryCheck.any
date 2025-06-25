@@ -157,9 +157,9 @@ AnyFolder SymmetryCheck= {
           AnyKinCoM Shank = {AnySeg &ref= Main.HumanModel.BodyModel.Right.Leg.Seg.Shank;};
           //old leg has no talus
           #if BM_LEG_MODEL != _LEG_MODEL_LEG_
-            AnyKinCoM Talus = {AnySeg &ref= Main.HumanModel.BodyModel.Right.Leg.Seg.Talus;};
+            AnyKinCoM Talus = {AnySeg &ref= Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.Talus;};
           #endif
-          AnyKinCoM Foot = {AnySeg &ref= Main.HumanModel.BodyModel.Right.Leg.Seg.Foot;};
+          AnyKinCoM Foot = {AnyFolder &ref= Main.HumanModel.BodyModel.Right.Leg.Seg.Foot;};
 
         };
 
@@ -172,9 +172,9 @@ AnyFolder SymmetryCheck= {
           AnyKinCoM Thigh ={   AnySeg  &ref= Main.HumanModel.BodyModel.Left.Leg.Seg.Thigh;      };
           AnyKinCoM Shank={   AnySeg  &ref= Main.HumanModel.BodyModel.Left.Leg.Seg.Shank;      };
         #if BM_LEG_MODEL != _LEG_MODEL_LEG_
-            AnyKinCoM Talus={   AnySeg  &ref= Main.HumanModel.BodyModel.Left.Leg.Seg.Talus;      };
+            AnyKinCoM Talus={   AnySeg  &ref= Main.HumanModel.BodyModel.Left.Leg.Seg.Foot.Talus;      };
         #endif
-          AnyKinCoM Foot={   AnySeg  &ref= Main.HumanModel.BodyModel.Left.Leg.Seg.Foot;      };
+          AnyKinCoM Foot={   AnyFolder  &ref= Main.HumanModel.BodyModel.Left.Leg.Seg.Foot;      };
         };
 
         AnyFolder Comparison ={
