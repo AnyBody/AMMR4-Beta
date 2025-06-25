@@ -14,7 +14,7 @@ AnySeg Clavicula ={
   AnyRefNode& MoCapMarkerFrameAMMR24 = AnatomicalFrame;///< For backwards Compatibility with AMMR 2.4 MoCap Marker protocols
 
   r0 = ....Trunk.Segments.SternumSeg.r0 + ....Trunk.Segments.SternumSeg._SIDE_.scj.sRel*....Trunk.Segments.SternumSeg.Axes0'  - scj.sRel*Axes0';
-  Axes0= ....Trunk.Segments.PelvisSeg.Axes0*Scale.T0.RigidBodyTransform.rot';
+  Axes0= ....Trunk.Segments.SternumSeg.Axes0*Scale.T0.RigidBodyTransform.rot';
 
   UseInertiaObjects = On;
 
@@ -113,7 +113,7 @@ AnySeg Scapula ={
   AnyMat33 Mirror={{1,0,0},{0,1*..Sign,0},{0,0,1}};
 
   r0 = .Clavicula.acj.sRel*.Clavicula.Axes0'+.Clavicula.r0 -  acj.sRel*Axes0';
-  Axes0= ....Trunk.Segments.PelvisSeg.Axes0*Scale.T0.RigidBodyTransform.rot';
+  Axes0= ....Trunk.Segments.SternumSeg.Axes0*Scale.T0.RigidBodyTransform.rot';
 
   UseInertiaObjects = On;
 
