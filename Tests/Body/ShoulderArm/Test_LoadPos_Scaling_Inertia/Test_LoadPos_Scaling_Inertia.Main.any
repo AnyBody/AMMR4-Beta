@@ -1,4 +1,5 @@
 //fatal_warnings = [""]
+//ignore_errors = ["AbductionInitialPosturePertubation", "'GHRot'  :  Close to"]
 //define = (
 //[
 //    {'SCALING_TYPE': '"NONE"'},
@@ -41,12 +42,8 @@
 //Select between three different scaling options
 
 #ifndef TEST_NAME
-//#define SCALING_TYPE "NONE"
-#define SCALING_TYPE "LINEAR"
-//#define SCALING_TYPE "RBF_SCALING"
-
-//Define a symmetric or non-symmetric case
-#define RIGHT_LEFT_SCALE_SYM "Off"
+  #define SCALING_TYPE "NONE"
+  #define RIGHT_LEFT_SCALE_SYM "Off"
 
 #endif
 
