@@ -363,7 +363,8 @@ AnyFolder SymmetryCheck= {
         ComparePtrArrays actuators() = {
           Array1 = ObjSearchRecursive("Main.HumanModel.BodyModel.Trunk.Joints.RibCage.Right", "*.Fout");
           Array2 = ObjSearchRecursive("Main.HumanModel.BodyModel.Trunk.Joints.RibCage.Left", "*.Fout");
-         MirrorMatrix = diag(arrcat(..MirrorPlane,..MirrorPlane));
+          MirrorMatrix = diag(arrcat(...MirrorPlane, ...MirrorPlane));
+
       };
       #endif
     };
