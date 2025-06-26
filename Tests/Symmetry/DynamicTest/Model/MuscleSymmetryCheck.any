@@ -284,8 +284,8 @@ AnyFolder SymmetryCheck= {
 
       #if BM_TRUNK_THORACIC_MODEL == _THORACIC_MODEL_FLEXIBLE_
         ComparePtrArrays rib_inertia_pos() = {
-          Array1 = ObjGetMember(ObjSearchRecursive("Main.HumanModel.BodyModel.Trunk.Segments.Right", "*", "AnyInertia"), "r");
-          Array2 = ObjGetMember(ObjSearchRecursive("Main.HumanModel.BodyModel.Trunk.Segments.Left", "*", "AnyInertia"), "r");
+          Array1 = ObjGetMember(ObjSearchRecursive("Main.HumanModel.BodyModel.Trunk.Segments.Right", "*", "AnyInertia"), "sCoM");
+          Array2 = ObjGetMember(ObjSearchRecursive("Main.HumanModel.BodyModel.Trunk.Segments.Left", "*", "AnyInertia"), "sCoM");
           MirrorMatrix = ...MirrorMatrix;
         };
 
