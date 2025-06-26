@@ -363,19 +363,15 @@ Finger5MetaRef = {
         AnyFunTransform3D &Scale =.Scale;
       };
 
-    AnyRefNode RadioCarpalFlexion = {
-    //Wrist joint location
-    sRel =..Scale(.Data.RadioCarpalFlexion_pos*.Mirror );
-    /// wrist joint flexion axis is defined from joint center pointing to radialStylo and using the MCP2 and MCP5 midpoint
-    ARel = RotMat(sRel,.Scale(.Data.RadiolStyloInNeutralConf_pos*.Mirror),  0.5*(.Scale(.Data.MCP2_Distal_pos*.Mirror)+ .Scale(.Data.MCP5_Distal_pos*.Mirror)))*RotMat(0.5*pi,y);
-  };
+
 
   AnyRefNode RadioCarpalDeviation = {
     // wrist joint is defined from the two epicondyle bony landmarks
-    sRel =.Scale(.Data.RadioCarpalDeviation_pos*.Mirror );
-    ARel =.RadioCarpalFlexion.ARel*RotMat(0.5*pi,z)*RotMat(pi,x);  //note here we re-use the axis from RadioCarpalFlexion but flip it around this ensures the flexion and deviation axes are orthogonal
+    sRel =.Scale(.Data.RadioCarpalDeviation_pos*.Mirror +{0.015,0.0,0}*.Mirror);
+    //Note first rotations is because of difference in simple and detailed hans seg coordinate systems
+    ARel =RotMat(pi*0.5,z)* RotMat(-pi*0.5,x)* ...WristJointSeg.RadioCarpalFlexion.ARel*RotMat(0.5*pi,z)*RotMat(pi,x);  //note here we re-use the axis from RadioCarpalFlexion but flip it around this ensures the flexion and deviation axes are orthogonal
   };
-
+  
 
      AnyRefNode wj={
         sRel=.Scale({-0.005,0.005,....Sign*-0.005} + {0.005, -0.001433, ....Sign*0.001099}); //corrected
