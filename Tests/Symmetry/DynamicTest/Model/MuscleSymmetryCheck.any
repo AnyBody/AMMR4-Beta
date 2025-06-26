@@ -298,7 +298,8 @@ AnyFolder SymmetryCheck= {
           ComparePtrArrays scoms() = {
             Array1 = .right;
             Array2 = .left;
-          MirrorMatrix = ...MirrorMatrix;
+            MirrorMatrix = ....MirrorMatrix;
+
           };
 
           /// Segments and nested objects that have a scom with z-axis=0
