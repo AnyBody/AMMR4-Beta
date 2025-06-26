@@ -259,7 +259,8 @@ AnyFolder SymmetryCheck= {
         ComparePtrArrays abdom_pos() = {
           Array1 = ObjSearchRecursive("Main.HumanModel.BodyModel.Trunk.Abdominal", "*.Right.*.r");
           Array2 = ObjSearchRecursive("Main.HumanModel.BodyModel.Trunk.Abdominal", "*.Left.*.r");
-         MirrorMatrix = ...MirrorMatrix;
+           MirrorMatrix = ...MirrorMatrix;
+
         };
       #endif
 
@@ -283,8 +284,8 @@ AnyFolder SymmetryCheck= {
 
       #if BM_TRUNK_THORACIC_MODEL == _THORACIC_MODEL_FLEXIBLE_
         ComparePtrArrays rib_inertia_pos() = {
-          Array1 = ObjGetMember(ObjSearchRecursive("Main.HumanModel.BodyModel.Trunk.Segments.Right", "*", "AnyInertia"), "r");
-          Array2 = ObjGetMember(ObjSearchRecursive("Main.HumanModel.BodyModel.Trunk.Segments.Left", "*", "AnyInertia"), "r");
+          Array1 = ObjGetMember(ObjSearchRecursive("Main.HumanModel.BodyModel.Trunk.Segments.Right", "*", "AnyInertia"), "sCoM");
+          Array2 = ObjGetMember(ObjSearchRecursive("Main.HumanModel.BodyModel.Trunk.Segments.Left", "*", "AnyInertia"), "sCoM");
           MirrorMatrix = ...MirrorMatrix;
         };
 
@@ -297,7 +298,8 @@ AnyFolder SymmetryCheck= {
           ComparePtrArrays scoms() = {
             Array1 = .right;
             Array2 = .left;
-          MirrorMatrix = ...MirrorMatrix;
+            MirrorMatrix = ....MirrorMatrix;
+
           };
 
           /// Segments and nested objects that have a scom with z-axis=0
@@ -363,7 +365,8 @@ AnyFolder SymmetryCheck= {
         ComparePtrArrays actuators() = {
           Array1 = ObjSearchRecursive("Main.HumanModel.BodyModel.Trunk.Joints.RibCage.Right", "*.Fout");
           Array2 = ObjSearchRecursive("Main.HumanModel.BodyModel.Trunk.Joints.RibCage.Left", "*.Fout");
-         MirrorMatrix = diag(arrcat(..MirrorPlane,..MirrorPlane));
+          MirrorMatrix = diag(arrcat(...MirrorPlane, ...MirrorPlane));
+
       };
       #endif
     };
