@@ -259,7 +259,7 @@ AnyFolder SymmetryCheck= {
         ComparePtrArrays abdom_pos() = {
           Array1 = ObjSearchRecursive("Main.HumanModel.BodyModel.Trunk.Abdominal", "*.Right.*.r");
           Array2 = ObjSearchRecursive("Main.HumanModel.BodyModel.Trunk.Abdominal", "*.Left.*.r");
-           MirrorMatrix = ....MirrorMatrix;
+           MirrorMatrix = ...MirrorMatrix;
 
         };
       #endif
