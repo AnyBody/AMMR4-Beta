@@ -792,24 +792,33 @@ AnySeg Radius ={
 //This seg is introduced because the flexion extension axis in the wrist is not coincident with the Radio ulnar deviation axis
 //Sources for the 5 mm "A kinematic model of the upper limb based on the visible human project (VHP) image dataset, Pandy et.al. 1999"
 AnySeg WristJointSeg ={
+   AnyMat33 Mirror={{1,0,0},{0,..Sign,0},{0,0,1}};
+  AnyFolder &Data = ..Data.unscaled.ModelParameters.HandSeg.SimpleHandSeg;
   Mass=0;
   Jii={0,0,0};
   AnyFunTransform3D &Scale = .Hand.Scale;  //This small seg scales with the hand
-    r0=.Radius.RadioCarpal.sRel*.Radius.Axes0'+.Radius.r0-RadioCarpalFlexion.sRel*Axes0';
-//#if  BM_ARM_DETAILED_HAND == ON
-//  AnyRefNode RadioCarpalFlexion={sRel={0.00,0,0};};
-//  AnyRefNode RadioCarpalDeviation={sRel={-0.005,0,0};};
-//#else
-  AnyRefNode RadioCarpalFlexion={
-    sRel = ..Hand.Ref.RadioCarpalFlexion.sRel;
-    ARel =..Hand.Ref.RadioCarpalFlexion.ARel;
-  };
-  AnyRefNode RadioCarpalDeviation={
-    sRel=..Hand.Ref.RadioCarpalDeviation.sRel;
-    ARel =..Hand.Ref.RadioCarpalDeviation.ARel;
+  r0=.Radius.RadioCarpal.sRel*.Radius.Axes0'+.Radius.r0-RadioCarpalFlexion.sRel*Axes0';
+  
+
+//Note depending on the joint configuration this node may not be used directly
+//Wrist joint seg and hand share scaling function
+//We construct the RadiocarpalFlexion axis here and the wrist joint seg utilize directly the scaled sRel and ARels
+//The distance between flexion and deviation axis is 5 mm for an unscaled model. Sources for the 5 mm "A kinematic model of the upper limb based on the visible human project (VHP) image dataset, Pandy et
+ AnyRefNode RadioCarpalFlexion = {
+    //Wrist joint location
+    sRel =.Scale(.Data.RadioCarpalFlexion_pos*.Mirror );
+    /// wrist joint flexion axis is defined from joint center pointing to radialStylo and using the MCP2 and MCP5 midpoint
+    ARel =RotMat(sRel,.Scale(.Data.RadiolStyloInNeutralConf_pos*.Mirror),  0.5*(.Scale(.Data.MCP2_Distal_pos*.Mirror)+ .Scale(.Data.MCP5_Distal_pos*.Mirror)));
   };
 
-//#endif
+  AnyRefNode RadioCarpalDeviation = {
+    // wrist joint is defined from the two epicondyle bony landmarks
+    sRel =.Scale(.Data.RadioCarpalDeviation_pos*.Mirror );
+    ARel =.RadioCarpalFlexion.ARel*RotMat(0.5*pi,z)*RotMat(pi,x);  //note here we re-use the axis from RadioCarpalFlexion but flip it around this ensures the flexion and deviation axes are orthogonal
+  };
+
+
+
 
 };
 #endif
