@@ -792,7 +792,7 @@ AnySeg Radius ={
 //This seg is introduced because the flexion extension axis in the wrist is not coincident with the Radio ulnar deviation axis
 //Sources for the 5 mm "A kinematic model of the upper limb based on the visible human project (VHP) image dataset, Pandy et.al. 1999"
 AnySeg WristJointSeg ={
-   AnyMat33 Mirror={{1,0,0},{0,..Sign,0},{0,0,1}};
+   AnyMat33 Mirror={{1,0,0},{0,1,0},{0,0,..Sign}};
   AnyFolder &Data = ..Data.unscaled.ModelParameters.HandSeg.SimpleHandSeg;
   Mass=0;
   Jii={0,0,0};
