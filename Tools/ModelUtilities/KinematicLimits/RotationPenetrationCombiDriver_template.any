@@ -205,8 +205,8 @@ See below for more information on how to use the class.
           };
           
           //draw outline
-          AnyDrawPointCloud DrawVector = {
-            Visible = ....Settings.BoxVisibility;
+          AnyDrawPointCloud DrawCornerOutline = {
+            Visible ??= ....Settings.BoxVisibility;
             Points = .Node_sRels;
             Points3D = On;
             RGB={0,0,1};
@@ -216,13 +216,22 @@ See below for more information on how to use the class.
             VectorFields =take(.Node_sRels,bump,0)-.Node_sRels;
           };
           
+          //draw penetration plane
+          AnySurfTriMesh DrawPenetrationPlane = {
+            Points = ....Corners + repmat(4,{{0,0,....Settings.DepthLowerLimit}*.MidNode.ARel'});
+            Quadrilaterals = {{0,1,2,3}};
+            viewSurface.Visible ??= ....Settings.BoxVisibility;
+            viewSurface.Opacity = 0.3;
+            viewSurface.RGB = {0,0,1};
+          };
+          
           Node_ARels = {
             RotMat(Node_sRels[0],Node_sRels[1],Node_sRels[2]),
             RotMat(Node_sRels[1],Node_sRels[2],Node_sRels[3]),
             RotMat(Node_sRels[2],Node_sRels[3],Node_sRels[0]),
             RotMat(Node_sRels[3],Node_sRels[0],Node_sRels[1])
           };
-        };         
+        };
       };
       
       AnyKinMeasureOrg Measures ={
