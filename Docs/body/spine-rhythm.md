@@ -61,7 +61,7 @@ flexion rhythm for the lumbar spine.
 The rhythm coefficients were derived from a review of spine literature. The
 values for spine and vertebra range-of-motion vary significantly in published
 studies, and no single complete dataset was found. Consequently, the rhythm
-presented here is a composite, designed to provide the most consistent and
+presented here is a composite set, designed to provide the most consistent and
 average set of rhythm coefficients. The two curves for the thoracic flexion
 rhythm is because this rhythm is defined as a bilinear rhythm with different
 coefficients for the positive and negative direction. The papers used to derive
