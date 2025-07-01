@@ -261,10 +261,14 @@ See below for more information on how to use the class.
       
       AnyFunInterpol Fun ={
         T=farr(-10.0,0.01,20*100);
-        Data={iffun(ltfun(T,0),1.0-..Settings.UsePlaneBordersForBoundsCheck,..Settings.WeightWithinBoundsFun)};
+        Data={iffun(ltfun(T,0),
+                    // When T<0, use WeightWithinBoundsFun if UsePlaneBordersForBoundsCheck is approx 0, otherwise set to 0.0
+                    iffun(ltfun(abs(..Settings.UsePlaneBordersForBoundsCheck),0.00001), ..Settings.WeightWithinBoundsFun, 0.0),
+                    // When T>=0, use WeightWithinBoundsFun
+                    ..Settings.WeightWithinBoundsFun)};
         Type=Bspline;
       };
-
+      
       
       AnyKinMeasureFunComb1 InSideBounds = {
         Functions={&.Fun,&.Fun,&.Fun,&.Fun};
@@ -324,8 +328,13 @@ See below for more information on how to use the class.
         };  
         MeasureOrganizer ={2};
       }; 
-      
-      AnyInt DepthTest = warn(orfun(gtfun(abs(C0_C1_C2_C3.Pos[0]-1.0),0.00001),gteqfun(Depth.Pos[0],.Settings.DepthLowerLimit)), 
+      // Send warning if load-time position of target frame is below the penetration plane (both conditions must fail)
+      AnyInt DepthTest = warn(orfun(
+                                    // check if target frame is outside the bounds from the corners, considering its weight function
+                                    ltfun(abs(C0_C1_C2_C3.Pos[0]),0.00001*.Settings.WeightWithinBoundsFun^4),
+                                    // check if target frame is above the penetration plane
+                                    gteqfun(Depth.Pos[0],.Settings.DepthLowerLimit)
+                                    ), 
       strformat("\n"+
       "------------------------------------------------------------------------------------------------------\n"+
       "WARNING: The target frame is located below the penetration plane as calculated from the corners \n"+
