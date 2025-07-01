@@ -9,7 +9,7 @@ The model is currently in a beta state. It may lack some functionality.
 
 AnyBody Technology, in corporation with Glasgow Caledonian
 University and University of Maastricht inside the [AFootprint EU project](https://web.archive.org/web/20190502001603/https://www.afootprint.eu/),
-developed a detailed multisegmental foot model, which is fully dynamic and
+developed a detailed multisegmented foot model, which is fully dynamic and
 contains 26 segments representing all the foot bones, muscles,
 ligaments, and joints connecting them.
 
@@ -56,7 +56,7 @@ The GM foot model can be used in one of the following configurations:
 
     :::{admonition} **Kinematic improvement only**
     :class: warning
-    The Toe Flexion configuration is intendended for kinematic improvements only. Please don't use it to evaluate
+    The Toe Flexion configuration is intended for kinematic improvements only. Please don't use it to evaluate
     intrinsic loads in the foot!
     :::
 
