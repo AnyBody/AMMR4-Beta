@@ -543,13 +543,12 @@ UseC3DWeightResiduals=ON
 #ifdef _RFIN
 // Marker on the Right Finger
 CreateMarkerDriver RFIN (
-MarkerPlacement=Right.ShoulderArm.Segments.Hand,
-PlaceMarkerAt=AnatomicalFrame,
+MarkerPlacement=Right.ShoulderArm.Segments.Hand.Carpals,
+PlaceMarkerAt=HandMid,
 OptX=OFF ,OptY=ON,OptZ=OFF,
 UseC3DWeightResiduals=ON
 ) = {
-  //sRelOpt = {-0.065,-0.03,0.02};
-  sRelOpt = {-0.02,-0.065,-0.0};
+  sRelOpt = {0.0, 0.0, 0.0};
 };
 #endif
 
@@ -557,13 +556,12 @@ UseC3DWeightResiduals=ON
 #ifdef _LFIN
 // Marker on the Left Finger
 CreateMarkerDriver LFIN (
-MarkerPlacement=Left.ShoulderArm.Segments.Hand,
-PlaceMarkerAt=AnatomicalFrame,
+MarkerPlacement=Left.ShoulderArm.Segments.Hand.Carpals,
+PlaceMarkerAt=HandMid,
 OptX=OFF ,OptY=ON,OptZ=OFF,
 UseC3DWeightResiduals=ON
 ) = {
- // sRelOpt = {-0.065,-0.03,-0.02};
- sRelOpt = {-0.02,-0.065,0.0};
+  sRelOpt = {0.0, 0.0, 0.0};
 
 };
 #endif

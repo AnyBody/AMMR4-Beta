@@ -75,6 +75,9 @@ AnyInertiaSolid BoneInertiaObject = {
 
   AnyRefNode Ref={
 
+  AnyFunTransform3D& Scale = .Scale;
+  AnyFolder& ScalingNode = .ScalingNode;
+
 
   //Note depending on the joint configuration this node may not be used directly
   //Wrist joint seg and hand share scaling function
@@ -113,6 +116,7 @@ AnyInertiaSolid BoneInertiaObject = {
 
    AnyRefNode PalmJoint                                 = { sRel = ..Scale(..Data.PalmJoint_pos                                *..Mirror); };
    AnyRefNode Hand                                      = { sRel = ..Scale(..Data.Hand_pos                                     *..Mirror); };
+   AnyRefNode HandMid                                  = { sRel = ..Scale(..Data.Hand_mid_pos                                 *..Mirror); };
    AnyRefNode Via1_Extensor_Indicis                     = { sRel = ..Scale(..Data.Via1_Extensor_Indicis_pos                    *..Mirror); };
    AnyRefNode I_Extensor_Indicis                        = { sRel = ..Scale(..Data.I_Extensor_Indicis_pos                       *..Mirror); };
    AnyRefNode I_Extensor_Pollicis_Longus                = { sRel = ..Scale(..Data.I_Extensor_Pollicis_Longus_pos               *..Mirror); };
