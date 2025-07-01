@@ -4,7 +4,7 @@ The spine rhythm is a set of drivers which can be used to reduces the degrees of
 fredom of the spine and makes the spine model easier to use without the need to
 specify how every vertebra should move.
 
-The spine rhythms is also a set of coefficients which speficies how the spine
+The spine rhythms consists of a set of coefficients which specifies how the spine
 should move as function of the overall spine motion. The spine rhythm
 coefficients are documented on this page which also show how to overwrite the
 default coefficients with your own data.
