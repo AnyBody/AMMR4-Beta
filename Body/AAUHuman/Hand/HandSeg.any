@@ -369,7 +369,7 @@ Finger5MetaRef = {
     // wrist joint is defined from the two epicondyle bony landmarks
     sRel =.Scale(.Data.RadioCarpalDeviation_pos*.Mirror +{0.015,0.0,0}*.Mirror);
     //Note first rotations is because of difference in simple and detailed hans seg coordinate systems
-    ARel =RotMat(pi*0.5,z)* RotMat(-pi*0.5,x)* ...WristJointSeg.RadioCarpalFlexion.ARel*RotMat(0.5*pi,z)*RotMat(pi,x);  //note here we re-use the axis from RadioCarpalFlexion but flip it around this ensures the flexion and deviation axes are orthogonal
+    ARel =RotMat(pi*0.5,z)* RotMat(-pi*0.5,x)* ...WristJointSeg.RadioCarpalFlexion.ARel*RotMat(0.5*pi,z)*RotMat(pi,x)*RotMat((1-....Sign)*pi*0.5,x);  //note here we re-use the axis from RadioCarpalFlexion but flip it around this ensures the flexion and deviation axes are orthogonal
   };
   
 
