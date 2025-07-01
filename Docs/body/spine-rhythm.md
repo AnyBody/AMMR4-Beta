@@ -40,7 +40,7 @@ The class templates encapsulate the complex rhythm implementation which uses
 classes `AnyKinFunComb` and `AnyKinMeasureFunComb1` to combine and transform
 kinematic measures into a single kinematic measure. It is easy to see the
 underlying code by right-clicking the class template in the AnyScript editor and
-select `Go to definition`.
+selecting `Go to definition`.
 
 In the model the spine rhythm is comprised of many different rhythms which are
 linked together with other rhythms. This is done so rhythms can be activated as needed
