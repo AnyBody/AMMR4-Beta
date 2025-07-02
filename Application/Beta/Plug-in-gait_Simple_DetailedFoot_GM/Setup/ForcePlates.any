@@ -1,13 +1,13 @@
-Main.EnvironmentModel.ForcePlates = 
+Main.EnvironmentModel.ForcePlates =
 {
 
-  // See forceplate specification for which option 
+  // See forceplate specification for which option
   // are available for the ForcePlateAutoDetection class:
   // #include "<ANYMOCAP_PATH>/ForcePlates/ForcePlateAutoDetection.any"
-  // The ``ALLOW_MULTI_LIMB_CONTACT=OFF`` ensures the class can't create contact 
+  // The ``ALLOW_MULTI_LIMB_CONTACT=OFF`` ensures the class can't create contact
   // with both limbs simulatenously
-  
-  
+
+
   // NOTE IN THIS SPECIAL CASE THE LIMITS ARE VERY HIGH THIS IS BY PURPOSE
   //WE USE THE PLATE ONLY TO GET DATA INTO THE MODEL NOT TO APPLY THEM
   ForcePlateAutoDetection Plate1(
@@ -18,10 +18,8 @@ Main.EnvironmentModel.ForcePlates =
     ALLOW_MULTI_LIMB_CONTACT = OFF,
     LIMB1 = Main.HumanModel.BodyModel.Right.Leg.Seg.Foot,
     LIMB2 = Main.HumanModel.BodyModel.Right.Leg.Seg.Foot,
-    CONTACT_NODE1 = Calcaneus.HeelStrikeNode,
-    CONTACT_NODE2 = Calcaneus.HeelStrikeNode,
     HeightTolerance = -1000,
-    VelThreshold = -1000 
+    VelThreshold = -1000
 
   ) = { };
 

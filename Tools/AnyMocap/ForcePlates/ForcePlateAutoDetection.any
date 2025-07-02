@@ -90,10 +90,10 @@ See below for more details
   //  the collateral limb. (Defaults to ON)
   // ForcePlateAutoDetection#CONTACT_NODE1
   //   The node on LIMB1/2 used for contact detection. Change this if you are connecting
-  //   to something different than the feet. (Defaults to: HeelContactNodeLow)
+  //   to something different than the feet. (Defaults to: Calcaneus.HeelContactNodeLow)
   // ForcePlateAutoDetection#CONTACT_NODE2
   //   The node on LIMB1/2 used for contact detection. Change this if you are connecting
-  //   to something different than the feet. (Defaults to: ToeLateralContactNode)
+  //   to something different than the feet. (Defaults to: Metatarsal5.ToeLateralContactNode)
   // ForcePlateAutoDetection#CREATE_KIN_GRF
   //   Create a kinematic representation of the ground reaction force vector. This is experimental
   //   but could be used to include the GRF vector in the parameter optimization. (Defaults to OFF)
