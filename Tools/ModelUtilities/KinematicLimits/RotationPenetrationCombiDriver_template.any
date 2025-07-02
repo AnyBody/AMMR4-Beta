@@ -329,12 +329,14 @@ See below for more information on how to use the class.
         MeasureOrganizer ={2};
       }; 
       // Send warning if load-time position of target frame is below the penetration plane (both conditions must fail)
-      AnyInt DepthTest = warn(orfun(
-                                    // check if target frame is outside the bounds from the corners, considering its weight function
-                                    ltfun(abs(C0_C1_C2_C3.Pos[0]),0.00001*.Settings.WeightWithinBoundsFun^4),
-                                    // check if target frame is above the penetration plane
-                                    gteqfun(Depth.Pos[0],.Settings.DepthLowerLimit)
-                                    ), 
+      AnyInt DepthTest = warn(iffun(eqfun(System.LoadedModel.LoadComplete, "Off"),
+                                orfun(
+                                      // check if target frame is outside the bounds from the corners, considering its weight function
+                                      ltfun(abs(C0_C1_C2_C3.Pos[0]),0.00001*.Settings.WeightWithinBoundsFun^4),
+                                      // check if target frame is above the penetration plane
+                                      gteqfun(Depth.Pos[0],.Settings.DepthLowerLimit)
+                                      ),
+                                  1),
       strformat("\n"+
       "------------------------------------------------------------------------------------------------------\n"+
       "WARNING: The target frame is located below the penetration plane as calculated from the corners \n"+
@@ -342,8 +344,7 @@ See below for more information on how to use the class.
       "settings (Corners, DepthLowerLimit) to ensure the target frame is above the penetration plane, \n"+
       "and therefore, kinematic stability.\n"+
       "------------------------------------------------------------------------------------------------------"));
-      AnyString loadcheck = iffun(System.LoadedModel.LoadComplete,"LoadCompete","Load not complete");
-
+      
       AnyFunInterpol FunDepth ={
         T=farr(-10.0,0.001,20*1000);
         Data={..Settings.ErrorAtDepthLowerLimitHard*smoothramp(..Settings.DepthLowerLimit,..Settings.DepthLowerLimitHard,T)};
