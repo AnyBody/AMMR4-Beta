@@ -41,7 +41,7 @@ AnyKinMeasureOrg SternoClavicularAxialRotation ={
 //This measure will be zero when SC protraction and SternoClavicularProtraction is -23 and SternoClavicularElevationVec is 11.5
 AnyKinMeasureOrg SternoClavicularProtraction_Postural = {
   AnyKinRotational SCRot = {
-    AnyRefNode &thorax = .....Trunk.Segments.PelvisSeg.ScalingNode;
+    AnyRefNode &thorax = .....Trunk.Segments.SternumSeg.ScalingNode;
     AnyRefNode &clavicula = ...Segments.Clavicula.PosturalFrame;
     Type = RotAxesAngles;
     Axis1 = x;
@@ -241,6 +241,9 @@ AnyFolder ThoraxHumerus =
     };
 
     AnyKinRotational GHRot = {
+      
+      Pos0 = {0,1,0}; //we would like to have a solution with positive elevation this starting guess makes this more "likely"
+      
       AnyRefNode& ref1  = .ThoraxShoulderISB.RotNodeElevPlane;
       AnyRefNode& ref2  = .HumerusISB.RotNodeElevPlane;
 
@@ -263,6 +266,60 @@ AnyFolder ThoraxHumerus =
   };
 
 };
+
+
+///This is a "processed" version of the ThoraxHumerus measure
+///If Elevation is negative it will flip all signs on the ThoraxHumerus measure
+///This can be needed since a rotational measure can return multiple solutions for same position, and if used e.g. in rhythms this cause issues
+AnyFolder ThoraxHumerus_Positive_Elevation ={
+  
+  AnyFunInterpol SignFunction ={
+    T ??= farr(-400.0,0.5,1600)*pi/180;
+    Data ??=  {iffun(gteqfun(T,0),1.0,-1.0)};
+    Type = Bspline;
+  };
+  
+  AnyKinMeasureFunComb1 ElevationSign =   {
+    AnyKinMeasure& HumerusElevationPlane = ..ThoraxHumerus.Elevation;
+    Functions = {&.SignFunction};
+  };
+  
+  AnyKinMeasureQuadComb FlipSigns = {
+    AnyKinMeasureOrg &ref1 = ..ThoraxHumerus.PlaneOfElevation;
+    AnyKinMeasureOrg &ref2 = ..ThoraxHumerus.Elevation;
+    AnyKinMeasureOrg &ref3 = ..ThoraxHumerus.InternalAxialRotation;
+    AnyKinMeasureFunComb1 &ref4 =   .ElevationSign;
+    
+    OutDim = 3;
+    CoefQuadTensor = {
+      {
+        {0,0,0,1},
+        {0,0,0,0},
+        {0,0,0,0},
+        {0,0,0,0} 
+      },
+      {
+        {0,0,0,0},
+        {0,0,0,1},
+        {0,0,0,0},
+        {0,0,0,0} 
+      },
+      {
+        {0,0,0,0},
+        {0,0,0,0},
+        {0,0,0,1},
+        {0,0,0,0} 
+      }
+    };      
+  };
+  AnyKinMeasureOrg PlaneOfElevation ={       AnyKinMeasureQuadComb& ref=.FlipSigns;    MeasureOrganizer = {0};  };
+  AnyKinMeasureOrg Elevation ={              AnyKinMeasureQuadComb& ref=.FlipSigns;    MeasureOrganizer = {1};  };
+  AnyKinMeasureOrg InternalAxialRotation ={  AnyKinMeasureQuadComb& ref=.FlipSigns;    MeasureOrganizer = {2};  };
+  
+  
+};
+
+
 
 AnyKinMeasureOrg ScapulaThoraxProtraction =
 {
