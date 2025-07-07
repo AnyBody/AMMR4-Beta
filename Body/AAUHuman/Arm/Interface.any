@@ -242,7 +242,9 @@ AnyFolder ThoraxHumerus =
 
     AnyKinRotational GHRot = {
       
+      #if (ANYBODY_V1 > 8) | (ANYBODY_V1 == 8 & ANYBODY_V2 > 2) | (ANYBODY_V1 == 8 & ANYBODY_V2 == 2 & ANYBODY_V4 >= 13305 )
       Pos0 = {0,1,0}; //we would like to have a solution with positive elevation this starting guess makes this more "likely"
+      #endif
       
       AnyRefNode& ref1  = .ThoraxShoulderISB.RotNodeElevPlane;
       AnyRefNode& ref2  = .HumerusISB.RotNodeElevPlane;
