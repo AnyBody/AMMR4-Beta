@@ -541,12 +541,12 @@ See below for more details
  AnyFolder CopCalculations = {
 
    AnyVector T =  .Time;
-   AnyVector fx = .ForcePlate.load.Data[0] + .ForcePlate.BaselineOffset.Fx;
-   AnyVector fy = .ForcePlate.load.Data[1] + .ForcePlate.BaselineOffset.Fy;
-   AnyVector fz = .ForcePlate.load.Data[2] + .ForcePlate.BaselineOffset.Fz;
-   AnyVector mx =  (1/1000)*.ForcePlate.load.Data[3] + .ForcePlate.BaselineOffset.Mx*C3D_OBJECT.PointsScaleFactor;
-   AnyVector my =  (1/1000)*.ForcePlate.load.Data[4] + .ForcePlate.BaselineOffset.My*C3D_OBJECT.PointsScaleFactor;
-   AnyVector mz =  (1/1000)*.ForcePlate.load.Data[5] + .ForcePlate.BaselineOffset.Mz*C3D_OBJECT.PointsScaleFactor;
+   AnyVector fx = .ForcePlate.load.Data[0];
+   AnyVector fy = .ForcePlate.load.Data[1];
+   AnyVector fz = .ForcePlate.load.Data[2];
+   AnyVector mx =  C3D_OBJECT.PointsScaleFactor*.ForcePlate.load.Data[3];
+   AnyVector my =  C3D_OBJECT.PointsScaleFactor*.ForcePlate.load.Data[4];
+   AnyVector mz =  C3D_OBJECT.PointsScaleFactor*.ForcePlate.load.Data[5];
 
    AnyVector norm = vnorm({fx,fy,fz}');
 
