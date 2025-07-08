@@ -116,7 +116,7 @@ See below for more details
     #var AnyFloat ORIGIN = reshape(C3D_OBJECT.Groups.FORCE_PLATFORM.ORIGIN.Data, {USED, 3});
     #var AnyIntVar MaxChannels = iffun(sum(eqfun(3, TYPE)), 8, 6);
     #var AnyInt CHANNEL = reshape(C3D_OBJECT.Groups.FORCE_PLATFORM.CHANNEL.Data, {USED, MaxChannels});
-    #var AnyInt ZERO = reshape(C3D_OBJECT.Groups.FORCE_PLATFORM.ZERO.Data, {USED});
+    #var AnyInt ZERO = reshape(C3D_OBJECT.Groups.FORCE_PLATFORM.ZERO.Data, {2});
   };
 
   AnyInt ForcePlateType = ForcePlateInfo.TYPE[PLATE_NO-1];
