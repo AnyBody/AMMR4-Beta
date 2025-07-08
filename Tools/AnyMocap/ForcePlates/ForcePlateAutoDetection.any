@@ -544,9 +544,9 @@ See below for more details
    AnyVector fx = .ForcePlate.load.Data[0] + .ForcePlate.BaselineOffset.Fx;
    AnyVector fy = .ForcePlate.load.Data[1] + .ForcePlate.BaselineOffset.Fy;
    AnyVector fz = .ForcePlate.load.Data[2] + .ForcePlate.BaselineOffset.Fz;
-   AnyVector mx =  (1/1000)*.ForcePlate.load.Data[3] + .ForcePlate.BaselineOffset.Mx;
-   AnyVector my =  (1/1000)*.ForcePlate.load.Data[4] + .ForcePlate.BaselineOffset.My;
-   AnyVector mz =  (1/1000)*.ForcePlate.load.Data[5] + .ForcePlate.BaselineOffset.Mz;
+   AnyVector mx =  (1/1000)*.ForcePlate.load.Data[3] + .ForcePlate.BaselineOffset.Mx*C3D_OBJECT.PointsScaleFactor;
+   AnyVector my =  (1/1000)*.ForcePlate.load.Data[4] + .ForcePlate.BaselineOffset.My*C3D_OBJECT.PointsScaleFactor;
+   AnyVector mz =  (1/1000)*.ForcePlate.load.Data[5] + .ForcePlate.BaselineOffset.Mz*C3D_OBJECT.PointsScaleFactor;
 
    AnyVector norm = vnorm({fx,fy,fz}');
 
@@ -565,7 +565,7 @@ See below for more details
    AnyVector Vy = (mx+originz*fy)/( _fz );
    AnyVector Vz = 0*Vy;
 
-   /*
+   
    AnyDrawSphere Draw_Calculated_COP =
    {
      RGB = {1,1,0};
@@ -583,7 +583,7 @@ See below for more details
         )
      );
    };
-   */
+   
 
 
    AnyFunInterpol GlobalCopFun =
