@@ -267,7 +267,7 @@
 
 
   AnyVar MaxLoad = max( vnorm(
-    {Obj2Num(Fx) - BaselineOffset.Fx, Obj2Num(Fy) - BaselineOffset.Fy, Obj2Num(Fz) - BaselineOffset.Fz}
+    {Obj2Num(Fx) + BaselineOffset.Fx, Obj2Num(Fy) + BaselineOffset.Fy, Obj2Num(Fz) + BaselineOffset.Fz}
     ) );
   AnyVar FzTotal = load(NetEffectMeasure.t)[2];
   AnyVar LoadRatio = vnorm(Force.Flocal)/(MaxLoad+0.0001);
@@ -306,12 +306,12 @@
     Type=PiecewiseLinear;
     T= .Time;
     Data= .CalMatrix'* {
-       Obj2Num(.Fx) - .BaselineOffset.Fx,
-       Obj2Num(.Fy) - .BaselineOffset.Fy,
-       Obj2Num(.Fz) - .BaselineOffset.Fz,
-       Obj2Num(.Mx) - .BaselineOffset.Mx,
-       Obj2Num(.My) - .BaselineOffset.My,
-       Obj2Num(.Mz) - .BaselineOffset.Mz,
+       Obj2Num(.Fx) + .BaselineOffset.Fx,
+       Obj2Num(.Fy) + .BaselineOffset.Fy,
+       Obj2Num(.Fz) + .BaselineOffset.Fz,
+       Obj2Num(.Mx) + .BaselineOffset.Mx,
+       Obj2Num(.My) + .BaselineOffset.My,
+       Obj2Num(.Mz) + .BaselineOffset.Mz,
      };
   };
 
