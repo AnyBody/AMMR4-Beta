@@ -540,12 +540,12 @@ See below for more details
  AnyFolder CopCalculations = {
 
    AnyVector T =  .Time;
-   AnyVector fx = .ForcePlate.load.Data[0];
-   AnyVector fy = .ForcePlate.load.Data[1];
-   AnyVector fz = .ForcePlate.load.Data[2];
-   AnyVector mx =  (1/1000)*.ForcePlate.load.Data[3];
-   AnyVector my =  (1/1000)*.ForcePlate.load.Data[4];
-   AnyVector mz =  (1/1000)*.ForcePlate.load.Data[5];
+   AnyVector fx = .ForcePlate.load.Data[0] + .ForcePlate.BaselineOffset.Fx;
+   AnyVector fy = .ForcePlate.load.Data[1] + .ForcePlate.BaselineOffset.Fy;
+   AnyVector fz = .ForcePlate.load.Data[2] + .ForcePlate.BaselineOffset.Fz;
+   AnyVector mx =  (1/1000)*.ForcePlate.load.Data[3] + .ForcePlate.BaselineOffset.Mx;
+   AnyVector my =  (1/1000)*.ForcePlate.load.Data[4] + .ForcePlate.BaselineOffset.My;
+   AnyVector mz =  (1/1000)*.ForcePlate.load.Data[5] + .ForcePlate.BaselineOffset.Mz;
 
    AnyVector norm = vnorm({fx,fy,fz}');
 
