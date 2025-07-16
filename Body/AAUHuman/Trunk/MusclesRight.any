@@ -1826,6 +1826,9 @@ MuscleGroup LongissimusCervicis = {
   };
 };
 
+///The longissimus thoracis is a component of the erector spinae muscle group. It consists of two parts: lumbar and thoracic.
+///The thoracic part inserts into the transverse processes of vertebrae T1 - T12 and the angles of ribs 3 - 12.
+/// Refrence: Bakkum, B.W., Cramer, G.D.: Muscles That Influence the Spine. In: Clinical Anatomy of the Spine, Spinal Cord, and Ans. pp. 98 - 134. Elsevier (2014) (DOI: 10.1016/B978-0-323-07954-9.00004-9)
 MuscleGroup LongissimusThoracis = {
   // Longissimus thoracis part lumbar (LTpl)
   AnyMuscleViaPoint LTplL1SIPS = {
