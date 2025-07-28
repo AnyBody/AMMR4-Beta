@@ -328,10 +328,10 @@ MuscleGroup Hyoid = {
   };
 };
 
-// Iliocostalis Cervicis (IC)
+// Iliocostalis Cervicis
 AnyFolder IliocostalisCervicis = {
   AnyMuscleViaPoint ICptR3C4 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ErectorSpinae.ICptR3C4;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisCervicis.ICptR3C4;
     AnyRefNode &Org = ....Segments.C4Seg.Right.ICptR3C4Node;
     AnyRefNode &Via1 = ....Segments.C7Seg.Right.ICptR3C4Via1Node;
     AnyRefNode &Via2 = ....Segments.Right.R1Seg.ICptR3C4Via2Node;
@@ -340,7 +340,7 @@ AnyFolder IliocostalisCervicis = {
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint ICptR4C5 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ErectorSpinae.ICptR4C5;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisCervicis.ICptR4C5;
     AnyRefNode &Org = ....Segments.C5Seg.Right.ICptR4C5Node;
     AnyRefNode &Via1 = ....Segments.C7Seg.Right.ICptR4C5Via1Node;
     AnyRefNode &Via2 = ....Segments.Right.R1Seg.ICptR4C5Via2Node;
@@ -350,7 +350,7 @@ AnyFolder IliocostalisCervicis = {
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint ICptR5C6 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ErectorSpinae.ICptR5C6;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisCervicis.ICptR5C6;
     AnyRefNode &Org = ....Segments.C6Seg.Right.ICptR5C6Node;
     AnyRefNode &Via1 = ....Segments.C7Seg.Right.ICptR5C6Via1Node;
     AnyRefNode &Via2 = ....Segments.Right.R1Seg.ICptR5C6Via2Node;
@@ -361,7 +361,7 @@ AnyFolder IliocostalisCervicis = {
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint ICptR6C4 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ErectorSpinae.ICptR6C4;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisCervicis.ICptR6C4;
     AnyRefNode &Org = ....Segments.C4Seg.Right.ICptR6C4Node;
     AnyRefNode &Via1 = ....Segments.C7Seg.Right.ICptR6C4Via1Node;
     AnyRefNode &Via2 = ....Segments.Right.R1Seg.ICptR6C4Via2Node;
@@ -375,9 +375,9 @@ AnyFolder IliocostalisCervicis = {
 }; // End of Iliocostalis cervicis
 
 AnyFolder IliocostalisLumborum = {
-  // Iliocostalis lumborum (IL)
+  // Iliocostalis lumborum
     AnyMuscleViaPoint ILplL1CI = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ErectorSpinae.ILplL1CI;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisLumborum.ILplL1CI;
     AnyRefNode &Org = ....Segments.L1Seg.ILplL1CINodeR;
     #if BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
     AnyRefNode &Via1 = ....Abdominal.Layer_L3.BaseSegPosterior.ILplL1CIViaNodeR;
@@ -389,28 +389,28 @@ AnyFolder IliocostalisLumborum = {
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint ILplL2CI = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ErectorSpinae.ILplL2CI;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisLumborum.ILplL2CI;
     AnyRefNode &Org = ....Segments.L2Seg.ILplL2CINodeR;
     AnyRefNode &Ins = ....Segments.PelvisSeg.ILplL2CINodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint ILplL3CI = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ErectorSpinae.ILplL3CI;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisLumborum.ILplL3CI;
     AnyRefNode &Org = ....Segments.L3Seg.ILplL3CINodeR;
     AnyRefNode &Ins = ....Segments.PelvisSeg.ILplL3CINodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint ILplL4CI = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ErectorSpinae.ILplL4CI;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisLumborum.ILplL4CI;
     AnyRefNode &Org = ....Segments.L4Seg.ILplL4CINodeR;
     AnyRefNode &Ins = ....Segments.PelvisSeg.ILplL4CINodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint ILptC5SIPS = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ErectorSpinae.ILptC5SIPS;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisLumborum.ILptC5SIPS;
     AnyRefNode &Org = ....Segments.Right.R5Seg.ILptC5SIPSNodeR;
     AnyRefNode &Via1 = ....Segments.Right.R6Seg.ILptC5SIPSVia1NodeR;
     AnyRefNode &Via2 = ....Segments.Right.R7Seg.ILptC5SIPSVia2NodeR;
@@ -431,7 +431,7 @@ AnyFolder IliocostalisLumborum = {
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint ILptC6SIPS = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ErectorSpinae.ILptC6SIPS;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisLumborum.ILptC6SIPS;
     AnyRefNode &Org = ....Segments.Right.R6Seg.ILptC6SIPSNodeR;
     AnyRefNode &Via1 = ....Segments.Right.R7Seg.ILptC6SIPSVia1NodeR;
     AnyRefNode &Via2 = ....Segments.Right.R8Seg.ILptC6SIPSVia2NodeR;
@@ -451,7 +451,7 @@ AnyFolder IliocostalisLumborum = {
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint ILptC7CI = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ErectorSpinae.ILptC7CI;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisLumborum.ILptC7CI;
     AnyRefNode &Org = ....Segments.Right.R7Seg.ILptC7CINodeR;
     AnyRefNode &Via1 = ....Segments.Right.R8Seg.ILptC7CIVia1NodeR;
     AnyRefNode &Via2 = ....Segments.Right.R9Seg.ILptC7CIVia2NodeR;
@@ -470,7 +470,7 @@ AnyFolder IliocostalisLumborum = {
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint ILptC8CI = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ErectorSpinae.ILptC8CI;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisLumborum.ILptC8CI;
     AnyRefNode &Org = ....Segments.Right.R8Seg.ILptC8CINodeR;
     AnyRefNode &Via1 = ....Segments.Right.R9Seg.ILptC8CIVia1NodeR;
     AnyRefNode &Via2 = ....Segments.Right.R10Seg.ILptC8CIVia2NodeR;
@@ -488,7 +488,7 @@ AnyFolder IliocostalisLumborum = {
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint ILptC9CI = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ErectorSpinae.ILptC9CI;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisLumborum.ILptC9CI;
     AnyRefNode &Org = ....Segments.Right.R9Seg.ILptC9CINodeR;
     AnyRefNode &Via1 = ....Segments.Right.R10Seg.ILptC9CIVia1NodeR;
     #if BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
@@ -505,7 +505,7 @@ AnyFolder IliocostalisLumborum = {
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint ILptC10CI = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ErectorSpinae.ILptC10CI;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisLumborum.ILptC10CI;
     AnyRefNode &Org = ....Segments.Right.R10Seg.ILptC10CINodeR;
     #if BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
     AnyRefNode &Via1 = ....Abdominal.Layer_L1.BaseSegPosterior.ILptC10CIVia1NodeR;
@@ -521,7 +521,7 @@ AnyFolder IliocostalisLumborum = {
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint ILptC11CI = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ErectorSpinae.ILptC11CI;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisLumborum.ILptC11CI;
     AnyRefNode &Org = ....Segments.Right.R11Seg.ILptC11CINodeR;
     #if BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
 //    AnyRefNode &Via1 = ....Abdominal.Layer_L2.BaseSegPosterior.ILptC11CIVia1NodeR;
@@ -535,7 +535,7 @@ AnyFolder IliocostalisLumborum = {
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint ILptC12CI = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ErectorSpinae.ILptC12CI;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisLumborum.ILptC12CI;
     AnyRefNode &Org = ....Segments.Right.R12Seg.ILptC12CINodeR;
     #if BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
 //    AnyRefNode &Via1 = ....Abdominal.Layer_L2.BaseSegPosterior.ILptC12CIVia1NodeR;
@@ -550,10 +550,10 @@ AnyFolder IliocostalisLumborum = {
   };
 }; // End of Iliocostalis lumborum
   
-// Iliocostalis Thoracis (IT)
+// Iliocostalis Thoracis
 AnyFolder IliocostalisThoracis = {
   AnyMuscleViaPoint ITC7R7 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ErectorSpinae.ITC7R7;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisThoracis.ITC7R7;
     AnyRefNode &Org = ....Segments.C7Seg.Right.ITC7R7NodeOrg;
     AnyRefNode &Via1 = ....Segments.Right.R1Seg.ITC7R7Via1NodeR;
     AnyRefNode &Via2 = ....Segments.Right.R2Seg.ITC7R7Via2NodeR;
@@ -567,7 +567,7 @@ AnyFolder IliocostalisThoracis = {
   };
   #if BM_TRUNK_THORACIC_MODEL == _THORACIC_MODEL_FLEXIBLE_
   AnyMuscleViaPoint ITR1R7 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ErectorSpinae.ITR1R7;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisThoracis.ITR1R7;
     AnyRefNode &Org = ....Segments.Right.R1Seg.ITR1R7NodeROrg;
     AnyRefNode &Via2 = ....Segments.Right.R2Seg.ITR1R7Via1NodeR;
     AnyRefNode &Via3 = ....Segments.Right.R3Seg.ITR1R7Via2NodeR;
@@ -579,7 +579,7 @@ AnyFolder IliocostalisThoracis = {
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint ITR2R8 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ErectorSpinae.ITR2R8;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisThoracis.ITR2R8;
     AnyRefNode &Org = ....Segments.Right.R2Seg.ITR2R8NodeROrg;
     AnyRefNode &Via2 = ....Segments.Right.R3Seg.ITR2R8Via1NodeR;
     AnyRefNode &Via3 = ....Segments.Right.R4Seg.ITR2R8Via2NodeR;
@@ -591,7 +591,7 @@ AnyFolder IliocostalisThoracis = {
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint ITR3R9 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ErectorSpinae.ITR3R9;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisThoracis.ITR3R9;
     AnyRefNode &Org = ....Segments.Right.R3Seg.ITR3R9NodeROrg;
     AnyRefNode &Via2 = ....Segments.Right.R4Seg.ITR3R9Via1NodeR;
     AnyRefNode &Via3 = ....Segments.Right.R5Seg.ITR3R9Via2NodeR;
@@ -603,7 +603,7 @@ AnyFolder IliocostalisThoracis = {
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint ITR4R10 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ErectorSpinae.ITR4R10;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisThoracis.ITR4R10;
     AnyRefNode &Org = ....Segments.Right.R4Seg.ITR4R10NodeROrg;
     AnyRefNode &Via2 = ....Segments.Right.R5Seg.ITR4R10Via1NodeR;
     AnyRefNode &Via3 = ....Segments.Right.R6Seg.ITR4R10Via2NodeR;
@@ -615,7 +615,7 @@ AnyFolder IliocostalisThoracis = {
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint ITR5R11 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ErectorSpinae.ITR5T11;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisThoracis.ITR5T11;
     AnyRefNode &Org = ....Segments.Right.R5Seg.ITR5R11NodeROrg;
     AnyRefNode &Via2 = ....Segments.Right.R6Seg.ITR5R11Via1NodeR;
     AnyRefNode &Via3 = ....Segments.Right.R7Seg.ITR5R11Via2NodeR;
@@ -627,7 +627,7 @@ AnyFolder IliocostalisThoracis = {
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint ITR6R12 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ErectorSpinae.ITR6T12;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisThoracis.ITR6T12;
     AnyRefNode &Org = ....Segments.Right.R6Seg.ITR6R12NodeR;
     AnyRefNode &Via2 = ....Segments.Right.R7Seg.ITR6R12Via1NodeR;
     AnyRefNode &Via3 = ....Segments.Right.R8Seg.ITR6R12Via2NodeR;
@@ -1830,9 +1830,9 @@ MuscleGroup LongissimusCervicis = {
 ///The thoracic part inserts into the transverse processes of vertebrae T1 - T12 and the angles of ribs 3 - 12.
 /// Refrence: Bakkum, B.W., Cramer, G.D.: Muscles That Influence the Spine. In: Clinical Anatomy of the Spine, Spinal Cord, and Ans. pp. 98 - 134. Elsevier (2014) (DOI: 10.1016/B978-0-323-07954-9.00004-9)
 MuscleGroup LongissimusThoracis = {
-  // Longissimus thoracis part lumbar (LTpl)
+  // Longissimus thoracis part lumbar
   AnyMuscleViaPoint LTplL1SIPS = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ErectorSpinae.LTplL1SIPS;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongissimusThoracis.LTplL1SIPS;
     AnyRefNode &Org = ....Segments.L1Seg.LTplL1SIPSNodeR;
     #if BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
     AnyRefNode &Via1 = ....Abdominal.Layer_L3.BaseSegPosterior.LTplL1SIPSViaNodeR;
@@ -1844,28 +1844,28 @@ MuscleGroup LongissimusThoracis = {
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint LTplL2SIPS = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ErectorSpinae.LTplL2SIPS;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongissimusThoracis.LTplL2SIPS;
     AnyRefNode &Org = ....Segments.L2Seg.LTplL2SIPSNodeR;
     AnyRefNode &Ins = ....Segments.PelvisSeg.LTplL2SIPSNodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint LTplL3SIPS = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ErectorSpinae.LTplL3SIPS;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongissimusThoracis.LTplL3SIPS;
     AnyRefNode &Org = ....Segments.L3Seg.LTplL3SIPSNodeR;
     AnyRefNode &Ins = ....Segments.PelvisSeg.LTplL3SIPSNodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint LTplL4SIPS = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ErectorSpinae.LTplL4SIPS;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongissimusThoracis.LTplL4SIPS;
     AnyRefNode &Org = ....Segments.L4Seg.LTplL4SIPSNodeR;
     AnyRefNode &Ins = ....Segments.PelvisSeg.LTplL4SIPSNodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint LTplL5Ilium = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ErectorSpinae.LTplL5Ilium;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongissimusThoracis.LTplL5Ilium;
     AnyRefNode &Org = ....Segments.L5Seg.LTplL5IliumNodeR;
     AnyRefNode &Ins = ....Segments.SacrumSeg.LTplL5IliumNodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -1873,9 +1873,9 @@ MuscleGroup LongissimusThoracis = {
   };
     // End of Longissimus thoracis part lumbar
 
-    // Longissimus thoracis part thoracis (LTpt)
+    // Longissimus thoracis part thoracis
   AnyMuscleViaPoint LTptT1L1 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ErectorSpinae.LTptT1L1;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongissimusThoracis.LTptT1L1;
     AnyRefNode &Org = ....Segments.T1Seg.LTptT1L1NodeR;
     AnyRefNode &Via1 = ....Segments.T2Seg.LTptT1L1Via1NodeR;
     AnyRefNode &Via2 = ....Segments.T3Seg.LTptT1L1Via2NodeR;
@@ -1893,7 +1893,7 @@ MuscleGroup LongissimusThoracis = {
     viewForce.Visible ??= Off;
   };  
   AnyMuscleViaPoint LTptT2L2 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ErectorSpinae.LTptT2L2;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongissimusThoracis.LTptT2L2;
     AnyRefNode &Org = ....Segments.T2Seg.LTptT2L2NodeR;
     AnyRefNode &Via1 = ....Segments.T3Seg.LTptT2L2Via1NodeR;
     AnyRefNode &Via2 = ....Segments.T4Seg.LTptT2L2Via2NodeR;
@@ -1911,7 +1911,7 @@ MuscleGroup LongissimusThoracis = {
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint LTptT3L3 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ErectorSpinae.LTptT3L3;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongissimusThoracis.LTptT3L3;
     AnyRefNode &Org = ....Segments.T3Seg.LTptT3L3NodeR;
     AnyRefNode &Via1 = ....Segments.T4Seg.LTptT3L3Via1NodeR;
     AnyRefNode &Via2 = ....Segments.T5Seg.LTptT3L3Via2NodeR;
@@ -1929,7 +1929,7 @@ MuscleGroup LongissimusThoracis = {
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint LTptT4L4 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ErectorSpinae.LTptT4L4;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongissimusThoracis.LTptT4L4;
     AnyRefNode &Org = ....Segments.T4Seg.LTptT4L4NodeR;
     AnyRefNode &Via1 = ....Segments.T5Seg.LTptT4L4Via1NodeR;
     AnyRefNode &Via2 = ....Segments.T6Seg.LTptT4L4Via2NodeR;
@@ -1947,7 +1947,7 @@ MuscleGroup LongissimusThoracis = {
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint LTptT5L5 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ErectorSpinae.LTptT5L5;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongissimusThoracis.LTptT5L5;
     AnyRefNode &Org = ....Segments.T5Seg.LTptT5L5NodeR;
     AnyRefNode &Via1 = ....Segments.T6Seg.LTptT5L5Via1NodeR;
     AnyRefNode &Via2 = ....Segments.T7Seg.LTptT5L5Via2NodeR;
@@ -1965,7 +1965,7 @@ MuscleGroup LongissimusThoracis = {
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint LTptT6S1 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ErectorSpinae.LTptT6S1;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongissimusThoracis.LTptT6S1;
     AnyRefNode &Org = ....Segments.T6Seg.LTptT6S1NodeR;
     AnyRefNode &Via1 = ....Segments.T7Seg.LTptT6S1Via1NodeR;
     AnyRefNode &Via2 = ....Segments.T8Seg.LTptT6S1Via2NodeR;
@@ -1983,7 +1983,7 @@ MuscleGroup LongissimusThoracis = {
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint LTptT7S2 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ErectorSpinae.LTptT7S2;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongissimusThoracis.LTptT7S2;
     AnyRefNode &Org = ....Segments.T7Seg.LTptT7S2NodeR;
     AnyRefNode &Via1 = ....Segments.T8Seg.LTptT7S2Via1NodeR;
     AnyRefNode &Via2 = ....Segments.T9Seg.LTptT7S2Via2NodeR;
@@ -2000,7 +2000,7 @@ MuscleGroup LongissimusThoracis = {
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint LTptT8S3 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ErectorSpinae.LTptT8S3;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongissimusThoracis.LTptT8S3;
     AnyRefNode &Org = ....Segments.T8Seg.LTptT8S3NodeR;
     AnyRefNode &Via1 = ....Segments.T9Seg.LTptT8S3Via1NodeR;
     AnyRefNode &Via2 = ....Segments.T10Seg.LTptT8S3Via2NodeR;
@@ -2016,7 +2016,7 @@ MuscleGroup LongissimusThoracis = {
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint LTptT9S4 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ErectorSpinae.LTptT9S4;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongissimusThoracis.LTptT9S4;
     AnyRefNode &Org = ....Segments.T9Seg.LTptT9S4NodeR;
     AnyRefNode &Via1 = ....Segments.T10Seg.LTptT9S4Via1NodeR;
     AnyRefNode &Via2 = ....Segments.T11Seg.LTptT9S4Via2NodeR;
@@ -2031,7 +2031,7 @@ MuscleGroup LongissimusThoracis = {
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint LTptT10Sacrum = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ErectorSpinae.LTptT10Sacrum;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongissimusThoracis.LTptT10Sacrum;
     AnyRefNode &Org = ....Segments.T10Seg.LTptT10SacrumNodeR;
     AnyRefNode &Via1 = ....Segments.T11Seg.LTptT10SacrumVia1NodeR;
     #if BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
@@ -2054,7 +2054,7 @@ MuscleGroup LongissimusThoracis = {
     viewForce.Visible ??= Off;
   };  
   AnyMuscleViaPoint LTptT11Sacrum = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ErectorSpinae.LTptT11Sacrum;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongissimusThoracis.LTptT11Sacrum;
     AnyRefNode &Org = ....Segments.T11Seg.LTptT11SacrumNodeR;
     #if BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
     AnyRefNode &Via1 = ....Abdominal.Layer_L1.BaseSegPosterior.LTptT11SacrumVia1NodeR;
@@ -2076,7 +2076,7 @@ MuscleGroup LongissimusThoracis = {
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint LTptT12Sacrum = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ErectorSpinae.LTptT12Sacrum;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongissimusThoracis.LTptT12Sacrum;
     AnyRefNode &Org = ....Segments.T12Seg.LTptT12SacrumNodeR;
     #if BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
     AnyRefNode &Via1 = ....Abdominal.Layer_L2.BaseSegPosterior.LTptT12SacrumVia1NodeR;
@@ -2098,7 +2098,7 @@ MuscleGroup LongissimusThoracis = {
 
   // Longissimus Thoracis - lateral part (attaching to ribs)
   AnyMuscleViaPoint LTptC3L3 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ErectorSpinae.LTptC3L3;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongissimusThoracis.LTptC3L3;
     AnyRefNode &Org = ....Segments.Right.R3Seg.LTptC3L3NodeR;
     AnyRefNode &Via1 = ....Segments.Right.R4Seg.LTptC3L3Via1NodeR;
     #ifndef LongissimusThoracis_ViaNodes_Ribs 
@@ -2125,7 +2125,7 @@ MuscleGroup LongissimusThoracis = {
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint LTptC4L4 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ErectorSpinae.LTptC4L4;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongissimusThoracis.LTptC4L4;
     AnyRefNode &Org = ....Segments.Right.R4Seg.LTptC4L4NodeR;
     AnyRefNode &Via1 = ....Segments.Right.R5Seg.LTptC4L4Via1NodeR;
     #ifndef LongissimusThoracis_ViaNodes_Ribs 
@@ -2151,7 +2151,7 @@ MuscleGroup LongissimusThoracis = {
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint LTptC5L5 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ErectorSpinae.LTptC5L5;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongissimusThoracis.LTptC5L5;
     AnyRefNode &Org = ....Segments.Right.R5Seg.LTptC5L5NodeR;
     AnyRefNode &Via1 = ....Segments.Right.R6Seg.LTptC5L5Via1NodeR;
     #ifndef LongissimusThoracis_ViaNodes_Ribs 
@@ -2176,7 +2176,7 @@ MuscleGroup LongissimusThoracis = {
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint LTptC6S1 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ErectorSpinae.LTptC6S1;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongissimusThoracis.LTptC6S1;
     AnyRefNode &Org = ....Segments.Right.R6Seg.LTptC6S1NodeR;
     AnyRefNode &Via1 = ....Segments.Right.R7Seg.LTptC6S1Via1NodeR;
     #ifndef LongissimusThoracis_ViaNodes_Ribs 
@@ -2200,7 +2200,7 @@ MuscleGroup LongissimusThoracis = {
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint LTptC7S2 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ErectorSpinae.LTptC7S2;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongissimusThoracis.LTptC7S2;
     AnyRefNode &Org = ....Segments.Right.R7Seg.LTptC7S2NodeR;
     AnyRefNode &Via1 = ....Segments.Right.R8Seg.LTptC7S2Via1NodeR;
     AnyRefNode &Via2 = ....Segments.Right.R9Seg.LTptC7S2Via2NodeR;
@@ -2221,7 +2221,7 @@ MuscleGroup LongissimusThoracis = {
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint LTptC8S3 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ErectorSpinae.LTptC8S3;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongissimusThoracis.LTptC8S3;
     AnyRefNode &Org = ....Segments.Right.R8Seg.LTptC8S3NodeR;
     AnyRefNode &Via1 = ....Segments.Right.R9Seg.LTptC8S3Via1NodeR;
     AnyRefNode &Via2 = ....Segments.Right.R10Seg.LTptC8S3Via2NodeR;
@@ -2241,7 +2241,7 @@ MuscleGroup LongissimusThoracis = {
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint LTptC9S4 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ErectorSpinae.LTptC9S4;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongissimusThoracis.LTptC9S4;
     AnyRefNode &Org = ....Segments.Right.R9Seg.LTptC9S4NodeR;
     AnyRefNode &Via1 = ....Segments.Right.R10Seg.LTptC9S4Via1NodeR;
     AnyRefNode &Via2 = ....Segments.Right.R11Seg.LTptC9S4Via2NodeR;
@@ -2260,7 +2260,7 @@ MuscleGroup LongissimusThoracis = {
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint LTptC10Sacrum = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ErectorSpinae.LTptC10Sacrum;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongissimusThoracis.LTptC10Sacrum;
     AnyRefNode &Org = ....Segments.Right.R10Seg.LTptC10SacrumNodeR;
     AnyRefNode &Via1 = ....Segments.Right.R11Seg.LTptC10SacrumVia1NodeR;
     #if BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
@@ -2283,7 +2283,7 @@ MuscleGroup LongissimusThoracis = {
     viewForce.Visible ??= Off;
   };  
   AnyMuscleViaPoint LTptC11Sacrum = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ErectorSpinae.LTptC11Sacrum;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongissimusThoracis.LTptC11Sacrum;
     AnyRefNode &Org = ....Segments.Right.R11Seg.LTptC11SacrumNodeR;
     #if BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
     AnyRefNode &Via1 = ....Abdominal.Layer_L1.BaseSegPosterior.LTptC11SacrumVia1NodeR;
@@ -2305,7 +2305,7 @@ MuscleGroup LongissimusThoracis = {
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint LTptC12Sacrum = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ErectorSpinae.LTptC12Sacrum;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongissimusThoracis.LTptC12Sacrum;
     AnyRefNode &Org = ....Segments.Right.R12Seg.LTptC12SacrumNodeR;
     #if BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
     AnyRefNode &Via1 = ....Abdominal.Layer_L2.BaseSegPosterior.LTptC12SacrumVia1NodeR;
@@ -2324,7 +2324,7 @@ MuscleGroup LongissimusThoracis = {
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
-  // Longissimus thoracis part thoracis
+  // End of Longissimus thoracis part thoracis
 };
 
 MuscleGroup LongusCapitis = {
