@@ -33,7 +33,7 @@ AnyFolder Muscles =
   {
     #if BM_TRUNK_MUSCLES
     AnyVar Volume ??= DesignVar(40.62); ///< Total volume of the muscle group (ml)
-    AnyFolder SPL1T2 = 
+    AnyFolder SpinalisL1T2 = 
     {
       AnyString Muscle = "SPL1T2"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -51,7 +51,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder SPL1T3 = 
+    AnyFolder SpinalisL1T3 = 
     {
       AnyString Muscle = "SPL1T3"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -69,7 +69,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder SPL2T1 = 
+    AnyFolder SpinalisL2T1 = 
     {
       AnyString Muscle = "SPL2T1"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -87,7 +87,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder SPT11T6 = 
+    AnyFolder SpinalisT11T6 = 
     {
       AnyString Muscle = "SPT11T6"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -105,7 +105,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder SPT12T4 = 
+    AnyFolder SpinalisT12T4 = 
     {
       AnyString Muscle = "SPT12T4"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -123,7 +123,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder SPT12T5 = 
+    AnyFolder SpinalisT12T5 = 
     {
       AnyString Muscle = "SPT12T5"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -144,7 +144,7 @@ AnyFolder Muscles =
   {
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_BUCKLE_
     AnyVar Volume ??= DesignVar(49.40); ///< Total volume of the muscle group (ml)
-    AnyFolder Transversus_1 = 
+    AnyFolder TransversusAbdominisL1 = 
     {
       AnyString Muscle = "Transversus_1"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -162,7 +162,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_BUCKLE_
-    AnyFolder Transversus_2 = 
+    AnyFolder TransversusAbdominisL2 = 
     {
       AnyString Muscle = "Transversus_2"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -180,7 +180,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_BUCKLE_
-    AnyFolder Transversus_3 = 
+    AnyFolder TransversusAbdominisL3 = 
     {
       AnyString Muscle = "Transversus_3"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -198,7 +198,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_BUCKLE_
-    AnyFolder Transversus_4 = 
+    AnyFolder TransversusAbdominisL4 = 
     {
       AnyString Muscle = "Transversus_4"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -216,7 +216,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_BUCKLE_
-    AnyFolder Transversus_5 = 
+    AnyFolder TransversusAbdominisL5 = 
     {
       AnyString Muscle = "Transversus_5"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -237,9 +237,9 @@ AnyFolder Muscles =
   {
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
     AnyVar Volume ??= DesignVar(61.73); ///< Total volume of the muscle group (ml)
-    AnyFolder L1_Diaphragm1 = 
+    AnyFolder DiaphragmL1_1 = 
     {
-      AnyString Muscle = "L1_Diaphragm1"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "DiaphragmL1_1"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -255,9 +255,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-    AnyFolder L1_Diaphragm2 = 
+    AnyFolder DiaphragmL1_2 = 
     {
-      AnyString Muscle = "L1_Diaphragm2"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "DiaphragmL1_2"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -273,9 +273,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-    AnyFolder L2_Diaphragm1 = 
+    AnyFolder DiaphragmL2_1 = 
     {
-      AnyString Muscle = "L2_Diaphragm1"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "DiaphragmL2_1"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -291,9 +291,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-    AnyFolder L2_Diaphragm2 = 
+    AnyFolder DiaphragmL2_2 = 
     {
-      AnyString Muscle = "L2_Diaphragm2"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "DiaphragmL2_2"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -309,9 +309,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-    AnyFolder L1TransverseProcess_Diaphragm = 
+    AnyFolder DiaphragmL1_3 = 
     {
-      AnyString Muscle = "L1TransverseProcess_Diaphragm"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "DiaphragmL1_3"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -327,9 +327,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-    AnyFolder R12_Diaphragm1 = 
+    AnyFolder DiaphragmR12_1 = 
     {
-      AnyString Muscle = "R12_Diaphragm1"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "DiaphragmR12_1"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -345,9 +345,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-    AnyFolder R12_Diaphragm2 = 
+    AnyFolder DiaphragmR12_2 = 
     {
-      AnyString Muscle = "R12_Diaphragm2"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "DiaphragmR12_2"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -363,9 +363,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-    AnyFolder R11_Diaphragm1 = 
+    AnyFolder DiaphragmR11_1 = 
     {
-      AnyString Muscle = "R11_Diaphragm1"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "DiaphragmR11_1"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -381,9 +381,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-    AnyFolder R11_Diaphragm2 = 
+    AnyFolder DiaphragmR11_2 = 
     {
-      AnyString Muscle = "R11_Diaphragm2"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "DiaphragmR11_2"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -399,9 +399,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-    AnyFolder R11_Diaphragm3 = 
+    AnyFolder DiaphragmR11_3 = 
     {
-      AnyString Muscle = "R11_Diaphragm3"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "DiaphragmR11_3"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -417,9 +417,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-    AnyFolder R10_Diaphragm1 = 
+    AnyFolder DiaphragmR10_1 = 
     {
-      AnyString Muscle = "R10_Diaphragm1"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "DiaphragmR10_1"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -435,9 +435,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-    AnyFolder R10_Diaphragm2 = 
+    AnyFolder DiaphragmR10_2 = 
     {
-      AnyString Muscle = "R10_Diaphragm2"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "DiaphragmR10_2"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -453,9 +453,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-    AnyFolder R10_Diaphragm3 = 
+    AnyFolder DiaphragmR10_3 = 
     {
-      AnyString Muscle = "R10_Diaphragm3"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "DiaphragmR10_3"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -471,9 +471,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-    AnyFolder CC_DiaphragmNode1 = 
+    AnyFolder DiaphragmCC_1 = 
     {
-      AnyString Muscle = "CC_DiaphragmNode1"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "DiaphragmCC_1"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -489,9 +489,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-    AnyFolder CC_DiaphragmNode2 = 
+    AnyFolder DiaphragmCC_2 = 
     {
-      AnyString Muscle = "CC_DiaphragmNode2"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "DiaphragmCC_2"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -507,9 +507,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-    AnyFolder CC_DiaphragmNode3 = 
+    AnyFolder DiaphragmCC_3 = 
     {
-      AnyString Muscle = "CC_DiaphragmNode3"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "DiaphragmCC_3"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -525,9 +525,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-    AnyFolder CC_DiaphragmNode4 = 
+    AnyFolder DiaphragmCC_4 = 
     {
-      AnyString Muscle = "CC_DiaphragmNode4"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "DiaphragmCC_4"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -543,9 +543,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-    AnyFolder CC_DiaphragmNode5 = 
+    AnyFolder DiaphragmCC_5 = 
     {
-      AnyString Muscle = "CC_DiaphragmNode5"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "DiaphragmCC_5"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -561,9 +561,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-    AnyFolder CC_DiaphragmNode6 = 
+    AnyFolder DiaphragmCC_6 = 
     {
-      AnyString Muscle = "CC_DiaphragmNode6"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "DiaphragmCC_6"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -579,9 +579,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-    AnyFolder CC_DiaphragmNode7 = 
+    AnyFolder DiaphragmCC_7 = 
     {
-      AnyString Muscle = "CC_DiaphragmNode7"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "DiaphragmCC_7"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -597,9 +597,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-    AnyFolder Xiphoid_Diaphragm = 
+    AnyFolder DiaphragmXiphoid = 
     {
-      AnyString Muscle = "Xiphoid_Diaphragm"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "DiaphragmXiphoid"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -638,9 +638,9 @@ AnyFolder Muscles =
   AnyFolder IliocostalisCervicis = 
   {
     #if BM_TRUNK_MUSCLES
-    AnyFolder ICptR3C4 = 
+    AnyFolder IliocostalisCervicisR3C4 = 
     {
-      AnyString Muscle = "ICptR3C4"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "IliocostalisCervicisR3C4"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -656,9 +656,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder ICptR4C5 = 
+    AnyFolder IliocostalisCervicisR4C5 = 
     {
-      AnyString Muscle = "ICptR4C5"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "IliocostalisCervicisR4C5"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -674,9 +674,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder ICptR5C6 = 
+    AnyFolder IliocostalisCervicisR5C6 = 
     {
-      AnyString Muscle = "ICptR5C6"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "IliocostalisCervicisR5C6"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -692,9 +692,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder ICptR6C4 = 
+    AnyFolder IliocostalisCervicisR6C4 = 
     {
-      AnyString Muscle = "ICptR6C4"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "IliocostalisCervicisR6C4"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -713,9 +713,9 @@ AnyFolder Muscles =
   {
     #if BM_TRUNK_MUSCLES
     AnyVar Volume ??= DesignVar(1026.81); ///< Total volume of the muscle group (ml)
-    AnyFolder ILplL1CI = 
+    AnyFolder IliocostalisLumborumL1 = 
     {
-      AnyString Muscle = "ILplL1CI"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "IliocostalisLumborumL1IC"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -731,9 +731,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder ILplL2CI = 
+    AnyFolder IliocostalisLumborumL2 = 
     {
-      AnyString Muscle = "ILplL2CI"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "IliocostalisLumborumL2IC"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -749,9 +749,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder ILplL3CI = 
+    AnyFolder IliocostalisLumborumL3 = 
     {
-      AnyString Muscle = "ILplL3CI"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "IliocostalisLumborumL3IC"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -767,9 +767,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder ILplL4CI = 
+    AnyFolder IliocostalisLumborumL4 = 
     {
-      AnyString Muscle = "ILplL4CI"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "IliocostalisLumborumL4IC"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -785,9 +785,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder ILptC5SIPS = 
+    AnyFolder IliocostalisLumborumR5 = 
     {
-      AnyString Muscle = "ILptC5SIPS"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "IliocostalisLumborumR5IC"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -803,9 +803,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder ILptC6SIPS = 
+    AnyFolder IliocostalisLumborumR6 = 
     {
-      AnyString Muscle = "ILptC6SIPS"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "IliocostalisLumborumR6IC"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -821,9 +821,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder ILptC7CI = 
+    AnyFolder IliocostalisLumborumR7 = 
     {
-      AnyString Muscle = "ILptC7CI"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "IliocostalisLumborumR7IC"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -839,9 +839,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder ILptC8CI = 
+    AnyFolder IliocostalisLumborumR8 = 
     {
-      AnyString Muscle = "ILptC8CI"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "IliocostalisLumborumR8IC"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -857,9 +857,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder ILptC9CI = 
+    AnyFolder IliocostalisLumborumR9 = 
     {
-      AnyString Muscle = "ILptC9CI"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "IliocostalisLumborumR9IC"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -875,9 +875,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder ILptC10CI = 
+    AnyFolder IliocostalisLumborumR10 = 
     {
-      AnyString Muscle = "ILptC10CI"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "IliocostalisLumborumR10IC"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -893,9 +893,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder ILptC11CI = 
+    AnyFolder IliocostalisLumborumR11 = 
     {
-      AnyString Muscle = "ILptC11CI"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "IliocostalisLumborumR11IC"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -911,9 +911,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder ILptC12CI = 
+    AnyFolder IliocostalisLumborumR12 = 
     {
-      AnyString Muscle = "ILptC12CI"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "IliocostalisLumborumR12IC"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -931,9 +931,9 @@ AnyFolder Muscles =
   AnyFolder IliocostalisThoracis = 
   {
     #if BM_TRUNK_MUSCLES
-    AnyFolder ITC7R7 = 
+    AnyFolder IliocostalisThoracisC7R7 = 
     {
-      AnyString Muscle = "ITC7R7"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "IliocostalisThoracisC7R7"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -949,9 +949,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder ITR1R7 = 
+    AnyFolder IliocostalisThoracisR1R7 = 
     {
-      AnyString Muscle = "ITR1R7"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "IliocostalisThoracisR1R7"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -967,9 +967,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder ITR2R8 = 
+    AnyFolder IliocostalisThoracisR2R8 = 
     {
-      AnyString Muscle = "ITR2R8"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "IliocostalisThoracisR2R8"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -985,9 +985,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder ITR3R9 = 
+    AnyFolder IliocostalisThoracisR3R9 = 
     {
-      AnyString Muscle = "ITR3R9"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "IliocostalisThoracisR3R9"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -1003,9 +1003,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder ITR4R10 = 
+    AnyFolder IliocostalisThoracisR4R10 = 
     {
-      AnyString Muscle = "ITR4R10"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "IliocostalisThoracisR4R10"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -1021,9 +1021,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder ITR5T11 = 
+    AnyFolder IliocostalisThoracisR5T11 = 
     {
-      AnyString Muscle = "ITR5R11"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "IliocostalisThoracisR5T11"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -1039,9 +1039,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder ITR6T12 = 
+    AnyFolder IliocostalisThoracisR6T12 = 
     {
-      AnyString Muscle = "ITR6R12"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "IliocostalisThoracisR6T12"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -1060,9 +1060,9 @@ AnyFolder Muscles =
   {
     #if BM_TRUNK_MUSCLES
     AnyVar Volume ??= DesignVar(130.63); ///< Total volume of the muscle group (ml)
-    AnyFolder IC_Ext_R1R2 = 
+    AnyFolder IntercostalisExternusR1R2 = 
     {
-      AnyString Muscle = "IC_Ext_R1R2"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "IntercostalisExternusR1R2"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -1078,9 +1078,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder IC_Ext_R2R3 = 
+    AnyFolder IntercostalisExternusR2R3 = 
     {
-      AnyString Muscle = "IC_Ext_R2R3"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "IntercostalisExternusR2R3"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -1096,9 +1096,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder IC_Ext_R3R4 = 
+    AnyFolder IntercostalisExternusR3R4 = 
     {
-      AnyString Muscle = "IC_Ext_R3R4"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "IntercostalisExternusR3R4"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -1114,9 +1114,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder IC_Ext_R4R5 = 
+    AnyFolder IntercostalisExternusR4R5 = 
     {
-      AnyString Muscle = "IC_Ext_R4R5"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "IntercostalisExternusR4R5"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -1132,9 +1132,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder IC_Ext_R5R6 = 
+    AnyFolder IntercostalisExternusR5R6 = 
     {
-      AnyString Muscle = "IC_Ext_R5R6"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "IntercostalisExternusR5R6"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -1150,9 +1150,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder IC_Ext_R6R7 = 
+    AnyFolder IntercostalisExternusR6R7 = 
     {
-      AnyString Muscle = "IC_Ext_R6R7"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "IntercostalisExternusR6R7"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -1168,9 +1168,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder IC_Ext_R7R8 = 
+    AnyFolder IntercostalisExternusR7R8 = 
     {
-      AnyString Muscle = "IC_Ext_R7R8"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "IntercostalisExternusR7R8"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -1186,9 +1186,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder IC_Ext_R8R9 = 
+    AnyFolder IntercostalisExternusR8R9 = 
     {
-      AnyString Muscle = "IC_Ext_R8R9"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "IntercostalisExternusR8R9"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -1204,9 +1204,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder IC_Ext_R9R10 = 
+    AnyFolder IntercostalisExternusR9R10 = 
     {
-      AnyString Muscle = "IC_Ext_R9R10"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "IntercostalisExternusR9R10"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -1222,9 +1222,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder IC_Ext_R10R11 = 
+    AnyFolder IntercostalisExternusR10R11 = 
     {
-      AnyString Muscle = "IC_Ext_R10R11"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "IntercostalisExternusR10R11"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -1240,9 +1240,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder IC_Ext_R11R12 = 
+    AnyFolder IntercostalisExternusR11R12 = 
     {
-      AnyString Muscle = "IC_Ext_R11R12"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "IntercostalisExternusR11R12"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -1261,9 +1261,9 @@ AnyFolder Muscles =
   {
     #if BM_TRUNK_MUSCLES
     AnyVar Volume ??= DesignVar(71.10); ///< Total volume of the muscle group (ml)
-    AnyFolder IC_Int_R1R2 = 
+    AnyFolder IntercostalisInternusR1R2 = 
     {
-      AnyString Muscle = "IC_Int_R1R2"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "IntercostalisInternusR1R2"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -1279,9 +1279,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder IC_Int_R2R3 = 
+    AnyFolder IntercostalisInternusR2R3 = 
     {
-      AnyString Muscle = "IC_Int_R2R3"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "IntercostalisInternusR2R3"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -1297,9 +1297,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder IC_Int_R3R4 = 
+    AnyFolder IntercostalisInternusR3R4 = 
     {
-      AnyString Muscle = "IC_Int_R3R4"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "IntercostalisInternusR3R4"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -1315,9 +1315,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder IC_Int_R4R5 = 
+    AnyFolder IntercostalisInternusR4R5 = 
     {
-      AnyString Muscle = "IC_Int_R4R5"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "IntercostalisInternusR4R5"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -1333,9 +1333,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder IC_Int_R5R6 = 
+    AnyFolder IntercostalisInternusR5R6 = 
     {
-      AnyString Muscle = "IC_Int_R5R6"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "IntercostalisInternusR5R6"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -1351,9 +1351,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder IC_Int_R6R7 = 
+    AnyFolder IntercostalisInternusR6R7 = 
     {
-      AnyString Muscle = "IC_Int_R6R7"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "IntercostalisInternusR6R7"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -1369,9 +1369,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder IC_Int_R7R8 = 
+    AnyFolder IntercostalisInternusR7R8 = 
     {
-      AnyString Muscle = "IC_Int_R7R8"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "IntercostalisInternusR7R8"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -1387,9 +1387,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder IC_Int_R8R9 = 
+    AnyFolder IntercostalisInternusR8R9 = 
     {
-      AnyString Muscle = "IC_Int_R8R9"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "IntercostalisInternusR8R9"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -1405,9 +1405,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder IC_Int_R9R10 = 
+    AnyFolder IntercostalisInternusR9R10 = 
     {
-      AnyString Muscle = "IC_Int_R9R10"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "IntercostalisInternusR9R10"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -1423,9 +1423,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder IC_Int_R10R11 = 
+    AnyFolder IntercostalisInternusR10R11 = 
     {
-      AnyString Muscle = "IC_Int_R10R11"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "IntercostalisInternusR10R11"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -1441,9 +1441,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder IC_Int_R11R12 = 
+    AnyFolder IntercostalisInternusR11R12 = 
     {
-      AnyString Muscle = "IC_Int_R11R12"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "IntercostalisInternusR11R12"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -1462,9 +1462,9 @@ AnyFolder Muscles =
   {
     #if BM_TRUNK_MUSCLES
     AnyVar Volume ??= DesignVar(48.92); ///< Total volume of the muscle group (ml)
-    AnyFolder IC_Inn_R1R2 = 
+    AnyFolder IntercostalisIntimusR1R2 = 
     {
-      AnyString Muscle = "IC_Inn_R1R2"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "IntercostalisIntimusR1R2"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -1480,9 +1480,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder IC_Inn_R2R3 = 
+    AnyFolder IntercostalisIntimusR2R3 = 
     {
-      AnyString Muscle = "IC_Inn_R2R3"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "IntercostalisIntimusR2R3"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -1498,9 +1498,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder IC_Inn_R3R4 = 
+    AnyFolder IntercostalisIntimusR3R4 = 
     {
-      AnyString Muscle = "IC_Inn_R3R4"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "IntercostalisIntimusR3R4"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -1516,9 +1516,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder IC_Inn_R4R5 = 
+    AnyFolder IntercostalisIntimusR4R5 = 
     {
-      AnyString Muscle = "IC_Inn_R4R5"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "IntercostalisIntimusR4R5"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -1534,9 +1534,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder IC_Inn_R5R6 = 
+    AnyFolder IntercostalisIntimusR5R6 = 
     {
-      AnyString Muscle = "IC_Inn_R5R6"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "IntercostalisIntimusR5R6"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -1552,9 +1552,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder IC_Inn_R6R7 = 
+    AnyFolder IntercostalisIntimusR6R7 = 
     {
-      AnyString Muscle = "IC_Inn_R6R7"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "IntercostalisIntimusR6R7"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -1570,9 +1570,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder IC_Inn_R7R8 = 
+    AnyFolder IntercostalisIntimusR7R8 = 
     {
-      AnyString Muscle = "IC_Inn_R7R8"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "IntercostalisIntimusR7R8"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -1588,9 +1588,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder IC_Inn_R8R9 = 
+    AnyFolder IntercostalisIntimusR8R9 = 
     {
-      AnyString Muscle = "IC_Inn_R8R9"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "IntercostalisIntimusR8R9"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -1606,9 +1606,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder IC_Inn_R9R10 = 
+    AnyFolder IntercostalisIntimusR9R10 = 
     {
-      AnyString Muscle = "IC_Inn_R9R10"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "IntercostalisIntimusR9R10"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -1624,9 +1624,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder IC_Inn_R10R11 = 
+    AnyFolder IntercostalisIntimusR10R11 = 
     {
-      AnyString Muscle = "IC_Inn_R10R11"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "IntercostalisIntimusR10R11"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -1642,9 +1642,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder IC_Inn_R11R12 = 
+    AnyFolder IntercostalisIntimusR11R12 = 
     {
-      AnyString Muscle = "IC_Inn_R11R12"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "IntercostalisIntimusR11R12"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -1663,7 +1663,7 @@ AnyFolder Muscles =
   {
     #if BM_TRUNK_MUSCLES
     AnyVar Volume ??= DesignVar(22.42); ///< Total volume of the muscle group (ml)
-    AnyFolder LCBrC7R1 = 
+    AnyFolder LevatorCostarumC7R1 = 
     {
       AnyString Muscle = "LCBrC7R1"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -1681,7 +1681,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LCBrT1R2 = 
+    AnyFolder LevatorCostarumT1R2 = 
     {
       AnyString Muscle = "LCBrT1R2"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -1699,7 +1699,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LCBrT2R3 = 
+    AnyFolder LevatorCostarumT2R3 = 
     {
       AnyString Muscle = "LCBrT2R3"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -1717,7 +1717,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LCBrT3R4 = 
+    AnyFolder LevatorCostarumT3R4 = 
     {
       AnyString Muscle = "LCBrT3R4"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -1735,7 +1735,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LCBrT4R5 = 
+    AnyFolder LevatorCostarumT4R5 = 
     {
       AnyString Muscle = "LCBrT4R5"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -1753,7 +1753,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LCBrT5R6 = 
+    AnyFolder LevatorCostarumT5R6 = 
     {
       AnyString Muscle = "LCBrT5R6"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -1771,7 +1771,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LCBrT6R7 = 
+    AnyFolder LevatorCostarumT6R7 = 
     {
       AnyString Muscle = "LCBrT6R7"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -1789,7 +1789,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LCBrT7R8 = 
+    AnyFolder LevatorCostarumT7R8 = 
     {
       AnyString Muscle = "LCBrT7R8"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -1807,7 +1807,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LCBrT8R9 = 
+    AnyFolder LevatorCostarumT8R9 = 
     {
       AnyString Muscle = "LCBrT8R9"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -1825,7 +1825,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LCBrT9R10 = 
+    AnyFolder LevatorCostarumT9R10 = 
     {
       AnyString Muscle = "LCBrT9R10"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -1843,7 +1843,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LCBrT10R11 = 
+    AnyFolder LevatorCostarumT10R11 = 
     {
       AnyString Muscle = "LCBrT10R11"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -1861,7 +1861,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LCBrT11R12 = 
+    AnyFolder LevatorCostarumT11R12 = 
     {
       AnyString Muscle = "LCBrT11R12"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -1879,7 +1879,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LCLgT5R7 = 
+    AnyFolder LevatorCostarumT5R7 = 
     {
       AnyString Muscle = "LCLgT5R7"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -1897,7 +1897,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LCLgT6R8 = 
+    AnyFolder LevatorCostarumT6R8 = 
     {
       AnyString Muscle = "LCLgT6R8"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -1915,7 +1915,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LCLgT7R9 = 
+    AnyFolder LevatorCostarumT7R9 = 
     {
       AnyString Muscle = "LCLgT7R9"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -1933,7 +1933,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LCLgT8R10 = 
+    AnyFolder LevatorCostarumT8R10 = 
     {
       AnyString Muscle = "LCLgT8R10"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -1951,7 +1951,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LCLgT9R11 = 
+    AnyFolder LevatorCostarumT9R11 = 
     {
       AnyString Muscle = "LCLgT9R11"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -1969,7 +1969,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LCLgT10R12 = 
+    AnyFolder LevatorCostarumT10R12 = 
     {
       AnyString Muscle = "LCLgT10R12"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -1990,7 +1990,7 @@ AnyFolder Muscles =
   {
     #if BM_TRUNK_MUSCLES
     AnyVar Volume ??= DesignVar(11.06); ///< Total volume of the muscle group (ml)
-    AnyFolder LongissimusCapitisC3C0 = 
+    AnyFolder LongissimusCapitisC3 = 
     {
       AnyString Muscle = "LongissimusCapitisC3C0"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -2008,7 +2008,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LongissimusCapitisC4C0 = 
+    AnyFolder LongissimusCapitisC4 = 
     {
       AnyString Muscle = "LongissimusCapitisC4C0"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -2026,7 +2026,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LongissimusCapitisC5C0 = 
+    AnyFolder LongissimusCapitisC5 = 
     {
       AnyString Muscle = "LongissimusCapitisC5C0"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -2044,7 +2044,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LongissimusCapitisC6C0 = 
+    AnyFolder LongissimusCapitisC6 = 
     {
       AnyString Muscle = "LongissimusCapitisC6C0"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -2062,7 +2062,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LongissimusCapitisC7C0 = 
+    AnyFolder LongissimusCapitisC7 = 
     {
       AnyString Muscle = "LongissimusCapitisC7C0"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -2080,7 +2080,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LongissimusCapitisT1C0 = 
+    AnyFolder LongissimusCapitisT1 = 
     {
       AnyString Muscle = "LongissimusCapitisT1C0"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -2098,7 +2098,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LongissimusCapitisT2C0 = 
+    AnyFolder LongissimusCapitisT2 = 
     {
       AnyString Muscle = "LongissimusCapitisT2C0"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -2116,7 +2116,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LongissimusCapitisT3C0 = 
+    AnyFolder LongissimusCapitisT3 = 
     {
       AnyString Muscle = "LongissimusCapitisT3C0"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -2134,7 +2134,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LongissimusCapitisT4C0 = 
+    AnyFolder LongissimusCapitisT4 = 
     {
       AnyString Muscle = "LongissimusCapitisT4C0"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -2152,7 +2152,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LongissimusCapitisT5C0 = 
+    AnyFolder LongissimusCapitisT5 = 
     {
       AnyString Muscle = "LongissimusCapitisT5C0"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -2265,7 +2265,7 @@ AnyFolder Muscles =
   AnyFolder LongissimusThoracis = 
   {
     #if BM_TRUNK_MUSCLES
-    AnyFolder LTplL1SIPS = 
+    AnyFolder LongissimusThoracisL1IC = 
     {
       AnyString Muscle = "LTplL1SIPS"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -2283,7 +2283,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LTplL2SIPS = 
+    AnyFolder LongissimusThoracisL2IC = 
     {
       AnyString Muscle = "LTplL2SIPS"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -2301,7 +2301,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LTplL3SIPS = 
+    AnyFolder LongissimusThoracisL3IC = 
     {
       AnyString Muscle = "LTplL3SIPS"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -2319,7 +2319,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LTplL4SIPS = 
+    AnyFolder LongissimusThoracisL4IC = 
     {
       AnyString Muscle = "LTplL4SIPS"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -2337,7 +2337,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LTplL5Ilium = 
+    AnyFolder LongissimusThoracisL5Ilium = 
     {
       AnyString Muscle = "LTplL5Ilium"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -2355,7 +2355,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LTptT1L1 = 
+    AnyFolder LongissimusThoracisT1L1 = 
     {
       AnyString Muscle = "LTptT1L1"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -2373,7 +2373,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LTptT2L2 = 
+    AnyFolder LongissimusThoracisT2L2 = 
     {
       AnyString Muscle = "LTptT2L2"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -2391,7 +2391,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LTptT3L3 = 
+    AnyFolder LongissimusThoracisT3L3 = 
     {
       AnyString Muscle = "LTptT3L3"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -2409,7 +2409,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LTptT4L4 = 
+    AnyFolder LongissimusThoracisT4L4 = 
     {
       AnyString Muscle = "LTptT4L4"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -2427,7 +2427,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LTptT5L5 = 
+    AnyFolder LongissimusThoracisT5L5 = 
     {
       AnyString Muscle = "LTptT5L5"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -2445,7 +2445,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LTptT6S1 = 
+    AnyFolder LongissimusThoracisT6S1 = 
     {
       AnyString Muscle = "LTptT6S1"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -2463,7 +2463,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LTptT7S2 = 
+    AnyFolder LongissimusThoracisT7S2 = 
     {
       AnyString Muscle = "LTptT7S2"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -2481,7 +2481,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LTptT8S3 = 
+    AnyFolder LongissimusThoracisT8S3 = 
     {
       AnyString Muscle = "LTptT8S3"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -2499,7 +2499,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LTptT9S4 = 
+    AnyFolder LongissimusThoracisT9S4 = 
     {
       AnyString Muscle = "LTptT9S4"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -2517,7 +2517,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LTptT10Sacrum = 
+    AnyFolder LongissimusThoracisT10S3 = 
     {
       AnyString Muscle = "LTptT10Sacrum"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -2535,7 +2535,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LTptT11Sacrum = 
+    AnyFolder LongissimusThoracisT11S3 = 
     {
       AnyString Muscle = "LTptT11Sacrum"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -2553,7 +2553,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LTptT12Sacrum = 
+    AnyFolder LongissimusThoracisT12S3 = 
     {
       AnyString Muscle = "LTptT12Sacrum"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -2571,7 +2571,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LTptC3L3 = 
+    AnyFolder LongissimusThoracisR3L3 = 
     {
       AnyString Muscle = "LTptC3L3"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -2589,7 +2589,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LTptC4L4 = 
+    AnyFolder LongissimusThoracisR4L4 = 
     {
       AnyString Muscle = "LTptC4L4"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -2607,7 +2607,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LTptC5L5 = 
+    AnyFolder LongissimusThoracisR5L5 = 
     {
       AnyString Muscle = "LTptC5L5"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -2625,7 +2625,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LTptC6S1 = 
+    AnyFolder LongissimusThoracisR6S1 = 
     {
       AnyString Muscle = "LTptC6S1"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -2643,7 +2643,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LTptC7S2 = 
+    AnyFolder LongissimusThoracisR7S2 = 
     {
       AnyString Muscle = "LTptC7S2"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -2661,7 +2661,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LTptC8S3 = 
+    AnyFolder LongissimusThoracisR8S3 = 
     {
       AnyString Muscle = "LTptC8S3"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -2679,7 +2679,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LTptC9S4 = 
+    AnyFolder LongissimusThoracisR9S4 = 
     {
       AnyString Muscle = "LTptC9S4"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -2697,7 +2697,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LTptC10Sacrum = 
+    AnyFolder LongissimusThoracisR10S3 = 
     {
       AnyString Muscle = "LTptC10Sacrum"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -2715,7 +2715,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LTptC11Sacrum = 
+    AnyFolder LongissimusThoracisR11S3 = 
     {
       AnyString Muscle = "LTptC11Sacrum"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -2733,7 +2733,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LTptC12Sacrum = 
+    AnyFolder LongissimusThoracisR12S3 = 
     {
       AnyString Muscle = "LTptC12Sacrum"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -2754,7 +2754,7 @@ AnyFolder Muscles =
   {
     #if BM_TRUNK_MUSCLES
     AnyVar Volume ??= DesignVar(10.48); ///< Total volume of the muscle group (ml)
-    AnyFolder LongusCapitisC6C0 = 
+    AnyFolder LongusCapitisC6 = 
     {
       AnyString Muscle = "LongusCapitisC6C0"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -2772,7 +2772,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LongusCapitisC5C0 = 
+    AnyFolder LongusCapitisC5 = 
     {
       AnyString Muscle = "LongusCapitisC5C0"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -2790,7 +2790,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LongusCapitisC4C0 = 
+    AnyFolder LongusCapitisC4 = 
     {
       AnyString Muscle = "LongusCapitisC4C0"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -2808,7 +2808,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LongusCapitisC3C0 = 
+    AnyFolder LongusCapitisC3 = 
     {
       AnyString Muscle = "LongusCapitisC3C0"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -3009,7 +3009,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LongusColliSuperiorObliqueC3C1 = 
+    AnyFolder LongusColliC3C1 = 
     {
       AnyString Muscle = "LongusColliSuperiorObliqueC3C1"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -3027,7 +3027,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LongusColliSuperiorObliqueC4C1 = 
+    AnyFolder LongusColliC4C1 = 
     {
       AnyString Muscle = "LongusColliSuperiorObliqueC4C1"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -3045,7 +3045,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LongusColliSuperiorObliqueC5C1 = 
+    AnyFolder LongusColliC5C1 = 
     {
       AnyString Muscle = "LongusColliSuperiorObliqueC5C1"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -3063,7 +3063,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LongusColliSuperiorObliqueC4C2 = 
+    AnyFolder LongusColliC4C2 = 
     {
       AnyString Muscle = "LongusColliSuperiorObliqueC4C2"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -3081,7 +3081,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LongusColliSuperiorObliqueC5C2 = 
+    AnyFolder LongusColliC5C2 = 
     {
       AnyString Muscle = "LongusColliSuperiorObliqueC5C2"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -3099,7 +3099,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LongusColliSuperiorObliqueC6C2 = 
+    AnyFolder LongusColliC6C2 = 
     {
       AnyString Muscle = "LongusColliSuperiorObliqueC6C2"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -3117,7 +3117,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LongusColliSuperiorObliqueC6C3 = 
+    AnyFolder LongusColliC6C3 = 
     {
       AnyString Muscle = "LongusColliSuperiorObliqueC6C3"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -3135,7 +3135,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LongusColliInferiorObliqueT1C6 = 
+    AnyFolder LongusColliT1C6 = 
     {
       AnyString Muscle = "LongusColliInferiorObliqueT1C6"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -3153,7 +3153,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LongusColliInferiorObliqueT2C6 = 
+    AnyFolder LongusColliT2C6 = 
     {
       AnyString Muscle = "LongusColliInferiorObliqueT2C6"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -3171,7 +3171,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LongusColliInferiorObliqueT2C5 = 
+    AnyFolder LongusColliT2C5 = 
     {
       AnyString Muscle = "LongusColliInferiorObliqueT2C5"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -3411,7 +3411,7 @@ AnyFolder Muscles =
   {
     #if BM_TRUNK_MUSCLES
     AnyVar Volume ??= DesignVar(89.32); ///< Total volume of the muscle group (ml)
-    AnyFolder MFdL1L3 = 
+    AnyFolder MultifidusLumborumL1L3 = 
     {
       AnyString Muscle = "MFdL1L3"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -3429,7 +3429,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder MFdL2L4 = 
+    AnyFolder MultifidusLumborumL2L4 = 
     {
       AnyString Muscle = "MFdL2L4"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -3447,7 +3447,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder MFdL3L5 = 
+    AnyFolder MultifidusLumborumL3L5 = 
     {
       AnyString Muscle = "MFdL3L5"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -3465,7 +3465,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder MFdL4S1 = 
+    AnyFolder MultifidusLumborumL4S1 = 
     {
       AnyString Muscle = "MFdL4S1"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -3483,7 +3483,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder MFdL5S1 = 
+    AnyFolder MultifidusLumborumL5S1 = 
     {
       AnyString Muscle = "MFdL5S1"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -3501,7 +3501,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder MFmL1L4 = 
+    AnyFolder MultifidusLumborumL1L4 = 
     {
       AnyString Muscle = "MFmL1L4"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -3519,7 +3519,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder MFmL2L5 = 
+    AnyFolder MultifidusLumborumL2L5 = 
     {
       AnyString Muscle = "MFmL2L5"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -3537,7 +3537,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder MFmL3S1 = 
+    AnyFolder MultifidusLumborumL3S1 = 
     {
       AnyString Muscle = "MFmL3S1"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -3555,7 +3555,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder MFmL4Sacrum = 
+    AnyFolder MultifidusLumborumL4S1 = 
     {
       AnyString Muscle = "MFmL4Sacrum"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -3573,7 +3573,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder MFmL5Sacrum = 
+    AnyFolder MultifidusLumborumL5S1 = 
     {
       AnyString Muscle = "MFmL5Sacrum"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -3591,7 +3591,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder MFtsL1L5 = 
+    AnyFolder MultifidusLumborumL1L5 = 
     {
       AnyString Muscle = "MFtsL1L5"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -3609,7 +3609,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder MFtsL1S1 = 
+    AnyFolder MultifidusLumborumL1S1 = 
     {
       AnyString Muscle = "MFtsL1S1"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -3627,7 +3627,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder MFtsL2L5 = 
+    AnyFolder MultifidusLumborumL2L5 = 
     {
       AnyString Muscle = "MFtsL2L5"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -3645,7 +3645,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder MFtsL2S1 = 
+    AnyFolder MultifidusLumborumL2S1 = 
     {
       AnyString Muscle = "MFtsL2S1"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -3663,7 +3663,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder MFtsL3Ligament = 
+    AnyFolder MultifidusLumborumL3S2 = 
     {
       AnyString Muscle = "MFtsL3Ligament"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -3681,7 +3681,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder MFtsL4Sacrum = 
+    AnyFolder MultifidusLumborumL4S2 = 
     {
       AnyString Muscle = "MFtsL4Sacrum"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -3699,7 +3699,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder MFtsL5Sacrum = 
+    AnyFolder MultifidusLumborumL5S3 = 
     {
       AnyString Muscle = "MFtsL5Sacrum"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -3717,7 +3717,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder MFtstL1SIPS = 
+    AnyFolder MultifidusLumborumtL1IC = 
     {
       AnyString Muscle = "MFtstL1SIPS"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -3735,7 +3735,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder MFtstL2SIPS = 
+    AnyFolder MultifidusLumborumtL2IC = 
     {
       AnyString Muscle = "MFtstL2SIPS"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -3756,7 +3756,7 @@ AnyFolder Muscles =
   {
     #if BM_TRUNK_MUSCLES
     AnyVar Volume ??= DesignVar(242.34); ///< Total volume of the muscle group (ml)
-    AnyFolder MFT4T1 = 
+    AnyFolder MultifidusThoracisT4T1 = 
     {
       AnyString Muscle = "MFT4T1"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -3774,7 +3774,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder MFT5T1 = 
+    AnyFolder MultifidusThoracisT5T1 = 
     {
       AnyString Muscle = "MFT5T1"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -3792,7 +3792,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder MFT5T2 = 
+    AnyFolder MultifidusThoracisT5T2 = 
     {
       AnyString Muscle = "MFT5T2"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -3810,7 +3810,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder MFT6T1 = 
+    AnyFolder MultifidusThoracisT6T1 = 
     {
       AnyString Muscle = "MFT6T1"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -3828,7 +3828,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder MFT6T2 = 
+    AnyFolder MultifidusThoracisT6T2 = 
     {
       AnyString Muscle = "MFT6T2"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -3846,7 +3846,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder MFT6T3 = 
+    AnyFolder MultifidusThoracisT6T3 = 
     {
       AnyString Muscle = "MFT6T3"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -3864,7 +3864,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder MFT7T2 = 
+    AnyFolder MultifidusThoracisT7T2 = 
     {
       AnyString Muscle = "MFT7T2"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -3882,7 +3882,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder MFT7T3 = 
+    AnyFolder MultifidusThoracisT7T3 = 
     {
       AnyString Muscle = "MFT7T3"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -3900,7 +3900,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder MFT7T4 = 
+    AnyFolder MultifidusThoracisT7T4 = 
     {
       AnyString Muscle = "MFT7T4"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -3918,7 +3918,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder MFT8T3 = 
+    AnyFolder MultifidusThoracisT8T3 = 
     {
       AnyString Muscle = "MFT8T3"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -3936,7 +3936,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder MFT8T4 = 
+    AnyFolder MultifidusThoracisT8T4 = 
     {
       AnyString Muscle = "MFT8T4"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -3954,7 +3954,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder MFT8T5 = 
+    AnyFolder MultifidusThoracisT8T5 = 
     {
       AnyString Muscle = "MFT8T5"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -3972,7 +3972,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder MFT9T4 = 
+    AnyFolder MultifidusThoracisT9T4 = 
     {
       AnyString Muscle = "MFT9T4"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -3990,7 +3990,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder MFT9T5 = 
+    AnyFolder MultifidusThoracisT9T5 = 
     {
       AnyString Muscle = "MFT9T5"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -4008,7 +4008,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder MFT9T6 = 
+    AnyFolder MultifidusThoracisT9T6 = 
     {
       AnyString Muscle = "MFT9T6"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -4026,7 +4026,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder MFT10T5 = 
+    AnyFolder MultifidusThoracisT10T5 = 
     {
       AnyString Muscle = "MFT10T5"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -4044,7 +4044,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder MFT10T6 = 
+    AnyFolder MultifidusThoracisT10T6 = 
     {
       AnyString Muscle = "MFT10T6"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -4062,7 +4062,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder MFT10T7 = 
+    AnyFolder MultifidusThoracisT10T7 = 
     {
       AnyString Muscle = "MFT10T7"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -4080,7 +4080,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder MFT11T6 = 
+    AnyFolder MultifidusThoracisT11T6 = 
     {
       AnyString Muscle = "MFT11T6"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -4098,7 +4098,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder MFT11T7 = 
+    AnyFolder MultifidusThoracisT11T7 = 
     {
       AnyString Muscle = "MFT11T7"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -4116,7 +4116,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder MFT11T8 = 
+    AnyFolder MultifidusThoracisT11T8 = 
     {
       AnyString Muscle = "MFT11T8"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -4134,7 +4134,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder MFT12T7 = 
+    AnyFolder MultifidusThoracisT12T7 = 
     {
       AnyString Muscle = "MFT12T7"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -4152,7 +4152,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder MFT12T8 = 
+    AnyFolder MultifidusThoracisT12T8 = 
     {
       AnyString Muscle = "MFT12T8"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -4170,7 +4170,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder MFT12T9 = 
+    AnyFolder MultifidusThoracisT12T9 = 
     {
       AnyString Muscle = "MFT12T9"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -4188,7 +4188,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder MFL1T8 = 
+    AnyFolder MultifidusThoracisL1T8 = 
     {
       AnyString Muscle = "MFL1T8"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -4206,7 +4206,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder MFL1T9 = 
+    AnyFolder MultifidusThoracisL1T9 = 
     {
       AnyString Muscle = "MFL1T9"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -4224,7 +4224,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder MFL1T10 = 
+    AnyFolder MultifidusThoracisL1T10 = 
     {
       AnyString Muscle = "MFL1T10"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -4242,7 +4242,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder MFL2T9 = 
+    AnyFolder MultifidusThoracisL2T9 = 
     {
       AnyString Muscle = "MFL2T9"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -4260,7 +4260,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder MFL2T10 = 
+    AnyFolder MultifidusThoracisL2T10 = 
     {
       AnyString Muscle = "MFL2T10"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -4278,7 +4278,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder MFL2T11 = 
+    AnyFolder MultifidusThoracisL2T11 = 
     {
       AnyString Muscle = "MFL2T11"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -4296,7 +4296,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder MFL3T10 = 
+    AnyFolder MultifidusThoracisL3T10 = 
     {
       AnyString Muscle = "MFL3T10"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -4314,7 +4314,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder MFL3T11 = 
+    AnyFolder MultifidusThoracisL3T11 = 
     {
       AnyString Muscle = "MFL3T11"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -4332,7 +4332,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder MFL3T12 = 
+    AnyFolder MultifidusThoracisL3T12 = 
     {
       AnyString Muscle = "MFL3T12"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -4350,7 +4350,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder MFL4T11 = 
+    AnyFolder MultifidusThoracisL4T11 = 
     {
       AnyString Muscle = "MFL4T11"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -4368,7 +4368,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder MFL4T12 = 
+    AnyFolder MultifidusThoracisL4T12 = 
     {
       AnyString Muscle = "MFL4T12"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -4386,7 +4386,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder MFL5T12 = 
+    AnyFolder MultifidusThoracisL5T12 = 
     {
       AnyString Muscle = "MFL5T12"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -4407,7 +4407,7 @@ AnyFolder Muscles =
   {
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_BUCKLE_
     AnyVar Volume ??= DesignVar(93.94); ///< Total volume of the muscle group (ml)
-    AnyFolder OEC_1 = 
+    AnyFolder ObliquusExternusR6Abd = 
     {
       AnyString Muscle = "OEC_1"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -4425,7 +4425,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_BUCKLE_
-    AnyFolder OEC_2 = 
+    AnyFolder ObliquusExternusR7Abd = 
     {
       AnyString Muscle = "OEC_2"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -4443,7 +4443,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_BUCKLE_
-    AnyFolder OEC_3 = 
+    AnyFolder ObliquusExternusR8Abd = 
     {
       AnyString Muscle = "OEC_3"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -4461,7 +4461,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_BUCKLE_
-    AnyFolder OEC_4 = 
+    AnyFolder ObliquusExternusR9Abd = 
     {
       AnyString Muscle = "OEC_4"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -4479,7 +4479,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_BUCKLE_
-    AnyFolder OEC_5 = 
+    AnyFolder ObliquusExternusR10Abd_1 = 
     {
       AnyString Muscle = "OEC_5"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -4497,7 +4497,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_BUCKLE_
-    AnyFolder OEC_6 = 
+    AnyFolder ObliquusExternusR10Abd_2 = 
     {
       AnyString Muscle = "OEC_6"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -4515,7 +4515,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_BUCKLE_
-    AnyFolder OEC_7 = 
+    AnyFolder ObliquusExternusR11IC = 
     {
       AnyString Muscle = "OEC_7"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -4533,7 +4533,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_BUCKLE_
-    AnyFolder OEC_8 = 
+    AnyFolder ObliquusExternusR12IC = 
     {
       AnyString Muscle = "OEC_8"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -4552,7 +4552,7 @@ AnyFolder Muscles =
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
     AnyVar Volume ??= DesignVar(178.46); ///< Total volume of the muscle group (ml)
-    AnyFolder OEC_1 = 
+    AnyFolder ObliquusExternusR6Abd = 
     {
       AnyString Muscle = "OEC_1"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -4570,7 +4570,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-    AnyFolder OEC_2 = 
+    AnyFolder ObliquusExternusR7Abd = 
     {
       AnyString Muscle = "OEC_2"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -4588,7 +4588,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-    AnyFolder OEC_3 = 
+    AnyFolder ObliquusExternusR8Abd = 
     {
       AnyString Muscle = "OEC_3"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -4606,7 +4606,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-    AnyFolder OEC_4 = 
+    AnyFolder ObliquusExternusR9Abd = 
     {
       AnyString Muscle = "OEC_4"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -4624,7 +4624,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-    AnyFolder OEC_5 = 
+    AnyFolder ObliquusExternusR9Abd = 
     {
       AnyString Muscle = "OEC_5"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -4642,7 +4642,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-    AnyFolder OEC_6 = 
+    AnyFolder ObliquusExternusR10Abd_1 = 
     {
       AnyString Muscle = "OEC_6"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -4660,7 +4660,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-    AnyFolder OEC_7 = 
+    AnyFolder ObliquusExternusR10Abd_2 = 
     {
       AnyString Muscle = "OEC_7"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -4678,7 +4678,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-    AnyFolder OEC_8 = 
+    AnyFolder ObliquusExternusR10IC_1 = 
     {
       AnyString Muscle = "OEC_8"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -4696,7 +4696,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-    AnyFolder OEC_9 = 
+    AnyFolder ObliquusExternusR10IC_2 = 
     {
       AnyString Muscle = "OEC_9"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -4714,7 +4714,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-    AnyFolder OEC_10 = 
+    AnyFolder ObliquusExternusR11IC_1 = 
     {
       AnyString Muscle = "OEC_10"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -4732,7 +4732,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-    AnyFolder OEC_11 = 
+    AnyFolder ObliquusExternusR11IC_2 = 
     {
       AnyString Muscle = "OEC_11"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -4750,7 +4750,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-    AnyFolder OEC_12 = 
+    AnyFolder ObliquusExternusR12IC = 
     {
       AnyString Muscle = "OEC_12"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -4771,7 +4771,7 @@ AnyFolder Muscles =
   {
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_BUCKLE_
     AnyVar Volume ??= DesignVar(91.37); ///< Total volume of the muscle group (ml)
-    AnyFolder OIC_1 = 
+    AnyFolder ObliquusInternusR11 = 
     {
       AnyString Muscle = "OIC_1"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -4789,7 +4789,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_BUCKLE_
-    AnyFolder OIC_2 = 
+    AnyFolder ObliquusInternusR10_1 = 
     {
       AnyString Muscle = "OIC_2"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -4807,7 +4807,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_BUCKLE_
-    AnyFolder OIC_3 = 
+    AnyFolder ObliquusInternusR10_2 = 
     {
       AnyString Muscle = "OIC_3"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -4825,7 +4825,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_BUCKLE_
-    AnyFolder OIC_4 = 
+    AnyFolder ObliquusInternusCC_1 = 
     {
       AnyString Muscle = "OIC_4"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -4843,7 +4843,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_BUCKLE_
-    AnyFolder OIC_5 = 
+    AnyFolder ObliquusInternusCC_2 = 
     {
       AnyString Muscle = "OIC_5"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -4861,7 +4861,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_BUCKLE_
-    AnyFolder OIC_6 = 
+    AnyFolder ObliquusInternusAbd_1 = 
     {
       AnyString Muscle = "OIC_6"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -4879,7 +4879,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_BUCKLE_
-    AnyFolder OIC_7 = 
+    AnyFolder ObliquusInternusAbd_2 = 
     {
       AnyString Muscle = "OIC_7"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -4897,7 +4897,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_BUCKLE_
-    AnyFolder OIC_8 = 
+    AnyFolder ObliquusInternusAbd_3 = 
     {
       AnyString Muscle = "OIC_8"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -4915,7 +4915,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_BUCKLE_
-    AnyFolder OIC_9 = 
+    AnyFolder ObliquusInternusAbd_4 = 
     {
       AnyString Muscle = "OIC_9"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -4933,7 +4933,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_BUCKLE_
-    AnyFolder OIC_10 = 
+    AnyFolder ObliquusInternusAbd_5 = 
     {
       AnyString Muscle = "OIC_10"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -4952,7 +4952,7 @@ AnyFolder Muscles =
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
     AnyVar Volume ??= DesignVar(145.36); ///< Total volume of the muscle group (ml)
-    AnyFolder OIC_1 = 
+    AnyFolder ObliquusInternusR12_1 = 
     {
       AnyString Muscle = "OIC_1"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -4970,7 +4970,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-    AnyFolder OIC_2 = 
+    AnyFolder ObliquusInternusR12_1 = 
     {
       AnyString Muscle = "OIC_2"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -4988,7 +4988,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-    AnyFolder OIC_3 = 
+    AnyFolder ObliquusInternusR11_2 = 
     {
       AnyString Muscle = "OIC_3"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -5006,7 +5006,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-    AnyFolder OIC_4 = 
+    AnyFolder ObliquusInternusR10_1 = 
     {
       AnyString Muscle = "OIC_4"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -5024,7 +5024,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-    AnyFolder OIC_5 = 
+    AnyFolder ObliquusInternusR10_2 = 
     {
       AnyString Muscle = "OIC_5"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -5042,7 +5042,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-    AnyFolder OIC_6 = 
+    AnyFolder ObliquusInternusCC_1 = 
     {
       AnyString Muscle = "OIC_6"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -5060,7 +5060,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-    AnyFolder OIC_7 = 
+    AnyFolder ObliquusInternusCC_2 = 
     {
       AnyString Muscle = "OIC_7"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -5078,7 +5078,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-    AnyFolder OIC_8 = 
+    AnyFolder ObliquusInternusCC_3 = 
     {
       AnyString Muscle = "OIC_8"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -5096,7 +5096,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-    AnyFolder OIC_9 = 
+    AnyFolder ObliquusInternusXiphoid = 
     {
       AnyString Muscle = "OIC_9"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -5114,7 +5114,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-    AnyFolder OIC_10 = 
+    AnyFolder ObliquusInternusAbd_1 = 
     {
       AnyString Muscle = "OIC_10"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -5132,7 +5132,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-    AnyFolder OIC_11 = 
+    AnyFolder ObliquusInternusAbd_2 = 
     {
       AnyString Muscle = "OIC_11"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -5150,7 +5150,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-    AnyFolder OIC_12 = 
+    AnyFolder ObliquusInternusAbd_3 = 
     {
       AnyString Muscle = "OIC_12"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -5168,7 +5168,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-    AnyFolder OIC_13 = 
+    AnyFolder ObliquusInternusAbd_4 = 
     {
       AnyString Muscle = "OIC_13"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -5186,7 +5186,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-    AnyFolder OIC_14 = 
+    AnyFolder ObliquusInternusAbd_5 = 
     {
       AnyString Muscle = "OIC_14"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -5203,11 +5203,11 @@ AnyFolder Muscles =
     };
     #endif
   }; // ObliquusInternus group
-  AnyFolder PelvicFloor = 
+  AnyFolder Puborectalis = 
   {
     #if BM_TRUNK_MUSCLES
     AnyVar Volume ??= DesignVar(4.32); ///< Total volume of the muscle group (ml)
-    AnyFolder Puporectalis_1 = 
+    AnyFolder Puborectalis_1 = 
     {
       AnyString Muscle = "Puporectalis_1"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -5225,7 +5225,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder Puporectalis_2 = 
+    AnyFolder Puborectalis_2 = 
     {
       AnyString Muscle = "Puporectalis_2"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -5241,10 +5241,12 @@ AnyFolder Muscles =
       AnyFloat Fcfast ??= DesignVar(0.4); ///< Factor for determining shortening speed at optimum length
     };
     #endif
-  
+  }; // Puborectalis group
+  AnyFolder Pubococcygeus = 
+  {
     #if BM_TRUNK_MUSCLES
     AnyVar Volume ??= DesignVar(7.38); ///< Total volume of the muscle group (ml)
-    AnyFolder Pupococcygeus_1 = 
+    AnyFolder Pubococcygeus_1 = 
     {
       AnyString Muscle = "Pupococcygeus_1"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -5262,7 +5264,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder Pupococcygeus_2 = 
+    AnyFolder Pubococcygeus_2 = 
     {
       AnyString Muscle = "Pupococcygeus_2"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -5278,12 +5280,12 @@ AnyFolder Muscles =
       AnyFloat Fcfast ??= DesignVar(0.4); ///< Factor for determining shortening speed at optimum length
     };
     #endif
-  }; // PelvicFloor group
+  }; // Pubococcygeus group
   AnyFolder PsoasMajor = 
   {
     #if BM_TRUNK_MUSCLES  | BM_LEG_MUSCLES_LEFT  |  BM_LEG_MUSCLES_RIGHT
     AnyVar Volume ??= DesignVar(321.43); ///< Total volume of the muscle group (ml)
-    AnyFolder PMT12I_TM = 
+    AnyFolder PsoasMajorT12 = 
     {
       AnyString Muscle = "PMT12I_TM"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -5301,7 +5303,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES  | BM_LEG_MUSCLES_LEFT  |  BM_LEG_MUSCLES_RIGHT
-    AnyFolder PML1I_TM = 
+    AnyFolder PsoasMajorL1_1 = 
     {
       AnyString Muscle = "PML1I_TM"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -5319,7 +5321,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES  | BM_LEG_MUSCLES_LEFT  |  BM_LEG_MUSCLES_RIGHT
-    AnyFolder PML1T_TM = 
+    AnyFolder PsoasMajorL1_2 = 
     {
       AnyString Muscle = "PML1T_TM"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -5337,7 +5339,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES  | BM_LEG_MUSCLES_LEFT  |  BM_LEG_MUSCLES_RIGHT
-    AnyFolder PML2I_TM = 
+    AnyFolder PsoasMajorL2_1 = 
     {
       AnyString Muscle = "PML2I_TM"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -5355,7 +5357,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES  | BM_LEG_MUSCLES_LEFT  |  BM_LEG_MUSCLES_RIGHT
-    AnyFolder PML2T_TM = 
+    AnyFolder PsoasMajorL2_2 = 
     {
       AnyString Muscle = "PML2T_TM"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -5373,7 +5375,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES  | BM_LEG_MUSCLES_LEFT  |  BM_LEG_MUSCLES_RIGHT
-    AnyFolder PML3I_TM = 
+    AnyFolder PsoasMajorL3_1 = 
     {
       AnyString Muscle = "PML3I_TM"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -5391,7 +5393,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES  | BM_LEG_MUSCLES_LEFT  |  BM_LEG_MUSCLES_RIGHT
-    AnyFolder PML3T_TM = 
+    AnyFolder PsoasMajorL3_2 = 
     {
       AnyString Muscle = "PML3T_TM"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -5409,7 +5411,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES  | BM_LEG_MUSCLES_LEFT  |  BM_LEG_MUSCLES_RIGHT
-    AnyFolder PML4I_TM = 
+    AnyFolder PsoasMajorL4_1 = 
     {
       AnyString Muscle = "PML4I_TM"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -5427,7 +5429,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES  | BM_LEG_MUSCLES_LEFT  |  BM_LEG_MUSCLES_RIGHT
-    AnyFolder PML4T_TM = 
+    AnyFolder PsoasMajorL4_2 = 
     {
       AnyString Muscle = "PML4T_TM"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -5445,7 +5447,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES  | BM_LEG_MUSCLES_LEFT  |  BM_LEG_MUSCLES_RIGHT
-    AnyFolder PML5_TM = 
+    AnyFolder PsoasMajorL5_1 = 
     {
       AnyString Muscle = "PML5_TM"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -5463,7 +5465,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES  | BM_LEG_MUSCLES_LEFT  |  BM_LEG_MUSCLES_RIGHT
-    AnyFolder PML5T_TM = 
+    AnyFolder PsoasMajorL5_2 = 
     {
       AnyString Muscle = "PML5T_TM"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -5484,7 +5486,7 @@ AnyFolder Muscles =
   {
     #if BM_TRUNK_MUSCLES
     AnyVar Volume ??= DesignVar(39.85); ///< Total volume of the muscle group (ml)
-    AnyFolder QLC12Lat_CILat = 
+    AnyFolder QuadratusLumborumR12IC_1 = 
     {
       AnyString Muscle = "QLC12Lat_CILat"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -5502,7 +5504,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder QLC12InterMedian_CILat = 
+    AnyFolder QuadratusLumborumR12IC_2 = 
     {
       AnyString Muscle = "QLC12InterMedian_CILat"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -5520,7 +5522,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder QLC12Median_CILat = 
+    AnyFolder QuadratusLumborumR12IC_3 = 
     {
       AnyString Muscle = "QLC12Median_CILat"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -5538,7 +5540,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder QLC12InterMedian_CIInterMedian = 
+    AnyFolder QuadratusLumborumR12IC_4 = 
     {
       AnyString Muscle = "QLC12InterMedian_CIInterMedian"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -5556,7 +5558,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder QLC12Median_CIInterMedian = 
+    AnyFolder QuadratusLumborumR12IC_5 = 
     {
       AnyString Muscle = "QLC12Median_CIInterMedian"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -5574,7 +5576,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder QLT12_CILat = 
+    AnyFolder QuadratusLumborumT12IC_1 = 
     {
       AnyString Muscle = "QLT12_CILat"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -5592,7 +5594,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder QLL1_CILat = 
+    AnyFolder QuadratusLumborumL1IC_1 = 
     {
       AnyString Muscle = "QLL1_CILat"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -5610,7 +5612,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder QLL2_CILat = 
+    AnyFolder QuadratusLumborumL2IC_1 = 
     {
       AnyString Muscle = "QLL2_CILat"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -5628,7 +5630,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder QLL3_CILat = 
+    AnyFolder QuadratusLumborumL3IC_1 = 
     {
       AnyString Muscle = "QLL3_CILat"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -5646,7 +5648,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder QLT12_CIInterMedian = 
+    AnyFolder QuadratusLumborumT12IC_2 = 
     {
       AnyString Muscle = "QLT12_CIInterMedian"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -5664,7 +5666,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder QLL1_CIInterMedian = 
+    AnyFolder QuadratusLumborumL1IC_2 = 
     {
       AnyString Muscle = "QLL1_CIInterMedian"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -5682,7 +5684,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder QLL2_CIInterMedian = 
+    AnyFolder QuadratusLumborumL2IC_2 = 
     {
       AnyString Muscle = "QLL2_CIInterMedian"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -5700,7 +5702,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder QLL3_CIInterMedian = 
+    AnyFolder QuadratusLumborumL3IC_2 = 
     {
       AnyString Muscle = "QLL3_CIInterMedian"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -5718,7 +5720,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder QLL4_CIInterMedian = 
+    AnyFolder QuadratusLumborumL4IC_1 = 
     {
       AnyString Muscle = "QLL4_CIInterMedian"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -5736,7 +5738,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder QLT12_CIMedian = 
+    AnyFolder QuadratusLumborumT12IC_3 = 
     {
       AnyString Muscle = "QLT12_CIMedian"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -5754,7 +5756,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder QLL1_CIMedian = 
+    AnyFolder QuadratusLumborumL1IC_3 = 
     {
       AnyString Muscle = "QLL1_CIMedian"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -5772,7 +5774,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder QLL2_CIMedian = 
+    AnyFolder QuadratusLumborumL2IC_3 = 
     {
       AnyString Muscle = "QLL2_CIMedian"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -5790,7 +5792,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder QLL3_CIMedian = 
+    AnyFolder QuadratusLumborumL3IC_3 = 
     {
       AnyString Muscle = "QLL3_CIMedian"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -5808,7 +5810,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder QLL4_CIMedian = 
+    AnyFolder QuadratusLumborumL4IC_2 = 
     {
       AnyString Muscle = "QLL4_CIMedian"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -5826,7 +5828,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder QLC12Lat_L4 = 
+    AnyFolder QuadratusLumborumR12L4_1 = 
     {
       AnyString Muscle = "QLC12Lat_L4"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -5844,7 +5846,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder QLC12Lat_L3 = 
+    AnyFolder QuadratusLumborumR12L3_1 = 
     {
       AnyString Muscle = "QLC12Lat_L3"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -5862,7 +5864,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder QLC12Lat_L2 = 
+    AnyFolder QuadratusLumborumR12L2_1 = 
     {
       AnyString Muscle = "QLC12Lat_L2"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -5880,7 +5882,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder QLC12InterMedian_L4 = 
+    AnyFolder QuadratusLumborumR12L4_2 = 
     {
       AnyString Muscle = "QLC12InterMedian_L4"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -5898,7 +5900,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder QLC12InterMedian_L3 = 
+    AnyFolder QuadratusLumborumR12L3_2 = 
     {
       AnyString Muscle = "QLC12InterMedian_L3"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -5916,7 +5918,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder QLC12InterMedian_L2 = 
+    AnyFolder QuadratusLumborumR12L2_2 = 
     {
       AnyString Muscle = "QLC12InterMedian_L2"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -5934,7 +5936,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder QLC12Median_L4 = 
+    AnyFolder QuadratusLumborumR12L4_3 = 
     {
       AnyString Muscle = "QLC12Median_L4"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -5952,7 +5954,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder QLC12Median_L3 = 
+    AnyFolder QuadratusLumborumR12L3_3 = 
     {
       AnyString Muscle = "QLC12Median_L3"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -5970,7 +5972,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder QLC12Median_L2 = 
+    AnyFolder QuadratusLumborumR12L2_3 = 
     {
       AnyString Muscle = "QLC12Median_L2"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -5991,7 +5993,7 @@ AnyFolder Muscles =
   {
     #if BM_TRUNK_MUSCLES
     AnyVar Volume ??= DesignVar(133.49); ///< Total volume of the muscle group (ml)
-    AnyFolder RA_1 = 
+    AnyFolder RectusAbdominisXiphoid = 
     {
       AnyString Muscle = "RA_1"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -6009,7 +6011,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder RA_2 = 
+    AnyFolder RectusAbdominisCC = 
     {
       AnyString Muscle = "RA_2"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -6446,7 +6448,7 @@ AnyFolder Muscles =
     };
     #endif
   }; // RotatoresLongus group
-  AnyFolder Scalenus = 
+  AnyFolder ScalenusAnterior = 
   {
     #if BM_TRUNK_MUSCLES
     AnyVar Volume ??= DesignVar(44.73); ///< Total volume of the muscle group (ml)
@@ -6520,7 +6522,9 @@ AnyFolder Muscles =
       AnyFloat Fcfast ??= DesignVar(0.4); ///< Factor for determining shortening speed at optimum length
     };
     #endif
-  
+  }; // ScalenusAnterior group
+  AnyFolder ScalenusMedius = 
+  {
     #if BM_TRUNK_MUSCLES
     AnyFolder ScalenusMediusR1C7 = 
     {
@@ -6628,7 +6632,9 @@ AnyFolder Muscles =
       AnyFloat Fcfast ??= DesignVar(0.4); ///< Factor for determining shortening speed at optimum length
     };
     #endif
-  
+  }; // ScalenusMedius group
+  AnyFolder ScalenusPosterior = 
+  {
     #if BM_TRUNK_MUSCLES
     AnyFolder ScalenusPosteriorR2C7 = 
     {
@@ -6682,7 +6688,7 @@ AnyFolder Muscles =
       AnyFloat Fcfast ??= DesignVar(0.4); ///< Factor for determining shortening speed at optimum length
     };
     #endif
-  }; // Scalenus group
+  }; // ScalenusPosterior group
   AnyFolder SemispinalisCapitis = 
   {
     #if BM_TRUNK_MUSCLES
@@ -6981,7 +6987,7 @@ AnyFolder Muscles =
   {
     #if BM_TRUNK_MUSCLES
     AnyVar Volume ??= DesignVar(12.85); ///< Total volume of the muscle group (ml)
-    AnyFolder SSTT12T4 = 
+    AnyFolder SemispinalisThoracisT12T4 = 
     {
       AnyString Muscle = "SSTT12T4"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -6999,7 +7005,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder SSTT11T3 = 
+    AnyFolder SemispinalisThoracisT11T3 = 
     {
       AnyString Muscle = "SSTT11T3"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -7017,7 +7023,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder SSTT10T2 = 
+    AnyFolder SemispinalisThoracisT10T2 = 
     {
       AnyString Muscle = "SSTT10T2"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -7035,7 +7041,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder SSTT9T1 = 
+    AnyFolder SemispinalisThoracisT9T1 = 
     {
       AnyString Muscle = "SSTT9T1"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -7053,7 +7059,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder SSTT8C7 = 
+    AnyFolder SemispinalisThoracisT8C7 = 
     {
       AnyString Muscle = "SSTT8C7"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -7071,7 +7077,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder SSTT7C6 = 
+    AnyFolder SemispinalisThoracisT7C6 = 
     {
       AnyString Muscle = "SSTT7C6"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -7092,7 +7098,7 @@ AnyFolder Muscles =
   {
     #if BM_TRUNK_MUSCLES
     AnyVar Volume ??= DesignVar(22.03); ///< Total volume of the muscle group (ml)
-    AnyFolder SPIL2R12 = 
+    AnyFolder SerratusPosteriorInferiorL2R12 = 
     {
       AnyString Muscle = "SPIL2R12"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -7110,7 +7116,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder SPIL1R11 = 
+    AnyFolder SerratusPosteriorInferiorL1R11 = 
     {
       AnyString Muscle = "SPIL1R11"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -7128,7 +7134,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder SPIT12R10 = 
+    AnyFolder SerratusPosteriorInferiorT12R10 = 
     {
       AnyString Muscle = "SPIT12R10"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -7146,7 +7152,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder SPIT11R9 = 
+    AnyFolder SerratusPosteriorInferiorT11R9 = 
     {
       AnyString Muscle = "SPIT11R9"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -7167,7 +7173,7 @@ AnyFolder Muscles =
   {
     #if BM_TRUNK_MUSCLES
     AnyVar Volume ??= DesignVar(17.42); ///< Total volume of the muscle group (ml)
-    AnyFolder SPSR2C7 = 
+    AnyFolder SerratusPosteriorSuperiorR2C7 = 
     {
       AnyString Muscle = "SPSR2C7"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -7185,7 +7191,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder SPSR3T1 = 
+    AnyFolder SerratusPosteriorSuperiorR3T1 = 
     {
       AnyString Muscle = "SPSR3T1"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -7203,7 +7209,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder SPSR4T2 = 
+    AnyFolder SerratusPosteriorSuperiorR4T2 = 
     {
       AnyString Muscle = "SPSR4T2"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -7221,7 +7227,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder SPSR5T3 = 
+    AnyFolder SerratusPosteriorSuperiorR5T3 = 
     {
       AnyString Muscle = "SPSR5T3"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -7242,7 +7248,7 @@ AnyFolder Muscles =
   {
     #if BM_TRUNK_MUSCLES
     AnyVar Volume ??= DesignVar(51.23); ///< Total volume of the muscle group (ml)
-    AnyFolder SpleniusCapitisC7C0 = 
+    AnyFolder SpleniusCapitisC7 = 
     {
       AnyString Muscle = "SpleniusCapitisC7C0"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -7260,7 +7266,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder SpleniusCapitisT1C0 = 
+    AnyFolder SpleniusCapitisT1 = 
     {
       AnyString Muscle = "SpleniusCapitisT1C0"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -7278,7 +7284,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder SpleniusCapitisT2C0 = 
+    AnyFolder SpleniusCapitisT2 = 
     {
       AnyString Muscle = "SpleniusCapitisT2C0"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -7296,7 +7302,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder SpleniusCapitisT3C0 = 
+    AnyFolder SpleniusCapitisT3 = 
     {
       AnyString Muscle = "SpleniusCapitisT3C0"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -7392,7 +7398,7 @@ AnyFolder Muscles =
   {
     #if BM_TRUNK_MUSCLES
     AnyVar Volume ??= DesignVar(36.20); ///< Total volume of the muscle group (ml)
-    AnyFolder SCR1R3 = 
+    AnyFolder SubcostalisR1R3 = 
     {
       AnyString Muscle = "SCR1R3"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -7410,7 +7416,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder SCR1R4 = 
+    AnyFolder SubcostalisR1R4 = 
     {
       AnyString Muscle = "SCR1R4"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -7428,7 +7434,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder SCR2R4 = 
+    AnyFolder SubcostalisR2R4 = 
     {
       AnyString Muscle = "SCR2R4"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -7446,7 +7452,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder SCR2R5 = 
+    AnyFolder SubcostalisR2R5 = 
     {
       AnyString Muscle = "SCR2R5"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -7464,7 +7470,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder SCR3R5 = 
+    AnyFolder SubcostalisR3R5 = 
     {
       AnyString Muscle = "SCR3R5"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -7482,7 +7488,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder SCR3R6 = 
+    AnyFolder SubcostalisR3R6 = 
     {
       AnyString Muscle = "SCR3R6"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -7500,7 +7506,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder SCR4R6 = 
+    AnyFolder SubcostalisR4R6 = 
     {
       AnyString Muscle = "SCR4R6"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -7518,7 +7524,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder SCR4R7 = 
+    AnyFolder SubcostalisR4R7 = 
     {
       AnyString Muscle = "SCR4R7"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -7536,7 +7542,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder SCR5R7 = 
+    AnyFolder SubcostalisR5R7 = 
     {
       AnyString Muscle = "SCR5R7"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -7554,7 +7560,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder SCR5R8 = 
+    AnyFolder SubcostalisR5R8 = 
     {
       AnyString Muscle = "SCR5R8"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -7572,7 +7578,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder SCR6R8 = 
+    AnyFolder SubcostalisR6R8 = 
     {
       AnyString Muscle = "SCR6R8"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -7590,7 +7596,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder SCR6R9 = 
+    AnyFolder SubcostalisR6R9 = 
     {
       AnyString Muscle = "SCR6R9"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -7608,7 +7614,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder SCR7R9 = 
+    AnyFolder SubcostalisR7R9 = 
     {
       AnyString Muscle = "SCR7R9"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -7626,7 +7632,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder SCR7R10 = 
+    AnyFolder SubcostalisR7R10 = 
     {
       AnyString Muscle = "SCR7R10"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -7644,7 +7650,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder SCR8R10 = 
+    AnyFolder SubcostalisR8R10 = 
     {
       AnyString Muscle = "SCR8R10"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -7662,7 +7668,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder SCR8R11 = 
+    AnyFolder SubcostalisR8R11 = 
     {
       AnyString Muscle = "SCR8R11"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -7680,7 +7686,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder SCR9R11 = 
+    AnyFolder SubcostalisR9R11 = 
     {
       AnyString Muscle = "SCR9R11"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -7701,7 +7707,7 @@ AnyFolder Muscles =
   {
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
     AnyVar Volume ??= DesignVar(49.40); ///< Total volume of the muscle group (ml)
-    AnyFolder TransversusL1 = 
+    AnyFolder TransversusAbdominisL1 = 
     {
       AnyString Muscle = "TransversusL1"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -7719,7 +7725,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-    AnyFolder TransversusL2 = 
+    AnyFolder TransversusAbdominisL2 = 
     {
       AnyString Muscle = "TransversusL2"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -7737,7 +7743,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-    AnyFolder TransversusL3 = 
+    AnyFolder TransversusAbdominisL3 = 
     {
       AnyString Muscle = "TransversusL3"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -7755,7 +7761,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-    AnyFolder TransversusL4 = 
+    AnyFolder TransversusAbdominisL4 = 
     {
       AnyString Muscle = "TransversusL4"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -7773,7 +7779,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-    AnyFolder TransversusL5 = 
+    AnyFolder TransversusAbdominisL5 = 
     {
       AnyString Muscle = "TransversusL5"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -7794,7 +7800,7 @@ AnyFolder Muscles =
   {
     #if BM_TRUNK_MUSCLES
     AnyVar Volume ??= DesignVar(46.62); ///< Total volume of the muscle group (ml)
-    AnyFolder TrThR2S = 
+    AnyFolder TransversusThoracisR2St = 
     {
       AnyString Muscle = "TrThR2S"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -7812,7 +7818,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder TrThR2R4S = 
+    AnyFolder TransversusThoracisR2R4 = 
     {
       AnyString Muscle = "TrThR2R4S"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -7830,7 +7836,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder TrThR3S = 
+    AnyFolder TransversusThoracisR3St = 
     {
       AnyString Muscle = "TrThR3S"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -7848,7 +7854,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder TrThR3R5S = 
+    AnyFolder TransversusThoracisR3R5 = 
     {
       AnyString Muscle = "TrThR3R5S"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -7866,7 +7872,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder TrThR4S = 
+    AnyFolder TransversusThoracisR4St = 
     {
       AnyString Muscle = "TrThR4S"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -7884,7 +7890,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder TrThR4R6S = 
+    AnyFolder TransversusThoracisR4R6 = 
     {
       AnyString Muscle = "TrThR4R6S"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -7902,7 +7908,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder TrThR5S = 
+    AnyFolder TransversusThoracisR5St = 
     {
       AnyString Muscle = "TrThR5S"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -7920,7 +7926,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder TrThR5R7S = 
+    AnyFolder TransversusThoracisR5R7 = 
     {
       AnyString Muscle = "TrThR5R7S"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -7938,7 +7944,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder TrThR6S = 
+    AnyFolder TransversusThoracisR6St = 
     {
       AnyString Muscle = "TrThR6S"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -7956,7 +7962,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder TrThR7S = 
+    AnyFolder TransversusThoracisR7St = 
     {
       AnyString Muscle = "TrThR7S"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -7974,7 +7980,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder TrThR8S = 
+    AnyFolder TransversusThoracisR8St = 
     {
       AnyString Muscle = "TrThR8S"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -7992,7 +7998,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder TrThR9S = 
+    AnyFolder TransversusThoracisR9St = 
     {
       AnyString Muscle = "TrThR9S"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -8010,7 +8016,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder TrThR10S = 
+    AnyFolder TransversusThoracisR10St = 
     {
       AnyString Muscle = "TrThR10S"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
