@@ -6404,24 +6404,32 @@ MuscleGroup TransversusThoracis = {
     AnyMuscleModel &MusMdl = ....MuscleModels.Right.TransversusThoracis.TransvThModel_10;
     AnyRefNode &R7 = ....Segments.Right.R7Seg.TrThR7SNodeROrg;
     AnyRefNode &S8 = ....Segments.SternalBodySeg.TrThNodeRIns;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    viewForce.Visible ??= Off;
   };
   
   AnyMuscleViaPoint TrThR8S = {
     AnyMuscleModel &MusMdl = ....MuscleModels.Right.TransversusThoracis.TransvThModel_11;
     AnyRefNode &R8 = ....Segments.Right.R8Seg.TrThR8SNodeROrg;
     AnyRefNode &S8 = ....Segments.SternalBodySeg.TrThNodeRIns;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    viewForce.Visible ??= Off;
   };
   
   AnyMuscleViaPoint TrThR9S = {
     AnyMuscleModel &MusMdl = ....MuscleModels.Right.TransversusThoracis.TransvThModel_12;
     AnyRefNode &R9 = ....Segments.Right.R9Seg.TrThR9SNodeROrg;
     AnyRefNode &S8 = ....Segments.SternalBodySeg.TrThNodeRIns;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    viewForce.Visible ??= Off;
   };
   
   AnyMuscleViaPoint TrThR10S = {
     AnyMuscleModel &MusMdl = ....MuscleModels.Right.TransversusThoracis.TransvThModel_13;
     AnyRefNode &R10 = ....Segments.Right.R10Seg.TrThR10SNodeROrg;
     AnyRefNode &S8 = ....Segments.SternalBodySeg.TrThNodeRIns;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    viewForce.Visible ??= Off;
   };
 };
 #endif
