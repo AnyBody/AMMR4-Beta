@@ -1204,10 +1204,10 @@ AnySeg L2Seg = {
     // End of Obliquus Internus Nodes
 
     // Diaphragm Muscles Nodes
-    AnyRefNode L2_DiaphragmNode1R = {sRel = .Scale(.Data.Right.DiaphragmNode1_pos); };
-    AnyRefNode L2_DiaphragmNode2R = {sRel = .Scale(.Data.Right.DiaphragmNode2_pos); };
-    AnyRefNode L2_DiaphragmNode1L = {sRel = .Scale(.Data.Left.DiaphragmNode1_pos); };
-    AnyRefNode L2_DiaphragmNode2L = {sRel = .Scale(.Data.Left.DiaphragmNode2_pos); };
+    AnyRefNode DiaphragmL2_1NodeR = {sRel = .Scale(.Data.Right.DiaphragmNode1_pos); };
+    AnyRefNode DiaphragmL2_2NodeR = {sRel = .Scale(.Data.Right.DiaphragmNode2_pos); };
+    AnyRefNode DiaphragmL2_1NodeL = {sRel = .Scale(.Data.Left.DiaphragmNode1_pos); };
+    AnyRefNode DiaphragmL2_2NodeL = {sRel = .Scale(.Data.Left.DiaphragmNode2_pos); };
     //End of Diaphragm Muscles Nodes
 
   AnyDrawSurf BoneDraw = {
@@ -1456,12 +1456,12 @@ AnySeg L1Seg = {
     // End of Quadratus Lumborum Nodes
 
     // Diaphragm Muscles Nodes
-    AnyRefNode L1TransversProcess_DiaphragmR = {sRel = .Scale(.Data.Right.TransversProcessDiaphragmNode_pos); };
-    AnyRefNode L1TransversProcess_DiaphragmL = {sRel = .Scale(.Data.Left.TransversProcessDiaphragmNode_pos); };
-    AnyRefNode L1_DiaphragmNode1R = {sRel = .Scale(.Data.Right.DiaphragmNode1_pos); };
-    AnyRefNode L1_DiaphragmNode2R = {sRel = .Scale(.Data.Right.DiaphragmNode2_pos); };
-    AnyRefNode L1_DiaphragmNode1L = {sRel = .Scale(.Data.Left.DiaphragmNode1_pos); };
-    AnyRefNode L1_DiaphragmNode2L = {sRel = .Scale(.Data.Left.DiaphragmNode2_pos); };
+    AnyRefNode DiaphragmL1_3NodeR = {sRel = .Scale(.Data.Right.DiaphragmL1_3Node_pos); };
+    AnyRefNode DiaphragmL1_3NodeL = {sRel = .Scale(.Data.Left.DiaphragmL1_3Node_pos); };
+    AnyRefNode DiaphragmL1_1NodeR = {sRel = .Scale(.Data.Right.DiaphragmNode1_pos); };
+    AnyRefNode DiaphragmL1_2NodeR = {sRel = .Scale(.Data.Right.DiaphragmNode2_pos); };
+    AnyRefNode DiaphragmL1_1NodeL = {sRel = .Scale(.Data.Left.DiaphragmNode1_pos); };
+    AnyRefNode DiaphragmL1_2NodeL = {sRel = .Scale(.Data.Left.DiaphragmNode2_pos); };
     //End of Diaphragm Muscles Nodes
 
     AnyDrawSurf BoneDraw = {

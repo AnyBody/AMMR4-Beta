@@ -7,13 +7,13 @@
 #if BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
 MuscleGroup Diaphragm = {
   
-  AnyMuscleShortestPath L1_Diaphragm1 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Diaphragm.L1_Diaphragm1;
-    AnyRefNode &Org = ....Segments.L1Seg.L1_DiaphragmNode1R;
-    AnyRefNode &Ins = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.L1_Diaphragm1Node;
+  AnyMuscleShortestPath DiaphragmL1_1 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Diaphragm.DiaphragmL1_1;
+    AnyRefNode &Org = ....Segments.L1Seg.DiaphragmL1_1NodeR;
+    AnyRefNode &Ins = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.DiaphragmL1_1Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
-    AnyParamSurf &Srf = ....Abdominal.Diaphragm.CavitySegSuperoposterior.Layer_T10.Right.L1_Diaphragm1;
+    AnyParamSurf &Srf = ....Abdominal.Diaphragm.CavitySegSuperoposterior.Layer_T10.Right.DiaphragmL1_1;
     SPLine = {
       StringMesh=35;
       AnyMatrix InitWrapPos = {transf3D({0,-.Srf.Radius[0],0}, &.Srf)};
@@ -21,13 +21,13 @@ MuscleGroup Diaphragm = {
     };
   };
   
-  AnyMuscleShortestPath L1_Diaphragm2 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Diaphragm.L1_Diaphragm2;
-    AnyRefNode &Org = ....Segments.L1Seg.L1_DiaphragmNode2R;
-    AnyRefNode &Ins = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.L1_Diaphragm2Node;
+  AnyMuscleShortestPath DiaphragmL1_2 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Diaphragm.DiaphragmL1_2;
+    AnyRefNode &Org = ....Segments.L1Seg.DiaphragmL1_2NodeR;
+    AnyRefNode &Ins = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.DiaphragmL1_2Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
-    AnyParamSurf &Srf = ....Abdominal.Diaphragm.CavitySegSuperoposterior.Layer_T10.Right.L1_Diaphragm2;
+    AnyParamSurf &Srf = ....Abdominal.Diaphragm.CavitySegSuperoposterior.Layer_T10.Right.DiaphragmL1_2;
     SPLine = {
       StringMesh=35;
       AnyMatrix InitWrapPos = {transf3D({0,-.Srf.Radius[0],0}, &.Srf)};
@@ -35,13 +35,13 @@ MuscleGroup Diaphragm = {
     };
   };
   
-  AnyMuscleShortestPath L2_Diaphragm1 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Diaphragm.L2_Diaphragm1;
-    AnyRefNode &Org = ....Segments.L2Seg.L2_DiaphragmNode1R;
-    AnyRefNode &Ins = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.L2_Diaphragm1Node;
+  AnyMuscleShortestPath DiaphragmL2_1 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Diaphragm.DiaphragmL2_1;
+    AnyRefNode &Org = ....Segments.L2Seg.DiaphragmL2_1NodeR;
+    AnyRefNode &Ins = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.DiaphragmL2_1Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
-    AnyParamSurf &Srf = ....Abdominal.Diaphragm.CavitySegSuperoposterior.Layer_T10.Right.L2_Diaphragm1;
+    AnyParamSurf &Srf = ....Abdominal.Diaphragm.CavitySegSuperoposterior.Layer_T10.Right.DiaphragmL2_1;
     SPLine = {
       StringMesh=35;
       AnyMatrix InitWrapPos = {transf3D({0,-.Srf.Radius[0],0}, &.Srf)};
@@ -49,13 +49,13 @@ MuscleGroup Diaphragm = {
     };
   };
   
-  AnyMuscleShortestPath L2_Diaphragm2 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Diaphragm.L2_Diaphragm2;
-    AnyRefNode &Org = ....Segments.L2Seg.L2_DiaphragmNode2R;
-    AnyRefNode &Ins = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.L2_Diaphragm2Node;
+  AnyMuscleShortestPath DiaphragmL2_2 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Diaphragm.DiaphragmL2_2;
+    AnyRefNode &Org = ....Segments.L2Seg.DiaphragmL2_2NodeR;
+    AnyRefNode &Ins = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.DiaphragmL2_2Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
-    AnyParamSurf &Srf = ....Abdominal.Diaphragm.CavitySegSuperoposterior.Layer_T10.Right.L2_Diaphragm2;
+    AnyParamSurf &Srf = ....Abdominal.Diaphragm.CavitySegSuperoposterior.Layer_T10.Right.DiaphragmL2_2;
     SPLine = {
       StringMesh=35;
       AnyMatrix InitWrapPos = {transf3D({0,-.Srf.Radius[0],0}, &.Srf)};
@@ -63,236 +63,236 @@ MuscleGroup Diaphragm = {
     };
   };
   
-  AnyMuscleShortestPath L1TransverseProcess_Diaphragm = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Diaphragm.L1TransverseProcess_Diaphragm;
-    AnyRefNode &Org = ....Segments.L1Seg.L1TransversProcess_DiaphragmR;
-    AnyRefNode &Ins = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.L1TransversProcess_DiaphragmNode;
+  AnyMuscleShortestPath DiaphragmL1_3 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Diaphragm.DiaphragmL1_3;
+    AnyRefNode &Org = ....Segments.L1Seg.DiaphragmL1_3NodeR;
+    AnyRefNode &Ins = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.DiaphragmL1_3Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
-    AnyParamSurf &Srf = ....Abdominal.Diaphragm.CavitySegSuperoposterior.Layer_T10.Right.L1TransverseProcess_Diaphragm;
+    AnyParamSurf &Srf = ....Abdominal.Diaphragm.CavitySegSuperoposterior.Layer_T10.Right.DiaphragmL1_3;
     SPLine = {
       StringMesh=35;
       AnyMatrix InitWrapPos = {transf3D({0,-.Srf.Radius[0],0}, &.Srf)};
       InitWrapPosVecArr = {&InitWrapPos};
     };
   };
-  AnyMuscleShortestPath R12_Diaphragm2 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Diaphragm.R12_Diaphragm2;
-    AnyRefNode &Org = ....Segments.Right.R12Seg.R12_DiaphragmNode2R;
-    AnyRefNode &Ins = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.R12_Diaphragm2Node;
+  AnyMuscleShortestPath DiaphragmR12_2 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Diaphragm.DiaphragmR12_2;
+    AnyRefNode &Org = ....Segments.Right.R12Seg.DiaphragmR12_2NodeR;
+    AnyRefNode &Ins = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.DiaphragmR12_2Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
-    AnyParamSurf &Srf = ....Abdominal.Diaphragm.CavitySegSuperoposterior.Layer_T10.Right.R12_Diaphragm2;
+    AnyParamSurf &Srf = ....Abdominal.Diaphragm.CavitySegSuperoposterior.Layer_T10.Right.DiaphragmR12_2;
     SPLine = {
       StringMesh=35;
       AnyMatrix InitWrapPos = {transf3D({0,-.Srf.Radius[0],0}, &.Srf)};
       InitWrapPosVecArr = {&InitWrapPos};
     };
   };
-  AnyMuscleShortestPath R12_Diaphragm1 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Diaphragm.R12_Diaphragm1;
-    AnyRefNode &Org = ....Segments.Right.R12Seg.R12_DiaphragmNode1R;
-    AnyRefNode &Ins = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.R12_Diaphragm1Node;
+  AnyMuscleShortestPath DiaphragmR12_1 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Diaphragm.DiaphragmR12_1;
+    AnyRefNode &Org = ....Segments.Right.R12Seg.DiaphragmR12_1NodeR;
+    AnyRefNode &Ins = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.DiaphragmR12_1Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
-    AnyParamSurf &Srf = ....Abdominal.Diaphragm.CavitySegSuperoposterior.Layer_T10.Right.R12_Diaphragm1;
+    AnyParamSurf &Srf = ....Abdominal.Diaphragm.CavitySegSuperoposterior.Layer_T10.Right.DiaphragmR12_1;
     SPLine = {
       StringMesh=35;
       AnyMatrix InitWrapPos = {transf3D({0,-.Srf.Radius[0],0}, &.Srf)};
       InitWrapPosVecArr = {&InitWrapPos};
     };
   };
-  AnyMuscleShortestPath R11_Diaphragm3 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Diaphragm.R11_Diaphragm3;
-    AnyRefNode &Org = ....Segments.Right.R11Seg.R11_DiaphragmNode3R;    
-    AnyRefNode &Ins = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.R11_Diaphragm3Node;
+  AnyMuscleShortestPath DiaphragmR11_3 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Diaphragm.DiaphragmR11_3;
+    AnyRefNode &Org = ....Segments.Right.R11Seg.DiaphragmR11_3NodeR;    
+    AnyRefNode &Ins = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.DiaphragmR11_3Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
-    AnyParamSurf &Srf = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.R11_Diaphragm3;
+    AnyParamSurf &Srf = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.DiaphragmR11_3;
     SPLine = {
       StringMesh=35;
       AnyMatrix InitWrapPos = {transf3D({0,-.Srf.Radius[0],0}, &.Srf)};
       InitWrapPosVecArr = {&InitWrapPos};
     };
   };
-  AnyMuscleShortestPath R11_Diaphragm2 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Diaphragm.R11_Diaphragm2;
-    AnyRefNode &Org = ....Segments.Right.R11Seg.R11_DiaphragmNode2R;
-    AnyRefNode &Ins = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.R11_Diaphragm2Node;
+  AnyMuscleShortestPath DiaphragmR11_2 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Diaphragm.DiaphragmR11_2;
+    AnyRefNode &Org = ....Segments.Right.R11Seg.DiaphragmR11_2NodeR;
+    AnyRefNode &Ins = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.DiaphragmR11_2Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
-    AnyParamSurf &Srf = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.R11_Diaphragm2;
+    AnyParamSurf &Srf = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.DiaphragmR11_2;
     SPLine = {
       StringMesh=35;
       AnyMatrix InitWrapPos = {transf3D({0,-.Srf.Radius[0],0}, &.Srf)};
       InitWrapPosVecArr = {&InitWrapPos};
     };
   };
-  AnyMuscleShortestPath R11_Diaphragm1 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Diaphragm.R11_Diaphragm1;
-    AnyRefNode &Org = ....Segments.Right.R11Seg.R11_DiaphragmNode1R;
-    AnyRefNode &Ins = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.R11_Diaphragm1Node;
+  AnyMuscleShortestPath DiaphragmR11_1 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Diaphragm.DiaphragmR11_1;
+    AnyRefNode &Org = ....Segments.Right.R11Seg.DiaphragmR11_1NodeR;
+    AnyRefNode &Ins = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.DiaphragmR11_1Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
-    AnyParamSurf &Srf = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.R11_Diaphragm1;
+    AnyParamSurf &Srf = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.DiaphragmR11_1;
     SPLine = {
       StringMesh=35;
       AnyMatrix InitWrapPos = {transf3D({0,-.Srf.Radius[0],0}, &.Srf)};
       InitWrapPosVecArr = {&InitWrapPos};
     };
   };
-  AnyMuscleShortestPath R10_Diaphragm1 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Diaphragm.R10_Diaphragm1;
-    AnyRefNode &Org = ....Segments.Right.R10Seg.R10_DiaphragmNode1R;
-    AnyRefNode &Ins = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.R10_Diaphragm1Node;
+  AnyMuscleShortestPath DiaphragmR10_1 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Diaphragm.DiaphragmR10_1;
+    AnyRefNode &Org = ....Segments.Right.R10Seg.DiaphragmR10_1NodeR;
+    AnyRefNode &Ins = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.DiaphragmR10_1Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
-    AnyParamSurf &Srf = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.R10_Diaphragm1;
+    AnyParamSurf &Srf = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.DiaphragmR10_1;
     SPLine = {
       StringMesh=35;
       AnyMatrix InitWrapPos = {transf3D({0,-.Srf.Radius[0],0}, &.Srf)};
       InitWrapPosVecArr = {&InitWrapPos};
     };
   };
-  AnyMuscleShortestPath R10_Diaphragm2 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Diaphragm.R10_Diaphragm2;
-    AnyRefNode &Org = ....Segments.Right.R10Seg.R10_DiaphragmNode2R;
-    AnyRefNode &Ins = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.R10_Diaphragm2Node;
+  AnyMuscleShortestPath DiaphragmR10_2 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Diaphragm.DiaphragmR10_2;
+    AnyRefNode &Org = ....Segments.Right.R10Seg.DiaphragmR10_2NodeR;
+    AnyRefNode &Ins = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.DiaphragmR10_2Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
-    AnyParamSurf &Srf = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.R10_Diaphragm2;
+    AnyParamSurf &Srf = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.DiaphragmR10_2;
     SPLine = {
       StringMesh=35;
       AnyMatrix InitWrapPos = {transf3D({0,-.Srf.Radius[0],0}, &.Srf)};
       InitWrapPosVecArr = {&InitWrapPos};
     };
   };
-  AnyMuscleShortestPath R10_Diaphragm3 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Diaphragm.R10_Diaphragm3;
-    AnyRefNode &Org = ....Segments.Right.R10Seg.R10_DiaphragmNode3R;
-    AnyRefNode &Ins = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.R10_Diaphragm3Node;
+  AnyMuscleShortestPath DiaphragmR10_3 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Diaphragm.DiaphragmR10_3;
+    AnyRefNode &Org = ....Segments.Right.R10Seg.DiaphragmR10_3NodeR;
+    AnyRefNode &Ins = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.DiaphragmR10_3Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
-    AnyParamSurf &Srf = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.R10_Diaphragm3;
+    AnyParamSurf &Srf = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.DiaphragmR10_3;
     SPLine = {
       StringMesh=35;
       AnyMatrix InitWrapPos = {transf3D({0,-.Srf.Radius[0],0}, &.Srf)};
       InitWrapPosVecArr = {&InitWrapPos};
     };
   };
-  AnyMuscleShortestPath CC_DiaphragmNode7 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Diaphragm.CC_DiaphragmNode7;
+  AnyMuscleShortestPath DiaphragmCC_7 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Diaphragm.DiaphragmCC_7;
     #if BM_TRUNK_THORACIC_STERNUM_TOPOLOGY == 4
-    AnyRefNode &Org = ....Segments.Right.CostalCartilageSeg.CC_DiaphragmNode7R;
+    AnyRefNode &Org = ....Segments.Right.CostalCartilageSeg.DiaphragmCC_7R;
     #else
-    AnyRefNode &Org = ....Segments.SternalBodySeg.CC_DiaphragmNode7R;
+    AnyRefNode &Org = ....Segments.SternalBodySeg.DiaphragmCC_7R;
     #endif
-    AnyRefNode &Ins = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.CC_Diaphragm7Node;
+    AnyRefNode &Ins = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.DiaphragmCC_7Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
-    AnyParamSurf &Srf = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.CC_Diaphragm7;
+    AnyParamSurf &Srf = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.DiaphragmCC_7;
     SPLine = {
       StringMesh=35;
       AnyMatrix InitWrapPos = {transf3D({0,-.Srf.Radius[0],0}, &.Srf)};
       InitWrapPosVecArr = {&InitWrapPos};
     };
   };
-  AnyMuscleShortestPath CC_DiaphragmNode6 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Diaphragm.CC_DiaphragmNode6;
+  AnyMuscleShortestPath DiaphragmCC_6 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Diaphragm.DiaphragmCC_6;
     #if BM_TRUNK_THORACIC_STERNUM_TOPOLOGY == 4
-    AnyRefNode &Org = ....Segments.Right.CostalCartilageSeg.CC_DiaphragmNode6R;
+    AnyRefNode &Org = ....Segments.Right.CostalCartilageSeg.DiaphragmCC_6R;
     #else
-    AnyRefNode &Org = ....Segments.SternalBodySeg.CC_DiaphragmNode6R;
+    AnyRefNode &Org = ....Segments.SternalBodySeg.DiaphragmCC_6R;
     #endif
-    AnyRefNode &Ins = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.CC_Diaphragm6Node;
+    AnyRefNode &Ins = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.DiaphragmCC_6Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
-    AnyParamSurf &Srf = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.CC_Diaphragm6;
+    AnyParamSurf &Srf = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.DiaphragmCC_6;
     SPLine = {
       StringMesh=35;
       AnyMatrix InitWrapPos = {transf3D({0,-.Srf.Radius[0],0}, &.Srf)};
       InitWrapPosVecArr = {&InitWrapPos};
     };
   };
-  AnyMuscleShortestPath CC_DiaphragmNode5 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Diaphragm.CC_DiaphragmNode5;
+  AnyMuscleShortestPath DiaphragmCC_5 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Diaphragm.DiaphragmCC_5;
     #if BM_TRUNK_THORACIC_STERNUM_TOPOLOGY == 4
-    AnyRefNode &Org = ....Segments.Right.CostalCartilageSeg.CC_DiaphragmNode5R;
+    AnyRefNode &Org = ....Segments.Right.CostalCartilageSeg.DiaphragmCC_5R;
     #else
-    AnyRefNode &Org = ....Segments.SternalBodySeg.CC_DiaphragmNode5R;
+    AnyRefNode &Org = ....Segments.SternalBodySeg.DiaphragmCC_5R;
     #endif
-    AnyRefNode &Ins = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.CC_Diaphragm5Node;
+    AnyRefNode &Ins = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.DiaphragmCC_5Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
-    AnyParamSurf &Srf = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.CC_Diaphragm5;
+    AnyParamSurf &Srf = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.DiaphragmCC_5;
     SPLine = {
       StringMesh=35;
       AnyMatrix InitWrapPos = {transf3D({0,-.Srf.Radius[0],0}, &.Srf)};
       InitWrapPosVecArr = {&InitWrapPos};
     };
   };
-  AnyMuscleShortestPath CC_DiaphragmNode4 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Diaphragm.CC_DiaphragmNode4;
+  AnyMuscleShortestPath DiaphragmCC_4 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Diaphragm.DiaphragmCC_4;
     #if BM_TRUNK_THORACIC_STERNUM_TOPOLOGY == 4
-    AnyRefNode &Org = ....Segments.Right.CostalCartilageSeg.CC_DiaphragmNode4R;
+    AnyRefNode &Org = ....Segments.Right.CostalCartilageSeg.DiaphragmCC_4R;
     #else
-    AnyRefNode &Org = ....Segments.SternalBodySeg.CC_DiaphragmNode4R;
+    AnyRefNode &Org = ....Segments.SternalBodySeg.DiaphragmCC_4R;
     #endif
-    AnyRefNode &Ins = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.CC_Diaphragm4Node;
+    AnyRefNode &Ins = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.DiaphragmCC_4Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
-    AnyParamSurf &Srf = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.CC_Diaphragm4;
+    AnyParamSurf &Srf = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.DiaphragmCC_4;
     SPLine = {
       StringMesh=35;
       AnyMatrix InitWrapPos = {transf3D({0,-.Srf.Radius[0],0}, &.Srf)};
       InitWrapPosVecArr = {&InitWrapPos};
     };
   };
-  AnyMuscleShortestPath CC_DiaphragmNode3 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Diaphragm.CC_DiaphragmNode3;
+  AnyMuscleShortestPath DiaphragmCC_3 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Diaphragm.DiaphragmCC_3;
     #if BM_TRUNK_THORACIC_STERNUM_TOPOLOGY == 4
-    AnyRefNode &Org = ....Segments.Right.CostalCartilageSeg.CC_DiaphragmNode3R;
+    AnyRefNode &Org = ....Segments.Right.CostalCartilageSeg.DiaphragmCC_3R;
     #else
-    AnyRefNode &Org = ....Segments.SternalBodySeg.CC_DiaphragmNode3R;
+    AnyRefNode &Org = ....Segments.SternalBodySeg.DiaphragmCC_3R;
     #endif
-    AnyRefNode &Ins = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.CC_Diaphragm3Node;
+    AnyRefNode &Ins = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.DiaphragmCC_3Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
-    AnyParamSurf &Srf = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.CC_Diaphragm3;
+    AnyParamSurf &Srf = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.DiaphragmCC_3;
     SPLine = {
       StringMesh=35;
       AnyMatrix InitWrapPos = {transf3D({0,-.Srf.Radius[0],0}, &.Srf)};
       InitWrapPosVecArr = {&InitWrapPos};
     };
   };
-  AnyMuscleShortestPath CC_DiaphragmNode2 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Diaphragm.CC_DiaphragmNode2;
+  AnyMuscleShortestPath DiaphragmCC_2 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Diaphragm.DiaphragmCC_2;
     #if BM_TRUNK_THORACIC_STERNUM_TOPOLOGY == 4
-    AnyRefNode &Org = ....Segments.Right.CostalCartilageSeg.CC_DiaphragmNode2R;
+    AnyRefNode &Org = ....Segments.Right.CostalCartilageSeg.DiaphragmCC_2R;
     #else
-    AnyRefNode &Org = ....Segments.SternalBodySeg.CC_DiaphragmNode2R;
+    AnyRefNode &Org = ....Segments.SternalBodySeg.DiaphragmCC_2R;
     #endif
-    AnyRefNode &Ins = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.CC_Diaphragm2Node;
+    AnyRefNode &Ins = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.DiaphragmCC_2Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
-    AnyParamSurf &Srf = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.CC_Diaphragm2;
+    AnyParamSurf &Srf = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.DiaphragmCC_2;
     SPLine = {
       StringMesh=35;
       AnyMatrix InitWrapPos = {transf3D({0,-.Srf.Radius[0],0}, &.Srf)};
       InitWrapPosVecArr = {&InitWrapPos};
     };
   };
-  AnyMuscleShortestPath CC_DiaphragmNode1 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Diaphragm.CC_DiaphragmNode1;
+  AnyMuscleShortestPath DiaphragmCC_1 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Diaphragm.DiaphragmCC_1;
     #if BM_TRUNK_THORACIC_STERNUM_TOPOLOGY == 4
-    AnyRefNode &Org = ....Segments.Right.CostalCartilageSeg.CC_DiaphragmNode1R;
+    AnyRefNode &Org = ....Segments.Right.CostalCartilageSeg.DiaphragmCC_1R;
     #else
-    AnyRefNode &Org = ....Segments.SternalBodySeg.CC_DiaphragmNode1R;
+    AnyRefNode &Org = ....Segments.SternalBodySeg.DiaphragmCC_1R;
     #endif
-    AnyRefNode &Ins = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.CC_Diaphragm1Node;
+    AnyRefNode &Ins = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.DiaphragmCC_1Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
-    AnyParamSurf &Srf = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.CC_Diaphragm1;
+    AnyParamSurf &Srf = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.DiaphragmCC_1;
     SPLine = {
       StringMesh=35;
       AnyMatrix InitWrapPos = {transf3D({0,-.Srf.Radius[0],0}, &.Srf)};
@@ -300,13 +300,13 @@ MuscleGroup Diaphragm = {
     };
   };
   
-  AnyMuscleShortestPath Xiphoid_Diaphragm = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Diaphragm.Xiphoid_Diaphragm;
-    AnyRefNode &Org = ....Segments.SternalBodySeg.Xiphoid_DiaphragmNodeR;
-    AnyRefNode &Ins = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.Xiphoid_DiaphragmNode;
+  AnyMuscleShortestPath DiaphragmXiphoid = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Diaphragm.DiaphragmXiphoid;
+    AnyRefNode &Org = ....Segments.SternalBodySeg.DiaphragmXiphoidNodeR;
+    AnyRefNode &Ins = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.DiaphragmXiphoidNode;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
-    AnyParamSurf &Srf = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.Xiphoid_Diaphragm;
+    AnyParamSurf &Srf = ....Abdominal.Diaphragm.CavitySegSuperoanterior.Layer_T10.Right.DiaphragmXiphoid;
     SPLine = {
       StringMesh=35;
       AnyMatrix InitWrapPos = {transf3D({0,-.Srf.Radius[0],0}, &.Srf)};
@@ -3926,9 +3926,9 @@ MuscleGroup ObliquusInternus = {
   
   AnyMuscleShortestPath OIC_8 = {
     AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.OIC_8;
-    //  AnyRefNode &Org = ....Segments.SternalBodySeg.Xiphoid_DiaphragmNodeR;
+    //  AnyRefNode &Org = ....Segments.SternalBodySeg.DiaphragmXiphoidNodeR;
     //  AnyRefNode &Ins = ....Segments.PelvisSeg.Right.ObliquusInternusNode_6;
-    AnyRefNode &Org = ....Segments.SternalBodySeg.Xiphoid_DiaphragmNodeR;
+    AnyRefNode &Org = ....Segments.SternalBodySeg.DiaphragmXiphoidNodeR;
     AnyRefNode &Via = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L1.BaseSegAnterior.TransversusPoints.Right.nn06;
     
     AnyRefNode &Ins = ....Segments.PelvisSeg.Right.ObliquusInternusNode_6;
@@ -4358,7 +4358,7 @@ MuscleGroup ObliquusInternus = {
   
   AnyMuscleShortestPath OIC_9 = {
     AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.OIC_9;
-    AnyRefNode &Org = ....Segments.SternalBodySeg.Xiphoid_DiaphragmNodeR;
+    AnyRefNode &Org = ....Segments.SternalBodySeg.DiaphragmXiphoidNodeR;
     AnyRefNode &Via = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L1.BaseSegAnterior.TransversusPoints.Right.nn06;
     
     AnyRefNode &Ins = ....Segments.PelvisSeg.Right.ObliquusInternusNode_6;

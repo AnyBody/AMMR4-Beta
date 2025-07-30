@@ -143,7 +143,7 @@ Segments = {
       #if BM_TRUNK_THORACIC_STERNUM_TOPOLOGY != 4
         Torus3PointOuterFit ObliquusWrapping() = {
           P1=..CS10NodeR.sRel;
-          P2=..CC_DiaphragmNode6R.sRel;
+          P2=..DiaphragmCC_6R.sRel;
           P3=.ObliquusInternusNode_2.sRel;
         };
       #endif
@@ -156,29 +156,29 @@ Segments = {
       #if BM_TRUNK_THORACIC_STERNUM_TOPOLOGY != 4
         Torus3PointOuterFit ObliquusWrapping() = {
           P1 = ..CS10NodeL.sRel;
-          P2 = ..CC_DiaphragmNode6L.sRel;
+          P2 = ..DiaphragmCC_6L.sRel;
           P3 = .ObliquusInternusNode_2.sRel;
         };
       #endif
     };
 
-    AnyRefNode Xiphoid_DiaphragmNodeR = {sRel = .Scale(.Data.Sternum.Right.Xiphoid_DiaphragmNode_pos); };
-    AnyRefNode CC_DiaphragmNode1R = {sRel = .Scale(.Data.Sternum.Right.CC_DiaphragmNode1_pos); };
-    AnyRefNode CC_DiaphragmNode2R = {sRel = .Scale(.Data.Sternum.Right.CC_DiaphragmNode2_pos); };
-    AnyRefNode CC_DiaphragmNode3R = {sRel = .Scale(.Data.Sternum.Right.CC_DiaphragmNode3_pos); };
-    AnyRefNode CC_DiaphragmNode4R = {sRel = .Scale(.Data.Sternum.Right.CC_DiaphragmNode4_pos); };
-    AnyRefNode CC_DiaphragmNode5R = {sRel = .Scale(.Data.Sternum.Right.CC_DiaphragmNode5_pos); };
-    AnyRefNode CC_DiaphragmNode6R = {sRel = .Scale(.Data.Sternum.Right.CC_DiaphragmNode6_pos); };
-    AnyRefNode CC_DiaphragmNode7R = {sRel = .Scale(.Data.Sternum.Right.CC_DiaphragmNode7_pos); };
+    AnyRefNode DiaphragmXiphoidNodeR = {sRel = .Scale(.Data.Sternum.Right.DiaphragmXiphoidNode_pos); };
+    AnyRefNode DiaphragmCC_1R = {sRel = .Scale(.Data.Sternum.Right.DiaphragmCC_1_pos); };
+    AnyRefNode DiaphragmCC_2R = {sRel = .Scale(.Data.Sternum.Right.DiaphragmCC_2_pos); };
+    AnyRefNode DiaphragmCC_3R = {sRel = .Scale(.Data.Sternum.Right.DiaphragmCC_3_pos); };
+    AnyRefNode DiaphragmCC_4R = {sRel = .Scale(.Data.Sternum.Right.DiaphragmCC_4_pos); };
+    AnyRefNode DiaphragmCC_5R = {sRel = .Scale(.Data.Sternum.Right.DiaphragmCC_5_pos); };
+    AnyRefNode DiaphragmCC_6R = {sRel = .Scale(.Data.Sternum.Right.DiaphragmCC_6_pos); };
+    AnyRefNode DiaphragmCC_7R = {sRel = .Scale(.Data.Sternum.Right.DiaphragmCC_7_pos); };
 
-    AnyRefNode Xiphoid_DiaphragmNodeL = {sRel = .Scale(.Data.Sternum.Left.Xiphoid_DiaphragmNode_pos); };
-    AnyRefNode CC_DiaphragmNode1L = {sRel = .Scale(.Data.Sternum.Left.CC_DiaphragmNode1_pos); };
-    AnyRefNode CC_DiaphragmNode2L = {sRel = .Scale(.Data.Sternum.Left.CC_DiaphragmNode2_pos); };
-    AnyRefNode CC_DiaphragmNode3L = {sRel = .Scale(.Data.Sternum.Left.CC_DiaphragmNode3_pos); };
-    AnyRefNode CC_DiaphragmNode4L = {sRel = .Scale(.Data.Sternum.Left.CC_DiaphragmNode4_pos); };
-    AnyRefNode CC_DiaphragmNode5L = {sRel = .Scale(.Data.Sternum.Left.CC_DiaphragmNode5_pos); };
-    AnyRefNode CC_DiaphragmNode6L = {sRel = .Scale(.Data.Sternum.Left.CC_DiaphragmNode6_pos); };
-    AnyRefNode CC_DiaphragmNode7L = {sRel = .Scale(.Data.Sternum.Left.CC_DiaphragmNode7_pos); };
+    AnyRefNode DiaphragmXiphoidNodeL = {sRel = .Scale(.Data.Sternum.Left.DiaphragmXiphoidNode_pos); };
+    AnyRefNode DiaphragmCC_1L = {sRel = .Scale(.Data.Sternum.Left.DiaphragmCC_1_pos); };
+    AnyRefNode DiaphragmCC_2L = {sRel = .Scale(.Data.Sternum.Left.DiaphragmCC_2_pos); };
+    AnyRefNode DiaphragmCC_3L = {sRel = .Scale(.Data.Sternum.Left.DiaphragmCC_3_pos); };
+    AnyRefNode DiaphragmCC_4L = {sRel = .Scale(.Data.Sternum.Left.DiaphragmCC_4_pos); };
+    AnyRefNode DiaphragmCC_5L = {sRel = .Scale(.Data.Sternum.Left.DiaphragmCC_5_pos); };
+    AnyRefNode DiaphragmCC_6L = {sRel = .Scale(.Data.Sternum.Left.DiaphragmCC_6_pos); };
+    AnyRefNode DiaphragmCC_7L = {sRel = .Scale(.Data.Sternum.Left.DiaphragmCC_7_pos); };
 
 
     AnyRefNode Right_IC_Int_R2R3_elem_sternum = {sRel = .Scale(.Data.Sternum.Right.IC_Int_R2R3_elem_sternum_pos); };
@@ -496,9 +496,9 @@ Segments = {
       AnyRefNode SCR7R10_R_Ins    = { sRel =  .Scale(.Data.R10.Right.SCR7R10Ins_pos);};
       AnyRefNode SCR8R10_R_Ins    = { sRel =  .Scale(.Data.R10.Right.SCR8R10Ins_pos);};
       AnyRefNode O_serratus_posterior_inferior_R10R = {sRel = .Scale(.Data.R10.Right.O_serratus_posterior_inferior_pos); };
-      AnyRefNode R10_DiaphragmNode1R = {sRel = .Scale(.Data.R10.Right.R10_DiaphragmNode1_pos); };
-      AnyRefNode R10_DiaphragmNode2R = {sRel = .Scale(.Data.R10.Right.R10_DiaphragmNode2_pos); };
-      AnyRefNode R10_DiaphragmNode3R = {sRel = .Scale(.Data.R10.Right.R10_DiaphragmNode3_pos); };
+      AnyRefNode DiaphragmR10_1NodeR = {sRel = .Scale(.Data.R10.Right.DiaphragmR10_1Node_pos); };
+      AnyRefNode DiaphragmR10_2NodeR = {sRel = .Scale(.Data.R10.Right.DiaphragmR10_2Node_pos); };
+      AnyRefNode DiaphragmR10_3NodeR = {sRel = .Scale(.Data.R10.Right.DiaphragmR10_3Node_pos); };
       AnyRefNode IC_Int_R9R10_elem_sternum = {sRel = .Scale(.Data.R10.Right.IC_Int_R9R10_elem_sternum_pos); };
       AnyRefNode CCNodeR11 ={ sRel = .Scale(.Data.Thorax.Right.OEC11_CINode_pos);};
       AnyRefNode MidNode        = { sRel =  .Scale(.Data.R10.Right.MidNode_pos); };
@@ -529,9 +529,9 @@ Segments = {
       AnyRefNode LCLgT9R11_R_Ins  = { sRel =  .Scale(.Data.R11.Right.LCLgT9R11Ins_pos);};
       AnyRefNode SCR8R11_R_Org = { sRel =  .Scale(.Data.T11.Right.SCR8R11_Org_pos);};
       AnyRefNode SCR9R11_R_Org = { sRel =  .Scale(.Data.T11.Right.SCR9R11_Org_pos);};
-      AnyRefNode R11_DiaphragmNode1R = {sRel = .Scale(.Data.R11.Right.R11_DiaphragmNode1_pos); };
-      AnyRefNode R11_DiaphragmNode2R = {sRel = .Scale(.Data.R11.Right.R11_DiaphragmNode2_pos); };
-      AnyRefNode R11_DiaphragmNode3R = {sRel = .Scale(.Data.R11.Right.R11_DiaphragmNode3_pos); };
+      AnyRefNode DiaphragmR11_1NodeR = {sRel = .Scale(.Data.R11.Right.DiaphragmR11_1Node_pos); };
+      AnyRefNode DiaphragmR11_2NodeR = {sRel = .Scale(.Data.R11.Right.DiaphragmR11_2Node_pos); };
+      AnyRefNode DiaphragmR11_3NodeR = {sRel = .Scale(.Data.R11.Right.DiaphragmR11_3Node_pos); };
       AnyRefNode CCTangetNodeR11 ={ sRel = .Scale(.Data.R11.Right.CC_AlignmentNode); };
       AnyRefNode CCTangetNodeR11R10 ={ sRel = .Scale(.Data.R11.Right.CCTangetNodeR11R10); };
       AnyRefNode CCNodeR11 ={ sRel = .Scale(.Data.Thorax.Right.OEC11_CINode_pos);AnyRefNode RotNode ={ ARel=RotMat(.sRel,..CCTangetNodeR11.sRel,..CCTangetNodeR11R10.sRel);};};
@@ -575,8 +575,8 @@ Segments = {
       AnyRefNode LCBrT11R12_R_Ins  = { sRel =  .Scale(.Data.R12.Right.LCBrT11R12Ins_pos);};
       AnyRefNode LCLgT10R12_R_Ins  = { sRel =  .Scale(.Data.R12.Right.LCLgT10R12Ins_pos);};
       AnyRefNode O_serratus_posterior_inferior_R12R = {sRel = .Scale(.Data.R12.Right.O_serratus_posterior_inferior_pos);};
-      AnyRefNode R12_DiaphragmNode1R = {sRel = .Scale(.Data.R12.Right.R12_DiaphragmNode1_pos); };
-      AnyRefNode R12_DiaphragmNode2R = {sRel = .Scale(.Data.R12.Right.R12_DiaphragmNode2_pos); };
+      AnyRefNode DiaphragmR12_1NodeR = {sRel = .Scale(.Data.R12.Right.DiaphragmR12_1Node_pos); };
+      AnyRefNode DiaphragmR12_2NodeR = {sRel = .Scale(.Data.R12.Right.DiaphragmR12_2Node_pos); };
       AnyRefNode CCTangetNodeR12 ={ sRel = .Scale(.Data.R12.Right.CC_AlignmentNode); };
       AnyRefNode CCTangetNodeR12R11 ={ sRel = .Scale(.Data.R12.Right.CCTangetNodeR12R11); };
       AnyRefNode CCNodeR12 ={ sRel = .Scale(.Data.R12.Right.OEC12_CINode_pos);AnyRefNode RotNode ={ ARel=RotMat(.sRel,..CCTangetNodeR12.sRel,..CCTangetNodeR12R11.sRel);};};
@@ -678,25 +678,25 @@ Segments = {
         Right = {
           Torus3PointOuterFit ObliquusWrapping() = {
             P1 = ..CS10NodeR.sRel;
-            P2 = ..CC_DiaphragmNode6R.sRel;
+            P2 = ..DiaphragmCC_6R.sRel;
             P3 = .ObliquusInternusNode_2.sRel;
           };
         };
         Left = {
           Torus3PointOuterFit ObliquusWrapping() = {
             P1 = ..CS10NodeL.sRel;
-            P2 = ..CC_DiaphragmNode6L.sRel;
+            P2 = ..DiaphragmCC_6L.sRel;
             P3 = .ObliquusInternusNode_2.sRel;
           };
         };
-        AnyRefNode Xiphoid_DiaphragmNodeR = {sRel = .Scale(.Data.Sternum.Right.Xiphoid_DiaphragmNode_pos); };
-        AnyRefNode CC_DiaphragmNode1R = {sRel = .Scale(.Data.Sternum.Right.CC_DiaphragmNode1_pos); };
-        AnyRefNode CC_DiaphragmNode2R = {sRel = .Scale(.Data.Sternum.Right.CC_DiaphragmNode2_pos); };
-        AnyRefNode CC_DiaphragmNode3R = {sRel = .Scale(.Data.Sternum.Right.CC_DiaphragmNode3_pos); };
-        AnyRefNode CC_DiaphragmNode4R = {sRel = .Scale(.Data.Sternum.Right.CC_DiaphragmNode4_pos); };
-        AnyRefNode CC_DiaphragmNode5R = {sRel = .Scale(.Data.Sternum.Right.CC_DiaphragmNode5_pos); };
-        AnyRefNode CC_DiaphragmNode6R = {sRel = .Scale(.Data.Sternum.Right.CC_DiaphragmNode6_pos); };
-        AnyRefNode CC_DiaphragmNode7R = {sRel = .Scale(.Data.Sternum.Right.CC_DiaphragmNode7_pos); };
+        AnyRefNode DiaphragmXiphoidNodeR = {sRel = .Scale(.Data.Sternum.Right.DiaphragmXiphoidNode_pos); };
+        AnyRefNode DiaphragmCC_1R = {sRel = .Scale(.Data.Sternum.Right.DiaphragmCC_1_pos); };
+        AnyRefNode DiaphragmCC_2R = {sRel = .Scale(.Data.Sternum.Right.DiaphragmCC_2_pos); };
+        AnyRefNode DiaphragmCC_3R = {sRel = .Scale(.Data.Sternum.Right.DiaphragmCC_3_pos); };
+        AnyRefNode DiaphragmCC_4R = {sRel = .Scale(.Data.Sternum.Right.DiaphragmCC_4_pos); };
+        AnyRefNode DiaphragmCC_5R = {sRel = .Scale(.Data.Sternum.Right.DiaphragmCC_5_pos); };
+        AnyRefNode DiaphragmCC_6R = {sRel = .Scale(.Data.Sternum.Right.DiaphragmCC_6_pos); };
+        AnyRefNode DiaphragmCC_7R = {sRel = .Scale(.Data.Sternum.Right.DiaphragmCC_7_pos); };
         AnyRefNode Right_IC_Int_R3R4_elem_sternum = {sRel = .Scale(.Data.Sternum.Right.IC_Int_R3R4_elem_sternum_pos); };
         AnyRefNode Right_IC_Int_R4R5_elem_sternum = {sRel = .Scale(.Data.Sternum.Right.IC_Int_R4R5_elem_sternum_pos); };
         AnyRefNode Right_IC_Int_R5R6_elem_sternum = {sRel = .Scale(.Data.Sternum.Right.IC_Int_R5R6_elem_sternum_pos); };
@@ -1005,9 +1005,9 @@ Segments = {
       AnyRefNode SCR7R10_L_Ins    = { sRel =  .Scale(.Data.R10.Left.SCR7R10Ins_pos);};
       AnyRefNode SCR8R10_L_Ins    = { sRel =  .Scale(.Data.R10.Left.SCR8R10Ins_pos);};
       AnyRefNode O_serratus_posterior_inferior_R10L = {sRel = .Scale(.Data.R10.Left.O_serratus_posterior_inferior_pos); };
-      AnyRefNode R10_DiaphragmNode1L = {sRel = .Scale(.Data.R10.Left.R10_DiaphragmNode1_pos); };
-      AnyRefNode R10_DiaphragmNode2L = {sRel = .Scale(.Data.R10.Left.R10_DiaphragmNode2_pos); };
-      AnyRefNode R10_DiaphragmNode3L = {sRel = .Scale(.Data.R10.Left.R10_DiaphragmNode3_pos); };
+      AnyRefNode DiaphragmR10_1NodeL = {sRel = .Scale(.Data.R10.Left.DiaphragmR10_1Node_pos); };
+      AnyRefNode DiaphragmR10_2NodeL = {sRel = .Scale(.Data.R10.Left.DiaphragmR10_2Node_pos); };
+      AnyRefNode DiaphragmR10_3NodeL = {sRel = .Scale(.Data.R10.Left.DiaphragmR10_3Node_pos); };
       AnyRefNode IC_Int_R9R10_elem_sternum = {sRel = .Scale(.Data.R10.Left.IC_Int_R9R10_elem_sternum_pos); };
       AnyRefNode CCNodeR11 ={ sRel = .Scale(.Data.Thorax.Left.OEC11_CINode_pos);};
       AnyRefNode MidNode        = { sRel =  .Scale(.Data.R10.Left.MidNode_pos); };
@@ -1036,9 +1036,9 @@ Segments = {
       AnyRefNode LCLgT9R11_L_Ins  = { sRel =  .Scale(.Data.R11.Left.LCLgT9R11Ins_pos);};
       AnyRefNode SCR8R11_L_Org = { sRel =  .Scale(.Data.T11.Left.SCR8R11_Org_pos);};
       AnyRefNode SCR9R11_L_Org = { sRel =  .Scale(.Data.T11.Left.SCR9R11_Org_pos);};
-      AnyRefNode R11_DiaphragmNode1L = {sRel = .Scale(.Data.R11.Left.R11_DiaphragmNode1_pos); };
-      AnyRefNode R11_DiaphragmNode2L = {sRel = .Scale(.Data.R11.Left.R11_DiaphragmNode2_pos); };
-      AnyRefNode R11_DiaphragmNode3L = {sRel = .Scale(.Data.R11.Left.R11_DiaphragmNode3_pos); };
+      AnyRefNode DiaphragmR11_1NodeL = {sRel = .Scale(.Data.R11.Left.DiaphragmR11_1Node_pos); };
+      AnyRefNode DiaphragmR11_2NodeL = {sRel = .Scale(.Data.R11.Left.DiaphragmR11_2Node_pos); };
+      AnyRefNode DiaphragmR11_3NodeL = {sRel = .Scale(.Data.R11.Left.DiaphragmR11_3Node_pos); };
       AnyRefNode CCTangetNodeR11 ={ sRel = .Scale(.Data.R11.Left.CC_AlignmentNode); };
       AnyRefNode CCTangetNodeR11R10 ={ sRel = .Scale(.Data.R11.Left.CCTangetNodeR11R10); };
       AnyRefNode CCNodeR11 ={ sRel = .Scale(.Data.Thorax.Left.OEC11_CINode_pos);AnyRefNode RotNode ={ ARel=RotMat(.sRel,..CCTangetNodeR11.sRel,..CCTangetNodeR11R10.sRel);};};
@@ -1082,8 +1082,8 @@ Segments = {
       AnyRefNode LCBrT11R12_L_Ins  = { sRel =  .Scale(.Data.R12.Left.LCBrT11R12Ins_pos);};
       AnyRefNode LCLgT10R12_L_Ins  = { sRel =  .Scale(.Data.R12.Left.LCLgT10R12Ins_pos);};
       AnyRefNode O_serratus_posterior_inferior_R12L = {sRel = .Scale(.Data.R12.Left.O_serratus_posterior_inferior_pos);};
-      AnyRefNode R12_DiaphragmNode1L = {sRel = .Scale(.Data.R12.Left.R12_DiaphragmNode1_pos); };
-      AnyRefNode R12_DiaphragmNode2L = {sRel = .Scale(.Data.R12.Left.R12_DiaphragmNode2_pos); };
+      AnyRefNode DiaphragmR12_1NodeL = {sRel = .Scale(.Data.R12.Left.DiaphragmR12_1Node_pos); };
+      AnyRefNode DiaphragmR12_2NodeL = {sRel = .Scale(.Data.R12.Left.DiaphragmR12_2Node_pos); };
       AnyRefNode CCTangetNodeR12 ={ sRel = .Scale(.Data.R12.Left.CC_AlignmentNode); };
       AnyRefNode CCTangetNodeR12R11 ={ sRel = .Scale(.Data.R12.Left.CCTangetNodeR12R11); };
       AnyRefNode CCNodeR12 ={ sRel = .Scale(.Data.R12.Left.OEC12_CINode_pos);
@@ -1158,14 +1158,14 @@ Segments = {
 
 
 
-        AnyRefNode Xiphoid_DiaphragmNodeL = {sRel = .Scale(.Data.Sternum.Left.Xiphoid_DiaphragmNode_pos); };
-        AnyRefNode CC_DiaphragmNode1L = {sRel = .Scale(.Data.Sternum.Left.CC_DiaphragmNode1_pos); };
-        AnyRefNode CC_DiaphragmNode2L = {sRel = .Scale(.Data.Sternum.Left.CC_DiaphragmNode2_pos); };
-        AnyRefNode CC_DiaphragmNode3L = {sRel = .Scale(.Data.Sternum.Left.CC_DiaphragmNode3_pos); };
-        AnyRefNode CC_DiaphragmNode4L = {sRel = .Scale(.Data.Sternum.Left.CC_DiaphragmNode4_pos); };
-        AnyRefNode CC_DiaphragmNode5L = {sRel = .Scale(.Data.Sternum.Left.CC_DiaphragmNode5_pos); };
-        AnyRefNode CC_DiaphragmNode6L = {sRel = .Scale(.Data.Sternum.Left.CC_DiaphragmNode6_pos); };
-        AnyRefNode CC_DiaphragmNode7L = {sRel = .Scale(.Data.Sternum.Left.CC_DiaphragmNode7_pos); };
+        AnyRefNode DiaphragmXiphoidNodeL = {sRel = .Scale(.Data.Sternum.Left.DiaphragmXiphoidNode_pos); };
+        AnyRefNode DiaphragmCC_1L = {sRel = .Scale(.Data.Sternum.Left.DiaphragmCC_1_pos); };
+        AnyRefNode DiaphragmCC_2L = {sRel = .Scale(.Data.Sternum.Left.DiaphragmCC_2_pos); };
+        AnyRefNode DiaphragmCC_3L = {sRel = .Scale(.Data.Sternum.Left.DiaphragmCC_3_pos); };
+        AnyRefNode DiaphragmCC_4L = {sRel = .Scale(.Data.Sternum.Left.DiaphragmCC_4_pos); };
+        AnyRefNode DiaphragmCC_5L = {sRel = .Scale(.Data.Sternum.Left.DiaphragmCC_5_pos); };
+        AnyRefNode DiaphragmCC_6L = {sRel = .Scale(.Data.Sternum.Left.DiaphragmCC_6_pos); };
+        AnyRefNode DiaphragmCC_7L = {sRel = .Scale(.Data.Sternum.Left.DiaphragmCC_7_pos); };
 
 
         AnyRefNode Left_IC_Int_R6R7_elem_sternum = {sRel = .Scale(.Data.Sternum.Left.IC_Int_R6R7_elem_sternum_pos); };

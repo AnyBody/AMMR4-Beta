@@ -1084,7 +1084,7 @@ AnyFolder L1 = {
     AnyFloat O_serratus_posterior_inferior_pos = {-0.02, 0.105 , 0.0};
     AnyFloat O_serratus_posterior_inferior_L1R11ViaNodepos = {-0.035, 0.14, 0.04};
 
-    AnyFloat TransversProcessDiaphragmNode_pos     = {0.002, 0.136, 0.034};
+    AnyFloat DiaphragmL1_3Node_pos     = {0.002, 0.136, 0.034};
     AnyFloat DiaphragmNode1_pos     = {0.042, 0.146, 0.014};
     AnyFloat DiaphragmNode2_pos     = {0.028, 0.1385, 0.022};
 
@@ -1146,7 +1146,7 @@ AnyFolder L1 = {
     AnyFloat O_serratus_posterior_inferior_pos = .Right.O_serratus_posterior_inferior_pos * ..MirrorTransform;
     AnyFloat O_serratus_posterior_inferior_L1R11ViaNodepos = .Right.O_serratus_posterior_inferior_L1R11ViaNodepos * ..MirrorTransform;
 
-    AnyFloat TransversProcessDiaphragmNode_pos     = .Right.TransversProcessDiaphragmNode_pos * ..MirrorTransform;
+    AnyFloat DiaphragmL1_3Node_pos     = .Right.DiaphragmL1_3Node_pos * ..MirrorTransform;
     AnyFloat DiaphragmNode1_pos     = .Right.DiaphragmNode1_pos * ..MirrorTransform;
     AnyFloat DiaphragmNode2_pos     = .Right.DiaphragmNode2_pos * ..MirrorTransform;
 
