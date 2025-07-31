@@ -4847,34 +4847,34 @@ MuscleGroup ObliquusInternus = {
 
 #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
 MuscleGroup Pupococcygeus = {
-  AnyMuscleViaPoint Pupococcygeus1= {
+  AnyMuscleViaPoint Pubococcygeus_1= {
     AnyMuscleModel &MusMdl = ....MuscleModels.Right.Pupococcygeus.Pupococcygeus_1;
-    AnyRefNode &Org = ....Segments.PelvisSeg.Pupococcygeus1NodeR;
-    AnyRefNode &Ins = ....Segments.SacrumSeg.Pupococcygeus1NodeR;
+    AnyRefNode &Org = ....Segments.PelvisSeg.Pubococcygeus_1NodeR;
+    AnyRefNode &Ins = ....Segments.SacrumSeg.Pubococcygeus_1NodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
-  AnyMuscleViaPoint Pupococcygeus2= {
+  AnyMuscleViaPoint Pubococcygeus_2= {
     AnyMuscleModel &MusMdl = ....MuscleModels.Right.Pupococcygeus.Pupococcygeus_2;
-    AnyRefNode &Org = ....Segments.PelvisSeg.Pupococcygeus2NodeR;
-    AnyRefNode &Ins = ....Segments.SacrumSeg.Pupococcygeus2NodeR;
+    AnyRefNode &Org = ....Segments.PelvisSeg.Pubococcygeus_2NodeR;
+    AnyRefNode &Ins = ....Segments.SacrumSeg.Pubococcygeus_2NodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
 };
 
 MuscleGroup Puporectalis = {
-  AnyMuscleViaPoint Puporectalis1= {
+  AnyMuscleViaPoint Puborectalis_1= {
     AnyMuscleModel &MusMdl = ....MuscleModels.Right.Puporectalis.Puporectalis_1;
-    AnyRefNode &Org = ....Segments.PelvisSeg.Puporectalis1NodeR;
-    AnyRefNode &Ins = ....Segments.SacrumSeg.Puporectalis1NodeR;
+    AnyRefNode &Org = ....Segments.PelvisSeg.Puborectalis_1NodeR;
+    AnyRefNode &Ins = ....Segments.SacrumSeg.Puborectalis_1NodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
-  AnyMuscleViaPoint Puporectalis2= {
+  AnyMuscleViaPoint Puborectalis_2= {
     AnyMuscleModel &MusMdl = ....MuscleModels.Right.Puporectalis.Puporectalis_2;
-    AnyRefNode &Org = ....Segments.PelvisSeg.Puporectalis2NodeR;
-    AnyRefNode &Ins = ....Segments.SacrumSeg.Puporectalis2NodeR;
+    AnyRefNode &Org = ....Segments.PelvisSeg.Puborectalis_2NodeR;
+    AnyRefNode &Ins = ....Segments.SacrumSeg.Puborectalis_2NodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };

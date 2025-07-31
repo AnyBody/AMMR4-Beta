@@ -4814,58 +4814,58 @@ MuscleGroup ObliquusInternus = {
 
 #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
 MuscleGroup Pupococcygeus = {
-  AnyMuscleViaPoint Pupococcygeus1= {
+  AnyMuscleViaPoint Pubococcygeus_1= {
     AnyMuscleModel &MusMdl = ....MuscleModels.Left.Pupococcygeus.Pupococcygeus_1;
-    AnyRefNode &Org = ....Segments.PelvisSeg.Pupococcygeus1NodeL;
-    AnyRefNode &Ins = ....Segments.SacrumSeg.Pupococcygeus1NodeL;
+    AnyRefNode &Org = ....Segments.PelvisSeg.Pubococcygeus_1NodeL;
+    AnyRefNode &Ins = ....Segments.SacrumSeg.Pubococcygeus_1NodeL;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
-  AnyMuscleViaPoint Pupococcygeus2= {
+  AnyMuscleViaPoint Pubococcygeus_2= {
     AnyMuscleModel &MusMdl = ....MuscleModels.Left.Pupococcygeus.Pupococcygeus_2;
-    AnyRefNode &Org = ....Segments.PelvisSeg.Pupococcygeus2NodeL;
-    AnyRefNode &Ins = ....Segments.SacrumSeg.Pupococcygeus2NodeL;
+    AnyRefNode &Org = ....Segments.PelvisSeg.Pubococcygeus_2NodeL;
+    AnyRefNode &Ins = ....Segments.SacrumSeg.Pubococcygeus_2NodeL;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
 };
 
 MuscleGroup Puporectalis = {
-  AnyMuscleViaPoint Puporectalis1= {
+  AnyMuscleViaPoint Puborectalis_1= {
     AnyMuscleModel &MusMdl = ....MuscleModels.Left.Puporectalis.Puporectalis_1;
-    AnyRefNode &Org = ....Segments.PelvisSeg.Puporectalis1NodeL;
-    AnyRefNode &Ins = ....Segments.SacrumSeg.Puporectalis1NodeL;
+    AnyRefNode &Org = ....Segments.PelvisSeg.Puborectalis_1NodeL;
+    AnyRefNode &Ins = ....Segments.SacrumSeg.Puborectalis_1NodeL;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
-  AnyMuscleViaPoint Puporectalis2= {
+  AnyMuscleViaPoint Puborectalis_2= {
     AnyMuscleModel &MusMdl = ....MuscleModels.Left.Puporectalis.Puporectalis_2;
-    AnyRefNode &Org = ....Segments.PelvisSeg.Puporectalis2NodeL;
-    AnyRefNode &Ins = ....Segments.SacrumSeg.Puporectalis2NodeL;
+    AnyRefNode &Org = ....Segments.PelvisSeg.Puborectalis_2NodeL;
+    AnyRefNode &Ins = ....Segments.SacrumSeg.Puborectalis_2NodeL;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
 };
 
-//  AnyMuscleViaPoint Puporectalis2= {
+//  AnyMuscleViaPoint Puborectalis_2= {
 //    AnyMuscleModel &MusMdl = ....MuscleModels.Left.PelvicFloor.Puporectalis_2;
-//    AnyRefNode &Org = ....Segments.PelvisSeg.Puporectalis2NodeL;
-//    AnyRefNode &Ins = ....Segments.SacrumSeg.Puporectalis2NodeL;
+//    AnyRefNode &Org = ....Segments.PelvisSeg.Puborectalis_2NodeL;
+//    AnyRefNode &Ins = ....Segments.SacrumSeg.Puborectalis_2NodeL;
 //    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
 //    viewForce.Visible ??= Off;
 //  };
 //  
-//  AnyMuscleViaPoint Pupococcygeus1= {
+//  AnyMuscleViaPoint Pubococcygeus_1= {
 //    AnyMuscleModel &MusMdl = ....MuscleModels.Left.PelvicFloor.Pupococcygeus_1;
-//    AnyRefNode &Org = ....Segments.PelvisSeg.Pupococcygeus1NodeL;
-//    AnyRefNode &Ins = ....Segments.SacrumSeg.Pupococcygeus1NodeL;
+//    AnyRefNode &Org = ....Segments.PelvisSeg.Pubococcygeus_1NodeL;
+//    AnyRefNode &Ins = ....Segments.SacrumSeg.Pubococcygeus_1NodeL;
 //    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
 //    viewForce.Visible ??= Off;
 //  };
-//  AnyMuscleViaPoint Pupococcygeus2= {
+//  AnyMuscleViaPoint Pubococcygeus_2= {
 //    AnyMuscleModel &MusMdl = ....MuscleModels.Left.PelvicFloor.Pupococcygeus_2;
-//    AnyRefNode &Org = ....Segments.PelvisSeg.Pupococcygeus2NodeL;
-//    AnyRefNode &Ins = ....Segments.SacrumSeg.Pupococcygeus2NodeL;
+//    AnyRefNode &Org = ....Segments.PelvisSeg.Pubococcygeus_2NodeL;
+//    AnyRefNode &Ins = ....Segments.SacrumSeg.Pubococcygeus_2NodeL;
 //    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
 //    viewForce.Visible ??= Off;
 //  };

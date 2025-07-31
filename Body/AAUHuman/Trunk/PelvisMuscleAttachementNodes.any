@@ -269,15 +269,15 @@ AnyRefNode Seat_contactCenter = {sRel = .Scale(.Data.Seat_contactCenter_pos);};
   AnyRefNode Transversus8_1LNode = {sRel =.Scale(.Data.Left.Transversus8_1_pos);};
   AnyRefNode Transversus8_2LNode = {sRel =.Scale(.Data.Left.Transversus8_2_pos);};
 
-  AnyRefNode  Puporectalis1NodeR={sRel = .Scale(.Data.Right.Puporectalis1_pos);};
-  AnyRefNode  Puporectalis2NodeR={sRel = .Scale(.Data.Right.Puporectalis1_pos);};
-  AnyRefNode  Puporectalis1NodeL={sRel = .Scale(.Data.Left.Puporectalis1_pos);};
-  AnyRefNode  Puporectalis2NodeL={sRel = .Scale(.Data.Left.Puporectalis1_pos);};
+  AnyRefNode  Puborectalis_1NodeR={sRel = .Scale(.Data.Right.Puborectalis_1_pos);};
+  AnyRefNode  Puborectalis_2NodeR={sRel = .Scale(.Data.Right.Puborectalis_1_pos);};
+  AnyRefNode  Puborectalis_1NodeL={sRel = .Scale(.Data.Left.Puborectalis_1_pos);};
+  AnyRefNode  Puborectalis_2NodeL={sRel = .Scale(.Data.Left.Puborectalis_1_pos);};
 
-  AnyRefNode  Pupococcygeus1NodeR ={sRel = .Scale(.Data.Right.Puporectalis1_pos);};
-  AnyRefNode  Pupococcygeus2NodeR ={sRel = .Scale(.Data.Right.Puporectalis1_pos);};
-  AnyRefNode  Pupococcygeus1NodeL ={sRel = .Scale(.Data.Left.Puporectalis1_pos);};
-  AnyRefNode  Pupococcygeus2NodeL ={sRel = .Scale(.Data.Left.Puporectalis1_pos);};
+  AnyRefNode  Pubococcygeus_1NodeR ={sRel = .Scale(.Data.Right.Puborectalis_1_pos);};
+  AnyRefNode  Pubococcygeus_2NodeR ={sRel = .Scale(.Data.Right.Puborectalis_1_pos);};
+  AnyRefNode  Pubococcygeus_1NodeL ={sRel = .Scale(.Data.Left.Puborectalis_1_pos);};
+  AnyRefNode  Pubococcygeus_2NodeL ={sRel = .Scale(.Data.Left.Puborectalis_1_pos);};
 #endif
 /// Previous names for seat_contactR/L/center. Added here for backwards compatibility.
 AnyRefNode Tuber_ischiadicumR = {sRel = .Scale(.Data.Right.Seat_contact_pos);};

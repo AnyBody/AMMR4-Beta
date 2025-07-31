@@ -218,10 +218,10 @@ AnyFolder Pelvis = {
       AnyFloat Transversus7_2_pos ={0.0494,-0.03155,0.0614};
       AnyFloat Transversus8_1_pos ={0.07311,-0.0958,0.0633};
       AnyFloat Transversus8_2_pos ={0.0452,-0.0513,0.06163};
-      AnyFloat Puporectalis1_pos ={0.038996894,-0.17051911,0.010945595};
-      AnyFloat Puporectalis2_pos ={0.025902467,-0.1703189,0.015720557};
-      AnyFloat Pupococcygeus1_pos ={0.065261446,-0.16586813,0.0043942};
-      AnyFloat Pupococcygeus2_pos ={0.053172123,-0.16823313,0.00773671};
+      AnyFloat Puborectalis_1_pos ={0.038996894,-0.17051911,0.010945595};
+      AnyFloat Puborectalis_2_pos ={0.025902467,-0.1703189,0.015720557};
+      AnyFloat Pubococcygeus_1_pos ={0.065261446,-0.16586813,0.0043942};
+      AnyFloat Pubococcygeus_2_pos ={0.053172123,-0.16823313,0.00773671};
       AnyFloat Illiococcygeus1_pos ={0.01530074, -0.16555537,0.02385361};
       AnyFloat Illiococcygeus2_pos ={0.00698961, -0.15956853,0.03279636};
       AnyFloat Illiococcygeus3_pos ={0.00057361, -0.15074690,0.04164211};
@@ -338,10 +338,10 @@ AnyFolder Pelvis = {
       AnyFloat Transversus7_2_pos =.Right.Transversus7_2_pos* ..MirrorTransform ;
       AnyFloat Transversus8_1_pos =.Right.Transversus8_1_pos* ..MirrorTransform ;
       AnyFloat Transversus8_2_pos =.Right.Transversus8_2_pos* ..MirrorTransform ;
-      AnyFloat  Puporectalis1_pos =.Right.Puporectalis1_pos* ..MirrorTransform;
-      AnyFloat  Puporectalis2_pos =.Right.Puporectalis2_pos* ..MirrorTransform;
-      AnyFloat  Pupococcygeus1_pos =.Right.Pupococcygeus1_pos* ..MirrorTransform;
-      AnyFloat  Pupococcygeus2_pos =.Right.Pupococcygeus2_pos* ..MirrorTransform;
+      AnyFloat  Puborectalis_1_pos =.Right.Puborectalis_1_pos* ..MirrorTransform;
+      AnyFloat  Puborectalis_2_pos =.Right.Puborectalis_2_pos* ..MirrorTransform;
+      AnyFloat  Pubococcygeus_1_pos =.Right.Pubococcygeus_1_pos* ..MirrorTransform;
+      AnyFloat  Pubococcygeus_2_pos =.Right.Pubococcygeus_2_pos* ..MirrorTransform;
       AnyFloat  Illiococcygeus1_pos =.Right.Illiococcygeus1_pos* ..MirrorTransform;
       AnyFloat  Illiococcygeus3_pos =.Right.Illiococcygeus3_pos* ..MirrorTransform;
       AnyFloat  Illiococcygeus4_pos =.Right.Illiococcygeus4_pos* ..MirrorTransform;
@@ -384,10 +384,10 @@ AnyFolder Sacrum = {
   AnyFolder Right = {
     AnyFloat SacrumContactNode_pos = {-0.006000000, -0.02500000, 0.05000000};
     #if BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-      AnyFloat Puporectalis1_pos ={-0.032542277,-0.12732209,0.00097748067};
-      AnyFloat Puporectalis2_pos ={-0.037777826,-0.12007225,0.008633879};
-      AnyFloat Pupococcygeus1_pos ={-0.00051133032,-0.027415741,0.012528392};
-      AnyFloat Pupococcygeus2_pos ={0.016514685,-0.020097122,0.011810537};
+      AnyFloat Puborectalis_1_pos ={-0.032542277,-0.12732209,0.00097748067};
+      AnyFloat Puborectalis_2_pos ={-0.037777826,-0.12007225,0.008633879};
+      AnyFloat Pubococcygeus_1_pos ={-0.00051133032,-0.027415741,0.012528392};
+      AnyFloat Pubococcygeus_2_pos ={0.016514685,-0.020097122,0.011810537};
     #endif
 
 
@@ -432,10 +432,10 @@ AnyFolder Sacrum = {
     AnyFloat MirrorTransform = {{1,0,0},{0,1,0},{0,0, MirrorSign}};
     AnyFloat SacrumContactNode_pos = .Right.SacrumContactNode_pos* MirrorTransform;
     #if BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-      AnyFloat Puporectalis1_pos =.Right.Puporectalis1_pos* MirrorTransform;
-      AnyFloat Puporectalis2_pos =.Right.Puporectalis2_pos* MirrorTransform;
-      AnyFloat Pupococcygeus1_pos =.Right.Pupococcygeus1_pos* MirrorTransform;
-      AnyFloat Pupococcygeus2_pos =.Right.Pupococcygeus2_pos* MirrorTransform;
+      AnyFloat Puborectalis_1_pos =.Right.Puborectalis_1_pos* MirrorTransform;
+      AnyFloat Puborectalis_2_pos =.Right.Puborectalis_2_pos* MirrorTransform;
+      AnyFloat Pubococcygeus_1_pos =.Right.Pubococcygeus_1_pos* MirrorTransform;
+      AnyFloat Pubococcygeus_2_pos =.Right.Pubococcygeus_2_pos* MirrorTransform;
     #endif
     AnyFloat MultifidusLumborumL4S1Node_pos = .Right.MultifidusLumborumL4S1Node_pos * ..MirrorTransform;
     AnyFloat MultifidusLumborumL5S1Node_pos = .Right.MultifidusLumborumL5S1Node_pos * ..MirrorTransform;
