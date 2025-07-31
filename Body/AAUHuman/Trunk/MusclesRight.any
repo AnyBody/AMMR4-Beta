@@ -330,45 +330,45 @@ MuscleGroup Hyoid = {
 
 // Iliocostalis Cervicis
 AnyFolder IliocostalisCervicis = {
-  AnyMuscleViaPoint ICptR3C4 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisCervicis.ICptR3C4;
-    AnyRefNode &Org = ....Segments.C4Seg.Right.ICptR3C4Node;
-    AnyRefNode &Via1 = ....Segments.C7Seg.Right.ICptR3C4Via1Node;
-    AnyRefNode &Via2 = ....Segments.Right.R1Seg.ICptR3C4Via2Node;
-    AnyRefNode &Ins = ....Segments.Right.R3Seg.ICptR3C4Node;
+  AnyMuscleViaPoint IliocostalisCervicisR3C4 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisCervicis.IliocostalisCervicisR3C4;
+    AnyRefNode &Org = ....Segments.C4Seg.Right.IliocostalisCervicisR3C4Node;
+    AnyRefNode &Via1 = ....Segments.C7Seg.Right.IliocostalisCervicisR3C4Via1Node;
+    AnyRefNode &Via2 = ....Segments.Right.R1Seg.IliocostalisCervicisR3C4Via2Node;
+    AnyRefNode &Ins = ....Segments.Right.R3Seg.IliocostalisCervicisR3C4Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
-  AnyMuscleViaPoint ICptR4C5 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisCervicis.ICptR4C5;
-    AnyRefNode &Org = ....Segments.C5Seg.Right.ICptR4C5Node;
-    AnyRefNode &Via1 = ....Segments.C7Seg.Right.ICptR4C5Via1Node;
-    AnyRefNode &Via2 = ....Segments.Right.R1Seg.ICptR4C5Via2Node;
-    AnyRefNode &Via3 = ....Segments.Right.R3Seg.ICptR4C5Via3Node;
-    AnyRefNode &Ins = ....Segments.Right.R4Seg.ICptR4C5Node;
+  AnyMuscleViaPoint IliocostalisCervicisR4C5 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisCervicis.IliocostalisCervicisR4C5;
+    AnyRefNode &Org = ....Segments.C5Seg.Right.IliocostalisCervicisR4C5Node;
+    AnyRefNode &Via1 = ....Segments.C7Seg.Right.IliocostalisCervicisR4C5Via1Node;
+    AnyRefNode &Via2 = ....Segments.Right.R1Seg.IliocostalisCervicisR4C5Via2Node;
+    AnyRefNode &Via3 = ....Segments.Right.R3Seg.IliocostalisCervicisR4C5Via3Node;
+    AnyRefNode &Ins = ....Segments.Right.R4Seg.IliocostalisCervicisR4C5Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
-  AnyMuscleViaPoint ICptR5C6 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisCervicis.ICptR5C6;
-    AnyRefNode &Org = ....Segments.C6Seg.Right.ICptR5C6Node;
-    AnyRefNode &Via1 = ....Segments.C7Seg.Right.ICptR5C6Via1Node;
-    AnyRefNode &Via2 = ....Segments.Right.R1Seg.ICptR5C6Via2Node;
-    AnyRefNode &Via3 = ....Segments.Right.R3Seg.ICptR5C6Via3Node;
-    AnyRefNode &Via4 = ....Segments.Right.R4Seg.ICptR5C6Via4Node;
-    AnyRefNode &Ins = ....Segments.Right.R5Seg.ICptR5C6Node;
+  AnyMuscleViaPoint IliocostalisCervicisR5C6 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisCervicis.IliocostalisCervicisR5C6;
+    AnyRefNode &Org = ....Segments.C6Seg.Right.IliocostalisCervicisR5C6Node;
+    AnyRefNode &Via1 = ....Segments.C7Seg.Right.IliocostalisCervicisR5C6Via1Node;
+    AnyRefNode &Via2 = ....Segments.Right.R1Seg.IliocostalisCervicisR5C6Via2Node;
+    AnyRefNode &Via3 = ....Segments.Right.R3Seg.IliocostalisCervicisR5C6Via3Node;
+    AnyRefNode &Via4 = ....Segments.Right.R4Seg.IliocostalisCervicisR5C6Via4Node;
+    AnyRefNode &Ins = ....Segments.Right.R5Seg.IliocostalisCervicisR5C6Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
-  AnyMuscleViaPoint ICptR6C4 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisCervicis.ICptR6C4;
-    AnyRefNode &Org = ....Segments.C4Seg.Right.ICptR6C4Node;
-    AnyRefNode &Via1 = ....Segments.C7Seg.Right.ICptR6C4Via1Node;
-    AnyRefNode &Via2 = ....Segments.Right.R1Seg.ICptR6C4Via2Node;
-    AnyRefNode &Via3 = ....Segments.Right.R3Seg.ICptR6C4Via3Node;
-    AnyRefNode &Via4 = ....Segments.Right.R4Seg.ICptR6C4Via4Node;
-    AnyRefNode &Via5 = ....Segments.Right.R5Seg.ICptR6C4Via5Node;
-    AnyRefNode &Ins = ....Segments.Right.R6Seg.ICptR6C4Node;
+  AnyMuscleViaPoint IliocostalisCervicisR6C4 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisCervicis.IliocostalisCervicisR6C4;
+    AnyRefNode &Org = ....Segments.C4Seg.Right.IliocostalisCervicisR6C4Node;
+    AnyRefNode &Via1 = ....Segments.C7Seg.Right.IliocostalisCervicisR6C4Via1Node;
+    AnyRefNode &Via2 = ....Segments.Right.R1Seg.IliocostalisCervicisR6C4Via2Node;
+    AnyRefNode &Via3 = ....Segments.Right.R3Seg.IliocostalisCervicisR6C4Via3Node;
+    AnyRefNode &Via4 = ....Segments.Right.R4Seg.IliocostalisCervicisR6C4Via4Node;
+    AnyRefNode &Via5 = ....Segments.Right.R5Seg.IliocostalisCervicisR6C4Via5Node;
+    AnyRefNode &Ins = ....Segments.Right.R6Seg.IliocostalisCervicisR6C4Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
@@ -376,175 +376,175 @@ AnyFolder IliocostalisCervicis = {
 
 AnyFolder IliocostalisLumborum = {
   // Iliocostalis lumborum
-    AnyMuscleViaPoint ILplL1CI = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisLumborum.ILplL1CI;
-    AnyRefNode &Org = ....Segments.L1Seg.ILplL1CINodeR;
+    AnyMuscleViaPoint IliocostalisLumborumL1 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisLumborum.IliocostalisLumborumL1;
+    AnyRefNode &Org = ....Segments.L1Seg.IliocostalisLumborumL1NodeR;
     #if BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-    AnyRefNode &Via1 = ....Abdominal.Layer_L3.BaseSegPosterior.ILplL1CIViaNodeR;
+    AnyRefNode &Via1 = ....Abdominal.Layer_L3.BaseSegPosterior.IliocostalisLumborumL1ViaNodeR;
     #else
-    AnyRefNode &Via1 = ....Segments.L2Seg.ILplL1CIViaNodeR;
+    AnyRefNode &Via1 = ....Segments.L2Seg.IliocostalisLumborumL1ViaNodeR;
     #endif
-    AnyRefNode &Ins = ....Segments.PelvisSeg.ILplL1CINodeR;
+    AnyRefNode &Ins = ....Segments.PelvisSeg.IliocostalisLumborumL1NodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
-  AnyMuscleViaPoint ILplL2CI = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisLumborum.ILplL2CI;
-    AnyRefNode &Org = ....Segments.L2Seg.ILplL2CINodeR;
-    AnyRefNode &Ins = ....Segments.PelvisSeg.ILplL2CINodeR;
+  AnyMuscleViaPoint IliocostalisLumborumL2 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisLumborum.IliocostalisLumborumL2;
+    AnyRefNode &Org = ....Segments.L2Seg.IliocostalisLumborumL2NodeR;
+    AnyRefNode &Ins = ....Segments.PelvisSeg.IliocostalisLumborumL2NodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
-  AnyMuscleViaPoint ILplL3CI = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisLumborum.ILplL3CI;
-    AnyRefNode &Org = ....Segments.L3Seg.ILplL3CINodeR;
-    AnyRefNode &Ins = ....Segments.PelvisSeg.ILplL3CINodeR;
+  AnyMuscleViaPoint IliocostalisLumborumL3 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisLumborum.IliocostalisLumborumL3;
+    AnyRefNode &Org = ....Segments.L3Seg.IliocostalisLumborumL3NodeR;
+    AnyRefNode &Ins = ....Segments.PelvisSeg.IliocostalisLumborumL3NodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
-  AnyMuscleViaPoint ILplL4CI = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisLumborum.ILplL4CI;
-    AnyRefNode &Org = ....Segments.L4Seg.ILplL4CINodeR;
-    AnyRefNode &Ins = ....Segments.PelvisSeg.ILplL4CINodeR;
+  AnyMuscleViaPoint IliocostalisLumborumL4 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisLumborum.IliocostalisLumborumL4;
+    AnyRefNode &Org = ....Segments.L4Seg.IliocostalisLumborumL4NodeR;
+    AnyRefNode &Ins = ....Segments.PelvisSeg.IliocostalisLumborumL4NodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
-  AnyMuscleViaPoint ILptC5SIPS = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisLumborum.ILptC5SIPS;
-    AnyRefNode &Org = ....Segments.Right.R5Seg.ILptC5SIPSNodeR;
-    AnyRefNode &Via1 = ....Segments.Right.R6Seg.ILptC5SIPSVia1NodeR;
-    AnyRefNode &Via2 = ....Segments.Right.R7Seg.ILptC5SIPSVia2NodeR;
-    AnyRefNode &Via3 = ....Segments.Right.R8Seg.ILptC5SIPSVia3NodeR;
-    AnyRefNode &Via4 = ....Segments.Right.R9Seg.ILptC5SIPSVia4NodeR;
-    AnyRefNode &Via5 = ....Segments.Right.R10Seg.ILptC5SIPSVia5NodeR;
+  AnyMuscleViaPoint IliocostalisLumborumR5 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisLumborum.IliocostalisLumborumR5;
+    AnyRefNode &Org = ....Segments.Right.R5Seg.IliocostalisLumborumR5NodeR;
+    AnyRefNode &Via1 = ....Segments.Right.R6Seg.IliocostalisLumborumR5Via1NodeR;
+    AnyRefNode &Via2 = ....Segments.Right.R7Seg.IliocostalisLumborumR5Via2NodeR;
+    AnyRefNode &Via3 = ....Segments.Right.R8Seg.IliocostalisLumborumR5Via3NodeR;
+    AnyRefNode &Via4 = ....Segments.Right.R9Seg.IliocostalisLumborumR5Via4NodeR;
+    AnyRefNode &Via5 = ....Segments.Right.R10Seg.IliocostalisLumborumR5Via5NodeR;
     #if BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-    AnyRefNode &Via6 = ....Abdominal.Layer_L1.BaseSegPosterior.ILptC5SIPSVia6NodeR;
-    AnyRefNode &Via7 = ....Abdominal.Layer_L2.BaseSegPosterior.ILptC5SIPSVia7NodeR;
-    AnyRefNode &Via8 = ....Abdominal.Layer_L3.BaseSegPosterior.ILptC5SIPSVia8NodeR;
+    AnyRefNode &Via6 = ....Abdominal.Layer_L1.BaseSegPosterior.IliocostalisLumborumR5Via6NodeR;
+    AnyRefNode &Via7 = ....Abdominal.Layer_L2.BaseSegPosterior.IliocostalisLumborumR5Via7NodeR;
+    AnyRefNode &Via8 = ....Abdominal.Layer_L3.BaseSegPosterior.IliocostalisLumborumR5Via8NodeR;
     #else
-    AnyRefNode &Via6 = ....Segments.Right.R12Seg.ILptC5SIPSVia6NodeR;
-    AnyRefNode &Via7 = ....Segments.L1Seg.ILptC5SIPSVia7NodeR;
-    AnyRefNode &Via8 = ....Segments.L2Seg.ILptC5SIPSVia8NodeR;
+    AnyRefNode &Via6 = ....Segments.Right.R12Seg.IliocostalisLumborumR5Via6NodeR;
+    AnyRefNode &Via7 = ....Segments.L1Seg.IliocostalisLumborumR5Via7NodeR;
+    AnyRefNode &Via8 = ....Segments.L2Seg.IliocostalisLumborumR5Via8NodeR;
     #endif
-    AnyRefNode &Ins = ....Segments.PelvisSeg.ILptC5SIPSNodeR;
+    AnyRefNode &Ins = ....Segments.PelvisSeg.IliocostalisLumborumR5NodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
-  AnyMuscleViaPoint ILptC6SIPS = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisLumborum.ILptC6SIPS;
-    AnyRefNode &Org = ....Segments.Right.R6Seg.ILptC6SIPSNodeR;
-    AnyRefNode &Via1 = ....Segments.Right.R7Seg.ILptC6SIPSVia1NodeR;
-    AnyRefNode &Via2 = ....Segments.Right.R8Seg.ILptC6SIPSVia2NodeR;
-    AnyRefNode &Via3 = ....Segments.Right.R9Seg.ILptC6SIPSVia3NodeR;
-    AnyRefNode &Via4 = ....Segments.Right.R10Seg.ILptC6SIPSVia4NodeR;
+  AnyMuscleViaPoint IliocostalisLumborumR6 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisLumborum.IliocostalisLumborumR6;
+    AnyRefNode &Org = ....Segments.Right.R6Seg.IliocostalisLumborumR6NodeR;
+    AnyRefNode &Via1 = ....Segments.Right.R7Seg.IliocostalisLumborumR6Via1NodeR;
+    AnyRefNode &Via2 = ....Segments.Right.R8Seg.IliocostalisLumborumR6Via2NodeR;
+    AnyRefNode &Via3 = ....Segments.Right.R9Seg.IliocostalisLumborumR6Via3NodeR;
+    AnyRefNode &Via4 = ....Segments.Right.R10Seg.IliocostalisLumborumR6Via4NodeR;
     #if BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-    AnyRefNode &Via5 = ....Abdominal.Layer_L1.BaseSegPosterior.ILptC6SIPSVia5NodeR;
-    AnyRefNode &Via6 = ....Abdominal.Layer_L2.BaseSegPosterior.ILptC6SIPSVia6NodeR;
-    AnyRefNode &Via7 = ....Abdominal.Layer_L3.BaseSegPosterior.ILptC6SIPSVia7NodeR;
+    AnyRefNode &Via5 = ....Abdominal.Layer_L1.BaseSegPosterior.IliocostalisLumborumR6Via5NodeR;
+    AnyRefNode &Via6 = ....Abdominal.Layer_L2.BaseSegPosterior.IliocostalisLumborumR6Via6NodeR;
+    AnyRefNode &Via7 = ....Abdominal.Layer_L3.BaseSegPosterior.IliocostalisLumborumR6Via7NodeR;
     #else
-    AnyRefNode &Via5 = ....Segments.Right.R12Seg.ILptC6SIPSVia5NodeR;
-    AnyRefNode &Via6 = ....Segments.L1Seg.ILptC6SIPSVia6NodeR;
-    AnyRefNode &Via7 = ....Segments.L2Seg.ILptC6SIPSVia7NodeR;
+    AnyRefNode &Via5 = ....Segments.Right.R12Seg.IliocostalisLumborumR6Via5NodeR;
+    AnyRefNode &Via6 = ....Segments.L1Seg.IliocostalisLumborumR6Via6NodeR;
+    AnyRefNode &Via7 = ....Segments.L2Seg.IliocostalisLumborumR6Via7NodeR;
     #endif
-    AnyRefNode &Ins = ....Segments.PelvisSeg.ILptC6SIPSNodeR;
+    AnyRefNode &Ins = ....Segments.PelvisSeg.IliocostalisLumborumR6NodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
-  AnyMuscleViaPoint ILptC7CI = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisLumborum.ILptC7CI;
-    AnyRefNode &Org = ....Segments.Right.R7Seg.ILptC7CINodeR;
-    AnyRefNode &Via1 = ....Segments.Right.R8Seg.ILptC7CIVia1NodeR;
-    AnyRefNode &Via2 = ....Segments.Right.R9Seg.ILptC7CIVia2NodeR;
-    AnyRefNode &Via3 = ....Segments.Right.R10Seg.ILptC7CIVia3NodeR;
+  AnyMuscleViaPoint IliocostalisLumborumR7 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisLumborum.IliocostalisLumborumR7;
+    AnyRefNode &Org = ....Segments.Right.R7Seg.IliocostalisLumborumR7NodeR;
+    AnyRefNode &Via1 = ....Segments.Right.R8Seg.IliocostalisLumborumR7Via1NodeR;
+    AnyRefNode &Via2 = ....Segments.Right.R9Seg.IliocostalisLumborumR7Via2NodeR;
+    AnyRefNode &Via3 = ....Segments.Right.R10Seg.IliocostalisLumborumR7Via3NodeR;
     #if BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-    AnyRefNode &Via4 = ....Abdominal.Layer_L1.BaseSegPosterior.ILptC7CIVia4NodeR;
-    AnyRefNode &Via5 = ....Abdominal.Layer_L2.BaseSegPosterior.ILptC7CIVia5NodeR;
-    AnyRefNode &Via6 = ....Abdominal.Layer_L3.BaseSegPosterior.ILptC7CIVia6NodeR;
+    AnyRefNode &Via4 = ....Abdominal.Layer_L1.BaseSegPosterior.IliocostalisLumborumR7Via4NodeR;
+    AnyRefNode &Via5 = ....Abdominal.Layer_L2.BaseSegPosterior.IliocostalisLumborumR7Via5NodeR;
+    AnyRefNode &Via6 = ....Abdominal.Layer_L3.BaseSegPosterior.IliocostalisLumborumR7Via6NodeR;
     #else
-    AnyRefNode &Via4 = ....Segments.Right.R12Seg.ILptC7CIVia4NodeR;
-    AnyRefNode &Via5 = ....Segments.L1Seg.ILptC7CIVia5NodeR;
-    AnyRefNode &Via6 = ....Segments.L2Seg.ILptC7CIVia6NodeR;
+    AnyRefNode &Via4 = ....Segments.Right.R12Seg.IliocostalisLumborumR7Via4NodeR;
+    AnyRefNode &Via5 = ....Segments.L1Seg.IliocostalisLumborumR7Via5NodeR;
+    AnyRefNode &Via6 = ....Segments.L2Seg.IliocostalisLumborumR7Via6NodeR;
     #endif
-    AnyRefNode &Ins = ....Segments.PelvisSeg.ILptC7CINodeR;
+    AnyRefNode &Ins = ....Segments.PelvisSeg.IliocostalisLumborumR7NodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
-  AnyMuscleViaPoint ILptC8CI = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisLumborum.ILptC8CI;
-    AnyRefNode &Org = ....Segments.Right.R8Seg.ILptC8CINodeR;
-    AnyRefNode &Via1 = ....Segments.Right.R9Seg.ILptC8CIVia1NodeR;
-    AnyRefNode &Via2 = ....Segments.Right.R10Seg.ILptC8CIVia2NodeR;
+  AnyMuscleViaPoint IliocostalisLumborumR8 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisLumborum.IliocostalisLumborumR8;
+    AnyRefNode &Org = ....Segments.Right.R8Seg.IliocostalisLumborumR8NodeR;
+    AnyRefNode &Via1 = ....Segments.Right.R9Seg.IliocostalisLumborumR8Via1NodeR;
+    AnyRefNode &Via2 = ....Segments.Right.R10Seg.IliocostalisLumborumR8Via2NodeR;
     #if BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-    AnyRefNode &Via3 = ....Abdominal.Layer_L1.BaseSegPosterior.ILptC8CIVia3NodeR;
-    AnyRefNode &Via4 = ....Abdominal.Layer_L2.BaseSegPosterior.ILptC8CIVia4NodeR;
-    AnyRefNode &Via5 = ....Abdominal.Layer_L3.BaseSegPosterior.ILptC8CIVia5NodeR;
+    AnyRefNode &Via3 = ....Abdominal.Layer_L1.BaseSegPosterior.IliocostalisLumborumR8Via3NodeR;
+    AnyRefNode &Via4 = ....Abdominal.Layer_L2.BaseSegPosterior.IliocostalisLumborumR8Via4NodeR;
+    AnyRefNode &Via5 = ....Abdominal.Layer_L3.BaseSegPosterior.IliocostalisLumborumR8Via5NodeR;
     #else
-    AnyRefNode &Via3 = ....Segments.Right.R12Seg.ILptC8CIVia3NodeR;
-    AnyRefNode &Via4 = ....Segments.L1Seg.ILptC8CIVia4NodeR;
-    AnyRefNode &Via5 = ....Segments.L2Seg.ILptC8CIVia5NodeR;
+    AnyRefNode &Via3 = ....Segments.Right.R12Seg.IliocostalisLumborumR8Via3NodeR;
+    AnyRefNode &Via4 = ....Segments.L1Seg.IliocostalisLumborumR8Via4NodeR;
+    AnyRefNode &Via5 = ....Segments.L2Seg.IliocostalisLumborumR8Via5NodeR;
     #endif
-    AnyRefNode &Ins = ....Segments.PelvisSeg.ILptC8CINodeR;
+    AnyRefNode &Ins = ....Segments.PelvisSeg.IliocostalisLumborumR8NodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
-  AnyMuscleViaPoint ILptC9CI = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisLumborum.ILptC9CI;
-    AnyRefNode &Org = ....Segments.Right.R9Seg.ILptC9CINodeR;
-    AnyRefNode &Via1 = ....Segments.Right.R10Seg.ILptC9CIVia1NodeR;
+  AnyMuscleViaPoint IliocostalisLumborumR9 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisLumborum.IliocostalisLumborumR9;
+    AnyRefNode &Org = ....Segments.Right.R9Seg.IliocostalisLumborumR9NodeR;
+    AnyRefNode &Via1 = ....Segments.Right.R10Seg.IliocostalisLumborumR9Via1NodeR;
     #if BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-    AnyRefNode &Via2 = ....Abdominal.Layer_L1.BaseSegPosterior.ILptC9CIVia2NodeR;
-    AnyRefNode &Via3 = ....Abdominal.Layer_L2.BaseSegPosterior.ILptC9CIVia3NodeR;
-    AnyRefNode &Via4 = ....Abdominal.Layer_L3.BaseSegPosterior.ILptC9CIVia4NodeR;
+    AnyRefNode &Via2 = ....Abdominal.Layer_L1.BaseSegPosterior.IliocostalisLumborumR9Via2NodeR;
+    AnyRefNode &Via3 = ....Abdominal.Layer_L2.BaseSegPosterior.IliocostalisLumborumR9Via3NodeR;
+    AnyRefNode &Via4 = ....Abdominal.Layer_L3.BaseSegPosterior.IliocostalisLumborumR9Via4NodeR;
     #else
-    AnyRefNode &Via2 = ....Segments.Right.R12Seg.ILptC9CIVia2NodeR;
-    AnyRefNode &Via3 = ....Segments.L1Seg.ILptC9CIVia3NodeR;
-    AnyRefNode &Via4 = ....Segments.L2Seg.ILptC9CIVia4NodeR;
+    AnyRefNode &Via2 = ....Segments.Right.R12Seg.IliocostalisLumborumR9Via2NodeR;
+    AnyRefNode &Via3 = ....Segments.L1Seg.IliocostalisLumborumR9Via3NodeR;
+    AnyRefNode &Via4 = ....Segments.L2Seg.IliocostalisLumborumR9Via4NodeR;
     #endif
-    AnyRefNode &Ins = ....Segments.PelvisSeg.ILptC9CINodeR;
+    AnyRefNode &Ins = ....Segments.PelvisSeg.IliocostalisLumborumR9NodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
-  AnyMuscleViaPoint ILptC10CI = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisLumborum.ILptC10CI;
-    AnyRefNode &Org = ....Segments.Right.R10Seg.ILptC10CINodeR;
+  AnyMuscleViaPoint IliocostalisLumborumR10 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisLumborum.IliocostalisLumborumR10;
+    AnyRefNode &Org = ....Segments.Right.R10Seg.IliocostalisLumborumR10NodeR;
     #if BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-    AnyRefNode &Via1 = ....Abdominal.Layer_L1.BaseSegPosterior.ILptC10CIVia1NodeR;
-    AnyRefNode &Via2 = ....Abdominal.Layer_L2.BaseSegPosterior.ILptC10CIVia2NodeR;
-    AnyRefNode &Via3 = ....Abdominal.Layer_L3.BaseSegPosterior.ILptC10CIVia3NodeR;
+    AnyRefNode &Via1 = ....Abdominal.Layer_L1.BaseSegPosterior.IliocostalisLumborumR10Via1NodeR;
+    AnyRefNode &Via2 = ....Abdominal.Layer_L2.BaseSegPosterior.IliocostalisLumborumR10Via2NodeR;
+    AnyRefNode &Via3 = ....Abdominal.Layer_L3.BaseSegPosterior.IliocostalisLumborumR10Via3NodeR;
     #else
-    AnyRefNode &Via1 = ....Segments.Right.R12Seg.ILptC10CIVia1NodeR;
-    AnyRefNode &Via2 = ....Segments.L1Seg.ILptC10CIVia2NodeR;
-    AnyRefNode &Via3 = ....Segments.L2Seg.ILptC10CIVia3NodeR;
+    AnyRefNode &Via1 = ....Segments.Right.R12Seg.IliocostalisLumborumR10Via1NodeR;
+    AnyRefNode &Via2 = ....Segments.L1Seg.IliocostalisLumborumR10Via2NodeR;
+    AnyRefNode &Via3 = ....Segments.L2Seg.IliocostalisLumborumR10Via3NodeR;
     #endif
-    AnyRefNode &Ins = ....Segments.PelvisSeg.ILptC10CINodeR;
+    AnyRefNode &Ins = ....Segments.PelvisSeg.IliocostalisLumborumR10NodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
-  AnyMuscleViaPoint ILptC11CI = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisLumborum.ILptC11CI;
-    AnyRefNode &Org = ....Segments.Right.R11Seg.ILptC11CINodeR;
+  AnyMuscleViaPoint IliocostalisLumborumR11 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisLumborum.IliocostalisLumborumR11;
+    AnyRefNode &Org = ....Segments.Right.R11Seg.IliocostalisLumborumR11NodeR;
     #if BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-//    AnyRefNode &Via1 = ....Abdominal.Layer_L2.BaseSegPosterior.ILptC11CIVia1NodeR;
-//    AnyRefNode &Via2 = ....Abdominal.Layer_L3.BaseSegPosterior.ILptC11CIVia2NodeR;
+//    AnyRefNode &Via1 = ....Abdominal.Layer_L2.BaseSegPosterior.IliocostalisLumborumR11Via1NodeR;
+//    AnyRefNode &Via2 = ....Abdominal.Layer_L3.BaseSegPosterior.IliocostalisLumborumR11Via2NodeR;
     #else
-    AnyRefNode &Via1 = ....Segments.L1Seg.ILptC11CIVia1NodeR;
-    AnyRefNode &Via2 = ....Segments.L2Seg.ILptC11CIVia2NodeR;
+    AnyRefNode &Via1 = ....Segments.L1Seg.IliocostalisLumborumR11Via1NodeR;
+    AnyRefNode &Via2 = ....Segments.L2Seg.IliocostalisLumborumR11Via2NodeR;
     #endif
-    AnyRefNode &Ins = ....Segments.PelvisSeg.ILptC11CINodeR;
+    AnyRefNode &Ins = ....Segments.PelvisSeg.IliocostalisLumborumR11NodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
-  AnyMuscleViaPoint ILptC12CI = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisLumborum.ILptC12CI;
-    AnyRefNode &Org = ....Segments.Right.R12Seg.ILptC12CINodeR;
+  AnyMuscleViaPoint IliocostalisLumborumR12 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisLumborum.IliocostalisLumborumR12;
+    AnyRefNode &Org = ....Segments.Right.R12Seg.IliocostalisLumborumR12NodeR;
     #if BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-//    AnyRefNode &Via1 = ....Abdominal.Layer_L2.BaseSegPosterior.ILptC12CIVia1NodeR;
-//    AnyRefNode &Via2 = ....Abdominal.Layer_L3.BaseSegPosterior.ILptC12CIVia2NodeR;
+//    AnyRefNode &Via1 = ....Abdominal.Layer_L2.BaseSegPosterior.IliocostalisLumborumR12Via1NodeR;
+//    AnyRefNode &Via2 = ....Abdominal.Layer_L3.BaseSegPosterior.IliocostalisLumborumR12Via2NodeR;
     #else
-    AnyRefNode &Via1 = ....Segments.L1Seg.ILptC12CIVia1NodeR;
-    AnyRefNode &Via2 = ....Segments.L2Seg.ILptC12CIVia2NodeR;
+    AnyRefNode &Via1 = ....Segments.L1Seg.IliocostalisLumborumR12Via1NodeR;
+    AnyRefNode &Via2 = ....Segments.L2Seg.IliocostalisLumborumR12Via2NodeR;
     #endif
-    AnyRefNode &Ins = ....Segments.PelvisSeg.ILptC12CINodeR;
+    AnyRefNode &Ins = ....Segments.PelvisSeg.IliocostalisLumborumR12NodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
@@ -552,89 +552,89 @@ AnyFolder IliocostalisLumborum = {
   
 // Iliocostalis Thoracis
 AnyFolder IliocostalisThoracis = {
-  AnyMuscleViaPoint ITC7R7 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisThoracis.ITC7R7;
-    AnyRefNode &Org = ....Segments.C7Seg.Right.ITC7R7NodeOrg;
-    AnyRefNode &Via1 = ....Segments.Right.R1Seg.ITC7R7Via1NodeR;
-    AnyRefNode &Via2 = ....Segments.Right.R2Seg.ITC7R7Via2NodeR;
-    AnyRefNode &Via3 = ....Segments.Right.R3Seg.ITC7R7Via3NodeR;
-    AnyRefNode &Via4 = ....Segments.Right.R4Seg.ITC7R7Via4NodeR;
-    AnyRefNode &Via5 = ....Segments.Right.R5Seg.ITC7R7Via5NodeR;
-    AnyRefNode &Via6 = ....Segments.Right.R6Seg.ITC7R7Via6NodeR;
-    AnyRefNode &Ins = ....Segments.Right.R7Seg.ITC7R7NodeRIns;
+  AnyMuscleViaPoint IliocostalisThoracisC7R7 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisThoracis.IliocostalisThoracisC7R7;
+    AnyRefNode &Org = ....Segments.C7Seg.Right.IliocostalisThoracisC7R7NodeOrg;
+    AnyRefNode &Via1 = ....Segments.Right.R1Seg.IliocostalisThoracisC7R7Via1NodeR;
+    AnyRefNode &Via2 = ....Segments.Right.R2Seg.IliocostalisThoracisC7R7Via2NodeR;
+    AnyRefNode &Via3 = ....Segments.Right.R3Seg.IliocostalisThoracisC7R7Via3NodeR;
+    AnyRefNode &Via4 = ....Segments.Right.R4Seg.IliocostalisThoracisC7R7Via4NodeR;
+    AnyRefNode &Via5 = ....Segments.Right.R5Seg.IliocostalisThoracisC7R7Via5NodeR;
+    AnyRefNode &Via6 = ....Segments.Right.R6Seg.IliocostalisThoracisC7R7Via6NodeR;
+    AnyRefNode &Ins = ....Segments.Right.R7Seg.IliocostalisThoracisC7R7NodeRIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   #if BM_TRUNK_THORACIC_MODEL == _THORACIC_MODEL_FLEXIBLE_
-  AnyMuscleViaPoint ITR1R7 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisThoracis.ITR1R7;
-    AnyRefNode &Org = ....Segments.Right.R1Seg.ITR1R7NodeROrg;
-    AnyRefNode &Via2 = ....Segments.Right.R2Seg.ITR1R7Via1NodeR;
-    AnyRefNode &Via3 = ....Segments.Right.R3Seg.ITR1R7Via2NodeR;
-    AnyRefNode &Via4 = ....Segments.Right.R4Seg.ITR1R7Via3NodeR;
-    AnyRefNode &Via5 = ....Segments.Right.R5Seg.ITR1R7Via4NodeR;
-    AnyRefNode &Via6 = ....Segments.Right.R6Seg.ITR1R7Via5NodeR;
-    AnyRefNode &Ins = ....Segments.Right.R7Seg.ITR1R7NodeRIns;
+  AnyMuscleViaPoint IliocostalisThoracisR1R7 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisThoracis.IliocostalisThoracisR1R7;
+    AnyRefNode &Org = ....Segments.Right.R1Seg.IliocostalisThoracisR1R7NodeROrg;
+    AnyRefNode &Via2 = ....Segments.Right.R2Seg.IliocostalisThoracisR1R7Via1NodeR;
+    AnyRefNode &Via3 = ....Segments.Right.R3Seg.IliocostalisThoracisR1R7Via2NodeR;
+    AnyRefNode &Via4 = ....Segments.Right.R4Seg.IliocostalisThoracisR1R7Via3NodeR;
+    AnyRefNode &Via5 = ....Segments.Right.R5Seg.IliocostalisThoracisR1R7Via4NodeR;
+    AnyRefNode &Via6 = ....Segments.Right.R6Seg.IliocostalisThoracisR1R7Via5NodeR;
+    AnyRefNode &Ins = ....Segments.Right.R7Seg.IliocostalisThoracisR1R7NodeRIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
-  AnyMuscleViaPoint ITR2R8 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisThoracis.ITR2R8;
-    AnyRefNode &Org = ....Segments.Right.R2Seg.ITR2R8NodeROrg;
-    AnyRefNode &Via2 = ....Segments.Right.R3Seg.ITR2R8Via1NodeR;
-    AnyRefNode &Via3 = ....Segments.Right.R4Seg.ITR2R8Via2NodeR;
-    AnyRefNode &Via4 = ....Segments.Right.R5Seg.ITR2R8Via3NodeR;
-    AnyRefNode &Via5 = ....Segments.Right.R6Seg.ITR2R8Via4NodeR;
-    AnyRefNode &Via6 = ....Segments.Right.R7Seg.ITR2R8Via5NodeR;
-    AnyRefNode &Ins = ....Segments.Right.R8Seg.ITR2R8NodeRIns;
+  AnyMuscleViaPoint IliocostalisThoracisR2R8 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisThoracis.IliocostalisThoracisR2R8;
+    AnyRefNode &Org = ....Segments.Right.R2Seg.IliocostalisThoracisR2R8NodeROrg;
+    AnyRefNode &Via2 = ....Segments.Right.R3Seg.IliocostalisThoracisR2R8Via1NodeR;
+    AnyRefNode &Via3 = ....Segments.Right.R4Seg.IliocostalisThoracisR2R8Via2NodeR;
+    AnyRefNode &Via4 = ....Segments.Right.R5Seg.IliocostalisThoracisR2R8Via3NodeR;
+    AnyRefNode &Via5 = ....Segments.Right.R6Seg.IliocostalisThoracisR2R8Via4NodeR;
+    AnyRefNode &Via6 = ....Segments.Right.R7Seg.IliocostalisThoracisR2R8Via5NodeR;
+    AnyRefNode &Ins = ....Segments.Right.R8Seg.IliocostalisThoracisR2R8NodeRIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
-  AnyMuscleViaPoint ITR3R9 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisThoracis.ITR3R9;
-    AnyRefNode &Org = ....Segments.Right.R3Seg.ITR3R9NodeROrg;
-    AnyRefNode &Via2 = ....Segments.Right.R4Seg.ITR3R9Via1NodeR;
-    AnyRefNode &Via3 = ....Segments.Right.R5Seg.ITR3R9Via2NodeR;
-    AnyRefNode &Via4 = ....Segments.Right.R6Seg.ITR3R9Via3NodeR;
-    AnyRefNode &Via5 = ....Segments.Right.R7Seg.ITR3R9Via4NodeR;
-    AnyRefNode &Via6 = ....Segments.Right.R8Seg.ITR3R9Via5NodeR;
-    AnyRefNode &Ins = ....Segments.Right.R9Seg.ITR3R9NodeRIns;
+  AnyMuscleViaPoint IliocostalisThoracisR3R9 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisThoracis.IliocostalisThoracisR3R9;
+    AnyRefNode &Org = ....Segments.Right.R3Seg.IliocostalisThoracisR3R9NodeROrg;
+    AnyRefNode &Via2 = ....Segments.Right.R4Seg.IliocostalisThoracisR3R9Via1NodeR;
+    AnyRefNode &Via3 = ....Segments.Right.R5Seg.IliocostalisThoracisR3R9Via2NodeR;
+    AnyRefNode &Via4 = ....Segments.Right.R6Seg.IliocostalisThoracisR3R9Via3NodeR;
+    AnyRefNode &Via5 = ....Segments.Right.R7Seg.IliocostalisThoracisR3R9Via4NodeR;
+    AnyRefNode &Via6 = ....Segments.Right.R8Seg.IliocostalisThoracisR3R9Via5NodeR;
+    AnyRefNode &Ins = ....Segments.Right.R9Seg.IliocostalisThoracisR3R9NodeRIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
-  AnyMuscleViaPoint ITR4R10 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisThoracis.ITR4R10;
-    AnyRefNode &Org = ....Segments.Right.R4Seg.ITR4R10NodeROrg;
-    AnyRefNode &Via2 = ....Segments.Right.R5Seg.ITR4R10Via1NodeR;
-    AnyRefNode &Via3 = ....Segments.Right.R6Seg.ITR4R10Via2NodeR;
-    AnyRefNode &Via4 = ....Segments.Right.R7Seg.ITR4R10Via3NodeR;
-    AnyRefNode &Via5 = ....Segments.Right.R8Seg.ITR4R10Via4NodeR;
-    AnyRefNode &Via6 = ....Segments.Right.R9Seg.ITR4R10Via5NodeR;
-    AnyRefNode &Ins = ....Segments.Right.R10Seg.ITR4R10NodeRIns;
+  AnyMuscleViaPoint IliocostalisThoracisR4R10 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisThoracis.IliocostalisThoracisR4R10;
+    AnyRefNode &Org = ....Segments.Right.R4Seg.IliocostalisThoracisR4R10NodeROrg;
+    AnyRefNode &Via2 = ....Segments.Right.R5Seg.IliocostalisThoracisR4R10Via1NodeR;
+    AnyRefNode &Via3 = ....Segments.Right.R6Seg.IliocostalisThoracisR4R10Via2NodeR;
+    AnyRefNode &Via4 = ....Segments.Right.R7Seg.IliocostalisThoracisR4R10Via3NodeR;
+    AnyRefNode &Via5 = ....Segments.Right.R8Seg.IliocostalisThoracisR4R10Via4NodeR;
+    AnyRefNode &Via6 = ....Segments.Right.R9Seg.IliocostalisThoracisR4R10Via5NodeR;
+    AnyRefNode &Ins = ....Segments.Right.R10Seg.IliocostalisThoracisR4R10NodeRIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
-  AnyMuscleViaPoint ITR5R11 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisThoracis.ITR5T11;
-    AnyRefNode &Org = ....Segments.Right.R5Seg.ITR5R11NodeROrg;
-    AnyRefNode &Via2 = ....Segments.Right.R6Seg.ITR5R11Via1NodeR;
-    AnyRefNode &Via3 = ....Segments.Right.R7Seg.ITR5R11Via2NodeR;
-    AnyRefNode &Via4 = ....Segments.Right.R8Seg.ITR5R11Via3NodeR;
-    AnyRefNode &Via5 = ....Segments.Right.R9Seg.ITR5R11Via4NodeR;
-    AnyRefNode &Via6 = ....Segments.Right.R10Seg.ITR5R11Via5NodeR;
-    AnyRefNode &Ins = ....Segments.Right.R11Seg.ITR5R11NodeRIns;
+  AnyMuscleViaPoint IliocostalisThoracisR5R11 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisThoracis.IliocostalisThoracisR6R11;
+    AnyRefNode &Org = ....Segments.Right.R5Seg.IliocostalisThoracisR5R11NodeROrg;
+    AnyRefNode &Via2 = ....Segments.Right.R6Seg.IliocostalisThoracisR5R11Via1NodeR;
+    AnyRefNode &Via3 = ....Segments.Right.R7Seg.IliocostalisThoracisR5R11Via2NodeR;
+    AnyRefNode &Via4 = ....Segments.Right.R8Seg.IliocostalisThoracisR5R11Via3NodeR;
+    AnyRefNode &Via5 = ....Segments.Right.R9Seg.IliocostalisThoracisR5R11Via4NodeR;
+    AnyRefNode &Via6 = ....Segments.Right.R10Seg.IliocostalisThoracisR5R11Via5NodeR;
+    AnyRefNode &Ins = ....Segments.Right.R11Seg.IliocostalisThoracisR5R11NodeRIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
-  AnyMuscleViaPoint ITR6R12 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisThoracis.ITR6T12;
-    AnyRefNode &Org = ....Segments.Right.R6Seg.ITR6R12NodeR;
-    AnyRefNode &Via2 = ....Segments.Right.R7Seg.ITR6R12Via1NodeR;
-    AnyRefNode &Via3 = ....Segments.Right.R8Seg.ITR6R12Via2NodeR;
-    AnyRefNode &Via4 = ....Segments.Right.R9Seg.ITR6R12Via3NodeR;
-    AnyRefNode &Via5 = ....Segments.Right.R10Seg.ITR6R12Via4NodeR;
-    AnyRefNode &Via6 = ....Segments.Right.R11Seg.ITR6R12Via5NodeR;
-    AnyRefNode &Ins = ....Segments.Right.R12Seg.ITR6R12NodeRIns;
+  AnyMuscleViaPoint IliocostalisThoracisR6R12 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisThoracis.IliocostalisThoracisR6R12;
+    AnyRefNode &Org = ....Segments.Right.R6Seg.IliocostalisThoracisR6R12NodeR;
+    AnyRefNode &Via2 = ....Segments.Right.R7Seg.IliocostalisThoracisR6R12Via1NodeR;
+    AnyRefNode &Via3 = ....Segments.Right.R8Seg.IliocostalisThoracisR6R12Via2NodeR;
+    AnyRefNode &Via4 = ....Segments.Right.R9Seg.IliocostalisThoracisR6R12Via3NodeR;
+    AnyRefNode &Via5 = ....Segments.Right.R10Seg.IliocostalisThoracisR6R12Via4NodeR;
+    AnyRefNode &Via6 = ....Segments.Right.R11Seg.IliocostalisThoracisR6R12Via5NodeR;
+    AnyRefNode &Ins = ....Segments.Right.R12Seg.IliocostalisThoracisR6R12NodeRIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };

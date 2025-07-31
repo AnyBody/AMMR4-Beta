@@ -410,8 +410,8 @@ AnySeg C4Seg = {
 
   Right = {
     // Iliocostalis Cervicis
-    AnyRefNode ICptR3C4Node        = {sRel = ..Scale(..Data.Right.ICptR3C4Node_pos);};
-    AnyRefNode ICptR6C4Node        = {sRel = ..Scale(..Data.Right.ICptR6C4Node_pos);};
+    AnyRefNode IliocostalisCervicisR3C4Node        = {sRel = ..Scale(..Data.Right.IliocostalisCervicisR3C4Node_pos);};
+    AnyRefNode IliocostalisCervicisR6C4Node        = {sRel = ..Scale(..Data.Right.IliocostalisCervicisR6C4Node_pos);};
     //Longus Colli
     AnyRefNode LongusColliT1C4Node = {sRel = ..Scale(..Data.Right.LongusColliT1C4Node_pos);};
     AnyRefNode LongusColliC7C3Node = {sRel = ..Scale(..Data.Right.LongusColliC7C3Node_pos);};
@@ -426,8 +426,8 @@ AnySeg C4Seg = {
   };
   Left = {
     // Iliocostalis Cervicis
-    AnyRefNode ICptR3C4Node        = {sRel = ..Scale(..Data.Left.ICptR3C4Node_pos);};
-    AnyRefNode ICptR6C4Node        = {sRel = ..Scale(..Data.Left.ICptR6C4Node_pos);};
+    AnyRefNode IliocostalisCervicisR3C4Node        = {sRel = ..Scale(..Data.Left.IliocostalisCervicisR3C4Node_pos);};
+    AnyRefNode IliocostalisCervicisR6C4Node        = {sRel = ..Scale(..Data.Left.IliocostalisCervicisR6C4Node_pos);};
     //Longus Colli
     AnyRefNode LongusColliT1C4Node = {sRel = ..Scale(..Data.Left.LongusColliT1C4Node_pos);};
     AnyRefNode LongusColliC7C3Node = {sRel = ..Scale(..Data.Left.LongusColliC7C3Node_pos);};
@@ -543,7 +543,7 @@ AnySeg C5Seg = {
 
   Right = {
     // Iliocostalis Cervicis
-    AnyRefNode ICptR4C5Node        = {sRel = ..Scale(..Data.Right.ICptR4C5Node_pos);};
+    AnyRefNode IliocostalisCervicisR4C5Node        = {sRel = ..Scale(..Data.Right.IliocostalisCervicisR4C5Node_pos);};
     //Longus Colli
     AnyRefNode LongusColliT2C5Node = {sRel = ..Scale(..Data.Right.LongusColliT2C5Node_pos);};
     AnyRefNode LongusColliT1C4Node = {sRel = ..Scale(..Data.Right.LongusColliT1C4Node_pos);};
@@ -561,7 +561,7 @@ AnySeg C5Seg = {
   };
   Left = {
     // Iliocostalis Cervicis
-    AnyRefNode ICptR4C5Node        = {sRel = ..Scale(..Data.Left.ICptR4C5Node_pos);};
+    AnyRefNode IliocostalisCervicisR4C5Node        = {sRel = ..Scale(..Data.Left.IliocostalisCervicisR4C5Node_pos);};
     AnyRefNode LongusColliT2C5Node = {sRel = ..Scale(..Data.Left.LongusColliT2C5Node_pos);};
     AnyRefNode LongusColliT1C4Node = {sRel = ..Scale(..Data.Left.LongusColliT1C4Node_pos);};
     AnyRefNode LongusColliC7C3Node = {sRel = ..Scale(..Data.Left.LongusColliC7C3Node_pos);};
@@ -682,7 +682,7 @@ AnySeg C6Seg = {
   AnyRefNode SSTC6Spinous = {sRel = .Scale(.Data.SSTC6Spinous_pos);};
   Right = {
     // Iliocostalis Cervicis
-    AnyRefNode ICptR5C6Node        = {sRel = ..Scale(..Data.Right.ICptR5C6Node_pos);};
+    AnyRefNode IliocostalisCervicisR5C6Node        = {sRel = ..Scale(..Data.Right.IliocostalisCervicisR5C6Node_pos);};
     //Longus Colli
     AnyRefNode LongusColliT3C6Node = {sRel = ..Scale(..Data.Right.LongusColliT3C6Node_pos);};
     AnyRefNode LongusColliT2C5Node = {sRel = ..Scale(..Data.Right.LongusColliT2C5Node_pos);};
@@ -700,7 +700,7 @@ AnySeg C6Seg = {
   };
   Left = {
     // Iliocostalis Cervicis
-    AnyRefNode ICptR5C6Node        = {sRel = ..Scale(..Data.Left.ICptR5C6Node_pos);};
+    AnyRefNode IliocostalisCervicisR5C6Node        = {sRel = ..Scale(..Data.Left.IliocostalisCervicisR5C6Node_pos);};
     AnyRefNode LongusColliT3C6Node = {sRel = ..Scale(..Data.Left.LongusColliT3C6Node_pos);};
     AnyRefNode LongusColliT2C5Node = {sRel = ..Scale(..Data.Left.LongusColliT2C5Node_pos);};
     AnyRefNode LongusColliT1C4Node = {sRel = ..Scale(..Data.Left.LongusColliT1C4Node_pos);};
@@ -836,10 +836,10 @@ AnySeg C7Seg = {
 
   Right = {
     //Iliocostalis Cervicis
-    AnyRefNode ICptR3C4Via1Node   = {sRel = ..Scale(..Data.Right.ICptR3C4Via1Node_pos);};
-    AnyRefNode ICptR4C5Via1Node   = {sRel = ..Scale(..Data.Right.ICptR4C5Via1Node_pos);};
-    AnyRefNode ICptR5C6Via1Node   = {sRel = ..Scale(..Data.Right.ICptR5C6Via1Node_pos);};
-    AnyRefNode ICptR6C4Via1Node   = {sRel = ..Scale(..Data.Right.ICptR6C4Via1Node_pos);};
+    AnyRefNode IliocostalisCervicisR3C4Via1Node   = {sRel = ..Scale(..Data.Right.IliocostalisCervicisR3C4Via1Node_pos);};
+    AnyRefNode IliocostalisCervicisR4C5Via1Node   = {sRel = ..Scale(..Data.Right.IliocostalisCervicisR4C5Via1Node_pos);};
+    AnyRefNode IliocostalisCervicisR5C6Via1Node   = {sRel = ..Scale(..Data.Right.IliocostalisCervicisR5C6Via1Node_pos);};
+    AnyRefNode IliocostalisCervicisR6C4Via1Node   = {sRel = ..Scale(..Data.Right.IliocostalisCervicisR6C4Via1Node_pos);};
     //Longus Colli
     AnyRefNode LongusColliT3C6Node = {sRel = ..Scale(..Data.Right.LongusColliT3C6Node_pos);};
     AnyRefNode LongusColliT2C5Node = {sRel = ..Scale(..Data.Right.LongusColliT2C5Node_pos);};
@@ -853,14 +853,14 @@ AnySeg C7Seg = {
     AnyRefNode RotatoresBrevisT1C7Node = {sRel = ..Scale(..Data.Right.RotatoresBrevisT1C7InsNode_pos);};
     AnyRefNode RotatoresLongusT2C7Node = {sRel = ..Scale(..Data.Right.RotatoresLongusT2C7InsNode_pos);};
     //Illiocostalis thoracic
-    AnyRefNode ITC7R7NodeOrg = {sRel = ..Scale(..Data.Right.ITC7R7Node_pos);};
+    AnyRefNode IliocostalisThoracisC7R7NodeOrg = {sRel = ..Scale(..Data.Right.IliocostalisThoracisC7R7Node_pos);};
   };
   Left = {
     //Iliocostalis Cervicis
-    AnyRefNode ICptR3C4Via1Node   = {sRel = ..Scale(..Data.Left.ICptR3C4Via1Node_pos);};
-    AnyRefNode ICptR4C5Via1Node   = {sRel = ..Scale(..Data.Left.ICptR4C5Via1Node_pos);};
-    AnyRefNode ICptR5C6Via1Node   = {sRel = ..Scale(..Data.Left.ICptR5C6Via1Node_pos);};
-    AnyRefNode ICptR6C4Via1Node   = {sRel = ..Scale(..Data.Left.ICptR6C4Via1Node_pos);};
+    AnyRefNode IliocostalisCervicisR3C4Via1Node   = {sRel = ..Scale(..Data.Left.IliocostalisCervicisR3C4Via1Node_pos);};
+    AnyRefNode IliocostalisCervicisR4C5Via1Node   = {sRel = ..Scale(..Data.Left.IliocostalisCervicisR4C5Via1Node_pos);};
+    AnyRefNode IliocostalisCervicisR5C6Via1Node   = {sRel = ..Scale(..Data.Left.IliocostalisCervicisR5C6Via1Node_pos);};
+    AnyRefNode IliocostalisCervicisR6C4Via1Node   = {sRel = ..Scale(..Data.Left.IliocostalisCervicisR6C4Via1Node_pos);};
     //Longus Colli
     AnyRefNode LongusColliT3C6Node = {sRel = ..Scale(..Data.Left.LongusColliT3C6Node_pos);};
     AnyRefNode LongusColliT2C5Node = {sRel = ..Scale(..Data.Left.LongusColliT2C5Node_pos);};
@@ -874,7 +874,7 @@ AnySeg C7Seg = {
     AnyRefNode RotatoresBrevisT1C7Node = {sRel = ..Scale(..Data.Left.RotatoresBrevisT1C7InsNode_pos);};
     AnyRefNode RotatoresLongusT2C7Node = {sRel = ..Scale(..Data.Left.RotatoresLongusT2C7InsNode_pos);};
     //Illiocostalis thoracic
-    AnyRefNode ITC7R7NodeOrg = {sRel = ..Scale(..Data.Left.ITC7R7Node_pos);};
+    AnyRefNode IliocostalisThoracisC7R7NodeOrg = {sRel = ..Scale(..Data.Left.IliocostalisThoracisC7R7Node_pos);};
   };
 
   AnyDrawSurf BoneDraw = {
