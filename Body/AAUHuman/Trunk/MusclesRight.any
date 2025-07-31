@@ -3830,8 +3830,8 @@ MuscleGroup ObliquusInternus = {
   #ifdef OBLIQUUS_WRAP_ON_CYLS
   
   
-  AnyMuscleViaPoint OIC_1 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.OIC_1;
+  AnyMuscleViaPoint ObliquusInternusR12 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.ObliquusInternusR12;
     AnyRefNode &Org = ....Segments.Right.R12Seg.ObliquusExternusNode;
     AnyRefNode &Ins = ....Segments.PelvisSeg.Right.ObliquusInternusNode_1;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -3839,8 +3839,8 @@ MuscleGroup ObliquusInternus = {
   };
   
   
-  AnyMuscleViaPoint OIC_2 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.OIC_2;
+  AnyMuscleViaPoint ObliquusInternusR11_1 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.ObliquusInternusR11_1;
     AnyRefNode &Org = ....Segments.Right.R11Seg.ObliquusExternusNode1;
     AnyRefNode &Ins = ....Segments.PelvisSeg.Right.ObliquusInternusNode_2;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -3848,8 +3848,8 @@ MuscleGroup ObliquusInternus = {
   };
   
   
-  AnyMuscleViaPoint OIC_3 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.OIC_3;
+  AnyMuscleViaPoint ObliquusInternusR11_2 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.ObliquusInternusR11_2;
     AnyRefNode &Org = ....Segments.Right.R11Seg.ObliquusExternusNode;
     AnyRefNode &Ins = ....Segments.PelvisSeg.Right.ObliquusInternusNode_3;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -3857,8 +3857,8 @@ MuscleGroup ObliquusInternus = {
   };
   
   
-  AnyMuscleViaPoint OIC_4 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.OIC_4;
+  AnyMuscleViaPoint ObliquusInternusR10_1 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.ObliquusInternusR10_1;
     AnyRefNode &Org = ....Segments.Right.R10Seg.ObliquusExternusNode_2;
     AnyRefNode &Ins = ....Segments.PelvisSeg.Right.ObliquusInternusNode_4;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -3866,8 +3866,8 @@ MuscleGroup ObliquusInternus = {
   };
   
   
-  AnyMuscleViaPoint OIC_5 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.OIC_5;
+  AnyMuscleViaPoint ObliquusInternusR10_2 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.ObliquusInternusR10_2;
     AnyRefNode &Org = ....Segments.Right.R10Seg.ObliquusExternusNode_1;
     AnyRefNode &Ins = ....Segments.PelvisSeg.Right.ObliquusInternusNode_4_1;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -3875,8 +3875,8 @@ MuscleGroup ObliquusInternus = {
   };
   
   
-  AnyMuscleShortestPath OIC_6 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.OIC_6;
+  AnyMuscleShortestPath ObliquusInternusCC_1 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.ObliquusInternusCC_1;
     #if BM_TRUNK_THORACIC_STERNUM_TOPOLOGY == 4
     AnyRefNode &Org = ....Segments.Right.CostalCartilageSeg.ObliquusInternus_1;
     #else
@@ -3900,8 +3900,8 @@ MuscleGroup ObliquusInternus = {
   };
   
   
-  AnyMuscleShortestPath OIC_7 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.OIC_7;
+  AnyMuscleShortestPath ObliquusInternusCC_2 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.ObliquusInternusCC_2;
     #if BM_TRUNK_THORACIC_STERNUM_TOPOLOGY == 4
     AnyRefNode &Org = ....Segments.Right.CostalCartilageSeg.ObliquusInternus_2;
     #else      
@@ -3925,8 +3925,8 @@ MuscleGroup ObliquusInternus = {
   };
   
   
-  AnyMuscleShortestPath OIC_8 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.OIC_8;
+  AnyMuscleShortestPath ObliquusInternusCC_3 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.ObliquusInternusCC_3;
     //  AnyRefNode &Org = ....Segments.SternalBodySeg.DiaphragmXiphoidNodeR;
     //  AnyRefNode &Ins = ....Segments.PelvisSeg.Right.ObliquusInternusNode_6;
     AnyRefNode &Org = ....Segments.SternalBodySeg.DiaphragmXiphoidNodeR;
@@ -3957,8 +3957,8 @@ MuscleGroup ObliquusInternus = {
   
   
   
-  AnyMuscleShortestPath OIC_8_extra = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.OIC_8;
+  AnyMuscleShortestPath ObliquusInternusCC_3_extra = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.ObliquusInternusCC_3;
     AnyRefNode &Org = ....Segments.SternalBodySeg.RACP_Via_2_R;
     AnyRefNode &Ins = ....Segments.PelvisSeg.Right.ObliquusInternusNode_6;
     
@@ -3979,8 +3979,8 @@ MuscleGroup ObliquusInternus = {
   };
   
   
-  AnyMuscleShortestPath OIC_9 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.OIC_9;
+  AnyMuscleShortestPath ObliquusInternusXiphoid = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.ObliquusInternusXiphoid;
     AnyRefNode &Org =      ....Abdominal.Layer_L1.BaseSegAnterior.mid;
     AnyRefNode &Ins = ....Segments.PelvisSeg.Right.ObliquusInternusNode_6;
     
@@ -4003,8 +4003,8 @@ MuscleGroup ObliquusInternus = {
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleShortestPath OIC_10 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.OIC_10;
+  AnyMuscleShortestPath ObliquusInternusAbd_1 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.ObliquusInternusAbd_1;
     AnyRefNode &Org =      ....Abdominal.Layer_L2.BaseSegAnterior.mid;
     AnyRefNode &Ins = ....Segments.PelvisSeg.Right.ObliquusInternusNode_6;
     
@@ -4026,8 +4026,8 @@ MuscleGroup ObliquusInternus = {
   };
   
   
-  AnyMuscleShortestPath OIC_11 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.OIC_11;
+  AnyMuscleShortestPath ObliquusInternusAbd_2 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.ObliquusInternusAbd_2;
     AnyRefNode &Org = ....Abdominal.Layer_L3.BaseSegAnterior.mid;
     AnyRefNode &Ins = ....Segments.PelvisSeg.Right.ObliquusInternusNode_7;
     
@@ -4049,8 +4049,8 @@ MuscleGroup ObliquusInternus = {
   };
   
   
-  AnyMuscleShortestPath OIC_12 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.OIC_12;
+  AnyMuscleShortestPath ObliquusInternusAbd_3 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.ObliquusInternusAbd_3;
     AnyRefNode &Org =      ....Abdominal.Layer_L4.BaseSegAnterior.mid;
     AnyRefNode &Ins = ....Segments.PelvisSeg.Right.ObliquusInternusNode_7;
     
@@ -4069,8 +4069,8 @@ MuscleGroup ObliquusInternus = {
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleShortestPath  OIC_13= {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.OIC_13;
+  AnyMuscleShortestPath  ObliquusInternusAbd_4= {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.ObliquusInternusAbd_4;
     AnyRefNode &Org = ....Abdominal.Layer_L5.BaseSegAnterior.mid;
     AnyRefNode &Ins = ....Segments.PelvisSeg.Right.ObliquusInternusNode_8;
     
@@ -4093,8 +4093,8 @@ MuscleGroup ObliquusInternus = {
   #endif
   
   #ifndef OBLIQUUS_WRAP_ON_CYLS
-  AnyMuscleViaPoint OIC_1 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.OIC_1;
+  AnyMuscleViaPoint ObliquusInternusR12 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.ObliquusInternusR12;
     AnyRefNode &Org = ....Segments.Right.R12Seg.ObliquusExternusNode;
     AnyRefNode &Ins = ....Segments.PelvisSeg.Right.ObliquusInternusNode_1;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -4103,8 +4103,8 @@ MuscleGroup ObliquusInternus = {
   };
   
   
-  AnyMuscleViaPoint OIC_2 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.OIC_2;
+  AnyMuscleViaPoint ObliquusInternusR11_1 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.ObliquusInternusR11_1;
     AnyRefNode &Org = ....Segments.Right.R11Seg.ObliquusExternusNode1;
     AnyRefNode &Ins = ....Segments.PelvisSeg.Right.ObliquusInternusNode_2;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -4113,8 +4113,8 @@ MuscleGroup ObliquusInternus = {
   };
   
   
-  AnyMuscleViaPoint OIC_3 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.OIC_3;
+  AnyMuscleViaPoint ObliquusInternusR11_2 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.ObliquusInternusR11_2;
     AnyRefNode &Org = ....Segments.Right.R11Seg.ObliquusExternusNode;
     AnyRefNode &Ins = ....Segments.PelvisSeg.Right.ObliquusInternusNode_3;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -4123,8 +4123,8 @@ MuscleGroup ObliquusInternus = {
   };
   
   
-  AnyMuscleViaPoint OIC_4 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.OIC_4;
+  AnyMuscleViaPoint ObliquusInternusR10_1 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.ObliquusInternusR10_1;
     AnyRefNode &Org = ....Segments.Right.R10Seg.ObliquusExternusNode_2;
     AnyRefNode &Ins = ....Segments.PelvisSeg.Right.ObliquusInternusNode_4;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -4133,8 +4133,8 @@ MuscleGroup ObliquusInternus = {
   };
   
   
-  AnyMuscleViaPoint OIC_5 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.OIC_5;
+  AnyMuscleViaPoint ObliquusInternusR10_2 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.ObliquusInternusR10_2;
     AnyRefNode &Org = ....Segments.Right.R10Seg.ObliquusExternusNode_1;
     AnyRefNode &Ins = ....Segments.PelvisSeg.Right.ObliquusInternusNode_4_1;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -4143,8 +4143,8 @@ MuscleGroup ObliquusInternus = {
   };
   
   
-  AnyMuscleShortestPath OIC_6 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.OIC_6;
+  AnyMuscleShortestPath ObliquusInternusCC_1 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.ObliquusInternusCC_1;
     #if BM_TRUNK_THORACIC_STERNUM_TOPOLOGY == 4
     AnyRefNode &Org = ....Segments.Right.CostalCartilageSeg.ObliquusInternus_1;
     #else
@@ -4204,8 +4204,8 @@ MuscleGroup ObliquusInternus = {
     #include "MusclesSharedCode_SPLine.any"
   };
   
-  AnyMuscleShortestPath OIC_7 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.OIC_7;
+  AnyMuscleShortestPath ObliquusInternusCC_2 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.ObliquusInternusCC_2;
     #if BM_TRUNK_THORACIC_STERNUM_TOPOLOGY == 4
     AnyRefNode &Org = ....Segments.Right.CostalCartilageSeg.ObliquusInternus_2;
     #else      
@@ -4277,8 +4277,8 @@ MuscleGroup ObliquusInternus = {
   };
   
   
-  AnyMuscleShortestPath OIC_8 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.OIC_8;
+  AnyMuscleShortestPath ObliquusInternusCC_3 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.ObliquusInternusCC_3;
     AnyRefNode &Org = ....Segments.SternalBodySeg.RACP_Via_2_R;
     // AnyRefNode &Via = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L1.BaseSegAnterior.TransversusPoints.Right.nn05;
     
@@ -4357,8 +4357,8 @@ MuscleGroup ObliquusInternus = {
     #include "MusclesSharedCode_SPLine.any"
   };
   
-  AnyMuscleShortestPath OIC_9 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.OIC_9;
+  AnyMuscleShortestPath ObliquusInternusXiphoid = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.ObliquusInternusXiphoid;
     AnyRefNode &Org = ....Segments.SternalBodySeg.DiaphragmXiphoidNodeR;
     AnyRefNode &Via = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L1.BaseSegAnterior.TransversusPoints.Right.nn06;
     
@@ -4449,8 +4449,8 @@ MuscleGroup ObliquusInternus = {
     #include "MusclesSharedCode_SPLine.any"
   };
   
-  AnyMuscleShortestPath OIC_10 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.OIC_10;
+  AnyMuscleShortestPath ObliquusInternusAbd_1 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.ObliquusInternusAbd_1;
     AnyRefNode &Org =      ....Abdominal.Layer_L1.BaseSegAnterior.mid;
     AnyRefNode &Ins = ....Segments.PelvisSeg.Right.ObliquusInternusNode_6;
     
@@ -4527,8 +4527,8 @@ MuscleGroup ObliquusInternus = {
   };
   
   
-  AnyMuscleShortestPath OIC_11 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.OIC_11;
+  AnyMuscleShortestPath ObliquusInternusAbd_2 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.ObliquusInternusAbd_2;
     AnyRefNode &Org =      ....Abdominal.Layer_L2.BaseSegAnterior.mid;
     AnyRefNode &Ins = ....Segments.PelvisSeg.Right.ObliquusInternusNode_6;
     
@@ -4611,8 +4611,8 @@ MuscleGroup ObliquusInternus = {
   
   //
   
-  AnyMuscleShortestPath OIC_12 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.OIC_12;
+  AnyMuscleShortestPath ObliquusInternusAbd_3 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.ObliquusInternusAbd_3;
     AnyRefNode &Org = ....Abdominal.Layer_L3.BaseSegAnterior.mid;
     AnyRefNode &Ins = ....Segments.PelvisSeg.Right.ObliquusInternusNode_7;
     
@@ -4680,8 +4680,8 @@ MuscleGroup ObliquusInternus = {
   };
   
   
-  AnyMuscleShortestPath OIC_13 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.OIC_13;
+  AnyMuscleShortestPath ObliquusInternusAbd_4 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.ObliquusInternusAbd_4;
     AnyRefNode &Org =      ....Abdominal.Layer_L4.BaseSegAnterior.mid;
     AnyRefNode &Ins = ....Segments.PelvisSeg.Right.ObliquusInternusNode_7;
     
@@ -4733,8 +4733,8 @@ MuscleGroup ObliquusInternus = {
     #include "MusclesSharedCode_SPLine.any"
   };
   
-  AnyMuscleViaPoint  OIC_14= {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.OIC_14;
+  AnyMuscleViaPoint  ObliquusInternusAbd_5= {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.ObliquusInternusAbd_5;
     AnyRefNode &Org = ....Abdominal.Layer_L5.BaseSegAnterior.mid;
     AnyRefNode &Ins = ....Segments.PelvisSeg.Right.ObliquusInternusNode_8;
     
