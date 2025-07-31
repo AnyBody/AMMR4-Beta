@@ -2801,300 +2801,300 @@ MuscleGroup MultifidusLumborum = {
 
 MuscleGroup MultifidusThoracis = {
   #if BM_TRUNK_THORACIC_MODEL == _THORACIC_MODEL_FLEXIBLE_
-  AnyMuscleViaPoint MFT4T1 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MFT4T1;
-    AnyRefFrame &Org = ....Segments.T4Seg.MFT4T1NodeLOrg;
-    AnyRefFrame &Ins = ....Segments.T1Seg.MFT4T1NodeLIns;
+  AnyMuscleViaPoint MultifidusThoracisT4T1 =   {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MultifidusThoracisT4T1;
+    AnyRefFrame &Org = ....Segments.T4Seg.MultifidusThoracisT4T1NodeLOrg;
+    AnyRefFrame &Ins = ....Segments.T1Seg.MultifidusThoracisT4T1NodeLIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint MFT5T1 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MFT5T1;
-    AnyRefFrame &Org = ....Segments.T5Seg.MFT5T1NodeLOrg;
-    AnyRefFrame &Ins = ....Segments.T1Seg.MFT5T1NodeLIns;
+  AnyMuscleViaPoint MultifidusThoracisT5T1 =   {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MultifidusThoracisT5T1;
+    AnyRefFrame &Org = ....Segments.T5Seg.MultifidusThoracisT5T1NodeLOrg;
+    AnyRefFrame &Ins = ....Segments.T1Seg.MultifidusThoracisT5T1NodeLIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint MFT5T2 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MFT5T2;
-    AnyRefFrame &Org = ....Segments.T5Seg.MFT5T2NodeLOrg;
-    AnyRefFrame &Ins = ....Segments.T2Seg.MFT5T2NodeLIns;
+  AnyMuscleViaPoint MultifidusThoracisT5T2 =   {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MultifidusThoracisT5T2;
+    AnyRefFrame &Org = ....Segments.T5Seg.MultifidusThoracisT5T2NodeLOrg;
+    AnyRefFrame &Ins = ....Segments.T2Seg.MultifidusThoracisT5T2NodeLIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint MFT6T1 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MFT6T1;
-    AnyRefFrame &Org = ....Segments.T6Seg.MFT6T1NodeLOrg;
-    AnyRefFrame &Ins = ....Segments.T1Seg.MFT6T1NodeLIns;
+  AnyMuscleViaPoint MultifidusThoracisT6T1 =   {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MultifidusThoracisT6T1;
+    AnyRefFrame &Org = ....Segments.T6Seg.MultifidusThoracisT6T1NodeLOrg;
+    AnyRefFrame &Ins = ....Segments.T1Seg.MultifidusThoracisT6T1NodeLIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint MFT6T2 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MFT6T2;
-    AnyRefFrame &Org = ....Segments.T6Seg.MFT6T2NodeLOrg;
-    AnyRefFrame &Ins = ....Segments.T2Seg.MFT6T2NodeLIns;
+  AnyMuscleViaPoint MultifidusThoracisT6T2 =   {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MultifidusThoracisT6T2;
+    AnyRefFrame &Org = ....Segments.T6Seg.MultifidusThoracisT6T2NodeLOrg;
+    AnyRefFrame &Ins = ....Segments.T2Seg.MultifidusThoracisT6T2NodeLIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint MFT6T3 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MFT6T3;
-    AnyRefFrame &Org = ....Segments.T6Seg.MFT6T3NodeLOrg;
-    AnyRefFrame &Ins = ....Segments.T3Seg.MFT6T3NodeLIns;
+  AnyMuscleViaPoint MultifidusThoracisT6T3 =   {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MultifidusThoracisT6T3;
+    AnyRefFrame &Org = ....Segments.T6Seg.MultifidusThoracisT6T3NodeLOrg;
+    AnyRefFrame &Ins = ....Segments.T3Seg.MultifidusThoracisT6T3NodeLIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint MFT7T2 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MFT7T2;
-    AnyRefFrame &Org = ....Segments.T7Seg.MFT7T2NodeLOrg;
-    AnyRefFrame &Ins = ....Segments.T2Seg.MFT7T2NodeLIns;
+  AnyMuscleViaPoint MultifidusThoracisT7T2 =   {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MultifidusThoracisT7T2;
+    AnyRefFrame &Org = ....Segments.T7Seg.MultifidusThoracisT7T2NodeLOrg;
+    AnyRefFrame &Ins = ....Segments.T2Seg.MultifidusThoracisT7T2NodeLIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint MFT7T3 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MFT7T3;
-    AnyRefFrame &Org = ....Segments.T7Seg.MFT7T3NodeLOrg;
-    AnyRefFrame &Ins = ....Segments.T3Seg.MFT7T3NodeLIns;
+  AnyMuscleViaPoint MultifidusThoracisT7T3 =   {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MultifidusThoracisT7T3;
+    AnyRefFrame &Org = ....Segments.T7Seg.MultifidusThoracisT7T3NodeLOrg;
+    AnyRefFrame &Ins = ....Segments.T3Seg.MultifidusThoracisT7T3NodeLIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint MFT7T4 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MFT7T4;
-    AnyRefFrame &Org = ....Segments.T7Seg.MFT7T4NodeLOrg;
-    AnyRefFrame &Ins = ....Segments.T4Seg.MFT7T4NodeLIns;
+  AnyMuscleViaPoint MultifidusThoracisT7T4 =   {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MultifidusThoracisT7T4;
+    AnyRefFrame &Org = ....Segments.T7Seg.MultifidusThoracisT7T4NodeLOrg;
+    AnyRefFrame &Ins = ....Segments.T4Seg.MultifidusThoracisT7T4NodeLIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint MFT8T3 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MFT8T3;
-    AnyRefFrame &Org = ....Segments.T8Seg.MFT8T3NodeLOrg;
-    AnyRefFrame &Ins = ....Segments.T3Seg.MFT8T3NodeLIns;
+  AnyMuscleViaPoint MultifidusThoracisT8T3 =   {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MultifidusThoracisT8T3;
+    AnyRefFrame &Org = ....Segments.T8Seg.MultifidusThoracisT8T3NodeLOrg;
+    AnyRefFrame &Ins = ....Segments.T3Seg.MultifidusThoracisT8T3NodeLIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint MFT8T4 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MFT8T4;
-    AnyRefFrame &Org = ....Segments.T8Seg.MFT8T4NodeLOrg;
-    AnyRefFrame &Ins = ....Segments.T4Seg.MFT8T4NodeLIns;
+  AnyMuscleViaPoint MultifidusThoracisT8T4 =   {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MultifidusThoracisT8T4;
+    AnyRefFrame &Org = ....Segments.T8Seg.MultifidusThoracisT8T4NodeLOrg;
+    AnyRefFrame &Ins = ....Segments.T4Seg.MultifidusThoracisT8T4NodeLIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint MFT8T5 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MFT8T5;
-    AnyRefFrame &Org = ....Segments.T8Seg.MFT8T5NodeLOrg;
-    AnyRefFrame &Ins = ....Segments.T5Seg.MFT8T5NodeLIns;
+  AnyMuscleViaPoint MultifidusThoracisT8T5 =   {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MultifidusThoracisT8T5;
+    AnyRefFrame &Org = ....Segments.T8Seg.MultifidusThoracisT8T5NodeLOrg;
+    AnyRefFrame &Ins = ....Segments.T5Seg.MultifidusThoracisT8T5NodeLIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint MFT9T4 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MFT9T4;
-    AnyRefFrame &Org = ....Segments.T9Seg.MFT9T4NodeLOrg;
-    AnyRefFrame &Ins = ....Segments.T4Seg.MFT9T4NodeLIns;
+  AnyMuscleViaPoint MultifidusThoracisT9T4 =   {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MultifidusThoracisT9T4;
+    AnyRefFrame &Org = ....Segments.T9Seg.MultifidusThoracisT9T4NodeLOrg;
+    AnyRefFrame &Ins = ....Segments.T4Seg.MultifidusThoracisT9T4NodeLIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint MFT9T5 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MFT9T5;
-    AnyRefFrame &Org = ....Segments.T9Seg.MFT9T5NodeLOrg;
-    AnyRefFrame &Ins = ....Segments.T5Seg.MFT9T5NodeLIns;
+  AnyMuscleViaPoint MultifidusThoracisT9T5 =   {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MultifidusThoracisT9T5;
+    AnyRefFrame &Org = ....Segments.T9Seg.MultifidusThoracisT9T5NodeLOrg;
+    AnyRefFrame &Ins = ....Segments.T5Seg.MultifidusThoracisT9T5NodeLIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint MFT9T6 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MFT9T6;
-    AnyRefFrame &Org = ....Segments.T9Seg.MFT9T6NodeLOrg;
-    AnyRefFrame &Ins = ....Segments.T6Seg.MFT9T6NodeLIns;
+  AnyMuscleViaPoint MultifidusThoracisT9T6 =   {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MultifidusThoracisT9T6;
+    AnyRefFrame &Org = ....Segments.T9Seg.MultifidusThoracisT9T6NodeLOrg;
+    AnyRefFrame &Ins = ....Segments.T6Seg.MultifidusThoracisT9T6NodeLIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint MFT10T5 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MFT10T5;
-    AnyRefFrame &Org = ....Segments.T10Seg.MFT10T5NodeLOrg;
-    AnyRefFrame &Ins = ....Segments.T5Seg.MFT10T5NodeLIns;
+  AnyMuscleViaPoint MultifidusThoracisT10T5 =   {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MultifidusThoracisT10T5;
+    AnyRefFrame &Org = ....Segments.T10Seg.MultifidusThoracisT10T5NodeLOrg;
+    AnyRefFrame &Ins = ....Segments.T5Seg.MultifidusThoracisT10T5NodeLIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint MFT10T6 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MFT10T6;
-    AnyRefFrame &Org = ....Segments.T10Seg.MFT10T6NodeLOrg;
-    AnyRefFrame &Ins = ....Segments.T6Seg.MFT10T6NodeLIns;
+  AnyMuscleViaPoint MultifidusThoracisT10T6 =   {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MultifidusThoracisT10T6;
+    AnyRefFrame &Org = ....Segments.T10Seg.MultifidusThoracisT10T6NodeLOrg;
+    AnyRefFrame &Ins = ....Segments.T6Seg.MultifidusThoracisT10T6NodeLIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint MFT10T7 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MFT10T7;
-    AnyRefFrame &Org = ....Segments.T10Seg.MFT10T7NodeLOrg;
-    AnyRefFrame &Ins = ....Segments.T7Seg.MFT10T7NodeLIns;
+  AnyMuscleViaPoint MultifidusThoracisT10T7 =   {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MultifidusThoracisT10T7;
+    AnyRefFrame &Org = ....Segments.T10Seg.MultifidusThoracisT10T7NodeLOrg;
+    AnyRefFrame &Ins = ....Segments.T7Seg.MultifidusThoracisT10T7NodeLIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint MFT11T6 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MFT11T6;
-    AnyRefFrame &Org = ....Segments.T11Seg.MFT11T6NodeLOrg;
-    AnyRefFrame &Ins = ....Segments.T6Seg.MFT11T6NodeLIns;
+  AnyMuscleViaPoint MultifidusThoracisT11T6 =   {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MultifidusThoracisT11T6;
+    AnyRefFrame &Org = ....Segments.T11Seg.MultifidusThoracisT11T6NodeLOrg;
+    AnyRefFrame &Ins = ....Segments.T6Seg.MultifidusThoracisT11T6NodeLIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint MFT11T7 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MFT11T7;
-    AnyRefFrame &Org = ....Segments.T11Seg.MFT11T7NodeLOrg;
-    AnyRefFrame &Ins = ....Segments.T7Seg.MFT11T7NodeLIns;
+  AnyMuscleViaPoint MultifidusThoracisT11T7 =   {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MultifidusThoracisT11T7;
+    AnyRefFrame &Org = ....Segments.T11Seg.MultifidusThoracisT11T7NodeLOrg;
+    AnyRefFrame &Ins = ....Segments.T7Seg.MultifidusThoracisT11T7NodeLIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint MFT11T8 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MFT11T8;
-    AnyRefFrame &Org = ....Segments.T11Seg.MFT11T8NodeLOrg;
-    AnyRefFrame &Ins = ....Segments.T8Seg.MFT11T8NodeLIns;
+  AnyMuscleViaPoint MultifidusThoracisT11T8 =   {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MultifidusThoracisT11T8;
+    AnyRefFrame &Org = ....Segments.T11Seg.MultifidusThoracisT11T8NodeLOrg;
+    AnyRefFrame &Ins = ....Segments.T8Seg.MultifidusThoracisT11T8NodeLIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint MFT12T7 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MFT12T7;
-    AnyRefFrame &Org = ....Segments.T12Seg.MFT12T7NodeLOrg;
-    AnyRefFrame &Ins = ....Segments.T7Seg.MFT12T7NodeLIns;
+  AnyMuscleViaPoint MultifidusThoracisT12T7 =   {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MultifidusThoracisT12T7;
+    AnyRefFrame &Org = ....Segments.T12Seg.MultifidusThoracisT12T7NodeLOrg;
+    AnyRefFrame &Ins = ....Segments.T7Seg.MultifidusThoracisT12T7NodeLIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint MFT12T8 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MFT12T8;
-    AnyRefFrame &Org = ....Segments.T12Seg.MFT12T8NodeLOrg;
-    AnyRefFrame &Ins = ....Segments.T8Seg.MFT12T8NodeLIns;
+  AnyMuscleViaPoint MultifidusThoracisT12T8 =   {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MultifidusThoracisT12T8;
+    AnyRefFrame &Org = ....Segments.T12Seg.MultifidusThoracisT12T8NodeLOrg;
+    AnyRefFrame &Ins = ....Segments.T8Seg.MultifidusThoracisT12T8NodeLIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint MFT12T9 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MFT12T9;
-    AnyRefFrame &Org = ....Segments.T12Seg.MFT12T9NodeLOrg;
-    AnyRefFrame &Ins = ....Segments.T9Seg.MFT12T9NodeLIns;
+  AnyMuscleViaPoint MultifidusThoracisT12T9 =   {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MultifidusThoracisT12T9;
+    AnyRefFrame &Org = ....Segments.T12Seg.MultifidusThoracisT12T9NodeLOrg;
+    AnyRefFrame &Ins = ....Segments.T9Seg.MultifidusThoracisT12T9NodeLIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   #endif
-  AnyMuscleViaPoint MFL1T8 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MFL1T8;
-    AnyRefFrame &Org = ....Segments.L1Seg.MFL1T8NodeLOrg;
-    AnyRefFrame &Ins = ....Segments.T8Seg.MFL1T8NodeLIns;
+  AnyMuscleViaPoint MultifidusThoracisL1T8 =   {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MultifidusThoracisL1T8;
+    AnyRefFrame &Org = ....Segments.L1Seg.MultifidusThoracisL1T8NodeLOrg;
+    AnyRefFrame &Ins = ....Segments.T8Seg.MultifidusThoracisL1T8NodeLIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint MFL1T9 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MFL1T9;
-    AnyRefFrame &Org = ....Segments.L1Seg.MFL1T9NodeLOrg;
-    AnyRefFrame &Ins = ....Segments.T9Seg.MFL1T9NodeLIns;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-    viewForce.Visible ??= Off;
-    
-  };
-  
-  AnyMuscleViaPoint MFL1T10 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MFL1T10;
-    AnyRefFrame &Org = ....Segments.L1Seg.MFL1T10NodeLOrg;
-    AnyRefFrame &Ins = ....Segments.T10Seg.MFL1T10NodeLIns;
+  AnyMuscleViaPoint MultifidusThoracisL1T9 =   {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MultifidusThoracisL1T9;
+    AnyRefFrame &Org = ....Segments.L1Seg.MultifidusThoracisL1T9NodeLOrg;
+    AnyRefFrame &Ins = ....Segments.T9Seg.MultifidusThoracisL1T9NodeLIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
     
   };
   
-  AnyMuscleViaPoint MFL2T9 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MFL2T9;
-    AnyRefFrame &Org = ....Segments.L2Seg.MFL2T9NodeLOrg;
-    AnyRefFrame &Ins = ....Segments.T9Seg.MFL2T9NodeLIns;
+  AnyMuscleViaPoint MultifidusThoracisL1T10 =   {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MultifidusThoracisL1T10;
+    AnyRefFrame &Org = ....Segments.L1Seg.MultifidusThoracisL1T10NodeLOrg;
+    AnyRefFrame &Ins = ....Segments.T10Seg.MultifidusThoracisL1T10NodeLIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
     
   };
   
-  AnyMuscleViaPoint MFL2T10 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MFL2T10;
-    AnyRefFrame &Org = ....Segments.L2Seg.MFL2T10NodeLOrg;
-    AnyRefFrame &Ins = ....Segments.T10Seg.MFL2T10NodeLIns;
+  AnyMuscleViaPoint MultifidusThoracisL2T9 =   {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MultifidusThoracisL2T9;
+    AnyRefFrame &Org = ....Segments.L2Seg.MultifidusThoracisL2T9NodeLOrg;
+    AnyRefFrame &Ins = ....Segments.T9Seg.MultifidusThoracisL2T9NodeLIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
     
   };
   
-  AnyMuscleViaPoint MFL2T11 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MFL2T11;
-    AnyRefFrame &Org = ....Segments.L2Seg.MFL2T11NodeLOrg;
-    AnyRefFrame &Ins = ....Segments.T11Seg.MFL2T11NodeLIns;
+  AnyMuscleViaPoint MultifidusThoracisL2T10 =   {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MultifidusThoracisL2T10;
+    AnyRefFrame &Org = ....Segments.L2Seg.MultifidusThoracisL2T10NodeLOrg;
+    AnyRefFrame &Ins = ....Segments.T10Seg.MultifidusThoracisL2T10NodeLIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
     
   };
   
-  AnyMuscleViaPoint MFL3T10 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MFL3T10;
-    AnyRefFrame &Org = ....Segments.L3Seg.MFL3T10NodeLOrg;
-    AnyRefFrame &Ins = ....Segments.T10Seg.MFL3T10NodeLIns;
+  AnyMuscleViaPoint MultifidusThoracisL2T11 =   {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MultifidusThoracisL2T11;
+    AnyRefFrame &Org = ....Segments.L2Seg.MultifidusThoracisL2T11NodeLOrg;
+    AnyRefFrame &Ins = ....Segments.T11Seg.MultifidusThoracisL2T11NodeLIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
     
   };
   
-  AnyMuscleViaPoint MFL3T11 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MFL3T11;
-    AnyRefFrame &Org = ....Segments.L3Seg.MFL3T11NodeLOrg;
-    AnyRefFrame &Ins = ....Segments.T11Seg.MFL3T11NodeLIns;
+  AnyMuscleViaPoint MultifidusThoracisL3T10 =   {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MultifidusThoracisL3T10;
+    AnyRefFrame &Org = ....Segments.L3Seg.MultifidusThoracisL3T10NodeLOrg;
+    AnyRefFrame &Ins = ....Segments.T10Seg.MultifidusThoracisL3T10NodeLIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
     
   };
   
-  AnyMuscleViaPoint MFL3T12 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MFL3T12;
-    AnyRefFrame &Org = ....Segments.L3Seg.MFL3T12NodeLOrg;
-    AnyRefFrame &Ins = ....Segments.T12Seg.MFL3T12NodeLIns;
+  AnyMuscleViaPoint MultifidusThoracisL3T11 =   {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MultifidusThoracisL3T11;
+    AnyRefFrame &Org = ....Segments.L3Seg.MultifidusThoracisL3T11NodeLOrg;
+    AnyRefFrame &Ins = ....Segments.T11Seg.MultifidusThoracisL3T11NodeLIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
     
   };
   
-  AnyMuscleViaPoint MFL4T11 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MFL4T11;
-    AnyRefFrame &Org = ....Segments.L4Seg.MFL4T11NodeLOrg;
-    AnyRefFrame &Ins = ....Segments.T11Seg.MFL4T11NodeLIns;
+  AnyMuscleViaPoint MultifidusThoracisL3T12 =   {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MultifidusThoracisL3T12;
+    AnyRefFrame &Org = ....Segments.L3Seg.MultifidusThoracisL3T12NodeLOrg;
+    AnyRefFrame &Ins = ....Segments.T12Seg.MultifidusThoracisL3T12NodeLIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
     
   };
   
-  AnyMuscleViaPoint MFL4T12 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MFL4T12;
-    AnyRefFrame &Org = ....Segments.L4Seg.MFL4T12NodeLOrg;
-    AnyRefFrame &Ins = ....Segments.T12Seg.MFL4T12NodeLIns;
+  AnyMuscleViaPoint MultifidusThoracisL4T11 =   {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MultifidusThoracisL4T11;
+    AnyRefFrame &Org = ....Segments.L4Seg.MultifidusThoracisL4T11NodeLOrg;
+    AnyRefFrame &Ins = ....Segments.T11Seg.MultifidusThoracisL4T11NodeLIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
     
   };
   
-  AnyMuscleViaPoint MFL5T12 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MFL5T12;
-    AnyRefFrame &Org = ....Segments.L5Seg.MFL5T12NodeLOrg;
-    AnyRefFrame &Ins = ....Segments.T12Seg.MFL5T12NodeLIns;
+  AnyMuscleViaPoint MultifidusThoracisL4T12 =   {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MultifidusThoracisL4T12;
+    AnyRefFrame &Org = ....Segments.L4Seg.MultifidusThoracisL4T12NodeLOrg;
+    AnyRefFrame &Ins = ....Segments.T12Seg.MultifidusThoracisL4T12NodeLIns;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    viewForce.Visible ??= Off;
+    
+  };
+  
+  AnyMuscleViaPoint MultifidusThoracisL5T12 =   {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ThoracicMultifidi.MultifidusThoracisL5T12;
+    AnyRefFrame &Org = ....Segments.L5Seg.MultifidusThoracisL5T12NodeLOrg;
+    AnyRefFrame &Ins = ....Segments.T12Seg.MultifidusThoracisL5T12NodeLIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
     
