@@ -1021,9 +1021,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder IliocostalisThoracisR5T11 = 
+    AnyFolder IliocostalisThoracisR5R11 = 
     {
-      AnyString Muscle = "IliocostalisThoracisR5T11"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "IliocostalisThoracisR5R11"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -1039,9 +1039,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder IliocostalisThoracisR6T12 = 
+    AnyFolder IliocostalisThoracisR6R12 = 
     {
-      AnyString Muscle = "IliocostalisThoracisR6T12"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "IliocostalisThoracisR6R12"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume

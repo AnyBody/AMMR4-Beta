@@ -1213,8 +1213,8 @@ AnyFolder Left = {
 
 
     #if BM_TRUNK_MUSCLES
-    AnyMuscleModel3E IliocostalisThoracisR5T11 = {
-      AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.IliocostalisThoracis.IliocostalisThoracisR5T11;
+    AnyMuscleModel3E IliocostalisThoracisR5R11 = {
+      AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.IliocostalisThoracis.IliocostalisThoracisR5R11;
       AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
       AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
       F0 ??= ...DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1235,8 +1235,8 @@ AnyFolder Left = {
 
 
     #if BM_TRUNK_MUSCLES
-    AnyMuscleModel3E IliocostalisThoracisR6T12 = {
-      AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.IliocostalisThoracis.IliocostalisThoracisR6T12;
+    AnyMuscleModel3E IliocostalisThoracisR6R12 = {
+      AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.IliocostalisThoracis.IliocostalisThoracisR6R12;
       AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
       AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
       F0 ??= ...DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -10355,8 +10355,8 @@ AnyFolder Right = {
 
 
     #if BM_TRUNK_MUSCLES
-    AnyMuscleModel3E IliocostalisThoracisR5T11 = {
-      AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.IliocostalisThoracis.IliocostalisThoracisR5T11;
+    AnyMuscleModel3E IliocostalisThoracisR5R11 = {
+      AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.IliocostalisThoracis.IliocostalisThoracisR5R11;
       AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
       AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
       F0 ??= ...DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -10377,8 +10377,8 @@ AnyFolder Right = {
 
 
     #if BM_TRUNK_MUSCLES
-    AnyMuscleModel3E IliocostalisThoracisR6T12 = {
-      AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.IliocostalisThoracis.IliocostalisThoracisR6T12;
+    AnyMuscleModel3E IliocostalisThoracisR6R12 = {
+      AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.IliocostalisThoracis.IliocostalisThoracisR6R12;
       AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
       AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
       F0 ??= ...DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
