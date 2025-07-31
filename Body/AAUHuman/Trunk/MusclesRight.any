@@ -2329,33 +2329,33 @@ MuscleGroup LongissimusThoracis = {
 };
 
 MuscleGroup LongusCapitis = {
-  AnyMuscleViaPoint LongusCapitisC6C0 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongusCapitis.LongusCapitisC6C0;
-    AnyRefNode &Org = ....Segments.C6Seg.LongusCapitisC6C0NodeR;
+  AnyMuscleViaPoint LongusCapitisC6 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongusCapitis.LongusCapitisC6;
+    AnyRefNode &Org = ....Segments.C6Seg.LongusCapitisC6NodeR;
     AnyRefNode &Ins = ....Segments.SkullSeg.LongusCapitisC0NodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint LongusCapitisC5C0 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongusCapitis.LongusCapitisC5C0;
-    AnyRefNode &Org = ....Segments.C5Seg.LongusCapitisC5C0NodeR;
+  AnyMuscleViaPoint LongusCapitisC5 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongusCapitis.LongusCapitisC5;
+    AnyRefNode &Org = ....Segments.C5Seg.LongusCapitisC5NodeR;
     AnyRefNode &Ins = ....Segments.SkullSeg.LongusCapitisC0NodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint LongusCapitisC4C0 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongusCapitis.LongusCapitisC4C0;
-    AnyRefNode &Org = ....Segments.C4Seg.LongusCapitisC4C0NodeR;
+  AnyMuscleViaPoint LongusCapitisC4 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongusCapitis.LongusCapitisC4;
+    AnyRefNode &Org = ....Segments.C4Seg.LongusCapitisC4NodeR;
     AnyRefNode &Ins = ....Segments.SkullSeg.LongusCapitisC0NodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint LongusCapitisC3C0 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongusCapitis.LongusCapitisC3C0;
-    AnyRefNode &Org = ....Segments.C3Seg.LongusCapitisC3C0NodeR;
+  AnyMuscleViaPoint LongusCapitisC3 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongusCapitis.LongusCapitisC3;
+    AnyRefNode &Org = ....Segments.C3Seg.LongusCapitisC3NodeR;
     AnyRefNode &Ins = ....Segments.SkullSeg.LongusCapitisC0NodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
@@ -2473,75 +2473,75 @@ MuscleGroup LongusColli = {
     viewForce.Visible ??= Off;
   };
   // LongusColliSuperiorOblique
-  AnyMuscleViaPoint LongusColliSuperiorObliqueC3C1 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongusColli.LongusColliSuperiorObliqueC3C1;
-    AnyRefNode &Org = ....Segments.C3Seg.LongusCapitisC3C0NodeR;
+  AnyMuscleViaPoint LongusColliC3C1 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongusColli.LongusColliC3C1;
+    AnyRefNode &Org = ....Segments.C3Seg.LongusCapitisC3NodeR;
     AnyRefNode &Ins = ....Segments.C1Seg.Right.LongusColliC5C1Node;
     viewMuscle = {#include "<ANYBODY_PATH_BODY>/drawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;                
   };
-  AnyMuscleViaPoint LongusColliSuperiorObliqueC4C1 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongusColli.LongusColliSuperiorObliqueC4C1;
-    AnyRefNode &Org = ....Segments.C4Seg.LongusCapitisC4C0NodeR;
+  AnyMuscleViaPoint LongusColliC4C1 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongusColli.LongusColliC4C1;
+    AnyRefNode &Org = ....Segments.C4Seg.LongusCapitisC4NodeR;
     AnyRefNode &Ins = ....Segments.C1Seg.Right.LongusColliC5C1Node;
     viewMuscle = {#include "<ANYBODY_PATH_BODY>/drawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;                
   };
-  AnyMuscleViaPoint LongusColliSuperiorObliqueC5C1 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongusColli.LongusColliSuperiorObliqueC5C1;
-    AnyRefNode &Org = ....Segments.C5Seg.LongusCapitisC5C0NodeR;
+  AnyMuscleViaPoint LongusColliC5C1 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongusColli.LongusColliC5C1;
+    AnyRefNode &Org = ....Segments.C5Seg.LongusCapitisC5NodeR;
     AnyRefNode &Ins = ....Segments.C1Seg.Right.LongusColliC5C1Node;
     viewMuscle = {#include "<ANYBODY_PATH_BODY>/drawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;                
   };
-  AnyMuscleViaPoint LongusColliSuperiorObliqueC4C2 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongusColli.LongusColliSuperiorObliqueC4C2;
-    AnyRefNode &Org = ....Segments.C4Seg.LongusCapitisC4C0NodeR;
+  AnyMuscleViaPoint LongusColliC4C2 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongusColli.LongusColliC4C2;
+    AnyRefNode &Org = ....Segments.C4Seg.LongusCapitisC4NodeR;
     AnyRefNode &Ins = ....Segments.C2Seg.Right.LongusColliC6C2Node;
     viewMuscle = {#include "<ANYBODY_PATH_BODY>/drawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;                
   };
-  AnyMuscleViaPoint LongusColliSuperiorObliqueC5C2 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongusColli.LongusColliSuperiorObliqueC5C2;
-    AnyRefNode &Org = ....Segments.C5Seg.LongusCapitisC5C0NodeR;
+  AnyMuscleViaPoint LongusColliC5C2 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongusColli.LongusColliC5C2;
+    AnyRefNode &Org = ....Segments.C5Seg.LongusCapitisC5NodeR;
     AnyRefNode &Ins = ....Segments.C2Seg.Right.LongusColliC6C2Node;
     viewMuscle = {#include "<ANYBODY_PATH_BODY>/drawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;                
   };
-  AnyMuscleViaPoint LongusColliSuperiorObliqueC6C2 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongusColli.LongusColliSuperiorObliqueC6C2;
-    AnyRefNode &Org = ....Segments.C6Seg.LongusCapitisC6C0NodeR;
+  AnyMuscleViaPoint LongusColliC6C2 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongusColli.LongusColliC6C2;
+    AnyRefNode &Org = ....Segments.C6Seg.LongusCapitisC6NodeR;
     AnyRefNode &Ins = ....Segments.C2Seg.Right.LongusColliC6C2Node;
     viewMuscle = {#include "<ANYBODY_PATH_BODY>/drawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;                
   };
-  AnyMuscleViaPoint LongusColliSuperiorObliqueC6C3 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongusColli.LongusColliSuperiorObliqueC6C3;
-    AnyRefNode &Org = ....Segments.C6Seg.LongusCapitisC6C0NodeR;
+  AnyMuscleViaPoint LongusColliC6C3 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongusColli.LongusColliC6C3;
+    AnyRefNode &Org = ....Segments.C6Seg.LongusCapitisC6NodeR;
     AnyRefNode &Ins = ....Segments.C3Seg.Right.LongusColliC7C3Node;
     viewMuscle = {#include "<ANYBODY_PATH_BODY>/drawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;                
   };
   
   // LongusColliInferiorOblique
-  AnyMuscleViaPoint LongusColliInferiorObliqueT1C6 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongusColli.LongusColliInferiorObliqueT1C6;
+  AnyMuscleViaPoint LongusColliT1C6 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongusColli.LongusColliT1C6;
     AnyRefNode &Org = ....Segments.T1Seg.Right.LongusColliT1C4Node;
-    AnyRefNode &Ins = ....Segments.C6Seg.LongusCapitisC6C0NodeR;
+    AnyRefNode &Ins = ....Segments.C6Seg.LongusCapitisC6NodeR;
     viewMuscle = {#include "<ANYBODY_PATH_BODY>/drawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;                
   };
-  AnyMuscleViaPoint LongusColliInferiorObliqueT2C6 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongusColli.LongusColliInferiorObliqueT2C6;
+  AnyMuscleViaPoint LongusColliT2C6 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongusColli.LongusColliT2C6;
     AnyRefNode &Org = ....Segments.T2Seg.Right.LongusColliT2C5Node;
-    AnyRefNode &Ins = ....Segments.C6Seg.LongusCapitisC6C0NodeR;
+    AnyRefNode &Ins = ....Segments.C6Seg.LongusCapitisC6NodeR;
     viewMuscle = {#include "<ANYBODY_PATH_BODY>/drawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;                
   };
-  AnyMuscleViaPoint LongusColliInferiorObliqueT2C5 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongusColli.LongusColliInferiorObliqueT2C5;
+  AnyMuscleViaPoint LongusColliT2C5 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongusColli.LongusColliT2C5;
     AnyRefNode &Org = ....Segments.T2Seg.Right.LongusColliT2C5Node;
-    AnyRefNode &Ins = ....Segments.C5Seg.LongusCapitisC5C0NodeR;
+    AnyRefNode &Ins = ....Segments.C5Seg.LongusCapitisC5NodeR;
     viewMuscle = {#include "<ANYBODY_PATH_BODY>/drawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;                
   };
