@@ -4809,23 +4809,11 @@ MuscleGroup ObliquusInternus = {
   #endif
 };
 
+// Psoas is separated since it is used by the legs in certain BM configurations
+#include "PsoasMajorLeft.any"
+
 #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-MuscleGroup PelvicFloor = {
-  AnyMuscleViaPoint Puporectalis1= {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.Puporectalis.Puporectalis_1;
-    AnyRefNode &Org = ....Segments.PelvisSeg.Puporectalis1NodeL;
-    AnyRefNode &Ins = ....Segments.SacrumSeg.Puporectalis1NodeL;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-    viewForce.Visible ??= Off;
-  };
-  AnyMuscleViaPoint Puporectalis2= {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.Puporectalis.Puporectalis_2;
-    AnyRefNode &Org = ....Segments.PelvisSeg.Puporectalis2NodeL;
-    AnyRefNode &Ins = ....Segments.SacrumSeg.Puporectalis2NodeL;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-    viewForce.Visible ??= Off;
-  };
-  
+MuscleGroup Pupococcygeus = {
   AnyMuscleViaPoint Pupococcygeus1= {
     AnyMuscleModel &MusMdl = ....MuscleModels.Left.Pupococcygeus.Pupococcygeus_1;
     AnyRefNode &Org = ....Segments.PelvisSeg.Pupococcygeus1NodeL;
@@ -4841,6 +4829,24 @@ MuscleGroup PelvicFloor = {
     viewForce.Visible ??= Off;
   };
 };
+
+MuscleGroup Puporectalis = {
+  AnyMuscleViaPoint Puporectalis1= {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.Puporectalis.Puporectalis_1;
+    AnyRefNode &Org = ....Segments.PelvisSeg.Puporectalis1NodeL;
+    AnyRefNode &Ins = ....Segments.SacrumSeg.Puporectalis1NodeL;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    viewForce.Visible ??= Off;
+  };
+  AnyMuscleViaPoint Puporectalis2= {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.Puporectalis.Puporectalis_2;
+    AnyRefNode &Org = ....Segments.PelvisSeg.Puporectalis2NodeL;
+    AnyRefNode &Ins = ....Segments.SacrumSeg.Puporectalis2NodeL;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    viewForce.Visible ??= Off;
+  };
+};
+
 //  AnyMuscleViaPoint Puporectalis2= {
 //    AnyMuscleModel &MusMdl = ....MuscleModels.Left.PelvicFloor.Puporectalis_2;
 //    AnyRefNode &Org = ....Segments.PelvisSeg.Puporectalis2NodeL;
@@ -4866,8 +4872,7 @@ MuscleGroup PelvicFloor = {
 //};
 #endif
 
-// Psoas is separated since it is used by the legs in certain BM configurations
-#include "PsoasMajorLeft.any"
+
 
 MuscleGroup QuadratusLumborum = {
   AnyMuscleViaPoint QLC12Lat_CILat = {
