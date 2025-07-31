@@ -4883,23 +4883,23 @@ MuscleGroup Puporectalis = {
 #endif
 
 MuscleGroup QuadratusLumborum = {
-  AnyMuscleViaPoint QLC12Lat_CILat = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.QuadratusLumborum.QL_1;
+  AnyMuscleViaPoint QuadratusLumborumR12IC_1 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.QuadratusLumborum.QuadratusLumborumR12IC_1;
     AnyRefNode &Org = ....Segments.Right.R12Seg.QLC12Lat_CINode1R;
     AnyRefNode &Ins = ....Segments.PelvisSeg.QLLatNode1R;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
-  AnyMuscleViaPoint QLC12InterMedian_CILat = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.QuadratusLumborum.QL_2;
+  AnyMuscleViaPoint QuadratusLumborumR12IC_2 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.QuadratusLumborum.QuadratusLumborumR12IC_2;
     AnyRefNode &Org = ....Segments.Right.R12Seg.QLC12Lat_CINode3R;
     AnyRefNode &Ins = ....Segments.PelvisSeg.QLLatNode2R;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     
     
   };
-  AnyMuscleViaPoint QLC12Median_CILat = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.QuadratusLumborum.QL_3;
+  AnyMuscleViaPoint QuadratusLumborumR12IC_3 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.QuadratusLumborum.QuadratusLumborumR12IC_3;
     AnyRefNode &Org = ....Segments.Right.R12Seg.QLC12InterMedian_CINode1R;
     AnyRefNode &Ins = ....Segments.PelvisSeg.QLLatNode3R;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -4907,16 +4907,16 @@ MuscleGroup QuadratusLumborum = {
     
   };
   
-  AnyMuscleViaPoint QLC12InterMedian_CIInterMedian = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.QuadratusLumborum.QL_4;
+  AnyMuscleViaPoint QuadratusLumborumR12IC_4 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.QuadratusLumborum.QuadratusLumborumR12IC_4;
     AnyRefNode &Org = ....Segments.Right.R12Seg.QLC12InterMedian_CINode3R;
     AnyRefNode &Ins = ....Segments.PelvisSeg.QLLatNode5R;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     
     
   };
-  AnyMuscleViaPoint QLC12Median_CIInterMedian = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.QuadratusLumborum.QL_5;
+  AnyMuscleViaPoint QuadratusLumborumR12IC_5 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.QuadratusLumborum.QuadratusLumborumR12IC_5;
     AnyRefNode &Org = ....Segments.Right.R12Seg.QLC12Median_CINode1R;
     AnyRefNode &Ins = ....Segments.PelvisSeg.QLInterMedianNode1R;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -4924,8 +4924,8 @@ MuscleGroup QuadratusLumborum = {
     
   };
   
-  AnyMuscleViaPoint QLT12_CILat = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.QuadratusLumborum.QL_6;
+  AnyMuscleViaPoint QuadratusLumborumT12IC_1 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.QuadratusLumborum.QuadratusLumborumT12IC_1;
     AnyRefNode &Org = ....Segments.T12Seg.QLT12_CINodeR;
     AnyRefNode &Ins = ....Segments.PelvisSeg.QLLatNode3R;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -4933,32 +4933,32 @@ MuscleGroup QuadratusLumborum = {
     
   };
   
-  AnyMuscleViaPoint QLL1_CILat = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.QuadratusLumborum.QL_7;
+  AnyMuscleViaPoint QuadratusLumborumL1IC_1 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.QuadratusLumborum.QuadratusLumborumL1IC_1;
     AnyRefNode &Org = ....Segments.L1Seg.QLL1_CINodeR;
     AnyRefNode &Ins = ....Segments.PelvisSeg.QLLatNode4R;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint QLL2_CILat = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.QuadratusLumborum.QL_8;
+  AnyMuscleViaPoint QuadratusLumborumL2IC_1 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.QuadratusLumborum.QuadratusLumborumL2IC_1;
     AnyRefNode &Org = ....Segments.L2Seg.QLL2_CINodeR;
     AnyRefNode &Ins = ....Segments.PelvisSeg.QLLatNode4R;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint QLL3_CILat = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.QuadratusLumborum.QL_9;
+  AnyMuscleViaPoint QuadratusLumborumL3IC_1 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.QuadratusLumborum.QuadratusLumborumL3IC_1;
     AnyRefNode &Org = ....Segments.L3Seg.QLL3_CINodeR;
     AnyRefNode &Ins = ....Segments.PelvisSeg.QLLatNode5R;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint QLT12_CIInterMedian = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.QuadratusLumborum.QL_10;
+  AnyMuscleViaPoint QuadratusLumborumT12IC_2 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.QuadratusLumborum.QuadratusLumborumT12IC_2;
     AnyRefNode &Org = ....Segments.T12Seg.QLT12_CINodeR;
     AnyRefNode &Ins = ....Segments.PelvisSeg.QLInterMedianNode1R;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -4966,8 +4966,8 @@ MuscleGroup QuadratusLumborum = {
     
   };
   
-  AnyMuscleViaPoint QLL1_CIInterMedian = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.QuadratusLumborum.QL_11;
+  AnyMuscleViaPoint QuadratusLumborumL1IC_2 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.QuadratusLumborum.QuadratusLumborumL1IC_2;
     AnyRefNode &Org = ....Segments.L1Seg.QLL1_CINodeR;
     AnyRefNode &Ins = ....Segments.PelvisSeg.QLInterMedianNode2R;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -4975,8 +4975,8 @@ MuscleGroup QuadratusLumborum = {
     
   };
   
-  AnyMuscleViaPoint QLL2_CIInterMedian = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.QuadratusLumborum.QL_12;
+  AnyMuscleViaPoint QuadratusLumborumL2IC_2 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.QuadratusLumborum.QuadratusLumborumL2IC_2;
     AnyRefNode &Org = ....Segments.L2Seg.QLL2_CINodeR;
     AnyRefNode &Ins = ....Segments.PelvisSeg.QLInterMedianNode2R;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -4984,8 +4984,8 @@ MuscleGroup QuadratusLumborum = {
     
   };
   
-  AnyMuscleViaPoint QLL3_CIInterMedian = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.QuadratusLumborum.QL_13;
+  AnyMuscleViaPoint QuadratusLumborumL3IC_2 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.QuadratusLumborum.QuadratusLumborumL3IC_2;
     AnyRefNode &Org = ....Segments.L3Seg.QLL3_CINodeR;
     AnyRefNode &Ins = ....Segments.PelvisSeg.QLInterMedianNode3R;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -4993,16 +4993,16 @@ MuscleGroup QuadratusLumborum = {
     
   };
   
-  AnyMuscleViaPoint QLL4_CIInterMedian = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.QuadratusLumborum.QL_14;
+  AnyMuscleViaPoint QuadratusLumborumL4IC_1 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.QuadratusLumborum.QuadratusLumborumL4IC_1;
     AnyRefNode &Org = ....Segments.L4Seg.QLL4_CINodeR;
     AnyRefNode &Ins = ....Segments.PelvisSeg.QLInterMedianNode3R;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint QLT12_CIMedian = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.QuadratusLumborum.QL_15;
+  AnyMuscleViaPoint QuadratusLumborumT12IC_3 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.QuadratusLumborum.QuadratusLumborumT12IC_3;
     AnyRefNode &Org = ....Segments.T12Seg.QLT12_CINodeR;
     AnyRefNode &Ins = ....Segments.PelvisSeg.QLInterMedianNode4R;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -5010,8 +5010,8 @@ MuscleGroup QuadratusLumborum = {
     
   };
   
-  AnyMuscleViaPoint QLL1_CIMedian = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.QuadratusLumborum.QL_16;
+  AnyMuscleViaPoint QuadratusLumborumL1IC_3 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.QuadratusLumborum.QuadratusLumborumL1IC_3;
     AnyRefNode &Org = ....Segments.L1Seg.QLL1_CINodeR;
     AnyRefNode &Ins = ....Segments.PelvisSeg.QLInterMedianNode4R;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -5019,8 +5019,8 @@ MuscleGroup QuadratusLumborum = {
     
   };
   
-  AnyMuscleViaPoint QLL2_CIMedian = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.QuadratusLumborum.QL_17;
+  AnyMuscleViaPoint QuadratusLumborumL2IC_3 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.QuadratusLumborum.QuadratusLumborumL2IC_3;
     AnyRefNode &Org = ....Segments.L2Seg.QLL2_CINodeR;
     AnyRefNode &Ins = ....Segments.PelvisSeg.QLInterMedianNode5R;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -5028,8 +5028,8 @@ MuscleGroup QuadratusLumborum = {
     
   };
   
-  AnyMuscleViaPoint QLL3_CIMedian = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.QuadratusLumborum.QL_18;
+  AnyMuscleViaPoint QuadratusLumborumL3IC_3 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.QuadratusLumborum.QuadratusLumborumL3IC_3;
     AnyRefNode &Org = ....Segments.L3Seg.QLL3_CINodeR;
     AnyRefNode &Ins = ....Segments.PelvisSeg.QLInterMedianNode5R;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -5037,8 +5037,8 @@ MuscleGroup QuadratusLumborum = {
     
   };
   
-  AnyMuscleViaPoint QLL4_CIMedian = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.QuadratusLumborum.QL_19;
+  AnyMuscleViaPoint QuadratusLumborumL4IC_2 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.QuadratusLumborum.QuadratusLumborumL4IC_2;
     AnyRefNode &Org = ....Segments.L4Seg.QLL4_CINodeR;
     AnyRefNode &Ins = ....Segments.PelvisSeg.QLMedianNodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -5046,24 +5046,24 @@ MuscleGroup QuadratusLumborum = {
     
   };
   
-  AnyMuscleViaPoint QLC12Lat_L4 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.QuadratusLumborum.QL_20;
+  AnyMuscleViaPoint QuadratusLumborumR12L4_1 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.QuadratusLumborum.QuadratusLumborumR12L4_1;
     AnyRefNode &Org = ....Segments.L4Seg.QLL4_CINodeR;
     AnyRefNode &Ins = ....Segments.Right.R12Seg.QLC12Lat_CINode2R;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     
     
   };
-  AnyMuscleViaPoint QLC12Lat_L3 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.QuadratusLumborum.QL_21;
+  AnyMuscleViaPoint QuadratusLumborumR12L3_1 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.QuadratusLumborum.QuadratusLumborumR12L3_1;
     AnyRefNode &Org = ....Segments.L3Seg.QLL3_CINodeR;
     AnyRefNode &Ins = ....Segments.Right.R12Seg.QLC12Lat_CINode4R;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     
     
   };
-  AnyMuscleViaPoint QLC12Lat_L2 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.QuadratusLumborum.QL_22;
+  AnyMuscleViaPoint QuadratusLumborumR12L2_1 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.QuadratusLumborum.QuadratusLumborumR12L2_1;
     AnyRefNode &Org = ....Segments.L2Seg.QLL2_CINodeR;
     AnyRefNode &Ins = ....Segments.Right.R12Seg.QLC12Lat_CINode5R;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -5071,24 +5071,24 @@ MuscleGroup QuadratusLumborum = {
     
   };
   
-  AnyMuscleViaPoint QLC12InterMedian_L4 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.QuadratusLumborum.QL_23;
+  AnyMuscleViaPoint QuadratusLumborumR12L4_2 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.QuadratusLumborum.QuadratusLumborumR12L4_2;
     AnyRefNode &Org = ....Segments.L4Seg.QLL4_CINodeR;
     AnyRefNode &Ins = ....Segments.Right.R12Seg.QLC12InterMedian_CINode2R;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     
     
   };
-  AnyMuscleViaPoint QLC12InterMedian_L3 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.QuadratusLumborum.QL_24;
+  AnyMuscleViaPoint QuadratusLumborumR12L3_2 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.QuadratusLumborum.QuadratusLumborumR12L3_2;
     AnyRefNode &Org = ....Segments.L3Seg.QLL3_CINodeR;
     AnyRefNode &Ins = ....Segments.Right.R12Seg.QLC12InterMedian_CINode4R;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     
     
   };
-  AnyMuscleViaPoint QLC12InterMedian_L2 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.QuadratusLumborum.QL_25;
+  AnyMuscleViaPoint QuadratusLumborumR12L2_2 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.QuadratusLumborum.QuadratusLumborumR12L2_2;
     AnyRefNode &Org = ....Segments.L2Seg.QLL2_CINodeR;
     AnyRefNode &Ins = ....Segments.Right.R12Seg.QLC12InterMedian_CINode5R;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -5096,24 +5096,24 @@ MuscleGroup QuadratusLumborum = {
     
   };
   
-  AnyMuscleViaPoint QLC12Median_L4 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.QuadratusLumborum.QL_26;
+  AnyMuscleViaPoint QuadratusLumborumR12L4_3 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.QuadratusLumborum.QuadratusLumborumR12L4_3;
     AnyRefNode &Org = ....Segments.L4Seg.QLL4_CINodeR;
     AnyRefNode &Ins = ....Segments.Right.R12Seg.QLC12Median_CINode2R;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     
     
   };
-  AnyMuscleViaPoint QLC12Median_L3 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.QuadratusLumborum.QL_27;
+  AnyMuscleViaPoint QuadratusLumborumR12L3_3 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.QuadratusLumborum.QuadratusLumborumR12L3_3;
     AnyRefNode &Org = ....Segments.L3Seg.QLL3_CINodeR;
     AnyRefNode &Ins = ....Segments.Right.R12Seg.QLC12Median_CINode3R;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     
     
   };
-  AnyMuscleViaPoint QLC12Median_L2 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.QuadratusLumborum.QL_28;
+  AnyMuscleViaPoint QuadratusLumborumR12L2_3 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.QuadratusLumborum.QuadratusLumborumR12L2_3;
     AnyRefNode &Org = ....Segments.L2Seg.QLL2_CINodeR;
     AnyRefNode &Ins = ....Segments.Right.R12Seg.QLC12Median_CINode4R;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};

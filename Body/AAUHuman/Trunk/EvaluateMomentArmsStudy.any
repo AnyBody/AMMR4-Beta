@@ -183,11 +183,11 @@ AnyKinStudy Study = {
          AnyVar PML5T_TM = -1*...Model.SpineMusRightRef.PsoasMajor.PML5T_TM.LmtDot/...Model.Drivers.AngularVelocity;
        };
        AnyFolder QuadratusLumborum = {
-         AnyVar QLC12Lat_CILat = -1*...Model.SpineMusRightRef.QuadratusLumborum.QLC12Lat_CILat.LmtDot/...Model.Drivers.AngularVelocity;
-         AnyVar QLC12InterMedian_CILat = -1*...Model.SpineMusRightRef.QuadratusLumborum.QLC12InterMedian_CILat.LmtDot/...Model.Drivers.AngularVelocity;
-         AnyVar QLC12Median_CILat = -1*...Model.SpineMusRightRef.QuadratusLumborum.QLC12Median_CILat.LmtDot/...Model.Drivers.AngularVelocity;
-         AnyVar QLC12InterMedian_CIInterMedian = -1*...Model.SpineMusRightRef.QuadratusLumborum.QLC12InterMedian_CIInterMedian.LmtDot/...Model.Drivers.AngularVelocity;
-         AnyVar QLC12Median_CIInterMedian = -1*...Model.SpineMusRightRef.QuadratusLumborum.QLC12Median_CIInterMedian.LmtDot/...Model.Drivers.AngularVelocity;
+         AnyVar QuadratusLumborumR12IC_1 = -1*...Model.SpineMusRightRef.QuadratusLumborum.QuadratusLumborumR12IC_1.LmtDot/...Model.Drivers.AngularVelocity;
+         AnyVar QuadratusLumborumR12IC_2 = -1*...Model.SpineMusRightRef.QuadratusLumborum.QuadratusLumborumR12IC_2.LmtDot/...Model.Drivers.AngularVelocity;
+         AnyVar QuadratusLumborumR12IC_3 = -1*...Model.SpineMusRightRef.QuadratusLumborum.QuadratusLumborumR12IC_3.LmtDot/...Model.Drivers.AngularVelocity;
+         AnyVar QuadratusLumborumR12IC_4 = -1*...Model.SpineMusRightRef.QuadratusLumborum.QuadratusLumborumR12IC_4.LmtDot/...Model.Drivers.AngularVelocity;
+         AnyVar QuadratusLumborumR12IC_5 = -1*...Model.SpineMusRightRef.QuadratusLumborum.QuadratusLumborumR12IC_5.LmtDot/...Model.Drivers.AngularVelocity;
        };
        AnyFolder ObliquusExternus = {
          AnyVar ObliquusExternusR6Abd = -1*...Model.SpineMusRightRef.ObliquusExternus.ObliquusExternusR6Abd.LmtDot/...Model.Drivers.AngularVelocity;
@@ -330,11 +330,11 @@ AnyKinStudy Study = {
          AnyVar PML5T_TM = -1*...Model.SpineMusLeftRef.PsoasMajor.PML5T_TM.LmtDot/...Model.Drivers.AngularVelocity;
        };
        AnyFolder QuadratusLumborum = {
-         AnyVar QLC12Lat_CILat = -1*...Model.SpineMusLeftRef.QuadratusLumborum.QLC12Lat_CILat.LmtDot/...Model.Drivers.AngularVelocity;
-         AnyVar QLC12InterMedian_CILat = -1*...Model.SpineMusLeftRef.QuadratusLumborum.QLC12InterMedian_CILat.LmtDot/...Model.Drivers.AngularVelocity;
-         AnyVar QLC12Median_CILat = -1*...Model.SpineMusLeftRef.QuadratusLumborum.QLC12Median_CILat.LmtDot/...Model.Drivers.AngularVelocity;
-         AnyVar QLC12InterMedian_CIInterMedian = -1*...Model.SpineMusLeftRef.QuadratusLumborum.QLC12InterMedian_CIInterMedian.LmtDot/...Model.Drivers.AngularVelocity;
-         AnyVar QLC12Median_CIInterMedian = -1*...Model.SpineMusLeftRef.QuadratusLumborum.QLC12Median_CIInterMedian.LmtDot/...Model.Drivers.AngularVelocity;
+         AnyVar QuadratusLumborumR12IC_1 = -1*...Model.SpineMusLeftRef.QuadratusLumborum.QuadratusLumborumR12IC_1.LmtDot/...Model.Drivers.AngularVelocity;
+         AnyVar QuadratusLumborumR12IC_2 = -1*...Model.SpineMusLeftRef.QuadratusLumborum.QuadratusLumborumR12IC_2.LmtDot/...Model.Drivers.AngularVelocity;
+         AnyVar QuadratusLumborumR12IC_3 = -1*...Model.SpineMusLeftRef.QuadratusLumborum.QuadratusLumborumR12IC_3.LmtDot/...Model.Drivers.AngularVelocity;
+         AnyVar QuadratusLumborumR12IC_4 = -1*...Model.SpineMusLeftRef.QuadratusLumborum.QuadratusLumborumR12IC_4.LmtDot/...Model.Drivers.AngularVelocity;
+         AnyVar QuadratusLumborumR12IC_5 = -1*...Model.SpineMusLeftRef.QuadratusLumborum.QuadratusLumborumR12IC_5.LmtDot/...Model.Drivers.AngularVelocity;
        };
        AnyFolder ObliquusExternus = {
          AnyVar ObliquusExternusR6Abd = -1*...Model.SpineMusLeftRef.ObliquusExternus.ObliquusExternusR6Abd.LmtDot/...Model.Drivers.AngularVelocity;
