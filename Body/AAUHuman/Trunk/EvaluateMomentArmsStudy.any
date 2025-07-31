@@ -106,15 +106,15 @@ AnyKinStudy Study = {
         };
         AnyFolder RectusAbdominis = {
         #if BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_BUCKLE_ | BM_TRUNK_EXPERIMENTAL_RECTUS_ABDOMINIS == ON
-           AnyVar RA_1 = -1*...Model.SpineMusRightRef.RectusAbdominis.RA_1.LmtDot/...Model.Drivers.AngularVelocity;
-           AnyVar RA_2 = -1*...Model.SpineMusRightRef.RectusAbdominis.RA_2.LmtDot/...Model.Drivers.AngularVelocity;
+           AnyVar RectusAbdominis_1 = -1*...Model.SpineMusRightRef.RectusAbdominis.RectusAbdominis_1.LmtDot/...Model.Drivers.AngularVelocity;
+           AnyVar RectusAbdominis_2 = -1*...Model.SpineMusRightRef.RectusAbdominis.RectusAbdominis_2.LmtDot/...Model.Drivers.AngularVelocity;
          #else
-           AnyVar RA_1_1 = -1*...Model.SpineMusRightRef.RectusAbdominis.RA_1_1.LmtDot/...Model.Drivers.AngularVelocity;
-           AnyVar RA_1_2 = -1*...Model.SpineMusRightRef.RectusAbdominis.RA_1_2.LmtDot/...Model.Drivers.AngularVelocity;
-           AnyVar RA_1_3 = -1*...Model.SpineMusRightRef.RectusAbdominis.RA_1_3.LmtDot/...Model.Drivers.AngularVelocity;
-           AnyVar RA_1_4 = -1*...Model.SpineMusRightRef.RectusAbdominis.RA_1_4.LmtDot/...Model.Drivers.AngularVelocity;
-           AnyVar RA_1_5 = -1*...Model.SpineMusRightRef.RectusAbdominis.RA_1_5.LmtDot/...Model.Drivers.AngularVelocity;
-           AnyVar RA_1_6 = -1*...Model.SpineMusRightRef.RectusAbdominis.RA_1_6.LmtDot/...Model.Drivers.AngularVelocity;
+           AnyVar RectusAbdominis_1_1 = -1*...Model.SpineMusRightRef.RectusAbdominis.RectusAbdominis_1_1.LmtDot/...Model.Drivers.AngularVelocity;
+           AnyVar RectusAbdominis_1_2 = -1*...Model.SpineMusRightRef.RectusAbdominis.RectusAbdominis_1_2.LmtDot/...Model.Drivers.AngularVelocity;
+           AnyVar RectusAbdominis_1_3 = -1*...Model.SpineMusRightRef.RectusAbdominis.RectusAbdominis_1_3.LmtDot/...Model.Drivers.AngularVelocity;
+           AnyVar RectusAbdominis_1_4 = -1*...Model.SpineMusRightRef.RectusAbdominis.RectusAbdominis_1_4.LmtDot/...Model.Drivers.AngularVelocity;
+           AnyVar RectusAbdominis_1_5 = -1*...Model.SpineMusRightRef.RectusAbdominis.RectusAbdominis_1_5.LmtDot/...Model.Drivers.AngularVelocity;
+           AnyVar RectusAbdominis_1_6 = -1*...Model.SpineMusRightRef.RectusAbdominis.RectusAbdominis_1_6.LmtDot/...Model.Drivers.AngularVelocity;
          #endif
          };
         AnyFolder Multifidi = {
@@ -253,15 +253,15 @@ AnyKinStudy Study = {
         };
         AnyFolder RectusAbdominis = {
         #if BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_BUCKLE_ | BM_TRUNK_EXPERIMENTAL_RECTUS_ABDOMINIS == ON
-           AnyVar RA_1 = -1*...Model.SpineMusLeftRef.RectusAbdominis.RA_1.LmtDot/...Model.Drivers.AngularVelocity;
-           AnyVar RA_2 = -1*...Model.SpineMusLeftRef.RectusAbdominis.RA_2.LmtDot/...Model.Drivers.AngularVelocity;
+           AnyVar RectusAbdominis_1 = -1*...Model.SpineMusLeftRef.RectusAbdominis.RectusAbdominis_1.LmtDot/...Model.Drivers.AngularVelocity;
+           AnyVar RectusAbdominis_2 = -1*...Model.SpineMusLeftRef.RectusAbdominis.RectusAbdominis_2.LmtDot/...Model.Drivers.AngularVelocity;
          #else
-           AnyVar RA_1_1 = -1*...Model.SpineMusLeftRef.RectusAbdominis.RA_1_1.LmtDot/...Model.Drivers.AngularVelocity;
-           AnyVar RA_1_2 = -1*...Model.SpineMusLeftRef.RectusAbdominis.RA_1_2.LmtDot/...Model.Drivers.AngularVelocity;
-           AnyVar RA_1_3 = -1*...Model.SpineMusLeftRef.RectusAbdominis.RA_1_3.LmtDot/...Model.Drivers.AngularVelocity;
-           AnyVar RA_1_4 = -1*...Model.SpineMusLeftRef.RectusAbdominis.RA_1_4.LmtDot/...Model.Drivers.AngularVelocity;
-           AnyVar RA_1_5 = -1*...Model.SpineMusLeftRef.RectusAbdominis.RA_1_5.LmtDot/...Model.Drivers.AngularVelocity;
-           AnyVar RA_1_6 = -1*...Model.SpineMusLeftRef.RectusAbdominis.RA_1_6.LmtDot/...Model.Drivers.AngularVelocity;
+           AnyVar RectusAbdominis_1_1 = -1*...Model.SpineMusLeftRef.RectusAbdominis.RectusAbdominis_1_1.LmtDot/...Model.Drivers.AngularVelocity;
+           AnyVar RectusAbdominis_1_2 = -1*...Model.SpineMusLeftRef.RectusAbdominis.RectusAbdominis_1_2.LmtDot/...Model.Drivers.AngularVelocity;
+           AnyVar RectusAbdominis_1_3 = -1*...Model.SpineMusLeftRef.RectusAbdominis.RectusAbdominis_1_3.LmtDot/...Model.Drivers.AngularVelocity;
+           AnyVar RectusAbdominis_1_4 = -1*...Model.SpineMusLeftRef.RectusAbdominis.RectusAbdominis_1_4.LmtDot/...Model.Drivers.AngularVelocity;
+           AnyVar RectusAbdominis_1_5 = -1*...Model.SpineMusLeftRef.RectusAbdominis.RectusAbdominis_1_5.LmtDot/...Model.Drivers.AngularVelocity;
+           AnyVar RectusAbdominis_1_6 = -1*...Model.SpineMusLeftRef.RectusAbdominis.RectusAbdominis_1_6.LmtDot/...Model.Drivers.AngularVelocity;
          #endif
        };
         AnyFolder Multifidi = {

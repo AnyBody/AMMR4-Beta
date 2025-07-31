@@ -641,7 +641,7 @@ AnyFolder Abdominal = {
  
     AnySeg Dummy ={
       AnyRefNode JntNode={
-        sRel = ....Segments.PelvisSeg.RA_1_R.sRel;
+        sRel = ....Segments.PelvisSeg.RectusAbdominis_1_R.sRel;
         ARel =  RotMat (sRel, ....Segments.SternalBodySeg.RACP_CO6_2_mid.sRel, sRel+{0.1,0,0})* RotMat (-pi/2,z)*RotMat(pi,y);
       };
       Mass=0;Jii={0,0,0};
@@ -649,7 +649,7 @@ AnyFolder Abdominal = {
       Axes0 = ...Segments.PelvisSeg.Axes0;
     };
     AnySphericalJoint Jnt ={
-      AnyRefNode &ref=  ...Segments.PelvisSeg.RA_1_R;
+      AnyRefNode &ref=  ...Segments.PelvisSeg.RectusAbdominis_1_R;
       AnyRefNode &ref2=.Dummy.JntNode;
     };
     AnyReacForce Jnt_Rot_Reactions ={

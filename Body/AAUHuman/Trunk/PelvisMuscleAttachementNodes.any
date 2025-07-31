@@ -204,15 +204,15 @@ AnyRefNode QLMedianNodeL = {sRel = .Scale(.Data.Left.QLMedianNode_pos);};
 // End of Quadratus Lumborum Nodes
 
 // Rectus Abdominis Nodes
-AnyRefNode RA_1_R = {sRel = .Scale(.Data.Right.RA_Node1_pos);};
-AnyRefNode RA_2_R = {sRel = .Scale(.Data.Right.RA_Node2_pos);};
-AnyRefNode RA_1_L = {sRel = .Scale(.Data.Left.RA_Node1_pos);};
-AnyRefNode RA_2_L = {sRel = .Scale(.Data.Left.RA_Node2_pos);};
+AnyRefNode RectusAbdominis_1_R = {sRel = .Scale(.Data.Right.RA_Node1_pos);};
+AnyRefNode RectusAbdominis_2_R = {sRel = .Scale(.Data.Right.RA_Node2_pos);};
+AnyRefNode RectusAbdominis_1_L = {sRel = .Scale(.Data.Left.RA_Node1_pos);};
+AnyRefNode RectusAbdominis_2_L = {sRel = .Scale(.Data.Left.RA_Node2_pos);};
 
-AnyRefNode RA_1_ViaR = {sRel = .Scale(.Data.Right.RA_Node1Via_pos);};
-AnyRefNode RA_2_ViaR = {sRel = .Scale(.Data.Right.RA_Node2Via_pos);};
-AnyRefNode RA_1_ViaL = {sRel = .Scale(.Data.Left.RA_Node1Via_pos);};
-AnyRefNode RA_2_ViaL = {sRel = .Scale(.Data.Left.RA_Node2Via_pos);};
+AnyRefNode RectusAbdominis_1_ViaR = {sRel = .Scale(.Data.Right.RA_Node1Via_pos);};
+AnyRefNode RectusAbdominis_2_ViaR = {sRel = .Scale(.Data.Right.RA_Node2Via_pos);};
+AnyRefNode RectusAbdominis_1_ViaL = {sRel = .Scale(.Data.Left.RA_Node1Via_pos);};
+AnyRefNode RectusAbdominis_2_ViaL = {sRel = .Scale(.Data.Left.RA_Node2Via_pos);};
 
 
 // End of Rectus Abdominis Nodes
