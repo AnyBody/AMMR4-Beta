@@ -1560,147 +1560,147 @@ MuscleGroup IntercostalisIntimus(searchString="*.*") = {
 
 MuscleGroup LevatorCostarum = {
   
-  AnyMuscleViaPoint LCBrC7R1 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.LevatorCostarum.LCModel_1;
-    AnyRefNode &S4 = ....Segments.C7Seg.LCBrC7R1LOrg;
-    AnyRefNode &R1 = ....Segments.Left.R1Seg.LCBrC7R1_L_Ins;
+  AnyMuscleViaPoint LevatorCostarumC7R1 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.LevatorCostarum.LevatorCostarumC7R1;
+    AnyRefNode &S4 = ....Segments.C7Seg.LevatorCostarumC7R1LOrg;
+    AnyRefNode &R1 = ....Segments.Left.R1Seg.LevatorCostarumC7R1_L_Ins;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   #if BM_TRUNK_THORACIC_MODEL == _THORACIC_MODEL_FLEXIBLE_
-  AnyMuscleViaPoint LCBrT1R2 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.LevatorCostarum.LCModel_2;
-    AnyRefNode &S4 = ....Segments.T1Seg.LCBrT1R2LOrg;
-    AnyRefNode &R1 = ....Segments.Left.R2Seg.LCBrT1R2_L_Ins;
+  AnyMuscleViaPoint LevatorCostarumT1R2 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.LevatorCostarum.LevatorCostarumT1R2;
+    AnyRefNode &S4 = ....Segments.T1Seg.LevatorCostarumT1R2LOrg;
+    AnyRefNode &R1 = ....Segments.Left.R2Seg.LevatorCostarumT1R2_L_Ins;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint LCBrT2R3 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.LevatorCostarum.LCModel_3;
-    AnyRefNode &S4 = ....Segments.T2Seg.LCBrT2R3LOrg;
-    AnyRefNode &R1 = ....Segments.Left.R3Seg.LCBrT2R3_L_Ins;
+  AnyMuscleViaPoint LevatorCostarumT2R3 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.LevatorCostarum.LevatorCostarumT2R3;
+    AnyRefNode &S4 = ....Segments.T2Seg.LevatorCostarumT2R3LOrg;
+    AnyRefNode &R1 = ....Segments.Left.R3Seg.LevatorCostarumT2R3_L_Ins;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint LCBrT3R4 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.LevatorCostarum.LCModel_4;
-    AnyRefNode &S4 = ....Segments.T3Seg.LCBrT3R4LOrg;
-    AnyRefNode &R1 = ....Segments.Left.R4Seg.LCBrT3R4_L_Ins;
+  AnyMuscleViaPoint LevatorCostarumT3R4 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.LevatorCostarum.LevatorCostarumT3R4;
+    AnyRefNode &S4 = ....Segments.T3Seg.LevatorCostarumT3R4LOrg;
+    AnyRefNode &R1 = ....Segments.Left.R4Seg.LevatorCostarumT3R4_L_Ins;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint LCBrT4R5 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.LevatorCostarum.LCModel_5;
-    AnyRefNode &S4 = ....Segments.T4Seg.LCBrT4R5LOrg;
-    AnyRefNode &R1 = ....Segments.Left.R5Seg.LCBrT4R5_L_Ins;
+  AnyMuscleViaPoint LevatorCostarumT4R5 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.LevatorCostarum.LevatorCostarumT4R5;
+    AnyRefNode &S4 = ....Segments.T4Seg.LevatorCostarumT4R5LOrg;
+    AnyRefNode &R1 = ....Segments.Left.R5Seg.LevatorCostarumT4R5_L_Ins;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint LCBrT5R6 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.LevatorCostarum.LCModel_6;
-    AnyRefNode &S4 = ....Segments.T5Seg.LCBrT5R6LOrg;
-    AnyRefNode &R1 = ....Segments.Left.R6Seg.LCBrT5R6_L_Ins;
+  AnyMuscleViaPoint LevatorCostarumT5R6 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.LevatorCostarum.LevatorCostarumT5R6;
+    AnyRefNode &S4 = ....Segments.T5Seg.LevatorCostarumT5R6LOrg;
+    AnyRefNode &R1 = ....Segments.Left.R6Seg.LevatorCostarumT5R6_L_Ins;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint LCBrT6R7 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.LevatorCostarum.LCModel_7;
-    AnyRefNode &S4 = ....Segments.T6Seg.LCBrT6R7LOrg;
-    AnyRefNode &R1 = ....Segments.Left.R7Seg.LCBrT6R7_L_Ins;
+  AnyMuscleViaPoint LevatorCostarumT6R7 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.LevatorCostarum.LevatorCostarumT6R7;
+    AnyRefNode &S4 = ....Segments.T6Seg.LevatorCostarumT6R7LOrg;
+    AnyRefNode &R1 = ....Segments.Left.R7Seg.LevatorCostarumT6R7_L_Ins;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint LCBrT7R8 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.LevatorCostarum.LCModel_8;
-    AnyRefNode &S4 = ....Segments.T7Seg.LCBrT7R8LOrg;
-    AnyRefNode &R1 = ....Segments.Left.R8Seg.LCBrT7R8_L_Ins;
+  AnyMuscleViaPoint LevatorCostarumT7R8 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.LevatorCostarum.LevatorCostarumT7R8;
+    AnyRefNode &S4 = ....Segments.T7Seg.LevatorCostarumT7R8LOrg;
+    AnyRefNode &R1 = ....Segments.Left.R8Seg.LevatorCostarumT7R8_L_Ins;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint LCBrT8R9 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.LevatorCostarum.LCModel_9;
-    AnyRefNode &S4 = ....Segments.T8Seg.LCBrT8R9LOrg;
-    AnyRefNode &R1 = ....Segments.Left.R9Seg.LCBrT8R9_L_Ins;
+  AnyMuscleViaPoint LevatorCostarumT8R9 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.LevatorCostarum.LevatorCostarumT8R9;
+    AnyRefNode &S4 = ....Segments.T8Seg.LevatorCostarumT8R9LOrg;
+    AnyRefNode &R1 = ....Segments.Left.R9Seg.LevatorCostarumT8R9_L_Ins;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint LCBrT9R10 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.LevatorCostarum.LCModel_10;
-    AnyRefNode &S4 = ....Segments.T9Seg.LCBrT9R10LOrg;
-    AnyRefNode &R1 = ....Segments.Left.R10Seg.LCBrT9R10_L_Ins;
+  AnyMuscleViaPoint LevatorCostarumT9R10 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.LevatorCostarum.LevatorCostarumT9R10;
+    AnyRefNode &S4 = ....Segments.T9Seg.LevatorCostarumT9R10LOrg;
+    AnyRefNode &R1 = ....Segments.Left.R10Seg.LevatorCostarumT9R10_L_Ins;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint LCBrT10R11 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.LevatorCostarum.LCModel_11;
-    AnyRefNode &S4 = ....Segments.T10Seg.LCBrT10R11LOrg;
-    AnyRefNode &R1 = ....Segments.Left.R11Seg.LCBrT10R11_L_Ins;
+  AnyMuscleViaPoint LevatorCostarumT10R11 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.LevatorCostarum.LevatorCostarumT10R11;
+    AnyRefNode &S4 = ....Segments.T10Seg.LevatorCostarumT10R11LOrg;
+    AnyRefNode &R1 = ....Segments.Left.R11Seg.LevatorCostarumT10R11_L_Ins;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint LCBrT11R12 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.LevatorCostarum.LCModel_12;
-    AnyRefNode &S4 = ....Segments.T11Seg.LCBrT11R12LOrg;
-    AnyRefNode &R1 = ....Segments.Left.R12Seg.LCBrT11R12_L_Ins;
+  AnyMuscleViaPoint LevatorCostarumT11R12 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.LevatorCostarum.LevatorCostarumT11R12;
+    AnyRefNode &S4 = ....Segments.T11Seg.LevatorCostarumT11R12LOrg;
+    AnyRefNode &R1 = ....Segments.Left.R12Seg.LevatorCostarumT11R12_L_Ins;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
   // LONGUS
-  AnyMuscleViaPoint LCLgT5R7 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.LevatorCostarum.LCModel_13;
-    AnyRefNode &S4 = ....Segments.T5Seg.LCLgT5R7LOrg;
-    AnyRefNode &R1 = ....Segments.Left.R7Seg.LCLgT5R7_L_Ins;
+  AnyMuscleViaPoint LevatorCostarumT5R7 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.LevatorCostarum.LevatorCostarumT5R7;
+    AnyRefNode &S4 = ....Segments.T5Seg.LevatorCostarumT5R7LOrg;
+    AnyRefNode &R1 = ....Segments.Left.R7Seg.LevatorCostarumT5R7_L_Ins;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint LCLgT6R8 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.LevatorCostarum.LCModel_14;
-    AnyRefNode &S4 = ....Segments.T6Seg.LCLgT6R8LOrg;
-    AnyRefNode &R1 = ....Segments.Left.R8Seg.LCLgT6R8_L_Ins;
+  AnyMuscleViaPoint LevatorCostarumT6R8 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.LevatorCostarum.LevatorCostarumT6R8;
+    AnyRefNode &S4 = ....Segments.T6Seg.LevatorCostarumT6R8LOrg;
+    AnyRefNode &R1 = ....Segments.Left.R8Seg.LevatorCostarumT6R8_L_Ins;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint LCLgT7R9 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.LevatorCostarum.LCModel_15;
-    AnyRefNode &S4 = ....Segments.T7Seg.LCLgT7R9LOrg;
-    AnyRefNode &R1 = ....Segments.Left.R9Seg.LCLgT7R9_L_Ins;
+  AnyMuscleViaPoint LevatorCostarumT7R9 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.LevatorCostarum.LevatorCostarumT7R9;
+    AnyRefNode &S4 = ....Segments.T7Seg.LevatorCostarumT7R9LOrg;
+    AnyRefNode &R1 = ....Segments.Left.R9Seg.LevatorCostarumT7R9_L_Ins;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint LCLgT8R10 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.LevatorCostarum.LCModel_16;
-    AnyRefNode &S4 = ....Segments.T8Seg.LCLgT8R10LOrg;
-    AnyRefNode &R1 = ....Segments.Left.R10Seg.LCLgT8R10_L_Ins;
+  AnyMuscleViaPoint LevatorCostarumT8R10 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.LevatorCostarum.LevatorCostarumT8R10;
+    AnyRefNode &S4 = ....Segments.T8Seg.LevatorCostarumT8R10LOrg;
+    AnyRefNode &R1 = ....Segments.Left.R10Seg.LevatorCostarumT8R10_L_Ins;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint LCLgT9R11 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.LevatorCostarum.LCModel_17;
-    AnyRefNode &S4 = ....Segments.T9Seg.LCLgT9R11LOrg;
-    AnyRefNode &R1 = ....Segments.Left.R11Seg.LCLgT9R11_L_Ins;
+  AnyMuscleViaPoint LevatorCostarumT9R11 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.LevatorCostarum.LevatorCostarumT9R11;
+    AnyRefNode &S4 = ....Segments.T9Seg.LevatorCostarumT9R11LOrg;
+    AnyRefNode &R1 = ....Segments.Left.R11Seg.LevatorCostarumT9R11_L_Ins;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint LCLgT10R12 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.LevatorCostarum.LCModel_18;
-    AnyRefNode &S4 = ....Segments.T10Seg.LCLgT10R12LOrg;
-    AnyRefNode &R1 = ....Segments.Left.R12Seg.LCLgT10R12_L_Ins;
+  AnyMuscleViaPoint LevatorCostarumT10R12 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.LevatorCostarum.LevatorCostarumT10R12;
+    AnyRefNode &S4 = ....Segments.T10Seg.LevatorCostarumT10R12LOrg;
+    AnyRefNode &R1 = ....Segments.Left.R12Seg.LevatorCostarumT10R12_L_Ins;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
