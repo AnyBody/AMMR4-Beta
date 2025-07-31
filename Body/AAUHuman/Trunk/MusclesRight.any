@@ -5686,7 +5686,7 @@ MuscleGroup RotatoresLongus = {
   #endif
 };
 
-MuscleGroup Scalenus = {
+MuscleGroup ScalenusAnterior = {
   AnyMuscleViaPoint ScalenusAnteriorR1C6 = {
     AnyMuscleModel &MusMdl= ....MuscleModels.Right.Scalenus.ScalenusAnteriorR1C6;
     AnyRefNode &Org = ....Segments.C6Seg.Right.ScalenusAnteriorR1C6Node;
@@ -5715,6 +5715,8 @@ MuscleGroup Scalenus = {
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
+};
+MuscleGroup ScalenusMedius = { 
   AnyMuscleViaPoint ScalenusMediusR1C7 = {
     AnyMuscleModel &MusMdl =....MuscleModels.Right.Scalenus.ScalenusMediusR1C7;
     AnyRefNode &Org = ....Segments.C7Seg.Right.ScalenusMediusR1C7Node;
@@ -5757,6 +5759,8 @@ MuscleGroup Scalenus = {
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
+};
+MuscleGroup ScalenusPosterior = {
   AnyMuscleViaPoint ScalenusPosteriorR2C7 = {
     AnyMuscleModel &MusMdl =....MuscleModels.Right.Scalenus.ScalenusPosteriorR2C7;
     AnyRefNode &Org = ....Segments.C7Seg.Right.ScalenusPosteriorR2C7Node;
