@@ -1713,72 +1713,72 @@ MuscleGroup LevatorCostarum = {
 }; 
 
 MuscleGroup LongissimusCapitis = {  
-  AnyMuscleViaPoint LongissimusCapitisC3C0 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongissimusCapitis.LongissimusCapitisC3C0;
-    AnyRefNode &Org = ....Segments.C3Seg.LongissimusCapitisC3C0NodeR;
+  AnyMuscleViaPoint LongissimusCapitisC3 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongissimusCapitis.LongissimusCapitisC3;
+    AnyRefNode &Org = ....Segments.C3Seg.LongissimusCapitisC3NodeR;
     AnyRefNode &Ins = ....Segments.SkullSeg.LongissimusCapitisNodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };  
-  AnyMuscleViaPoint LongissimusCapitisC4C0 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongissimusCapitis.LongissimusCapitisC4C0;
-    AnyRefNode &Org = ....Segments.C4Seg.LongissimusCapitisC4C0NodeR;
+  AnyMuscleViaPoint LongissimusCapitisC4 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongissimusCapitis.LongissimusCapitisC4;
+    AnyRefNode &Org = ....Segments.C4Seg.LongissimusCapitisC4NodeR;
     AnyRefNode &Ins = ....Segments.SkullSeg.LongissimusCapitisNodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   }; 
-  AnyMuscleViaPoint LongissimusCapitisC5C0 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongissimusCapitis.LongissimusCapitisC5C0;
-    AnyRefNode &Org = ....Segments.C5Seg.LongissimusCapitisC5C0NodeR;
+  AnyMuscleViaPoint LongissimusCapitisC5 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongissimusCapitis.LongissimusCapitisC5;
+    AnyRefNode &Org = ....Segments.C5Seg.LongissimusCapitisC5NodeR;
     AnyRefNode &Ins = ....Segments.SkullSeg.LongissimusCapitisNodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   }; 
-  AnyMuscleViaPoint LongissimusCapitisC6C0 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongissimusCapitis.LongissimusCapitisC6C0;
-    AnyRefNode &Org = ....Segments.C6Seg.LongissimusCapitisC6C0NodeR;
+  AnyMuscleViaPoint LongissimusCapitisC6 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongissimusCapitis.LongissimusCapitisC6;
+    AnyRefNode &Org = ....Segments.C6Seg.LongissimusCapitisC6NodeR;
     AnyRefNode &Ins = ....Segments.SkullSeg.LongissimusCapitisNodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   }; 
-  AnyMuscleViaPoint LongissimusCapitisC7C0 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongissimusCapitis.LongissimusCapitisC7C0;
-    AnyRefNode &Org = ....Segments.C7Seg.LongissimusCapitisC7C0NodeR;
+  AnyMuscleViaPoint LongissimusCapitisC7 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongissimusCapitis.LongissimusCapitisC7;
+    AnyRefNode &Org = ....Segments.C7Seg.LongissimusCapitisC7NodeR;
     AnyRefNode &Ins = ....Segments.SkullSeg.LongissimusCapitisNodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   }; 
-  AnyMuscleViaPoint LongissimusCapitisT1C0 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongissimusCapitis.LongissimusCapitisT1C0;
-    AnyRefNode &Org = ....Segments.T1Seg.Right.LongissimusCapitisT1C0Node;
+  AnyMuscleViaPoint LongissimusCapitisT1 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongissimusCapitis.LongissimusCapitisT1;
+    AnyRefNode &Org = ....Segments.T1Seg.Right.LongissimusCapitisT1Node;
     AnyRefNode &Ins = ....Segments.SkullSeg.LongissimusCapitisNodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };  
-  AnyMuscleViaPoint LongissimusCapitisT2C0 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongissimusCapitis.LongissimusCapitisT2C0;
-    AnyRefNode &Org = ....Segments.T2Seg.Right.LongissimusCapitisT2C0Node;
+  AnyMuscleViaPoint LongissimusCapitisT2 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongissimusCapitis.LongissimusCapitisT2;
+    AnyRefNode &Org = ....Segments.T2Seg.Right.LongissimusCapitisT2Node;
     AnyRefNode &Ins = ....Segments.SkullSeg.LongissimusCapitisNodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };  
-  AnyMuscleViaPoint LongissimusCapitisT3C0 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongissimusCapitis.LongissimusCapitisT3C0;
-    AnyRefNode &Org = ....Segments.T3Seg.Right.LongissimusCapitisT3C0Node;
+  AnyMuscleViaPoint LongissimusCapitisT3 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongissimusCapitis.LongissimusCapitisT3;
+    AnyRefNode &Org = ....Segments.T3Seg.Right.LongissimusCapitisT3Node;
     AnyRefNode &Ins = ....Segments.SkullSeg.LongissimusCapitisNodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };  
-  AnyMuscleViaPoint LongissimusCapitisT4C0 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongissimusCapitis.LongissimusCapitisT4C0;
-    AnyRefNode &Org = ....Segments.T4Seg.Right.LongissimusCapitisT4C0Node;
+  AnyMuscleViaPoint LongissimusCapitisT4 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongissimusCapitis.LongissimusCapitisT4;
+    AnyRefNode &Org = ....Segments.T4Seg.Right.LongissimusCapitisT4Node;
     AnyRefNode &Ins = ....Segments.SkullSeg.LongissimusCapitisNodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };  
-  AnyMuscleViaPoint LongissimusCapitisT5C0 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongissimusCapitis.LongissimusCapitisT5C0;
-    AnyRefNode &Org = ....Segments.T5Seg.Right.LongissimusCapitisT5C0Node;
+  AnyMuscleViaPoint LongissimusCapitisT5 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LongissimusCapitis.LongissimusCapitisT5;
+    AnyRefNode &Org = ....Segments.T5Seg.Right.LongissimusCapitisT5Node;
     AnyRefNode &Ins = ....Segments.SkullSeg.LongissimusCapitisNodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;

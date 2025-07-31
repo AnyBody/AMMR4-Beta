@@ -115,7 +115,7 @@ Segments.T1Seg = {
     //Semispinalis Capitis node
     AnyRefNode SemispinalisCapitisT1C0Node = {sRel = ..Scale(..Data.Thorax.Right.SemispinalisCapitisT1C0Node_pos);};
     //Longissimus Capitis
-    AnyRefNode LongissimusCapitisT1C0Node = {sRel = ..Scale(..Data.Thorax.Right.LongissimusCapitisT1C0Node_pos);};
+    AnyRefNode LongissimusCapitisT1Node = {sRel = ..Scale(..Data.Thorax.Right.LongissimusCapitisT1Node_pos);};
     //Longissimus cervicis nodes
     AnyRefNode LongissimusCervicisT1Node = {sRel = ..Scale(..Data.Thorax.Right.LongissimusCervicisT1Node_pos);};
     //Splenius Capitis
@@ -132,7 +132,7 @@ Segments.T1Seg = {
     //Semispinalis Capitis node
     AnyRefNode SemispinalisCapitisT1C0Node = {sRel = ..Scale(..Data.Thorax.Left.SemispinalisCapitisT1C0Node_pos);};
     //Longissimus Capitis
-    AnyRefNode LongissimusCapitisT1C0Node = {sRel = ..Scale(..Data.Thorax.Left.LongissimusCapitisT1C0Node_pos);};
+    AnyRefNode LongissimusCapitisT1Node = {sRel = ..Scale(..Data.Thorax.Left.LongissimusCapitisT1Node_pos);};
     //Longissimus cervicis nodes
     AnyRefNode LongissimusCervicisT1Node = {sRel = ..Scale(..Data.Thorax.Left.LongissimusCervicisT1Node_pos);};
     //Splenius Capitis
@@ -221,7 +221,7 @@ Segments.T2Seg = {
     //Semispinalis Capitis node
     AnyRefNode SemispinalisCapitisT2C0Node = {sRel = ..Scale(..Data.Thorax.Right.SemispinalisCapitisT2C0Node_pos);};
     //Longissimus Capitis
-    AnyRefNode LongissimusCapitisT2C0Node = {sRel = ..Scale(..Data.Thorax.Right.LongissimusCapitisT2C0Node_pos);};
+    AnyRefNode LongissimusCapitisT2Node = {sRel = ..Scale(..Data.Thorax.Right.LongissimusCapitisT2Node_pos);};
     //Longissimus cervicis nodes
     AnyRefNode LongissimusCervicisT2Node = {sRel = ..Scale(..Data.Thorax.Right.LongissimusCervicisT2Node_pos);};
     //Splenius Capitis
@@ -238,7 +238,7 @@ Segments.T2Seg = {
     //Semispinalis Capitis node
     AnyRefNode SemispinalisCapitisT2C0Node = {sRel = ..Scale(..Data.Thorax.Left.SemispinalisCapitisT2C0Node_pos);};
     //Longissimus Capitis
-    AnyRefNode LongissimusCapitisT2C0Node = {sRel = ..Scale(..Data.Thorax.Left.LongissimusCapitisT2C0Node_pos);};
+    AnyRefNode LongissimusCapitisT2Node = {sRel = ..Scale(..Data.Thorax.Left.LongissimusCapitisT2Node_pos);};
     //Longissimus cervicis nodes
     AnyRefNode LongissimusCervicisT2Node = {sRel = ..Scale(..Data.Thorax.Left.LongissimusCervicisT2Node_pos);};
     //Splenius Capitis
@@ -313,7 +313,7 @@ Segments.T3Seg = {
     //Semispinalis Capitis node
     AnyRefNode SemispinalisCapitisT3C0Node = {sRel = ..Scale(..Data.Thorax.Right.SemispinalisCapitisT3C0Node_pos);};
     //Longissimus Capitis
-    AnyRefNode LongissimusCapitisT3C0Node = {sRel = ..Scale(..Data.Thorax.Right.LongissimusCapitisT3C0Node_pos);};
+    AnyRefNode LongissimusCapitisT3Node = {sRel = ..Scale(..Data.Thorax.Right.LongissimusCapitisT3Node_pos);};
     //Longissimus cervicis nodes
     AnyRefNode LongissimusCervicisT3Node = {sRel = ..Scale(..Data.Thorax.Right.LongissimusCervicisT3Node_pos);};
     //Splenius Capitis
@@ -332,7 +332,7 @@ Segments.T3Seg = {
     //Semispinalis Capitis node
     AnyRefNode SemispinalisCapitisT3C0Node = {sRel = ..Scale(..Data.Thorax.Left.SemispinalisCapitisT3C0Node_pos);};
     //Longissimus Capitis
-    AnyRefNode LongissimusCapitisT3C0Node = {sRel = ..Scale(..Data.Thorax.Left.LongissimusCapitisT3C0Node_pos);};
+    AnyRefNode LongissimusCapitisT3Node = {sRel = ..Scale(..Data.Thorax.Left.LongissimusCapitisT3Node_pos);};
     //Longissimus cervicis nodes
     AnyRefNode LongissimusCervicisT3Node = {sRel = ..Scale(..Data.Thorax.Left.LongissimusCervicisT3Node_pos);};
     //Splenius Capitis
@@ -412,7 +412,7 @@ Segments.T4Seg = {
     //Semispinalis Capitis node
     AnyRefNode SemispinalisCapitisT4C0Node = {sRel = ..Scale(..Data.Thorax.Right.SemispinalisCapitisT4C0Node_pos);};
     //Longissimus Capitis
-    AnyRefNode LongissimusCapitisT4C0Node = {sRel = ..Scale(..Data.Thorax.Right.LongissimusCapitisT4C0Node_pos);};
+    AnyRefNode LongissimusCapitisT4Node = {sRel = ..Scale(..Data.Thorax.Right.LongissimusCapitisT4Node_pos);};
     //Longissimus cervicis nodes
     AnyRefNode LongissimusCervicisT4Node = {sRel = ..Scale(..Data.Thorax.Right.LongissimusCervicisT4Node_pos);};
     //Splenius Cervicis
@@ -427,7 +427,7 @@ Segments.T4Seg = {
     //Semispinalis Capitis node
     AnyRefNode SemispinalisCapitisT4C0Node = {sRel = ..Scale(..Data.Thorax.Left.SemispinalisCapitisT4C0Node_pos);};
     //Longissimus Capitis
-    AnyRefNode LongissimusCapitisT4C0Node = {sRel = ..Scale(..Data.Thorax.Left.LongissimusCapitisT4C0Node_pos);};
+    AnyRefNode LongissimusCapitisT4Node = {sRel = ..Scale(..Data.Thorax.Left.LongissimusCapitisT4Node_pos);};
     //Longissimus cervicis nodes
     AnyRefNode LongissimusCervicisT4Node = {sRel = ..Scale(..Data.Thorax.Left.LongissimusCervicisT4Node_pos);};
     //Splenius Cervicis
@@ -512,7 +512,7 @@ Segments.T5Seg = {
     //Semispinalis Capitis node
     AnyRefNode SemispinalisCapitisT5C0Node = {sRel = ..Scale(..Data.Thorax.Right.SemispinalisCapitisT5C0Node_pos);};
     //Longissimus Capitis
-    AnyRefNode LongissimusCapitisT5C0Node = {sRel = ..Scale(..Data.Thorax.Right.LongissimusCapitisT5C0Node_pos);};
+    AnyRefNode LongissimusCapitisT5Node = {sRel = ..Scale(..Data.Thorax.Right.LongissimusCapitisT5Node_pos);};
     //Longissimus cervicis nodes
     AnyRefNode LongissimusCervicisT5Node = {sRel = ..Scale(..Data.Thorax.Right.LongissimusCervicisT5Node_pos);};
     //Splenius Cervicis
@@ -527,7 +527,7 @@ Segments.T5Seg = {
     //Semispinalis Capitis node
     AnyRefNode SemispinalisCapitisT5C0Node = {sRel = ..Scale(..Data.Thorax.Left.SemispinalisCapitisT5C0Node_pos);};
     //Longissimus Capitis
-    AnyRefNode LongissimusCapitisT5C0Node = {sRel = ..Scale(..Data.Thorax.Left.LongissimusCapitisT5C0Node_pos);};
+    AnyRefNode LongissimusCapitisT5Node = {sRel = ..Scale(..Data.Thorax.Left.LongissimusCapitisT5Node_pos);};
     //Longissimus cervicis nodes
     AnyRefNode LongissimusCervicisT5Node = {sRel = ..Scale(..Data.Thorax.Left.LongissimusCervicisT5Node_pos);};
     //Splenius Cervicis
