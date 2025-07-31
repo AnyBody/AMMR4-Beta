@@ -3755,57 +3755,57 @@ MuscleGroup ObliquusExternus = {
   
   
   #if BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_BUCKLE_
-  AnyMuscleViaPoint OEC_1 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ObliquusExternus.OEC_1;
+  AnyMuscleViaPoint ObliquusExternusR6Abd = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ObliquusExternus.ObliquusExternusR6Abd;
     AnyRefNode &Org = ....Segments.Left.R6Seg.ObliquusExternusNode;
     AnyRefNode &Ins = ....Buckle.Segments.BuckleSeg.Left.ObliquusExternusNode_1;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
-  AnyMuscleViaPoint OEC_2 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ObliquusExternus.OEC_2;
+  AnyMuscleViaPoint ObliquusExternusR7Abd = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ObliquusExternus.ObliquusExternusR7Abd;
     AnyRefNode &Org = ....Segments.Left.R7Seg.ObliquusExternusNode;
     AnyRefNode &Ins = ....Buckle.Segments.BuckleSeg.Left.ObliquusExternusNode_2;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
-  AnyMuscleViaPoint OEC_3 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ObliquusExternus.OEC_3;
+  AnyMuscleViaPoint ObliquusExternusR8Abd = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ObliquusExternus.ObliquusExternusR8Abd;
     AnyRefNode &Org = ....Segments.Left.R8Seg.ObliquusExternusNode;
     AnyRefNode &Ins = ....Buckle.Segments.BuckleSeg.Left.ObliquusExternusNode_3;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
-  AnyMuscleViaPoint OEC_4 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ObliquusExternus.OEC_4;
+  AnyMuscleViaPoint ObliquusExternusR9Abd = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ObliquusExternus.ObliquusExternusR9Abd;
     AnyRefNode &Org = ....Segments.Left.R9Seg.ObliquusExternusNode;
     AnyRefNode &Ins = ....Buckle.Segments.BuckleSeg.Left.ObliquusExternusNode_4;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
-  AnyMuscleViaPoint OEC_5 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ObliquusExternus.OEC_5;
+  AnyMuscleViaPoint ObliquusExternusR10Abd_1 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ObliquusExternus.ObliquusExternusR10Abd_1;
     AnyRefNode &Org = ....Segments.Left.R10Seg.ObliquusExternusNode_1;
     AnyRefNode &Ins = ....Buckle.Segments.BuckleSeg.Left.ObliquusExternusNode_5;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };  
-  AnyMuscleViaPoint OEC_6 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ObliquusExternus.OEC_6;
+  AnyMuscleViaPoint ObliquusExternusR10Abd_2 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ObliquusExternus.ObliquusExternusR10Abd_2;
     AnyRefNode &Org = ....Segments.Left.R10Seg.ObliquusExternusNode_2;
     AnyRefNode &Ins = ....Segments.PelvisSeg.Left.ObliquusExternusNode_1;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
-  AnyMuscleViaPoint OEC_7 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ObliquusExternus.OEC_7;
+  AnyMuscleViaPoint ObliquusExternusR11IC = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ObliquusExternus.ObliquusExternusR11IC;
     AnyRefNode &Org = ....Segments.Left.R11Seg.ObliquusExternusNode;
     AnyRefNode &Ins = ....Segments.PelvisSeg.Left.ObliquusExternusNode_2;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
-  AnyMuscleViaPoint OEC_8= {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ObliquusExternus.OEC_8;
+  AnyMuscleViaPoint ObliquusExternusR12IC= {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.ObliquusExternus.ObliquusExternusR12IC;
     AnyRefNode &Org = ....Segments.Left.R12Seg.ObliquusExternusNode;
     AnyRefNode &Ins = ....Segments.PelvisSeg.Left.ObliquusExternusNode_3;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};

@@ -3763,57 +3763,57 @@ MuscleGroup ObliquusExternus = {
   
   
   #if BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_BUCKLE_
-  AnyMuscleViaPoint OEC_1 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.OEC_1;
+  AnyMuscleViaPoint ObliquusExternusR6Abd = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.ObliquusExternusR6Abd;
     AnyRefNode &Org = ....Segments.Right.R6Seg.ObliquusExternusNode;
     AnyRefNode &Ins = ....Buckle.Segments.BuckleSeg.Right.ObliquusExternusNode_1;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
-  AnyMuscleViaPoint OEC_2 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.OEC_2;
+  AnyMuscleViaPoint ObliquusExternusR7Abd = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.ObliquusExternusR7Abd;
     AnyRefNode &Org = ....Segments.Right.R7Seg.ObliquusExternusNode;
     AnyRefNode &Ins = ....Buckle.Segments.BuckleSeg.Right.ObliquusExternusNode_2;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
-  AnyMuscleViaPoint OEC_3 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.OEC_3;
+  AnyMuscleViaPoint ObliquusExternusR8Abd = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.ObliquusExternusR8Abd;
     AnyRefNode &Org = ....Segments.Right.R8Seg.ObliquusExternusNode;
     AnyRefNode &Ins = ....Buckle.Segments.BuckleSeg.Right.ObliquusExternusNode_3;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
-  AnyMuscleViaPoint OEC_4 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.OEC_4;
+  AnyMuscleViaPoint ObliquusExternusR9Abd = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.ObliquusExternusR9Abd;
     AnyRefNode &Org = ....Segments.Right.R9Seg.ObliquusExternusNode;
     AnyRefNode &Ins = ....Buckle.Segments.BuckleSeg.Right.ObliquusExternusNode_4;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
-  AnyMuscleViaPoint OEC_5 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.OEC_5;
+  AnyMuscleViaPoint ObliquusExternusR10Abd_1 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.ObliquusExternusR10Abd_1;
     AnyRefNode &Org = ....Segments.Right.R10Seg.ObliquusExternusNode_1;
     AnyRefNode &Ins = ....Buckle.Segments.BuckleSeg.Right.ObliquusExternusNode_5;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };  
-  AnyMuscleViaPoint OEC_6 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.OEC_6;
+  AnyMuscleViaPoint ObliquusExternusR10Abd_2 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.ObliquusExternusR10Abd_2;
     AnyRefNode &Org = ....Segments.Right.R10Seg.ObliquusExternusNode_2;
     AnyRefNode &Ins = ....Segments.PelvisSeg.Right.ObliquusExternusNode_1;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
-  AnyMuscleViaPoint OEC_7 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.OEC_7;
+  AnyMuscleViaPoint ObliquusExternusR11IC = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.ObliquusExternusR11IC;
     AnyRefNode &Org = ....Segments.Right.R11Seg.ObliquusExternusNode;
     AnyRefNode &Ins = ....Segments.PelvisSeg.Right.ObliquusExternusNode_2;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
-  AnyMuscleViaPoint OEC_8= {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.OEC_8;
+  AnyMuscleViaPoint ObliquusExternusR12IC= {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.ObliquusExternusR12IC;
     AnyRefNode &Org = ....Segments.Right.R12Seg.ObliquusExternusNode;
     AnyRefNode &Ins = ....Segments.PelvisSeg.Right.ObliquusExternusNode_3;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
