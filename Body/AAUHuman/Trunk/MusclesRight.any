@@ -4760,80 +4760,80 @@ MuscleGroup ObliquusInternus = {
   #endif
   
   #if BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_BUCKLE_
-  AnyMuscleViaPoint OIC_1 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.OIC_1;
+  AnyMuscleViaPoint ObliquusInternusR11 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.ObliquusInternusR11;
     AnyRefNode &Org = ....Segments.Right.R11Seg.ObliquusInternusNode;
     AnyRefNode &Ins = ....Segments.PelvisSeg.Right.ObliquusInternusNode_1;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint OIC_2 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.OIC_2;
+  AnyMuscleViaPoint ObliquusInternusR10_1 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.ObliquusInternusR10_1;
     AnyRefNode &Org = ....Segments.Right.R10Seg.ObliquusInternusNode_2;
     AnyRefNode &Ins = ....Segments.PelvisSeg.Right.ObliquusInternusNode_2;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint OIC_3 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.OIC_3;
+  AnyMuscleViaPoint ObliquusInternusR10_2 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.ObliquusInternusR10_2;
     AnyRefNode &Org = ....Segments.Right.R10Seg.ObliquusInternusNode_1;
     AnyRefNode &Ins = ....Segments.PelvisSeg.Right.ObliquusInternusNode_3;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint OIC_4 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.OIC_4;
+  AnyMuscleViaPoint ObliquusInternusCC_1 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.ObliquusInternusCC_1;
     AnyRefNode &Org = ....Segments.SternalBodySeg.Right.ObliquusInternusNode_1;
     AnyRefNode &Ins = ....Segments.PelvisSeg.Right.ObliquusInternusNode_4;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint OIC_5 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.OIC_5;
+  AnyMuscleViaPoint ObliquusInternusCC_2 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.ObliquusInternusCC_2;
     AnyRefNode &Org = ....Segments.SternalBodySeg.Right.ObliquusInternusNode_2;
     AnyRefNode &Ins = ....Segments.PelvisSeg.Right.ObliquusInternusNode_5;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint OIC_6 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.OIC_6;
+  AnyMuscleViaPoint ObliquusInternusAbd_1 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.ObliquusInternusAbd_1;
     AnyRefNode &Org = ....Buckle.Segments.BuckleSeg.Right.ObliquusInternusNode_1;
     AnyRefNode &Ins = ....Segments.PelvisSeg.Right.ObliquusInternusNode_6;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint OIC_7 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.OIC_7;
+  AnyMuscleViaPoint ObliquusInternusAbd_2 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.ObliquusInternusAbd_2;
     AnyRefNode &Org = ....Buckle.Segments.BuckleSeg.Right.ObliquusInternusNode_2;
     AnyRefNode &Ins = ....Segments.PelvisSeg.Right.ObliquusInternusNode_7;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint OIC_8 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.OIC_8;
+  AnyMuscleViaPoint ObliquusInternusAbd_3 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.ObliquusInternusAbd_3;
     AnyRefNode &Org = ....Buckle.Segments.BuckleSeg.Right.ObliquusInternusNode_3;
     AnyRefNode &Ins = ....Segments.PelvisSeg.Right.ObliquusInternusNode_8;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint OIC_9 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.OIC_9;
+  AnyMuscleViaPoint ObliquusInternusAbd_4 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.ObliquusInternusAbd_4;
     AnyRefNode &Org = ....Buckle.Segments.BuckleSeg.Right.ObliquusInternusNode_4;
     AnyRefNode &Ins = ....Segments.PelvisSeg.Right.ObliquusInternusNode_9;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint OIC_10 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.OIC_10;
+  AnyMuscleViaPoint ObliquusInternusAbd_5 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusInternus.ObliquusInternusAbd_5;
     AnyRefNode &Org = ....Buckle.Segments.BuckleSeg.Right.ObliquusInternusNode_5;
     AnyRefNode &Ins = ....Segments.PelvisSeg.Right.ObliquusInternusNode_10;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
