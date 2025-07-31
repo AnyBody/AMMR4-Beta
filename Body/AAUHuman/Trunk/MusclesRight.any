@@ -3114,8 +3114,8 @@ MuscleGroup ObliquusExternus = {
   
   #ifdef OBLIQUUS_WRAP_ON_CYLS
   
-  AnyMuscleShortestPath OEC_1 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.OEC_1;
+  AnyMuscleShortestPath ObliquusExternusR6Abd = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.ObliquusExternusR6Abd;
     AnyRefNode &Org = ....Segments.Right.R6Seg.ObliquusExternusNode;
     AnyRefNode &Ins = ....Abdominal.Layer_L1.BaseSegAnterior.mid;
     
@@ -3137,8 +3137,8 @@ MuscleGroup ObliquusExternus = {
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleShortestPath OEC_2 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.OEC_2;
+  AnyMuscleShortestPath ObliquusExternusR7Abd = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.ObliquusExternusR7Abd;
     AnyRefNode &Org = ....Segments.Right.R7Seg.ObliquusExternusNode;
     AnyRefNode &Ins = ....Abdominal.Layer_L2.BaseSegAnterior.mid;
     
@@ -3161,8 +3161,8 @@ MuscleGroup ObliquusExternus = {
   };
   
   
-  AnyMuscleShortestPath OEC_3 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.OEC_3;
+  AnyMuscleShortestPath ObliquusExternusR8Abd = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.ObliquusExternusR8Abd;
     AnyRefNode &Org = ....Segments.Right.R8Seg.ObliquusExternusNode;
     AnyRefNode &Ins = ....Abdominal.Layer_L3.BaseSegAnterior.mid;
     
@@ -3185,8 +3185,8 @@ MuscleGroup ObliquusExternus = {
   };
   
   
-  AnyMuscleShortestPath OEC_4 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.OEC_4;
+  AnyMuscleShortestPath ObliquusExternusR9Abd_1 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.ObliquusExternusR9Abd_1;
     AnyRefNode &Org = ....Segments.Right.R9Seg.ObliquusExternusNode;
     AnyRefNode &Ins = ....Abdominal.Layer_L4.BaseSegAnterior.mid;
     
@@ -3209,8 +3209,8 @@ MuscleGroup ObliquusExternus = {
   };
   
   
-  AnyMuscleShortestPath  OEC_5= {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.OEC_5;
+  AnyMuscleShortestPath  ObliquusExternusR9Abd_2= {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.ObliquusExternusR9Abd_2;
     AnyRefNode &Org = ....Segments.Right.R9Seg.ObliquusExternusNode_1;
     AnyRefNode &Ins = ....Abdominal.Layer_L5.BaseSegAnterior.mid;
     
@@ -3236,8 +3236,8 @@ MuscleGroup ObliquusExternus = {
   };
   
   
-  AnyMuscleShortestPath OEC_6 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.OEC_6;
+  AnyMuscleShortestPath ObliquusExternusR10Abd_1 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.ObliquusExternusR10Abd_1;
     AnyRefNode &Org = ....Segments.Right.R10Seg.ObliquusExternusNode_1;
     AnyRefNode &Ins =     ....Abdominal.Layer_Pelvic2.BaseSegAnterior.VolumePoints.Right.nn11;
     
@@ -3259,8 +3259,8 @@ MuscleGroup ObliquusExternus = {
   };
   
   
-  AnyMuscleShortestPath OEC_7 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.OEC_7;
+  AnyMuscleShortestPath ObliquusExternusR10Abd_2 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.ObliquusExternusR10Abd_2;
     AnyRefNode &Org = ....Segments.Right.R10Seg.ObliquusExternusNode_2;
     AnyRefNode &Ins =     ....Abdominal.Layer_Pelvic2.BaseSegAnterior.VolumePoints.Right.nn10;
     
@@ -3282,8 +3282,8 @@ MuscleGroup ObliquusExternus = {
   };
   
   
-  AnyMuscleViaPoint OEC_8= {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.OEC_8;
+  AnyMuscleViaPoint ObliquusExternusR10IC_1= {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.ObliquusExternusR10IC_1;
     AnyRefNode &Org = ....Segments.Right.R10Seg.ObliquusExternusNode_00;
     AnyRefNode &Ins =    ....Segments.PelvisSeg.Right.ObliquusInternusNode_8;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -3291,8 +3291,8 @@ MuscleGroup ObliquusExternus = {
   };
   
   
-  AnyMuscleViaPoint OEC_9= {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.OEC_9;
+  AnyMuscleViaPoint ObliquusExternusR10IC_2= {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.ObliquusExternusR10IC_2;
     AnyRefNode &Org = ....Segments.Right.R10Seg.ObliquusExternusNode_0;
     AnyRefNode &Ins =    ....Segments.PelvisSeg.Right.ObliquusInternusNode_9;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -3300,8 +3300,8 @@ MuscleGroup ObliquusExternus = {
   };
   
   
-  AnyMuscleViaPoint OEC_10 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.OEC_10;
+  AnyMuscleViaPoint ObliquusExternusR11IC_1 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.ObliquusExternusR11IC_1;
     AnyRefNode &Org = ....Segments.Right.R11Seg.ObliquusExternusNode;
     AnyRefNode &Ins =    ....Segments.PelvisSeg.Right.ObliquusInternusNode_7;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -3309,8 +3309,8 @@ MuscleGroup ObliquusExternus = {
   };
   
   
-  AnyMuscleViaPoint OEC_11 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.OEC_11;
+  AnyMuscleViaPoint ObliquusExternusR11IC_2 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.ObliquusExternusR11IC_2;
     AnyRefNode &Org = ....Segments.Right.R11Seg.ObliquusExternusNode1;
     AnyRefNode &Ins =    ....Segments.PelvisSeg.Right.ObliquusInternusNode_5;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -3318,8 +3318,8 @@ MuscleGroup ObliquusExternus = {
   };
   
   
-  AnyMuscleViaPoint OEC_12 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.OEC_12;
+  AnyMuscleViaPoint ObliquusExternusR12IC = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.ObliquusExternusR12IC;
     AnyRefNode &Org = ....Segments.Right.R12Seg.ObliquusExternusNode;
     AnyRefNode &Ins =    ....Segments.PelvisSeg.Right.ObliquusInternusNode_4;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -3332,8 +3332,8 @@ MuscleGroup ObliquusExternus = {
   
   
   
-  AnyMuscleShortestPath OEC_1 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.OEC_1;
+  AnyMuscleShortestPath ObliquusExternusR6Abd = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.ObliquusExternusR6Abd;
     AnyRefNode &Org = ....Segments.Right.R6Seg.ObliquusExternusNode;
     AnyRefNode &Ins = ....Abdominal.Layer_L1.BaseSegAnterior.mid;
     
@@ -3359,8 +3359,8 @@ MuscleGroup ObliquusExternus = {
     #include "MusclesSharedCode_SPLine.any"
   };
   
-  AnyMuscleShortestPath OEC_2 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.OEC_2;
+  AnyMuscleShortestPath ObliquusExternusR7Abd = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.ObliquusExternusR7Abd;
     AnyRefNode &Org = ....Segments.Right.R7Seg.ObliquusExternusNode;
     AnyRefNode &Ins = ....Abdominal.Layer_L2.BaseSegAnterior.mid;
     
@@ -3384,8 +3384,8 @@ MuscleGroup ObliquusExternus = {
   };
   
   
-  AnyMuscleShortestPath OEC_3 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.OEC_3;
+  AnyMuscleShortestPath ObliquusExternusR8Abd = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.ObliquusExternusR8Abd;
     AnyRefNode &Org = ....Segments.Right.R8Seg.ObliquusExternusNode;
     AnyRefNode &Ins = ....Abdominal.Layer_L3.BaseSegAnterior.mid;
     
@@ -3450,8 +3450,8 @@ MuscleGroup ObliquusExternus = {
   };
   
   
-  AnyMuscleShortestPath OEC_4 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.OEC_4;
+  AnyMuscleShortestPath ObliquusExternusR9Abd_1 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.ObliquusExternusR9Abd_1;
     AnyRefNode &Org = ....Segments.Right.R9Seg.ObliquusExternusNode;
     AnyRefNode &Ins = ....Abdominal.Layer_L4.BaseSegAnterior.mid;
     
@@ -3519,8 +3519,8 @@ MuscleGroup ObliquusExternus = {
   };
   
   
-  AnyMuscleShortestPath  OEC_5= {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.OEC_5;
+  AnyMuscleShortestPath  ObliquusExternusR9Abd_2= {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.ObliquusExternusR9Abd_2;
     AnyRefNode &Org = ....Segments.Right.R9Seg.ObliquusExternusNode_1;
     AnyRefNode &Ins = ....Abdominal.Layer_L5.BaseSegAnterior.mid;
     
@@ -3585,8 +3585,8 @@ MuscleGroup ObliquusExternus = {
   };
   
   //
-  AnyMuscleShortestPath OEC_6 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.OEC_6;
+  AnyMuscleShortestPath ObliquusExternusR10Abd_1 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.ObliquusExternusR10Abd_1;
     AnyRefNode &Org = ....Segments.Right.R10Seg.ObliquusExternusNode_1;
     AnyRefNode &Ins =     ....Abdominal.Layer_Pelvic2.BaseSegAnterior.VolumePoints.Right.nn11;
     //AnySurfTriCylMesh &mesh4= Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L4.BaseSegAnterior.mesh;
@@ -3644,8 +3644,8 @@ MuscleGroup ObliquusExternus = {
   };
   
   
-  AnyMuscleShortestPath OEC_7 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.OEC_7;
+  AnyMuscleShortestPath ObliquusExternusR10Abd_2 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.ObliquusExternusR10Abd_2;
     AnyRefNode &Org = ....Segments.Right.R10Seg.ObliquusExternusNode_2;
     AnyRefNode &Ins =     ....Abdominal.Layer_Pelvic2.BaseSegAnterior.VolumePoints.Right.nn10;
     // AnySurfTriCylMesh &mesh0 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.mesh;
@@ -3707,8 +3707,8 @@ MuscleGroup ObliquusExternus = {
   };
   
   
-  AnyMuscleViaPoint OEC_8= {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.OEC_8;
+  AnyMuscleViaPoint ObliquusExternusR10IC_1= {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.ObliquusExternusR10IC_1;
     AnyRefNode &Org = ....Segments.Right.R10Seg.ObliquusExternusNode_00;
     AnyRefNode &Ins =    ....Segments.PelvisSeg.Right.ObliquusInternusNode_8;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -3717,8 +3717,8 @@ MuscleGroup ObliquusExternus = {
   };
   
   
-  AnyMuscleViaPoint OEC_9= {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.OEC_9;
+  AnyMuscleViaPoint ObliquusExternusR10IC_2= {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.ObliquusExternusR10IC_2;
     AnyRefNode &Org = ....Segments.Right.R10Seg.ObliquusExternusNode_0;
     AnyRefNode &Ins =    ....Segments.PelvisSeg.Right.ObliquusInternusNode_9;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -3727,8 +3727,8 @@ MuscleGroup ObliquusExternus = {
   };
   
   
-  AnyMuscleViaPoint OEC_10 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.OEC_10;
+  AnyMuscleViaPoint ObliquusExternusR11IC_1 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.ObliquusExternusR11IC_1;
     AnyRefNode &Org = ....Segments.Right.R11Seg.ObliquusExternusNode;
     AnyRefNode &Ins =    ....Segments.PelvisSeg.Right.ObliquusInternusNode_7;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -3737,8 +3737,8 @@ MuscleGroup ObliquusExternus = {
   };
   
   
-  AnyMuscleViaPoint OEC_11 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.OEC_11;
+  AnyMuscleViaPoint ObliquusExternusR11IC_2 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.ObliquusExternusR11IC_2;
     AnyRefNode &Org = ....Segments.Right.R11Seg.ObliquusExternusNode1;
     AnyRefNode &Ins =    ....Segments.PelvisSeg.Right.ObliquusInternusNode_5;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -3747,8 +3747,8 @@ MuscleGroup ObliquusExternus = {
   };
   
   
-  AnyMuscleViaPoint OEC_12 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.OEC_12;
+  AnyMuscleViaPoint ObliquusExternusR12IC = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ObliquusExternus.ObliquusExternusR12IC;
     AnyRefNode &Org = ....Segments.Right.R12Seg.ObliquusExternusNode;
     AnyRefNode &Ins =    ....Segments.PelvisSeg.Right.ObliquusInternusNode_4;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};

@@ -190,15 +190,15 @@ AnyKinStudy Study = {
          AnyVar QLC12Median_CIInterMedian = -1*...Model.SpineMusRightRef.QuadratusLumborum.QLC12Median_CIInterMedian.LmtDot/...Model.Drivers.AngularVelocity;
        };
        AnyFolder ObliquusExternus = {
-         AnyVar OEC_1 = -1*...Model.SpineMusRightRef.ObliquusExternus.OEC_1.LmtDot/...Model.Drivers.AngularVelocity;
-         AnyVar OEC_2 = -1*...Model.SpineMusRightRef.ObliquusExternus.OEC_2.LmtDot/...Model.Drivers.AngularVelocity;
-         AnyVar OEC_3 = -1*...Model.SpineMusRightRef.ObliquusExternus.OEC_3.LmtDot/...Model.Drivers.AngularVelocity;
-         AnyVar OEC_4 = -1*...Model.SpineMusRightRef.ObliquusExternus.OEC_4.LmtDot/...Model.Drivers.AngularVelocity;
-         AnyVar OEC_6 = -1*...Model.SpineMusRightRef.ObliquusExternus.OEC_6.LmtDot/...Model.Drivers.AngularVelocity;
-         AnyVar OEC_7 = -1*...Model.SpineMusRightRef.ObliquusExternus.OEC_7.LmtDot/...Model.Drivers.AngularVelocity;
-//         AnyVar OEC_7 = -1*...Model.SpineMusRightRef.ObliquusExternus.OEC_7.LmtDot/...Model.Drivers.AngularVelocity;
+         AnyVar ObliquusExternusR6Abd = -1*...Model.SpineMusRightRef.ObliquusExternus.ObliquusExternusR6Abd.LmtDot/...Model.Drivers.AngularVelocity;
+         AnyVar ObliquusExternusR7Abd = -1*...Model.SpineMusRightRef.ObliquusExternus.ObliquusExternusR7Abd.LmtDot/...Model.Drivers.AngularVelocity;
+         AnyVar ObliquusExternusR8Abd = -1*...Model.SpineMusRightRef.ObliquusExternus.ObliquusExternusR8Abd.LmtDot/...Model.Drivers.AngularVelocity;
+         AnyVar ObliquusExternusR9Abd_1 = -1*...Model.SpineMusRightRef.ObliquusExternus.ObliquusExternusR9Abd_1.LmtDot/...Model.Drivers.AngularVelocity;
+         AnyVar ObliquusExternusR10Abd_1 = -1*...Model.SpineMusRightRef.ObliquusExternus.ObliquusExternusR10Abd_1.LmtDot/...Model.Drivers.AngularVelocity;
+         AnyVar ObliquusExternusR10Abd_2 = -1*...Model.SpineMusRightRef.ObliquusExternus.ObliquusExternusR10Abd_2.LmtDot/...Model.Drivers.AngularVelocity;
+//         AnyVar ObliquusExternusR10Abd_2 = -1*...Model.SpineMusRightRef.ObliquusExternus.ObliquusExternusR10Abd_2.LmtDot/...Model.Drivers.AngularVelocity;
 //         #if  BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_BUCKLE_
-//         AnyVar OEC_11 = -1*...Model.SpineMusRightRef.ObliquusExternus.OEC_11.LmtDot/...Model.Drivers.AngularVelocity;
+//         AnyVar ObliquusExternusR11IC_2 = -1*...Model.SpineMusRightRef.ObliquusExternus.ObliquusExternusR11IC_2.LmtDot/...Model.Drivers.AngularVelocity;
 //         #endif
        };
        AnyFolder ObliquusInternus = {
@@ -337,18 +337,18 @@ AnyKinStudy Study = {
          AnyVar QLC12Median_CIInterMedian = -1*...Model.SpineMusLeftRef.QuadratusLumborum.QLC12Median_CIInterMedian.LmtDot/...Model.Drivers.AngularVelocity;
        };
        AnyFolder ObliquusExternus = {
-         AnyVar OEC_1 = -1*...Model.SpineMusLeftRef.ObliquusExternus.OEC_1.LmtDot/...Model.Drivers.AngularVelocity;
-         AnyVar OEC_2 = -1*...Model.SpineMusLeftRef.ObliquusExternus.OEC_2.LmtDot/...Model.Drivers.AngularVelocity;
-         AnyVar OEC_3 = -1*...Model.SpineMusLeftRef.ObliquusExternus.OEC_3.LmtDot/...Model.Drivers.AngularVelocity;
-         AnyVar OEC_4 = -1*...Model.SpineMusLeftRef.ObliquusExternus.OEC_4.LmtDot/...Model.Drivers.AngularVelocity;
-         AnyVar OEC_6 = -1*...Model.SpineMusLeftRef.ObliquusExternus.OEC_6.LmtDot/...Model.Drivers.AngularVelocity;
-         AnyVar OEC_7 = -1*...Model.SpineMusLeftRef.ObliquusExternus.OEC_7.LmtDot/...Model.Drivers.AngularVelocity;
-         AnyVar OEC_8 = -1*...Model.SpineMusLeftRef.ObliquusExternus.OEC_7.LmtDot/...Model.Drivers.AngularVelocity;
+         AnyVar ObliquusExternusR6Abd = -1*...Model.SpineMusLeftRef.ObliquusExternus.ObliquusExternusR6Abd.LmtDot/...Model.Drivers.AngularVelocity;
+         AnyVar ObliquusExternusR7Abd = -1*...Model.SpineMusLeftRef.ObliquusExternus.ObliquusExternusR7Abd.LmtDot/...Model.Drivers.AngularVelocity;
+         AnyVar ObliquusExternusR8Abd = -1*...Model.SpineMusLeftRef.ObliquusExternus.ObliquusExternusR8Abd.LmtDot/...Model.Drivers.AngularVelocity;
+         AnyVar ObliquusExternusR9Abd_1 = -1*...Model.SpineMusLeftRef.ObliquusExternus.ObliquusExternusR9Abd_1.LmtDot/...Model.Drivers.AngularVelocity;
+         AnyVar ObliquusExternusR10Abd_1 = -1*...Model.SpineMusLeftRef.ObliquusExternus.ObliquusExternusR10Abd_1.LmtDot/...Model.Drivers.AngularVelocity;
+         AnyVar ObliquusExternusR10Abd_2 = -1*...Model.SpineMusLeftRef.ObliquusExternus.ObliquusExternusR10Abd_2.LmtDot/...Model.Drivers.AngularVelocity;
+         AnyVar ObliquusExternusR10IC_1 = -1*...Model.SpineMusLeftRef.ObliquusExternus.ObliquusExternusR10Abd_2.LmtDot/...Model.Drivers.AngularVelocity;
          #if  BM_TRUNK_CAVITY_MODEL ==_CAVITY_MODEL_VOLUME_
-         AnyVar OEC_9 = -1*...Model.SpineMusLeftRef.ObliquusExternus.OEC_9.LmtDot/...Model.Drivers.AngularVelocity;
-         AnyVar OEC_10 = -1*...Model.SpineMusLeftRef.ObliquusExternus.OEC_10.LmtDot/...Model.Drivers.AngularVelocity;
-         AnyVar OEC_11 = -1*...Model.SpineMusLeftRef.ObliquusExternus.OEC_11.LmtDot/...Model.Drivers.AngularVelocity;
-         AnyVar OEC_12 = -1*...Model.SpineMusLeftRef.ObliquusExternus.OEC_12.LmtDot/...Model.Drivers.AngularVelocity;
+         AnyVar ObliquusExternusR10IC_2 = -1*...Model.SpineMusLeftRef.ObliquusExternus.ObliquusExternusR10IC_2.LmtDot/...Model.Drivers.AngularVelocity;
+         AnyVar ObliquusExternusR11IC_1 = -1*...Model.SpineMusLeftRef.ObliquusExternus.ObliquusExternusR11IC_1.LmtDot/...Model.Drivers.AngularVelocity;
+         AnyVar ObliquusExternusR11IC_2 = -1*...Model.SpineMusLeftRef.ObliquusExternus.ObliquusExternusR11IC_2.LmtDot/...Model.Drivers.AngularVelocity;
+         AnyVar ObliquusExternusR12IC = -1*...Model.SpineMusLeftRef.ObliquusExternus.ObliquusExternusR12IC.LmtDot/...Model.Drivers.AngularVelocity;
          #endif
        };
        AnyFolder ObliquusInternus = {
