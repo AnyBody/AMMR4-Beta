@@ -649,123 +649,123 @@ AnyFolder IliocostalisThoracis = {
 
 #if IC_TYPE == OLD  
 
-MuscleGroup InterCostalisExternus(searchString="*.*") = {
-  SplineMuscle_CreateMuscle IC_Ext_R1R2(
+MuscleGroup IntercostalisExternus(searchString="*.*") = {
+  SplineMuscle_CreateMuscle IntercostalisExternusR1R2(
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE),
   OriginSegment=....Segments.Right.R1Seg,
   ORIGIN_POINTS=....Data.unscaled.ModelParameters.R1.Right.IC_R1_Ext_Inf.Points,
   InsertionSegment=....Segments.Right.R2Seg,
   INSERTION_POINTS=....Data.unscaled.ModelParameters.R2.Right.IC_R2_Ext_Sup.Points,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R1R2,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisExternus.IntercostalisExternusR1R2,
   )= {};
   
-  SplineMuscle_CreateMuscle IC_Ext_R2R3 (
+  SplineMuscle_CreateMuscle IntercostalisExternusR2R3 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
   OriginSegment=....Segments.Right.R2Seg,
   ORIGIN_POINTS=....Data.unscaled.ModelParameters.R2.Right.IC_R2_Ext_Inf.Points,
   InsertionSegment=....Segments.Right.R5Seg,
   INSERTION_POINTS=....Data.unscaled.ModelParameters.R3.Right.IC_R3_Ext_Sup.Points,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R2R3,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisExternus.IntercostalisExternusR2R3,
   )= {};
   
-  SplineMuscle_CreateMuscle IC_Ext_R3R4 (
+  SplineMuscle_CreateMuscle IntercostalisExternusR3R4 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
   OriginSegment=....Segments.Right.R3Seg,
   ORIGIN_POINTS=....Data.unscaled.ModelParameters.R3.Right.IC_R3_Ext_Inf.Points,
   InsertionSegment=....Segments.Right.R4Seg,
   INSERTION_POINTS=....Data.unscaled.ModelParameters.R4.Right.IC_R4_Ext_Sup.Points,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R3R4,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisExternus.IntercostalisExternusR3R4,
   )= {};
   
-  SplineMuscle_CreateMuscle IC_Ext_R4R5 (
+  SplineMuscle_CreateMuscle IntercostalisExternusR4R5 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
   OriginSegment=....Segments.Right.R4Seg,
   ORIGIN_POINTS=....Data.unscaled.ModelParameters.R4.Right.IC_R4_Ext_Inf.Points,
   InsertionSegment=....Segments.Right.R5Seg,
   INSERTION_POINTS=....Data.unscaled.ModelParameters.R5.Right.IC_R5_Ext_Sup.Points,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R4R5,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisExternus.IntercostalisExternusR4R5,
   )= {};
   
-  SplineMuscle_CreateMuscle IC_Ext_R5R6 (
+  SplineMuscle_CreateMuscle IntercostalisExternusR5R6 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
   OriginSegment=....Segments.Right.R5Seg,
   ORIGIN_POINTS=....Data.unscaled.ModelParameters.R5.Right.IC_R5_Ext_Inf.Points,
   InsertionSegment=....Segments.Right.R6Seg,
   INSERTION_POINTS=....Data.unscaled.ModelParameters.R6.Right.IC_R6_Ext_Sup.Points,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R5R6,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisExternus.IntercostalisExternusR5R6,
   )= {};
   
-  SplineMuscle_CreateMuscle IC_Ext_R6R7 (
+  SplineMuscle_CreateMuscle IntercostalisExternusR6R7 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
   OriginSegment=....Segments.Right.R6Seg,
   ORIGIN_POINTS=....Data.unscaled.ModelParameters.R6.Right.IC_R6_Ext_Inf.Points,
   InsertionSegment=....Segments.Right.R7Seg,
   INSERTION_POINTS=....Data.unscaled.ModelParameters.R7.Right.IC_R7_Ext_Sup.Points,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R6R7,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisExternus.IntercostalisExternusR6R7,
   )= {};
   
-  SplineMuscle_CreateMuscle IC_Ext_R7R8 (
+  SplineMuscle_CreateMuscle IntercostalisExternusR7R8 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
   OriginSegment=....Segments.Right.R7Seg,
   ORIGIN_POINTS=....Data.unscaled.ModelParameters.R7.Right.IC_R7_Ext_Inf.Points,
   InsertionSegment=....Segments.Right.R8Seg,
   INSERTION_POINTS=....Data.unscaled.ModelParameters.R8.Right.IC_R8_Ext_Sup.Points,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R7R8,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisExternus.IntercostalisExternusR7R8,
   )= {};
   
-  SplineMuscle_CreateMuscle IC_Ext_R8R9 (
+  SplineMuscle_CreateMuscle IntercostalisExternusR8R9 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
   OriginSegment=....Segments.Right.R8Seg,
   ORIGIN_POINTS=....Data.unscaled.ModelParameters.R8.Right.IC_R8_Ext_Inf.Points,
   InsertionSegment=....Segments.Right.R9Seg,
   INSERTION_POINTS=....Data.unscaled.ModelParameters.R9.Right.IC_R9_Ext_Sup.Points,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R8R9,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisExternus.IntercostalisExternusR8R9,
   )= {};
   
-  SplineMuscle_CreateMuscle IC_Ext_R9R10 (
+  SplineMuscle_CreateMuscle IntercostalisExternusR9R10 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
   OriginSegment=....Segments.Right.R9Seg,
   ORIGIN_POINTS=....Data.unscaled.ModelParameters.R9.Right.IC_R9_Ext_Inf.Points,
   InsertionSegment=....Segments.Right.R10Seg,
   INSERTION_POINTS=....Data.unscaled.ModelParameters.R10.Right.IC_R10_Ext_Sup.Points,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R9R10,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisExternus.IntercostalisExternusR9R10,
   )= {};
   
-  SplineMuscle_CreateMuscle IC_Ext_R10R11 (
+  SplineMuscle_CreateMuscle IntercostalisExternusR10R11 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE),
   OriginSegment=....Segments.Right.R10Seg,
   ORIGIN_POINTS=....Data.unscaled.ModelParameters.R10.Right.IC_R10_Ext_Inf.Points,
   InsertionSegment=....Segments.Right.R11Seg,
   INSERTION_POINTS=....Data.unscaled.ModelParameters.R11.Right.IC_R11_Ext_Sup.Points,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R10R11,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisExternus.IntercostalisExternusR10R11,
   )= {};
   
-  SplineMuscle_CreateMuscle IC_Ext_R11R12 (
+  SplineMuscle_CreateMuscle IntercostalisExternusR11R12 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE-2),
   OriginSegment=....Segments.Right.R11Seg,
   ORIGIN_POINTS=....Data.unscaled.ModelParameters.R11.Right.IC_R11_Ext_Inf.Points,
   InsertionSegment=....Segments.Right.R12Seg,
   INSERTION_POINTS=....Data.unscaled.ModelParameters.R12.Right.IC_R12_Ext_Sup.Points,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R11R12,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisExternus.IntercostalisExternusR11R12,
   )= {};
 };
 
-MuscleGroup InterCostalisInternus(searchString="*.*") = {
+MuscleGroup IntercostalisInternus(searchString="*.*") = {
   
   
-  SplineMuscle_CreateMuscle IC_Int_R1R2 (
+  SplineMuscle_CreateMuscle IntercostalisInternusR1R2 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE),
   OriginSegment=....Segments.Right.R1Seg,
   ORIGIN_POINTS=....Data.unscaled.ModelParameters.R1.Right.IC_R1_Int_Inf.Points,
   InsertionSegment=....Segments.Right.R2Seg,
   INSERTION_POINTS=....Data.unscaled.ModelParameters.R2.Right.IC_R2_Int_Sup.Points,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisInternal.IC_Int_R1R2,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisInternus.IntercostalisInternusR1R2,
   )= {
     NumberOfElements = IC_MULTIPLIER*(IC_SIZE)+1;
     //The Last element is defined manually
     AnyMuscleViaPoint elem_sternum = {
-      AnyRefNode &Org = .....Segments.SternumSeg.Right_IC_Int_R1R2_elem_sternum;
-      AnyRefNode &Ins = .InsertionSegment.IC_Int_R1R2_elem_sternum;
+      AnyRefNode &Org = .....Segments.SternumSeg.Right_IntercostalisInternusR1R2_elem_sternum;
+      AnyRefNode &Ins = .InsertionSegment.IntercostalisInternusR1R2_elem_sternum;
       AnyMuscleModel MusMdl = {
         F0=..MuscleModel.F0/..NumberOfElements;
         Lf0=..MuscleModel.F0; 
@@ -779,18 +779,18 @@ MuscleGroup InterCostalisInternus(searchString="*.*") = {
   
   
   
-  SplineMuscle_CreateMuscle IC_Int_R2R3 (
+  SplineMuscle_CreateMuscle IntercostalisInternusR2R3 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
   OriginSegment=....Segments.Right.R2Seg,
   ORIGIN_POINTS=....Data.unscaled.ModelParameters.R2.Right.IC_R2_Int_Inf.Points,
   InsertionSegment=....Segments.Right.R3Seg,
   INSERTION_POINTS=....Data.unscaled.ModelParameters.R3.Right.IC_R3_Int_Sup.Points,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisInternal.IC_Int_R2R3,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisInternus.IntercostalisInternusR2R3,
   )= {
     NumberOfElements =  IC_MULTIPLIER*(IC_SIZE+1)+1;
     AnyMuscleViaPoint elem_sternum= {
-      AnyRefNode &Org = .....Segments.SternalBodySeg.Right_IC_Int_R2R3_elem_sternum;
-      AnyRefNode &Ins = .InsertionSegment.IC_Int_R2R3_elem_sternum;
+      AnyRefNode &Org = .....Segments.SternalBodySeg.Right_IntercostalisInternusR2R3_elem_sternum;
+      AnyRefNode &Ins = .InsertionSegment.IntercostalisInternusR2R3_elem_sternum;
       AnyMuscleModel MusMdl = {
         F0=..MuscleModel.F0/..NumberOfElements;
         Lf0=..MuscleModel.F0; 
@@ -802,18 +802,18 @@ MuscleGroup InterCostalisInternus(searchString="*.*") = {
     };    
   };
   
-  SplineMuscle_CreateMuscle IC_Int_R3R4 (
+  SplineMuscle_CreateMuscle IntercostalisInternusR3R4 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
   OriginSegment=....Segments.Right.R3Seg,
   ORIGIN_POINTS=....Data.unscaled.ModelParameters.R3.Right.IC_R3_Int_Inf.Points,
   InsertionSegment=....Segments.Right.R4Seg,
   INSERTION_POINTS=....Data.unscaled.ModelParameters.R4.Right.IC_R4_Int_Sup.Points,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisInternal.IC_Int_R3R4,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisInternus.IntercostalisInternusR3R4,
   )= {
     NumberOfElements =  IC_MULTIPLIER*(IC_SIZE+1)+1;
     AnyMuscleViaPoint elem_sternum= {
-      AnyRefNode &Org = .....Segments.SternalBodySeg.Right_IC_Int_R3R4_elem_sternum;
-      AnyRefNode &Ins = .InsertionSegment.IC_Int_R3R4_elem_sternum;
+      AnyRefNode &Org = .....Segments.SternalBodySeg.Right_IntercostalisInternusR3R4_elem_sternum;
+      AnyRefNode &Ins = .InsertionSegment.IntercostalisInternusR3R4_elem_sternum;
       AnyMuscleModel MusMdl = {
         F0=..MuscleModel.F0/..NumberOfElements;
         Lf0=..MuscleModel.F0; 
@@ -825,18 +825,18 @@ MuscleGroup InterCostalisInternus(searchString="*.*") = {
     };    
   };
   
-  SplineMuscle_CreateMuscle IC_Int_R4R5 (
+  SplineMuscle_CreateMuscle IntercostalisInternusR4R5 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
   OriginSegment=....Segments.Right.R4Seg,
   ORIGIN_POINTS=....Data.unscaled.ModelParameters.R4.Right.IC_R4_Int_Inf.Points,
   InsertionSegment=....Segments.Right.R5Seg,
   INSERTION_POINTS=....Data.unscaled.ModelParameters.R5.Right.IC_R5_Int_Sup.Points,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisInternal.IC_Int_R4R5,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisInternus.IntercostalisInternusR4R5,
   )= {
     NumberOfElements =  IC_MULTIPLIER*(IC_SIZE+1)+1;
     AnyMuscleViaPoint elem_sternum= {
-      AnyRefNode &Org = .....Segments.SternalBodySeg.Right_IC_Int_R4R5_elem_sternum;
-      AnyRefNode &Ins = .InsertionSegment.IC_Int_R4R5_elem_sternum;
+      AnyRefNode &Org = .....Segments.SternalBodySeg.Right_IntercostalisInternusR4R5_elem_sternum;
+      AnyRefNode &Ins = .InsertionSegment.IntercostalisInternusR4R5_elem_sternum;
       AnyMuscleModel MusMdl = {
         F0=..MuscleModel.F0/..NumberOfElements;
         Lf0=..MuscleModel.F0; 
@@ -848,18 +848,18 @@ MuscleGroup InterCostalisInternus(searchString="*.*") = {
     };    
   };
   
-  SplineMuscle_CreateMuscle IC_Int_R5R6 (
+  SplineMuscle_CreateMuscle IntercostalisInternusR5R6 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
   OriginSegment=....Segments.Right.R5Seg,
   ORIGIN_POINTS=....Data.unscaled.ModelParameters.R5.Right.IC_R5_Int_Inf.Points,
   InsertionSegment=....Segments.Right.R6Seg,
   INSERTION_POINTS=....Data.unscaled.ModelParameters.R6.Right.IC_R6_Int_Sup.Points,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisInternal.IC_Int_R5R6,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisInternus.IntercostalisInternusR5R6,
   )= {
     NumberOfElements =  IC_MULTIPLIER*(IC_SIZE+1)+1;
     AnyMuscleViaPoint elem_sternum= {
-      AnyRefNode &Org = .....Segments.SternalBodySeg.Right_IC_Int_R5R6_elem_sternum;
-      AnyRefNode &Ins = .InsertionSegment.IC_Int_R5R6_elem_sternum;
+      AnyRefNode &Org = .....Segments.SternalBodySeg.Right_IntercostalisInternusR5R6_elem_sternum;
+      AnyRefNode &Ins = .InsertionSegment.IntercostalisInternusR5R6_elem_sternum;
       AnyMuscleModel MusMdl = {
         F0=..MuscleModel.F0/..NumberOfElements;
         Lf0=..MuscleModel.F0; 
@@ -871,18 +871,18 @@ MuscleGroup InterCostalisInternus(searchString="*.*") = {
     };    
   };
   
-  SplineMuscle_CreateMuscle IC_Int_R6R7 (
+  SplineMuscle_CreateMuscle IntercostalisInternusR6R7 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
   OriginSegment=....Segments.Right.R6Seg,
   ORIGIN_POINTS=....Data.unscaled.ModelParameters.R6.Right.IC_R6_Int_Inf.Points,
   InsertionSegment=....Segments.Right.R7Seg,
   INSERTION_POINTS=....Data.unscaled.ModelParameters.R7.Right.IC_R7_Int_Sup.Points,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisInternal.IC_Int_R6R7,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisInternus.IntercostalisInternusR6R7,
   )= {
     NumberOfElements =  IC_MULTIPLIER*(IC_SIZE+1)+1;
     AnyMuscleViaPoint elem_sternum= {
-      AnyRefNode &Org = .....Segments.SternalBodySeg.Right_IC_Int_R6R7_elem_sternum;
-      AnyRefNode &Ins = .InsertionSegment.IC_Int_R6R7_elem_sternum;
+      AnyRefNode &Org = .....Segments.SternalBodySeg.Right_IntercostalisInternusR6R7_elem_sternum;
+      AnyRefNode &Ins = .InsertionSegment.IntercostalisInternusR6R7_elem_sternum;
       AnyMuscleModel MusMdl = {
         F0=..MuscleModel.F0/..NumberOfElements;
         Lf0=..MuscleModel.F0; 
@@ -894,22 +894,22 @@ MuscleGroup InterCostalisInternus(searchString="*.*") = {
     };    
   };
   
-  SplineMuscle_CreateMuscle IC_Int_R7R8 (
+  SplineMuscle_CreateMuscle IntercostalisInternusR7R8 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
   OriginSegment=....Segments.Right.R7Seg,
   ORIGIN_POINTS=....Data.unscaled.ModelParameters.R7.Right.IC_R7_Int_Inf.Points,
   InsertionSegment=....Segments.Right.R8Seg,
   INSERTION_POINTS=....Data.unscaled.ModelParameters.R8.Right.IC_R8_Int_Sup.Points,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisInternal.IC_Int_R7R8,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisInternus.IntercostalisInternusR7R8,
   )= {
     NumberOfElements =  IC_MULTIPLIER*(IC_SIZE+1)+1;
     AnyMuscleViaPoint elem_sternum= {
       #if BM_TRUNK_THORACIC_STERNUM_TOPOLOGY == 4
-      AnyRefNode &Org = .....Segments.Right.CostalCartilageSeg.Right_IC_Int_R7R8_elem_sternum;
+      AnyRefNode &Org = .....Segments.Right.CostalCartilageSeg.Right_IntercostalisInternusR7R8_elem_sternum;
       #else 
-      AnyRefNode &Org = .....Segments.SternalBodySeg.Right_IC_Int_R7R8_elem_sternum;
+      AnyRefNode &Org = .....Segments.SternalBodySeg.Right_IntercostalisInternusR7R8_elem_sternum;
       #endif
-      AnyRefNode &Ins = .InsertionSegment.IC_Int_R7R8_elem_sternum;
+      AnyRefNode &Ins = .InsertionSegment.IntercostalisInternusR7R8_elem_sternum;
       AnyMuscleModel MusMdl = {
         F0=..MuscleModel.F0/..NumberOfElements;
         Lf0=..MuscleModel.F0; 
@@ -921,22 +921,22 @@ MuscleGroup InterCostalisInternus(searchString="*.*") = {
     };
   };
   
-  SplineMuscle_CreateMuscle IC_Int_R8R9 (
+  SplineMuscle_CreateMuscle IntercostalisInternusR8R9 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
   OriginSegment=....Segments.Right.R8Seg,
   ORIGIN_POINTS=....Data.unscaled.ModelParameters.R8.Right.IC_R8_Int_Inf.Points,
   InsertionSegment=....Segments.Right.R9Seg,
   INSERTION_POINTS=....Data.unscaled.ModelParameters.R9.Right.IC_R9_Int_Sup.Points,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisInternal.IC_Int_R8R9,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisInternus.IntercostalisInternusR8R9,
   )= {
     NumberOfElements =  IC_MULTIPLIER*(IC_SIZE+1)+1;
     AnyMuscleViaPoint elem_sternum= {
       #if BM_TRUNK_THORACIC_STERNUM_TOPOLOGY == 4
-      AnyRefNode &Org = .....Segments.Right.CostalCartilageSeg.Right_IC_Int_R8R9_elem_sternum;
+      AnyRefNode &Org = .....Segments.Right.CostalCartilageSeg.Right_IntercostalisInternusR8R9_elem_sternum;
       #else
-      AnyRefNode &Org = .....Segments.SternalBodySeg.Right_IC_Int_R8R9_elem_sternum;
+      AnyRefNode &Org = .....Segments.SternalBodySeg.Right_IntercostalisInternusR8R9_elem_sternum;
       #endif
-      AnyRefNode &Ins = .InsertionSegment.IC_Int_R8R9_elem_sternum;
+      AnyRefNode &Ins = .InsertionSegment.IntercostalisInternusR8R9_elem_sternum;
       AnyMuscleModel MusMdl = {
         F0=..MuscleModel.F0/..NumberOfElements;
         Lf0=..MuscleModel.F0; 
@@ -946,22 +946,22 @@ MuscleGroup InterCostalisInternus(searchString="*.*") = {
     };    
   };
   
-  SplineMuscle_CreateMuscle IC_Int_R9R10 (
+  SplineMuscle_CreateMuscle IntercostalisInternusR9R10 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
   OriginSegment=....Segments.Right.R9Seg,
   ORIGIN_POINTS=....Data.unscaled.ModelParameters.R9.Right.IC_R9_Int_Inf.Points,
   InsertionSegment=....Segments.Right.R10Seg,
   INSERTION_POINTS=....Data.unscaled.ModelParameters.R10.Right.IC_R10_Int_Sup.Points,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisInternal.IC_Int_R9R10,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisInternus.IntercostalisInternusR9R10,
   )= {
     NumberOfElements =  IC_MULTIPLIER*(IC_SIZE+1)+1;
     AnyMuscleViaPoint elem_sternum= {
       #if BM_TRUNK_THORACIC_STERNUM_TOPOLOGY == 4
-      AnyRefNode &Org = .....Segments.Right.CostalCartilageSeg.Right_IC_Int_R9R10_elem_sternum;
+      AnyRefNode &Org = .....Segments.Right.CostalCartilageSeg.Right_IntercostalisInternusR9R10_elem_sternum;
       #else
-      AnyRefNode &Org = .....Segments.SternalBodySeg.Right_IC_Int_R9R10_elem_sternum;
+      AnyRefNode &Org = .....Segments.SternalBodySeg.Right_IntercostalisInternusR9R10_elem_sternum;
       #endif
-      AnyRefNode &Ins = .InsertionSegment.IC_Int_R9R10_elem_sternum;
+      AnyRefNode &Ins = .InsertionSegment.IntercostalisInternusR9R10_elem_sternum;
       AnyMuscleModel MusMdl = {
         F0=..MuscleModel.F0/..NumberOfElements;
         Lf0=..MuscleModel.F0; 
@@ -971,124 +971,124 @@ MuscleGroup InterCostalisInternus(searchString="*.*") = {
     };    
   };
   
-  SplineMuscle_CreateMuscle IC_Int_R10R11 (
+  SplineMuscle_CreateMuscle IntercostalisInternusR10R11 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE),
   OriginSegment=....Segments.Right.R10Seg,
   ORIGIN_POINTS=....Data.unscaled.ModelParameters.R10.Right.IC_R10_Int_Inf.Points,
   InsertionSegment=....Segments.Right.R11Seg,
   INSERTION_POINTS=....Data.unscaled.ModelParameters.R11.Right.IC_R11_Int_Sup.Points,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisInternal.IC_Int_R10R11,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisInternus.IntercostalisInternusR10R11,
   )= {};
   
-  SplineMuscle_CreateMuscle IC_Int_R11R12 (
+  SplineMuscle_CreateMuscle IntercostalisInternusR11R12 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE-1),
   OriginSegment=....Segments.Right.R11Seg,
   ORIGIN_POINTS=....Data.unscaled.ModelParameters.R11.Right.IC_R11_Int_Inf.Points,
   InsertionSegment=....Segments.Right.R12Seg,
   INSERTION_POINTS=....Data.unscaled.ModelParameters.R12.Right.IC_R12_Int_Sup.Points,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisInternal.IC_Int_R11R12,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisInternus.IntercostalisInternusR11R12,
   )= {};
 };
 
-MuscleGroup InterCostalisIntimus(searchString="*.*") = {
+MuscleGroup IntercostalisIntimus(searchString="*.*") = {
   
-  SplineMuscle_CreateMuscle IC_Inn_R1R2(
+  SplineMuscle_CreateMuscle IntercostalisIntimusR1R2(
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE),
   OriginSegment=....Segments.Right.R1Seg,
   ORIGIN_POINTS=....Data.unscaled.ModelParameters.R1.Right.IC_R1_Inn_Inf.Points,
   InsertionSegment=....Segments.Right.R2Seg,
   INSERTION_POINTS=....Data.unscaled.ModelParameters.R2.Right.IC_R2_Inn_Sup.Points,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R1R2,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisIntimus.IntercostalisIntimusR1R2,
   )= {};
   
-  SplineMuscle_CreateMuscle IC_Inn_R2R3 (
+  SplineMuscle_CreateMuscle IntercostalisIntimusR2R3 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
   OriginSegment=....Segments.Right.R2Seg,
   ORIGIN_POINTS=....Data.unscaled.ModelParameters.R2.Right.IC_R2_Inn_Inf.Points,
   InsertionSegment=....Segments.Right.R5Seg,
   INSERTION_POINTS=....Data.unscaled.ModelParameters.R3.Right.IC_R3_Inn_Sup.Points,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R2R3,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisIntimus.IntercostalisIntimusR2R3,
   )= {};
   
-  SplineMuscle_CreateMuscle IC_Inn_R3R4 (
+  SplineMuscle_CreateMuscle IntercostalisIntimusR3R4 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
   OriginSegment=....Segments.Right.R3Seg,
   ORIGIN_POINTS=....Data.unscaled.ModelParameters.R3.Right.IC_R3_Inn_Inf.Points,
   InsertionSegment=....Segments.Right.R4Seg,
   INSERTION_POINTS=....Data.unscaled.ModelParameters.R4.Right.IC_R4_Inn_Sup.Points,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R3R4,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisIntimus.IntercostalisIntimusR3R4,
   )= {};
   
-  SplineMuscle_CreateMuscle IC_Inn_R4R5 (
+  SplineMuscle_CreateMuscle IntercostalisIntimusR4R5 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
   OriginSegment=....Segments.Right.R4Seg,
   ORIGIN_POINTS=....Data.unscaled.ModelParameters.R4.Right.IC_R4_Inn_Inf.Points,
   InsertionSegment=....Segments.Right.R5Seg,
   INSERTION_POINTS=....Data.unscaled.ModelParameters.R5.Right.IC_R5_Inn_Sup.Points,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R4R5,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisIntimus.IntercostalisIntimusR4R5,
   )= {};
   
-  SplineMuscle_CreateMuscle IC_Inn_R5R6 (
+  SplineMuscle_CreateMuscle IntercostalisIntimusR5R6 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
   OriginSegment=....Segments.Right.R5Seg,
   ORIGIN_POINTS=....Data.unscaled.ModelParameters.R5.Right.IC_R5_Inn_Inf.Points,
   InsertionSegment=....Segments.Right.R6Seg,
   INSERTION_POINTS=....Data.unscaled.ModelParameters.R6.Right.IC_R6_Inn_Sup.Points,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R5R6,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisIntimus.IntercostalisIntimusR5R6,
   )= {};
   
-  SplineMuscle_CreateMuscle IC_Inn_R6R7 (
+  SplineMuscle_CreateMuscle IntercostalisIntimusR6R7 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
   OriginSegment=....Segments.Right.R6Seg,
   ORIGIN_POINTS=....Data.unscaled.ModelParameters.R6.Right.IC_R6_Inn_Inf.Points,
   InsertionSegment=....Segments.Right.R7Seg,
   INSERTION_POINTS=....Data.unscaled.ModelParameters.R7.Right.IC_R7_Inn_Sup.Points,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R6R7,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisIntimus.IntercostalisIntimusR6R7,
   )= {};
   
-  SplineMuscle_CreateMuscle IC_Inn_R7R8 (
+  SplineMuscle_CreateMuscle IntercostalisIntimusR7R8 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
   OriginSegment=....Segments.Right.R7Seg,
   ORIGIN_POINTS=....Data.unscaled.ModelParameters.R7.Right.IC_R7_Inn_Inf.Points,
   InsertionSegment=....Segments.Right.R8Seg,
   INSERTION_POINTS=....Data.unscaled.ModelParameters.R8.Right.IC_R8_Inn_Sup.Points,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R7R8,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisIntimus.IntercostalisIntimusR7R8,
   )= {};
   
-  SplineMuscle_CreateMuscle IC_Inn_R8R9 (
+  SplineMuscle_CreateMuscle IntercostalisIntimusR8R9 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
   OriginSegment=....Segments.Right.R8Seg,
   ORIGIN_POINTS=....Data.unscaled.ModelParameters.R8.Right.IC_R8_Inn_Inf.Points,
   InsertionSegment=....Segments.Right.R9Seg,
   INSERTION_POINTS=....Data.unscaled.ModelParameters.R9.Right.IC_R9_Inn_Sup.Points,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R8R9,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisIntimus.IntercostalisIntimusR8R9,
   )= {};
   
-  SplineMuscle_CreateMuscle IC_Inn_R9R10 (
+  SplineMuscle_CreateMuscle IntercostalisIntimusR9R10 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
   OriginSegment=....Segments.Right.R9Seg,
   ORIGIN_POINTS=....Data.unscaled.ModelParameters.R9.Right.IC_R9_Inn_Inf.Points,
   InsertionSegment=....Segments.Right.R10Seg,
   INSERTION_POINTS=....Data.unscaled.ModelParameters.R10.Right.IC_R10_Inn_Sup.Points,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R9R10,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisIntimus.IntercostalisIntimusR9R10,
   )= {};
   
-  SplineMuscle_CreateMuscle IC_Inn_R10R11 (
+  SplineMuscle_CreateMuscle IntercostalisIntimusR10R11 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE),
   OriginSegment=....Segments.Right.R10Seg,
   ORIGIN_POINTS=....Data.unscaled.ModelParameters.R10.Right.IC_R10_Inn_Inf.Points,
   InsertionSegment=....Segments.Right.R11Seg,
   INSERTION_POINTS=....Data.unscaled.ModelParameters.R11.Right.IC_R11_Inn_Sup.Points,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R10R11,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisIntimus.IntercostalisIntimusR10R11,
   )= {};
   
-  SplineMuscle_CreateMuscle IC_Inn_R11R12 (
+  SplineMuscle_CreateMuscle IntercostalisIntimusR11R12 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE-2),
   OriginSegment=....Segments.Right.R11Seg,
   ORIGIN_POINTS=....Data.unscaled.ModelParameters.R11.Right.IC_R11_Inn_Inf.Points,
   InsertionSegment=....Segments.Right.R12Seg,
   INSERTION_POINTS=....Data.unscaled.ModelParameters.R12.Right.IC_R12_Inn_Sup.Points,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R11R12,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisIntimus.IntercostalisIntimusR11R12,
   )= {};
   
 };
@@ -1098,129 +1098,130 @@ MuscleGroup InterCostalisIntimus(searchString="*.*") = {
 #if IC_TYPE != OLD  
 //  #if IC_TYPE== MULTI_OFFSET
 
-MuscleGroup InterCostalisExternus(searchString="*.*") = {
+MuscleGroup IntercostalisExternus(searchString="*.*") = {
 
-  SplineMuscle_CreateMuscleMultiOffset IC_Ext_R1R2 (
+  SplineMuscle_CreateMuscleMultiOffset IntercostalisExternusR1R2 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
   OriginSegment=....Segments.Right.R1Seg,
   ORIGIN_POINTS=....Segments.Right.R1Seg.IC_points.Ext_InfPoints,
   InsertionSegment=....Segments.Right.R2Seg,
   INSERTION_POINTS=....Segments.Right.R2Seg.IC_points.Ext_SupPoints,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R1R2,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisExternus.IntercostalisExternusR1R2,
   )= {DesiredAngle=45;};
   
-  SplineMuscle_CreateMuscleMultiOffset IC_Ext_R2R3 (
+  SplineMuscle_CreateMuscleMultiOffset IntercostalisExternusR2R3 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
   OriginSegment=....Segments.Right.R2Seg,
   ORIGIN_POINTS=....Segments.Right.R2Seg.IC_points.Ext_InfPoints,
   InsertionSegment=....Segments.Right.R3Seg,
   INSERTION_POINTS=....Segments.Right.R3Seg.IC_points.Ext_SupPoints,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R2R3,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisExternus.IntercostalisExternusR2R3,
   )= {DesiredAngle=45;};
   
   
-  SplineMuscle_CreateMuscleMultiOffset IC_Ext_R3R4 (
+  SplineMuscle_CreateMuscleMultiOffset IntercostalisExternusR3R4 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
   OriginSegment=....Segments.Right.R3Seg,
   ORIGIN_POINTS=....Segments.Right.R3Seg.IC_points.Ext_InfPoints,
   InsertionSegment=....Segments.Right.R4Seg,
   INSERTION_POINTS=....Segments.Right.R4Seg.IC_points.Ext_SupPoints,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R3R4,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisExternus.IntercostalisExternusR3R4,
   )= {DesiredAngle=45;};
   
-  SplineMuscle_CreateMuscleMultiOffset IC_Ext_R4R5 (
+  SplineMuscle_CreateMuscleMultiOffset IntercostalisExternusR4R5 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
   OriginSegment=....Segments.Right.R4Seg,
   ORIGIN_POINTS=....Segments.Right.R4Seg.IC_points.Ext_InfPoints,
   InsertionSegment=....Segments.Right.R5Seg,
   INSERTION_POINTS=....Segments.Right.R5Seg.IC_points.Ext_SupPoints,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R4R5,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisExternus.IntercostalisExternusR4R5,
   )= {DesiredAngle=45;};
   
   
-  SplineMuscle_CreateMuscleMultiOffset IC_Ext_R5R6 (
+  SplineMuscle_CreateMuscleMultiOffset IntercostalisExternusR5R6 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
   OriginSegment=....Segments.Right.R5Seg,
   ORIGIN_POINTS=....Segments.Right.R5Seg.IC_points.Ext_InfPoints,
   InsertionSegment=....Segments.Right.R6Seg,
   INSERTION_POINTS=....Segments.Right.R6Seg.IC_points.Ext_SupPoints,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R5R6,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisExternus.IntercostalisExternusR5R6,
   )= {DesiredAngle=45;};
   
   
-  SplineMuscle_CreateMuscleMultiOffset IC_Ext_R6R7 (
+  SplineMuscle_CreateMuscleMultiOffset IntercostalisExternusR6R7 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
   OriginSegment=....Segments.Right.R6Seg,
   ORIGIN_POINTS=....Segments.Right.R6Seg.IC_points.Ext_InfPoints,
   InsertionSegment=....Segments.Right.R7Seg,
   INSERTION_POINTS=....Segments.Right.R7Seg.IC_points.Ext_SupPoints,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R6R7,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisExternus.IntercostalisExternusR6R7,
   )= {DesiredAngle=45;};
   
-  SplineMuscle_CreateMuscleMultiOffset IC_Ext_R7R8 (
+  SplineMuscle_CreateMuscleMultiOffset IntercostalisExternusR7R8 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
   OriginSegment=....Segments.Right.R7Seg,
   ORIGIN_POINTS=....Segments.Right.R7Seg.IC_points.Ext_InfPoints,
   InsertionSegment=....Segments.Right.R8Seg,
   INSERTION_POINTS=....Segments.Right.R8Seg.IC_points.Ext_SupPoints,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R7R8,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisExternus.IntercostalisExternusR7R8,
   )= {DesiredAngle=45;};
   
   
-  SplineMuscle_CreateMuscleMultiOffset IC_Ext_R8R9 (
+  SplineMuscle_CreateMuscleMultiOffset IntercostalisExternusR8R9 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
   OriginSegment=....Segments.Right.R8Seg,
   ORIGIN_POINTS=....Segments.Right.R8Seg.IC_points.Ext_InfPoints,
   InsertionSegment=....Segments.Right.R9Seg,
   INSERTION_POINTS=....Segments.Right.R9Seg.IC_points.Ext_SupPoints,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R8R9,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisExternus.IntercostalisExternusR8R9,
   )= {DesiredAngle=45;};
-  SplineMuscle_CreateMuscleMultiOffset IC_Ext_R9R10 (
+
+  SplineMuscle_CreateMuscleMultiOffset IntercostalisExternusR9R10 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
   OriginSegment=....Segments.Right.R9Seg,
   ORIGIN_POINTS=....Segments.Right.R9Seg.IC_points.Ext_InfPoints,
   InsertionSegment=....Segments.Right.R10Seg,
   INSERTION_POINTS=....Segments.Right.R10Seg.IC_points.Ext_SupPoints,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R9R10,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisExternus.IntercostalisExternusR9R10,
   )= {DesiredAngle=45;};
   
   
-  SplineMuscle_CreateMuscleMultiOffset IC_Ext_R10R11 (
+  SplineMuscle_CreateMuscleMultiOffset IntercostalisExternusR10R11 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE),
   OriginSegment=....Segments.Right.R10Seg,
   ORIGIN_POINTS=....Segments.Right.R10Seg.IC_points.Ext_InfPoints,
   InsertionSegment=....Segments.Right.R11Seg,
   INSERTION_POINTS=....Segments.Right.R11Seg.IC_points.Ext_SupPoints,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R10R11,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisExternus.IntercostalisExternusR10R11,
   )= {DesiredAngle=45;};
   
   
-  SplineMuscle_CreateMuscleMultiOffset IC_Ext_R11R12 (
+  SplineMuscle_CreateMuscleMultiOffset IntercostalisExternusR11R12 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE-4),
   OriginSegment=....Segments.Right.R11Seg,
   ORIGIN_POINTS=....Segments.Right.R11Seg.IC_points.Ext_InfPoints,
   InsertionSegment=....Segments.Right.R12Seg,
   INSERTION_POINTS=....Segments.Right.R12Seg.IC_points.Ext_SupPoints,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R11R12,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisExternus.IntercostalisExternusR11R12,
   )= {DesiredAngle=45;};
 };
 
-MuscleGroup InterCostalisInternus(searchString="*.*") = {
+MuscleGroup IntercostalisInternus(searchString="*.*") = {
   
-  SplineMuscle_CreateMuscleMultiOffset IC_Int_R1R2 (
+  SplineMuscle_CreateMuscleMultiOffset IntercostalisInternusR1R2 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1-3),
   OriginSegment=....Segments.Right.R1Seg,
   ORIGIN_POINTS=....Segments.Right.R1Seg.IC_points.Int_InfPoints,
   InsertionSegment=....Segments.Right.R2Seg,
   INSERTION_POINTS=....Segments.Right.R2Seg.IC_points.Int_SupPoints,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R1R2,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisInternus.IntercostalisInternusR1R2,
   )= {
     DesiredAngle =-45;
     NumberOfElements = IC_MULTIPLIER*(IC_SIZE+1-3);
     //The Last element is defined manually
     AnyMuscleViaPoint elem_sternum = {
-      AnyRefNode &Org = .....Segments.SternumSeg.Right_IC_Int_R1R2_elem_sternum;
-      AnyRefNode &Ins = .InsertionSegment.IC_Int_R1R2_elem_sternum;
+      AnyRefNode &Org = .....Segments.SternumSeg.Right_IntercostalisInternusR1R2_elem_sternum;
+      AnyRefNode &Ins = .InsertionSegment.IntercostalisInternusR1R2_elem_sternum;
       AnyMuscleModel MusMdl = {
         F0=..MuscleModel.F0/..NumberOfElements;
         Lf0=..MuscleModel.F0; 
@@ -1231,19 +1232,19 @@ MuscleGroup InterCostalisInternus(searchString="*.*") = {
     };
   };
   
-  SplineMuscle_CreateMuscleMultiOffset IC_Int_R2R3 (
+  SplineMuscle_CreateMuscleMultiOffset IntercostalisInternusR2R3 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
   OriginSegment=....Segments.Right.R2Seg,
   ORIGIN_POINTS=....Segments.Right.R2Seg.IC_points.Int_InfPoints,
   InsertionSegment=....Segments.Right.R3Seg,
   INSERTION_POINTS=....Segments.Right.R3Seg.IC_points.Int_SupPoints,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R2R3,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisInternus.IntercostalisInternusR2R3,
   )= {
     DesiredAngle=-45;
     NumberOfElements =  IC_MULTIPLIER*(IC_SIZE+1);
     AnyMuscleViaPoint elem_sternum= {
-      AnyRefNode &Org = .....Segments.SternalBodySeg.Right_IC_Int_R2R3_elem_sternum;
-      AnyRefNode &Ins = .InsertionSegment.IC_Int_R2R3_elem_sternum;
+      AnyRefNode &Org = .....Segments.SternalBodySeg.Right_IntercostalisInternusR2R3_elem_sternum;
+      AnyRefNode &Ins = .InsertionSegment.IntercostalisInternusR2R3_elem_sternum;
       AnyMuscleModel MusMdl = {
         F0 = ..MuscleModel.F0/..NumberOfElements;
         Lf0 = ..MuscleModel.F0;
@@ -1254,19 +1255,19 @@ MuscleGroup InterCostalisInternus(searchString="*.*") = {
     };    
   };
   
-  SplineMuscle_CreateMuscleMultiOffset IC_Int_R3R4 (
+  SplineMuscle_CreateMuscleMultiOffset IntercostalisInternusR3R4 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
   OriginSegment=....Segments.Right.R3Seg,
   ORIGIN_POINTS=....Segments.Right.R3Seg.IC_points.Int_InfPoints,
   InsertionSegment=....Segments.Right.R4Seg,
   INSERTION_POINTS=....Segments.Right.R4Seg.IC_points.Int_SupPoints,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R3R4,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisInternus.IntercostalisInternusR3R4,
   )= { 
     DesiredAngle=-45;
     NumberOfElements =  IC_MULTIPLIER*(IC_SIZE+1);
     AnyMuscleViaPoint elem_sternum= {
-      AnyRefNode &Org = .....Segments.SternalBodySeg.Right_IC_Int_R3R4_elem_sternum;
-      AnyRefNode &Ins = .InsertionSegment.IC_Int_R3R4_elem_sternum;
+      AnyRefNode &Org = .....Segments.SternalBodySeg.Right_IntercostalisInternusR3R4_elem_sternum;
+      AnyRefNode &Ins = .InsertionSegment.IntercostalisInternusR3R4_elem_sternum;
       AnyMuscleModel MusMdl = {
         F0 = ..MuscleModel.F0/..NumberOfElements;
         Lf0 = ..MuscleModel.F0;
@@ -1277,19 +1278,19 @@ MuscleGroup InterCostalisInternus(searchString="*.*") = {
     };    
   };
   
-  SplineMuscle_CreateMuscleMultiOffset IC_Int_R4R5 (
+  SplineMuscle_CreateMuscleMultiOffset IntercostalisInternusR4R5 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
   OriginSegment=....Segments.Right.R4Seg,
   ORIGIN_POINTS=....Segments.Right.R4Seg.IC_points.Int_InfPoints,
   InsertionSegment=....Segments.Right.R5Seg,
   INSERTION_POINTS=....Segments.Right.R5Seg.IC_points.Int_SupPoints,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R4R5,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisInternus.IntercostalisInternusR4R5,
   )= {
     DesiredAngle=-45;
     NumberOfElements =  IC_MULTIPLIER*(IC_SIZE+1);
     AnyMuscleViaPoint elem_sternum= {
-      AnyRefNode &Org = .....Segments.SternalBodySeg.Right_IC_Int_R4R5_elem_sternum;
-      AnyRefNode &Ins = .InsertionSegment.IC_Int_R4R5_elem_sternum;
+      AnyRefNode &Org = .....Segments.SternalBodySeg.Right_IntercostalisInternusR4R5_elem_sternum;
+      AnyRefNode &Ins = .InsertionSegment.IntercostalisInternusR4R5_elem_sternum;
       AnyMuscleModel MusMdl = {
         F0 = ..MuscleModel.F0/..NumberOfElements;
         Lf0 = ..MuscleModel.F0;
@@ -1300,19 +1301,19 @@ MuscleGroup InterCostalisInternus(searchString="*.*") = {
     };  
   };
 
-  SplineMuscle_CreateMuscleMultiOffset IC_Int_R5R6 (
+  SplineMuscle_CreateMuscleMultiOffset IntercostalisInternusR5R6 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
   OriginSegment=....Segments.Right.R5Seg,
   ORIGIN_POINTS=....Segments.Right.R5Seg.IC_points.Int_InfPoints,
   InsertionSegment=....Segments.Right.R6Seg,
   INSERTION_POINTS=....Segments.Right.R6Seg.IC_points.Int_SupPoints,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R5R6,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisInternus.IntercostalisInternusR5R6,
   )= {
     DesiredAngle=-45;
     NumberOfElements =  IC_MULTIPLIER*(IC_SIZE+1);
     AnyMuscleViaPoint elem_sternum= {
-      AnyRefNode &Org = .....Segments.SternalBodySeg.Right_IC_Int_R5R6_elem_sternum;
-      AnyRefNode &Ins = .InsertionSegment.IC_Int_R5R6_elem_sternum;
+      AnyRefNode &Org = .....Segments.SternalBodySeg.Right_IntercostalisInternusR5R6_elem_sternum;
+      AnyRefNode &Ins = .InsertionSegment.IntercostalisInternusR5R6_elem_sternum;
       AnyMuscleModel MusMdl = {
         F0 = ..MuscleModel.F0/..NumberOfElements;
         Lf0 = ..MuscleModel.F0;
@@ -1323,19 +1324,19 @@ MuscleGroup InterCostalisInternus(searchString="*.*") = {
     };      
   };
 
-  SplineMuscle_CreateMuscleMultiOffset IC_Int_R6R7 (
+  SplineMuscle_CreateMuscleMultiOffset IntercostalisInternusR6R7 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
   OriginSegment=....Segments.Right.R6Seg,
   ORIGIN_POINTS=....Segments.Right.R6Seg.IC_points.Int_InfPoints,
   InsertionSegment=....Segments.Right.R7Seg,
   INSERTION_POINTS=....Segments.Right.R7Seg.IC_points.Int_SupPoints,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R6R7,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisInternus.IntercostalisInternusR6R7,
   )= {
     DesiredAngle=-45;
     NumberOfElements =  IC_MULTIPLIER*(IC_SIZE+1);
     AnyMuscleViaPoint elem_sternum= {
-      AnyRefNode &Org = .....Segments.SternalBodySeg.Right_IC_Int_R6R7_elem_sternum;
-      AnyRefNode &Ins = .InsertionSegment.IC_Int_R6R7_elem_sternum;
+      AnyRefNode &Org = .....Segments.SternalBodySeg.Right_IntercostalisInternusR6R7_elem_sternum;
+      AnyRefNode &Ins = .InsertionSegment.IntercostalisInternusR6R7_elem_sternum;
       AnyMuscleModel MusMdl = {
         F0 = ..MuscleModel.F0/..NumberOfElements;
         Lf0 = ..MuscleModel.F0;
@@ -1347,23 +1348,23 @@ MuscleGroup InterCostalisInternus(searchString="*.*") = {
     };    
   };
   
-  SplineMuscle_CreateMuscleMultiOffset IC_Int_R7R8 (
+  SplineMuscle_CreateMuscleMultiOffset IntercostalisInternusR7R8 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
   OriginSegment=....Segments.Right.R7Seg,
   ORIGIN_POINTS=....Segments.Right.R7Seg.IC_points.Int_InfPoints,
   InsertionSegment=....Segments.Right.R8Seg,
   INSERTION_POINTS=....Segments.Right.R8Seg.IC_points.Int_SupPoints,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R7R8,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisInternus.IntercostalisInternusR7R8,
   )= {
     DesiredAngle=-45;
     NumberOfElements =  IC_MULTIPLIER*(IC_SIZE+1);
     AnyMuscleViaPoint elem_sternum= {
       #if BM_TRUNK_THORACIC_STERNUM_TOPOLOGY == 4
-      AnyRefNode &Org = .....Segments.Right.CostalCartilageSeg.Right_IC_Int_R7R8_elem_sternum;
+      AnyRefNode &Org = .....Segments.Right.CostalCartilageSeg.Right_IntercostalisInternusR7R8_elem_sternum;
       #else 
-      AnyRefNode &Org = .....Segments.SternalBodySeg.Right_IC_Int_R7R8_elem_sternum;
+      AnyRefNode &Org = .....Segments.SternalBodySeg.Right_IntercostalisInternusR7R8_elem_sternum;
       #endif
-      AnyRefNode &Ins = .InsertionSegment.IC_Int_R7R8_elem_sternum;
+      AnyRefNode &Ins = .InsertionSegment.IntercostalisInternusR7R8_elem_sternum;
       AnyMuscleModel MusMdl = {
         F0 = ..MuscleModel.F0/..NumberOfElements;
         Lf0 = ..MuscleModel.F0;
@@ -1376,23 +1377,23 @@ MuscleGroup InterCostalisInternus(searchString="*.*") = {
   };
   
   
-  SplineMuscle_CreateMuscleMultiOffset IC_Int_R8R9 (
+  SplineMuscle_CreateMuscleMultiOffset IntercostalisInternusR8R9 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
   OriginSegment=....Segments.Right.R8Seg,
   ORIGIN_POINTS=....Segments.Right.R8Seg.IC_points.Int_InfPoints,
   InsertionSegment=....Segments.Right.R9Seg,
   INSERTION_POINTS=....Segments.Right.R9Seg.IC_points.Int_SupPoints,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R8R9,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisInternus.IntercostalisInternusR8R9,
   )= {
     DesiredAngle=-45;
     NumberOfElements =  IC_MULTIPLIER*(IC_SIZE+1);
     AnyMuscleViaPoint elem_sternum= {
       #if BM_TRUNK_THORACIC_STERNUM_TOPOLOGY == 4
-      AnyRefNode &Org = .....Segments.Right.CostalCartilageSeg.Right_IC_Int_R8R9_elem_sternum;
+      AnyRefNode &Org = .....Segments.Right.CostalCartilageSeg.Right_IntercostalisInternusR8R9_elem_sternum;
       #else
-      AnyRefNode &Org = .....Segments.SternalBodySeg.Right_IC_Int_R8R9_elem_sternum;
+      AnyRefNode &Org = .....Segments.SternalBodySeg.Right_IntercostalisInternusR8R9_elem_sternum;
       #endif
-      AnyRefNode &Ins = .InsertionSegment.IC_Int_R8R9_elem_sternum;
+      AnyRefNode &Ins = .InsertionSegment.IntercostalisInternusR8R9_elem_sternum;
       AnyMuscleModel MusMdl = {
         F0 = ..MuscleModel.F0/..NumberOfElements;
         Lf0 = ..MuscleModel.F0;
@@ -1402,23 +1403,23 @@ MuscleGroup InterCostalisInternus(searchString="*.*") = {
     }; 
   };
   
-  SplineMuscle_CreateMuscleMultiOffset IC_Int_R9R10 (
+  SplineMuscle_CreateMuscleMultiOffset IntercostalisInternusR9R10 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+1),
   OriginSegment=....Segments.Right.R9Seg,
   ORIGIN_POINTS=....Segments.Right.R9Seg.IC_points.Int_InfPoints,
   InsertionSegment=....Segments.Right.R10Seg,
   INSERTION_POINTS=....Segments.Right.R10Seg.IC_points.Int_SupPoints,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R9R10,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisInternus.IntercostalisInternusR9R10,
   )= {
     DesiredAngle=-45;
     NumberOfElements =  IC_MULTIPLIER*(IC_SIZE+1);
     AnyMuscleViaPoint elem_sternum= {
       #if BM_TRUNK_THORACIC_STERNUM_TOPOLOGY == 4
-      AnyRefNode &Org = .....Segments.Right.CostalCartilageSeg.Right_IC_Int_R9R10_elem_sternum;
+      AnyRefNode &Org = .....Segments.Right.CostalCartilageSeg.Right_IntercostalisInternusR9R10_elem_sternum;
       #else
-      AnyRefNode &Org = .....Segments.SternalBodySeg.Right_IC_Int_R9R10_elem_sternum;
+      AnyRefNode &Org = .....Segments.SternalBodySeg.Right_IntercostalisInternusR9R10_elem_sternum;
       #endif
-      AnyRefNode &Ins = .InsertionSegment.IC_Int_R9R10_elem_sternum;
+      AnyRefNode &Ins = .InsertionSegment.IntercostalisInternusR9R10_elem_sternum;
       AnyMuscleModel MusMdl = {
         F0 = ..MuscleModel.F0/..NumberOfElements;
         Lf0 = ..MuscleModel.F0;
@@ -1429,130 +1430,130 @@ MuscleGroup InterCostalisInternus(searchString="*.*") = {
   };
   
   
-  SplineMuscle_CreateMuscleMultiOffset IC_Int_R10R11 (
+  SplineMuscle_CreateMuscleMultiOffset IntercostalisInternusR10R11 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE),
   OriginSegment=....Segments.Right.R10Seg,
   ORIGIN_POINTS=....Segments.Right.R10Seg.IC_points.Int_InfPoints,
   InsertionSegment=....Segments.Right.R11Seg,
   INSERTION_POINTS=....Segments.Right.R11Seg.IC_points.Int_SupPoints,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R10R11,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisInternus.IntercostalisInternusR10R11,
   )= {DesiredAngle=-45;};
   
   
-  SplineMuscle_CreateMuscleMultiOffset IC_Int_R11R12 (
+  SplineMuscle_CreateMuscleMultiOffset IntercostalisInternusR11R12 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE-4),
   OriginSegment=....Segments.Right.R11Seg,
   ORIGIN_POINTS=....Segments.Right.R11Seg.IC_points.Int_InfPoints,
   InsertionSegment=....Segments.Right.R12Seg,
   INSERTION_POINTS=....Segments.Right.R12Seg.IC_points.Int_SupPoints,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R11R12,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisInternus.IntercostalisInternusR11R12,
   )= {DesiredAngle=-45;};
 };
 
-MuscleGroup InterCostalisIntimus(searchString="*.*") = {
+MuscleGroup IntercostalisIntimus(searchString="*.*") = {
 
-  SplineMuscle_CreateMuscleMultiOffset IC_Inn_R1R2 (
+  SplineMuscle_CreateMuscleMultiOffset IntercostalisIntimusR1R2 (
   CREATE_ELEMENTS= IC_MULTIPLIER*IC_SIZE,
   OriginSegment=....Segments.Right.R1Seg,
   ORIGIN_POINTS=....Segments.Right.R1Seg.IC_points.Inn_InfPoints,
   InsertionSegment=....Segments.Right.R2Seg,
   INSERTION_POINTS=....Segments.Right.R2Seg.IC_points.Inn_SupPoints,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R1R2,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisIntimus.IntercostalisIntimusR1R2,
   )= {DesiredAngle = 0;};
   
-  SplineMuscle_CreateMuscleMultiOffset IC_Inn_R2R3 (
+  SplineMuscle_CreateMuscleMultiOffset IntercostalisIntimusR2R3 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+3),
   OriginSegment=....Segments.Right.R2Seg,
   ORIGIN_POINTS=....Segments.Right.R2Seg.IC_points.Inn_InfPoints,
   InsertionSegment=....Segments.Right.R3Seg,
   INSERTION_POINTS=....Segments.Right.R3Seg.IC_points.Inn_SupPoints,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R2R3,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisIntimus.IntercostalisIntimusR2R3,
   )= {DesiredAngle = 0;};
   
   
-  SplineMuscle_CreateMuscleMultiOffset IC_Inn_R3R4 (
+  SplineMuscle_CreateMuscleMultiOffset IntercostalisIntimusR3R4 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+3),
   OriginSegment=....Segments.Right.R3Seg,
   ORIGIN_POINTS=....Segments.Right.R3Seg.IC_points.Inn_InfPoints,
   InsertionSegment=....Segments.Right.R4Seg,
   INSERTION_POINTS=....Segments.Right.R4Seg.IC_points.Inn_SupPoints,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R3R4,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisIntimus.IntercostalisIntimusR3R4,
   )= {DesiredAngle = 0;};
   
-  SplineMuscle_CreateMuscleMultiOffset IC_Inn_R4R5 (
+  SplineMuscle_CreateMuscleMultiOffset IntercostalisIntimusR4R5 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+3),
   OriginSegment=....Segments.Right.R4Seg,
   ORIGIN_POINTS=....Segments.Right.R4Seg.IC_points.Inn_InfPoints,
   InsertionSegment=....Segments.Right.R5Seg,
   INSERTION_POINTS=....Segments.Right.R5Seg.IC_points.Inn_SupPoints,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R4R5,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisIntimus.IntercostalisIntimusR4R5,
   )= {DesiredAngle = 0;};
   
   
-  SplineMuscle_CreateMuscleMultiOffset IC_Inn_R5R6 (
+  SplineMuscle_CreateMuscleMultiOffset IntercostalisIntimusR5R6 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+3),
   OriginSegment=....Segments.Right.R5Seg,
   ORIGIN_POINTS=....Segments.Right.R5Seg.IC_points.Inn_InfPoints,
   InsertionSegment=....Segments.Right.R6Seg,
   INSERTION_POINTS=....Segments.Right.R6Seg.IC_points.Inn_SupPoints,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R5R6,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisIntimus.IntercostalisIntimusR5R6,
   )= {DesiredAngle = 0;};
   
   
-  SplineMuscle_CreateMuscleMultiOffset IC_Inn_R6R7 (
+  SplineMuscle_CreateMuscleMultiOffset IntercostalisIntimusR6R7 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+3),
   OriginSegment=....Segments.Right.R6Seg,
   ORIGIN_POINTS=....Segments.Right.R6Seg.IC_points.Inn_InfPoints,
   InsertionSegment=....Segments.Right.R7Seg,
   INSERTION_POINTS=....Segments.Right.R7Seg.IC_points.Inn_SupPoints,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R6R7,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisIntimus.IntercostalisIntimusR6R7,
   )= {DesiredAngle = 0;};
   
-  SplineMuscle_CreateMuscleMultiOffset IC_Inn_R7R8 (
+  SplineMuscle_CreateMuscleMultiOffset IntercostalisIntimusR7R8 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+3),
   OriginSegment=....Segments.Right.R7Seg,
   ORIGIN_POINTS=....Segments.Right.R7Seg.IC_points.Inn_InfPoints,
   InsertionSegment=....Segments.Right.R8Seg,
   INSERTION_POINTS=....Segments.Right.R8Seg.IC_points.Inn_SupPoints,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R7R8,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisIntimus.IntercostalisIntimusR7R8,
   )= {DesiredAngle = 0;};
   
   
-  SplineMuscle_CreateMuscleMultiOffset IC_Inn_R8R9 (
+  SplineMuscle_CreateMuscleMultiOffset IntercostalisIntimusR8R9 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+3),
   OriginSegment=....Segments.Right.R8Seg,
   ORIGIN_POINTS=....Segments.Right.R8Seg.IC_points.Inn_InfPoints,
   InsertionSegment=....Segments.Right.R9Seg,
   INSERTION_POINTS=....Segments.Right.R9Seg.IC_points.Inn_SupPoints,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R8R9,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisIntimus.IntercostalisIntimusR8R9,
   )= {DesiredAngle = 0;};
   
-  SplineMuscle_CreateMuscleMultiOffset IC_Inn_R9R10 (
+  SplineMuscle_CreateMuscleMultiOffset IntercostalisIntimusR9R10 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE+3),
   OriginSegment=....Segments.Right.R9Seg,
   ORIGIN_POINTS=....Segments.Right.R9Seg.IC_points.Inn_InfPoints,
   InsertionSegment=....Segments.Right.R10Seg,
   INSERTION_POINTS=....Segments.Right.R10Seg.IC_points.Inn_SupPoints,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R9R10,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisIntimus.IntercostalisIntimusR9R10,
   )= {DesiredAngle = 0;};
   
-  SplineMuscle_CreateMuscleMultiOffset IC_Inn_R10R11 (
+  SplineMuscle_CreateMuscleMultiOffset IntercostalisIntimusR10R11 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE),
   OriginSegment=....Segments.Right.R10Seg,
   ORIGIN_POINTS=....Segments.Right.R10Seg.IC_points.Inn_InfPoints,
   InsertionSegment=....Segments.Right.R11Seg,
   INSERTION_POINTS=....Segments.Right.R11Seg.IC_points.Inn_SupPoints,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R10R11,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisIntimus.IntercostalisIntimusR10R11,
   )= {DesiredAngle = 0;};
   
   
-  SplineMuscle_CreateMuscleMultiOffset IC_Inn_R11R12 (
+  SplineMuscle_CreateMuscleMultiOffset IntercostalisIntimusR11R12 (
   CREATE_ELEMENTS=IC_MULTIPLIER*(IC_SIZE-4),
   OriginSegment=....Segments.Right.R11Seg,
   ORIGIN_POINTS=....Segments.Right.R11Seg.IC_points.Inn_InfPoints,
   InsertionSegment=....Segments.Right.R12Seg,
   INSERTION_POINTS=....Segments.Right.R12Seg.IC_points.Inn_SupPoints,
-  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.InterCostalisExternal.IC_Ext_R11R12,
+  MUSCLE_MODEL_PARAMETERS=....MuscleModels.Right.IntercostalisIntimus.IntercostalisIntimusR11R12,
   )= {DesiredAngle = 0;};
   
 };

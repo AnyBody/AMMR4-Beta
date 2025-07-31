@@ -102,15 +102,15 @@ AnyFolder Sternum = {
     AnyFloat DiaphragmCC_7_pos     = {0.1268028, 0.118733, 0.120133};
     AnyFloat DiaphragmXiphoidNode_pos = {0.1403280, 0.231191, 0.002};
 
-    AnyFloat IC_Int_R1R2_elem_sternum_pos = {0.07012063, 0.4041974, 0.02339074};
-    AnyFloat IC_Int_R2R3_elem_sternum_pos = {0.092012063, 0.3701974, 0.03039074};
-    AnyFloat IC_Int_R3R4_elem_sternum_pos = {0.10512063, 0.3421974, 0.0389074};
-    AnyFloat IC_Int_R4R5_elem_sternum_pos = {0.11812063, 0.3111974, 0.06239074};
-    AnyFloat IC_Int_R5R6_elem_sternum_pos = {0.12712063, 0.2831974, 0.06739074};
-    AnyFloat IC_Int_R6R7_elem_sternum_pos = {0.13812063, 0.2511974, 0.07639074};
-    AnyFloat IC_Int_R7R8_elem_sternum_pos = {0.15012063, 0.2101974, 0.08639074};
-    AnyFloat IC_Int_R8R9_elem_sternum_pos = {0.15512063, 0.1761974, 0.09439074};
-    AnyFloat IC_Int_R9R10_elem_sternum_pos = {0.15012063, 0.1401974, 0.105539074};
+    AnyFloat IntercostalisInternusR1R2_elem_sternum_pos = {0.07012063, 0.4041974, 0.02339074};
+    AnyFloat IntercostalisInternusR2R3_elem_sternum_pos = {0.092012063, 0.3701974, 0.03039074};
+    AnyFloat IntercostalisInternusR3R4_elem_sternum_pos = {0.10512063, 0.3421974, 0.0389074};
+    AnyFloat IntercostalisInternusR4R5_elem_sternum_pos = {0.11812063, 0.3111974, 0.06239074};
+    AnyFloat IntercostalisInternusR5R6_elem_sternum_pos = {0.12712063, 0.2831974, 0.06739074};
+    AnyFloat IntercostalisInternusR6R7_elem_sternum_pos = {0.13812063, 0.2511974, 0.07639074};
+    AnyFloat IntercostalisInternusR7R8_elem_sternum_pos = {0.15012063, 0.2101974, 0.08639074};
+    AnyFloat IntercostalisInternusR8R9_elem_sternum_pos = {0.15512063, 0.1761974, 0.09439074};
+    AnyFloat IntercostalisInternusR9R10_elem_sternum_pos = {0.15012063, 0.1401974, 0.105539074};
 
 
     AnyFloat CostalCartilageJointNode_Pos= {0.136, 0.241, 0.022};
@@ -177,15 +177,15 @@ AnyFolder Sternum = {
     AnyFloat DiaphragmCC_7_pos     = .Right.DiaphragmCC_7_pos * ..MirrorTransform;
     AnyFloat DiaphragmXiphoidNode_pos = .Right.DiaphragmXiphoidNode_pos * ..MirrorTransform;
 
-    AnyFloat IC_Int_R1R2_elem_sternum_pos = .Right.IC_Int_R1R2_elem_sternum_pos * ..MirrorTransform;
-    AnyFloat IC_Int_R2R3_elem_sternum_pos = .Right.IC_Int_R2R3_elem_sternum_pos * ..MirrorTransform;
-    AnyFloat IC_Int_R3R4_elem_sternum_pos = .Right.IC_Int_R3R4_elem_sternum_pos * ..MirrorTransform;
-    AnyFloat IC_Int_R4R5_elem_sternum_pos = .Right.IC_Int_R4R5_elem_sternum_pos * ..MirrorTransform;
-    AnyFloat IC_Int_R5R6_elem_sternum_pos = .Right.IC_Int_R5R6_elem_sternum_pos * ..MirrorTransform;
-    AnyFloat IC_Int_R6R7_elem_sternum_pos = .Right.IC_Int_R6R7_elem_sternum_pos * ..MirrorTransform;
-    AnyFloat IC_Int_R7R8_elem_sternum_pos = .Right.IC_Int_R7R8_elem_sternum_pos * ..MirrorTransform;
-    AnyFloat IC_Int_R8R9_elem_sternum_pos = .Right.IC_Int_R8R9_elem_sternum_pos * ..MirrorTransform;
-    AnyFloat IC_Int_R9R10_elem_sternum_pos = .Right.IC_Int_R9R10_elem_sternum_pos * ..MirrorTransform;
+    AnyFloat IntercostalisInternusR1R2_elem_sternum_pos = .Right.IntercostalisInternusR1R2_elem_sternum_pos * ..MirrorTransform;
+    AnyFloat IntercostalisInternusR2R3_elem_sternum_pos = .Right.IntercostalisInternusR2R3_elem_sternum_pos * ..MirrorTransform;
+    AnyFloat IntercostalisInternusR3R4_elem_sternum_pos = .Right.IntercostalisInternusR3R4_elem_sternum_pos * ..MirrorTransform;
+    AnyFloat IntercostalisInternusR4R5_elem_sternum_pos = .Right.IntercostalisInternusR4R5_elem_sternum_pos * ..MirrorTransform;
+    AnyFloat IntercostalisInternusR5R6_elem_sternum_pos = .Right.IntercostalisInternusR5R6_elem_sternum_pos * ..MirrorTransform;
+    AnyFloat IntercostalisInternusR6R7_elem_sternum_pos = .Right.IntercostalisInternusR6R7_elem_sternum_pos * ..MirrorTransform;
+    AnyFloat IntercostalisInternusR7R8_elem_sternum_pos = .Right.IntercostalisInternusR7R8_elem_sternum_pos * ..MirrorTransform;
+    AnyFloat IntercostalisInternusR8R9_elem_sternum_pos = .Right.IntercostalisInternusR8R9_elem_sternum_pos * ..MirrorTransform;
+    AnyFloat IntercostalisInternusR9R10_elem_sternum_pos = .Right.IntercostalisInternusR9R10_elem_sternum_pos * ..MirrorTransform;
 
     AnyFloat CostalCartilageJointNode_Pos= .Right.CostalCartilageJointNode_Pos* ..MirrorTransform;
 
@@ -3063,7 +3063,7 @@ AnyFloat Int_Inf_End_ABS_pos = {0.093074677580506138, 0.37104514416503942, 0.041
     Spline_template_ABS_OFFSETS IC_R2_Inn_Sup ( NAME=IC_R2_Inn_Inf_pos,NUM_ELEM=20,POINTS=.IC_R2_Inn_Sup_pos,OFFSETS=.OffSetCal.Offsets_Inn_Inf,SIGN=1)={START =0.0;};
 #endif
 
-    AnyFloat IC_Int_R1R2_elem_sternum_pos = {0.0813218, 0.3859283, 0.05407529};
+    AnyFloat IntercostalisInternusR1R2_elem_sternum_pos = {0.0813218, 0.3859283, 0.05407529};
 
     #if CC_ALIGNMENT  == MID | CC_ALIGNMENT == CV
     #if CC_ALIGNMENT == MID
@@ -3153,7 +3153,7 @@ AnyFloat Int_Inf_End_ABS_pos = .Right.Int_Inf_End_ABS_pos* ..MirrorTransform;
 
     #endif
 
-    AnyFloat IC_Int_R1R2_elem_sternum_pos = .Right.IC_Int_R1R2_elem_sternum_pos* ..MirrorTransform;
+    AnyFloat IntercostalisInternusR1R2_elem_sternum_pos = .Right.IntercostalisInternusR1R2_elem_sternum_pos* ..MirrorTransform;
 
     AnyFloat CC_AlignmentNode =.Right.CC_AlignmentNode* ..MirrorTransform;
 
@@ -3313,7 +3313,7 @@ AnyFloat Int_Inf_End_ABS_pos = {0.11048609999990502, 0.34161860000004957, 0.0521
     Spline_template_ABS_OFFSETS IC_R3_Inn_Sup ( NAME=IC_R3_Inn_Inf_pos,NUM_ELEM=20,POINTS=.IC_R3_Inn_Sup_pos,OFFSETS=.OffSetCal.Offsets_Inn_Inf,SIGN=1)={START=0.0;};
 #endif
 
-    AnyFloat IC_Int_R2R3_elem_sternum_pos = {0.1003218, 0.3559283, 0.05607529};
+    AnyFloat IntercostalisInternusR2R3_elem_sternum_pos = {0.1003218, 0.3559283, 0.05607529};
 
     #if CC_ALIGNMENT  == MID | CC_ALIGNMENT == CV
     #if CC_ALIGNMENT == MID
@@ -3404,7 +3404,7 @@ AnyFloat Int_Inf_End_ABS_pos = .Right.Int_Inf_End_ABS_pos* ..MirrorTransform;
 
 
     #endif
-    AnyFloat IC_Int_R2R3_elem_sternum_pos = .Right.IC_Int_R2R3_elem_sternum_pos* ..MirrorTransform;
+    AnyFloat IntercostalisInternusR2R3_elem_sternum_pos = .Right.IntercostalisInternusR2R3_elem_sternum_pos* ..MirrorTransform;
     AnyFloat CC_AlignmentNode =.Right.CC_AlignmentNode* ..MirrorTransform;
 
 
@@ -3568,7 +3568,7 @@ AnyFloat Int_Inf_End_ABS_pos = {0.12172319999989453, 0.31135180000005697, 0.0695
     Spline_template_ABS_OFFSETS IC_R4_Int_Sup ( NAME=IC_R4_Int_Inf_pos,NUM_ELEM=20,POINTS=.IC_R4_Int_Sup_pos,OFFSETS=.OffSetCal.Offsets_Int_Inf,SIGN=1)={};
     Spline_template_ABS_OFFSETS IC_R4_Inn_Sup ( NAME=IC_R4_Inn_Inf_pos,NUM_ELEM=20,POINTS=.IC_R4_Inn_Sup_pos,OFFSETS=.OffSetCal.Offsets_Inn_Inf,SIGN=1)={START=0.0;};
 #endif
-    AnyFloat IC_Int_R3R4_elem_sternum_pos = {0.11233218, 0.3259283, 0.07507529};
+    AnyFloat IntercostalisInternusR3R4_elem_sternum_pos = {0.11233218, 0.3259283, 0.07507529};
 
     #if CC_ALIGNMENT  == MID | CC_ALIGNMENT == CV
     #if CC_ALIGNMENT == MID
@@ -3658,7 +3658,7 @@ AnyFloat Int_Inf_End_ABS_pos = .Right.Int_Inf_End_ABS_pos* ..MirrorTransform;
     AnyFolder IC_R4_Int_Inf0 = {AnyMatrix Points= ..Right.IC_R4_Int_Inf0.Points* ...MirrorTransform;};
     AnyFolder IC_R4_Int_Sup0 = {AnyMatrix Points= ..Right.IC_R4_Int_Sup0.Points* ...MirrorTransform;};
 #endif
-    AnyFloat IC_Int_R3R4_elem_sternum_pos = .Right.IC_Int_R3R4_elem_sternum_pos* ..MirrorTransform;
+    AnyFloat IntercostalisInternusR3R4_elem_sternum_pos = .Right.IntercostalisInternusR3R4_elem_sternum_pos* ..MirrorTransform;
 
     AnyFloat CC_AlignmentNode =.Right.CC_AlignmentNode* ..MirrorTransform;
 
@@ -3829,7 +3829,7 @@ AnyFloat Int_Inf_End_ABS_pos = {0.13299549999987983, 0.28154560000006251, 0.0825
     Spline_template_ABS_OFFSETS IC_R5_Inn_Sup ( NAME=IC_R5_Inn_Inf_pos,NUM_ELEM=20,POINTS=.IC_R5_Inn_Sup_pos,OFFSETS=.OffSetCal.Offsets_Inn_Inf,SIGN=1)={START=0.0;};
 #endif
 
-    AnyFloat IC_Int_R4R5_elem_sternum_pos = {0.1203218, 0.2979283, 0.09307529};
+    AnyFloat IntercostalisInternusR4R5_elem_sternum_pos = {0.1203218, 0.2979283, 0.09307529};
 
     #if CC_ALIGNMENT  == MID | CC_ALIGNMENT == CV
     #if CC_ALIGNMENT == MID
@@ -3921,7 +3921,7 @@ AnyFloat Int_Inf_End_ABS_pos = .Right.Int_Inf_End_ABS_pos* ..MirrorTransform;
     AnyFolder IC_R5_Int_Sup0 = {AnyMatrix Points= ..Right.IC_R5_Int_Sup0.Points* ...MirrorTransform;};
 
     #endif
-    AnyFloat IC_Int_R4R5_elem_sternum_pos = .Right.IC_Int_R4R5_elem_sternum_pos* ..MirrorTransform;
+    AnyFloat IntercostalisInternusR4R5_elem_sternum_pos = .Right.IntercostalisInternusR4R5_elem_sternum_pos* ..MirrorTransform;
     AnyFloat CC_AlignmentNode =.Right.CC_AlignmentNode* ..MirrorTransform;
   };
 };
@@ -4083,7 +4083,7 @@ AnyFloat Int_Inf_End_ABS_pos = {0.14178439999987116, 0.2458850000000459, 0.09268
     Spline_template_ABS_OFFSETS IC_R6_Int_Sup ( NAME=IC_R6_Int_Inf_pos,NUM_ELEM=20,POINTS=.IC_R6_Int_Sup_pos,OFFSETS=.OffSetCal.Offsets_Int_Inf,SIGN=1)={};
     Spline_template_ABS_OFFSETS IC_R6_Inn_Sup ( NAME=IC_R6_Inn_Inf_pos,NUM_ELEM=20,POINTS=.IC_R6_Inn_Sup_pos,OFFSETS=.OffSetCal.Offsets_Inn_Inf,SIGN=1)={START=0.0;};
 #endif
-    AnyFloat IC_Int_R5R6_elem_sternum_pos = {0.13233218, 0.2659283, 0.10307529};
+    AnyFloat IntercostalisInternusR5R6_elem_sternum_pos = {0.13233218, 0.2659283, 0.10307529};
 
     #if CC_ALIGNMENT  == MID | CC_ALIGNMENT == CV
     #if CC_ALIGNMENT == MID
@@ -4170,7 +4170,7 @@ AnyFloat Int_Inf_End_ABS_pos = .Right.Int_Inf_End_ABS_pos* ..MirrorTransform;
     AnyFolder IC_R6_Int_Sup0 = {AnyMatrix Points= ..Right.IC_R6_Int_Sup0.Points* ...MirrorTransform;};
 #endif
 
-    AnyFloat IC_Int_R5R6_elem_sternum_pos = .Right.IC_Int_R5R6_elem_sternum_pos* ..MirrorTransform;
+    AnyFloat IntercostalisInternusR5R6_elem_sternum_pos = .Right.IntercostalisInternusR5R6_elem_sternum_pos* ..MirrorTransform;
     AnyFloat CC_AlignmentNode =.Right.CC_AlignmentNode* ..MirrorTransform;
 
   };
@@ -4326,7 +4326,7 @@ AnyFloat Int_Inf_End_ABS_pos = {0.15310649999988202, 0.20739250000005791, 0.1006
 
     #endif
 
-    AnyFloat IC_Int_R6R7_elem_sternum_pos = {0.1375336, 0.2249356, 0.113531};
+    AnyFloat IntercostalisInternusR6R7_elem_sternum_pos = {0.1375336, 0.2249356, 0.113531};
 
     #if CC_ALIGNMENT  == MID | CC_ALIGNMENT == CV
     #if CC_ALIGNMENT == MID
@@ -4413,7 +4413,7 @@ AnyFloat Int_Inf_End_ABS_pos = .Right.Int_Inf_End_ABS_pos* ..MirrorTransform;
     AnyFolder IC_R7_Int_Inf0 = {AnyMatrix Points= ..Right.IC_R7_Int_Inf0.Points* ...MirrorTransform;};
     AnyFolder IC_R7_Int_Sup0 = {AnyMatrix Points= ..Right.IC_R7_Int_Sup0.Points* ...MirrorTransform;};
 #endif
-    AnyFloat IC_Int_R6R7_elem_sternum_pos = .Right.IC_Int_R6R7_elem_sternum_pos* ..MirrorTransform;
+    AnyFloat IntercostalisInternusR6R7_elem_sternum_pos = .Right.IntercostalisInternusR6R7_elem_sternum_pos* ..MirrorTransform;
     AnyFloat CC_AlignmentNode =.Right.CC_AlignmentNode* ..MirrorTransform;
   };
 };
@@ -4560,7 +4560,7 @@ AnyFloat Int_Inf_End_ABS_pos = {0.15722199999983494, 0.17152640000009012, 0.1149
     Spline_template_ABS_OFFSETS IC_R8_Int_Sup ( NAME=IC_R8_Int_Inf_pos,NUM_ELEM=20,POINTS=.IC_R8_Int_Sup_pos,OFFSETS=.OffSetCal.Offsets_Int_Inf,SIGN=1)={};
     Spline_template_ABS_OFFSETS IC_R8_Inn_Sup ( NAME=IC_R8_Inn_Inf_pos,NUM_ELEM=20,POINTS=.IC_R8_Inn_Sup_pos,OFFSETS=.OffSetCal.Offsets_Inn_Inf,SIGN=1)={START=0.0;};
 #endif
-    AnyFloat IC_Int_R7R8_elem_sternum_pos = {0.14049, 0.1895552, 0.1244138};
+    AnyFloat IntercostalisInternusR7R8_elem_sternum_pos = {0.14049, 0.1895552, 0.1244138};
 
     #if CC_ALIGNMENT  == MID | CC_ALIGNMENT == CV
     #if CC_ALIGNMENT == MID
@@ -4646,7 +4646,7 @@ AnyFloat Int_Inf_End_ABS_pos = .Right.Int_Inf_End_ABS_pos* ..MirrorTransform;
     AnyFolder IC_R85Int_Sup0 = {AnyMatrix Points= ..Right.IC_R8_Int_Sup0.Points* ...MirrorTransform;};
 #endif
 
-    AnyFloat IC_Int_R7R8_elem_sternum_pos = .Right.IC_Int_R7R8_elem_sternum_pos* ..MirrorTransform;
+    AnyFloat IntercostalisInternusR7R8_elem_sternum_pos = .Right.IntercostalisInternusR7R8_elem_sternum_pos* ..MirrorTransform;
     AnyFloat CC_AlignmentNode =.Right.CC_AlignmentNode* ..MirrorTransform;
   };
 };
@@ -4799,7 +4799,7 @@ AnyFloat Int_Inf_End_ABS_pos = {0.14902339999981951, 0.13554500000008535, 0.1183
     Spline_template_ABS_OFFSETS IC_R9_Inn_Sup ( NAME=IC_R9_Inn_Inf_pos,NUM_ELEM=20,POINTS=.IC_R9_Inn_Sup_pos,OFFSETS=.OffSetCal.Offsets_Inn_Inf,SIGN=1)={START=0.0;};
 #endif
 
-    AnyFloat IC_Int_R8R9_elem_sternum_pos = {0.1311498, 0.1479617, 0.1238891};
+    AnyFloat IntercostalisInternusR8R9_elem_sternum_pos = {0.1311498, 0.1479617, 0.1238891};
 
     #if CC_ALIGNMENT  == MID | CC_ALIGNMENT == CV
     #if CC_ALIGNMENT == MID
@@ -4882,7 +4882,7 @@ AnyFloat Int_Inf_End_ABS_pos = .Right.Int_Inf_End_ABS_pos* ..MirrorTransform;
     AnyFolder IC_R9_Int_Sup0 = {AnyMatrix Points= ..Right.IC_R9_Int_Sup0.Points* ...MirrorTransform;};
     #endif
 
-    AnyFloat IC_Int_R8R9_elem_sternum_pos = .Right.IC_Int_R8R9_elem_sternum_pos* ..MirrorTransform;
+    AnyFloat IntercostalisInternusR8R9_elem_sternum_pos = .Right.IntercostalisInternusR8R9_elem_sternum_pos* ..MirrorTransform;
     AnyFloat CC_AlignmentNode =.Right.CC_AlignmentNode* ..MirrorTransform;
   };
 };
@@ -5045,7 +5045,7 @@ AnyFloat Int_Inf_End_ABS_pos = {0.080364800999901731, 0.12798364000004445, 0.126
 
 
 
-    AnyFloat IC_Int_R9R10_elem_sternum_pos = {0.12165797, 0.12525829, 0.11877961};
+    AnyFloat IntercostalisInternusR9R10_elem_sternum_pos = {0.12165797, 0.12525829, 0.11877961};
 
     #if CC_ALIGNMENT  == MID | CC_ALIGNMENT == CV
     #if CC_ALIGNMENT == MID
@@ -5135,7 +5135,7 @@ AnyFloat Int_Inf_End_ABS_pos = .Right.Int_Inf_End_ABS_pos* ..MirrorTransform;
     AnyFolder IC_R10_Int_Inf0 = {AnyMatrix Points= ..Right.IC_R10_Int_Inf0.Points* ...MirrorTransform;};
     AnyFolder IC_R10_Int_Sup0 = {AnyMatrix Points= ..Right.IC_R10_Int_Sup0.Points* ...MirrorTransform;};
 #endif
-    AnyFloat IC_Int_R9R10_elem_sternum_pos = .Right.IC_Int_R9R10_elem_sternum_pos* ..MirrorTransform;
+    AnyFloat IntercostalisInternusR9R10_elem_sternum_pos = .Right.IntercostalisInternusR9R10_elem_sternum_pos* ..MirrorTransform;
     AnyFloat CC_AlignmentNode =.Right.CC_AlignmentNode* ..MirrorTransform;
   };
 };
