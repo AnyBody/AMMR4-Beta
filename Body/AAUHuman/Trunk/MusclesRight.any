@@ -5517,7 +5517,7 @@ MuscleGroup RectusAbdominis = {
 
 MuscleGroup RotatoresBrevis = {
   AnyMuscleViaPoint RotatoresBrevisT1C7 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.RotatoresBrevis.RotatoresBrevis_1;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.RotatoresBrevis.RotatoresBrevisT1C7;
     AnyRefFrame &Org = ....Segments.T1Seg.Right.RotatoresBrevisT1C7Node;
     AnyRefFrame &Ins = ....Segments.C7Seg.Right.RotatoresBrevisT1C7Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -5525,77 +5525,77 @@ MuscleGroup RotatoresBrevis = {
   };
   #if BM_TRUNK_THORACIC_MODEL == _THORACIC_MODEL_FLEXIBLE_
   AnyMuscleViaPoint RotatoresBrevisT2T1 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.RotatoresBrevis.RotatoresBrevis_2;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.RotatoresBrevis.RotatoresBrevisT2T1;
     AnyRefFrame &Org = ....Segments.T2Seg.Right.RotatoresBrevisT2T1Node;
     AnyRefFrame &Ins = ....Segments.T1Seg.Right.RotatoresBrevisT2T1Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint RotatoresBrevisT3T2 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.RotatoresBrevis.RotatoresBrevis_3;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.RotatoresBrevis.RotatoresBrevisT3T2;
     AnyRefFrame &Org = ....Segments.T3Seg.Right.RotatoresBrevisT3T2Node;
     AnyRefFrame &Ins = ....Segments.T2Seg.Right.RotatoresBrevisT3T2Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint RotatoresBrevisT4T3 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.RotatoresBrevis.RotatoresBrevis_4;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.RotatoresBrevis.RotatoresBrevisT4T3;
     AnyRefFrame &Org = ....Segments.T4Seg.Right.RotatoresBrevisT4T3Node;
     AnyRefFrame &Ins = ....Segments.T3Seg.Right.RotatoresBrevisT4T3Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint RotatoresBrevisT5T4 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.RotatoresBrevis.RotatoresBrevis_5;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.RotatoresBrevis.RotatoresBrevisT5T4;
     AnyRefFrame &Org = ....Segments.T5Seg.Right.RotatoresBrevisT5T4Node;
     AnyRefFrame &Ins = ....Segments.T4Seg.Right.RotatoresBrevisT5T4Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint RotatoresBrevisT6T5 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.RotatoresBrevis.RotatoresBrevis_6;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.RotatoresBrevis.RotatoresBrevisT6T5;
     AnyRefFrame &Org = ....Segments.T6Seg.Right.RotatoresBrevisT6T5Node;
     AnyRefFrame &Ins = ....Segments.T5Seg.Right.RotatoresBrevisT6T5Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint RotatoresBrevisT7T6 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.RotatoresBrevis.RotatoresBrevis_7;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.RotatoresBrevis.RotatoresBrevisT7T6;
     AnyRefFrame &Org = ....Segments.T7Seg.Right.RotatoresBrevisT7T6Node;
     AnyRefFrame &Ins = ....Segments.T6Seg.Right.RotatoresBrevisT7T6Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint RotatoresBrevisT8T7 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.RotatoresBrevis.RotatoresBrevis_8;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.RotatoresBrevis.RotatoresBrevisT8T7;
     AnyRefFrame &Org = ....Segments.T8Seg.Right.RotatoresBrevisT8T7Node;
     AnyRefFrame &Ins = ....Segments.T7Seg.Right.RotatoresBrevisT8T7Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint RotatoresBrevisT9T8 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.RotatoresBrevis.RotatoresBrevis_9;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.RotatoresBrevis.RotatoresBrevisT9T8;
     AnyRefFrame &Org = ....Segments.T9Seg.Right.RotatoresBrevisT9T8Node;
     AnyRefFrame &Ins = ....Segments.T8Seg.Right.RotatoresBrevisT9T8Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint RotatoresBrevisT10T9 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.RotatoresBrevis.RotatoresBrevis_10;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.RotatoresBrevis.RotatoresBrevisT10T9;
     AnyRefFrame &Org = ....Segments.T10Seg.Right.RotatoresBrevisT10T9Node;
     AnyRefFrame &Ins = ....Segments.T9Seg.Right.RotatoresBrevisT10T9Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint RotatoresBrevisT11T10 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.RotatoresBrevis.RotatoresBrevis_11;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.RotatoresBrevis.RotatoresBrevisT11T10;
     AnyRefFrame &Org = ....Segments.T11Seg.Right.RotatoresBrevisT11T10Node;
     AnyRefFrame &Ins = ....Segments.T10Seg.Right.RotatoresBrevisT11T10Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint RotatoresBrevisT12T11 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.RotatoresBrevis.RotatoresBrevis_12;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.RotatoresBrevis.RotatoresBrevisT12T11;
     AnyRefFrame &Org = ....Segments.T12Seg.Right.RotatoresBrevisT12T11Node;
     AnyRefFrame &Ins = ....Segments.T11Seg.Right.RotatoresBrevisT12T11Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -5606,7 +5606,7 @@ MuscleGroup RotatoresBrevis = {
 
 MuscleGroup RotatoresLongus = {
   AnyMuscleViaPoint RotatoresLongusT2C7 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.RotatoresLongus.RotatoresLongus_1;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.RotatoresLongus.RotatoresLongusT2C7;
     AnyRefFrame &Org = ....Segments.T2Seg.Right.RotatoresLongusT2C7Node;
     AnyRefFrame &Ins = ....Segments.C7Seg.Right.RotatoresLongusT2C7Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -5614,70 +5614,70 @@ MuscleGroup RotatoresLongus = {
   };
   #if BM_TRUNK_THORACIC_MODEL == _THORACIC_MODEL_FLEXIBLE_
   AnyMuscleViaPoint RotatoresLongusT3T1 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.RotatoresLongus.RotatoresLongus_2;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.RotatoresLongus.RotatoresLongusT3T1;
     AnyRefFrame &Org = ....Segments.T3Seg.Right.RotatoresLongusT3T1Node;
     AnyRefFrame &Ins = ....Segments.T1Seg.Right.RotatoresLongusT3T1Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint RotatoresLongusT4T2 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.RotatoresLongus.RotatoresLongus_3;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.RotatoresLongus.RotatoresLongusT4T2;
     AnyRefFrame &Org = ....Segments.T4Seg.Right.RotatoresLongusT4T2Node;
     AnyRefFrame &Ins = ....Segments.T2Seg.Right.RotatoresLongusT4T2Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint RotatoresLongusT5T3 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.RotatoresLongus.RotatoresLongus_4;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.RotatoresLongus.RotatoresLongusT5T3;
     AnyRefFrame &Org = ....Segments.T5Seg.Right.RotatoresLongusT5T3Node;
     AnyRefFrame &Ins = ....Segments.T3Seg.Right.RotatoresLongusT5T3Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint RotatoresLongusT6T4 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.RotatoresLongus.RotatoresLongus_5;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.RotatoresLongus.RotatoresLongusT6T4;
     AnyRefFrame &Org = ....Segments.T6Seg.Right.RotatoresLongusT6T4Node;
     AnyRefFrame &Ins = ....Segments.T4Seg.Right.RotatoresLongusT6T4Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint RotatoresLongusT7T5 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.RotatoresLongus.RotatoresLongus_6;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.RotatoresLongus.RotatoresLongusT7T5;
     AnyRefFrame &Org = ....Segments.T7Seg.Right.RotatoresLongusT7T5Node;
     AnyRefFrame &Ins = ....Segments.T5Seg.Right.RotatoresLongusT7T5Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint RotatoresLongusT8T6 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.RotatoresLongus.RotatoresLongus_7;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.RotatoresLongus.RotatoresLongusT8T6;
     AnyRefFrame &Org = ....Segments.T8Seg.Right.RotatoresLongusT8T6Node;
     AnyRefFrame &Ins = ....Segments.T6Seg.Right.RotatoresLongusT8T6Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint RotatoresLongusT9T7 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.RotatoresLongus.RotatoresLongus_8;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.RotatoresLongus.RotatoresLongusT9T7;
     AnyRefFrame &Org = ....Segments.T9Seg.Right.RotatoresLongusT9T7Node;
     AnyRefFrame &Ins = ....Segments.T7Seg.Right.RotatoresLongusT9T7Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint RotatoresLongusT10T8 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.RotatoresLongus.RotatoresLongus_9;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.RotatoresLongus.RotatoresLongusT10T8;
     AnyRefFrame &Org = ....Segments.T10Seg.Right.RotatoresLongusT10T8Node;
     AnyRefFrame &Ins = ....Segments.T8Seg.Right.RotatoresLongusT10T8Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint RotatoresLongusT11T9 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.RotatoresLongus.RotatoresLongus_10;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.RotatoresLongus.RotatoresLongusT11T9;
     AnyRefFrame &Org = ....Segments.T11Seg.Right.RotatoresLongusT11T9Node;
     AnyRefFrame &Ins = ....Segments.T9Seg.Right.RotatoresLongusT11T9Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint RotatoresLongusT12T10 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.RotatoresLongus.RotatoresLongus_11;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.RotatoresLongus.RotatoresLongusT12T10;
     AnyRefFrame &Org = ....Segments.T12Seg.Right.RotatoresLongusT12T10Node;
     AnyRefFrame &Ins = ....Segments.T10Seg.Right.RotatoresLongusT12T10Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
