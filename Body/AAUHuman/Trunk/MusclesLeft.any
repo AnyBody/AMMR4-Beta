@@ -4813,16 +4813,16 @@ MuscleGroup ObliquusInternus = {
 #include "PsoasMajorLeft.any"
 
 #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-MuscleGroup Pupococcygeus = {
+MuscleGroup Pubococcygeus = {
   AnyMuscleViaPoint Pubococcygeus_1= {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.Pupococcygeus.Pupococcygeus_1;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.Pubococcygeus.Pubococcygeus_1;
     AnyRefNode &Org = ....Segments.PelvisSeg.Pubococcygeus_1NodeL;
     AnyRefNode &Ins = ....Segments.SacrumSeg.Pubococcygeus_1NodeL;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint Pubococcygeus_2= {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.Pupococcygeus.Pupococcygeus_2;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.Pubococcygeus.Pubococcygeus_2;
     AnyRefNode &Org = ....Segments.PelvisSeg.Pubococcygeus_2NodeL;
     AnyRefNode &Ins = ....Segments.SacrumSeg.Pubococcygeus_2NodeL;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -4830,16 +4830,16 @@ MuscleGroup Pupococcygeus = {
   };
 };
 
-MuscleGroup Puporectalis = {
+MuscleGroup Puborectalis = {
   AnyMuscleViaPoint Puborectalis_1= {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.Puporectalis.Puporectalis_1;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.Puborectalis.Puborectalis_1;
     AnyRefNode &Org = ....Segments.PelvisSeg.Puborectalis_1NodeL;
     AnyRefNode &Ins = ....Segments.SacrumSeg.Puborectalis_1NodeL;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint Puborectalis_2= {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.Puporectalis.Puporectalis_2;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.Puborectalis.Puborectalis_2;
     AnyRefNode &Org = ....Segments.PelvisSeg.Puborectalis_2NodeL;
     AnyRefNode &Ins = ....Segments.SacrumSeg.Puborectalis_2NodeL;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -5678,28 +5678,28 @@ MuscleGroup RotatoresLongus = {
 
 MuscleGroup ScalenusAnterior = {
   AnyMuscleViaPoint ScalenusAnteriorR1C6 = {
-    AnyMuscleModel &MusMdl= ....MuscleModels.Left.Scalenus.ScalenusAnteriorR1C6;
+    AnyMuscleModel &MusMdl= ....MuscleModels.Left.ScalenusAnterior.ScalenusAnteriorR1C6;
     AnyRefNode &Org = ....Segments.C6Seg.Left.ScalenusAnteriorR1C6Node;
     AnyRefNode &Ins = ....Segments.Left.R1Seg.ScalenusAnteriorR1C6Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint ScalenusAnteriorR1C5 = {
-    AnyMuscleModel &MusMdl= ....MuscleModels.Left.Scalenus.ScalenusAnteriorR1C5;
+    AnyMuscleModel &MusMdl= ....MuscleModels.Left.ScalenusAnterior.ScalenusAnteriorR1C5;
     AnyRefNode &Org = ....Segments.C5Seg.Left.ScalenusAnteriorR1C5Node;
     AnyRefNode &Ins = ....Segments.Left.R1Seg.ScalenusAnteriorR1C5Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint ScalenusAnteriorR1C4 = {
-    AnyMuscleModel &MusMdl= ....MuscleModels.Left.Scalenus.ScalenusAnteriorR1C4;
+    AnyMuscleModel &MusMdl= ....MuscleModels.Left.ScalenusAnterior.ScalenusAnteriorR1C4;
     AnyRefNode &Org = ....Segments.C4Seg.Left.ScalenusAnteriorR1C4Node;
     AnyRefNode &Ins = ....Segments.Left.R1Seg.ScalenusAnteriorR1C4Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint ScalenusAnteriorR1C3 = {
-    AnyMuscleModel &MusMdl= ....MuscleModels.Left.Scalenus.ScalenusAnteriorR1C3;
+    AnyMuscleModel &MusMdl= ....MuscleModels.Left.ScalenusAnterior.ScalenusAnteriorR1C3;
     AnyRefNode &Org = ....Segments.C3Seg.Left.ScalenusAnteriorR1C3Node;
     AnyRefNode &Ins = ....Segments.Left.R1Seg.ScalenusAnteriorR1C3Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -5708,42 +5708,42 @@ MuscleGroup ScalenusAnterior = {
 };
 MuscleGroup ScalenusMedius = {
   AnyMuscleViaPoint ScalenusMediusR1C7 = {
-    AnyMuscleModel &MusMdl =....MuscleModels.Left.Scalenus.ScalenusMediusR1C7;
+    AnyMuscleModel &MusMdl =....MuscleModels.Left.ScalenusMedius.ScalenusMediusR1C7;
     AnyRefNode &Org = ....Segments.C7Seg.Left.ScalenusMediusR1C7Node;
     AnyRefNode &Ins = ....Segments.Left.R1Seg.ScalenusMediusR1C7Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint ScalenusMediusR1C6 = {
-    AnyMuscleModel &MusMdl =....MuscleModels.Left.Scalenus.ScalenusMediusR1C6;
+    AnyMuscleModel &MusMdl =....MuscleModels.Left.ScalenusMedius.ScalenusMediusR1C6;
     AnyRefNode &Org = ....Segments.C6Seg.Left.ScalenusMediusR1C6Node;
     AnyRefNode &Ins = ....Segments.Left.R1Seg.ScalenusMediusR1C6Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint ScalenusMediusR1C5 = {
-    AnyMuscleModel &MusMdl =....MuscleModels.Left.Scalenus.ScalenusMediusR1C5;
+    AnyMuscleModel &MusMdl =....MuscleModels.Left.ScalenusMedius.ScalenusMediusR1C5;
     AnyRefNode &Org = ....Segments.C5Seg.Left.ScalenusMediusR1C5Node;
     AnyRefNode &Ins = ....Segments.Left.R1Seg.ScalenusMediusR1C5Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint ScalenusMediusR1C4 = {
-    AnyMuscleModel &MusMdl =....MuscleModels.Left.Scalenus.ScalenusMediusR1C4;
+    AnyMuscleModel &MusMdl =....MuscleModels.Left.ScalenusMedius.ScalenusMediusR1C4;
     AnyRefNode &Org = ....Segments.C4Seg.Left.ScalenusMediusR1C4Node;
     AnyRefNode &Ins = ....Segments.Left.R1Seg.ScalenusMediusR1C4Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint ScalenusMediusR1C3 = {
-    AnyMuscleModel &MusMdl =....MuscleModels.Left.Scalenus.ScalenusMediusR1C3;
+    AnyMuscleModel &MusMdl =....MuscleModels.Left.ScalenusMedius.ScalenusMediusR1C3;
     AnyRefNode &Org = ....Segments.C3Seg.Left.ScalenusMediusR1C3Node;
     AnyRefNode &Ins = ....Segments.Left.R1Seg.ScalenusMediusR1C3Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint ScalenusMediusR1C2 = {
-    AnyMuscleModel &MusMdl =....MuscleModels.Left.Scalenus.ScalenusMediusR1C2;
+    AnyMuscleModel &MusMdl =....MuscleModels.Left.ScalenusMedius.ScalenusMediusR1C2;
     AnyRefNode &Org = ....Segments.C2Seg.Left.ScalenusMediusR1C2Node;
     AnyRefNode &Ins = ....Segments.Left.R1Seg.ScalenusMediusR1C2Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -5752,21 +5752,21 @@ MuscleGroup ScalenusMedius = {
 };
 MuscleGroup ScalenusPosterior = {
   AnyMuscleViaPoint ScalenusPosteriorR2C7 = {
-    AnyMuscleModel &MusMdl =....MuscleModels.Left.Scalenus.ScalenusPosteriorR2C7;
+    AnyMuscleModel &MusMdl =....MuscleModels.Left.ScalenusPosterior.ScalenusPosteriorR2C7;
     AnyRefNode &Org = ....Segments.C7Seg.Left.ScalenusPosteriorR2C7Node;
     AnyRefNode &Ins = ....Segments.Left.R2Seg.ScalenusPosteriorR2C7Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint ScalenusPosteriorR2C6 = {
-    AnyMuscleModel &MusMdl =....MuscleModels.Left.Scalenus.ScalenusPosteriorR2C6;
+    AnyMuscleModel &MusMdl =....MuscleModels.Left.ScalenusPosterior.ScalenusPosteriorR2C6;
     AnyRefNode &Org = ....Segments.C6Seg.Left.ScalenusPosteriorR2C6Node;
     AnyRefNode &Ins = ....Segments.Left.R2Seg.ScalenusPosteriorR2C6Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint ScalenusPosteriorR2C5 = {
-    AnyMuscleModel &MusMdl =....MuscleModels.Left.Scalenus.ScalenusPosteriorR2C5;
+    AnyMuscleModel &MusMdl =....MuscleModels.Left.ScalenusPosterior.ScalenusPosteriorR2C5;
     AnyRefNode &Org = ....Segments.C5Seg.Left.ScalenusPosteriorR2C5Node;
     AnyRefNode &Ins = ....Segments.Left.R2Seg.ScalenusPosteriorR2C5Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
