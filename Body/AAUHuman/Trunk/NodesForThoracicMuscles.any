@@ -1258,8 +1258,8 @@ Segments.T12Seg = {
   AnyRefNode LongissimusThoracisR11S3Via1NodeR = {sRel = .Scale(.Data.R12.Right.LongissimusThoracisR11S3Via1Node_pos); };
   AnyRefNode LongissimusThoracisR11S3Via1NodeL = {sRel = .Scale(.Data.R12.Left.LongissimusThoracisR11S3Via1Node_pos); };
   
-  AnyRefNode PMT12I_TMNodeR = {sRel = .Scale(.Data.Thorax.Right.PMT12I_TMNode_pos);};
-  AnyRefNode PMT12I_TMNodeL = {sRel = .Scale(.Data.Thorax.Left.PMT12I_TMNode_pos);};
+  AnyRefNode PsoasMajorT12NodeR = {sRel = .Scale(.Data.Thorax.Right.PsoasMajorT12Node_pos);};
+  AnyRefNode PsoasMajorT12NodeL = {sRel = .Scale(.Data.Thorax.Left.PsoasMajorT12Node_pos);};
   AnyRefNode O_serratus_posterior_inferior_T12R = {sRel = .Scale(.Data.T12.O_serratus_posterior_inferior_pos); };
   AnyRefNode O_serratus_posterior_inferior_T12L = {sRel = .Scale(.Data.T12.O_serratus_posterior_inferior_pos);};
   AnyRefNode O_serratus_posterior_inferior_T12R10ViaNodeR = {sRel = .Scale(.Data.T12.Right.O_serratus_posterior_inferior_T12R10ViaNodepos); };

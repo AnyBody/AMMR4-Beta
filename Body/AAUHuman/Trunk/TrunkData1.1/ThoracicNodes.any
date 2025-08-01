@@ -5748,7 +5748,7 @@ AnyFolder Thorax = {
   AnyVar LongissimusThoracisR9S4Z      = (Right.LongissimusThoracisR9S4Node_pos[2]     -.Sacrum.Right.LongissimusThoracisR9S4Node_pos[2])     /(Right.LongissimusThoracisR9S4Node_pos[1]     -.Sacrum.Right.LongissimusThoracisR9S4Node_pos[1]);
   AnyVar LongissimusThoracisR10S3Z = (Right.LongissimusThoracisR10S3Node_pos[2]-.Sacrum.Right.LongissimusThoracisR10S3Node_pos[2])/(Right.LongissimusThoracisR10S3Node_pos[1]-.Sacrum.Right.LongissimusThoracisR10S3Node_pos[1]);
   AnyVar LongissimusThoracisR11S3Z = (Right.LongissimusThoracisR11S3Node_pos[2]-.Sacrum.Right.LongissimusThoracisR11S3Node_pos[2])/(Right.LongissimusThoracisR11S3Node_pos[1]-.Sacrum.Right.LongissimusThoracisR11S3Node_pos[1]);
-  AnyVar PMT12I_TMZ = (Right.PMT12I_TMNode_pos[2]-.Pelvis.Right.IliopubicEminenceViaNode_pos[2])/(Right.PMT12I_TMNode_pos[1]-.Pelvis.Right.IliopubicEminenceViaNode_pos[1]);
+  AnyVar PsoasMajorT12Z = (Right.PsoasMajorT12Node_pos[2]-.Pelvis.Right.IliopubicEminenceViaNode_pos[2])/(Right.PsoasMajorT12Node_pos[1]-.Pelvis.Right.IliopubicEminenceViaNode_pos[1]);
 
   AnyFolder Right = {
     AnyFloat LumpedHyoidT1C0Node_pos                        = {0.06000000, 0.4200000, 0.01800000};
@@ -5841,7 +5841,7 @@ AnyFolder Thorax = {
     #else
       AnyFloat BuckleNode_pos                             = {0.1500000, 0.1800000, 0.1200000};
     #endif
-    AnyVec3 PMT12I_TMNode_pos= {0.04, 0.163, 0.019};
+    AnyVec3 PsoasMajorT12Node_pos= {0.04, 0.163, 0.019};
     AnyFloat IliocostalisLumborumR5Via1Node_pos    = {-0.050,0.336,(IliocostalisLumborumR5Node_pos[2] - .IliocostalisLumborumR5Z*(IliocostalisLumborumR5Node_pos[1] - 0.336))};
     AnyFloat IliocostalisLumborumR5Via2Node_pos    = {-0.052,0.317,(IliocostalisLumborumR5Node_pos[2] - .IliocostalisLumborumR5Z*(IliocostalisLumborumR5Node_pos[1] - 0.317))};
     AnyFloat IliocostalisLumborumR5Via3Node_pos    = {-0.053,0.283,(IliocostalisLumborumR5Node_pos[2] - .IliocostalisLumborumR5Z*(IliocostalisLumborumR5Node_pos[1] - 0.283))};
@@ -6132,7 +6132,7 @@ AnyFolder Thorax = {
 
 
     AnyFloat BuckleNode_pos = .Right.BuckleNode_pos * ..MirrorTransform;
-    AnyFloat PMT12I_TMNode_pos = .Right.PMT12I_TMNode_pos * ..MirrorTransform;
+    AnyFloat PsoasMajorT12Node_pos = .Right.PsoasMajorT12Node_pos * ..MirrorTransform;
     AnyFloat IliocostalisLumborumR5Node_pos        = .Right.IliocostalisLumborumR5Node_pos         * ..MirrorTransform;
     AnyFloat IliocostalisLumborumR6Node_pos        = .Right.IliocostalisLumborumR6Node_pos         * ..MirrorTransform;
     AnyFloat IliocostalisLumborumR7Node_pos          = .Right.IliocostalisLumborumR7Node_pos           * ..MirrorTransform;
