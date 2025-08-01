@@ -6266,8 +6266,8 @@ MuscleGroup Subcostalis = {
 
 #if BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
 MuscleGroup TransversusAbdominis = {
-  AnyMuscleViaPoint TransversusL1 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Transversus.Transversus_1;
+  AnyMuscleViaPoint TransversusAbdominisL1 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.TransversusAbdominis.TransversusAbdominisL1;
     AnyRefNode &Org = ....Segments.L1Seg.TransversusInsNode_R;
     AnyRefNode &Via01 = ....Abdominal.Layer_L1.BaseSegPosterior.TransversusPoints.Right.nn03;
     AnyRefNode &Via02 = ....Abdominal.Layer_L1.BaseSegAnterior.TransversusPoints.Right.nn01;
@@ -6280,8 +6280,8 @@ MuscleGroup TransversusAbdominis = {
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };    
   
-  AnyMuscleViaPoint TransversusL2 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Transversus.Transversus_2;
+  AnyMuscleViaPoint TransversusAbdominisL2 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.TransversusAbdominis.TransversusAbdominisL2;
     AnyRefNode &Org = ....Segments.L2Seg.TransversusInsNode_R;
     AnyRefNode &Via01 = ....Abdominal.Layer_L2.BaseSegPosterior.TransversusPoints.Right.nn03;
     AnyRefNode &Via02 = ....Abdominal.Layer_L2.BaseSegAnterior.TransversusPoints.Right.nn01;
@@ -6293,8 +6293,8 @@ MuscleGroup TransversusAbdominis = {
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   }; 
   
-  AnyMuscleViaPoint TransversusL3 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Transversus.Transversus_3;
+  AnyMuscleViaPoint TransversusAbdominisL3 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.TransversusAbdominis.TransversusAbdominisL3;
     AnyRefNode &Org = ....Segments.L3Seg.TransversusInsNode_R;
     AnyRefNode &Via01 = ....Abdominal.Layer_L3.BaseSegPosterior.TransversusPoints.Right.nn03;
     AnyRefNode &Via02 = ....Abdominal.Layer_L3.BaseSegAnterior.TransversusPoints.Right.nn01;
@@ -6306,8 +6306,8 @@ MuscleGroup TransversusAbdominis = {
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
   
-  AnyMuscleViaPoint TransversusL4 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Transversus.Transversus_4;
+  AnyMuscleViaPoint TransversusAbdominisL4 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.TransversusAbdominis.TransversusAbdominisL4;
     AnyRefNode &Org = ....Segments.L4Seg.TransversusInsNode_R;
     AnyRefNode &Via01 = ....Abdominal.Layer_L4.BaseSegPosterior.TransversusPoints.Right.nn03;
     AnyRefNode &Via02 = ....Abdominal.Layer_L4.BaseSegAnterior.TransversusPoints.Right.nn01;
@@ -6319,8 +6319,8 @@ MuscleGroup TransversusAbdominis = {
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   }; 
   
-  AnyMuscleViaPoint TransversusL5 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Transversus.Transversus_5;
+  AnyMuscleViaPoint TransversusAbdominisL5 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.TransversusAbdominis.TransversusAbdominisL5;
     AnyRefNode &Org = ....Segments.L5Seg.TransversusInsNode_R;
     AnyRefNode &Via01 = ....Abdominal.Layer_L5.BaseSegPosterior.TransversusPoints.Right.nn03;
     AnyRefNode &Via02 = ....Abdominal.Layer_L5.BaseSegAnterior.TransversusPoints.Right.nn01;

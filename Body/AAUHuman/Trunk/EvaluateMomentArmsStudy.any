@@ -98,11 +98,11 @@ AnyKinStudy Study = {
 
       AnyFolder Right = {
         AnyFolder Transversus = {
-          AnyVar TransversusL1 = -1*...Model.SpineMusRightRef.Transversus.TransversusL1.LmtDot/...Model.Drivers.AngularVelocity;
-          AnyVar TransversusL2 = -1*...Model.SpineMusRightRef.Transversus.TransversusL2.LmtDot/...Model.Drivers.AngularVelocity;
-          AnyVar TransversusL3 = -1*...Model.SpineMusRightRef.Transversus.TransversusL3.LmtDot/...Model.Drivers.AngularVelocity;
-          AnyVar TransversusL4 = -1*...Model.SpineMusRightRef.Transversus.TransversusL4.LmtDot/...Model.Drivers.AngularVelocity;
-          AnyVar TransversusL5 = -1*...Model.SpineMusRightRef.Transversus.TransversusL5.LmtDot/...Model.Drivers.AngularVelocity;
+          AnyVar TransversusAbdominisL1 = -1*...Model.SpineMusRightRef.TransversusAbdominis.TransversusAbdominisL1.LmtDot/...Model.Drivers.AngularVelocity;
+          AnyVar TransversusAbdominisL2 = -1*...Model.SpineMusRightRef.TransversusAbdominis.TransversusAbdominisL2.LmtDot/...Model.Drivers.AngularVelocity;
+          AnyVar TransversusAbdominisL3 = -1*...Model.SpineMusRightRef.TransversusAbdominis.TransversusAbdominisL3.LmtDot/...Model.Drivers.AngularVelocity;
+          AnyVar TransversusAbdominisL4 = -1*...Model.SpineMusRightRef.TransversusAbdominis.TransversusAbdominisL4.LmtDot/...Model.Drivers.AngularVelocity;
+          AnyVar TransversusAbdominisL5 = -1*...Model.SpineMusRightRef.TransversusAbdominis.TransversusAbdominisL5.LmtDot/...Model.Drivers.AngularVelocity;
         };
         AnyFolder RectusAbdominis = {
         #if BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_BUCKLE_ | BM_TRUNK_EXPERIMENTAL_RECTUS_ABDOMINIS == ON
@@ -245,11 +245,11 @@ AnyKinStudy Study = {
 
       AnyFolder Left = {
         AnyFolder Transversus = {
-          AnyVar TransversusL1 = -1*...Model.SpineMusLeftRef.Transversus.TransversusL1.LmtDot/...Model.Drivers.AngularVelocity;
-          AnyVar TransversusL2 = -1*...Model.SpineMusLeftRef.Transversus.TransversusL2.LmtDot/...Model.Drivers.AngularVelocity;
-          AnyVar TransversusL3 = -1*...Model.SpineMusLeftRef.Transversus.TransversusL3.LmtDot/...Model.Drivers.AngularVelocity;
-          AnyVar TransversusL4 = -1*...Model.SpineMusLeftRef.Transversus.TransversusL4.LmtDot/...Model.Drivers.AngularVelocity;
-          AnyVar TransversusL5 = -1*...Model.SpineMusLeftRef.Transversus.TransversusL5.LmtDot/...Model.Drivers.AngularVelocity;
+          AnyVar TransversusAbdominisL1 = -1*...Model.SpineMusLeftRef.TransversusAbdominis.TransversusAbdominisL1.LmtDot/...Model.Drivers.AngularVelocity;
+          AnyVar TransversusAbdominisL2 = -1*...Model.SpineMusLeftRef.TransversusAbdominis.TransversusAbdominisL2.LmtDot/...Model.Drivers.AngularVelocity;
+          AnyVar TransversusAbdominisL3 = -1*...Model.SpineMusLeftRef.TransversusAbdominis.TransversusAbdominisL3.LmtDot/...Model.Drivers.AngularVelocity;
+          AnyVar TransversusAbdominisL4 = -1*...Model.SpineMusLeftRef.TransversusAbdominis.TransversusAbdominisL4.LmtDot/...Model.Drivers.AngularVelocity;
+          AnyVar TransversusAbdominisL5 = -1*...Model.SpineMusLeftRef.TransversusAbdominis.TransversusAbdominisL5.LmtDot/...Model.Drivers.AngularVelocity;
         };
         AnyFolder RectusAbdominis = {
         #if BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_BUCKLE_ | BM_TRUNK_EXPERIMENTAL_RECTUS_ABDOMINIS == ON
