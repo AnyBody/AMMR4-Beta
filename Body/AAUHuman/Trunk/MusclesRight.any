@@ -615,7 +615,7 @@ AnyFolder IliocostalisThoracis = {
     viewForce.Visible ??= Off;
   };
   AnyMuscleViaPoint IliocostalisThoracisR5R11 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisThoracis.IliocostalisThoracisR6R11;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.IliocostalisThoracis.IliocostalisThoracisR5R11;
     AnyRefNode &Org = ....Segments.Right.R5Seg.IliocostalisThoracisR5R11NodeROrg;
     AnyRefNode &Via2 = ....Segments.Right.R6Seg.IliocostalisThoracisR5R11Via1NodeR;
     AnyRefNode &Via3 = ....Segments.Right.R7Seg.IliocostalisThoracisR5R11Via2NodeR;
@@ -2647,7 +2647,7 @@ MuscleGroup MultifidusCervicis = {
 
 MuscleGroup MultifidusLumborum = {
   AnyMuscleViaPoint MultifidusLumborumL1L3 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Multifidi.MultifidusLumborumL1L3;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.MultifidusLumborum.MultifidusLumborumL1L3;
     AnyRefNode &Org = ....Segments.L1Seg.MultifidusLumborumL1L3NodeR;
     AnyRefNode &Ins = ....Segments.L3Seg.MultifidusLumborumL1L3NodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -2655,7 +2655,7 @@ MuscleGroup MultifidusLumborum = {
   };
   
   AnyMuscleViaPoint MultifidusLumborumL2L4 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Multifidi.MultifidusLumborumL2L4;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.MultifidusLumborum.MultifidusLumborumL2L4;
     AnyRefNode &Org = ....Segments.L2Seg.MultifidusLumborumL2L4NodeR;
     AnyRefNode &Ins = ....Segments.L4Seg.MultifidusLumborumL2L4NodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -2663,7 +2663,7 @@ MuscleGroup MultifidusLumborum = {
   };
   
   AnyMuscleViaPoint MultifidusLumborumL3L5 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Multifidi.MultifidusLumborumL3L5;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.MultifidusLumborum.MultifidusLumborumL3L5;
     AnyRefNode &Org = ....Segments.L3Seg.MultifidusLumborumL3L5NodeR;
     AnyRefNode &Ins = ....Segments.L5Seg.MultifidusLumborumL3L5NodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -2671,7 +2671,7 @@ MuscleGroup MultifidusLumborum = {
   };
   
   AnyMuscleViaPoint MultifidusLumborumL4S1_1 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Multifidi.MultifidusLumborumL4S1_1;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.MultifidusLumborum.MultifidusLumborumL4S1_1;
     AnyRefNode &Org = ....Segments.L4Seg.MultifidusLumborumL4S1_1NodeR;
     AnyRefNode &Ins = ....Segments.SacrumSeg.MultifidusLumborumL4S1_1NodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -2679,7 +2679,7 @@ MuscleGroup MultifidusLumborum = {
   };
   
   AnyMuscleViaPoint MultifidusLumborumL5S1_1 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Multifidi.MultifidusLumborumL5S1_1;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.MultifidusLumborum.MultifidusLumborumL5S1_1;
     AnyRefNode &Org = ....Segments.L5Seg.MultifidusLumborumL5S1_1NodeR;
     AnyRefNode &Ins = ....Segments.SacrumSeg.MultifidusLumborumL5S1_1NodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -2687,7 +2687,7 @@ MuscleGroup MultifidusLumborum = {
   };
   
   AnyMuscleViaPoint MultifidusLumborumL1L4 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Multifidi.MultifidusLumborumL1L4;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.MultifidusLumborum.MultifidusLumborumL1L4;
     AnyRefNode &Org = ....Segments.L1Seg.MultifidusLumborumL1L4NodeR;
     AnyRefNode &Ins = ....Segments.L4Seg.MultifidusLumborumL1L4NodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -2695,7 +2695,7 @@ MuscleGroup MultifidusLumborum = {
   };
   
   AnyMuscleViaPoint MultifidusLumborumL2L5_1 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Multifidi.MultifidusLumborumL2L5_1;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.MultifidusLumborum.MultifidusLumborumL2L5_1;
     AnyRefNode &Org = ....Segments.L2Seg.MultifidusLumborumL2L5_1NodeR;
     AnyRefNode &Ins = ....Segments.L5Seg.MultifidusLumborumL2L5_1NodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -2703,7 +2703,7 @@ MuscleGroup MultifidusLumborum = {
   };
   
   AnyMuscleViaPoint MultifidusLumborumL3S1 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Multifidi.MultifidusLumborumL3S1;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.MultifidusLumborum.MultifidusLumborumL3S1;
     AnyRefNode &Org = ....Segments.L3Seg.MultifidusLumborumL3S1NodeR;
     AnyRefNode &Ins = ....Segments.SacrumSeg.MultifidusLumborumL3S1NodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -2711,7 +2711,7 @@ MuscleGroup MultifidusLumborum = {
   };
   
   AnyMuscleViaPoint MultifidusLumborumL4S1_2 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Multifidi.MultifidusLumborumL4S1_2;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.MultifidusLumborum.MultifidusLumborumL4S1_2;
     AnyRefNode &Org = ....Segments.L4Seg.MultifidusLumborumL4S1_2NodeR;
     AnyRefNode &Ins = ....Segments.SacrumSeg.MultifidusLumborumL4S1_2NodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -2719,7 +2719,7 @@ MuscleGroup MultifidusLumborum = {
   };
   
   AnyMuscleViaPoint MultifidusLumborumL5S1_2 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Multifidi.MultifidusLumborumL5S1_2;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.MultifidusLumborum.MultifidusLumborumL5S1_2;
     AnyRefNode &Org = ....Segments.L5Seg.MultifidusLumborumL5S1_2NodeR;
     AnyRefNode &Ins = ....Segments.SacrumSeg.MultifidusLumborumL5S1_2NodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -2727,7 +2727,7 @@ MuscleGroup MultifidusLumborum = {
   };
   
   AnyMuscleViaPoint MultifidusLumborumL1L5 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Multifidi.MultifidusLumborumL1L5;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.MultifidusLumborum.MultifidusLumborumL1L5;
     AnyRefNode &Org = ....Segments.L1Seg.MultifidusLumborumL1L5NodeR;
     AnyRefNode &Ins = ....Segments.L5Seg.MultifidusLumborumL1L5NodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -2735,7 +2735,7 @@ MuscleGroup MultifidusLumborum = {
   };
   
   AnyMuscleViaPoint MultifidusLumborumL1S1 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Multifidi.MultifidusLumborumL1S1;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.MultifidusLumborum.MultifidusLumborumL1S1;
     AnyRefNode &Org = ....Segments.L1Seg.MultifidusLumborumL1S1NodeR;
     AnyRefNode &Ins = ....Segments.SacrumSeg.MultifidusLumborumL1S1NodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -2743,7 +2743,7 @@ MuscleGroup MultifidusLumborum = {
   };
   
   AnyMuscleViaPoint MultifidusLumborumL2L5_2 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Multifidi.MultifidusLumborumL2L5_2;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.MultifidusLumborum.MultifidusLumborumL2L5_2;
     AnyRefNode &Org = ....Segments.L2Seg.MultifidusLumborumL2L5_2NodeR;
     AnyRefNode &Ins = ....Segments.L5Seg.MultifidusLumborumL2L5_2NodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -2751,7 +2751,7 @@ MuscleGroup MultifidusLumborum = {
   };
   
   AnyMuscleViaPoint MultifidusLumborumL2S1 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Multifidi.MultifidusLumborumL2S1;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.MultifidusLumborum.MultifidusLumborumL2S1;
     AnyRefNode &Org = ....Segments.L2Seg.MultifidusLumborumL2S1NodeR;
     AnyRefNode &Ins = ....Segments.SacrumSeg.MultifidusLumborumL2S1NodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -2759,7 +2759,7 @@ MuscleGroup MultifidusLumborum = {
   };
   
   AnyMuscleViaPoint MultifidusLumborumL3S2 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Multifidi.MultifidusLumborumL3S2;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.MultifidusLumborum.MultifidusLumborumL3S2;
     AnyRefNode &Org = ....Segments.L3Seg.MultifidusLumborumL3S2NodeR;
     AnyRefNode &Via = ....Segments.SacrumSeg.MultifidusLumborumL3S2NodeViaR;
     AnyRefNode &Ins = ....Segments.SacrumSeg.MultifidusLumborumL3S2NodeR;
@@ -2768,7 +2768,7 @@ MuscleGroup MultifidusLumborum = {
   };
   
   AnyMuscleViaPoint MultifidusLumborumL4S2 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Multifidi.MultifidusLumborumL4S2;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.MultifidusLumborum.MultifidusLumborumL4S2;
     AnyRefNode &Org = ....Segments.L4Seg.MultifidusLumborumL4S2NodeR;
     AnyRefNode &Via = ....Segments.SacrumSeg.MultifidusLumborumL4S2ViaNodeR;
     AnyRefNode &Ins = ....Segments.SacrumSeg.MultifidusLumborumL4S2NodeR;
@@ -2777,7 +2777,7 @@ MuscleGroup MultifidusLumborum = {
   };
   
   AnyMuscleViaPoint MultifidusLumborumL5S3 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Multifidi.MultifidusLumborumL5S3;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.MultifidusLumborum.MultifidusLumborumL5S3;
     AnyRefNode &Org = ....Segments.L5Seg.MultifidusLumborumL5S3NodeR;
     AnyRefNode &Via = ....Segments.SacrumSeg.MultifidusLumborumL5S3ViaNodeR;
     AnyRefNode &Ins = ....Segments.SacrumSeg.MultifidusLumborumL5S3NodeR;
@@ -2786,7 +2786,7 @@ MuscleGroup MultifidusLumborum = {
   };
   
   AnyMuscleViaPoint MultifidusLumborumtL1IC = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Multifidi.MultifidusLumborumtL1IC;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.MultifidusLumborum.MultifidusLumborumtL1IC;
     AnyRefNode &Org = ....Segments.L1Seg.MultifidusLumborumtL1ICNodeR;
     AnyRefNode &Via = ....Segments.PelvisSeg.MultifidusLumborumtL1ICViaNodeR;
     AnyRefNode &Ins = ....Segments.PelvisSeg.MultifidusLumborumtL1ICNodeR;
@@ -2795,7 +2795,7 @@ MuscleGroup MultifidusLumborum = {
   };
   
   AnyMuscleViaPoint MultifidusLumborumtL2IC = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Multifidi.MultifidusLumborumtL2IC;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.MultifidusLumborum.MultifidusLumborumtL2IC;
     AnyRefNode &Org = ....Segments.L2Seg.MultifidusLumborumtL2ICNodeR;
     AnyRefNode &Via = ....Segments.PelvisSeg.MultifidusLumborumtL2ICViaNodeR;
     AnyRefNode &Ins = ....Segments.PelvisSeg.MultifidusLumborumtL2ICNodeR;
@@ -2807,7 +2807,7 @@ MuscleGroup MultifidusLumborum = {
 MuscleGroup MultifidusThoracis = {
   #if BM_TRUNK_THORACIC_MODEL == _THORACIC_MODEL_FLEXIBLE_
   AnyMuscleViaPoint MultifidusThoracisT4T1 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ThoracicMultifidi.MultifidusThoracisT4T1;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.MultifidusThoracis.MultifidusThoracisT4T1;
     AnyRefFrame &Org = ....Segments.T4Seg.MultifidusThoracisTtifidusThoracisT4T1NodeROrg;
     AnyRefFrame &Ins = ....Segments.T1Seg.MultifidusThoracisTtifidusThoracisT4T1NodeRIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -2815,7 +2815,7 @@ MuscleGroup MultifidusThoracis = {
   };
   
   AnyMuscleViaPoint MultifidusThoracisT5T1 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ThoracicMultifidi.MultifidusThoracisT5T1;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.MultifidusThoracis.MultifidusThoracisT5T1;
     AnyRefFrame &Org = ....Segments.T5Seg.MultifidusThoracisT5T1NodeROrg;
     AnyRefFrame &Ins = ....Segments.T1Seg.MultifidusThoracisT5T1NodeRIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -2823,7 +2823,7 @@ MuscleGroup MultifidusThoracis = {
   };
   
   AnyMuscleViaPoint MultifidusThoracisT5T2 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ThoracicMultifidi.MultifidusThoracisT5T2;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.MultifidusThoracis.MultifidusThoracisT5T2;
     AnyRefFrame &Org = ....Segments.T5Seg.MultifidusThoracisT5T2NodeROrg;
     AnyRefFrame &Ins = ....Segments.T2Seg.MultifidusThoracisT5T2NodeRIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -2831,7 +2831,7 @@ MuscleGroup MultifidusThoracis = {
   };
   
   AnyMuscleViaPoint MultifidusThoracisT6T1 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ThoracicMultifidi.MultifidusThoracisT6T1;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.MultifidusThoracis.MultifidusThoracisT6T1;
     AnyRefFrame &Org = ....Segments.T6Seg.MultifidusThoracisT6T1NodeROrg;
     AnyRefFrame &Ins = ....Segments.T1Seg.MultifidusThoracisT6T1NodeRIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -2839,7 +2839,7 @@ MuscleGroup MultifidusThoracis = {
   };
   
   AnyMuscleViaPoint MultifidusThoracisT6T2 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ThoracicMultifidi.MultifidusThoracisT6T2;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.MultifidusThoracis.MultifidusThoracisT6T2;
     AnyRefFrame &Org = ....Segments.T6Seg.MultifidusThoracisT6T2NodeROrg;
     AnyRefFrame &Ins = ....Segments.T2Seg.MultifidusThoracisT6T2NodeRIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -2847,7 +2847,7 @@ MuscleGroup MultifidusThoracis = {
   };
   
   AnyMuscleViaPoint MultifidusThoracisT6T3 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ThoracicMultifidi.MultifidusThoracisT6T3;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.MultifidusThoracis.MultifidusThoracisT6T3;
     AnyRefFrame &Org = ....Segments.T6Seg.MultifidusThoracisT6T3NodeROrg;
     AnyRefFrame &Ins = ....Segments.T3Seg.MultifidusThoracisT6T3NodeRIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -2855,7 +2855,7 @@ MuscleGroup MultifidusThoracis = {
   };
   
   AnyMuscleViaPoint MultifidusThoracisT7T2 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ThoracicMultifidi.MultifidusThoracisT7T2;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.MultifidusThoracis.MultifidusThoracisT7T2;
     AnyRefFrame &Org = ....Segments.T7Seg.MultifidusThoracisT7T2NodeROrg;
     AnyRefFrame &Ins = ....Segments.T2Seg.MultifidusThoracisT7T2NodeRIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -2863,7 +2863,7 @@ MuscleGroup MultifidusThoracis = {
   };
   
   AnyMuscleViaPoint MultifidusThoracisT7T3 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ThoracicMultifidi.MultifidusThoracisT7T3;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.MultifidusThoracis.MultifidusThoracisT7T3;
     AnyRefFrame &Org = ....Segments.T7Seg.MultifidusThoracisT7T3NodeROrg;
     AnyRefFrame &Ins = ....Segments.T3Seg.MultifidusThoracisT7T3NodeRIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -2871,7 +2871,7 @@ MuscleGroup MultifidusThoracis = {
   };
   
   AnyMuscleViaPoint MultifidusThoracisT7T4 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ThoracicMultifidi.MultifidusThoracisT7T4;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.MultifidusThoracis.MultifidusThoracisT7T4;
     AnyRefFrame &Org = ....Segments.T7Seg.MultifidusThoracisT7T4NodeROrg;
     AnyRefFrame &Ins = ....Segments.T4Seg.MultifidusThoracisT7T4NodeRIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -2879,7 +2879,7 @@ MuscleGroup MultifidusThoracis = {
   };
   
   AnyMuscleViaPoint MultifidusThoracisT8T3 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ThoracicMultifidi.MultifidusThoracisT8T3;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.MultifidusThoracis.MultifidusThoracisT8T3;
     AnyRefFrame &Org = ....Segments.T8Seg.MultifidusThoracisT8T3NodeROrg;
     AnyRefFrame &Ins = ....Segments.T3Seg.MultifidusThoracisT8T3NodeRIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -2887,7 +2887,7 @@ MuscleGroup MultifidusThoracis = {
   };
   
   AnyMuscleViaPoint MultifidusThoracisT8T4 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ThoracicMultifidi.MultifidusThoracisT8T4;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.MultifidusThoracis.MultifidusThoracisT8T4;
     AnyRefFrame &Org = ....Segments.T8Seg.MultifidusThoracisT8T4NodeROrg;
     AnyRefFrame &Ins = ....Segments.T4Seg.MultifidusThoracisT8T4NodeRIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -2895,7 +2895,7 @@ MuscleGroup MultifidusThoracis = {
   };
   
   AnyMuscleViaPoint MultifidusThoracisT8T5 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ThoracicMultifidi.MultifidusThoracisT8T5;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.MultifidusThoracis.MultifidusThoracisT8T5;
     AnyRefFrame &Org = ....Segments.T8Seg.MultifidusThoracisT8T5NodeROrg;
     AnyRefFrame &Ins = ....Segments.T5Seg.MultifidusThoracisT8T5NodeRIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -2903,7 +2903,7 @@ MuscleGroup MultifidusThoracis = {
   };
   
   AnyMuscleViaPoint MultifidusThoracisT9T4 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ThoracicMultifidi.MultifidusThoracisT9T4;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.MultifidusThoracis.MultifidusThoracisT9T4;
     AnyRefFrame &Org = ....Segments.T9Seg.MultifidusThoracisT9T4NodeROrg;
     AnyRefFrame &Ins = ....Segments.T4Seg.MultifidusThoracisT9T4NodeRIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -2911,7 +2911,7 @@ MuscleGroup MultifidusThoracis = {
   };
   
   AnyMuscleViaPoint MultifidusThoracisT9T5 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ThoracicMultifidi.MultifidusThoracisT9T5;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.MultifidusThoracis.MultifidusThoracisT9T5;
     AnyRefFrame &Org = ....Segments.T9Seg.MultifidusThoracisT9T5NodeROrg;
     AnyRefFrame &Ins = ....Segments.T5Seg.MultifidusThoracisT9T5NodeRIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -2919,7 +2919,7 @@ MuscleGroup MultifidusThoracis = {
   };
   
   AnyMuscleViaPoint MultifidusThoracisT9T6 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ThoracicMultifidi.MultifidusThoracisT9T6;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.MultifidusThoracis.MultifidusThoracisT9T6;
     AnyRefFrame &Org = ....Segments.T9Seg.MultifidusThoracisT9T6NodeROrg;
     AnyRefFrame &Ins = ....Segments.T6Seg.MultifidusThoracisT9T6NodeRIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -2927,7 +2927,7 @@ MuscleGroup MultifidusThoracis = {
   };
   
   AnyMuscleViaPoint MultifidusThoracisT10T5 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ThoracicMultifidi.MultifidusThoracisT10T5;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.MultifidusThoracis.MultifidusThoracisT10T5;
     AnyRefFrame &Org = ....Segments.T10Seg.MultifidusThoracisT10T5NodeROrg;
     AnyRefFrame &Ins = ....Segments.T5Seg.MultifidusThoracisT10T5NodeRIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -2935,7 +2935,7 @@ MuscleGroup MultifidusThoracis = {
   };
   
   AnyMuscleViaPoint MultifidusThoracisT10T6 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ThoracicMultifidi.MultifidusThoracisT10T6;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.MultifidusThoracis.MultifidusThoracisT10T6;
     AnyRefFrame &Org = ....Segments.T10Seg.MultifidusThoracisT10T6NodeROrg;
     AnyRefFrame &Ins = ....Segments.T6Seg.MultifidusThoracisT10T6NodeRIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -2943,7 +2943,7 @@ MuscleGroup MultifidusThoracis = {
   };
   
   AnyMuscleViaPoint MultifidusThoracisT10T7 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ThoracicMultifidi.MultifidusThoracisT10T7;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.MultifidusThoracis.MultifidusThoracisT10T7;
     AnyRefFrame &Org = ....Segments.T10Seg.MultifidusThoracisT10T7NodeROrg;
     AnyRefFrame &Ins = ....Segments.T7Seg.MultifidusThoracisT10T7NodeRIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -2951,7 +2951,7 @@ MuscleGroup MultifidusThoracis = {
   };
   
   AnyMuscleViaPoint MultifidusThoracisT11T6 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ThoracicMultifidi.MultifidusThoracisT11T6;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.MultifidusThoracis.MultifidusThoracisT11T6;
     AnyRefFrame &Org = ....Segments.T11Seg.MultifidusThoracisT11T6NodeROrg;
     AnyRefFrame &Ins = ....Segments.T6Seg.MultifidusThoracisT11T6NodeRIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -2959,7 +2959,7 @@ MuscleGroup MultifidusThoracis = {
   };
   
   AnyMuscleViaPoint MultifidusThoracisT11T7 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ThoracicMultifidi.MultifidusThoracisT11T7;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.MultifidusThoracis.MultifidusThoracisT11T7;
     AnyRefFrame &Org = ....Segments.T11Seg.MultifidusThoracisT11T7NodeROrg;
     AnyRefFrame &Ins = ....Segments.T7Seg.MultifidusThoracisT11T7NodeRIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -2967,7 +2967,7 @@ MuscleGroup MultifidusThoracis = {
   };
   
   AnyMuscleViaPoint MultifidusThoracisT11T8 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ThoracicMultifidi.MultifidusThoracisT11T8;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.MultifidusThoracis.MultifidusThoracisT11T8;
     AnyRefFrame &Org = ....Segments.T11Seg.MultifidusThoracisT11T8NodeROrg;
     AnyRefFrame &Ins = ....Segments.T8Seg.MultifidusThoracisT11T8NodeRIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -2975,7 +2975,7 @@ MuscleGroup MultifidusThoracis = {
   };
   
   AnyMuscleViaPoint MultifidusThoracisT12T7 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ThoracicMultifidi.MultifidusThoracisT12T7;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.MultifidusThoracis.MultifidusThoracisT12T7;
     AnyRefFrame &Org = ....Segments.T12Seg.MultifidusThoracisT12T7NodeROrg;
     AnyRefFrame &Ins = ....Segments.T7Seg.MultifidusThoracisT12T7NodeRIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -2983,7 +2983,7 @@ MuscleGroup MultifidusThoracis = {
   };
   
   AnyMuscleViaPoint MultifidusThoracisT12T8 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ThoracicMultifidi.MultifidusThoracisT12T8;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.MultifidusThoracis.MultifidusThoracisT12T8;
     AnyRefFrame &Org = ....Segments.T12Seg.MultifidusThoracisT12T8NodeROrg;
     AnyRefFrame &Ins = ....Segments.T8Seg.MultifidusThoracisT12T8NodeRIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -2991,7 +2991,7 @@ MuscleGroup MultifidusThoracis = {
   };
   
   AnyMuscleViaPoint MultifidusThoracisT12T9 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ThoracicMultifidi.MultifidusThoracisT12T9;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.MultifidusThoracis.MultifidusThoracisT12T9;
     AnyRefFrame &Org = ....Segments.T12Seg.MultifidusThoracisT12T9NodeROrg;
     AnyRefFrame &Ins = ....Segments.T9Seg.MultifidusThoracisT12T9NodeRIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -2999,7 +2999,7 @@ MuscleGroup MultifidusThoracis = {
   };
   #endif
   AnyMuscleViaPoint MultifidusThoracisL1T8 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ThoracicMultifidi.MultifidusThoracisL1T8;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.MultifidusThoracis.MultifidusThoracisL1T8;
     AnyRefFrame &Org = ....Segments.L1Seg.MultifidusThoracisL1T8NodeROrg;
     AnyRefFrame &Ins = ....Segments.T8Seg.MultifidusThoracisL1T8NodeRIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -3007,7 +3007,7 @@ MuscleGroup MultifidusThoracis = {
   };
   
   AnyMuscleViaPoint MultifidusThoracisL1T9 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ThoracicMultifidi.MultifidusThoracisL1T9;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.MultifidusThoracis.MultifidusThoracisL1T9;
     AnyRefFrame &Org = ....Segments.L1Seg.MultifidusThoracisL1T9NodeROrg;
     AnyRefFrame &Ins = ....Segments.T9Seg.MultifidusThoracisL1T9NodeRIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -3016,7 +3016,7 @@ MuscleGroup MultifidusThoracis = {
   };
   
   AnyMuscleViaPoint MultifidusThoracisL1T10 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ThoracicMultifidi.MultifidusThoracisL1T10;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.MultifidusThoracis.MultifidusThoracisL1T10;
     AnyRefFrame &Org = ....Segments.L1Seg.MultifidusThoracisL1T10NodeROrg;
     AnyRefFrame &Ins = ....Segments.T10Seg.MultifidusThoracisL1T10NodeRIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -3025,7 +3025,7 @@ MuscleGroup MultifidusThoracis = {
   };
   
   AnyMuscleViaPoint MultifidusThoracisL2T9 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ThoracicMultifidi.MultifidusThoracisL2T9;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.MultifidusThoracis.MultifidusThoracisL2T9;
     AnyRefFrame &Org = ....Segments.L2Seg.MultifidusThoracisL2T9NodeROrg;
     AnyRefFrame &Ins = ....Segments.T9Seg.MultifidusThoracisL2T9NodeRIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -3034,7 +3034,7 @@ MuscleGroup MultifidusThoracis = {
   };
   
   AnyMuscleViaPoint MultifidusThoracisL2T10 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ThoracicMultifidi.MultifidusThoracisL2T10;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.MultifidusThoracis.MultifidusThoracisL2T10;
     AnyRefFrame &Org = ....Segments.L2Seg.MultifidusThoracisL2T10NodeROrg;
     AnyRefFrame &Ins = ....Segments.T10Seg.MultifidusThoracisL2T10NodeRIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -3043,7 +3043,7 @@ MuscleGroup MultifidusThoracis = {
   };
   
   AnyMuscleViaPoint MultifidusThoracisL2T11 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ThoracicMultifidi.MultifidusThoracisL2T11;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.MultifidusThoracis.MultifidusThoracisL2T11;
     AnyRefFrame &Org = ....Segments.L2Seg.MultifidusThoracisL2T11NodeROrg;
     AnyRefFrame &Ins = ....Segments.T11Seg.MultifidusThoracisL2T11NodeRIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -3052,7 +3052,7 @@ MuscleGroup MultifidusThoracis = {
   };
   
   AnyMuscleViaPoint MultifidusThoracisL3T10 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ThoracicMultifidi.MultifidusThoracisL3T10;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.MultifidusThoracis.MultifidusThoracisL3T10;
     AnyRefFrame &Org = ....Segments.L3Seg.MultifidusThoracisL3T10NodeROrg;
     AnyRefFrame &Ins = ....Segments.T10Seg.MultifidusThoracisL3T10NodeRIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -3061,7 +3061,7 @@ MuscleGroup MultifidusThoracis = {
   };
   
   AnyMuscleViaPoint MultifidusThoracisL3T11 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ThoracicMultifidi.MultifidusThoracisL3T11;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.MultifidusThoracis.MultifidusThoracisL3T11;
     AnyRefFrame &Org = ....Segments.L3Seg.MultifidusThoracisL3T11NodeROrg;
     AnyRefFrame &Ins = ....Segments.T11Seg.MultifidusThoracisL3T11NodeRIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -3070,7 +3070,7 @@ MuscleGroup MultifidusThoracis = {
   };
   
   AnyMuscleViaPoint MultifidusThoracisL3T12 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ThoracicMultifidi.MultifidusThoracisL3T12;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.MultifidusThoracis.MultifidusThoracisL3T12;
     AnyRefFrame &Org = ....Segments.L3Seg.MultifidusThoracisL3T12NodeROrg;
     AnyRefFrame &Ins = ....Segments.T12Seg.MultifidusThoracisL3T12NodeRIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -3079,7 +3079,7 @@ MuscleGroup MultifidusThoracis = {
   };
   
   AnyMuscleViaPoint MultifidusThoracisL4T11 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ThoracicMultifidi.MultifidusThoracisL4T11;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.MultifidusThoracis.MultifidusThoracisL4T11;
     AnyRefFrame &Org = ....Segments.L4Seg.MultifidusThoracisL4T11NodeROrg;
     AnyRefFrame &Ins = ....Segments.T11Seg.MultifidusThoracisL4T11NodeRIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -3088,7 +3088,7 @@ MuscleGroup MultifidusThoracis = {
   };
   
   AnyMuscleViaPoint MultifidusThoracisL4T12 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ThoracicMultifidi.MultifidusThoracisL4T12;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.MultifidusThoracis.MultifidusThoracisL4T12;
     AnyRefFrame &Org = ....Segments.L4Seg.MultifidusThoracisL4T12NodeROrg;
     AnyRefFrame &Ins = ....Segments.T12Seg.MultifidusThoracisL4T12NodeRIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -3097,7 +3097,7 @@ MuscleGroup MultifidusThoracis = {
   };
   
   AnyMuscleViaPoint MultifidusThoracisL5T12 =   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.ThoracicMultifidi.MultifidusThoracisL5T12;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.MultifidusThoracis.MultifidusThoracisL5T12;
     AnyRefFrame &Org = ....Segments.L5Seg.MultifidusThoracisL5T12NodeROrg;
     AnyRefFrame &Ins = ....Segments.T12Seg.MultifidusThoracisL5T12NodeRIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
