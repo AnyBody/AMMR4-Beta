@@ -6115,138 +6115,138 @@ MuscleGroup SpleniusCervicis = {
 
 #if BM_TRUNK_THORACIC_MODEL == _THORACIC_MODEL_FLEXIBLE_
 MuscleGroup Subcostalis = {
-  AnyMuscleViaPoint SCR1R3 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.Subcostalis.SCModel_1;
-    AnyRefNode &R1 = ....Segments.Left.R1Seg.SCR1R3_L_Org;
-    AnyRefNode &R3 = ....Segments.Left.R3Seg.SCR1R3_L_Ins;
+  AnyMuscleViaPoint SubcostalisR1R3 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.Subcostalis.SubcostalisR1R3;
+    AnyRefNode &R1 = ....Segments.Left.R1Seg.SubcostalisR1R3_L_Org;
+    AnyRefNode &R3 = ....Segments.Left.R3Seg.SubcostalisR1R3_L_Ins;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint SCR1R4 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.Subcostalis.SCModel_2;
-    AnyRefNode &R1 = ....Segments.Left.R1Seg.SCR1R4_L_Org;
-    AnyRefNode &R3 = ....Segments.Left.R4Seg.SCR1R4_L_Ins;
+  AnyMuscleViaPoint SubcostalisR1R4 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.Subcostalis.SubcostalisR1R4;
+    AnyRefNode &R1 = ....Segments.Left.R1Seg.SubcostalisR1R4_L_Org;
+    AnyRefNode &R3 = ....Segments.Left.R4Seg.SubcostalisR1R4_L_Ins;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint SCR2R4 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.Subcostalis.SCModel_3;
-    AnyRefNode &R2 = ....Segments.Left.R2Seg.SCR2R4_L_Org;
-    AnyRefNode &R4 = ....Segments.Left.R4Seg.SCR2R4_L_Ins;
+  AnyMuscleViaPoint SubcostalisR2R4 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.Subcostalis.SubcostalisR2R4;
+    AnyRefNode &R2 = ....Segments.Left.R2Seg.SubcostalisR2R4_L_Org;
+    AnyRefNode &R4 = ....Segments.Left.R4Seg.SubcostalisR2R4_L_Ins;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint SCR2R5 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.Subcostalis.SCModel_4;
-    AnyRefNode &R2 = ....Segments.Left.R2Seg.SCR2R5_L_Org;
-    AnyRefNode &R4 = ....Segments.Left.R5Seg.SCR2R5_L_Ins;
+  AnyMuscleViaPoint SubcostalisR2R5 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.Subcostalis.SubcostalisR2R5;
+    AnyRefNode &R2 = ....Segments.Left.R2Seg.SubcostalisR2R5_L_Org;
+    AnyRefNode &R4 = ....Segments.Left.R5Seg.SubcostalisR2R5_L_Ins;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint SCR3R5 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.Subcostalis.SCModel_5;
-    AnyRefNode &R3 = ....Segments.Left.R3Seg.SCR3R5_L_Org;
-    AnyRefNode &R5 = ....Segments.Left.R5Seg.SCR3R5_L_Ins;
+  AnyMuscleViaPoint SubcostalisR3R5 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.Subcostalis.SubcostalisR3R5;
+    AnyRefNode &R3 = ....Segments.Left.R3Seg.SubcostalisR3R5_L_Org;
+    AnyRefNode &R5 = ....Segments.Left.R5Seg.SubcostalisR3R5_L_Ins;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint SCR3R6 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.Subcostalis.SCModel_6;
-    AnyRefNode &R3 = ....Segments.Left.R3Seg.SCR3R6_L_Org;
-    AnyRefNode &R5 = ....Segments.Left.R6Seg.SCR3R6_L_Ins;
+  AnyMuscleViaPoint SubcostalisR3R6 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.Subcostalis.SubcostalisR3R6;
+    AnyRefNode &R3 = ....Segments.Left.R3Seg.SubcostalisR3R6_L_Org;
+    AnyRefNode &R5 = ....Segments.Left.R6Seg.SubcostalisR3R6_L_Ins;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint SCR4R6 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.Subcostalis.SCModel_7;
-    AnyRefNode &R4 = ....Segments.Left.R4Seg.SCR4R6_L_Org;
-    AnyRefNode &R6 = ....Segments.Left.R6Seg.SCR4R6_L_Ins;
+  AnyMuscleViaPoint SubcostalisR4R6 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.Subcostalis.SubcostalisR4R6;
+    AnyRefNode &R4 = ....Segments.Left.R4Seg.SubcostalisR4R6_L_Org;
+    AnyRefNode &R6 = ....Segments.Left.R6Seg.SubcostalisR4R6_L_Ins;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint SCR4R7 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.Subcostalis.SCModel_8;
-    AnyRefNode &R4 = ....Segments.Left.R4Seg.SCR4R7_L_Org;
-    AnyRefNode &R6 = ....Segments.Left.R7Seg.SCR4R7_L_Ins;
+  AnyMuscleViaPoint SubcostalisR4R7 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.Subcostalis.SubcostalisR4R7;
+    AnyRefNode &R4 = ....Segments.Left.R4Seg.SubcostalisR4R7_L_Org;
+    AnyRefNode &R6 = ....Segments.Left.R7Seg.SubcostalisR4R7_L_Ins;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint SCR5R7 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.Subcostalis.SCModel_9;
-    AnyRefNode &R5 = ....Segments.Left.R5Seg.SCR5R7_L_Org;
-    AnyRefNode &R7 = ....Segments.Left.R7Seg.SCR5R7_L_Ins;
+  AnyMuscleViaPoint SubcostalisR5R7 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.Subcostalis.SubcostalisR5R7;
+    AnyRefNode &R5 = ....Segments.Left.R5Seg.SubcostalisR5R7_L_Org;
+    AnyRefNode &R7 = ....Segments.Left.R7Seg.SubcostalisR5R7_L_Ins;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint SCR5R8 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.Subcostalis.SCModel_10;
-    AnyRefNode &R5 = ....Segments.Left.R5Seg.SCR5R8_L_Org;
-    AnyRefNode &R7 = ....Segments.Left.R8Seg.SCR5R8_L_Ins;
+  AnyMuscleViaPoint SubcostalisR5R8 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.Subcostalis.SubcostalisR5R8;
+    AnyRefNode &R5 = ....Segments.Left.R5Seg.SubcostalisR5R8_L_Org;
+    AnyRefNode &R7 = ....Segments.Left.R8Seg.SubcostalisR5R8_L_Ins;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint SCR6R8 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.Subcostalis.SCModel_11;
-    AnyRefNode &R6 = ....Segments.Left.R6Seg.SCR6R8_L_Org;
-    AnyRefNode &R8 = ....Segments.Left.R8Seg.SCR6R8_L_Ins;
+  AnyMuscleViaPoint SubcostalisR6R8 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.Subcostalis.SubcostalisR6R8;
+    AnyRefNode &R6 = ....Segments.Left.R6Seg.SubcostalisR6R8_L_Org;
+    AnyRefNode &R8 = ....Segments.Left.R8Seg.SubcostalisR6R8_L_Ins;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint SCR6R9 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.Subcostalis.SCModel_12;
-    AnyRefNode &R6 = ....Segments.Left.R6Seg.SCR6R9_L_Org;
-    AnyRefNode &R8 = ....Segments.Left.R9Seg.SCR6R9_L_Ins;
+  AnyMuscleViaPoint SubcostalisR6R9 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.Subcostalis.SubcostalisR6R9;
+    AnyRefNode &R6 = ....Segments.Left.R6Seg.SubcostalisR6R9_L_Org;
+    AnyRefNode &R8 = ....Segments.Left.R9Seg.SubcostalisR6R9_L_Ins;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint SCR7R9 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.Subcostalis.SCModel_13;
-    AnyRefNode &R7 = ....Segments.Left.R7Seg.SCR7R9_L_Org;
-    AnyRefNode &R9 = ....Segments.Left.R9Seg.SCR7R9_L_Ins;
+  AnyMuscleViaPoint SubcostalisR7R9 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.Subcostalis.SubcostalisR7R9;
+    AnyRefNode &R7 = ....Segments.Left.R7Seg.SubcostalisR7R9_L_Org;
+    AnyRefNode &R9 = ....Segments.Left.R9Seg.SubcostalisR7R9_L_Ins;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint SCR7R10 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.Subcostalis.SCModel_14;
-    AnyRefNode &R7 = ....Segments.Left.R7Seg.SCR7R10_L_Org;
-    AnyRefNode &R9 = ....Segments.Left.R10Seg.SCR7R10_L_Ins;
+  AnyMuscleViaPoint SubcostalisR7R10 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.Subcostalis.SubcostalisR7R10;
+    AnyRefNode &R7 = ....Segments.Left.R7Seg.SubcostalisR7R10_L_Org;
+    AnyRefNode &R9 = ....Segments.Left.R10Seg.SubcostalisR7R10_L_Ins;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint SCR8R10 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.Subcostalis.SCModel_15;
-    AnyRefNode &R8 = ....Segments.Left.R8Seg.SCR8R10_L_Org;
-    AnyRefNode &R10 = ....Segments.Left.R10Seg.SCR8R10_L_Ins;
+  AnyMuscleViaPoint SubcostalisR8R10 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.Subcostalis.SubcostalisR8R10;
+    AnyRefNode &R8 = ....Segments.Left.R8Seg.SubcostalisR8R10_L_Org;
+    AnyRefNode &R10 = ....Segments.Left.R10Seg.SubcostalisR8R10_L_Ins;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint SCR8R11 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.Subcostalis.SCModel_16;
-    AnyRefNode &R8 = ....Segments.Left.R8Seg.SCR8R11_L_Ins;
-    AnyRefNode &R11 = ....Segments.Left.R11Seg.SCR8R11_L_Org;
+  AnyMuscleViaPoint SubcostalisR8R11 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.Subcostalis.SubcostalisR8R11;
+    AnyRefNode &R8 = ....Segments.Left.R8Seg.SubcostalisR8R11_L_Ins;
+    AnyRefNode &R11 = ....Segments.Left.R11Seg.SubcostalisR8R11_L_Org;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint SCR9R11 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.Subcostalis.SCModel_17;
-    AnyRefNode &R9 = ....Segments.Left.R9Seg.SCR9R11_L_Ins;
-    AnyRefNode &R11 = ....Segments.Left.R11Seg.SCR9R11_L_Org;
+  AnyMuscleViaPoint SubcostalisR9R11 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.Subcostalis.SubcostalisR9R11;
+    AnyRefNode &R9 = ....Segments.Left.R9Seg.SubcostalisR9R11_L_Ins;
+    AnyRefNode &R11 = ....Segments.Left.R11Seg.SubcostalisR9R11_L_Org;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   }; 
