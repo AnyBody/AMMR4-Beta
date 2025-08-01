@@ -3886,8 +3886,8 @@ AnyFolder Left = {
 
 
     #if BM_TRUNK_MUSCLES
-    AnyMuscleModel3E MultifidusLumborumL4S1 = {
-      AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.MultifidusLumborum.MultifidusLumborumL4S1;
+    AnyMuscleModel3E MultifidusLumborumL4S1_1 = {
+      AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.MultifidusLumborum.MultifidusLumborumL4S1_1;
       AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
       AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
       F0 ??= ...DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -3908,8 +3908,8 @@ AnyFolder Left = {
 
 
     #if BM_TRUNK_MUSCLES
-    AnyMuscleModel3E MultifidusLumborumL5S1 = {
-      AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.MultifidusLumborum.MultifidusLumborumL5S1;
+    AnyMuscleModel3E MultifidusLumborumL5S1_1 = {
+      AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.MultifidusLumborum.MultifidusLumborumL5S1_1;
       AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
       AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
       F0 ??= ...DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -3952,8 +3952,8 @@ AnyFolder Left = {
 
 
     #if BM_TRUNK_MUSCLES
-    AnyMuscleModel3E MultifidusLumborumL2L5 = {
-      AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.MultifidusLumborum.MultifidusLumborumL2L5;
+    AnyMuscleModel3E MultifidusLumborumL2L5_1 = {
+      AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.MultifidusLumborum.MultifidusLumborumL2L5_1;
       AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
       AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
       F0 ??= ...DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -3996,8 +3996,8 @@ AnyFolder Left = {
 
 
     #if BM_TRUNK_MUSCLES
-    AnyMuscleModel3E MultifidusLumborumL4S1 = {
-      AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.MultifidusLumborum.MultifidusLumborumL4S1;
+    AnyMuscleModel3E MultifidusLumborumL4S1_2 = {
+      AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.MultifidusLumborum.MultifidusLumborumL4S1_2;
       AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
       AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
       F0 ??= ...DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -4018,8 +4018,8 @@ AnyFolder Left = {
 
 
     #if BM_TRUNK_MUSCLES
-    AnyMuscleModel3E MultifidusLumborumL5S1 = {
-      AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.MultifidusLumborum.MultifidusLumborumL5S1;
+    AnyMuscleModel3E MultifidusLumborumL5S1_2 = {
+      AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.MultifidusLumborum.MultifidusLumborumL5S1_2;
       AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
       AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
       F0 ??= ...DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -4084,8 +4084,8 @@ AnyFolder Left = {
 
 
     #if BM_TRUNK_MUSCLES
-    AnyMuscleModel3E MultifidusLumborumL2L5 = {
-      AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.MultifidusLumborum.MultifidusLumborumL2L5;
+    AnyMuscleModel3E MultifidusLumborumL2L5_2 = {
+      AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.MultifidusLumborum.MultifidusLumborumL2L5_2;
       AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
       AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
       F0 ??= ...DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -13028,8 +13028,8 @@ AnyFolder Right = {
 
 
     #if BM_TRUNK_MUSCLES
-    AnyMuscleModel3E MultifidusLumborumL4S1 = {
-      AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.MultifidusLumborum.MultifidusLumborumL4S1;
+    AnyMuscleModel3E MultifidusLumborumL4S1_1 = {
+      AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.MultifidusLumborum.MultifidusLumborumL4S1_1;
       AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
       AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
       F0 ??= ...DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -13050,8 +13050,8 @@ AnyFolder Right = {
 
 
     #if BM_TRUNK_MUSCLES
-    AnyMuscleModel3E MultifidusLumborumL5S1 = {
-      AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.MultifidusLumborum.MultifidusLumborumL5S1;
+    AnyMuscleModel3E MultifidusLumborumL5S1_1 = {
+      AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.MultifidusLumborum.MultifidusLumborumL5S1_1;
       AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
       AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
       F0 ??= ...DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -13094,8 +13094,8 @@ AnyFolder Right = {
 
 
     #if BM_TRUNK_MUSCLES
-    AnyMuscleModel3E MultifidusLumborumL2L5 = {
-      AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.MultifidusLumborum.MultifidusLumborumL2L5;
+    AnyMuscleModel3E MultifidusLumborumL2L5_1 = {
+      AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.MultifidusLumborum.MultifidusLumborumL2L5_1;
       AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
       AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
       F0 ??= ...DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -13138,8 +13138,8 @@ AnyFolder Right = {
 
 
     #if BM_TRUNK_MUSCLES
-    AnyMuscleModel3E MultifidusLumborumL4S1 = {
-      AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.MultifidusLumborum.MultifidusLumborumL4S1;
+    AnyMuscleModel3E MultifidusLumborumL4S1_2 = {
+      AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.MultifidusLumborum.MultifidusLumborumL4S1_2;
       AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
       AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
       F0 ??= ...DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -13160,8 +13160,8 @@ AnyFolder Right = {
 
 
     #if BM_TRUNK_MUSCLES
-    AnyMuscleModel3E MultifidusLumborumL5S1 = {
-      AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.MultifidusLumborum.MultifidusLumborumL5S1;
+    AnyMuscleModel3E MultifidusLumborumL5S1_2 = {
+      AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.MultifidusLumborum.MultifidusLumborumL5S1_2;
       AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
       AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
       F0 ??= ...DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -13226,8 +13226,8 @@ AnyFolder Right = {
 
 
     #if BM_TRUNK_MUSCLES
-    AnyMuscleModel3E MultifidusLumborumL2L5 = {
-      AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.MultifidusLumborum.MultifidusLumborumL2L5;
+    AnyMuscleModel3E MultifidusLumborumL2L5_2 = {
+      AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.MultifidusLumborum.MultifidusLumborumL2L5_2;
       AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
       AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
       F0 ??= ...DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
