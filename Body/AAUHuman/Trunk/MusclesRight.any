@@ -320,7 +320,7 @@ MuscleGroup Diaphragm = {
 // vital part in swallowing and speech.
 MuscleGroup Hyoid = {
   AnyMuscleViaPoint LumpedHyoidStC0 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.LumpedHyoid.LumpedHyoidStC0;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Hyoid.LumpedHyoidStC0;
     AnyRefNode &Org = ....Segments.SkullSeg.LumpedHyoidT1C0NodeR;
     AnyRefNode &Ins = ....Segments.SternumSeg.LumpedHyoidStC0NodeRIns;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
