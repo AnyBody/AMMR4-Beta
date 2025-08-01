@@ -794,8 +794,8 @@ AnySeg C7Seg = {
   AnyRefNode MidNode = {sRel = .Scale(.Data.MidNode_pos);};
 
   //Splenius capitis nodes
-  AnyRefNode SpleniusCapitisC7C0NodeR = {sRel = .Scale(.Data.Right.SpleniusCapitisC7C0Node_pos);};
-  AnyRefNode SpleniusCapitisC7C0NodeL = {sRel = .Scale(.Data.Left.SpleniusCapitisC7C0Node_pos);};
+  AnyRefNode SpleniusCapitisC7NodeR = {sRel = .Scale(.Data.Right.SpleniusCapitisC7Node_pos);};
+  AnyRefNode SpleniusCapitisC7NodeL = {sRel = .Scale(.Data.Left.SpleniusCapitisC7Node_pos);};
 
   //Semispinalis capitis nodes
   AnyRefNode SemispinalisCapitisC7C0NodeR = {sRel = .Scale(.Data.Right.SemispinalisCapitisC7C0Node_pos);};

@@ -6051,31 +6051,31 @@ MuscleGroup SerratusPosteriorSuperior = {
 };
 
 MuscleGroup SpleniusCapitis = {
-  AnyMuscleViaPoint SpleniusCapitisC7C0 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.SpleniusCapitis.SpleniusCapitisC7C0;
+  AnyMuscleViaPoint SpleniusCapitisC7 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.SpleniusCapitis.SpleniusCapitisC7;
     AnyRefNode &Org = ....Segments.SkullSeg.SpleniusCapitisNodeL;
-    AnyRefNode &Ins = ....Segments.C7Seg.SpleniusCapitisC7C0NodeL;
+    AnyRefNode &Ins = ....Segments.C7Seg.SpleniusCapitisC7NodeL;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };   
-  AnyMuscleViaPoint SpleniusCapitisT1C0 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.SpleniusCapitis.SpleniusCapitisT1C0;
+  AnyMuscleViaPoint SpleniusCapitisT1 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.SpleniusCapitis.SpleniusCapitisT1;
     AnyRefNode &Org = ....Segments.SkullSeg.SpleniusCapitisNodeL;
-    AnyRefNode &Ins = ....Segments.T1Seg.Left.SpleniusCapitisT1C0Node;
+    AnyRefNode &Ins = ....Segments.T1Seg.Left.SpleniusCapitisT1Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };  
-  AnyMuscleViaPoint SpleniusCapitisT2C0 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.SpleniusCapitis.SpleniusCapitisT2C0;
+  AnyMuscleViaPoint SpleniusCapitisT2 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.SpleniusCapitis.SpleniusCapitisT2;
     AnyRefNode &Org = ....Segments.SkullSeg.SpleniusCapitisNodeL;
-    AnyRefNode &Ins = ....Segments.T2Seg.Left.SpleniusCapitisT2C0Node;
+    AnyRefNode &Ins = ....Segments.T2Seg.Left.SpleniusCapitisT2Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };  
-  AnyMuscleViaPoint SpleniusCapitisT3C0 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.SpleniusCapitis.SpleniusCapitisT3C0;
+  AnyMuscleViaPoint SpleniusCapitis3 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.SpleniusCapitis.SpleniusCapitis3;
     AnyRefNode &Org = ....Segments.SkullSeg.SpleniusCapitisNodeL;
-    AnyRefNode &Ins = ....Segments.T3Seg.Left.SpleniusCapitisT3C0Node;
+    AnyRefNode &Ins = ....Segments.T3Seg.Left.SpleniusCapitis3Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };  

@@ -119,7 +119,7 @@ Segments.T1Seg = {
     //Longissimus cervicis nodes
     AnyRefNode LongissimusCervicisT1Node = {sRel = ..Scale(..Data.Thorax.Right.LongissimusCervicisT1Node_pos);};
     //Splenius Capitis
-    AnyRefNode SpleniusCapitisT1C0Node = {sRel = ..Scale(..Data.Thorax.Right.SpleniusCapitisT1C0Node_pos);};
+    AnyRefNode SpleniusCapitisT1Node = {sRel = ..Scale(..Data.Thorax.Right.SpleniusCapitisT1Node_pos);};
     //Rotatores
     AnyRefNode RotatoresBrevisT1C7Node = {sRel = ..Scale(..Data.Thorax.Right.RotatoresBrevisT1C7OrgNode_pos);};
     AnyRefNode RotatoresBrevisT2T1Node = {sRel = ..Scale(..Data.Thorax.Right.RotatoresBrevisT2T1InsNode_pos);};
@@ -136,7 +136,7 @@ Segments.T1Seg = {
     //Longissimus cervicis nodes
     AnyRefNode LongissimusCervicisT1Node = {sRel = ..Scale(..Data.Thorax.Left.LongissimusCervicisT1Node_pos);};
     //Splenius Capitis
-    AnyRefNode SpleniusCapitisT1C0Node = {sRel = ..Scale(..Data.Thorax.Left.SpleniusCapitisT1C0Node_pos);};
+    AnyRefNode SpleniusCapitisT1Node = {sRel = ..Scale(..Data.Thorax.Left.SpleniusCapitisT1Node_pos);};
     //Rotatores
     AnyRefNode RotatoresBrevisT1C7Node = {sRel = ..Scale(..Data.Thorax.Left.RotatoresBrevisT1C7OrgNode_pos);};
     AnyRefNode RotatoresBrevisT2T1Node = {sRel = ..Scale(..Data.Thorax.Left.RotatoresBrevisT2T1InsNode_pos);};
@@ -225,7 +225,7 @@ Segments.T2Seg = {
     //Longissimus cervicis nodes
     AnyRefNode LongissimusCervicisT2Node = {sRel = ..Scale(..Data.Thorax.Right.LongissimusCervicisT2Node_pos);};
     //Splenius Capitis
-    AnyRefNode SpleniusCapitisT2C0Node = {sRel = ..Scale(..Data.Thorax.Right.SpleniusCapitisT2C0Node_pos);};
+    AnyRefNode SpleniusCapitisT2Node = {sRel = ..Scale(..Data.Thorax.Right.SpleniusCapitisT2Node_pos);};
     //Rotatores
     AnyRefNode RotatoresBrevisT2T1Node = {sRel = ..Scale(..Data.Thorax.Right.RotatoresBrevisT2T1OrgNode_pos);};
     AnyRefNode RotatoresBrevisT3T2Node = {sRel = ..Scale(..Data.Thorax.Right.RotatoresBrevisT3T2InsNode_pos);};
@@ -242,7 +242,7 @@ Segments.T2Seg = {
     //Longissimus cervicis nodes
     AnyRefNode LongissimusCervicisT2Node = {sRel = ..Scale(..Data.Thorax.Left.LongissimusCervicisT2Node_pos);};
     //Splenius Capitis
-    AnyRefNode SpleniusCapitisT2C0Node = {sRel = ..Scale(..Data.Thorax.Left.SpleniusCapitisT2C0Node_pos);};
+    AnyRefNode SpleniusCapitisT2Node = {sRel = ..Scale(..Data.Thorax.Left.SpleniusCapitisT2Node_pos);};
     //Rotatores
     AnyRefNode RotatoresBrevisT2T1Node = {sRel = ..Scale(..Data.Thorax.Left.RotatoresBrevisT2T1OrgNode_pos);};
     AnyRefNode RotatoresBrevisT3T2Node = {sRel = ..Scale(..Data.Thorax.Left.RotatoresBrevisT3T2InsNode_pos);};
@@ -317,7 +317,7 @@ Segments.T3Seg = {
     //Longissimus cervicis nodes
     AnyRefNode LongissimusCervicisT3Node = {sRel = ..Scale(..Data.Thorax.Right.LongissimusCervicisT3Node_pos);};
     //Splenius Capitis
-    AnyRefNode SpleniusCapitisT3C0Node = {sRel = ..Scale(..Data.Thorax.Right.SpleniusCapitisT3C0Node_pos);};
+    AnyRefNode SpleniusCapitis3Node = {sRel = ..Scale(..Data.Thorax.Right.SpleniusCapitis3Node_pos);};
     //Splenius Cervicis
     AnyRefNode SpleniusCervicisNode = {sRel = ..Scale(..Data.Thorax.Right.SpleniusCervicisT3Node_pos);};
     //Rotatores
@@ -336,7 +336,7 @@ Segments.T3Seg = {
     //Longissimus cervicis nodes
     AnyRefNode LongissimusCervicisT3Node = {sRel = ..Scale(..Data.Thorax.Left.LongissimusCervicisT3Node_pos);};
     //Splenius Capitis
-    AnyRefNode SpleniusCapitisT3C0Node = {sRel = ..Scale(..Data.Thorax.Left.SpleniusCapitisT3C0Node_pos);};
+    AnyRefNode SpleniusCapitis3Node = {sRel = ..Scale(..Data.Thorax.Left.SpleniusCapitis3Node_pos);};
     //Splenius Cervicis
     AnyRefNode SpleniusCervicisNode = {sRel = ..Scale(..Data.Thorax.Left.SpleniusCervicisT3Node_pos);};
     //Rotatores
