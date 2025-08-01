@@ -2670,18 +2670,18 @@ MuscleGroup MultifidusLumborum = {
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint MultifidusLumborumL4S1 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Multifidi.MultifidusLumborumL4S1;
-    AnyRefNode &Org = ....Segments.L4Seg.MultifidusLumborumL4S1NodeR;
-    AnyRefNode &Ins = ....Segments.SacrumSeg.MultifidusLumborumL4S1NodeR;
+  AnyMuscleViaPoint MultifidusLumborumL4S1_1 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Multifidi.MultifidusLumborumL4S1_1;
+    AnyRefNode &Org = ....Segments.L4Seg.MultifidusLumborumL4S1_1NodeR;
+    AnyRefNode &Ins = ....Segments.SacrumSeg.MultifidusLumborumL4S1_1NodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint MultifidusLumborumL5S1 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Multifidi.MultifidusLumborumL5S1;
-    AnyRefNode &Org = ....Segments.L5Seg.MultifidusLumborumL5S1NodeR;
-    AnyRefNode &Ins = ....Segments.SacrumSeg.MultifidusLumborumL5S1NodeR;
+  AnyMuscleViaPoint MultifidusLumborumL5S1_1 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Multifidi.MultifidusLumborumL5S1_1;
+    AnyRefNode &Org = ....Segments.L5Seg.MultifidusLumborumL5S1_1NodeR;
+    AnyRefNode &Ins = ....Segments.SacrumSeg.MultifidusLumborumL5S1_1NodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
@@ -2694,10 +2694,10 @@ MuscleGroup MultifidusLumborum = {
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint MultifidusLumborumL2L5 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Multifidi.MultifidusLumborumL2L5;
-    AnyRefNode &Org = ....Segments.L2Seg.MultifidusLumborumL2L5NodeR;
-    AnyRefNode &Ins = ....Segments.L5Seg.MultifidusLumborumL2L5NodeR;
+  AnyMuscleViaPoint MultifidusLumborumL2L5_1 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Multifidi.MultifidusLumborumL2L5_1;
+    AnyRefNode &Org = ....Segments.L2Seg.MultifidusLumborumL2L5_1NodeR;
+    AnyRefNode &Ins = ....Segments.L5Seg.MultifidusLumborumL2L5_1NodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
@@ -2710,18 +2710,18 @@ MuscleGroup MultifidusLumborum = {
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint MultifidusLumborumL4S1 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Multifidi.MultifidusLumborumL4S1;
-    AnyRefNode &Org = ....Segments.L4Seg.MultifidusLumborumL4S1NodeR;
-    AnyRefNode &Ins = ....Segments.SacrumSeg.MultifidusLumborumL4S1NodeR;
+  AnyMuscleViaPoint MultifidusLumborumL4S1_2 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Multifidi.MultifidusLumborumL4S1_2;
+    AnyRefNode &Org = ....Segments.L4Seg.MultifidusLumborumL4S1_2NodeR;
+    AnyRefNode &Ins = ....Segments.SacrumSeg.MultifidusLumborumL4S1_2NodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint MultifidusLumborumL5S1 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Multifidi.MultifidusLumborumL5S1;
-    AnyRefNode &Org = ....Segments.L5Seg.MultifidusLumborumL5S1NodeR;
-    AnyRefNode &Ins = ....Segments.SacrumSeg.MultifidusLumborumL5S1NodeR;
+  AnyMuscleViaPoint MultifidusLumborumL5S1_2 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Multifidi.MultifidusLumborumL5S1_2;
+    AnyRefNode &Org = ....Segments.L5Seg.MultifidusLumborumL5S1_2NodeR;
+    AnyRefNode &Ins = ....Segments.SacrumSeg.MultifidusLumborumL5S1_2NodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
@@ -2742,10 +2742,10 @@ MuscleGroup MultifidusLumborum = {
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint MultifidusLumborumL2L5 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Multifidi.MultifidusLumborumL2L5;
-    AnyRefNode &Org = ....Segments.L2Seg.MultifidusLumborumL2L5NodeR;
-    AnyRefNode &Ins = ....Segments.L5Seg.MultifidusLumborumL2L5NodeR;
+  AnyMuscleViaPoint MultifidusLumborumL2L5_2 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.Multifidi.MultifidusLumborumL2L5_2;
+    AnyRefNode &Org = ....Segments.L2Seg.MultifidusLumborumL2L5_2NodeR;
+    AnyRefNode &Ins = ....Segments.L5Seg.MultifidusLumborumL2L5_2NodeR;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };

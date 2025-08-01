@@ -391,10 +391,10 @@ AnyFolder Sacrum = {
     #endif
 
 
-    AnyFloat MultifidusLumborumL4S1Node_pos = {0.0306566, 0.0142471 , 0.0333636};
-    AnyFloat MultifidusLumborumL5S1Node_pos = {0.00205033, 0.012148, 0.0129715};
-    AnyFloat MultifidusLumborumL4S1Node_pos = {-0.0213334, -0.01194, 0.0257652};
-    AnyFloat MultifidusLumborumL5S1Node_pos = {0.00447431, 0.00935999, 0.0172032};
+    AnyFloat MultifidusLumborumL4S1_1Node_pos = {0.0306566, 0.0142471 , 0.0333636};
+    AnyFloat MultifidusLumborumL5S1_2Node_pos = {0.00205033, 0.012148, 0.0129715};
+    AnyFloat MultifidusLumborumL4S1_2Node_pos = {-0.0213334, -0.01194, 0.0257652};
+    AnyFloat MultifidusLumborumL5S1_1Node_pos = {0.00447431, 0.00935999, 0.0172032};
     AnyFloat MultifidusLumborumL5S3Node_pos = {-0.038453, -0.0540485, 0.0311674};
     AnyFloat MultifidusLumborumL3S1Node_pos = {0.0306566, 0.0142471 , 0.0333636};
     AnyFloat MultifidusLumborumL1S1Node_pos = {0.0306566, 0.0142471 , 0.0333636};
@@ -437,10 +437,10 @@ AnyFolder Sacrum = {
       AnyFloat Pubococcygeus_1_pos =.Right.Pubococcygeus_1_pos* MirrorTransform;
       AnyFloat Pubococcygeus_2_pos =.Right.Pubococcygeus_2_pos* MirrorTransform;
     #endif
-    AnyFloat MultifidusLumborumL4S1Node_pos = .Right.MultifidusLumborumL4S1Node_pos * ..MirrorTransform;
-    AnyFloat MultifidusLumborumL5S1Node_pos = .Right.MultifidusLumborumL5S1Node_pos * ..MirrorTransform;
-    AnyFloat MultifidusLumborumL4S1Node_pos = .Right.MultifidusLumborumL4S1Node_pos * ..MirrorTransform;
-    AnyFloat MultifidusLumborumL5S1Node_pos = .Right.MultifidusLumborumL5S1Node_pos * ..MirrorTransform;
+    AnyFloat MultifidusLumborumL4S1_1Node_pos = .Right.MultifidusLumborumL4S1_1Node_pos * ..MirrorTransform;
+    AnyFloat MultifidusLumborumL5S1_2Node_pos = .Right.MultifidusLumborumL5S1_2Node_pos * ..MirrorTransform;
+    AnyFloat MultifidusLumborumL4S1_2Node_pos = .Right.MultifidusLumborumL4S1_2Node_pos * ..MirrorTransform;
+    AnyFloat MultifidusLumborumL5S1_1Node_pos = .Right.MultifidusLumborumL5S1_1Node_pos * ..MirrorTransform;
     AnyFloat MultifidusLumborumL3S1Node_pos = .Right.MultifidusLumborumL3S1Node_pos * ..MirrorTransform;
     AnyFloat MultifidusLumborumL1S1Node_pos = .Right.MultifidusLumborumL1S1Node_pos * ..MirrorTransform;
     AnyFloat MultifidusLumborumL2S1Node_pos = .Right.MultifidusLumborumL2S1Node_pos * ..MirrorTransform;
@@ -509,11 +509,11 @@ AnyFolder L5 = {
 
 
     AnyFloat MultifidusLumborumL3L5Node_pos = {0.02700000, 0.02500000, 0.02200000};
-    AnyFloat MultifidusLumborumL5S1Node_pos = {0.008000000, 0.009000000, 0.005000000};
-    AnyFloat MultifidusLumborumL2L5Node_pos = {0.02700000, 0.02500000, 0.02200000};
-    AnyFloat MultifidusLumborumL5S1Node_pos = {0.004000000, 0.01000000, 0.005000000};
+    AnyFloat MultifidusLumborumL5S1_1Node_pos = {0.008000000, 0.009000000, 0.005000000};
+    AnyFloat MultifidusLumborumL2L5_1Node_pos = {0.02700000, 0.02500000, 0.02200000};
+    AnyFloat MultifidusLumborumL5S1_2Node_pos = {0.004000000, 0.01000000, 0.005000000};
     AnyFloat MultifidusLumborumL1L5Node_pos = {0.02700000, 0.02500000, 0.02200000};
-    AnyFloat MultifidusLumborumL2L5Node_pos = {0.02700000, 0.02500000, 0.02200000};
+    AnyFloat MultifidusLumborumL2L5_2Node_pos = {0.02700000, 0.02500000, 0.02200000};
     AnyFloat MultifidusLumborumL5S3Node_pos = {0.001000000, 0.007000000, 0.0000000}+{-0.006,0.005,0};
     AnyFloat OEC10_RSNode_pos = {0.1580000, 0.008000000, 0.01500000};
     AnyFloat MultifidusThoracisL5T12Node_pos = {0.02500000, 0.02200000, 0.02400000};
@@ -569,11 +569,11 @@ AnyFolder L5 = {
     AnyFloat PsoasMajorL4_2Via1Node_pos  = .Right.PsoasMajorL4_2Via1Node_pos  * ..MirrorTransform;
 
     AnyFloat MultifidusLumborumL3L5Node_pos = .Right.MultifidusLumborumL3L5Node_pos * ..MirrorTransform;
-    AnyFloat MultifidusLumborumL5S1Node_pos = .Right.MultifidusLumborumL5S1Node_pos * ..MirrorTransform;
-    AnyFloat MultifidusLumborumL2L5Node_pos = .Right.MultifidusLumborumL2L5Node_pos * ..MirrorTransform;
-    AnyFloat MultifidusLumborumL5S1Node_pos = .Right.MultifidusLumborumL5S1Node_pos * ..MirrorTransform;
+    AnyFloat MultifidusLumborumL5S1_1Node_pos = .Right.MultifidusLumborumL5S1_1Node_pos * ..MirrorTransform;
+    AnyFloat MultifidusLumborumL2L5_1Node_pos = .Right.MultifidusLumborumL2L5_1Node_pos * ..MirrorTransform;
+    AnyFloat MultifidusLumborumL5S1_2Node_pos = .Right.MultifidusLumborumL5S1_2Node_pos * ..MirrorTransform;
     AnyFloat MultifidusLumborumL1L5Node_pos = .Right.MultifidusLumborumL1L5Node_pos * ..MirrorTransform;
-    AnyFloat MultifidusLumborumL2L5Node_pos = .Right.MultifidusLumborumL2L5Node_pos * ..MirrorTransform;
+    AnyFloat MultifidusLumborumL2L5_2Node_pos = .Right.MultifidusLumborumL2L5_2Node_pos * ..MirrorTransform;
     AnyFloat OEC10_RSNode_pos = .Right.OEC10_RSNode_pos * ..MirrorTransform;
     AnyFloat ContactNode_pos = .Right.ContactNode_pos * ..MirrorTransform;
     AnyFloat MultifidusThoracisL5T12Node_pos = .Right.MultifidusThoracisL5T12Node_pos * ..MirrorTransform;
@@ -605,9 +605,9 @@ AnyFolder L4 = {
 
   AnyFolder Right = {
     AnyFloat MultifidusLumborumL2L4Node_pos = {0.02600000, 0.05500000, 0.02200000};
-    AnyFloat MultifidusLumborumL4S1Node_pos = {0.01400000, 0.02800000, 0.005000000};
+    AnyFloat MultifidusLumborumL4S1_1Node_pos = {0.01400000, 0.02800000, 0.005000000};
     AnyFloat MultifidusLumborumL1L4Node_pos = {0.02600000, 0.05500000, 0.02200000};
-    AnyFloat MultifidusLumborumL4S1Node_pos = {0.009000000, 0.02500000, 0.005000000};
+    AnyFloat MultifidusLumborumL4S1_2Node_pos = {0.009000000, 0.02500000, 0.005000000};
     AnyFloat MultifidusLumborumL4S2Node_pos = {0.003000000, 0.02100000, 0.0000000};
 
     AnyFloat IliocostalisLumborumL1ViaNode_pos       = {.LSNode_pos[0]-0.005,.LSNode_pos[1],(..L1.Right.IliocostalisLumborumL1Node_pos[2]          - .IliocostalisLumborumL1Z*(..L1.Right.IliocostalisLumborumL1Node_pos[1] - .LSNode_pos[1]))};
@@ -658,9 +658,9 @@ AnyFolder L4 = {
 
   AnyFolder Left = {
     AnyFloat MultifidusLumborumL2L4Node_pos = .Right.MultifidusLumborumL2L4Node_pos * ..MirrorTransform;
-    AnyFloat MultifidusLumborumL4S1Node_pos = .Right.MultifidusLumborumL4S1Node_pos * ..MirrorTransform;
+    AnyFloat MultifidusLumborumL4S1_1Node_pos = .Right.MultifidusLumborumL4S1_1Node_pos * ..MirrorTransform;
     AnyFloat MultifidusLumborumL1L4Node_pos = .Right.MultifidusLumborumL1L4Node_pos * ..MirrorTransform;
-    AnyFloat MultifidusLumborumL4S1Node_pos = .Right.MultifidusLumborumL4S1Node_pos * ..MirrorTransform;
+    AnyFloat MultifidusLumborumL4S1_2Node_pos = .Right.MultifidusLumborumL4S1_2Node_pos * ..MirrorTransform;
     AnyFloat MultifidusLumborumL4S2Node_pos = .Right.MultifidusLumborumL4S2Node_pos * ..MirrorTransform;
 
     AnyFloat IliocostalisLumborumL1ViaNode_pos       = .Right.IliocostalisLumborumL1ViaNode_pos       * ..MirrorTransform;
@@ -882,8 +882,8 @@ AnyFolder L2 = {
 
   AnyFolder Right = {
     AnyFloat MultifidusLumborumL2L4Node_pos = {0.01100000, 0.07900000, 0.005000000};
-    AnyFloat MultifidusLumborumL2L5Node_pos = {0.007000000, 0.07500000, 0.005000000};
-    AnyFloat MultifidusLumborumL2L5Node_pos = {0.004000000, 0.06800000, 0.0000000};
+    AnyFloat MultifidusLumborumL2L5_1Node_pos = {0.007000000, 0.07500000, 0.005000000};
+    AnyFloat MultifidusLumborumL2L5_2Node_pos = {0.004000000, 0.06800000, 0.0000000};
     AnyFloat MultifidusLumborumL2S1Node_pos = {0.004000000, 0.06800000, 0.0000000};
     AnyFloat MultifidusLumborumtL2ICNode_pos = {0.004000000, 0.06800000, 0.0000000};
 
@@ -946,8 +946,8 @@ AnyFolder L2 = {
 
   AnyFolder Left = {
     AnyFloat MultifidusLumborumL2L4Node_pos = .Right.MultifidusLumborumL2L4Node_pos * ..MirrorTransform;
-    AnyFloat MultifidusLumborumL2L5Node_pos = .Right.MultifidusLumborumL2L5Node_pos * ..MirrorTransform;
-    AnyFloat MultifidusLumborumL2L5Node_pos = .Right.MultifidusLumborumL2L5Node_pos * ..MirrorTransform;
+    AnyFloat MultifidusLumborumL2L5_1Node_pos = .Right.MultifidusLumborumL2L5_1Node_pos * ..MirrorTransform;
+    AnyFloat MultifidusLumborumL2L5_2Node_pos = .Right.MultifidusLumborumL2L5_2Node_pos * ..MirrorTransform;
     AnyFloat MultifidusLumborumL2S1Node_pos = .Right.MultifidusLumborumL2S1Node_pos * ..MirrorTransform;
     AnyFloat MultifidusLumborumtL2ICNode_pos = .Right.MultifidusLumborumtL2ICNode_pos * ..MirrorTransform;
     AnyFloat IliocostalisLumborumL2Node_pos          = .Right.IliocostalisLumborumL2Node_pos          * ..MirrorTransform;
