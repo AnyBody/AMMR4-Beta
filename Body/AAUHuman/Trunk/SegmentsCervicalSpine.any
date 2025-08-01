@@ -679,7 +679,7 @@ AnySeg C6Seg = {
   AnyRefNode MultifidusCervicisC6NodeR = {sRel = .Scale(.Data.Right.MultifidusCervicisC6Node_pos);};
   AnyRefNode MultifidusCervicisC6NodeL = {sRel = .Scale(.Data.Left.MultifidusCervicisC6Node_pos);};
 
-  AnyRefNode SSTC6Spinous = {sRel = .Scale(.Data.SSTC6Spinous_pos);};
+  AnyRefNode SemispinalisThoracisC6Spinous = {sRel = .Scale(.Data.SemispinalisThoracisC6Spinous_pos);};
   Right = {
     // Iliocostalis Cervicis
     AnyRefNode IliocostalisCervicisR5C6Node        = {sRel = ..Scale(..Data.Right.IliocostalisCervicisR5C6Node_pos);};
@@ -831,7 +831,7 @@ AnySeg C7Seg = {
   AnyRefNode O_serratus_posterior_superior_1C7NodeR = {sRel = .Scale(.Data.Right.O_serratus_posterior_superior_1C7Node_pos); };
   AnyRefNode O_serratus_posterior_superior_1C7NodeL = {sRel = .Scale(.Data.Left.O_serratus_posterior_superior_1C7Node_pos); };
 
-  AnyRefNode SSTC7Spinous = {sRel = .Scale(.Data.SSTC7Spinous_pos); };
+  AnyRefNode SemispinalisThoracisC7Spinous = {sRel = .Scale(.Data.SemispinalisThoracisC7Spinous_pos); };
 
 
   Right = {

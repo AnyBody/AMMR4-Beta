@@ -5903,71 +5903,71 @@ MuscleGroup SemispinalisCervicis = {
 
 MuscleGroup SemispinalisThoracis = {
   #if BM_TRUNK_THORACIC_MODEL == _THORACIC_MODEL_FLEXIBLE_
-  AnyMuscleViaPoint SSTT12T4 = 
+  AnyMuscleViaPoint SemispinalisThoracisT12T4 = 
   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.SemispinalisThoracis.SSTT12T4;
-    AnyRefFrame &Org = ....Segments.T12Seg.SSTT12TransversusL;
-    AnyRefNode &Via1 = ....Segments.T11Seg.SSTT11ViaNodeL;
-    AnyRefNode &Via2 = ....Segments.T10Seg.SSTT10ViaNodeL;
-    AnyRefNode &Via3 = ....Segments.T9Seg.SSTT9ViaNodeL;
-    AnyRefNode &Via4 = ....Segments.T8Seg.SSTT8ViaNodeL;
-    AnyRefNode &Via5 = ....Segments.T7Seg.SSTT4ViaNodeL;
-    AnyRefFrame &Ins = ....Segments.T4Seg.SSTT4Spinous;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.SemispinalisThoracis.SemispinalisThoracisT12T4;
+    AnyRefFrame &Org = ....Segments.T12Seg.SemispinalisThoracisT12TransversusL;
+    AnyRefNode &Via1 = ....Segments.T11Seg.SemispinalisThoracisT11ViaNodeL;
+    AnyRefNode &Via2 = ....Segments.T10Seg.SemispinalisThoracisT10ViaNodeL;
+    AnyRefNode &Via3 = ....Segments.T9Seg.SemispinalisThoracisT9ViaNodeL;
+    AnyRefNode &Via4 = ....Segments.T8Seg.SemispinalisThoracisT8ViaNodeL;
+    AnyRefNode &Via5 = ....Segments.T7Seg.SemispinalisThoracisT4ViaNodeL;
+    AnyRefFrame &Ins = ....Segments.T4Seg.SemispinalisThoracisT4Spinous;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint SSTT11T3 = 
+  AnyMuscleViaPoint SemispinalisThoracisT11T3 = 
   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.SemispinalisThoracis.SSTT11T3;
-    AnyRefFrame &Org = ....Segments.T11Seg.SSTT11TransversusL;
-    AnyRefNode &Via2 = ....Segments.T10Seg.SSTT10ViaNodeL;
-    AnyRefNode &Via3 = ....Segments.T9Seg.SSTT9ViaNodeL;
-    AnyRefNode &Via4 = ....Segments.T8Seg.SSTT8ViaNodeL;
-    AnyRefNode &Via5 = ....Segments.T7Seg.SSTT3ViaNodeL;
-    AnyRefFrame &Ins = ....Segments.T3Seg.SSTT3Spinous;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.SemispinalisThoracis.SemispinalisThoracisT11T3;
+    AnyRefFrame &Org = ....Segments.T11Seg.SemispinalisThoracisT11TransversusL;
+    AnyRefNode &Via2 = ....Segments.T10Seg.SemispinalisThoracisT10ViaNodeL;
+    AnyRefNode &Via3 = ....Segments.T9Seg.SemispinalisThoracisT9ViaNodeL;
+    AnyRefNode &Via4 = ....Segments.T8Seg.SemispinalisThoracisT8ViaNodeL;
+    AnyRefNode &Via5 = ....Segments.T7Seg.SemispinalisThoracisT3ViaNodeL;
+    AnyRefFrame &Ins = ....Segments.T3Seg.SemispinalisThoracisT3Spinous;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint SSTT10T2 = 
+  AnyMuscleViaPoint SemispinalisThoracisT10T2 = 
   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.SemispinalisThoracis.SSTT10T2;
-    AnyRefFrame &Org = ....Segments.T10Seg.SSTT10TransversusL;
-    AnyRefNode &Via3 = ....Segments.T9Seg.SSTT9ViaNodeL;
-    AnyRefNode &Via4 = ....Segments.T8Seg.SSTT8ViaNodeL;
-    AnyRefNode &Via5 = ....Segments.T7Seg.SSTT2ViaNodeL;
-    AnyRefFrame &Ins = ....Segments.T2Seg.SSTT2Spinous;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.SemispinalisThoracis.SemispinalisThoracisT10T2;
+    AnyRefFrame &Org = ....Segments.T10Seg.SemispinalisThoracisT10TransversusL;
+    AnyRefNode &Via3 = ....Segments.T9Seg.SemispinalisThoracisT9ViaNodeL;
+    AnyRefNode &Via4 = ....Segments.T8Seg.SemispinalisThoracisT8ViaNodeL;
+    AnyRefNode &Via5 = ....Segments.T7Seg.SemispinalisThoracisT2ViaNodeL;
+    AnyRefFrame &Ins = ....Segments.T2Seg.SemispinalisThoracisT2Spinous;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint SSTT9T1 = 
+  AnyMuscleViaPoint SemispinalisThoracisT9T1 = 
   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.SemispinalisThoracis.SSTT9T1;
-    AnyRefFrame &Org = ....Segments.T9Seg.SSTT9TransversusL;
-    AnyRefNode &Via4 = ....Segments.T8Seg.SSTT9T4ViaNodeL;
-    AnyRefNode &Via5 = ....Segments.T7Seg.SSTT9T1ViaNodeL;
-    AnyRefFrame &Ins = ....Segments.T1Seg.SSTT1Spinous;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.SemispinalisThoracis.SemispinalisThoracisT9T1;
+    AnyRefFrame &Org = ....Segments.T9Seg.SemispinalisThoracisT9TransversusL;
+    AnyRefNode &Via4 = ....Segments.T8Seg.SemispinalisThoracisT9T4ViaNodeL;
+    AnyRefNode &Via5 = ....Segments.T7Seg.SemispinalisThoracisT9T1ViaNodeL;
+    AnyRefFrame &Ins = ....Segments.T1Seg.SemispinalisThoracisT1Spinous;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   #endif
-  AnyMuscleViaPoint SSTT8C7 = 
+  AnyMuscleViaPoint SemispinalisThoracisT8C7 = 
   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.SemispinalisThoracis.SSTT8C7;
-    AnyRefFrame &Org = ....Segments.T8Seg.SSTT8TransversusL;
-    AnyRefNode &Via5 = ....Segments.T7Seg.SSTT8T4ViaNodeL;
-    AnyRefFrame &Ins = ....Segments.C7Seg.SSTC7Spinous;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.SemispinalisThoracis.SemispinalisThoracisT8C7;
+    AnyRefFrame &Org = ....Segments.T8Seg.SemispinalisThoracisT8TransversusL;
+    AnyRefNode &Via5 = ....Segments.T7Seg.SemispinalisThoracisT8T4ViaNodeL;
+    AnyRefFrame &Ins = ....Segments.C7Seg.SemispinalisThoracisC7Spinous;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint SSTT7C6 = 
+  AnyMuscleViaPoint SemispinalisThoracisT7C6 = 
   {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.SemispinalisThoracis.SSTT7C6;
-    AnyRefFrame &Org = ....Segments.T7Seg.SSTT7TransversusL;
-    AnyRefFrame &Ins = ....Segments.C6Seg.SSTC6Spinous;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.SemispinalisThoracis.SemispinalisThoracisT7C6;
+    AnyRefFrame &Org = ....Segments.T7Seg.SemispinalisThoracisT7TransversusL;
+    AnyRefFrame &Ins = ....Segments.C6Seg.SemispinalisThoracisC6Spinous;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
