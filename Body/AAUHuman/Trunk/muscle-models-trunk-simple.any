@@ -1926,8 +1926,8 @@ AnyFolder Left = {
         #endif
         
         #if BM_TRUNK_MUSCLES
-        AnyMuscleModel LongusColliT2C5 = {
-            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.LongusColli.LongusColliT2C5;
+        AnyMuscleModel LongusColliT2C5_1 = {
+            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.LongusColli.LongusColliT2C5_1;
             AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
             AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
             F0 ??= ...DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -2010,8 +2010,8 @@ AnyFolder Left = {
         #endif
         
         #if BM_TRUNK_MUSCLES
-        AnyMuscleModel LongusColliC6C2 = {
-            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.LongusColli.LongusColliC6C2;
+        AnyMuscleModel LongusColliC6C2_1 = {
+            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.LongusColli.LongusColliC6C2_1;
             AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
             AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
             F0 ??= ...DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -2022,8 +2022,8 @@ AnyFolder Left = {
         #endif
         
         #if BM_TRUNK_MUSCLES
-        AnyMuscleModel LongusColliC5C1 = {
-            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.LongusColli.LongusColliC5C1;
+        AnyMuscleModel LongusColliC5C1_1 = {
+            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.LongusColli.LongusColliC5C1_1;
             AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
             AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
             F0 ??= ...DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -2058,8 +2058,8 @@ AnyFolder Left = {
         #endif
         
         #if BM_TRUNK_MUSCLES
-        AnyMuscleModel LongusColliC5C1 = {
-            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.LongusColli.LongusColliC5C1;
+        AnyMuscleModel LongusColliC5C1_2 = {
+            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.LongusColli.LongusColliC5C1_2;
             AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
             AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
             F0 ??= ...DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -2094,8 +2094,8 @@ AnyFolder Left = {
         #endif
         
         #if BM_TRUNK_MUSCLES
-        AnyMuscleModel LongusColliC6C2 = {
-            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.LongusColli.LongusColliC6C2;
+        AnyMuscleModel LongusColliC6C2_2 = {
+            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.LongusColli.LongusColliC6C2_2;
             AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
             AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
             F0 ??= ...DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -2142,8 +2142,8 @@ AnyFolder Left = {
         #endif
         
         #if BM_TRUNK_MUSCLES
-        AnyMuscleModel LongusColliT2C5 = {
-            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.LongusColli.LongusColliT2C5;
+        AnyMuscleModel LongusColliT2C5_2 = {
+            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.LongusColli.LongusColliT2C5_2;
             AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
             AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
             F0 ??= ...DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -3106,8 +3106,8 @@ AnyFolder Left = {
         #endif
         
         #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-        AnyMuscleModel ObliquusExternusR9Abd = {
-            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.ObliquusExternus.ObliquusExternusR9Abd;
+        AnyMuscleModel ObliquusExternusR9Abd_1 = {
+            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.ObliquusExternus.ObliquusExternusR9Abd_1;
             AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
             AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
             F0 ??= ...DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -3118,8 +3118,8 @@ AnyFolder Left = {
         #endif
         
         #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-        AnyMuscleModel ObliquusExternusR9Abd = {
-            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.ObliquusExternus.ObliquusExternusR9Abd;
+        AnyMuscleModel ObliquusExternusR9Abd_2 = {
+            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.ObliquusExternus.ObliquusExternusR9Abd_2;
             AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
             AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
             F0 ??= ...DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -3338,8 +3338,8 @@ AnyFolder Left = {
         #endif
         
         #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-        AnyMuscleModel ObliquusInternusR12_1 = {
-            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.ObliquusInternus.ObliquusInternusR12_1;
+        AnyMuscleModel ObliquusInternusR12 = {
+            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.ObliquusInternus.ObliquusInternusR12;
             AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
             AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
             F0 ??= ...DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -3350,8 +3350,8 @@ AnyFolder Left = {
         #endif
         
         #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-        AnyMuscleModel ObliquusInternusR12_1 = {
-            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.ObliquusInternus.ObliquusInternusR12_1;
+        AnyMuscleModel ObliquusInternusR11_1 = {
+            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.ObliquusInternus.ObliquusInternusR11_1;
             AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
             AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
             F0 ??= ...DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -3507,62 +3507,6 @@ AnyFolder Left = {
         
     };
     
-    AnyFolder Puborectalis = {
-        
-        #if BM_TRUNK_MUSCLES
-        AnyMuscleModel Puborectalis_1 = {
-            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.Puborectalis.Puborectalis_1;
-            AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
-            AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
-            F0 ??= ...DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
-            Lf0 ??= MuscleParameters.OptimalFiberlength / cos(pi/180*MuscleParameters.Pennationangle); //< Optimal fiber length corrected by pennation angle
-            AnyVar PCSA ??= 1e4*...StrengthScaleSpine*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
-            Vol0 = (1e-4*PCSA) * Lf0; // New calculation of the vol for the specific muscle branch
-        };
-        #endif
-        
-        #if BM_TRUNK_MUSCLES
-        AnyMuscleModel Puborectalis_2 = {
-            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.Puborectalis.Puborectalis_2;
-            AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
-            AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
-            F0 ??= ...DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
-            Lf0 ??= MuscleParameters.OptimalFiberlength / cos(pi/180*MuscleParameters.Pennationangle); //< Optimal fiber length corrected by pennation angle
-            AnyVar PCSA ??= 1e4*...StrengthScaleSpine*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
-            Vol0 = (1e-4*PCSA) * Lf0; // New calculation of the vol for the specific muscle branch
-        };
-        #endif
-        
-    };
-    
-    AnyFolder Pubococcygeus = {
-        
-        #if BM_TRUNK_MUSCLES
-        AnyMuscleModel Pubococcygeus_1 = {
-            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.Pubococcygeus.Pubococcygeus_1;
-            AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
-            AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
-            F0 ??= ...DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
-            Lf0 ??= MuscleParameters.OptimalFiberlength / cos(pi/180*MuscleParameters.Pennationangle); //< Optimal fiber length corrected by pennation angle
-            AnyVar PCSA ??= 1e4*...StrengthScaleSpine*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
-            Vol0 = (1e-4*PCSA) * Lf0; // New calculation of the vol for the specific muscle branch
-        };
-        #endif
-        
-        #if BM_TRUNK_MUSCLES
-        AnyMuscleModel Pubococcygeus_2 = {
-            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.Pubococcygeus.Pubococcygeus_2;
-            AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
-            AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
-            F0 ??= ...DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
-            Lf0 ??= MuscleParameters.OptimalFiberlength / cos(pi/180*MuscleParameters.Pennationangle); //< Optimal fiber length corrected by pennation angle
-            AnyVar PCSA ??= 1e4*...StrengthScaleSpine*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
-            Vol0 = (1e-4*PCSA) * Lf0; // New calculation of the vol for the specific muscle branch
-        };
-        #endif
-        
-    };
-    
     AnyFolder PsoasMajor = {
         
         #if BM_TRUNK_MUSCLES  | BM_LEG_MUSCLES_LEFT  |  BM_LEG_MUSCLES_RIGHT
@@ -3688,6 +3632,62 @@ AnyFolder Left = {
         #if BM_TRUNK_MUSCLES  | BM_LEG_MUSCLES_LEFT  |  BM_LEG_MUSCLES_RIGHT
         AnyMuscleModel PsoasMajorL5_2 = {
             AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.PsoasMajor.PsoasMajorL5_2;
+            AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
+            AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
+            F0 ??= ...DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
+            Lf0 ??= MuscleParameters.OptimalFiberlength / cos(pi/180*MuscleParameters.Pennationangle); //< Optimal fiber length corrected by pennation angle
+            AnyVar PCSA ??= 1e4*...StrengthScaleSpine*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+            Vol0 = (1e-4*PCSA) * Lf0; // New calculation of the vol for the specific muscle branch
+        };
+        #endif
+        
+    };
+    
+    AnyFolder Pubococcygeus = {
+        
+        #if BM_TRUNK_MUSCLES
+        AnyMuscleModel Pubococcygeus_1 = {
+            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.Pubococcygeus.Pubococcygeus_1;
+            AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
+            AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
+            F0 ??= ...DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
+            Lf0 ??= MuscleParameters.OptimalFiberlength / cos(pi/180*MuscleParameters.Pennationangle); //< Optimal fiber length corrected by pennation angle
+            AnyVar PCSA ??= 1e4*...StrengthScaleSpine*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+            Vol0 = (1e-4*PCSA) * Lf0; // New calculation of the vol for the specific muscle branch
+        };
+        #endif
+        
+        #if BM_TRUNK_MUSCLES
+        AnyMuscleModel Pubococcygeus_2 = {
+            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.Pubococcygeus.Pubococcygeus_2;
+            AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
+            AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
+            F0 ??= ...DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
+            Lf0 ??= MuscleParameters.OptimalFiberlength / cos(pi/180*MuscleParameters.Pennationangle); //< Optimal fiber length corrected by pennation angle
+            AnyVar PCSA ??= 1e4*...StrengthScaleSpine*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+            Vol0 = (1e-4*PCSA) * Lf0; // New calculation of the vol for the specific muscle branch
+        };
+        #endif
+        
+    };
+    
+    AnyFolder Puborectalis = {
+        
+        #if BM_TRUNK_MUSCLES
+        AnyMuscleModel Puborectalis_1 = {
+            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.Puborectalis.Puborectalis_1;
+            AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
+            AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
+            F0 ??= ...DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
+            Lf0 ??= MuscleParameters.OptimalFiberlength / cos(pi/180*MuscleParameters.Pennationangle); //< Optimal fiber length corrected by pennation angle
+            AnyVar PCSA ??= 1e4*...StrengthScaleSpine*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+            Vol0 = (1e-4*PCSA) * Lf0; // New calculation of the vol for the specific muscle branch
+        };
+        #endif
+        
+        #if BM_TRUNK_MUSCLES
+        AnyMuscleModel Puborectalis_2 = {
+            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.Puborectalis.Puborectalis_2;
             AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
             AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
             F0 ??= ...DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -4042,8 +4042,8 @@ AnyFolder Left = {
     AnyFolder RectusAbdominis = {
         
         #if BM_TRUNK_MUSCLES
-        AnyMuscleModel RectusAbdominisXiphoid = {
-            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.RectusAbdominis.RectusAbdominisXiphoid;
+        AnyMuscleModel RectusAbdominis_1 = {
+            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.RectusAbdominis.RectusAbdominis_1;
             AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
             AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
             F0 ??= ...DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -4054,8 +4054,8 @@ AnyFolder Left = {
         #endif
         
         #if BM_TRUNK_MUSCLES
-        AnyMuscleModel RectusAbdominisCC = {
-            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.RectusAbdominis.RectusAbdominisCC;
+        AnyMuscleModel RectusAbdominis_2 = {
+            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.RectusAbdominis.RectusAbdominis_2;
             AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
             AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
             F0 ??= ...DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -7210,8 +7210,8 @@ AnyFolder Right = {
         #endif
         
         #if BM_TRUNK_MUSCLES
-        AnyMuscleModel LongusColliT2C5 = {
-            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.LongusColli.LongusColliT2C5;
+        AnyMuscleModel LongusColliT2C5_1 = {
+            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.LongusColli.LongusColliT2C5_1;
             AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
             AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
             F0 ??= ...DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -7294,8 +7294,8 @@ AnyFolder Right = {
         #endif
         
         #if BM_TRUNK_MUSCLES
-        AnyMuscleModel LongusColliC6C2 = {
-            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.LongusColli.LongusColliC6C2;
+        AnyMuscleModel LongusColliC6C2_1 = {
+            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.LongusColli.LongusColliC6C2_1;
             AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
             AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
             F0 ??= ...DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -7306,8 +7306,8 @@ AnyFolder Right = {
         #endif
         
         #if BM_TRUNK_MUSCLES
-        AnyMuscleModel LongusColliC5C1 = {
-            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.LongusColli.LongusColliC5C1;
+        AnyMuscleModel LongusColliC5C1_1 = {
+            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.LongusColli.LongusColliC5C1_1;
             AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
             AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
             F0 ??= ...DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -7342,8 +7342,8 @@ AnyFolder Right = {
         #endif
         
         #if BM_TRUNK_MUSCLES
-        AnyMuscleModel LongusColliC5C1 = {
-            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.LongusColli.LongusColliC5C1;
+        AnyMuscleModel LongusColliC5C1_2 = {
+            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.LongusColli.LongusColliC5C1_2;
             AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
             AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
             F0 ??= ...DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -7378,8 +7378,8 @@ AnyFolder Right = {
         #endif
         
         #if BM_TRUNK_MUSCLES
-        AnyMuscleModel LongusColliC6C2 = {
-            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.LongusColli.LongusColliC6C2;
+        AnyMuscleModel LongusColliC6C2_2 = {
+            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.LongusColli.LongusColliC6C2_2;
             AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
             AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
             F0 ??= ...DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -7426,8 +7426,8 @@ AnyFolder Right = {
         #endif
         
         #if BM_TRUNK_MUSCLES
-        AnyMuscleModel LongusColliT2C5 = {
-            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.LongusColli.LongusColliT2C5;
+        AnyMuscleModel LongusColliT2C5_2 = {
+            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.LongusColli.LongusColliT2C5_2;
             AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
             AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
             F0 ??= ...DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -8390,8 +8390,8 @@ AnyFolder Right = {
         #endif
         
         #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-        AnyMuscleModel ObliquusExternusR9Abd = {
-            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.ObliquusExternus.ObliquusExternusR9Abd;
+        AnyMuscleModel ObliquusExternusR9Abd_1 = {
+            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.ObliquusExternus.ObliquusExternusR9Abd_1;
             AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
             AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
             F0 ??= ...DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -8402,8 +8402,8 @@ AnyFolder Right = {
         #endif
         
         #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-        AnyMuscleModel ObliquusExternusR9Abd = {
-            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.ObliquusExternus.ObliquusExternusR9Abd;
+        AnyMuscleModel ObliquusExternusR9Abd_2 = {
+            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.ObliquusExternus.ObliquusExternusR9Abd_2;
             AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
             AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
             F0 ??= ...DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -8622,8 +8622,8 @@ AnyFolder Right = {
         #endif
         
         #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-        AnyMuscleModel ObliquusInternusR12_1 = {
-            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.ObliquusInternus.ObliquusInternusR12_1;
+        AnyMuscleModel ObliquusInternusR12 = {
+            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.ObliquusInternus.ObliquusInternusR12;
             AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
             AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
             F0 ??= ...DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -8634,8 +8634,8 @@ AnyFolder Right = {
         #endif
         
         #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-        AnyMuscleModel ObliquusInternusR12_1 = {
-            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.ObliquusInternus.ObliquusInternusR12_1;
+        AnyMuscleModel ObliquusInternusR11_1 = {
+            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.ObliquusInternus.ObliquusInternusR11_1;
             AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
             AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
             F0 ??= ...DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -8791,62 +8791,6 @@ AnyFolder Right = {
         
     };
     
-    AnyFolder Puborectalis = {
-        
-        #if BM_TRUNK_MUSCLES
-        AnyMuscleModel Puborectalis_1 = {
-            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.Puborectalis.Puborectalis_1;
-            AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
-            AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
-            F0 ??= ...DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
-            Lf0 ??= MuscleParameters.OptimalFiberlength / cos(pi/180*MuscleParameters.Pennationangle); //< Optimal fiber length corrected by pennation angle
-            AnyVar PCSA ??= 1e4*...StrengthScaleSpine*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
-            Vol0 = (1e-4*PCSA) * Lf0; // New calculation of the vol for the specific muscle branch
-        };
-        #endif
-        
-        #if BM_TRUNK_MUSCLES
-        AnyMuscleModel Puborectalis_2 = {
-            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.Puborectalis.Puborectalis_2;
-            AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
-            AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
-            F0 ??= ...DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
-            Lf0 ??= MuscleParameters.OptimalFiberlength / cos(pi/180*MuscleParameters.Pennationangle); //< Optimal fiber length corrected by pennation angle
-            AnyVar PCSA ??= 1e4*...StrengthScaleSpine*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
-            Vol0 = (1e-4*PCSA) * Lf0; // New calculation of the vol for the specific muscle branch
-        };
-        #endif
-        
-    };
-    
-    AnyFolder Pubococcygeus = {
-        
-        #if BM_TRUNK_MUSCLES
-        AnyMuscleModel Pubococcygeus_1 = {
-            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.Pubococcygeus.Pubococcygeus_1;
-            AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
-            AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
-            F0 ??= ...DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
-            Lf0 ??= MuscleParameters.OptimalFiberlength / cos(pi/180*MuscleParameters.Pennationangle); //< Optimal fiber length corrected by pennation angle
-            AnyVar PCSA ??= 1e4*...StrengthScaleSpine*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
-            Vol0 = (1e-4*PCSA) * Lf0; // New calculation of the vol for the specific muscle branch
-        };
-        #endif
-        
-        #if BM_TRUNK_MUSCLES
-        AnyMuscleModel Pubococcygeus_2 = {
-            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.Pubococcygeus.Pubococcygeus_2;
-            AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
-            AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
-            F0 ??= ...DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
-            Lf0 ??= MuscleParameters.OptimalFiberlength / cos(pi/180*MuscleParameters.Pennationangle); //< Optimal fiber length corrected by pennation angle
-            AnyVar PCSA ??= 1e4*...StrengthScaleSpine*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
-            Vol0 = (1e-4*PCSA) * Lf0; // New calculation of the vol for the specific muscle branch
-        };
-        #endif
-        
-    };
-    
     AnyFolder PsoasMajor = {
         
         #if BM_TRUNK_MUSCLES  | BM_LEG_MUSCLES_LEFT  |  BM_LEG_MUSCLES_RIGHT
@@ -8972,6 +8916,62 @@ AnyFolder Right = {
         #if BM_TRUNK_MUSCLES  | BM_LEG_MUSCLES_LEFT  |  BM_LEG_MUSCLES_RIGHT
         AnyMuscleModel PsoasMajorL5_2 = {
             AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.PsoasMajor.PsoasMajorL5_2;
+            AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
+            AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
+            F0 ??= ...DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
+            Lf0 ??= MuscleParameters.OptimalFiberlength / cos(pi/180*MuscleParameters.Pennationangle); //< Optimal fiber length corrected by pennation angle
+            AnyVar PCSA ??= 1e4*...StrengthScaleSpine*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+            Vol0 = (1e-4*PCSA) * Lf0; // New calculation of the vol for the specific muscle branch
+        };
+        #endif
+        
+    };
+    
+    AnyFolder Pubococcygeus = {
+        
+        #if BM_TRUNK_MUSCLES
+        AnyMuscleModel Pubococcygeus_1 = {
+            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.Pubococcygeus.Pubococcygeus_1;
+            AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
+            AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
+            F0 ??= ...DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
+            Lf0 ??= MuscleParameters.OptimalFiberlength / cos(pi/180*MuscleParameters.Pennationangle); //< Optimal fiber length corrected by pennation angle
+            AnyVar PCSA ??= 1e4*...StrengthScaleSpine*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+            Vol0 = (1e-4*PCSA) * Lf0; // New calculation of the vol for the specific muscle branch
+        };
+        #endif
+        
+        #if BM_TRUNK_MUSCLES
+        AnyMuscleModel Pubococcygeus_2 = {
+            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.Pubococcygeus.Pubococcygeus_2;
+            AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
+            AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
+            F0 ??= ...DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
+            Lf0 ??= MuscleParameters.OptimalFiberlength / cos(pi/180*MuscleParameters.Pennationangle); //< Optimal fiber length corrected by pennation angle
+            AnyVar PCSA ??= 1e4*...StrengthScaleSpine*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+            Vol0 = (1e-4*PCSA) * Lf0; // New calculation of the vol for the specific muscle branch
+        };
+        #endif
+        
+    };
+    
+    AnyFolder Puborectalis = {
+        
+        #if BM_TRUNK_MUSCLES
+        AnyMuscleModel Puborectalis_1 = {
+            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.Puborectalis.Puborectalis_1;
+            AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
+            AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
+            F0 ??= ...DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
+            Lf0 ??= MuscleParameters.OptimalFiberlength / cos(pi/180*MuscleParameters.Pennationangle); //< Optimal fiber length corrected by pennation angle
+            AnyVar PCSA ??= 1e4*...StrengthScaleSpine*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+            Vol0 = (1e-4*PCSA) * Lf0; // New calculation of the vol for the specific muscle branch
+        };
+        #endif
+        
+        #if BM_TRUNK_MUSCLES
+        AnyMuscleModel Puborectalis_2 = {
+            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.Puborectalis.Puborectalis_2;
             AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
             AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
             F0 ??= ...DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -9326,8 +9326,8 @@ AnyFolder Right = {
     AnyFolder RectusAbdominis = {
         
         #if BM_TRUNK_MUSCLES
-        AnyMuscleModel RectusAbdominisXiphoid = {
-            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.RectusAbdominis.RectusAbdominisXiphoid;
+        AnyMuscleModel RectusAbdominis_1 = {
+            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.RectusAbdominis.RectusAbdominis_1;
             AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
             AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
             F0 ??= ...DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -9338,8 +9338,8 @@ AnyFolder Right = {
         #endif
         
         #if BM_TRUNK_MUSCLES
-        AnyMuscleModel RectusAbdominisCC = {
-            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.RectusAbdominis.RectusAbdominisCC;
+        AnyMuscleModel RectusAbdominis_2 = {
+            AnyFolder& MuscleParameters = ....Data.unscaled.ModelParameters.Muscles.RectusAbdominis.RectusAbdominis_2;
             AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
             AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
             F0 ??= ...DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length

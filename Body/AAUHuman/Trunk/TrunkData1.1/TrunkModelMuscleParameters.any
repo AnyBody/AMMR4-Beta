@@ -2847,7 +2847,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LongusColliT2C5 = 
+    AnyFolder LongusColliT2C5_1 = 
     {
       AnyString Muscle = "LongusColliT2C5"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -2973,7 +2973,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LongusColliC6C2 = 
+    AnyFolder LongusColliC6C2_1 = 
     {
       AnyString Muscle = "LongusColliC6C2"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -2991,7 +2991,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LongusColliC5C1 = 
+    AnyFolder LongusColliC5C1_1 = 
     {
       AnyString Muscle = "LongusColliC5C1"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -3045,7 +3045,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LongusColliC5C1 = 
+    AnyFolder LongusColliC5C1_2 = 
     {
       AnyString Muscle = "LongusColliSuperiorObliqueC5C1"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -3099,7 +3099,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LongusColliC6C2 = 
+    AnyFolder LongusColliC6C2_2 = 
     {
       AnyString Muscle = "LongusColliSuperiorObliqueC6C2"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -3171,7 +3171,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder LongusColliT2C5 = 
+    AnyFolder LongusColliT2C5_2 = 
     {
       AnyString Muscle = "LongusColliInferiorObliqueT2C5"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -4606,7 +4606,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-    AnyFolder ObliquusExternusR9Abd = 
+    AnyFolder ObliquusExternusR9Abd_1 = 
     {
       AnyString Muscle = "OEC_4"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -4624,7 +4624,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-    AnyFolder ObliquusExternusR9Abd = 
+    AnyFolder ObliquusExternusR9Abd_2 = 
     {
       AnyString Muscle = "OEC_5"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -4952,7 +4952,7 @@ AnyFolder Muscles =
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
     AnyVar Volume ??= DesignVar(145.36); ///< Total volume of the muscle group (ml)
-    AnyFolder ObliquusInternusR12_1 = 
+    AnyFolder ObliquusInternusR12 = 
     {
       AnyString Muscle = "OIC_1"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -4970,7 +4970,7 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-    AnyFolder ObliquusInternusR12_1 = 
+    AnyFolder ObliquusInternusR11_1 = 
     {
       AnyString Muscle = "OIC_2"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -5203,84 +5203,6 @@ AnyFolder Muscles =
     };
     #endif
   }; // ObliquusInternus group
-  AnyFolder Puborectalis = 
-  {
-    #if BM_TRUNK_MUSCLES
-    AnyVar Volume ??= DesignVar(4.32); ///< Total volume of the muscle group (ml)
-    AnyFolder Puborectalis_1 = 
-    {
-      AnyString Muscle = "Puporectalis_1"; ///< Descriptive name for the muscle, e.g. for plotting
-      AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
-      AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
-      AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
-      AnyFloat MuscleVolume ??= .Volume*0; ///< Volume of the muscle (ml) (the fraction of the group volume is based on the strength of the previous model)
-      AnyFloat MuscleVolumeSIScaled ??= ..VolumeUnitFactor*VolumeScaleFactor*MuscleVolume; ///< Scaled Volume of the muscle in SI base unit (m^3)
-      AnyFloat OptimalFiberlength ??= _FIBER_LENGTH_DESIGNVAR(0.082671); ///< Optimal working length of the muscle fiber (m)
-      AnyFloat TotalTendonLength ??= _TENDON_LENGTH_DESIGNVAR(0.01);///< The total tendon length (m)
-      AnyFloat K1 ??= DesignVar(10); ///< K1 constant in the muscle model.  Factor for determining shortening speed at optimum length
-      AnyFloat K2 ??= DesignVar(1); ///< K2 constant in the muscle model.  Factor for determining shortening speed at optimum length
-      AnyFloat Epsilon0 ??= DesignVar(0.053); ///< Epsilon bar in the muscle model. Represents tendon strain at F0
-      AnyFloat Fcfast ??= DesignVar(0.4); ///< Factor for determining shortening speed at optimum length
-    };
-    #endif
-  
-    #if BM_TRUNK_MUSCLES
-    AnyFolder Puborectalis_2 = 
-    {
-      AnyString Muscle = "Puporectalis_2"; ///< Descriptive name for the muscle, e.g. for plotting
-      AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
-      AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
-      AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
-      AnyFloat MuscleVolume ??= .Volume*0; ///< Volume of the muscle (ml) (the fraction of the group volume is based on the strength of the previous model)
-      AnyFloat MuscleVolumeSIScaled ??= ..VolumeUnitFactor*VolumeScaleFactor*MuscleVolume; ///< Scaled Volume of the muscle in SI base unit (m^3)
-      AnyFloat OptimalFiberlength ??= _FIBER_LENGTH_DESIGNVAR(0.090267); ///< Optimal working length of the muscle fiber (m)
-      AnyFloat TotalTendonLength ??= _TENDON_LENGTH_DESIGNVAR(0.01);///< The total tendon length (m)
-      AnyFloat K1 ??= DesignVar(10); ///< K1 constant in the muscle model.  Factor for determining shortening speed at optimum length
-      AnyFloat K2 ??= DesignVar(1); ///< K2 constant in the muscle model.  Factor for determining shortening speed at optimum length
-      AnyFloat Epsilon0 ??= DesignVar(0.053); ///< Epsilon bar in the muscle model. Represents tendon strain at F0
-      AnyFloat Fcfast ??= DesignVar(0.4); ///< Factor for determining shortening speed at optimum length
-    };
-    #endif
-  }; // Puborectalis group
-  AnyFolder Pubococcygeus = 
-  {
-    #if BM_TRUNK_MUSCLES
-    AnyVar Volume ??= DesignVar(7.38); ///< Total volume of the muscle group (ml)
-    AnyFolder Pubococcygeus_1 = 
-    {
-      AnyString Muscle = "Pupococcygeus_1"; ///< Descriptive name for the muscle, e.g. for plotting
-      AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
-      AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
-      AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
-      AnyFloat MuscleVolume ??= .Volume*0; ///< Volume of the muscle (ml) (the fraction of the group volume is based on the strength of the previous model)
-      AnyFloat MuscleVolumeSIScaled ??= ..VolumeUnitFactor*VolumeScaleFactor*MuscleVolume; ///< Scaled Volume of the muscle in SI base unit (m^3)
-      AnyFloat OptimalFiberlength ??= _FIBER_LENGTH_DESIGNVAR(0.14584); ///< Optimal working length of the muscle fiber (m)
-      AnyFloat TotalTendonLength ??= _TENDON_LENGTH_DESIGNVAR(0.01);///< The total tendon length (m)
-      AnyFloat K1 ??= DesignVar(10); ///< K1 constant in the muscle model.  Factor for determining shortening speed at optimum length
-      AnyFloat K2 ??= DesignVar(1); ///< K2 constant in the muscle model.  Factor for determining shortening speed at optimum length
-      AnyFloat Epsilon0 ??= DesignVar(0.053); ///< Epsilon bar in the muscle model. Represents tendon strain at F0
-      AnyFloat Fcfast ??= DesignVar(0.4); ///< Factor for determining shortening speed at optimum length
-    };
-    #endif
-  
-    #if BM_TRUNK_MUSCLES
-    AnyFolder Pubococcygeus_2 = 
-    {
-      AnyString Muscle = "Pupococcygeus_2"; ///< Descriptive name for the muscle, e.g. for plotting
-      AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
-      AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
-      AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
-      AnyFloat MuscleVolume ??= .Volume*0; ///< Volume of the muscle (ml) (the fraction of the group volume is based on the strength of the previous model)
-      AnyFloat MuscleVolumeSIScaled ??= ..VolumeUnitFactor*VolumeScaleFactor*MuscleVolume; ///< Scaled Volume of the muscle in SI base unit (m^3)
-      AnyFloat OptimalFiberlength ??= _FIBER_LENGTH_DESIGNVAR(0.1494); ///< Optimal working length of the muscle fiber (m)
-      AnyFloat TotalTendonLength ??= _TENDON_LENGTH_DESIGNVAR(0.01);///< The total tendon length (m)
-      AnyFloat K1 ??= DesignVar(10); ///< K1 constant in the muscle model.  Factor for determining shortening speed at optimum length
-      AnyFloat K2 ??= DesignVar(1); ///< K2 constant in the muscle model.  Factor for determining shortening speed at optimum length
-      AnyFloat Epsilon0 ??= DesignVar(0.053); ///< Epsilon bar in the muscle model. Represents tendon strain at F0
-      AnyFloat Fcfast ??= DesignVar(0.4); ///< Factor for determining shortening speed at optimum length
-    };
-    #endif
-  }; // Pubococcygeus group
   AnyFolder PsoasMajor = 
   {
     #if BM_TRUNK_MUSCLES  | BM_LEG_MUSCLES_LEFT  |  BM_LEG_MUSCLES_RIGHT
@@ -5482,6 +5404,84 @@ AnyFolder Muscles =
     };
     #endif
   }; // PsoasMajor group
+  AnyFolder Pubococcygeus = 
+  {
+    #if BM_TRUNK_MUSCLES
+    AnyVar Volume ??= DesignVar(7.38); ///< Total volume of the muscle group (ml)
+    AnyFolder Pubococcygeus_1 = 
+    {
+      AnyString Muscle = "Pupococcygeus_1"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
+      AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
+      AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
+      AnyFloat MuscleVolume ??= .Volume*0; ///< Volume of the muscle (ml) (the fraction of the group volume is based on the strength of the previous model)
+      AnyFloat MuscleVolumeSIScaled ??= ..VolumeUnitFactor*VolumeScaleFactor*MuscleVolume; ///< Scaled Volume of the muscle in SI base unit (m^3)
+      AnyFloat OptimalFiberlength ??= _FIBER_LENGTH_DESIGNVAR(0.14584); ///< Optimal working length of the muscle fiber (m)
+      AnyFloat TotalTendonLength ??= _TENDON_LENGTH_DESIGNVAR(0.01);///< The total tendon length (m)
+      AnyFloat K1 ??= DesignVar(10); ///< K1 constant in the muscle model.  Factor for determining shortening speed at optimum length
+      AnyFloat K2 ??= DesignVar(1); ///< K2 constant in the muscle model.  Factor for determining shortening speed at optimum length
+      AnyFloat Epsilon0 ??= DesignVar(0.053); ///< Epsilon bar in the muscle model. Represents tendon strain at F0
+      AnyFloat Fcfast ??= DesignVar(0.4); ///< Factor for determining shortening speed at optimum length
+    };
+    #endif
+  
+    #if BM_TRUNK_MUSCLES
+    AnyFolder Pubococcygeus_2 = 
+    {
+      AnyString Muscle = "Pupococcygeus_2"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
+      AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
+      AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
+      AnyFloat MuscleVolume ??= .Volume*0; ///< Volume of the muscle (ml) (the fraction of the group volume is based on the strength of the previous model)
+      AnyFloat MuscleVolumeSIScaled ??= ..VolumeUnitFactor*VolumeScaleFactor*MuscleVolume; ///< Scaled Volume of the muscle in SI base unit (m^3)
+      AnyFloat OptimalFiberlength ??= _FIBER_LENGTH_DESIGNVAR(0.1494); ///< Optimal working length of the muscle fiber (m)
+      AnyFloat TotalTendonLength ??= _TENDON_LENGTH_DESIGNVAR(0.01);///< The total tendon length (m)
+      AnyFloat K1 ??= DesignVar(10); ///< K1 constant in the muscle model.  Factor for determining shortening speed at optimum length
+      AnyFloat K2 ??= DesignVar(1); ///< K2 constant in the muscle model.  Factor for determining shortening speed at optimum length
+      AnyFloat Epsilon0 ??= DesignVar(0.053); ///< Epsilon bar in the muscle model. Represents tendon strain at F0
+      AnyFloat Fcfast ??= DesignVar(0.4); ///< Factor for determining shortening speed at optimum length
+    };
+    #endif
+  }; // Pubococcygeus group
+  AnyFolder Puborectalis = 
+  {
+    #if BM_TRUNK_MUSCLES
+    AnyVar Volume ??= DesignVar(4.32); ///< Total volume of the muscle group (ml)
+    AnyFolder Puborectalis_1 = 
+    {
+      AnyString Muscle = "Puporectalis_1"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
+      AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
+      AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
+      AnyFloat MuscleVolume ??= .Volume*0; ///< Volume of the muscle (ml) (the fraction of the group volume is based on the strength of the previous model)
+      AnyFloat MuscleVolumeSIScaled ??= ..VolumeUnitFactor*VolumeScaleFactor*MuscleVolume; ///< Scaled Volume of the muscle in SI base unit (m^3)
+      AnyFloat OptimalFiberlength ??= _FIBER_LENGTH_DESIGNVAR(0.082671); ///< Optimal working length of the muscle fiber (m)
+      AnyFloat TotalTendonLength ??= _TENDON_LENGTH_DESIGNVAR(0.01);///< The total tendon length (m)
+      AnyFloat K1 ??= DesignVar(10); ///< K1 constant in the muscle model.  Factor for determining shortening speed at optimum length
+      AnyFloat K2 ??= DesignVar(1); ///< K2 constant in the muscle model.  Factor for determining shortening speed at optimum length
+      AnyFloat Epsilon0 ??= DesignVar(0.053); ///< Epsilon bar in the muscle model. Represents tendon strain at F0
+      AnyFloat Fcfast ??= DesignVar(0.4); ///< Factor for determining shortening speed at optimum length
+    };
+    #endif
+  
+    #if BM_TRUNK_MUSCLES
+    AnyFolder Puborectalis_2 = 
+    {
+      AnyString Muscle = "Puporectalis_2"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
+      AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
+      AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
+      AnyFloat MuscleVolume ??= .Volume*0; ///< Volume of the muscle (ml) (the fraction of the group volume is based on the strength of the previous model)
+      AnyFloat MuscleVolumeSIScaled ??= ..VolumeUnitFactor*VolumeScaleFactor*MuscleVolume; ///< Scaled Volume of the muscle in SI base unit (m^3)
+      AnyFloat OptimalFiberlength ??= _FIBER_LENGTH_DESIGNVAR(0.090267); ///< Optimal working length of the muscle fiber (m)
+      AnyFloat TotalTendonLength ??= _TENDON_LENGTH_DESIGNVAR(0.01);///< The total tendon length (m)
+      AnyFloat K1 ??= DesignVar(10); ///< K1 constant in the muscle model.  Factor for determining shortening speed at optimum length
+      AnyFloat K2 ??= DesignVar(1); ///< K2 constant in the muscle model.  Factor for determining shortening speed at optimum length
+      AnyFloat Epsilon0 ??= DesignVar(0.053); ///< Epsilon bar in the muscle model. Represents tendon strain at F0
+      AnyFloat Fcfast ??= DesignVar(0.4); ///< Factor for determining shortening speed at optimum length
+    };
+    #endif
+  }; // Puborectalis group
   AnyFolder QuadratusLumborum = 
   {
     #if BM_TRUNK_MUSCLES
@@ -5993,7 +5993,7 @@ AnyFolder Muscles =
   {
     #if BM_TRUNK_MUSCLES
     AnyVar Volume ??= DesignVar(133.49); ///< Total volume of the muscle group (ml)
-    AnyFolder RectusAbdominisXiphoid = 
+    AnyFolder RectusAbdominis_1 = 
     {
       AnyString Muscle = "RA_1"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -6011,9 +6011,9 @@ AnyFolder Muscles =
     #endif
   
     #if BM_TRUNK_MUSCLES
-    AnyFolder RectusAbdominisCC = 
+    AnyFolder RectusAbdominis_2 = 
     {
-      AnyString Muscle = "RectusAbdominis_2"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "RA_2"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
