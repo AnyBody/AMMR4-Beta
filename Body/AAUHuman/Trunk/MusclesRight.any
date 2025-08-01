@@ -5986,8 +5986,8 @@ MuscleGroup SemispinalisThoracis = {
 
 MuscleGroup SerratusPosteriorInferior = {
   
-  AnyMuscleViaPoint SPIL2R12 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.SerratusPosteriorInferior.SPIL2R12;
+  AnyMuscleViaPoint SerratusPosteriorInferiorL2R12 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.SerratusPosteriorInferior.SerratusPosteriorInferiorL2R12;
     AnyRefNode &L2 = ....Segments.L2Seg.O_serratus_posterior_inferior_R;
     AnyRefNode &Via1 = ....Segments.L2Seg.O_serratus_posterior_inferior_L2R12ViaNode_R;
     AnyRefNode &R12 = ....Segments.Right.R12Seg.O_serratus_posterior_inferior_R12R;
@@ -5995,8 +5995,8 @@ MuscleGroup SerratusPosteriorInferior = {
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint SPIL1R11 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.SerratusPosteriorInferior.SPIL1R11;
+  AnyMuscleViaPoint SerratusPosteriorInferiorL1R11 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.SerratusPosteriorInferior.SerratusPosteriorInferiorL1R11;
     AnyRefNode &L1 = ....Segments.L1Seg.O_serratus_posterior_inferior_R;
     AnyRefNode &Via1 = ....Segments.L1Seg.O_serratus_posterior_inferior_L1R11ViaNode_R;
     AnyRefNode &R11 = ....Segments.Right.R11Seg.O_serratus_posterior_inferior_R11R;
@@ -6004,8 +6004,8 @@ MuscleGroup SerratusPosteriorInferior = {
     viewForce.Visible ??= Off;
   };
   #if BM_TRUNK_THORACIC_MODEL == _THORACIC_MODEL_FLEXIBLE_
-  AnyMuscleViaPoint SPIT12R10 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.SerratusPosteriorInferior.SPIT12R10;
+  AnyMuscleViaPoint SerratusPosteriorInferiorT12R10 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.SerratusPosteriorInferior.SerratusPosteriorInferiorT12R10;
     AnyRefNode &T12 = ....Segments.T12Seg.O_serratus_posterior_inferior_T12R;
     AnyRefNode &Via1 = ....Segments.T12Seg.O_serratus_posterior_inferior_T12R10ViaNodeR;
     AnyRefNode &R10 = ....Segments.Right.R10Seg.O_serratus_posterior_inferior_R10R;
@@ -6013,8 +6013,8 @@ MuscleGroup SerratusPosteriorInferior = {
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint SPIT11R9 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.SerratusPosteriorInferior.SPIT11R9;
+  AnyMuscleViaPoint SerratusPosteriorInferiorT11R9 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.SerratusPosteriorInferior.SerratusPosteriorInferiorT11R9;
     AnyRefNode &T11 = ....Segments.T11Seg.O_serratus_posterior_inferior_T11R;
     AnyRefNode &Via1 = ....Segments.T11Seg.O_serratus_posterior_inferior_T11R9ViaNodeR;
     AnyRefNode &R9 = ....Segments.Right.R9Seg.O_serratus_posterior_inferior_R9R;
@@ -6026,8 +6026,8 @@ MuscleGroup SerratusPosteriorInferior = {
 
 MuscleGroup SerratusPosteriorSuperior = {
   
-  AnyMuscleViaPoint SPSR2C7 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.SerratusPosteriorSuperior.SPSR2C7;
+  AnyMuscleViaPoint SerratusPosteriorSuperiorR2C7 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.SerratusPosteriorSuperior.SerratusPosteriorSuperiorR2C7;
     AnyRefNode &C7 = ....Segments.C7Seg.O_serratus_posterior_superior_1C7NodeR;
     AnyRefNode &R2 = ....Segments.Right.R2Seg.O_serratus_posterior_superior_1R;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -6035,24 +6035,24 @@ MuscleGroup SerratusPosteriorSuperior = {
   };
   
   #if BM_TRUNK_THORACIC_MODEL == _THORACIC_MODEL_FLEXIBLE_
-  AnyMuscleViaPoint SPSR3T1 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.SerratusPosteriorSuperior.SPSR3T1;
+  AnyMuscleViaPoint SerratusPosteriorSuperiorR3T1 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.SerratusPosteriorSuperior.SerratusPosteriorSuperiorR3T1;
     AnyRefNode &T1 = ....Segments.T1Seg.O_serratus_posterior_superior_T1R;
     AnyRefNode &R3 = ....Segments.Right.R3Seg.O_serratus_posterior_superior_2R;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint SPSR4T2 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.SerratusPosteriorSuperior.SPSR4T2;
+  AnyMuscleViaPoint SerratusPosteriorSuperiorR4T2 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.SerratusPosteriorSuperior.SerratusPosteriorSuperiorR4T2;
     AnyRefNode &T2 = ....Segments.T2Seg.O_serratus_posterior_superior_T2R;
     AnyRefNode &R4 = ....Segments.Right.R4Seg.O_serratus_posterior_superior_3R;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };
   
-  AnyMuscleViaPoint SPSR5T3 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.SerratusPosteriorSuperior.SPSR5T3;
+  AnyMuscleViaPoint SerratusPosteriorSuperiorR5T3 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.SerratusPosteriorSuperior.SerratusPosteriorSuperiorR5T3;
     AnyRefNode &T3 = ....Segments.T3Seg.O_serratus_posterior_superior_T3R;
     AnyRefNode &R5 = ....Segments.Right.R5Seg.O_serratus_posterior_superior_4R;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
