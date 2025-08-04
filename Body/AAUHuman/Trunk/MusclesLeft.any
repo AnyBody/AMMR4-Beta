@@ -5047,7 +5047,7 @@ MuscleGroup QuadratusLumborum = {
     
   };
   AnyMuscleViaPoint QuadratusLumborumR12L3_1 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.QuadratusLumborum.QQuadratusLumborumR12L3_1L_21;
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.QuadratusLumborum.QuadratusLumborumR12L3_1;
     AnyRefNode &Org = ....Segments.L3Seg.QLL3_CINodeL;
     AnyRefNode &Ins = ....Segments.Left.R12Seg.QLC12Lat_CINode4L;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -6072,10 +6072,10 @@ MuscleGroup SpleniusCapitis = {
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };  
-  AnyMuscleViaPoint SpleniusCapitis3 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Left.SpleniusCapitis.SpleniusCapitis3;
+  AnyMuscleViaPoint SpleniusCapitisT3 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Left.SpleniusCapitis.SpleniusCapitisT3;
     AnyRefNode &Org = ....Segments.SkullSeg.SpleniusCapitisNodeL;
-    AnyRefNode &Ins = ....Segments.T3Seg.Left.SpleniusCapitis3Node;
+    AnyRefNode &Ins = ....Segments.T3Seg.Left.SpleniusCapitisT3Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };  

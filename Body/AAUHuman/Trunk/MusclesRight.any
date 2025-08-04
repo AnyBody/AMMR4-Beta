@@ -6083,10 +6083,10 @@ MuscleGroup SpleniusCapitis = {
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };  
-  AnyMuscleViaPoint SpleniusCapitis3 = {
-    AnyMuscleModel &MusMdl = ....MuscleModels.Right.SpleniusCapitis.SpleniusCapitis3;
+  AnyMuscleViaPoint SpleniusCapitisT3 = {
+    AnyMuscleModel &MusMdl = ....MuscleModels.Right.SpleniusCapitis.SpleniusCapitisT3;
     AnyRefNode &Org = ....Segments.SkullSeg.SpleniusCapitisNodeR;
-    AnyRefNode &Ins = ....Segments.T3Seg.Right.SpleniusCapitis3Node;
+    AnyRefNode &Ins = ....Segments.T3Seg.Right.SpleniusCapitisT3Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     viewForce.Visible ??= Off;
   };  
