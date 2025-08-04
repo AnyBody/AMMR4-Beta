@@ -13,12 +13,10 @@
 
 #include "../libdef.any"
 
-#ifndef TEST_NAME
-  #define BM_LEG_MODEL _LEG_MODEL_TLEM_
+  #define BM_LEG_MODEL 3
   #define BM_ARM_LEFT 0
   #define BM_ARM_RIGHT 0
-#endif
-
+  #define TEST_NAME "test_EvaluateMomentArms_1"
 
 #ifdef CREATE_IMAGE
   #define BM_LEG_MODEL _LEG_MODEL_TLEM_

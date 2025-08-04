@@ -121,7 +121,7 @@ AnyFolder Pelvis = {
     AnyVec3 PSIS = {-0.016926, -0.00514715, 0.0396796};
     AnyVec3 PT = {0.1070, -0.1413, 0.0190};
 
-    // Multifidi nodes
+    // MultifidusLumborum nodes
 
     AnyFloat MultifidusLumborumtL1ICViaNode_pos = {-0.0149335+0.02, 0.0153627+0.015, (0.054064-0.02)};
     AnyFloat MultifidusLumborumtL2ICViaNode_pos = {-0.0174397+0.02, 0.0118849+0.01, (0.048182-0.02)};
@@ -250,7 +250,7 @@ AnyFolder Pelvis = {
     AnyVec3 PSIS = .Right.PSIS * ..MirrorTransform;
     AnyVec3 PT = .Right.PT * ..MirrorTransform;
 
-    // Multifidi nodes
+    // MultifidusLumborum nodes
 
     AnyFloat MultifidusLumborumtL1ICViaNode_pos = .Right.MultifidusLumborumtL1ICViaNode_pos * ..MirrorTransform;
     AnyFloat MultifidusLumborumtL2ICViaNode_pos = .Right.MultifidusLumborumtL2ICViaNode_pos * ..MirrorTransform;

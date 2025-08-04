@@ -116,7 +116,7 @@ AnySeg SacrumSeg = {
    #include "SacrumMuscleAttactmentNodes.any"
    #endif
 
-  // Multifidi Nodes
+  // MultifidusLumborum Nodes
   AnyRefNode MultifidusLumborumL4S1_1NodeR = {sRel = .Scale(.Data.Right.MultifidusLumborumL4S1_1Node_pos);};
   AnyRefNode MultifidusLumborumL4S1_1NodeL = {sRel = .Scale(.Data.Left.MultifidusLumborumL4S1_1Node_pos);};
   AnyRefNode MultifidusLumborumL5S1_1NodeR = {sRel = .Scale(.Data.Right.MultifidusLumborumL5S1_1Node_pos);};
@@ -319,7 +319,7 @@ AnySeg L5Seg = {
   AnyRefNode LINodeSuperior = {sRel = .Scale(.Data.LINodeSuperior_pos);};
   // End of ligament Nodes
 
-  // Multifidi Nodes
+  // MultifidusLumborum Nodes
   AnyRefNode MultifidusLumborumL3L5NodeR = {sRel = .Scale(.Data.Right.MultifidusLumborumL3L5Node_pos);};
   AnyRefNode MultifidusLumborumL3L5NodeL = {sRel = .Scale(.Data.Left.MultifidusLumborumL3L5Node_pos);};
 
@@ -340,7 +340,7 @@ AnySeg L5Seg = {
 
   AnyRefNode MultifidusLumborumL5S3NodeR = {sRel = .Scale(.Data.Right.MultifidusLumborumL5S3Node_pos);};
   AnyRefNode MultifidusLumborumL5S3NodeL = {sRel = .Scale(.Data.Left.MultifidusLumborumL5S3Node_pos);};
-  // End of Multifidi Nodes
+  // End of MultifidusLumborum Nodes
 
   // Erector Spinae Nodes
   AnyRefNode LongissimusThoracisL5IliumNodeR = {sRel = .Scale(.Data.Right.LongissimusThoracisL5IliumNode_pos);};
@@ -543,7 +543,7 @@ AnySeg L4Seg = {
   AnyRefNode LINodeSuperior = {sRel = .Scale(.Data.LINodeSuperior_pos);};
   // End of ligament Nodes
 
-  // Multifidi Nodes
+  // MultifidusLumborum Nodes
   AnyRefNode MultifidusLumborumL2L4NodeR = {sRel = .Scale(.Data.Right.MultifidusLumborumL2L4Node_pos);};
   AnyRefNode MultifidusLumborumL2L4NodeL = {sRel = .Scale(.Data.Left.MultifidusLumborumL2L4Node_pos);};
 
@@ -558,7 +558,7 @@ AnySeg L4Seg = {
 
   AnyRefNode MultifidusLumborumL4S2NodeR = {sRel = .Scale(.Data.Right.MultifidusLumborumL4S2Node_pos);};
   AnyRefNode MultifidusLumborumL4S2NodeL = {sRel = .Scale(.Data.Left.MultifidusLumborumL4S2Node_pos);};
-  // End of Multifidi Nodes
+  // End of MultifidusLumborum Nodes
 
   // Erector Spinae Nodes
   AnyRefNode IliocostalisLumborumL4NodeR = {sRel = .Scale(.Data.Right.IliocostalisLumborumL4Node_pos);};
@@ -782,7 +782,7 @@ AnySeg L3Seg = {
   AnyRefNode LINodeSuperior = {sRel = .Scale(.Data.LINodeSuperior_pos);};
   // End of ligament Nodes
 
-  // Multifidi Nodes
+  // MultifidusLumborum Nodes
   AnyRefNode MultifidusLumborumL1L3NodeR = {sRel = .Scale(.Data.Right.MultifidusLumborumL1L3Node_pos);};
   AnyRefNode MultifidusLumborumL1L3NodeL = {sRel = .Scale(.Data.Left.MultifidusLumborumL1L3Node_pos);};
 
@@ -794,7 +794,7 @@ AnySeg L3Seg = {
 
   AnyRefNode MultifidusLumborumL3S2NodeR = {sRel = .Scale(.Data.Right.MultifidusLumborumL3S2Node_pos);};
   AnyRefNode MultifidusLumborumL3S2NodeL = {sRel = .Scale(.Data.Left.MultifidusLumborumL3S2Node_pos);};
-  // End of Multifidi Nodes
+  // End of MultifidusLumborum Nodes
 
   // Erector Spinae Nodes
   AnyRefNode IliocostalisLumborumL3NodeR = {sRel = .Scale(.Data.Right.IliocostalisLumborumL3Node_pos);};
@@ -1053,7 +1053,7 @@ AnySeg L2Seg = {
   AnyRefNode LINodeSuperior = {sRel = .Scale(.Data.LINodeSuperior_pos);};
   // End of ligament Nodes
 
-  // Multifidi Nodes
+  // MultifidusLumborum Nodes
   AnyRefNode MultifidusLumborumL2L4NodeR = {sRel = .Scale(.Data.Right.MultifidusLumborumL2L4Node_pos);};
   AnyRefNode MultifidusLumborumL2L4NodeL = {sRel = .Scale(.Data.Left.MultifidusLumborumL2L4Node_pos);};
 
@@ -1068,7 +1068,7 @@ AnySeg L2Seg = {
 
   AnyRefNode MultifidusLumborumtL2ICNodeR = {sRel = .Scale(.Data.Right.MultifidusLumborumtL2ICNode_pos);};
   AnyRefNode MultifidusLumborumtL2ICNodeL = {sRel = .Scale(.Data.Left.MultifidusLumborumtL2ICNode_pos);};
-  // End of Multifidi Nodes
+  // End of MultifidusLumborum Nodes
 
   // Erector Spinae Nodes
   AnyRefNode IliocostalisLumborumL2NodeR = {sRel = .Scale(.Data.Right.IliocostalisLumborumL2Node_pos);};
@@ -1324,7 +1324,7 @@ AnySeg L1Seg = {
   AnyRefNode LINodeSuperior = {sRel = .Scale(.Data.LINodeSuperior_pos);};
   // End of ligament Nodes
 
-  // Multifidi Nodes
+  // MultifidusLumborum Nodes
   AnyRefNode MultifidusLumborumL1L3NodeR = {sRel = .Scale(.Data.Right.MultifidusLumborumL1L3Node_pos);};
   AnyRefNode MultifidusLumborumL1L3NodeL = {sRel = .Scale(.Data.Left.MultifidusLumborumL1L3Node_pos);};
 
@@ -1339,7 +1339,7 @@ AnySeg L1Seg = {
 
   AnyRefNode MultifidusLumborumtL1ICNodeR = {sRel = .Scale(.Data.Right.MultifidusLumborumtL1ICNode_pos);};
   AnyRefNode MultifidusLumborumtL1ICNodeL = {sRel = .Scale(.Data.Left.MultifidusLumborumtL1ICNode_pos);};
-  // End of Multifidi Nodes
+  // End of MultifidusLumborum Nodes
 
   // Erector Spinae Nodes
   AnyRefNode IliocostalisLumborumL1NodeR = {sRel = .Scale(.Data.Right.IliocostalisLumborumL1Node_pos);};
