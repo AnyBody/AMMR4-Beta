@@ -97,7 +97,7 @@ AnyKinStudy Study = {
       };
 
       AnyFolder Right = {
-        AnyFolder Transversus = {
+        AnyFolder TransversusAbdominis = {
           AnyVar TransversusAbdominisL1 = -1*...Model.SpineMusRightRef.TransversusAbdominis.TransversusAbdominisL1.LmtDot/...Model.Drivers.AngularVelocity;
           AnyVar TransversusAbdominisL2 = -1*...Model.SpineMusRightRef.TransversusAbdominis.TransversusAbdominisL2.LmtDot/...Model.Drivers.AngularVelocity;
           AnyVar TransversusAbdominisL3 = -1*...Model.SpineMusRightRef.TransversusAbdominis.TransversusAbdominisL3.LmtDot/...Model.Drivers.AngularVelocity;
@@ -138,16 +138,11 @@ AnyKinStudy Study = {
           AnyVar MultifidusLumborumtL1IC = -1*...Model.SpineMusRightRef.MultifidusLumborum.MultifidusLumborumtL1IC.LmtDot/...Model.Drivers.AngularVelocity;
           AnyVar MultifidusLumborumtL2IC = -1*...Model.SpineMusRightRef.MultifidusLumborum.MultifidusLumborumtL2IC.LmtDot/...Model.Drivers.AngularVelocity;
         };
-        AnyFolder ErectorSpinae = {
+        AnyFolder IliocostalisLumborumL = {
           AnyVar IliocostalisLumborumL1 = -1*...Model.SpineMusRightRef.IliocostalisLumborum.IliocostalisLumborumL1.LmtDot/...Model.Drivers.AngularVelocity;
           AnyVar IliocostalisLumborumL2 = -1*...Model.SpineMusRightRef.IliocostalisLumborum.IliocostalisLumborumL2.LmtDot/...Model.Drivers.AngularVelocity;
           AnyVar IliocostalisLumborumL3 = -1*...Model.SpineMusRightRef.IliocostalisLumborum.IliocostalisLumborumL3.LmtDot/...Model.Drivers.AngularVelocity;
           AnyVar IliocostalisLumborumL4 = -1*...Model.SpineMusRightRef.IliocostalisLumborum.IliocostalisLumborumL4.LmtDot/...Model.Drivers.AngularVelocity;
-          AnyVar LongissimusThoracisL1IC = -1*...Model.SpineMusRightRef.LongissimusThoracis.LongissimusThoracisL1IC.LmtDot/...Model.Drivers.AngularVelocity;
-          AnyVar LongissimusThoracisL2IC = -1*...Model.SpineMusRightRef.LongissimusThoracis.LongissimusThoracisL2IC.LmtDot/...Model.Drivers.AngularVelocity;
-          AnyVar LongissimusThoracisL3IC = -1*...Model.SpineMusRightRef.LongissimusThoracis.LongissimusThoracisL3IC.LmtDot/...Model.Drivers.AngularVelocity;
-          AnyVar LongissimusThoracisL4IC = -1*...Model.SpineMusRightRef.LongissimusThoracis.LongissimusThoracisL4IC.LmtDot/...Model.Drivers.AngularVelocity;
-          AnyVar LongissimusThoracisL5Ilium = -1*...Model.SpineMusRightRef.LongissimusThoracis.LongissimusThoracisL5Ilium.LmtDot/...Model.Drivers.AngularVelocity;
           AnyVar IliocostalisLumborumR5 = -1*...Model.SpineMusRightRef.IliocostalisLumborum.IliocostalisLumborumR5.LmtDot/...Model.Drivers.AngularVelocity;
           AnyVar IliocostalisLumborumR6 = -1*...Model.SpineMusRightRef.IliocostalisLumborum.IliocostalisLumborumR6.LmtDot/...Model.Drivers.AngularVelocity;
           AnyVar IliocostalisLumborumR7 = -1*...Model.SpineMusRightRef.IliocostalisLumborum.IliocostalisLumborumR7.LmtDot/...Model.Drivers.AngularVelocity;
@@ -156,6 +151,13 @@ AnyKinStudy Study = {
           AnyVar IliocostalisLumborumR10 = -1*...Model.SpineMusRightRef.IliocostalisLumborum.IliocostalisLumborumR10.LmtDot/...Model.Drivers.AngularVelocity;
           AnyVar IliocostalisLumborumR11 = -1*...Model.SpineMusRightRef.IliocostalisLumborum.IliocostalisLumborumR11.LmtDot/...Model.Drivers.AngularVelocity;
           AnyVar IliocostalisLumborumR12 = -1*...Model.SpineMusRightRef.IliocostalisLumborum.IliocostalisLumborumR12.LmtDot/...Model.Drivers.AngularVelocity;
+        };
+        AnyFolder LongissimusThoracis = {
+          AnyVar LongissimusThoracisL1IC = -1*...Model.SpineMusRightRef.LongissimusThoracis.LongissimusThoracisL1IC.LmtDot/...Model.Drivers.AngularVelocity;
+          AnyVar LongissimusThoracisL2IC = -1*...Model.SpineMusRightRef.LongissimusThoracis.LongissimusThoracisL2IC.LmtDot/...Model.Drivers.AngularVelocity;
+          AnyVar LongissimusThoracisL3IC = -1*...Model.SpineMusRightRef.LongissimusThoracis.LongissimusThoracisL3IC.LmtDot/...Model.Drivers.AngularVelocity;
+          AnyVar LongissimusThoracisL4IC = -1*...Model.SpineMusRightRef.LongissimusThoracis.LongissimusThoracisL4IC.LmtDot/...Model.Drivers.AngularVelocity;
+          AnyVar LongissimusThoracisL5Ilium = -1*...Model.SpineMusRightRef.LongissimusThoracis.LongissimusThoracisL5Ilium.LmtDot/...Model.Drivers.AngularVelocity;
           AnyVar LongissimusThoracisT1L1 = -1*...Model.SpineMusRightRef.LongissimusThoracis.LongissimusThoracisT1L1.LmtDot/...Model.Drivers.AngularVelocity;
           AnyVar LongissimusThoracisT2L2 = -1*...Model.SpineMusRightRef.LongissimusThoracis.LongissimusThoracisT2L2.LmtDot/...Model.Drivers.AngularVelocity;
           AnyVar LongissimusThoracisT3L3 = -1*...Model.SpineMusRightRef.LongissimusThoracis.LongissimusThoracisT3L3.LmtDot/...Model.Drivers.AngularVelocity;
@@ -244,7 +246,7 @@ AnyKinStudy Study = {
       };//Right
 
       AnyFolder Left = {
-        AnyFolder Transversus = {
+        AnyFolder TransversusAbdominis = {
           AnyVar TransversusAbdominisL1 = -1*...Model.SpineMusLeftRef.TransversusAbdominis.TransversusAbdominisL1.LmtDot/...Model.Drivers.AngularVelocity;
           AnyVar TransversusAbdominisL2 = -1*...Model.SpineMusLeftRef.TransversusAbdominis.TransversusAbdominisL2.LmtDot/...Model.Drivers.AngularVelocity;
           AnyVar TransversusAbdominisL3 = -1*...Model.SpineMusLeftRef.TransversusAbdominis.TransversusAbdominisL3.LmtDot/...Model.Drivers.AngularVelocity;
@@ -285,16 +287,11 @@ AnyKinStudy Study = {
           AnyVar MultifidusLumborumtL1IC = -1*...Model.SpineMusLeftRef.MultifidusLumborum.MultifidusLumborumtL1IC.LmtDot/...Model.Drivers.AngularVelocity;
           AnyVar MultifidusLumborumtL2IC = -1*...Model.SpineMusLeftRef.MultifidusLumborum.MultifidusLumborumtL2IC.LmtDot/...Model.Drivers.AngularVelocity;
         };
-        AnyFolder ErectorSpinae = {
+        AnyFolder IliocostalisLumborum = {
           AnyVar IliocostalisLumborumL1 = -1*...Model.SpineMusLeftRef.IliocostalisLumborum.IliocostalisLumborumL1.LmtDot/...Model.Drivers.AngularVelocity;
           AnyVar IliocostalisLumborumL2 = -1*...Model.SpineMusLeftRef.IliocostalisLumborum.IliocostalisLumborumL2.LmtDot/...Model.Drivers.AngularVelocity;
           AnyVar IliocostalisLumborumL3 = -1*...Model.SpineMusLeftRef.IliocostalisLumborum.IliocostalisLumborumL3.LmtDot/...Model.Drivers.AngularVelocity;
           AnyVar IliocostalisLumborumL4 = -1*...Model.SpineMusLeftRef.IliocostalisLumborum.IliocostalisLumborumL4.LmtDot/...Model.Drivers.AngularVelocity;
-          AnyVar LongissimusThoracisL1IC = -1*...Model.SpineMusLeftRef.LongissimusThoracis.LongissimusThoracisL1IC.LmtDot/...Model.Drivers.AngularVelocity;
-          AnyVar LongissimusThoracisL2IC = -1*...Model.SpineMusLeftRef.LongissimusThoracis.LongissimusThoracisL2IC.LmtDot/...Model.Drivers.AngularVelocity;
-          AnyVar LongissimusThoracisL3IC = -1*...Model.SpineMusLeftRef.LongissimusThoracis.LongissimusThoracisL3IC.LmtDot/...Model.Drivers.AngularVelocity;
-          AnyVar LongissimusThoracisL4IC = -1*...Model.SpineMusLeftRef.LongissimusThoracis.LongissimusThoracisL4IC.LmtDot/...Model.Drivers.AngularVelocity;
-          AnyVar LongissimusThoracisL5Ilium = -1*...Model.SpineMusLeftRef.LongissimusThoracis.LongissimusThoracisL5Ilium.LmtDot/...Model.Drivers.AngularVelocity;
           AnyVar IliocostalisLumborumR5 = -1*...Model.SpineMusLeftRef.IliocostalisLumborum.IliocostalisLumborumR5.LmtDot/...Model.Drivers.AngularVelocity;
           AnyVar IliocostalisLumborumR6 = -1*...Model.SpineMusLeftRef.IliocostalisLumborum.IliocostalisLumborumR6.LmtDot/...Model.Drivers.AngularVelocity;
           AnyVar IliocostalisLumborumR7 = -1*...Model.SpineMusLeftRef.IliocostalisLumborum.IliocostalisLumborumR7.LmtDot/...Model.Drivers.AngularVelocity;
@@ -303,6 +300,13 @@ AnyKinStudy Study = {
           AnyVar IliocostalisLumborumR10 = -1*...Model.SpineMusLeftRef.IliocostalisLumborum.IliocostalisLumborumR10.LmtDot/...Model.Drivers.AngularVelocity;
           AnyVar IliocostalisLumborumR11 = -1*...Model.SpineMusLeftRef.IliocostalisLumborum.IliocostalisLumborumR11.LmtDot/...Model.Drivers.AngularVelocity;
           AnyVar IliocostalisLumborumR12 = -1*...Model.SpineMusLeftRef.IliocostalisLumborum.IliocostalisLumborumR12.LmtDot/...Model.Drivers.AngularVelocity;
+        };
+        AnyFolder LongissimusThoracis = {
+          AnyVar LongissimusThoracisL1IC = -1*...Model.SpineMusLeftRef.LongissimusThoracis.LongissimusThoracisL1IC.LmtDot/...Model.Drivers.AngularVelocity;
+          AnyVar LongissimusThoracisL2IC = -1*...Model.SpineMusLeftRef.LongissimusThoracis.LongissimusThoracisL2IC.LmtDot/...Model.Drivers.AngularVelocity;
+          AnyVar LongissimusThoracisL3IC = -1*...Model.SpineMusLeftRef.LongissimusThoracis.LongissimusThoracisL3IC.LmtDot/...Model.Drivers.AngularVelocity;
+          AnyVar LongissimusThoracisL4IC = -1*...Model.SpineMusLeftRef.LongissimusThoracis.LongissimusThoracisL4IC.LmtDot/...Model.Drivers.AngularVelocity;
+          AnyVar LongissimusThoracisL5Ilium = -1*...Model.SpineMusLeftRef.LongissimusThoracis.LongissimusThoracisL5Ilium.LmtDot/...Model.Drivers.AngularVelocity;
           AnyVar LongissimusThoracisT1L1 = -1*...Model.SpineMusLeftRef.LongissimusThoracis.LongissimusThoracisT1L1.LmtDot/...Model.Drivers.AngularVelocity;
           AnyVar LongissimusThoracisT2L2 = -1*...Model.SpineMusLeftRef.LongissimusThoracis.LongissimusThoracisT2L2.LmtDot/...Model.Drivers.AngularVelocity;
           AnyVar LongissimusThoracisT3L3 = -1*...Model.SpineMusLeftRef.LongissimusThoracis.LongissimusThoracisT3L3.LmtDot/...Model.Drivers.AngularVelocity;

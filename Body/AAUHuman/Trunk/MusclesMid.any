@@ -95,7 +95,7 @@
   
   #if BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_BUCKLE_
     ///Definitions of the different transversus fascicles  
-    MuscleGroup Transversus = {
+    MuscleGroup TransversusAbdominis = {
       AnyMuscleViaPoint TransversusAbdominisL1 = {
         AnyMuscleModel &MusMdl = ...MuscleModels.TransversusSingle.TransversusAbdominisL1;
         
