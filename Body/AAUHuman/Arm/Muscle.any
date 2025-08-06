@@ -34,15 +34,15 @@ MuscleGroup LevatorScapulae() = {
 };
 
 MuscleGroup Sternocleidomastoid() = {
-  AnyMuscleViaPoint Sternocleidomastoid_caput_clavicular = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.Sternocleidomastoid_1;
+  AnyMuscleViaPoint SternocleidomastoidClavicular = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.SternocleidomastoidClavicular;
     AnyRefNode &Ins2 = ...Segments.Clavicula.SternocleidomastoidNode;
     AnyRefNode &Org = ..TrunkNodeAttachement.SkullSeg.SternocleidomastoidNode;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
-  AnyMuscleViaPoint Sternocleidomastoid_caput_Sternum = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.Sternocleidomastoid_2;
+  AnyMuscleViaPoint SternocleidomastoidSternum = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.SternocleidomastoidSternum;
     AnyRefNode &Ins = ..TrunkNodeAttachement.ManubriumSeg.SternocleidomastoidNode;
     AnyRefNode &Org = ..TrunkNodeAttachement.SkullSeg.SternocleidomastoidNode;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
