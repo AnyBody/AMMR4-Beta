@@ -49,7 +49,7 @@ MuscleGroup Sternocleidomastoid() = {
   };
 };
 
-MuscleGroup TrapeziusScapular() = {
+MuscleGroup Trapezius() = {
   AnyMuscleShortestPath  TrapeziusScapularT12 = {
     AnyMuscleModel &MusMdl =  ...MuscleModels.TrapeziusScapularT12;
     AnyRefNode &Org = ..TrunkNodeAttachement.T12Seg.O_TrapeziusScapularT12;
@@ -180,9 +180,7 @@ MuscleGroup TrapeziusScapular() = {
     AnyRefNode &Ins = ...Segments.Scapula.I_TrapeziusScapularC6;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
-};
 
-MuscleGroup TrapeziusClavicular() = {
   AnyMuscleViaPoint  TrapeziusClavicularC5 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.TrapeziusClavicularC5;
     AnyRefNode &Org = ..TrunkNodeAttachement.C5Seg.O_TrapeziusClavicularC5;
