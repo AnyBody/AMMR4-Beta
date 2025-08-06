@@ -183,45 +183,45 @@ MuscleGroup TrapeziusScapular() = {
 };
 
 MuscleGroup TrapeziusClavicular() = {
-  AnyMuscleViaPoint  trapezius_clavicular_part_1 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.trapezius_clavicular_part_1;
-    AnyRefNode &Org = ..TrunkNodeAttachement.C5Seg.O_trapezius_clavicular_part_1;
-    AnyRefNode &Ins = ...Segments.Clavicula.I_trapezius_clavicular_part_1;
+  AnyMuscleViaPoint  TrapeziusClavicularC5 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.TrapeziusClavicularC5;
+    AnyRefNode &Org = ..TrunkNodeAttachement.C5Seg.O_TrapeziusClavicularC5;
+    AnyRefNode &Ins = ...Segments.Clavicula.I_TrapeziusClavicularC5;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
-  AnyMuscleViaPoint trapezius_clavicular_part_2 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.trapezius_clavicular_part_2;
-    AnyRefNode &Org = ..TrunkNodeAttachement.C4Seg.O_trapezius_clavicular_part_2;
-    AnyRefNode &Ins = ...Segments.Clavicula.I_trapezius_clavicular_part_2;
+  AnyMuscleViaPoint TrapeziusClavicularC4 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.TrapeziusClavicularC4;
+    AnyRefNode &Org = ..TrunkNodeAttachement.C4Seg.O_TrapeziusClavicularC4;
+    AnyRefNode &Ins = ...Segments.Clavicula.I_TrapeziusClavicularC4;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
-  AnyMuscleViaPoint trapezius_clavicular_part_3 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.trapezius_clavicular_part_3;
-    AnyRefNode &Org = ..TrunkNodeAttachement.C3Seg.O_trapezius_clavicular_part_3;
-    AnyRefNode &Ins = ...Segments.Clavicula.I_trapezius_clavicular_part_3;
+  AnyMuscleViaPoint TrapeziusClavicularC3 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.TrapeziusClavicularC3;
+    AnyRefNode &Org = ..TrunkNodeAttachement.C3Seg.O_TrapeziusClavicularC3;
+    AnyRefNode &Ins = ...Segments.Clavicula.I_TrapeziusClavicularC3;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
-  AnyMuscleViaPoint trapezius_clavicular_part_4 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.trapezius_clavicular_part_4;
-    AnyRefNode &Org = ..TrunkNodeAttachement.C2Seg.O_trapezius_clavicular_part_4;
-    AnyRefNode &Ins = ...Segments.Clavicula.I_trapezius_clavicular_part_4;
+  AnyMuscleViaPoint TrapeziusClavicularC2 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.TrapeziusClavicularC2;
+    AnyRefNode &Org = ..TrunkNodeAttachement.C2Seg.O_TrapeziusClavicularC2;
+    AnyRefNode &Ins = ...Segments.Clavicula.I_TrapeziusClavicularC2;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
-  AnyMuscleViaPoint trapezius_clavicular_part_5 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.trapezius_clavicular_part_5;
-    AnyRefNode &Org = ..TrunkNodeAttachement.C1Seg.O_trapezius_clavicular_part_5;
-    AnyRefNode &Ins = ...Segments.Clavicula.I_trapezius_clavicular_part_5;
+  AnyMuscleViaPoint TrapeziusClavicularC1 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.TrapeziusClavicularC1;
+    AnyRefNode &Org = ..TrunkNodeAttachement.C1Seg.O_TrapeziusClavicularC1;
+    AnyRefNode &Ins = ...Segments.Clavicula.I_TrapeziusClavicularC1;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
-  AnyMuscleViaPoint trapezius_clavicular_part_6 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.trapezius_clavicular_part_6;
-    AnyRefNode &Org = ..TrunkNodeAttachement.SkullSeg.O_trapezius_clavicular_part_6;
-    AnyRefNode &Ins = ...Segments.Clavicula.I_trapezius_clavicular_part_6;
+  AnyMuscleViaPoint TrapeziusClavicularSkull = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.TrapeziusClavicularSkull;
+    AnyRefNode &Org = ..TrunkNodeAttachement.SkullSeg.O_TrapeziusClavicularSkull;
+    AnyRefNode &Ins = ...Segments.Clavicula.I_TrapeziusClavicularSkull;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 };

@@ -8,7 +8,7 @@ AnyFolder C1 = {
     AnyFloat LongusColliC5C1Node_pos = {0.04200000, 0.5740000, 0.008000000};
     AnyFloat SpleniusCervicisT3C1Node_pos = {0.01900000, 0.5730000, 0.03900000};
     AnyFloat O_LevatorScapulaeC1_pos = {0.02500000, 0.5750000, 0.03900000};
-    AnyFloat O_trapezius_clavicular_part_5_pos = {-0.01000000, 0.5700000, 0.005000000};
+    AnyFloat O_TrapeziusClavicularC1_pos = {-0.01000000, 0.5700000, 0.005000000};
     AnyFloat SuperiorArticularFacetAnteriorNode_pos = {0.032400, 0.580300, 0.013100};
     AnyFloat SuperiorArticularFacetPosteriorNode_pos = {0.013800, 0.580300, 0.019500};
   };
@@ -17,7 +17,7 @@ AnyFolder C1 = {
     AnyFloat LongusColliC5C1Node_pos = .Right.LongusColliC5C1Node_pos * ..MirrorTransform;
     AnyFloat SpleniusCervicisT3C1Node_pos = .Right.SpleniusCervicisT3C1Node_pos * ..MirrorTransform;
     AnyFloat O_LevatorScapulaeC1_pos = .Right.O_LevatorScapulaeC1_pos * ..MirrorTransform;
-    AnyFloat O_trapezius_clavicular_part_5_pos = .Right.O_trapezius_clavicular_part_5_pos * ..MirrorTransform;
+    AnyFloat O_TrapeziusClavicularC1_pos = .Right.O_TrapeziusClavicularC1_pos * ..MirrorTransform;
     AnyFloat SuperiorArticularFacetAnteriorNode_pos = .Right.SuperiorArticularFacetAnteriorNode_pos * ..MirrorTransform;
     AnyFloat SuperiorArticularFacetPosteriorNode_pos = .Right.SuperiorArticularFacetPosteriorNode_pos * ..MirrorTransform;
   };
@@ -38,7 +38,7 @@ AnyFolder C2 = {
     AnyFloat LongissimusCervicisT1C2Node_pos = {0.02200000, 0.5580000, 0.02600000};
     AnyFloat MultifidusCervicisC2Node_pos = {-0.01000000, 0.5440000, 0.0000000};
     AnyFloat O_LevatorScapulaeC2_pos = {0.02500000, 0.5650000, 0.02567000};
-    AnyFloat O_trapezius_clavicular_part_4_pos = {-0.01000000, 0.5450000, 0.005000000};
+    AnyFloat O_TrapeziusClavicularC2_pos = {-0.01000000, 0.5450000, 0.005000000};
     AnyFloat SuperiorArticularFacetAnteriorNode_pos = {0.037300, 0.568200, 0.007300};
     AnyFloat SuperiorArticularFacetPosteriorNode_pos = {0.030300, 0.569400, 0.005300};
   };
@@ -52,7 +52,7 @@ AnyFolder C2 = {
     AnyFloat LongissimusCervicisT1C2Node_pos = .Right.LongissimusCervicisT1C2Node_pos * ..MirrorTransform;
     AnyFloat MultifidusCervicisC2Node_pos = .Right.MultifidusCervicisC2Node_pos * ..MirrorTransform;
     AnyFloat O_LevatorScapulaeC2_pos = .Right.O_LevatorScapulaeC2_pos * ..MirrorTransform;
-    AnyFloat O_trapezius_clavicular_part_4_pos = .Right.O_trapezius_clavicular_part_4_pos * ..MirrorTransform;
+    AnyFloat O_TrapeziusClavicularC2_pos = .Right.O_TrapeziusClavicularC2_pos * ..MirrorTransform;
     AnyFloat SuperiorArticularFacetAnteriorNode_pos = .Right.SuperiorArticularFacetAnteriorNode_pos * ..MirrorTransform;
     AnyFloat SuperiorArticularFacetPosteriorNode_pos = .Right.SuperiorArticularFacetPosteriorNode_pos * ..MirrorTransform;
   };
@@ -80,7 +80,7 @@ AnyFolder C3 = {
       AnyFloat LongissimusCervicisT2C3Node_pos = {0.02300000, 0.5420000, 0.02600000};
       AnyFloat MultifidusCervicisC3Node_pos = {-0.01100000, 0.5310000, 0.0000000};
       AnyFloat O_LevatorScapulaeC3_pos = {0.02400000, 0.5500000, 0.02310000};
-      AnyFloat O_trapezius_clavicular_part_3_pos = {-0.01200000, 0.5350000, 0.005000000};
+      AnyFloat O_TrapeziusClavicularC3_pos = {-0.01200000, 0.5350000, 0.005000000};
       AnyFloat UncinateProcessNode_pos = {0.031300, 0.555800, 0.011300};
 
   };
@@ -99,7 +99,7 @@ AnyFolder C3 = {
     AnyFloat LongissimusCervicisT2C3Node_pos = .Right.LongissimusCervicisT2C3Node_pos * ..MirrorTransform;
     AnyFloat MultifidusCervicisC3Node_pos = .Right.MultifidusCervicisC3Node_pos * ..MirrorTransform;
     AnyFloat O_LevatorScapulaeC3_pos = .Right.O_LevatorScapulaeC3_pos * ..MirrorTransform;
-    AnyFloat O_trapezius_clavicular_part_3_pos = .Right.O_trapezius_clavicular_part_3_pos * ..MirrorTransform;
+    AnyFloat O_TrapeziusClavicularC3_pos = .Right.O_TrapeziusClavicularC3_pos * ..MirrorTransform;
     AnyFloat UncinateProcessNode_pos = .Right.UncinateProcessNode_pos * ..MirrorTransform;
   };
 };
@@ -128,7 +128,7 @@ AnyFolder C4 = {
     AnyFloat LongissimusCervicisT3C4Node_pos = {0.02200000, 0.5260000, 0.02600000};
     AnyFloat MultifidusCervicisC4Node_pos = {-0.01400000, 0.5210000, 0.0000000};
     AnyFloat O_LevatorScapulaeC4_pos = {0.02300000, 0.5350000, 0.02310000};
-    AnyFloat O_trapezius_clavicular_part_2_pos = {-0.01400000, 0.5220000, 0.005000000};
+    AnyFloat O_TrapeziusClavicularC4_pos = {-0.01400000, 0.5220000, 0.005000000};
     AnyFloat UncinateProcessNode_pos = {0.031300, 0.539400, 0.012300};
   };
 
@@ -148,7 +148,7 @@ AnyFolder C4 = {
     AnyFloat LongissimusCervicisT3C4Node_pos = .Right.LongissimusCervicisT3C4Node_pos * ..MirrorTransform;
     AnyFloat MultifidusCervicisC4Node_pos = .Right.MultifidusCervicisC4Node_pos * ..MirrorTransform;
     AnyFloat O_LevatorScapulaeC4_pos = .Right.O_LevatorScapulaeC4_pos * ..MirrorTransform;
-    AnyFloat O_trapezius_clavicular_part_2_pos = .Right.O_trapezius_clavicular_part_2_pos * ..MirrorTransform;
+    AnyFloat O_TrapeziusClavicularC4_pos = .Right.O_TrapeziusClavicularC4_pos * ..MirrorTransform;
     AnyFloat UncinateProcessNode_pos = .Right.UncinateProcessNode_pos * ..MirrorTransform;
   };
 };
@@ -178,7 +178,7 @@ AnyFolder C5 = {
     AnyFloat LongissimusCervicisT4C5Node_pos = {0.02000000, 0.5100000, 0.02800000};
     AnyFloat MultifidusCervicisC5C2Node_pos = {0.02000000, 0.5100000, 0.02800000};
     AnyFloat MultifidusCervicisC5Node_pos = {-0.02200000, 0.5110000, 0.0000000};
-    AnyFloat O_trapezius_clavicular_part_1_pos = {-0.02200000, 0.5130000, 0.005000000};
+    AnyFloat O_TrapeziusClavicularC5_pos = {-0.02200000, 0.5130000, 0.005000000};
     AnyFloat UncinateProcessNode_pos = {0.029000, 0.520700, 0.013000};
   };
 
@@ -199,7 +199,7 @@ AnyFolder C5 = {
     AnyFloat LongissimusCervicisT4C5Node_pos = .Right.LongissimusCervicisT4C5Node_pos * ..MirrorTransform;
     AnyFloat MultifidusCervicisC5C2Node_pos = .Right.MultifidusCervicisC5C2Node_pos * ..MirrorTransform;
     AnyFloat MultifidusCervicisC5Node_pos = .Right.MultifidusCervicisC5Node_pos * ..MirrorTransform;
-    AnyFloat O_trapezius_clavicular_part_1_pos = .Right.O_trapezius_clavicular_part_1_pos * ..MirrorTransform;
+    AnyFloat O_TrapeziusClavicularC5_pos = .Right.O_TrapeziusClavicularC5_pos * ..MirrorTransform;
     AnyFloat UncinateProcessNode_pos = .Right.UncinateProcessNode_pos * ..MirrorTransform;
   };
 };
