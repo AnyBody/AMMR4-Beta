@@ -92,60 +92,60 @@ AnyMat33 Mirror  = {{1,0,0},{0,1,0},{0,0, ..Sign}};
 
 T1Seg = {
   AnyRefNode O_rhomboideus_2 = {sRel = (.Scale(({-0.027, 0.45 , 0.005}))*..Mirror);};
-  AnyRefNode O_trapezius_scapular_part_12 = {sRel = .Scale({-0.03471001, 0.44004, 0.00400})*..Mirror; };
+  AnyRefNode O_TrapeziusScapularT1 = {sRel = .Scale({-0.03471001, 0.44004, 0.00400})*..Mirror; };
 };
 
 T2Seg = {
   AnyRefNode O_rhomboideus_3 = {sRel = (.Scale(({-0.035, 0.425 , 0.005}))*..Mirror);};
-  AnyRefNode O_trapezius_scapular_part_11 = {sRel = .Scale({-0.04471001, 0.41694, 0.00400})*..Mirror; };
+  AnyRefNode O_TrapeziusScapularT2 = {sRel = .Scale({-0.04471001, 0.41694, 0.00400})*..Mirror; };
 };
 
 T3Seg = {
   AnyRefNode O_rhomboideus_4 = {sRel = (.Scale(({-0.038, 0.405 , 0.005}))*..Mirror);};
-  AnyRefNode O_trapezius_scapular_part_10 = {sRel = .Scale({-0.05471001, 0.39106, 0.00400})*..Mirror; };
+  AnyRefNode O_TrapeziusScapularT3 = {sRel = .Scale({-0.05471001, 0.39106, 0.00400})*..Mirror; };
 };
 
 T4Seg = {
   AnyRefNode O_rhomboideus_5 = {sRel = (.Scale(({-0.044, 0.38 , 0.005}))*..Mirror);};
-  AnyRefNode O_trapezius_scapular_part_9 = {sRel = .Scale({-0.06107001, 0.3644, 0.00400})*..Mirror; };
+  AnyRefNode O_TrapeziusScapularT4 = {sRel = .Scale({-0.06107001, 0.3644, 0.00400})*..Mirror; };
 };
 
 T5Seg = {
   AnyRefNode O_rhomboideus_6 = {sRel = (.Scale(({-0.05, 0.35 , 0.005}))*..Mirror);};
-  AnyRefNode O_trapezius_scapular_part_8 = {sRel = .Scale({-0.06307001, 0.3404, 0.00400})*..Mirror; };
+  AnyRefNode O_TrapeziusScapularT5 = {sRel = .Scale({-0.06307001, 0.3404, 0.00400})*..Mirror; };
 };
 
 T6Seg = {
-  AnyRefNode O_trapezius_scapular_part_7 = {sRel = .Scale({-0.06707001, 0.3104, 0.00400})*..Mirror; };
+  AnyRefNode O_TrapeziusScapularT6 = {sRel = .Scale({-0.06707001, 0.3104, 0.00400})*..Mirror; };
 };
 
 T7Seg = {
-  AnyRefNode O_trapezius_scapular_part_6 = {sRel = .Scale({-0.06507001, 0.2794, 0.00400})*..Mirror; };
+  AnyRefNode O_TrapeziusScapularT7 = {sRel = .Scale({-0.06507001, 0.2794, 0.00400})*..Mirror; };
 };
 
 T8Seg = {
   AnyRefNode O_latissimus_dorsi_1 = {sRel = .Scale({-0.06057001, 0.25472, -7.5035e-19}); };
-  AnyRefNode O_trapezius_scapular_part_5 = {sRel = .Scale({-0.05927001, 0.25445, 0.00400})*..Mirror; };
+  AnyRefNode O_TrapeziusScapularT8 = {sRel = .Scale({-0.05927001, 0.25445, 0.00400})*..Mirror; };
 };
 
 T9Seg = {
   AnyRefNode O_latissimus_dorsi_2 = { sRel = .Scale({-0.05450501, 0.23701, -7.5035e-19});};
-  AnyRefNode O_trapezius_scapular_part_4 = {sRel = .Scale({-0.05627001, 0.23245, 0.00500})*..Mirror; };
+  AnyRefNode O_TrapeziusScapularT9 = {sRel = .Scale({-0.05627001, 0.23245, 0.00500})*..Mirror; };
 };
 
 T10Seg = {
   AnyRefNode O_latissimus_dorsi_3 = {sRel = .Scale({-0.04744001, 0.1953, -7.5035e-19}); };
-  AnyRefNode O_trapezius_scapular_part_3 = {sRel = .Scale({-0.04027001, 0.18345, 0.00500})*..Mirror; };
+  AnyRefNode O_TrapeziusScapularT10 = {sRel = .Scale({-0.04027001, 0.18345, 0.00500})*..Mirror; };
 };
 
 T11Seg = {
   AnyRefNode O_latissimus_dorsi_4 = { sRel = .Scale({-0.03701501, 0.161715, -7.5035e-19}); };
-  AnyRefNode O_trapezius_scapular_part_2 = {sRel = .Scale({-0.03897001, 0.16282, 0.00500})*..Mirror; };
+  AnyRefNode O_TrapeziusScapularT11 = {sRel = .Scale({-0.03897001, 0.16282, 0.00500})*..Mirror; };
 };
 
 T12Seg = {
   AnyRefNode O_latissimus_dorsi_5 = {sRel = .Scale({-0.02859001, 0.12913, -7.5035e-19});};
-  AnyRefNode O_trapezius_scapular_part_1 = {sRel = .Scale({-0.02897001, 0.13282, 0.00500})*..Mirror; };
+  AnyRefNode O_TrapeziusScapularT12 = {sRel = .Scale({-0.02897001, 0.13282, 0.00500})*..Mirror; };
 
 };
 
@@ -202,13 +202,13 @@ C5Seg = {
 };
 
 C6Seg = {
-  AnyRefNode O_trapezius_scapular_part_14 = {
+  AnyRefNode O_TrapeziusScapularC6 = {
      sRel = (......Trunk.Segments.C6Seg.Scale(({-0.026, 0.495 , 0.005}))*..Mirror);
   };
 };
 
 C7Seg = {
-  AnyRefNode O_trapezius_scapular_part_13 = {
+  AnyRefNode O_TrapeziusScapularC7 = {
      sRel = (......Trunk.Segments.C7Seg.Scale(({-0.030, 0.47 , 0.005}))*..Mirror);
   };
   AnyRefNode O_rhomboideus_1 = {
