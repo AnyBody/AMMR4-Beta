@@ -4,31 +4,31 @@
 #endif
 
 MuscleGroup LevatorScapulae() = {
-  AnyMuscleViaPoint levator_scapulae_1 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.levator_scapulae_1;
-    AnyRefNode &Org = ..TrunkNodeAttachement.C1Seg.O_levator_scapulae_1;
-    AnyRefNode &Ins = ...Segments.Scapula.I_levator_scapulae_1;
+  AnyMuscleViaPoint LevatorScapulaeC1 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.LevatorScapulaeC1;
+    AnyRefNode &Org = ..TrunkNodeAttachement.C1Seg.O_LevatorScapulaeC1;
+    AnyRefNode &Ins = ...Segments.Scapula.I_LevatorScapulaeC1;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
-  AnyMuscleViaPoint levator_scapulae_2 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.levator_scapulae_2;
-    AnyRefNode &Org = ..TrunkNodeAttachement.C2Seg.O_levator_scapulae_2;
-    AnyRefNode &Ins = ...Segments.Scapula.I_levator_scapulae_2;
+  AnyMuscleViaPoint LevatorScapulaeC2 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.LevatorScapulaeC2;
+    AnyRefNode &Org = ..TrunkNodeAttachement.C2Seg.O_LevatorScapulaeC2;
+    AnyRefNode &Ins = ...Segments.Scapula.I_LevatorScapulaeC2;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
-  AnyMuscleViaPoint levator_scapulae_3 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.levator_scapulae_3;
-    AnyRefNode &Org = ..TrunkNodeAttachement.C3Seg.O_levator_scapulae_3;
-    AnyRefNode &Ins = ...Segments.Scapula.I_levator_scapulae_3;
+  AnyMuscleViaPoint LevatorScapulaeC3 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.LevatorScapulaeC3;
+    AnyRefNode &Org = ..TrunkNodeAttachement.C3Seg.O_LevatorScapulaeC3;
+    AnyRefNode &Ins = ...Segments.Scapula.I_LevatorScapulaeC3;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
-  AnyMuscleViaPoint levator_scapulae_4 ={
-    AnyMuscleModel &MusMdl = ...MuscleModels.levator_scapulae_4;
-    AnyRefNode &Org = ..TrunkNodeAttachement.C4Seg.O_levator_scapulae_4 ;
-    AnyRefNode &Ins = ...Segments.Scapula.I_levator_scapulae_4 ;
+  AnyMuscleViaPoint LevatorScapulaeC4 ={
+    AnyMuscleModel &MusMdl = ...MuscleModels.LevatorScapulaeC4;
+    AnyRefNode &Org = ..TrunkNodeAttachement.C4Seg.O_LevatorScapulaeC4 ;
+    AnyRefNode &Ins = ...Segments.Scapula.I_LevatorScapulaeC4 ;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 };
