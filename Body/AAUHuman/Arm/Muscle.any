@@ -267,45 +267,45 @@ MuscleGroup BicepsBrachii = {
 };
 
 MuscleGroup Coracobrachialis = {
-  AnyMuscleViaPoint coracobrachialis_1 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.coracobrachialis_1;
-    AnyRefNode &Org = ...Segments.Scapula.O_coracobrachialis_1;
-    AnyRefNode &Ins = ...Segments.Humerus.I_coracobrachialis_1;
+  AnyMuscleViaPoint Coracobrachialis_1 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.Coracobrachialis_1;
+    AnyRefNode &Org = ...Segments.Scapula.O_Coracobrachialis_1;
+    AnyRefNode &Ins = ...Segments.Humerus.I_Coracobrachialis_1;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
-  AnyMuscleViaPoint coracobrachialis_2 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.coracobrachialis_2;
-    AnyRefNode &Org = ...Segments.Scapula.O_coracobrachialis_2;
-    AnyRefNode &Ins = ...Segments.Humerus.I_coracobrachialis_2;
+  AnyMuscleViaPoint Coracobrachialis_2 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.Coracobrachialis_2;
+    AnyRefNode &Org = ...Segments.Scapula.O_Coracobrachialis_2;
+    AnyRefNode &Ins = ...Segments.Humerus.I_Coracobrachialis_2;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
-  AnyMuscleViaPoint coracobrachialis_3 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.coracobrachialis_3;
-    AnyRefNode &Org = ...Segments.Scapula.O_coracobrachialis_3;
-    AnyRefNode &Ins = ...Segments.Humerus.I_coracobrachialis_3;
+  AnyMuscleViaPoint Coracobrachialis_3 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.Coracobrachialis_3;
+    AnyRefNode &Org = ...Segments.Scapula.O_Coracobrachialis_3;
+    AnyRefNode &Ins = ...Segments.Humerus.I_Coracobrachialis_3;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
-  AnyMuscleViaPoint coracobrachialis_4 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.coracobrachialis_4;
-    AnyRefNode &Org = ...Segments.Scapula.O_coracobrachialis_4;
-    AnyRefNode &Ins = ...Segments.Humerus.I_coracobrachialis_4;
+  AnyMuscleViaPoint Coracobrachialis_4 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.Coracobrachialis_4;
+    AnyRefNode &Org = ...Segments.Scapula.O_Coracobrachialis_4;
+    AnyRefNode &Ins = ...Segments.Humerus.I_Coracobrachialis_4;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
-  AnyMuscleViaPoint coracobrachialis_5 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.coracobrachialis_5;
-    AnyRefNode &Org = ...Segments.Scapula.O_coracobrachialis_5;
-    AnyRefNode &Ins = ...Segments.Humerus.I_coracobrachialis_5;
+  AnyMuscleViaPoint Coracobrachialis_5 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.Coracobrachialis_5;
+    AnyRefNode &Org = ...Segments.Scapula.O_Coracobrachialis_5;
+    AnyRefNode &Ins = ...Segments.Humerus.I_Coracobrachialis_5;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
-  AnyMuscleViaPoint coracobrachialis_6 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.coracobrachialis_6;
-    AnyRefNode &Org = ...Segments.Scapula.O_coracobrachialis_6;
-    AnyRefNode &Ins = ...Segments.Humerus.I_coracobrachialis_6;
+  AnyMuscleViaPoint Coracobrachialis_6 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.Coracobrachialis_6;
+    AnyRefNode &Org = ...Segments.Scapula.O_Coracobrachialis_6;
+    AnyRefNode &Ins = ...Segments.Humerus.I_Coracobrachialis_6;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 };
