@@ -225,22 +225,22 @@ MuscleGroup Trapezius() = {
 };
 
 MuscleGroup BicepsBrachii = {
-  AnyMuscleShortestPath  biceps_brachii_caput_breve = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.biceps_brachii_caput_breve;
-    AnyRefNode &Org = ...Segments.Scapula.O_biceps_brachii_caput_breve;
+  AnyMuscleShortestPath  BicepsBrachii_1 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.BicepsBrachii_1;
+    AnyRefNode &Org = ...Segments.Scapula.O_BicepsBrachii_1;
     AnyRefNode &Ins = ...Segments.Radius.I_Biceps_SH ;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     SPLine.StringMesh = 200;
     AnySurfCylinder &Surf0 = ..condylus_hum;
     AnySurfCylinder &Surf3 = ..bicepscyl;
     AnySurfEllipsoid &Surf4 = ..art_gh_humRef;
-    SPLine.InitWrapPosVecArr = { &.biceps_brachii_caput_longum.SPLine.InitWrapPos };
+    SPLine.InitWrapPosVecArr = { &.BicepsBrachii_2.SPLine.InitWrapPos };
   };
 
-  AnyMuscleShortestPath biceps_brachii_caput_longum = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.biceps_brachii_caput_longum;
+  AnyMuscleShortestPath BicepsBrachii_2 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.BicepsBrachii_2;
 
-    AnyRefNode &Org = ...Segments.Scapula.O_biceps_brachii_caput_longum;//this point has been taken from VU study
+    AnyRefNode &Org = ...Segments.Scapula.O_BicepsBrachii_2;//this point has been taken from VU study
     AnyRefNode &Via1 = ...Segments.Humerus.sulcus_intertubercularisTop;
     AnyRefNode &Via2 = ...Segments.Humerus.sulcus_intertubercularis;
     AnyRefNode &Ins = ...Segments.Radius.I_Biceps_LH;  //this point has been taken from MAYO study

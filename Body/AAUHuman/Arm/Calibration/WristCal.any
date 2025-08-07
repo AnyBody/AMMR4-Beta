@@ -296,13 +296,13 @@ AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.ShoulderArm.Muscles);
   AnyFloat  PalmarisLongusRmin = repmat(NumElemOf(PalmarisLongusMuscles), ..RMin);
   AnyFloat  PalmarisLongusRmax = repmat(NumElemOf(PalmarisLongusMuscles), ..RMax);
 
-  AnyObjectPtrArray biceps_brachii_caput_breveMuscles = ObjSearch(MusPrefix+".*.biceps_brachii_caput_br*", "AnyMuscle");
-  AnyFloat  biceps_brachii_caput_breveRmin = repmat(NumElemOf(biceps_brachii_caput_breveMuscles), ..RMin);
-  AnyFloat  biceps_brachii_caput_breveRmax = repmat(NumElemOf(biceps_brachii_caput_breveMuscles), ..RMax);
+  AnyObjectPtrArray BicepsBrachii_1Muscles = ObjSearch(MusPrefix+".*.biceps_brachii_caput_br*", "AnyMuscle");
+  AnyFloat  BicepsBrachii_1Rmin = repmat(NumElemOf(BicepsBrachii_1Muscles), ..RMin);
+  AnyFloat  BicepsBrachii_1Rmax = repmat(NumElemOf(BicepsBrachii_1Muscles), ..RMax);
 
-  AnyObjectPtrArray biceps_brachii_caput_longumMuscles = ObjSearch(MusPrefix+".*.biceps_brachii_caput_long*", "AnyMuscle");
-  AnyFloat  biceps_brachii_caput_longumRmin = repmat(NumElemOf(biceps_brachii_caput_longumMuscles), ..RMin);
-  AnyFloat  biceps_brachii_caput_longumRmax = repmat(NumElemOf(biceps_brachii_caput_longumMuscles), ..RMax);
+  AnyObjectPtrArray BicepsBrachii_2Muscles = ObjSearch(MusPrefix+".*.biceps_brachii_caput_long*", "AnyMuscle");
+  AnyFloat  BicepsBrachii_2Rmin = repmat(NumElemOf(BicepsBrachii_2Muscles), ..RMin);
+  AnyFloat  BicepsBrachii_2Rmax = repmat(NumElemOf(BicepsBrachii_2Muscles), ..RMax);
 
   AnyObjectPtrArray BrachialisMuscles = ObjSearch(MusPrefix+".*.Brachialis*", "AnyMuscle");
   AnyFloat  BrachialisRmin = repmat(NumElemOf(BrachialisMuscles), ..RMin);
@@ -365,8 +365,8 @@ AnyBodyCalibrationStudy ArmCalibrationStudyWrist = {
       ref.FlexorDigitorumSuperficialisMuscles,
       ref.FlexorPollicisLongusMuscles,
       ref.PalmarisLongusMuscles,
-      ref.biceps_brachii_caput_breveMuscles,
-      ref.biceps_brachii_caput_longumMuscles,
+      ref.BicepsBrachii_1Muscles,
+      ref.BicepsBrachii_2Muscles,
       ref.BrachialisMuscles,
       ref.TricepsMuscles,
       ref.Brach_radMuscles),
@@ -391,8 +391,8 @@ AnyBodyCalibrationStudy ArmCalibrationStudyWrist = {
       ref.FlexorDigitorumSuperficialisRmin,
       ref.FlexorPollicisLongusRmin,
       ref.PalmarisLongusRmin,
-      ref.biceps_brachii_caput_breveRmin,
-      ref.biceps_brachii_caput_longumRmin,
+      ref.BicepsBrachii_1Rmin,
+      ref.BicepsBrachii_2Rmin,
       ref.BrachialisRmin,
       ref.TricepsRmin,
       ref.Brach_radRmin),
@@ -417,8 +417,8 @@ AnyBodyCalibrationStudy ArmCalibrationStudyWrist = {
       ref.FlexorDigitorumSuperficialisRmax,
       ref.FlexorPollicisLongusRmax,
       ref.PalmarisLongusRmax,
-      ref.biceps_brachii_caput_breveRmax,
-      ref.biceps_brachii_caput_longumRmax,
+      ref.BicepsBrachii_1Rmax,
+      ref.BicepsBrachii_2Rmax,
       ref.BrachialisRmax,
       ref.TricepsRmax,
       ref.Brach_radRmax),

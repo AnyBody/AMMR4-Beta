@@ -17,11 +17,11 @@ AnyVar StrengthScaleHand = .StrengthScaling.Hand.StrengthScale;
 
 
 /////////////////////////////////////////////////////
-//     biceps_brachii_caput_breve (1 element )     //
+//     BicepsBrachii_1 (1 element )     //
 /////////////////////////////////////////////////////
-AnyMuscleModel biceps_brachii_caput_breve =
+AnyMuscleModel BicepsBrachii_1 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.biceps_brachii_caput_breve;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.BicepsBrachii_1;
   AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -35,11 +35,11 @@ AnyMuscleModel biceps_brachii_caput_breve =
 
 
 //////////////////////////////////////////////////////
-//     biceps_brachii_caput_longum (1 element )     //
+//     BicepsBrachii_2 (1 element )     //
 //////////////////////////////////////////////////////
-AnyMuscleModel biceps_brachii_caput_longum =
+AnyMuscleModel BicepsBrachii_2 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.biceps_brachii_caput_longum;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.BicepsBrachii_2;
   AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length

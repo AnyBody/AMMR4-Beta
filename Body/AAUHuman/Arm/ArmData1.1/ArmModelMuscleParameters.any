@@ -76,7 +76,7 @@
 AnyFolder Muscles =
 {
   AnyVar VolumeUnitFactor ??= 1e-6; ///< Unit conversion factor for volume (1e-6 > volume in cm^3)
-  AnyFolder biceps_brachii_caput_breve =
+  AnyFolder BicepsBrachii_1 =
   {
     AnyString Muscle = "Biceps brachii caput breve"; ///< Descriptive name for the muscle, e.g. for plotting
     AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -92,7 +92,7 @@ AnyFolder Muscles =
     AnyFloat Fcfast ??= DesignVar(0.4); ///< Factor for determining shortening speed at optimum length
   };
 
-  AnyFolder biceps_brachii_caput_longum =
+  AnyFolder BicepsBrachii_2 =
   {
     AnyString Muscle = "Biceps brachii caput longum"; ///< Descriptive name for the muscle, e.g. for plotting
     AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
