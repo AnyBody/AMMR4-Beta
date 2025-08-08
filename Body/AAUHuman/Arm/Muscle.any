@@ -34,15 +34,15 @@ MuscleGroup LevatorScapulae() = {
 };
 
 MuscleGroup Sternocleidomastoid() = {
-  AnyMuscleViaPoint Sternocleidomastoid_caput_clavicular = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.Sternocleidomastoid_1;
+  AnyMuscleViaPoint Sternocleidomastoid1 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.Sternocleidomastoid1;
     AnyRefNode &Ins2 = ...Segments.Clavicula.SternocleidomastoidNode;
     AnyRefNode &Org = ..TrunkNodeAttachement.SkullSeg.SternocleidomastoidNode;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
-  AnyMuscleViaPoint Sternocleidomastoid_caput_Sternum = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.Sternocleidomastoid_2;
+  AnyMuscleViaPoint Sternocleidomastoid2 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.Sternocleidomastoid2;
     AnyRefNode &Ins = ..TrunkNodeAttachement.ManubriumSeg.SternocleidomastoidNode;
     AnyRefNode &Org = ..TrunkNodeAttachement.SkullSeg.SternocleidomastoidNode;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -50,10 +50,10 @@ MuscleGroup Sternocleidomastoid() = {
 };
 
 MuscleGroup TrapeziusScapular() = {
-  AnyMuscleShortestPath  trapezius_scapular_part_1 = {
-    AnyMuscleModel &MusMdl =  ...MuscleModels.trapezius_scapular_part_1;
-    AnyRefNode &Org = ..TrunkNodeAttachement.T12Seg.O_trapezius_scapular_part_1;
-    AnyRefNode &Ins = ...Segments.Scapula.I_trapezius_scapular_part_1;
+  AnyMuscleShortestPath  TrapeziusScapular1 = {
+    AnyMuscleModel &MusMdl =  ...MuscleModels.TrapeziusScapular1;
+    AnyRefNode &Org = ..TrunkNodeAttachement.T12Seg.O_TrapeziusScapular1;
+    AnyRefNode &Ins = ...Segments.Scapula.I_TrapeziusScapular1;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     SPLine.StringMesh = 100;
     AnySurfCylinder &Surf = ..margo_medialis;
@@ -63,10 +63,10 @@ MuscleGroup TrapeziusScapular() = {
     };
   };
 
-  AnyMuscleShortestPath  trapezius_scapular_part_2 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.trapezius_scapular_part_2;
-    AnyRefNode &Org = ..TrunkNodeAttachement.T11Seg.O_trapezius_scapular_part_2;
-    AnyRefNode &Ins = ...Segments.Scapula.I_trapezius_scapular_part_2;
+  AnyMuscleShortestPath  TrapeziusScapular2 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.TrapeziusScapular2;
+    AnyRefNode &Org = ..TrunkNodeAttachement.T11Seg.O_TrapeziusScapular2;
+    AnyRefNode &Ins = ...Segments.Scapula.I_TrapeziusScapular2;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     SPLine.StringMesh = 100;
     AnySurfCylinder &Surf = ..margo_medialis;
@@ -76,108 +76,108 @@ MuscleGroup TrapeziusScapular() = {
     };
   };
 
-  AnyMuscleShortestPath trapezius_scapular_part_3 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.trapezius_scapular_part_3;
-    AnyRefNode &Org = ..TrunkNodeAttachement.T10Seg.O_trapezius_scapular_part_3;
-    AnyRefNode &Ins = ...Segments.Scapula.I_trapezius_scapular_part_3;
+  AnyMuscleShortestPath TrapeziusScapular3 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.TrapeziusScapular3;
+    AnyRefNode &Org = ..TrunkNodeAttachement.T10Seg.O_TrapeziusScapular3;
+    AnyRefNode &Ins = ...Segments.Scapula.I_TrapeziusScapular3;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     SPLine.StringMesh = 100;
     AnySurfCylinder &Surf = ..margo_medialis;
-    SPLine.InitWrapPosVecArr = .trapezius_scapular_part_1.SPLine.InitWrapPosVecArr;
+    SPLine.InitWrapPosVecArr = .TrapeziusScapular1.SPLine.InitWrapPosVecArr;
   };
 
-  AnyMuscleShortestPath trapezius_scapular_part_4 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.trapezius_scapular_part_4;
-    AnyRefNode &Org = ..TrunkNodeAttachement.T9Seg.O_trapezius_scapular_part_4;
-    AnyRefNode &Ins = ...Segments.Scapula.I_trapezius_scapular_part_4;
+  AnyMuscleShortestPath TrapeziusScapular4 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.TrapeziusScapular4;
+    AnyRefNode &Org = ..TrunkNodeAttachement.T9Seg.O_TrapeziusScapular4;
+    AnyRefNode &Ins = ...Segments.Scapula.I_TrapeziusScapular4;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     SPLine.StringMesh = 100;
     AnySurfCylinder &Surf = ..margo_medialis;
-    SPLine.InitWrapPosVecArr = .trapezius_scapular_part_1.SPLine.InitWrapPosVecArr;
+    SPLine.InitWrapPosVecArr = .TrapeziusScapular1.SPLine.InitWrapPosVecArr;
   };
 
-  AnyMuscleShortestPath trapezius_scapular_part_5 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.trapezius_scapular_part_5;
-    AnyRefNode &Org = ..TrunkNodeAttachement.T8Seg.O_trapezius_scapular_part_5;
-    AnyRefNode &Ins = ...Segments.Scapula.I_trapezius_scapular_part_5;
+  AnyMuscleShortestPath TrapeziusScapular5 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.TrapeziusScapular5;
+    AnyRefNode &Org = ..TrunkNodeAttachement.T8Seg.O_TrapeziusScapular5;
+    AnyRefNode &Ins = ...Segments.Scapula.I_TrapeziusScapular5;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     SPLine.StringMesh = 100;
     AnySurfCylinder &Surf = ..margo_medialis;
-    SPLine.InitWrapPosVecArr = .trapezius_scapular_part_1.SPLine.InitWrapPosVecArr;
+    SPLine.InitWrapPosVecArr = .TrapeziusScapular1.SPLine.InitWrapPosVecArr;
   };
 
-  AnyMuscleShortestPath trapezius_scapular_part_6 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.trapezius_scapular_part_6;
-    AnyRefNode &Org = ..TrunkNodeAttachement.T7Seg.O_trapezius_scapular_part_6;
-    AnyRefNode &Ins = ...Segments.Scapula.I_trapezius_scapular_part_6;
+  AnyMuscleShortestPath TrapeziusScapular6 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.TrapeziusScapular6;
+    AnyRefNode &Org = ..TrunkNodeAttachement.T7Seg.O_TrapeziusScapular6;
+    AnyRefNode &Ins = ...Segments.Scapula.I_TrapeziusScapular6;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     SPLine.StringMesh = 100;
     AnySurfCylinder &Surf = ..margo_medialis;
-    SPLine.InitWrapPosVecArr = .trapezius_scapular_part_1.SPLine.InitWrapPosVecArr;
+    SPLine.InitWrapPosVecArr = .TrapeziusScapular1.SPLine.InitWrapPosVecArr;
   };
 
-  AnyMuscleShortestPath trapezius_scapular_part_7 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.trapezius_scapular_part_7;
-    AnyRefNode &Org = ..TrunkNodeAttachement.T6Seg.O_trapezius_scapular_part_7;
-    AnyRefNode &Ins = ...Segments.Scapula.I_trapezius_scapular_part_7;
+  AnyMuscleShortestPath TrapeziusScapular7 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.TrapeziusScapular7;
+    AnyRefNode &Org = ..TrunkNodeAttachement.T6Seg.O_TrapeziusScapular7;
+    AnyRefNode &Ins = ...Segments.Scapula.I_TrapeziusScapular7;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     SPLine.StringMesh = 100;
     AnySurfCylinder &Surf = ..margo_medialis;
-    SPLine.InitWrapPosVecArr = .trapezius_scapular_part_1.SPLine.InitWrapPosVecArr;
+    SPLine.InitWrapPosVecArr = .TrapeziusScapular1.SPLine.InitWrapPosVecArr;
   };
 
-  AnyMuscleShortestPath trapezius_scapular_part_8 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.trapezius_scapular_part_8;
-    AnyRefNode &Org = ..TrunkNodeAttachement.T5Seg.O_trapezius_scapular_part_8;
-    AnyRefNode &Ins = ...Segments.Scapula.I_trapezius_scapular_part_8;
+  AnyMuscleShortestPath TrapeziusScapular8 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.TrapeziusScapular8;
+    AnyRefNode &Org = ..TrunkNodeAttachement.T5Seg.O_TrapeziusScapular8;
+    AnyRefNode &Ins = ...Segments.Scapula.I_TrapeziusScapular8;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     SPLine.StringMesh = 100;
     AnySurfCylinder &Surf = ..margo_medialis;
-    SPLine.InitWrapPosVecArr = .trapezius_scapular_part_1.SPLine.InitWrapPosVecArr;
+    SPLine.InitWrapPosVecArr = .TrapeziusScapular1.SPLine.InitWrapPosVecArr;
   };
 
-  AnyMuscleShortestPath trapezius_scapular_part_9 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.trapezius_scapular_part_9;
-    AnyRefNode &Org = ..TrunkNodeAttachement.T4Seg.O_trapezius_scapular_part_9;
-    AnyRefNode &Ins = ...Segments.Scapula.I_trapezius_scapular_part_9;
+  AnyMuscleShortestPath TrapeziusScapular9 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.TrapeziusScapular9;
+    AnyRefNode &Org = ..TrunkNodeAttachement.T4Seg.O_TrapeziusScapular9;
+    AnyRefNode &Ins = ...Segments.Scapula.I_TrapeziusScapular9;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     SPLine.StringMesh = 100;
     AnySurfCylinder &Surf = ..margo_medialis;
-    SPLine.InitWrapPosVecArr = .trapezius_scapular_part_1.SPLine.InitWrapPosVecArr;
+    SPLine.InitWrapPosVecArr = .TrapeziusScapular1.SPLine.InitWrapPosVecArr;
   };
 
-  AnyMuscleViaPoint trapezius_scapular_part_10 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.trapezius_scapular_part_10;
-    AnyRefNode &Org = ..TrunkNodeAttachement.T3Seg.O_trapezius_scapular_part_10;
-    AnyRefNode &Ins = ...Segments.Scapula.I_trapezius_scapular_part_10;
+  AnyMuscleViaPoint TrapeziusScapular10 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.TrapeziusScapular10;
+    AnyRefNode &Org = ..TrunkNodeAttachement.T3Seg.O_TrapeziusScapular10;
+    AnyRefNode &Ins = ...Segments.Scapula.I_TrapeziusScapular10;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
-  AnyMuscleViaPoint trapezius_scapular_part_11 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.trapezius_scapular_part_11;
-    AnyRefNode &Org = ..TrunkNodeAttachement.T2Seg.O_trapezius_scapular_part_11;
-    AnyRefNode &Ins = ...Segments.Scapula.I_trapezius_scapular_part_11;
+  AnyMuscleViaPoint TrapeziusScapular11 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.TrapeziusScapular11;
+    AnyRefNode &Org = ..TrunkNodeAttachement.T2Seg.O_TrapeziusScapular11;
+    AnyRefNode &Ins = ...Segments.Scapula.I_TrapeziusScapular11;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
-  AnyMuscleViaPoint trapezius_scapular_part_12 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.trapezius_scapular_part_12;
-    AnyRefNode &Org = ..TrunkNodeAttachement.T1Seg.O_trapezius_scapular_part_12;
-    AnyRefNode &Ins = ...Segments.Scapula.I_trapezius_scapular_part_12;
+  AnyMuscleViaPoint TrapeziusScapular12 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.TrapeziusScapular12;
+    AnyRefNode &Org = ..TrunkNodeAttachement.T1Seg.O_TrapeziusScapular12;
+    AnyRefNode &Ins = ...Segments.Scapula.I_TrapeziusScapular12;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
-  AnyMuscleViaPoint trapezius_scapular_part_13 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.trapezius_scapular_part_13;
-    AnyRefNode &Org = ..TrunkNodeAttachement.C7Seg.O_trapezius_scapular_part_13;
-    AnyRefNode &Ins = ...Segments.Scapula.I_trapezius_scapular_part_13;
+  AnyMuscleViaPoint TrapeziusScapular13 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.TrapeziusScapular13;
+    AnyRefNode &Org = ..TrunkNodeAttachement.C7Seg.O_TrapeziusScapular13;
+    AnyRefNode &Ins = ...Segments.Scapula.I_TrapeziusScapular13;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
-  AnyMuscleViaPoint trapezius_scapular_part_14 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.trapezius_scapular_part_14;
-    AnyRefNode &Org = ..TrunkNodeAttachement.C6Seg.O_trapezius_scapular_part_14;
-    AnyRefNode &Ins = ...Segments.Scapula.I_trapezius_scapular_part_14;
+  AnyMuscleViaPoint TrapeziusScapular14 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.TrapeziusScapular14;
+    AnyRefNode &Org = ..TrunkNodeAttachement.C6Seg.O_TrapeziusScapular14;
+    AnyRefNode &Ins = ...Segments.Scapula.I_TrapeziusScapular14;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 };
