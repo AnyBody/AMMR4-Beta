@@ -492,10 +492,10 @@ MuscleGroup Coracobrachialis = {
 #else
   MuscleGroup DeltoideusPosterior = {
     // start of BM_ARM_DELTOID_WRAPPING
-    AnyMuscleShortestPath deltoideus_posterior_part_1 = {
-      AnyMuscleModel &MusMdl = ...MuscleModels.deltoideus_posterior_part_1;
-      AnyRefNode &Org = ...Segments.Scapula.O_deltoideus_posterior_part_1;
-      AnyRefNode &Ins = ...Segments.Humerus.I_deltoideus_posterior_part_1;
+    AnyMuscleShortestPath DeltoideusPosterior1 = {
+      AnyMuscleModel &MusMdl = ...MuscleModels.DeltoideusPosterior1;
+      AnyRefNode &Org = ...Segments.Scapula.O_DeltoideusPosterior1;
+      AnyRefNode &Ins = ...Segments.Humerus.I_DeltoideusPosterior1;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
       SPLine.StringMesh = 45;
       AnyParamSurfAnalytical &Surf = ..DeltoidWrappingPosterior.BASE_FRAME.Wrapping_1.Surf;
@@ -510,11 +510,11 @@ MuscleGroup Coracobrachialis = {
       };
     };
 
-    AnyMuscleShortestPath deltoideus_posterior_part_3 = {
-      AnyMuscleModel &MusMdl = ...MuscleModels.deltoideus_posterior_part_3;
-      AnyRefNode &Org = ...Segments.Scapula.O_deltoideus_posterior_part_3;
+    AnyMuscleShortestPath DeltoideusPosterior3 = {
+      AnyMuscleModel &MusMdl = ...MuscleModels.DeltoideusPosterior3;
+      AnyRefNode &Org = ...Segments.Scapula.O_DeltoideusPosterior3;
 
-      AnyRefNode &Ins = ...Segments.Humerus.I_deltoideus_posterior_part_3;
+      AnyRefNode &Ins = ...Segments.Humerus.I_DeltoideusPosterior3;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
       SPLine.StringMesh = 40;
 
@@ -533,10 +533,10 @@ MuscleGroup Coracobrachialis = {
     };
 
     // an extra fibers a/b
-    AnyMuscleShortestPath deltoideus_posterior_part_2 = {
-      AnyMuscleModel &MusMdl = ...MuscleModels.deltoideus_posterior_part_2;
-      AnyRefNode &Org = ...Segments.Scapula.O_deltoideus_posterior_part_2;
-      AnyRefNode &Ins = ...Segments.Humerus.I_deltoideus_posterior_part_2;
+    AnyMuscleShortestPath DeltoideusPosterior2 = {
+      AnyMuscleModel &MusMdl = ...MuscleModels.DeltoideusPosterior2;
+      AnyRefNode &Org = ...Segments.Scapula.O_DeltoideusPosterior2;
+      AnyRefNode &Ins = ...Segments.Humerus.I_DeltoideusPosterior2;
       SPLine.StringMesh = 30;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
       AnyParamSurfAnalytical &Surf = ..DeltoidWrappingPosterior.BASE_FRAME.Wrapping_2.Surf;
@@ -551,10 +551,10 @@ MuscleGroup Coracobrachialis = {
       };
     };
 
-    AnyMuscleShortestPath deltoideus_posterior_part_4 = {
-      AnyMuscleModel &MusMdl = ...MuscleModels.deltoideus_posterior_part_4;
-      AnyRefNode &Org = ...Segments.Scapula.O_deltoideus_posterior_part_4;
-      AnyRefNode &Ins = ...Segments.Humerus.I_deltoideus_posterior_part_4;
+    AnyMuscleShortestPath DeltoideusPosterior4 = {
+      AnyMuscleModel &MusMdl = ...MuscleModels.DeltoideusPosterior4;
+      AnyRefNode &Org = ...Segments.Scapula.O_DeltoideusPosterior4;
+      AnyRefNode &Ins = ...Segments.Humerus.I_DeltoideusPosterior4;
       SPLine.StringMesh = 20;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
       AnyParamSurfAnalytical &Surf = ..DeltoidWrappingPosterior.BASE_FRAME.Wrapping_4.Surf;
