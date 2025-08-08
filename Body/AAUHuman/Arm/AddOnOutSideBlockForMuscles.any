@@ -159,7 +159,7 @@ SkullSeg = {
 };
 
 C1Seg = {
-  AnyRefNode O_levator_scapulae_1 = {
+  AnyRefNode O_LevatorScapulae1 = {
     sRel = (......Trunk.Segments.C1Seg.Scale(({0.025, 0.575 , 0.039}))*..Mirror);
   };
 
@@ -169,7 +169,7 @@ C1Seg = {
 };
 
 C2Seg = {
-  AnyRefNode O_levator_scapulae_2 = {
+  AnyRefNode O_LevatorScapulae2 = {
     sRel = (......Trunk.Segments.C2Seg.Scale(({0.025, 0.565 , 0.025670}))*..Mirror);
   };
   AnyRefNode O_trapezius_clavicular_part_4        = {
@@ -178,7 +178,7 @@ C2Seg = {
 };
 
 C3Seg = {
-  AnyRefNode O_levator_scapulae_3 = {
+  AnyRefNode O_LevatorScapulae3 = {
     sRel = (......Trunk.Segments.C3Seg.Scale(({0.024, 0.55 , 0.023100}))*..Mirror);
   };
   AnyRefNode O_trapezius_clavicular_part_3        = {
@@ -187,7 +187,7 @@ C3Seg = {
 };
 
 C4Seg = {
-  AnyRefNode O_levator_scapulae_4 = {
+  AnyRefNode O_LevatorScapulae4 = {
     sRel = (......Trunk.Segments.C4Seg.Scale(({0.023, 0.535 , 0.023100}))*..Mirror);
   };
   AnyRefNode O_trapezius_clavicular_part_2        = {

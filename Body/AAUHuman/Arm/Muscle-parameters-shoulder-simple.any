@@ -728,47 +728,47 @@ AnyMuscleModel latissimus_dorsi_11 =
 ///////////////////////////////////////////
 //     levator_scapulae (4 elements)     //
 ///////////////////////////////////////////
-AnyMuscleModel levator_scapulae_1 =
+AnyMuscleModel LevatorScapulae1 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.levator_scapulae;
   AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
   Lf0 ??= MuscleParameters.OptimalFiberlength / cos(pi/180*MuscleParameters.Pennationangle); //< Optimal fiber length corrected by pennation angle
-  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.levator_scapulae_1.Lf0 +.levator_scapulae_2.Lf0 +.levator_scapulae_3.Lf0 +.levator_scapulae_4.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.LevatorScapulae1.Lf0 +.LevatorScapulae2.Lf0 +.LevatorScapulae3.Lf0 +.LevatorScapulae4.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
 
-AnyMuscleModel levator_scapulae_2 =
+AnyMuscleModel LevatorScapulae2 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.levator_scapulae;
   AnyIntVar MuscleElemNo = 2; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
   Lf0 ??= MuscleParameters.OptimalFiberlength / cos(pi/180*MuscleParameters.Pennationangle); //< Optimal fiber length corrected by pennation angle
-  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.levator_scapulae_1.Lf0 +.levator_scapulae_2.Lf0 +.levator_scapulae_3.Lf0 +.levator_scapulae_4.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.LevatorScapulae1.Lf0 +.LevatorScapulae2.Lf0 +.LevatorScapulae3.Lf0 +.LevatorScapulae4.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
 
-AnyMuscleModel levator_scapulae_3 =
+AnyMuscleModel LevatorScapulae3 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.levator_scapulae;
   AnyIntVar MuscleElemNo = 3; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
   Lf0 ??= MuscleParameters.OptimalFiberlength / cos(pi/180*MuscleParameters.Pennationangle); //< Optimal fiber length corrected by pennation angle
-  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.levator_scapulae_1.Lf0 +.levator_scapulae_2.Lf0 +.levator_scapulae_3.Lf0 +.levator_scapulae_4.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.LevatorScapulae1.Lf0 +.LevatorScapulae2.Lf0 +.LevatorScapulae3.Lf0 +.LevatorScapulae4.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
 
-AnyMuscleModel levator_scapulae_4 =
+AnyMuscleModel LevatorScapulae4 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.levator_scapulae;
   AnyIntVar MuscleElemNo = 4; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
   Lf0 ??= MuscleParameters.OptimalFiberlength / cos(pi/180*MuscleParameters.Pennationangle); //< Optimal fiber length corrected by pennation angle
-  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.levator_scapulae_1.Lf0 +.levator_scapulae_2.Lf0 +.levator_scapulae_3.Lf0 +.levator_scapulae_4.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.LevatorScapulae1.Lf0 +.LevatorScapulae2.Lf0 +.LevatorScapulae3.Lf0 +.LevatorScapulae4.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
 
