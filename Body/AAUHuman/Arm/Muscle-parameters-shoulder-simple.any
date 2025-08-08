@@ -422,47 +422,47 @@ AnyMuscleModel DeltoideusPosterior4 =
 //////////////////////////////////////////////////
 //     deltoideus_lateral_part (4 elements)     //
 //////////////////////////////////////////////////
-AnyMuscleModel deltoideus_lateral_part_1 =
+AnyMuscleModel DeltoideusLateral1 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.deltoideus_lateral_part;
   AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
   Lf0 ??= MuscleParameters.OptimalFiberlength / cos(pi/180*MuscleParameters.Pennationangle); //< Optimal fiber length corrected by pennation angle
-  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.deltoideus_lateral_part_1.Lf0 +.deltoideus_lateral_part_2.Lf0 +.deltoideus_lateral_part_3.Lf0 +.deltoideus_lateral_part_4.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.DeltoideusLateral1.Lf0 +.DeltoideusLateral2.Lf0 +.DeltoideusLateral3.Lf0 +.DeltoideusLateral4.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
 
-AnyMuscleModel deltoideus_lateral_part_2 =
+AnyMuscleModel DeltoideusLateral2 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.deltoideus_lateral_part;
   AnyIntVar MuscleElemNo = 2; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
   Lf0 ??= MuscleParameters.OptimalFiberlength / cos(pi/180*MuscleParameters.Pennationangle); //< Optimal fiber length corrected by pennation angle
-  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.deltoideus_lateral_part_1.Lf0 +.deltoideus_lateral_part_2.Lf0 +.deltoideus_lateral_part_3.Lf0 +.deltoideus_lateral_part_4.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.DeltoideusLateral1.Lf0 +.DeltoideusLateral2.Lf0 +.DeltoideusLateral3.Lf0 +.DeltoideusLateral4.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
 
-AnyMuscleModel deltoideus_lateral_part_3 =
+AnyMuscleModel DeltoideusLateral3 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.deltoideus_lateral_part;
   AnyIntVar MuscleElemNo = 3; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
   Lf0 ??= MuscleParameters.OptimalFiberlength / cos(pi/180*MuscleParameters.Pennationangle); //< Optimal fiber length corrected by pennation angle
-  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.deltoideus_lateral_part_1.Lf0 +.deltoideus_lateral_part_2.Lf0 +.deltoideus_lateral_part_3.Lf0 +.deltoideus_lateral_part_4.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.DeltoideusLateral1.Lf0 +.DeltoideusLateral2.Lf0 +.DeltoideusLateral3.Lf0 +.DeltoideusLateral4.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
 
-AnyMuscleModel deltoideus_lateral_part_4 =
+AnyMuscleModel DeltoideusLateral4 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.deltoideus_lateral_part;
   AnyIntVar MuscleElemNo = 4; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
   Lf0 ??= MuscleParameters.OptimalFiberlength / cos(pi/180*MuscleParameters.Pennationangle); //< Optimal fiber length corrected by pennation angle
-  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.deltoideus_lateral_part_1.Lf0 +.deltoideus_lateral_part_2.Lf0 +.deltoideus_lateral_part_3.Lf0 +.deltoideus_lateral_part_4.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.DeltoideusLateral1.Lf0 +.DeltoideusLateral2.Lf0 +.DeltoideusLateral3.Lf0 +.DeltoideusLateral4.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
 

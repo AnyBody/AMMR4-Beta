@@ -572,11 +572,11 @@ MuscleGroup Coracobrachialis = {
   };
 
   MuscleGroup DeltoideusLateral = {
-    AnyMuscleShortestPath deltoideus_lateral_part_1 = {
-      AnyMuscleModel &MusMdl = ...MuscleModels.deltoideus_lateral_part_1;
-      AnyRefNode &Org = ...Segments.Scapula.O_deltoideus_lateral_part_1;
+    AnyMuscleShortestPath DeltoideusLateral1 = {
+      AnyMuscleModel &MusMdl = ...MuscleModels.DeltoideusLateral1;
+      AnyRefNode &Org = ...Segments.Scapula.O_DeltoideusLateral1;
 
-      AnyRefNode &Ins = ...Segments.Humerus.I_deltoideus_lateral_part_1;
+      AnyRefNode &Ins = ...Segments.Humerus.I_DeltoideusLateral1;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
       SPLine.StringMesh = 30;
 
@@ -591,10 +591,10 @@ MuscleGroup Coracobrachialis = {
       };
     };
 
-    AnyMuscleShortestPath deltoideus_lateral_part_3 = {
-      AnyMuscleModel &MusMdl = ...MuscleModels.deltoideus_lateral_part_3;
-      AnyRefNode &Org = ...Segments.Scapula.O_deltoideus_lateral_part_3;
-      AnyRefNode &Ins = ...Segments.Humerus.I_deltoideus_lateral_part_3;
+    AnyMuscleShortestPath DeltoideusLateral3 = {
+      AnyMuscleModel &MusMdl = ...MuscleModels.DeltoideusLateral3;
+      AnyRefNode &Org = ...Segments.Scapula.O_DeltoideusLateral3;
+      AnyRefNode &Ins = ...Segments.Humerus.I_DeltoideusLateral3;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
       SPLine.StringMesh = 30;
 
@@ -612,10 +612,10 @@ MuscleGroup Coracobrachialis = {
     };
 
 
-    AnyMuscleShortestPath deltoideus_lateral_part_2 = {
-      AnyMuscleModel &MusMdl = ...MuscleModels.deltoideus_lateral_part_2;
-      AnyRefNode &Org = ...Segments.Scapula.O_deltoideus_lateral_part_2;
-      AnyRefNode &Ins = ...Segments.Humerus.I_deltoideus_lateral_part_2;
+    AnyMuscleShortestPath DeltoideusLateral2 = {
+      AnyMuscleModel &MusMdl = ...MuscleModels.DeltoideusLateral2;
+      AnyRefNode &Org = ...Segments.Scapula.O_DeltoideusLateral2;
+      AnyRefNode &Ins = ...Segments.Humerus.I_DeltoideusLateral2;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
       SPLine.StringMesh = 30;
       AnyParamSurfAnalytical &Surf = ..DeltoidWrappingLateral.BASE_FRAME.Wrapping_2.Surf;
@@ -630,10 +630,10 @@ MuscleGroup Coracobrachialis = {
       };
     };
 
-    AnyMuscleShortestPath deltoideus_lateral_part_4 = {
-      AnyMuscleModel &MusMdl = ...MuscleModels.deltoideus_lateral_part_4;
-      AnyRefNode &Org = ...Segments.Scapula.O_deltoideus_lateral_part_4;
-      AnyRefNode &Ins = ...Segments.Humerus.I_deltoideus_lateral_part_4;
+    AnyMuscleShortestPath DeltoideusLateral4 = {
+      AnyMuscleModel &MusMdl = ...MuscleModels.DeltoideusLateral4;
+      AnyRefNode &Org = ...Segments.Scapula.O_DeltoideusLateral4;
+      AnyRefNode &Ins = ...Segments.Humerus.I_DeltoideusLateral4;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any" };
       SPLine.StringMesh = 30;
 
