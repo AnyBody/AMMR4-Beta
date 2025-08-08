@@ -52,38 +52,38 @@ ManubriumSeg = {
 };
 
 PelvisSeg = {
-  AnyRefNode O_latissimus_dorsi_11  = {
+  AnyRefNode O_LatissimusDorsi11  = {
     sRel = .Scale({0.01, 0.042, ....Sign*0.065});
 
   };
 };
 
 L1Seg = {
-  AnyRefNode O_latissimus_dorsi_6  = {
+  AnyRefNode O_LatissimusDorsi6  = {
     sRel= .Scale({-0.01000, 0.107, 0.000000});
   };
 };
 
 L2Seg = {
-  AnyRefNode O_latissimus_dorsi_7  = {
+  AnyRefNode O_LatissimusDorsi7  = {
     sRel= .Scale({-0.008, 0.077, 0.000000});
   };
 };
 
 L3Seg = {
-  AnyRefNode O_latissimus_dorsi_8 = {
+  AnyRefNode O_LatissimusDorsi8 = {
     sRel=.Scale({0.000000, 0.051, 0.000000});
   };
 };
 
 L4Seg = {
-  AnyRefNode O_latissimus_dorsi_9 = {
+  AnyRefNode O_LatissimusDorsi9 = {
     sRel=.Scale({0.00000, 0.028, 0.000000});
   };
 };
 
 L5Seg = {
-  AnyRefNode O_latissimus_dorsi_10 = {
+  AnyRefNode O_LatissimusDorsi10 = {
     sRel=.Scale({0.00, 0.008, 0.000000});
   };
 };
@@ -124,27 +124,27 @@ T7Seg = {
 };
 
 T8Seg = {
-  AnyRefNode O_latissimus_dorsi_1 = {sRel = .Scale({-0.06057001, 0.25472, -7.5035e-19}); };
+  AnyRefNode O_LatissimusDorsi1 = {sRel = .Scale({-0.06057001, 0.25472, -7.5035e-19}); };
   AnyRefNode O_TrapeziusScapular5 = {sRel = .Scale({-0.05927001, 0.25445, 0.00400})*..Mirror; };
 };
 
 T9Seg = {
-  AnyRefNode O_latissimus_dorsi_2 = { sRel = .Scale({-0.05450501, 0.23701, -7.5035e-19});};
+  AnyRefNode O_LatissimusDorsi2 = { sRel = .Scale({-0.05450501, 0.23701, -7.5035e-19});};
   AnyRefNode O_TrapeziusScapular4 = {sRel = .Scale({-0.05627001, 0.23245, 0.00500})*..Mirror; };
 };
 
 T10Seg = {
-  AnyRefNode O_latissimus_dorsi_3 = {sRel = .Scale({-0.04744001, 0.1953, -7.5035e-19}); };
+  AnyRefNode O_LatissimusDorsi3 = {sRel = .Scale({-0.04744001, 0.1953, -7.5035e-19}); };
   AnyRefNode O_TrapeziusScapular3 = {sRel = .Scale({-0.04027001, 0.18345, 0.00500})*..Mirror; };
 };
 
 T11Seg = {
-  AnyRefNode O_latissimus_dorsi_4 = { sRel = .Scale({-0.03701501, 0.161715, -7.5035e-19}); };
+  AnyRefNode O_LatissimusDorsi4 = { sRel = .Scale({-0.03701501, 0.161715, -7.5035e-19}); };
   AnyRefNode O_TrapeziusScapular2 = {sRel = .Scale({-0.03897001, 0.16282, 0.00500})*..Mirror; };
 };
 
 T12Seg = {
-  AnyRefNode O_latissimus_dorsi_5 = {sRel = .Scale({-0.02859001, 0.12913, -7.5035e-19});};
+  AnyRefNode O_LatissimusDorsi5 = {sRel = .Scale({-0.02859001, 0.12913, -7.5035e-19});};
   AnyRefNode O_TrapeziusScapular1 = {sRel = .Scale({-0.02897001, 0.13282, 0.00500})*..Mirror; };
 
 };

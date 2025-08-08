@@ -9,9 +9,9 @@ DEBUG=0
 {
   RadiusX = 1.15* vnorm(..Segments.Scapula.GHReactionCenterNode.sRel - ..Segments.Scapula.gh.sRel);
   Radius = RadiusX;//vnorm(..Segments.Scapula.acj.sRel - ..Segments.Scapula.gh.sRel)*0.8613933;
-  RadiusHeight = 0.7* vnorm(..Segments.Humerus.gh.sRel - ..Segments.Humerus.I_latissimus_dorsi_11.sRel);
+  RadiusHeight = 0.7* vnorm(..Segments.Humerus.gh.sRel - ..Segments.Humerus.I_LatissimusDorsi11.sRel);
 
-  WrapSurfLength = 1.9 * vnorm(..Segments.Humerus.I_latissimus_dorsi_1.sRel - ..Segments.Humerus.gh.sRel);
+  WrapSurfLength = 1.9 * vnorm(..Segments.Humerus.I_LatissimusDorsi1.sRel - ..Segments.Humerus.gh.sRel);
   Angles = ..Sign*({-100});
 
   AnySeg LatissimusWrappingSeg ={

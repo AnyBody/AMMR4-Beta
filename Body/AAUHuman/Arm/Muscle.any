@@ -809,11 +809,11 @@ MuscleGroup Infraspinatus = {
 };
 
 MuscleGroup LatissimusDorsi = {
-  AnyMuscleShortestPath latissimus_dorsi_1 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.latissimus_dorsi_1;
-    AnyRefNode &Org = ..TrunkNodeAttachement.T8Seg.O_latissimus_dorsi_1;
-    AnyRefNode &Via = ..ThoraxWrappingSufaceSegRef.O_latissimus_dorsi_1_via;
-    AnyRefNode &Ins = ...Segments.Humerus.I_latissimus_dorsi_1;
+  AnyMuscleShortestPath LatissimusDorsi1 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.LatissimusDorsi1;
+    AnyRefNode &Org = ..TrunkNodeAttachement.T8Seg.O_LatissimusDorsi1;
+    AnyRefNode &Via = ..ThoraxWrappingSufaceSegRef.O_LatissimusDorsi1_via;
+    AnyRefNode &Ins = ...Segments.Humerus.I_LatissimusDorsi1;
     SPLine.StringMesh = 100;
     AnyParamSurf  &Surf1 = ..ThoraxWrappingSufaceSegRef.EllipsoidLatissimusOrigin.EllipsoidSurf;
     AnyParamSurf  &Surf2 = ..collum_hum;
@@ -834,155 +834,155 @@ MuscleGroup LatissimusDorsi = {
 
   };
 
-  AnyMuscleShortestPath latissimus_dorsi_2 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.latissimus_dorsi_2;
-    AnyRefNode &Org = ..TrunkNodeAttachement.T9Seg.O_latissimus_dorsi_2;
-    AnyRefNode &Via = ..ThoraxWrappingSufaceSegRef.O_latissimus_dorsi_2_via;
-    AnyRefNode &Ins = ...Segments.Humerus.I_latissimus_dorsi_2;
+  AnyMuscleShortestPath LatissimusDorsi2 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.LatissimusDorsi2;
+    AnyRefNode &Org = ..TrunkNodeAttachement.T9Seg.O_LatissimusDorsi2;
+    AnyRefNode &Via = ..ThoraxWrappingSufaceSegRef.O_LatissimusDorsi2_via;
+    AnyRefNode &Ins = ...Segments.Humerus.I_LatissimusDorsi2;
     SPLine.StringMesh = 100;
     AnyParamSurf &Surf1 = ..collum_hum;
     AnyParamSurf  &Surf2 = ..ThoraxWrappingSufaceSegRef.EllipsoidLatissimusOrigin.EllipsoidSurf;
     AnyParamSurf  &Surf3 = ..LatissimusDorsiWrapping.BASE_FRAME.Wrapping_1.Surf;
     AnyParamSurf &Surf4 = ...Segments.Scapula.Lattisimus_wrap.cyl;
 
-    SPLine.InitWrapPosVecArr = .latissimus_dorsi_1.SPLine.InitWrapPosVecArr;
+    SPLine.InitWrapPosVecArr = .LatissimusDorsi1.SPLine.InitWrapPosVecArr;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
-  AnyMuscleShortestPath latissimus_dorsi_3 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.latissimus_dorsi_3;
-    AnyRefNode &Org = ..TrunkNodeAttachement.T10Seg.O_latissimus_dorsi_3;
-    AnyRefNode &Via = ..ThoraxWrappingSufaceSegRef.O_latissimus_dorsi_3_via;
-    AnyRefNode &Ins = ...Segments.Humerus.I_latissimus_dorsi_3;
+  AnyMuscleShortestPath LatissimusDorsi3 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.LatissimusDorsi3;
+    AnyRefNode &Org = ..TrunkNodeAttachement.T10Seg.O_LatissimusDorsi3;
+    AnyRefNode &Via = ..ThoraxWrappingSufaceSegRef.O_LatissimusDorsi3_via;
+    AnyRefNode &Ins = ...Segments.Humerus.I_LatissimusDorsi3;
     SPLine.StringMesh = 110;
     AnyParamSurf &Surf1 = ..collum_hum;
     AnyParamSurf  &Surf2 = ..ThoraxWrappingSufaceSegRef.EllipsoidLatissimusOrigin.EllipsoidSurf;
     AnyParamSurf  &Surf3 = ..LatissimusDorsiWrapping.BASE_FRAME.Wrapping_1.Surf;
     AnyParamSurf &Surf4 = ...Segments.Scapula.Lattisimus_wrap.cyl;
 
-    SPLine.InitWrapPosVecArr = .latissimus_dorsi_1.SPLine.InitWrapPosVecArr;
+    SPLine.InitWrapPosVecArr = .LatissimusDorsi1.SPLine.InitWrapPosVecArr;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
-  AnyMuscleShortestPath latissimus_dorsi_4 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.latissimus_dorsi_4;
-    AnyRefNode &Org = ..TrunkNodeAttachement.T11Seg.O_latissimus_dorsi_4;
-    AnyRefNode &Via = ..ThoraxWrappingSufaceSegRef.O_latissimus_dorsi_4_via;
-    AnyRefNode &Ins = ...Segments.Humerus.I_latissimus_dorsi_4;
+  AnyMuscleShortestPath LatissimusDorsi4 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.LatissimusDorsi4;
+    AnyRefNode &Org = ..TrunkNodeAttachement.T11Seg.O_LatissimusDorsi4;
+    AnyRefNode &Via = ..ThoraxWrappingSufaceSegRef.O_LatissimusDorsi4_via;
+    AnyRefNode &Ins = ...Segments.Humerus.I_LatissimusDorsi4;
     SPLine.StringMesh = 110;
     AnyParamSurf &Surf1 = ..collum_hum;
     AnyParamSurf  &Surf2 = ..ThoraxWrappingSufaceSegRef.EllipsoidLatissimusOrigin.EllipsoidSurf;
     AnyParamSurf  &Surf3 = ..LatissimusDorsiWrapping.BASE_FRAME.Wrapping_1.Surf;
     AnyParamSurf &Surf4 = ...Segments.Scapula.Lattisimus_wrap.cyl;
 
-    SPLine.InitWrapPosVecArr = .latissimus_dorsi_1.SPLine.InitWrapPosVecArr;
+    SPLine.InitWrapPosVecArr = .LatissimusDorsi1.SPLine.InitWrapPosVecArr;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
-  AnyMuscleShortestPath latissimus_dorsi_5 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.latissimus_dorsi_5;
-    AnyRefNode &Org = ..TrunkNodeAttachement.T12Seg.O_latissimus_dorsi_5;
-    AnyRefNode &Via = ..ThoraxWrappingSufaceSegRef.O_latissimus_dorsi_5_via;
-    AnyRefNode &Ins = ...Segments.Humerus.I_latissimus_dorsi_5;
+  AnyMuscleShortestPath LatissimusDorsi5 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.LatissimusDorsi5;
+    AnyRefNode &Org = ..TrunkNodeAttachement.T12Seg.O_LatissimusDorsi5;
+    AnyRefNode &Via = ..ThoraxWrappingSufaceSegRef.O_LatissimusDorsi5_via;
+    AnyRefNode &Ins = ...Segments.Humerus.I_LatissimusDorsi5;
     SPLine.StringMesh = 120;
     AnyParamSurf &Surf1 = ..collum_hum;
     AnyParamSurf  &Surf2 = ..ThoraxWrappingSufaceSegRef.EllipsoidLatissimusOrigin.EllipsoidSurf;
     AnyParamSurf  &Surf3 = ..LatissimusDorsiWrapping.BASE_FRAME.Wrapping_1.Surf;
     AnyParamSurf &Surf4 = ...Segments.Scapula.Lattisimus_wrap.cyl;
 
-    SPLine.InitWrapPosVecArr = .latissimus_dorsi_1.SPLine.InitWrapPosVecArr;
+    SPLine.InitWrapPosVecArr = .LatissimusDorsi1.SPLine.InitWrapPosVecArr;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
-  AnyMuscleShortestPath latissimus_dorsi_6 = {
-    AnyMuscleModel &MusMdl =  ...MuscleModels.latissimus_dorsi_6;
-    AnyRefNode &Org = ..TrunkNodeAttachement.L1Seg.O_latissimus_dorsi_6;
-    AnyRefNode &Via = ..ThoraxWrappingSufaceSegRef.O_latissimus_dorsi_6_via;
-    AnyRefNode &Ins = ...Segments.Humerus.I_latissimus_dorsi_6;
+  AnyMuscleShortestPath LatissimusDorsi6 = {
+    AnyMuscleModel &MusMdl =  ...MuscleModels.LatissimusDorsi6;
+    AnyRefNode &Org = ..TrunkNodeAttachement.L1Seg.O_LatissimusDorsi6;
+    AnyRefNode &Via = ..ThoraxWrappingSufaceSegRef.O_LatissimusDorsi6_via;
+    AnyRefNode &Ins = ...Segments.Humerus.I_LatissimusDorsi6;
     SPLine.StringMesh = 110;
     AnyParamSurf  &Surf1 = ..ThoraxWrappingSufaceSegRef.EllipsoidLatissimusOrigin.EllipsoidSurf;
     AnyParamSurf &Surf2 = ..collum_hum;
     AnyParamSurf  &Surf3 = ..LatissimusDorsiWrapping.BASE_FRAME.Wrapping_1.Surf;
     AnyParamSurf &Surf4 = ...Segments.Scapula.Lattisimus_wrap.cyl;
 
-    SPLine.InitWrapPosVecArr = .latissimus_dorsi_1.SPLine.InitWrapPosVecArr;
+    SPLine.InitWrapPosVecArr = .LatissimusDorsi1.SPLine.InitWrapPosVecArr;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
-  AnyMuscleShortestPath latissimus_dorsi_7 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.latissimus_dorsi_7;
-    AnyRefNode &Org = ..TrunkNodeAttachement.L2Seg.O_latissimus_dorsi_7;
-    AnyRefNode &Via = ..ThoraxWrappingSufaceSegRef.O_latissimus_dorsi_7_via;
-    AnyRefNode &Ins = ...Segments.Humerus.I_latissimus_dorsi_7;
+  AnyMuscleShortestPath LatissimusDorsi7 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.LatissimusDorsi7;
+    AnyRefNode &Org = ..TrunkNodeAttachement.L2Seg.O_LatissimusDorsi7;
+    AnyRefNode &Via = ..ThoraxWrappingSufaceSegRef.O_LatissimusDorsi7_via;
+    AnyRefNode &Ins = ...Segments.Humerus.I_LatissimusDorsi7;
     SPLine.StringMesh = 110;
     AnyParamSurf  &Surf1 = ..ThoraxWrappingSufaceSegRef.EllipsoidLatissimusOrigin.EllipsoidSurf;
     AnyParamSurf  &Surf2 = ..collum_hum;
     AnyParamSurf  &Surf3 = ..LatissimusDorsiWrapping.BASE_FRAME.Wrapping_1.Surf;
     AnyParamSurf &Surf4 = ...Segments.Scapula.Lattisimus_wrap.cyl;
 
-    SPLine.InitWrapPosVecArr = .latissimus_dorsi_1.SPLine.InitWrapPosVecArr;
+    SPLine.InitWrapPosVecArr = .LatissimusDorsi1.SPLine.InitWrapPosVecArr;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
-  AnyMuscleShortestPath latissimus_dorsi_8 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.latissimus_dorsi_8;
-    AnyRefNode &Org = ..TrunkNodeAttachement.L3Seg.O_latissimus_dorsi_8;
-    AnyRefNode &Via = ..ThoraxWrappingSufaceSegRef.O_latissimus_dorsi_8_via;
-    AnyRefNode &Ins = ...Segments.Humerus.I_latissimus_dorsi_8;
+  AnyMuscleShortestPath LatissimusDorsi8 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.LatissimusDorsi8;
+    AnyRefNode &Org = ..TrunkNodeAttachement.L3Seg.O_LatissimusDorsi8;
+    AnyRefNode &Via = ..ThoraxWrappingSufaceSegRef.O_LatissimusDorsi8_via;
+    AnyRefNode &Ins = ...Segments.Humerus.I_LatissimusDorsi8;
     SPLine.StringMesh = 110;
     AnyParamSurf  &Surf1 = ..ThoraxWrappingSufaceSegRef.EllipsoidLatissimusOrigin.EllipsoidSurf;
     AnyParamSurf  &Surf2 = ..collum_hum;
     AnyParamSurf  &Surf3 = ..LatissimusDorsiWrapping.BASE_FRAME.Wrapping_1.Surf;
     AnyParamSurf &Surf4 = ...Segments.Scapula.Lattisimus_wrap.cyl;
 
-    SPLine.InitWrapPosVecArr = .latissimus_dorsi_1.SPLine.InitWrapPosVecArr;
+    SPLine.InitWrapPosVecArr = .LatissimusDorsi1.SPLine.InitWrapPosVecArr;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
-  AnyMuscleShortestPath latissimus_dorsi_9 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.latissimus_dorsi_9;
-    AnyRefNode &Org = ..TrunkNodeAttachement.L4Seg.O_latissimus_dorsi_9;
-    AnyRefNode &Via = ..ThoraxWrappingSufaceSegRef.O_latissimus_dorsi_9_via;
-    AnyRefNode &Ins = ...Segments.Humerus.I_latissimus_dorsi_9;
+  AnyMuscleShortestPath LatissimusDorsi9 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.LatissimusDorsi9;
+    AnyRefNode &Org = ..TrunkNodeAttachement.L4Seg.O_LatissimusDorsi9;
+    AnyRefNode &Via = ..ThoraxWrappingSufaceSegRef.O_LatissimusDorsi9_via;
+    AnyRefNode &Ins = ...Segments.Humerus.I_LatissimusDorsi9;
     SPLine.StringMesh = 110;
     AnyParamSurf  &Surf1 = ..ThoraxWrappingSufaceSegRef.EllipsoidLatissimusOrigin.EllipsoidSurf;
     AnyParamSurf  &Surf2 = ..collum_hum;
     AnyParamSurf  &Surf3 = ..LatissimusDorsiWrapping.BASE_FRAME.Wrapping_1.Surf;
     AnyParamSurf &Surf4 = ...Segments.Scapula.Lattisimus_wrap.cyl;
 
-    SPLine.InitWrapPosVecArr = .latissimus_dorsi_1.SPLine.InitWrapPosVecArr;
+    SPLine.InitWrapPosVecArr = .LatissimusDorsi1.SPLine.InitWrapPosVecArr;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
-  AnyMuscleShortestPath latissimus_dorsi_10 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.latissimus_dorsi_10;
-    AnyRefNode &Org = ..TrunkNodeAttachement.L5Seg.O_latissimus_dorsi_10;
-    AnyRefNode &Via = ..ThoraxWrappingSufaceSegRef.O_latissimus_dorsi_10_via;
-    AnyRefNode &Ins = ...Segments.Humerus.I_latissimus_dorsi_10;
+  AnyMuscleShortestPath LatissimusDorsi10 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.LatissimusDorsi10;
+    AnyRefNode &Org = ..TrunkNodeAttachement.L5Seg.O_LatissimusDorsi10;
+    AnyRefNode &Via = ..ThoraxWrappingSufaceSegRef.O_LatissimusDorsi10_via;
+    AnyRefNode &Ins = ...Segments.Humerus.I_LatissimusDorsi10;
     SPLine.StringMesh = 110;
     AnyParamSurf  &Surf1 = ..ThoraxWrappingSufaceSegRef.EllipsoidLatissimusOrigin.EllipsoidSurf;
     AnyParamSurf  &Surf2 = ..collum_hum;
     AnyParamSurf  &Surf3 = ..LatissimusDorsiWrapping.BASE_FRAME.Wrapping_1.Surf;
     AnyParamSurf &Surf4 = ...Segments.Scapula.Lattisimus_wrap.cyl;
 
-    SPLine.InitWrapPosVecArr = .latissimus_dorsi_1.SPLine.InitWrapPosVecArr;
+    SPLine.InitWrapPosVecArr = .LatissimusDorsi1.SPLine.InitWrapPosVecArr;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
-  AnyMuscleShortestPath latissimus_dorsi_11 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.latissimus_dorsi_11;
-    AnyRefNode &Org = ..TrunkNodeAttachement.PelvisSeg.O_latissimus_dorsi_11;
+  AnyMuscleShortestPath LatissimusDorsi11 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.LatissimusDorsi11;
+    AnyRefNode &Org = ..TrunkNodeAttachement.PelvisSeg.O_LatissimusDorsi11;
 
-    AnyRefNode &Via = ..ThoraxWrappingSufaceSegRef.O_latissimus_dorsi_11_via;
+    AnyRefNode &Via = ..ThoraxWrappingSufaceSegRef.O_LatissimusDorsi11_via;
 
-    AnyRefNode &Ins = ...Segments.Humerus.I_latissimus_dorsi_11;
+    AnyRefNode &Ins = ...Segments.Humerus.I_LatissimusDorsi11;
     SPLine.StringMesh = 200;
     AnyParamSurf  &Surf1 = ..ThoraxWrappingSufaceSegRef.EllipsoidLatissimusOrigin.EllipsoidSurf;
     AnyParamSurf &Surf2 = ..collum_hum;
     AnyParamSurf  &Surf3 = ..LatissimusDorsiWrapping.BASE_FRAME.Wrapping_1.Surf;
     AnyParamSurf &Surf4 = ...Segments.Scapula.Lattisimus_wrap.cyl;
 
-    SPLine.InitWrapPosVecArr = .latissimus_dorsi_1.SPLine.InitWrapPosVecArr;
+    SPLine.InitWrapPosVecArr = .LatissimusDorsi1.SPLine.InitWrapPosVecArr;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 };
