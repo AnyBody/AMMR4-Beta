@@ -199,7 +199,7 @@ DEBUG=0
 
   Angles = ..Sign*({160, 190, 210, 220}-20);
 
-  WrapSurfLength = 2*vnorm(..Segments.Humerus.I_deltoideus_anterior_part_3.sRel - ..Segments.Humerus.gh.sRel);
+  WrapSurfLength = 2*vnorm(..Segments.Humerus.I_DeltoideusAnterior3.sRel - ..Segments.Humerus.gh.sRel);
   Visibility = repmat(NumberOfCylinders, Off);
 
   AnySeg WrappingSegment =
