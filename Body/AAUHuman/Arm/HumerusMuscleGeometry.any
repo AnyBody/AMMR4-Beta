@@ -121,11 +121,11 @@ Humerus = {
 
   };
 
-  AnyRefNode infraspinatus_humurus_wrap = {
-    AnyVar minor_radius = 0.96*abs(.gh.sRel-.I_infraspinatus_5.sRel)[0];
+  AnyRefNode Infraspinatushumurus_wrap = {
+    AnyVar minor_radius = 0.96*abs(.gh.sRel-.I_Infraspinatus5.sRel)[0];
     AnyVar major_radius = minor_radius*1.9;
 
-    AnyVec3 minor_center = {0, .I_infraspinatus_5.sRel[1],0};
+    AnyVec3 minor_center = {0, .I_Infraspinatus5.sRel[1],0};
     AnyMat33 orientation = RotMat(0.0*...Sign,y);
 
     AnyVec3 major_center = minor_center+major_radius*...Sign*orientation'[0];
@@ -228,12 +228,12 @@ Humerus = {
   AnyRefNode I_supraspinatus_5                    = {sRel = .Scale(.Data.I_supraspinatus_5_pos*.Mirror);};
   AnyRefNode I_supraspinatus_6                    = {sRel = .Scale(.Data.I_supraspinatus_6_pos*.Mirror);};
 
-  AnyRefNode I_infraspinatus_1                    = {sRel = .Scale(.Data.I_infraspinatus_1_pos*.Mirror);};
-  AnyRefNode I_infraspinatus_2                    = {sRel = .Scale(.Data.I_infraspinatus_2_pos*.Mirror);};
-  AnyRefNode I_infraspinatus_3                    = {sRel = .Scale(.Data.I_infraspinatus_3_pos*.Mirror);};
-  AnyRefNode I_infraspinatus_4                    = {sRel = .Scale(.Data.I_infraspinatus_4_pos*.Mirror);};
-  AnyRefNode I_infraspinatus_5                    = {sRel = .Scale(.Data.I_infraspinatus_5_pos*.Mirror);};
-  AnyRefNode I_infraspinatus_6                    = {sRel = .Scale(.Data.I_infraspinatus_6_pos*.Mirror);};
+  AnyRefNode I_Infraspinatus1                    = {sRel = .Scale(.Data.I_Infraspinatus1_pos*.Mirror);};
+  AnyRefNode I_Infraspinatus2                    = {sRel = .Scale(.Data.I_Infraspinatus2_pos*.Mirror);};
+  AnyRefNode I_Infraspinatus3                    = {sRel = .Scale(.Data.I_Infraspinatus3_pos*.Mirror);};
+  AnyRefNode I_Infraspinatus4                    = {sRel = .Scale(.Data.I_Infraspinatus4_pos*.Mirror);};
+  AnyRefNode I_Infraspinatus5                    = {sRel = .Scale(.Data.I_Infraspinatus5_pos*.Mirror);};
+  AnyRefNode I_Infraspinatus6                    = {sRel = .Scale(.Data.I_Infraspinatus6_pos*.Mirror);};
 
   AnyRefNode I_teres_minor_1                      = {sRel = .Scale(.Data.I_teres_minor_1_pos*.Mirror);};
   AnyRefNode I_teres_minor_2                      = {sRel = .Scale(.Data.I_teres_minor_2_pos*.Mirror);};
