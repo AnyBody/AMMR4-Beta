@@ -212,8 +212,8 @@ AnyFolder Humerus = {
   // This file contains muscle attachment points for the humerus segment data from MAYO sub 2
   // The original coordinates have been transformed from global coordinates to the segment local
   // coordinate system
-  AnyFloat O_Brachialis_1_pos                   = {-0.003424, -0.207198 , -0.012998}+correction0+OffSet;
-  AnyFloat O_Brachialis_2_pos                   = {-0.004418, -0.243815 , -0.008691}+correction0+OffSet;
+  AnyFloat O_Brachialis1_pos                   = {-0.003424, -0.207198 , -0.012998}+correction0+OffSet;
+  AnyFloat O_Brachialis2_pos                   = {-0.004418, -0.243815 , -0.008691}+correction0+OffSet;
 
   AnyFloat Via_Triceps_LH_1_pos                   = {-0.009, -0.17 , 0.020}+correction+OffSet;
   AnyFloat Via_Triceps_LH_2_pos                   = {-0.015, -0.17 , 0.020}+correction+OffSet;
@@ -427,8 +427,8 @@ AnyFolder Ulna = {
 
   AnyFloat O_Supinator_ulna_part_1_pos = {-0.012788, 0.033349, 0.010340}+correction1;
   AnyFloat O_Supinator_ulna_part_2_pos = {-0.003613, 0.059799, 0.016045}+correction1;
-  AnyFloat I_Brachialis_1_pos = {0.017098,   0.038909, 0.007278}+correction0;
-  AnyFloat I_Brachialis_2_pos = {0.017098,   0.038909, 0.007278}+correction0;
+  AnyFloat I_Brachialis1_pos = {0.017098,   0.038909, 0.007278}+correction0;
+  AnyFloat I_Brachialis2_pos = {0.017098,   0.038909, 0.007278}+correction0;
   AnyFloat I_Triceps_LH_1_pos = {0.017540,  -0.007721, 0.025663}+correction ;
   AnyFloat I_Triceps_LH_2_pos = {0.017540,  -0.007721, 0.025663}+correction ;
   AnyFloat I_Anconeus_1_pos   = {0.008231,   0.027393, 0.031396};

@@ -260,7 +260,7 @@ MuscleGroup BicepsBrachiiLongum = {
       AnyMatrix InitWrapPos = {
             transf3D(.Surf0.Radius*{0.5,0,....Sign*1.2}, &....Segments.Humerus.fe),
             transf3D({....Sign*-1.1*.Surf0.Radius,1*.Surf0.Radius, 0.45*.Surf0.Length }, &.Surf0 ),
-            transf3D({ 0, 0  , 2*.Surf3.Radius }, &....Segments.Ulna.I_Brachialis_1),
+            transf3D({ 0, 0  , 2*.Surf3.Radius }, &....Segments.Ulna.I_Brachialis1),
             transf3D({ ....Sign*1*.Surf3.Radius,   -1*.Surf3.Radius, 0.65*.Surf3.Length }, &.Surf3)
 
       };
@@ -1628,10 +1628,10 @@ MuscleGroup TeresMinor = {
 };
 
 MuscleGroup Brachialis = {
-  AnyMuscleShortestPath Brachialis_1 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.Brachialis_1;
-    AnyRefNode &Org = ...Segments.Humerus.O_Brachialis_1;
-    AnyRefNode &Ins = ...Segments.Ulna.I_Brachialis_1;
+  AnyMuscleShortestPath Brachialis1 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.Brachialis1;
+    AnyRefNode &Org = ...Segments.Humerus.O_Brachialis1;
+    AnyRefNode &Ins = ...Segments.Ulna.I_Brachialis1;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     AnySurfCylinder &Surf1 = ..condylus_hum;
     SPLine.StringMesh = 30;
@@ -1643,15 +1643,15 @@ MuscleGroup Brachialis = {
     };
   };
 
-  AnyMuscleShortestPath Brachialis_2 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.Brachialis_2;
-    AnyRefNode &Org = ...Segments.Humerus.O_Brachialis_2;
-    AnyRefNode &Ins = ...Segments.Ulna.I_Brachialis_2;
+  AnyMuscleShortestPath Brachialis2 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.Brachialis2;
+    AnyRefNode &Org = ...Segments.Humerus.O_Brachialis2;
+    AnyRefNode &Ins = ...Segments.Ulna.I_Brachialis2;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     AnySurfCylinder &Surf1 = ..condylus_hum;
     SPLine.StringMesh = 30;
     SPLine = {
-      InitWrapPosVecArr = { &..Brachialis_1.SPLine.InitWrapPos };
+      InitWrapPosVecArr = { &..Brachialis1.SPLine.InitWrapPos };
     };
   };
 };
