@@ -1196,45 +1196,45 @@ MuscleGroup PectoralisMinor = {
 };
 
 MuscleGroup Rhomboideus = {
-  AnyMuscleViaPoint rhomboideus_1 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.rhomboideus_1;
-    AnyRefNode &Org = ..TrunkNodeAttachement.C7Seg.O_rhomboideus_1;
-    AnyRefNode &Ins = ...Segments.Scapula.I_rhomboideus_1;
+  AnyMuscleViaPoint Rhomboideus1 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.Rhomboideus1;
+    AnyRefNode &Org = ..TrunkNodeAttachement.C7Seg.O_Rhomboideus1;
+    AnyRefNode &Ins = ...Segments.Scapula.I_Rhomboideus1;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
-  AnyMuscleViaPoint rhomboideus_2 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.rhomboideus_2;
-    AnyRefNode &Org = ..TrunkNodeAttachement.T1Seg.O_rhomboideus_2;
-    AnyRefNode &Ins = ...Segments.Scapula.I_rhomboideus_2;
+  AnyMuscleViaPoint Rhomboideus2 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.Rhomboideus2;
+    AnyRefNode &Org = ..TrunkNodeAttachement.T1Seg.O_Rhomboideus2;
+    AnyRefNode &Ins = ...Segments.Scapula.I_Rhomboideus2;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
-  AnyMuscleViaPoint rhomboideus_3 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.rhomboideus_3;
-    AnyRefNode &Org = ..TrunkNodeAttachement.T2Seg.O_rhomboideus_3;
-    AnyRefNode &Ins = ...Segments.Scapula.I_rhomboideus_3;
+  AnyMuscleViaPoint Rhomboideus3 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.Rhomboideus3;
+    AnyRefNode &Org = ..TrunkNodeAttachement.T2Seg.O_Rhomboideus3;
+    AnyRefNode &Ins = ...Segments.Scapula.I_Rhomboideus3;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
-  AnyMuscleViaPoint rhomboideus_4 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.rhomboideus_4;
-    AnyRefNode &Org = ..TrunkNodeAttachement.T3Seg.O_rhomboideus_4;
-    AnyRefNode &Ins = ...Segments.Scapula.I_rhomboideus_4;
+  AnyMuscleViaPoint Rhomboideus4 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.Rhomboideus4;
+    AnyRefNode &Org = ..TrunkNodeAttachement.T3Seg.O_Rhomboideus4;
+    AnyRefNode &Ins = ...Segments.Scapula.I_Rhomboideus4;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
-  AnyMuscleViaPoint rhomboideus_5 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.rhomboideus_5;
-    AnyRefNode &Org = ..TrunkNodeAttachement.T4Seg.O_rhomboideus_5;
-    AnyRefNode &Ins = ...Segments.Scapula.I_rhomboideus_5;
+  AnyMuscleViaPoint Rhomboideus5 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.Rhomboideus5;
+    AnyRefNode &Org = ..TrunkNodeAttachement.T4Seg.O_Rhomboideus5;
+    AnyRefNode &Ins = ...Segments.Scapula.I_Rhomboideus5;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
-  AnyMuscleViaPoint rhomboideus_6 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.rhomboideus_6;
-    AnyRefNode &Org = ..TrunkNodeAttachement.T5Seg.O_rhomboideus_6;
-    AnyRefNode &Ins = ...Segments.Scapula.I_rhomboideus_6;
+  AnyMuscleViaPoint Rhomboideus6 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.Rhomboideus6;
+    AnyRefNode &Org = ..TrunkNodeAttachement.T5Seg.O_Rhomboideus6;
+    AnyRefNode &Ins = ...Segments.Scapula.I_Rhomboideus6;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 };
