@@ -1240,90 +1240,90 @@ MuscleGroup Rhomboideus = {
 };
 
 MuscleGroup SerratusAnterior = {
-  AnyMuscleShortestPath serratus_anterior_1 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.serratus_anterior_1;
-    AnyRefNode &Org = ..TrunkNodeAttachement.R1Seg.O_serratus_anterior_1;
-    AnyRefNode &Ins = ...Segments.Scapula.I_serratus_anterior_1;
+  AnyMuscleShortestPath SerratusAnterior1 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.SerratusAnterior1;
+    AnyRefNode &Org = ..TrunkNodeAttachement.R1Seg.O_SerratusAnterior1;
+    AnyRefNode &Ins = ...Segments.Scapula.I_SerratusAnterior1;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     SPLine.StringMesh = 40;
     AnySurfEllipsoid& Surf = ..ThoraxWrappingSufaceSegRef.SerratusAnteriorWrappingEllipsoid_1to5;
-    SPLine.InitWrapPosVecArr = .serratus_anterior_9.SPLine.InitWrapPosVecArr;
+    SPLine.InitWrapPosVecArr = .SerratusAnterior9.SPLine.InitWrapPosVecArr;
   };
 
-  AnyMuscleShortestPath serratus_anterior_2 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.serratus_anterior_2;
-    AnyRefNode &Org = ..TrunkNodeAttachement.R2Seg.O_serratus_anterior_2;
-    AnyRefNode &Ins = ...Segments.Scapula.I_serratus_anterior_2;
+  AnyMuscleShortestPath SerratusAnterior2 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.SerratusAnterior2;
+    AnyRefNode &Org = ..TrunkNodeAttachement.R2Seg.O_SerratusAnterior2;
+    AnyRefNode &Ins = ...Segments.Scapula.I_SerratusAnterior2;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     SPLine.StringMesh = 40;
     AnySurfEllipsoid& Surf = ..ThoraxWrappingSufaceSegRef.SerratusAnteriorWrappingEllipsoid_1to5;
-    SPLine.InitWrapPosVecArr = .serratus_anterior_9.SPLine.InitWrapPosVecArr;
+    SPLine.InitWrapPosVecArr = .SerratusAnterior9.SPLine.InitWrapPosVecArr;
   };
 
-  AnyMuscleShortestPath serratus_anterior_3 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.serratus_anterior_3;
-    AnyRefNode &Org = ..TrunkNodeAttachement.R3Seg.O_serratus_anterior_3;
-    AnyRefNode &Ins = ...Segments.Scapula.I_serratus_anterior_3;
+  AnyMuscleShortestPath SerratusAnterior3 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.SerratusAnterior3;
+    AnyRefNode &Org = ..TrunkNodeAttachement.R3Seg.O_SerratusAnterior3;
+    AnyRefNode &Ins = ...Segments.Scapula.I_SerratusAnterior3;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     SPLine.StringMesh = 40;
     AnySurfEllipsoid& Surf = ..ThoraxWrappingSufaceSegRef.SerratusAnteriorWrappingEllipsoid_1to5;
-    SPLine.InitWrapPosVecArr = .serratus_anterior_9.SPLine.InitWrapPosVecArr;
+    SPLine.InitWrapPosVecArr = .SerratusAnterior9.SPLine.InitWrapPosVecArr;
   };
 
-  AnyMuscleShortestPath serratus_anterior_4 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.serratus_anterior_4;
-    AnyRefNode &Org = ..TrunkNodeAttachement.R4Seg.O_serratus_anterior_4;
-    AnyRefNode &Ins = ...Segments.Scapula.I_serratus_anterior_4;
+  AnyMuscleShortestPath SerratusAnterior4 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.SerratusAnterior4;
+    AnyRefNode &Org = ..TrunkNodeAttachement.R4Seg.O_SerratusAnterior4;
+    AnyRefNode &Ins = ...Segments.Scapula.I_SerratusAnterior4;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     SPLine.StringMesh = 40;
     AnySurfEllipsoid& Surf = ..ThoraxWrappingSufaceSegRef.SerratusAnteriorWrappingEllipsoid_1to5;
-    SPLine.InitWrapPosVecArr = .serratus_anterior_9.SPLine.InitWrapPosVecArr;
+    SPLine.InitWrapPosVecArr = .SerratusAnterior9.SPLine.InitWrapPosVecArr;
   };
 
-  AnyMuscleShortestPath serratus_anterior_5 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.serratus_anterior_5;
-    AnyRefNode &Org = ..TrunkNodeAttachement.R5Seg.O_serratus_anterior_5;
-    AnyRefNode &Ins = ...Segments.Scapula.I_serratus_anterior_5;
+  AnyMuscleShortestPath SerratusAnterior5 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.SerratusAnterior5;
+    AnyRefNode &Org = ..TrunkNodeAttachement.R5Seg.O_SerratusAnterior5;
+    AnyRefNode &Ins = ...Segments.Scapula.I_SerratusAnterior5;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     SPLine.StringMesh = 56;
     AnySurfEllipsoid& Surf = ..ThoraxWrappingSufaceSegRef.SerratusAnteriorWrappingEllipsoid_1to5;
-    SPLine.InitWrapPosVecArr = .serratus_anterior_9.SPLine.InitWrapPosVecArr;
+    SPLine.InitWrapPosVecArr = .SerratusAnterior9.SPLine.InitWrapPosVecArr;
   };
 
-  AnyMuscleShortestPath serratus_anterior_6 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.serratus_anterior_6;
-    AnyRefNode &Org = ..TrunkNodeAttachement.R6Seg.O_serratus_anterior_6;
-    AnyRefNode &Ins = ...Segments.Scapula.I_serratus_anterior_6;
+  AnyMuscleShortestPath SerratusAnterior6 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.SerratusAnterior6;
+    AnyRefNode &Org = ..TrunkNodeAttachement.R6Seg.O_SerratusAnterior6;
+    AnyRefNode &Ins = ...Segments.Scapula.I_SerratusAnterior6;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     SPLine.StringMesh = 30;
     AnySurfEllipsoid& Surf = ..ThoraxWrappingSufaceSegRef.SerratusAnteriorWrappingEllipsoid_6to9;
-    SPLine.InitWrapPosVecArr = .serratus_anterior_9.SPLine.InitWrapPosVecArr;
+    SPLine.InitWrapPosVecArr = .SerratusAnterior9.SPLine.InitWrapPosVecArr;
   };
 
-  AnyMuscleShortestPath serratus_anterior_7 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.serratus_anterior_7;
-    AnyRefNode &Org = ..TrunkNodeAttachement.R7Seg.O_serratus_anterior_7;
-    AnyRefNode &Ins = ...Segments.Scapula.I_serratus_anterior_7;
+  AnyMuscleShortestPath SerratusAnterior7 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.SerratusAnterior7;
+    AnyRefNode &Org = ..TrunkNodeAttachement.R7Seg.O_SerratusAnterior7;
+    AnyRefNode &Ins = ...Segments.Scapula.I_SerratusAnterior7;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     SPLine.StringMesh = 30;
     AnySurfEllipsoid& Surf = ..ThoraxWrappingSufaceSegRef.SerratusAnteriorWrappingEllipsoid_6to9;
-    SPLine.InitWrapPosVecArr = .serratus_anterior_9.SPLine.InitWrapPosVecArr;
+    SPLine.InitWrapPosVecArr = .SerratusAnterior9.SPLine.InitWrapPosVecArr;
   };
 
-  AnyMuscleShortestPath serratus_anterior_8 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.serratus_anterior_8;
-    AnyRefNode &Org = ..TrunkNodeAttachement.R8Seg.O_serratus_anterior_8;
-    AnyRefNode &Ins = ...Segments.Scapula.I_serratus_anterior_8;
+  AnyMuscleShortestPath SerratusAnterior8 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.SerratusAnterior8;
+    AnyRefNode &Org = ..TrunkNodeAttachement.R8Seg.O_SerratusAnterior8;
+    AnyRefNode &Ins = ...Segments.Scapula.I_SerratusAnterior8;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     SPLine.StringMesh = 35;
     AnySurfEllipsoid& Surf = ..ThoraxWrappingSufaceSegRef.SerratusAnteriorWrappingEllipsoid_6to9;
-    SPLine.InitWrapPosVecArr = .serratus_anterior_9.SPLine.InitWrapPosVecArr;
+    SPLine.InitWrapPosVecArr = .SerratusAnterior9.SPLine.InitWrapPosVecArr;
   };
 
-  AnyMuscleShortestPath serratus_anterior_9 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.serratus_anterior_9;
-    AnyRefNode &Org = ..TrunkNodeAttachement.R9Seg.O_serratus_anterior_9;
-    AnyRefNode &Ins = ...Segments.Scapula.I_serratus_anterior_9;
+  AnyMuscleShortestPath SerratusAnterior9 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.SerratusAnterior9;
+    AnyRefNode &Org = ..TrunkNodeAttachement.R9Seg.O_SerratusAnterior9;
+    AnyRefNode &Ins = ...Segments.Scapula.I_SerratusAnterior9;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     SPLine.StringMesh = 35;
     AnySurfEllipsoid& Surf = ..ThoraxWrappingSufaceSegRef.SerratusAnteriorWrappingEllipsoid_6to9;

@@ -1071,102 +1071,102 @@ AnyMuscleModel Rhomboideus6 =
 ////////////////////////////////////////////
 //     serratus_anterior (9 elements)     //
 ////////////////////////////////////////////
-AnyMuscleModel serratus_anterior_1 =
+AnyMuscleModel SerratusAnterior1 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.serratus_anterior;
   AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
   Lf0 ??= MuscleParameters.OptimalFiberlength / cos(pi/180*MuscleParameters.Pennationangle); //< Optimal fiber length corrected by pennation angle
-  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.serratus_anterior_1.Lf0 +.serratus_anterior_2.Lf0 +.serratus_anterior_3.Lf0 +.serratus_anterior_4.Lf0 +.serratus_anterior_5.Lf0 +.serratus_anterior_6.Lf0 +.serratus_anterior_7.Lf0 +.serratus_anterior_8.Lf0 +.serratus_anterior_9.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.SerratusAnterior1.Lf0 +.SerratusAnterior2.Lf0 +.SerratusAnterior3.Lf0 +.SerratusAnterior4.Lf0 +.SerratusAnterior5.Lf0 +.SerratusAnterior6.Lf0 +.SerratusAnterior7.Lf0 +.SerratusAnterior8.Lf0 +.SerratusAnterior9.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
 
-AnyMuscleModel serratus_anterior_2 =
+AnyMuscleModel SerratusAnterior2 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.serratus_anterior;
   AnyIntVar MuscleElemNo = 2; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
   Lf0 ??= MuscleParameters.OptimalFiberlength / cos(pi/180*MuscleParameters.Pennationangle); //< Optimal fiber length corrected by pennation angle
-  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.serratus_anterior_1.Lf0 +.serratus_anterior_2.Lf0 +.serratus_anterior_3.Lf0 +.serratus_anterior_4.Lf0 +.serratus_anterior_5.Lf0 +.serratus_anterior_6.Lf0 +.serratus_anterior_7.Lf0 +.serratus_anterior_8.Lf0 +.serratus_anterior_9.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.SerratusAnterior1.Lf0 +.SerratusAnterior2.Lf0 +.SerratusAnterior3.Lf0 +.SerratusAnterior4.Lf0 +.SerratusAnterior5.Lf0 +.SerratusAnterior6.Lf0 +.SerratusAnterior7.Lf0 +.SerratusAnterior8.Lf0 +.SerratusAnterior9.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
 
-AnyMuscleModel serratus_anterior_3 =
+AnyMuscleModel SerratusAnterior3 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.serratus_anterior;
   AnyIntVar MuscleElemNo = 3; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
   Lf0 ??= MuscleParameters.OptimalFiberlength / cos(pi/180*MuscleParameters.Pennationangle); //< Optimal fiber length corrected by pennation angle
-  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.serratus_anterior_1.Lf0 +.serratus_anterior_2.Lf0 +.serratus_anterior_3.Lf0 +.serratus_anterior_4.Lf0 +.serratus_anterior_5.Lf0 +.serratus_anterior_6.Lf0 +.serratus_anterior_7.Lf0 +.serratus_anterior_8.Lf0 +.serratus_anterior_9.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.SerratusAnterior1.Lf0 +.SerratusAnterior2.Lf0 +.SerratusAnterior3.Lf0 +.SerratusAnterior4.Lf0 +.SerratusAnterior5.Lf0 +.SerratusAnterior6.Lf0 +.SerratusAnterior7.Lf0 +.SerratusAnterior8.Lf0 +.SerratusAnterior9.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
 
-AnyMuscleModel serratus_anterior_4 =
+AnyMuscleModel SerratusAnterior4 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.serratus_anterior;
   AnyIntVar MuscleElemNo = 4; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
   Lf0 ??= MuscleParameters.OptimalFiberlength / cos(pi/180*MuscleParameters.Pennationangle); //< Optimal fiber length corrected by pennation angle
-  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.serratus_anterior_1.Lf0 +.serratus_anterior_2.Lf0 +.serratus_anterior_3.Lf0 +.serratus_anterior_4.Lf0 +.serratus_anterior_5.Lf0 +.serratus_anterior_6.Lf0 +.serratus_anterior_7.Lf0 +.serratus_anterior_8.Lf0 +.serratus_anterior_9.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.SerratusAnterior1.Lf0 +.SerratusAnterior2.Lf0 +.SerratusAnterior3.Lf0 +.SerratusAnterior4.Lf0 +.SerratusAnterior5.Lf0 +.SerratusAnterior6.Lf0 +.SerratusAnterior7.Lf0 +.SerratusAnterior8.Lf0 +.SerratusAnterior9.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
 
-AnyMuscleModel serratus_anterior_5 =
+AnyMuscleModel SerratusAnterior5 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.serratus_anterior;
   AnyIntVar MuscleElemNo = 5; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
   Lf0 ??= MuscleParameters.OptimalFiberlength / cos(pi/180*MuscleParameters.Pennationangle); //< Optimal fiber length corrected by pennation angle
-  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.serratus_anterior_1.Lf0 +.serratus_anterior_2.Lf0 +.serratus_anterior_3.Lf0 +.serratus_anterior_4.Lf0 +.serratus_anterior_5.Lf0 +.serratus_anterior_6.Lf0 +.serratus_anterior_7.Lf0 +.serratus_anterior_8.Lf0 +.serratus_anterior_9.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.SerratusAnterior1.Lf0 +.SerratusAnterior2.Lf0 +.SerratusAnterior3.Lf0 +.SerratusAnterior4.Lf0 +.SerratusAnterior5.Lf0 +.SerratusAnterior6.Lf0 +.SerratusAnterior7.Lf0 +.SerratusAnterior8.Lf0 +.SerratusAnterior9.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
 
-AnyMuscleModel serratus_anterior_6 =
+AnyMuscleModel SerratusAnterior6 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.serratus_anterior;
   AnyIntVar MuscleElemNo = 6; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
   Lf0 ??= MuscleParameters.OptimalFiberlength / cos(pi/180*MuscleParameters.Pennationangle); //< Optimal fiber length corrected by pennation angle
-  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.serratus_anterior_1.Lf0 +.serratus_anterior_2.Lf0 +.serratus_anterior_3.Lf0 +.serratus_anterior_4.Lf0 +.serratus_anterior_5.Lf0 +.serratus_anterior_6.Lf0 +.serratus_anterior_7.Lf0 +.serratus_anterior_8.Lf0 +.serratus_anterior_9.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.SerratusAnterior1.Lf0 +.SerratusAnterior2.Lf0 +.SerratusAnterior3.Lf0 +.SerratusAnterior4.Lf0 +.SerratusAnterior5.Lf0 +.SerratusAnterior6.Lf0 +.SerratusAnterior7.Lf0 +.SerratusAnterior8.Lf0 +.SerratusAnterior9.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
 
-AnyMuscleModel serratus_anterior_7 =
+AnyMuscleModel SerratusAnterior7 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.serratus_anterior;
   AnyIntVar MuscleElemNo = 7; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
   Lf0 ??= MuscleParameters.OptimalFiberlength / cos(pi/180*MuscleParameters.Pennationangle); //< Optimal fiber length corrected by pennation angle
-  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.serratus_anterior_1.Lf0 +.serratus_anterior_2.Lf0 +.serratus_anterior_3.Lf0 +.serratus_anterior_4.Lf0 +.serratus_anterior_5.Lf0 +.serratus_anterior_6.Lf0 +.serratus_anterior_7.Lf0 +.serratus_anterior_8.Lf0 +.serratus_anterior_9.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.SerratusAnterior1.Lf0 +.SerratusAnterior2.Lf0 +.SerratusAnterior3.Lf0 +.SerratusAnterior4.Lf0 +.SerratusAnterior5.Lf0 +.SerratusAnterior6.Lf0 +.SerratusAnterior7.Lf0 +.SerratusAnterior8.Lf0 +.SerratusAnterior9.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
 
-AnyMuscleModel serratus_anterior_8 =
+AnyMuscleModel SerratusAnterior8 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.serratus_anterior;
   AnyIntVar MuscleElemNo = 8; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
   Lf0 ??= MuscleParameters.OptimalFiberlength / cos(pi/180*MuscleParameters.Pennationangle); //< Optimal fiber length corrected by pennation angle
-  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.serratus_anterior_1.Lf0 +.serratus_anterior_2.Lf0 +.serratus_anterior_3.Lf0 +.serratus_anterior_4.Lf0 +.serratus_anterior_5.Lf0 +.serratus_anterior_6.Lf0 +.serratus_anterior_7.Lf0 +.serratus_anterior_8.Lf0 +.serratus_anterior_9.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.SerratusAnterior1.Lf0 +.SerratusAnterior2.Lf0 +.SerratusAnterior3.Lf0 +.SerratusAnterior4.Lf0 +.SerratusAnterior5.Lf0 +.SerratusAnterior6.Lf0 +.SerratusAnterior7.Lf0 +.SerratusAnterior8.Lf0 +.SerratusAnterior9.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
 
-AnyMuscleModel serratus_anterior_9 =
+AnyMuscleModel SerratusAnterior9 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.serratus_anterior;
   AnyIntVar MuscleElemNo = 9; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
   Lf0 ??= MuscleParameters.OptimalFiberlength / cos(pi/180*MuscleParameters.Pennationangle); //< Optimal fiber length corrected by pennation angle
-  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.serratus_anterior_1.Lf0 +.serratus_anterior_2.Lf0 +.serratus_anterior_3.Lf0 +.serratus_anterior_4.Lf0 +.serratus_anterior_5.Lf0 +.serratus_anterior_6.Lf0 +.serratus_anterior_7.Lf0 +.serratus_anterior_8.Lf0 +.serratus_anterior_9.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.SerratusAnterior1.Lf0 +.SerratusAnterior2.Lf0 +.SerratusAnterior3.Lf0 +.SerratusAnterior4.Lf0 +.SerratusAnterior5.Lf0 +.SerratusAnterior6.Lf0 +.SerratusAnterior7.Lf0 +.SerratusAnterior8.Lf0 +.SerratusAnterior9.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
 

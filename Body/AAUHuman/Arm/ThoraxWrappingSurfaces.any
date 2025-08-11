@@ -28,10 +28,10 @@ ThoraxWrappingSufaceSegRef = {
   // Ellipsoids which are used for wrapping of serratus anterior.
   
   AnySurfEllipsoid SerratusAnteriorWrappingEllipsoid_1to5 = {
-    ARel = RotMat({0,0,0}, {0,0,1}, ..SerratusAnterior.serratus_anterior_5.Org.sRel-..SerratusAnterior.serratus_anterior_1.Org.sRel)*{{0,0,1},{0,-1,0},{1,0,0}};
+    ARel = RotMat({0,0,0}, {0,0,1}, ..SerratusAnterior.SerratusAnterior5.Org.sRel-..SerratusAnterior.SerratusAnterior1.Org.sRel)*{{0,0,1},{0,-1,0},{1,0,0}};
     sRel = {
-      0.5*..SerratusAnterior.serratus_anterior_5.Org.sRel[0] + 0.5*.....Trunk.Segments.T6Seg.T5T6JntNode.sRel[0],
-      ..SerratusAnterior.serratus_anterior_5.Org.sRel[1], 
+      0.5*..SerratusAnterior.SerratusAnterior5.Org.sRel[0] + 0.5*.....Trunk.Segments.T6Seg.T5T6JntNode.sRel[0],
+      ..SerratusAnterior.SerratusAnterior5.Org.sRel[1], 
       0
     };
     Radius = abs({ 
@@ -41,15 +41,15 @@ ThoraxWrappingSufaceSegRef = {
       0.98*(.....Trunk.Segments.Left.R7Seg.IliocostalisLumborumR7NodeL.sRel-sRel)*ARel'[0]',
       #endif
       1.05*(.....Trunk.Segments.T1Seg.T1C7JntNode.sRel-sRel)*ARel'[1]',
-      1.0*(..SerratusAnterior.serratus_anterior_5.Org.sRel-sRel)*ARel'[2]',
+      1.0*(..SerratusAnterior.SerratusAnterior5.Org.sRel-sRel)*ARel'[2]',
     });
   };
     
   AnySurfEllipsoid SerratusAnteriorWrappingEllipsoid_6to9 = {
-    ARel = RotMat({0,0,0}, {0,0,1}, ..SerratusAnterior.serratus_anterior_7.Org.sRel-..SerratusAnterior.serratus_anterior_1.Org.sRel)*{{0,0,1},{0,-1,0},{1,0,0}};
+    ARel = RotMat({0,0,0}, {0,0,1}, ..SerratusAnterior.SerratusAnterior7.Org.sRel-..SerratusAnterior.SerratusAnterior1.Org.sRel)*{{0,0,1},{0,-1,0},{1,0,0}};
     sRel = {
-      0.5*..SerratusAnterior.serratus_anterior_6.Org.sRel[0] + 0.5*.....Trunk.Segments.T7Seg.T6T7JntNode.sRel[0],
-      ..SerratusAnterior.serratus_anterior_6.Org.sRel[1], 
+      0.5*..SerratusAnterior.SerratusAnterior6.Org.sRel[0] + 0.5*.....Trunk.Segments.T7Seg.T6T7JntNode.sRel[0],
+      ..SerratusAnterior.SerratusAnterior6.Org.sRel[1], 
       0
     };
     Radius = abs({ 
@@ -59,7 +59,7 @@ ThoraxWrappingSufaceSegRef = {
       1.2*(.....Trunk.Segments.Left.R7Seg.IliocostalisLumborumR7NodeL.sRel-sRel)*ARel'[0]',
       #endif
       0.90*(.....Trunk.Segments.T1Seg.T1C7JntNode.sRel-sRel)*ARel'[1]',
-      1*(..SerratusAnterior.serratus_anterior_8.Org.sRel-sRel)*ARel'[2]',
+      1*(..SerratusAnterior.SerratusAnterior8.Org.sRel-sRel)*ARel'[2]',
     });
   };
 
