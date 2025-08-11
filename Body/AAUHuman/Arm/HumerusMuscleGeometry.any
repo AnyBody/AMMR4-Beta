@@ -255,8 +255,8 @@ Humerus = {
   AnyRefNode I_Coracobrachialis4                 = {sRel = .Scale(.Data.I_Coracobrachialis4_pos*.Mirror);};
   AnyRefNode I_Coracobrachialis5                 = {sRel = .Scale(.Data.I_Coracobrachialis5_pos*.Mirror);};
   AnyRefNode I_Coracobrachialis6                 = {sRel = .Scale(.Data.I_Coracobrachialis6_pos*.Mirror);};
-  AnyRefNode I_triceps_brachii_1                  = {sRel = .Scale(.Data.I_triceps_brachii_1_pos*.Mirror);};
-  AnyRefNode I_triceps_brachii_2                  = {sRel = .Scale(.Data.I_triceps_brachii_2_pos*.Mirror);};
+  AnyRefNode I_TricepsBrachii1                  = {sRel = .Scale(.Data.I_TricepsBrachii1_pos*.Mirror);};
+  AnyRefNode I_TricepsBrachii2                  = {sRel = .Scale(.Data.I_TricepsBrachii2_pos*.Mirror);};
 
   AnyRefNode I_LatissimusDorsi1                 = {sRel = .Scale(.Data.I_LatissimusDorsi1_pos*.Mirror);};
   AnyRefNode I_LatissimusDorsi2                 = {sRel = .Scale(.Data.I_LatissimusDorsi2_pos*.Mirror);};
@@ -290,14 +290,14 @@ Humerus = {
   AnyRefNode O_Brachialis1                   = {sRel = .Scale(.Data.O_Brachialis1_pos*.Mirror);};
   AnyRefNode O_Brachialis2                   = {sRel = .Scale(.Data.O_Brachialis2_pos*.Mirror);};
 
-  AnyRefNode Via_Triceps_LH_1                   = {sRel = .Scale(.Data.Via_Triceps_LH_1_pos*.Mirror);};
-  AnyRefNode Via_Triceps_LH_2                   = {sRel = .Scale(.Data.Via_Triceps_LH_2_pos*.Mirror);};
+  AnyRefNode Via_TricepsBrachiiLongum1                   = {sRel = .Scale(.Data.Via_TricepsBrachiiLongum1_pos*.Mirror);};
+  AnyRefNode Via_TricepsBrachiiLongum2                   = {sRel = .Scale(.Data.Via_TricepsBrachiiLongum2_pos*.Mirror);};
 
-  AnyRefNode O_Triceps_ME_1                   = {sRel = .Scale(.Data.O_Triceps_ME_1_pos*.Mirror);};
-  AnyRefNode O_Triceps_ME_2                   = {sRel = .Scale(.Data.O_Triceps_ME_2_pos*.Mirror);};
+  AnyRefNode O_TricepsBrachiiMediale1                   = {sRel = .Scale(.Data.O_TricepsBrachiiMediale1_pos*.Mirror);};
+  AnyRefNode O_TricepsBrachiiMediale2                   = {sRel = .Scale(.Data.O_TricepsBrachiiMediale2_pos*.Mirror);};
 
-  AnyRefNode O_Triceps_LA_1                   = {sRel = .Scale(.Data.O_Triceps_LA_1_pos*.Mirror);};
-  AnyRefNode O_Triceps_LA_2                   = {sRel = .Scale(.Data.O_Triceps_LA_2_pos*.Mirror);};
+  AnyRefNode O_TricepsBrachiiLaterale1                   = {sRel = .Scale(.Data.O_TricepsBrachiiLaterale1_pos*.Mirror);};
+  AnyRefNode O_TricepsBrachiiLaterale2                   = {sRel = .Scale(.Data.O_TricepsBrachiiLaterale2_pos*.Mirror);};
 
   AnyRefNode O_Brach_rad_1                    = {sRel = .Scale(.Data.O_Brach_rad_1_pos*.Mirror);};
   AnyRefNode O_Brach_rad_2                    = {sRel = .Scale(.Data.O_Brach_rad_2_pos*.Mirror);};

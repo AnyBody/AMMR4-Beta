@@ -67,12 +67,12 @@ Scapula = {
   };
 
 
-  AnyRefNode triceps_LH_ellipsoid = {
+  AnyRefNode TricepsBrachiiLongumellipsoid = {
 
     sRel = .GHReactionCenterNode.sRel + (.GHReactionCenterNode.sRel-.gh.sRel);
-    ARel = RotMat(.O_Triceps_LH_2.sRel, .O_Triceps_LH_1.sRel, sRel)*RotMat(pi/2, y);
+    ARel = RotMat(.O_TricepsBrachiiLongum2.sRel, .O_TricepsBrachiiLongum1.sRel, sRel)*RotMat(pi/2, y);
     AnySurfEllipsoid surf = {
-      AnyVar ra = 0.97*min({vnorm(.sRel-..O_Triceps_LH_2.sRel), vnorm(.sRel-..O_Triceps_LH_1.sRel) });
+      AnyVar ra = 0.97*min({vnorm(.sRel-..O_TricepsBrachiiLongum2.sRel), vnorm(.sRel-..O_TricepsBrachiiLongum1.sRel) });
       Radius= {ra,ra,2.5*ra};
     };
 
@@ -378,8 +378,8 @@ Scapula = {
   AnyRefNode O_Biceps_SH                 = {sRel = .Scale(.Data.O_Biceps_SH_pos*.Mirror);};
   AnyRefNode O_Cor_brach_1               = {sRel = .Scale(.Data.O_Cor_brach_1_pos*.Mirror);};
   AnyRefNode O_Cor_brach_2               = {sRel = .Scale(.Data.O_Cor_brach_2_pos*.Mirror);};
-  AnyRefNode O_Triceps_LH_1              = {sRel = .Scale(.Data.O_Triceps_LH_1_pos*.Mirror);}; //corrected
-  AnyRefNode O_Triceps_LH_2              = {sRel = .Scale(.Data.O_Triceps_LH_2_pos*.Mirror);};//corrected
+  AnyRefNode O_TricepsBrachiiLongum1              = {sRel = .Scale(.Data.O_TricepsBrachiiLongum1_pos*.Mirror);}; //corrected
+  AnyRefNode O_TricepsBrachiiLongum2              = {sRel = .Scale(.Data.O_TricepsBrachiiLongum2_pos*.Mirror);};//corrected
 
 };
 

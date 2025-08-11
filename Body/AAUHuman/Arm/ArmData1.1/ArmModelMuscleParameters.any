@@ -634,7 +634,7 @@ AnyFolder Muscles =
     AnyFloat Fcfast ??= DesignVar(0.4); ///< Factor for determining shortening speed at optimum length
   };
 
-  AnyFolder Triceps_LH =
+  AnyFolder TricepsBrachiiLongum =
   {
     AnyString Muscle = "Triceps Long head"; ///< Descriptive name for the muscle, e.g. for plotting
     AnyIntVar MuscleElemAmount = 2; ///< The total amount of elements for this muscle
@@ -666,7 +666,7 @@ AnyFolder Muscles =
     AnyFloat Fcfast ??= DesignVar(0.4); ///< Factor for determining shortening speed at optimum length
   };
 
-  AnyFolder Triceps_ME =
+  AnyFolder TricepsBrachiiMediale =
   {
     AnyString Muscle = "Triceps medial head"; ///< Descriptive name for the muscle, e.g. for plotting
     AnyIntVar MuscleElemAmount = 2; ///< The total amount of elements for this muscle
@@ -682,7 +682,7 @@ AnyFolder Muscles =
     AnyFloat Fcfast ??= DesignVar(0.4); ///< Factor for determining shortening speed at optimum length
   };
 
-  AnyFolder Triceps_LA =
+  AnyFolder TricepsBrachiiLaterale =
   {
     AnyString Muscle = "Triceps lateral head"; ///< Descriptive name for the muscle, e.g. for plotting
     AnyIntVar MuscleElemAmount = 2; ///< The total amount of elements for this muscle

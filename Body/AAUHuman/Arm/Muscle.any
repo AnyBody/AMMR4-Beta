@@ -1656,12 +1656,12 @@ MuscleGroup Brachialis = {
   };
 };
 
-MuscleGroup Triceps = {
-  AnyMuscleShortestPath Triceps_LH_1 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.Triceps_LH_1;
-    AnyRefNode &Org = ...Segments.Scapula.O_Triceps_LH_1;
-    AnyRefNode &Via = ...Segments.Humerus.Via_Triceps_LH_1;
-    AnyRefNode &Ins = ...Segments.Ulna.I_Triceps_LH_1;
+MuscleGroup TricepsBrachiiLongum = {
+  AnyMuscleShortestPath TricepsBrachiiLongum1 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.TricepsBrachiiLongum1;
+    AnyRefNode &Org = ...Segments.Scapula.O_TricepsBrachiiLongum1;
+    AnyRefNode &Via = ...Segments.Humerus.Via_TricepsBrachiiLongum1;
+    AnyRefNode &Ins = ...Segments.Ulna.I_TricepsBrachiiLongum1;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     SPLine.StringMesh = 70;
     AnySurfCylinder &Surf1 = ..oleacron;
@@ -1679,65 +1679,69 @@ MuscleGroup Triceps = {
     };
   };
 
-  AnyMuscleShortestPath Triceps_LH_2 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.Triceps_LH_2;
-    AnyRefNode &Org = ...Segments.Scapula.O_Triceps_LH_2;
-    AnyRefNode &Via = ...Segments.Humerus.Via_Triceps_LH_2;
-    AnyRefNode &Ins = ...Segments.Ulna.I_Triceps_LH_2;
+  AnyMuscleShortestPath TricepsBrachiiLongum2 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.TricepsBrachiiLongum2;
+    AnyRefNode &Org = ...Segments.Scapula.O_TricepsBrachiiLongum2;
+    AnyRefNode &Via = ...Segments.Humerus.Via_TricepsBrachiiLongum2;
+    AnyRefNode &Ins = ...Segments.Ulna.I_TricepsBrachiiLongum2;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     SPLine.StringMesh = 70;
     AnySurfCylinder &Surf1 = ..oleacron;
     AnyParamSurf &Surf2 = ..TricepsLHWrapping.BASE_FRAME.Wrapping_1.Surf;
     SPLine = {
-      InitWrapPosVecArr = { &..Triceps_LH_1.SPLine.InitWrapPosProximal,  &..Triceps_LH_1.SPLine.InitWrapPosDistal};
+      InitWrapPosVecArr = { &..TricepsBrachiiLongum1.SPLine.InitWrapPosProximal,  &..TricepsBrachiiLongum1.SPLine.InitWrapPosDistal};
     };
   };
+};
 
-  AnyMuscleShortestPath Triceps_ME_1 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.Triceps_ME_1;
-    AnyRefNode &Org = ...Segments.Humerus.O_Triceps_ME_1;
-    AnyRefNode &Ins = ...Segments.Ulna.I_Triceps_ME_1;
+MuscleGroup TricepsBrachiiMediale = {
+  AnyMuscleShortestPath TricepsBrachiiMediale1 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.TricepsBrachiiMediale1;
+    AnyRefNode &Org = ...Segments.Humerus.O_TricepsBrachiiMediale1;
+    AnyRefNode &Ins = ...Segments.Ulna.I_TricepsBrachiiMediale1;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     SPLine.StringMesh = 100;
     AnySurfCylinder &Surf1 = ..oleacron;
     SPLine = {
-      InitWrapPosVecArr = { &..Triceps_LH_1.SPLine.InitWrapPosDistal };
+      InitWrapPosVecArr = { &...TricepsBrachiiLongum.TricepsBrachiiLongum1.SPLine.InitWrapPosDistal };
     };
   };
 
-  AnyMuscleShortestPath Triceps_ME_2 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.Triceps_ME_2;
-    AnyRefNode &Org = ...Segments.Humerus.O_Triceps_ME_2;
-    AnyRefNode &Ins = ...Segments.Ulna.I_Triceps_ME_2;
+  AnyMuscleShortestPath TricepsBrachiiMediale2 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.TricepsBrachiiMediale2;
+    AnyRefNode &Org = ...Segments.Humerus.O_TricepsBrachiiMediale2;
+    AnyRefNode &Ins = ...Segments.Ulna.I_TricepsBrachiiMediale2;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     SPLine.StringMesh = 90;
     AnySurfCylinder &Surf1 = ..oleacron;
     SPLine = {
-      InitWrapPosVecArr = { &..Triceps_LH_1.SPLine.InitWrapPosDistal };
+      InitWrapPosVecArr = { &...TricepsBrachiiLongum.TricepsBrachiiLongum1.SPLine.InitWrapPosDistal };
     };
   };
+};
 
-  AnyMuscleShortestPath Triceps_LA_1 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.Triceps_LA_1;
-    AnyRefNode &Org = ...Segments.Humerus.O_Triceps_LA_1;
-    AnyRefNode &Ins = ...Segments.Ulna.I_Triceps_LA_1;
+MuscleGroup TricepsBrachiiLaterale = {
+  AnyMuscleShortestPath TricepsBrachiiLaterale1 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.TricepsBrachiiLaterale1;
+    AnyRefNode &Org = ...Segments.Humerus.O_TricepsBrachiiLaterale1;
+    AnyRefNode &Ins = ...Segments.Ulna.I_TricepsBrachiiLaterale1;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     AnySurfCylinder &Surf1 = ..oleacron;
     SPLine.StringMesh = 90;
     SPLine = {
-      InitWrapPosVecArr = { &..Triceps_LH_1.SPLine.InitWrapPosDistal };
+      InitWrapPosVecArr = { &...TricepsBrachiiLongum.TricepsBrachiiLongum1.SPLine.InitWrapPosDistal };
     };
   };
 
-  AnyMuscleShortestPath Triceps_LA_2 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.Triceps_LA_2;
-    AnyRefNode &Org = ...Segments.Humerus.O_Triceps_LA_2;
-    AnyRefNode &Ins = ...Segments.Ulna.I_Triceps_LA_2;
+  AnyMuscleShortestPath TricepsBrachiiLaterale2 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.TricepsBrachiiLaterale2;
+    AnyRefNode &Org = ...Segments.Humerus.O_TricepsBrachiiLaterale2;
+    AnyRefNode &Ins = ...Segments.Ulna.I_TricepsBrachiiLaterale2;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     AnySurfCylinder &Surf1 = ..oleacron;
     SPLine.StringMesh = 90;
     SPLine = {
-      InitWrapPosVecArr = { &..Triceps_LH_1.SPLine.InitWrapPosDistal };
+      InitWrapPosVecArr = { &...TricepsBrachiiLongum.TricepsBrachiiLongum1.SPLine.InitWrapPosDistal };
     };
   };
 };

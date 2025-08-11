@@ -1730,27 +1730,27 @@ AnyMuscleModel TrapeziusClavicular6 =
 
 
 /////////////////////////////////////
-//     Triceps_LH (2 elements)     //
+//     TricepsBrachiiLongum (2 elements)     //
 /////////////////////////////////////
-AnyMuscleModel Triceps_LH_1 =
+AnyMuscleModel TricepsBrachiiLongum1 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Triceps_LH;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.TricepsBrachiiLongum;
   AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
   Lf0 ??= MuscleParameters.OptimalFiberlength / cos(pi/180*MuscleParameters.Pennationangle); //< Optimal fiber length corrected by pennation angle
-  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.Triceps_LH_1.Lf0 +.Triceps_LH_2.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.TricepsBrachiiLongum1.Lf0 +.TricepsBrachiiLongum2.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
 
-AnyMuscleModel Triceps_LH_2 =
+AnyMuscleModel TricepsBrachiiLongum2 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Triceps_LH;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.TricepsBrachiiLongum;
   AnyIntVar MuscleElemNo = 2; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
   Lf0 ??= MuscleParameters.OptimalFiberlength / cos(pi/180*MuscleParameters.Pennationangle); //< Optimal fiber length corrected by pennation angle
-  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.Triceps_LH_1.Lf0 +.Triceps_LH_2.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.TricepsBrachiiLongum1.Lf0 +.TricepsBrachiiLongum2.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
 
@@ -1788,27 +1788,27 @@ AnyMuscleModel Brachialis2 =
 
 
 /////////////////////////////////////
-//     Triceps_ME (2 elements)     //
+//     TricepsBrachiiMediale (2 elements)     //
 /////////////////////////////////////
-AnyMuscleModel Triceps_ME_1 =
+AnyMuscleModel TricepsBrachiiMediale1 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Triceps_ME;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.TricepsBrachiiMediale;
   AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
   Lf0 ??= MuscleParameters.OptimalFiberlength / cos(pi/180*MuscleParameters.Pennationangle); //< Optimal fiber length corrected by pennation angle
-  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.Triceps_ME_1.Lf0 +.Triceps_ME_2.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.TricepsBrachiiMediale1.Lf0 +.TricepsBrachiiMediale2.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
 
-AnyMuscleModel Triceps_ME_2 =
+AnyMuscleModel TricepsBrachiiMediale2 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Triceps_ME;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.TricepsBrachiiMediale;
   AnyIntVar MuscleElemNo = 2; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
   Lf0 ??= MuscleParameters.OptimalFiberlength / cos(pi/180*MuscleParameters.Pennationangle); //< Optimal fiber length corrected by pennation angle
-  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.Triceps_ME_1.Lf0 +.Triceps_ME_2.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.TricepsBrachiiMediale1.Lf0 +.TricepsBrachiiMediale2.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
 
@@ -1817,27 +1817,27 @@ AnyMuscleModel Triceps_ME_2 =
 
 
 /////////////////////////////////////
-//     Triceps_LA (2 elements)     //
+//     TricepsBrachiiLaterale (2 elements)     //
 /////////////////////////////////////
-AnyMuscleModel Triceps_LA_1 =
+AnyMuscleModel TricepsBrachiiLaterale1 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Triceps_LA;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.TricepsBrachiiLaterale;
   AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
   Lf0 ??= MuscleParameters.OptimalFiberlength / cos(pi/180*MuscleParameters.Pennationangle); //< Optimal fiber length corrected by pennation angle
-  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.Triceps_LA_1.Lf0 +.Triceps_LA_2.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.TricepsBrachiiLaterale1.Lf0 +.TricepsBrachiiLaterale2.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
 
-AnyMuscleModel Triceps_LA_2 =
+AnyMuscleModel TricepsBrachiiLaterale2 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Triceps_LA;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.TricepsBrachiiLaterale;
   AnyIntVar MuscleElemNo = 2; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
   Lf0 ??= MuscleParameters.OptimalFiberlength / cos(pi/180*MuscleParameters.Pennationangle); //< Optimal fiber length corrected by pennation angle
-  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.Triceps_LA_1.Lf0 +.Triceps_LA_2.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.TricepsBrachiiLaterale1.Lf0 +.TricepsBrachiiLaterale2.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
 
