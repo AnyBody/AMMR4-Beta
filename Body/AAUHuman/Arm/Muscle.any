@@ -1106,10 +1106,10 @@ MuscleGroup PectoralisMajorSternocostal = {
 };
 
 MuscleGroup PectoralisMajorClavicular = {
-  AnyMuscleShortestPath pectoralis_major_clavicular_part_1 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.pectoralis_major_clavicular_part_1;
-    AnyRefNode &Org = ...Segments.Clavicula.O_pectoralis_major_clavicular_part_1;
-    AnyRefNode &Ins = ...Segments.Humerus.I_pectoralis_major_clavicular_part_1;
+  AnyMuscleShortestPath PectoralisMajorClavicular1 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.PectoralisMajorClavicular1;
+    AnyRefNode &Org = ...Segments.Clavicula.O_PectoralisMajorClavicular1;
+    AnyRefNode &Ins = ...Segments.Humerus.I_PectoralisMajorClavicular1;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     SPLine.StringMesh = 60;
     AnyParamSurf& Surf = ..ThoraxWrappingSufaceSegRef.PectoralisWrappingEllipsoid;
@@ -1125,50 +1125,50 @@ MuscleGroup PectoralisMajorClavicular = {
     };
   };
 
-  AnyMuscleShortestPath pectoralis_major_clavicular_part_2 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.pectoralis_major_clavicular_part_2;
-    AnyRefNode &Org = ...Segments.Clavicula.O_pectoralis_major_clavicular_part_2;
-    AnyRefNode &Ins = ...Segments.Humerus.I_pectoralis_major_clavicular_part_2;
+  AnyMuscleShortestPath PectoralisMajorClavicular2 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.PectoralisMajorClavicular2;
+    AnyRefNode &Org = ...Segments.Clavicula.O_PectoralisMajorClavicular2;
+    AnyRefNode &Ins = ...Segments.Humerus.I_PectoralisMajorClavicular2;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     SPLine.StringMesh = 60;
     AnyParamSurf& Surf = ..ThoraxWrappingSufaceSegRef.PectoralisWrappingEllipsoid;
     AnyParamSurf& Surf3 = ..Pectoralis_minor1_cyl.Cylinder.Segment.Surf;
-    SPLine.InitWrapPosVecArr = .pectoralis_major_clavicular_part_1.SPLine.InitWrapPosVecArr;
+    SPLine.InitWrapPosVecArr = .PectoralisMajorClavicular1.SPLine.InitWrapPosVecArr;
   };
 
 
-  AnyMuscleShortestPath pectoralis_major_clavicular_part_3 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.pectoralis_major_clavicular_part_3;
-    AnyRefNode &Org = ...Segments.Clavicula.O_pectoralis_major_clavicular_part_3;
-    AnyRefNode &Ins = ...Segments.Humerus.I_pectoralis_major_clavicular_part_3;
+  AnyMuscleShortestPath PectoralisMajorClavicular3 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.PectoralisMajorClavicular3;
+    AnyRefNode &Org = ...Segments.Clavicula.O_PectoralisMajorClavicular3;
+    AnyRefNode &Ins = ...Segments.Humerus.I_PectoralisMajorClavicular3;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     SPLine.StringMesh = 50;
     AnyParamSurf& Surf = ..ThoraxWrappingSufaceSegRef.PectoralisWrappingEllipsoid;
     AnyParamSurf& Surf3 = ..Pectoralis_minor1_cyl.Cylinder.Segment.Surf;
-    SPLine.InitWrapPosVecArr = .pectoralis_major_clavicular_part_1.SPLine.InitWrapPosVecArr;
+    SPLine.InitWrapPosVecArr = .PectoralisMajorClavicular1.SPLine.InitWrapPosVecArr;
   };
 
 
-  AnyMuscleShortestPath pectoralis_major_clavicular_part_4 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.pectoralis_major_clavicular_part_4;
-    AnyRefNode &Org = ...Segments.Clavicula.O_pectoralis_major_clavicular_part_4;
-    AnyRefNode &Ins = ...Segments.Humerus.I_pectoralis_major_clavicular_part_4;
+  AnyMuscleShortestPath PectoralisMajorClavicular4 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.PectoralisMajorClavicular4;
+    AnyRefNode &Org = ...Segments.Clavicula.O_PectoralisMajorClavicular4;
+    AnyRefNode &Ins = ...Segments.Humerus.I_PectoralisMajorClavicular4;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     SPLine.StringMesh =40;
     AnyParamSurf& Surf = ..ThoraxWrappingSufaceSegRef.PectoralisWrappingEllipsoid;
     AnyParamSurf& Surf3 = ..Pectoralis_minor1_cyl.Cylinder.Segment.Surf;
-    SPLine.InitWrapPosVecArr = .pectoralis_major_clavicular_part_1.SPLine.InitWrapPosVecArr;
+    SPLine.InitWrapPosVecArr = .PectoralisMajorClavicular1.SPLine.InitWrapPosVecArr;
   };
 
-  AnyMuscleShortestPath pectoralis_major_clavicular_part_5 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.pectoralis_major_clavicular_part_5;
-    AnyRefNode &Org = ...Segments.Clavicula.O_pectoralis_major_clavicular_part_5;
-    AnyRefNode &Ins = ...Segments.Humerus.I_pectoralis_major_clavicular_part_5;
+  AnyMuscleShortestPath PectoralisMajorClavicular5 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.PectoralisMajorClavicular5;
+    AnyRefNode &Org = ...Segments.Clavicula.O_PectoralisMajorClavicular5;
+    AnyRefNode &Ins = ...Segments.Humerus.I_PectoralisMajorClavicular5;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     SPLine.StringMesh = 35;
     AnyParamSurf& Surf1 = ..ThoraxWrappingSufaceSegRef.PectoralisWrappingEllipsoid;
     AnyParamSurf& Surf3 = ..Pectoralis_minor1_cyl.Cylinder.Segment.Surf;
-    SPLine.InitWrapPosVecArr = .pectoralis_major_clavicular_part_1.SPLine.InitWrapPosVecArr;
+    SPLine.InitWrapPosVecArr = .PectoralisMajorClavicular1.SPLine.InitWrapPosVecArr;
   };
 };
 
