@@ -1173,24 +1173,24 @@ MuscleGroup PectoralisMajorClavicular = {
 };
 
 MuscleGroup PectoralisMinor = {
-  AnyMuscleViaPoint pectoralis_minor_1 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.pectoralis_minor_1;
-    AnyRefNode &Org = ..TrunkNodeAttachement.R3Seg.O_pectoralis_minor_1;
-    AnyRefNode &Ins = ...Segments.Scapula.I_pectoralis_minor_1;
+  AnyMuscleViaPoint PectoralisMinor1 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.PectoralisMinor1;
+    AnyRefNode &Org = ..TrunkNodeAttachement.R3Seg.O_PectoralisMinor1;
+    AnyRefNode &Ins = ...Segments.Scapula.I_PectoralisMinor1;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
-  AnyMuscleViaPoint pectoralis_minor_2 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.pectoralis_minor_2;
-    AnyRefNode &Org = ..TrunkNodeAttachement.R4Seg.O_pectoralis_minor_2;
-    AnyRefNode &Ins = ...Segments.Scapula.I_pectoralis_minor_2;
+  AnyMuscleViaPoint PectoralisMinor2 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.PectoralisMinor2;
+    AnyRefNode &Org = ..TrunkNodeAttachement.R4Seg.O_PectoralisMinor2;
+    AnyRefNode &Ins = ...Segments.Scapula.I_PectoralisMinor2;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
-  AnyMuscleViaPoint pectoralis_minor_3 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.pectoralis_minor_3;
-    AnyRefNode &Org = ..TrunkNodeAttachement.R5Seg.O_pectoralis_minor_3;
-    AnyRefNode &Ins = ...Segments.Scapula.I_pectoralis_minor_3;
+  AnyMuscleViaPoint PectoralisMinor3 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.PectoralisMinor3;
+    AnyRefNode &Org = ..TrunkNodeAttachement.R5Seg.O_PectoralisMinor3;
+    AnyRefNode &Ins = ...Segments.Scapula.I_PectoralisMinor3;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 };
@@ -2431,7 +2431,7 @@ MuscleGroup FlexorPollicisLongus = {
 
 AnyFolder Pectoralis_minor1_cyl={
 
-  AnyFolder& pectoralis_ref =  .TrunkNodeAttachement.R3Seg.O_pectoralis_minor_1;
+  AnyFolder& pectoralis_ref =  .TrunkNodeAttachement.R3Seg.O_PectoralisMinor1;
   pectoralis_ref = {
     AnyRefNode PectoralisWrapAttachement = {
       ARel = RotMat(-pi/2,x)*RotMat(pi/5*....Sign, x);
@@ -2445,9 +2445,9 @@ AnyFolder Pectoralis_minor1_cyl={
       vnorm(...Segments.Humerus.I_subscapularis_1.sRel - ...Segments.Humerus.I_subscapularis_5.sRel)
     );
     Segment.Axes0 = ..TrunkNodeAttachement.R3Seg.Axes0 * RotMat(-pi/2,x)*RotMat(pi/5*...Sign,x)*RotMat(-0.25,y);
-    Segment.r0 = ..TrunkNodeAttachement.R3Seg.r0 + ..TrunkNodeAttachement.R3Seg.O_pectoralis_minor_1.sRel*..TrunkNodeAttachement.R3Seg.Axes0';
+    Segment.r0 = ..TrunkNodeAttachement.R3Seg.r0 + ..TrunkNodeAttachement.R3Seg.O_PectoralisMinor1.sRel*..TrunkNodeAttachement.R3Seg.Axes0';
     AnyRefNode &StartNode = .pectoralis_ref.PectoralisWrapAttachement;
-    AnyRefNode &EndNode = ...Segments.Scapula.I_pectoralis_minor_1;
+    AnyRefNode &EndNode = ...Segments.Scapula.I_PectoralisMinor1;
   };
 };
 
