@@ -150,11 +150,11 @@ Radius = {
 
   AnyRefNode I_Biceps_LH                      = {sRel = .Scale(.Data.I_Biceps_LH_pos*.Mirror);};
   AnyRefNode I_Biceps_SH                      = {sRel = .Scale(.Data.I_Biceps_SH_pos*.Mirror);};
-  AnyRefNode I_Brach_rad_1                    = {sRel = .Scale(.Data.I_Brach_rad_1_pos*.Mirror);};
-  AnyRefNode I_Brach_rad_2                    = {sRel = .Scale(.Data.I_Brach_rad_2_pos*.Mirror);};
-  AnyRefNode I_Pronator_teres_caput_humeral_1 = {sRel = .Scale(.Data.I_Pronator_teres_caput_humeral_1_pos*.Mirror);};
-  AnyRefNode I_Pronator_teres_caput_humeral_2 = {sRel = .Scale(.Data.I_Pronator_teres_caput_humeral_2_pos*.Mirror);};
-  AnyRefNode I_Pronator_teres_caput_ulnare_1  = {sRel = .Scale(.Data.I_Pronator_teres_caput_ulnare_1_pos*.Mirror);};
+  AnyRefNode I_Brachioradialis1                    = {sRel = .Scale(.Data.I_Brachioradialis1_pos*.Mirror);};
+  AnyRefNode I_Brachioradialis2                    = {sRel = .Scale(.Data.I_Brachioradialis2_pos*.Mirror);};
+  AnyRefNode I_PronatorTeresHumeral1 = {sRel = .Scale(.Data.I_PronatorTeresHumeral1_pos*.Mirror);};
+  AnyRefNode I_PronatorTeresHumeral2 = {sRel = .Scale(.Data.I_PronatorTeresHumeral2_pos*.Mirror);};
+  AnyRefNode I_PronatorTeresUlnare1  = {sRel = .Scale(.Data.I_PronatorTeresUlnare1_pos*.Mirror);};
   AnyRefNode I_Supinator_humerus_part_1       = {sRel = .Scale(.Data.I_Supinator_humerus_part_1_pos*.Mirror);};
   AnyRefNode I_Supinator_humerus_part_2       = {sRel = .Scale(.Data.I_Supinator_humerus_part_2_pos*.Mirror);};
   AnyRefNode I_Supinator_ulna_part_1          = {sRel = .Scale(.Data.I_Supinator_ulna_part_1_pos*.Mirror);};

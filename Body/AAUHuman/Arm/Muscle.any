@@ -1747,10 +1747,10 @@ MuscleGroup TricepsBrachiiLaterale = {
 };
 
 MuscleGroup Brachioradialis = {
-  AnyMuscleShortestPath Brach_rad_1 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.Brach_rad_1;
-    AnyRefNode &Org = ...Segments.Humerus.O_Brach_rad_1;
-    AnyRefNode &Ins = ...Segments.Radius.I_Brach_rad_1;
+  AnyMuscleShortestPath Brachioradialis1 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.Brachioradialis1;
+    AnyRefNode &Org = ...Segments.Humerus.O_Brachioradialis1;
+    AnyRefNode &Ins = ...Segments.Radius.I_Brachioradialis1;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     AnySurfCylinder &Surf1 = ..condylus_hum;
     SPLine.StringMesh = 50;
@@ -1762,10 +1762,10 @@ MuscleGroup Brachioradialis = {
     };
   };
 
-  AnyMuscleShortestPath Brach_rad_2 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.Brach_rad_2;
-    AnyRefNode &Org = ...Segments.Humerus.O_Brach_rad_2;
-    AnyRefNode &Ins = ...Segments.Radius.I_Brach_rad_2;
+  AnyMuscleShortestPath Brachioradialis2 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.Brachioradialis2;
+    AnyRefNode &Org = ...Segments.Humerus.O_Brachioradialis2;
+    AnyRefNode &Ins = ...Segments.Radius.I_Brachioradialis2;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     AnySurfCylinder &Surf1 = ..condylus_hum;
     SPLine.StringMesh = 50;
@@ -1779,26 +1779,26 @@ MuscleGroup Brachioradialis = {
 };
 
 MuscleGroup Anconeus = {
-  AnyMuscleViaPoint Anconeus_1 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.Anconeus_1;
-    AnyRefNode &Org = ...Segments.Humerus.O_Anconeus_1;
-    AnyRefNode &Ins = ...Segments.Ulna.I_Anconeus_1;
+  AnyMuscleViaPoint Anconeus1 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.Anconeus1;
+    AnyRefNode &Org = ...Segments.Humerus.O_Anconeus1;
+    AnyRefNode &Ins = ...Segments.Ulna.I_Anconeus1;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
-  AnyMuscleViaPoint Anconeus_2 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.Anconeus_2;
-    AnyRefNode &Org = ...Segments.Humerus.O_Anconeus_2;
-    AnyRefNode &Ins = ...Segments.Ulna.I_Anconeus_2;
+  AnyMuscleViaPoint Anconeus2 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.Anconeus2;
+    AnyRefNode &Org = ...Segments.Humerus.O_Anconeus2;
+    AnyRefNode &Ins = ...Segments.Ulna.I_Anconeus2;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 };
 
 MuscleGroup PronatorTeres = {
-  AnyMuscleShortestPath Pronator_teres_caput_humeral_1 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.Pronator_teres_caput_humeral_1;
-    AnyRefNode &Org = ...Segments.Humerus.O_Pronator_teres_caput_humeral_1;
-    AnyRefNode &Ins = ...Segments.Radius.I_Pronator_teres_caput_humeral_1;
+  AnyMuscleShortestPath PronatorTeresHumeral1 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.PronatorTeresHumeral1;
+    AnyRefNode &Org = ...Segments.Humerus.O_PronatorTeresHumeral1;
+    AnyRefNode &Ins = ...Segments.Radius.I_PronatorTeresHumeral1;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     AnySurfCylinder &Surf1 = ..pronatorterescyl;
     SPLine.StringMesh = 45;
@@ -1811,10 +1811,10 @@ MuscleGroup PronatorTeres = {
     };
   };
 
-  AnyMuscleShortestPath Pronator_teres_caput_humeral_2 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.Pronator_teres_caput_humeral_2;
-    AnyRefNode &Org = ...Segments.Humerus.O_Pronator_teres_caput_humeral_2;
-    AnyRefNode &Ins = ...Segments.Radius.I_Pronator_teres_caput_humeral_2;
+  AnyMuscleShortestPath PronatorTeresHumeral2 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.PronatorTeresHumeral2;
+    AnyRefNode &Org = ...Segments.Humerus.O_PronatorTeresHumeral2;
+    AnyRefNode &Ins = ...Segments.Radius.I_PronatorTeresHumeral2;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     AnySurfCylinder &Surf1 = ..pronatorterescyl;
     SPLine.StringMesh = 45;
@@ -1827,10 +1827,10 @@ MuscleGroup PronatorTeres = {
     };
   };
 
-  AnyMuscleShortestPath Pronator_teres_caput_ulnare_1 = {
+  AnyMuscleShortestPath PronatorTeresUlnare1 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.Pronator_teres_caput_ulnare;
-    AnyRefNode &Org = ...Segments.Ulna.O_Pronator_teres_caput_ulnare_1;
-    AnyRefNode &Ins = ...Segments.Radius.I_Pronator_teres_caput_ulnare_1;
+    AnyRefNode &Org = ...Segments.Ulna.O_PronatorTeresUlnare1;
+    AnyRefNode &Ins = ...Segments.Radius.I_PronatorTeresUlnare1;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any" };
     AnySurfCylinder &Surf1 = ..pronatorterescyl;
     SPLine.StringMesh = 35;

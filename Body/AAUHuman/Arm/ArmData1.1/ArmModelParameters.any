@@ -224,13 +224,13 @@ AnyFolder Humerus = {
   AnyFloat O_TricepsBrachiiLaterale1_pos                   = {-0.004730, -0.136631 , 0.003461}+correction+OffSet;
   AnyFloat O_TricepsBrachiiLaterale2_pos                   = {0.001537, -0.249976 , 0.008110}+correction+OffSet;
 
-  AnyFloat O_Brach_rad_1_pos                    = {0.006551, -0.256586 , 0.006249}+Correction+OffSet;
-  AnyFloat O_Brach_rad_2_pos                    = {0.014044, -0.281510 , 0.007781}+Correction+OffSet;
+  AnyFloat O_Brachioradialis1_pos                    = {0.006551, -0.256586 , 0.006249}+Correction+OffSet;
+  AnyFloat O_Brachioradialis2_pos                    = {0.014044, -0.281510 , 0.007781}+Correction+OffSet;
 
-  AnyFloat O_Anconeus_1_pos                     = {0.028771, -0.339539 , -0.000896}+correction1+OffSet;
-  AnyFloat O_Anconeus_2_pos                     = {0.028771, -0.339539 , -0.000896}+correction1+OffSet;
-  AnyFloat O_Pronator_teres_caput_humeral_1_pos = {-0.021174, -0.314668 , -0.005204}+correction2+OffSet;
-  AnyFloat O_Pronator_teres_caput_humeral_2_pos = {-0.028689, -0.328224 , -0.003659}+correction2+OffSet;
+  AnyFloat O_Anconeus1_pos                     = {0.028771, -0.339539 , -0.000896}+correction1+OffSet;
+  AnyFloat O_Anconeus2_pos                     = {0.028771, -0.339539 , -0.000896}+correction1+OffSet;
+  AnyFloat O_PronatorTeresHumeral1_pos = {-0.021174, -0.314668 , -0.005204}+correction2+OffSet;
+  AnyFloat O_PronatorTeresHumeral2_pos = {-0.028689, -0.328224 , -0.003659}+correction2+OffSet;
 
   AnyFloat O_Supinator_humerus_part_1_pos       = {0.033931, -0.320036 , -0.002443}+correction3+OffSet;
   AnyFloat O_Supinator_humerus_part_2_pos       = {0.033931, -0.320036 , -0.002443}+correction3+OffSet;
@@ -325,11 +325,11 @@ AnyFolder Radius = {
 
   AnyFloat I_Biceps_LH_pos                      = {-0.004634000, 0.01056600, -0.006213000};
   AnyFloat I_Biceps_SH_pos                      = {-0.004634000, 0.01056600, -0.006213000};
-  AnyFloat I_Brach_rad_1_pos                    = {-0.2193890, -0.03859000, -0.002705000};
-  AnyFloat I_Brach_rad_2_pos                    = {-0.2193890, -0.03859000, -0.002705000};
-  AnyFloat I_Pronator_teres_caput_humeral_1_pos = {-0.09049500, -0.02641100, 0.0009360000};
-  AnyFloat I_Pronator_teres_caput_humeral_2_pos = {-0.09049500, -0.02641100, 0.0009360000};
-  AnyFloat I_Pronator_teres_caput_ulnare_1_pos  = {-0.09049500, -0.02641100, 0.0009360000};
+  AnyFloat I_Brachioradialis1_pos                    = {-0.2193890, -0.03859000, -0.002705000};
+  AnyFloat I_Brachioradialis2_pos                    = {-0.2193890, -0.03859000, -0.002705000};
+  AnyFloat I_PronatorTeresHumeral1_pos = {-0.09049500, -0.02641100, 0.0009360000};
+  AnyFloat I_PronatorTeresHumeral2_pos = {-0.09049500, -0.02641100, 0.0009360000};
+  AnyFloat I_PronatorTeresUlnare1_pos  = {-0.09049500, -0.02641100, 0.0009360000};
   AnyFloat I_Supinator_humerus_part_1_pos       = {-0.028773, -0.006842, -0.007679}+correction;
   AnyFloat I_Supinator_humerus_part_2_pos       = {-0.070989, -0.018006, -0.000749}+correction;
   AnyFloat I_Supinator_ulna_part_1_pos          = {-0.028773, -0.006842, -0.007679}+correction;
@@ -423,7 +423,7 @@ AnyFolder Ulna = {
   AnyVec3 correction2 ={-0.005,0.0,0.008};
 
 
-  AnyFloat O_Pronator_teres_caput_ulnare_1_pos = {0.039301, 0.014662, 0.001805}+correction2;
+  AnyFloat O_PronatorTeresUlnare1_pos = {0.039301, 0.014662, 0.001805}+correction2;
 
   AnyFloat O_Supinator_ulna_part_1_pos = {-0.012788, 0.033349, 0.010340}+correction1;
   AnyFloat O_Supinator_ulna_part_2_pos = {-0.003613, 0.059799, 0.016045}+correction1;
@@ -431,8 +431,8 @@ AnyFolder Ulna = {
   AnyFloat I_Brachialis2_pos = {0.017098,   0.038909, 0.007278}+correction0;
   AnyFloat I_TricepsBrachiiLongum1_pos = {0.017540,  -0.007721, 0.025663}+correction ;
   AnyFloat I_TricepsBrachiiLongum2_pos = {0.017540,  -0.007721, 0.025663}+correction ;
-  AnyFloat I_Anconeus_1_pos   = {0.008231,   0.027393, 0.031396};
-  AnyFloat I_Anconeus_2_pos   = {0.006305,   0.057521, 0.029827};
+  AnyFloat I_Anconeus1_pos   = {0.008231,   0.027393, 0.031396};
+  AnyFloat I_Anconeus2_pos   = {0.006305,   0.057521, 0.029827};
   AnyFloat I_TricepsBrachiiMediale1_pos = ({0.017540, -0.007721, 0.025663}+correction);
   AnyFloat I_TricepsBrachiiMediale2_pos = ({0.017540, -0.007721, 0.025663}+correction);
   AnyFloat I_TricepsBrachiiLaterale1_pos = ({0.017540, -0.007721, 0.025663}+correction);
