@@ -1261,14 +1261,14 @@ AnyMuscleModel3E LevatorScapulae4 =
 /////////////////////////////////////////////////////////
 //     pectoralis_major_thoracic_part (10 elements)     //
 /////////////////////////////////////////////////////////
-AnyMuscleModel3E pectoralis_major_thoracic_part_1 =
+AnyMuscleModel3E PectoralisMajorSternocostal1 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.pectoralis_major_thoracic_part;
   AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
   Lf0 ??= MuscleParameters.OptimalFiberlength; ///< Optimum fiber length
-  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.pectoralis_major_thoracic_part_1.Lf0 +.pectoralis_major_thoracic_part_2.Lf0 +.pectoralis_major_thoracic_part_3.Lf0 +.pectoralis_major_thoracic_part_4.Lf0 +.pectoralis_major_thoracic_part_5.Lf0 +.pectoralis_major_thoracic_part_6.Lf0 +.pectoralis_major_thoracic_part_7.Lf0 +.pectoralis_major_thoracic_part_8.Lf0 +.pectoralis_major_thoracic_part_9.Lf0 +.pectoralis_major_thoracic_part_10.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.PectoralisMajorSternocostal1.Lf0 +.PectoralisMajorSternocostal2.Lf0 +.PectoralisMajorSternocostal3.Lf0 +.PectoralisMajorSternocostal4.Lf0 +.PectoralisMajorSternocostal5.Lf0 +.PectoralisMajorSternocostal6.Lf0 +.PectoralisMajorSternocostal7.Lf0 +.PectoralisMajorSternocostal8.Lf0 +.PectoralisMajorSternocostal9.Lf0 +.PectoralisMajorSternocostal10.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 = 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
   Lt0 ??= max({MuscleParameters.TotalTendonLength, 0.001}); ///< Tendon slack length (Cannot be zero)
   Gamma0 ??= MuscleParameters.Pennationangle*(pi/180); ///< Pennation angle in radian
@@ -1281,14 +1281,14 @@ AnyMuscleModel3E pectoralis_major_thoracic_part_1 =
   PEFactor ??= .DefaultMusPar.PEFactor; ///< Parameter for influence of parallel stiffness
 };
 
-AnyMuscleModel3E pectoralis_major_thoracic_part_2 =
+AnyMuscleModel3E PectoralisMajorSternocostal2 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.pectoralis_major_thoracic_part;
   AnyIntVar MuscleElemNo = 2; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
   Lf0 ??= MuscleParameters.OptimalFiberlength; ///< Optimum fiber length
-  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.pectoralis_major_thoracic_part_1.Lf0 +.pectoralis_major_thoracic_part_2.Lf0 +.pectoralis_major_thoracic_part_3.Lf0 +.pectoralis_major_thoracic_part_4.Lf0 +.pectoralis_major_thoracic_part_5.Lf0 +.pectoralis_major_thoracic_part_6.Lf0 +.pectoralis_major_thoracic_part_7.Lf0 +.pectoralis_major_thoracic_part_8.Lf0 +.pectoralis_major_thoracic_part_9.Lf0 +.pectoralis_major_thoracic_part_10.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.PectoralisMajorSternocostal1.Lf0 +.PectoralisMajorSternocostal2.Lf0 +.PectoralisMajorSternocostal3.Lf0 +.PectoralisMajorSternocostal4.Lf0 +.PectoralisMajorSternocostal5.Lf0 +.PectoralisMajorSternocostal6.Lf0 +.PectoralisMajorSternocostal7.Lf0 +.PectoralisMajorSternocostal8.Lf0 +.PectoralisMajorSternocostal9.Lf0 +.PectoralisMajorSternocostal10.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 = 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
   Lt0 ??= max({MuscleParameters.TotalTendonLength, 0.001}); ///< Tendon slack length (Cannot be zero)
   Gamma0 ??= MuscleParameters.Pennationangle*(pi/180); ///< Pennation angle in radian
@@ -1301,14 +1301,14 @@ AnyMuscleModel3E pectoralis_major_thoracic_part_2 =
   PEFactor ??= .DefaultMusPar.PEFactor; ///< Parameter for influence of parallel stiffness
 };
 
-AnyMuscleModel3E pectoralis_major_thoracic_part_3 =
+AnyMuscleModel3E PectoralisMajorSternocostal3 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.pectoralis_major_thoracic_part;
   AnyIntVar MuscleElemNo = 3; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
   Lf0 ??= MuscleParameters.OptimalFiberlength; ///< Optimum fiber length
-  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.pectoralis_major_thoracic_part_1.Lf0 +.pectoralis_major_thoracic_part_2.Lf0 +.pectoralis_major_thoracic_part_3.Lf0 +.pectoralis_major_thoracic_part_4.Lf0 +.pectoralis_major_thoracic_part_5.Lf0 +.pectoralis_major_thoracic_part_6.Lf0 +.pectoralis_major_thoracic_part_7.Lf0 +.pectoralis_major_thoracic_part_8.Lf0 +.pectoralis_major_thoracic_part_9.Lf0 +.pectoralis_major_thoracic_part_10.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.PectoralisMajorSternocostal1.Lf0 +.PectoralisMajorSternocostal2.Lf0 +.PectoralisMajorSternocostal3.Lf0 +.PectoralisMajorSternocostal4.Lf0 +.PectoralisMajorSternocostal5.Lf0 +.PectoralisMajorSternocostal6.Lf0 +.PectoralisMajorSternocostal7.Lf0 +.PectoralisMajorSternocostal8.Lf0 +.PectoralisMajorSternocostal9.Lf0 +.PectoralisMajorSternocostal10.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 = 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
   Lt0 ??= max({MuscleParameters.TotalTendonLength, 0.001}); ///< Tendon slack length (Cannot be zero)
   Gamma0 ??= MuscleParameters.Pennationangle*(pi/180); ///< Pennation angle in radian
@@ -1321,14 +1321,14 @@ AnyMuscleModel3E pectoralis_major_thoracic_part_3 =
   PEFactor ??= .DefaultMusPar.PEFactor; ///< Parameter for influence of parallel stiffness
 };
 
-AnyMuscleModel3E pectoralis_major_thoracic_part_4 =
+AnyMuscleModel3E PectoralisMajorSternocostal4 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.pectoralis_major_thoracic_part;
   AnyIntVar MuscleElemNo = 4; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
   Lf0 ??= MuscleParameters.OptimalFiberlength; ///< Optimum fiber length
-  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.pectoralis_major_thoracic_part_1.Lf0 +.pectoralis_major_thoracic_part_2.Lf0 +.pectoralis_major_thoracic_part_3.Lf0 +.pectoralis_major_thoracic_part_4.Lf0 +.pectoralis_major_thoracic_part_5.Lf0 +.pectoralis_major_thoracic_part_6.Lf0 +.pectoralis_major_thoracic_part_7.Lf0 +.pectoralis_major_thoracic_part_8.Lf0 +.pectoralis_major_thoracic_part_9.Lf0 +.pectoralis_major_thoracic_part_10.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.PectoralisMajorSternocostal1.Lf0 +.PectoralisMajorSternocostal2.Lf0 +.PectoralisMajorSternocostal3.Lf0 +.PectoralisMajorSternocostal4.Lf0 +.PectoralisMajorSternocostal5.Lf0 +.PectoralisMajorSternocostal6.Lf0 +.PectoralisMajorSternocostal7.Lf0 +.PectoralisMajorSternocostal8.Lf0 +.PectoralisMajorSternocostal9.Lf0 +.PectoralisMajorSternocostal10.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 = 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
   Lt0 ??= max({MuscleParameters.TotalTendonLength, 0.001}); ///< Tendon slack length (Cannot be zero)
   Gamma0 ??= MuscleParameters.Pennationangle*(pi/180); ///< Pennation angle in radian
@@ -1341,14 +1341,14 @@ AnyMuscleModel3E pectoralis_major_thoracic_part_4 =
   PEFactor ??= .DefaultMusPar.PEFactor; ///< Parameter for influence of parallel stiffness
 };
 
-AnyMuscleModel3E pectoralis_major_thoracic_part_5 =
+AnyMuscleModel3E PectoralisMajorSternocostal5 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.pectoralis_major_thoracic_part;
   AnyIntVar MuscleElemNo = 5; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
   Lf0 ??= MuscleParameters.OptimalFiberlength; ///< Optimum fiber length
-  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.pectoralis_major_thoracic_part_1.Lf0 +.pectoralis_major_thoracic_part_2.Lf0 +.pectoralis_major_thoracic_part_3.Lf0 +.pectoralis_major_thoracic_part_4.Lf0 +.pectoralis_major_thoracic_part_5.Lf0 +.pectoralis_major_thoracic_part_6.Lf0 +.pectoralis_major_thoracic_part_7.Lf0 +.pectoralis_major_thoracic_part_8.Lf0 +.pectoralis_major_thoracic_part_9.Lf0 +.pectoralis_major_thoracic_part_10.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.PectoralisMajorSternocostal1.Lf0 +.PectoralisMajorSternocostal2.Lf0 +.PectoralisMajorSternocostal3.Lf0 +.PectoralisMajorSternocostal4.Lf0 +.PectoralisMajorSternocostal5.Lf0 +.PectoralisMajorSternocostal6.Lf0 +.PectoralisMajorSternocostal7.Lf0 +.PectoralisMajorSternocostal8.Lf0 +.PectoralisMajorSternocostal9.Lf0 +.PectoralisMajorSternocostal10.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 = 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
   Lt0 ??= max({MuscleParameters.TotalTendonLength, 0.001}); ///< Tendon slack length (Cannot be zero)
   Gamma0 ??= MuscleParameters.Pennationangle*(pi/180); ///< Pennation angle in radian
@@ -1361,14 +1361,14 @@ AnyMuscleModel3E pectoralis_major_thoracic_part_5 =
   PEFactor ??= .DefaultMusPar.PEFactor; ///< Parameter for influence of parallel stiffness
 };
 
-AnyMuscleModel3E pectoralis_major_thoracic_part_6 =
+AnyMuscleModel3E PectoralisMajorSternocostal6 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.pectoralis_major_thoracic_part;
   AnyIntVar MuscleElemNo = 6; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
   Lf0 ??= MuscleParameters.OptimalFiberlength; ///< Optimum fiber length
-  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.pectoralis_major_thoracic_part_1.Lf0 +.pectoralis_major_thoracic_part_2.Lf0 +.pectoralis_major_thoracic_part_3.Lf0 +.pectoralis_major_thoracic_part_4.Lf0 +.pectoralis_major_thoracic_part_5.Lf0 +.pectoralis_major_thoracic_part_6.Lf0 +.pectoralis_major_thoracic_part_7.Lf0 +.pectoralis_major_thoracic_part_8.Lf0 +.pectoralis_major_thoracic_part_9.Lf0 +.pectoralis_major_thoracic_part_10.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.PectoralisMajorSternocostal1.Lf0 +.PectoralisMajorSternocostal2.Lf0 +.PectoralisMajorSternocostal3.Lf0 +.PectoralisMajorSternocostal4.Lf0 +.PectoralisMajorSternocostal5.Lf0 +.PectoralisMajorSternocostal6.Lf0 +.PectoralisMajorSternocostal7.Lf0 +.PectoralisMajorSternocostal8.Lf0 +.PectoralisMajorSternocostal9.Lf0 +.PectoralisMajorSternocostal10.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 = 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
   Lt0 ??= max({MuscleParameters.TotalTendonLength, 0.001}); ///< Tendon slack length (Cannot be zero)
   Gamma0 ??= MuscleParameters.Pennationangle*(pi/180); ///< Pennation angle in radian
@@ -1381,14 +1381,14 @@ AnyMuscleModel3E pectoralis_major_thoracic_part_6 =
   PEFactor ??= .DefaultMusPar.PEFactor; ///< Parameter for influence of parallel stiffness
 };
 
-AnyMuscleModel3E pectoralis_major_thoracic_part_7 =
+AnyMuscleModel3E PectoralisMajorSternocostal7 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.pectoralis_major_thoracic_part;
   AnyIntVar MuscleElemNo = 7; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
   Lf0 ??= MuscleParameters.OptimalFiberlength; ///< Optimum fiber length
-  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.pectoralis_major_thoracic_part_1.Lf0 +.pectoralis_major_thoracic_part_2.Lf0 +.pectoralis_major_thoracic_part_3.Lf0 +.pectoralis_major_thoracic_part_4.Lf0 +.pectoralis_major_thoracic_part_5.Lf0 +.pectoralis_major_thoracic_part_6.Lf0 +.pectoralis_major_thoracic_part_7.Lf0 +.pectoralis_major_thoracic_part_8.Lf0 +.pectoralis_major_thoracic_part_9.Lf0 +.pectoralis_major_thoracic_part_10.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.PectoralisMajorSternocostal1.Lf0 +.PectoralisMajorSternocostal2.Lf0 +.PectoralisMajorSternocostal3.Lf0 +.PectoralisMajorSternocostal4.Lf0 +.PectoralisMajorSternocostal5.Lf0 +.PectoralisMajorSternocostal6.Lf0 +.PectoralisMajorSternocostal7.Lf0 +.PectoralisMajorSternocostal8.Lf0 +.PectoralisMajorSternocostal9.Lf0 +.PectoralisMajorSternocostal10.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 = 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
   Lt0 ??= max({MuscleParameters.TotalTendonLength, 0.001}); ///< Tendon slack length (Cannot be zero)
   Gamma0 ??= MuscleParameters.Pennationangle*(pi/180); ///< Pennation angle in radian
@@ -1401,14 +1401,14 @@ AnyMuscleModel3E pectoralis_major_thoracic_part_7 =
   PEFactor ??= .DefaultMusPar.PEFactor; ///< Parameter for influence of parallel stiffness
 };
 
-AnyMuscleModel3E pectoralis_major_thoracic_part_8 =
+AnyMuscleModel3E PectoralisMajorSternocostal8 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.pectoralis_major_thoracic_part;
   AnyIntVar MuscleElemNo = 8; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
   Lf0 ??= MuscleParameters.OptimalFiberlength; ///< Optimum fiber length
-  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.pectoralis_major_thoracic_part_1.Lf0 +.pectoralis_major_thoracic_part_2.Lf0 +.pectoralis_major_thoracic_part_3.Lf0 +.pectoralis_major_thoracic_part_4.Lf0 +.pectoralis_major_thoracic_part_5.Lf0 +.pectoralis_major_thoracic_part_6.Lf0 +.pectoralis_major_thoracic_part_7.Lf0 +.pectoralis_major_thoracic_part_8.Lf0 +.pectoralis_major_thoracic_part_9.Lf0 +.pectoralis_major_thoracic_part_10.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.PectoralisMajorSternocostal1.Lf0 +.PectoralisMajorSternocostal2.Lf0 +.PectoralisMajorSternocostal3.Lf0 +.PectoralisMajorSternocostal4.Lf0 +.PectoralisMajorSternocostal5.Lf0 +.PectoralisMajorSternocostal6.Lf0 +.PectoralisMajorSternocostal7.Lf0 +.PectoralisMajorSternocostal8.Lf0 +.PectoralisMajorSternocostal9.Lf0 +.PectoralisMajorSternocostal10.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 = 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
   Lt0 ??= max({MuscleParameters.TotalTendonLength, 0.001}); ///< Tendon slack length (Cannot be zero)
   Gamma0 ??= MuscleParameters.Pennationangle*(pi/180); ///< Pennation angle in radian
@@ -1421,14 +1421,14 @@ AnyMuscleModel3E pectoralis_major_thoracic_part_8 =
   PEFactor ??= .DefaultMusPar.PEFactor; ///< Parameter for influence of parallel stiffness
 };
 
-AnyMuscleModel3E pectoralis_major_thoracic_part_9 =
+AnyMuscleModel3E PectoralisMajorSternocostal9 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.pectoralis_major_thoracic_part;
   AnyIntVar MuscleElemNo = 9; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
   Lf0 ??= MuscleParameters.OptimalFiberlength; ///< Optimum fiber length
-  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.pectoralis_major_thoracic_part_1.Lf0 +.pectoralis_major_thoracic_part_2.Lf0 +.pectoralis_major_thoracic_part_3.Lf0 +.pectoralis_major_thoracic_part_4.Lf0 +.pectoralis_major_thoracic_part_5.Lf0 +.pectoralis_major_thoracic_part_6.Lf0 +.pectoralis_major_thoracic_part_7.Lf0 +.pectoralis_major_thoracic_part_8.Lf0 +.pectoralis_major_thoracic_part_9.Lf0 +.pectoralis_major_thoracic_part_10.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.PectoralisMajorSternocostal1.Lf0 +.PectoralisMajorSternocostal2.Lf0 +.PectoralisMajorSternocostal3.Lf0 +.PectoralisMajorSternocostal4.Lf0 +.PectoralisMajorSternocostal5.Lf0 +.PectoralisMajorSternocostal6.Lf0 +.PectoralisMajorSternocostal7.Lf0 +.PectoralisMajorSternocostal8.Lf0 +.PectoralisMajorSternocostal9.Lf0 +.PectoralisMajorSternocostal10.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 = 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
   Lt0 ??= max({MuscleParameters.TotalTendonLength, 0.001}); ///< Tendon slack length (Cannot be zero)
   Gamma0 ??= MuscleParameters.Pennationangle*(pi/180); ///< Pennation angle in radian
@@ -1441,14 +1441,14 @@ AnyMuscleModel3E pectoralis_major_thoracic_part_9 =
   PEFactor ??= .DefaultMusPar.PEFactor; ///< Parameter for influence of parallel stiffness
 };
 
-AnyMuscleModel3E pectoralis_major_thoracic_part_10 =
+AnyMuscleModel3E PectoralisMajorSternocostal10 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.pectoralis_major_thoracic_part;
   AnyIntVar MuscleElemNo = 10; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
   Lf0 ??= MuscleParameters.OptimalFiberlength; ///< Optimum fiber length
-  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.pectoralis_major_thoracic_part_1.Lf0 +.pectoralis_major_thoracic_part_2.Lf0 +.pectoralis_major_thoracic_part_3.Lf0 +.pectoralis_major_thoracic_part_4.Lf0 +.pectoralis_major_thoracic_part_5.Lf0 +.pectoralis_major_thoracic_part_6.Lf0 +.pectoralis_major_thoracic_part_7.Lf0 +.pectoralis_major_thoracic_part_8.Lf0 +.pectoralis_major_thoracic_part_9.Lf0 +.pectoralis_major_thoracic_part_10.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.PectoralisMajorSternocostal1.Lf0 +.PectoralisMajorSternocostal2.Lf0 +.PectoralisMajorSternocostal3.Lf0 +.PectoralisMajorSternocostal4.Lf0 +.PectoralisMajorSternocostal5.Lf0 +.PectoralisMajorSternocostal6.Lf0 +.PectoralisMajorSternocostal7.Lf0 +.PectoralisMajorSternocostal8.Lf0 +.PectoralisMajorSternocostal9.Lf0 +.PectoralisMajorSternocostal10.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 = 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
   Lt0 ??= max({MuscleParameters.TotalTendonLength, 0.001}); ///< Tendon slack length (Cannot be zero)
   Gamma0 ??= MuscleParameters.Pennationangle*(pi/180); ///< Pennation angle in radian

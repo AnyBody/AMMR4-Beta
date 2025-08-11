@@ -11,10 +11,10 @@ ThoraxWrappingSufaceSegRef = {
 
   AnySurfEllipsoid PectoralisWrappingEllipsoid = {
     // Use pectoralis origins to define the main axis of the ellip
-    ARel = RotMat({0,0,0}, {0,0,1}, ..PectoralisMajorThoracic.pectoralis_major_thoracic_part_4.Org.sRel-..PectoralisMajorThoracic.pectoralis_major_thoracic_part_9.Org.sRel)*{{0,0,1},{0,-1,0},{1,0,0}};
-    sRel = 0.5*..PectoralisMajorThoracic.pectoralis_major_thoracic_part_6.Org.sRel + 0.5*.....Trunk.Segments.T7Seg.T6T7JntNode.sRel;  
+    ARel = RotMat({0,0,0}, {0,0,1}, ..PectoralisMajorSternocostal.PectoralisMajorSternocostal4.Org.sRel-..PectoralisMajorSternocostal.PectoralisMajorSternocostal9.Org.sRel)*{{0,0,1},{0,-1,0},{1,0,0}};
+    sRel = 0.5*..PectoralisMajorSternocostal.PectoralisMajorSternocostal6.Org.sRel + 0.5*.....Trunk.Segments.T7Seg.T6T7JntNode.sRel;  
     Radius = { 
-      0.98*(..PectoralisMajorThoracic.pectoralis_major_thoracic_part_6.Org.sRel-sRel)*ARel'[0]',
+      0.98*(..PectoralisMajorSternocostal.PectoralisMajorSternocostal6.Org.sRel-sRel)*ARel'[0]',
       (.....Trunk.Segments.T1Seg.T1C7JntNode.sRel-sRel)*ARel'[1]',
       #if _SIDE_==Right
       1.04*(.....Trunk.Segments.Right.R5Seg.IC_R5_Ant_R_Ins.sRel-sRel)*ARel'[2]',

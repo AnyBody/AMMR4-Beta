@@ -988,11 +988,11 @@ MuscleGroup LatissimusDorsi = {
 };
 
 
-MuscleGroup PectoralisMajorThoracic = {
-  AnyMuscleShortestPath pectoralis_major_thoracic_part_1 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.pectoralis_major_thoracic_part_1;
-    AnyRefNode &Org = ..TrunkNodeAttachement.SternalBodySeg.O_pectoralis_major_thoracic_part_1;
-    AnyRefNode &Ins = ...Segments.Humerus.I_pectoralis_major_thoracic_part_1;
+MuscleGroup PectoralisMajorSternocostal = {
+  AnyMuscleShortestPath PectoralisMajorSternocostal1 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.PectoralisMajorSternocostal1;
+    AnyRefNode &Org = ..TrunkNodeAttachement.SternalBodySeg.O_PectoralisMajorSternocostal1;
+    AnyRefNode &Ins = ...Segments.Humerus.I_PectoralisMajorSternocostal1;
     SPLine.StringMesh = 40;
     AnyParamSurf& Surf = ..ThoraxWrappingSufaceSegRef.PectoralisWrappingEllipsoid;
     SPLine = {
@@ -1004,80 +1004,80 @@ MuscleGroup PectoralisMajorThoracic = {
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
-  AnyMuscleShortestPath pectoralis_major_thoracic_part_2 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.pectoralis_major_thoracic_part_2;
-    AnyRefNode &Org = ..TrunkNodeAttachement.SternalBodySeg.O_pectoralis_major_thoracic_part_2;
-    AnyRefNode &Ins = ...Segments.Humerus.I_pectoralis_major_thoracic_part_2;
+  AnyMuscleShortestPath PectoralisMajorSternocostal2 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.PectoralisMajorSternocostal2;
+    AnyRefNode &Org = ..TrunkNodeAttachement.SternalBodySeg.O_PectoralisMajorSternocostal2;
+    AnyRefNode &Ins = ...Segments.Humerus.I_PectoralisMajorSternocostal2;
     SPLine.StringMesh = 40;
     AnyParamSurf& Surf = ..ThoraxWrappingSufaceSegRef.PectoralisWrappingEllipsoid;
-    SPLine.InitWrapPosVecArr = .pectoralis_major_thoracic_part_1.SPLine.InitWrapPosVecArr;
+    SPLine.InitWrapPosVecArr = .PectoralisMajorSternocostal1.SPLine.InitWrapPosVecArr;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
-  AnyMuscleShortestPath pectoralis_major_thoracic_part_3 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.pectoralis_major_thoracic_part_3;
-    AnyRefNode &Org = ..TrunkNodeAttachement.SternalBodySeg.O_pectoralis_major_thoracic_part_3;
-    AnyRefNode &Ins = ...Segments.Humerus.I_pectoralis_major_thoracic_part_3;
+  AnyMuscleShortestPath PectoralisMajorSternocostal3 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.PectoralisMajorSternocostal3;
+    AnyRefNode &Org = ..TrunkNodeAttachement.SternalBodySeg.O_PectoralisMajorSternocostal3;
+    AnyRefNode &Ins = ...Segments.Humerus.I_PectoralisMajorSternocostal3;
     SPLine.StringMesh = 40;
     AnyParamSurf& Surf = ..ThoraxWrappingSufaceSegRef.PectoralisWrappingEllipsoid;
-    SPLine.InitWrapPosVecArr = .pectoralis_major_thoracic_part_1.SPLine.InitWrapPosVecArr;
+    SPLine.InitWrapPosVecArr = .PectoralisMajorSternocostal1.SPLine.InitWrapPosVecArr;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
-  AnyMuscleShortestPath pectoralis_major_thoracic_part_4 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.pectoralis_major_thoracic_part_4;
-    AnyRefNode &Org = ..TrunkNodeAttachement.SternalBodySeg.O_pectoralis_major_thoracic_part_4;
-    AnyRefNode &Ins = ...Segments.Humerus.I_pectoralis_major_thoracic_part_4;
+  AnyMuscleShortestPath PectoralisMajorSternocostal4 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.PectoralisMajorSternocostal4;
+    AnyRefNode &Org = ..TrunkNodeAttachement.SternalBodySeg.O_PectoralisMajorSternocostal4;
+    AnyRefNode &Ins = ...Segments.Humerus.I_PectoralisMajorSternocostal4;
     SPLine.StringMesh = 40;
     AnyParamSurf& Surf = ..ThoraxWrappingSufaceSegRef.PectoralisWrappingEllipsoid;
-    SPLine.InitWrapPosVecArr = .pectoralis_major_thoracic_part_1.SPLine.InitWrapPosVecArr;
+    SPLine.InitWrapPosVecArr = .PectoralisMajorSternocostal1.SPLine.InitWrapPosVecArr;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
-  AnyMuscleShortestPath pectoralis_major_thoracic_part_5 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.pectoralis_major_thoracic_part_5;
-    AnyRefNode &Org = ..TrunkNodeAttachement.SternalBodySeg.O_pectoralis_major_thoracic_part_5;
-    AnyRefNode &Ins = ...Segments.Humerus.I_pectoralis_major_thoracic_part_5;
+  AnyMuscleShortestPath PectoralisMajorSternocostal5 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.PectoralisMajorSternocostal5;
+    AnyRefNode &Org = ..TrunkNodeAttachement.SternalBodySeg.O_PectoralisMajorSternocostal5;
+    AnyRefNode &Ins = ...Segments.Humerus.I_PectoralisMajorSternocostal5;
     SPLine.StringMesh = 40;
     AnyParamSurf& Surf = ..ThoraxWrappingSufaceSegRef.PectoralisWrappingEllipsoid;
-    SPLine.InitWrapPosVecArr = .pectoralis_major_thoracic_part_1.SPLine.InitWrapPosVecArr;
+    SPLine.InitWrapPosVecArr = .PectoralisMajorSternocostal1.SPLine.InitWrapPosVecArr;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
-  AnyMuscleShortestPath pectoralis_major_thoracic_part_6 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.pectoralis_major_thoracic_part_6;
-    AnyRefNode &Org = ..TrunkNodeAttachement.SternalBodySeg.O_pectoralis_major_thoracic_part_6;
-    AnyRefNode &Ins = ...Segments.Humerus.I_pectoralis_major_thoracic_part_6;
+  AnyMuscleShortestPath PectoralisMajorSternocostal6 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.PectoralisMajorSternocostal6;
+    AnyRefNode &Org = ..TrunkNodeAttachement.SternalBodySeg.O_PectoralisMajorSternocostal6;
+    AnyRefNode &Ins = ...Segments.Humerus.I_PectoralisMajorSternocostal6;
     SPLine.StringMesh = 40;
     AnyParamSurf& Surf = ..ThoraxWrappingSufaceSegRef.PectoralisWrappingEllipsoid;
-    SPLine.InitWrapPosVecArr = .pectoralis_major_thoracic_part_1.SPLine.InitWrapPosVecArr;
+    SPLine.InitWrapPosVecArr = .PectoralisMajorSternocostal1.SPLine.InitWrapPosVecArr;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
-  AnyMuscleShortestPath pectoralis_major_thoracic_part_7 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.pectoralis_major_thoracic_part_7;
-    AnyRefNode &Org = ..TrunkNodeAttachement.SternalBodySeg.O_pectoralis_major_thoracic_part_7;
-    AnyRefNode &Ins = ...Segments.Humerus.I_pectoralis_major_thoracic_part_7;
+  AnyMuscleShortestPath PectoralisMajorSternocostal7 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.PectoralisMajorSternocostal7;
+    AnyRefNode &Org = ..TrunkNodeAttachement.SternalBodySeg.O_PectoralisMajorSternocostal7;
+    AnyRefNode &Ins = ...Segments.Humerus.I_PectoralisMajorSternocostal7;
     SPLine.StringMesh = 40;
     AnyParamSurf& Surf = ..ThoraxWrappingSufaceSegRef.PectoralisWrappingEllipsoid;
-    SPLine.InitWrapPosVecArr = .pectoralis_major_thoracic_part_1.SPLine.InitWrapPosVecArr;
+    SPLine.InitWrapPosVecArr = .PectoralisMajorSternocostal1.SPLine.InitWrapPosVecArr;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
-  AnyMuscleShortestPath pectoralis_major_thoracic_part_8 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.pectoralis_major_thoracic_part_8;
-    AnyRefNode &Org = ..TrunkNodeAttachement.SternalBodySeg.O_pectoralis_major_thoracic_part_8;
-    AnyRefNode &Ins = ...Segments.Humerus.I_pectoralis_major_thoracic_part_8;
+  AnyMuscleShortestPath PectoralisMajorSternocostal8 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.PectoralisMajorSternocostal8;
+    AnyRefNode &Org = ..TrunkNodeAttachement.SternalBodySeg.O_PectoralisMajorSternocostal8;
+    AnyRefNode &Ins = ...Segments.Humerus.I_PectoralisMajorSternocostal8;
     SPLine.StringMesh = 40;
     AnyParamSurf& Surf = ..ThoraxWrappingSufaceSegRef.PectoralisWrappingEllipsoid;
-    SPLine.InitWrapPosVecArr = .pectoralis_major_thoracic_part_1.SPLine.InitWrapPosVecArr;
+    SPLine.InitWrapPosVecArr = .PectoralisMajorSternocostal1.SPLine.InitWrapPosVecArr;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
-  AnyMuscleShortestPath pectoralis_major_thoracic_part_9 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.pectoralis_major_thoracic_part_9;
-    AnyRefNode &Org = ..TrunkNodeAttachement.ManubriumSeg.O_pectoralis_major_thoracic_part_9;
-    AnyRefNode &Ins = ...Segments.Humerus.I_pectoralis_major_thoracic_part_9;
+  AnyMuscleShortestPath PectoralisMajorSternocostal9 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.PectoralisMajorSternocostal9;
+    AnyRefNode &Org = ..TrunkNodeAttachement.ManubriumSeg.O_PectoralisMajorSternocostal9;
+    AnyRefNode &Ins = ...Segments.Humerus.I_PectoralisMajorSternocostal9;
     SPLine.StringMesh = 70;
     AnyParamSurf& Surf = ..ThoraxWrappingSufaceSegRef.PectoralisWrappingEllipsoid;
     AnyParamSurf& Surf1 = ..Pectoralis_minor1_cyl.Cylinder.Segment.Surf;
@@ -1093,14 +1093,14 @@ MuscleGroup PectoralisMajorThoracic = {
 
   };
 
-  AnyMuscleShortestPath pectoralis_major_thoracic_part_10 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.pectoralis_major_thoracic_part_10;
-    AnyRefNode &Org = ..TrunkNodeAttachement.ManubriumSeg.O_pectoralis_major_thoracic_part_10;
-    AnyRefNode &Ins = ...Segments.Humerus.I_pectoralis_major_thoracic_part_10;
+  AnyMuscleShortestPath PectoralisMajorSternocostal10 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.PectoralisMajorSternocostal10;
+    AnyRefNode &Org = ..TrunkNodeAttachement.ManubriumSeg.O_PectoralisMajorSternocostal10;
+    AnyRefNode &Ins = ...Segments.Humerus.I_PectoralisMajorSternocostal10;
     SPLine.StringMesh = 70;
     AnyParamSurf& Surf = ..ThoraxWrappingSufaceSegRef.PectoralisWrappingEllipsoid;
     AnyParamSurf& Surf1 = ..Pectoralis_minor1_cyl.Cylinder.Segment.Surf;
-    SPLine.InitWrapPosVecArr = .pectoralis_major_thoracic_part_9.SPLine.InitWrapPosVecArr;
+    SPLine.InitWrapPosVecArr = .PectoralisMajorSternocostal9.SPLine.InitWrapPosVecArr;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 };
