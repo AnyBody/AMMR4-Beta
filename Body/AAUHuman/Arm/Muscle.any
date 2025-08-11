@@ -1338,13 +1338,13 @@ MuscleGroup SerratusAnterior = {
 };
 
 MuscleGroup Subscapularis = {
-  AnyMuscleShortestPath subscapularis_1 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.subscapularis_1;
-    AnyRefNode &Org = ...Segments.Scapula.O_subscapularis_1;
-    AnyRefNode &Ins = ...Segments.Humerus.I_subscapularis_1;
+  AnyMuscleShortestPath Subscapularis1 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.Subscapularis1;
+    AnyRefNode &Org = ...Segments.Scapula.O_Subscapularis1;
+    AnyRefNode &Ins = ...Segments.Humerus.I_Subscapularis1;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     SPLine.StringMesh = 100;
-    AnyParamSurf &Surf1 = ...Segments.Scapula.subscapularis_torus.surface;
+    AnyParamSurf &Surf1 = ...Segments.Scapula.Subscapularistorus.surface;
     AnyParamSurf &Surf2 = ...Segments.Humerus.SubscapularisHumerusWrapping.cyl;
     SPLine = {
       AnyMatrix InitWrapPos = {
@@ -1360,68 +1360,68 @@ MuscleGroup Subscapularis = {
     };
   };
 
-  AnyMuscleShortestPath subscapularis_2 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.subscapularis_2;
-    AnyRefNode &Org = ...Segments.Scapula.O_subscapularis_2;
-    AnyRefNode &Ins = ...Segments.Humerus.I_subscapularis_2;
+  AnyMuscleShortestPath Subscapularis2 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.Subscapularis2;
+    AnyRefNode &Org = ...Segments.Scapula.O_Subscapularis2;
+    AnyRefNode &Ins = ...Segments.Humerus.I_Subscapularis2;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     SPLine.StringMesh = 100;
-    AnyParamSurf &Surf1 = ...Segments.Scapula.subscapularis_torus.surface;
+    AnyParamSurf &Surf1 = ...Segments.Scapula.Subscapularistorus.surface;
     AnyParamSurf &Surf2 = ...Segments.Humerus.SubscapularisHumerusWrapping.cyl;
-    SPLine.InitWrapPosVecArr = .subscapularis_1.SPLine.InitWrapPosVecArr;
+    SPLine.InitWrapPosVecArr = .Subscapularis1.SPLine.InitWrapPosVecArr;
   };
 
-  AnyMuscleShortestPath subscapularis_3 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.subscapularis_3;
-    AnyRefNode &Org = ...Segments.Scapula.O_subscapularis_3;
-    AnyRefNode &Ins = ...Segments.Humerus.I_subscapularis_3;
+  AnyMuscleShortestPath Subscapularis3 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.Subscapularis3;
+    AnyRefNode &Org = ...Segments.Scapula.O_Subscapularis3;
+    AnyRefNode &Ins = ...Segments.Humerus.I_Subscapularis3;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     SPLine.StringMesh =100;
-    AnyParamSurf &Surf1 = ...Segments.Scapula.subscapularis_torus.surface;
+    AnyParamSurf &Surf1 = ...Segments.Scapula.Subscapularistorus.surface;
     AnyParamSurf &Surf2 = ...Segments.Humerus.SubscapularisHumerusWrapping.cyl;
-    SPLine.InitWrapPosVecArr = .subscapularis_1.SPLine.InitWrapPosVecArr;
+    SPLine.InitWrapPosVecArr = .Subscapularis1.SPLine.InitWrapPosVecArr;
   };
 
 
-  AnyMuscleShortestPath subscapularis_4 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.subscapularis_4;
-    AnyRefNode &Org = ...Segments.Scapula.O_subscapularis_4;
-    AnyRefNode &Ins = ...Segments.Humerus.I_subscapularis_4;
+  AnyMuscleShortestPath Subscapularis4 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.Subscapularis4;
+    AnyRefNode &Org = ...Segments.Scapula.O_Subscapularis4;
+    AnyRefNode &Ins = ...Segments.Humerus.I_Subscapularis4;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     SPLine.StringMesh = 100;
-    AnyParamSurf &Surf1 = ...Segments.Scapula.subscapularis_torus.surface;
+    AnyParamSurf &Surf1 = ...Segments.Scapula.Subscapularistorus.surface;
     AnyParamSurf &Surf2 = ...Segments.Humerus.SubscapularisHumerusWrapping.cyl;
-    SPLine.InitWrapPosVecArr = .subscapularis_1.SPLine.InitWrapPosVecArr;
+    SPLine.InitWrapPosVecArr = .Subscapularis1.SPLine.InitWrapPosVecArr;
   };
 
-  AnyMuscleShortestPath subscapularis_5 = {
-    AnyMuscleModel &MusMdl =  ...MuscleModels.subscapularis_5;
-    AnyRefNode &Org = ...Segments.Scapula.O_subscapularis_5;
-    AnyRefNode &Ins = ...Segments.Humerus.I_subscapularis_5;
+  AnyMuscleShortestPath Subscapularis5 = {
+    AnyMuscleModel &MusMdl =  ...MuscleModels.Subscapularis5;
+    AnyRefNode &Org = ...Segments.Scapula.O_Subscapularis5;
+    AnyRefNode &Ins = ...Segments.Humerus.I_Subscapularis5;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     SPLine.StringMesh = 100;
-    AnyParamSurf &Surf1 = ...Segments.Scapula.subscapularis_torus.surface;
+    AnyParamSurf &Surf1 = ...Segments.Scapula.Subscapularistorus.surface;
     AnyParamSurf &Surf2 = ...Segments.Humerus.SubscapularisHumerusWrapping.cyl;
-    SPLine.InitWrapPosVecArr = .subscapularis_1.SPLine.InitWrapPosVecArr;
+    SPLine.InitWrapPosVecArr = .Subscapularis1.SPLine.InitWrapPosVecArr;
   };
 
-  AnyMuscleShortestPath subscapularis_6 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.subscapularis_6;
-    AnyRefNode &Org = ...Segments.Scapula.O_subscapularis_6;
-    AnyRefNode &Ins = ...Segments.Humerus.I_subscapularis_6;
+  AnyMuscleShortestPath Subscapularis6 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.Subscapularis6;
+    AnyRefNode &Org = ...Segments.Scapula.O_Subscapularis6;
+    AnyRefNode &Ins = ...Segments.Humerus.I_Subscapularis6;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     SPLine.StringMesh = 100;
-    AnyParamSurf &Surf1 = ...Segments.Scapula.subscapularis_torus.surface;
+    AnyParamSurf &Surf1 = ...Segments.Scapula.Subscapularistorus.surface;
     AnyParamSurf &Surf2 = ...Segments.Humerus.SubscapularisHumerusWrapping.cyl;
-    SPLine.InitWrapPosVecArr = .subscapularis_1.SPLine.InitWrapPosVecArr;
+    SPLine.InitWrapPosVecArr = .Subscapularis1.SPLine.InitWrapPosVecArr;
   };
 };
 
 MuscleGroup Supraspinatus = {
-  AnyMuscleShortestPath supraspinatus_1 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.supraspinatus_1;
-    AnyRefNode &Org = ...Segments.Scapula.O_supraspinatus_1;
-    AnyRefNode &Ins = ...Segments.Humerus.I_supraspinatus_1;
+  AnyMuscleShortestPath Supraspinatus1 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.Supraspinatus1;
+    AnyRefNode &Org = ...Segments.Scapula.O_Supraspinatus1;
+    AnyRefNode &Ins = ...Segments.Humerus.I_Supraspinatus1;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     SPLine.StringMesh = 20;
     AnySurfEllipsoid &Surf = ..art_gh_humRef;
@@ -1431,65 +1431,65 @@ MuscleGroup Supraspinatus = {
     };
   };
 
-  AnyMuscleShortestPath supraspinatus_2 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.supraspinatus_2;
-    AnyRefNode &Org = ...Segments.Scapula.O_supraspinatus_2;
-    AnyRefNode &Ins = ...Segments.Humerus.I_supraspinatus_2;
+  AnyMuscleShortestPath Supraspinatus2 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.Supraspinatus2;
+    AnyRefNode &Org = ...Segments.Scapula.O_Supraspinatus2;
+    AnyRefNode &Ins = ...Segments.Humerus.I_Supraspinatus2;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     SPLine.StringMesh = 20;
     AnySurfEllipsoid &Surf = ..art_gh_humRef;
-    SPLine.InitWrapPosVecArr = .supraspinatus_1.SPLine.InitWrapPosVecArr;
+    SPLine.InitWrapPosVecArr = .Supraspinatus1.SPLine.InitWrapPosVecArr;
   };
 
-  AnyMuscleShortestPath supraspinatus_3 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.supraspinatus_3;
-    AnyRefNode &Org = ...Segments.Scapula.O_supraspinatus_3;
-    AnyRefNode &Ins = ...Segments.Humerus.I_supraspinatus_3;
+  AnyMuscleShortestPath Supraspinatus3 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.Supraspinatus3;
+    AnyRefNode &Org = ...Segments.Scapula.O_Supraspinatus3;
+    AnyRefNode &Ins = ...Segments.Humerus.I_Supraspinatus3;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     SPLine.StringMesh = 20;
     AnySurfEllipsoid &Surf = ..art_gh_humRef;
-    SPLine.InitWrapPosVecArr = .supraspinatus_1.SPLine.InitWrapPosVecArr;
+    SPLine.InitWrapPosVecArr = .Supraspinatus1.SPLine.InitWrapPosVecArr;
   };
 
-  AnyMuscleShortestPath supraspinatus_4 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.supraspinatus_4;
-    AnyRefNode &Org = ...Segments.Scapula.O_supraspinatus_4;
-    AnyRefNode &Ins = ...Segments.Humerus.I_supraspinatus_4;
+  AnyMuscleShortestPath Supraspinatus4 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.Supraspinatus4;
+    AnyRefNode &Org = ...Segments.Scapula.O_Supraspinatus4;
+    AnyRefNode &Ins = ...Segments.Humerus.I_Supraspinatus4;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     SPLine.StringMesh = 20;
     AnySurfEllipsoid &Surf = ..art_gh_humRef;
-    SPLine.InitWrapPosVecArr = .supraspinatus_1.SPLine.InitWrapPosVecArr;
+    SPLine.InitWrapPosVecArr = .Supraspinatus1.SPLine.InitWrapPosVecArr;
   };
 
-  AnyMuscleShortestPath supraspinatus_5 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.supraspinatus_5;
-    AnyRefNode &Org = ...Segments.Scapula.O_supraspinatus_5;
-    AnyRefNode &Ins = ...Segments.Humerus.I_supraspinatus_5;
+  AnyMuscleShortestPath Supraspinatus5 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.Supraspinatus5;
+    AnyRefNode &Org = ...Segments.Scapula.O_Supraspinatus5;
+    AnyRefNode &Ins = ...Segments.Humerus.I_Supraspinatus5;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     SPLine.StringMesh = 20;
     AnySurfEllipsoid &Surf = ..art_gh_humRef;
-    SPLine.InitWrapPosVecArr = .supraspinatus_1.SPLine.InitWrapPosVecArr;
+    SPLine.InitWrapPosVecArr = .Supraspinatus1.SPLine.InitWrapPosVecArr;
   };
 
-  AnyMuscleShortestPath supraspinatus_6 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.supraspinatus_6;
-    AnyRefNode &Org = ...Segments.Scapula.O_supraspinatus_6;
-    AnyRefNode &Ins = ...Segments.Humerus.I_supraspinatus_6;
+  AnyMuscleShortestPath Supraspinatus6 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.Supraspinatus6;
+    AnyRefNode &Org = ...Segments.Scapula.O_Supraspinatus6;
+    AnyRefNode &Ins = ...Segments.Humerus.I_Supraspinatus6;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     SPLine.StringMesh = 20;
     AnySurfEllipsoid &Surf = ..art_gh_humRef;
-    SPLine.InitWrapPosVecArr = .supraspinatus_1.SPLine.InitWrapPosVecArr;
+    SPLine.InitWrapPosVecArr = .Supraspinatus1.SPLine.InitWrapPosVecArr;
   };
 };
 
 MuscleGroup TeresMajor = {
-  AnyMuscleShortestPath teres_major_1 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.teres_major_1;
-    AnyRefNode &Org = ...Segments.Scapula.O_teres_major_1;
-    AnyRefNode &Ins = ...Segments.Humerus.I_teres_major_1;
+  AnyMuscleShortestPath TeresMajor1 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.TeresMajor1;
+    AnyRefNode &Org = ...Segments.Scapula.O_TeresMajor1;
+    AnyRefNode &Ins = ...Segments.Humerus.I_TeresMajor1;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     SPLine.StringMesh = 30;
-    AnySurfCylinder &Surf = ..collum_hum_teres_minor_major;
+    AnySurfCylinder &Surf = ..collum_hum_TeresMinormajor;
     AnySurfCylinder &Surf2 = ..teresmajor_cyl;
     SPLine = {
       AnyMatrix InitWrapPos = {
@@ -1499,70 +1499,70 @@ MuscleGroup TeresMajor = {
     };
   };
 
-  AnyMuscleShortestPath teres_major_2 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.teres_major_2;
-    AnyRefNode &Org = ...Segments.Scapula.O_teres_major_2;
-    AnyRefNode &Ins = ...Segments.Humerus.I_teres_major_2;
+  AnyMuscleShortestPath TeresMajor2 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.TeresMajor2;
+    AnyRefNode &Org = ...Segments.Scapula.O_TeresMajor2;
+    AnyRefNode &Ins = ...Segments.Humerus.I_TeresMajor2;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     SPLine.StringMesh = 35;
-    AnySurfCylinder &Surf = ..collum_hum_teres_minor_major;
+    AnySurfCylinder &Surf = ..collum_hum_TeresMinormajor;
     AnySurfCylinder &Surf2 = ..teresmajor_cyl;
-    SPLine.InitWrapPosVecArr = .teres_major_1.SPLine.InitWrapPosVecArr;
+    SPLine.InitWrapPosVecArr = .TeresMajor1.SPLine.InitWrapPosVecArr;
   };
 
-  AnyMuscleShortestPath teres_major_3 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.teres_major_3;
-    AnyRefNode &Org = ...Segments.Scapula.O_teres_major_3;
-    AnyRefNode &Ins = ...Segments.Humerus.I_teres_major_3;
+  AnyMuscleShortestPath TeresMajor3 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.TeresMajor3;
+    AnyRefNode &Org = ...Segments.Scapula.O_TeresMajor3;
+    AnyRefNode &Ins = ...Segments.Humerus.I_TeresMajor3;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     SPLine.StringMesh = 40;
-    AnySurfCylinder &Surf = ..collum_hum_teres_minor_major;
+    AnySurfCylinder &Surf = ..collum_hum_TeresMinormajor;
     AnySurfCylinder &Surf2 = ..teresmajor_cyl;
-    SPLine.InitWrapPosVecArr = .teres_major_1.SPLine.InitWrapPosVecArr;
+    SPLine.InitWrapPosVecArr = .TeresMajor1.SPLine.InitWrapPosVecArr;
   };
 
-  AnyMuscleShortestPath teres_major_4 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.teres_major_4;
-    AnyRefNode &Org = ...Segments.Scapula.O_teres_major_4;
-    AnyRefNode &Ins = ...Segments.Humerus.I_teres_major_4;
+  AnyMuscleShortestPath TeresMajor4 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.TeresMajor4;
+    AnyRefNode &Org = ...Segments.Scapula.O_TeresMajor4;
+    AnyRefNode &Ins = ...Segments.Humerus.I_TeresMajor4;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     SPLine.StringMesh = 30;
-    AnySurfCylinder &Surf = ..collum_hum_teres_minor_major;
+    AnySurfCylinder &Surf = ..collum_hum_TeresMinormajor;
     AnySurfCylinder &Surf2 = ..teresmajor_cyl;
-    SPLine.InitWrapPosVecArr = .teres_major_1.SPLine.InitWrapPosVecArr;
+    SPLine.InitWrapPosVecArr = .TeresMajor1.SPLine.InitWrapPosVecArr;
   };
 
-  AnyMuscleShortestPath teres_major_5 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.teres_major_5;
-    AnyRefNode &Org = ...Segments.Scapula.O_teres_major_5;
-    AnyRefNode &Ins = ...Segments.Humerus.I_teres_major_5;
+  AnyMuscleShortestPath TeresMajor5 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.TeresMajor5;
+    AnyRefNode &Org = ...Segments.Scapula.O_TeresMajor5;
+    AnyRefNode &Ins = ...Segments.Humerus.I_TeresMajor5;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     SPLine.StringMesh = 35;
-    AnySurfCylinder &Surf = ..collum_hum_teres_minor_major;
+    AnySurfCylinder &Surf = ..collum_hum_TeresMinormajor;
     AnySurfCylinder &Surf2 = ..teresmajor_cyl;
-    SPLine.InitWrapPosVecArr = .teres_major_1.SPLine.InitWrapPosVecArr;
+    SPLine.InitWrapPosVecArr = .TeresMajor1.SPLine.InitWrapPosVecArr;
   };
 
-  AnyMuscleShortestPath teres_major_6 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.teres_major_6;
-    AnyRefNode &Org = ...Segments.Scapula.O_teres_major_6;
-    AnyRefNode &Ins = ...Segments.Humerus.I_teres_major_6;
+  AnyMuscleShortestPath TeresMajor6 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.TeresMajor6;
+    AnyRefNode &Org = ...Segments.Scapula.O_TeresMajor6;
+    AnyRefNode &Ins = ...Segments.Humerus.I_TeresMajor6;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     SPLine.StringMesh = 30;
-    AnySurfCylinder &Surf = ..collum_hum_teres_minor_major;
+    AnySurfCylinder &Surf = ..collum_hum_TeresMinormajor;
     AnySurfCylinder &Surf2 = ..teresmajor_cyl;
-    SPLine.InitWrapPosVecArr = .teres_major_1.SPLine.InitWrapPosVecArr;
+    SPLine.InitWrapPosVecArr = .TeresMajor1.SPLine.InitWrapPosVecArr;
   };
 };
 
 MuscleGroup TeresMinor = {
-  AnyMuscleShortestPath teres_minor_1 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.teres_minor_1;
-    AnyRefNode &Org = ...Segments.Scapula.O_teres_minor_1;//Correction to make wrap work
-    AnyRefNode &Ins = ...Segments.Humerus.I_teres_minor_1;
+  AnyMuscleShortestPath TeresMinor1 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.TeresMinor1;
+    AnyRefNode &Org = ...Segments.Scapula.O_TeresMinor1;//Correction to make wrap work
+    AnyRefNode &Ins = ...Segments.Humerus.I_TeresMinor1;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     SPLine.StringMesh = 30;
-    AnyParamSurf &Surf = ...Segments.Humerus.teres_minor_humurus_wrap.torus;
+    AnyParamSurf &Surf = ...Segments.Humerus.TeresMinorhumurus_wrap.torus;
     SPLine = {
 
       AnyMatrix InitWrapPos = {
@@ -1576,54 +1576,54 @@ MuscleGroup TeresMinor = {
     };
   };
 
-  AnyMuscleShortestPath teres_minor_2 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.teres_minor_2;
-    AnyRefNode &Org = ...Segments.Scapula.O_teres_minor_2;//Correction to make wrap work
-    AnyRefNode &Ins = ...Segments.Humerus.I_teres_minor_2;
+  AnyMuscleShortestPath TeresMinor2 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.TeresMinor2;
+    AnyRefNode &Org = ...Segments.Scapula.O_TeresMinor2;//Correction to make wrap work
+    AnyRefNode &Ins = ...Segments.Humerus.I_TeresMinor2;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     SPLine.StringMesh = 30;
-    AnyParamSurf &Surf = ...Segments.Humerus.teres_minor_humurus_wrap.torus;
-    SPLine.InitWrapPosVecArr = .teres_minor_1.SPLine.InitWrapPosVecArr;
+    AnyParamSurf &Surf = ...Segments.Humerus.TeresMinorhumurus_wrap.torus;
+    SPLine.InitWrapPosVecArr = .TeresMinor1.SPLine.InitWrapPosVecArr;
   };
 
-  AnyMuscleShortestPath teres_minor_3 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.teres_minor_3;
-    AnyRefNode &Org = ...Segments.Scapula.O_teres_minor_3;
-    AnyRefNode &Ins = ...Segments.Humerus.I_teres_minor_3;
+  AnyMuscleShortestPath TeresMinor3 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.TeresMinor3;
+    AnyRefNode &Org = ...Segments.Scapula.O_TeresMinor3;
+    AnyRefNode &Ins = ...Segments.Humerus.I_TeresMinor3;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     SPLine.StringMesh = 30;
-    AnyParamSurf &Surf = ...Segments.Humerus.teres_minor_humurus_wrap.torus;
-    SPLine.InitWrapPosVecArr = .teres_minor_1.SPLine.InitWrapPosVecArr;
+    AnyParamSurf &Surf = ...Segments.Humerus.TeresMinorhumurus_wrap.torus;
+    SPLine.InitWrapPosVecArr = .TeresMinor1.SPLine.InitWrapPosVecArr;
   };
 
-  AnyMuscleShortestPath teres_minor_4 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.teres_minor_4;
-    AnyRefNode &Org = ...Segments.Scapula.O_teres_minor_4;
-    AnyRefNode &Ins = ...Segments.Humerus.I_teres_minor_4;
+  AnyMuscleShortestPath TeresMinor4 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.TeresMinor4;
+    AnyRefNode &Org = ...Segments.Scapula.O_TeresMinor4;
+    AnyRefNode &Ins = ...Segments.Humerus.I_TeresMinor4;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     SPLine.StringMesh = 30;
-    AnyParamSurf &Surf = ...Segments.Humerus.teres_minor_humurus_wrap.torus;
-    SPLine.InitWrapPosVecArr = .teres_minor_1.SPLine.InitWrapPosVecArr;
+    AnyParamSurf &Surf = ...Segments.Humerus.TeresMinorhumurus_wrap.torus;
+    SPLine.InitWrapPosVecArr = .TeresMinor1.SPLine.InitWrapPosVecArr;
   };
 
-  AnyMuscleShortestPath teres_minor_5 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.teres_minor_5;
-    AnyRefNode &Org = ...Segments.Scapula.O_teres_minor_5;
-    AnyRefNode &Ins = ...Segments.Humerus.I_teres_minor_5;
+  AnyMuscleShortestPath TeresMinor5 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.TeresMinor5;
+    AnyRefNode &Org = ...Segments.Scapula.O_TeresMinor5;
+    AnyRefNode &Ins = ...Segments.Humerus.I_TeresMinor5;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     SPLine.StringMesh = 30;
-    AnyParamSurf &Surf = ...Segments.Humerus.teres_minor_humurus_wrap.torus;
-    SPLine.InitWrapPosVecArr = .teres_minor_1.SPLine.InitWrapPosVecArr;
+    AnyParamSurf &Surf = ...Segments.Humerus.TeresMinorhumurus_wrap.torus;
+    SPLine.InitWrapPosVecArr = .TeresMinor1.SPLine.InitWrapPosVecArr;
   };
 
-  AnyMuscleShortestPath teres_minor_6 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.teres_minor_6;
-    AnyRefNode &Org = ...Segments.Scapula.O_teres_minor_6;
-    AnyRefNode &Ins = ...Segments.Humerus.I_teres_minor_6;
+  AnyMuscleShortestPath TeresMinor6 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.TeresMinor6;
+    AnyRefNode &Org = ...Segments.Scapula.O_TeresMinor6;
+    AnyRefNode &Ins = ...Segments.Humerus.I_TeresMinor6;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     SPLine.StringMesh = 30;
-    AnyParamSurf &Surf = ...Segments.Humerus.teres_minor_humurus_wrap.torus;
-    SPLine.InitWrapPosVecArr = .teres_minor_1.SPLine.InitWrapPosVecArr;
+    AnyParamSurf &Surf = ...Segments.Humerus.TeresMinorhumurus_wrap.torus;
+    SPLine.InitWrapPosVecArr = .TeresMinor1.SPLine.InitWrapPosVecArr;
   };
 };
 
@@ -2441,8 +2441,8 @@ AnyFolder Pectoralis_minor1_cyl={
   Cylinder = {
     LengthScale = 2.3;
     ScaleFactor = (
-      vnorm(...Segments.Humerus.Data.I_subscapularis_1_pos - ...Segments.Humerus.Data.I_subscapularis_5_pos) /
-      vnorm(...Segments.Humerus.I_subscapularis_1.sRel - ...Segments.Humerus.I_subscapularis_5.sRel)
+      vnorm(...Segments.Humerus.Data.I_Subscapularis1_pos - ...Segments.Humerus.Data.I_Subscapularis5_pos) /
+      vnorm(...Segments.Humerus.I_Subscapularis1.sRel - ...Segments.Humerus.I_Subscapularis5.sRel)
     );
     Segment.Axes0 = ..TrunkNodeAttachement.R3Seg.Axes0 * RotMat(-pi/2,x)*RotMat(pi/5*...Sign,x)*RotMat(-0.25,y);
     Segment.r0 = ..TrunkNodeAttachement.R3Seg.r0 + ..TrunkNodeAttachement.R3Seg.O_PectoralisMinor1.sRel*..TrunkNodeAttachement.R3Seg.Axes0';
@@ -2458,7 +2458,7 @@ AnySurfSphere &art_tub_minus_tub_majusRef = .Segments.Humerus.art_tub_minus_tub_
 AnySurfCylinder &bicepscyl = .Segments.Radius.BicepsCyl.cyl;
 AnySurfEllipsoid &art_gh_humRef = .Segments.Humerus.art_gh_hum.art_gh_humSurf;
 AnySurfCylinder &collum_hum = .Segments.Humerus.collum_hum.collum_hum;
-AnySurfCylinder &collum_hum_teres_minor_major = .Segments.Humerus.collum_hum_teres_minor_major.cyl;
+AnySurfCylinder &collum_hum_TeresMinormajor = .Segments.Humerus.collum_hum_TeresMinormajor.cyl;
 AnyParamSurf &tricpes_gh_sphere = .Segments.Humerus.tricpes_gh_sphere.surf;
 AnySurfCylinder &condylus_hum = .Segments.Humerus.condylus_hum.cyl;
 AnySurfCylinder &condylus_humT = .Segments.Humerus.condylus_humT.condylus_humT;
@@ -2466,6 +2466,6 @@ AnySurfCylinder &margo_medialis = .Segments.Scapula.margo_medialis.cyl;
 AnySurfCylinder &deltoid_cyl = .Segments.Scapula.deltoid_cyl.cyl;
 AnySurfCylinder &acromion_cyl = .Segments.Scapula.acromion_cyl.cyl;
 AnySurfCylinder &coracoid_cyl = .Segments.Scapula.coracoid_cyl.cyl;
-AnySurfCylinder &teresmajor_cyl = .Segments.Scapula.teres_major_cyl.cyl;
+AnySurfCylinder &teresmajor_cyl = .Segments.Scapula.TeresMajorcyl.cyl;
 
 #include "ThoraxWrappingSurfaces.any"

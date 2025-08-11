@@ -22,11 +22,11 @@ AnyFolder Humerus = {
   AnyFloat collum_hum_P2_pos ={-0.011698, -0.350000, -0.000157}+OffSet; ////Point used for radius
   AnyFloat collum_hum_P3_pos ={0.000000, 0.030000, 0.000000}+OffSet; //End point
 
-  AnyFloat collum_hum_teres_minor_pos = {0.0, -0.1 , 0.0}+OffSet;	//{0.001379000, -0.1089990, 0.009119000};
-  AnyFloat collum_hum_teres_minor_P2_pos= {0.0, 0.04 , 0.0}+{0,-0.02,0}+OffSet;//End point
-  AnyFloat collum_hum_teres_minor_P3_pos= {0.0, -0.1 , 0.01885}+OffSet;//Point used for radius
+  AnyFloat collum_hum_TeresMinorpos = {0.0, -0.1 , 0.0}+OffSet;	//{0.001379000, -0.1089990, 0.009119000};
+  AnyFloat collum_hum_TeresMinorP2_pos= {0.0, 0.04 , 0.0}+{0,-0.02,0}+OffSet;//End point
+  AnyFloat collum_hum_TeresMinorP3_pos= {0.0, -0.1 , 0.01885}+OffSet;//Point used for radius
 
-  AnyFloat collum_hum_teres_minor_new_pos = {0.002122180, 0.06807196, 0.006301948};
+  AnyFloat collum_hum_TeresMinornew_pos = {0.002122180, 0.06807196, 0.006301948};
 
   AnyVar  condylus_hum_Radius=0.012;
   AnyVar  condylus_hum_Length=0.08;
@@ -45,8 +45,8 @@ AnyFolder Humerus = {
 	{0,0,0},                       								//gh node
 	({0.013072-.01, -0.331048 , -0.007917}+OffSet ), 			//fe node
 	({-0.003235, -0.112511 , -0.018594}+correction4+OffSet), 	// I_Pectoralis_major_clavicular_part1
-	({(-0.014390+x1), 0.035979+y1 , -0.007855+z1}+OffSet), 	// I_supraspinatus_1 node
-	({(0.013689+xt), -0.016225+yt , 0.002468+zt}+OffSet) 	// I_teres_minor_5 node
+	({(-0.014390+x1), 0.035979+y1 , -0.007855+z1}+OffSet), 	// I_Supraspinatus1 node
+	({(0.013689+xt), -0.016225+yt , 0.002468+zt}+OffSet) 	// I_TeresMinor5 node
   };
 
 
@@ -131,20 +131,20 @@ AnyFolder Humerus = {
   AnyFloat I_DeltoideusAnterior3_pos       = {0.002682, -0.108890 , -0.015126}+ds1;
   AnyFloat I_DeltoideusAnterior4_pos       = {0.000682, -0.098890 , -0.015126}+ds1;
 #endif
-  AnyFloat I_subscapularis_1_pos                    = {-0.013538, 0.013190 , -0.033056} +ds2;
-  AnyFloat I_subscapularis_2_pos                    = {-0.013538, 0.013190 , -0.033056} +ds2;
-  AnyFloat I_subscapularis_3_pos                    = {-0.013162, 0.002403 , -0.035777} +ds2;
-  AnyFloat I_subscapularis_4_pos                    = {-0.013162, 0.002403 , -0.035777} +ds2;
-  AnyFloat I_subscapularis_5_pos                    = {-0.012987, -0.002479 , -0.037019}+ds2;
-  AnyFloat I_subscapularis_6_pos                    = {-0.012987, -0.002479 , -0.037019}+ds2;
+  AnyFloat I_Subscapularis1_pos                    = {-0.013538, 0.013190 , -0.033056} +ds2;
+  AnyFloat I_Subscapularis2_pos                    = {-0.013538, 0.013190 , -0.033056} +ds2;
+  AnyFloat I_Subscapularis3_pos                    = {-0.013162, 0.002403 , -0.035777} +ds2;
+  AnyFloat I_Subscapularis4_pos                    = {-0.013162, 0.002403 , -0.035777} +ds2;
+  AnyFloat I_Subscapularis5_pos                    = {-0.012987, -0.002479 , -0.037019}+ds2;
+  AnyFloat I_Subscapularis6_pos                    = {-0.012987, -0.002479 , -0.037019}+ds2;
 
 
-  AnyFloat I_supraspinatus_1_pos                    = {(-0.014390+x1), 0.035979+y1 , -0.007855+z1}+OffSet;
-  AnyFloat I_supraspinatus_2_pos                    = {(-0.014390+x1), 0.035979+y1 , -0.007855+z1}+OffSet;
-  AnyFloat I_supraspinatus_3_pos                    = {(-0.012505+x1), 0.034910+y1 , -0.000163+z1}+OffSet;
-  AnyFloat I_supraspinatus_4_pos                    = {(-0.012505+x1), 0.034910+y1 , -0.000163+z1}+OffSet;
-  AnyFloat I_supraspinatus_5_pos                    = {(-0.010693+x1), 0.033878+y1 ,  0.007226+z1}+OffSet;
-  AnyFloat I_supraspinatus_6_pos                    = {(-0.010693+x1), 0.033878+y1 ,  0.007226+z1}+OffSet;
+  AnyFloat I_Supraspinatus1_pos                    = {(-0.014390+x1), 0.035979+y1 , -0.007855+z1}+OffSet;
+  AnyFloat I_Supraspinatus2_pos                    = {(-0.014390+x1), 0.035979+y1 , -0.007855+z1}+OffSet;
+  AnyFloat I_Supraspinatus3_pos                    = {(-0.012505+x1), 0.034910+y1 , -0.000163+z1}+OffSet;
+  AnyFloat I_Supraspinatus4_pos                    = {(-0.012505+x1), 0.034910+y1 , -0.000163+z1}+OffSet;
+  AnyFloat I_Supraspinatus5_pos                    = {(-0.010693+x1), 0.033878+y1 ,  0.007226+z1}+OffSet;
+  AnyFloat I_Supraspinatus6_pos                    = {(-0.010693+x1), 0.033878+y1 ,  0.007226+z1}+OffSet;
 
 
 
@@ -155,19 +155,19 @@ AnyFolder Humerus = {
   AnyFloat I_Infraspinatus5_pos                    = {(0.004975+xi), 0.013755+yi , 0.018686+zi}+OffSet;
   AnyFloat I_Infraspinatus6_pos                    = {(0.004975+xi), 0.013755+yi , 0.018686+zi}+OffSet;
 
-  AnyFloat I_teres_minor_1_pos                      = {(0.012979+xt), -0.001188+yt , 0.008916+zt}+OffSet;
-  AnyFloat I_teres_minor_2_pos                      = {(0.012979+xt), -0.001188+yt , 0.008916+zt}+OffSet;
-  AnyFloat I_teres_minor_3_pos                      = {(0.013360+xt), -0.009360+yt , 0.005409+zt}+OffSet;
-  AnyFloat I_teres_minor_4_pos                      = {(0.013360+xt), -0.009360+yt , 0.005409+zt}+OffSet;
-  AnyFloat I_teres_minor_5_pos                      = {(0.013689+xt), -0.016225+yt , 0.002468+zt}+OffSet;
-  AnyFloat I_teres_minor_6_pos                      = {(0.013689+xt), -0.016225+yt , 0.002468+zt}+OffSet;
+  AnyFloat I_TeresMinor1_pos                      = {(0.012979+xt), -0.001188+yt , 0.008916+zt}+OffSet;
+  AnyFloat I_TeresMinor2_pos                      = {(0.012979+xt), -0.001188+yt , 0.008916+zt}+OffSet;
+  AnyFloat I_TeresMinor3_pos                      = {(0.013360+xt), -0.009360+yt , 0.005409+zt}+OffSet;
+  AnyFloat I_TeresMinor4_pos                      = {(0.013360+xt), -0.009360+yt , 0.005409+zt}+OffSet;
+  AnyFloat I_TeresMinor5_pos                      = {(0.013689+xt), -0.016225+yt , 0.002468+zt}+OffSet;
+  AnyFloat I_TeresMinor6_pos                      = {(0.013689+xt), -0.016225+yt , 0.002468+zt}+OffSet;
 
-  AnyFloat I_teres_major_1_pos                      = {-0.009281, -0.043713 , -0.018597}+correction5+OffSet;
-  AnyFloat I_teres_major_2_pos                      = {-0.009281, -0.043713 , -0.018597}+correction5+OffSet;
-  AnyFloat I_teres_major_3_pos                      = {-0.008416, -0.059459 , -0.017509}+correction5+OffSet;
-  AnyFloat I_teres_major_4_pos                      = {-0.008416, -0.059459 , -0.017509}+correction5+OffSet;
-  AnyFloat I_teres_major_5_pos                      = {-0.007840, -0.070873 , -0.016625}+correction5+OffSet;
-  AnyFloat I_teres_major_6_pos                      = {-0.007840, -0.070873 , -0.016625}+correction5+OffSet;
+  AnyFloat I_TeresMajor1_pos                      = {-0.009281, -0.043713 , -0.018597}+correction5+OffSet;
+  AnyFloat I_TeresMajor2_pos                      = {-0.009281, -0.043713 , -0.018597}+correction5+OffSet;
+  AnyFloat I_TeresMajor3_pos                      = {-0.008416, -0.059459 , -0.017509}+correction5+OffSet;
+  AnyFloat I_TeresMajor4_pos                      = {-0.008416, -0.059459 , -0.017509}+correction5+OffSet;
+  AnyFloat I_TeresMajor5_pos                      = {-0.007840, -0.070873 , -0.016625}+correction5+OffSet;
+  AnyFloat I_TeresMajor6_pos                      = {-0.007840, -0.070873 , -0.016625}+correction5+OffSet;
 
 
   AnyFloat I_Coracobrachialis1_pos                 = {-0.010924, -0.118511 , -0.009192}+OffSet;
@@ -479,9 +479,9 @@ AnyFolder Scapula = {
   AnyFloat coracoid_cyl2_P3_pos = {-0.01660200, -0.01086300, -0.02438100};
   AnyFloat coracoid_cyl2_pos = {-0.02660200, -0.01086300, -0.03438100};
 
-  AnyFloat subscapularis_cyl_P2_pos =subscapularis_cyl_pos + {0.015-0.02,-0.06,0.025+0.005};
-  AnyFloat subscapularis_cyl_P3_pos =subscapularis_cyl_pos + {0.0,0.008,0.008};//sRel+VX*Radius;
-  AnyFloat subscapularis_cyl_pos = gh_pos+{-0.03-0.015,0.015+0.01,-0.02+0.005};
+  AnyFloat Subscapulariscyl_P2_pos =Subscapulariscyl_pos + {0.015-0.02,-0.06,0.025+0.005};
+  AnyFloat Subscapulariscyl_P3_pos =Subscapulariscyl_pos + {0.0,0.008,0.008};//sRel+VX*Radius;
+  AnyFloat Subscapulariscyl_pos = gh_pos+{-0.03-0.015,0.015+0.01,-0.02+0.005};
 
 
 
@@ -523,36 +523,36 @@ AnyFolder Scapula = {
   AnyFloat O_DeltoideusLateral2_pos = {0.018565+0.01, -0.020427, 0.008868}+{0.01,0.012,-0.023};                              //{0.03856500, -0.008427000, -0.02613200};
   AnyFloat O_DeltoideusLateral4_pos = {0.027144+0.025, (-0.013524-0.005), -0.008283-0.0025}+{-0.015,0.012,-0.035};             //{0.04214400, -0.006524000, -0.04578300};
 #endif
-  AnyFloat O_subscapularis_1_pos = {-0.1170700, -0.03737400, 0.001273000};
-  AnyFloat O_subscapularis_2_pos = {-0.1068230, -0.03107300, -0.001931000};
-  AnyFloat O_subscapularis_3_pos = {-0.1196620, -0.09270600, 0.005038000};
-  AnyFloat O_subscapularis_4_pos = {-0.09853700, -0.07971500, -0.001576000};
-  AnyFloat O_subscapularis_5_pos = {-0.1057510, -0.1084560, 0.002014000};
-  AnyFloat O_subscapularis_6_pos = {-0.07867000, -0.09181100, -0.006469000};
-  AnyFloat O_supraspinatus_1_pos = {-0.08761200, 0.009190000, -0.01282400};
-  AnyFloat O_supraspinatus_2_pos = {-0.07483500, 0.008454000, -0.01818900};
-  AnyFloat O_supraspinatus_3_pos = {-0.08652400, 0.001699000, -0.002132000};
-  AnyFloat O_supraspinatus_4_pos = {-0.06676400, 0.0005510000, -0.01043800};
-  AnyFloat O_supraspinatus_5_pos = {-0.07604200, -0.006054000, 0.004172000};
-  AnyFloat O_supraspinatus_6_pos = {-0.06367200, -0.006783000, -0.001029000};
+  AnyFloat O_Subscapularis1_pos = {-0.1170700, -0.03737400, 0.001273000};
+  AnyFloat O_Subscapularis2_pos = {-0.1068230, -0.03107300, -0.001931000};
+  AnyFloat O_Subscapularis3_pos = {-0.1196620, -0.09270600, 0.005038000};
+  AnyFloat O_Subscapularis4_pos = {-0.09853700, -0.07971500, -0.001576000};
+  AnyFloat O_Subscapularis5_pos = {-0.1057510, -0.1084560, 0.002014000};
+  AnyFloat O_Subscapularis6_pos = {-0.07867000, -0.09181100, -0.006469000};
+  AnyFloat O_Supraspinatus1_pos = {-0.08761200, 0.009190000, -0.01282400};
+  AnyFloat O_Supraspinatus2_pos = {-0.07483500, 0.008454000, -0.01818900};
+  AnyFloat O_Supraspinatus3_pos = {-0.08652400, 0.001699000, -0.002132000};
+  AnyFloat O_Supraspinatus4_pos = {-0.06676400, 0.0005510000, -0.01043800};
+  AnyFloat O_Supraspinatus5_pos = {-0.07604200, -0.006054000, 0.004172000};
+  AnyFloat O_Supraspinatus6_pos = {-0.06367200, -0.006783000, -0.001029000};
   AnyFloat O_Infraspinatus1_pos = {-0.09447200, -0.03427400, 0.01015000};
   AnyFloat O_Infraspinatus2_pos = {-0.06154900, -0.02414900, 0.005710000};
   AnyFloat O_Infraspinatus3_pos = {-0.1112650, -0.06131700, 0.009120000};
   AnyFloat O_Infraspinatus4_pos = {-0.06361100, -0.04666800, 0.002686000};
   AnyFloat O_Infraspinatus5_pos = {-0.1207210, -0.08780300, 0.006848000};
   AnyFloat O_Infraspinatus6_pos = {-0.08975100, -0.07827000, 0.002667000};
-  AnyFloat O_teres_minor_1_pos = {-0.05260300, -0.07627500, -0.004653000};
-  AnyFloat O_teres_minor_2_pos = {-0.05038400, -0.07696700, -0.005156000};
-  AnyFloat O_teres_minor_3_pos = {-0.06493800, -0.08456200, -0.002430000};
-  AnyFloat O_teres_minor_4_pos = {-0.05946100, -0.08626600, -0.003667000};
-  AnyFloat O_teres_minor_5_pos = {-0.07168100, -0.09265500, -0.001380000};
-  AnyFloat O_teres_minor_6_pos = {-0.06785100, -0.09385300, -0.002244000};
-  AnyFloat O_teres_major_1_pos = {-0.1011600, -0.1092340, 0.003289000};
-  AnyFloat O_teres_major_2_pos = {-0.09425200, -0.1113340, -0.0002200000};
-  AnyFloat O_teres_major_3_pos = {-0.1173630, -0.1157010, 0.005858000};
-  AnyFloat O_teres_major_4_pos = {-0.1038070, -0.1197340, -0.0008670000};
-  AnyFloat O_teres_major_5_pos = {-0.1223600, -0.1223990, 0.004290000};
-  AnyFloat O_teres_major_6_pos = {-0.1106550, -0.1259410, -0.001546000};
+  AnyFloat O_TeresMinor1_pos = {-0.05260300, -0.07627500, -0.004653000};
+  AnyFloat O_TeresMinor2_pos = {-0.05038400, -0.07696700, -0.005156000};
+  AnyFloat O_TeresMinor3_pos = {-0.06493800, -0.08456200, -0.002430000};
+  AnyFloat O_TeresMinor4_pos = {-0.05946100, -0.08626600, -0.003667000};
+  AnyFloat O_TeresMinor5_pos = {-0.07168100, -0.09265500, -0.001380000};
+  AnyFloat O_TeresMinor6_pos = {-0.06785100, -0.09385300, -0.002244000};
+  AnyFloat O_TeresMajor1_pos = {-0.1011600, -0.1092340, 0.003289000};
+  AnyFloat O_TeresMajor2_pos = {-0.09425200, -0.1113340, -0.0002200000};
+  AnyFloat O_TeresMajor3_pos = {-0.1173630, -0.1157010, 0.005858000};
+  AnyFloat O_TeresMajor4_pos = {-0.1038070, -0.1197340, -0.0008670000};
+  AnyFloat O_TeresMajor5_pos = {-0.1223600, -0.1223990, 0.004290000};
+  AnyFloat O_TeresMajor6_pos = {-0.1106550, -0.1259410, -0.001546000};
   AnyFloat O_BicepsBrachiiBreve_pos = {0.01000000, -0.02594100, -0.08500000};        //{0.006927, -0.029410, -0.053235} // Original number from data
   AnyFloat O_BicepsBrachiiLongum_pos = {-0.01800000, -0.02452900, -0.02424200};      //{0.002473, -0.024529, -0.024242}+.Soffset)*.Smat; // Original number from data
   AnyFloat O_Coracobrachialis1_pos = {0.01000000, -0.02594100, -0.08500000};                //{0.004515, -0.029586, -0.052879}     // Original numbers from data

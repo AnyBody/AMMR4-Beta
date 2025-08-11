@@ -2003,14 +2003,14 @@ AnyMuscleModel3E Sternocleidomastoid2 =
 ////////////////////////////////////////
 //     subscapularis (6 elements)     //
 ////////////////////////////////////////
-AnyMuscleModel3E subscapularis_1 =
+AnyMuscleModel3E Subscapularis1 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.subscapularis;
   AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
   Lf0 ??= MuscleParameters.OptimalFiberlength; ///< Optimum fiber length
-  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.subscapularis_1.Lf0 +.subscapularis_2.Lf0 +.subscapularis_3.Lf0 +.subscapularis_4.Lf0 +.subscapularis_5.Lf0 +.subscapularis_6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.Subscapularis1.Lf0 +.Subscapularis2.Lf0 +.Subscapularis3.Lf0 +.Subscapularis4.Lf0 +.Subscapularis5.Lf0 +.Subscapularis6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 = 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
   Lt0 ??= max({MuscleParameters.TotalTendonLength, 0.001}); ///< Tendon slack length (Cannot be zero)
   Gamma0 ??= MuscleParameters.Pennationangle*(pi/180); ///< Pennation angle in radian
@@ -2023,14 +2023,14 @@ AnyMuscleModel3E subscapularis_1 =
   PEFactor ??= .DefaultMusPar.PEFactor; ///< Parameter for influence of parallel stiffness
 };
 
-AnyMuscleModel3E subscapularis_2 =
+AnyMuscleModel3E Subscapularis2 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.subscapularis;
   AnyIntVar MuscleElemNo = 2; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
   Lf0 ??= MuscleParameters.OptimalFiberlength; ///< Optimum fiber length
-  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.subscapularis_1.Lf0 +.subscapularis_2.Lf0 +.subscapularis_3.Lf0 +.subscapularis_4.Lf0 +.subscapularis_5.Lf0 +.subscapularis_6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.Subscapularis1.Lf0 +.Subscapularis2.Lf0 +.Subscapularis3.Lf0 +.Subscapularis4.Lf0 +.Subscapularis5.Lf0 +.Subscapularis6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 = 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
   Lt0 ??= max({MuscleParameters.TotalTendonLength, 0.001}); ///< Tendon slack length (Cannot be zero)
   Gamma0 ??= MuscleParameters.Pennationangle*(pi/180); ///< Pennation angle in radian
@@ -2043,14 +2043,14 @@ AnyMuscleModel3E subscapularis_2 =
   PEFactor ??= .DefaultMusPar.PEFactor; ///< Parameter for influence of parallel stiffness
 };
 
-AnyMuscleModel3E subscapularis_3 =
+AnyMuscleModel3E Subscapularis3 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.subscapularis;
   AnyIntVar MuscleElemNo = 3; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
   Lf0 ??= MuscleParameters.OptimalFiberlength; ///< Optimum fiber length
-  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.subscapularis_1.Lf0 +.subscapularis_2.Lf0 +.subscapularis_3.Lf0 +.subscapularis_4.Lf0 +.subscapularis_5.Lf0 +.subscapularis_6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.Subscapularis1.Lf0 +.Subscapularis2.Lf0 +.Subscapularis3.Lf0 +.Subscapularis4.Lf0 +.Subscapularis5.Lf0 +.Subscapularis6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 = 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
   Lt0 ??= max({MuscleParameters.TotalTendonLength, 0.001}); ///< Tendon slack length (Cannot be zero)
   Gamma0 ??= MuscleParameters.Pennationangle*(pi/180); ///< Pennation angle in radian
@@ -2063,14 +2063,14 @@ AnyMuscleModel3E subscapularis_3 =
   PEFactor ??= .DefaultMusPar.PEFactor; ///< Parameter for influence of parallel stiffness
 };
 
-AnyMuscleModel3E subscapularis_4 =
+AnyMuscleModel3E Subscapularis4 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.subscapularis;
   AnyIntVar MuscleElemNo = 4; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
   Lf0 ??= MuscleParameters.OptimalFiberlength; ///< Optimum fiber length
-  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.subscapularis_1.Lf0 +.subscapularis_2.Lf0 +.subscapularis_3.Lf0 +.subscapularis_4.Lf0 +.subscapularis_5.Lf0 +.subscapularis_6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.Subscapularis1.Lf0 +.Subscapularis2.Lf0 +.Subscapularis3.Lf0 +.Subscapularis4.Lf0 +.Subscapularis5.Lf0 +.Subscapularis6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 = 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
   Lt0 ??= max({MuscleParameters.TotalTendonLength, 0.001}); ///< Tendon slack length (Cannot be zero)
   Gamma0 ??= MuscleParameters.Pennationangle*(pi/180); ///< Pennation angle in radian
@@ -2083,14 +2083,14 @@ AnyMuscleModel3E subscapularis_4 =
   PEFactor ??= .DefaultMusPar.PEFactor; ///< Parameter for influence of parallel stiffness
 };
 
-AnyMuscleModel3E subscapularis_5 =
+AnyMuscleModel3E Subscapularis5 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.subscapularis;
   AnyIntVar MuscleElemNo = 5; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
   Lf0 ??= MuscleParameters.OptimalFiberlength; ///< Optimum fiber length
-  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.subscapularis_1.Lf0 +.subscapularis_2.Lf0 +.subscapularis_3.Lf0 +.subscapularis_4.Lf0 +.subscapularis_5.Lf0 +.subscapularis_6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.Subscapularis1.Lf0 +.Subscapularis2.Lf0 +.Subscapularis3.Lf0 +.Subscapularis4.Lf0 +.Subscapularis5.Lf0 +.Subscapularis6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 = 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
   Lt0 ??= max({MuscleParameters.TotalTendonLength, 0.001}); ///< Tendon slack length (Cannot be zero)
   Gamma0 ??= MuscleParameters.Pennationangle*(pi/180); ///< Pennation angle in radian
@@ -2103,14 +2103,14 @@ AnyMuscleModel3E subscapularis_5 =
   PEFactor ??= .DefaultMusPar.PEFactor; ///< Parameter for influence of parallel stiffness
 };
 
-AnyMuscleModel3E subscapularis_6 =
+AnyMuscleModel3E Subscapularis6 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.subscapularis;
   AnyIntVar MuscleElemNo = 6; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
   Lf0 ??= MuscleParameters.OptimalFiberlength; ///< Optimum fiber length
-  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.subscapularis_1.Lf0 +.subscapularis_2.Lf0 +.subscapularis_3.Lf0 +.subscapularis_4.Lf0 +.subscapularis_5.Lf0 +.subscapularis_6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.Subscapularis1.Lf0 +.Subscapularis2.Lf0 +.Subscapularis3.Lf0 +.Subscapularis4.Lf0 +.Subscapularis5.Lf0 +.Subscapularis6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 = 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
   Lt0 ??= max({MuscleParameters.TotalTendonLength, 0.001}); ///< Tendon slack length (Cannot be zero)
   Gamma0 ??= MuscleParameters.Pennationangle*(pi/180); ///< Pennation angle in radian
@@ -2130,14 +2130,14 @@ AnyMuscleModel3E subscapularis_6 =
 ////////////////////////////////////////
 //     supraspinatus (6 elements)     //
 ////////////////////////////////////////
-AnyMuscleModel3E supraspinatus_1 =
+AnyMuscleModel3E Supraspinatus1 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.supraspinatus;
   AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
   Lf0 ??= MuscleParameters.OptimalFiberlength; ///< Optimum fiber length
-  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.supraspinatus_1.Lf0 +.supraspinatus_2.Lf0 +.supraspinatus_3.Lf0 +.supraspinatus_4.Lf0 +.supraspinatus_5.Lf0 +.supraspinatus_6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.Supraspinatus1.Lf0 +.Supraspinatus2.Lf0 +.Supraspinatus3.Lf0 +.Supraspinatus4.Lf0 +.Supraspinatus5.Lf0 +.Supraspinatus6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 = 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
   Lt0 ??= max({MuscleParameters.TotalTendonLength, 0.001}); ///< Tendon slack length (Cannot be zero)
   Gamma0 ??= MuscleParameters.Pennationangle*(pi/180); ///< Pennation angle in radian
@@ -2150,14 +2150,14 @@ AnyMuscleModel3E supraspinatus_1 =
   PEFactor ??= .DefaultMusPar.PEFactor; ///< Parameter for influence of parallel stiffness
 };
 
-AnyMuscleModel3E supraspinatus_2 =
+AnyMuscleModel3E Supraspinatus2 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.supraspinatus;
   AnyIntVar MuscleElemNo = 2; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
   Lf0 ??= MuscleParameters.OptimalFiberlength; ///< Optimum fiber length
-  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.supraspinatus_1.Lf0 +.supraspinatus_2.Lf0 +.supraspinatus_3.Lf0 +.supraspinatus_4.Lf0 +.supraspinatus_5.Lf0 +.supraspinatus_6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.Supraspinatus1.Lf0 +.Supraspinatus2.Lf0 +.Supraspinatus3.Lf0 +.Supraspinatus4.Lf0 +.Supraspinatus5.Lf0 +.Supraspinatus6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 = 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
   Lt0 ??= max({MuscleParameters.TotalTendonLength, 0.001}); ///< Tendon slack length (Cannot be zero)
   Gamma0 ??= MuscleParameters.Pennationangle*(pi/180); ///< Pennation angle in radian
@@ -2170,14 +2170,14 @@ AnyMuscleModel3E supraspinatus_2 =
   PEFactor ??= .DefaultMusPar.PEFactor; ///< Parameter for influence of parallel stiffness
 };
 
-AnyMuscleModel3E supraspinatus_3 =
+AnyMuscleModel3E Supraspinatus3 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.supraspinatus;
   AnyIntVar MuscleElemNo = 3; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
   Lf0 ??= MuscleParameters.OptimalFiberlength; ///< Optimum fiber length
-  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.supraspinatus_1.Lf0 +.supraspinatus_2.Lf0 +.supraspinatus_3.Lf0 +.supraspinatus_4.Lf0 +.supraspinatus_5.Lf0 +.supraspinatus_6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.Supraspinatus1.Lf0 +.Supraspinatus2.Lf0 +.Supraspinatus3.Lf0 +.Supraspinatus4.Lf0 +.Supraspinatus5.Lf0 +.Supraspinatus6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 = 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
   Lt0 ??= max({MuscleParameters.TotalTendonLength, 0.001}); ///< Tendon slack length (Cannot be zero)
   Gamma0 ??= MuscleParameters.Pennationangle*(pi/180); ///< Pennation angle in radian
@@ -2190,14 +2190,14 @@ AnyMuscleModel3E supraspinatus_3 =
   PEFactor ??= .DefaultMusPar.PEFactor; ///< Parameter for influence of parallel stiffness
 };
 
-AnyMuscleModel3E supraspinatus_4 =
+AnyMuscleModel3E Supraspinatus4 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.supraspinatus;
   AnyIntVar MuscleElemNo = 4; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
   Lf0 ??= MuscleParameters.OptimalFiberlength; ///< Optimum fiber length
-  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.supraspinatus_1.Lf0 +.supraspinatus_2.Lf0 +.supraspinatus_3.Lf0 +.supraspinatus_4.Lf0 +.supraspinatus_5.Lf0 +.supraspinatus_6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.Supraspinatus1.Lf0 +.Supraspinatus2.Lf0 +.Supraspinatus3.Lf0 +.Supraspinatus4.Lf0 +.Supraspinatus5.Lf0 +.Supraspinatus6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 = 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
   Lt0 ??= max({MuscleParameters.TotalTendonLength, 0.001}); ///< Tendon slack length (Cannot be zero)
   Gamma0 ??= MuscleParameters.Pennationangle*(pi/180); ///< Pennation angle in radian
@@ -2210,14 +2210,14 @@ AnyMuscleModel3E supraspinatus_4 =
   PEFactor ??= .DefaultMusPar.PEFactor; ///< Parameter for influence of parallel stiffness
 };
 
-AnyMuscleModel3E supraspinatus_5 =
+AnyMuscleModel3E Supraspinatus5 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.supraspinatus;
   AnyIntVar MuscleElemNo = 5; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
   Lf0 ??= MuscleParameters.OptimalFiberlength; ///< Optimum fiber length
-  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.supraspinatus_1.Lf0 +.supraspinatus_2.Lf0 +.supraspinatus_3.Lf0 +.supraspinatus_4.Lf0 +.supraspinatus_5.Lf0 +.supraspinatus_6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.Supraspinatus1.Lf0 +.Supraspinatus2.Lf0 +.Supraspinatus3.Lf0 +.Supraspinatus4.Lf0 +.Supraspinatus5.Lf0 +.Supraspinatus6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 = 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
   Lt0 ??= max({MuscleParameters.TotalTendonLength, 0.001}); ///< Tendon slack length (Cannot be zero)
   Gamma0 ??= MuscleParameters.Pennationangle*(pi/180); ///< Pennation angle in radian
@@ -2230,14 +2230,14 @@ AnyMuscleModel3E supraspinatus_5 =
   PEFactor ??= .DefaultMusPar.PEFactor; ///< Parameter for influence of parallel stiffness
 };
 
-AnyMuscleModel3E supraspinatus_6 =
+AnyMuscleModel3E Supraspinatus6 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.supraspinatus;
   AnyIntVar MuscleElemNo = 6; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
   Lf0 ??= MuscleParameters.OptimalFiberlength; ///< Optimum fiber length
-  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.supraspinatus_1.Lf0 +.supraspinatus_2.Lf0 +.supraspinatus_3.Lf0 +.supraspinatus_4.Lf0 +.supraspinatus_5.Lf0 +.supraspinatus_6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.Supraspinatus1.Lf0 +.Supraspinatus2.Lf0 +.Supraspinatus3.Lf0 +.Supraspinatus4.Lf0 +.Supraspinatus5.Lf0 +.Supraspinatus6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 = 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
   Lt0 ??= max({MuscleParameters.TotalTendonLength, 0.001}); ///< Tendon slack length (Cannot be zero)
   Gamma0 ??= MuscleParameters.Pennationangle*(pi/180); ///< Pennation angle in radian
@@ -2257,14 +2257,14 @@ AnyMuscleModel3E supraspinatus_6 =
 //////////////////////////////////////
 //     teres_major (6 elements)     //
 //////////////////////////////////////
-AnyMuscleModel3E teres_major_1 =
+AnyMuscleModel3E TeresMajor1 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.teres_major;
   AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
   Lf0 ??= MuscleParameters.OptimalFiberlength; ///< Optimum fiber length
-  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.teres_major_1.Lf0 +.teres_major_2.Lf0 +.teres_major_3.Lf0 +.teres_major_4.Lf0 +.teres_major_5.Lf0 +.teres_major_6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.TeresMajor1.Lf0 +.TeresMajor2.Lf0 +.TeresMajor3.Lf0 +.TeresMajor4.Lf0 +.TeresMajor5.Lf0 +.TeresMajor6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 = 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
   Lt0 ??= max({MuscleParameters.TotalTendonLength, 0.001}); ///< Tendon slack length (Cannot be zero)
   Gamma0 ??= MuscleParameters.Pennationangle*(pi/180); ///< Pennation angle in radian
@@ -2277,14 +2277,14 @@ AnyMuscleModel3E teres_major_1 =
   PEFactor ??= .DefaultMusPar.PEFactor; ///< Parameter for influence of parallel stiffness
 };
 
-AnyMuscleModel3E teres_major_2 =
+AnyMuscleModel3E TeresMajor2 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.teres_major;
   AnyIntVar MuscleElemNo = 2; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
   Lf0 ??= MuscleParameters.OptimalFiberlength; ///< Optimum fiber length
-  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.teres_major_1.Lf0 +.teres_major_2.Lf0 +.teres_major_3.Lf0 +.teres_major_4.Lf0 +.teres_major_5.Lf0 +.teres_major_6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.TeresMajor1.Lf0 +.TeresMajor2.Lf0 +.TeresMajor3.Lf0 +.TeresMajor4.Lf0 +.TeresMajor5.Lf0 +.TeresMajor6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 = 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
   Lt0 ??= max({MuscleParameters.TotalTendonLength, 0.001}); ///< Tendon slack length (Cannot be zero)
   Gamma0 ??= MuscleParameters.Pennationangle*(pi/180); ///< Pennation angle in radian
@@ -2297,14 +2297,14 @@ AnyMuscleModel3E teres_major_2 =
   PEFactor ??= .DefaultMusPar.PEFactor; ///< Parameter for influence of parallel stiffness
 };
 
-AnyMuscleModel3E teres_major_3 =
+AnyMuscleModel3E TeresMajor3 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.teres_major;
   AnyIntVar MuscleElemNo = 3; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
   Lf0 ??= MuscleParameters.OptimalFiberlength; ///< Optimum fiber length
-  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.teres_major_1.Lf0 +.teres_major_2.Lf0 +.teres_major_3.Lf0 +.teres_major_4.Lf0 +.teres_major_5.Lf0 +.teres_major_6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.TeresMajor1.Lf0 +.TeresMajor2.Lf0 +.TeresMajor3.Lf0 +.TeresMajor4.Lf0 +.TeresMajor5.Lf0 +.TeresMajor6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 = 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
   Lt0 ??= max({MuscleParameters.TotalTendonLength, 0.001}); ///< Tendon slack length (Cannot be zero)
   Gamma0 ??= MuscleParameters.Pennationangle*(pi/180); ///< Pennation angle in radian
@@ -2317,14 +2317,14 @@ AnyMuscleModel3E teres_major_3 =
   PEFactor ??= .DefaultMusPar.PEFactor; ///< Parameter for influence of parallel stiffness
 };
 
-AnyMuscleModel3E teres_major_4 =
+AnyMuscleModel3E TeresMajor4 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.teres_major;
   AnyIntVar MuscleElemNo = 4; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
   Lf0 ??= MuscleParameters.OptimalFiberlength; ///< Optimum fiber length
-  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.teres_major_1.Lf0 +.teres_major_2.Lf0 +.teres_major_3.Lf0 +.teres_major_4.Lf0 +.teres_major_5.Lf0 +.teres_major_6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.TeresMajor1.Lf0 +.TeresMajor2.Lf0 +.TeresMajor3.Lf0 +.TeresMajor4.Lf0 +.TeresMajor5.Lf0 +.TeresMajor6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 = 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
   Lt0 ??= max({MuscleParameters.TotalTendonLength, 0.001}); ///< Tendon slack length (Cannot be zero)
   Gamma0 ??= MuscleParameters.Pennationangle*(pi/180); ///< Pennation angle in radian
@@ -2337,14 +2337,14 @@ AnyMuscleModel3E teres_major_4 =
   PEFactor ??= .DefaultMusPar.PEFactor; ///< Parameter for influence of parallel stiffness
 };
 
-AnyMuscleModel3E teres_major_5 =
+AnyMuscleModel3E TeresMajor5 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.teres_major;
   AnyIntVar MuscleElemNo = 5; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
   Lf0 ??= MuscleParameters.OptimalFiberlength; ///< Optimum fiber length
-  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.teres_major_1.Lf0 +.teres_major_2.Lf0 +.teres_major_3.Lf0 +.teres_major_4.Lf0 +.teres_major_5.Lf0 +.teres_major_6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.TeresMajor1.Lf0 +.TeresMajor2.Lf0 +.TeresMajor3.Lf0 +.TeresMajor4.Lf0 +.TeresMajor5.Lf0 +.TeresMajor6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 = 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
   Lt0 ??= max({MuscleParameters.TotalTendonLength, 0.001}); ///< Tendon slack length (Cannot be zero)
   Gamma0 ??= MuscleParameters.Pennationangle*(pi/180); ///< Pennation angle in radian
@@ -2357,14 +2357,14 @@ AnyMuscleModel3E teres_major_5 =
   PEFactor ??= .DefaultMusPar.PEFactor; ///< Parameter for influence of parallel stiffness
 };
 
-AnyMuscleModel3E teres_major_6 =
+AnyMuscleModel3E TeresMajor6 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.teres_major;
   AnyIntVar MuscleElemNo = 6; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
   Lf0 ??= MuscleParameters.OptimalFiberlength; ///< Optimum fiber length
-  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.teres_major_1.Lf0 +.teres_major_2.Lf0 +.teres_major_3.Lf0 +.teres_major_4.Lf0 +.teres_major_5.Lf0 +.teres_major_6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.TeresMajor1.Lf0 +.TeresMajor2.Lf0 +.TeresMajor3.Lf0 +.TeresMajor4.Lf0 +.TeresMajor5.Lf0 +.TeresMajor6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 = 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
   Lt0 ??= max({MuscleParameters.TotalTendonLength, 0.001}); ///< Tendon slack length (Cannot be zero)
   Gamma0 ??= MuscleParameters.Pennationangle*(pi/180); ///< Pennation angle in radian
@@ -2384,14 +2384,14 @@ AnyMuscleModel3E teres_major_6 =
 //////////////////////////////////////
 //     teres_minor (6 elements)     //
 //////////////////////////////////////
-AnyMuscleModel3E teres_minor_1 =
+AnyMuscleModel3E TeresMinor1 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.teres_minor;
   AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
   Lf0 ??= MuscleParameters.OptimalFiberlength; ///< Optimum fiber length
-  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.teres_minor_1.Lf0 +.teres_minor_2.Lf0 +.teres_minor_3.Lf0 +.teres_minor_4.Lf0 +.teres_minor_5.Lf0 +.teres_minor_6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.TeresMinor1.Lf0 +.TeresMinor2.Lf0 +.TeresMinor3.Lf0 +.TeresMinor4.Lf0 +.TeresMinor5.Lf0 +.TeresMinor6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 = 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
   Lt0 ??= max({MuscleParameters.TotalTendonLength, 0.001}); ///< Tendon slack length (Cannot be zero)
   Gamma0 ??= MuscleParameters.Pennationangle*(pi/180); ///< Pennation angle in radian
@@ -2404,14 +2404,14 @@ AnyMuscleModel3E teres_minor_1 =
   PEFactor ??= .DefaultMusPar.PEFactor; ///< Parameter for influence of parallel stiffness
 };
 
-AnyMuscleModel3E teres_minor_2 =
+AnyMuscleModel3E TeresMinor2 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.teres_minor;
   AnyIntVar MuscleElemNo = 2; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
   Lf0 ??= MuscleParameters.OptimalFiberlength; ///< Optimum fiber length
-  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.teres_minor_1.Lf0 +.teres_minor_2.Lf0 +.teres_minor_3.Lf0 +.teres_minor_4.Lf0 +.teres_minor_5.Lf0 +.teres_minor_6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.TeresMinor1.Lf0 +.TeresMinor2.Lf0 +.TeresMinor3.Lf0 +.TeresMinor4.Lf0 +.TeresMinor5.Lf0 +.TeresMinor6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 = 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
   Lt0 ??= max({MuscleParameters.TotalTendonLength, 0.001}); ///< Tendon slack length (Cannot be zero)
   Gamma0 ??= MuscleParameters.Pennationangle*(pi/180); ///< Pennation angle in radian
@@ -2424,14 +2424,14 @@ AnyMuscleModel3E teres_minor_2 =
   PEFactor ??= .DefaultMusPar.PEFactor; ///< Parameter for influence of parallel stiffness
 };
 
-AnyMuscleModel3E teres_minor_3 =
+AnyMuscleModel3E TeresMinor3 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.teres_minor;
   AnyIntVar MuscleElemNo = 3; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
   Lf0 ??= MuscleParameters.OptimalFiberlength; ///< Optimum fiber length
-  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.teres_minor_1.Lf0 +.teres_minor_2.Lf0 +.teres_minor_3.Lf0 +.teres_minor_4.Lf0 +.teres_minor_5.Lf0 +.teres_minor_6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.TeresMinor1.Lf0 +.TeresMinor2.Lf0 +.TeresMinor3.Lf0 +.TeresMinor4.Lf0 +.TeresMinor5.Lf0 +.TeresMinor6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 = 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
   Lt0 ??= max({MuscleParameters.TotalTendonLength, 0.001}); ///< Tendon slack length (Cannot be zero)
   Gamma0 ??= MuscleParameters.Pennationangle*(pi/180); ///< Pennation angle in radian
@@ -2444,14 +2444,14 @@ AnyMuscleModel3E teres_minor_3 =
   PEFactor ??= .DefaultMusPar.PEFactor; ///< Parameter for influence of parallel stiffness
 };
 
-AnyMuscleModel3E teres_minor_4 =
+AnyMuscleModel3E TeresMinor4 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.teres_minor;
   AnyIntVar MuscleElemNo = 4; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
   Lf0 ??= MuscleParameters.OptimalFiberlength; ///< Optimum fiber length
-  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.teres_minor_1.Lf0 +.teres_minor_2.Lf0 +.teres_minor_3.Lf0 +.teres_minor_4.Lf0 +.teres_minor_5.Lf0 +.teres_minor_6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.TeresMinor1.Lf0 +.TeresMinor2.Lf0 +.TeresMinor3.Lf0 +.TeresMinor4.Lf0 +.TeresMinor5.Lf0 +.TeresMinor6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 = 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
   Lt0 ??= max({MuscleParameters.TotalTendonLength, 0.001}); ///< Tendon slack length (Cannot be zero)
   Gamma0 ??= MuscleParameters.Pennationangle*(pi/180); ///< Pennation angle in radian
@@ -2464,14 +2464,14 @@ AnyMuscleModel3E teres_minor_4 =
   PEFactor ??= .DefaultMusPar.PEFactor; ///< Parameter for influence of parallel stiffness
 };
 
-AnyMuscleModel3E teres_minor_5 =
+AnyMuscleModel3E TeresMinor5 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.teres_minor;
   AnyIntVar MuscleElemNo = 5; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
   Lf0 ??= MuscleParameters.OptimalFiberlength; ///< Optimum fiber length
-  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.teres_minor_1.Lf0 +.teres_minor_2.Lf0 +.teres_minor_3.Lf0 +.teres_minor_4.Lf0 +.teres_minor_5.Lf0 +.teres_minor_6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.TeresMinor1.Lf0 +.TeresMinor2.Lf0 +.TeresMinor3.Lf0 +.TeresMinor4.Lf0 +.TeresMinor5.Lf0 +.TeresMinor6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 = 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
   Lt0 ??= max({MuscleParameters.TotalTendonLength, 0.001}); ///< Tendon slack length (Cannot be zero)
   Gamma0 ??= MuscleParameters.Pennationangle*(pi/180); ///< Pennation angle in radian
@@ -2484,14 +2484,14 @@ AnyMuscleModel3E teres_minor_5 =
   PEFactor ??= .DefaultMusPar.PEFactor; ///< Parameter for influence of parallel stiffness
 };
 
-AnyMuscleModel3E teres_minor_6 =
+AnyMuscleModel3E TeresMinor6 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.teres_minor;
   AnyIntVar MuscleElemNo = 6; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
   Lf0 ??= MuscleParameters.OptimalFiberlength; ///< Optimum fiber length
-  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.teres_minor_1.Lf0 +.teres_minor_2.Lf0 +.teres_minor_3.Lf0 +.teres_minor_4.Lf0 +.teres_minor_5.Lf0 +.teres_minor_6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+  AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.TeresMinor1.Lf0 +.TeresMinor2.Lf0 +.TeresMinor3.Lf0 +.TeresMinor4.Lf0 +.TeresMinor5.Lf0 +.TeresMinor6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 = 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
   Lt0 ??= max({MuscleParameters.TotalTendonLength, 0.001}); ///< Tendon slack length (Cannot be zero)
   Gamma0 ??= MuscleParameters.Pennationangle*(pi/180); ///< Pennation angle in radian
