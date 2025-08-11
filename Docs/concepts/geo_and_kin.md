@@ -24,7 +24,7 @@ In AMMR, the bodyparts use either of the following two concepts
   MAYBE MENTION THAT THIS IS OLDER CONCEPT ?????
 
 
-:::note **About AMMR Implementation**
+:::{note} **About AMMR Implementation**
 
 The Trunk Model, The GM Foot and the Hand Model (new in AMMR 4.0) are cases using the Shared Data Frame concept,
 while The TLEM Leg Model and The Shoulder-Arm Model uses Local Data/Segmental Frames
@@ -35,7 +35,7 @@ A Data/Segmental Frame can have certain assumptions attached,
 for instance about the location of the data with respect certain features like neutral position, scanned position, etc.
 Such assumptions may be exploited for building the model and a therefore they are important to acknowledge.
 
-:::note **About AMMR Implementation**
+:::{note} **About AMMR Implementation**
 
 - The Trunk Model's Data Frame is assumed to represent a neutral standing posture.
   This has been used to define Anatomical and Postural Data Frames, see further explanation later
@@ -67,7 +67,7 @@ Anatomical Frames are particular useful for:
 - definition of markers and other environment connections related to segments/bones
 
 
-:::note **About AMMR Implementation**
+:::{note} **About AMMR Implementation**
 TODO:
 
 - In upper and lower extremity models we define Y of the long-bones between the joint centers,
@@ -96,7 +96,7 @@ we must define the neutral position of the body part and in this posture attach 
 Postural Frames on the segments.
 TODO: IF NEEDED, EXPLAIN BETTER OR MAYBE LINK TO THE NOTE BELOW
 
-:::note **About AMMR Implementation**
+:::{note} **About AMMR Implementation**
 Postural Frames is a concept introduced in AMMR 4.0
 TODO: IS IT FULLY IMPLEMENTED ?????????????
 
@@ -117,7 +117,7 @@ TODO: IS IT FULLY IMPLEMENTED ?????????????
     Long bones of extremities Y is longitudinal axis, while X is in the sagital plane and Z in the frontal plane in neutral
 
 
-:::note **About AMMR Implementation**
+:::{note} **About AMMR Implementation**
 
 'ScalingNode'
 :::
@@ -137,7 +137,7 @@ And leveraging symmetry in the generic model streamlines model development
 and helps to ensure that both sides of the body behave consistently in simulations.
 
 
-:::note **About AMMR Implementation**
+:::{note} **About AMMR Implementation**
 
 - **All body-part models of extremities** are developped for one side with 
   a specific mirroring parameter allowing to implement left and right side with sign-change and full reuse of code.
