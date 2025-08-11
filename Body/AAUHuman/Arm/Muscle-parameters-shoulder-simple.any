@@ -2110,11 +2110,11 @@ AnyMuscleModel ExtensorIndicis =
 
 
 /////////////////////////////////////////////////
-//     Extensor_Carpi_Ulnaris (1 element )     //
+//     ExtensorCarpiUlnaris (1 element )     //
 /////////////////////////////////////////////////
-AnyMuscleModel Extensor_Carpi_Ulnaris =
+AnyMuscleModel ExtensorCarpiUlnaris =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Extensor_Carpi_Ulnaris;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.ExtensorCarpiUlnaris;
   AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -2164,11 +2164,11 @@ AnyMuscleModel ExtensorCarpiRadialisBrevis =
 
 
 ////////////////////////////////////////////////
-//     Flexor_Carpi_Radialis (1 element )     //
+//     FlexorCarpiRadialis (1 element )     //
 ////////////////////////////////////////////////
-AnyMuscleModel Flexor_Carpi_Radialis =
+AnyMuscleModel FlexorCarpiRadialis =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Flexor_Carpi_Radialis;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.FlexorCarpiRadialis;
   AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -2182,11 +2182,11 @@ AnyMuscleModel Flexor_Carpi_Radialis =
 
 
 ///////////////////////////////////////////////
-//     Flexor_Carpi_Ulnaris (1 element )     //
+//     FlexorCarpiUlnaris (1 element )     //
 ///////////////////////////////////////////////
-AnyMuscleModel Flexor_Carpi_Ulnaris =
+AnyMuscleModel FlexorCarpiUlnaris =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Flexor_Carpi_Ulnaris;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.FlexorCarpiUlnaris;
   AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -2200,11 +2200,11 @@ AnyMuscleModel Flexor_Carpi_Ulnaris =
 
 
 //////////////////////////////////////////
-//     Palmaris_Longus (1 element )     //
+//     PalmarisLongus (1 element )     //
 //////////////////////////////////////////
-AnyMuscleModel Palmaris_Longus =
+AnyMuscleModel PalmarisLongus =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Palmaris_Longus;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.PalmarisLongus;
   AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -2218,11 +2218,11 @@ AnyMuscleModel Palmaris_Longus =
 
 
 ////////////////////////////////////////////////////////////////
-//     Flexor_Digitorum_Superficialis_Digit5 (1 element )     //
+//     FlexorDigitorumSuperficialisDigit5 (1 element )     //
 ////////////////////////////////////////////////////////////////
-AnyMuscleModel Flexor_Digitorum_Superficialis_Digit5 =
+AnyMuscleModel FlexorDigitorumSuperficialisDigit5 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Flexor_Digitorum_Superficialis_Digit5;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.FlexorDigitorumSuperficialisDigit5;
   AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -2236,11 +2236,11 @@ AnyMuscleModel Flexor_Digitorum_Superficialis_Digit5 =
 
 
 ////////////////////////////////////////////////////////////////
-//     Flexor_Digitorum_Superficialis_Digit4 (1 element )     //
+//     FlexorDigitorumSuperficialisDigit4 (1 element )     //
 ////////////////////////////////////////////////////////////////
-AnyMuscleModel Flexor_Digitorum_Superficialis_Digit4 =
+AnyMuscleModel FlexorDigitorumSuperficialisDigit4 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Flexor_Digitorum_Superficialis_Digit4;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.FlexorDigitorumSuperficialisDigit4;
   AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -2254,11 +2254,11 @@ AnyMuscleModel Flexor_Digitorum_Superficialis_Digit4 =
 
 
 ////////////////////////////////////////////////////////////////
-//     Flexor_Digitorum_Superficialis_Digit3 (1 element )     //
+//     FlexorDigitorumSuperficialisDigit3 (1 element )     //
 ////////////////////////////////////////////////////////////////
-AnyMuscleModel Flexor_Digitorum_Superficialis_Digit3 =
+AnyMuscleModel FlexorDigitorumSuperficialisDigit3 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Flexor_Digitorum_Superficialis_Digit3;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.FlexorDigitorumSuperficialisDigit3;
   AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -2272,11 +2272,11 @@ AnyMuscleModel Flexor_Digitorum_Superficialis_Digit3 =
 
 
 ////////////////////////////////////////////////////////////////
-//     Flexor_Digitorum_Superficialis_Digit2 (1 element )     //
+//     FlexorDigitorumSuperficialisDigit2 (1 element )     //
 ////////////////////////////////////////////////////////////////
-AnyMuscleModel Flexor_Digitorum_Superficialis_Digit2 =
+AnyMuscleModel FlexorDigitorumSuperficialisDigit2 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Flexor_Digitorum_Superficialis_Digit2;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.FlexorDigitorumSuperficialisDigit2;
   AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length

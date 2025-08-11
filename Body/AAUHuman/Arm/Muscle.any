@@ -2065,13 +2065,13 @@ MuscleGroup ExtensorCarpiRadialisBrevis = {
 };
 
 MuscleGroup ExtensorCarpiUlnaris = {
-  AnyMuscleShortestPath Extensor_Carpi_Ulnaris ={
-    AnyMuscleModel &MusMdl = ...MuscleModels.Extensor_Carpi_Ulnaris;
-    AnyRefNode &Org = ...Segments.Humerus.O_Extensor_Carpi_Ulnaris;
-    AnyRefNode &Via1 = ...Segments.Ulna.Via1_Extensor_Carpi_Ulnaris;
-  //  AnyRefNode &Via2 = ...Segments.Ulna.Via2_Extensor_Carpi_Ulnaris;
-    AnyRefNode &Via2 = ...Segments.Radius.Via_Extensor_Carpi_Ulnaris;
-    AnyRefNode &Ins = ...Segments.Hand.Finger5MetaRef.I_Extensor_Carpi_Ulnaris;
+  AnyMuscleShortestPath ExtensorCarpiUlnaris ={
+    AnyMuscleModel &MusMdl = ...MuscleModels.ExtensorCarpiUlnaris;
+    AnyRefNode &Org = ...Segments.Humerus.O_ExtensorCarpiUlnaris;
+    AnyRefNode &Via1 = ...Segments.Ulna.Via1_ExtensorCarpiUlnaris;
+  //  AnyRefNode &Via2 = ...Segments.Ulna.Via2_ExtensorCarpiUlnaris;
+    AnyRefNode &Via2 = ...Segments.Radius.Via_ExtensorCarpiUlnaris;
+    AnyRefNode &Ins = ...Segments.Hand.Finger5MetaRef.I_ExtensorCarpiUlnaris;
     AnySurfCylinder &Surf2 = ...Segments.Radius.MedialExtensorCyl.cyl;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     SPLine.StringMesh = 35;
@@ -2085,12 +2085,12 @@ MuscleGroup ExtensorCarpiUlnaris = {
 };
 
 MuscleGroup FlexorCarpiUlnaris = {
-  AnyMuscleShortestPath Flexor_Carpi_Ulnaris  ={
-    AnyMuscleModel &MusMdl = ...MuscleModels.Flexor_Carpi_Ulnaris;
-    AnyRefNode &Org = ...Segments.Humerus.O_Flexor_Carpi_Ulnaris;
-    AnyRefNode &Via1 = ...Segments.Ulna.Via1_Flexor_Carpi_Ulnaris;
-    AnyRefNode &Via2 = ...Segments.Radius.Via_Flexor_Carpi_Ulnaris;
-    AnyRefNode &Ins = ...Segments.Hand.Finger5MetaRef.I_Flexor_Carpi_Ulnaris;
+  AnyMuscleShortestPath FlexorCarpiUlnaris  ={
+    AnyMuscleModel &MusMdl = ...MuscleModels.FlexorCarpiUlnaris;
+    AnyRefNode &Org = ...Segments.Humerus.O_FlexorCarpiUlnaris;
+    AnyRefNode &Via1 = ...Segments.Ulna.Via1_FlexorCarpiUlnaris;
+    AnyRefNode &Via2 = ...Segments.Radius.Via_FlexorCarpiUlnaris;
+    AnyRefNode &Ins = ...Segments.Hand.Finger5MetaRef.I_FlexorCarpiUlnaris;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     AnySurfCylinder &Surf2 = ...Segments.Radius.FlexorMuscleCyl.cyl;
     SPLine.StringMesh = 30;
@@ -2105,11 +2105,11 @@ MuscleGroup FlexorCarpiUlnaris = {
 };
 
 MuscleGroup FlexorCarpiRadialis = {
-  AnyMuscleShortestPath Flexor_Carpi_Radialis  ={
-    AnyMuscleModel &MusMdl = ...MuscleModels.Flexor_Carpi_Radialis;
-    AnyRefNode &Org = ...Segments.Humerus.O_Flexor_Carpi_Radialis;
-    AnyRefNode &Via2 = ...Segments.Radius.Via_Flexor_Carpi_Radialis;
-    AnyRefNode &Ins = ...Segments.Hand.Finger2MetaRef.I_Flexor_Carpi_Radialis;
+  AnyMuscleShortestPath FlexorCarpiRadialis  ={
+    AnyMuscleModel &MusMdl = ...MuscleModels.FlexorCarpiRadialis;
+    AnyRefNode &Org = ...Segments.Humerus.O_FlexorCarpiRadialis;
+    AnyRefNode &Via2 = ...Segments.Radius.Via_FlexorCarpiRadialis;
+    AnyRefNode &Ins = ...Segments.Hand.Finger2MetaRef.I_FlexorCarpiRadialis;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
 
     AnySurfEllipsoid &Surf1 = ...Segments.Radius.FlexorMuscleEllipsoid.ellipsoid;
@@ -2126,11 +2126,11 @@ MuscleGroup FlexorCarpiRadialis = {
 };
 
 MuscleGroup PalmarisLongus = {
-  AnyMuscleShortestPath Palmaris_Longus  ={
-    AnyMuscleModel &MusMdl = ...MuscleModels.Palmaris_Longus;
-    AnyRefNode &Org = ...Segments.Humerus.O_Palmaris_Longus;
-    AnyRefNode &Via2 = ...Segments.Radius.Via_Palmaris_Longus;
-    AnyRefNode &Ins = ...Segments.Hand.Finger4MetaRef.I_Palmaris_Longus;
+  AnyMuscleShortestPath PalmarisLongus  ={
+    AnyMuscleModel &MusMdl = ...MuscleModels.PalmarisLongus;
+    AnyRefNode &Org = ...Segments.Humerus.O_PalmarisLongus;
+    AnyRefNode &Via2 = ...Segments.Radius.Via_PalmarisLongus;
+    AnyRefNode &Ins = ...Segments.Hand.Finger4MetaRef.I_PalmarisLongus;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
 
     AnySurfEllipsoid &Surf1 = ...Segments.Radius.FlexorMuscleEllipsoid.ellipsoid;
@@ -2147,12 +2147,12 @@ MuscleGroup PalmarisLongus = {
 };
 
 MuscleGroup FlexorDigitorumSuperficialis = {
-  AnyMuscleShortestPath Flexor_Digitorum_Superficialis__Digit5 ={
-    AnyMuscleModel &MusMdl = ...MuscleModels.Flexor_Digitorum_Superficialis_Digit5;
-    AnyRefNode &Org = ...Segments.Humerus.O_Flexor_Digitorum_Superficialis;
-    AnyRefNode &Via1 = ...Segments.Radius.Via_Flexor_Digitorum_Superficialis_Digit5;
-    AnyRefNode &Via2 = ...Segments.Hand.Finger5MetaRef.Via_Flexor_Digitorum_Superficialis_Digit5;
-    AnyRefNode &Ins = ...Segments.Hand.Finger5MetaRef.I_Flexor_Digitorum_Superficialis_Digit5;
+  AnyMuscleShortestPath FlexorDigitorumSuperficialisDigit5 ={
+    AnyMuscleModel &MusMdl = ...MuscleModels.FlexorDigitorumSuperficialisDigit5;
+    AnyRefNode &Org = ...Segments.Humerus.O_FlexorDigitorumSuperficialis;
+    AnyRefNode &Via1 = ...Segments.Radius.Via_FlexorDigitorumSuperficialisDigit5;
+    AnyRefNode &Via2 = ...Segments.Hand.Finger5MetaRef.Via_FlexorDigitorumSuperficialisDigit5;
+    AnyRefNode &Ins = ...Segments.Hand.Finger5MetaRef.I_FlexorDigitorumSuperficialisDigit5;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
 
     AnySurfEllipsoid &Surf1 = ...Segments.Radius.FlexorMuscleEllipsoid.ellipsoid;
@@ -2167,12 +2167,12 @@ MuscleGroup FlexorDigitorumSuperficialis = {
     SPLine.RelTol=0.0000001;
   };
 
-  AnyMuscleShortestPath Flexor_Digitorum_Superficialis__Digit4 ={
-    AnyMuscleModel &MusMdl = ...MuscleModels.Flexor_Digitorum_Superficialis_Digit4;
-    AnyRefNode &Org = ...Segments.Humerus.O_Flexor_Digitorum_Superficialis;
-    AnyRefNode &Via1 = ...Segments.Radius.Via_Flexor_Digitorum_Superficialis_Digit4;
-    AnyRefNode &Via2 = ...Segments.Hand.Finger4MetaRef.Via_Flexor_Digitorum_Superficialis_Digit4;
-    AnyRefNode &Ins = ...Segments.Hand.Finger4MetaRef.I_Flexor_Digitorum_Superficialis_Digit4;
+  AnyMuscleShortestPath FlexorDigitorumSuperficialisDigit4 ={
+    AnyMuscleModel &MusMdl = ...MuscleModels.FlexorDigitorumSuperficialisDigit4;
+    AnyRefNode &Org = ...Segments.Humerus.O_FlexorDigitorumSuperficialis;
+    AnyRefNode &Via1 = ...Segments.Radius.Via_FlexorDigitorumSuperficialisDigit4;
+    AnyRefNode &Via2 = ...Segments.Hand.Finger4MetaRef.Via_FlexorDigitorumSuperficialisDigit4;
+    AnyRefNode &Ins = ...Segments.Hand.Finger4MetaRef.I_FlexorDigitorumSuperficialisDigit4;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
 
     AnySurfEllipsoid &Surf1 = ...Segments.Radius.FlexorMuscleEllipsoid.ellipsoid;
@@ -2187,12 +2187,12 @@ MuscleGroup FlexorDigitorumSuperficialis = {
     SPLine.RelTol=0.0000001;
   };
 
-  AnyMuscleShortestPath Flexor_Digitorum_Superficialis__Digit3 ={
-    AnyMuscleModel &MusMdl = ...MuscleModels.Flexor_Digitorum_Superficialis_Digit3;
-    AnyRefNode &Org = ...Segments.Humerus.O_Flexor_Digitorum_Superficialis;
-    AnyRefNode &Via1 = ...Segments.Radius.Via_Flexor_Digitorum_Superficialis_Digit3;
-    AnyRefNode &Via2 = ...Segments.Hand.Finger3MetaRef.Via_Flexor_Digitorum_Superficialis_Digit3;
-    AnyRefNode &Ins = ...Segments.Hand.Finger3MetaRef.I_Flexor_Digitorum_Superficialis_Digit3;
+  AnyMuscleShortestPath FlexorDigitorumSuperficialisDigit3 ={
+    AnyMuscleModel &MusMdl = ...MuscleModels.FlexorDigitorumSuperficialisDigit3;
+    AnyRefNode &Org = ...Segments.Humerus.O_FlexorDigitorumSuperficialis;
+    AnyRefNode &Via1 = ...Segments.Radius.Via_FlexorDigitorumSuperficialisDigit3;
+    AnyRefNode &Via2 = ...Segments.Hand.Finger3MetaRef.Via_FlexorDigitorumSuperficialisDigit3;
+    AnyRefNode &Ins = ...Segments.Hand.Finger3MetaRef.I_FlexorDigitorumSuperficialisDigit3;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
 
     AnySurfEllipsoid &Surf1 = ...Segments.Radius.FlexorMuscleEllipsoid.ellipsoid;
@@ -2206,12 +2206,12 @@ MuscleGroup FlexorDigitorumSuperficialis = {
     SPLine.StringMesh = 25;
     SPLine.RelTol=0.0000001;
   };
-  AnyMuscleShortestPath Flexor_Digitorum_Superficialis__Digit2 ={
-    AnyMuscleModel &MusMdl = ...MuscleModels.Flexor_Digitorum_Superficialis_Digit2;
-    AnyRefNode &Org = ...Segments.Humerus.O_Flexor_Digitorum_Superficialis;
-    AnyRefNode &Via1 = ...Segments.Radius.Via_Flexor_Digitorum_Superficialis_Digit2;
-    AnyRefNode &Via2 = ...Segments.Hand.Finger2MetaRef.Via_Flexor_Digitorum_Superficialis_Digit2;
-    AnyRefNode &Ins = ...Segments.Hand.Finger2MetaRef.I_Flexor_Digitorum_Superficialis_Digit2;
+  AnyMuscleShortestPath FlexorDigitorumSuperficialisDigit2 ={
+    AnyMuscleModel &MusMdl = ...MuscleModels.FlexorDigitorumSuperficialisDigit2;
+    AnyRefNode &Org = ...Segments.Humerus.O_FlexorDigitorumSuperficialis;
+    AnyRefNode &Via1 = ...Segments.Radius.Via_FlexorDigitorumSuperficialisDigit2;
+    AnyRefNode &Via2 = ...Segments.Hand.Finger2MetaRef.Via_FlexorDigitorumSuperficialisDigit2;
+    AnyRefNode &Ins = ...Segments.Hand.Finger2MetaRef.I_FlexorDigitorumSuperficialisDigit2;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
 
     AnySurfEllipsoid &Surf1 = ...Segments.Radius.FlexorMuscleEllipsoid.ellipsoid;

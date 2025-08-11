@@ -313,15 +313,15 @@ Humerus = {
   AnyRefNode I_Cor_brach_2                    = {sRel = .Scale(.Data.I_Cor_brach_2_pos*.Mirror);};
 
 
-  AnyRefNode O_Extensor_Carpi_Ulnaris         = {sRel = .Scale(.Data.O_Extensor_Carpi_Ulnaris_pos*.Mirror);};
+  AnyRefNode O_ExtensorCarpiUlnaris         = {sRel = .Scale(.Data.O_ExtensorCarpiUlnaris_pos*.Mirror);};
   AnyRefNode O_ExtensorCarpiRadialisBrevis = {sRel = .Scale(.Data.O_ExtensorCarpiRadialisBrevis_pos*.Mirror);};
 
   AnyRefNode O_ExtensorCarpiRadialisLongus = {sRel = .Scale(.Data.O_ExtensorCarpiRadialisLongus_pos*.Mirror);};
-  AnyRefNode O_Flexor_Carpi_Ulnaris           = {sRel = .Scale(.Data.O_Flexor_Carpi_Ulnaris_pos*.Mirror);};
-  AnyRefNode O_Flexor_Carpi_Radialis          = {sRel = .Scale(.Data.O_Flexor_Carpi_Radialis_pos*.Mirror);};
-  AnyRefNode O_Palmaris_Longus                = {sRel = .Scale(.Data.O_Palmaris_Longus_pos*.Mirror);};
+  AnyRefNode O_FlexorCarpiUlnaris           = {sRel = .Scale(.Data.O_FlexorCarpiUlnaris_pos*.Mirror);};
+  AnyRefNode O_FlexorCarpiRadialis          = {sRel = .Scale(.Data.O_FlexorCarpiRadialis_pos*.Mirror);};
+  AnyRefNode O_PalmarisLongus                = {sRel = .Scale(.Data.O_PalmarisLongus_pos*.Mirror);};
 
-  AnyRefNode O_Flexor_Digitorum_Superficialis = {sRel = .Scale(.Data.O_Flexor_Digitorum_Superficialis_pos*.Mirror);};
+  AnyRefNode O_FlexorDigitorumSuperficialis = {sRel = .Scale(.Data.O_FlexorDigitorumSuperficialispos*.Mirror);};
   AnyRefNode O_Extensor_Digitorum             = {sRel = .Scale(.Data.O_Extensor_Digitorum_pos*.Mirror);};
   AnyRefNode O_Extensor_Digiti_Minimi         = {sRel = .Scale(.Data.O_Extensor_Digiti_Minimi_pos*.Mirror);};
 

@@ -1318,10 +1318,10 @@ requested body height.
   the Inverse Dynamics simulations.
 - Fixed a problem with the Body Model configurator plugin showing reporting: "No
   Human Model" when a configuration file already exists.
-- Corrected the location of via points of Flexor_Digitorum_Superficialis_Digit2
+- Corrected the location of via points of FlexorDigitorumSuperficialisDigit2
   to avoid wrapping surface collisions in certain hand positions.
-- Corrected the location of via points of Flexor_Digitorum_Superficialis_Digit3
-  and 4, Palmaris_Longus, ExtensorCarpiRadialisBrevis and
+- Corrected the location of via points of FlexorDigitorumSuperficialisDigit3
+  and 4, PalmarisLongus, ExtensorCarpiRadialisBrevis and
   Extensor_Digitorum_Digit2 to avoid wrapping surface collisions in certain hand
   positions.
 - The muscle via point representing the bicipital groove have been adjusted to

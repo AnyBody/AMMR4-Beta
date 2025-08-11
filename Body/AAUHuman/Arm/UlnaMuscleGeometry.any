@@ -56,11 +56,11 @@ Ulna = {
   AnyRefNode O_ExtensorIndicis              = {sRel = .Scale(.Data.O_ExtensorIndicis_pos*.Mirror);};
   AnyRefNode O_ExtensorPollicisLongus      = {sRel = .Scale(.Data.O_ExtensorPollicisLongus_pos*.Mirror);};
   AnyRefNode O_AbductorPollicisLongus      = {sRel = .Scale(.Data.O_AbductorPollicisLongus_pos*.Mirror);};
-  AnyRefNode Via1_Flexor_Carpi_Ulnaris       = {sRel = .Scale(.Data.Via1_Flexor_Carpi_Ulnaris_pos*.Mirror);};
-  AnyRefNode Via2_Flexor_Carpi_Ulnaris       = {sRel = .Scale(.Data.Via2_Flexor_Carpi_Ulnaris_pos*.Mirror);};
-  AnyRefNode Via1_Extensor_Carpi_Ulnaris     = {sRel = .Scale(.Data.Via1_Extensor_Carpi_Ulnaris_pos*.Mirror);};
-  AnyRefNode Via2_Extensor_Carpi_Ulnaris     = {sRel = .Scale(.Data.Via2_Extensor_Carpi_Ulnaris_pos*.Mirror);};
-  AnyRefNode O_Flexor_Digitorum_Superficialis= {sRel = .Scale(.Data.O_Flexor_Digitorum_Superficialis_pos*.Mirror);};
+  AnyRefNode Via1_FlexorCarpiUlnaris       = {sRel = .Scale(.Data.Via1_FlexorCarpiUlnaris_pos*.Mirror);};
+  AnyRefNode Via2_FlexorCarpiUlnaris       = {sRel = .Scale(.Data.Via2_FlexorCarpiUlnaris_pos*.Mirror);};
+  AnyRefNode Via1_ExtensorCarpiUlnaris     = {sRel = .Scale(.Data.Via1_ExtensorCarpiUlnaris_pos*.Mirror);};
+  AnyRefNode Via2_ExtensorCarpiUlnaris     = {sRel = .Scale(.Data.Via2_ExtensorCarpiUlnaris_pos*.Mirror);};
+  AnyRefNode O_FlexorDigitorumSuperficialis= {sRel = .Scale(.Data.O_FlexorDigitorumSuperficialispos*.Mirror);};
   AnyRefNode O_Flexor_Digitorum_Profundus    = {sRel = .Scale(.Data.O_Flexor_Digitorum_Profundus_pos*.Mirror);};
 
 };
