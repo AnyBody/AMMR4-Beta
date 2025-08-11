@@ -1845,10 +1845,10 @@ MuscleGroup PronatorTeres = {
 };
 
 MuscleGroup Supinator = {
-  AnyMuscleShortestPath Supinator_humerus_part_1 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.Supinator_humerus_part_1;
-    AnyRefNode &Org = ...Segments.Humerus.O_Supinator_humerus_part_1;
-    AnyRefNode &Ins = ...Segments.Radius.I_Supinator_humerus_part_1;
+  AnyMuscleShortestPath SupinatorHumerus1 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.SupinatorHumerus1;
+    AnyRefNode &Org = ...Segments.Humerus.O_SupinatorHumerus1;
+    AnyRefNode &Ins = ...Segments.Radius.I_SupinatorHumerus1;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     AnySurfCylinder &Surf1 = ..supinatorcyl;
     SPLine.StringMesh = 25;
@@ -1860,10 +1860,10 @@ MuscleGroup Supinator = {
     };
   };
 
-  AnyMuscleShortestPath Supinator_humerus_part_2 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.Supinator_humerus_part_2;
-    AnyRefNode &Org = ...Segments.Humerus.O_Supinator_humerus_part_2;
-    AnyRefNode &Ins = ...Segments.Radius.I_Supinator_humerus_part_2;
+  AnyMuscleShortestPath SupinatorHumerus2 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.SupinatorHumerus2;
+    AnyRefNode &Org = ...Segments.Humerus.O_SupinatorHumerus2;
+    AnyRefNode &Ins = ...Segments.Radius.I_SupinatorHumerus2;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     AnySurfCylinder &Surf1 = ..supinatorcyl;
     SPLine.StringMesh = 30;
@@ -1875,10 +1875,10 @@ MuscleGroup Supinator = {
     };
   };
 
-  AnyMuscleShortestPath Supinator_ulna_part_1 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.Supinator_ulna_part_1;
-    AnyRefNode &Org = ...Segments.Ulna.O_Supinator_ulna_part_1;
-    AnyRefNode &Ins = ...Segments.Radius.I_Supinator_ulna_part_1;
+  AnyMuscleShortestPath SupinatorUlnare1 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.SupinatorUlnare1;
+    AnyRefNode &Org = ...Segments.Ulna.O_SupinatorUlnare1;
+    AnyRefNode &Ins = ...Segments.Radius.I_SupinatorUlnare1;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     AnySurfCylinder &Surf1 = ..supinatorcyl;
 
@@ -1896,10 +1896,10 @@ MuscleGroup Supinator = {
     };
   };
 
-  AnyMuscleShortestPath Supinator_ulna_part_2 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.Supinator_ulna_part_2;
-    AnyRefNode &Org = ...Segments.Ulna.O_Supinator_ulna_part_2;
-    AnyRefNode &Ins = ...Segments.Radius.I_Supinator_ulna_part_2;
+  AnyMuscleShortestPath SupinatorUlnare2 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.SupinatorUlnare2;
+    AnyRefNode &Org = ...Segments.Ulna.O_SupinatorUlnare2;
+    AnyRefNode &Ins = ...Segments.Radius.I_SupinatorUlnare2;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     AnySurfCylinder &Surf1 = ..supinatorcyl;
     SPLine.StringMesh = 25;
