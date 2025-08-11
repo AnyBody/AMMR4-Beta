@@ -322,8 +322,8 @@ Humerus = {
   AnyRefNode O_PalmarisLongus                = {sRel = .Scale(.Data.O_PalmarisLongus_pos*.Mirror);};
 
   AnyRefNode O_FlexorDigitorumSuperficialis = {sRel = .Scale(.Data.O_FlexorDigitorumSuperficialispos*.Mirror);};
-  AnyRefNode O_Extensor_Digitorum             = {sRel = .Scale(.Data.O_Extensor_Digitorum_pos*.Mirror);};
-  AnyRefNode O_Extensor_Digiti_Minimi         = {sRel = .Scale(.Data.O_Extensor_Digiti_Minimi_pos*.Mirror);};
+  AnyRefNode O_ExtensorDigitorum             = {sRel = .Scale(.Data.O_ExtensorDigitorumpos*.Mirror);};
+  AnyRefNode O_ExtensorDigitiMinimi         = {sRel = .Scale(.Data.O_ExtensorDigitiMinimi_pos*.Mirror);};
 
 };
 
