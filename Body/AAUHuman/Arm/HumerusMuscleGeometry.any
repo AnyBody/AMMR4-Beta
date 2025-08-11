@@ -314,9 +314,9 @@ Humerus = {
 
 
   AnyRefNode O_Extensor_Carpi_Ulnaris         = {sRel = .Scale(.Data.O_Extensor_Carpi_Ulnaris_pos*.Mirror);};
-  AnyRefNode O_Extensor_Carpi_Radialis_Brevis = {sRel = .Scale(.Data.O_Extensor_Carpi_Radialis_Brevis_pos*.Mirror);};
+  AnyRefNode O_ExtensorCarpiRadialisBrevis = {sRel = .Scale(.Data.O_ExtensorCarpiRadialisBrevis_pos*.Mirror);};
 
-  AnyRefNode O_Extensor_Carpi_Radialis_Longus = {sRel = .Scale(.Data.O_Extensor_Carpi_Radialis_Longus_pos*.Mirror);};
+  AnyRefNode O_ExtensorCarpiRadialisLongus = {sRel = .Scale(.Data.O_ExtensorCarpiRadialisLongus_pos*.Mirror);};
   AnyRefNode O_Flexor_Carpi_Ulnaris           = {sRel = .Scale(.Data.O_Flexor_Carpi_Ulnaris_pos*.Mirror);};
   AnyRefNode O_Flexor_Carpi_Radialis          = {sRel = .Scale(.Data.O_Flexor_Carpi_Radialis_pos*.Mirror);};
   AnyRefNode O_Palmaris_Longus                = {sRel = .Scale(.Data.O_Palmaris_Longus_pos*.Mirror);};

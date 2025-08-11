@@ -810,7 +810,7 @@ AnyFolder Muscles =
     AnyFloat Fcfast ??= DesignVar(0.4); ///< Factor for determining shortening speed at optimum length
   };
 
-  AnyFolder Extensor_Pollicis_Longus =
+  AnyFolder ExtensorPollicisLongus =
   {
     AnyString Muscle = "Extensor Pollicis Longus"; ///< Descriptive name for the muscle, e.g. for plotting
     AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -826,7 +826,7 @@ AnyFolder Muscles =
     AnyFloat Fcfast ??= DesignVar(0.4); ///< Factor for determining shortening speed at optimum length
   };
 
-  AnyFolder Extensor_Pollicis_Brevis =
+  AnyFolder ExtensorPollicisBrevis =
   {
     AnyString Muscle = "Extensor Pollicis Brevis"; ///< Descriptive name for the muscle, e.g. for plotting
     AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -842,7 +842,7 @@ AnyFolder Muscles =
     AnyFloat Fcfast ??= DesignVar(0.4); ///< Factor for determining shortening speed at optimum length
   };
 
-  AnyFolder Abductor_Pollicis_Longus =
+  AnyFolder AbductorPollicisLongus =
   {
     AnyString Muscle = "Abductor Pollicis Longus"; ///< Descriptive name for the muscle, e.g. for plotting
     AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -858,9 +858,9 @@ AnyFolder Muscles =
     AnyFloat Fcfast ??= DesignVar(0.4); ///< Factor for determining shortening speed at optimum length
   };
 
-  AnyFolder Extensor_Indicis =
+  AnyFolder ExtensorIndicis =
   {
-    AnyString Muscle = "Extensor_Indicis"; ///< Descriptive name for the muscle, e.g. for plotting
+    AnyString Muscle = "ExtensorIndicis"; ///< Descriptive name for the muscle, e.g. for plotting
     AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
     AnyFloat Pennationangle ??= DesignVar(6); ///< Pennation angle of the muscle fibers (degres)
     AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -890,7 +890,7 @@ AnyFolder Muscles =
     AnyFloat Fcfast ??= DesignVar(0.4); ///< Factor for determining shortening speed at optimum length
   };
 
-  AnyFolder Extensor_Carpi_Radialis_Longus =
+  AnyFolder ExtensorCarpiRadialisLongus =
   {
     AnyString Muscle = "Extensor Carpi Radialis Longus"; ///< Descriptive name for the muscle, e.g. for plotting
     AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
@@ -906,7 +906,7 @@ AnyFolder Muscles =
     AnyFloat Fcfast ??= DesignVar(0.4); ///< Factor for determining shortening speed at optimum length
   };
 
-  AnyFolder Extensor_Carpi_Radialis_Brevis =
+  AnyFolder ExtensorCarpiRadialisBrevis =
   {
     AnyString Muscle = "Extensor Carpi Radialis Brevis"; ///< Descriptive name for the muscle, e.g. for plotting
     AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle

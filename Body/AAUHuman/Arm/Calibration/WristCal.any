@@ -244,9 +244,9 @@ AnyFolder WristCal ={
 
 AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.ShoulderArm.Muscles);
 
-  AnyObjectPtrArray AbductorPollicisMuscles = ObjSearch(MusPrefix+".AbductorPollicis.*", "AnyMuscle");
-  AnyFloat  AbductorPollicisRmin = repmat(NumElemOf(AbductorPollicisMuscles), ..RMin);
-  AnyFloat  AbductorPollicisRmax = repmat(NumElemOf(AbductorPollicisMuscles), ..RMax);
+  AnyObjectPtrArray AbductorPollicisLongusMuscles = ObjSearch(MusPrefix+".AbductorPollicisLongus.*", "AnyMuscle");
+  AnyFloat  AbductorPollicisLongusRmin = repmat(NumElemOf(AbductorPollicisLongusMuscles), ..RMin);
+  AnyFloat  AbductorPollicisLongusRmax = repmat(NumElemOf(AbductorPollicisLongusMuscles), ..RMax);
 
   AnyObjectPtrArray ExtensorCarpiRadialisMuscles = ObjSearch(MusPrefix+".ExtensorCarpiRadialis.*", "AnyMuscle");
   AnyFloat  ExtensorCarpiRadialisRmin = repmat(NumElemOf(ExtensorCarpiRadialisMuscles), ..RMin);
@@ -352,7 +352,7 @@ AnyBodyCalibrationStudy ArmCalibrationStudyWrist = {
   InitialConditions.PosAnalysisOnlyOnOff = On;
 
   MuscleArr = arrcat(arrcat(arrcat(
-      ref.AbductorPollicisMuscles,
+      ref.AbductorPollicisLongusMuscles,
       ref.ExtensorCarpiRadialisMuscles,
       ref.ExtensorCarpiUlnarisMuscles,
       ref.ExtensorDigitiMinimiMuscles,
@@ -378,7 +378,7 @@ AnyBodyCalibrationStudy ArmCalibrationStudyWrist = {
       ref.Pron_quadrMuscles
   );
   RminMuscleFiber = arrcat(arrcat(arrcat(
-      ref.AbductorPollicisRmin,
+      ref.AbductorPollicisLongusRmin,
       ref.ExtensorCarpiRadialisRmin,
       ref.ExtensorCarpiUlnarisRmin,
       ref.ExtensorDigitiMinimiRmin,
@@ -404,7 +404,7 @@ AnyBodyCalibrationStudy ArmCalibrationStudyWrist = {
       ref.Pron_quadrRmin
   );
   RmaxMuscleFiber = arrcat(arrcat(arrcat(
-      ref.AbductorPollicisRmax,
+      ref.AbductorPollicisLongusRmax,
       ref.ExtensorCarpiRadialisRmax,
       ref.ExtensorCarpiUlnarisRmax,
       ref.ExtensorDigitiMinimiRmax,

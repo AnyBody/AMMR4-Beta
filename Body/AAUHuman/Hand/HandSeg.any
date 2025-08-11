@@ -81,7 +81,7 @@ AnyFunTransform3D &Scale= GScaling.Hand.ScaleFunction;
 
 
 Finger1MetaRef = {
-  AnyRefNode I_Abductor_Pollicis_Longus = {
+  AnyRefNode I_AbductorPollicisLongus = {
 //     AnyDrawRefFrame drw={RGB={1,0,0};};
     sRel = ..Scale({-0.01, 0.007, ....Sign*0}); //guesstimate
 
@@ -89,22 +89,22 @@ Finger1MetaRef = {
 
 
 
-  AnyRefNode I_Extensor_Pollicis_Brevis = {
+  AnyRefNode I_ExtensorPollicisBrevis = {
     //   AnyDrawRefFrame drw={};
     sRel = ..Scale({-0.01, -0.02, 0}); //guesstimate
   };
 
-  AnyRefNode Via1_Extensor_Pollicis_Brevis = {
+  AnyRefNode Via1_ExtensorPollicisBrevis = {
     //   AnyDrawRefFrame drw={};
     sRel = ..Scale({-0.01, 0.0, 0}); //guesstimate
   };
 
 
-  AnyRefNode Via1_Extensor_Pollicis_Longus= {
+  AnyRefNode Via1_ExtensorPollicisLongus= {
     //   AnyDrawRefFrame drw={};
     sRel = ..Scale({-0.01, 0.0, 0}); //guesstimate
   };
-  AnyRefNode I_Extensor_Pollicis_Longus= {
+  AnyRefNode I_ExtensorPollicisLongus= {
     //   AnyDrawRefFrame drw={};
     sRel = ..Scale({-0.01, -0.02, 0}); //guesstimate
   };
@@ -123,18 +123,18 @@ Finger1MetaRef = {
 
 
 Finger2MetaRef = {
-  AnyRefNode Via1_Extensor_Indicis = {
+  AnyRefNode Via1_ExtensorIndicis = {
     //AnyDrawRefFrame drw={RGB={0,1,1};};
     sRel = ..Scale({-0.007,0.02,0.0}); //guesstimate
   };
 
 
-  AnyRefNode I_Extensor_Indicis = {
+  AnyRefNode I_ExtensorIndicis = {
     //AnyDrawRefFrame drw={RGB={0,1,1};};
     sRel = ..Scale({-0.01,-0.02,0.0}); //guesstimate
   };
 
-  AnyRefNode I_Extensor_Carpi_Radialis_Longus= {
+  AnyRefNode I_ExtensorCarpiRadialisLongus= {
     //AnyDrawRefFrame drw={RGB={0,1,1};};
     sRel = ..Scale({-0.006,-0.01,0.0}); //guesstimate
   };
@@ -180,12 +180,12 @@ Finger2MetaRef = {
 
 Finger3MetaRef={
 
-  AnyRefNode Via_Extensor_Carpi_Radialis_Brevis = {
+  AnyRefNode Via_ExtensorCarpiRadialisBrevis = {
     //AnyDrawRefFrame drw={RGB={0,1,1};};
     sRel = ..Scale({-0.006,0.027,0.0}); //guesstimate
   };
 
-  AnyRefNode I_Extensor_Carpi_Radialis_Brevis = {
+  AnyRefNode I_ExtensorCarpiRadialisBrevis = {
     //AnyDrawRefFrame drw={RGB={0,1,1};};
     sRel = ..Scale({-0.006,0.025,0.0}); //guesstimate
   };

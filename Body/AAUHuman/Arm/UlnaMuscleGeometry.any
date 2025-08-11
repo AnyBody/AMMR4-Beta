@@ -38,8 +38,8 @@ Ulna = {
   };
 
 
-  AnyRefNode O_Pron_quadr_1                  = {sRel = .Scale(.Data.O_Pron_quadr_1_pos*.Mirror);};
-  AnyRefNode O_Pron_quadr_2                  = {sRel = .Scale(.Data.O_Pron_quadr_2_pos*.Mirror);};
+  AnyRefNode O_PronatorQuadratus1                  = {sRel = .Scale(.Data.O_PronatorQuadratus1_pos*.Mirror);};
+  AnyRefNode O_PronatorQuadratus2                  = {sRel = .Scale(.Data.O_PronatorQuadratus2_pos*.Mirror);};
   AnyRefNode O_PronatorTeresUlnare1 = {sRel = .Scale(.Data.O_PronatorTeresUlnare1_pos*.Mirror);};
   AnyRefNode O_SupinatorUlnare1         = {sRel = .Scale(.Data.O_SupinatorUlnare1_pos*.Mirror);};
   AnyRefNode O_SupinatorUlnare2         = {sRel = .Scale(.Data.O_SupinatorUlnare2_pos*.Mirror);};
@@ -53,9 +53,9 @@ Ulna = {
   AnyRefNode I_TricepsBrachiiMediale2                  = {sRel = .Scale(.Data.I_TricepsBrachiiMediale2_pos*.Mirror);};
   AnyRefNode I_TricepsBrachiiLaterale1                  = {sRel = .Scale(.Data.I_TricepsBrachiiLaterale1_pos*.Mirror);};
   AnyRefNode I_TricepsBrachiiLaterale2                  = {sRel = .Scale(.Data.I_TricepsBrachiiLaterale2_pos*.Mirror);};
-  AnyRefNode O_Extensor_Indicis              = {sRel = .Scale(.Data.O_Extensor_Indicis_pos*.Mirror);};
-  AnyRefNode O_Extensor_Pollicis_Longus      = {sRel = .Scale(.Data.O_Extensor_Pollicis_Longus_pos*.Mirror);};
-  AnyRefNode O_Abductor_Pollicis_Longus      = {sRel = .Scale(.Data.O_Abductor_Pollicis_Longus_pos*.Mirror);};
+  AnyRefNode O_ExtensorIndicis              = {sRel = .Scale(.Data.O_ExtensorIndicis_pos*.Mirror);};
+  AnyRefNode O_ExtensorPollicisLongus      = {sRel = .Scale(.Data.O_ExtensorPollicisLongus_pos*.Mirror);};
+  AnyRefNode O_AbductorPollicisLongus      = {sRel = .Scale(.Data.O_AbductorPollicisLongus_pos*.Mirror);};
   AnyRefNode Via1_Flexor_Carpi_Ulnaris       = {sRel = .Scale(.Data.Via1_Flexor_Carpi_Ulnaris_pos*.Mirror);};
   AnyRefNode Via2_Flexor_Carpi_Ulnaris       = {sRel = .Scale(.Data.Via2_Flexor_Carpi_Ulnaris_pos*.Mirror);};
   AnyRefNode Via1_Extensor_Carpi_Ulnaris     = {sRel = .Scale(.Data.Via1_Extensor_Carpi_Ulnaris_pos*.Mirror);};

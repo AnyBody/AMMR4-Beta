@@ -239,9 +239,9 @@ AnyFolder Humerus = {
 
 
   AnyFloat O_Extensor_Carpi_Ulnaris_pos         = {0.0313, -0.35 , 0.00};
-  AnyFloat O_Extensor_Carpi_Radialis_Brevis_pos = O_Extensor_Carpi_Ulnaris_pos;
+  AnyFloat O_ExtensorCarpiRadialisBrevis_pos = O_Extensor_Carpi_Ulnaris_pos;
 
-  AnyFloat O_Extensor_Carpi_Radialis_Longus_pos = {0.0313, -0.33 , 0.00};
+  AnyFloat O_ExtensorCarpiRadialisLongus_pos = {0.0313, -0.33 , 0.00};
   AnyFloat O_Flexor_Carpi_Ulnaris_pos           = {-0.038, -0.345 , 0.00};
   AnyFloat O_Flexor_Carpi_Radialis_pos          = {-0.038, -0.345 , 0.00};
   AnyFloat O_Palmaris_Longus_pos                = {-0.038, -0.345 , 0.00};
@@ -335,13 +335,13 @@ AnyFolder Radius = {
   AnyFloat I_SupinatorUlnare1_pos          = {-0.028773, -0.006842, -0.007679}+correction;
   AnyFloat I_SupinatorUlnare2_pos          = {-0.070989, -0.018006, -0.000749}+correction;
 
-  AnyFloat I_Pron_quadr_1_pos = {-0.1926390, -0.02953800, -0.005120000};          // corrected value
-  AnyFloat I_Pron_quadr_2_pos = {-0.2143840, -0.02441400, -0.006305000};          // corrected value
-  AnyFloat O_Extensor_Pollicis_Brevis_pos = {-0.1800000, -0.02000000, 0.01500000};// estimate
-  AnyFloat Via_Extensor_Indicis_pos = {-0.2100000, -0.01200000, 0.01800000};
-  AnyFloat Via_Extensor_Pollicis_Longus_pos = {-0.2230000, -0.03000000, 0.02500000};
-  AnyFloat Via_Extensor_Pollicis_Brevis_pos = {-0.2230000, -0.03000000, 0.02500000};
-  AnyFloat Via_Abductor_Pollicis_Longus_pos = {-0.2230000, -0.03000000, 0.02500000};
+  AnyFloat I_PronatorQuadratus1_pos = {-0.1926390, -0.02953800, -0.005120000};          // corrected value
+  AnyFloat I_PronatorQuadratus2_pos = {-0.2143840, -0.02441400, -0.006305000};          // corrected value
+  AnyFloat O_ExtensorPollicisBrevis_pos = {-0.1800000, -0.02000000, 0.01500000};// estimate
+  AnyFloat Via_ExtensorIndicis_pos = {-0.2100000, -0.01200000, 0.01800000};
+  AnyFloat Via_ExtensorPollicisLongus_pos = {-0.2230000, -0.03000000, 0.02500000};
+  AnyFloat Via_ExtensorPollicisBrevis_pos = {-0.2230000, -0.03000000, 0.02500000};
+  AnyFloat Via_AbductorPollicisLongus_pos = {-0.2230000, -0.03000000, 0.02500000};
   AnyFloat Via_Flexor_Carpi_Ulnaris_pos = {-0.217000, 0.005000, -0.00300000};
   AnyFloat Via_Flexor_Carpi_Radialis_pos = {-0.2180000, -0.02000000, -0.005000000};
   AnyFloat Via_Extensor_Carpi_Ulnaris_pos = {-0.212, 0.01200, 0.01900000};
@@ -356,8 +356,8 @@ AnyFolder Radius = {
 
 
   AnyFloat O_Flexor_Digitorum_Superficialis_pos = {-0.07000000, -0.02641100, -0.005000000};
-  AnyFloat Via_Extensor_Carpi_Radialis_Brevis_pos = {-0.2180000, -0.03000000, 0.02000000};
-  AnyFloat Via_Extensor_Carpi_Radialis_Longus_pos = {-0.2230000, -0.03000000, 0.02500000};
+  AnyFloat Via_ExtensorCarpiRadialisBrevis_pos = {-0.2180000, -0.03000000, 0.02000000};
+  AnyFloat Via_ExtensorCarpiRadialisLongus_pos = {-0.2230000, -0.03000000, 0.02500000};
   AnyFloat Via_Flexor_Digitorum_Superficialis_Digit2_pos = {-0.220000, -0.02800000, -0.005000000};
   AnyFloat Via_Flexor_Digitorum_Superficialis_Digit3_pos = {-0.2200000, -0.02400000, -0.005000000};
   AnyFloat Via_Flexor_Digitorum_Superficialis_Digit4_pos = {-0.2200000, -0.02000000, -0.006000000};
@@ -414,8 +414,8 @@ AnyFolder Ulna = {
   };
 
   AnyFloat oleacranon_pos = {-0.06500000, 0.005386209, 0.004120444};
-  AnyFloat O_Pron_quadr_1_pos = {0.016303, 0.215608, -0.005749} +{0.013,0.005,0.003};  //Corrected value
-  AnyFloat O_Pron_quadr_2_pos = {0.019230, 0.249767, -0.006490}+{0.01,0.005,0.003};    //Corrected value
+  AnyFloat O_PronatorQuadratus1_pos = {0.016303, 0.215608, -0.005749} +{0.013,0.005,0.003};  //Corrected value
+  AnyFloat O_PronatorQuadratus2_pos = {0.019230, 0.249767, -0.006490}+{0.01,0.005,0.003};    //Corrected value
 
   AnyVec3 correction ={0.0,0.0,-0.00};
   AnyVec3 correction0 ={0.0,0.0,-0.01};
@@ -438,9 +438,9 @@ AnyFolder Ulna = {
   AnyFloat I_TricepsBrachiiLaterale1_pos = ({0.017540, -0.007721, 0.025663}+correction);
   AnyFloat I_TricepsBrachiiLaterale2_pos = ({0.017540, -0.007721, 0.025663}+correction);
 
-  AnyFloat O_Extensor_Indicis_pos = {0.02200000, 0.2000000, 0.0000000};                         //estimate
-  AnyFloat O_Extensor_Pollicis_Longus_pos = {0.01500000, 0.1500000, 0.01000000};                //estimate
-  AnyFloat O_Abductor_Pollicis_Longus_pos = {0.008000000, 0.1000000, 0.01000000};               //estimate
+  AnyFloat O_ExtensorIndicis_pos = {0.02200000, 0.2000000, 0.0000000};                         //estimate
+  AnyFloat O_ExtensorPollicisLongus_pos = {0.01500000, 0.1500000, 0.01000000};                //estimate
+  AnyFloat O_AbductorPollicisLongus_pos = {0.008000000, 0.1000000, 0.01000000};               //estimate
   AnyFloat Via1_Flexor_Carpi_Ulnaris_pos = {0.03400000, 0.1600000, -0.005000000};               //estimate
   AnyFloat Via2_Flexor_Carpi_Ulnaris_pos = {0.03000000, 0.2450000, -0.01000000};                //estimate
   AnyFloat Via1_Extensor_Carpi_Ulnaris_pos = {0.02000000, 0.1000000, 0.02000000};               //estimate
@@ -723,18 +723,18 @@ AnyFolder HandSeg = {
     AnyFloat sCoM_pos                                      = {-0.06, 0.0, 0.0};
     AnyFloat Hand_pos     						           = {-0.1,0,.0};
     AnyFloat PalmJoint_pos                                 = {-0.08  ,-0.02  ,0.0    };
-    AnyFloat Via1_Extensor_Indicis_pos                     = {-0.03  , -0.015, 0.015 };
-    AnyFloat I_Extensor_Indicis_pos                        = {-0.135 , -0.05 , -0.005};
-    AnyFloat I_Extensor_Pollicis_Longus_pos                = {-0.055 , -0.065, -0.003};
-    AnyFloat Via1_Extensor_Pollicis_Longus_pos             = {-0.03  , -0.04 , 0.005 };
-    AnyFloat I_Extensor_Pollicis_Brevis_pos                = {-0.055 , -0.065, -0.003};
-    AnyFloat Via1_Extensor_Pollicis_Brevis_pos             = {-0.03  , -0.04 , 0.005 };
-    AnyFloat I_Abductor_Pollicis_Longus_pos                = {-0.04  , -0.055, -0.01 };
-    AnyFloat Via1_Abductor_Pollicis_Longus_pos             = {-0.01  , -0.02 , 0.015 };
+    AnyFloat Via1_ExtensorIndicis_pos                     = {-0.03  , -0.015, 0.015 };
+    AnyFloat I_ExtensorIndicis_pos                        = {-0.135 , -0.05 , -0.005};
+    AnyFloat I_ExtensorPollicisLongus_pos                = {-0.055 , -0.065, -0.003};
+    AnyFloat Via1_ExtensorPollicisLongus_pos             = {-0.03  , -0.04 , 0.005 };
+    AnyFloat I_ExtensorPollicisBrevis_pos                = {-0.055 , -0.065, -0.003};
+    AnyFloat Via1_ExtensorPollicisBrevis_pos             = {-0.03  , -0.04 , 0.005 };
+    AnyFloat I_AbductorPollicisLongus_pos                = {-0.04  , -0.055, -0.01 };
+    AnyFloat Via1_AbductorPollicisLongus_pos             = {-0.01  , -0.02 , 0.015 };
     AnyFloat I_Extensor_Carpi_Ulnaris_pos                  = {-0.035 , 0.017 , 0.0053};
-    AnyFloat I_Extensor_Carpi_Radialis_Brevis_pos          = {-0.04  , -0.014, 0.01  };
-    AnyFloat Via_Extensor_Carpi_Radialis_Brevis_pos        = {-0.033 , -0.015, 0.01  };
-    AnyFloat I_Extensor_Carpi_Radialis_Longus_pos          = {-0.05  , -0.02 , 0.01  };
+    AnyFloat I_ExtensorCarpiRadialisBrevis_pos          = {-0.04  , -0.014, 0.01  };
+    AnyFloat Via_ExtensorCarpiRadialisBrevis_pos        = {-0.033 , -0.015, 0.01  };
+    AnyFloat I_ExtensorCarpiRadialisLongus_pos          = {-0.05  , -0.02 , 0.01  };
     AnyFloat I_Flexor_Carpi_Ulnaris_pos                    = {-0.04  , 0.014 , -0.0  };
     AnyFloat I_Flexor_Carpi_Radialis_pos                   = {-0.0335, -0.018, -0.0  };
     AnyFloat Via_Flexor_Carpi_Radialis_pos                 = {-0.035 , -0.005, -0.013};

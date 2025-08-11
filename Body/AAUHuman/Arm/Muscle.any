@@ -1917,28 +1917,28 @@ MuscleGroup Supinator = {
 };
 
 MuscleGroup PronatorQuadratus = {
-  AnyMuscleViaPoint Pron_quadr_1 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.Pron_quadr_1;
-    AnyRefNode &Org = ...Segments.Ulna.O_Pron_quadr_1;
-    AnyRefNode &Ins = ...Segments.Radius.I_Pron_quadr_1;
+  AnyMuscleViaPoint PronatorQuadratus1 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.PronatorQuadratus1;
+    AnyRefNode &Org = ...Segments.Ulna.O_PronatorQuadratus1;
+    AnyRefNode &Ins = ...Segments.Radius.I_PronatorQuadratus1;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
-  AnyMuscleViaPoint Pron_quadr_2 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.Pron_quadr_2;
-    AnyRefNode &Org = ...Segments.Ulna.O_Pron_quadr_2;
-    AnyRefNode &Ins = ...Segments.Radius.I_Pron_quadr_2;
+  AnyMuscleViaPoint PronatorQuadratus2 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.PronatorQuadratus2;
+    AnyRefNode &Org = ...Segments.Ulna.O_PronatorQuadratus2;
+    AnyRefNode &Ins = ...Segments.Radius.I_PronatorQuadratus2;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 };
 
 MuscleGroup ExtensorIndicis = {
-  AnyMuscleShortestPath Extensor_Indicis ={
-    AnyMuscleModel &MusMdl = ...MuscleModels.Extensor_Indicis;
-    AnyRefNode &Org = ...Segments.Ulna.O_Extensor_Indicis;
-    AnyRefNode &Via1 = ...Segments.Radius.Via_Extensor_Indicis;
-    AnyRefNode &Via2 = ...Segments.Hand.Finger2MetaRef.Via1_Extensor_Indicis;
-    AnyRefNode &Ins = ...Segments.Hand.Finger2MetaRef.I_Extensor_Indicis;
+  AnyMuscleShortestPath ExtensorIndicis ={
+    AnyMuscleModel &MusMdl = ...MuscleModels.ExtensorIndicis;
+    AnyRefNode &Org = ...Segments.Ulna.O_ExtensorIndicis;
+    AnyRefNode &Via1 = ...Segments.Radius.Via_ExtensorIndicis;
+    AnyRefNode &Via2 = ...Segments.Hand.Finger2MetaRef.Via1_ExtensorIndicis;
+    AnyRefNode &Ins = ...Segments.Hand.Finger2MetaRef.I_ExtensorIndicis;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
 
     AnySurfEllipsoid &Surf1 = ...Segments.Radius.ExtensorMuscleEllipsoid.ellipsoid;
@@ -1954,16 +1954,16 @@ MuscleGroup ExtensorIndicis = {
   };
 };
 
-MuscleGroup AbductorPollicis = {
-  AnyMuscleViaPoint Abductor_Pollicis_Longus ={
+MuscleGroup AbductorPollicisLongus = {
+  AnyMuscleViaPoint AbductorPollicisLongus ={
 
-    AnyMuscleModel &MusMdl = ...MuscleModels.Abductor_Pollicis_Longus;
-    AnyRefNode &Ins = ...Segments.Hand.Finger1MetaRef.I_Abductor_Pollicis_Longus;
-    //AnyRefNode &Via1 = ...Segments.Hand.Via1_Abductor_Pollicis_Longus;
+    AnyMuscleModel &MusMdl = ...MuscleModels.AbductorPollicisLongus;
+    AnyRefNode &Ins = ...Segments.Hand.Finger1MetaRef.I_AbductorPollicisLongus;
+    //AnyRefNode &Via1 = ...Segments.Hand.Via1_AbductorPollicisLongus;
 
-    AnyRefNode &Via2 = ...Segments.Radius.Via_Abductor_Pollicis_Longus;
+    AnyRefNode &Via2 = ...Segments.Radius.Via_AbductorPollicisLongus;
 
-    AnyRefNode &Org = ...Segments.Ulna.O_Abductor_Pollicis_Longus;
+    AnyRefNode &Org = ...Segments.Ulna.O_AbductorPollicisLongus;
 
     //AnySurfCylinder &Surf1 = ...Segments.Hand.FlexorMuscleCyl.cyl;
   //  AnySurfCylinder &Surf2 = ...Segments.Radius.MedialExtensorCyl.cyl;
@@ -1980,14 +1980,14 @@ MuscleGroup AbductorPollicis = {
   };
 };
 
-MuscleGroup ExtensorPollicis = {
-  AnyMuscleShortestPath Extensor_Pollicis_Brevis ={
-    AnyMuscleModel &MusMdl = ...MuscleModels.Extensor_Pollicis_Brevis;
+MuscleGroup ExtensorPollicisBrevis = {
+  AnyMuscleShortestPath ExtensorPollicisBrevis ={
+    AnyMuscleModel &MusMdl = ...MuscleModels.ExtensorPollicisBrevis;
 
-    AnyRefNode &Ins = ...Segments.Hand.Finger1MetaRef.I_Extensor_Pollicis_Brevis;
-    AnyRefNode &Via2 = ...Segments.Hand.Finger1MetaRef.Via1_Extensor_Pollicis_Brevis;
-    AnyRefNode &Via1 = ...Segments.Radius.Via_Extensor_Pollicis_Longus;
-    AnyRefNode &Org = ...Segments.Radius.O_Extensor_Pollicis_Brevis;
+    AnyRefNode &Ins = ...Segments.Hand.Finger1MetaRef.I_ExtensorPollicisBrevis;
+    AnyRefNode &Via2 = ...Segments.Hand.Finger1MetaRef.Via1_ExtensorPollicisBrevis;
+    AnyRefNode &Via1 = ...Segments.Radius.Via_ExtensorPollicisLongus;
+    AnyRefNode &Org = ...Segments.Radius.O_ExtensorPollicisBrevis;
 
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     AnySurfCylinder &Surf2 = ...Segments.Radius.MedialExtensorCyl.cyl;
@@ -2000,13 +2000,15 @@ MuscleGroup ExtensorPollicis = {
       InitWrapPosVecArr = {None, &InitWrapPos, None };
     };
   };
+};
 
-  AnyMuscleShortestPath Extensor_Pollicis_Longus ={
-    AnyMuscleModel &MusMdl = ...MuscleModels.Extensor_Pollicis_Longus;
-    AnyRefNode &Org = ...Segments.Ulna.O_Extensor_Pollicis_Longus;
-    AnyRefNode &Via1 = ...Segments.Radius.Via_Extensor_Pollicis_Longus;
-    AnyRefNode &Via2 = ...Segments.Hand.Finger1MetaRef.Via1_Extensor_Pollicis_Longus;
-    AnyRefNode &Ins = ...Segments.Hand.Finger1MetaRef.I_Extensor_Pollicis_Longus;
+MuscleGroup ExtensorPollicisLongus = {
+  AnyMuscleShortestPath ExtensorPollicisLongus ={
+    AnyMuscleModel &MusMdl = ...MuscleModels.ExtensorPollicisLongus;
+    AnyRefNode &Org = ...Segments.Ulna.O_ExtensorPollicisLongus;
+    AnyRefNode &Via1 = ...Segments.Radius.Via_ExtensorPollicisLongus;
+    AnyRefNode &Via2 = ...Segments.Hand.Finger1MetaRef.Via1_ExtensorPollicisLongus;
+    AnyRefNode &Ins = ...Segments.Hand.Finger1MetaRef.I_ExtensorPollicisLongus;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     AnySurfCylinder &Surf2 = ...Segments.Radius.MedialExtensorCyl.cyl;
 
@@ -2021,13 +2023,13 @@ MuscleGroup ExtensorPollicis = {
   };
 };
 
-MuscleGroup ExtensorCarpiRadialis = {
-  AnyMuscleShortestPath Extensor_Carpi_Radialis_Longus ={
+MuscleGroup ExtensorCarpiRadialisLongus = {
+  AnyMuscleShortestPath ExtensorCarpiRadialisLongus ={
     AnySurfCylinder &Surf1 = ...Segments.Radius.MedialExtensorCyl.cyl;
-    AnyMuscleModel &MusMdl = ...MuscleModels.Extensor_Carpi_Radialis_Longus;
-    AnyRefNode &Org = ...Segments.Humerus.O_Extensor_Carpi_Radialis_Longus;
-    AnyRefNode &Via1 = ...Segments.Radius.Via_Extensor_Carpi_Radialis_Longus;
-    AnyRefNode &Ins = ...Segments.Hand.Finger2MetaRef.I_Extensor_Carpi_Radialis_Longus;
+    AnyMuscleModel &MusMdl = ...MuscleModels.ExtensorCarpiRadialisLongus;
+    AnyRefNode &Org = ...Segments.Humerus.O_ExtensorCarpiRadialisLongus;
+    AnyRefNode &Via1 = ...Segments.Radius.Via_ExtensorCarpiRadialisLongus;
+    AnyRefNode &Ins = ...Segments.Hand.Finger2MetaRef.I_ExtensorCarpiRadialisLongus;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     SPLine.StringMesh = 45;
     SPLine.AbsTol=1e-6;
@@ -2037,13 +2039,15 @@ MuscleGroup ExtensorCarpiRadialis = {
       InitWrapPosVecArr = { None,&InitWrapPos };
     };
   };
+};
 
-  AnyMuscleShortestPath Extensor_Carpi_Radialis_Brevis ={
-    AnyMuscleModel &MusMdl = ...MuscleModels.Extensor_Carpi_Radialis_Brevis;
-    AnyRefNode &Org = ...Segments.Humerus.O_Extensor_Carpi_Radialis_Brevis;
-    AnyRefNode &Via1 = ...Segments.Radius.Via_Extensor_Carpi_Radialis_Brevis;
-    AnyRefNode &Via2 = ...Segments.Hand.Finger3MetaRef.Via_Extensor_Carpi_Radialis_Brevis;
-    AnyRefNode &Ins = ...Segments.Hand.Finger3MetaRef.I_Extensor_Carpi_Radialis_Brevis;
+MuscleGroup ExtensorCarpiRadialisBrevis = {
+  AnyMuscleShortestPath ExtensorCarpiRadialisBrevis ={
+    AnyMuscleModel &MusMdl = ...MuscleModels.ExtensorCarpiRadialisBrevis;
+    AnyRefNode &Org = ...Segments.Humerus.O_ExtensorCarpiRadialisBrevis;
+    AnyRefNode &Via1 = ...Segments.Radius.Via_ExtensorCarpiRadialisBrevis;
+    AnyRefNode &Via2 = ...Segments.Hand.Finger3MetaRef.Via_ExtensorCarpiRadialisBrevis;
+    AnyRefNode &Ins = ...Segments.Hand.Finger3MetaRef.I_ExtensorCarpiRadialisBrevis;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
 
     AnySurfEllipsoid &Surf1 = ...Segments.Radius.ExtensorMuscleEllipsoid.ellipsoid;

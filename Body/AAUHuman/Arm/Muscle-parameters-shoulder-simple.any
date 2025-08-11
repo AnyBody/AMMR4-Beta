@@ -2011,25 +2011,25 @@ AnyMuscleModel SupinatorUlnare2 =
 /////////////////////////////////////
 //     Pron_quadr (2 elements)     //
 /////////////////////////////////////
-AnyMuscleModel Pron_quadr_1 =
+AnyMuscleModel PronatorQuadratus1 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Pron_quadr;
   AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
   Lf0 ??= MuscleParameters.OptimalFiberlength / cos(pi/180*MuscleParameters.Pennationangle); //< Optimal fiber length corrected by pennation angle
-  AnyVar PCSA ??= 1e4*.StrengthScaleUlna*MuscleParameters.MuscleVolumeSIScaled/(.Pron_quadr_1.Lf0 +.Pron_quadr_2.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+  AnyVar PCSA ??= 1e4*.StrengthScaleUlna*MuscleParameters.MuscleVolumeSIScaled/(.PronatorQuadratus1.Lf0 +.PronatorQuadratus2.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
 
-AnyMuscleModel Pron_quadr_2 =
+AnyMuscleModel PronatorQuadratus2 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Pron_quadr;
   AnyIntVar MuscleElemNo = 2; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
   Lf0 ??= MuscleParameters.OptimalFiberlength / cos(pi/180*MuscleParameters.Pennationangle); //< Optimal fiber length corrected by pennation angle
-  AnyVar PCSA ??= 1e4*.StrengthScaleUlna*MuscleParameters.MuscleVolumeSIScaled/(.Pron_quadr_1.Lf0 +.Pron_quadr_2.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
+  AnyVar PCSA ??= 1e4*.StrengthScaleUlna*MuscleParameters.MuscleVolumeSIScaled/(.PronatorQuadratus1.Lf0 +.PronatorQuadratus2.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
 
@@ -2038,11 +2038,11 @@ AnyMuscleModel Pron_quadr_2 =
 
 
 ///////////////////////////////////////////////////
-//     Extensor_Pollicis_Longus (1 element )     //
+//     ExtensorPollicisLongus (1 element )     //
 ///////////////////////////////////////////////////
-AnyMuscleModel Extensor_Pollicis_Longus =
+AnyMuscleModel ExtensorPollicisLongus =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Extensor_Pollicis_Longus;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.ExtensorPollicisLongus;
   AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -2056,11 +2056,11 @@ AnyMuscleModel Extensor_Pollicis_Longus =
 
 
 ///////////////////////////////////////////////////
-//     Extensor_Pollicis_Brevis (1 element )     //
+//     ExtensorPollicisBrevis (1 element )     //
 ///////////////////////////////////////////////////
-AnyMuscleModel Extensor_Pollicis_Brevis =
+AnyMuscleModel ExtensorPollicisBrevis =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Extensor_Pollicis_Brevis;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.ExtensorPollicisBrevis;
   AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -2074,11 +2074,11 @@ AnyMuscleModel Extensor_Pollicis_Brevis =
 
 
 ///////////////////////////////////////////////////
-//     Abductor_Pollicis_Longus (1 element )     //
+//     AbductorPollicisLongus (1 element )     //
 ///////////////////////////////////////////////////
-AnyMuscleModel Abductor_Pollicis_Longus =
+AnyMuscleModel AbductorPollicisLongus =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Abductor_Pollicis_Longus;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.AbductorPollicisLongus;
   AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -2092,11 +2092,11 @@ AnyMuscleModel Abductor_Pollicis_Longus =
 
 
 ///////////////////////////////////////////
-//     Extensor_Indicis (1 element )     //
+//     ExtensorIndicis (1 element )     //
 ///////////////////////////////////////////
-AnyMuscleModel Extensor_Indicis =
+AnyMuscleModel ExtensorIndicis =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Extensor_Indicis;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.ExtensorIndicis;
   AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -2128,11 +2128,11 @@ AnyMuscleModel Extensor_Carpi_Ulnaris =
 
 
 /////////////////////////////////////////////////////////
-//     Extensor_Carpi_Radialis_Longus (1 element )     //
+//     ExtensorCarpiRadialisLongus (1 element )     //
 /////////////////////////////////////////////////////////
-AnyMuscleModel Extensor_Carpi_Radialis_Longus =
+AnyMuscleModel ExtensorCarpiRadialisLongus =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Extensor_Carpi_Radialis_Longus;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.ExtensorCarpiRadialisLongus;
   AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -2146,11 +2146,11 @@ AnyMuscleModel Extensor_Carpi_Radialis_Longus =
 
 
 /////////////////////////////////////////////////////////
-//     Extensor_Carpi_Radialis_Brevis (1 element )     //
+//     ExtensorCarpiRadialisBrevis (1 element )     //
 /////////////////////////////////////////////////////////
-AnyMuscleModel Extensor_Carpi_Radialis_Brevis =
+AnyMuscleModel ExtensorCarpiRadialisBrevis =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Extensor_Carpi_Radialis_Brevis;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.ExtensorCarpiRadialisBrevis;
   AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length

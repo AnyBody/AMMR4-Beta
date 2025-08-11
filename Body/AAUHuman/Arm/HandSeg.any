@@ -57,18 +57,18 @@ AnySeg Hand ={
 
    AnyRefNode PalmJoint                                 = { sRel = ..Scale(..Data.PalmJoint_pos                                *..Mirror); };
    AnyRefNode Hand                                      = { sRel = ..Scale(..Data.Hand_pos                                     *..Mirror); };
-   AnyRefNode Via1_Extensor_Indicis                     = { sRel = ..Scale(..Data.Via1_Extensor_Indicis_pos                    *..Mirror); };
-   AnyRefNode I_Extensor_Indicis                        = { sRel = ..Scale(..Data.I_Extensor_Indicis_pos                       *..Mirror); };
-   AnyRefNode I_Extensor_Pollicis_Longus                = { sRel = ..Scale(..Data.I_Extensor_Pollicis_Longus_pos               *..Mirror); };
-   AnyRefNode Via1_Extensor_Pollicis_Longus             = { sRel = ..Scale(..Data.Via1_Extensor_Pollicis_Longus_pos            *..Mirror); };
-   AnyRefNode I_Extensor_Pollicis_Brevis                = { sRel = ..Scale(..Data.I_Extensor_Pollicis_Brevis_pos               *..Mirror); };
-   AnyRefNode Via1_Extensor_Pollicis_Brevis             = { sRel = ..Scale(..Data.Via1_Extensor_Pollicis_Brevis_pos            *..Mirror); };
-   AnyRefNode I_Abductor_Pollicis_Longus                = { sRel = ..Scale(..Data.I_Abductor_Pollicis_Longus_pos               *..Mirror); };
-   AnyRefNode Via1_Abductor_Pollicis_Longus             = { sRel = ..Scale(..Data.Via1_Abductor_Pollicis_Longus_pos            *..Mirror); };
+   AnyRefNode Via1_ExtensorIndicis                     = { sRel = ..Scale(..Data.Via1_ExtensorIndicis_pos                    *..Mirror); };
+   AnyRefNode I_ExtensorIndicis                        = { sRel = ..Scale(..Data.I_ExtensorIndicis_pos                       *..Mirror); };
+   AnyRefNode I_ExtensorPollicisLongus                = { sRel = ..Scale(..Data.I_ExtensorPollicisLongus_pos               *..Mirror); };
+   AnyRefNode Via1_ExtensorPollicisLongus             = { sRel = ..Scale(..Data.Via1_ExtensorPollicisLongus_pos            *..Mirror); };
+   AnyRefNode I_ExtensorPollicisBrevis                = { sRel = ..Scale(..Data.I_ExtensorPollicisBrevis_pos               *..Mirror); };
+   AnyRefNode Via1_ExtensorPollicisBrevis             = { sRel = ..Scale(..Data.Via1_ExtensorPollicisBrevis_pos            *..Mirror); };
+   AnyRefNode I_AbductorPollicisLongus                = { sRel = ..Scale(..Data.I_AbductorPollicisLongus_pos               *..Mirror); };
+   AnyRefNode Via1_AbductorPollicisLongus             = { sRel = ..Scale(..Data.Via1_AbductorPollicisLongus_pos            *..Mirror); };
    AnyRefNode I_Extensor_Carpi_Ulnaris                  = { sRel = ..Scale(..Data.I_Extensor_Carpi_Ulnaris_pos                 *..Mirror); };
-   AnyRefNode I_Extensor_Carpi_Radialis_Brevis          = { sRel = ..Scale(..Data.I_Extensor_Carpi_Radialis_Brevis_pos         *..Mirror); };
-   AnyRefNode Via_Extensor_Carpi_Radialis_Brevis        = { sRel = ..Scale(..Data.Via_Extensor_Carpi_Radialis_Brevis_pos       *..Mirror); };
-   AnyRefNode I_Extensor_Carpi_Radialis_Longus          = { sRel = ..Scale(..Data.I_Extensor_Carpi_Radialis_Longus_pos         *..Mirror); };
+   AnyRefNode I_ExtensorCarpiRadialisBrevis          = { sRel = ..Scale(..Data.I_ExtensorCarpiRadialisBrevis_pos         *..Mirror); };
+   AnyRefNode Via_ExtensorCarpiRadialisBrevis        = { sRel = ..Scale(..Data.Via_ExtensorCarpiRadialisBrevis_pos       *..Mirror); };
+   AnyRefNode I_ExtensorCarpiRadialisLongus          = { sRel = ..Scale(..Data.I_ExtensorCarpiRadialisLongus_pos         *..Mirror); };
    AnyRefNode I_Flexor_Carpi_Ulnaris                    = { sRel = ..Scale(..Data.I_Flexor_Carpi_Ulnaris_pos                   *..Mirror); };
    AnyRefNode I_Flexor_Carpi_Radialis                   = { sRel = ..Scale(..Data.I_Flexor_Carpi_Radialis_pos                  *..Mirror); };
    AnyRefNode Via_Flexor_Carpi_Radialis                 = { sRel = ..Scale(..Data.Via_Flexor_Carpi_Radialis_pos                *..Mirror); };
@@ -103,11 +103,11 @@ AnySeg Hand ={
    AnyRefNode Via_Flexor_Pollicis_Longus                = { sRel = ..Scale(..Data.Via_Flexor_Pollicis_Longus_pos               *..Mirror); };
    AnyRefNode I_Flexor_Pollicis_Longus                  = { sRel = ..Scale(..Data.I_Flexor_Pollicis_Longus_pos                 *..Mirror); };
 
-   Via1_Extensor_Pollicis_Longus       = {ARel=.ARel0;};
-   Via1_Extensor_Pollicis_Brevis       = {ARel=.ARel0;};
+   Via1_ExtensorPollicisLongus       = {ARel=.ARel0;};
+   Via1_ExtensorPollicisBrevis       = {ARel=.ARel0;};
    I_Extensor_Carpi_Ulnaris            = {ARel=.ARel0;};
-   Via_Extensor_Carpi_Radialis_Brevis  = {ARel=.ARel0;};
-   I_Extensor_Carpi_Radialis_Longus    = {ARel=.ARel0;};
+   Via_ExtensorCarpiRadialisBrevis  = {ARel=.ARel0;};
+   I_ExtensorCarpiRadialisLongus    = {ARel=.ARel0;};
    Via_Extensor_Digitorum_Digit5       = {ARel=.ARel0;};
    Via_Extensor_Digitorum_Digit4       = {ARel=.ARel0;};
    Via_Extensor_Digitorum_Digit3       = {ARel=.ARel0;};

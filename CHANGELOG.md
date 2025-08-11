@@ -1321,7 +1321,7 @@ requested body height.
 - Corrected the location of via points of Flexor_Digitorum_Superficialis_Digit2
   to avoid wrapping surface collisions in certain hand positions.
 - Corrected the location of via points of Flexor_Digitorum_Superficialis_Digit3
-  and 4, Palmaris_Longus, Extensor_Carpi_Radialis_Brevis and
+  and 4, Palmaris_Longus, ExtensorCarpiRadialisBrevis and
   Extensor_Digitorum_Digit2 to avoid wrapping surface collisions in certain hand
   positions.
 - The muscle via point representing the bicipital groove have been adjusted to
@@ -1961,7 +1961,7 @@ the driver values are updated.
     is enabled.
   - Fixed problems with via points of the wrist extensor muscles colliding with
     the wrist wrapping surface in normal range of motion. The via point of
-    Extensor indicis `Via_Extensor_Indicis_pos` has been slightly adjusted and
+    Extensor indicis `Via_ExtensorIndicis_pos` has been slightly adjusted and
     the location of the wrist wrapping cylinder `MedialExtensorCyl` has been
     improved.
 
