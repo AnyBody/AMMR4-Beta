@@ -248,7 +248,7 @@ AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.ShoulderArm.Muscles);
   AnyFloat  AbductorPollicisLongusRmin = repmat(NumElemOf(AbductorPollicisLongusMuscles), ..RMin);
   AnyFloat  AbductorPollicisLongusRmax = repmat(NumElemOf(AbductorPollicisLongusMuscles), ..RMax);
 
-  AnyObjectPtrArray ExtensorCarpiRadialisMuscles = ObjSearch(MusPrefix+".ExtensorCarpiRadialis.*", "AnyMuscle");
+  AnyObjectPtrArray ExtensorCarpiRadialisMuscles = ObjSearch(MusPrefix+".ExtensorCarpiRadialis*.*", "AnyMuscle");
   AnyFloat  ExtensorCarpiRadialisRmin = repmat(NumElemOf(ExtensorCarpiRadialisMuscles), ..RMin);
   AnyFloat  ExtensorCarpiRadialisRmax = repmat(NumElemOf(ExtensorCarpiRadialisMuscles), ..RMax);
 
@@ -268,7 +268,7 @@ AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.ShoulderArm.Muscles);
   AnyFloat  ExtensorIndicisRmin = repmat(NumElemOf(ExtensorIndicisMuscles), ..RMin);
   AnyFloat  ExtensorIndicisRmax = repmat(NumElemOf(ExtensorIndicisMuscles), ..RMax);
 
-  AnyObjectPtrArray ExtensorPollicisMuscles = ObjSearch(MusPrefix+".ExtensorPollicis.*", "AnyMuscle");
+  AnyObjectPtrArray ExtensorPollicisMuscles = ObjSearch(MusPrefix+".ExtensorPollicis*.*", "AnyMuscle");
   AnyFloat  ExtensorPollicisRmin = repmat(NumElemOf(ExtensorPollicisMuscles), ..RMin);
   AnyFloat  ExtensorPollicisRmax = repmat(NumElemOf(ExtensorPollicisMuscles), ..RMax);
 
