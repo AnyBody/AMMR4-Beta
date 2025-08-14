@@ -1,7 +1,7 @@
 // This file contains muscle attachment points for the clavicle segment data from VU sub 2.
 // The original coordinates have been transformed from global coordinates to the segment local
 // coordinate system
-AnyFolder &Humerus =.Segments.Humerus;
+AnyFolder &Humerus =..Segments.Humerus;
 
 Humerus = {
   #include "../DrawSettings/SegmentAxes.any"
@@ -92,7 +92,7 @@ Humerus = {
     AnyFloat lengthscalefactor = 1;
     AnyFloat radiusscalefactor = 0.92;
 
-    AnyVar Z_rotation =0.5*pi*(1-...Sign);
+    AnyVar Z_rotation =0.5*pi*(1-....Sign);
     #include "<ANYBODY_PATH_MODELUTILS>/WrappingSurfaces/WrappingCylinder5PointFit.any"
     cyl ={CapRatio =1;};
   };
@@ -104,9 +104,9 @@ Humerus = {
     AnyVar major_radius = minor_radius*1.9;
 
     AnyVec3 minor_center = {0, .I_TeresMinor3.sRel[1],0};
-    AnyMat33 orientation = RotMat(0.0*...Sign,y);
+    AnyMat33 orientation = RotMat(0.0*....Sign,y);
 
-    AnyVec3 major_center = minor_center+major_radius*...Sign*orientation'[0];
+    AnyVec3 major_center = minor_center+major_radius*....Sign*orientation'[0];
 
     sRel=major_center;
     ARel = orientation;
@@ -126,9 +126,9 @@ Humerus = {
     AnyVar major_radius = minor_radius*1.9;
 
     AnyVec3 minor_center = {0, .I_Infraspinatus5.sRel[1],0};
-    AnyMat33 orientation = RotMat(0.0*...Sign,y);
+    AnyMat33 orientation = RotMat(0.0*....Sign,y);
 
-    AnyVec3 major_center = minor_center+major_radius*...Sign*orientation'[0];
+    AnyVec3 major_center = minor_center+major_radius*....Sign*orientation'[0];
 
     sRel=major_center;
     ARel = orientation;
@@ -145,7 +145,7 @@ Humerus = {
 
   AnyRefNode tricpes_gh_sphere = {
    sRel=.gh.sRel;
-    ARel =RotMat(...Sign*0.25*pi,y);
+    ARel =RotMat(....Sign*0.25*pi,y);
     AnySurfSphere surf = {
       AnyVar ra=    1*..art_gh_hum.Radius;
       Radius=ra ;
@@ -162,7 +162,7 @@ Humerus = {
     AnyFloat lengthscalefactor = 5;
     AnyFloat radiusscalefactor = 1.2;
 
-    AnyVar Z_rotation =iffun(eqfun(1.0,...Sign),1,0)*pi;
+    AnyVar Z_rotation =iffun(eqfun(1.0,....Sign),1,0)*pi;
 
     #include "<ANYBODY_PATH_MODELUTILS>/WrappingSurfaces/WrappingCylinder5PointFit.any"
     cyl = {
