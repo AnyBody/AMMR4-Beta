@@ -1,0 +1,120 @@
+/*
+  File containing the BM dependent objects for the calibration studies.
+*/
+
+/// Mech Objects for the shoulder rythm. 
+/// These are excluded from the calibration (if found) 
+/// since the calibration drivers handles all DOFs.
+AnyMechObjectExcluder ExcludeShoulderRhythm = {
+  Objects = arrcat(
+    ObjSearch(&.ArmJoints, "ClaviculaProtractionDriver"),
+    ObjSearch(&.ArmJoints, "ClaviculaElevationDriver"),
+    ObjSearch(&.ArmJoints, "ClaviculaAxialRotationDriver")
+  );
+};
+
+#if BM_ARM_DETAILED_HAND
+  // Finger constraints for the detailed hand model in calibration studies
+  AnyKinEqSimpleDriver CMC1Flexion = {
+    AnyRevoluteJoint &ref = .ArmSegments.Hand.Finger1.Jnt.CMCFlexion;
+    DriverPos = {0}*pi/180;
+    DriverVel = {0};
+  };
+
+  AnyKinEqSimpleDriver CMC1Abduction = {
+    AnyRevoluteJoint &ref = .ArmSegments.Hand.Finger1.Jnt.CMCAbduction;
+    DriverPos = {0}*pi/180;
+    DriverVel = {0};
+  };
+
+  AnyKinEqSimpleDriver MCP1Flexion = {
+    AnyRevoluteJoint &ref = .ArmSegments.Hand.Finger1.Jnt.MCPFlexion;
+    DriverPos = {0}*pi/180;
+    DriverVel = {0};
+  };
+
+  AnyKinEqSimpleDriver MCP1Abduction=
+  {
+    AnyRevoluteJoint &ref = .ArmSegments.Hand.Finger1.Jnt.MCPAbduction;
+    DriverPos = {0}*pi/180;
+    DriverVel = {0};
+  };
+
+  AnyKinEqSimpleDriver DIP1 = {
+    AnyRevoluteJoint &ref = .ArmSegments.Hand.Finger1.Jnt.DIP;
+    DriverPos = {0}*pi/180;
+    DriverVel = {0};
+  };
+
+  AnyKinEqSimpleDriver MCP2= {
+    AnyRevoluteJoint &ref = .ArmSegments.Hand.Finger2.Jnt.MCP;
+    DriverPos= {0}*pi/180;
+    DriverVel= {0};
+  };
+
+  AnyKinEqSimpleDriver PIP2= {
+    AnyRevoluteJoint &ref = .ArmSegments.Hand.Finger2.Jnt.PIP;
+    DriverPos= {0}*pi/180;
+    DriverVel= {0};
+  };
+
+  AnyKinEqSimpleDriver DIP2= {
+    AnyRevoluteJoint &ref = .ArmSegments.Hand.Finger2.Jnt.DIP;
+    DriverPos= {0};
+    DriverVel= {0};
+  };
+
+  AnyKinEqSimpleDriver MCP3= {
+    AnyRevoluteJoint &ref = .ArmSegments.Hand.Finger3.Jnt.MCP;
+    DriverPos= {0}*pi/180;
+    DriverVel= {0};
+  };
+
+  AnyKinEqSimpleDriver PIP3= {
+    AnyRevoluteJoint &ref = .ArmSegments.Hand.Finger3.Jnt.PIP;
+    DriverPos= {0}*pi/180;
+    DriverVel= {0};
+  };
+
+  AnyKinEqSimpleDriver DIP3= {
+    AnyRevoluteJoint &ref = .ArmSegments.Hand.Finger3.Jnt.DIP;
+    DriverPos= {0};
+    DriverVel= {0};
+  };
+
+  AnyKinEqSimpleDriver MCP4= {
+    AnyRevoluteJoint &ref = .ArmSegments.Hand.Finger4.Jnt.MCP;
+    DriverPos= {0}*pi/180;
+    DriverVel= {0};
+  };
+
+  AnyKinEqSimpleDriver PIP4= {
+    AnyRevoluteJoint &ref = .ArmSegments.Hand.Finger4.Jnt.PIP;
+    DriverPos= {0}*pi/180;
+    DriverVel= {0};
+  };
+
+  AnyKinEqSimpleDriver DIP4= {
+    AnyRevoluteJoint &ref = .ArmSegments.Hand.Finger4.Jnt.DIP;
+    DriverPos= {0}*pi/180;
+    DriverVel= {0};
+  };
+
+  AnyKinEqSimpleDriver MCP5= {
+    AnyRevoluteJoint &ref = .ArmSegments.Hand.Finger5.Jnt.MCP;
+    DriverPos= {0}*pi/180;
+    DriverVel= {0};
+  };
+
+  AnyKinEqSimpleDriver PIP5= {
+    AnyRevoluteJoint &ref = .ArmSegments.Hand.Finger5.Jnt.PIP;
+    DriverPos= {0}*pi/180;
+    DriverVel= {0};
+  };
+
+  AnyKinEqSimpleDriver DIP5= {
+    AnyRevoluteJoint &ref = .ArmSegments.Hand.Finger5.Jnt.DIP;
+    DriverPos= {0};
+    DriverVel= {0};
+  };
+#endif

@@ -1,0 +1,144 @@
+TwoParCalibrationStudy RightCal1Shoulder(
+  BodyModelRef = Main.HumanModel.BodyModel,
+  Side = Right,
+  SHOULDER = On
+) = {
+  nStep = NumElemOf(ShoulderPositions);
+  
+  MuscleArr = ObjSearch(
+    &..BodyModel.Right.ShoulderArm.Muscles,
+    {
+      "DeltoideusAnterior.*",
+      "DeltoideusLateral.*",
+      "DeltoideusPosterior.*",
+      "Infraspinatus.*",
+      "LatissimusDorsi.*",
+      "LevatorScapulae.*",
+      "PectoralisMajorClavicular.*",
+      "PectoralisMajorThoracic.*",
+      "PectoralisMinor.*",
+      "SerratusAnterior.*",
+      "Subscapularis.*",
+      "Supraspinatus.*",
+    },
+    "AnyMuscle"
+  );
+  
+  ShoulderPositions = flattenptr(&.RangeOfMotion.Right.ShoulderArm.Shoulder.ActiveRoMShoulder);
+};
+
+TwoParCalibrationStudy RightCal2Elbow(
+  BodyModelRef = Main.HumanModel.BodyModel,
+  Side = Right,
+  ELBOWFLEXION = On
+) = {
+  nStep = NumElemOf(ElbowFlexionPositions);
+  
+  MuscleArr = ObjSearch(
+    &..BodyModel.Right.ShoulderArm.Muscles,
+    {
+      "Anconeus.*",
+      "BicepsBrachii.*",
+      "Brachialis.*",
+      "Brachioradialis.*",
+      "Coracobrachialis.*",
+      "Triceps.*",
+    },
+    "AnyMuscle"
+  );
+  
+  ElbowFlexionPositions = flattenptr(&.RangeOfMotion.Right.ShoulderArm.Elbow.ActiveRoMFlexion);
+};
+
+TwoParCalibrationStudy RightCal3ElbowWrist(
+  BodyModelRef = Main.HumanModel.BodyModel,
+  Side = Right,
+  ELBOWFLEXION = On,
+  WRISTFLEXION = On
+) = {
+  nStep = NumElemOf(ElbowFlexionPositions);
+  
+  MuscleArr = ObjSearch(
+    &..BodyModel.Right.ShoulderArm.Muscles,
+    {
+      "Extensor*.*",
+      "FlexorCarpi*.*",
+      "FlexorDigi*.*",
+      "PalmarisLongus.*",
+    },
+    "AnyMuscle"
+  );
+  
+  ElbowFlexionPositions = repmat(4, flattenptr(&.RangeOfMotion.Right.ShoulderArm.Elbow.ActiveRoMFlexion));
+  WristFlexionPositions = repmat(4, flattenptr(&.RangeOfMotion.Right.ShoulderArm.Wrist.ActiveRoMFlexion));
+};
+
+TwoParCalibrationStudy RightCal4Wrist(
+  BodyModelRef = Main.HumanModel.BodyModel,
+  Side = Right,
+  WRISTFLEXION = On
+) = {
+  nStep = NumElemOf(WristFlexionPositions);
+  
+  MuscleArr = ObjSearch(
+    &..BodyModel.Right.ShoulderArm.Muscles,
+    {
+      "AbductorPollicis.*",
+      "FlexorPollicis*.*",
+    },
+    "AnyMuscle"
+  );
+  
+  WristFlexionPositions = flattenptr(&.RangeOfMotion.Right.ShoulderArm.Wrist.ActiveRoMFlexion);
+};
+
+TwoParCalibrationStudy RightCal5ScapulaClavicula(
+  BodyModelRef = Main.HumanModel.BodyModel,
+  Side = Right,
+  SCAPULAELEVATION = On,
+  SCAPULAPROTRACTION = On,
+) = {
+  nStep = NumElemOf(ScapulaElevationPositions);
+  
+  MuscleArr = ObjSearch(
+    &..BodyModel.Right.ShoulderArm.Muscles,
+    {
+      "Rhomboideus.*",
+      "Sternocleidomastoid.*",
+      "Teres*.*",
+      "Trapezius*.*",
+    },
+    "AnyMuscle"
+  );
+  
+  ScapulaElevationPositions = repmat(2, flattenptr(&.RangeOfMotion.Right.ShoulderArm.Shoulder.ActiveRoMScapulaElevation));
+  ScapulaProtractionPositions = repmat(2, flattenptr(&.RangeOfMotion.Right.ShoulderArm.Shoulder.ActiveRoMScapulaProtraction));
+};
+
+TwoParCalibrationStudy RightCal6ForearmPronationSupination(
+  BodyModelRef = Main.HumanModel.BodyModel,
+  Side = Right,
+  ELBOWPRONATION = On,
+) = {
+  nStep = NumElemOf(ElbowPronationPositions);
+  
+  MuscleArr = ObjSearch(
+    &..BodyModel.Right.ShoulderArm.Muscles,
+    {
+      "Pronator*.*",
+      "Supinator.*",
+    },
+    "AnyMuscle"
+  );
+  
+  ElbowPronationPositions = flattenptr(&.RangeOfMotion.Right.ShoulderArm.Elbow.ActiveRoMPronation);
+};
+
+CalibrationSequence = {
+  AnyOperation& Cal1Shoulder = .RightCal1Shoulder.FiberAndTendonLengthAdjustment;
+  AnyOperation& Cal2Elbow = .RightCal2Elbow.FiberAndTendonLengthAdjustment;
+  AnyOperation& Cal3ElbowWrist = .RightCal3ElbowWrist.FiberAndTendonLengthAdjustment;
+  AnyOperation& Cal4Wrist = .RightCal4Wrist.FiberAndTendonLengthAdjustment;
+  AnyOperation& Cal5ScapulaClavicula = .RightCal5ScapulaClavicula.FiberAndTendonLengthAdjustment;
+  AnyOperation& Cal6ForearmPronationSupination = .RightCal6ForearmPronationSupination.FiberAndTendonLengthAdjustment;
+};

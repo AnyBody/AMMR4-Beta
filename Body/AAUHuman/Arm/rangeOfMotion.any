@@ -12,19 +12,82 @@ AnyFolder RangeOfMotion = {
     AnyVar MaxScapulaClaviculaDepressionAngle = -5;
     AnyVar MaxScapulaClaviculaProtractionAngle = 15;
     AnyVar MaxScapulaClaviculaRetractionAngle = -36;
+    AnyVar ScapulaNeutral = 0;
+
+    // Shoulder positions
+    AnyFloat Neutral = {0, 0, 0};
+    AnyFloat Flexed = {MaxGlenohumeralFlexionAngle, 0, 0};
+    AnyFloat Extended = {MaxGlenohumeralExtensionAngle, 0, 0};
+    AnyFloat Abducted = {0, MaxGlenohumeralAbductionAngle, 0};
+    AnyFloat Adducted = {0, MaxGlenohumeralAdductionAngle, 0};
+    AnyFloat ExternallyRotated = {0, 0, MaxGlenohumeralExternalRotationAngle};
+    AnyFloat InternallyRotated = {0, 0, MaxGlenohumeralInternalRotationAngle};
+    AnyFloat FlexedAndExternallyRotated = {MaxGlenohumeralFlexionAngle, 0, MaxGlenohumeralExternalRotationAngle};
+    AnyFloat FlexedAndInternallyRotated = {MaxGlenohumeralFlexionAngle, 0, MaxGlenohumeralInternalRotationAngle};
+    AnyFloat ExtendedAndExternallyRotated = {MaxGlenohumeralExtensionAngle, 0, MaxGlenohumeralExternalRotationAngle};
+    AnyFloat ExtendedAndInternallyRotated = {MaxGlenohumeralExtensionAngle, 0, MaxGlenohumeralInternalRotationAngle};
+    AnyFloat FlexedAndAdducted = {MaxGlenohumeralFlexionAngle, MaxGlenohumeralAdductionAngle, 0};
+    AnyFloat FlexedAndAbducted = {MaxGlenohumeralFlexionAngle, MaxGlenohumeralAbductionAngle, 0};
+
+    AnyObjectPtrArray ActiveRoMShoulder = {
+      &Flexed,
+      &Extended,
+      &Abducted,
+      &Adducted,
+      &ExternallyRotated,
+      &InternallyRotated,
+      &FlexedAndExternallyRotated,
+      &FlexedAndInternallyRotated,
+      &ExtendedAndExternallyRotated,
+      &ExtendedAndInternallyRotated,
+      &FlexedAndAdducted,
+      &FlexedAndAbducted,
+    };
+
+    AnyObjectPtrArray ActiveRoMScapulaElevation = {
+      &MaxScapulaClaviculaElevationAngle,
+      &MaxScapulaClaviculaDepressionAngle,
+    };
+
+    AnyObjectPtrArray ActiveRoMScapulaProtraction = {
+      &MaxScapulaClaviculaProtractionAngle,
+      &MaxScapulaClaviculaRetractionAngle,
+    };
   };
-  
+
   AnyFolder Elbow = {
     AnyVar MaxFlexionAngle = 150;
     AnyVar MaxExtensionAngle = 0;
     AnyVar MaxPronationAngle = 90;
     AnyVar MaxSupinationAngle = -90;
+    AnyVar Neutral = 0;
+
+    AnyObjectPtrArray ActiveRoMFlexion = {
+      &MaxFlexionAngle,
+      &MaxExtensionAngle,
+    };
+
+    AnyObjectPtrArray ActiveRoMPronation = {
+      &MaxPronationAngle,
+      &MaxSupinationAngle,
+    };
   };
-  
+
   AnyFolder Wrist = {
     AnyVar MaxFlexionAngle = 85;
     AnyVar MaxExtensionAngle = -70;
     AnyVar MaxAbductionAngle = 20;
     AnyVar MaxAdductionAngle = -35;
+    AnyVar Neutral = 0;
+
+    AnyObjectPtrArray ActiveRoMFlexion = {
+      &MaxFlexionAngle,
+      &MaxExtensionAngle,
+    };
+
+    AnyObjectPtrArray ActiveRoMAbduction = {
+      &MaxAbductionAngle,
+      &MaxAdductionAngle,
+    };
   };
 };

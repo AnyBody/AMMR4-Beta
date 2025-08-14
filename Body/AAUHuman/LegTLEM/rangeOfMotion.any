@@ -12,7 +12,7 @@ AnyFolder RangeOfMotion = {
     AnyVar MaxExtensionInAdductionAngle = -10;
     AnyVar MaxFlexionInAbductionAngle = 90;
     AnyVar MinFlexionInAdduction = 5;
-    
+
     // Hip positions
     AnyFloat Neutral = { 0, 0, 0 };
     AnyFloat InternallyRotated = { 0, 0, MaxInternalRotationAngle };
@@ -25,19 +25,52 @@ AnyFolder RangeOfMotion = {
     AnyFloat Extended = { MaxExtensionAngle,  0, 0};
     AnyFloat ExtendedAndAdducted = { MaxExtensionInAdductionAngle,  MaxAdductionInExtensionAngle, 0};
     AnyFloat AbductedAndExternallyRotated = {0,  MaxAbductionAngle,  MaxExternalRotationAngle};
+
+    /// Positions defining the active range of motion for the hip joint
+    /// The active range of motion is defined as the range of motion that can be achieved by the muscles
+    AnyObjectPtrArray ActiveRoM = {
+      &InternallyRotated,
+      &ExternallyRotated,
+      &Adduction,
+      &Abduction,
+      &Flexed,
+      &FlexedAndAdducted,
+      &FlexedAndAbducted,
+      &Extended,
+      &ExtendedAndAdducted,
+      &AbductedAndExternallyRotated,
+    };
+
   };
-  
+
   AnyFolder Knee = {
     AnyVar Neutral = 0;
     AnyVar MaxFlexionAngle = 130;
     AnyVar MaxExtensionAngle = -3;
+
+    AnyObjectPtrArray ActiveRoM = {
+      &MaxFlexionAngle,
+      &MaxExtensionAngle,
+    };
   };
-  
+
   AnyFolder Ankle = {
     AnyVar Neutral = 0;
     AnyVar MaxPlantarFlexionAngle = 45;
     AnyVar MaxDorsiFlexionAngle = -20;
     AnyVar MaxInversionAngle = 15;
     AnyVar MaxEversionAngle = -20;
+
+    AnyObjectPtrArray ActiveRoMFlexion = {
+      &MaxPlantarFlexionAngle,
+      &Neutral,
+      &MaxDorsiFlexionAngle,
+    };
+
+    AnyObjectPtrArray ActiveRoMEversion = {
+      &MaxInversionAngle,
+      &Neutral,
+      &MaxEversionAngle,
+    };
   };
 };

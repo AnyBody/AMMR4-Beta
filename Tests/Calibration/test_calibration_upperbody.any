@@ -1,6 +1,8 @@
 //ignore_errors = ['Currently, no room for tendon']
 //fatal_warnings = [
 //    "Penetration of surface",
+//    "too few kinematic constraints to be kinematically determinate",
+//    "A segment appears to be missing in this study",
 //]
 //define = (
 //   [
@@ -31,28 +33,27 @@
 
 
 
-Main = 
+Main =
 {
-  #include "<ANYBODY_PATH_BODY>/HumanModel.any"  
+  #include "<ANYBODY_PATH_BODY>/HumanModel.any"
 
   AnyOperation& RunTest = Main.HumanModel.Calibration.CalibrationSequence;
 
   // Test to check that all muscles in the model are part of the calibration studies.
   // the test is excluded for the calibration combinations that do not make sense / are unimplemented
-  #if BM_CALIBRATION_TYPE != 3
-    AnyObjectPtrArray muscles_from_cal_studies = unique(flattenptr(ObjSearchRecursive(&Main.HumanModel.Calibration, "MuscleArr")));
-    AnyObjectPtrArray muscles_right = unique(flattenptr(ObjSearchRecursive(&Main.HumanModel.BodyModel.Right.ShoulderArm.Muscles, "*", "AnyMuscle")));
-    AnyObjectPtrArray muscles_left = unique(flattenptr(ObjSearchRecursive(&Main.HumanModel.BodyModel.Left.ShoulderArm.Muscles, "*", "AnyMuscle")));
-    AnyObjectPtrArray muscles_from_model = arrcat(muscles_right, muscles_left);
-  
-    AnyInt test_all_mus_in_cal = expect(
-      eqfun(
-      NumElemOf(muscles_from_cal_studies),
-      NumElemOf(muscles_from_model)
-      ),
-      "The number of muscles in the calibration studies do not match the number of muscles in the model!"
-    );
-  #endif
+  AnyObjectPtrArray muscles_from_cal_studies = unique(flattenptr(ObjSearchRecursive(&Main.HumanModel.Calibration, "MuscleArr")));
+  AnyObjectPtrArray muscles_right = unique(flattenptr(ObjSearchRecursive(&Main.HumanModel.BodyModel.Right.ShoulderArm.Muscles, "*", "AnyMuscle")));
+  AnyObjectPtrArray muscles_left = unique(flattenptr(ObjSearchRecursive(&Main.HumanModel.BodyModel.Left.ShoulderArm.Muscles, "*", "AnyMuscle")));
+  AnyObjectPtrArray muscles_from_model = arrcat(muscles_right, muscles_left);
+  AnyObjectPtr diff = set_difference(muscles_from_model, muscles_from_cal_studies);
+
+  AnyInt test_all_mus_in_cal = expect(
+    eqfun(
+    NumElemOf(muscles_from_cal_studies),
+    NumElemOf(muscles_from_model)
+    ),
+    "The number of muscles in the calibration studies do not match the number of muscles in the model!"
+  );
 };
 
 

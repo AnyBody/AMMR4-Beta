@@ -17,7 +17,38 @@ AnyFolder RangeOfMotion = {
   AnyVar MaxPelvisSacrumExtensionAngle = -5;
   AnyVar MaxPelvisSacrumLateralBendingAngle = 5;
   AnyVar MinPelvisSacrumLateralBendingAngle = -5;
-  
+  AnyVar Neutral = 0;
+
+  AnyObjectPtrArray ActiveRoMThoraxFlexion = {
+    &MaxPelvisThoraxFlexionAngle,
+    &MaxPelvisThoraxExtensionAngle,
+  };
+
+  AnyObjectPtrArray ActiveRoMThoraxLateralBending = {
+    &MaxPelvisThoraxLateralBendingAngle,
+    &MinPelvisThoraxLateralBendingAngle,
+  };
+
+  AnyObjectPtrArray ActiveRoMThoraxAxialRotation = {
+    &MaxPelvisThoraxAxialRotationAngle,
+    &MinPelvisThoraxAxialRotationAngle,
+  };
+
+  AnyObjectPtrArray ActiveRoMSkullFlexion = {
+    &MaxSkullThoraxFlexionAngle,
+    &MaxSkullThoraxExtensionAngle,
+  };
+
+  AnyObjectPtrArray ActiveRoMSkullLateralBending = {
+    &MaxSkullThoraxLateralBendingAngle,
+    &MinSkullThoraxLateralBendingAngle,
+  };
+
+  AnyObjectPtrArray ActiveRoMSkullAxialRotation = {
+    &MaxSkullThoraxAxialRotationAngle,
+    &MinSkullThoraxAxialRotationAngle,
+  };
+
   // AnyFolder Right = {};
   // AnyFolder Left = {};
 };
