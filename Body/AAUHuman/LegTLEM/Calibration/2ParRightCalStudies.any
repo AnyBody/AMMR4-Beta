@@ -123,7 +123,8 @@ TwoParCalibrationStudy RightCal6Ankle(
   ANKLE = On,
   SUBTALAR = On,
 ) = {
-  nStep = NumElemOf(AnklePositions);
+//  nStep = NumElemOf(AnklePositions);
+    nStep = NumElemOf(Obj2Num(AnklePositions));
   MuscleArr = ObjSearch(
     &..BodyModel.Right.Leg.Mus,
     {
@@ -135,8 +136,14 @@ TwoParCalibrationStudy RightCal6Ankle(
     "AnyMuscle"
   );
   
-  AnklePositions = repmat(3, flattenptr(&.RangeOfMotion.Right.Leg.Ankle.ActiveRoMFlexion));
-  SubTalarPositions = flatten(transpose(reshape(repmat(3, flattenptr(&.RangeOfMotion.Right.Leg.Ankle.ActiveRoMEversion)),{3,3})));
+//  AnklePositions = repmat(3, flattenptr(&.RangeOfMotion.Right.Leg.Ankle.ActiveRoMFlexion));
+//  SubTalarPositions = flatten(transpose(reshape(repmat(3, flattenptr(&.RangeOfMotion.Right.Leg.Ankle.ActiveRoMEversion)),{3,3})));
+    
+//    AnklePositions = Main.HumanModel.BodyModel.Right.Leg.Data.RangeOfMotion.Ankle.SweepActiveRoMFlexion;
+//    SubTalarPositions = Main.HumanModel.BodyModel.Right.Leg.Data.RangeOfMotion.Ankle.SweepActiveRoMEversion;
+
+    AnklePositions = &Main.HumanModel.BodyModel.Right.Leg.Data.RangeOfMotion.Ankle.circularSweep.v1Samples;
+    SubTalarPositions = &Main.HumanModel.BodyModel.Right.Leg.Data.RangeOfMotion.Ankle.circularSweep.v2Samples;
 };
 
 
