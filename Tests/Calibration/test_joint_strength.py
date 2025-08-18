@@ -4,6 +4,7 @@ from collections import ChainMap
 from anypytools import AnyPyProcess, macro_commands as mc
 from anypytools.abcutils import AnyPyProcessOutputList
 from anypytools.tools import winepath, ON_WINDOWS
+import matplotlib.pyplot as plt
 
 import pytest
 
@@ -27,15 +28,15 @@ AMS_VARIABLES = [
 
 DEFINES_COMBINATIONS = product(
     [
-        {'BM_LEG_MODEL':'_LEG_MODEL_TLEM_'}
+        {'BM_LEG_MODEL': 1} # _LEG_MODEL_TLEM_
 
     ],
     [
-        {'BM_CALIBRATION_TYPE':'_EXPERIMENTAL_CALIBRATION_TYPE_2PAR_'}
+        {'BM_CALIBRATION_TYPE': 3} # _EXPERIMENTAL_CALIBRATION_TYPE_2PAR_
     ],
     [
-        {'BM_LEG_MUSCLES_BOTH': '_MUSCLES_3E_HILL_'},
-        {'BM_LEG_MUSCLES_BOTH': '_MUSCLES_SIMPLE_'}
+        {'BM_LEG_MUSCLES_BOTH': 2}, # _MUSCLES_3E_HILL_
+        {'BM_LEG_MUSCLES_BOTH': 1} # _MUSCLES_SIMPLE_
     ],
     [
         {"TEST_NAME":"test_cal_joint_strength_0"}, # set to indicate running from test framework
@@ -55,11 +56,23 @@ def extract_output(output: AnyPyProcessOutputList) -> dict[str,list]:
     """ extract output variables from the model into a dict""" 
     formatted = {}
     for result in output:
+        muscle_config = get_muscle_config(result["task_macro"][0])
+
         for var in AMS_VARIABLES:
-            formatted.setdefault(var.split(".")[-1], []).append(result[var])
+            formatted.setdefault(f"{muscle_config}_{var.split(".")[-5]}", result[var])
     
     return formatted    
 
+
+def get_muscle_config(load_string: str) -> str:
+    """ get the muscle configuration from the load string"""
+    if 'BM_LEG_MUSCLES_BOTH="2"' in load_string:
+        return "3E"
+    elif 'BM_LEG_MUSCLES_BOTH="1"' in load_string:
+        return "SIMPLE"
+    else:
+        raise ValueError(f"Unknown muscle configuration in {load_string}")
+    
 
 def make_dump_commands(variables: list[str]) -> list[mc.MacroCommand]: 
     return [mc.Dump(var) for var in variables]
@@ -79,8 +92,8 @@ def model_output() -> dict:
         macros.append(
             [
                 mc.Load(model, defs=defs),
-                # mc.OperationRun(OPERATION),
-                # *make_dump_commands(AMS_VARIABLES),
+                mc.OperationRun(OPERATION),
+                *make_dump_commands(AMS_VARIABLES),
             ]
         )
 
@@ -97,8 +110,35 @@ def model_output() -> dict:
     return extract_output(results)
 
 
-def test_joint_strength(model_output: AnyPyProcessOutputList):
-    """ test the trunk region mass"""
-    output = model_output["JointStrength"]
+def test_joint_strength(model_output: AnyPyProcessOutputList) -> None:
     
-    rounded_vals = [round(val, ABS_TOL) for val in output]
+    # plot the same joint strength for each variable across different muscle configurations
+    joints = [
+        "HipFlexion",
+        "HipExtension",
+        "KneeFlexion",
+        "KneeExtension",
+        "AnklePlantarFlexion",
+        "AnkleDorsiFlexion",
+        "HipAdduction",
+        "HipAbduction",
+        "HipInternalRotation",
+        "HipExternalRotation",
+        "SubTalarEversion",
+        "SubTalarInversion",
+    ]
+    for var in joints:
+        output: dict[str, list[float]] = {key: value for key, value in model_output.items() if var in key}
+        # plt.figure(figsize=(10, 6))
+        for key, values in output.items():
+            plt.plot(values, label=key)
+        plt.title(f"Joint Strength for {var}")
+        plt.xlabel("Study")
+        plt.ylabel("Joint Strength")
+        plt.legend()
+        plt.grid()
+        plt.savefig(f"Tests/Calibration/joint_strength_{var}.png")
+        plt.close()
+
+    
+    
