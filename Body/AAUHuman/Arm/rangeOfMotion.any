@@ -13,7 +13,7 @@ AnyFolder RangeOfMotion = {
     AnyVar MaxScapulaClaviculaProtractionAngle = 15;
     AnyVar MaxScapulaClaviculaRetractionAngle = -36;
     AnyVar ScapulaNeutral = 0;
-    
+
     // Shoulder positions
     AnyFloat Neutral = {0, 0, 0};
     AnyFloat Flexed = {MaxGlenohumeralFlexionAngle, 0, 0};
@@ -44,17 +44,17 @@ AnyFolder RangeOfMotion = {
       &FlexedAndAbducted,
     };
 
-    AnyObjectPtrArray ActiveRoMScapulaElevation = {      
+    AnyObjectPtrArray ActiveRoMScapulaElevation = {
       &MaxScapulaClaviculaElevationAngle,
       &MaxScapulaClaviculaDepressionAngle,
     };
 
-    AnyObjectPtrArray ActiveRoMScapulaProtraction = {      
+    AnyObjectPtrArray ActiveRoMScapulaProtraction = {
       &MaxScapulaClaviculaProtractionAngle,
       &MaxScapulaClaviculaRetractionAngle,
     };
   };
-  
+
   AnyFolder Elbow = {
     AnyVar MaxFlexionAngle = 150;
     AnyVar MaxExtensionAngle = 0;
@@ -72,7 +72,7 @@ AnyFolder RangeOfMotion = {
       &MaxSupinationAngle,
     };
   };
-  
+
   AnyFolder Wrist = {
     AnyVar MaxFlexionAngle = 85;
     AnyVar MaxExtensionAngle = -70;

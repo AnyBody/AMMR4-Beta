@@ -4,7 +4,7 @@ TwoParCalibrationStudy RightCal1Hip(
   HIP = On
 ) = {
   nStep = NumElemOf(HipPositions);
-  
+
   MuscleArr = ObjSearch(
     &..BodyModel.Right.Leg.Mus,
     {
@@ -18,7 +18,7 @@ TwoParCalibrationStudy RightCal1Hip(
       "Pectineus.*",
       "Piriformis.*",
       "QuadratusFemoris.*",
-    }, 
+    },
     "AnyMuscle"
   );
 
@@ -34,12 +34,12 @@ TwoParCalibrationStudy RightCal2HipSpine(
   TRUNKROTATION = On,
 ) = {
   nStep = NumElemOf(HipPositions);
-  
+
   MuscleArr = ObjSearch(
     &..BodyModel.Trunk.Muscles.Right,
     {
       "Psoas*.*",
-    }, 
+    },
     "AnyMuscle"
   );
 
@@ -56,7 +56,7 @@ TwoParCalibrationStudy RightCal3HipKnee(
   KNEE = On,
 ) = {
   nStep = NumElemOf(HipPositions);
-  
+
   MuscleArr = ObjSearch(
     &..BodyModel.Right.Leg.Mus,
     {
@@ -67,7 +67,7 @@ TwoParCalibrationStudy RightCal3HipKnee(
       "Semimembranosus.*",
       "Semitendinosus.*",
       "TensorFasciaeLatae.*",
-    }, 
+    },
     "AnyMuscle"
   );
 
@@ -81,14 +81,14 @@ TwoParCalibrationStudy RightCal4Knee(
   KNEE = On,
 ) = {
   nStep = NumElemOf(KneePositions);
-  
+
   MuscleArr = ObjSearch(
     &..BodyModel.Right.Leg.Mus,
     {
       "BicepsFemorisCaputBreve.*",
       "Popliteus.*",
       "Vastus*.*",
-    }, 
+    },
     "AnyMuscle"
   );
 
@@ -102,14 +102,14 @@ TwoParCalibrationStudy RightCal5AnkleKnee(
   ANKLE = On,
 ) = {
   nStep = NumElemOf(AnklePositions);
-  
+
   MuscleArr = ObjSearch(
     &..BodyModel.Right.Leg.Mus,
     {
       "Gastroc*.*",
       "Peroneus*.*",
       "Plantaris.*",
-    }, 
+    },
     "AnyMuscle"
   );
 
@@ -132,13 +132,16 @@ TwoParCalibrationStudy RightCal6Ankle(
       "Flexor*.*",
       "Soleus*.*",
       "Tibialis*.*",
-    }, 
+    },
     "AnyMuscle"
   );
-  
+
+  AnklePositions = repmat(3, flattenptr(&.RangeOfMotion.Right.Leg.Ankle.ActiveRoMFlexion));
+  SubTalarPositions = flatten(transpose(reshape(repmat(3, flattenptr(&.RangeOfMotion.Right.Leg.Ankle.ActiveRoMEversion)),{3,3})));
+
 //  AnklePositions = repmat(3, flattenptr(&.RangeOfMotion.Right.Leg.Ankle.ActiveRoMFlexion));
 //  SubTalarPositions = flatten(transpose(reshape(repmat(3, flattenptr(&.RangeOfMotion.Right.Leg.Ankle.ActiveRoMEversion)),{3,3})));
-    
+
 //    AnklePositions = Main.HumanModel.BodyModel.Right.Leg.Data.RangeOfMotion.Ankle.SweepActiveRoMFlexion;
 //    SubTalarPositions = Main.HumanModel.BodyModel.Right.Leg.Data.RangeOfMotion.Ankle.SweepActiveRoMEversion;
 
