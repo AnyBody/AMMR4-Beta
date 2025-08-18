@@ -136,9 +136,6 @@ TwoParCalibrationStudy RightCal6Ankle(
     "AnyMuscle"
   );
 
-  AnklePositions = repmat(3, flattenptr(&.RangeOfMotion.Right.Leg.Ankle.ActiveRoMFlexion));
-  SubTalarPositions = flatten(transpose(reshape(repmat(3, flattenptr(&.RangeOfMotion.Right.Leg.Ankle.ActiveRoMEversion)),{3,3})));
-
 //  AnklePositions = repmat(3, flattenptr(&.RangeOfMotion.Right.Leg.Ankle.ActiveRoMFlexion));
 //  SubTalarPositions = flatten(transpose(reshape(repmat(3, flattenptr(&.RangeOfMotion.Right.Leg.Ankle.ActiveRoMEversion)),{3,3})));
 

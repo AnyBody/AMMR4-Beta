@@ -73,5 +73,56 @@ AnyFolder RangeOfMotion = {
       &Neutral,
       &MaxEversionAngle,
     };
+
+    // Square grid without center
+    AnyInt NumOfPoints = 10;
+    AnyFloat FlexionAngles = linspace(MaxPlantarFlexionAngle, MaxDorsiFlexionAngle, NumOfPoints);
+    AnyFloat InversionAngles = linspace(MaxInversionAngle, MaxEversionAngle, NumOfPoints);
+    AnyFloat v1 = flatten(transpose(repmat(1, NumOfPoints, FlexionAngles)));
+    AnyFloat v2 = flatten(repmat(1, NumOfPoints, InversionAngles));
+    AnyFloat values = {v1, v2};
+    AnyObjectPtr SweepActiveRoMFlexion = &v1;
+    AnyObjectPtr SweepActiveRoMEversion = &v2;
+
+
+    // circular sweep
+    AnyInt m = 10;
+    AnyInt n = 10;
+    AnyFloat center = zeros(2,m*m);
+    AnyMatrix arr0 = {flatten(arr0x'), flatten(arr0y)};
+    //    AnyFloat array = center + (arr0 - center) * (1/repmat(2,m,rm));
+    AnyFloat rm = im / m;
+    AnyIntArray im = iarr(1,m);
+    AnyFloat arr0x = repmat(1, m, FlexionAngles) * diag(rm);
+    AnyFloat arr0y = diag(rm) * repmat(1, m, InversionAngles) ;//* diag(rm);
+
+    /**
+      Class template to sample a circular grid of points from start -> end for a 2d space.
+      m is the number of samples
+    */
+    #class_template SampleRoM(
+      m,
+      v1_start,
+      v1_end,
+      v2_start,
+      v2_end,
+    ) {
+      AnyFolder calculations = {
+        AnyFloat v1_i = linspace(.v1_start, .v1_end, .m);
+        AnyFloat v2_i = linspace(.v2_start, .v2_end, .m);
+        AnyIntArray im = iarr(1,.m);
+        AnyFloat rm = im / .m;
+      };
+      AnyFloat v1Samples = flatten(repmat(1, m, calculations.v1_i) * diag(calculations.rm));
+      AnyFloat v2Samples = flatten(repmat(1, m, calculations.v2_i) * diag(calculations.rm));
+    };
+
+    SampleRoM circularSweep(
+      m=.m,
+      v1_start=.MaxPlantarFlexionAngle,
+      v1_end=.MaxDorsiFlexionAngle,
+      v2_start=.MaxInversionAngle,
+      v2_end=.MaxEversionAngle
+    )={};
   };
 };
