@@ -329,7 +329,7 @@ AnyFolder Radius = {
   AnyFloat I_Brachioradialis2_pos                    = {-0.2193890, -0.03859000, -0.002705000};
   AnyFloat I_PronatorTeresHumeral1_pos = {-0.09049500, -0.02641100, 0.0009360000};
   AnyFloat I_PronatorTeresHumeral2_pos = {-0.09049500, -0.02641100, 0.0009360000};
-  AnyFloat I_PronatorTeresUlnare1_pos  = {-0.09049500, -0.02641100, 0.0009360000};
+  AnyFloat I_PronatorTeresUlnare_pos  = {-0.09049500, -0.02641100, 0.0009360000};
   AnyFloat I_SupinatorHumerus1_pos       = {-0.028773, -0.006842, -0.007679}+correction;
   AnyFloat I_SupinatorHumerus2_pos       = {-0.070989, -0.018006, -0.000749}+correction;
   AnyFloat I_SupinatorUlnare1_pos          = {-0.028773, -0.006842, -0.007679}+correction;
@@ -423,7 +423,7 @@ AnyFolder Ulna = {
   AnyVec3 correction2 ={-0.005,0.0,0.008};
 
 
-  AnyFloat O_PronatorTeresUlnare1_pos = {0.039301, 0.014662, 0.001805}+correction2;
+  AnyFloat O_PronatorTeresUlnare_pos = {0.039301, 0.014662, 0.001805}+correction2;
 
   AnyFloat O_SupinatorUlnare1_pos = {-0.012788, 0.033349, 0.010340}+correction1;
   AnyFloat O_SupinatorUlnare2_pos = {-0.003613, 0.059799, 0.016045}+correction1;

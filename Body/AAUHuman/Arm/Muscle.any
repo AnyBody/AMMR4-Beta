@@ -1633,10 +1633,10 @@ MuscleGroup PronatorTeres = {
     };
   };
 
-  AnyMuscleShortestPath PronatorTeresUlnare1 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.Pronator_teres_caput_ulnare;
-    AnyRefNode &Org = ...Segments.Ulna.O_PronatorTeresUlnare1;
-    AnyRefNode &Ins = ...Segments.Radius.I_PronatorTeresUlnare1;
+  AnyMuscleShortestPath PronatorTeresUlnare = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.PronatorTeresUlnare;
+    AnyRefNode &Org = ...Segments.Ulna.O_PronatorTeresUlnare;
+    AnyRefNode &Ins = ...Segments.Radius.I_PronatorTeresUlnare;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any" };
     AnySurfCylinder &Surf1 = ...Segments.Radius.PronatorTeresCyl.cyl;
     SPLine.StringMesh = 35;
