@@ -3,225 +3,44 @@
   #include "ammr_3.0_compatibility_structure.any"
 #endif
 
-MuscleGroup LevatorScapulae() = {
-  AnyMuscleViaPoint LevatorScapulae1 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.LevatorScapulae1;
-    AnyRefNode &Org = ..WrappingSurfaces.TrunkNodeAttachement.C1Seg.O_LevatorScapulae1;
-    AnyRefNode &Ins = ...Segments.Scapula.I_LevatorScapulae1;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-  };
+MuscleGroup AbductorPollicisLongus = {
+  AnyMuscleViaPoint AbductorPollicisLongus ={
 
-  AnyMuscleViaPoint LevatorScapulae2 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.LevatorScapulae2;
-    AnyRefNode &Org = ..WrappingSurfaces.TrunkNodeAttachement.C2Seg.O_LevatorScapulae2;
-    AnyRefNode &Ins = ...Segments.Scapula.I_LevatorScapulae2;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-  };
+    AnyMuscleModel &MusMdl = ...MuscleModels.AbductorPollicisLongus;
+    AnyRefNode &Ins = ...Segments.Hand.Finger1MetaRef.I_AbductorPollicisLongus;
+    //AnyRefNode &Via1 = ...Segments.Hand.Via1_AbductorPollicisLongus;
 
-  AnyMuscleViaPoint LevatorScapulae3 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.LevatorScapulae3;
-    AnyRefNode &Org = ..WrappingSurfaces.TrunkNodeAttachement.C3Seg.O_LevatorScapulae3;
-    AnyRefNode &Ins = ...Segments.Scapula.I_LevatorScapulae3;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-  };
+    AnyRefNode &Via2 = ...Segments.Radius.Via_AbductorPollicisLongus;
 
-  AnyMuscleViaPoint LevatorScapulae4 ={
-    AnyMuscleModel &MusMdl = ...MuscleModels.LevatorScapulae4;
-    AnyRefNode &Org = ..WrappingSurfaces.TrunkNodeAttachement.C4Seg.O_LevatorScapulae4 ;
-    AnyRefNode &Ins = ...Segments.Scapula.I_LevatorScapulae4 ;
+    AnyRefNode &Org = ...Segments.Ulna.O_AbductorPollicisLongus;
+
+    //AnySurfCylinder &Surf1 = ...Segments.Hand.FlexorMuscleCyl.cyl;
+  //  AnySurfCylinder &Surf2 = ...Segments.Radius.MedialExtensorCyl.cyl;
+
+    // AnySurfCylinder &Surf2 = ...Segments.Radius.RadiusMuscleCyl.cyl;
+    // AnySurfCylinder &Surf3 = ...Segments.Ulna.UlnaMuscleCyl.cyl;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+
+  //  SPLine.StringMesh = 45;
+  //  SPLine.RelTol=0.0000001;
+  //  SPLine.InitWrapPosVectors = {
+  //    {0,0,..Sign*0.1}, {0,..Sign*0,0}
+  //  };
   };
 };
 
-MuscleGroup Sternocleidomastoid() = {
-  AnyMuscleViaPoint Sternocleidomastoid1 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.Sternocleidomastoid1;
-    AnyRefNode &Ins2 = ...Segments.Clavicula.SternocleidomastoidNode;
-    AnyRefNode &Org = ..WrappingSurfaces.TrunkNodeAttachement.SkullSeg.SternocleidomastoidNode;
+MuscleGroup Anconeus = {
+  AnyMuscleViaPoint Anconeus1 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.Anconeus1;
+    AnyRefNode &Org = ...Segments.Humerus.O_Anconeus1;
+    AnyRefNode &Ins = ...Segments.Ulna.I_Anconeus1;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
-  AnyMuscleViaPoint Sternocleidomastoid2 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.Sternocleidomastoid2;
-    AnyRefNode &Ins = ..WrappingSurfaces.TrunkNodeAttachement.ManubriumSeg.SternocleidomastoidNode;
-    AnyRefNode &Org = ..WrappingSurfaces.TrunkNodeAttachement.SkullSeg.SternocleidomastoidNode;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-  };
-};
-
-MuscleGroup TrapeziusScapular() = {
-  AnyMuscleShortestPath  TrapeziusScapular1 = {
-    AnyMuscleModel &MusMdl =  ...MuscleModels.TrapeziusScapular1;
-    AnyRefNode &Org = ..WrappingSurfaces.TrunkNodeAttachement.T12Seg.O_TrapeziusScapular1;
-    AnyRefNode &Ins = ...Segments.Scapula.I_TrapeziusScapular1;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-    SPLine.StringMesh = 100;
-    AnySurfCylinder &Surf = ...Segments.Scapula.margo_medialis.cyl;
-    SPLine = {
-      AnyMatrix InitWrapPos = { transf3D({1.3*.Surf.Radius, 0,0.5*.Surf.Length}, &.Surf)};
-      InitWrapPosVecArr = {&InitWrapPos};
-    };
-  };
-
-  AnyMuscleShortestPath  TrapeziusScapular2 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.TrapeziusScapular2;
-    AnyRefNode &Org = ..WrappingSurfaces.TrunkNodeAttachement.T11Seg.O_TrapeziusScapular2;
-    AnyRefNode &Ins = ...Segments.Scapula.I_TrapeziusScapular2;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-    SPLine.StringMesh = 100;
-    AnySurfCylinder &Surf = ...Segments.Scapula.margo_medialis.cyl;
-    SPLine = {
-      AnyMatrix InitWrapPos = { transf3D({1.3*.Surf.Radius, 0,0.5*.Surf.Length}, &.Surf)};
-      InitWrapPosVecArr = {&InitWrapPos};
-    };
-  };
-
-  AnyMuscleShortestPath TrapeziusScapular3 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.TrapeziusScapular3;
-    AnyRefNode &Org = ..WrappingSurfaces.TrunkNodeAttachement.T10Seg.O_TrapeziusScapular3;
-    AnyRefNode &Ins = ...Segments.Scapula.I_TrapeziusScapular3;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-    SPLine.StringMesh = 100;
-    AnySurfCylinder &Surf = ...Segments.Scapula.margo_medialis.cyl;
-    SPLine.InitWrapPosVecArr = .TrapeziusScapular1.SPLine.InitWrapPosVecArr;
-  };
-
-  AnyMuscleShortestPath TrapeziusScapular4 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.TrapeziusScapular4;
-    AnyRefNode &Org = ..WrappingSurfaces.TrunkNodeAttachement.T9Seg.O_TrapeziusScapular4;
-    AnyRefNode &Ins = ...Segments.Scapula.I_TrapeziusScapular4;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-    SPLine.StringMesh = 100;
-    AnySurfCylinder &Surf = ...Segments.Scapula.margo_medialis.cyl;
-    SPLine.InitWrapPosVecArr = .TrapeziusScapular1.SPLine.InitWrapPosVecArr;
-  };
-
-  AnyMuscleShortestPath TrapeziusScapular5 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.TrapeziusScapular5;
-    AnyRefNode &Org = ..WrappingSurfaces.TrunkNodeAttachement.T8Seg.O_TrapeziusScapular5;
-    AnyRefNode &Ins = ...Segments.Scapula.I_TrapeziusScapular5;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-    SPLine.StringMesh = 100;
-    AnySurfCylinder &Surf = ...Segments.Scapula.margo_medialis.cyl;
-    SPLine.InitWrapPosVecArr = .TrapeziusScapular1.SPLine.InitWrapPosVecArr;
-  };
-
-  AnyMuscleShortestPath TrapeziusScapular6 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.TrapeziusScapular6;
-    AnyRefNode &Org = ..WrappingSurfaces.TrunkNodeAttachement.T7Seg.O_TrapeziusScapular6;
-    AnyRefNode &Ins = ...Segments.Scapula.I_TrapeziusScapular6;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-    SPLine.StringMesh = 100;
-    AnySurfCylinder &Surf = ...Segments.Scapula.margo_medialis.cyl;
-    SPLine.InitWrapPosVecArr = .TrapeziusScapular1.SPLine.InitWrapPosVecArr;
-  };
-
-  AnyMuscleShortestPath TrapeziusScapular7 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.TrapeziusScapular7;
-    AnyRefNode &Org = ..WrappingSurfaces.TrunkNodeAttachement.T6Seg.O_TrapeziusScapular7;
-    AnyRefNode &Ins = ...Segments.Scapula.I_TrapeziusScapular7;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-    SPLine.StringMesh = 100;
-    AnySurfCylinder &Surf = ...Segments.Scapula.margo_medialis.cyl;
-    SPLine.InitWrapPosVecArr = .TrapeziusScapular1.SPLine.InitWrapPosVecArr;
-  };
-
-  AnyMuscleShortestPath TrapeziusScapular8 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.TrapeziusScapular8;
-    AnyRefNode &Org = ..WrappingSurfaces.TrunkNodeAttachement.T5Seg.O_TrapeziusScapular8;
-    AnyRefNode &Ins = ...Segments.Scapula.I_TrapeziusScapular8;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-    SPLine.StringMesh = 100;
-    AnySurfCylinder &Surf = ...Segments.Scapula.margo_medialis.cyl;
-    SPLine.InitWrapPosVecArr = .TrapeziusScapular1.SPLine.InitWrapPosVecArr;
-  };
-
-  AnyMuscleShortestPath TrapeziusScapular9 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.TrapeziusScapular9;
-    AnyRefNode &Org = ..WrappingSurfaces.TrunkNodeAttachement.T4Seg.O_TrapeziusScapular9;
-    AnyRefNode &Ins = ...Segments.Scapula.I_TrapeziusScapular9;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-    SPLine.StringMesh = 100;
-    AnySurfCylinder &Surf = ...Segments.Scapula.margo_medialis.cyl;
-    SPLine.InitWrapPosVecArr = .TrapeziusScapular1.SPLine.InitWrapPosVecArr;
-  };
-
-  AnyMuscleViaPoint TrapeziusScapular10 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.TrapeziusScapular10;
-    AnyRefNode &Org = ..WrappingSurfaces.TrunkNodeAttachement.T3Seg.O_TrapeziusScapular10;
-    AnyRefNode &Ins = ...Segments.Scapula.I_TrapeziusScapular10;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-  };
-
-  AnyMuscleViaPoint TrapeziusScapular11 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.TrapeziusScapular11;
-    AnyRefNode &Org = ..WrappingSurfaces.TrunkNodeAttachement.T2Seg.O_TrapeziusScapular11;
-    AnyRefNode &Ins = ...Segments.Scapula.I_TrapeziusScapular11;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-  };
-
-  AnyMuscleViaPoint TrapeziusScapular12 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.TrapeziusScapular12;
-    AnyRefNode &Org = ..WrappingSurfaces.TrunkNodeAttachement.T1Seg.O_TrapeziusScapular12;
-    AnyRefNode &Ins = ...Segments.Scapula.I_TrapeziusScapular12;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-  };
-
-  AnyMuscleViaPoint TrapeziusScapular13 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.TrapeziusScapular13;
-    AnyRefNode &Org = ..WrappingSurfaces.TrunkNodeAttachement.C7Seg.O_TrapeziusScapular13;
-    AnyRefNode &Ins = ...Segments.Scapula.I_TrapeziusScapular13;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-  };
-
-  AnyMuscleViaPoint TrapeziusScapular14 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.TrapeziusScapular14;
-    AnyRefNode &Org = ..WrappingSurfaces.TrunkNodeAttachement.C6Seg.O_TrapeziusScapular14;
-    AnyRefNode &Ins = ...Segments.Scapula.I_TrapeziusScapular14;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-  };
-};
-
-MuscleGroup TrapeziusClavicular() = {
-  AnyMuscleViaPoint  TrapeziusClavicular1 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.TrapeziusClavicular1;
-    AnyRefNode &Org = ..WrappingSurfaces.TrunkNodeAttachement.C5Seg.O_TrapeziusClavicular1;
-    AnyRefNode &Ins = ...Segments.Clavicula.I_TrapeziusClavicular1;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-  };
-
-  AnyMuscleViaPoint TrapeziusClavicular2 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.TrapeziusClavicular2;
-    AnyRefNode &Org = ..WrappingSurfaces.TrunkNodeAttachement.C4Seg.O_TrapeziusClavicular2;
-    AnyRefNode &Ins = ...Segments.Clavicula.I_TrapeziusClavicular2;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-  };
-
-  AnyMuscleViaPoint TrapeziusClavicular3 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.TrapeziusClavicular3;
-    AnyRefNode &Org = ..WrappingSurfaces.TrunkNodeAttachement.C3Seg.O_TrapeziusClavicular3;
-    AnyRefNode &Ins = ...Segments.Clavicula.I_TrapeziusClavicular3;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-  };
-
-  AnyMuscleViaPoint TrapeziusClavicular4 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.TrapeziusClavicular4;
-    AnyRefNode &Org = ..WrappingSurfaces.TrunkNodeAttachement.C2Seg.O_TrapeziusClavicular4;
-    AnyRefNode &Ins = ...Segments.Clavicula.I_TrapeziusClavicular4;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-  };
-
-  AnyMuscleViaPoint TrapeziusClavicular5 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.TrapeziusClavicular5;
-    AnyRefNode &Org = ..WrappingSurfaces.TrunkNodeAttachement.C1Seg.O_TrapeziusClavicular5;
-    AnyRefNode &Ins = ...Segments.Clavicula.I_TrapeziusClavicular5;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-  };
-
-  AnyMuscleViaPoint TrapeziusClavicular6 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.TrapeziusClavicular6;
-    AnyRefNode &Org = ..WrappingSurfaces.TrunkNodeAttachement.SkullSeg.O_TrapeziusClavicular6;
-    AnyRefNode &Ins = ...Segments.Clavicula.I_TrapeziusClavicular6;
+  AnyMuscleViaPoint Anconeus2 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.Anconeus2;
+    AnyRefNode &Org = ...Segments.Humerus.O_Anconeus2;
+    AnyRefNode &Ins = ...Segments.Ulna.I_Anconeus2;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 };
@@ -265,6 +84,67 @@ MuscleGroup BicepsBrachiiLongum = {
 
       };
       InitWrapPosVecArr = { None,None, &InitWrapPos };
+    };
+  };
+};
+
+MuscleGroup Brachialis = {
+  AnyMuscleShortestPath Brachialis1 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.Brachialis1;
+    AnyRefNode &Org = ...Segments.Humerus.O_Brachialis1;
+    AnyRefNode &Ins = ...Segments.Ulna.I_Brachialis1;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    AnySurfCylinder &Surf1 = ...Segments.Humerus.condylus_hum.cyl;
+    SPLine.StringMesh = 30;
+    SPLine = {
+      AnyMatrix InitWrapPos = {
+            transf3D({....Sign*-1.1* .Surf1.Radius,0.5* .Surf1.Radius,  0.46*.Surf1.Length }, &.Surf1)
+      };
+      InitWrapPosVecArr = { &InitWrapPos };
+    };
+  };
+
+  AnyMuscleShortestPath Brachialis2 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.Brachialis2;
+    AnyRefNode &Org = ...Segments.Humerus.O_Brachialis2;
+    AnyRefNode &Ins = ...Segments.Ulna.I_Brachialis2;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    AnySurfCylinder &Surf1 = ...Segments.Humerus.condylus_hum.cyl;
+    SPLine.StringMesh = 30;
+    SPLine = {
+      InitWrapPosVecArr = { &..Brachialis1.SPLine.InitWrapPos };
+    };
+  };
+};
+
+MuscleGroup Brachioradialis = {
+  AnyMuscleShortestPath Brachioradialis1 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.Brachioradialis1;
+    AnyRefNode &Org = ...Segments.Humerus.O_Brachioradialis1;
+    AnyRefNode &Ins = ...Segments.Radius.I_Brachioradialis1;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    AnySurfCylinder &Surf1 = ...Segments.Humerus.condylus_hum.cyl;
+    SPLine.StringMesh = 50;
+    SPLine = {
+      AnyMatrix InitWrapPos = {
+            transf3D({....Sign*-1.1* .Surf1.Radius,0,  0.47*.Surf1.Length }, &.Surf1)
+      };
+      InitWrapPosVecArr = { &InitWrapPos };
+    };
+  };
+
+  AnyMuscleShortestPath Brachioradialis2 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.Brachioradialis2;
+    AnyRefNode &Org = ...Segments.Humerus.O_Brachioradialis2;
+    AnyRefNode &Ins = ...Segments.Radius.I_Brachioradialis2;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    AnySurfCylinder &Surf1 = ...Segments.Humerus.condylus_hum.cyl;
+    SPLine.StringMesh = 50;
+    SPLine = {
+      AnyMatrix InitWrapPos = {
+            transf3D({....Sign*-1.1* .Surf1.Radius,0,  0.5*.Surf1.Length }, &.Surf1)
+      };
+      InitWrapPosVecArr = { &InitWrapPos };
     };
   };
 };
@@ -314,6 +194,93 @@ MuscleGroup Coracobrachialis = {
 };
 
 #if BM_ARM_DELTOID_WRAPPING == _DELTOID_WRAPPING_RAKE_
+  MuscleGroup DeltoideusClavicular = {
+    AnyMuscleShortestPath deltoideus_clavicular_part_1 = {
+      AnyMuscleModel &MusMdl = ...MuscleModels.deltoideus_clavicular_part_1;
+      AnyRefNode &Org = ...Segments.Clavicula.O_deltoideus_clavicular_part_1;
+      AnyRefNode &Via = .ArtificialRake.DeltoidMuscleConnector.DeltoidVia7;
+      AnyRefNode &Ins = ...Segments.Humerus.I_deltoideus_clavicular_part_1;
+      viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+      AnySurfSphere &Surf = ...Segments.Humerus.art_tub_minus_tub_majus.art_tub_minus_tub_majusSurf;
+      SPLine.StringMesh = 35;
+      SPLine = {
+        AnyMatrix InitWrapPos = { transf3D({0, 0.8*.Surf.Radius,0}, &.Via)};
+        InitWrapPosVecArr = {&InitWrapPos,None};
+      };
+    };
+
+    AnyMuscleShortestPath deltoideus_clavicular_part_2 = {
+      AnyMuscleModel &MusMdl = ...MuscleModels.deltoideus_clavicular_part_2;
+      AnyRefNode &Org = ...Segments.Clavicula.O_deltoideus_clavicular_part_2;
+      AnyRefNode &Via = .ArtificialRake.DeltoidMuscleConnector.DeltoidVia8;
+      AnyRefNode &Ins = ...Segments.Humerus.I_deltoideus_clavicular_part_2;
+      viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+      SPLine.StringMesh = 42;
+      AnySurfSphere &Surf = ...Segments.Humerus.art_tub_minus_tub_majus.art_tub_minus_tub_majusSurf;
+      SPLine = {
+        AnyMatrix InitWrapPos = { transf3D({0, 0.8*.Surf.Radius,0}, &.Via)};
+        InitWrapPosVecArr = {&InitWrapPos,None};
+      };
+    };
+
+    AnyMuscleShortestPath deltoideus_clavicular_part_3 = {
+      AnyMuscleModel &MusMdl = ...MuscleModels.deltoideus_clavicular_part_3;
+      AnyRefNode &Org = ...Segments.Clavicula.O_deltoideus_clavicular_part_3;
+      AnyRefNode &Via = .ArtificialRake.DeltoidMuscleConnector.DeltoidVia9;
+      AnyRefNode &Ins = ...Segments.Humerus.I_deltoideus_clavicular_part_3;
+      viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+      AnySurfSphere &Surf = ...Segments.Humerus.art_tub_minus_tub_majus.art_tub_minus_tub_majusSurf;
+      SPLine.StringMesh = 35;
+      SPLine = {
+        AnyMatrix InitWrapPos = { transf3D({0, 0.8*.Surf.Radius,0}, &.Via)};
+        InitWrapPosVecArr = {&InitWrapPos,None};
+      };
+    };
+
+    AnyMuscleShortestPath deltoideus_clavicular_part_4 = {
+      AnyMuscleModel &MusMdl = ...MuscleModels.deltoideus_clavicular_part_4;
+      AnyRefNode &Org = ...Segments.Clavicula.O_deltoideus_clavicular_part_4;
+      AnyRefNode &Via = .ArtificialRake.DeltoidMuscleConnector.DeltoidVia10;
+      AnyRefNode &Ins = ...Segments.Humerus.I_deltoideus_clavicular_part_4;
+      viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+      SPLine.StringMesh = 30;
+      AnySurfSphere &Surf = ...Segments.Humerus.art_tub_minus_tub_majus.art_tub_minus_tub_majusSurf;
+      SPLine = {
+        AnyMatrix InitWrapPos = { transf3D({0, 0.8*.Surf.Radius,0}, &.Via)};
+        InitWrapPosVecArr = {&InitWrapPos,None};
+      };
+    };
+
+    AnyMuscleShortestPath deltoideus_clavicular_part_5 = {
+      AnyMuscleModel &MusMdl = ...MuscleModels.deltoideus_clavicular_part_5;
+      AnyRefNode &Org = ...Segments.Clavicula.O_deltoideus_clavicular_part_5;
+      AnyRefNode &Via = .ArtificialRake.DeltoidMuscleConnector.DeltoidVia11;
+      AnyRefNode &Ins = ...Segments.Humerus.I_deltoideus_clavicular_part_5;
+      viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+      SPLine.StringMesh = 35;
+      AnySurfSphere &Surf = ...Segments.Humerus.art_tub_minus_tub_majus.art_tub_minus_tub_majusSurf;
+      SPLine = {
+        AnyMatrix InitWrapPos = { transf3D({0, 0.8*.Surf.Radius,0}, &.Via)};
+        InitWrapPosVecArr = {&InitWrapPos,None};
+      };
+    };
+
+    //most proximal unit
+    AnyMuscleShortestPath deltoideus_clavicular_part_6 = {
+      AnyMuscleModel &MusMdl = ...MuscleModels.deltoideus_clavicular_part_6;
+      AnyRefNode &Org = ...Segments.Clavicula.O_deltoideus_clavicular_part_6;
+      AnyRefNode &Via = .ArtificialRake.DeltoidMuscleConnector.DeltoidVia12;
+      AnyRefNode &Ins = ...Segments.Humerus.I_deltoideus_clavicular_part_6;
+      viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+      SPLine.StringMesh = 20;
+      AnySurfSphere &Surf = ...Segments.Humerus.art_tub_minus_tub_majus.art_tub_minus_tub_majusSurf;
+      SPLine = {
+        AnyMatrix InitWrapPos = { transf3D({0, 0.8*.Surf.Radius,0}, &.Via)};
+        InitWrapPosVecArr = {&InitWrapPos,None};
+      };
+    };
+  };
+
   MuscleGroup DeltoideusScapular = {
     AnyMuscleShortestPath deltoideus_scapular_part_1 = {
       AnyMuscleModel &MusMdl = ...MuscleModels.deltoideus_scapular_part_1;
@@ -403,253 +370,7 @@ MuscleGroup Coracobrachialis = {
     };
   };
 
-  MuscleGroup DeltoideusClavicular = {
-    AnyMuscleShortestPath deltoideus_clavicular_part_1 = {
-      AnyMuscleModel &MusMdl = ...MuscleModels.deltoideus_clavicular_part_1;
-      AnyRefNode &Org = ...Segments.Clavicula.O_deltoideus_clavicular_part_1;
-      AnyRefNode &Via = .ArtificialRake.DeltoidMuscleConnector.DeltoidVia7;
-      AnyRefNode &Ins = ...Segments.Humerus.I_deltoideus_clavicular_part_1;
-      viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-      AnySurfSphere &Surf = ...Segments.Humerus.art_tub_minus_tub_majus.art_tub_minus_tub_majusSurf;
-      SPLine.StringMesh = 35;
-      SPLine = {
-        AnyMatrix InitWrapPos = { transf3D({0, 0.8*.Surf.Radius,0}, &.Via)};
-        InitWrapPosVecArr = {&InitWrapPos,None};
-      };
-    };
-
-    AnyMuscleShortestPath deltoideus_clavicular_part_2 = {
-      AnyMuscleModel &MusMdl = ...MuscleModels.deltoideus_clavicular_part_2;
-      AnyRefNode &Org = ...Segments.Clavicula.O_deltoideus_clavicular_part_2;
-      AnyRefNode &Via = .ArtificialRake.DeltoidMuscleConnector.DeltoidVia8;
-      AnyRefNode &Ins = ...Segments.Humerus.I_deltoideus_clavicular_part_2;
-      viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-      SPLine.StringMesh = 42;
-      AnySurfSphere &Surf = ...Segments.Humerus.art_tub_minus_tub_majus.art_tub_minus_tub_majusSurf;
-      SPLine = {
-        AnyMatrix InitWrapPos = { transf3D({0, 0.8*.Surf.Radius,0}, &.Via)};
-        InitWrapPosVecArr = {&InitWrapPos,None};
-      };
-    };
-
-    AnyMuscleShortestPath deltoideus_clavicular_part_3 = {
-      AnyMuscleModel &MusMdl = ...MuscleModels.deltoideus_clavicular_part_3;
-      AnyRefNode &Org = ...Segments.Clavicula.O_deltoideus_clavicular_part_3;
-      AnyRefNode &Via = .ArtificialRake.DeltoidMuscleConnector.DeltoidVia9;
-      AnyRefNode &Ins = ...Segments.Humerus.I_deltoideus_clavicular_part_3;
-      viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-      AnySurfSphere &Surf = ...Segments.Humerus.art_tub_minus_tub_majus.art_tub_minus_tub_majusSurf;
-      SPLine.StringMesh = 35;
-      SPLine = {
-        AnyMatrix InitWrapPos = { transf3D({0, 0.8*.Surf.Radius,0}, &.Via)};
-        InitWrapPosVecArr = {&InitWrapPos,None};
-      };
-    };
-
-    AnyMuscleShortestPath deltoideus_clavicular_part_4 = {
-      AnyMuscleModel &MusMdl = ...MuscleModels.deltoideus_clavicular_part_4;
-      AnyRefNode &Org = ...Segments.Clavicula.O_deltoideus_clavicular_part_4;
-      AnyRefNode &Via = .ArtificialRake.DeltoidMuscleConnector.DeltoidVia10;
-      AnyRefNode &Ins = ...Segments.Humerus.I_deltoideus_clavicular_part_4;
-      viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-      SPLine.StringMesh = 30;
-      AnySurfSphere &Surf = ...Segments.Humerus.art_tub_minus_tub_majus.art_tub_minus_tub_majusSurf;
-      SPLine = {
-        AnyMatrix InitWrapPos = { transf3D({0, 0.8*.Surf.Radius,0}, &.Via)};
-        InitWrapPosVecArr = {&InitWrapPos,None};
-      };
-    };
-
-    AnyMuscleShortestPath deltoideus_clavicular_part_5 = {
-      AnyMuscleModel &MusMdl = ...MuscleModels.deltoideus_clavicular_part_5;
-      AnyRefNode &Org = ...Segments.Clavicula.O_deltoideus_clavicular_part_5;
-      AnyRefNode &Via = .ArtificialRake.DeltoidMuscleConnector.DeltoidVia11;
-      AnyRefNode &Ins = ...Segments.Humerus.I_deltoideus_clavicular_part_5;
-      viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-      SPLine.StringMesh = 35;
-      AnySurfSphere &Surf = ...Segments.Humerus.art_tub_minus_tub_majus.art_tub_minus_tub_majusSurf;
-      SPLine = {
-        AnyMatrix InitWrapPos = { transf3D({0, 0.8*.Surf.Radius,0}, &.Via)};
-        InitWrapPosVecArr = {&InitWrapPos,None};
-      };
-    };
-
-    //most proximal unit
-    AnyMuscleShortestPath deltoideus_clavicular_part_6 = {
-      AnyMuscleModel &MusMdl = ...MuscleModels.deltoideus_clavicular_part_6;
-      AnyRefNode &Org = ...Segments.Clavicula.O_deltoideus_clavicular_part_6;
-      AnyRefNode &Via = .ArtificialRake.DeltoidMuscleConnector.DeltoidVia12;
-      AnyRefNode &Ins = ...Segments.Humerus.I_deltoideus_clavicular_part_6;
-      viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-      SPLine.StringMesh = 20;
-      AnySurfSphere &Surf = ...Segments.Humerus.art_tub_minus_tub_majus.art_tub_minus_tub_majusSurf;
-      SPLine = {
-        AnyMatrix InitWrapPos = { transf3D({0, 0.8*.Surf.Radius,0}, &.Via)};
-        InitWrapPosVecArr = {&InitWrapPos,None};
-      };
-    };
-  };
 #else
-  MuscleGroup DeltoideusPosterior = {
-    // start of BM_ARM_DELTOID_WRAPPING
-    AnyMuscleShortestPath DeltoideusPosterior1 = {
-      AnyMuscleModel &MusMdl = ...MuscleModels.DeltoideusPosterior1;
-      AnyRefNode &Org = ...Segments.Scapula.O_DeltoideusPosterior1;
-      AnyRefNode &Ins = ...Segments.Humerus.I_DeltoideusPosterior1;
-      viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-      SPLine.StringMesh = 45;
-      AnyParamSurfAnalytical &Surf = ..WrappingSurfaces.DeltoidWrappingPosterior.BASE_FRAME.Wrapping_1.Surf;
-      AnyParamSurfAnalytical &Surf2 = ...Segments.Scapula.deltoid_cyl.cyl;
-      SPLine = {
-        AnyMatrix InitWrapPos = {
-            transf3D({0.8*.Surf.Sizes[0],0.8*.Surf.Sizes[0 ],0}, &...WrappingSurfaces.DeltoidWrappingPosterior.BASE_FRAME.Wrapping_1.Center),
-            transf3D({1.1*.Surf.Sizes[0],0,0},  &...WrappingSurfaces.DeltoidWrappingPosterior.BASE_FRAME.Wrapping_1.Center),
-            transf3D({0.8*.Surf.Sizes[0],-0.8*.Surf.Sizes[0],0}, &...WrappingSurfaces.DeltoidWrappingPosterior.BASE_FRAME.Wrapping_1.Center)
-        };
-        InitWrapPosVecArr = {&InitWrapPos};
-      };
-    };
-
-    AnyMuscleShortestPath DeltoideusPosterior3 = {
-      AnyMuscleModel &MusMdl = ...MuscleModels.DeltoideusPosterior3;
-      AnyRefNode &Org = ...Segments.Scapula.O_DeltoideusPosterior3;
-
-      AnyRefNode &Ins = ...Segments.Humerus.I_DeltoideusPosterior3;
-      viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-      SPLine.StringMesh = 40;
-
-      AnyParamSurfAnalytical &Surf = ..WrappingSurfaces.DeltoidWrappingPosterior.BASE_FRAME.Wrapping_3.Surf;
-      AnyParamSurfAnalytical &Surf2 = ...Segments.Scapula.deltoid_cyl.cyl;
-
-      SPLine = {
-        AnyMatrix InitWrapPos = {
-            transf3D({0.8*.Surf.Sizes[0],0.8*.Surf.Sizes[0 ],0}, &...WrappingSurfaces.DeltoidWrappingPosterior.BASE_FRAME.Wrapping_3.Center),
-            transf3D({1.1*.Surf.Sizes[0],0,0},  &...WrappingSurfaces.DeltoidWrappingPosterior.BASE_FRAME.Wrapping_3.Center),
-            transf3D({0.8*.Surf.Sizes[0],-0.8*.Surf.Sizes[0],0}, &...WrappingSurfaces.DeltoidWrappingPosterior.BASE_FRAME.Wrapping_3.Center)
-        };
-        InitWrapPosVecArr = {&InitWrapPos};
-      };
-
-    };
-
-    // an extra fibers a/b
-    AnyMuscleShortestPath DeltoideusPosterior2 = {
-      AnyMuscleModel &MusMdl = ...MuscleModels.DeltoideusPosterior2;
-      AnyRefNode &Org = ...Segments.Scapula.O_DeltoideusPosterior2;
-      AnyRefNode &Ins = ...Segments.Humerus.I_DeltoideusPosterior2;
-      SPLine.StringMesh = 30;
-      viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-      AnyParamSurfAnalytical &Surf = ..WrappingSurfaces.DeltoidWrappingPosterior.BASE_FRAME.Wrapping_2.Surf;
-      AnyParamSurfAnalytical &Surf2 = ...Segments.Scapula.deltoid_cyl.cyl;
-      SPLine = {
-        AnyMatrix InitWrapPos = {
-            transf3D({0.8*.Surf.Sizes[0],0.8*.Surf.Sizes[0 ],0}, &...WrappingSurfaces.DeltoidWrappingPosterior.BASE_FRAME.Wrapping_2.Center),
-            transf3D({1.1*.Surf.Sizes[0],0,0},  &...WrappingSurfaces.DeltoidWrappingPosterior.BASE_FRAME.Wrapping_2.Center),
-            transf3D({0.8*.Surf.Sizes[0],-0.8*.Surf.Sizes[0],0}, &...WrappingSurfaces.DeltoidWrappingPosterior.BASE_FRAME.Wrapping_2.Center)
-        };
-        InitWrapPosVecArr = {&InitWrapPos};
-      };
-    };
-
-    AnyMuscleShortestPath DeltoideusPosterior4 = {
-      AnyMuscleModel &MusMdl = ...MuscleModels.DeltoideusPosterior4;
-      AnyRefNode &Org = ...Segments.Scapula.O_DeltoideusPosterior4;
-      AnyRefNode &Ins = ...Segments.Humerus.I_DeltoideusPosterior4;
-      SPLine.StringMesh = 20;
-      viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-      AnyParamSurfAnalytical &Surf = ..WrappingSurfaces.DeltoidWrappingPosterior.BASE_FRAME.Wrapping_4.Surf;
-      AnyParamSurfAnalytical &Surf2 = ...Segments.Scapula.deltoid_cyl.cyl;
-
-      SPLine = {
-        AnyMatrix InitWrapPos = {
-            transf3D({0.8*.Surf.Sizes[0],0.8*.Surf.Sizes[0 ],0}, &...WrappingSurfaces.DeltoidWrappingPosterior.BASE_FRAME.Wrapping_4.Center),
-            transf3D({1.1*.Surf.Sizes[0],0,0},  &...WrappingSurfaces.DeltoidWrappingPosterior.BASE_FRAME.Wrapping_4.Center),
-            transf3D({0.8*.Surf.Sizes[0],-0.8*.Surf.Sizes[0],0}, &...WrappingSurfaces.DeltoidWrappingPosterior.BASE_FRAME.Wrapping_4.Center)
-        };
-        InitWrapPosVecArr = {&InitWrapPos};
-      };
-    };
-  };
-
-  MuscleGroup DeltoideusLateral = {
-    AnyMuscleShortestPath DeltoideusLateral1 = {
-      AnyMuscleModel &MusMdl = ...MuscleModels.DeltoideusLateral1;
-      AnyRefNode &Org = ...Segments.Scapula.O_DeltoideusLateral1;
-
-      AnyRefNode &Ins = ...Segments.Humerus.I_DeltoideusLateral1;
-      viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-      SPLine.StringMesh = 30;
-
-      AnyParamSurfAnalytical &Surf = ..WrappingSurfaces.DeltoidWrappingLateral.BASE_FRAME.Wrapping_1.Surf;
-      SPLine = {
-        AnyMatrix InitWrapPos = {
-            transf3D({0.8*.Surf.Sizes[0],0.8*.Surf.Sizes[0 ],0}, &...WrappingSurfaces.DeltoidWrappingLateral.BASE_FRAME.Wrapping_1.Center),
-            transf3D({1.1*.Surf.Sizes[0],0,0},  &...WrappingSurfaces.DeltoidWrappingLateral.BASE_FRAME.Wrapping_1.Center),
-            transf3D({0.8*.Surf.Sizes[0],-0.8*.Surf.Sizes[0],0}, &...WrappingSurfaces.DeltoidWrappingLateral.BASE_FRAME.Wrapping_1.Center)
-        };
-        InitWrapPosVecArr = {&InitWrapPos};
-      };
-    };
-
-    AnyMuscleShortestPath DeltoideusLateral3 = {
-      AnyMuscleModel &MusMdl = ...MuscleModels.DeltoideusLateral3;
-      AnyRefNode &Org = ...Segments.Scapula.O_DeltoideusLateral3;
-      AnyRefNode &Ins = ...Segments.Humerus.I_DeltoideusLateral3;
-      viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-      SPLine.StringMesh = 30;
-
-
-      AnyParamSurfAnalytical &Surf = ..WrappingSurfaces.DeltoidWrappingLateral.BASE_FRAME.Wrapping_3.Surf;
-
-      SPLine = {
-        AnyMatrix InitWrapPos = {
-            transf3D({0.8*.Surf.Sizes[0],0.8*.Surf.Sizes[0 ],0}, &...WrappingSurfaces.DeltoidWrappingLateral.BASE_FRAME.Wrapping_2.Center),
-            transf3D({1.1*.Surf.Sizes[0],0,0},  &...WrappingSurfaces.DeltoidWrappingLateral.BASE_FRAME.Wrapping_2.Center),
-            transf3D({0.8*.Surf.Sizes[0],-0.8*.Surf.Sizes[0],0}, &...WrappingSurfaces.DeltoidWrappingLateral.BASE_FRAME.Wrapping_2.Center)
-        };
-        InitWrapPosVecArr = {&InitWrapPos};
-      };
-    };
-
-
-    AnyMuscleShortestPath DeltoideusLateral2 = {
-      AnyMuscleModel &MusMdl = ...MuscleModels.DeltoideusLateral2;
-      AnyRefNode &Org = ...Segments.Scapula.O_DeltoideusLateral2;
-      AnyRefNode &Ins = ...Segments.Humerus.I_DeltoideusLateral2;
-      viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-      SPLine.StringMesh = 30;
-      AnyParamSurfAnalytical &Surf = ..WrappingSurfaces.DeltoidWrappingLateral.BASE_FRAME.Wrapping_2.Surf;
-
-      SPLine = {
-        AnyMatrix InitWrapPos = {
-            transf3D({0.8*.Surf.Sizes[0],0.8*.Surf.Sizes[0 ],0}, &...WrappingSurfaces.DeltoidWrappingLateral.BASE_FRAME.Wrapping_3.Center),
-            transf3D({1.1*.Surf.Sizes[0],0,0},  &...WrappingSurfaces.DeltoidWrappingLateral.BASE_FRAME.Wrapping_3.Center),
-            transf3D({0.8*.Surf.Sizes[0],-0.8*.Surf.Sizes[0],0}, &...WrappingSurfaces.DeltoidWrappingLateral.BASE_FRAME.Wrapping_3.Center)
-        };
-        InitWrapPosVecArr = {&InitWrapPos};
-      };
-    };
-
-    AnyMuscleShortestPath DeltoideusLateral4 = {
-      AnyMuscleModel &MusMdl = ...MuscleModels.DeltoideusLateral4;
-      AnyRefNode &Org = ...Segments.Scapula.O_DeltoideusLateral4;
-      AnyRefNode &Ins = ...Segments.Humerus.I_DeltoideusLateral4;
-      viewMuscle = {#include "../DrawSettings/MusDrawSettings.any" };
-      SPLine.StringMesh = 30;
-
-
-      AnyParamSurfAnalytical &Surf = ..WrappingSurfaces.DeltoidWrappingLateral.BASE_FRAME.Wrapping_4.Surf;
-      SPLine = {
-        AnyMatrix InitWrapPos = {
-            transf3D({0.8*.Surf.Sizes[0],0.8*.Surf.Sizes[0 ],0}, &...WrappingSurfaces.DeltoidWrappingLateral.BASE_FRAME.Wrapping_4.Center),
-            transf3D({1.1*.Surf.Sizes[0],0,0},  &...WrappingSurfaces.DeltoidWrappingLateral.BASE_FRAME.Wrapping_4.Center),
-            transf3D({0.8*.Surf.Sizes[0],-0.8*.Surf.Sizes[0],0}, &...WrappingSurfaces.DeltoidWrappingLateral.BASE_FRAME.Wrapping_4.Center)
-        };
-        InitWrapPosVecArr = {&InitWrapPos};
-      };
-    };
-  };
-
   MuscleGroup DeltoideusAnterior = {
     AnyMuscleShortestPath DeltoideusAnterior1 = {
       AnyMuscleModel &MusMdl = ...MuscleModels.DeltoideusAnterior1;
@@ -734,8 +455,625 @@ MuscleGroup Coracobrachialis = {
       };
     };
   };
+
+  MuscleGroup DeltoideusLateral = {
+    AnyMuscleShortestPath DeltoideusLateral1 = {
+      AnyMuscleModel &MusMdl = ...MuscleModels.DeltoideusLateral1;
+      AnyRefNode &Org = ...Segments.Scapula.O_DeltoideusLateral1;
+
+      AnyRefNode &Ins = ...Segments.Humerus.I_DeltoideusLateral1;
+      viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+      SPLine.StringMesh = 30;
+
+      AnyParamSurfAnalytical &Surf = ..WrappingSurfaces.DeltoidWrappingLateral.BASE_FRAME.Wrapping_1.Surf;
+      SPLine = {
+        AnyMatrix InitWrapPos = {
+            transf3D({0.8*.Surf.Sizes[0],0.8*.Surf.Sizes[0 ],0}, &...WrappingSurfaces.DeltoidWrappingLateral.BASE_FRAME.Wrapping_1.Center),
+            transf3D({1.1*.Surf.Sizes[0],0,0},  &...WrappingSurfaces.DeltoidWrappingLateral.BASE_FRAME.Wrapping_1.Center),
+            transf3D({0.8*.Surf.Sizes[0],-0.8*.Surf.Sizes[0],0}, &...WrappingSurfaces.DeltoidWrappingLateral.BASE_FRAME.Wrapping_1.Center)
+        };
+        InitWrapPosVecArr = {&InitWrapPos};
+      };
+    };
+
+    AnyMuscleShortestPath DeltoideusLateral3 = {
+      AnyMuscleModel &MusMdl = ...MuscleModels.DeltoideusLateral3;
+      AnyRefNode &Org = ...Segments.Scapula.O_DeltoideusLateral3;
+      AnyRefNode &Ins = ...Segments.Humerus.I_DeltoideusLateral3;
+      viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+      SPLine.StringMesh = 30;
+
+
+      AnyParamSurfAnalytical &Surf = ..WrappingSurfaces.DeltoidWrappingLateral.BASE_FRAME.Wrapping_3.Surf;
+
+      SPLine = {
+        AnyMatrix InitWrapPos = {
+            transf3D({0.8*.Surf.Sizes[0],0.8*.Surf.Sizes[0 ],0}, &...WrappingSurfaces.DeltoidWrappingLateral.BASE_FRAME.Wrapping_2.Center),
+            transf3D({1.1*.Surf.Sizes[0],0,0},  &...WrappingSurfaces.DeltoidWrappingLateral.BASE_FRAME.Wrapping_2.Center),
+            transf3D({0.8*.Surf.Sizes[0],-0.8*.Surf.Sizes[0],0}, &...WrappingSurfaces.DeltoidWrappingLateral.BASE_FRAME.Wrapping_2.Center)
+        };
+        InitWrapPosVecArr = {&InitWrapPos};
+      };
+    };
+
+
+    AnyMuscleShortestPath DeltoideusLateral2 = {
+      AnyMuscleModel &MusMdl = ...MuscleModels.DeltoideusLateral2;
+      AnyRefNode &Org = ...Segments.Scapula.O_DeltoideusLateral2;
+      AnyRefNode &Ins = ...Segments.Humerus.I_DeltoideusLateral2;
+      viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+      SPLine.StringMesh = 30;
+      AnyParamSurfAnalytical &Surf = ..WrappingSurfaces.DeltoidWrappingLateral.BASE_FRAME.Wrapping_2.Surf;
+
+      SPLine = {
+        AnyMatrix InitWrapPos = {
+            transf3D({0.8*.Surf.Sizes[0],0.8*.Surf.Sizes[0 ],0}, &...WrappingSurfaces.DeltoidWrappingLateral.BASE_FRAME.Wrapping_3.Center),
+            transf3D({1.1*.Surf.Sizes[0],0,0},  &...WrappingSurfaces.DeltoidWrappingLateral.BASE_FRAME.Wrapping_3.Center),
+            transf3D({0.8*.Surf.Sizes[0],-0.8*.Surf.Sizes[0],0}, &...WrappingSurfaces.DeltoidWrappingLateral.BASE_FRAME.Wrapping_3.Center)
+        };
+        InitWrapPosVecArr = {&InitWrapPos};
+      };
+    };
+
+    AnyMuscleShortestPath DeltoideusLateral4 = {
+      AnyMuscleModel &MusMdl = ...MuscleModels.DeltoideusLateral4;
+      AnyRefNode &Org = ...Segments.Scapula.O_DeltoideusLateral4;
+      AnyRefNode &Ins = ...Segments.Humerus.I_DeltoideusLateral4;
+      viewMuscle = {#include "../DrawSettings/MusDrawSettings.any" };
+      SPLine.StringMesh = 30;
+
+
+      AnyParamSurfAnalytical &Surf = ..WrappingSurfaces.DeltoidWrappingLateral.BASE_FRAME.Wrapping_4.Surf;
+      SPLine = {
+        AnyMatrix InitWrapPos = {
+            transf3D({0.8*.Surf.Sizes[0],0.8*.Surf.Sizes[0 ],0}, &...WrappingSurfaces.DeltoidWrappingLateral.BASE_FRAME.Wrapping_4.Center),
+            transf3D({1.1*.Surf.Sizes[0],0,0},  &...WrappingSurfaces.DeltoidWrappingLateral.BASE_FRAME.Wrapping_4.Center),
+            transf3D({0.8*.Surf.Sizes[0],-0.8*.Surf.Sizes[0],0}, &...WrappingSurfaces.DeltoidWrappingLateral.BASE_FRAME.Wrapping_4.Center)
+        };
+        InitWrapPosVecArr = {&InitWrapPos};
+      };
+    };
+  };
+  
+  MuscleGroup DeltoideusPosterior = {
+    // start of BM_ARM_DELTOID_WRAPPING
+    AnyMuscleShortestPath DeltoideusPosterior1 = {
+      AnyMuscleModel &MusMdl = ...MuscleModels.DeltoideusPosterior1;
+      AnyRefNode &Org = ...Segments.Scapula.O_DeltoideusPosterior1;
+      AnyRefNode &Ins = ...Segments.Humerus.I_DeltoideusPosterior1;
+      viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+      SPLine.StringMesh = 45;
+      AnyParamSurfAnalytical &Surf = ..WrappingSurfaces.DeltoidWrappingPosterior.BASE_FRAME.Wrapping_1.Surf;
+      AnyParamSurfAnalytical &Surf2 = ...Segments.Scapula.deltoid_cyl.cyl;
+      SPLine = {
+        AnyMatrix InitWrapPos = {
+            transf3D({0.8*.Surf.Sizes[0],0.8*.Surf.Sizes[0 ],0}, &...WrappingSurfaces.DeltoidWrappingPosterior.BASE_FRAME.Wrapping_1.Center),
+            transf3D({1.1*.Surf.Sizes[0],0,0},  &...WrappingSurfaces.DeltoidWrappingPosterior.BASE_FRAME.Wrapping_1.Center),
+            transf3D({0.8*.Surf.Sizes[0],-0.8*.Surf.Sizes[0],0}, &...WrappingSurfaces.DeltoidWrappingPosterior.BASE_FRAME.Wrapping_1.Center)
+        };
+        InitWrapPosVecArr = {&InitWrapPos};
+      };
+    };
+
+    AnyMuscleShortestPath DeltoideusPosterior3 = {
+      AnyMuscleModel &MusMdl = ...MuscleModels.DeltoideusPosterior3;
+      AnyRefNode &Org = ...Segments.Scapula.O_DeltoideusPosterior3;
+
+      AnyRefNode &Ins = ...Segments.Humerus.I_DeltoideusPosterior3;
+      viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+      SPLine.StringMesh = 40;
+
+      AnyParamSurfAnalytical &Surf = ..WrappingSurfaces.DeltoidWrappingPosterior.BASE_FRAME.Wrapping_3.Surf;
+      AnyParamSurfAnalytical &Surf2 = ...Segments.Scapula.deltoid_cyl.cyl;
+
+      SPLine = {
+        AnyMatrix InitWrapPos = {
+            transf3D({0.8*.Surf.Sizes[0],0.8*.Surf.Sizes[0 ],0}, &...WrappingSurfaces.DeltoidWrappingPosterior.BASE_FRAME.Wrapping_3.Center),
+            transf3D({1.1*.Surf.Sizes[0],0,0},  &...WrappingSurfaces.DeltoidWrappingPosterior.BASE_FRAME.Wrapping_3.Center),
+            transf3D({0.8*.Surf.Sizes[0],-0.8*.Surf.Sizes[0],0}, &...WrappingSurfaces.DeltoidWrappingPosterior.BASE_FRAME.Wrapping_3.Center)
+        };
+        InitWrapPosVecArr = {&InitWrapPos};
+      };
+
+    };
+
+    // an extra fibers a/b
+    AnyMuscleShortestPath DeltoideusPosterior2 = {
+      AnyMuscleModel &MusMdl = ...MuscleModels.DeltoideusPosterior2;
+      AnyRefNode &Org = ...Segments.Scapula.O_DeltoideusPosterior2;
+      AnyRefNode &Ins = ...Segments.Humerus.I_DeltoideusPosterior2;
+      SPLine.StringMesh = 30;
+      viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+      AnyParamSurfAnalytical &Surf = ..WrappingSurfaces.DeltoidWrappingPosterior.BASE_FRAME.Wrapping_2.Surf;
+      AnyParamSurfAnalytical &Surf2 = ...Segments.Scapula.deltoid_cyl.cyl;
+      SPLine = {
+        AnyMatrix InitWrapPos = {
+            transf3D({0.8*.Surf.Sizes[0],0.8*.Surf.Sizes[0 ],0}, &...WrappingSurfaces.DeltoidWrappingPosterior.BASE_FRAME.Wrapping_2.Center),
+            transf3D({1.1*.Surf.Sizes[0],0,0},  &...WrappingSurfaces.DeltoidWrappingPosterior.BASE_FRAME.Wrapping_2.Center),
+            transf3D({0.8*.Surf.Sizes[0],-0.8*.Surf.Sizes[0],0}, &...WrappingSurfaces.DeltoidWrappingPosterior.BASE_FRAME.Wrapping_2.Center)
+        };
+        InitWrapPosVecArr = {&InitWrapPos};
+      };
+    };
+
+    AnyMuscleShortestPath DeltoideusPosterior4 = {
+      AnyMuscleModel &MusMdl = ...MuscleModels.DeltoideusPosterior4;
+      AnyRefNode &Org = ...Segments.Scapula.O_DeltoideusPosterior4;
+      AnyRefNode &Ins = ...Segments.Humerus.I_DeltoideusPosterior4;
+      SPLine.StringMesh = 20;
+      viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+      AnyParamSurfAnalytical &Surf = ..WrappingSurfaces.DeltoidWrappingPosterior.BASE_FRAME.Wrapping_4.Surf;
+      AnyParamSurfAnalytical &Surf2 = ...Segments.Scapula.deltoid_cyl.cyl;
+
+      SPLine = {
+        AnyMatrix InitWrapPos = {
+            transf3D({0.8*.Surf.Sizes[0],0.8*.Surf.Sizes[0 ],0}, &...WrappingSurfaces.DeltoidWrappingPosterior.BASE_FRAME.Wrapping_4.Center),
+            transf3D({1.1*.Surf.Sizes[0],0,0},  &...WrappingSurfaces.DeltoidWrappingPosterior.BASE_FRAME.Wrapping_4.Center),
+            transf3D({0.8*.Surf.Sizes[0],-0.8*.Surf.Sizes[0],0}, &...WrappingSurfaces.DeltoidWrappingPosterior.BASE_FRAME.Wrapping_4.Center)
+        };
+        InitWrapPosVecArr = {&InitWrapPos};
+      };
+    };
+  };
   // end of deltoid wrapping muscles
 #endif
+
+MuscleGroup ExtensorCarpiRadialisBrevis = {
+  AnyMuscleShortestPath ExtensorCarpiRadialisBrevis ={
+    AnyMuscleModel &MusMdl = ...MuscleModels.ExtensorCarpiRadialisBrevis;
+    AnyRefNode &Org = ...Segments.Humerus.O_ExtensorCarpiRadialisBrevis;
+    AnyRefNode &Via1 = ...Segments.Radius.Via_ExtensorCarpiRadialisBrevis;
+    AnyRefNode &Via2 = ...Segments.Hand.Finger3MetaRef.Via_ExtensorCarpiRadialisBrevis;
+    AnyRefNode &Ins = ...Segments.Hand.Finger3MetaRef.I_ExtensorCarpiRadialisBrevis;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+
+    AnySurfEllipsoid &Surf1 = ...Segments.Radius.ExtensorMuscleEllipsoid.ellipsoid;
+    SPLine = {
+      AnyMatrix InitWrapPos = {
+        transf3D({-0.2*.Surf1.Radius[0],-0.6*.Surf1.Radius[1], ....Sign*0.9*.Surf1.Radius[2] }, &.Surf1 ),
+        transf3D({-0.8*.Surf1.Radius[0],-0.5*.Surf1.Radius[1], ....Sign*0.8*.Surf1.Radius[2]  }, &.Surf1 )
+      };
+      InitWrapPosVecArr = {None,&InitWrapPos,None};
+    };
+    SPLine.StringMesh = 60;
+    SPLine.RelTol=10e-6;
+    SPLine.AbsTol=10e-6;
+  };
+};
+
+MuscleGroup ExtensorCarpiRadialisLongus = {
+  AnyMuscleShortestPath ExtensorCarpiRadialisLongus ={
+    AnySurfCylinder &Surf1 = ...Segments.Radius.MedialExtensorCyl.cyl;
+    AnyMuscleModel &MusMdl = ...MuscleModels.ExtensorCarpiRadialisLongus;
+    AnyRefNode &Org = ...Segments.Humerus.O_ExtensorCarpiRadialisLongus;
+    AnyRefNode &Via1 = ...Segments.Radius.Via_ExtensorCarpiRadialisLongus;
+    AnyRefNode &Ins = ...Segments.Hand.Finger2MetaRef.I_ExtensorCarpiRadialisLongus;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    SPLine.StringMesh = 45;
+    SPLine.AbsTol=1e-6;
+    SPLine.RelTol=1e-7;
+    SPLine = {
+      AnyMatrix InitWrapPos = transf3D({{....Sign*1*.Surf1.Radius, 1.1*.Surf1.Radius, 0.3*.Surf1.Length }}, &.Surf1);
+      InitWrapPosVecArr = { None,&InitWrapPos };
+    };
+  };
+};
+
+MuscleGroup ExtensorCarpiUlnaris = {
+  AnyMuscleShortestPath ExtensorCarpiUlnaris ={
+    AnyMuscleModel &MusMdl = ...MuscleModels.ExtensorCarpiUlnaris;
+    AnyRefNode &Org = ...Segments.Humerus.O_ExtensorCarpiUlnaris;
+    AnyRefNode &Via1 = ...Segments.Ulna.Via1_ExtensorCarpiUlnaris;
+  //  AnyRefNode &Via2 = ...Segments.Ulna.Via2_ExtensorCarpiUlnaris;
+    AnyRefNode &Via2 = ...Segments.Radius.Via_ExtensorCarpiUlnaris;
+    AnyRefNode &Ins = ...Segments.Hand.Finger5MetaRef.I_ExtensorCarpiUlnaris;
+    AnySurfCylinder &Surf2 = ...Segments.Radius.MedialExtensorCyl.cyl;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    SPLine.StringMesh = 35;
+    SPLine.RelTol=0.0000001;
+    SPLine = {
+      AnyMatrix InitWrapPos = {transf3D({....Sign*-0.4*.Surf2.Radius, 1.1*.Surf2.Radius, 0.8*.Surf2.Length }, &.Surf2),
+                              transf3D({....Sign*1.3*.Surf2.Radius, 0.5*.Surf2.Radius, 0.8*.Surf2.Length }, &.Surf2)};
+      InitWrapPosVecArr = { None, None, &InitWrapPos};
+    };
+  };
+};
+
+MuscleGroup ExtensorDigitiMinimi = {
+  AnyMuscleShortestPath ExtensorDigitiMinimi ={
+    AnyMuscleModel &MusMdl = ...MuscleModels.ExtensorDigitiMinimi;
+    AnyRefNode &Org = ...Segments.Humerus.O_ExtensorDigitiMinimi;
+    AnyRefNode &Via1 = ...Segments.Radius.Via_ExtensorDigitiMinimi;
+    AnyRefNode &Via2 = ...Segments.Hand.Finger5MetaRef.Via_ExtensorDigitiMinimi;
+    AnyRefNode &Ins = ...Segments.Hand.Finger5MetaRef.I_ExtensorDigitiMinimi;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+
+    AnySurfEllipsoid &Surf1 = ...Segments.Radius.ExtensorMuscleEllipsoid.ellipsoid;
+    SPLine = {
+      AnyMatrix InitWrapPos = {
+        transf3D({-0.2*.Surf1.Radius[0],-0.05*.Surf1.Radius[1], ....Sign*1.0*.Surf1.Radius[2] }, &.Surf1 ) ,
+        transf3D({-0.8*.Surf1.Radius[0],0.05*.Surf1.Radius[1], ....Sign*1.0*.Surf1.Radius[2]  }, &.Surf1 )
+      };
+      InitWrapPosVecArr = {None,&InitWrapPos,None};
+    };
+    SPLine.StringMesh = 30;
+    SPLine.RelTol=1e-7;
+    SPLine.AbsTol=1e-5;
+  };
+};
+
+MuscleGroup ExtensorDigitorum ={
+  AnyMuscleShortestPath ExtensorDigitorumDigit2 ={
+    AnyMuscleModel &MusMdl = ...MuscleModels.ExtensorDigitorumDigit2;
+    AnyRefNode &Org = ...Segments.Humerus.O_ExtensorDigitorum;
+    AnyRefNode &Via2 = ...Segments.Radius.Via_ExtensorDigitorumDigit2;
+    AnyRefNode &Via1 = ...Segments.Hand.Finger2MetaRef.Via_ExtensorDigitorumDigit2;
+    AnyRefNode &Ins = ...Segments.Hand.Finger2MetaRef.I_ExtensorDigitorumDigit2;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+
+    AnySurfEllipsoid &Surf1 = ...Segments.Radius.ExtensorMuscleEllipsoid.ellipsoid;
+    SPLine = {
+      AnyMatrix InitWrapPos = {
+        transf3D({-0.2*.Surf1.Radius[0],-0.4*.Surf1.Radius[1], ....Sign*1.0*.Surf1.Radius[2] }, &.Surf1 ) ,
+        transf3D({-0.8*.Surf1.Radius[0],-0.35*.Surf1.Radius[1], ....Sign*1.0*.Surf1.Radius[2]  }, &.Surf1 )
+      };
+      InitWrapPosVecArr = {None,&InitWrapPos,None};
+    };
+    SPLine.StringMesh = 50;
+  };
+  AnyMuscleShortestPath ExtensorDigitorumDigit3 ={
+    AnyMuscleModel &MusMdl = ...MuscleModels.ExtensorDigitorumDigit3;
+    AnyRefNode &Org = ...Segments.Humerus.O_ExtensorDigitorum;
+    AnyRefNode &Via2 = ...Segments.Radius.Via_ExtensorDigitorumDigit3;
+    AnyRefNode &Via1 = ...Segments.Hand.Finger3MetaRef.Via_ExtensorDigitorumDigit3;
+    AnyRefNode &Ins = ...Segments.Hand.Finger3MetaRef.I_ExtensorDigitorumDigit3;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+
+    AnySurfEllipsoid &Surf1 = ...Segments.Radius.ExtensorMuscleEllipsoid.ellipsoid;
+    SPLine = {
+      AnyMatrix InitWrapPos = {
+        transf3D({-0.2*.Surf1.Radius[0],-0.3*.Surf1.Radius[1], ....Sign*1.0*.Surf1.Radius[2] }, &.Surf1 ) ,
+        transf3D({-0.8*.Surf1.Radius[0],-0.25*.Surf1.Radius[1], ....Sign*1.0*.Surf1.Radius[2]  }, &.Surf1 )
+      };
+      InitWrapPosVecArr = {None,&InitWrapPos,None};
+    };
+    SPLine.StringMesh = 50;
+    SPLine.RelTol=1e-7;
+    SPLine.AbsTol=1e-5;
+  };
+
+  AnyMuscleShortestPath ExtensorDigitorumDigit4 ={
+    AnyMuscleModel &MusMdl = ...MuscleModels.ExtensorDigitorumDigit4;
+    AnyRefNode &Org = ...Segments.Humerus.O_ExtensorDigitorum;
+    AnyRefNode &Via2 = ...Segments.Radius.Via_ExtensorDigitorumDigit4;
+    AnyRefNode &Via1 = ...Segments.Hand.Finger4MetaRef.Via_ExtensorDigitorumDigit4;
+    AnyRefNode &Ins = ...Segments.Hand.Finger4MetaRef.I_ExtensorDigitorumDigit4;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+
+    AnySurfEllipsoid &Surf1 = ...Segments.Radius.ExtensorMuscleEllipsoid.ellipsoid;
+    SPLine = {
+      AnyMatrix InitWrapPos = {
+        transf3D({-0.2*.Surf1.Radius[0],-0.2*.Surf1.Radius[1], ....Sign*1.0*.Surf1.Radius[2] }, &.Surf1 ) ,
+        transf3D({-0.8*.Surf1.Radius[0],-0.15*.Surf1.Radius[1], ....Sign*1.0*.Surf1.Radius[2]  }, &.Surf1 )
+      };
+      InitWrapPosVecArr = {None,&InitWrapPos,None};
+    };
+    SPLine.StringMesh = 50;
+    SPLine.RelTol=1e-7;
+    SPLine.AbsTol=1e-5;
+  };
+
+  AnyMuscleShortestPath ExtensorDigitorumDigit5 ={
+    AnyMuscleModel &MusMdl = ...MuscleModels.ExtensorDigitorumDigit5;
+    AnyRefNode &Org = ...Segments.Humerus.O_ExtensorDigitorum;
+
+    AnyRefNode &Via2 = ...Segments.Radius.Via_ExtensorDigitorumDigit5;
+    AnyRefNode &Via1 = ...Segments.Hand.Finger5MetaRef.Via_ExtensorDigitorumDigit5;
+
+    AnyRefNode &Ins = ...Segments.Hand.Finger5MetaRef.I_ExtensorDigitorumDigit5;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+
+    AnySurfEllipsoid &Surf1 = ...Segments.Radius.ExtensorMuscleEllipsoid.ellipsoid;
+    SPLine = {
+      AnyMatrix InitWrapPos = {
+        transf3D({-0.2*.Surf1.Radius[0],-0.1*.Surf1.Radius[1], ....Sign*1.0*.Surf1.Radius[2] }, &.Surf1 ) ,
+        transf3D({-0.8*.Surf1.Radius[0],-0.05*.Surf1.Radius[1], ....Sign*1.0*.Surf1.Radius[2]  }, &.Surf1 )
+      };
+      InitWrapPosVecArr = {None,&InitWrapPos,None};
+    };
+    SPLine.StringMesh = 50;
+    SPLine.RelTol=1e-7;
+    SPLine.AbsTol=1e-5;
+  };
+};
+
+MuscleGroup ExtensorIndicis = {
+  AnyMuscleShortestPath ExtensorIndicis ={
+    AnyMuscleModel &MusMdl = ...MuscleModels.ExtensorIndicis;
+    AnyRefNode &Org = ...Segments.Ulna.O_ExtensorIndicis;
+    AnyRefNode &Via1 = ...Segments.Radius.Via_ExtensorIndicis;
+    AnyRefNode &Via2 = ...Segments.Hand.Finger2MetaRef.Via1_ExtensorIndicis;
+    AnyRefNode &Ins = ...Segments.Hand.Finger2MetaRef.I_ExtensorIndicis;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+
+    AnySurfEllipsoid &Surf1 = ...Segments.Radius.ExtensorMuscleEllipsoid.ellipsoid;
+    SPLine = {
+      AnyMatrix InitWrapPos = {
+        transf3D({-0.2*.Surf1.Radius[0],-0.2*.Surf1.Radius[1], ....Sign*0.9*.Surf1.Radius[2] }, &.Surf1 ),
+        transf3D({-0.8*.Surf1.Radius[0],-0.3*.Surf1.Radius[1], ....Sign*0.9*.Surf1.Radius[2] }, &.Surf1 )
+      };
+      InitWrapPosVecArr = {None,&InitWrapPos,None};
+    };
+    SPLine.StringMesh = 25;
+    SPLine.RelTol=0.0000001;
+  };
+};
+
+MuscleGroup ExtensorPollicisBrevis = {
+  AnyMuscleShortestPath ExtensorPollicisBrevis ={
+    AnyMuscleModel &MusMdl = ...MuscleModels.ExtensorPollicisBrevis;
+
+    AnyRefNode &Ins = ...Segments.Hand.Finger1MetaRef.I_ExtensorPollicisBrevis;
+    AnyRefNode &Via2 = ...Segments.Hand.Finger1MetaRef.Via1_ExtensorPollicisBrevis;
+    AnyRefNode &Via1 = ...Segments.Radius.Via_ExtensorPollicisLongus;
+    AnyRefNode &Org = ...Segments.Radius.O_ExtensorPollicisBrevis;
+
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    AnySurfCylinder &Surf2 = ...Segments.Radius.MedialExtensorCyl.cyl;
+    SPLine.StringMesh = 30;
+    SPLine.RelTol=0.0000001;
+    SPLine = {
+      AnyMatrix InitWrapPos = {
+          transf3D({....Sign*1*.Surf2.Radius, 1.1*.Surf2.Radius, 0.3*.Surf2.Length }, &.Surf2)
+      };
+      InitWrapPosVecArr = {None, &InitWrapPos, None };
+    };
+  };
+};
+
+MuscleGroup ExtensorPollicisLongus = {
+  AnyMuscleShortestPath ExtensorPollicisLongus ={
+    AnyMuscleModel &MusMdl = ...MuscleModels.ExtensorPollicisLongus;
+    AnyRefNode &Org = ...Segments.Ulna.O_ExtensorPollicisLongus;
+    AnyRefNode &Via1 = ...Segments.Radius.Via_ExtensorPollicisLongus;
+    AnyRefNode &Via2 = ...Segments.Hand.Finger1MetaRef.Via1_ExtensorPollicisLongus;
+    AnyRefNode &Ins = ...Segments.Hand.Finger1MetaRef.I_ExtensorPollicisLongus;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    AnySurfCylinder &Surf2 = ...Segments.Radius.MedialExtensorCyl.cyl;
+
+    SPLine.StringMesh = 45;
+    SPLine.RelTol=0.0000001;
+    SPLine = {
+      AnyMatrix InitWrapPos = {
+          transf3D({....Sign*1*.Surf2.Radius, 1.1*.Surf2.Radius, 0.3*.Surf2.Length }, &.Surf2)
+      };
+      InitWrapPosVecArr = {None, &InitWrapPos, None};
+    };
+  };
+};
+
+MuscleGroup FlexorCarpiRadialis = {
+  AnyMuscleShortestPath FlexorCarpiRadialis  ={
+    AnyMuscleModel &MusMdl = ...MuscleModels.FlexorCarpiRadialis;
+    AnyRefNode &Org = ...Segments.Humerus.O_FlexorCarpiRadialis;
+    AnyRefNode &Via2 = ...Segments.Radius.Via_FlexorCarpiRadialis;
+    AnyRefNode &Ins = ...Segments.Hand.Finger2MetaRef.I_FlexorCarpiRadialis;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+
+    AnySurfEllipsoid &Surf1 = ...Segments.Radius.FlexorMuscleEllipsoid.ellipsoid;
+    SPLine = {
+      AnyMatrix InitWrapPos = {
+        transf3D({-0.2*.Surf1.Radius[0],-0.5*.Surf1.Radius[1], ....Sign*-0.8*.Surf1.Radius[2] }, &.Surf1 ) ,
+        transf3D({-0.8*.Surf1.Radius[0],-0.5*.Surf1.Radius[1], ....Sign*-0.7*.Surf1.Radius[2]  }, &.Surf1 )
+      };
+      InitWrapPosVecArr = {None,&InitWrapPos};
+    };
+    SPLine.StringMesh = 25;
+    SPLine.RelTol=0.0000001;
+  };
+};
+
+MuscleGroup FlexorCarpiUlnaris = {
+  AnyMuscleShortestPath FlexorCarpiUlnaris  ={
+    AnyMuscleModel &MusMdl = ...MuscleModels.FlexorCarpiUlnaris;
+    AnyRefNode &Org = ...Segments.Humerus.O_FlexorCarpiUlnaris;
+    AnyRefNode &Via1 = ...Segments.Ulna.Via1_FlexorCarpiUlnaris;
+    AnyRefNode &Via2 = ...Segments.Radius.Via_FlexorCarpiUlnaris;
+    AnyRefNode &Ins = ...Segments.Hand.Finger5MetaRef.I_FlexorCarpiUlnaris;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    AnySurfCylinder &Surf2 = ...Segments.Radius.FlexorMuscleCyl.cyl;
+    SPLine.StringMesh = 30;
+    SPLine = {
+      AnyMatrix InitWrapPos = {
+        transf3D({....Sign*-0.8*.Surf2.Radius, 1.2*.Surf2.Radius, 0.8*.Surf2.Length }, &.Surf2 ) ,
+        transf3D({....Sign*0.1*.Surf2.Radius, 1.2*.Surf2.Radius, 0.8*.Surf2.Length }, &.Surf2 )
+      };
+      InitWrapPosVecArr = {None, None ,&InitWrapPos};
+    };
+  };
+};
+
+MuscleGroup FlexorDigitorumProfundus = {
+  AnyMuscleShortestPath FlexorDigitorumProfundusDigit2 ={
+    AnyMuscleModel &MusMdl = ...MuscleModels.FlexorDigitorumProfundusDigit2;
+    AnyRefNode &Org = ...Segments.Ulna.O_FlexorDigitorumProfundus;
+    AnyRefNode &Via1 = ...Segments.Radius.Via_FlexorDigitorumProfundusDigit2;
+    AnyRefNode &Via2 = ...Segments.Hand.Finger2MetaRef.Via_FlexorDigitorumProfundusDigit2;
+    AnyRefNode &Ins = ...Segments.Hand.Finger2MetaRef.I_FlexorDigitorumProfundusDigit2;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+
+    AnySurfEllipsoid &Surf1 = ...Segments.Radius.FlexorMuscleEllipsoid.ellipsoid;
+    SPLine = {
+      AnyMatrix InitWrapPos = {
+        transf3D({-0.2*.Surf1.Radius[0],-0.4*.Surf1.Radius[1], ....Sign*-1.0*.Surf1.Radius[2] }, &.Surf1 ) ,
+        transf3D({-0.8*.Surf1.Radius[0],-0.4*.Surf1.Radius[1], ....Sign*-0.9*.Surf1.Radius[2]  }, &.Surf1 )
+      };
+      InitWrapPosVecArr = {None,&InitWrapPos,None};
+    };
+    SPLine.StringMesh = 35;
+  };
+
+  AnyMuscleShortestPath FlexorDigitorumProfundusDigit3 ={
+    AnyMuscleModel &MusMdl = ...MuscleModels.FlexorDigitorumProfundusDigit3;
+    AnyRefNode &Org = ...Segments.Ulna.O_FlexorDigitorumProfundus;
+    AnyRefNode &Via1 = ...Segments.Radius.Via_FlexorDigitorumProfundusDigit3;
+    AnyRefNode &Via2 = ...Segments.Hand.Finger3MetaRef.Via_FlexorDigitorumProfundusDigit3;
+    AnyRefNode &Ins = ...Segments.Hand.Finger3MetaRef.I_FlexorDigitorumProfundusDigit3;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+
+    AnySurfEllipsoid &Surf1 = ...Segments.Radius.FlexorMuscleEllipsoid.ellipsoid;
+    SPLine = {
+      AnyMatrix InitWrapPos = {
+        transf3D({-0.2*.Surf1.Radius[0],-0.3*.Surf1.Radius[1], ....Sign*-1.0*.Surf1.Radius[2] }, &.Surf1 ) ,
+        transf3D({-0.8*.Surf1.Radius[0],-0.3*.Surf1.Radius[1], ....Sign*-0.9*.Surf1.Radius[2]  }, &.Surf1 )
+      };
+      InitWrapPosVecArr = {None,&InitWrapPos,None};
+    };
+    SPLine.StringMesh = 35;
+  };
+
+  AnyMuscleShortestPath FlexorDigitorumProfundusDigit4 ={
+    AnyMuscleModel &MusMdl = ...MuscleModels.FlexorDigitorumProfundusDigit4;
+    AnyRefNode &Org = ...Segments.Ulna.O_FlexorDigitorumProfundus;
+    AnyRefNode &Via1 = ...Segments.Radius.Via_FlexorDigitorumProfundusDigit4;
+    AnyRefNode &Via2 = ...Segments.Hand.Finger4MetaRef.Via_FlexorDigitorumProfundusDigit4;
+    AnyRefNode &Ins = ...Segments.Hand.Finger4MetaRef.I_FlexorDigitorumProfundusDigit4;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+
+    AnySurfEllipsoid &Surf1 = ...Segments.Radius.FlexorMuscleEllipsoid.ellipsoid;
+    SPLine = {
+      AnyMatrix InitWrapPos = {
+        transf3D({-0.2*.Surf1.Radius[0],-0.2*.Surf1.Radius[1], ....Sign*-1.0*.Surf1.Radius[2] }, &.Surf1 ) ,
+        transf3D({-0.8*.Surf1.Radius[0],-0.2*.Surf1.Radius[1], ....Sign*-0.9*.Surf1.Radius[2]  }, &.Surf1 )
+      };
+      InitWrapPosVecArr = {None,&InitWrapPos,None};
+    };
+    SPLine.StringMesh = 35;
+  };
+  
+  AnyMuscleShortestPath FlexorDigitorumProfundusDigit5 ={
+    AnyMuscleModel &MusMdl = ...MuscleModels.FlexorDigitorumProfundusDigit5;
+    AnyRefNode &Org = ...Segments.Ulna.O_FlexorDigitorumProfundus;
+    AnyRefNode &Via1 = ...Segments.Radius.Via_FlexorDigitorumProfundusDigit5;
+    AnyRefNode &Via2 = ...Segments.Hand.Finger5MetaRef.Via_FlexorDigitorumProfundusDigit5;
+    AnyRefNode &Ins = ...Segments.Hand.Finger5MetaRef.I_FlexorDigitorumProfundusDigit5;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+
+    AnySurfEllipsoid &Surf1 = ...Segments.Radius.FlexorMuscleEllipsoid.ellipsoid;
+    SPLine = {
+      AnyMatrix InitWrapPos = {
+        transf3D({-0.2*.Surf1.Radius[0],-0.1*.Surf1.Radius[1], ....Sign*-1.0*.Surf1.Radius[2] }, &.Surf1 ) ,
+        transf3D({-0.8*.Surf1.Radius[0],-0.1*.Surf1.Radius[1], ....Sign*-0.9*.Surf1.Radius[2]  }, &.Surf1 )
+      };
+      InitWrapPosVecArr = {None,&InitWrapPos,None};
+    };
+    SPLine.StringMesh = 35;
+  };
+};
+
+MuscleGroup FlexorDigitorumSuperficialis = {
+  AnyMuscleShortestPath FlexorDigitorumSuperficialisDigit2 ={
+    AnyMuscleModel &MusMdl = ...MuscleModels.FlexorDigitorumSuperficialisDigit2;
+    AnyRefNode &Org = ...Segments.Humerus.O_FlexorDigitorumSuperficialis;
+    AnyRefNode &Via1 = ...Segments.Radius.Via_FlexorDigitorumSuperficialisDigit2;
+    AnyRefNode &Via2 = ...Segments.Hand.Finger2MetaRef.Via_FlexorDigitorumSuperficialisDigit2;
+    AnyRefNode &Ins = ...Segments.Hand.Finger2MetaRef.I_FlexorDigitorumSuperficialisDigit2;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+
+    AnySurfEllipsoid &Surf1 = ...Segments.Radius.FlexorMuscleEllipsoid.ellipsoid;
+    SPLine = {
+      AnyMatrix InitWrapPos = {
+        transf3D({-0.2*.Surf1.Radius[0],-0.5*.Surf1.Radius[1], ....Sign*-1.1*.Surf1.Radius[2] }, &.Surf1 ) ,
+        transf3D({-0.8*.Surf1.Radius[0],-0.5*.Surf1.Radius[1], ....Sign*-1.0*.Surf1.Radius[2]  }, &.Surf1 )
+      };
+      InitWrapPosVecArr = {None,&InitWrapPos,None};
+    };
+    SPLine.StringMesh = 30;
+  };
+  
+  AnyMuscleShortestPath FlexorDigitorumSuperficialisDigit3 ={
+    AnyMuscleModel &MusMdl = ...MuscleModels.FlexorDigitorumSuperficialisDigit3;
+    AnyRefNode &Org = ...Segments.Humerus.O_FlexorDigitorumSuperficialis;
+    AnyRefNode &Via1 = ...Segments.Radius.Via_FlexorDigitorumSuperficialisDigit3;
+    AnyRefNode &Via2 = ...Segments.Hand.Finger3MetaRef.Via_FlexorDigitorumSuperficialisDigit3;
+    AnyRefNode &Ins = ...Segments.Hand.Finger3MetaRef.I_FlexorDigitorumSuperficialisDigit3;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+
+    AnySurfEllipsoid &Surf1 = ...Segments.Radius.FlexorMuscleEllipsoid.ellipsoid;
+    SPLine = {
+      AnyMatrix InitWrapPos = {
+        transf3D({-0.2*.Surf1.Radius[0],-0.4*.Surf1.Radius[1], ....Sign*-1.1*.Surf1.Radius[2] }, &.Surf1 ) ,
+        transf3D({-0.8*.Surf1.Radius[0],-0.4*.Surf1.Radius[1], ....Sign*-1.0*.Surf1.Radius[2]  }, &.Surf1 )
+      };
+      InitWrapPosVecArr = {None,&InitWrapPos,None};
+    };
+    SPLine.StringMesh = 25;
+    SPLine.RelTol=0.0000001;
+  };
+  
+  AnyMuscleShortestPath FlexorDigitorumSuperficialisDigit4 ={
+    AnyMuscleModel &MusMdl = ...MuscleModels.FlexorDigitorumSuperficialisDigit4;
+    AnyRefNode &Org = ...Segments.Humerus.O_FlexorDigitorumSuperficialis;
+    AnyRefNode &Via1 = ...Segments.Radius.Via_FlexorDigitorumSuperficialisDigit4;
+    AnyRefNode &Via2 = ...Segments.Hand.Finger4MetaRef.Via_FlexorDigitorumSuperficialisDigit4;
+    AnyRefNode &Ins = ...Segments.Hand.Finger4MetaRef.I_FlexorDigitorumSuperficialisDigit4;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+
+    AnySurfEllipsoid &Surf1 = ...Segments.Radius.FlexorMuscleEllipsoid.ellipsoid;
+    SPLine = {
+      AnyMatrix InitWrapPos = {
+        transf3D({-0.2*.Surf1.Radius[0],-0.3*.Surf1.Radius[1], ....Sign*-1.1*.Surf1.Radius[2] }, &.Surf1 ) ,
+        transf3D({-0.8*.Surf1.Radius[0],-0.3*.Surf1.Radius[1], ....Sign*-1.0*.Surf1.Radius[2]  }, &.Surf1 )
+      };
+      InitWrapPosVecArr = {None,&InitWrapPos,None};
+    };
+    SPLine.StringMesh = 25;
+    SPLine.RelTol=0.0000001;
+  };
+
+  AnyMuscleShortestPath FlexorDigitorumSuperficialisDigit5 ={
+    AnyMuscleModel &MusMdl = ...MuscleModels.FlexorDigitorumSuperficialisDigit5;
+    AnyRefNode &Org = ...Segments.Humerus.O_FlexorDigitorumSuperficialis;
+    AnyRefNode &Via1 = ...Segments.Radius.Via_FlexorDigitorumSuperficialisDigit5;
+    AnyRefNode &Via2 = ...Segments.Hand.Finger5MetaRef.Via_FlexorDigitorumSuperficialisDigit5;
+    AnyRefNode &Ins = ...Segments.Hand.Finger5MetaRef.I_FlexorDigitorumSuperficialisDigit5;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+
+    AnySurfEllipsoid &Surf1 = ...Segments.Radius.FlexorMuscleEllipsoid.ellipsoid;
+    SPLine = {
+      AnyMatrix InitWrapPos = {
+        transf3D({-0.2*.Surf1.Radius[0],-0.2*.Surf1.Radius[1], ....Sign*-1.1*.Surf1.Radius[2] }, &.Surf1 ) ,
+        transf3D({-0.8*.Surf1.Radius[0],-0.2*.Surf1.Radius[1], ....Sign*-1.0*.Surf1.Radius[2]  }, &.Surf1 )
+      };
+      InitWrapPosVecArr = {None,&InitWrapPos,None};
+    };
+    SPLine.StringMesh = 25;
+    SPLine.RelTol=0.0000001;
+  };
+};
+
+MuscleGroup FlexorPollicisLongus = {
+  AnyMuscleShortestPath FlexorPollicisLongus ={
+    AnyMuscleModel &MusMdl = ...MuscleModels.FlexorPollicisLongus;
+    AnyRefNode &Org = ...Segments.Radius.O_FlexorPollicisLongus;
+    AnyRefNode &Via1 = ...Segments.Radius.Via_FlexorPollicisLongus;
+    AnyRefNode &Via2 = ...Segments.Hand.Finger1MetaRef.Via_FlexorPollicisLongus;
+    AnyRefNode &Ins = ...Segments.Hand.Finger1MetaRef.I_FlexorPollicisLongus;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+
+    AnySurfEllipsoid &Surf1 = ...Segments.Radius.FlexorMuscleEllipsoid.ellipsoid;
+    SPLine = {
+      AnyMatrix InitWrapPos = {
+        transf3D({-0.2*.Surf1.Radius[0],-0.6*.Surf1.Radius[1], ....Sign*-0.9*.Surf1.Radius[2] }, &.Surf1 ) ,
+        transf3D({-0.8*.Surf1.Radius[0],-0.6*.Surf1.Radius[1], ....Sign*-0.8*.Surf1.Radius[2]  }, &.Surf1 )
+      };
+      InitWrapPosVecArr = {None,&InitWrapPos,None};
+    };
+    SPLine.StringMesh = 25;
+    SPLine.RelTol=1e-7;
+    SPLine.AbsTol=1e-5;
+  };
+};
 
 MuscleGroup Infraspinatus = {
   AnyMuscleShortestPath Infraspinatus1 = {
@@ -807,6 +1145,7 @@ MuscleGroup Infraspinatus = {
     SPLine.InitWrapPosVecArr = .Infraspinatus1.SPLine.InitWrapPosVecArr;
   };
 };
+
 
 MuscleGroup LatissimusDorsi = {
   AnyMuscleShortestPath LatissimusDorsi1 = {
@@ -987,6 +1326,123 @@ MuscleGroup LatissimusDorsi = {
   };
 };
 
+MuscleGroup LevatorScapulae() = {
+  AnyMuscleViaPoint LevatorScapulae1 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.LevatorScapulae1;
+    AnyRefNode &Org = ..WrappingSurfaces.TrunkNodeAttachement.C1Seg.O_LevatorScapulae1;
+    AnyRefNode &Ins = ...Segments.Scapula.I_LevatorScapulae1;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+  };
+
+  AnyMuscleViaPoint LevatorScapulae2 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.LevatorScapulae2;
+    AnyRefNode &Org = ..WrappingSurfaces.TrunkNodeAttachement.C2Seg.O_LevatorScapulae2;
+    AnyRefNode &Ins = ...Segments.Scapula.I_LevatorScapulae2;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+  };
+
+  AnyMuscleViaPoint LevatorScapulae3 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.LevatorScapulae3;
+    AnyRefNode &Org = ..WrappingSurfaces.TrunkNodeAttachement.C3Seg.O_LevatorScapulae3;
+    AnyRefNode &Ins = ...Segments.Scapula.I_LevatorScapulae3;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+  };
+
+  AnyMuscleViaPoint LevatorScapulae4 ={
+    AnyMuscleModel &MusMdl = ...MuscleModels.LevatorScapulae4;
+    AnyRefNode &Org = ..WrappingSurfaces.TrunkNodeAttachement.C4Seg.O_LevatorScapulae4 ;
+    AnyRefNode &Ins = ...Segments.Scapula.I_LevatorScapulae4 ;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+  };
+};
+
+MuscleGroup PalmarisLongus = {
+  AnyMuscleShortestPath PalmarisLongus  ={
+    AnyMuscleModel &MusMdl = ...MuscleModels.PalmarisLongus;
+    AnyRefNode &Org = ...Segments.Humerus.O_PalmarisLongus;
+    AnyRefNode &Via2 = ...Segments.Radius.Via_PalmarisLongus;
+    AnyRefNode &Ins = ...Segments.Hand.Finger4MetaRef.I_PalmarisLongus;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+
+    AnySurfEllipsoid &Surf1 = ...Segments.Radius.FlexorMuscleEllipsoid.ellipsoid;
+    SPLine = {
+      AnyMatrix InitWrapPos = {
+        transf3D({-0.2*.Surf1.Radius[0],0.1*.Surf1.Radius[1], ....Sign*-1.0*.Surf1.Radius[2] }, &.Surf1 ) ,
+        transf3D({-0.8*.Surf1.Radius[0],0.1*.Surf1.Radius[1], ....Sign*-0.9*.Surf1.Radius[2]  }, &.Surf1 )
+      };
+      InitWrapPosVecArr = {None,&InitWrapPos};
+    };
+    SPLine.StringMesh = 25;
+    SPLine.RelTol=0.0000001;
+  };
+};
+
+MuscleGroup PectoralisMajorClavicular = {
+  AnyMuscleShortestPath PectoralisMajorClavicular1 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.PectoralisMajorClavicular1;
+    AnyRefNode &Org = ...Segments.Clavicula.O_PectoralisMajorClavicular1;
+    AnyRefNode &Ins = ...Segments.Humerus.I_PectoralisMajorClavicular1;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    SPLine.StringMesh = 60;
+    AnyParamSurf& Surf = ..WrappingSurfaces.ThoraxWrappingSufaceSegRef.PectoralisWrappingEllipsoid;
+    AnyParamSurf& Surf3 = ..WrappingSurfaces.Pectoralis_minor1_cyl.Cylinder.Segment.Surf;
+    SPLine = {
+      AnyMatrix InitWrapPos = {
+        transf3D({0, ....Sign*1.2*.Surf3.Radius,0.4*.Surf3.Length}, &.Surf3),
+        transf3D({1*.Surf3.Radius, ....Sign*0.5*.Surf3.Radius,0.5*.Surf3.Length}, &.Surf3),
+        transf3D({1.3*.Surf3.Radius, ....Sign* -0.5*.Surf3.Radius,0.6*.Surf3.Length}, &.Surf3),
+        transf3D({0,0,0.0}, &....Segments.Humerus.gh)
+      };
+      InitWrapPosVecArr = {&InitWrapPos};
+    };
+  };
+
+  AnyMuscleShortestPath PectoralisMajorClavicular2 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.PectoralisMajorClavicular2;
+    AnyRefNode &Org = ...Segments.Clavicula.O_PectoralisMajorClavicular2;
+    AnyRefNode &Ins = ...Segments.Humerus.I_PectoralisMajorClavicular2;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    SPLine.StringMesh = 60;
+    AnyParamSurf& Surf = ..WrappingSurfaces.ThoraxWrappingSufaceSegRef.PectoralisWrappingEllipsoid;
+    AnyParamSurf& Surf3 = ..WrappingSurfaces.Pectoralis_minor1_cyl.Cylinder.Segment.Surf;
+    SPLine.InitWrapPosVecArr = .PectoralisMajorClavicular1.SPLine.InitWrapPosVecArr;
+  };
+
+
+  AnyMuscleShortestPath PectoralisMajorClavicular3 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.PectoralisMajorClavicular3;
+    AnyRefNode &Org = ...Segments.Clavicula.O_PectoralisMajorClavicular3;
+    AnyRefNode &Ins = ...Segments.Humerus.I_PectoralisMajorClavicular3;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    SPLine.StringMesh = 50;
+    AnyParamSurf& Surf = ..WrappingSurfaces.ThoraxWrappingSufaceSegRef.PectoralisWrappingEllipsoid;
+    AnyParamSurf& Surf3 = ..WrappingSurfaces.Pectoralis_minor1_cyl.Cylinder.Segment.Surf;
+    SPLine.InitWrapPosVecArr = .PectoralisMajorClavicular1.SPLine.InitWrapPosVecArr;
+  };
+
+
+  AnyMuscleShortestPath PectoralisMajorClavicular4 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.PectoralisMajorClavicular4;
+    AnyRefNode &Org = ...Segments.Clavicula.O_PectoralisMajorClavicular4;
+    AnyRefNode &Ins = ...Segments.Humerus.I_PectoralisMajorClavicular4;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    SPLine.StringMesh =40;
+    AnyParamSurf& Surf = ..WrappingSurfaces.ThoraxWrappingSufaceSegRef.PectoralisWrappingEllipsoid;
+    AnyParamSurf& Surf3 = ..WrappingSurfaces.Pectoralis_minor1_cyl.Cylinder.Segment.Surf;
+    SPLine.InitWrapPosVecArr = .PectoralisMajorClavicular1.SPLine.InitWrapPosVecArr;
+  };
+
+  AnyMuscleShortestPath PectoralisMajorClavicular5 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.PectoralisMajorClavicular5;
+    AnyRefNode &Org = ...Segments.Clavicula.O_PectoralisMajorClavicular5;
+    AnyRefNode &Ins = ...Segments.Humerus.I_PectoralisMajorClavicular5;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    SPLine.StringMesh = 35;
+    AnyParamSurf& Surf1 = ..WrappingSurfaces.ThoraxWrappingSufaceSegRef.PectoralisWrappingEllipsoid;
+    AnyParamSurf& Surf3 = ..WrappingSurfaces.Pectoralis_minor1_cyl.Cylinder.Segment.Surf;
+    SPLine.InitWrapPosVecArr = .PectoralisMajorClavicular1.SPLine.InitWrapPosVecArr;
+  };
+};
 
 MuscleGroup PectoralisMajorSternocostal = {
   AnyMuscleShortestPath PectoralisMajorSternocostal1 = {
@@ -1105,73 +1561,6 @@ MuscleGroup PectoralisMajorSternocostal = {
   };
 };
 
-MuscleGroup PectoralisMajorClavicular = {
-  AnyMuscleShortestPath PectoralisMajorClavicular1 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.PectoralisMajorClavicular1;
-    AnyRefNode &Org = ...Segments.Clavicula.O_PectoralisMajorClavicular1;
-    AnyRefNode &Ins = ...Segments.Humerus.I_PectoralisMajorClavicular1;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-    SPLine.StringMesh = 60;
-    AnyParamSurf& Surf = ..WrappingSurfaces.ThoraxWrappingSufaceSegRef.PectoralisWrappingEllipsoid;
-    AnyParamSurf& Surf3 = ..WrappingSurfaces.Pectoralis_minor1_cyl.Cylinder.Segment.Surf;
-    SPLine = {
-      AnyMatrix InitWrapPos = {
-        transf3D({0, ....Sign*1.2*.Surf3.Radius,0.4*.Surf3.Length}, &.Surf3),
-        transf3D({1*.Surf3.Radius, ....Sign*0.5*.Surf3.Radius,0.5*.Surf3.Length}, &.Surf3),
-        transf3D({1.3*.Surf3.Radius, ....Sign* -0.5*.Surf3.Radius,0.6*.Surf3.Length}, &.Surf3),
-        transf3D({0,0,0.0}, &....Segments.Humerus.gh)
-      };
-      InitWrapPosVecArr = {&InitWrapPos};
-    };
-  };
-
-  AnyMuscleShortestPath PectoralisMajorClavicular2 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.PectoralisMajorClavicular2;
-    AnyRefNode &Org = ...Segments.Clavicula.O_PectoralisMajorClavicular2;
-    AnyRefNode &Ins = ...Segments.Humerus.I_PectoralisMajorClavicular2;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-    SPLine.StringMesh = 60;
-    AnyParamSurf& Surf = ..WrappingSurfaces.ThoraxWrappingSufaceSegRef.PectoralisWrappingEllipsoid;
-    AnyParamSurf& Surf3 = ..WrappingSurfaces.Pectoralis_minor1_cyl.Cylinder.Segment.Surf;
-    SPLine.InitWrapPosVecArr = .PectoralisMajorClavicular1.SPLine.InitWrapPosVecArr;
-  };
-
-
-  AnyMuscleShortestPath PectoralisMajorClavicular3 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.PectoralisMajorClavicular3;
-    AnyRefNode &Org = ...Segments.Clavicula.O_PectoralisMajorClavicular3;
-    AnyRefNode &Ins = ...Segments.Humerus.I_PectoralisMajorClavicular3;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-    SPLine.StringMesh = 50;
-    AnyParamSurf& Surf = ..WrappingSurfaces.ThoraxWrappingSufaceSegRef.PectoralisWrappingEllipsoid;
-    AnyParamSurf& Surf3 = ..WrappingSurfaces.Pectoralis_minor1_cyl.Cylinder.Segment.Surf;
-    SPLine.InitWrapPosVecArr = .PectoralisMajorClavicular1.SPLine.InitWrapPosVecArr;
-  };
-
-
-  AnyMuscleShortestPath PectoralisMajorClavicular4 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.PectoralisMajorClavicular4;
-    AnyRefNode &Org = ...Segments.Clavicula.O_PectoralisMajorClavicular4;
-    AnyRefNode &Ins = ...Segments.Humerus.I_PectoralisMajorClavicular4;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-    SPLine.StringMesh =40;
-    AnyParamSurf& Surf = ..WrappingSurfaces.ThoraxWrappingSufaceSegRef.PectoralisWrappingEllipsoid;
-    AnyParamSurf& Surf3 = ..WrappingSurfaces.Pectoralis_minor1_cyl.Cylinder.Segment.Surf;
-    SPLine.InitWrapPosVecArr = .PectoralisMajorClavicular1.SPLine.InitWrapPosVecArr;
-  };
-
-  AnyMuscleShortestPath PectoralisMajorClavicular5 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.PectoralisMajorClavicular5;
-    AnyRefNode &Org = ...Segments.Clavicula.O_PectoralisMajorClavicular5;
-    AnyRefNode &Ins = ...Segments.Humerus.I_PectoralisMajorClavicular5;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-    SPLine.StringMesh = 35;
-    AnyParamSurf& Surf1 = ..WrappingSurfaces.ThoraxWrappingSufaceSegRef.PectoralisWrappingEllipsoid;
-    AnyParamSurf& Surf3 = ..WrappingSurfaces.Pectoralis_minor1_cyl.Cylinder.Segment.Surf;
-    SPLine.InitWrapPosVecArr = .PectoralisMajorClavicular1.SPLine.InitWrapPosVecArr;
-  };
-};
-
 MuscleGroup PectoralisMinor = {
   AnyMuscleViaPoint PectoralisMinor1 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.PectoralisMinor1;
@@ -1192,6 +1581,72 @@ MuscleGroup PectoralisMinor = {
     AnyRefNode &Org = ..WrappingSurfaces.TrunkNodeAttachement.R5Seg.O_PectoralisMinor3;
     AnyRefNode &Ins = ...Segments.Scapula.I_PectoralisMinor3;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+  };
+};
+
+MuscleGroup PronatorQuadratus = {
+  AnyMuscleViaPoint PronatorQuadratus1 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.PronatorQuadratus1;
+    AnyRefNode &Org = ...Segments.Ulna.O_PronatorQuadratus1;
+    AnyRefNode &Ins = ...Segments.Radius.I_PronatorQuadratus1;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+  };
+
+  AnyMuscleViaPoint PronatorQuadratus2 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.PronatorQuadratus2;
+    AnyRefNode &Org = ...Segments.Ulna.O_PronatorQuadratus2;
+    AnyRefNode &Ins = ...Segments.Radius.I_PronatorQuadratus2;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+  };
+};
+
+MuscleGroup PronatorTeres = {
+  AnyMuscleShortestPath PronatorTeresHumeral1 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.PronatorTeresHumeral1;
+    AnyRefNode &Org = ...Segments.Humerus.O_PronatorTeresHumeral1;
+    AnyRefNode &Ins = ...Segments.Radius.I_PronatorTeresHumeral1;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    AnySurfCylinder &Surf1 = ...Segments.Radius.PronatorTeresCyl.cyl;
+    SPLine.StringMesh = 45;
+    SPLine = {
+      AnyMatrix InitWrapPos = {
+            transf3D(0.01*{4,....Sign*2,-1.8}, &.Ins),
+            transf3D(0.01*{2,....Sign*0.5,-1.3}, &.Ins)
+      };
+      InitWrapPosVecArr = { &InitWrapPos };
+    };
+  };
+
+  AnyMuscleShortestPath PronatorTeresHumeral2 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.PronatorTeresHumeral2;
+    AnyRefNode &Org = ...Segments.Humerus.O_PronatorTeresHumeral2;
+    AnyRefNode &Ins = ...Segments.Radius.I_PronatorTeresHumeral2;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    AnySurfCylinder &Surf1 = ...Segments.Radius.PronatorTeresCyl.cyl;
+    SPLine.StringMesh = 45;
+    SPLine = {
+      AnyMatrix InitWrapPos = {
+            transf3D(0.01*{4,....Sign*2,-1.8}, &.Ins),
+            transf3D(0.01*{2,....Sign*0.5,-1.3}, &.Ins)
+      };
+      InitWrapPosVecArr = { &InitWrapPos };
+    };
+  };
+
+  AnyMuscleShortestPath PronatorTeresUlnare1 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.Pronator_teres_caput_ulnare;
+    AnyRefNode &Org = ...Segments.Ulna.O_PronatorTeresUlnare1;
+    AnyRefNode &Ins = ...Segments.Radius.I_PronatorTeresUlnare1;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any" };
+    AnySurfCylinder &Surf1 = ...Segments.Radius.PronatorTeresCyl.cyl;
+    SPLine.StringMesh = 35;
+    SPLine = {
+      AnyMatrix InitWrapPos = {
+            transf3D(0.01*{4,....Sign*2,-1.8}, &.Ins),
+            transf3D(0.01*{2,....Sign*0.5,-1.3}, &.Ins)
+      };
+      InitWrapPosVecArr = { &InitWrapPos };
+    };
   };
 };
 
@@ -1337,6 +1792,23 @@ MuscleGroup SerratusAnterior = {
   };
 };
 
+MuscleGroup Sternocleidomastoid() = {
+  AnyMuscleViaPoint Sternocleidomastoid1 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.Sternocleidomastoid1;
+    AnyRefNode &Ins2 = ...Segments.Clavicula.SternocleidomastoidNode;
+    AnyRefNode &Org = ..WrappingSurfaces.TrunkNodeAttachement.SkullSeg.SternocleidomastoidNode;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+  };
+
+  AnyMuscleViaPoint Sternocleidomastoid2 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.Sternocleidomastoid2;
+    AnyRefNode &Ins = ..WrappingSurfaces.TrunkNodeAttachement.ManubriumSeg.SternocleidomastoidNode;
+    AnyRefNode &Org = ..WrappingSurfaces.TrunkNodeAttachement.SkullSeg.SternocleidomastoidNode;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+  };
+};
+
+
 MuscleGroup Subscapularis = {
   AnyMuscleShortestPath Subscapularis1 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.Subscapularis1;
@@ -1414,6 +1886,78 @@ MuscleGroup Subscapularis = {
     AnyParamSurf &Surf1 = ...Segments.Scapula.Subscapularistorus.surface;
     AnyParamSurf &Surf2 = ...Segments.Humerus.SubscapularisHumerusWrapping.cyl;
     SPLine.InitWrapPosVecArr = .Subscapularis1.SPLine.InitWrapPosVecArr;
+  };
+};
+
+MuscleGroup Supinator = {
+  AnyMuscleShortestPath SupinatorHumerus1 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.SupinatorHumerus1;
+    AnyRefNode &Org = ...Segments.Humerus.O_SupinatorHumerus1;
+    AnyRefNode &Ins = ...Segments.Radius.I_SupinatorHumerus1;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    AnySurfCylinder &Surf1 = ...Segments.Radius.SupinatorCyl.cyl;
+    SPLine.StringMesh = 25;
+    SPLine = {
+      AnyMatrix InitWrapPos = {
+            transf3D({1*.Surf1.Radius,....Sign*-1*.Surf1.Radius, 1*.Surf1.Radius},&.Ins)
+      };
+      InitWrapPosVecArr = { &InitWrapPos };
+    };
+  };
+
+  AnyMuscleShortestPath SupinatorHumerus2 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.SupinatorHumerus2;
+    AnyRefNode &Org = ...Segments.Humerus.O_SupinatorHumerus2;
+    AnyRefNode &Ins = ...Segments.Radius.I_SupinatorHumerus2;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    AnySurfCylinder &Surf1 = ...Segments.Radius.SupinatorCyl.cyl;
+    SPLine.StringMesh = 30;
+    SPLine = {
+      AnyMatrix InitWrapPos = {
+            transf3D({....Sign*1*.Surf1.Radius,....Sign*-1*.Surf1.Radius, 1*.Surf1.Radius},&.Ins)
+      };
+      InitWrapPosVecArr = { &InitWrapPos };
+    };
+  };
+
+  AnyMuscleShortestPath SupinatorUlnare1 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.SupinatorUlnare1;
+    AnyRefNode &Org = ...Segments.Ulna.O_SupinatorUlnare1;
+    AnyRefNode &Ins = ...Segments.Radius.I_SupinatorUlnare1;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    AnySurfCylinder &Surf1 = ...Segments.Radius.SupinatorCyl.cyl;
+
+    SPLine.StringMesh = 35;
+    SPLine.RelTol=0.0000001;
+    SPLine = {
+      AnyMatrix InitWrapPos = transf3D(.Surf1.Radius*
+      {{5,....Sign*2.8, 1},
+      {4,....Sign*2.2, 2},
+      {3,....Sign*1.5, 2.5},
+      {2,....Sign*0, 2.5},
+      {1,....Sign*-1, 1}},
+    &.Ins);
+      InitWrapPosVecArr = { &InitWrapPos };
+    };
+  };
+
+  AnyMuscleShortestPath SupinatorUlnare2 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.SupinatorUlnare2;
+    AnyRefNode &Org = ...Segments.Ulna.O_SupinatorUlnare2;
+    AnyRefNode &Ins = ...Segments.Radius.I_SupinatorUlnare2;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    AnySurfCylinder &Surf1 = ...Segments.Radius.SupinatorCyl.cyl;
+    SPLine.StringMesh = 25;
+    SPLine = {
+      AnyMatrix InitWrapPos = transf3D(.Surf1.Radius*
+      {{5,....Sign*3.2,0.5},
+      {4,....Sign*2.7, 1.5},
+      {3,....Sign*2, 2},
+      {2,....Sign*0.5, 2},
+      {1,....Sign*-0.5, 0.5}},
+    &.Ins);
+      InitWrapPosVecArr = { &InitWrapPos };
+    };
   };
 };
 
@@ -1627,31 +2171,205 @@ MuscleGroup TeresMinor = {
   };
 };
 
-MuscleGroup Brachialis = {
-  AnyMuscleShortestPath Brachialis1 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.Brachialis1;
-    AnyRefNode &Org = ...Segments.Humerus.O_Brachialis1;
-    AnyRefNode &Ins = ...Segments.Ulna.I_Brachialis1;
+MuscleGroup TrapeziusClavicular() = {
+  AnyMuscleViaPoint  TrapeziusClavicular1 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.TrapeziusClavicular1;
+    AnyRefNode &Org = ..WrappingSurfaces.TrunkNodeAttachement.C5Seg.O_TrapeziusClavicular1;
+    AnyRefNode &Ins = ...Segments.Clavicula.I_TrapeziusClavicular1;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-    AnySurfCylinder &Surf1 = ...Segments.Humerus.condylus_hum.cyl;
-    SPLine.StringMesh = 30;
+  };
+
+  AnyMuscleViaPoint TrapeziusClavicular2 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.TrapeziusClavicular2;
+    AnyRefNode &Org = ..WrappingSurfaces.TrunkNodeAttachement.C4Seg.O_TrapeziusClavicular2;
+    AnyRefNode &Ins = ...Segments.Clavicula.I_TrapeziusClavicular2;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+  };
+
+  AnyMuscleViaPoint TrapeziusClavicular3 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.TrapeziusClavicular3;
+    AnyRefNode &Org = ..WrappingSurfaces.TrunkNodeAttachement.C3Seg.O_TrapeziusClavicular3;
+    AnyRefNode &Ins = ...Segments.Clavicula.I_TrapeziusClavicular3;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+  };
+
+  AnyMuscleViaPoint TrapeziusClavicular4 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.TrapeziusClavicular4;
+    AnyRefNode &Org = ..WrappingSurfaces.TrunkNodeAttachement.C2Seg.O_TrapeziusClavicular4;
+    AnyRefNode &Ins = ...Segments.Clavicula.I_TrapeziusClavicular4;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+  };
+
+  AnyMuscleViaPoint TrapeziusClavicular5 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.TrapeziusClavicular5;
+    AnyRefNode &Org = ..WrappingSurfaces.TrunkNodeAttachement.C1Seg.O_TrapeziusClavicular5;
+    AnyRefNode &Ins = ...Segments.Clavicula.I_TrapeziusClavicular5;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+  };
+
+  AnyMuscleViaPoint TrapeziusClavicular6 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.TrapeziusClavicular6;
+    AnyRefNode &Org = ..WrappingSurfaces.TrunkNodeAttachement.SkullSeg.O_TrapeziusClavicular6;
+    AnyRefNode &Ins = ...Segments.Clavicula.I_TrapeziusClavicular6;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+  };
+};
+
+MuscleGroup TrapeziusScapular() = {
+  AnyMuscleShortestPath  TrapeziusScapular1 = {
+    AnyMuscleModel &MusMdl =  ...MuscleModels.TrapeziusScapular1;
+    AnyRefNode &Org = ..WrappingSurfaces.TrunkNodeAttachement.T12Seg.O_TrapeziusScapular1;
+    AnyRefNode &Ins = ...Segments.Scapula.I_TrapeziusScapular1;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    SPLine.StringMesh = 100;
+    AnySurfCylinder &Surf = ...Segments.Scapula.margo_medialis.cyl;
     SPLine = {
-      AnyMatrix InitWrapPos = {
-            transf3D({....Sign*-1.1* .Surf1.Radius,0.5* .Surf1.Radius,  0.46*.Surf1.Length }, &.Surf1)
-      };
-      InitWrapPosVecArr = { &InitWrapPos };
+      AnyMatrix InitWrapPos = { transf3D({1.3*.Surf.Radius, 0,0.5*.Surf.Length}, &.Surf)};
+      InitWrapPosVecArr = {&InitWrapPos};
     };
   };
 
-  AnyMuscleShortestPath Brachialis2 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.Brachialis2;
-    AnyRefNode &Org = ...Segments.Humerus.O_Brachialis2;
-    AnyRefNode &Ins = ...Segments.Ulna.I_Brachialis2;
+  AnyMuscleShortestPath  TrapeziusScapular2 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.TrapeziusScapular2;
+    AnyRefNode &Org = ..WrappingSurfaces.TrunkNodeAttachement.T11Seg.O_TrapeziusScapular2;
+    AnyRefNode &Ins = ...Segments.Scapula.I_TrapeziusScapular2;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-    AnySurfCylinder &Surf1 = ...Segments.Humerus.condylus_hum.cyl;
-    SPLine.StringMesh = 30;
+    SPLine.StringMesh = 100;
+    AnySurfCylinder &Surf = ...Segments.Scapula.margo_medialis.cyl;
     SPLine = {
-      InitWrapPosVecArr = { &..Brachialis1.SPLine.InitWrapPos };
+      AnyMatrix InitWrapPos = { transf3D({1.3*.Surf.Radius, 0,0.5*.Surf.Length}, &.Surf)};
+      InitWrapPosVecArr = {&InitWrapPos};
+    };
+  };
+
+  AnyMuscleShortestPath TrapeziusScapular3 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.TrapeziusScapular3;
+    AnyRefNode &Org = ..WrappingSurfaces.TrunkNodeAttachement.T10Seg.O_TrapeziusScapular3;
+    AnyRefNode &Ins = ...Segments.Scapula.I_TrapeziusScapular3;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    SPLine.StringMesh = 100;
+    AnySurfCylinder &Surf = ...Segments.Scapula.margo_medialis.cyl;
+    SPLine.InitWrapPosVecArr = .TrapeziusScapular1.SPLine.InitWrapPosVecArr;
+  };
+
+  AnyMuscleShortestPath TrapeziusScapular4 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.TrapeziusScapular4;
+    AnyRefNode &Org = ..WrappingSurfaces.TrunkNodeAttachement.T9Seg.O_TrapeziusScapular4;
+    AnyRefNode &Ins = ...Segments.Scapula.I_TrapeziusScapular4;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    SPLine.StringMesh = 100;
+    AnySurfCylinder &Surf = ...Segments.Scapula.margo_medialis.cyl;
+    SPLine.InitWrapPosVecArr = .TrapeziusScapular1.SPLine.InitWrapPosVecArr;
+  };
+
+  AnyMuscleShortestPath TrapeziusScapular5 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.TrapeziusScapular5;
+    AnyRefNode &Org = ..WrappingSurfaces.TrunkNodeAttachement.T8Seg.O_TrapeziusScapular5;
+    AnyRefNode &Ins = ...Segments.Scapula.I_TrapeziusScapular5;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    SPLine.StringMesh = 100;
+    AnySurfCylinder &Surf = ...Segments.Scapula.margo_medialis.cyl;
+    SPLine.InitWrapPosVecArr = .TrapeziusScapular1.SPLine.InitWrapPosVecArr;
+  };
+
+  AnyMuscleShortestPath TrapeziusScapular6 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.TrapeziusScapular6;
+    AnyRefNode &Org = ..WrappingSurfaces.TrunkNodeAttachement.T7Seg.O_TrapeziusScapular6;
+    AnyRefNode &Ins = ...Segments.Scapula.I_TrapeziusScapular6;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    SPLine.StringMesh = 100;
+    AnySurfCylinder &Surf = ...Segments.Scapula.margo_medialis.cyl;
+    SPLine.InitWrapPosVecArr = .TrapeziusScapular1.SPLine.InitWrapPosVecArr;
+  };
+
+  AnyMuscleShortestPath TrapeziusScapular7 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.TrapeziusScapular7;
+    AnyRefNode &Org = ..WrappingSurfaces.TrunkNodeAttachement.T6Seg.O_TrapeziusScapular7;
+    AnyRefNode &Ins = ...Segments.Scapula.I_TrapeziusScapular7;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    SPLine.StringMesh = 100;
+    AnySurfCylinder &Surf = ...Segments.Scapula.margo_medialis.cyl;
+    SPLine.InitWrapPosVecArr = .TrapeziusScapular1.SPLine.InitWrapPosVecArr;
+  };
+
+  AnyMuscleShortestPath TrapeziusScapular8 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.TrapeziusScapular8;
+    AnyRefNode &Org = ..WrappingSurfaces.TrunkNodeAttachement.T5Seg.O_TrapeziusScapular8;
+    AnyRefNode &Ins = ...Segments.Scapula.I_TrapeziusScapular8;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    SPLine.StringMesh = 100;
+    AnySurfCylinder &Surf = ...Segments.Scapula.margo_medialis.cyl;
+    SPLine.InitWrapPosVecArr = .TrapeziusScapular1.SPLine.InitWrapPosVecArr;
+  };
+
+  AnyMuscleShortestPath TrapeziusScapular9 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.TrapeziusScapular9;
+    AnyRefNode &Org = ..WrappingSurfaces.TrunkNodeAttachement.T4Seg.O_TrapeziusScapular9;
+    AnyRefNode &Ins = ...Segments.Scapula.I_TrapeziusScapular9;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    SPLine.StringMesh = 100;
+    AnySurfCylinder &Surf = ...Segments.Scapula.margo_medialis.cyl;
+    SPLine.InitWrapPosVecArr = .TrapeziusScapular1.SPLine.InitWrapPosVecArr;
+  };
+
+  AnyMuscleViaPoint TrapeziusScapular10 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.TrapeziusScapular10;
+    AnyRefNode &Org = ..WrappingSurfaces.TrunkNodeAttachement.T3Seg.O_TrapeziusScapular10;
+    AnyRefNode &Ins = ...Segments.Scapula.I_TrapeziusScapular10;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+  };
+
+  AnyMuscleViaPoint TrapeziusScapular11 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.TrapeziusScapular11;
+    AnyRefNode &Org = ..WrappingSurfaces.TrunkNodeAttachement.T2Seg.O_TrapeziusScapular11;
+    AnyRefNode &Ins = ...Segments.Scapula.I_TrapeziusScapular11;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+  };
+
+  AnyMuscleViaPoint TrapeziusScapular12 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.TrapeziusScapular12;
+    AnyRefNode &Org = ..WrappingSurfaces.TrunkNodeAttachement.T1Seg.O_TrapeziusScapular12;
+    AnyRefNode &Ins = ...Segments.Scapula.I_TrapeziusScapular12;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+  };
+
+  AnyMuscleViaPoint TrapeziusScapular13 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.TrapeziusScapular13;
+    AnyRefNode &Org = ..WrappingSurfaces.TrunkNodeAttachement.C7Seg.O_TrapeziusScapular13;
+    AnyRefNode &Ins = ...Segments.Scapula.I_TrapeziusScapular13;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+  };
+
+  AnyMuscleViaPoint TrapeziusScapular14 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.TrapeziusScapular14;
+    AnyRefNode &Org = ..WrappingSurfaces.TrunkNodeAttachement.C6Seg.O_TrapeziusScapular14;
+    AnyRefNode &Ins = ...Segments.Scapula.I_TrapeziusScapular14;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+  };
+};
+
+MuscleGroup TricepsBrachiiLaterale = {
+  AnyMuscleShortestPath TricepsBrachiiLaterale1 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.TricepsBrachiiLaterale1;
+    AnyRefNode &Org = ...Segments.Humerus.O_TricepsBrachiiLaterale1;
+    AnyRefNode &Ins = ...Segments.Ulna.I_TricepsBrachiiLaterale1;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    AnySurfCylinder &Surf1 = ...Segments.Ulna.oleacranon.oleacranon;
+    SPLine.StringMesh = 90;
+    SPLine = {
+      InitWrapPosVecArr = { &...TricepsBrachiiLongum.TricepsBrachiiLongum1.SPLine.InitWrapPosDistal };
+    };
+  };
+
+  AnyMuscleShortestPath TricepsBrachiiLaterale2 = {
+    AnyMuscleModel &MusMdl = ...MuscleModels.TricepsBrachiiLaterale2;
+    AnyRefNode &Org = ...Segments.Humerus.O_TricepsBrachiiLaterale2;
+    AnyRefNode &Ins = ...Segments.Ulna.I_TricepsBrachiiLaterale2;
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    AnySurfCylinder &Surf1 = ...Segments.Ulna.oleacranon.oleacranon;
+    SPLine.StringMesh = 90;
+    SPLine = {
+      InitWrapPosVecArr = { &...TricepsBrachiiLongum.TricepsBrachiiLongum1.SPLine.InitWrapPosDistal };
     };
   };
 };
@@ -1717,722 +2435,6 @@ MuscleGroup TricepsBrachiiMediale = {
     SPLine = {
       InitWrapPosVecArr = { &...TricepsBrachiiLongum.TricepsBrachiiLongum1.SPLine.InitWrapPosDistal };
     };
-  };
-};
-
-MuscleGroup TricepsBrachiiLaterale = {
-  AnyMuscleShortestPath TricepsBrachiiLaterale1 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.TricepsBrachiiLaterale1;
-    AnyRefNode &Org = ...Segments.Humerus.O_TricepsBrachiiLaterale1;
-    AnyRefNode &Ins = ...Segments.Ulna.I_TricepsBrachiiLaterale1;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-    AnySurfCylinder &Surf1 = ...Segments.Ulna.oleacranon.oleacranon;
-    SPLine.StringMesh = 90;
-    SPLine = {
-      InitWrapPosVecArr = { &...TricepsBrachiiLongum.TricepsBrachiiLongum1.SPLine.InitWrapPosDistal };
-    };
-  };
-
-  AnyMuscleShortestPath TricepsBrachiiLaterale2 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.TricepsBrachiiLaterale2;
-    AnyRefNode &Org = ...Segments.Humerus.O_TricepsBrachiiLaterale2;
-    AnyRefNode &Ins = ...Segments.Ulna.I_TricepsBrachiiLaterale2;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-    AnySurfCylinder &Surf1 = ...Segments.Ulna.oleacranon.oleacranon;
-    SPLine.StringMesh = 90;
-    SPLine = {
-      InitWrapPosVecArr = { &...TricepsBrachiiLongum.TricepsBrachiiLongum1.SPLine.InitWrapPosDistal };
-    };
-  };
-};
-
-MuscleGroup Brachioradialis = {
-  AnyMuscleShortestPath Brachioradialis1 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.Brachioradialis1;
-    AnyRefNode &Org = ...Segments.Humerus.O_Brachioradialis1;
-    AnyRefNode &Ins = ...Segments.Radius.I_Brachioradialis1;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-    AnySurfCylinder &Surf1 = ...Segments.Humerus.condylus_hum.cyl;
-    SPLine.StringMesh = 50;
-    SPLine = {
-      AnyMatrix InitWrapPos = {
-            transf3D({....Sign*-1.1* .Surf1.Radius,0,  0.47*.Surf1.Length }, &.Surf1)
-      };
-      InitWrapPosVecArr = { &InitWrapPos };
-    };
-  };
-
-  AnyMuscleShortestPath Brachioradialis2 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.Brachioradialis2;
-    AnyRefNode &Org = ...Segments.Humerus.O_Brachioradialis2;
-    AnyRefNode &Ins = ...Segments.Radius.I_Brachioradialis2;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-    AnySurfCylinder &Surf1 = ...Segments.Humerus.condylus_hum.cyl;
-    SPLine.StringMesh = 50;
-    SPLine = {
-      AnyMatrix InitWrapPos = {
-            transf3D({....Sign*-1.1* .Surf1.Radius,0,  0.5*.Surf1.Length }, &.Surf1)
-      };
-      InitWrapPosVecArr = { &InitWrapPos };
-    };
-  };
-};
-
-MuscleGroup Anconeus = {
-  AnyMuscleViaPoint Anconeus1 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.Anconeus1;
-    AnyRefNode &Org = ...Segments.Humerus.O_Anconeus1;
-    AnyRefNode &Ins = ...Segments.Ulna.I_Anconeus1;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-  };
-
-  AnyMuscleViaPoint Anconeus2 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.Anconeus2;
-    AnyRefNode &Org = ...Segments.Humerus.O_Anconeus2;
-    AnyRefNode &Ins = ...Segments.Ulna.I_Anconeus2;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-  };
-};
-
-MuscleGroup PronatorTeres = {
-  AnyMuscleShortestPath PronatorTeresHumeral1 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.PronatorTeresHumeral1;
-    AnyRefNode &Org = ...Segments.Humerus.O_PronatorTeresHumeral1;
-    AnyRefNode &Ins = ...Segments.Radius.I_PronatorTeresHumeral1;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-    AnySurfCylinder &Surf1 = ...Segments.Radius.PronatorTeresCyl.cyl;
-    SPLine.StringMesh = 45;
-    SPLine = {
-      AnyMatrix InitWrapPos = {
-            transf3D(0.01*{4,....Sign*2,-1.8}, &.Ins),
-            transf3D(0.01*{2,....Sign*0.5,-1.3}, &.Ins)
-      };
-      InitWrapPosVecArr = { &InitWrapPos };
-    };
-  };
-
-  AnyMuscleShortestPath PronatorTeresHumeral2 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.PronatorTeresHumeral2;
-    AnyRefNode &Org = ...Segments.Humerus.O_PronatorTeresHumeral2;
-    AnyRefNode &Ins = ...Segments.Radius.I_PronatorTeresHumeral2;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-    AnySurfCylinder &Surf1 = ...Segments.Radius.PronatorTeresCyl.cyl;
-    SPLine.StringMesh = 45;
-    SPLine = {
-      AnyMatrix InitWrapPos = {
-            transf3D(0.01*{4,....Sign*2,-1.8}, &.Ins),
-            transf3D(0.01*{2,....Sign*0.5,-1.3}, &.Ins)
-      };
-      InitWrapPosVecArr = { &InitWrapPos };
-    };
-  };
-
-  AnyMuscleShortestPath PronatorTeresUlnare1 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.Pronator_teres_caput_ulnare;
-    AnyRefNode &Org = ...Segments.Ulna.O_PronatorTeresUlnare1;
-    AnyRefNode &Ins = ...Segments.Radius.I_PronatorTeresUlnare1;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any" };
-    AnySurfCylinder &Surf1 = ...Segments.Radius.PronatorTeresCyl.cyl;
-    SPLine.StringMesh = 35;
-    SPLine = {
-      AnyMatrix InitWrapPos = {
-            transf3D(0.01*{4,....Sign*2,-1.8}, &.Ins),
-            transf3D(0.01*{2,....Sign*0.5,-1.3}, &.Ins)
-      };
-      InitWrapPosVecArr = { &InitWrapPos };
-    };
-  };
-};
-
-MuscleGroup Supinator = {
-  AnyMuscleShortestPath SupinatorHumerus1 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.SupinatorHumerus1;
-    AnyRefNode &Org = ...Segments.Humerus.O_SupinatorHumerus1;
-    AnyRefNode &Ins = ...Segments.Radius.I_SupinatorHumerus1;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-    AnySurfCylinder &Surf1 = ...Segments.Radius.SupinatorCyl.cyl;
-    SPLine.StringMesh = 25;
-    SPLine = {
-      AnyMatrix InitWrapPos = {
-            transf3D({1*.Surf1.Radius,....Sign*-1*.Surf1.Radius, 1*.Surf1.Radius},&.Ins)
-      };
-      InitWrapPosVecArr = { &InitWrapPos };
-    };
-  };
-
-  AnyMuscleShortestPath SupinatorHumerus2 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.SupinatorHumerus2;
-    AnyRefNode &Org = ...Segments.Humerus.O_SupinatorHumerus2;
-    AnyRefNode &Ins = ...Segments.Radius.I_SupinatorHumerus2;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-    AnySurfCylinder &Surf1 = ...Segments.Radius.SupinatorCyl.cyl;
-    SPLine.StringMesh = 30;
-    SPLine = {
-      AnyMatrix InitWrapPos = {
-            transf3D({....Sign*1*.Surf1.Radius,....Sign*-1*.Surf1.Radius, 1*.Surf1.Radius},&.Ins)
-      };
-      InitWrapPosVecArr = { &InitWrapPos };
-    };
-  };
-
-  AnyMuscleShortestPath SupinatorUlnare1 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.SupinatorUlnare1;
-    AnyRefNode &Org = ...Segments.Ulna.O_SupinatorUlnare1;
-    AnyRefNode &Ins = ...Segments.Radius.I_SupinatorUlnare1;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-    AnySurfCylinder &Surf1 = ...Segments.Radius.SupinatorCyl.cyl;
-
-    SPLine.StringMesh = 35;
-    SPLine.RelTol=0.0000001;
-    SPLine = {
-      AnyMatrix InitWrapPos = transf3D(.Surf1.Radius*
-      {{5,....Sign*2.8, 1},
-      {4,....Sign*2.2, 2},
-      {3,....Sign*1.5, 2.5},
-      {2,....Sign*0, 2.5},
-      {1,....Sign*-1, 1}},
-    &.Ins);
-      InitWrapPosVecArr = { &InitWrapPos };
-    };
-  };
-
-  AnyMuscleShortestPath SupinatorUlnare2 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.SupinatorUlnare2;
-    AnyRefNode &Org = ...Segments.Ulna.O_SupinatorUlnare2;
-    AnyRefNode &Ins = ...Segments.Radius.I_SupinatorUlnare2;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-    AnySurfCylinder &Surf1 = ...Segments.Radius.SupinatorCyl.cyl;
-    SPLine.StringMesh = 25;
-    SPLine = {
-      AnyMatrix InitWrapPos = transf3D(.Surf1.Radius*
-      {{5,....Sign*3.2,0.5},
-      {4,....Sign*2.7, 1.5},
-      {3,....Sign*2, 2},
-      {2,....Sign*0.5, 2},
-      {1,....Sign*-0.5, 0.5}},
-    &.Ins);
-      InitWrapPosVecArr = { &InitWrapPos };
-    };
-  };
-};
-
-MuscleGroup PronatorQuadratus = {
-  AnyMuscleViaPoint PronatorQuadratus1 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.PronatorQuadratus1;
-    AnyRefNode &Org = ...Segments.Ulna.O_PronatorQuadratus1;
-    AnyRefNode &Ins = ...Segments.Radius.I_PronatorQuadratus1;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-  };
-
-  AnyMuscleViaPoint PronatorQuadratus2 = {
-    AnyMuscleModel &MusMdl = ...MuscleModels.PronatorQuadratus2;
-    AnyRefNode &Org = ...Segments.Ulna.O_PronatorQuadratus2;
-    AnyRefNode &Ins = ...Segments.Radius.I_PronatorQuadratus2;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-  };
-};
-
-MuscleGroup ExtensorIndicis = {
-  AnyMuscleShortestPath ExtensorIndicis ={
-    AnyMuscleModel &MusMdl = ...MuscleModels.ExtensorIndicis;
-    AnyRefNode &Org = ...Segments.Ulna.O_ExtensorIndicis;
-    AnyRefNode &Via1 = ...Segments.Radius.Via_ExtensorIndicis;
-    AnyRefNode &Via2 = ...Segments.Hand.Finger2MetaRef.Via1_ExtensorIndicis;
-    AnyRefNode &Ins = ...Segments.Hand.Finger2MetaRef.I_ExtensorIndicis;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-
-    AnySurfEllipsoid &Surf1 = ...Segments.Radius.ExtensorMuscleEllipsoid.ellipsoid;
-    SPLine = {
-      AnyMatrix InitWrapPos = {
-        transf3D({-0.2*.Surf1.Radius[0],-0.2*.Surf1.Radius[1], ....Sign*0.9*.Surf1.Radius[2] }, &.Surf1 ),
-        transf3D({-0.8*.Surf1.Radius[0],-0.3*.Surf1.Radius[1], ....Sign*0.9*.Surf1.Radius[2] }, &.Surf1 )
-      };
-      InitWrapPosVecArr = {None,&InitWrapPos,None};
-    };
-    SPLine.StringMesh = 25;
-    SPLine.RelTol=0.0000001;
-  };
-};
-
-MuscleGroup AbductorPollicisLongus = {
-  AnyMuscleViaPoint AbductorPollicisLongus ={
-
-    AnyMuscleModel &MusMdl = ...MuscleModels.AbductorPollicisLongus;
-    AnyRefNode &Ins = ...Segments.Hand.Finger1MetaRef.I_AbductorPollicisLongus;
-    //AnyRefNode &Via1 = ...Segments.Hand.Via1_AbductorPollicisLongus;
-
-    AnyRefNode &Via2 = ...Segments.Radius.Via_AbductorPollicisLongus;
-
-    AnyRefNode &Org = ...Segments.Ulna.O_AbductorPollicisLongus;
-
-    //AnySurfCylinder &Surf1 = ...Segments.Hand.FlexorMuscleCyl.cyl;
-  //  AnySurfCylinder &Surf2 = ...Segments.Radius.MedialExtensorCyl.cyl;
-
-    // AnySurfCylinder &Surf2 = ...Segments.Radius.RadiusMuscleCyl.cyl;
-    // AnySurfCylinder &Surf3 = ...Segments.Ulna.UlnaMuscleCyl.cyl;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-
-  //  SPLine.StringMesh = 45;
-  //  SPLine.RelTol=0.0000001;
-  //  SPLine.InitWrapPosVectors = {
-  //    {0,0,..Sign*0.1}, {0,..Sign*0,0}
-  //  };
-  };
-};
-
-MuscleGroup ExtensorPollicisBrevis = {
-  AnyMuscleShortestPath ExtensorPollicisBrevis ={
-    AnyMuscleModel &MusMdl = ...MuscleModels.ExtensorPollicisBrevis;
-
-    AnyRefNode &Ins = ...Segments.Hand.Finger1MetaRef.I_ExtensorPollicisBrevis;
-    AnyRefNode &Via2 = ...Segments.Hand.Finger1MetaRef.Via1_ExtensorPollicisBrevis;
-    AnyRefNode &Via1 = ...Segments.Radius.Via_ExtensorPollicisLongus;
-    AnyRefNode &Org = ...Segments.Radius.O_ExtensorPollicisBrevis;
-
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-    AnySurfCylinder &Surf2 = ...Segments.Radius.MedialExtensorCyl.cyl;
-    SPLine.StringMesh = 30;
-    SPLine.RelTol=0.0000001;
-    SPLine = {
-      AnyMatrix InitWrapPos = {
-          transf3D({....Sign*1*.Surf2.Radius, 1.1*.Surf2.Radius, 0.3*.Surf2.Length }, &.Surf2)
-      };
-      InitWrapPosVecArr = {None, &InitWrapPos, None };
-    };
-  };
-};
-
-MuscleGroup ExtensorPollicisLongus = {
-  AnyMuscleShortestPath ExtensorPollicisLongus ={
-    AnyMuscleModel &MusMdl = ...MuscleModels.ExtensorPollicisLongus;
-    AnyRefNode &Org = ...Segments.Ulna.O_ExtensorPollicisLongus;
-    AnyRefNode &Via1 = ...Segments.Radius.Via_ExtensorPollicisLongus;
-    AnyRefNode &Via2 = ...Segments.Hand.Finger1MetaRef.Via1_ExtensorPollicisLongus;
-    AnyRefNode &Ins = ...Segments.Hand.Finger1MetaRef.I_ExtensorPollicisLongus;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-    AnySurfCylinder &Surf2 = ...Segments.Radius.MedialExtensorCyl.cyl;
-
-    SPLine.StringMesh = 45;
-    SPLine.RelTol=0.0000001;
-    SPLine = {
-      AnyMatrix InitWrapPos = {
-          transf3D({....Sign*1*.Surf2.Radius, 1.1*.Surf2.Radius, 0.3*.Surf2.Length }, &.Surf2)
-      };
-      InitWrapPosVecArr = {None, &InitWrapPos, None};
-    };
-  };
-};
-
-MuscleGroup ExtensorCarpiRadialisLongus = {
-  AnyMuscleShortestPath ExtensorCarpiRadialisLongus ={
-    AnySurfCylinder &Surf1 = ...Segments.Radius.MedialExtensorCyl.cyl;
-    AnyMuscleModel &MusMdl = ...MuscleModels.ExtensorCarpiRadialisLongus;
-    AnyRefNode &Org = ...Segments.Humerus.O_ExtensorCarpiRadialisLongus;
-    AnyRefNode &Via1 = ...Segments.Radius.Via_ExtensorCarpiRadialisLongus;
-    AnyRefNode &Ins = ...Segments.Hand.Finger2MetaRef.I_ExtensorCarpiRadialisLongus;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-    SPLine.StringMesh = 45;
-    SPLine.AbsTol=1e-6;
-    SPLine.RelTol=1e-7;
-    SPLine = {
-      AnyMatrix InitWrapPos = transf3D({{....Sign*1*.Surf1.Radius, 1.1*.Surf1.Radius, 0.3*.Surf1.Length }}, &.Surf1);
-      InitWrapPosVecArr = { None,&InitWrapPos };
-    };
-  };
-};
-
-MuscleGroup ExtensorCarpiRadialisBrevis = {
-  AnyMuscleShortestPath ExtensorCarpiRadialisBrevis ={
-    AnyMuscleModel &MusMdl = ...MuscleModels.ExtensorCarpiRadialisBrevis;
-    AnyRefNode &Org = ...Segments.Humerus.O_ExtensorCarpiRadialisBrevis;
-    AnyRefNode &Via1 = ...Segments.Radius.Via_ExtensorCarpiRadialisBrevis;
-    AnyRefNode &Via2 = ...Segments.Hand.Finger3MetaRef.Via_ExtensorCarpiRadialisBrevis;
-    AnyRefNode &Ins = ...Segments.Hand.Finger3MetaRef.I_ExtensorCarpiRadialisBrevis;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-
-    AnySurfEllipsoid &Surf1 = ...Segments.Radius.ExtensorMuscleEllipsoid.ellipsoid;
-    SPLine = {
-      AnyMatrix InitWrapPos = {
-        transf3D({-0.2*.Surf1.Radius[0],-0.6*.Surf1.Radius[1], ....Sign*0.9*.Surf1.Radius[2] }, &.Surf1 ),
-        transf3D({-0.8*.Surf1.Radius[0],-0.5*.Surf1.Radius[1], ....Sign*0.8*.Surf1.Radius[2]  }, &.Surf1 )
-      };
-      InitWrapPosVecArr = {None,&InitWrapPos,None};
-    };
-    SPLine.StringMesh = 60;
-    SPLine.RelTol=10e-6;
-    SPLine.AbsTol=10e-6;
-  };
-};
-
-MuscleGroup ExtensorCarpiUlnaris = {
-  AnyMuscleShortestPath ExtensorCarpiUlnaris ={
-    AnyMuscleModel &MusMdl = ...MuscleModels.ExtensorCarpiUlnaris;
-    AnyRefNode &Org = ...Segments.Humerus.O_ExtensorCarpiUlnaris;
-    AnyRefNode &Via1 = ...Segments.Ulna.Via1_ExtensorCarpiUlnaris;
-  //  AnyRefNode &Via2 = ...Segments.Ulna.Via2_ExtensorCarpiUlnaris;
-    AnyRefNode &Via2 = ...Segments.Radius.Via_ExtensorCarpiUlnaris;
-    AnyRefNode &Ins = ...Segments.Hand.Finger5MetaRef.I_ExtensorCarpiUlnaris;
-    AnySurfCylinder &Surf2 = ...Segments.Radius.MedialExtensorCyl.cyl;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-    SPLine.StringMesh = 35;
-    SPLine.RelTol=0.0000001;
-    SPLine = {
-      AnyMatrix InitWrapPos = {transf3D({....Sign*-0.4*.Surf2.Radius, 1.1*.Surf2.Radius, 0.8*.Surf2.Length }, &.Surf2),
-                              transf3D({....Sign*1.3*.Surf2.Radius, 0.5*.Surf2.Radius, 0.8*.Surf2.Length }, &.Surf2)};
-      InitWrapPosVecArr = { None, None, &InitWrapPos};
-    };
-  };
-};
-
-MuscleGroup FlexorCarpiUlnaris = {
-  AnyMuscleShortestPath FlexorCarpiUlnaris  ={
-    AnyMuscleModel &MusMdl = ...MuscleModels.FlexorCarpiUlnaris;
-    AnyRefNode &Org = ...Segments.Humerus.O_FlexorCarpiUlnaris;
-    AnyRefNode &Via1 = ...Segments.Ulna.Via1_FlexorCarpiUlnaris;
-    AnyRefNode &Via2 = ...Segments.Radius.Via_FlexorCarpiUlnaris;
-    AnyRefNode &Ins = ...Segments.Hand.Finger5MetaRef.I_FlexorCarpiUlnaris;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-    AnySurfCylinder &Surf2 = ...Segments.Radius.FlexorMuscleCyl.cyl;
-    SPLine.StringMesh = 30;
-    SPLine = {
-      AnyMatrix InitWrapPos = {
-        transf3D({....Sign*-0.8*.Surf2.Radius, 1.2*.Surf2.Radius, 0.8*.Surf2.Length }, &.Surf2 ) ,
-        transf3D({....Sign*0.1*.Surf2.Radius, 1.2*.Surf2.Radius, 0.8*.Surf2.Length }, &.Surf2 )
-      };
-      InitWrapPosVecArr = {None, None ,&InitWrapPos};
-    };
-  };
-};
-
-MuscleGroup FlexorCarpiRadialis = {
-  AnyMuscleShortestPath FlexorCarpiRadialis  ={
-    AnyMuscleModel &MusMdl = ...MuscleModels.FlexorCarpiRadialis;
-    AnyRefNode &Org = ...Segments.Humerus.O_FlexorCarpiRadialis;
-    AnyRefNode &Via2 = ...Segments.Radius.Via_FlexorCarpiRadialis;
-    AnyRefNode &Ins = ...Segments.Hand.Finger2MetaRef.I_FlexorCarpiRadialis;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-
-    AnySurfEllipsoid &Surf1 = ...Segments.Radius.FlexorMuscleEllipsoid.ellipsoid;
-    SPLine = {
-      AnyMatrix InitWrapPos = {
-        transf3D({-0.2*.Surf1.Radius[0],-0.5*.Surf1.Radius[1], ....Sign*-0.8*.Surf1.Radius[2] }, &.Surf1 ) ,
-        transf3D({-0.8*.Surf1.Radius[0],-0.5*.Surf1.Radius[1], ....Sign*-0.7*.Surf1.Radius[2]  }, &.Surf1 )
-      };
-      InitWrapPosVecArr = {None,&InitWrapPos};
-    };
-    SPLine.StringMesh = 25;
-    SPLine.RelTol=0.0000001;
-  };
-};
-
-MuscleGroup PalmarisLongus = {
-  AnyMuscleShortestPath PalmarisLongus  ={
-    AnyMuscleModel &MusMdl = ...MuscleModels.PalmarisLongus;
-    AnyRefNode &Org = ...Segments.Humerus.O_PalmarisLongus;
-    AnyRefNode &Via2 = ...Segments.Radius.Via_PalmarisLongus;
-    AnyRefNode &Ins = ...Segments.Hand.Finger4MetaRef.I_PalmarisLongus;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-
-    AnySurfEllipsoid &Surf1 = ...Segments.Radius.FlexorMuscleEllipsoid.ellipsoid;
-    SPLine = {
-      AnyMatrix InitWrapPos = {
-        transf3D({-0.2*.Surf1.Radius[0],0.1*.Surf1.Radius[1], ....Sign*-1.0*.Surf1.Radius[2] }, &.Surf1 ) ,
-        transf3D({-0.8*.Surf1.Radius[0],0.1*.Surf1.Radius[1], ....Sign*-0.9*.Surf1.Radius[2]  }, &.Surf1 )
-      };
-      InitWrapPosVecArr = {None,&InitWrapPos};
-    };
-    SPLine.StringMesh = 25;
-    SPLine.RelTol=0.0000001;
-  };
-};
-
-MuscleGroup FlexorDigitorumSuperficialis = {
-  AnyMuscleShortestPath FlexorDigitorumSuperficialisDigit5 ={
-    AnyMuscleModel &MusMdl = ...MuscleModels.FlexorDigitorumSuperficialisDigit5;
-    AnyRefNode &Org = ...Segments.Humerus.O_FlexorDigitorumSuperficialis;
-    AnyRefNode &Via1 = ...Segments.Radius.Via_FlexorDigitorumSuperficialisDigit5;
-    AnyRefNode &Via2 = ...Segments.Hand.Finger5MetaRef.Via_FlexorDigitorumSuperficialisDigit5;
-    AnyRefNode &Ins = ...Segments.Hand.Finger5MetaRef.I_FlexorDigitorumSuperficialisDigit5;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-
-    AnySurfEllipsoid &Surf1 = ...Segments.Radius.FlexorMuscleEllipsoid.ellipsoid;
-    SPLine = {
-      AnyMatrix InitWrapPos = {
-        transf3D({-0.2*.Surf1.Radius[0],-0.2*.Surf1.Radius[1], ....Sign*-1.1*.Surf1.Radius[2] }, &.Surf1 ) ,
-        transf3D({-0.8*.Surf1.Radius[0],-0.2*.Surf1.Radius[1], ....Sign*-1.0*.Surf1.Radius[2]  }, &.Surf1 )
-      };
-      InitWrapPosVecArr = {None,&InitWrapPos,None};
-    };
-    SPLine.StringMesh = 25;
-    SPLine.RelTol=0.0000001;
-  };
-
-  AnyMuscleShortestPath FlexorDigitorumSuperficialisDigit4 ={
-    AnyMuscleModel &MusMdl = ...MuscleModels.FlexorDigitorumSuperficialisDigit4;
-    AnyRefNode &Org = ...Segments.Humerus.O_FlexorDigitorumSuperficialis;
-    AnyRefNode &Via1 = ...Segments.Radius.Via_FlexorDigitorumSuperficialisDigit4;
-    AnyRefNode &Via2 = ...Segments.Hand.Finger4MetaRef.Via_FlexorDigitorumSuperficialisDigit4;
-    AnyRefNode &Ins = ...Segments.Hand.Finger4MetaRef.I_FlexorDigitorumSuperficialisDigit4;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-
-    AnySurfEllipsoid &Surf1 = ...Segments.Radius.FlexorMuscleEllipsoid.ellipsoid;
-    SPLine = {
-      AnyMatrix InitWrapPos = {
-        transf3D({-0.2*.Surf1.Radius[0],-0.3*.Surf1.Radius[1], ....Sign*-1.1*.Surf1.Radius[2] }, &.Surf1 ) ,
-        transf3D({-0.8*.Surf1.Radius[0],-0.3*.Surf1.Radius[1], ....Sign*-1.0*.Surf1.Radius[2]  }, &.Surf1 )
-      };
-      InitWrapPosVecArr = {None,&InitWrapPos,None};
-    };
-    SPLine.StringMesh = 25;
-    SPLine.RelTol=0.0000001;
-  };
-
-  AnyMuscleShortestPath FlexorDigitorumSuperficialisDigit3 ={
-    AnyMuscleModel &MusMdl = ...MuscleModels.FlexorDigitorumSuperficialisDigit3;
-    AnyRefNode &Org = ...Segments.Humerus.O_FlexorDigitorumSuperficialis;
-    AnyRefNode &Via1 = ...Segments.Radius.Via_FlexorDigitorumSuperficialisDigit3;
-    AnyRefNode &Via2 = ...Segments.Hand.Finger3MetaRef.Via_FlexorDigitorumSuperficialisDigit3;
-    AnyRefNode &Ins = ...Segments.Hand.Finger3MetaRef.I_FlexorDigitorumSuperficialisDigit3;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-
-    AnySurfEllipsoid &Surf1 = ...Segments.Radius.FlexorMuscleEllipsoid.ellipsoid;
-    SPLine = {
-      AnyMatrix InitWrapPos = {
-        transf3D({-0.2*.Surf1.Radius[0],-0.4*.Surf1.Radius[1], ....Sign*-1.1*.Surf1.Radius[2] }, &.Surf1 ) ,
-        transf3D({-0.8*.Surf1.Radius[0],-0.4*.Surf1.Radius[1], ....Sign*-1.0*.Surf1.Radius[2]  }, &.Surf1 )
-      };
-      InitWrapPosVecArr = {None,&InitWrapPos,None};
-    };
-    SPLine.StringMesh = 25;
-    SPLine.RelTol=0.0000001;
-  };
-  AnyMuscleShortestPath FlexorDigitorumSuperficialisDigit2 ={
-    AnyMuscleModel &MusMdl = ...MuscleModels.FlexorDigitorumSuperficialisDigit2;
-    AnyRefNode &Org = ...Segments.Humerus.O_FlexorDigitorumSuperficialis;
-    AnyRefNode &Via1 = ...Segments.Radius.Via_FlexorDigitorumSuperficialisDigit2;
-    AnyRefNode &Via2 = ...Segments.Hand.Finger2MetaRef.Via_FlexorDigitorumSuperficialisDigit2;
-    AnyRefNode &Ins = ...Segments.Hand.Finger2MetaRef.I_FlexorDigitorumSuperficialisDigit2;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-
-    AnySurfEllipsoid &Surf1 = ...Segments.Radius.FlexorMuscleEllipsoid.ellipsoid;
-    SPLine = {
-      AnyMatrix InitWrapPos = {
-        transf3D({-0.2*.Surf1.Radius[0],-0.5*.Surf1.Radius[1], ....Sign*-1.1*.Surf1.Radius[2] }, &.Surf1 ) ,
-        transf3D({-0.8*.Surf1.Radius[0],-0.5*.Surf1.Radius[1], ....Sign*-1.0*.Surf1.Radius[2]  }, &.Surf1 )
-      };
-      InitWrapPosVecArr = {None,&InitWrapPos,None};
-    };
-    SPLine.StringMesh = 30;
-  };
-};
-
-MuscleGroup FlexorDigitorumProfundus = {
-  AnyMuscleShortestPath FlexorDigitorumProfundusDigit5 ={
-    AnyMuscleModel &MusMdl = ...MuscleModels.FlexorDigitorumProfundusDigit5;
-    AnyRefNode &Org = ...Segments.Ulna.O_FlexorDigitorumProfundus;
-    AnyRefNode &Via1 = ...Segments.Radius.Via_FlexorDigitorumProfundusDigit5;
-    AnyRefNode &Via2 = ...Segments.Hand.Finger5MetaRef.Via_FlexorDigitorumProfundusDigit5;
-    AnyRefNode &Ins = ...Segments.Hand.Finger5MetaRef.I_FlexorDigitorumProfundusDigit5;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-
-    AnySurfEllipsoid &Surf1 = ...Segments.Radius.FlexorMuscleEllipsoid.ellipsoid;
-    SPLine = {
-      AnyMatrix InitWrapPos = {
-        transf3D({-0.2*.Surf1.Radius[0],-0.1*.Surf1.Radius[1], ....Sign*-1.0*.Surf1.Radius[2] }, &.Surf1 ) ,
-        transf3D({-0.8*.Surf1.Radius[0],-0.1*.Surf1.Radius[1], ....Sign*-0.9*.Surf1.Radius[2]  }, &.Surf1 )
-      };
-      InitWrapPosVecArr = {None,&InitWrapPos,None};
-    };
-    SPLine.StringMesh = 35;
-  };
-
-  AnyMuscleShortestPath FlexorDigitorumProfundusDigit4 ={
-    AnyMuscleModel &MusMdl = ...MuscleModels.FlexorDigitorumProfundusDigit4;
-    AnyRefNode &Org = ...Segments.Ulna.O_FlexorDigitorumProfundus;
-    AnyRefNode &Via1 = ...Segments.Radius.Via_FlexorDigitorumProfundusDigit4;
-    AnyRefNode &Via2 = ...Segments.Hand.Finger4MetaRef.Via_FlexorDigitorumProfundusDigit4;
-    AnyRefNode &Ins = ...Segments.Hand.Finger4MetaRef.I_FlexorDigitorumProfundusDigit4;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-
-    AnySurfEllipsoid &Surf1 = ...Segments.Radius.FlexorMuscleEllipsoid.ellipsoid;
-    SPLine = {
-      AnyMatrix InitWrapPos = {
-        transf3D({-0.2*.Surf1.Radius[0],-0.2*.Surf1.Radius[1], ....Sign*-1.0*.Surf1.Radius[2] }, &.Surf1 ) ,
-        transf3D({-0.8*.Surf1.Radius[0],-0.2*.Surf1.Radius[1], ....Sign*-0.9*.Surf1.Radius[2]  }, &.Surf1 )
-      };
-      InitWrapPosVecArr = {None,&InitWrapPos,None};
-    };
-    SPLine.StringMesh = 35;
-  };
-
-  AnyMuscleShortestPath FlexorDigitorumProfundusDigit3 ={
-    AnyMuscleModel &MusMdl = ...MuscleModels.FlexorDigitorumProfundusDigit3;
-    AnyRefNode &Org = ...Segments.Ulna.O_FlexorDigitorumProfundus;
-    AnyRefNode &Via1 = ...Segments.Radius.Via_FlexorDigitorumProfundusDigit3;
-    AnyRefNode &Via2 = ...Segments.Hand.Finger3MetaRef.Via_FlexorDigitorumProfundusDigit3;
-    AnyRefNode &Ins = ...Segments.Hand.Finger3MetaRef.I_FlexorDigitorumProfundusDigit3;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-
-    AnySurfEllipsoid &Surf1 = ...Segments.Radius.FlexorMuscleEllipsoid.ellipsoid;
-    SPLine = {
-      AnyMatrix InitWrapPos = {
-        transf3D({-0.2*.Surf1.Radius[0],-0.3*.Surf1.Radius[1], ....Sign*-1.0*.Surf1.Radius[2] }, &.Surf1 ) ,
-        transf3D({-0.8*.Surf1.Radius[0],-0.3*.Surf1.Radius[1], ....Sign*-0.9*.Surf1.Radius[2]  }, &.Surf1 )
-      };
-      InitWrapPosVecArr = {None,&InitWrapPos,None};
-    };
-    SPLine.StringMesh = 35;
-  };
-
-  AnyMuscleShortestPath FlexorDigitorumProfundusDigit2 ={
-    AnyMuscleModel &MusMdl = ...MuscleModels.FlexorDigitorumProfundusDigit2;
-    AnyRefNode &Org = ...Segments.Ulna.O_FlexorDigitorumProfundus;
-    AnyRefNode &Via1 = ...Segments.Radius.Via_FlexorDigitorumProfundusDigit2;
-    AnyRefNode &Via2 = ...Segments.Hand.Finger2MetaRef.Via_FlexorDigitorumProfundusDigit2;
-    AnyRefNode &Ins = ...Segments.Hand.Finger2MetaRef.I_FlexorDigitorumProfundusDigit2;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-
-    AnySurfEllipsoid &Surf1 = ...Segments.Radius.FlexorMuscleEllipsoid.ellipsoid;
-    SPLine = {
-      AnyMatrix InitWrapPos = {
-        transf3D({-0.2*.Surf1.Radius[0],-0.4*.Surf1.Radius[1], ....Sign*-1.0*.Surf1.Radius[2] }, &.Surf1 ) ,
-        transf3D({-0.8*.Surf1.Radius[0],-0.4*.Surf1.Radius[1], ....Sign*-0.9*.Surf1.Radius[2]  }, &.Surf1 )
-      };
-      InitWrapPosVecArr = {None,&InitWrapPos,None};
-    };
-    SPLine.StringMesh = 35;
-  };
-};
-
-MuscleGroup ExtensorDigitorum ={
-  AnyMuscleShortestPath ExtensorDigitorumDigit5 ={
-    AnyMuscleModel &MusMdl = ...MuscleModels.ExtensorDigitorumDigit5;
-    AnyRefNode &Org = ...Segments.Humerus.O_ExtensorDigitorum;
-
-    AnyRefNode &Via2 = ...Segments.Radius.Via_ExtensorDigitorumDigit5;
-    AnyRefNode &Via1 = ...Segments.Hand.Finger5MetaRef.Via_ExtensorDigitorumDigit5;
-
-    AnyRefNode &Ins = ...Segments.Hand.Finger5MetaRef.I_ExtensorDigitorumDigit5;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-
-    AnySurfEllipsoid &Surf1 = ...Segments.Radius.ExtensorMuscleEllipsoid.ellipsoid;
-    SPLine = {
-      AnyMatrix InitWrapPos = {
-        transf3D({-0.2*.Surf1.Radius[0],-0.1*.Surf1.Radius[1], ....Sign*1.0*.Surf1.Radius[2] }, &.Surf1 ) ,
-        transf3D({-0.8*.Surf1.Radius[0],-0.05*.Surf1.Radius[1], ....Sign*1.0*.Surf1.Radius[2]  }, &.Surf1 )
-      };
-      InitWrapPosVecArr = {None,&InitWrapPos,None};
-    };
-    SPLine.StringMesh = 50;
-    SPLine.RelTol=1e-7;
-    SPLine.AbsTol=1e-5;
-  };
-
-  AnyMuscleShortestPath ExtensorDigitorumDigit4 ={
-    AnyMuscleModel &MusMdl = ...MuscleModels.ExtensorDigitorumDigit4;
-    AnyRefNode &Org = ...Segments.Humerus.O_ExtensorDigitorum;
-    AnyRefNode &Via2 = ...Segments.Radius.Via_ExtensorDigitorumDigit4;
-    AnyRefNode &Via1 = ...Segments.Hand.Finger4MetaRef.Via_ExtensorDigitorumDigit4;
-    AnyRefNode &Ins = ...Segments.Hand.Finger4MetaRef.I_ExtensorDigitorumDigit4;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-
-    AnySurfEllipsoid &Surf1 = ...Segments.Radius.ExtensorMuscleEllipsoid.ellipsoid;
-    SPLine = {
-      AnyMatrix InitWrapPos = {
-        transf3D({-0.2*.Surf1.Radius[0],-0.2*.Surf1.Radius[1], ....Sign*1.0*.Surf1.Radius[2] }, &.Surf1 ) ,
-        transf3D({-0.8*.Surf1.Radius[0],-0.15*.Surf1.Radius[1], ....Sign*1.0*.Surf1.Radius[2]  }, &.Surf1 )
-      };
-      InitWrapPosVecArr = {None,&InitWrapPos,None};
-    };
-    SPLine.StringMesh = 50;
-    SPLine.RelTol=1e-7;
-    SPLine.AbsTol=1e-5;
-  };
-
-  AnyMuscleShortestPath ExtensorDigitorumDigit3 ={
-    AnyMuscleModel &MusMdl = ...MuscleModels.ExtensorDigitorumDigit3;
-    AnyRefNode &Org = ...Segments.Humerus.O_ExtensorDigitorum;
-    AnyRefNode &Via2 = ...Segments.Radius.Via_ExtensorDigitorumDigit3;
-    AnyRefNode &Via1 = ...Segments.Hand.Finger3MetaRef.Via_ExtensorDigitorumDigit3;
-    AnyRefNode &Ins = ...Segments.Hand.Finger3MetaRef.I_ExtensorDigitorumDigit3;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-
-    AnySurfEllipsoid &Surf1 = ...Segments.Radius.ExtensorMuscleEllipsoid.ellipsoid;
-    SPLine = {
-      AnyMatrix InitWrapPos = {
-        transf3D({-0.2*.Surf1.Radius[0],-0.3*.Surf1.Radius[1], ....Sign*1.0*.Surf1.Radius[2] }, &.Surf1 ) ,
-        transf3D({-0.8*.Surf1.Radius[0],-0.25*.Surf1.Radius[1], ....Sign*1.0*.Surf1.Radius[2]  }, &.Surf1 )
-      };
-      InitWrapPosVecArr = {None,&InitWrapPos,None};
-    };
-    SPLine.StringMesh = 50;
-    SPLine.RelTol=1e-7;
-    SPLine.AbsTol=1e-5;
-  };
-
-  AnyMuscleShortestPath ExtensorDigitorumDigit2 ={
-    AnyMuscleModel &MusMdl = ...MuscleModels.ExtensorDigitorumDigit2;
-    AnyRefNode &Org = ...Segments.Humerus.O_ExtensorDigitorum;
-    AnyRefNode &Via2 = ...Segments.Radius.Via_ExtensorDigitorumDigit2;
-    AnyRefNode &Via1 = ...Segments.Hand.Finger2MetaRef.Via_ExtensorDigitorumDigit2;
-    AnyRefNode &Ins = ...Segments.Hand.Finger2MetaRef.I_ExtensorDigitorumDigit2;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-
-    AnySurfEllipsoid &Surf1 = ...Segments.Radius.ExtensorMuscleEllipsoid.ellipsoid;
-    SPLine = {
-      AnyMatrix InitWrapPos = {
-        transf3D({-0.2*.Surf1.Radius[0],-0.4*.Surf1.Radius[1], ....Sign*1.0*.Surf1.Radius[2] }, &.Surf1 ) ,
-        transf3D({-0.8*.Surf1.Radius[0],-0.35*.Surf1.Radius[1], ....Sign*1.0*.Surf1.Radius[2]  }, &.Surf1 )
-      };
-      InitWrapPosVecArr = {None,&InitWrapPos,None};
-    };
-    SPLine.StringMesh = 50;
-  };
-};
-
-MuscleGroup ExtensorDigitiMinimi = {
-  AnyMuscleShortestPath ExtensorDigitiMinimi ={
-    AnyMuscleModel &MusMdl = ...MuscleModels.ExtensorDigitiMinimi;
-    AnyRefNode &Org = ...Segments.Humerus.O_ExtensorDigitiMinimi;
-    AnyRefNode &Via1 = ...Segments.Radius.Via_ExtensorDigitiMinimi;
-    AnyRefNode &Via2 = ...Segments.Hand.Finger5MetaRef.Via_ExtensorDigitiMinimi;
-    AnyRefNode &Ins = ...Segments.Hand.Finger5MetaRef.I_ExtensorDigitiMinimi;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-
-    AnySurfEllipsoid &Surf1 = ...Segments.Radius.ExtensorMuscleEllipsoid.ellipsoid;
-    SPLine = {
-      AnyMatrix InitWrapPos = {
-        transf3D({-0.2*.Surf1.Radius[0],-0.05*.Surf1.Radius[1], ....Sign*1.0*.Surf1.Radius[2] }, &.Surf1 ) ,
-        transf3D({-0.8*.Surf1.Radius[0],0.05*.Surf1.Radius[1], ....Sign*1.0*.Surf1.Radius[2]  }, &.Surf1 )
-      };
-      InitWrapPosVecArr = {None,&InitWrapPos,None};
-    };
-    SPLine.StringMesh = 30;
-    SPLine.RelTol=1e-7;
-    SPLine.AbsTol=1e-5;
-  };
-};
-
-MuscleGroup FlexorPollicisLongus = {
-  AnyMuscleShortestPath FlexorPollicisLongus ={
-    AnyMuscleModel &MusMdl = ...MuscleModels.FlexorPollicisLongus;
-    AnyRefNode &Org = ...Segments.Radius.O_FlexorPollicisLongus;
-    AnyRefNode &Via1 = ...Segments.Radius.Via_FlexorPollicisLongus;
-    AnyRefNode &Via2 = ...Segments.Hand.Finger1MetaRef.Via_FlexorPollicisLongus;
-    AnyRefNode &Ins = ...Segments.Hand.Finger1MetaRef.I_FlexorPollicisLongus;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-
-    AnySurfEllipsoid &Surf1 = ...Segments.Radius.FlexorMuscleEllipsoid.ellipsoid;
-    SPLine = {
-      AnyMatrix InitWrapPos = {
-        transf3D({-0.2*.Surf1.Radius[0],-0.6*.Surf1.Radius[1], ....Sign*-0.9*.Surf1.Radius[2] }, &.Surf1 ) ,
-        transf3D({-0.8*.Surf1.Radius[0],-0.6*.Surf1.Radius[1], ....Sign*-0.8*.Surf1.Radius[2]  }, &.Surf1 )
-      };
-      InitWrapPosVecArr = {None,&InitWrapPos,None};
-    };
-    SPLine.StringMesh = 25;
-    SPLine.RelTol=1e-7;
-    SPLine.AbsTol=1e-5;
   };
 };
 
