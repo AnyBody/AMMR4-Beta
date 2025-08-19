@@ -16,9 +16,9 @@ AnyVar StrengthScaleHand = .StrengthScaling.Hand.StrengthScale;
 
 
 
-/////////////////////////////////////////////////////
+/////////////////////////////////////////////
 //     BicepsBrachiiBreve (1 element )     //
-/////////////////////////////////////////////////////
+/////////////////////////////////////////////
 AnyMuscleModel BicepsBrachiiBreve =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.BicepsBrachiiBreve;
@@ -29,14 +29,14 @@ AnyMuscleModel BicepsBrachiiBreve =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
+ 
 
 
 
 
-
-//////////////////////////////////////////////////////
+//////////////////////////////////////////////
 //     BicepsBrachiiLongum (1 element )     //
-//////////////////////////////////////////////////////
+//////////////////////////////////////////////
 AnyMuscleModel BicepsBrachiiLongum =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.BicepsBrachiiLongum;
@@ -47,17 +47,17 @@ AnyMuscleModel BicepsBrachiiLongum =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 
 
 
 
 ///////////////////////////////////////////
-//     coracobrachialis (6 elements)     //
+//     Coracobrachialis (6 elements)     //
 ///////////////////////////////////////////
 AnyMuscleModel Coracobrachialis1 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.coracobrachialis;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Coracobrachialis;
   AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -65,10 +65,10 @@ AnyMuscleModel Coracobrachialis1 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.Coracobrachialis1.Lf0 +.Coracobrachialis2.Lf0 +.Coracobrachialis3.Lf0 +.Coracobrachialis4.Lf0 +.Coracobrachialis5.Lf0 +.Coracobrachialis6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel Coracobrachialis2 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.coracobrachialis;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Coracobrachialis;
   AnyIntVar MuscleElemNo = 2; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -76,10 +76,10 @@ AnyMuscleModel Coracobrachialis2 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.Coracobrachialis1.Lf0 +.Coracobrachialis2.Lf0 +.Coracobrachialis3.Lf0 +.Coracobrachialis4.Lf0 +.Coracobrachialis5.Lf0 +.Coracobrachialis6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel Coracobrachialis3 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.coracobrachialis;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Coracobrachialis;
   AnyIntVar MuscleElemNo = 3; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -87,10 +87,10 @@ AnyMuscleModel Coracobrachialis3 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.Coracobrachialis1.Lf0 +.Coracobrachialis2.Lf0 +.Coracobrachialis3.Lf0 +.Coracobrachialis4.Lf0 +.Coracobrachialis5.Lf0 +.Coracobrachialis6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel Coracobrachialis4 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.coracobrachialis;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Coracobrachialis;
   AnyIntVar MuscleElemNo = 4; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -98,10 +98,10 @@ AnyMuscleModel Coracobrachialis4 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.Coracobrachialis1.Lf0 +.Coracobrachialis2.Lf0 +.Coracobrachialis3.Lf0 +.Coracobrachialis4.Lf0 +.Coracobrachialis5.Lf0 +.Coracobrachialis6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel Coracobrachialis5 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.coracobrachialis;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Coracobrachialis;
   AnyIntVar MuscleElemNo = 5; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -109,10 +109,10 @@ AnyMuscleModel Coracobrachialis5 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.Coracobrachialis1.Lf0 +.Coracobrachialis2.Lf0 +.Coracobrachialis3.Lf0 +.Coracobrachialis4.Lf0 +.Coracobrachialis5.Lf0 +.Coracobrachialis6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel Coracobrachialis6 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.coracobrachialis;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Coracobrachialis;
   AnyIntVar MuscleElemNo = 6; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -120,7 +120,7 @@ AnyMuscleModel Coracobrachialis6 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.Coracobrachialis1.Lf0 +.Coracobrachialis2.Lf0 +.Coracobrachialis3.Lf0 +.Coracobrachialis4.Lf0 +.Coracobrachialis5.Lf0 +.Coracobrachialis6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 
 
 
@@ -139,7 +139,7 @@ AnyMuscleModel deltoideus_scapular_part_1 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 
 #endif
 
@@ -159,7 +159,7 @@ AnyMuscleModel deltoideus_scapular_part_2 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 
 #endif
 
@@ -179,7 +179,7 @@ AnyMuscleModel deltoideus_scapular_part_3 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 
 #endif
 
@@ -199,7 +199,7 @@ AnyMuscleModel deltoideus_scapular_part_4 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 
 #endif
 
@@ -219,7 +219,7 @@ AnyMuscleModel deltoideus_scapular_part_5 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 
 #endif
 
@@ -239,7 +239,7 @@ AnyMuscleModel deltoideus_scapular_part_6 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 
 #endif
 
@@ -259,7 +259,7 @@ AnyMuscleModel deltoideus_clavicular_part_1 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 
 #endif
 
@@ -279,7 +279,7 @@ AnyMuscleModel deltoideus_clavicular_part_2 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 
 #endif
 
@@ -299,7 +299,7 @@ AnyMuscleModel deltoideus_clavicular_part_3 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 
 #endif
 
@@ -319,7 +319,7 @@ AnyMuscleModel deltoideus_clavicular_part_4 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 
 #endif
 
@@ -339,7 +339,7 @@ AnyMuscleModel deltoideus_clavicular_part_5 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 
 #endif
 
@@ -359,19 +359,19 @@ AnyMuscleModel deltoideus_clavicular_part_6 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 
 #endif
 
 
 
 #if BM_ARM_DELTOID_WRAPPING != OFF
-////////////////////////////////////////////////////
-//     deltoideus_posterior_part (4 elements)     //
-////////////////////////////////////////////////////
+//////////////////////////////////////////////
+//     DeltoideusPosterior (4 elements)     //
+//////////////////////////////////////////////
 AnyMuscleModel DeltoideusPosterior1 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.deltoideus_posterior_part;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.DeltoideusPosterior;
   AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -379,10 +379,10 @@ AnyMuscleModel DeltoideusPosterior1 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.DeltoideusPosterior1.Lf0 +.DeltoideusPosterior2.Lf0 +.DeltoideusPosterior3.Lf0 +.DeltoideusPosterior4.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel DeltoideusPosterior2 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.deltoideus_posterior_part;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.DeltoideusPosterior;
   AnyIntVar MuscleElemNo = 2; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -390,10 +390,10 @@ AnyMuscleModel DeltoideusPosterior2 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.DeltoideusPosterior1.Lf0 +.DeltoideusPosterior2.Lf0 +.DeltoideusPosterior3.Lf0 +.DeltoideusPosterior4.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel DeltoideusPosterior3 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.deltoideus_posterior_part;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.DeltoideusPosterior;
   AnyIntVar MuscleElemNo = 3; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -401,10 +401,10 @@ AnyMuscleModel DeltoideusPosterior3 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.DeltoideusPosterior1.Lf0 +.DeltoideusPosterior2.Lf0 +.DeltoideusPosterior3.Lf0 +.DeltoideusPosterior4.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel DeltoideusPosterior4 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.deltoideus_posterior_part;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.DeltoideusPosterior;
   AnyIntVar MuscleElemNo = 4; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -412,19 +412,19 @@ AnyMuscleModel DeltoideusPosterior4 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.DeltoideusPosterior1.Lf0 +.DeltoideusPosterior2.Lf0 +.DeltoideusPosterior3.Lf0 +.DeltoideusPosterior4.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 
 #endif
 
 
 
 #if BM_ARM_DELTOID_WRAPPING != OFF
-//////////////////////////////////////////////////
-//     deltoideus_lateral_part (4 elements)     //
-//////////////////////////////////////////////////
+////////////////////////////////////////////
+//     DeltoideusLateral (4 elements)     //
+////////////////////////////////////////////
 AnyMuscleModel DeltoideusLateral1 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.deltoideus_lateral_part;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.DeltoideusLateral;
   AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -432,10 +432,10 @@ AnyMuscleModel DeltoideusLateral1 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.DeltoideusLateral1.Lf0 +.DeltoideusLateral2.Lf0 +.DeltoideusLateral3.Lf0 +.DeltoideusLateral4.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel DeltoideusLateral2 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.deltoideus_lateral_part;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.DeltoideusLateral;
   AnyIntVar MuscleElemNo = 2; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -443,10 +443,10 @@ AnyMuscleModel DeltoideusLateral2 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.DeltoideusLateral1.Lf0 +.DeltoideusLateral2.Lf0 +.DeltoideusLateral3.Lf0 +.DeltoideusLateral4.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel DeltoideusLateral3 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.deltoideus_lateral_part;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.DeltoideusLateral;
   AnyIntVar MuscleElemNo = 3; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -454,10 +454,10 @@ AnyMuscleModel DeltoideusLateral3 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.DeltoideusLateral1.Lf0 +.DeltoideusLateral2.Lf0 +.DeltoideusLateral3.Lf0 +.DeltoideusLateral4.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel DeltoideusLateral4 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.deltoideus_lateral_part;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.DeltoideusLateral;
   AnyIntVar MuscleElemNo = 4; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -465,19 +465,19 @@ AnyMuscleModel DeltoideusLateral4 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.DeltoideusLateral1.Lf0 +.DeltoideusLateral2.Lf0 +.DeltoideusLateral3.Lf0 +.DeltoideusLateral4.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 
 #endif
 
 
 
 #if BM_ARM_DELTOID_WRAPPING != OFF
-///////////////////////////////////////////////////
-//     deltoideus_anterior_part (4 elements)     //
-///////////////////////////////////////////////////
+/////////////////////////////////////////////
+//     DeltoideusAnterior (4 elements)     //
+/////////////////////////////////////////////
 AnyMuscleModel DeltoideusAnterior1 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.deltoideus_anterior_part;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.DeltoideusAnterior;
   AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -485,10 +485,10 @@ AnyMuscleModel DeltoideusAnterior1 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.DeltoideusAnterior1.Lf0 +.DeltoideusAnterior2.Lf0 +.DeltoideusAnterior3.Lf0 +.DeltoideusAnterior4.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel DeltoideusAnterior2 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.deltoideus_anterior_part;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.DeltoideusAnterior;
   AnyIntVar MuscleElemNo = 2; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -496,10 +496,10 @@ AnyMuscleModel DeltoideusAnterior2 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.DeltoideusAnterior1.Lf0 +.DeltoideusAnterior2.Lf0 +.DeltoideusAnterior3.Lf0 +.DeltoideusAnterior4.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel DeltoideusAnterior3 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.deltoideus_anterior_part;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.DeltoideusAnterior;
   AnyIntVar MuscleElemNo = 3; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -507,10 +507,10 @@ AnyMuscleModel DeltoideusAnterior3 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.DeltoideusAnterior1.Lf0 +.DeltoideusAnterior2.Lf0 +.DeltoideusAnterior3.Lf0 +.DeltoideusAnterior4.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel DeltoideusAnterior4 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.deltoideus_anterior_part;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.DeltoideusAnterior;
   AnyIntVar MuscleElemNo = 4; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -518,18 +518,18 @@ AnyMuscleModel DeltoideusAnterior4 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.DeltoideusAnterior1.Lf0 +.DeltoideusAnterior2.Lf0 +.DeltoideusAnterior3.Lf0 +.DeltoideusAnterior4.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 
 #endif
 
 
 
 ////////////////////////////////////////
-//     infraspinatus (6 elements)     //
+//     Infraspinatus (6 elements)     //
 ////////////////////////////////////////
 AnyMuscleModel Infraspinatus1 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.infraspinatus;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Infraspinatus;
   AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -537,10 +537,10 @@ AnyMuscleModel Infraspinatus1 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.Infraspinatus1.Lf0 +.Infraspinatus2.Lf0 +.Infraspinatus3.Lf0 +.Infraspinatus4.Lf0 +.Infraspinatus5.Lf0 +.Infraspinatus6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel Infraspinatus2 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.infraspinatus;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Infraspinatus;
   AnyIntVar MuscleElemNo = 2; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -548,10 +548,10 @@ AnyMuscleModel Infraspinatus2 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.Infraspinatus1.Lf0 +.Infraspinatus2.Lf0 +.Infraspinatus3.Lf0 +.Infraspinatus4.Lf0 +.Infraspinatus5.Lf0 +.Infraspinatus6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel Infraspinatus3 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.infraspinatus;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Infraspinatus;
   AnyIntVar MuscleElemNo = 3; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -559,10 +559,10 @@ AnyMuscleModel Infraspinatus3 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.Infraspinatus1.Lf0 +.Infraspinatus2.Lf0 +.Infraspinatus3.Lf0 +.Infraspinatus4.Lf0 +.Infraspinatus5.Lf0 +.Infraspinatus6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel Infraspinatus4 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.infraspinatus;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Infraspinatus;
   AnyIntVar MuscleElemNo = 4; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -570,10 +570,10 @@ AnyMuscleModel Infraspinatus4 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.Infraspinatus1.Lf0 +.Infraspinatus2.Lf0 +.Infraspinatus3.Lf0 +.Infraspinatus4.Lf0 +.Infraspinatus5.Lf0 +.Infraspinatus6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel Infraspinatus5 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.infraspinatus;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Infraspinatus;
   AnyIntVar MuscleElemNo = 5; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -581,10 +581,10 @@ AnyMuscleModel Infraspinatus5 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.Infraspinatus1.Lf0 +.Infraspinatus2.Lf0 +.Infraspinatus3.Lf0 +.Infraspinatus4.Lf0 +.Infraspinatus5.Lf0 +.Infraspinatus6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel Infraspinatus6 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.infraspinatus;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Infraspinatus;
   AnyIntVar MuscleElemNo = 6; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -592,17 +592,17 @@ AnyMuscleModel Infraspinatus6 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.Infraspinatus1.Lf0 +.Infraspinatus2.Lf0 +.Infraspinatus3.Lf0 +.Infraspinatus4.Lf0 +.Infraspinatus5.Lf0 +.Infraspinatus6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
+ 
 
 
 
 
-
-///////////////////////////////////////////
-//     latissimus_dorsi (11 elements)     //
-///////////////////////////////////////////
+//////////////////////////////////////////
+//     LatissimusDorsi (11 elements)     //
+//////////////////////////////////////////
 AnyMuscleModel LatissimusDorsi1 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.latissimus_dorsi;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.LatissimusDorsi;
   AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -610,10 +610,10 @@ AnyMuscleModel LatissimusDorsi1 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.LatissimusDorsi1.Lf0 +.LatissimusDorsi2.Lf0 +.LatissimusDorsi3.Lf0 +.LatissimusDorsi4.Lf0 +.LatissimusDorsi5.Lf0 +.LatissimusDorsi6.Lf0 +.LatissimusDorsi7.Lf0 +.LatissimusDorsi8.Lf0 +.LatissimusDorsi9.Lf0 +.LatissimusDorsi10.Lf0 +.LatissimusDorsi11.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel LatissimusDorsi2 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.latissimus_dorsi;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.LatissimusDorsi;
   AnyIntVar MuscleElemNo = 2; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -621,10 +621,10 @@ AnyMuscleModel LatissimusDorsi2 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.LatissimusDorsi1.Lf0 +.LatissimusDorsi2.Lf0 +.LatissimusDorsi3.Lf0 +.LatissimusDorsi4.Lf0 +.LatissimusDorsi5.Lf0 +.LatissimusDorsi6.Lf0 +.LatissimusDorsi7.Lf0 +.LatissimusDorsi8.Lf0 +.LatissimusDorsi9.Lf0 +.LatissimusDorsi10.Lf0 +.LatissimusDorsi11.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel LatissimusDorsi3 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.latissimus_dorsi;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.LatissimusDorsi;
   AnyIntVar MuscleElemNo = 3; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -632,10 +632,10 @@ AnyMuscleModel LatissimusDorsi3 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.LatissimusDorsi1.Lf0 +.LatissimusDorsi2.Lf0 +.LatissimusDorsi3.Lf0 +.LatissimusDorsi4.Lf0 +.LatissimusDorsi5.Lf0 +.LatissimusDorsi6.Lf0 +.LatissimusDorsi7.Lf0 +.LatissimusDorsi8.Lf0 +.LatissimusDorsi9.Lf0 +.LatissimusDorsi10.Lf0 +.LatissimusDorsi11.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel LatissimusDorsi4 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.latissimus_dorsi;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.LatissimusDorsi;
   AnyIntVar MuscleElemNo = 4; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -643,10 +643,10 @@ AnyMuscleModel LatissimusDorsi4 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.LatissimusDorsi1.Lf0 +.LatissimusDorsi2.Lf0 +.LatissimusDorsi3.Lf0 +.LatissimusDorsi4.Lf0 +.LatissimusDorsi5.Lf0 +.LatissimusDorsi6.Lf0 +.LatissimusDorsi7.Lf0 +.LatissimusDorsi8.Lf0 +.LatissimusDorsi9.Lf0 +.LatissimusDorsi10.Lf0 +.LatissimusDorsi11.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel LatissimusDorsi5 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.latissimus_dorsi;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.LatissimusDorsi;
   AnyIntVar MuscleElemNo = 5; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -654,10 +654,10 @@ AnyMuscleModel LatissimusDorsi5 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.LatissimusDorsi1.Lf0 +.LatissimusDorsi2.Lf0 +.LatissimusDorsi3.Lf0 +.LatissimusDorsi4.Lf0 +.LatissimusDorsi5.Lf0 +.LatissimusDorsi6.Lf0 +.LatissimusDorsi7.Lf0 +.LatissimusDorsi8.Lf0 +.LatissimusDorsi9.Lf0 +.LatissimusDorsi10.Lf0 +.LatissimusDorsi11.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel LatissimusDorsi6 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.latissimus_dorsi;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.LatissimusDorsi;
   AnyIntVar MuscleElemNo = 6; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -665,10 +665,10 @@ AnyMuscleModel LatissimusDorsi6 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.LatissimusDorsi1.Lf0 +.LatissimusDorsi2.Lf0 +.LatissimusDorsi3.Lf0 +.LatissimusDorsi4.Lf0 +.LatissimusDorsi5.Lf0 +.LatissimusDorsi6.Lf0 +.LatissimusDorsi7.Lf0 +.LatissimusDorsi8.Lf0 +.LatissimusDorsi9.Lf0 +.LatissimusDorsi10.Lf0 +.LatissimusDorsi11.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel LatissimusDorsi7 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.latissimus_dorsi;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.LatissimusDorsi;
   AnyIntVar MuscleElemNo = 7; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -676,10 +676,10 @@ AnyMuscleModel LatissimusDorsi7 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.LatissimusDorsi1.Lf0 +.LatissimusDorsi2.Lf0 +.LatissimusDorsi3.Lf0 +.LatissimusDorsi4.Lf0 +.LatissimusDorsi5.Lf0 +.LatissimusDorsi6.Lf0 +.LatissimusDorsi7.Lf0 +.LatissimusDorsi8.Lf0 +.LatissimusDorsi9.Lf0 +.LatissimusDorsi10.Lf0 +.LatissimusDorsi11.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel LatissimusDorsi8 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.latissimus_dorsi;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.LatissimusDorsi;
   AnyIntVar MuscleElemNo = 8; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -687,10 +687,10 @@ AnyMuscleModel LatissimusDorsi8 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.LatissimusDorsi1.Lf0 +.LatissimusDorsi2.Lf0 +.LatissimusDorsi3.Lf0 +.LatissimusDorsi4.Lf0 +.LatissimusDorsi5.Lf0 +.LatissimusDorsi6.Lf0 +.LatissimusDorsi7.Lf0 +.LatissimusDorsi8.Lf0 +.LatissimusDorsi9.Lf0 +.LatissimusDorsi10.Lf0 +.LatissimusDorsi11.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel LatissimusDorsi9 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.latissimus_dorsi;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.LatissimusDorsi;
   AnyIntVar MuscleElemNo = 9; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -698,10 +698,10 @@ AnyMuscleModel LatissimusDorsi9 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.LatissimusDorsi1.Lf0 +.LatissimusDorsi2.Lf0 +.LatissimusDorsi3.Lf0 +.LatissimusDorsi4.Lf0 +.LatissimusDorsi5.Lf0 +.LatissimusDorsi6.Lf0 +.LatissimusDorsi7.Lf0 +.LatissimusDorsi8.Lf0 +.LatissimusDorsi9.Lf0 +.LatissimusDorsi10.Lf0 +.LatissimusDorsi11.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel LatissimusDorsi10 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.latissimus_dorsi;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.LatissimusDorsi;
   AnyIntVar MuscleElemNo = 10; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -709,10 +709,10 @@ AnyMuscleModel LatissimusDorsi10 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.LatissimusDorsi1.Lf0 +.LatissimusDorsi2.Lf0 +.LatissimusDorsi3.Lf0 +.LatissimusDorsi4.Lf0 +.LatissimusDorsi5.Lf0 +.LatissimusDorsi6.Lf0 +.LatissimusDorsi7.Lf0 +.LatissimusDorsi8.Lf0 +.LatissimusDorsi9.Lf0 +.LatissimusDorsi10.Lf0 +.LatissimusDorsi11.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel LatissimusDorsi11 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.latissimus_dorsi;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.LatissimusDorsi;
   AnyIntVar MuscleElemNo = 11; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -720,17 +720,17 @@ AnyMuscleModel LatissimusDorsi11 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.LatissimusDorsi1.Lf0 +.LatissimusDorsi2.Lf0 +.LatissimusDorsi3.Lf0 +.LatissimusDorsi4.Lf0 +.LatissimusDorsi5.Lf0 +.LatissimusDorsi6.Lf0 +.LatissimusDorsi7.Lf0 +.LatissimusDorsi8.Lf0 +.LatissimusDorsi9.Lf0 +.LatissimusDorsi10.Lf0 +.LatissimusDorsi11.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
+ 
 
 
 
 
-
-///////////////////////////////////////////
-//     levator_scapulae (4 elements)     //
-///////////////////////////////////////////
+//////////////////////////////////////////
+//     LevatorScapulae (4 elements)     //
+//////////////////////////////////////////
 AnyMuscleModel LevatorScapulae1 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.levator_scapulae;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.LevatorScapulae;
   AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -738,10 +738,10 @@ AnyMuscleModel LevatorScapulae1 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.LevatorScapulae1.Lf0 +.LevatorScapulae2.Lf0 +.LevatorScapulae3.Lf0 +.LevatorScapulae4.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel LevatorScapulae2 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.levator_scapulae;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.LevatorScapulae;
   AnyIntVar MuscleElemNo = 2; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -749,10 +749,10 @@ AnyMuscleModel LevatorScapulae2 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.LevatorScapulae1.Lf0 +.LevatorScapulae2.Lf0 +.LevatorScapulae3.Lf0 +.LevatorScapulae4.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel LevatorScapulae3 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.levator_scapulae;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.LevatorScapulae;
   AnyIntVar MuscleElemNo = 3; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -760,10 +760,10 @@ AnyMuscleModel LevatorScapulae3 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.LevatorScapulae1.Lf0 +.LevatorScapulae2.Lf0 +.LevatorScapulae3.Lf0 +.LevatorScapulae4.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel LevatorScapulae4 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.levator_scapulae;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.LevatorScapulae;
   AnyIntVar MuscleElemNo = 4; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -771,17 +771,17 @@ AnyMuscleModel LevatorScapulae4 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.LevatorScapulae1.Lf0 +.LevatorScapulae2.Lf0 +.LevatorScapulae3.Lf0 +.LevatorScapulae4.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
+ 
 
 
 
 
-
-/////////////////////////////////////////////////////////
-//     pectoralis_major_thoracic_part (10 elements)     //
-/////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+//     PectoralisMajorSternocostal (10 elements)     //
+//////////////////////////////////////////////////////
 AnyMuscleModel PectoralisMajorSternocostal1 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.pectoralis_major_thoracic_part;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.PectoralisMajorSternocostal;
   AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -789,10 +789,10 @@ AnyMuscleModel PectoralisMajorSternocostal1 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.PectoralisMajorSternocostal1.Lf0 +.PectoralisMajorSternocostal2.Lf0 +.PectoralisMajorSternocostal3.Lf0 +.PectoralisMajorSternocostal4.Lf0 +.PectoralisMajorSternocostal5.Lf0 +.PectoralisMajorSternocostal6.Lf0 +.PectoralisMajorSternocostal7.Lf0 +.PectoralisMajorSternocostal8.Lf0 +.PectoralisMajorSternocostal9.Lf0 +.PectoralisMajorSternocostal10.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel PectoralisMajorSternocostal2 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.pectoralis_major_thoracic_part;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.PectoralisMajorSternocostal;
   AnyIntVar MuscleElemNo = 2; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -800,10 +800,10 @@ AnyMuscleModel PectoralisMajorSternocostal2 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.PectoralisMajorSternocostal1.Lf0 +.PectoralisMajorSternocostal2.Lf0 +.PectoralisMajorSternocostal3.Lf0 +.PectoralisMajorSternocostal4.Lf0 +.PectoralisMajorSternocostal5.Lf0 +.PectoralisMajorSternocostal6.Lf0 +.PectoralisMajorSternocostal7.Lf0 +.PectoralisMajorSternocostal8.Lf0 +.PectoralisMajorSternocostal9.Lf0 +.PectoralisMajorSternocostal10.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel PectoralisMajorSternocostal3 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.pectoralis_major_thoracic_part;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.PectoralisMajorSternocostal;
   AnyIntVar MuscleElemNo = 3; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -811,10 +811,10 @@ AnyMuscleModel PectoralisMajorSternocostal3 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.PectoralisMajorSternocostal1.Lf0 +.PectoralisMajorSternocostal2.Lf0 +.PectoralisMajorSternocostal3.Lf0 +.PectoralisMajorSternocostal4.Lf0 +.PectoralisMajorSternocostal5.Lf0 +.PectoralisMajorSternocostal6.Lf0 +.PectoralisMajorSternocostal7.Lf0 +.PectoralisMajorSternocostal8.Lf0 +.PectoralisMajorSternocostal9.Lf0 +.PectoralisMajorSternocostal10.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel PectoralisMajorSternocostal4 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.pectoralis_major_thoracic_part;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.PectoralisMajorSternocostal;
   AnyIntVar MuscleElemNo = 4; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -822,10 +822,10 @@ AnyMuscleModel PectoralisMajorSternocostal4 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.PectoralisMajorSternocostal1.Lf0 +.PectoralisMajorSternocostal2.Lf0 +.PectoralisMajorSternocostal3.Lf0 +.PectoralisMajorSternocostal4.Lf0 +.PectoralisMajorSternocostal5.Lf0 +.PectoralisMajorSternocostal6.Lf0 +.PectoralisMajorSternocostal7.Lf0 +.PectoralisMajorSternocostal8.Lf0 +.PectoralisMajorSternocostal9.Lf0 +.PectoralisMajorSternocostal10.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel PectoralisMajorSternocostal5 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.pectoralis_major_thoracic_part;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.PectoralisMajorSternocostal;
   AnyIntVar MuscleElemNo = 5; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -833,10 +833,10 @@ AnyMuscleModel PectoralisMajorSternocostal5 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.PectoralisMajorSternocostal1.Lf0 +.PectoralisMajorSternocostal2.Lf0 +.PectoralisMajorSternocostal3.Lf0 +.PectoralisMajorSternocostal4.Lf0 +.PectoralisMajorSternocostal5.Lf0 +.PectoralisMajorSternocostal6.Lf0 +.PectoralisMajorSternocostal7.Lf0 +.PectoralisMajorSternocostal8.Lf0 +.PectoralisMajorSternocostal9.Lf0 +.PectoralisMajorSternocostal10.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel PectoralisMajorSternocostal6 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.pectoralis_major_thoracic_part;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.PectoralisMajorSternocostal;
   AnyIntVar MuscleElemNo = 6; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -844,10 +844,10 @@ AnyMuscleModel PectoralisMajorSternocostal6 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.PectoralisMajorSternocostal1.Lf0 +.PectoralisMajorSternocostal2.Lf0 +.PectoralisMajorSternocostal3.Lf0 +.PectoralisMajorSternocostal4.Lf0 +.PectoralisMajorSternocostal5.Lf0 +.PectoralisMajorSternocostal6.Lf0 +.PectoralisMajorSternocostal7.Lf0 +.PectoralisMajorSternocostal8.Lf0 +.PectoralisMajorSternocostal9.Lf0 +.PectoralisMajorSternocostal10.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel PectoralisMajorSternocostal7 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.pectoralis_major_thoracic_part;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.PectoralisMajorSternocostal;
   AnyIntVar MuscleElemNo = 7; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -855,10 +855,10 @@ AnyMuscleModel PectoralisMajorSternocostal7 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.PectoralisMajorSternocostal1.Lf0 +.PectoralisMajorSternocostal2.Lf0 +.PectoralisMajorSternocostal3.Lf0 +.PectoralisMajorSternocostal4.Lf0 +.PectoralisMajorSternocostal5.Lf0 +.PectoralisMajorSternocostal6.Lf0 +.PectoralisMajorSternocostal7.Lf0 +.PectoralisMajorSternocostal8.Lf0 +.PectoralisMajorSternocostal9.Lf0 +.PectoralisMajorSternocostal10.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel PectoralisMajorSternocostal8 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.pectoralis_major_thoracic_part;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.PectoralisMajorSternocostal;
   AnyIntVar MuscleElemNo = 8; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -866,10 +866,10 @@ AnyMuscleModel PectoralisMajorSternocostal8 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.PectoralisMajorSternocostal1.Lf0 +.PectoralisMajorSternocostal2.Lf0 +.PectoralisMajorSternocostal3.Lf0 +.PectoralisMajorSternocostal4.Lf0 +.PectoralisMajorSternocostal5.Lf0 +.PectoralisMajorSternocostal6.Lf0 +.PectoralisMajorSternocostal7.Lf0 +.PectoralisMajorSternocostal8.Lf0 +.PectoralisMajorSternocostal9.Lf0 +.PectoralisMajorSternocostal10.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel PectoralisMajorSternocostal9 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.pectoralis_major_thoracic_part;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.PectoralisMajorSternocostal;
   AnyIntVar MuscleElemNo = 9; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -877,10 +877,10 @@ AnyMuscleModel PectoralisMajorSternocostal9 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.PectoralisMajorSternocostal1.Lf0 +.PectoralisMajorSternocostal2.Lf0 +.PectoralisMajorSternocostal3.Lf0 +.PectoralisMajorSternocostal4.Lf0 +.PectoralisMajorSternocostal5.Lf0 +.PectoralisMajorSternocostal6.Lf0 +.PectoralisMajorSternocostal7.Lf0 +.PectoralisMajorSternocostal8.Lf0 +.PectoralisMajorSternocostal9.Lf0 +.PectoralisMajorSternocostal10.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel PectoralisMajorSternocostal10 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.pectoralis_major_thoracic_part;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.PectoralisMajorSternocostal;
   AnyIntVar MuscleElemNo = 10; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -888,17 +888,17 @@ AnyMuscleModel PectoralisMajorSternocostal10 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.PectoralisMajorSternocostal1.Lf0 +.PectoralisMajorSternocostal2.Lf0 +.PectoralisMajorSternocostal3.Lf0 +.PectoralisMajorSternocostal4.Lf0 +.PectoralisMajorSternocostal5.Lf0 +.PectoralisMajorSternocostal6.Lf0 +.PectoralisMajorSternocostal7.Lf0 +.PectoralisMajorSternocostal8.Lf0 +.PectoralisMajorSternocostal9.Lf0 +.PectoralisMajorSternocostal10.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
+ 
 
 
 
 
-
-///////////////////////////////////////////////////////////
-//     pectoralis_major_clavicular_part (5 elements)     //
-///////////////////////////////////////////////////////////
+////////////////////////////////////////////////////
+//     PectoralisMajorClavicular (5 elements)     //
+////////////////////////////////////////////////////
 AnyMuscleModel PectoralisMajorClavicular1 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.pectoralis_major_clavicular_part;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.PectoralisMajorClavicular;
   AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -906,10 +906,10 @@ AnyMuscleModel PectoralisMajorClavicular1 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.PectoralisMajorClavicular1.Lf0 +.PectoralisMajorClavicular2.Lf0 +.PectoralisMajorClavicular3.Lf0 +.PectoralisMajorClavicular4.Lf0 +.PectoralisMajorClavicular5.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel PectoralisMajorClavicular2 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.pectoralis_major_clavicular_part;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.PectoralisMajorClavicular;
   AnyIntVar MuscleElemNo = 2; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -917,10 +917,10 @@ AnyMuscleModel PectoralisMajorClavicular2 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.PectoralisMajorClavicular1.Lf0 +.PectoralisMajorClavicular2.Lf0 +.PectoralisMajorClavicular3.Lf0 +.PectoralisMajorClavicular4.Lf0 +.PectoralisMajorClavicular5.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel PectoralisMajorClavicular3 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.pectoralis_major_clavicular_part;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.PectoralisMajorClavicular;
   AnyIntVar MuscleElemNo = 3; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -928,10 +928,10 @@ AnyMuscleModel PectoralisMajorClavicular3 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.PectoralisMajorClavicular1.Lf0 +.PectoralisMajorClavicular2.Lf0 +.PectoralisMajorClavicular3.Lf0 +.PectoralisMajorClavicular4.Lf0 +.PectoralisMajorClavicular5.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel PectoralisMajorClavicular4 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.pectoralis_major_clavicular_part;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.PectoralisMajorClavicular;
   AnyIntVar MuscleElemNo = 4; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -939,10 +939,10 @@ AnyMuscleModel PectoralisMajorClavicular4 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.PectoralisMajorClavicular1.Lf0 +.PectoralisMajorClavicular2.Lf0 +.PectoralisMajorClavicular3.Lf0 +.PectoralisMajorClavicular4.Lf0 +.PectoralisMajorClavicular5.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel PectoralisMajorClavicular5 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.pectoralis_major_clavicular_part;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.PectoralisMajorClavicular;
   AnyIntVar MuscleElemNo = 5; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -950,17 +950,17 @@ AnyMuscleModel PectoralisMajorClavicular5 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.PectoralisMajorClavicular1.Lf0 +.PectoralisMajorClavicular2.Lf0 +.PectoralisMajorClavicular3.Lf0 +.PectoralisMajorClavicular4.Lf0 +.PectoralisMajorClavicular5.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
+ 
 
 
 
 
-
-///////////////////////////////////////////
-//     pectoralis_minor (3 elements)     //
-///////////////////////////////////////////
+//////////////////////////////////////////
+//     PectoralisMinor (3 elements)     //
+//////////////////////////////////////////
 AnyMuscleModel PectoralisMinor1 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.pectoralis_minor;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.PectoralisMinor;
   AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -968,10 +968,10 @@ AnyMuscleModel PectoralisMinor1 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.PectoralisMinor1.Lf0 +.PectoralisMinor2.Lf0 +.PectoralisMinor3.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel PectoralisMinor2 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.pectoralis_minor;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.PectoralisMinor;
   AnyIntVar MuscleElemNo = 2; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -979,10 +979,10 @@ AnyMuscleModel PectoralisMinor2 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.PectoralisMinor1.Lf0 +.PectoralisMinor2.Lf0 +.PectoralisMinor3.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel PectoralisMinor3 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.pectoralis_minor;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.PectoralisMinor;
   AnyIntVar MuscleElemNo = 3; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -990,17 +990,17 @@ AnyMuscleModel PectoralisMinor3 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.PectoralisMinor1.Lf0 +.PectoralisMinor2.Lf0 +.PectoralisMinor3.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 
 
 
 
 //////////////////////////////////////
-//     rhomboideus (6 elements)     //
+//     Rhomboideus (6 elements)     //
 //////////////////////////////////////
 AnyMuscleModel Rhomboideus1 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.rhomboideus;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Rhomboideus;
   AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1008,10 +1008,10 @@ AnyMuscleModel Rhomboideus1 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.Rhomboideus1.Lf0 +.Rhomboideus2.Lf0 +.Rhomboideus3.Lf0 +.Rhomboideus4.Lf0 +.Rhomboideus5.Lf0 +.Rhomboideus6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel Rhomboideus2 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.rhomboideus;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Rhomboideus;
   AnyIntVar MuscleElemNo = 2; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1019,10 +1019,10 @@ AnyMuscleModel Rhomboideus2 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.Rhomboideus1.Lf0 +.Rhomboideus2.Lf0 +.Rhomboideus3.Lf0 +.Rhomboideus4.Lf0 +.Rhomboideus5.Lf0 +.Rhomboideus6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel Rhomboideus3 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.rhomboideus;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Rhomboideus;
   AnyIntVar MuscleElemNo = 3; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1030,10 +1030,10 @@ AnyMuscleModel Rhomboideus3 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.Rhomboideus1.Lf0 +.Rhomboideus2.Lf0 +.Rhomboideus3.Lf0 +.Rhomboideus4.Lf0 +.Rhomboideus5.Lf0 +.Rhomboideus6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel Rhomboideus4 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.rhomboideus;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Rhomboideus;
   AnyIntVar MuscleElemNo = 4; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1041,10 +1041,10 @@ AnyMuscleModel Rhomboideus4 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.Rhomboideus1.Lf0 +.Rhomboideus2.Lf0 +.Rhomboideus3.Lf0 +.Rhomboideus4.Lf0 +.Rhomboideus5.Lf0 +.Rhomboideus6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel Rhomboideus5 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.rhomboideus;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Rhomboideus;
   AnyIntVar MuscleElemNo = 5; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1052,10 +1052,10 @@ AnyMuscleModel Rhomboideus5 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.Rhomboideus1.Lf0 +.Rhomboideus2.Lf0 +.Rhomboideus3.Lf0 +.Rhomboideus4.Lf0 +.Rhomboideus5.Lf0 +.Rhomboideus6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel Rhomboideus6 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.rhomboideus;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Rhomboideus;
   AnyIntVar MuscleElemNo = 6; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1063,17 +1063,17 @@ AnyMuscleModel Rhomboideus6 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.Rhomboideus1.Lf0 +.Rhomboideus2.Lf0 +.Rhomboideus3.Lf0 +.Rhomboideus4.Lf0 +.Rhomboideus5.Lf0 +.Rhomboideus6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
+ 
 
 
 
 
-
-////////////////////////////////////////////
-//     serratus_anterior (9 elements)     //
-////////////////////////////////////////////
+///////////////////////////////////////////
+//     SerratusAnterior (9 elements)     //
+///////////////////////////////////////////
 AnyMuscleModel SerratusAnterior1 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.serratus_anterior;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.SerratusAnterior;
   AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1081,10 +1081,10 @@ AnyMuscleModel SerratusAnterior1 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.SerratusAnterior1.Lf0 +.SerratusAnterior2.Lf0 +.SerratusAnterior3.Lf0 +.SerratusAnterior4.Lf0 +.SerratusAnterior5.Lf0 +.SerratusAnterior6.Lf0 +.SerratusAnterior7.Lf0 +.SerratusAnterior8.Lf0 +.SerratusAnterior9.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel SerratusAnterior2 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.serratus_anterior;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.SerratusAnterior;
   AnyIntVar MuscleElemNo = 2; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1092,10 +1092,10 @@ AnyMuscleModel SerratusAnterior2 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.SerratusAnterior1.Lf0 +.SerratusAnterior2.Lf0 +.SerratusAnterior3.Lf0 +.SerratusAnterior4.Lf0 +.SerratusAnterior5.Lf0 +.SerratusAnterior6.Lf0 +.SerratusAnterior7.Lf0 +.SerratusAnterior8.Lf0 +.SerratusAnterior9.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel SerratusAnterior3 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.serratus_anterior;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.SerratusAnterior;
   AnyIntVar MuscleElemNo = 3; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1103,10 +1103,10 @@ AnyMuscleModel SerratusAnterior3 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.SerratusAnterior1.Lf0 +.SerratusAnterior2.Lf0 +.SerratusAnterior3.Lf0 +.SerratusAnterior4.Lf0 +.SerratusAnterior5.Lf0 +.SerratusAnterior6.Lf0 +.SerratusAnterior7.Lf0 +.SerratusAnterior8.Lf0 +.SerratusAnterior9.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel SerratusAnterior4 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.serratus_anterior;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.SerratusAnterior;
   AnyIntVar MuscleElemNo = 4; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1114,10 +1114,10 @@ AnyMuscleModel SerratusAnterior4 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.SerratusAnterior1.Lf0 +.SerratusAnterior2.Lf0 +.SerratusAnterior3.Lf0 +.SerratusAnterior4.Lf0 +.SerratusAnterior5.Lf0 +.SerratusAnterior6.Lf0 +.SerratusAnterior7.Lf0 +.SerratusAnterior8.Lf0 +.SerratusAnterior9.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel SerratusAnterior5 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.serratus_anterior;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.SerratusAnterior;
   AnyIntVar MuscleElemNo = 5; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1125,10 +1125,10 @@ AnyMuscleModel SerratusAnterior5 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.SerratusAnterior1.Lf0 +.SerratusAnterior2.Lf0 +.SerratusAnterior3.Lf0 +.SerratusAnterior4.Lf0 +.SerratusAnterior5.Lf0 +.SerratusAnterior6.Lf0 +.SerratusAnterior7.Lf0 +.SerratusAnterior8.Lf0 +.SerratusAnterior9.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel SerratusAnterior6 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.serratus_anterior;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.SerratusAnterior;
   AnyIntVar MuscleElemNo = 6; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1136,10 +1136,10 @@ AnyMuscleModel SerratusAnterior6 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.SerratusAnterior1.Lf0 +.SerratusAnterior2.Lf0 +.SerratusAnterior3.Lf0 +.SerratusAnterior4.Lf0 +.SerratusAnterior5.Lf0 +.SerratusAnterior6.Lf0 +.SerratusAnterior7.Lf0 +.SerratusAnterior8.Lf0 +.SerratusAnterior9.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel SerratusAnterior7 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.serratus_anterior;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.SerratusAnterior;
   AnyIntVar MuscleElemNo = 7; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1147,10 +1147,10 @@ AnyMuscleModel SerratusAnterior7 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.SerratusAnterior1.Lf0 +.SerratusAnterior2.Lf0 +.SerratusAnterior3.Lf0 +.SerratusAnterior4.Lf0 +.SerratusAnterior5.Lf0 +.SerratusAnterior6.Lf0 +.SerratusAnterior7.Lf0 +.SerratusAnterior8.Lf0 +.SerratusAnterior9.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel SerratusAnterior8 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.serratus_anterior;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.SerratusAnterior;
   AnyIntVar MuscleElemNo = 8; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1158,10 +1158,10 @@ AnyMuscleModel SerratusAnterior8 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.SerratusAnterior1.Lf0 +.SerratusAnterior2.Lf0 +.SerratusAnterior3.Lf0 +.SerratusAnterior4.Lf0 +.SerratusAnterior5.Lf0 +.SerratusAnterior6.Lf0 +.SerratusAnterior7.Lf0 +.SerratusAnterior8.Lf0 +.SerratusAnterior9.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel SerratusAnterior9 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.serratus_anterior;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.SerratusAnterior;
   AnyIntVar MuscleElemNo = 9; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1169,7 +1169,7 @@ AnyMuscleModel SerratusAnterior9 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.SerratusAnterior1.Lf0 +.SerratusAnterior2.Lf0 +.SerratusAnterior3.Lf0 +.SerratusAnterior4.Lf0 +.SerratusAnterior5.Lf0 +.SerratusAnterior6.Lf0 +.SerratusAnterior7.Lf0 +.SerratusAnterior8.Lf0 +.SerratusAnterior9.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 
 
 
@@ -1187,7 +1187,7 @@ AnyMuscleModel Sternocleidomastoid1 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.Sternocleidomastoid1.Lf0 +.Sternocleidomastoid2.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel Sternocleidomastoid2 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Sternocleidomastoid;
@@ -1198,17 +1198,17 @@ AnyMuscleModel Sternocleidomastoid2 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.Sternocleidomastoid1.Lf0 +.Sternocleidomastoid2.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 
 
 
 
 ////////////////////////////////////////
-//     subscapularis (6 elements)     //
+//     Subscapularis (6 elements)     //
 ////////////////////////////////////////
 AnyMuscleModel Subscapularis1 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.subscapularis;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Subscapularis;
   AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1216,10 +1216,10 @@ AnyMuscleModel Subscapularis1 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.Subscapularis1.Lf0 +.Subscapularis2.Lf0 +.Subscapularis3.Lf0 +.Subscapularis4.Lf0 +.Subscapularis5.Lf0 +.Subscapularis6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel Subscapularis2 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.subscapularis;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Subscapularis;
   AnyIntVar MuscleElemNo = 2; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1227,10 +1227,10 @@ AnyMuscleModel Subscapularis2 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.Subscapularis1.Lf0 +.Subscapularis2.Lf0 +.Subscapularis3.Lf0 +.Subscapularis4.Lf0 +.Subscapularis5.Lf0 +.Subscapularis6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel Subscapularis3 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.subscapularis;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Subscapularis;
   AnyIntVar MuscleElemNo = 3; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1238,10 +1238,10 @@ AnyMuscleModel Subscapularis3 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.Subscapularis1.Lf0 +.Subscapularis2.Lf0 +.Subscapularis3.Lf0 +.Subscapularis4.Lf0 +.Subscapularis5.Lf0 +.Subscapularis6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel Subscapularis4 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.subscapularis;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Subscapularis;
   AnyIntVar MuscleElemNo = 4; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1249,10 +1249,10 @@ AnyMuscleModel Subscapularis4 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.Subscapularis1.Lf0 +.Subscapularis2.Lf0 +.Subscapularis3.Lf0 +.Subscapularis4.Lf0 +.Subscapularis5.Lf0 +.Subscapularis6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel Subscapularis5 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.subscapularis;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Subscapularis;
   AnyIntVar MuscleElemNo = 5; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1260,10 +1260,10 @@ AnyMuscleModel Subscapularis5 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.Subscapularis1.Lf0 +.Subscapularis2.Lf0 +.Subscapularis3.Lf0 +.Subscapularis4.Lf0 +.Subscapularis5.Lf0 +.Subscapularis6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel Subscapularis6 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.subscapularis;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Subscapularis;
   AnyIntVar MuscleElemNo = 6; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1271,17 +1271,17 @@ AnyMuscleModel Subscapularis6 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.Subscapularis1.Lf0 +.Subscapularis2.Lf0 +.Subscapularis3.Lf0 +.Subscapularis4.Lf0 +.Subscapularis5.Lf0 +.Subscapularis6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 
 
 
 
 ////////////////////////////////////////
-//     supraspinatus (6 elements)     //
+//     Supraspinatus (6 elements)     //
 ////////////////////////////////////////
 AnyMuscleModel Supraspinatus1 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.supraspinatus;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Supraspinatus;
   AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1289,10 +1289,10 @@ AnyMuscleModel Supraspinatus1 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.Supraspinatus1.Lf0 +.Supraspinatus2.Lf0 +.Supraspinatus3.Lf0 +.Supraspinatus4.Lf0 +.Supraspinatus5.Lf0 +.Supraspinatus6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel Supraspinatus2 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.supraspinatus;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Supraspinatus;
   AnyIntVar MuscleElemNo = 2; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1300,10 +1300,10 @@ AnyMuscleModel Supraspinatus2 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.Supraspinatus1.Lf0 +.Supraspinatus2.Lf0 +.Supraspinatus3.Lf0 +.Supraspinatus4.Lf0 +.Supraspinatus5.Lf0 +.Supraspinatus6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel Supraspinatus3 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.supraspinatus;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Supraspinatus;
   AnyIntVar MuscleElemNo = 3; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1311,10 +1311,10 @@ AnyMuscleModel Supraspinatus3 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.Supraspinatus1.Lf0 +.Supraspinatus2.Lf0 +.Supraspinatus3.Lf0 +.Supraspinatus4.Lf0 +.Supraspinatus5.Lf0 +.Supraspinatus6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel Supraspinatus4 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.supraspinatus;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Supraspinatus;
   AnyIntVar MuscleElemNo = 4; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1322,10 +1322,10 @@ AnyMuscleModel Supraspinatus4 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.Supraspinatus1.Lf0 +.Supraspinatus2.Lf0 +.Supraspinatus3.Lf0 +.Supraspinatus4.Lf0 +.Supraspinatus5.Lf0 +.Supraspinatus6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel Supraspinatus5 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.supraspinatus;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Supraspinatus;
   AnyIntVar MuscleElemNo = 5; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1333,10 +1333,10 @@ AnyMuscleModel Supraspinatus5 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.Supraspinatus1.Lf0 +.Supraspinatus2.Lf0 +.Supraspinatus3.Lf0 +.Supraspinatus4.Lf0 +.Supraspinatus5.Lf0 +.Supraspinatus6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel Supraspinatus6 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.supraspinatus;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Supraspinatus;
   AnyIntVar MuscleElemNo = 6; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1344,17 +1344,17 @@ AnyMuscleModel Supraspinatus6 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.Supraspinatus1.Lf0 +.Supraspinatus2.Lf0 +.Supraspinatus3.Lf0 +.Supraspinatus4.Lf0 +.Supraspinatus5.Lf0 +.Supraspinatus6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
+ 
 
 
 
 
-
-//////////////////////////////////////
-//     teres_major (6 elements)     //
-//////////////////////////////////////
+/////////////////////////////////////
+//     TeresMajor (6 elements)     //
+/////////////////////////////////////
 AnyMuscleModel TeresMajor1 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.teres_major;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.TeresMajor;
   AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1362,10 +1362,10 @@ AnyMuscleModel TeresMajor1 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.TeresMajor1.Lf0 +.TeresMajor2.Lf0 +.TeresMajor3.Lf0 +.TeresMajor4.Lf0 +.TeresMajor5.Lf0 +.TeresMajor6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel TeresMajor2 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.teres_major;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.TeresMajor;
   AnyIntVar MuscleElemNo = 2; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1373,10 +1373,10 @@ AnyMuscleModel TeresMajor2 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.TeresMajor1.Lf0 +.TeresMajor2.Lf0 +.TeresMajor3.Lf0 +.TeresMajor4.Lf0 +.TeresMajor5.Lf0 +.TeresMajor6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel TeresMajor3 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.teres_major;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.TeresMajor;
   AnyIntVar MuscleElemNo = 3; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1384,10 +1384,10 @@ AnyMuscleModel TeresMajor3 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.TeresMajor1.Lf0 +.TeresMajor2.Lf0 +.TeresMajor3.Lf0 +.TeresMajor4.Lf0 +.TeresMajor5.Lf0 +.TeresMajor6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel TeresMajor4 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.teres_major;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.TeresMajor;
   AnyIntVar MuscleElemNo = 4; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1395,10 +1395,10 @@ AnyMuscleModel TeresMajor4 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.TeresMajor1.Lf0 +.TeresMajor2.Lf0 +.TeresMajor3.Lf0 +.TeresMajor4.Lf0 +.TeresMajor5.Lf0 +.TeresMajor6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel TeresMajor5 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.teres_major;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.TeresMajor;
   AnyIntVar MuscleElemNo = 5; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1406,10 +1406,10 @@ AnyMuscleModel TeresMajor5 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.TeresMajor1.Lf0 +.TeresMajor2.Lf0 +.TeresMajor3.Lf0 +.TeresMajor4.Lf0 +.TeresMajor5.Lf0 +.TeresMajor6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel TeresMajor6 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.teres_major;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.TeresMajor;
   AnyIntVar MuscleElemNo = 6; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1417,17 +1417,17 @@ AnyMuscleModel TeresMajor6 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.TeresMajor1.Lf0 +.TeresMajor2.Lf0 +.TeresMajor3.Lf0 +.TeresMajor4.Lf0 +.TeresMajor5.Lf0 +.TeresMajor6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
+ 
 
 
 
 
-
-//////////////////////////////////////
-//     teres_minor (6 elements)     //
-//////////////////////////////////////
+/////////////////////////////////////
+//     TeresMinor (6 elements)     //
+/////////////////////////////////////
 AnyMuscleModel TeresMinor1 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.teres_minor;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.TeresMinor;
   AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1435,10 +1435,10 @@ AnyMuscleModel TeresMinor1 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.TeresMinor1.Lf0 +.TeresMinor2.Lf0 +.TeresMinor3.Lf0 +.TeresMinor4.Lf0 +.TeresMinor5.Lf0 +.TeresMinor6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel TeresMinor2 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.teres_minor;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.TeresMinor;
   AnyIntVar MuscleElemNo = 2; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1446,10 +1446,10 @@ AnyMuscleModel TeresMinor2 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.TeresMinor1.Lf0 +.TeresMinor2.Lf0 +.TeresMinor3.Lf0 +.TeresMinor4.Lf0 +.TeresMinor5.Lf0 +.TeresMinor6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel TeresMinor3 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.teres_minor;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.TeresMinor;
   AnyIntVar MuscleElemNo = 3; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1457,10 +1457,10 @@ AnyMuscleModel TeresMinor3 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.TeresMinor1.Lf0 +.TeresMinor2.Lf0 +.TeresMinor3.Lf0 +.TeresMinor4.Lf0 +.TeresMinor5.Lf0 +.TeresMinor6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel TeresMinor4 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.teres_minor;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.TeresMinor;
   AnyIntVar MuscleElemNo = 4; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1468,10 +1468,10 @@ AnyMuscleModel TeresMinor4 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.TeresMinor1.Lf0 +.TeresMinor2.Lf0 +.TeresMinor3.Lf0 +.TeresMinor4.Lf0 +.TeresMinor5.Lf0 +.TeresMinor6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel TeresMinor5 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.teres_minor;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.TeresMinor;
   AnyIntVar MuscleElemNo = 5; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1479,10 +1479,10 @@ AnyMuscleModel TeresMinor5 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.TeresMinor1.Lf0 +.TeresMinor2.Lf0 +.TeresMinor3.Lf0 +.TeresMinor4.Lf0 +.TeresMinor5.Lf0 +.TeresMinor6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel TeresMinor6 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.teres_minor;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.TeresMinor;
   AnyIntVar MuscleElemNo = 6; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1490,17 +1490,17 @@ AnyMuscleModel TeresMinor6 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.TeresMinor1.Lf0 +.TeresMinor2.Lf0 +.TeresMinor3.Lf0 +.TeresMinor4.Lf0 +.TeresMinor5.Lf0 +.TeresMinor6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
+ 
 
 
 
 
-
-//////////////////////////////////////////////////
-//     trapezius_scapular_part (14 elements)     //
-//////////////////////////////////////////////////
+////////////////////////////////////////////
+//     TrapeziusScapular (14 elements)     //
+////////////////////////////////////////////
 AnyMuscleModel TrapeziusScapular1 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.trapezius_scapular_part;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.TrapeziusScapular;
   AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1508,10 +1508,10 @@ AnyMuscleModel TrapeziusScapular1 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.TrapeziusScapular1.Lf0 +.TrapeziusScapular2.Lf0 +.TrapeziusScapular3.Lf0 +.TrapeziusScapular4.Lf0 +.TrapeziusScapular5.Lf0 +.TrapeziusScapular6.Lf0 +.TrapeziusScapular7.Lf0 +.TrapeziusScapular8.Lf0 +.TrapeziusScapular9.Lf0 +.TrapeziusScapular10.Lf0 +.TrapeziusScapular11.Lf0 +.TrapeziusScapular12.Lf0 +.TrapeziusScapular13.Lf0 +.TrapeziusScapular14.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel TrapeziusScapular2 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.trapezius_scapular_part;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.TrapeziusScapular;
   AnyIntVar MuscleElemNo = 2; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1519,10 +1519,10 @@ AnyMuscleModel TrapeziusScapular2 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.TrapeziusScapular1.Lf0 +.TrapeziusScapular2.Lf0 +.TrapeziusScapular3.Lf0 +.TrapeziusScapular4.Lf0 +.TrapeziusScapular5.Lf0 +.TrapeziusScapular6.Lf0 +.TrapeziusScapular7.Lf0 +.TrapeziusScapular8.Lf0 +.TrapeziusScapular9.Lf0 +.TrapeziusScapular10.Lf0 +.TrapeziusScapular11.Lf0 +.TrapeziusScapular12.Lf0 +.TrapeziusScapular13.Lf0 +.TrapeziusScapular14.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel TrapeziusScapular3 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.trapezius_scapular_part;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.TrapeziusScapular;
   AnyIntVar MuscleElemNo = 3; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1530,10 +1530,10 @@ AnyMuscleModel TrapeziusScapular3 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.TrapeziusScapular1.Lf0 +.TrapeziusScapular2.Lf0 +.TrapeziusScapular3.Lf0 +.TrapeziusScapular4.Lf0 +.TrapeziusScapular5.Lf0 +.TrapeziusScapular6.Lf0 +.TrapeziusScapular7.Lf0 +.TrapeziusScapular8.Lf0 +.TrapeziusScapular9.Lf0 +.TrapeziusScapular10.Lf0 +.TrapeziusScapular11.Lf0 +.TrapeziusScapular12.Lf0 +.TrapeziusScapular13.Lf0 +.TrapeziusScapular14.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel TrapeziusScapular4 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.trapezius_scapular_part;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.TrapeziusScapular;
   AnyIntVar MuscleElemNo = 4; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1541,10 +1541,10 @@ AnyMuscleModel TrapeziusScapular4 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.TrapeziusScapular1.Lf0 +.TrapeziusScapular2.Lf0 +.TrapeziusScapular3.Lf0 +.TrapeziusScapular4.Lf0 +.TrapeziusScapular5.Lf0 +.TrapeziusScapular6.Lf0 +.TrapeziusScapular7.Lf0 +.TrapeziusScapular8.Lf0 +.TrapeziusScapular9.Lf0 +.TrapeziusScapular10.Lf0 +.TrapeziusScapular11.Lf0 +.TrapeziusScapular12.Lf0 +.TrapeziusScapular13.Lf0 +.TrapeziusScapular14.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel TrapeziusScapular5 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.trapezius_scapular_part;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.TrapeziusScapular;
   AnyIntVar MuscleElemNo = 5; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1552,10 +1552,10 @@ AnyMuscleModel TrapeziusScapular5 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.TrapeziusScapular1.Lf0 +.TrapeziusScapular2.Lf0 +.TrapeziusScapular3.Lf0 +.TrapeziusScapular4.Lf0 +.TrapeziusScapular5.Lf0 +.TrapeziusScapular6.Lf0 +.TrapeziusScapular7.Lf0 +.TrapeziusScapular8.Lf0 +.TrapeziusScapular9.Lf0 +.TrapeziusScapular10.Lf0 +.TrapeziusScapular11.Lf0 +.TrapeziusScapular12.Lf0 +.TrapeziusScapular13.Lf0 +.TrapeziusScapular14.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel TrapeziusScapular6 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.trapezius_scapular_part;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.TrapeziusScapular;
   AnyIntVar MuscleElemNo = 6; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1563,10 +1563,10 @@ AnyMuscleModel TrapeziusScapular6 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.TrapeziusScapular1.Lf0 +.TrapeziusScapular2.Lf0 +.TrapeziusScapular3.Lf0 +.TrapeziusScapular4.Lf0 +.TrapeziusScapular5.Lf0 +.TrapeziusScapular6.Lf0 +.TrapeziusScapular7.Lf0 +.TrapeziusScapular8.Lf0 +.TrapeziusScapular9.Lf0 +.TrapeziusScapular10.Lf0 +.TrapeziusScapular11.Lf0 +.TrapeziusScapular12.Lf0 +.TrapeziusScapular13.Lf0 +.TrapeziusScapular14.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel TrapeziusScapular7 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.trapezius_scapular_part;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.TrapeziusScapular;
   AnyIntVar MuscleElemNo = 7; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1574,10 +1574,10 @@ AnyMuscleModel TrapeziusScapular7 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.TrapeziusScapular1.Lf0 +.TrapeziusScapular2.Lf0 +.TrapeziusScapular3.Lf0 +.TrapeziusScapular4.Lf0 +.TrapeziusScapular5.Lf0 +.TrapeziusScapular6.Lf0 +.TrapeziusScapular7.Lf0 +.TrapeziusScapular8.Lf0 +.TrapeziusScapular9.Lf0 +.TrapeziusScapular10.Lf0 +.TrapeziusScapular11.Lf0 +.TrapeziusScapular12.Lf0 +.TrapeziusScapular13.Lf0 +.TrapeziusScapular14.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel TrapeziusScapular8 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.trapezius_scapular_part;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.TrapeziusScapular;
   AnyIntVar MuscleElemNo = 8; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1585,10 +1585,10 @@ AnyMuscleModel TrapeziusScapular8 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.TrapeziusScapular1.Lf0 +.TrapeziusScapular2.Lf0 +.TrapeziusScapular3.Lf0 +.TrapeziusScapular4.Lf0 +.TrapeziusScapular5.Lf0 +.TrapeziusScapular6.Lf0 +.TrapeziusScapular7.Lf0 +.TrapeziusScapular8.Lf0 +.TrapeziusScapular9.Lf0 +.TrapeziusScapular10.Lf0 +.TrapeziusScapular11.Lf0 +.TrapeziusScapular12.Lf0 +.TrapeziusScapular13.Lf0 +.TrapeziusScapular14.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel TrapeziusScapular9 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.trapezius_scapular_part;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.TrapeziusScapular;
   AnyIntVar MuscleElemNo = 9; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1596,10 +1596,10 @@ AnyMuscleModel TrapeziusScapular9 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.TrapeziusScapular1.Lf0 +.TrapeziusScapular2.Lf0 +.TrapeziusScapular3.Lf0 +.TrapeziusScapular4.Lf0 +.TrapeziusScapular5.Lf0 +.TrapeziusScapular6.Lf0 +.TrapeziusScapular7.Lf0 +.TrapeziusScapular8.Lf0 +.TrapeziusScapular9.Lf0 +.TrapeziusScapular10.Lf0 +.TrapeziusScapular11.Lf0 +.TrapeziusScapular12.Lf0 +.TrapeziusScapular13.Lf0 +.TrapeziusScapular14.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel TrapeziusScapular10 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.trapezius_scapular_part;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.TrapeziusScapular;
   AnyIntVar MuscleElemNo = 10; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1607,10 +1607,10 @@ AnyMuscleModel TrapeziusScapular10 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.TrapeziusScapular1.Lf0 +.TrapeziusScapular2.Lf0 +.TrapeziusScapular3.Lf0 +.TrapeziusScapular4.Lf0 +.TrapeziusScapular5.Lf0 +.TrapeziusScapular6.Lf0 +.TrapeziusScapular7.Lf0 +.TrapeziusScapular8.Lf0 +.TrapeziusScapular9.Lf0 +.TrapeziusScapular10.Lf0 +.TrapeziusScapular11.Lf0 +.TrapeziusScapular12.Lf0 +.TrapeziusScapular13.Lf0 +.TrapeziusScapular14.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel TrapeziusScapular11 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.trapezius_scapular_part;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.TrapeziusScapular;
   AnyIntVar MuscleElemNo = 11; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1618,10 +1618,10 @@ AnyMuscleModel TrapeziusScapular11 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.TrapeziusScapular1.Lf0 +.TrapeziusScapular2.Lf0 +.TrapeziusScapular3.Lf0 +.TrapeziusScapular4.Lf0 +.TrapeziusScapular5.Lf0 +.TrapeziusScapular6.Lf0 +.TrapeziusScapular7.Lf0 +.TrapeziusScapular8.Lf0 +.TrapeziusScapular9.Lf0 +.TrapeziusScapular10.Lf0 +.TrapeziusScapular11.Lf0 +.TrapeziusScapular12.Lf0 +.TrapeziusScapular13.Lf0 +.TrapeziusScapular14.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel TrapeziusScapular12 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.trapezius_scapular_part;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.TrapeziusScapular;
   AnyIntVar MuscleElemNo = 12; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1629,10 +1629,10 @@ AnyMuscleModel TrapeziusScapular12 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.TrapeziusScapular1.Lf0 +.TrapeziusScapular2.Lf0 +.TrapeziusScapular3.Lf0 +.TrapeziusScapular4.Lf0 +.TrapeziusScapular5.Lf0 +.TrapeziusScapular6.Lf0 +.TrapeziusScapular7.Lf0 +.TrapeziusScapular8.Lf0 +.TrapeziusScapular9.Lf0 +.TrapeziusScapular10.Lf0 +.TrapeziusScapular11.Lf0 +.TrapeziusScapular12.Lf0 +.TrapeziusScapular13.Lf0 +.TrapeziusScapular14.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel TrapeziusScapular13 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.trapezius_scapular_part;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.TrapeziusScapular;
   AnyIntVar MuscleElemNo = 13; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1640,10 +1640,10 @@ AnyMuscleModel TrapeziusScapular13 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.TrapeziusScapular1.Lf0 +.TrapeziusScapular2.Lf0 +.TrapeziusScapular3.Lf0 +.TrapeziusScapular4.Lf0 +.TrapeziusScapular5.Lf0 +.TrapeziusScapular6.Lf0 +.TrapeziusScapular7.Lf0 +.TrapeziusScapular8.Lf0 +.TrapeziusScapular9.Lf0 +.TrapeziusScapular10.Lf0 +.TrapeziusScapular11.Lf0 +.TrapeziusScapular12.Lf0 +.TrapeziusScapular13.Lf0 +.TrapeziusScapular14.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel TrapeziusScapular14 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.trapezius_scapular_part;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.TrapeziusScapular;
   AnyIntVar MuscleElemNo = 14; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1651,17 +1651,17 @@ AnyMuscleModel TrapeziusScapular14 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.TrapeziusScapular1.Lf0 +.TrapeziusScapular2.Lf0 +.TrapeziusScapular3.Lf0 +.TrapeziusScapular4.Lf0 +.TrapeziusScapular5.Lf0 +.TrapeziusScapular6.Lf0 +.TrapeziusScapular7.Lf0 +.TrapeziusScapular8.Lf0 +.TrapeziusScapular9.Lf0 +.TrapeziusScapular10.Lf0 +.TrapeziusScapular11.Lf0 +.TrapeziusScapular12.Lf0 +.TrapeziusScapular13.Lf0 +.TrapeziusScapular14.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
+ 
 
 
 
 
-
-////////////////////////////////////////////////////
-//     trapezius_clavicular_part (6 elements)     //
-////////////////////////////////////////////////////
+//////////////////////////////////////////////
+//     TrapeziusClavicular (6 elements)     //
+//////////////////////////////////////////////
 AnyMuscleModel TrapeziusClavicular1 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.trapezius_clavicular_part;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.TrapeziusClavicular;
   AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1669,10 +1669,10 @@ AnyMuscleModel TrapeziusClavicular1 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.TrapeziusClavicular1.Lf0 +.TrapeziusClavicular2.Lf0 +.TrapeziusClavicular3.Lf0 +.TrapeziusClavicular4.Lf0 +.TrapeziusClavicular5.Lf0 +.TrapeziusClavicular6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel TrapeziusClavicular2 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.trapezius_clavicular_part;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.TrapeziusClavicular;
   AnyIntVar MuscleElemNo = 2; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1680,10 +1680,10 @@ AnyMuscleModel TrapeziusClavicular2 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.TrapeziusClavicular1.Lf0 +.TrapeziusClavicular2.Lf0 +.TrapeziusClavicular3.Lf0 +.TrapeziusClavicular4.Lf0 +.TrapeziusClavicular5.Lf0 +.TrapeziusClavicular6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel TrapeziusClavicular3 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.trapezius_clavicular_part;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.TrapeziusClavicular;
   AnyIntVar MuscleElemNo = 3; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1691,10 +1691,10 @@ AnyMuscleModel TrapeziusClavicular3 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.TrapeziusClavicular1.Lf0 +.TrapeziusClavicular2.Lf0 +.TrapeziusClavicular3.Lf0 +.TrapeziusClavicular4.Lf0 +.TrapeziusClavicular5.Lf0 +.TrapeziusClavicular6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel TrapeziusClavicular4 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.trapezius_clavicular_part;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.TrapeziusClavicular;
   AnyIntVar MuscleElemNo = 4; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1702,10 +1702,10 @@ AnyMuscleModel TrapeziusClavicular4 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.TrapeziusClavicular1.Lf0 +.TrapeziusClavicular2.Lf0 +.TrapeziusClavicular3.Lf0 +.TrapeziusClavicular4.Lf0 +.TrapeziusClavicular5.Lf0 +.TrapeziusClavicular6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel TrapeziusClavicular5 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.trapezius_clavicular_part;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.TrapeziusClavicular;
   AnyIntVar MuscleElemNo = 5; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1713,10 +1713,10 @@ AnyMuscleModel TrapeziusClavicular5 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.TrapeziusClavicular1.Lf0 +.TrapeziusClavicular2.Lf0 +.TrapeziusClavicular3.Lf0 +.TrapeziusClavicular4.Lf0 +.TrapeziusClavicular5.Lf0 +.TrapeziusClavicular6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel TrapeziusClavicular6 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.trapezius_clavicular_part;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.TrapeziusClavicular;
   AnyIntVar MuscleElemNo = 6; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1724,14 +1724,14 @@ AnyMuscleModel TrapeziusClavicular6 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.TrapeziusClavicular1.Lf0 +.TrapeziusClavicular2.Lf0 +.TrapeziusClavicular3.Lf0 +.TrapeziusClavicular4.Lf0 +.TrapeziusClavicular5.Lf0 +.TrapeziusClavicular6.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
+ 
 
 
 
 
-
-/////////////////////////////////////
+///////////////////////////////////////////////
 //     TricepsBrachiiLongum (2 elements)     //
-/////////////////////////////////////
+///////////////////////////////////////////////
 AnyMuscleModel TricepsBrachiiLongum1 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.TricepsBrachiiLongum;
@@ -1742,7 +1742,7 @@ AnyMuscleModel TricepsBrachiiLongum1 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.TricepsBrachiiLongum1.Lf0 +.TricepsBrachiiLongum2.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel TricepsBrachiiLongum2 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.TricepsBrachiiLongum;
@@ -1753,7 +1753,7 @@ AnyMuscleModel TricepsBrachiiLongum2 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.TricepsBrachiiLongum1.Lf0 +.TricepsBrachiiLongum2.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 
 
 
@@ -1771,7 +1771,7 @@ AnyMuscleModel Brachialis1 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.Brachialis1.Lf0 +.Brachialis2.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel Brachialis2 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Brachialis;
@@ -1782,14 +1782,14 @@ AnyMuscleModel Brachialis2 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.Brachialis1.Lf0 +.Brachialis2.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
+ 
 
 
 
 
-
-/////////////////////////////////////
+////////////////////////////////////////////////
 //     TricepsBrachiiMediale (2 elements)     //
-/////////////////////////////////////
+////////////////////////////////////////////////
 AnyMuscleModel TricepsBrachiiMediale1 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.TricepsBrachiiMediale;
@@ -1800,7 +1800,7 @@ AnyMuscleModel TricepsBrachiiMediale1 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.TricepsBrachiiMediale1.Lf0 +.TricepsBrachiiMediale2.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel TricepsBrachiiMediale2 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.TricepsBrachiiMediale;
@@ -1811,14 +1811,14 @@ AnyMuscleModel TricepsBrachiiMediale2 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.TricepsBrachiiMediale1.Lf0 +.TricepsBrachiiMediale2.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
+ 
 
 
 
 
-
-/////////////////////////////////////
+/////////////////////////////////////////////////
 //     TricepsBrachiiLaterale (2 elements)     //
-/////////////////////////////////////
+/////////////////////////////////////////////////
 AnyMuscleModel TricepsBrachiiLaterale1 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.TricepsBrachiiLaterale;
@@ -1829,7 +1829,7 @@ AnyMuscleModel TricepsBrachiiLaterale1 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.TricepsBrachiiLaterale1.Lf0 +.TricepsBrachiiLaterale2.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel TricepsBrachiiLaterale2 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.TricepsBrachiiLaterale;
@@ -1840,17 +1840,17 @@ AnyMuscleModel TricepsBrachiiLaterale2 =
   AnyVar PCSA ??= 1e4*.StrengthScaleHumerus*MuscleParameters.MuscleVolumeSIScaled/(.TricepsBrachiiLaterale1.Lf0 +.TricepsBrachiiLaterale2.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
+ 
 
 
 
 
-
-////////////////////////////////////
-//     Brach_rad (2 elements)     //
-////////////////////////////////////
+//////////////////////////////////////////
+//     Brachioradialis (2 elements)     //
+//////////////////////////////////////////
 AnyMuscleModel Brachioradialis1 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Brach_rad;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Brachioradialis;
   AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1858,10 +1858,10 @@ AnyMuscleModel Brachioradialis1 =
   AnyVar PCSA ??= 1e4*.StrengthScaleUlna*MuscleParameters.MuscleVolumeSIScaled/(.Brachioradialis1.Lf0 +.Brachioradialis2.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel Brachioradialis2 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Brach_rad;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Brachioradialis;
   AnyIntVar MuscleElemNo = 2; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1869,7 +1869,7 @@ AnyMuscleModel Brachioradialis2 =
   AnyVar PCSA ??= 1e4*.StrengthScaleUlna*MuscleParameters.MuscleVolumeSIScaled/(.Brachioradialis1.Lf0 +.Brachioradialis2.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 
 
 
@@ -1887,7 +1887,7 @@ AnyMuscleModel Anconeus1 =
   AnyVar PCSA ??= 1e4*.StrengthScaleUlna*MuscleParameters.MuscleVolumeSIScaled/(.Anconeus1.Lf0 +.Anconeus2.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel Anconeus2 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Anconeus;
@@ -1898,17 +1898,17 @@ AnyMuscleModel Anconeus2 =
   AnyVar PCSA ??= 1e4*.StrengthScaleUlna*MuscleParameters.MuscleVolumeSIScaled/(.Anconeus1.Lf0 +.Anconeus2.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
+ 
 
 
 
 
-
-///////////////////////////////////////////////////////
-//     Pronator_teres_caput_humeral (2 elements)     //
-///////////////////////////////////////////////////////
+///////////////////////////////////////////////
+//     PronatorTeresHumeral (2 elements)     //
+///////////////////////////////////////////////
 AnyMuscleModel PronatorTeresHumeral1 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Pronator_teres_caput_humeral;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.PronatorTeresHumeral;
   AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1916,10 +1916,10 @@ AnyMuscleModel PronatorTeresHumeral1 =
   AnyVar PCSA ??= 1e4*.StrengthScaleUlna*MuscleParameters.MuscleVolumeSIScaled/(.PronatorTeresHumeral1.Lf0 +.PronatorTeresHumeral2.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel PronatorTeresHumeral2 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Pronator_teres_caput_humeral;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.PronatorTeresHumeral;
   AnyIntVar MuscleElemNo = 2; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1927,17 +1927,17 @@ AnyMuscleModel PronatorTeresHumeral2 =
   AnyVar PCSA ??= 1e4*.StrengthScaleUlna*MuscleParameters.MuscleVolumeSIScaled/(.PronatorTeresHumeral1.Lf0 +.PronatorTeresHumeral2.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
+ 
 
 
 
 
-
-//////////////////////////////////////////////////////
-//     Pronator_teres_caput_ulnare (1 element )     //
-//////////////////////////////////////////////////////
-AnyMuscleModel Pronator_teres_caput_ulnare =
+//////////////////////////////////////////////
+//     PronatorTeresUlnare (1 element )     //
+//////////////////////////////////////////////
+AnyMuscleModel PronatorTeresUlnare =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Pronator_teres_caput_ulnare;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.PronatorTeresUlnare;
   AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1945,17 +1945,17 @@ AnyMuscleModel Pronator_teres_caput_ulnare =
   AnyVar PCSA ??= 1e4*.StrengthScaleUlna*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
+ 
 
 
 
 
-
-/////////////////////////////////////////////////
-//     Supinator_humerus_part (2 elements)     //
-/////////////////////////////////////////////////
+///////////////////////////////////////////
+//     SupinatorHumerus (2 elements)     //
+///////////////////////////////////////////
 AnyMuscleModel SupinatorHumerus1 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Supinator_humerus_part;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.SupinatorHumerus;
   AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1963,10 +1963,10 @@ AnyMuscleModel SupinatorHumerus1 =
   AnyVar PCSA ??= 1e4*.StrengthScaleUlna*MuscleParameters.MuscleVolumeSIScaled/(.SupinatorHumerus1.Lf0 +.SupinatorHumerus2.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel SupinatorHumerus2 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Supinator_humerus_part;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.SupinatorHumerus;
   AnyIntVar MuscleElemNo = 2; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1974,17 +1974,17 @@ AnyMuscleModel SupinatorHumerus2 =
   AnyVar PCSA ??= 1e4*.StrengthScaleUlna*MuscleParameters.MuscleVolumeSIScaled/(.SupinatorHumerus1.Lf0 +.SupinatorHumerus2.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
+ 
 
 
 
 
-
-//////////////////////////////////////////////
-//     Supinator_ulna_part (2 elements)     //
-//////////////////////////////////////////////
+//////////////////////////////////////////
+//     SupinatorUlnare (2 elements)     //
+//////////////////////////////////////////
 AnyMuscleModel SupinatorUlnare1 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Supinator_ulna_part;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.SupinatorUlnare;
   AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -1992,10 +1992,10 @@ AnyMuscleModel SupinatorUlnare1 =
   AnyVar PCSA ??= 1e4*.StrengthScaleUlna*MuscleParameters.MuscleVolumeSIScaled/(.SupinatorUlnare1.Lf0 +.SupinatorUlnare2.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel SupinatorUlnare2 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Supinator_ulna_part;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.SupinatorUlnare;
   AnyIntVar MuscleElemNo = 2; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -2003,17 +2003,17 @@ AnyMuscleModel SupinatorUlnare2 =
   AnyVar PCSA ??= 1e4*.StrengthScaleUlna*MuscleParameters.MuscleVolumeSIScaled/(.SupinatorUlnare1.Lf0 +.SupinatorUlnare2.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
+ 
 
 
 
 
-
-/////////////////////////////////////
-//     Pron_quadr (2 elements)     //
-/////////////////////////////////////
+////////////////////////////////////////////
+//     PronatorQuadratus (2 elements)     //
+////////////////////////////////////////////
 AnyMuscleModel PronatorQuadratus1 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Pron_quadr;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.PronatorQuadratus;
   AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -2021,10 +2021,10 @@ AnyMuscleModel PronatorQuadratus1 =
   AnyVar PCSA ??= 1e4*.StrengthScaleUlna*MuscleParameters.MuscleVolumeSIScaled/(.PronatorQuadratus1.Lf0 +.PronatorQuadratus2.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 AnyMuscleModel PronatorQuadratus2 =
 {
-  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.Pron_quadr;
+  AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.PronatorQuadratus;
   AnyIntVar MuscleElemNo = 2; ///< The number of this element of the muscle
   AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
   F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -2032,14 +2032,14 @@ AnyMuscleModel PronatorQuadratus2 =
   AnyVar PCSA ??= 1e4*.StrengthScaleUlna*MuscleParameters.MuscleVolumeSIScaled/(.PronatorQuadratus1.Lf0 +.PronatorQuadratus2.Lf0 ); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
+ 
 
 
 
 
-
-///////////////////////////////////////////////////
+/////////////////////////////////////////////////
 //     ExtensorPollicisLongus (1 element )     //
-///////////////////////////////////////////////////
+/////////////////////////////////////////////////
 AnyMuscleModel ExtensorPollicisLongus =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.ExtensorPollicisLongus;
@@ -2050,14 +2050,14 @@ AnyMuscleModel ExtensorPollicisLongus =
   AnyVar PCSA ??= 1e4*.StrengthScaleUlna*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
+ 
 
 
 
 
-
-///////////////////////////////////////////////////
+/////////////////////////////////////////////////
 //     ExtensorPollicisBrevis (1 element )     //
-///////////////////////////////////////////////////
+/////////////////////////////////////////////////
 AnyMuscleModel ExtensorPollicisBrevis =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.ExtensorPollicisBrevis;
@@ -2068,14 +2068,14 @@ AnyMuscleModel ExtensorPollicisBrevis =
   AnyVar PCSA ??= 1e4*.StrengthScaleUlna*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
+ 
 
 
 
 
-
-///////////////////////////////////////////////////
+/////////////////////////////////////////////////
 //     AbductorPollicisLongus (1 element )     //
-///////////////////////////////////////////////////
+/////////////////////////////////////////////////
 AnyMuscleModel AbductorPollicisLongus =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.AbductorPollicisLongus;
@@ -2086,14 +2086,14 @@ AnyMuscleModel AbductorPollicisLongus =
   AnyVar PCSA ??= 1e4*.StrengthScaleUlna*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
+ 
 
 
 
 
-
-///////////////////////////////////////////
+//////////////////////////////////////////
 //     ExtensorIndicis (1 element )     //
-///////////////////////////////////////////
+//////////////////////////////////////////
 AnyMuscleModel ExtensorIndicis =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.ExtensorIndicis;
@@ -2104,14 +2104,14 @@ AnyMuscleModel ExtensorIndicis =
   AnyVar PCSA ??= 1e4*.StrengthScaleUlna*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
+ 
 
 
 
 
-
-/////////////////////////////////////////////////
+///////////////////////////////////////////////
 //     ExtensorCarpiUlnaris (1 element )     //
-/////////////////////////////////////////////////
+///////////////////////////////////////////////
 AnyMuscleModel ExtensorCarpiUlnaris =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.ExtensorCarpiUlnaris;
@@ -2122,14 +2122,14 @@ AnyMuscleModel ExtensorCarpiUlnaris =
   AnyVar PCSA ??= 1e4*.StrengthScaleUlna*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
+ 
 
 
 
 
-
-/////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
 //     ExtensorCarpiRadialisLongus (1 element )     //
-/////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
 AnyMuscleModel ExtensorCarpiRadialisLongus =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.ExtensorCarpiRadialisLongus;
@@ -2140,14 +2140,14 @@ AnyMuscleModel ExtensorCarpiRadialisLongus =
   AnyVar PCSA ??= 1e4*.StrengthScaleUlna*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
+ 
 
 
 
 
-
-/////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
 //     ExtensorCarpiRadialisBrevis (1 element )     //
-/////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
 AnyMuscleModel ExtensorCarpiRadialisBrevis =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.ExtensorCarpiRadialisBrevis;
@@ -2158,14 +2158,14 @@ AnyMuscleModel ExtensorCarpiRadialisBrevis =
   AnyVar PCSA ??= 1e4*.StrengthScaleUlna*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
+ 
 
 
 
 
-
-////////////////////////////////////////////////
+//////////////////////////////////////////////
 //     FlexorCarpiRadialis (1 element )     //
-////////////////////////////////////////////////
+//////////////////////////////////////////////
 AnyMuscleModel FlexorCarpiRadialis =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.FlexorCarpiRadialis;
@@ -2176,14 +2176,14 @@ AnyMuscleModel FlexorCarpiRadialis =
   AnyVar PCSA ??= 1e4*.StrengthScaleUlna*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
+ 
 
 
 
 
-
-///////////////////////////////////////////////
+/////////////////////////////////////////////
 //     FlexorCarpiUlnaris (1 element )     //
-///////////////////////////////////////////////
+/////////////////////////////////////////////
 AnyMuscleModel FlexorCarpiUlnaris =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.FlexorCarpiUlnaris;
@@ -2194,14 +2194,14 @@ AnyMuscleModel FlexorCarpiUlnaris =
   AnyVar PCSA ??= 1e4*.StrengthScaleUlna*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
+ 
 
 
 
 
-
-//////////////////////////////////////////
+/////////////////////////////////////////
 //     PalmarisLongus (1 element )     //
-//////////////////////////////////////////
+/////////////////////////////////////////
 AnyMuscleModel PalmarisLongus =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.PalmarisLongus;
@@ -2212,14 +2212,14 @@ AnyMuscleModel PalmarisLongus =
   AnyVar PCSA ??= 1e4*.StrengthScaleUlna*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
+ 
 
 
 
 
-
-////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
 //     FlexorDigitorumSuperficialisDigit5 (1 element )     //
-////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
 AnyMuscleModel FlexorDigitorumSuperficialisDigit5 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.FlexorDigitorumSuperficialisDigit5;
@@ -2230,14 +2230,14 @@ AnyMuscleModel FlexorDigitorumSuperficialisDigit5 =
   AnyVar PCSA ??= 1e4*.StrengthScaleUlna*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
+ 
 
 
 
 
-
-////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
 //     FlexorDigitorumSuperficialisDigit4 (1 element )     //
-////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
 AnyMuscleModel FlexorDigitorumSuperficialisDigit4 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.FlexorDigitorumSuperficialisDigit4;
@@ -2248,14 +2248,14 @@ AnyMuscleModel FlexorDigitorumSuperficialisDigit4 =
   AnyVar PCSA ??= 1e4*.StrengthScaleUlna*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
+ 
 
 
 
 
-
-////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
 //     FlexorDigitorumSuperficialisDigit3 (1 element )     //
-////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
 AnyMuscleModel FlexorDigitorumSuperficialisDigit3 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.FlexorDigitorumSuperficialisDigit3;
@@ -2266,14 +2266,14 @@ AnyMuscleModel FlexorDigitorumSuperficialisDigit3 =
   AnyVar PCSA ??= 1e4*.StrengthScaleUlna*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
+ 
 
 
 
 
-
-////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
 //     FlexorDigitorumSuperficialisDigit2 (1 element )     //
-////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
 AnyMuscleModel FlexorDigitorumSuperficialisDigit2 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.FlexorDigitorumSuperficialisDigit2;
@@ -2284,14 +2284,14 @@ AnyMuscleModel FlexorDigitorumSuperficialisDigit2 =
   AnyVar PCSA ??= 1e4*.StrengthScaleUlna*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
+ 
 
 
 
 
-
-////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
 //     FlexorDigitorumProfundusDigit5 (1 element )     //
-////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
 AnyMuscleModel FlexorDigitorumProfundusDigit5 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.FlexorDigitorumProfundusDigit5;
@@ -2302,14 +2302,14 @@ AnyMuscleModel FlexorDigitorumProfundusDigit5 =
   AnyVar PCSA ??= 1e4*.StrengthScaleUlna*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
+ 
 
 
 
 
-
-////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
 //     FlexorDigitorumProfundusDigit4 (1 element )     //
-////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
 AnyMuscleModel FlexorDigitorumProfundusDigit4 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.FlexorDigitorumProfundusDigit4;
@@ -2320,14 +2320,14 @@ AnyMuscleModel FlexorDigitorumProfundusDigit4 =
   AnyVar PCSA ??= 1e4*.StrengthScaleUlna*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
+ 
 
 
 
 
-
-////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
 //     FlexorDigitorumProfundusDigit3 (1 element )     //
-////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
 AnyMuscleModel FlexorDigitorumProfundusDigit3 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.FlexorDigitorumProfundusDigit3;
@@ -2338,14 +2338,14 @@ AnyMuscleModel FlexorDigitorumProfundusDigit3 =
   AnyVar PCSA ??= 1e4*.StrengthScaleUlna*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
+ 
 
 
 
 
-
-////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
 //     FlexorDigitorumProfundusDigit2 (1 element )     //
-////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
 AnyMuscleModel FlexorDigitorumProfundusDigit2 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.FlexorDigitorumProfundusDigit2;
@@ -2356,14 +2356,14 @@ AnyMuscleModel FlexorDigitorumProfundusDigit2 =
   AnyVar PCSA ??= 1e4*.StrengthScaleUlna*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
+ 
 
 
 
 
-
-////////////////////////////////////////////////////
+//////////////////////////////////////////////////
 //     ExtensorDigitorumDigit5 (1 element )     //
-////////////////////////////////////////////////////
+//////////////////////////////////////////////////
 AnyMuscleModel ExtensorDigitorumDigit5 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.ExtensorDigitorumDigit5;
@@ -2374,14 +2374,14 @@ AnyMuscleModel ExtensorDigitorumDigit5 =
   AnyVar PCSA ??= 1e4*.StrengthScaleUlna*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
+ 
 
 
 
 
-
-////////////////////////////////////////////////////
+//////////////////////////////////////////////////
 //     ExtensorDigitorumDigit4 (1 element )     //
-////////////////////////////////////////////////////
+//////////////////////////////////////////////////
 AnyMuscleModel ExtensorDigitorumDigit4 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.ExtensorDigitorumDigit4;
@@ -2392,14 +2392,14 @@ AnyMuscleModel ExtensorDigitorumDigit4 =
   AnyVar PCSA ??= 1e4*.StrengthScaleUlna*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
+ 
 
 
 
 
-
-////////////////////////////////////////////////////
+//////////////////////////////////////////////////
 //     ExtensorDigitorumDigit3 (1 element )     //
-////////////////////////////////////////////////////
+//////////////////////////////////////////////////
 AnyMuscleModel ExtensorDigitorumDigit3 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.ExtensorDigitorumDigit3;
@@ -2410,14 +2410,14 @@ AnyMuscleModel ExtensorDigitorumDigit3 =
   AnyVar PCSA ??= 1e4*.StrengthScaleUlna*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
+ 
 
 
 
 
-
-////////////////////////////////////////////////////
+//////////////////////////////////////////////////
 //     ExtensorDigitorumDigit2 (1 element )     //
-////////////////////////////////////////////////////
+//////////////////////////////////////////////////
 AnyMuscleModel ExtensorDigitorumDigit2 =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.ExtensorDigitorumDigit2;
@@ -2428,14 +2428,14 @@ AnyMuscleModel ExtensorDigitorumDigit2 =
   AnyVar PCSA ??= 1e4*.StrengthScaleUlna*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
+ 
 
 
 
 
-
-/////////////////////////////////////////////////
+///////////////////////////////////////////////
 //     ExtensorDigitiMinimi (1 element )     //
-/////////////////////////////////////////////////
+///////////////////////////////////////////////
 AnyMuscleModel ExtensorDigitiMinimi =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.ExtensorDigitiMinimi;
@@ -2446,14 +2446,14 @@ AnyMuscleModel ExtensorDigitiMinimi =
   AnyVar PCSA ??= 1e4*.StrengthScaleUlna*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
+ 
 
 
 
 
-
-/////////////////////////////////////////////////
+///////////////////////////////////////////////
 //     FlexorPollicisLongus (1 element )     //
-/////////////////////////////////////////////////
+///////////////////////////////////////////////
 AnyMuscleModel FlexorPollicisLongus =
 {
   AnyFolder& MuscleParameters = ..Data.unscaled.ModelParameters.Muscles.FlexorPollicisLongus;
@@ -2464,7 +2464,7 @@ AnyMuscleModel FlexorPollicisLongus =
   AnyVar PCSA ??= 1e4*.StrengthScaleUlna*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
   Vol0 ??= 1e-4 * PCSA * Lf0; // New calculation of the vol for the specific muscle branch (m^3)
 };
-
+ 
 
 
 
