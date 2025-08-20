@@ -124,223 +124,6 @@ AnyFolder Muscles =
     AnyFloat Fcfast ??= DesignVar(0.4); ///< Factor for determining shortening speed at optimum length
   };
 
-#if BM_ARM_DELTOID_WRAPPING == OFF
-  AnyFolder deltoideus_scapular_part_1 = 
-  {
-    AnyString Muscle = "Deltoideus scapula part 1"; ///< Descriptive name for the muscle, e.g. for plotting
-    AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
-    AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
-    AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
-    AnyFloat MuscleVolume ??= DesignVar(10.395); ///< Volume of the muscle  (ml)
-    AnyFloat MuscleVolumeSIScaled ??= .VolumeUnitFactor*VolumeScaleFactor*MuscleVolume; ///< Scaled Volume of the muscle in SI base unit (m^3)
-    AnyFloat OptimalFiberlength ??= _FIBER_LENGTH_DESIGNVAR(0.1155); ///< Optimal working length of the muscle fiber (m)
-    AnyFloat TotalTendonLength ??= _TENDON_LENGTH_DESIGNVAR(0.02475);///< The total tendon length (m)
-    AnyFloat K1 ??= DesignVar(10); ///< K1 constant in the muscle model.  Factor for determining shortening speed at optimum length
-    AnyFloat K2 ??= DesignVar(0); ///< K2 constant in the muscle model.  Factor for determining shortening speed at optimum length
-    AnyFloat Epsilon0 ??= DesignVar(0.053); ///< Epsilon bar in the muscle model. Represents tendon strain at F0
-    AnyFloat Fcfast ??= DesignVar(0.4); ///< Factor for determining shortening speed at optimum length
-  };
-#endif
-
-#if BM_ARM_DELTOID_WRAPPING == OFF
-  AnyFolder deltoideus_scapular_part_2 = 
-  {
-    AnyString Muscle = "Deltoideus scapula part 2"; ///< Descriptive name for the muscle, e.g. for plotting
-    AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
-    AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
-    AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
-    AnyFloat MuscleVolume ??= DesignVar(10.395); ///< Volume of the muscle  (ml)
-    AnyFloat MuscleVolumeSIScaled ??= .VolumeUnitFactor*VolumeScaleFactor*MuscleVolume; ///< Scaled Volume of the muscle in SI base unit (m^3)
-    AnyFloat OptimalFiberlength ??= _FIBER_LENGTH_DESIGNVAR(0.1155); ///< Optimal working length of the muscle fiber (m)
-    AnyFloat TotalTendonLength ??= _TENDON_LENGTH_DESIGNVAR(0.02475);///< The total tendon length (m)
-    AnyFloat K1 ??= DesignVar(10); ///< K1 constant in the muscle model.  Factor for determining shortening speed at optimum length
-    AnyFloat K2 ??= DesignVar(0); ///< K2 constant in the muscle model.  Factor for determining shortening speed at optimum length
-    AnyFloat Epsilon0 ??= DesignVar(0.053); ///< Epsilon bar in the muscle model. Represents tendon strain at F0
-    AnyFloat Fcfast ??= DesignVar(0.4); ///< Factor for determining shortening speed at optimum length
-  };
-#endif
-
-#if BM_ARM_DELTOID_WRAPPING == OFF
-  AnyFolder deltoideus_scapular_part_3 = 
-  {
-    AnyString Muscle = "Deltoideus scapula part 3"; ///< Descriptive name for the muscle, e.g. for plotting
-    AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
-    AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
-    AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
-    AnyFloat MuscleVolume ??= DesignVar(23.677); ///< Volume of the muscle  (ml)
-    AnyFloat MuscleVolumeSIScaled ??= .VolumeUnitFactor*VolumeScaleFactor*MuscleVolume; ///< Scaled Volume of the muscle in SI base unit (m^3)
-    AnyFloat OptimalFiberlength ??= _FIBER_LENGTH_DESIGNVAR(0.1155); ///< Optimal working length of the muscle fiber (m)
-    AnyFloat TotalTendonLength ??= _TENDON_LENGTH_DESIGNVAR(0.02475);///< The total tendon length (m)
-    AnyFloat K1 ??= DesignVar(10); ///< K1 constant in the muscle model.  Factor for determining shortening speed at optimum length
-    AnyFloat K2 ??= DesignVar(0); ///< K2 constant in the muscle model.  Factor for determining shortening speed at optimum length
-    AnyFloat Epsilon0 ??= DesignVar(0.053); ///< Epsilon bar in the muscle model. Represents tendon strain at F0
-    AnyFloat Fcfast ??= DesignVar(0.4); ///< Factor for determining shortening speed at optimum length
-  };
-#endif
-
-#if BM_ARM_DELTOID_WRAPPING == OFF
-  AnyFolder deltoideus_scapular_part_4 = 
-  {
-    AnyString Muscle = "Deltoideus scapula part 4"; ///< Descriptive name for the muscle, e.g. for plotting
-    AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
-    AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
-    AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
-    AnyFloat MuscleVolume ??= DesignVar(27.06); ///< Volume of the muscle  (ml)
-    AnyFloat MuscleVolumeSIScaled ??= .VolumeUnitFactor*VolumeScaleFactor*MuscleVolume; ///< Scaled Volume of the muscle in SI base unit (m^3)
-    AnyFloat OptimalFiberlength ??= _FIBER_LENGTH_DESIGNVAR(0.132); ///< Optimal working length of the muscle fiber (m)
-    AnyFloat TotalTendonLength ??= _TENDON_LENGTH_DESIGNVAR(0.02475);///< The total tendon length (m)
-    AnyFloat K1 ??= DesignVar(10); ///< K1 constant in the muscle model.  Factor for determining shortening speed at optimum length
-    AnyFloat K2 ??= DesignVar(0); ///< K2 constant in the muscle model.  Factor for determining shortening speed at optimum length
-    AnyFloat Epsilon0 ??= DesignVar(0.053); ///< Epsilon bar in the muscle model. Represents tendon strain at F0
-    AnyFloat Fcfast ??= DesignVar(0.4); ///< Factor for determining shortening speed at optimum length
-  };
-#endif
-
-#if BM_ARM_DELTOID_WRAPPING == OFF
-  AnyFolder deltoideus_scapular_part_5 = 
-  {
-    AnyString Muscle = "Deltoideus scapula part 5"; ///< Descriptive name for the muscle, e.g. for plotting
-    AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
-    AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
-    AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
-    AnyFloat MuscleVolume ??= DesignVar(27.06); ///< Volume of the muscle  (ml)
-    AnyFloat MuscleVolumeSIScaled ??= .VolumeUnitFactor*VolumeScaleFactor*MuscleVolume; ///< Scaled Volume of the muscle in SI base unit (m^3)
-    AnyFloat OptimalFiberlength ??= _FIBER_LENGTH_DESIGNVAR(0.132); ///< Optimal working length of the muscle fiber (m)
-    AnyFloat TotalTendonLength ??= _TENDON_LENGTH_DESIGNVAR(0.02475);///< The total tendon length (m)
-    AnyFloat K1 ??= DesignVar(10); ///< K1 constant in the muscle model.  Factor for determining shortening speed at optimum length
-    AnyFloat K2 ??= DesignVar(0); ///< K2 constant in the muscle model.  Factor for determining shortening speed at optimum length
-    AnyFloat Epsilon0 ??= DesignVar(0.053); ///< Epsilon bar in the muscle model. Represents tendon strain at F0
-    AnyFloat Fcfast ??= DesignVar(0.4); ///< Factor for determining shortening speed at optimum length
-  };
-#endif
-
-#if BM_ARM_DELTOID_WRAPPING == OFF
-  AnyFolder deltoideus_scapular_part_6 = 
-  {
-    AnyString Muscle = "Deltoideus scapula part 6"; ///< Descriptive name for the muscle, e.g. for plotting
-    AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
-    AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
-    AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
-    AnyFloat MuscleVolume ??= DesignVar(27.06); ///< Volume of the muscle  (ml)
-    AnyFloat MuscleVolumeSIScaled ??= .VolumeUnitFactor*VolumeScaleFactor*MuscleVolume; ///< Scaled Volume of the muscle in SI base unit (m^3)
-    AnyFloat OptimalFiberlength ??= _FIBER_LENGTH_DESIGNVAR(0.132); ///< Optimal working length of the muscle fiber (m)
-    AnyFloat TotalTendonLength ??= _TENDON_LENGTH_DESIGNVAR(0.02475);///< The total tendon length (m)
-    AnyFloat K1 ??= DesignVar(10); ///< K1 constant in the muscle model.  Factor for determining shortening speed at optimum length
-    AnyFloat K2 ??= DesignVar(0); ///< K2 constant in the muscle model.  Factor for determining shortening speed at optimum length
-    AnyFloat Epsilon0 ??= DesignVar(0.053); ///< Epsilon bar in the muscle model. Represents tendon strain at F0
-    AnyFloat Fcfast ??= DesignVar(0.4); ///< Factor for determining shortening speed at optimum length
-  };
-#endif
-
-#if BM_ARM_DELTOID_WRAPPING == OFF
-  AnyFolder deltoideus_clavicular_part_1 = 
-  {
-    AnyString Muscle = "Deltoideus clavicular part 1"; ///< Descriptive name for the muscle, e.g. for plotting
-    AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
-    AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
-    AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
-    AnyFloat MuscleVolume ??= DesignVar(19.074); ///< Volume of the muscle  (ml)
-    AnyFloat MuscleVolumeSIScaled ??= .VolumeUnitFactor*VolumeScaleFactor*MuscleVolume; ///< Scaled Volume of the muscle in SI base unit (m^3)
-    AnyFloat OptimalFiberlength ??= _FIBER_LENGTH_DESIGNVAR(0.14025); ///< Optimal working length of the muscle fiber (m)
-    AnyFloat TotalTendonLength ??= _TENDON_LENGTH_DESIGNVAR(0.02475);///< The total tendon length (m)
-    AnyFloat K1 ??= DesignVar(10); ///< K1 constant in the muscle model.  Factor for determining shortening speed at optimum length
-    AnyFloat K2 ??= DesignVar(0); ///< K2 constant in the muscle model.  Factor for determining shortening speed at optimum length
-    AnyFloat Epsilon0 ??= DesignVar(0.053); ///< Epsilon bar in the muscle model. Represents tendon strain at F0
-    AnyFloat Fcfast ??= DesignVar(0.4); ///< Factor for determining shortening speed at optimum length
-  };
-#endif
-
-#if BM_ARM_DELTOID_WRAPPING == OFF
-  AnyFolder deltoideus_clavicular_part_2 = 
-  {
-    AnyString Muscle = "Deltoideus clavicular part 2"; ///< Descriptive name for the muscle, e.g. for plotting
-    AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
-    AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
-    AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
-    AnyFloat MuscleVolume ??= DesignVar(19.074); ///< Volume of the muscle  (ml)
-    AnyFloat MuscleVolumeSIScaled ??= .VolumeUnitFactor*VolumeScaleFactor*MuscleVolume; ///< Scaled Volume of the muscle in SI base unit (m^3)
-    AnyFloat OptimalFiberlength ??= _FIBER_LENGTH_DESIGNVAR(0.14025); ///< Optimal working length of the muscle fiber (m)
-    AnyFloat TotalTendonLength ??= _TENDON_LENGTH_DESIGNVAR(0.02475);///< The total tendon length (m)
-    AnyFloat K1 ??= DesignVar(10); ///< K1 constant in the muscle model.  Factor for determining shortening speed at optimum length
-    AnyFloat K2 ??= DesignVar(0); ///< K2 constant in the muscle model.  Factor for determining shortening speed at optimum length
-    AnyFloat Epsilon0 ??= DesignVar(0.053); ///< Epsilon bar in the muscle model. Represents tendon strain at F0
-    AnyFloat Fcfast ??= DesignVar(0.4); ///< Factor for determining shortening speed at optimum length
-  };
-#endif
-
-#if BM_ARM_DELTOID_WRAPPING == OFF
-  AnyFolder deltoideus_clavicular_part_3 = 
-  {
-    AnyString Muscle = "Deltoideus clavicular part 3"; ///< Descriptive name for the muscle, e.g. for plotting
-    AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
-    AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
-    AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
-    AnyFloat MuscleVolume ??= DesignVar(19.074); ///< Volume of the muscle  (ml)
-    AnyFloat MuscleVolumeSIScaled ??= .VolumeUnitFactor*VolumeScaleFactor*MuscleVolume; ///< Scaled Volume of the muscle in SI base unit (m^3)
-    AnyFloat OptimalFiberlength ??= _FIBER_LENGTH_DESIGNVAR(0.14025); ///< Optimal working length of the muscle fiber (m)
-    AnyFloat TotalTendonLength ??= _TENDON_LENGTH_DESIGNVAR(0.02475);///< The total tendon length (m)
-    AnyFloat K1 ??= DesignVar(10); ///< K1 constant in the muscle model.  Factor for determining shortening speed at optimum length
-    AnyFloat K2 ??= DesignVar(0); ///< K2 constant in the muscle model.  Factor for determining shortening speed at optimum length
-    AnyFloat Epsilon0 ??= DesignVar(0.053); ///< Epsilon bar in the muscle model. Represents tendon strain at F0
-    AnyFloat Fcfast ??= DesignVar(0.4); ///< Factor for determining shortening speed at optimum length
-  };
-#endif
-
-#if BM_ARM_DELTOID_WRAPPING == OFF
-  AnyFolder deltoideus_clavicular_part_4 = 
-  {
-    AnyString Muscle = "Deltoideus clavicular part 4"; ///< Descriptive name for the muscle, e.g. for plotting
-    AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
-    AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
-    AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
-    AnyFloat MuscleVolume ??= DesignVar(19.074); ///< Volume of the muscle  (ml)
-    AnyFloat MuscleVolumeSIScaled ??= .VolumeUnitFactor*VolumeScaleFactor*MuscleVolume; ///< Scaled Volume of the muscle in SI base unit (m^3)
-    AnyFloat OptimalFiberlength ??= _FIBER_LENGTH_DESIGNVAR(0.14025); ///< Optimal working length of the muscle fiber (m)
-    AnyFloat TotalTendonLength ??= _TENDON_LENGTH_DESIGNVAR(0.02475);///< The total tendon length (m)
-    AnyFloat K1 ??= DesignVar(10); ///< K1 constant in the muscle model.  Factor for determining shortening speed at optimum length
-    AnyFloat K2 ??= DesignVar(0); ///< K2 constant in the muscle model.  Factor for determining shortening speed at optimum length
-    AnyFloat Epsilon0 ??= DesignVar(0.053); ///< Epsilon bar in the muscle model. Represents tendon strain at F0
-    AnyFloat Fcfast ??= DesignVar(0.4); ///< Factor for determining shortening speed at optimum length
-  };
-#endif
-
-#if BM_ARM_DELTOID_WRAPPING == OFF
-  AnyFolder deltoideus_clavicular_part_5 = 
-  {
-    AnyString Muscle = "Deltoideus clavicular part 5"; ///< Descriptive name for the muscle, e.g. for plotting
-    AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
-    AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
-    AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
-    AnyFloat MuscleVolume ??= DesignVar(19.074); ///< Volume of the muscle  (ml)
-    AnyFloat MuscleVolumeSIScaled ??= .VolumeUnitFactor*VolumeScaleFactor*MuscleVolume; ///< Scaled Volume of the muscle in SI base unit (m^3)
-    AnyFloat OptimalFiberlength ??= _FIBER_LENGTH_DESIGNVAR(0.14025); ///< Optimal working length of the muscle fiber (m)
-    AnyFloat TotalTendonLength ??= _TENDON_LENGTH_DESIGNVAR(0.02475);///< The total tendon length (m)
-    AnyFloat K1 ??= DesignVar(10); ///< K1 constant in the muscle model.  Factor for determining shortening speed at optimum length
-    AnyFloat K2 ??= DesignVar(0); ///< K2 constant in the muscle model.  Factor for determining shortening speed at optimum length
-    AnyFloat Epsilon0 ??= DesignVar(0.053); ///< Epsilon bar in the muscle model. Represents tendon strain at F0
-    AnyFloat Fcfast ??= DesignVar(0.4); ///< Factor for determining shortening speed at optimum length
-  };
-#endif
-
-#if BM_ARM_DELTOID_WRAPPING == OFF
-  AnyFolder deltoideus_clavicular_part_6 = 
-  {
-    AnyString Muscle = "Deltoideus clavicular part 6"; ///< Descriptive name for the muscle, e.g. for plotting
-    AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
-    AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
-    AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
-    AnyFloat MuscleVolume ??= DesignVar(19.074); ///< Volume of the muscle  (ml)
-    AnyFloat MuscleVolumeSIScaled ??= .VolumeUnitFactor*VolumeScaleFactor*MuscleVolume; ///< Scaled Volume of the muscle in SI base unit (m^3)
-    AnyFloat OptimalFiberlength ??= _FIBER_LENGTH_DESIGNVAR(0.14025); ///< Optimal working length of the muscle fiber (m)
-    AnyFloat TotalTendonLength ??= _TENDON_LENGTH_DESIGNVAR(0.02475);///< The total tendon length (m)
-    AnyFloat K1 ??= DesignVar(10); ///< K1 constant in the muscle model.  Factor for determining shortening speed at optimum length
-    AnyFloat K2 ??= DesignVar(0); ///< K2 constant in the muscle model.  Factor for determining shortening speed at optimum length
-    AnyFloat Epsilon0 ??= DesignVar(0.053); ///< Epsilon bar in the muscle model. Represents tendon strain at F0
-    AnyFloat Fcfast ??= DesignVar(0.4); ///< Factor for determining shortening speed at optimum length
-  };
-#endif
-
-#if BM_ARM_DELTOID_WRAPPING != OFF
   AnyFolder DeltoideusPosterior = 
   {
     AnyString Muscle = "Deltoideus posterior"; ///< Descriptive name for the muscle, e.g. for plotting
@@ -356,9 +139,7 @@ AnyFolder Muscles =
     AnyFloat Epsilon0 ??= DesignVar(0.053); ///< Epsilon bar in the muscle model. Represents tendon strain at F0
     AnyFloat Fcfast ??= DesignVar(0.4); ///< Factor for determining shortening speed at optimum length
   };
-#endif
 
-#if BM_ARM_DELTOID_WRAPPING != OFF
   AnyFolder DeltoideusLateral = 
   {
     AnyString Muscle = "Deltoideus lateral"; ///< Descriptive name for the muscle, e.g. for plotting
@@ -374,9 +155,7 @@ AnyFolder Muscles =
     AnyFloat Epsilon0 ??= DesignVar(0.053); ///< Epsilon bar in the muscle model. Represents tendon strain at F0
     AnyFloat Fcfast ??= DesignVar(0.4); ///< Factor for determining shortening speed at optimum length
   };
-#endif
 
-#if BM_ARM_DELTOID_WRAPPING != OFF
   AnyFolder DeltoideusAnterior = 
   {
     AnyString Muscle = "Deltoideus anterior"; ///< Descriptive name for the muscle, e.g. for plotting
@@ -392,7 +171,6 @@ AnyFolder Muscles =
     AnyFloat Epsilon0 ??= DesignVar(0.053); ///< Epsilon bar in the muscle model. Represents tendon strain at F0
     AnyFloat Fcfast ??= DesignVar(0.4); ///< Factor for determining shortening speed at optimum length
   };
-#endif
 
   AnyFolder Infraspinatus = 
   {
