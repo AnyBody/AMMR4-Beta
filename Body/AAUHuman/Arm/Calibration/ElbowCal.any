@@ -284,7 +284,7 @@ AnyFolder ElbowCal ={
   AnyFloat  PronatorTeresHumeralRmin = repmat(NumElemOf(PronatorTeresHumeralMuscles), ..RMin);
   AnyFloat  PronatorTeresHumeralRmax = repmat(NumElemOf(PronatorTeresHumeralMuscles), ..RMax);
 
-  AnyObjectPtrArray PronatorTeresUlnareMuscles = ObjSearch(MusPrefix+".*.PronatorTeresUlnare*", "AnyMuscle");
+  AnyObjectPtrArray PronatorTeresUlnareMuscles = ObjSearch(MusPrefix+".*.PronatorTeresUlnare", "AnyMuscle");
   AnyFloat  PronatorTeresUlnareRmin = repmat(NumElemOf(PronatorTeresUlnareMuscles), ..RMin);
   AnyFloat  PronatorTeresUlnareRmax = repmat(NumElemOf(PronatorTeresUlnareMuscles), ..RMax);
 
