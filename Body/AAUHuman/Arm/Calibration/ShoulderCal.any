@@ -261,22 +261,16 @@ AnyFolder ShoulderCal ={
   AnyFloat  CoracobrachialisRmin = repmat(NumElemOf(CoracobrachialisMuscles), ..RMin);
   AnyFloat  CoracobrachialisRmax = repmat(NumElemOf(CoracobrachialisMuscles), ..RMax);
 
-  #if BM_ARM_DELTOID_WRAPPING == _DELTOID_WRAPPING_RAKE_
-  AnyObjectPtrArray deltoideus_scapularMuscles = ObjSearch(MusPrefix+".*.deltoideus_scapular*", "AnyMuscle");
-  #else
   AnyObjectPtrArray deltoideus_scapularMuscles = arrcat(
     ObjSearch(MusPrefix+".*.DeltoideusPosterior*", "AnyMuscle"),
     ObjSearch(MusPrefix+".*.DeltoideusLateral*", "AnyMuscle")
   );
-  #endif
+
   AnyFloat  deltoideus_scapularRmin = repmat(NumElemOf(deltoideus_scapularMuscles), ..RMin);
   AnyFloat  deltoideus_scapularRmax = repmat(NumElemOf(deltoideus_scapularMuscles), ..RMax);
 
-  #if BM_ARM_DELTOID_WRAPPING == _DELTOID_WRAPPING_RAKE_
-  AnyObjectPtrArray deltoideus_clavicularMuscles = ObjSearch(MusPrefix+".*.deltoideus_clavicular*", "AnyMuscle");
-  #else
   AnyObjectPtrArray deltoideus_clavicularMuscles = ObjSearch(MusPrefix+".*.DeltoideusAnterior*", "AnyMuscle");
-  #endif
+  
   AnyFloat  deltoideus_clavicularRmin = repmat(NumElemOf(deltoideus_clavicularMuscles), ..RMin);
   AnyFloat  deltoideus_clavicularRmax = repmat(NumElemOf(deltoideus_clavicularMuscles), ..RMax);
 

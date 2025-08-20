@@ -283,11 +283,7 @@ Muscles = {
   /// Folder to reference relevant trunk segments and attach nodes needed for the arm model
   AnyFolder TrunkNodeAttachement = { #include "AddOnOutSideBlockForMuscles.any" };
 
-  #if BM_ARM_DELTOID_WRAPPING == _DELTOID_WRAPPING_RAKE_
-    #include "ArtificialRakeForDeltoidMuscle.any"
-  #else
-    #include "DeltoidWrap.any"
-  #endif
+  #include "DeltoidWrap.any"
 
   #include "LatissimusDorsiWrap.any"
   #include "TricepsBrachiiWrap.any"

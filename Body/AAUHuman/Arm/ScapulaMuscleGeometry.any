@@ -270,14 +270,7 @@ Scapula = {
   };
 
   AnyVec3 T={-0.02,0.012,0.005}; //corections
-#if BM_ARM_DELTOID_WRAPPING == _DELTOID_WRAPPING_RAKE_
-  AnyRefNode O_deltoideus_scapular_part_1 = {sRel = .Scale(.Data.O_deltoideus_scapular_part_1_pos*.Mirror);};
-  AnyRefNode O_deltoideus_scapular_part_2 = {sRel = .Scale(.Data.O_deltoideus_scapular_part_2_pos*.Mirror);};
-  AnyRefNode O_deltoideus_scapular_part_3 = {sRel = .Scale(.Data.O_deltoideus_scapular_part_3_pos*.Mirror);};
-  AnyRefNode O_deltoideus_scapular_part_4 = {sRel = .Scale(.Data.O_deltoideus_scapular_part_4_pos*.Mirror);};
-  AnyRefNode O_deltoideus_scapular_part_5 = {sRel = .Scale(.Data.O_deltoideus_scapular_part_5_pos*.Mirror);};
-  AnyRefNode O_deltoideus_scapular_part_6 = {sRel = .Scale(.Data.O_deltoideus_scapular_part_6_pos*.Mirror);};
-#else
+
   AnyRefNode O_DeltoideusPosterior1 = {sRel = .Scale(.Data.O_DeltoideusPosterior1_pos*.Mirror);};
   AnyRefNode O_DeltoideusPosterior2 = {sRel = .Scale(.Data.O_DeltoideusPosterior2_pos*.Mirror);};
   AnyRefNode O_DeltoideusPosterior3 = {sRel = .Scale(.Data.O_DeltoideusPosterior3_pos*.Mirror);};
@@ -286,7 +279,7 @@ Scapula = {
   AnyRefNode O_DeltoideusLateral2 = {sRel = .Scale(.Data.O_DeltoideusLateral2_pos*.Mirror);};
   AnyRefNode O_DeltoideusLateral3 = {sRel = .Scale(.Data.O_DeltoideusLateral3_pos*.Mirror);};
   AnyRefNode O_DeltoideusLateral4 = {sRel = .Scale(.Data.O_DeltoideusLateral4_pos*.Mirror);};
-#endif
+
   AnyRefNode O_Subscapularis1 = {sRel = .Scale(.Data.O_Subscapularis1_pos*.Mirror);};
   AnyRefNode O_Subscapularis2 = {sRel = .Scale(.Data.O_Subscapularis2_pos*.Mirror);};
   AnyRefNode O_Subscapularis3 = {sRel = .Scale(.Data.O_Subscapularis3_pos*.Mirror);};
