@@ -1,5 +1,5 @@
 //
-// !!! THIS IS AN AUTOMATICALLY GENERATED FILE. DO NOT MODIFY IT !!!
+// !!! THIS IS AN AUTOMATICALLY GENERATED FILE. DO NOT MODIFY IT !!! 
 //
 
 //
@@ -143,7 +143,7 @@ AnyMessage msg_BM_TRUNK_DIAGPHRAM_FIXED_POSITION = { TriggerPreProcess = On; Typ
 #endif
 
 #ifdef BM_TRUNK_THORACIC_STERNUM_TOPOLOGY
-// The topology of the sternum segment, i.e. number of segments into which sternum is split. Current options are 2, or 4 segments.
+// The topology of the sternum segment, i.e. number of segments into which sternum is split. Current options are 2, or 4 segments. 
 AnyMessage msg_BM_TRUNK_THORACIC_STERNUM_TOPOLOGY = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_TRUNK_THORACIC_STERNUM_TOPOLOGY);};
 #endif
 
@@ -255,11 +255,6 @@ AnyMessage msg_BM_ARM_CLAVICULA_ROTATION_RHYTHM = { TriggerPreProcess = On; Type
 #ifdef BM_ARM_DETAILED_HAND
 // Switch for enabling the detailed hand.
 AnyMessage msg_BM_ARM_DETAILED_HAND = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_ARM_DETAILED_HAND);};
-#endif
-
-#ifdef BM_ARM_DELTOID_WRAPPING
-// Switch for deltoid wrapping. Setting this to OFF or _DELTOID_WRAPPING_RAKE_ will revert to the older rake based implementation of the deltoid.
-AnyMessage msg_BM_ARM_DELTOID_WRAPPING = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_ARM_DELTOID_WRAPPING);};
 #endif
 
 #ifdef BM_ARM_MUSCLES_BOTH
@@ -785,7 +780,7 @@ AnyIntVar value_BM_TRUNK_DIAGPHRAM_FIXED_POSITION=BM_TRUNK_DIAGPHRAM_FIXED_POSIT
 #endif
 
 #ifdef BM_TRUNK_THORACIC_STERNUM_TOPOLOGY
-// The topology of the sternum segment, i.e. number of segments into which sternum is split. Current options are 2, or 4 segments.
+// The topology of the sternum segment, i.e. number of segments into which sternum is split. Current options are 2, or 4 segments. 
 AnyIntVar value_BM_TRUNK_THORACIC_STERNUM_TOPOLOGY=BM_TRUNK_THORACIC_STERNUM_TOPOLOGY;
 #endif
 
@@ -897,11 +892,6 @@ AnyIntVar value_BM_ARM_CLAVICULA_ROTATION_RHYTHM=BM_ARM_CLAVICULA_ROTATION_RHYTH
 #ifdef BM_ARM_DETAILED_HAND
 // Switch for enabling the detailed hand.
 AnyIntVar value_BM_ARM_DETAILED_HAND=BM_ARM_DETAILED_HAND;
-#endif
-
-#ifdef BM_ARM_DELTOID_WRAPPING
-// Switch for deltoid wrapping. Setting this to OFF or _DELTOID_WRAPPING_RAKE_ will revert to the older rake based implementation of the deltoid.
-AnyIntVar value_BM_ARM_DELTOID_WRAPPING=BM_ARM_DELTOID_WRAPPING;
 #endif
 
 #ifdef BM_ARM_MUSCLES_BOTH

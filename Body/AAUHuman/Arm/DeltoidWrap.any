@@ -1,7 +1,7 @@
 
 MultiWrapSurfs DeltoidWrappingPosterior (
 BASE_FRAME = WrappingSegment.RotNode,
-TYPE = BM_ARM_DELTOID_WRAPPING,
+TYPE = 2,
 NUMBER_OF_CYLINDERS= 4,
 DEBUG=0
 ) =
@@ -89,7 +89,7 @@ DEBUG=0
 MultiWrapSurfs DeltoidWrappingLateral (
 BASE_FRAME = WrappingSegment.RotNode,
 NUMBER_OF_CYLINDERS= 4,
-TYPE=BM_ARM_DELTOID_WRAPPING,
+TYPE= 2,
 DEBUG=0
 ) =
 {
@@ -189,7 +189,7 @@ DEBUG=0
 MultiWrapSurfs DeltoidWrappingAnterior (
 BASE_FRAME = WrappingSegment.RotNode,
 NUMBER_OF_CYLINDERS= 4,
-TYPE=BM_ARM_DELTOID_WRAPPING,
+TYPE= 2,
 DEBUG=0
 ) =
 {

@@ -30,6 +30,10 @@ You can [enable backwards compatibility](changes-to-bodymodel-folders) by settin
 ```
 :::
 
+**Removed:**
+
+- Removed BM_ARM_DELTOID_WRAPPING since the old ones are unused. The previous default is the only option now and Deltoids are wrapped on ellipsoids.
+
 **Fixed:**
 
 * Fixed the inclusion of the buckle segmental masses in the calculation of the TotalBodyMass variable.
@@ -1367,7 +1371,7 @@ requested body height.
   #define BM_ARM_DELTOID_WRAPPING _DELTOID_WRAPPING_CYLINDERS_
   ```
 
-  See {bm_statement}`BM_ARM_DELTOID_WRAPPING` for possible options.
+  See `BM_ARM_DELTOID_WRAPPING` for possible options.
 
 **Fixed:**
 

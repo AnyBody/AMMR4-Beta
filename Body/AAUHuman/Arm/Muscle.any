@@ -358,7 +358,6 @@ MuscleGroup Coracobrachialis = {
   };
   
   MuscleGroup DeltoideusPosterior = {
-    // start of BM_ARM_DELTOID_WRAPPING
     AnyMuscleShortestPath DeltoideusPosterior1 = {
       AnyMuscleModel &MusMdl = ...MuscleModels.DeltoideusPosterior1;
       AnyRefNode &Org = ...Segments.Scapula.O_DeltoideusPosterior1;

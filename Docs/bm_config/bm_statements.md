@@ -1076,25 +1076,6 @@ Switch for enabling the detailed hand.
 ::::
 
 
-::::{dropdown} `BM_ARM_DELTOID_WRAPPING`
-:animate: fade-in-slide-down
-:margin: 0 0 3 3
-
-```{ammr:bm_statement} BM_ARM_DELTOID_WRAPPING
-
-Switch for deltoid wrapping. Setting this to OFF or _DELTOID_WRAPPING_RAKE_ will revert to the older rake based implementation of the deltoid.
-
-:Default: {any}`_DELTOID_WRAPPING_ELIPSOIDS_`
-:Example: `#define BM_ARM_DELTOID_WRAPPING _DELTOID_WRAPPING_ELIPSOIDS_`
-:Options:
-  - {any}`_DELTOID_WRAPPING_RAKE_` -> Switch for using pre AMMR 2.2. rake implementation for deltoid wrapping
-  - {any}`_DELTOID_WRAPPING_ELIPSOIDS_` -> Switch for using multiple elipsoids in the deltoid wrapping"
-  - {any}`_DELTOID_WRAPPING_CYLINDERS_` -> Switch for using mulitple cylinder in the deltroid wrapping
-
-```
-::::
-
-
 ::::{dropdown} `BM_ARM_MUSCLES_BOTH`
 :animate: fade-in-slide-down
 :margin: 0 0 3 3
