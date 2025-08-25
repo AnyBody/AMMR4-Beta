@@ -11,7 +11,7 @@ DEBUG=0
   RadiusHeight = 0.8626287 * vnorm(...Segments.Scapula.GHReactionCenterNode.sRel - ...Segments.Scapula.acj.sRel);
 
   WrapSurfLength = 1.7 * vnorm(...Segments.Humerus.I_DeltoideusLateral1.sRel - ...Segments.Humerus.gh.sRel);
-  Angles = DesignVar(...Sign*({21, 24, 33, 47}));
+  Angles = DesignVar(...Sign*({25, 30, 36, 52}));
 
   Visibility = repmat(NumberOfCylinders, Off);
 
