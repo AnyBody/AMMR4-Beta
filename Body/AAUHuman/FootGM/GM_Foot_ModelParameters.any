@@ -38,6 +38,7 @@ ModelParameters = {
     AnyVec3 LateralControlPoint = ..Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(.Talus.LateralControlPoint);
     AnyVec3 MedialControlPoint = ..Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(.Talus.MedialControlPoint);
     
+    AnyVec3 HeelNode = ..Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(.Foot.TendonCalcaneousNode);
     AnyVec3 HeelContactNodeLow = ..Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(.Foot.HeelContactNodeLow);
     AnyVec3 HeelContactNodeLateral = ..Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(.Foot.HeelContactNodeLow + {0.02, 0.0, ..Sign*0.015});
     AnyVec3 HeelContactNodeMedial = ..Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(.Foot.HeelContactNodeLow + {0.02, 0.0, ..Sign*-0.015});
@@ -73,7 +74,7 @@ ModelParameters = {
       AnyVec3 SubTalarJoint = .SubTalarJoint;
       AnyVec3 SubTalarJointAxis = .SubTalarJointAxis;
       AnyVec3 SubTalarJointAxisRef = {-0.012, 0.105, 0.015}*..TF';
-      AnyVec3 HeelNode = {0.003219995, 0.09723906, -0.01468902}*..TF'; //Taken from TD leg
+      AnyVec3 HeelNode = .HeelNode; //Taken from TLEM2 dataset
       AnyVec3 HeelPlantarNode = .HeelPlantarNode;
       AnyVec3 TuberCalcanei = {-0.001, 0.113, -0.003}*..TF';
       AnyVec3 MedialProcess = {-0.02043697, 0.08772377, -0.005106899}*..TF';
@@ -547,36 +548,3 @@ ModelParameters = {
     };
   }; // FootGM
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
