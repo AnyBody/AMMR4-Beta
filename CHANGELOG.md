@@ -150,7 +150,8 @@ You can [enable backwards compatibility](changes-to-bodymodel-folders) by settin
    hand is enabled. 
 *  Fixed arm rest asymmetry in various sitting model application examples. 
 
-
+### ➕ Added:
+* The implemenation of the pelvis rotation vector measure in the interface folder has been refactored to allow overwritting the global reference frame.
 
 (ammr-3.1.3-changelog)=
 ## AMMR 3.1.3 (2025-06-16)
@@ -809,7 +810,7 @@ The `HumeroUlnarJoint` is the elbow flexion extension, and together
   <sphx_glr_auto_examples_Orthopedics_and_rehab_plot_KneeForcesExample.py>`>
 - A new box lifting motion capture model has been added. The model is based on
   data from an inertial measurement unit based suit
-  ([Xsens](https://www.movella.com/products/wearables/xsens-mtw-awinda)), and
+  ([Xsens](https://www.movella.com/wearables/xsens-mtw-awinda)), and
   illustrates how to connect MoCap models with objects in the environment.
   <{ref}`See more <sphx_glr_auto_examples_mocap_plot_bvh_boxlift.py>`>
 
