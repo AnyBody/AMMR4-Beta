@@ -71,7 +71,8 @@ jobs:
             --runslow `
           ${{ github.event.inputs.custom-pytest-arg != '' && ' ' || '$(Get-content .\known-failing-tests.txt | foreach {"--deselect={0}" -f $_.split("#")[0].trim() })' }} `
           ${{ github.event.inputs.custom-pytest-arg  || '' }}
-          
+        env:
+          ANYBODY_PATH_PYTHONHOME: ${{ env.PIXI_PROJECT_ROOT }}\.pixi\envs\test
               
       - name: Run known failing AMMR tests
         if: github.event.inputs.custom-pytest-arg == '' && matrix.test_group == 1
@@ -90,3 +91,5 @@ jobs:
               --suppress-no-test-exit-code `
               $(Get-content .\known-failing-tests.txt | foreach {"{0}" -f $_.split('#')[0].trim()})
           }
+        env:
+          ANYBODY_PATH_PYTHONHOME: ${{ env.PIXI_PROJECT_ROOT }}\.pixi\envs\test
