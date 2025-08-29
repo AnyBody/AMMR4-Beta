@@ -42,6 +42,333 @@ DEBUG=0
       #endif
     };
   };
+  AnySeg WrappingSegment1 ={
+    //^ Segment on which the wrapping cylinders are placed.
+    //^ The ssegment follows scapula kinematically, but is dynamically
+    //^ attached to both scapula and humerus to ensure that forces on
+    //^ the wrapping cylinders are distributed correctly between humerus
+    //^ scapula
+
+    Mass=1e-5;
+    Jii={0.0,0.0,0.0};
+
+    r0= {-0.128606, 1.650961, 0.1448542};//(O_DeltoideusPosterior2.r heigh 1.95 
+//    Axes0=....Segments.Scapula.Axes0
+//    #if _LEFT_RIGHT_ == "Left"
+//    * RotMat(pi,y)
+//    #endif;
+//Axes0 = {{0.39807674220255485, -0.16141538644427222, -0.90303930165660429},
+//  {0.36916871646552452, 0.92935623664317513, -0.0033829270806418343},
+//  {0.83979126341049692, -0.33202719531912139, 0.42954461405996014}};
+
+//      AnyFloat a = (.Scapula.O_DeltoideusPosterior2.r *3/4+
+//      .Humerus.I_DeltoideusPosterior2.r *1/4);
+//
+//    AnyRefNode EllipsoidCenter = {
+//      sRel = {-0.08912016, 1.644819, 0.1429419}-{-0.1017272, 1.68835, 0.1232976};
+//  };
+  AnySeg &Scapula = ....Segments.Scapula;
+  AnySeg &Humerus = ....Segments.Humerus;
+
+AnySurfEllipsoid DP1 = 
+{
+  AngleX = 10*pi/180;
+  AdjustorDirection = {1,0.3,0};
+  AnyRefNode &ScapulaNode = .Scapula.O_DeltoideusPosterior1;
+  AnyRefNode &HumerusNode = .Humerus.I_DeltoideusPosterior1;
+  #include "CalEllipsMembers.any"
+//  AdjustorDirection = {0.5,1,0};
+//  DistanceRatio = 0.5;
+//  ARel = RotMat(HumerusNode.sRel, ScapulaNode.sRel, (ScapulaNode.ARel*{-0.01,0,0}')'+ScapulaNode.sRel);
+};
+
+AnySurfEllipsoid DP2 = 
+{
+  AngleX = 20*pi/180;
+  AdjustorDirection = {1.7,0.6,0};
+  AnyRefNode &ScapulaNode = .Scapula.O_DeltoideusPosterior2;
+  AnyRefNode &HumerusNode = .Humerus.I_DeltoideusPosterior2;
+  #include "CalEllipsMembers.any"
+};
+
+AnySurfEllipsoid DP3 = 
+{
+  AngleX = 35*pi/180;
+  AdjustorDirection = {1.7,0.9,0};
+  AnyRefNode &ScapulaNode = .Scapula.O_DeltoideusPosterior3;
+  AnyRefNode &HumerusNode = .Humerus.I_DeltoideusPosterior3;
+  #include "CalEllipsMembers.any"
+//  AdjustorDirection = {0.5,1,0};
+//  DistanceRatio = 0.5;
+//  ARel = RotMat(HumerusNode.sRel, ScapulaNode.sRel, (ScapulaNode.ARel*{-0.01,0,0}')'+ScapulaNode.sRel);
+};
+
+AnySurfEllipsoid DP4 = 
+{
+  AngleX = 50*pi/180;
+  AdjustorDirection = {1.7,1,0};
+  DistanceRatio = 1.2;
+  AnyRefNode &ScapulaNode = .Scapula.O_DeltoideusPosterior4;
+  AnyRefNode &HumerusNode = .Humerus.I_DeltoideusPosterior4;
+  #include "CalEllipsMembers.any"
+//  AdjustorDirection = {0.5,1,0};
+//  DistanceRatio = 0.5;
+//  ARel = RotMat(HumerusNode.sRel, ScapulaNode.sRel, (ScapulaNode.ARel*{-0.01,0,0}')'+ScapulaNode.sRel);
+};
+
+////////Scapula = {
+////////AnyRefNode ellipsoid_ref = {
+////////  sRel = {-0.128606, 1.650961, 0.1448542}-.r0;//(O_DeltoideusPosterior2.r heigh 1.95 
+////////  AnySeg &Scapula = ..Scapula;
+////////  AnySeg &Humerus = ..Humerus;
+////////
+////////AnySurfEllipsoid DP1 = 
+////////{
+////////  AnyRefNode &ScapulaNode = ..O_DeltoideusPosterior1;
+////////  AnyRefNode &HumerusNode = .Humerus.I_DeltoideusPosterior1;
+////////  #include "CalEllipsMembers_ScapulaEllipsoids.any"
+//////////  AdjustorDirection = {0.5,1,0};
+//////////  DistanceRatio = 0.5;
+//////////  ARel = RotMat(HumerusNode.sRel, ScapulaNode.sRel, (ScapulaNode.ARel*{-0.01,0,0}')'+ScapulaNode.sRel);
+////////};
+////////AnySurfEllipsoid DP2 = 
+////////{
+////////  AnyRefNode &ScapulaNode = ..O_DeltoideusPosterior2;
+////////  AnyRefNode &HumerusNode = .Humerus.I_DeltoideusPosterior2;
+////////  #include "CalEllipsMembers_ScapulaEllipsoids.any"
+//////////  AdjustorDirection = {0.5,1,0};
+//////////  DistanceRatio = 0.5;
+//////////  ARel = RotMat(HumerusNode.sRel, ScapulaNode.sRel, (ScapulaNode.ARel*{-0.01,0,0}')'+ScapulaNode.sRel);
+////////};
+////////};
+////////};
+//    AnyRefNode RotNode =
+//    {
+//      AnyVar PosteriorTilt = 7;
+//      //AnyDrawRefFrame drwf ={ScaleXYZ=0.1*{1,1,1};RGB={0,1,1};};
+//      #if _LEFT_RIGHT_ == "Left"
+//      ARel = RotMat(-0.1,y)*RotMat(pi,x)*RotMat(PosteriorTilt*pi/180,x);
+//      #else
+//      ARel = RotMat(-0.1,y)*RotMat(PosteriorTilt*pi/180,x);
+//      #endif
+
+
+AnyRefNode LocalReferenceFrame_ConstraintNode = {sRel= {0,0,0}; ARel= .Scapula.Axes0;};
+AnyRefNode DeltoideusPosteriorWrappingRotNode = {sRel= {0,0,0};
+  ARel = .Scapula.Axes0* .Scapula.gh_rotated1.ARel;};
+
+AnyRefNode O_DeltoideusPosterior1 = {sRel= .Scapula.r0 -.r0 + (.Scapula.Axes0 * .....Segments.Scapula.O_DeltoideusPosterior1.sRel')';};
+AnyRefNode O_DeltoideusPosterior2 = {sRel= .Scapula.r0 -.r0 + (.Scapula.Axes0 * .....Segments.Scapula.O_DeltoideusPosterior2.sRel')';};
+AnyRefNode O_DeltoideusPosterior3 = {sRel= .Scapula.r0 -.r0 + (.Scapula.Axes0 * .....Segments.Scapula.O_DeltoideusPosterior3.sRel')';};
+AnyRefNode O_DeltoideusPosterior4 = {sRel= .Scapula.r0 -.r0 + (.Scapula.Axes0 * .....Segments.Scapula.O_DeltoideusPosterior4.sRel')';};
+
+AnyRefNode I_DeltoideusPosterior1 = {sRel= .Humerus.r0 -.r0 + (.Humerus.Axes0 * .....Segments.Humerus.I_DeltoideusPosterior1.sRel')';};
+AnyRefNode I_DeltoideusPosterior2 = {sRel= .Humerus.r0 -.r0 + (.Humerus.Axes0 * .....Segments.Humerus.I_DeltoideusPosterior2.sRel')';};
+AnyRefNode I_DeltoideusPosterior3 = {sRel= .Humerus.r0 -.r0 + (.Humerus.Axes0 * .....Segments.Humerus.I_DeltoideusPosterior3.sRel')';};
+AnyRefNode I_DeltoideusPosterior4 = {sRel= .Humerus.r0 -.r0 + (.Humerus.Axes0 * .....Segments.Humerus.I_DeltoideusPosterior4.sRel')';};
+
+AnyRefNode I_gh_joint = {sRel= .Scapula.r0 -.r0 + (.Scapula.Axes0 * .....Segments.Scapula.gh_rotated1.sRel')';};
+};
+
+AnyKinLinear m_O_DeltoideusPosterior1 = {
+  AnyRefNode &ref1 = .WrappingSegment1.O_DeltoideusPosterior1; 
+  AnyRefNode &ref2 = ....Segments.Scapula.O_DeltoideusPosterior1; 
+  Ref=0;
+  AnyDrawPLine drw ={Thickness=0.0025;};   
+  ref1= {AnyDrawRefFrame drw1 ={RGB={1,0,0};ScaleXYZ={1,1,1}*0.01;};};      
+  ref2= {AnyDrawRefFrame drw2 ={RGB={0,0,1};ScaleXYZ={1,1,1}*0.01;};};      
+};
+AnyKinLinear m_O_DeltoideusPosterior2 = {
+  AnyRefNode &ref1 = .WrappingSegment1.O_DeltoideusPosterior2; 
+  AnyRefNode &ref2 = ....Segments.Scapula.O_DeltoideusPosterior2; 
+  Ref=0;
+  AnyDrawPLine drw ={Thickness=0.0025;};   
+  ref1= {AnyDrawRefFrame drw1 ={RGB={1,0,0};ScaleXYZ={1,1,1}*0.01;};};      
+  ref2= {AnyDrawRefFrame drw2 ={RGB={0,0,1};ScaleXYZ={1,1,1}*0.01;};};      
+};
+AnyKinLinear m_O_DeltoideusPosterior3 = {
+  AnyRefNode &ref1 = .WrappingSegment1.O_DeltoideusPosterior3; 
+  AnyRefNode &ref2 = ....Segments.Scapula.O_DeltoideusPosterior3; 
+  Ref=0;
+  AnyDrawPLine drw ={Thickness=0.0025;};   
+  ref1= {AnyDrawRefFrame drw1 ={RGB={1,0,0};ScaleXYZ={1,1,1}*0.01;};};      
+  ref2= {AnyDrawRefFrame drw2 ={RGB={0,0,1};ScaleXYZ={1,1,1}*0.01;};};      
+};
+AnyKinLinear m_O_DeltoideusPosterior4 = {
+  AnyRefNode &ref1 = .WrappingSegment1.O_DeltoideusPosterior4; 
+  AnyRefNode &ref2 = ....Segments.Scapula.O_DeltoideusPosterior4; 
+  Ref=0;
+  AnyDrawPLine drw ={Thickness=0.0025;};   
+  ref1= {AnyDrawRefFrame drw1 ={RGB={1,0,0};ScaleXYZ={1,1,1}*0.01;};};      
+  ref2= {AnyDrawRefFrame drw2 ={RGB={0,0,1};ScaleXYZ={1,1,1}*0.01;};};      
+};
+
+AnyKinLinear m_I_DeltoideusPosterior1 = {
+  AnyRefNode &ref1 = .WrappingSegment1.I_DeltoideusPosterior1; 
+  AnyRefNode &ref2 = ....Segments.Humerus.I_DeltoideusPosterior1; 
+  Ref=0;
+  AnyDrawPLine drw ={Thickness=0.0025;};   
+  ref1= {AnyDrawRefFrame drw1 ={RGB={1,0,0};ScaleXYZ={1,1,1}*0.01;};};      
+  ref2= {AnyDrawRefFrame drw2 ={RGB={0,0,1};ScaleXYZ={1,1,1}*0.01;};};      
+};
+AnyKinLinear m_I_DeltoideusPosterior2 = {
+  AnyRefNode &ref1 = .WrappingSegment1.I_DeltoideusPosterior2; 
+  AnyRefNode &ref2 = ....Segments.Humerus.I_DeltoideusPosterior2; 
+  Ref=0;
+  AnyDrawPLine drw ={Thickness=0.0025;};   
+  ref1= {AnyDrawRefFrame drw1 ={RGB={1,0,0};ScaleXYZ={1,1,1}*0.01;};};      
+  ref2= {AnyDrawRefFrame drw2 ={RGB={0,0,1};ScaleXYZ={1,1,1}*0.01;};};      
+};
+AnyKinLinear m_I_DeltoideusPosterior3 = {
+  AnyRefNode &ref1 = .WrappingSegment1.I_DeltoideusPosterior3; 
+  AnyRefNode &ref2 = ....Segments.Humerus.I_DeltoideusPosterior3; 
+  Ref=0;
+  AnyDrawPLine drw ={Thickness=0.0025;};   
+  ref1= {AnyDrawRefFrame drw1 ={RGB={1,0,0};ScaleXYZ={1,1,1}*0.01;};};      
+  ref2= {AnyDrawRefFrame drw2 ={RGB={0,0,1};ScaleXYZ={1,1,1}*0.01;};};      
+};
+AnyKinLinear m_I_DeltoideusPosterior4 = {
+  AnyRefNode &ref1 = .WrappingSegment1.I_DeltoideusPosterior4; 
+  AnyRefNode &ref2 = ....Segments.Humerus.I_DeltoideusPosterior4; 
+  Ref=0;
+  AnyDrawPLine drw ={Thickness=0.0025;};   
+  ref1= {AnyDrawRefFrame drw1 ={RGB={1,0,0};ScaleXYZ={1,1,1}*0.01;};};      
+  ref2= {AnyDrawRefFrame drw2 ={RGB={0,0,1};ScaleXYZ={1,1,1}*0.01;};};      
+};
+
+AnyKinLinear m_gh_joint = {
+    AnyRefNode &ref1 = .WrappingSegment1.I_gh_joint; 
+    AnyRefNode &ref2=....Segments.Humerus.gh;
+    Ref=0;
+  AnyDrawPLine drw ={Thickness=0.0025;};   
+  ref1= {AnyDrawRefFrame drw1 ={RGB={1,0,0};ScaleXYZ={1,1,1}*0.01;};};      
+  ref2= {AnyDrawRefFrame drw2 ={RGB={0,0,1};ScaleXYZ={1,1,1}*0.01;};};      
+};
+
+ 
+   
+   AnyKinEq Constraint = {
+  RigidBodyAverageMeasure CombinationMeasure(ROTATIONAL=Off, LINEAR=On,POWER =1) = { 
+
+    LocalReferenceFrame = &..WrappingSegment1.LocalReferenceFrame_ConstraintNode;
+    InputMeasures = {
+        &..m_O_DeltoideusPosterior1,
+        &..m_O_DeltoideusPosterior2,
+        &..m_O_DeltoideusPosterior3,
+        &..m_O_DeltoideusPosterior4,
+//        &..m_I_DeltoideusPosterior1,
+//        &..m_I_DeltoideusPosterior2,
+//        &..m_I_DeltoideusPosterior3,
+//        &..m_I_DeltoideusPosterior4,
+//        &..m_gh_joint,
+      };
+      WeightCoefficients = {1,1,1,1};
+    };
+    Reaction.Type ??= repmat(nDim, Off);
+    
+    MeasureOrganizer = {0,1,2};
+  
+    
+  };
+
+//   AnyKinEq Constraint_z = {
+//  RigidBodyAverageMeasure CombinationMeasure(ROTATIONAL=Off, LINEAR=On,POWER =1) = { 
+//
+//    LocalReferenceFrame = &..WrappingSegment1.LocalReferenceFrame_ConstraintNode;
+//    InputMeasures = {
+//        &..m_gh_joint,
+//        &..m_I_DeltoideusPosterior1,
+//      };
+//      WeightCoefficients = {10,1};
+//    };
+//    Reaction.Type ??= repmat(nDim, Off);
+//    
+//    MeasureOrganizer = {0,2};
+//  };
+
+//   AnyKinEq constraint_Y = {
+//  AnyKinLinear WrapSegmentHumerusJnt1 ={
+////    AnyRefNode &ref1=.Scapula.O_DeltoideusPosterior2 ;
+////    AnySeg &ref2=.WrappingSegment1;
+//    AnyRefNode &ref1=.....Segments.Humerus.gh ;
+//    AnyRefNode &ref2=..WrappingSegment1.I_gh_joint;
+//  };
+//    MeasureOrganizer = {1};
+//};
+    AnyKinMotion WrappingSegmentDriver1={
+    AnyKinMeasureLinComb LinComb = {
+    AnyKinRotational HumerusScapulaRot={
+      AnyRefNode &ref2=......Segments.Scapula.gh_rotated1;
+      AnyRefNode &ref1=......Segments.Humerus.gh_rotated1;
+      Type = RotVector;
+    };
+    AnyKinRotational HumerusWrapSegmentRot={
+      AnyRefFrame &ref1=......Segments.Scapula.gh_rotated1;
+      AnyRefFrame &ref2=...WrappingSegment1.DeltoideusPosteriorWrappingRotNode;
+      Type =RotVector;
+    };
+      OutDim = 3;
+      Coef={
+        {0.1,0,0,-1,0,0},
+        { 0,0.1,0,0,-1,0}, //this one controls the rotaion around the long axis og humerus
+        {0,0,0.1,0,0,-1}
+      };
+    }; // Measure
+  };
+  
+  
+  
+  
+//////////////////   AnyKinEq Constraint = {
+//////////////////  RigidBodyAverageMeasure CombinationMeasure(ROTATIONAL=On, LINEAR=On,POWER =1) = { 
+//////////////////
+//////////////////    LocalReferenceFrame = &..WrappingSegment1.LocalReferenceFrame_ConstraintNode;
+//////////////////    InputMeasures = {
+//////////////////        &..m_O_DeltoideusPosterior1,
+//////////////////        &..m_O_DeltoideusPosterior2,
+//////////////////        &..m_O_DeltoideusPosterior3,
+//////////////////        &..m_O_DeltoideusPosterior4,
+//////////////////      };
+//////////////////      WeightCoefficients = {100,100,100,100};
+//////////////////    };
+//////////////////    Reaction.Type ??= repmat(nDim, Off);
+//////////////////    
+////////////////////    MeasureOrganizer = {1};
+//////////////////  
+//////////////////    
+//////////////////  };
+  
+  
+  AnyReacForce MomentsToScapula1 =
+  {
+    AnyKinRotational rot ={
+      AnyRefFrame &ref1=..WrappingSegment1;
+      AnyRefFrame &ref2=.....Segments.Scapula;
+      Type=RotVector;
+      AngVelOnOff=On;
+    };
+  };
+
+//AnyKinEq fix_WrappingSegment1 = {
+//AnyKinLinear lin = { 
+//  AnySeg &seg = .Scapula.O_DeltoideusPosterior2;
+//  AnySeg &seg1 = ..WrappingSegment1;
+//};
+////AnyKinRotational rot = { 
+//////  AnySeg &seg = ..WrappingSegment;
+////  AnySeg &seg1 = ..WrappingSegment1;
+////  Type =RotVector;
+////};
+//
+//};
+
+
+
+
+
+
+
+
 
   AnySphericalJoint WrapSegmentHumerusJnt ={
     AnyRefNode &ref1=....Segments.Humerus.gh ;
