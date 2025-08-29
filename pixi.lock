@@ -99,8 +99,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/zstd-1.5.7-hb8e6e7a_2.conda
       win-64:
       - conda: https://conda.anaconda.org/conda-forge/noarch/alabaster-1.0.0-pyhd8ed1ab_1.conda
-      - conda: https://conda.anaconda.org/anybody/win-64/ams-python-pth-3.0.0-py313h8ca1927_0.conda
-      - conda: https://conda.anaconda.org/anybody/win-64/anybodycon-8.1.1-20202.44880_12656.conda
+      - conda: https://conda.anaconda.org/anybody/label/rc/win-64/anybodycon-8.1.4beta2-20329.32520_12786.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/anypytools-1.17.1-py313he24d9e4_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/babel-2.17.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/brotli-python-1.1.0-py313h5813708_3.conda
@@ -689,8 +688,7 @@ environments:
       win-64:
       - conda: https://conda.anaconda.org/conda-forge/win-64/_openmp_mutex-4.5-2_gnu.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/alabaster-1.0.0-pyhd8ed1ab_1.conda
-      - conda: https://conda.anaconda.org/anybody/win-64/ams-python-pth-3.0.0-py313h8ca1927_0.conda
-      - conda: https://conda.anaconda.org/anybody/win-64/anybodycon-8.1.1-20202.44880_12656.conda
+      - conda: https://conda.anaconda.org/anybody/label/rc/win-64/anybodycon-8.1.4beta2-20329.32520_12786.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/anypytools-1.17.1-py313he24d9e4_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/azure-core-1.33.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/azure-storage-blob-12.25.0-pyhd8ed1ab_0.conda
@@ -851,15 +849,6 @@ packages:
   license_family: BSD
   size: 18684
   timestamp: 1733750512696
-- conda: https://conda.anaconda.org/anybody/win-64/ams-python-pth-3.0.0-py313h8ca1927_0.conda
-  sha256: be40bcb9b4503376fea1115af928ebe7d5ab5557ab40c458b496d11fe1f2c2fe
-  md5: 737c37fd8bf58af09213164385f626fe
-  depends:
-  - python
-  - python_abi 3.13.* *_cp313
-  license: MIT
-  size: 3589
-  timestamp: 1750763290056
 - conda: https://conda.anaconda.org/conda-forge/noarch/annotated-types-0.7.0-pyhd8ed1ab_1.conda
   sha256: e0ea1ba78fbb64f17062601edda82097fcf815012cf52bb704150a2668110d48
   md5: 2934f256a8acfe48f6ebb4fce6cde29c
@@ -870,17 +859,17 @@ packages:
   license_family: MIT
   size: 18074
   timestamp: 1733247158254
-- conda: https://conda.anaconda.org/anybody/win-64/anybodycon-8.1.1-20202.44880_12656.conda
+- conda: https://conda.anaconda.org/anybody/label/rc/win-64/anybodycon-8.1.4beta2-20329.32520_12786.conda
   build_number: 0
-  sha256: 38b4c6cfa499c4272ebd19e05889e62cb3d813ebabde804c6f35a9aa35a08298
-  md5: 13aa1ba25e40b1fdc0b6497dcefc774d
+  sha256: 51e3f63c5a19226aff3fbddaaa11f6b270c516b972252aa9bc53d6fd429e3c7c
+  md5: a3be15436e4b46811128022bfa4433b0
   depends:
   - vc14_runtime
   - nomkl
   constrains:
   - anypytools >=1.13.0
-  size: 137573502
-  timestamp: 1745498355347
+  size: 137561482
+  timestamp: 1756458472717
 - conda: https://conda.anaconda.org/conda-forge/linux-64/anypytools-1.17.1-py313hd190ac3_0.conda
   sha256: 39c3073f32fcd1581e9f7535383d1727161957b023460b8cffdd9e67a42dd904
   md5: 6f8e70f96bfc231482e6fbd7d1571660
