@@ -87,7 +87,7 @@ AnyFolder HumanRefNodes =
       };
       AnyRefNode GeomLeftNode =
       {
-          sRel = .Left.R4.sRel + (.Left.R4.O_serratus_anterior_4.sRel * .Left.R4.ARel');
+          sRel = .Left.R4.sRel + (.Left.R4.O_SerratusAnterior4.sRel * .Left.R4.ARel');
           ARel = RotMat(20*pi/180, z);
 
           AnySurfEllipsoid geom =
@@ -121,7 +121,7 @@ AnyFolder HumanRefNodes =
       };
       AnyRefNode GeomRightNode =
       {
-          sRel = .Right.R4.sRel + (.Right.R4.O_serratus_anterior_4.sRel * .Right.R4.ARel');
+          sRel = .Right.R4.sRel + (.Right.R4.O_SerratusAnterior4.sRel * .Right.R4.ARel');
           ARel = RotMat(20*pi/180, z);
 
           AnySurfEllipsoid geom =
@@ -184,7 +184,7 @@ AnyFolder HumanRefNodes =
       };
       AnyRefNode GeomCenterNode =
       {
-          sRel = (.ILptC5SIPSNodeL.sRel + .ILptC5SIPSNodeR.sRel +
+          sRel = (.IliocostalisLumborumR5NodeL.sRel + .IliocostalisLumborumR5NodeR.sRel +
                   .Seat_contactL.sRel + .Seat_contactR.sRel +
                   .Left.ObliquusInternusNode_8.sRel + .Right.ObliquusInternusNode_8.sRel +
                   .Left.ObliquusInternusNode_3.sRel + .Right.ObliquusInternusNode_3.sRel) / 8;
