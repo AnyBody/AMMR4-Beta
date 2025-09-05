@@ -1,9 +1,9 @@
-Main.ModelSetup.TrialSpecificData =
+Main.ModelSetup.TrialSpecificData = 
 {
-
+  
   LoadParametersFrom = {"2014002_ST" };
-
-
+  
+  
   AnyStringVar WalkingCondition = "C5";
 
   // Special configuration/exception for this trial
@@ -11,34 +11,36 @@ Main.ModelSetup.TrialSpecificData =
   #define EXCLUDE_L_UHE
   #define EXCLUDE_L_RSP
 
-  Main.ModelSetup.MocapDrivers = {
-    CreateMarkerDriver L_RSP (
-      MarkerName=L_UHE,
-      MarkerPlacement=Left.ShoulderArm.Segments.Radius,
-      PlaceMarkerAt = wj,
-      UseC3DWeightResiduals = ON
-    ) = {
-        sRelOpt = {-0, 0.045, 0.00};
-    };
-    CreateMarkerDriver L_UHE (
-      MarkerName=L_RSP,
-      MarkerPlacement=Left.ShoulderArm.Segments.Radius,
-      PlaceMarkerAt = wj,
-      UseC3DWeightResiduals = ON
-    ) = {
-      sRelOpt = {-0, -0.045, 0.00};
-    };
+  // Marker on the Left Wrist A
+  CreateMarkerDriver L_RSP (
+  MarkerName=L_UHE,
+  MarkerPlacement=Left.ShoulderArm.Segments.Radius,
+  PlaceMarkerAt=RadiusStylo,
+  OptX=ON,OptY=ON,OptZ=OFF,
+  UseC3DWeightResiduals = ON 
+  ) = {
+        sRelOpt = {0.01, 0, 0.00};
+  };
+
+  CreateMarkerDriver L_UHE (
+  MarkerName=L_RSP,
+  MarkerPlacement=Left.ShoulderArm.Segments.Radius,
+  PlaceMarkerAt=UlnaStylo,
+  OptX=ON,OptY=ON,OptZ=OFF,
+  UseC3DWeightResiduals = ON 
+  ) = {
+      sRelOpt = {-0.015, 0, 0.00};
   };
 
 
   TrialFileName = MOCAP_NAME_MAINFILEDIR;
-
+  
   /// Uniqe ID for each trial
   AnyStringVar TrialID = MOCAP_NAME_MAINFILEDIR;
   //nStep = 1+(tEnd-tStart)*.C3DFileData.Header.VideoFrameRate;
-
-
-   // This class_template calculates the load time position and orientation of
+  
+  
+   // This class_template calculates the load time position and orientation of 
    // the pelvis based on markers.
    AutoPelvisPos AutoPos(RASIS=R_IAS, LASIS=L_IAS, BACK=L_IPS) = {};
 
