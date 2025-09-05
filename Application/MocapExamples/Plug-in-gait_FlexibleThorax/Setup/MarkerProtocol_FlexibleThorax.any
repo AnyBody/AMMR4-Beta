@@ -390,7 +390,7 @@ PlaceMarkerAt = MetatarsalJoint1Node,
 OptX=OFF , OptY=OFF , OptZ=OFF,
 WeightX=1.0,WeightY=1.0,WeightZ=1.0
 ) = {
-  sRelOpt = {0.014, 0.02, 0.00};
+  sRelOpt = {0.022, 0.019, 0.001};
 };
 #endif
 
@@ -398,7 +398,7 @@ WeightX=1.0,WeightY=1.0,WeightZ=1.0
 // Marker on the Right Heel
 CreateMarkerDriver RHEE (
 MarkerName= RHEE ,
-MarkerPlacement=Right.Leg.Seg.Foot,
+MarkerPlacement=Right.Leg.Seg.Foot.Calcaneus,
 PlaceMarkerAt = HeelNode,
 OptX=OFF, OptY=OFF , OptZ=OFF,
 WeightX=1.0,WeightY=1.0,WeightZ=1.0
@@ -407,16 +407,15 @@ WeightX=1.0,WeightY=1.0,WeightZ=1.0
 };
 #endif
 
-
-// Marker on the Right Metatarsel 5
 #ifdef _RMT5
+// Marker on the Right Metatarsal 5
 CreateMarkerDriver RMT5 (
 MarkerName= RMT5,
 MarkerPlacement=Right.Leg.Seg.Foot,
 PlaceMarkerAt = MetatarsalJoint5Node,
 OptX=OFF,OptY=OFF,OptZ=OFF,
 WeightX=1.0,WeightY=1.0,WeightZ=1.0) = {
-  sRelOpt =  {0.0, 0.01, 0.015};
+  sRelOpt =  {0.007, 0.009, 0.014};
 };
 #endif
 
@@ -477,7 +476,7 @@ MarkerPlacement=Left.Leg.Seg.Foot,
 PlaceMarkerAt = MetatarsalJoint1Node,
 OptX=OFF,OptY=OFF ,OptZ=OFF
 ) = {
-  sRelOpt = {0.014, 0.02, 0.00};
+  sRelOpt = {0.022, 0.019, -0.001};
 };
 #endif
 
@@ -495,14 +494,14 @@ WeightX=1.0,WeightY=1.0,WeightZ=1.0
 #endif
 
 #ifdef _LMT5
-// Marker on the Right Metatarsel 5
+// Marker on the Left Metatarsal 5
 CreateMarkerDriver LMT5 (
 MarkerName= LMT5,
 MarkerPlacement=Left.Leg.Seg.Foot,
 PlaceMarkerAt = MetatarsalJoint5Node,
 OptX=OFF,OptY=OFF,OptZ=OFF,
 WeightX=1.0,WeightY=1.0,WeightZ=1.0) = {
-  sRelOpt =  {0.0, 0.01, -0.015};
+  sRelOpt =  {0.007, 0.009, -0.014};
 };
 #endif
 
@@ -607,10 +606,9 @@ OptX=OFF,OptY=OFF,OptZ=OFF
 #ifdef _RWRA
 // Marker on the Right Wrist A
 CreateMarkerDriver RWRA (
+MarkerName= RWRA,
 MarkerPlacement=Right.ShoulderArm.Segments.Radius,
-PlaceMarkerAt=RadiusStylo,
-OptX=OFF,OptY=OFF,OptZ=OFF,
-UseC3DWeightResiduals=ON
+OptX=OFF,OptY=OFF,OptZ=OFF
 ) = {
   sRelOpt = 0*{-0.21, -0.05, 0.01};
 };
@@ -619,11 +617,11 @@ UseC3DWeightResiduals=ON
 #ifdef _RWRB
 // Marker on the Right Wrist B
 CreateMarkerDriver RWRB (
+MarkerName= RWRB,
 MarkerPlacement=Right.ShoulderArm.Segments.Radius,
-PlaceMarkerAt=UlnaStylo,
 OptX=ON ,OptY=ON,OptZ=OFF,
-WeightX=0.1,WeightY=0.1,WeightZ=0.1,
-UseC3DWeightResiduals=ON
+//OptX=OFF ,OptY=OFF,OptZ=OFF,
+WeightX=0.1,WeightY=0.1,WeightZ=0.1
 ) = {
   sRelOpt =0* {-0.22, 0.05, 0.025};
 };
@@ -632,6 +630,7 @@ UseC3DWeightResiduals=ON
 #ifdef _LWRA
 // Marker on the Left Wrist A
 CreateMarkerDriver LWRA (
+MarkerName= LWRA,
 MarkerPlacement=Left.ShoulderArm.Segments.Radius,
 PlaceMarkerAt=RadiusStylo,
 OptX=OFF,OptY=OFF,OptZ=OFF,
@@ -644,11 +643,11 @@ UseC3DWeightResiduals=ON
 #ifdef _LWRB
 // Marker on the Left Wrist B
 CreateMarkerDriver LWRB (
+MarkerName= LWRB,
 MarkerPlacement=Left.ShoulderArm.Segments.Radius,
-PlaceMarkerAt=UlnaStylo,
-OptX=ON  ,OptY=ON ,OptZ=OFF,
-WeightX=0.1,WeightY=0.1,WeightZ=0.1,
-UseC3DWeightResiduals=ON
+OptX=ON ,OptY=ON,OptZ=OFF,
+//OptX=OFF  ,OptY=OFF ,OptZ=OFF,
+WeightX=0.1,WeightY=0.1,WeightZ=0.1
 ) = {
   sRelOpt = 0*{-0.22, -0.05, 0.025};
 };
@@ -658,10 +657,9 @@ UseC3DWeightResiduals=ON
 #ifdef _RFIN
 // Marker on the Right Finger
 CreateMarkerDriver RFIN (
+MarkerName= RFIN,
 MarkerPlacement=Right.ShoulderArm.Segments.Hand,
-PlaceMarkerAt=AnatomicalFrame,
-OptX=OFF ,OptY=ON,OptZ=OFF,
-UseC3DWeightResiduals=ON
+OptX=OFF ,OptY=OFF,OptZ=OFF
 ) = {
   //sRelOpt = {-0.065,-0.03,0.02};
   sRelOpt = {-0.02,-0.065,-0.0};
@@ -672,10 +670,9 @@ UseC3DWeightResiduals=ON
 #ifdef _LFIN
 // Marker on the Left Finger
 CreateMarkerDriver LFIN (
+MarkerName= LFIN,
 MarkerPlacement=Left.ShoulderArm.Segments.Hand,
-PlaceMarkerAt=AnatomicalFrame,
-OptX=OFF ,OptY=ON,OptZ=OFF,
-UseC3DWeightResiduals=ON
+OptX=OFF ,OptY=OFF,OptZ=OFF
 ) = {
  // sRelOpt = {-0.065,-0.03,-0.02};
  sRelOpt = {-0.02,-0.065,0.0};
