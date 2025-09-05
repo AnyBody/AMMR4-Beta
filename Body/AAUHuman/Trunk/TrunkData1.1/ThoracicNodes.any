@@ -5761,8 +5761,8 @@ AnyFolder Thorax = {
  AnyFloat ai_InNeutralConf_pos  = {-0.17222362881371742, 0.33497837474473391, 0.11096288348775879};
    AnyFloat acj_InNeutralConf_pos = {-0.12180237802829139, 0.51074743047717597, 0.16250303148093811};
   AnyFloat scj_InNeutralConf_pos  = {-0.06838000000000001, 0.47619162999999998, 0.0207};
-    AnyFloat O_deltoideus_anterior_part_1_Clavicula_InNeutralConf_pos = {-0.097815950407862395, 0.52244897030769311, 0.16273382490535182};
- AnyFloat I_trapezius_clavicular_part_3_Clavicula_InNeutralConf_pos = {-0.12220455309911955, 0.50934928843979876, 0.1371919462601158};
+    AnyFloat O_DeltoideusAnterior1_Clavicula_InNeutralConf_pos = {-0.097815950407862395, 0.52244897030769311, 0.16273382490535182};
+ AnyFloat I_TrapeziusClavicular3_Clavicula_InNeutralConf_pos = {-0.12220455309911955, 0.50934928843979876, 0.1371919462601158};
 
 
     #endif
@@ -5774,8 +5774,8 @@ AnyFloat aa_InNeutralConf_pos = {-0.14942037949963966, 0.50439157315507144, 0.19
 AnyFloat ai_InNeutralConf_pos  = {-0.17222358007457839, 0.33497833981561032, 0.11096295786837107};
 AnyFloat acj_InNeutralConf_pos  = {-0.1218023785818152, 0.51074743164297698, 0.16250303098831292};
 AnyFloat scj_InNeutralConf_pos = {-0.06838000000000001, 0.47619162999999998, 0.0207};
- AnyFloat O_deltoideus_anterior_part_1_Clavicula_InNeutralConf_pos = {-0.097815952967785197, 0.52244897562119297, 0.16273382264432598};
- AnyFloat I_trapezius_clavicular_part_3_Clavicula_InNeutralConf_pos =  {-0.12220455437528882, 0.50934928768607191, 0.13719194588500475};
+ AnyFloat O_DeltoideusAnterior1_Clavicula_InNeutralConf_pos = {-0.097815952967785197, 0.52244897562119297, 0.16273382264432598};
+ AnyFloat I_TrapeziusClavicular3_Clavicula_InNeutralConf_pos =  {-0.12220455437528882, 0.50934928768607191, 0.13719194588500475};
 
 
   #endif
@@ -6081,8 +6081,8 @@ AnyFloat scj_InNeutralConf_pos = {-0.06838000000000001, 0.47619162999999998, 0.0
     AnyFloat ai_InNeutralConf_pos  = .Right.ai_InNeutralConf_pos * ..MirrorTransform;
     AnyFloat acj_InNeutralConf_pos  =.Right.acj_InNeutralConf_pos * ..MirrorTransform;
     AnyFloat scj_InNeutralConf_pos = .Right.scj_InNeutralConf_pos * ..MirrorTransform;
-    AnyFloat O_deltoideus_anterior_part_1_Clavicula_InNeutralConf_pos = .Right.O_deltoideus_anterior_part_1_Clavicula_InNeutralConf_pos * ..MirrorTransform;
-    AnyFloat I_trapezius_clavicular_part_3_Clavicula_InNeutralConf_pos =.Right.I_trapezius_clavicular_part_3_Clavicula_InNeutralConf_pos * ..MirrorTransform;
+    AnyFloat O_DeltoideusAnterior1_Clavicula_InNeutralConf_pos = .Right.O_DeltoideusAnterior1_Clavicula_InNeutralConf_pos * ..MirrorTransform;
+    AnyFloat I_TrapeziusClavicular3_Clavicula_InNeutralConf_pos =.Right.I_TrapeziusClavicular3_Clavicula_InNeutralConf_pos * ..MirrorTransform;
 
 
 

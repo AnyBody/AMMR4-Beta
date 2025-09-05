@@ -25,10 +25,10 @@ AnySeg Clavicula ={
 AnyFloat Points0 = {
     ....Trunk.Data.unscaled.ModelParameters.Thorax._SIDE_.scj_InNeutralConf_pos,
     ....Trunk.Data.unscaled.ModelParameters.Thorax._SIDE_.acj_InNeutralConf_pos,
-    ....Trunk.Data.unscaled.ModelParameters.Thorax._SIDE_.O_deltoideus_anterior_part_1_Clavicula_InNeutralConf_pos,
-    ....Trunk.Data.unscaled.ModelParameters.Thorax._SIDE_.I_trapezius_clavicular_part_3_Clavicula_InNeutralConf_pos,
+    ....Trunk.Data.unscaled.ModelParameters.Thorax._SIDE_.O_DeltoideusAnterior1_Clavicula_InNeutralConf_pos,
+    ....Trunk.Data.unscaled.ModelParameters.Thorax._SIDE_.I_TrapeziusClavicular3_Clavicula_InNeutralConf_pos,
   };
-  AnyFloat  Points1 = {Data.scj_pos, Data.acj_pos, Data.O_deltoideus_anterior_part_1_pos,Data.I_trapezius_clavicular_part_3_pos}*Mirror;
+  AnyFloat  Points1 = {Data.scj_pos, Data.acj_pos, Data.O_DeltoideusAnterior1_pos,Data.I_TrapeziusClavicular3_pos}*Mirror;
   #include "..\Scaling\SegScaleFunWrtAnatomicalFrame_RigidBodyTransformation.any"
 
 

@@ -28,16 +28,16 @@
 //          AnyRefNode &ref2=Main.HumanModel.BodyModel.Right.ShoulderArm.Segments.Clavicula.acj_y;
 //        }; 
 
-        AnyKinLinear O_deltoideus_anterior_part_1_Clavicula ={
+        AnyKinLinear O_DeltoideusAnterior1_Clavicula ={
           Ref=0;
           AnyRefNode &ref1=Main.HumanModel.BodyModel.Trunk.Segments.PelvisSeg.ScalingNode;
-          AnyRefNode &ref2=Main.HumanModel.BodyModel.Right.ShoulderArm.Segments.Clavicula.O_deltoideus_anterior_part_1;
+          AnyRefNode &ref2=Main.HumanModel.BodyModel.Right.ShoulderArm.Segments.Clavicula.O_DeltoideusAnterior1;
         }; 
 
-        AnyKinLinear I_trapezius_clavicular_part_3_Clavicula ={
+        AnyKinLinear I_TrapeziusClavicular3_Clavicula ={
           Ref=0;
           AnyRefNode &ref1=Main.HumanModel.BodyModel.Trunk.Segments.PelvisSeg.ScalingNode;
-          AnyRefNode &ref2=Main.HumanModel.BodyModel.Right.ShoulderArm.Segments.Clavicula.I_trapezius_clavicular_part_3     ;  
+          AnyRefNode &ref2=Main.HumanModel.BodyModel.Right.ShoulderArm.Segments.Clavicula.I_TrapeziusClavicular3     ;  
  }; 
 
 
