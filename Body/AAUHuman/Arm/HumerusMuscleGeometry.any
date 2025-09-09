@@ -186,6 +186,19 @@ Humerus = {
       Length=vnorm(.sRel-.P2);
     };
   };
+   
+  AnyRefNode Deltoid_hum = {
+    sRel = .Scale( ({-0.011407, -0.142909, 0.000724}+{0.012821, -0.13903, 0.01491})/2 );
+    ARel = RotMat (pi/2, x);
+    AnyFloat P2 = Main.HumanModel.BodyModel.Right.ShoulderArm.Segments.Humerus.gh_rotated1.sRel;
+    AnyFloat P3 = .Scale({0.012821, -0.13903, 0.01491});
+    
+    AnySurfCylinder Deltoid_humCyl= {
+      Radius=vnorm(.sRel-.P3);
+      Length=vnorm(.sRel-.P2);
+      CenterOrigin = On;
+    };
+  };
 
 #if BM_ARM_DELTOID_WRAPPING == _DELTOID_WRAPPING_RAKE_
   AnyRefNode I_deltoideus_scapular_part_1         = {sRel = .Scale(.Data.I_deltoideus_scapular_part_1_pos*.Mirror);};
