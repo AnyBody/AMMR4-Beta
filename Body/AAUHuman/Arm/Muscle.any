@@ -383,6 +383,7 @@ MuscleGroup Coracobrachialis = {
 //      AnyParamSurfAnalytical &Surf = ..WrappingSurfaces.DeltoidWrappingAnterior.BASE_FRAME.Wrapping_1.Surf;
 //      AnyParamSurfAnalytical &Surf = ..WrappingSurfaces.DeltoidWrappingPosterior.WrappingSegment1.DA1_3nodes;
       AnyParamSurfAnalytical &Surf = ..WrappingSurfaces.DeltoidWrappingLateral.WrappingSegment1.DA1_3nodes;
+//      AnyParamSurfAnalytical &Surf = ..WrappingSurfaces.DeltoidWrappingAnterior.WrappingSegment1.DA1_3nodes;
       AnyParamSurfAnalytical &Surf3 = ...Segments.Humerus.Deltoid_hum.Deltoid_humCyl;
       SPLine = {
         AnyMatrix InitWrapPos = {
@@ -409,6 +410,7 @@ MuscleGroup Coracobrachialis = {
 //      AnyParamSurfAnalytical &Surf = ..WrappingSurfaces.DeltoidWrappingAnterior.BASE_FRAME.Wrapping_2.Surf;
 //      AnyParamSurfAnalytical &Surf = ..WrappingSurfaces.DeltoidWrappingPosterior.WrappingSegment1.DA2_3nodes;
       AnyParamSurfAnalytical &Surf = ..WrappingSurfaces.DeltoidWrappingLateral.WrappingSegment1.DA2_3nodes;
+//      AnyParamSurfAnalytical &Surf = ..WrappingSurfaces.DeltoidWrappingAnterior.WrappingSegment1.DA2_3nodes;
       AnyParamSurfAnalytical &Surf3 = ...Segments.Humerus.Deltoid_hum.Deltoid_humCyl;
 
       SPLine = {
@@ -432,6 +434,7 @@ MuscleGroup Coracobrachialis = {
 //      AnyParamSurfAnalytical &Surf = ..WrappingSurfaces.DeltoidWrappingAnterior.BASE_FRAME.Wrapping_3.Surf;
 //      AnyParamSurfAnalytical &Surf = ..WrappingSurfaces.DeltoidWrappingPosterior.WrappingSegment1.DA3_3nodes;
       AnyParamSurfAnalytical &Surf = ..WrappingSurfaces.DeltoidWrappingLateral.WrappingSegment1.DA3_3nodes;
+//      AnyParamSurfAnalytical &Surf = ..WrappingSurfaces.DeltoidWrappingAnterior.WrappingSegment1.DA3_3nodes;
       AnyParamSurfAnalytical &Surf3 = ...Segments.Humerus.Deltoid_hum.Deltoid_humCyl;
 
       SPLine = {
@@ -458,6 +461,7 @@ MuscleGroup Coracobrachialis = {
 //      AnyParamSurfAnalytical &Surf = ..WrappingSurfaces.DeltoidWrappingAnterior.BASE_FRAME.Wrapping_4.Surf;
 //      AnyParamSurfAnalytical &Surf = ..WrappingSurfaces.DeltoidWrappingPosterior.WrappingSegment1.DA3_3nodes;//DA4_3nodes;
       AnyParamSurfAnalytical &Surf = ..WrappingSurfaces.DeltoidWrappingLateral.WrappingSegment1.DA4_3nodes;
+//      AnyParamSurfAnalytical &Surf = ..WrappingSurfaces.DeltoidWrappingAnterior.WrappingSegment1.DA4_3nodes;
       AnyParamSurfAnalytical &Surf3 = ...Segments.Humerus.Deltoid_hum.Deltoid_humCyl;
 
       SPLine = {
