@@ -378,16 +378,15 @@ MuscleGroup Coracobrachialis = {
       AnyRefNode &Ins = ...Segments.Humerus.I_DeltoideusAnterior1;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
       SPLine.StringMesh = 30;
-
-
-      AnyParamSurfAnalytical &Surf = ..WrappingSurfaces.DeltoidWrappingAnterior.WrappingSegment1.DA1_3nodes;
-      AnyParamSurfAnalytical &Surf3 = ...Segments.Humerus.Deltoid_hum.Deltoid_humCyl;
+      AnyParamSurfAnalytical &Surf1 = ..WrappingSurfaces.DeltoidWrappingAnterior.WrappingSegment.Ellipsoid_DeltoidWrappingAnterior1;
+      AnyParamSurfAnalytical &Surf2 = ...Segments.Humerus.Deltoid_hum.Deltoid_humCyl;
+      
       SPLine = {
         AnyMatrix InitWrapPos = {
-            transf3D({.Surf.Sizes[0],-.Surf.Sizes[0 ],0}, &...WrappingSurfaces.DeltoidWrappingAnterior.WrappingSegment1.DA1_3nodes),
-            transf3D({0,-1.4*.Surf.Sizes[0],0},  &...WrappingSurfaces.DeltoidWrappingAnterior.WrappingSegment1.DA1_3nodes),
-            transf3D({0,-2*.Surf3.Radius,0},  &....Segments.Humerus.Deltoid_hum.Deltoid_humCyl),
-            transf3D({.Surf3.Radius,-.Surf3.Radius,0},  &....Segments.Humerus.Deltoid_hum.Deltoid_humCyl),
+            transf3D({.Surf1.Sizes[0],-.Surf1.Sizes[0 ],0}, &...WrappingSurfaces.DeltoidWrappingAnterior.WrappingSegment.Ellipsoid_DeltoidWrappingAnterior1),
+            transf3D({0,-1.4*.Surf1.Sizes[0],0},  &...WrappingSurfaces.DeltoidWrappingAnterior.WrappingSegment.Ellipsoid_DeltoidWrappingAnterior1),
+            transf3D({0,-2*.Surf2.Radius,0},  &....Segments.Humerus.Deltoid_hum.Deltoid_humCyl),
+            transf3D({.Surf2.Radius,-.Surf2.Radius,0},  &....Segments.Humerus.Deltoid_hum.Deltoid_humCyl),
         };
         InitWrapPosVecArr = {&InitWrapPos};
 
@@ -399,20 +398,18 @@ MuscleGroup Coracobrachialis = {
     AnyMuscleShortestPath DeltoideusAnterior2 = {
       AnyMuscleModel &MusMdl = ...MuscleModels.DeltoideusAnterior2;
       AnyRefNode &Org = ...Segments.Clavicula.O_DeltoideusAnterior2;
-
       AnyRefNode &Ins = ...Segments.Humerus.I_DeltoideusAnterior2;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
       SPLine.StringMesh = 30;
-
-      AnyParamSurfAnalytical &Surf = ..WrappingSurfaces.DeltoidWrappingAnterior.WrappingSegment1.DA2_3nodes;
-      AnyParamSurfAnalytical &Surf3 = ...Segments.Humerus.Deltoid_hum.Deltoid_humCyl;
-
+      AnyParamSurfAnalytical &Surf1 = ..WrappingSurfaces.DeltoidWrappingAnterior.WrappingSegment.Ellipsoid_DeltoidWrappingAnterior2;
+      AnyParamSurfAnalytical &Surf2 = ...Segments.Humerus.Deltoid_hum.Deltoid_humCyl;
+      
       SPLine = {
         AnyMatrix InitWrapPos = {
-            transf3D({.Surf.Sizes[0],-.Surf.Sizes[0 ],0}, &...WrappingSurfaces.DeltoidWrappingAnterior.WrappingSegment1.DA2_3nodes),
-            transf3D({0,-1.4*.Surf.Sizes[0],0},  &...WrappingSurfaces.DeltoidWrappingAnterior.WrappingSegment1.DA2_3nodes),
-            transf3D({0,-2*.Surf3.Radius,0},  &....Segments.Humerus.Deltoid_hum.Deltoid_humCyl),
-            transf3D({.Surf3.Radius,-.Surf3.Radius,0},  &....Segments.Humerus.Deltoid_hum.Deltoid_humCyl),
+            transf3D({.Surf1.Sizes[0],-.Surf1.Sizes[0 ],0}, &...WrappingSurfaces.DeltoidWrappingAnterior.WrappingSegment.Ellipsoid_DeltoidWrappingAnterior2),
+            transf3D({0,-1.4*.Surf1.Sizes[0],0},  &...WrappingSurfaces.DeltoidWrappingAnterior.WrappingSegment.Ellipsoid_DeltoidWrappingAnterior2),
+            transf3D({0,-2*.Surf2.Radius,0},  &....Segments.Humerus.Deltoid_hum.Deltoid_humCyl),
+            transf3D({.Surf2.Radius,-.Surf2.Radius,0},  &....Segments.Humerus.Deltoid_hum.Deltoid_humCyl),
         };
         InitWrapPosVecArr = {&InitWrapPos};  };
     };
@@ -422,18 +419,16 @@ MuscleGroup Coracobrachialis = {
       AnyRefNode &Org = ...Segments.Clavicula.O_DeltoideusAnterior3;
       AnyRefNode &Ins = ...Segments.Humerus.I_DeltoideusAnterior3;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-
-
       SPLine.StringMesh = 30;
-      AnyParamSurfAnalytical &Surf = ..WrappingSurfaces.DeltoidWrappingAnterior.WrappingSegment1.DA3_3nodes;
-      AnyParamSurfAnalytical &Surf3 = ...Segments.Humerus.Deltoid_hum.Deltoid_humCyl;
-
+      AnyParamSurfAnalytical &Surf1 = ..WrappingSurfaces.DeltoidWrappingAnterior.WrappingSegment.Ellipsoid_DeltoidWrappingAnterior3;
+      AnyParamSurfAnalytical &Surf2 = ...Segments.Humerus.Deltoid_hum.Deltoid_humCyl;
+      
       SPLine = {
         AnyMatrix InitWrapPos = {
-            transf3D({.Surf.Sizes[0],-.Surf.Sizes[0 ],0}, &...WrappingSurfaces.DeltoidWrappingAnterior.WrappingSegment1.DA3_3nodes),
-            transf3D({0,-1.4*.Surf.Sizes[0],0},  &...WrappingSurfaces.DeltoidWrappingAnterior.WrappingSegment1.DA3_3nodes),
-            transf3D({0,-2*.Surf3.Radius,0},  &....Segments.Humerus.Deltoid_hum.Deltoid_humCyl),
-            transf3D({.Surf3.Radius,-.Surf3.Radius,0},  &....Segments.Humerus.Deltoid_hum.Deltoid_humCyl),
+            transf3D({.Surf1.Sizes[0],-.Surf1.Sizes[0 ],0}, &...WrappingSurfaces.DeltoidWrappingAnterior.WrappingSegment.Ellipsoid_DeltoidWrappingAnterior3),
+            transf3D({0,-1.4*.Surf1.Sizes[0],0},  &...WrappingSurfaces.DeltoidWrappingAnterior.WrappingSegment.Ellipsoid_DeltoidWrappingAnterior3),
+            transf3D({0,-2*.Surf2.Radius,0},  &....Segments.Humerus.Deltoid_hum.Deltoid_humCyl),
+            transf3D({.Surf2.Radius,-.Surf2.Radius,0},  &....Segments.Humerus.Deltoid_hum.Deltoid_humCyl),
         };
         InitWrapPosVecArr = {&InitWrapPos};
       };
@@ -446,18 +441,16 @@ MuscleGroup Coracobrachialis = {
       AnyRefNode &Org = ...Segments.Clavicula.O_DeltoideusAnterior4;
       AnyRefNode &Ins = ...Segments.Humerus.I_DeltoideusAnterior4;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-
       SPLine.StringMesh = 30;
-
-      AnyParamSurfAnalytical &Surf = ..WrappingSurfaces.DeltoidWrappingAnterior.WrappingSegment1.DA4_3nodes;
-      AnyParamSurfAnalytical &Surf3 = ...Segments.Humerus.Deltoid_hum.Deltoid_humCyl;
+      AnyParamSurfAnalytical &Surf1 = ..WrappingSurfaces.DeltoidWrappingAnterior.WrappingSegment.Ellipsoid_DeltoidWrappingAnterior4;
+      AnyParamSurfAnalytical &Surf2 = ...Segments.Humerus.Deltoid_hum.Deltoid_humCyl;
 
       SPLine = {
         AnyMatrix InitWrapPos = {
-            transf3D({.Surf.Sizes[0],-.Surf.Sizes[0 ],0}, &...WrappingSurfaces.DeltoidWrappingAnterior.WrappingSegment1.DA4_3nodes),
-            transf3D({0,-1.4*.Surf.Sizes[0],0},  &...WrappingSurfaces.DeltoidWrappingAnterior.WrappingSegment1.DA4_3nodes),
-            transf3D({0,-2*.Surf3.Radius,0},  &....Segments.Humerus.Deltoid_hum.Deltoid_humCyl),
-            transf3D({.Surf3.Radius,-.Surf3.Radius,0},  &....Segments.Humerus.Deltoid_hum.Deltoid_humCyl),
+            transf3D({.Surf1.Sizes[0],-.Surf1.Sizes[0 ],0}, &...WrappingSurfaces.DeltoidWrappingAnterior.WrappingSegment.Ellipsoid_DeltoidWrappingAnterior4),
+            transf3D({0,-1.4*.Surf1.Sizes[0],0},  &...WrappingSurfaces.DeltoidWrappingAnterior.WrappingSegment.Ellipsoid_DeltoidWrappingAnterior4),
+            transf3D({0,-2*.Surf2.Radius,0},  &....Segments.Humerus.Deltoid_hum.Deltoid_humCyl),
+            transf3D({.Surf2.Radius,-.Surf2.Radius,0},  &....Segments.Humerus.Deltoid_hum.Deltoid_humCyl),
         };
         InitWrapPosVecArr = {&InitWrapPos};
       };
@@ -472,14 +465,14 @@ MuscleGroup Coracobrachialis = {
       AnyRefNode &Ins = ...Segments.Humerus.I_DeltoideusLateral1;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
       SPLine.StringMesh = 30;
-
-      AnyParamSurfAnalytical &Surf = ..WrappingSurfaces.DeltoidWrappingLateral.WrappingSegment1.DL1_3nodes;
-      AnyParamSurfAnalytical &Surf3 = ...Segments.Humerus.Deltoid_hum.Deltoid_humCyl;
+      AnyParamSurfAnalytical &Surf1 = ..WrappingSurfaces.DeltoidWrappingLateral.WrappingSegment.Ellipsoid_DeltoidWrappingLateral1;
+      AnyParamSurfAnalytical &Surf2 = ...Segments.Humerus.Deltoid_hum.Deltoid_humCyl;
+      
       SPLine = {
         AnyMatrix InitWrapPos = {
-            transf3D({.Surf.Sizes[0],-.Surf.Sizes[0 ],0}, &...WrappingSurfaces.DeltoidWrappingLateral.WrappingSegment1.DL1_3nodes),
-            transf3D({0,-1.4*.Surf.Sizes[0],0},  &...WrappingSurfaces.DeltoidWrappingLateral.WrappingSegment1.DL1_3nodes),
-            transf3D({2*.Surf3.Radius,0,0},  &....Segments.Humerus.Deltoid_hum.Deltoid_humCyl),
+            transf3D({.Surf1.Sizes[0],-.Surf1.Sizes[0 ],0}, &...WrappingSurfaces.DeltoidWrappingLateral.WrappingSegment.Ellipsoid_DeltoidWrappingLateral1),
+            transf3D({0,-1.4*.Surf1.Sizes[0],0},  &...WrappingSurfaces.DeltoidWrappingLateral.WrappingSegment.Ellipsoid_DeltoidWrappingLateral1),
+            transf3D({2*.Surf2.Radius,0,0},  &....Segments.Humerus.Deltoid_hum.Deltoid_humCyl),
         };
         InitWrapPosVecArr = {&InitWrapPos};
       };
@@ -491,14 +484,14 @@ MuscleGroup Coracobrachialis = {
       AnyRefNode &Ins = ...Segments.Humerus.I_DeltoideusLateral2;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
       SPLine.StringMesh = 30;
-      AnyParamSurfAnalytical &Surf = ..WrappingSurfaces.DeltoidWrappingLateral.WrappingSegment1.DL2_3nodes;
-      AnyParamSurfAnalytical &Surf3 = ...Segments.Humerus.Deltoid_hum.Deltoid_humCyl;
-
+      AnyParamSurfAnalytical &Surf1 = ..WrappingSurfaces.DeltoidWrappingLateral.WrappingSegment.Ellipsoid_DeltoidWrappingLateral2;
+      AnyParamSurfAnalytical &Surf2 = ...Segments.Humerus.Deltoid_hum.Deltoid_humCyl;
+      
       SPLine = {
         AnyMatrix InitWrapPos = {
-            transf3D({.Surf.Sizes[0],-.Surf.Sizes[0 ],0}, &...WrappingSurfaces.DeltoidWrappingLateral.WrappingSegment1.DL2_3nodes),
-            transf3D({0,-1.4*.Surf.Sizes[0],0},  &...WrappingSurfaces.DeltoidWrappingLateral.WrappingSegment1.DL2_3nodes),
-            transf3D({2*.Surf3.Radius,0,0},  &....Segments.Humerus.Deltoid_hum.Deltoid_humCyl),
+            transf3D({.Surf1.Sizes[0],-.Surf1.Sizes[0 ],0}, &...WrappingSurfaces.DeltoidWrappingLateral.WrappingSegment.Ellipsoid_DeltoidWrappingLateral2),
+            transf3D({0,-1.4*.Surf1.Sizes[0],0},  &...WrappingSurfaces.DeltoidWrappingLateral.WrappingSegment.Ellipsoid_DeltoidWrappingLateral2),
+            transf3D({2*.Surf2.Radius,0,0},  &....Segments.Humerus.Deltoid_hum.Deltoid_humCyl),
         };
         InitWrapPosVecArr = {&InitWrapPos};
       };
@@ -510,14 +503,14 @@ MuscleGroup Coracobrachialis = {
       AnyRefNode &Ins = ...Segments.Humerus.I_DeltoideusLateral3;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
       SPLine.StringMesh = 30;
-      AnyParamSurfAnalytical &Surf = ..WrappingSurfaces.DeltoidWrappingLateral.WrappingSegment1.DL3_3nodes;
-      AnyParamSurfAnalytical &Surf3 = ...Segments.Humerus.Deltoid_hum.Deltoid_humCyl;
-
+      AnyParamSurfAnalytical &Surf1 = ..WrappingSurfaces.DeltoidWrappingLateral.WrappingSegment.Ellipsoid_DeltoidWrappingLateral3;
+      AnyParamSurfAnalytical &Surf2 = ...Segments.Humerus.Deltoid_hum.Deltoid_humCyl;
+      
       SPLine = {
         AnyMatrix InitWrapPos = {
-            transf3D({.Surf.Sizes[0],-.Surf.Sizes[0 ],0}, &...WrappingSurfaces.DeltoidWrappingLateral.WrappingSegment1.DL3_3nodes),
-            transf3D({0,-1.4*.Surf.Sizes[0],0},  &...WrappingSurfaces.DeltoidWrappingLateral.WrappingSegment1.DL3_3nodes),
-            transf3D({2*.Surf3.Radius,0,0},  &....Segments.Humerus.Deltoid_hum.Deltoid_humCyl),
+            transf3D({.Surf1.Sizes[0],-.Surf1.Sizes[0 ],0}, &...WrappingSurfaces.DeltoidWrappingLateral.WrappingSegment.Ellipsoid_DeltoidWrappingLateral3),
+            transf3D({0,-1.4*.Surf1.Sizes[0],0},  &...WrappingSurfaces.DeltoidWrappingLateral.WrappingSegment.Ellipsoid_DeltoidWrappingLateral3),
+            transf3D({2*.Surf2.Radius,0,0},  &....Segments.Humerus.Deltoid_hum.Deltoid_humCyl),
         };
         InitWrapPosVecArr = {&InitWrapPos};
       };
@@ -529,14 +522,14 @@ MuscleGroup Coracobrachialis = {
       AnyRefNode &Ins = ...Segments.Humerus.I_DeltoideusLateral4;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any" };
       SPLine.StringMesh = 30;
-
-      AnyParamSurfAnalytical &Surf = ..WrappingSurfaces.DeltoidWrappingLateral.WrappingSegment1.DL4_3nodes;
-      AnyParamSurfAnalytical &Surf3 = ...Segments.Humerus.Deltoid_hum.Deltoid_humCyl;
+      AnyParamSurfAnalytical &Surf1 = ..WrappingSurfaces.DeltoidWrappingLateral.WrappingSegment.Ellipsoid_DeltoidWrappingLateral4;
+      AnyParamSurfAnalytical &Surf2 = ...Segments.Humerus.Deltoid_hum.Deltoid_humCyl;
+      
       SPLine = {
         AnyMatrix InitWrapPos = {
-            transf3D({.Surf.Sizes[0],-.Surf.Sizes[0 ],0}, &...WrappingSurfaces.DeltoidWrappingLateral.WrappingSegment1.DL4_3nodes),
-            transf3D({0,-1.4*.Surf.Sizes[0],0},  &...WrappingSurfaces.DeltoidWrappingLateral.WrappingSegment1.DL4_3nodes),
-            transf3D({2*.Surf3.Radius,0,0},  &....Segments.Humerus.Deltoid_hum.Deltoid_humCyl),
+            transf3D({.Surf1.Sizes[0],-.Surf1.Sizes[0 ],0}, &...WrappingSurfaces.DeltoidWrappingLateral.WrappingSegment.Ellipsoid_DeltoidWrappingLateral4),
+            transf3D({0,-1.4*.Surf1.Sizes[0],0},  &...WrappingSurfaces.DeltoidWrappingLateral.WrappingSegment.Ellipsoid_DeltoidWrappingLateral4),
+            transf3D({2*.Surf2.Radius,0,0},  &....Segments.Humerus.Deltoid_hum.Deltoid_humCyl),
         };
         InitWrapPosVecArr = {&InitWrapPos};
       };
@@ -551,15 +544,15 @@ MuscleGroup Coracobrachialis = {
       AnyRefNode &Ins = ...Segments.Humerus.I_DeltoideusPosterior1;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
       SPLine.StringMesh = 45;
-      AnyParamSurfAnalytical &Surf = ..WrappingSurfaces.DeltoidWrappingPosterior.WrappingSegment1.DP1_3nodes;
-      AnyParamSurfAnalytical &Surf3 = ...Segments.Humerus.Deltoid_hum.Deltoid_humCyl;
+      AnyParamSurfAnalytical &Surf1 = ..WrappingSurfaces.DeltoidWrappingPosterior.WrappingSegment.Ellipsoid_DeltoidWrappingPosterior1;
+      AnyParamSurfAnalytical &Surf2 = ...Segments.Humerus.Deltoid_hum.Deltoid_humCyl;
       
       SPLine = {
         AnyMatrix InitWrapPos = {
-            transf3D({.Surf.Sizes[0],-.Surf.Sizes[0 ],0}, &...WrappingSurfaces.DeltoidWrappingPosterior.WrappingSegment1.DP1_3nodes),
-            transf3D({0,-1.4*.Surf.Sizes[0],0},  &...WrappingSurfaces.DeltoidWrappingPosterior.WrappingSegment1.DP1_3nodes),
-            transf3D({0,2*.Surf3.Radius,0},  &....Segments.Humerus.Deltoid_hum.Deltoid_humCyl),
-            transf3D({.Surf3.Radius,.Surf3.Radius,0},  &....Segments.Humerus.Deltoid_hum.Deltoid_humCyl),
+            transf3D({.Surf1.Sizes[0],-.Surf1.Sizes[0 ],0}, &...WrappingSurfaces.DeltoidWrappingPosterior.WrappingSegment.Ellipsoid_DeltoidWrappingPosterior1),
+            transf3D({0,-1.4*.Surf1.Sizes[0],0},  &...WrappingSurfaces.DeltoidWrappingPosterior.WrappingSegment.Ellipsoid_DeltoidWrappingPosterior1),
+            transf3D({0,2*.Surf2.Radius,0},  &....Segments.Humerus.Deltoid_hum.Deltoid_humCyl),
+            transf3D({.Surf2.Radius,.Surf2.Radius,0},  &....Segments.Humerus.Deltoid_hum.Deltoid_humCyl),
         };
         InitWrapPosVecArr = {&InitWrapPos};
       };
@@ -572,15 +565,15 @@ MuscleGroup Coracobrachialis = {
       AnyRefNode &Ins = ...Segments.Humerus.I_DeltoideusPosterior2;
       SPLine.StringMesh = 30;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-      AnyParamSurfAnalytical &Surf = ..WrappingSurfaces.DeltoidWrappingPosterior.WrappingSegment1.DP2_3nodes;
-      AnyParamSurfAnalytical &Surf3 = ...Segments.Humerus.Deltoid_hum.Deltoid_humCyl;
+      AnyParamSurfAnalytical &Surf1 = ..WrappingSurfaces.DeltoidWrappingPosterior.WrappingSegment.Ellipsoid_DeltoidWrappingPosterior2;
+      AnyParamSurfAnalytical &Surf2 = ...Segments.Humerus.Deltoid_hum.Deltoid_humCyl;
       
       SPLine = {
         AnyMatrix InitWrapPos = {
-            transf3D({.Surf.Sizes[0],-.Surf.Sizes[0 ],0}, &...WrappingSurfaces.DeltoidWrappingPosterior.WrappingSegment1.DP2_3nodes),
-            transf3D({0,-1.4*.Surf.Sizes[0],0},  &...WrappingSurfaces.DeltoidWrappingPosterior.WrappingSegment1.DP2_3nodes),
-            transf3D({0,2*.Surf3.Radius,0},  &....Segments.Humerus.Deltoid_hum.Deltoid_humCyl),
-            transf3D({.Surf3.Radius,.Surf3.Radius,0},  &....Segments.Humerus.Deltoid_hum.Deltoid_humCyl),
+            transf3D({.Surf1.Sizes[0],-.Surf1.Sizes[0 ],0}, &...WrappingSurfaces.DeltoidWrappingPosterior.WrappingSegment.Ellipsoid_DeltoidWrappingPosterior2),
+            transf3D({0,-1.4*.Surf1.Sizes[0],0},  &...WrappingSurfaces.DeltoidWrappingPosterior.WrappingSegment.Ellipsoid_DeltoidWrappingPosterior2),
+            transf3D({0,2*.Surf2.Radius,0},  &....Segments.Humerus.Deltoid_hum.Deltoid_humCyl),
+            transf3D({.Surf2.Radius,.Surf2.Radius,0},  &....Segments.Humerus.Deltoid_hum.Deltoid_humCyl),
         };
         InitWrapPosVecArr = {&InitWrapPos};
       };
@@ -593,15 +586,15 @@ MuscleGroup Coracobrachialis = {
       AnyRefNode &Ins = ...Segments.Humerus.I_DeltoideusPosterior3;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
       SPLine.StringMesh = 40;
-      AnyParamSurfAnalytical &Surf = ..WrappingSurfaces.DeltoidWrappingPosterior.WrappingSegment1.DP3_3nodes;
-      AnyParamSurfAnalytical &Surf3 = ...Segments.Humerus.Deltoid_hum.Deltoid_humCyl;
+      AnyParamSurfAnalytical &Surf1 = ..WrappingSurfaces.DeltoidWrappingPosterior.WrappingSegment.Ellipsoid_DeltoidWrappingPosterior3;
+      AnyParamSurfAnalytical &Surf2 = ...Segments.Humerus.Deltoid_hum.Deltoid_humCyl;
 
       SPLine = {
         AnyMatrix InitWrapPos = {
-            transf3D({.Surf.Sizes[0],-.Surf.Sizes[0 ],0}, &...WrappingSurfaces.DeltoidWrappingPosterior.WrappingSegment1.DP3_3nodes),
-            transf3D({0,-1.4*.Surf.Sizes[0],0},  &...WrappingSurfaces.DeltoidWrappingPosterior.WrappingSegment1.DP3_3nodes),
-            transf3D({0,2*.Surf3.Radius,0},  &....Segments.Humerus.Deltoid_hum.Deltoid_humCyl),
-            transf3D({.Surf3.Radius,.Surf3.Radius,0},  &....Segments.Humerus.Deltoid_hum.Deltoid_humCyl),
+            transf3D({.Surf1.Sizes[0],-.Surf1.Sizes[0 ],0}, &...WrappingSurfaces.DeltoidWrappingPosterior.WrappingSegment.Ellipsoid_DeltoidWrappingPosterior3),
+            transf3D({0,-1.4*.Surf1.Sizes[0],0},  &...WrappingSurfaces.DeltoidWrappingPosterior.WrappingSegment.Ellipsoid_DeltoidWrappingPosterior3),
+            transf3D({0,2*.Surf2.Radius,0},  &....Segments.Humerus.Deltoid_hum.Deltoid_humCyl),
+            transf3D({.Surf2.Radius,.Surf2.Radius,0},  &....Segments.Humerus.Deltoid_hum.Deltoid_humCyl),
         };
         InitWrapPosVecArr = {&InitWrapPos};
       };
@@ -614,15 +607,15 @@ MuscleGroup Coracobrachialis = {
       AnyRefNode &Ins = ...Segments.Humerus.I_DeltoideusPosterior4;
       SPLine.StringMesh = 20;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-      AnyParamSurfAnalytical &Surf = ..WrappingSurfaces.DeltoidWrappingPosterior.WrappingSegment1.DP4_3nodes;
-      AnyParamSurfAnalytical &Surf3 = ...Segments.Humerus.Deltoid_hum.Deltoid_humCyl;
+      AnyParamSurfAnalytical &Surf1 = ..WrappingSurfaces.DeltoidWrappingPosterior.WrappingSegment.Ellipsoid_DeltoidWrappingPosterior4;
+      AnyParamSurfAnalytical &Surf2 = ...Segments.Humerus.Deltoid_hum.Deltoid_humCyl;
 
       SPLine = {
         AnyMatrix InitWrapPos = {
-            transf3D({.Surf.Sizes[0],-.Surf.Sizes[0 ],0}, &...WrappingSurfaces.DeltoidWrappingPosterior.WrappingSegment1.DP4_3nodes),
-            transf3D({0,-1.4*.Surf.Sizes[0],0},  &...WrappingSurfaces.DeltoidWrappingPosterior.WrappingSegment1.DP4_3nodes),
-            transf3D({0,2*.Surf3.Radius,0},  &....Segments.Humerus.Deltoid_hum.Deltoid_humCyl),
-            transf3D({.Surf3.Radius,.Surf3.Radius,0},  &....Segments.Humerus.Deltoid_hum.Deltoid_humCyl),
+            transf3D({.Surf1.Sizes[0],-.Surf1.Sizes[0 ],0}, &...WrappingSurfaces.DeltoidWrappingPosterior.WrappingSegment.Ellipsoid_DeltoidWrappingPosterior4),
+            transf3D({0,-1.4*.Surf1.Sizes[0],0},  &...WrappingSurfaces.DeltoidWrappingPosterior.WrappingSegment.Ellipsoid_DeltoidWrappingPosterior4),
+            transf3D({0,2*.Surf2.Radius,0},  &....Segments.Humerus.Deltoid_hum.Deltoid_humCyl),
+            transf3D({.Surf2.Radius,.Surf2.Radius,0},  &....Segments.Humerus.Deltoid_hum.Deltoid_humCyl),
         };
         InitWrapPosVecArr = {&InitWrapPos};
       };
