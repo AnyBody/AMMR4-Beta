@@ -327,7 +327,8 @@ AnyFolder DeltoidWrappingAnterior = {
       pos_node2 =  .ClaviculaRef.r0 + (.ClaviculaRef.Axes0 * Node2.sRel')'-.r0;
       axes_node2 = .ClaviculaRef.Axes0 * Node2.ARel;
       AdjustorXRotation = 3*pi/2;
-      #include "CalEllipsMembers_3nodes.any"
+      DistanceRatio = 1.25;
+    #include "CalEllipsMembers_3nodes.any"
     };
     AnySurfEllipsoid Ellipsoid_DeltoidWrappingAnterior2 = 
     {
@@ -337,6 +338,7 @@ AnyFolder DeltoidWrappingAnterior = {
       pos_node2 =  .ClaviculaRef.r0 + (.ClaviculaRef.Axes0 * Node2.sRel')'-.r0;
       axes_node2 = .ClaviculaRef.Axes0 * Node2.ARel;
       AdjustorXRotation = 3*pi/2;
+      DistanceRatio = 1.3;
       #include "CalEllipsMembers_3nodes.any"
     };
     AnySurfEllipsoid Ellipsoid_DeltoidWrappingAnterior3 = 
@@ -347,6 +349,7 @@ AnyFolder DeltoidWrappingAnterior = {
       pos_node2 =  .ClaviculaRef.r0 + (.ClaviculaRef.Axes0 * Node2.sRel')'-.r0;
       axes_node2 = .ClaviculaRef.Axes0 * Node2.ARel;
       AdjustorXRotation = 3*pi/2;
+      DistanceRatio = 1.3;
       #include "CalEllipsMembers_3nodes.any"
     };
     AnySurfEllipsoid Ellipsoid_DeltoidWrappingAnterior4 = 
@@ -360,7 +363,6 @@ AnyFolder DeltoidWrappingAnterior = {
       DistanceRatio = 1.3;
       #include "CalEllipsMembers_3nodes.any"
     };
-    
   };
   
   
