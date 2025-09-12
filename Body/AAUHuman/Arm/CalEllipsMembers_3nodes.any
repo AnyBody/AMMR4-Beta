@@ -7,11 +7,12 @@ AnyFloat pos_node3 ??= .ScapulaRef.r0 + (.ScapulaRef.Axes0 * Node3.sRel')'-.r0;
 AnyFloat Rxy ??= vnorm( (pos_node2 - pos_node1) )/5;
 AnyFloat Rz = Rxy*5;
 AnyFloat DistanceRatio ??= 1.45;
-AnyFloat AdjustorDirection ??= {1,0.3,0};
+AnyFloat AdjustorDirection ??= {1,.....Sign*0.3,0};
+AnyFloat AdjustorXRotation ??= pi/2;
 Radius = {Rxy, Rxy, Rz};
 AnyFloat Sizes = Radius;
-AnyMatrix RotMatrix ??= RotMat(pos_node1, pos_node2, pos_node3) * RotMat(pi/2,x);
+AnyMatrix RotMatrix ??= RotMat(pos_node1, pos_node2, pos_node3) * RotMat(AdjustorXRotation,x);
 sRel ??= (pos_node2 + pos_node1)/2 + Rxy*DistanceRatio * (RotMatrix*(AdjustorDirection/vnorm(AdjustorDirection))')';
-ARel ??= RotMatrix;
+ARel ??= RotMatrix * RotMat(pi/2 - .....Sign * pi/2,x);
 
 // viewSurface = {Visible = On; Opacity = 0.1; RGB = {0.5, 0.1, 0.1}; Transparency = 0.7; };

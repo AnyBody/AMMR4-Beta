@@ -102,6 +102,8 @@ AnyFolder Humerus = {
   AnyFloat art_tub_majus_pos = {0.021, 0.009 , -0.02}+OffSet;
   AnyFloat sulcus_intertubercularis_pos = {0.017500, -0.023000, -0.0175000}+OffSet; // 0.5*(.art_tub_majus.sRel+.art_tub_minus.sRel)+.Scale({.....Sign*0.003,0.0,0.0}); // midpoint
   AnyFloat sulcus_intertubercularisTop_pos = {0.017, 0.023000, -0.02650}+OffSet; //.sulcus_intertubercularis.sRel+.Scale({.....Sign*-0.005,0.015,0.003});
+  AnyFloat Deltoid_hum = {0.0006969078, -0.145082, 0.007705414};
+  AnyFloat Deltoid_hum_p3 = {0.012821, -0.13903, 0.01491};
 
 #if BM_ARM_DELTOID_WRAPPING == _DELTOID_WRAPPING_RAKE_
   AnyFloat I_deltoideus_scapular_part_1_pos         = {0.009442, -0.095031 , -0.005209}+{0,0,0.005}+ds1;
