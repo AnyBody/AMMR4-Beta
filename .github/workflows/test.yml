@@ -36,13 +36,13 @@ jobs:
       # Triggers a warning at 20 deg
       ShortestPathMaxAngle: 0.3491 
 
-    runs-on: windows-latest
+    runs-on: windows-2025
     
     steps:
 
       - uses: actions/checkout@v5
 
-      - uses: prefix-dev/setup-pixi@v0.8.14
+      - uses: prefix-dev/setup-pixi@v0.9.0
         with:
           environments: test
           cache-write: ${{ github.event_name == 'push' && ( github.ref_name == 'ammr4-beta' )}}

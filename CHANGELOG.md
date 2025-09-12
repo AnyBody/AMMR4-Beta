@@ -129,6 +129,11 @@ You can [enable backwards compatibility](changes-to-bodymodel-folders) by settin
 
 * Many of the key folders inside the Leg and Arm models have been renamed to create a unified structure across the full BodyModel. To bring back the old structure we have temporarily included a backward compatibility switch `BM_COMPATIBILITY_BODYMODEL_STRUCTURE` To ensure a smooth transition.
 
+* The metatarsal joint nodes in the TLEM foot model have been updated to be consistent with the GM foot model.
+  The joint nodes are now located at joint centers instead of the contact between the bone surfaces. 
+  This change will affect position of markers located relative to the metatarsal joint nodes in the  
+  TLEM foot model. MoCap examples in the AMMR affected by this change have been updated accordingly.
+
 * The color of force plates in C3D-based MoCap models has been adjusted to better distinguish between 
   when the foot is in contact with the force plate and when it is not.
 
@@ -149,6 +154,8 @@ You can [enable backwards compatibility](changes-to-bodymodel-folders) by settin
    share the same marker protocol irrespectively of if the detailed or simple
    hand is enabled. 
 *  Fixed arm rest asymmetry in various sitting model application examples. 
+*  Fixed contact thresholds in {ref}`Leg Press Machine 
+   example<example_legpressmachinemodel>` to ensure contact with all the nodes.
 
 ### ➕ Added:
 * The implemenation of the pelvis rotation vector measure in the interface folder has been refactored to allow overwritting the global reference frame.
