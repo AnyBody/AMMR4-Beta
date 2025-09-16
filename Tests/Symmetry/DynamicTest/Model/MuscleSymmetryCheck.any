@@ -12,13 +12,37 @@ AnyFolder SymmetryCheck= {
       AnyFolder Kinematics = {
         ComparePtrArrays pos() = {
           Array1 = ObjSearchRecursive(
-            "Main.HumanModel.BodyModel.Right.ShoulderArm.Segments", "r","AnyFloat", 10
+            arrcat(
+              &Main.HumanModel.BodyModel.Right.ShoulderArm.Segments.Clavicula,
+              &Main.HumanModel.BodyModel.Right.ShoulderArm.Segments.Scapula,
+              &Main.HumanModel.BodyModel.Right.ShoulderArm.Segments.Humerus,
+              &Main.HumanModel.BodyModel.Right.ShoulderArm.Segments.Ulna,
+              &Main.HumanModel.BodyModel.Right.ShoulderArm.Segments.Radius,
+              &Main.HumanModel.BodyModel.Right.ShoulderArm.Segments.WristJointSeg,
+            ), "r","AnyFloat", 10
           );
           Array2 = ObjSearchRecursive(
-            "Main.HumanModel.BodyModel.Left.ShoulderArm.Segments", "r","AnyFloat", 10
+            arrcat(
+              &Main.HumanModel.BodyModel.Left.ShoulderArm.Segments.Clavicula,
+              &Main.HumanModel.BodyModel.Left.ShoulderArm.Segments.Scapula,
+              &Main.HumanModel.BodyModel.Left.ShoulderArm.Segments.Humerus,
+              &Main.HumanModel.BodyModel.Left.ShoulderArm.Segments.Ulna,
+              &Main.HumanModel.BodyModel.Left.ShoulderArm.Segments.Radius,
+              &Main.HumanModel.BodyModel.Left.ShoulderArm.Segments.WristJointSeg,
+            ), "r","AnyFloat", 10
           );
           MirrorMatrix = ...MirrorMatrix;
         };
+        ComparePtrArrays hand_pos() = {
+          Array1 = ObjSearchRecursive(
+            "Main.HumanModel.BodyModel.Right.ShoulderArm.Segments.Hand", "r","AnyFloat", 10
+          );
+          Array2 = ObjSearchRecursive(
+            "Main.HumanModel.BodyModel.Left.ShoulderArm.Segments.Hand", "r","AnyFloat", 10
+          );
+          MirrorMatrix = ...MirrorMatrix;
+        };
+        
         ComparePtrArrays wraps() = {
           Array1 = ObjSearchRecursive(
             "Main.HumanModel.BodyModel.Right.ShoulderArm.Muscles", "r","AnyFloat", 10

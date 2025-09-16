@@ -34,6 +34,13 @@ AnyFolder CheckModel ={
       ),
       "Arm model positions asymmetric"
     );
+    AnyInt HandPositions = TEST_SEVERITY( 
+      orfun( 
+        not(Main.TestTrigger),  
+        ltfun(Main.StudyRef.SymmetryCheck.Arm.Kinematics.hand_pos.NormalizedDifference, kin_tol)
+      ),
+      "Hand model positions asymmetric"
+    );
     
     #if BM_ARM_MUSCLES_RIGHT == OFF & BM_ARM_MUSCLES_LEFT == OFF
       AnyInt ArmJntForces = TEST_SEVERITY(
