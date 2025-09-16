@@ -375,12 +375,6 @@ type = "#path"
 valuetype = "string"
 descr = "Custom file with all anthropometric measurements used by the scaling law. This is some times called the AnyMan file."
 
-[parameters.BM_SCALING_MY_FILE]
-deprecated = "true"
-type = "#path"
-valuetype = "string"
-descr = "Path with the ScalingLaw used. Can be set to override the BM_SCALING parameter and select a custom scaling law."
-
 [parameters.BM_SCALING_FILE]
 type = "#path"
 valuetype = "string"
@@ -680,17 +674,6 @@ descr = "Switch for the left arm model being present or not."
 nicename = "Left Arm"
 opt = [ "ON", "OFF"]
 
-[parameters.BM_ARM_DETAIL_HAND_LEFT]
-deprecated = "true"
-default = "OFF"
-valuetype = "integer"
-descr = "Keyword for the type of left hand."
-
-[parameters.BM_ARM_SHOULDER_RHYTHM_LEFT]
-deprecated = "true"
-default = "OFF"
-valuetype = "integer"
-descr = "Switch for the shoulder rhythm constraints for the left arm being present or not."
 
 [parameters.BM_ARM_RIGHT]
 default = "ON"
@@ -699,17 +682,6 @@ descr = "Switch for the right arm model being present or not."
 nicename = "Right Arm"
 opt = [ "ON", "OFF"]
 
-[parameters.BM_ARM_DETAIL_HAND_RIGHT]
-deprecated = "true"
-default = "OFF"
-valuetype = "integer"
-descr = "Keyword for the type of right hand."
-
-[parameters.BM_ARM_SHOULDER_RHYTHM_RIGHT]
-deprecated = "true"
-default = "OFF"
-valuetype = "integer"
-descr = "Switch for the shoulder rhythm constraints for the right arm being present or not."
 
 [parameters.BM_ARM_SHOULDER_RHYTHM]
 default = "OFF"
@@ -1091,14 +1063,6 @@ descr = "Switch for the mannequin driver being active or not"
 nicename = "Right Ankle Flexion"
 opt = [ "ON", "OFF", "BM_MANNEQUIN_DRIVER_DEFAULT",]
 
-[parameters.BM_MANNEQUIN_DRIVER_ANKLE_EVERSION_RIGHT]
-default = "BM_MANNEQUIN_DRIVER_DEFAULT"
-valuetype = "integer"
-deprecated = "true"
-descr = "Switch for the mannequin driver being active or not"
-nicename = "Right Ankle Eversion"
-opt = [ "ON", "OFF", "BM_MANNEQUIN_DRIVER_DEFAULT",]
-
 [parameters.BM_MANNEQUIN_DRIVER_ANKLE_SUBTALAR_EVERSION_RIGHT]
 default = "BM_MANNEQUIN_DRIVER_DEFAULT"
 valuetype = "integer"
@@ -1146,14 +1110,6 @@ default = "BM_MANNEQUIN_DRIVER_DEFAULT"
 valuetype = "integer"
 descr = "Switch for the mannequin driver being active or not"
 nicename = "Left Ankle Flexion"
-opt = [ "ON", "OFF", "BM_MANNEQUIN_DRIVER_DEFAULT",]
-
-[parameters.BM_MANNEQUIN_DRIVER_ANKLE_EVERSION_LEFT]
-default = "BM_MANNEQUIN_DRIVER_DEFAULT"
-valuetype = "integer"
-deprecated = "true"
-descr = "Switch for the mannequin driver being active or not"
-nicename = "Left Ankle Eversion"
 opt = [ "ON", "OFF", "BM_MANNEQUIN_DRIVER_DEFAULT",]
 
 [parameters.BM_MANNEQUIN_DRIVER_ANKLE_SUBTALAR_EVERSION_LEFT]
