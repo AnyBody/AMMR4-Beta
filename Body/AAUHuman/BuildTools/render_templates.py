@@ -73,7 +73,7 @@ for target,template, data in targets:
     template = tmplpath / template
     with open(template) as fh:
         tmpl = Template(fh.read())
-    with open(target, "w") as fh:
+    with open(target, "w", newline="\n") as fh:
         fh.write(tmpl.render(data=data))
 
 
