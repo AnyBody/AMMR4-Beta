@@ -38,10 +38,11 @@ Scapula = {
   // the cylinder starts in gh and points towards ts.
   AnyRefNode deltoid_cyl={
 
+    AnyVec3 P1 = .Scale(.Data.deltoid_cyl_P1_pos*.Mirror); //P2=.ai.sRel + VZ*Length;
     AnyVec3 P2 = .Scale(.Data.deltoid_cyl_P2_pos*.Mirror); //P2=.ai.sRel + VZ*Length;
     AnyVec3 P3 = .Scale(.Data.deltoid_cyl_P3_pos*.Mirror); //P3=.ai.sRel - VX*Radius;
 
-    sRel=.ai.sRel;
+    sRel= P1;
 
 
     //Calculate rot matrix for cylinder using three points
@@ -59,9 +60,10 @@ Scapula = {
 
     AnySurfCylinder cyl = {
       Radius= vnorm(.sRel-.P3);
-      Length= vnorm(.sRel-.P2);
+      Length= vnorm(.sRel-.P2)*2;
       CapRatio=1.0;
       //AnyDrawParamSurf drw={RGB={0,0,1};};
+      CenterOrigin = On;
     };
 
   };
