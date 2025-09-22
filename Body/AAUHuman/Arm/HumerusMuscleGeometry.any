@@ -195,7 +195,8 @@ Humerus = {
     
     AnySurfCylinder Deltoid_humCyl= {
       Radius=vnorm(.sRel-.P3);
-      Length=vnorm(.sRel-.P2);
+      Length=2*vnorm(.sRel-.P2);
+      CapRatio = 1;
       CenterOrigin = On;
     };
   };

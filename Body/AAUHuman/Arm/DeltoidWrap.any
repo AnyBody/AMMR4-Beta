@@ -36,18 +36,22 @@ AnyFolder DeltoidWrappingPosterior = {
       AnyRefNode &Node1 = .HumerusRef.I_DeltoideusPosterior1;
       AnyRefNode &Node2 = .ScapulaRef.O_DeltoideusPosterior1;
       AnyRefNode &Node3 = .ScapulaRef.I_LevatorScapulae1;
-      AdjustorDirection = {1,.....Sign*0.5,0};
+      AdjustorDirection = {1,.....Sign*0.3,0};//{1,.....Sign*1,0};
       AdjustorXRotation = 3*pi/2;
-      DistanceRatio = 1.2;
+      DistanceRatio = 1.2;//1.5;
+      //ARel = RotMatrix * RotMat(pi/2 - .....Sign * pi/2,x) * RotMat(25*pi/180,x);
       #include "CalEllipsMembers_3nodes.any"
-    };
+    };    
+
     AnySurfEllipsoid Ellipsoid_DeltoidWrappingPosterior2 = 
     {
       AnyRefNode &Node1 = .HumerusRef.I_DeltoideusPosterior2;
       AnyRefNode &Node2 = .ScapulaRef.O_DeltoideusPosterior2;
       AnyRefNode &Node3 = .ScapulaRef.I_LevatorScapulae1;
+      //AdjustorDirection = {1,.....Sign*0.8,0};
       AdjustorXRotation = 3*pi/2;
-      DistanceRatio = 1.2;
+      DistanceRatio = 1.2;//1.5;
+      //ARel = RotMatrix * RotMat(pi/2 - .....Sign * pi/2,x) * RotMat(20*pi/180,x);
       #include "CalEllipsMembers_3nodes.any"
     };
     AnySurfEllipsoid Ellipsoid_DeltoidWrappingPosterior3 = 
@@ -55,7 +59,9 @@ AnyFolder DeltoidWrappingPosterior = {
       AnyRefNode &Node1 = .HumerusRef.I_DeltoideusPosterior3;
       AnyRefNode &Node2 = .ScapulaRef.O_DeltoideusPosterior3;
       AnyRefNode &Node3 = .ScapulaRef.O_DeltoideusLateral1;
-      DistanceRatio = 1.2;
+      AdjustorDirection = {1,.....Sign*0.6,0};
+      DistanceRatio = 1.2;//1.5;
+      //ARel = RotMatrix * RotMat(pi/2 - .....Sign * pi/2,x) * RotMat(10*pi/180,x);
       #include "CalEllipsMembers_3nodes.any"
     };
     AnySurfEllipsoid Ellipsoid_DeltoidWrappingPosterior4 = 
@@ -63,24 +69,76 @@ AnyFolder DeltoidWrappingPosterior = {
       AnyRefNode &Node1 = .HumerusRef.I_DeltoideusPosterior4;
       AnyRefNode &Node2 = .ScapulaRef.O_DeltoideusPosterior4;
       AnyRefNode &Node3 = .ScapulaRef.O_DeltoideusLateral1;
-      AdjustorDirection = {0.8,.....Sign*0.3,0};
+      AdjustorDirection = {0.9,.....Sign*0.5,0};
+      DistanceRatio = 1.1;
+//      ARel = RotMatrix * RotMat(pi/2 - .....Sign * pi/2,x) * RotMat(20*pi/180,x);
       #include "CalEllipsMembers_3nodes.any"
     };
     
+    
+//    AnyRefNode deltoid_cyl={
+//      
+//      AnyVec3 P2 = .....Segments.Scapula.Scale(.....Segments.Scapula.Data.deltoid_cyl_P2_pos*.....Segments.Scapula.Mirror); //P2=.ai.sRel + VZ*Length;
+//      AnyVec3 P3 = .....Segments.Scapula.Scale(.....Segments.Scapula.Data.deltoid_cyl_P3_pos*.....Segments.Scapula.Mirror); //P3=.ai.sRel - VX*Radius;
+//      
+//      sRel= .ScapulaRef.ai.sRel-.r0+.ScapulaRef.r0;
+//      
+//      
+//      //Calculate rot matrix for cylinder using three points
+//      //p2-p1 used to find x axis
+//      //p3-p1 used to find the y axis
+//      //z axis found as cross product
+//      AnyMat33  Mat = RotMat(sRel,P3,P2);
+//      
+//      //Switch around the on the columns to compensate that the cylinder has
+//      //main axis along the zaxis
+//      ARel=.....Segments.Scapula.Axes0* {
+//        {Mat[0][2],Mat[0][0],Mat[0][1]},
+//        {Mat[1][2],Mat[1][0],Mat[1][1]},
+//        {Mat[2][2],Mat[2][0],Mat[2][1]}};
+//      
+//      AnySurfCylinder cyl = {
+//        Radius= vnorm(..ScapulaRef.ai.sRel-.P3);
+//        Length= vnorm(..ScapulaRef.ai.sRel-.P2);
+//        CapRatio=1.0;
+//        //AnyDrawParamSurf drw={RGB={0,0,1};};
+//      };
+//      
+//    };
+      
+//    AnyRefNode Deltoid_cyl = {
+//      sRel = Main.HumanModel.BodyModel.Right.ShoulderArm.Segments.Scapula.deltoid_cyl.sRel - .r0 + .ScapulaRef.r0;
+//    ARel = .ScapulaRef.Axes0*Main.HumanModel.BodyModel.Right.ShoulderArm.Segments.Scapula.deltoid_cyl.ARel;
+//    
+//    AnySurfCylinder Deltoid_humCyl= {
+//      Radius=Main.HumanModel.BodyModel.Right.ShoulderArm.Segments.Scapula.deltoid_cyl.cyl.Radius;
+//      Length=Main.HumanModel.BodyModel.Right.ShoulderArm.Segments.Scapula.deltoid_cyl.cyl.Length;
+//      CapRatio = 1;
+//      CenterOrigin = On;
+//    };
+//  };
+    
     AnyRefNode LocalReferenceFrame_ConstraintNode = {sRel= {0,0,0}; ARel= .ScapulaRef.Axes0;};
     AnyRefNode O_DeltoideusPosterior1 = {sRel= .ScapulaRef.r0 -.r0 + (.ScapulaRef.Axes0 * .ScapulaRef.O_DeltoideusPosterior1.sRel')';};
+    AnyRefNode O_DeltoideusPosterior3 = {sRel= .ScapulaRef.r0 -.r0 + (.ScapulaRef.Axes0 * .ScapulaRef.O_DeltoideusPosterior3.sRel')';};
     AnyRefNode O_DeltoideusPosterior4 = {sRel= .ScapulaRef.r0 -.r0 + (.ScapulaRef.Axes0 * .ScapulaRef.O_DeltoideusPosterior4.sRel')';};
     AnyRefNode gh_joint = {sRel= .ScapulaRef.r0 -.r0 + (.ScapulaRef.Axes0 * .ScapulaRef.gh_rotated1.sRel')';};
     AnyRefNode HumerusLateral = {sRel= .HumerusRef.r0 -.r0 + (.HumerusRef.Axes0 * .HumerusRef.TeresMinorhumurus_wrap.sRel')';};
     AnyRefNode HumerusAnterior = {sRel= .HumerusRef.r0 -.r0 + (.HumerusRef.Axes0 * .HumerusRef.I_Subscapularis3.sRel')';};
     AnyRefNode HumerusMedial = {sRel= .ScapulaRef.r0 -.r0 + (.ScapulaRef.Axes0 * .ScapulaRef.GHReactionCenterNodeRotated.sRel')'+ 
       (.ScapulaRef.Axes0 *.ScapulaRef.GHReactionCenterNodeRotated.ARel* .ScapulaRef.GHReactionCenterNodeRotated.CavityEdgeNode8.sRel')';};
+    AnyRefNode I_DeltoideusPosterior3 = {sRel= .HumerusRef.r0 -.r0 + (.HumerusRef.Axes0 * .HumerusRef.I_DeltoideusPosterior3.sRel')';};
   };
   
   AnyKinLinear m_O_DeltoideusPosterior1 = {
     AnyRefNode &ref1 = .WrappingSegment.O_DeltoideusPosterior1; 
     AnyRefNode &ref2 = ....Segments.Scapula.O_DeltoideusPosterior1; 
     Ref=0;  
+  };
+  AnyKinLinear m_O_DeltoideusPosterior3 = {
+    AnyRefNode &ref1 = .WrappingSegment.O_DeltoideusPosterior3; 
+    AnyRefNode &ref2 = ....Segments.Scapula.O_DeltoideusPosterior3; 
+    Ref=0;     
   };
   AnyKinLinear m_O_DeltoideusPosterior4 = {
     AnyRefNode &ref1 = .WrappingSegment.O_DeltoideusPosterior4; 
@@ -107,6 +165,11 @@ AnyFolder DeltoidWrappingPosterior = {
     AnyRefNode &ref2= ....Segments.Scapula.GHReactionCenterNodeRotated.CavityEdgeNode8;
     Ref=0;
   };
+  AnyKinLinear m_I_DeltoideusPosterior3 = {
+    AnyRefNode &ref1 = .WrappingSegment.I_DeltoideusPosterior3; 
+    AnyRefNode &ref2= ....Segments.Humerus.I_DeltoideusPosterior3;
+    Ref=0;
+  };
   
   
   AnyKinEq Constraint = {
@@ -120,8 +183,9 @@ AnyFolder DeltoidWrappingPosterior = {
         &..HumerusLateral,
         &..HumerusAnterior,
         &..HumerusMedial,
+        &..m_I_DeltoideusPosterior3
       };
-      WeightCoefficients = {4,4,1,1,1,1};
+      WeightCoefficients = {4,6,20,1,1,1,0.5};
     };
     Reaction.Type ??= repmat(nDim, Off); 
   };
@@ -170,6 +234,7 @@ AnyFolder DeltoidWrappingLateral = {
       AnyRefNode &Node1 = .HumerusRef.I_DeltoideusLateral1;
       AnyRefNode &Node2 = .ScapulaRef.O_DeltoideusLateral1;
       AnyRefNode &Node3 = .ScapulaRef.O_DeltoideusLateral2;
+      AdjustorDirection = {1,.....Sign*0.3,0};
       #include "CalEllipsMembers_3nodes.any"
     };
     AnySurfEllipsoid Ellipsoid_DeltoidWrappingLateral2 = 
@@ -177,6 +242,7 @@ AnyFolder DeltoidWrappingLateral = {
       AnyRefNode &Node1 = .HumerusRef.I_DeltoideusLateral2;
       AnyRefNode &Node2 = .ScapulaRef.O_DeltoideusLateral2;
       AnyRefNode &Node3 = .ScapulaRef.O_DeltoideusLateral3;
+      AdjustorDirection = {1,.....Sign*0.3,0};
       #include "CalEllipsMembers_3nodes.any"
     };
     AnySurfEllipsoid Ellipsoid_DeltoidWrappingLateral3 = 
@@ -184,6 +250,7 @@ AnyFolder DeltoidWrappingLateral = {
       AnyRefNode &Node1 = .HumerusRef.I_DeltoideusLateral3;
       AnyRefNode &Node2 = .ScapulaRef.O_DeltoideusLateral3;
       AnyRefNode &Node3 = .ScapulaRef.O_DeltoideusLateral4;
+      AdjustorDirection = {1,.....Sign*0.25,0};
       #include "CalEllipsMembers_3nodes.any"
     };
     AnySurfEllipsoid Ellipsoid_DeltoidWrappingLateral4 = 
@@ -191,11 +258,49 @@ AnyFolder DeltoidWrappingLateral = {
       AnyRefNode &Node1 = .HumerusRef.I_DeltoideusLateral4;
       AnyRefNode &Node2 = .ScapulaRef.O_DeltoideusLateral4;
       AnyRefNode &Node3 = .ScapulaRef.gh_rotated1;
-      AdjustorDirection = {0.8,.....Sign*0.3,0};
+      AdjustorDirection = {1,.....Sign*0.25,0};
+//      AdjustorDirection = {0.8,.....Sign*0.3,0};
       AdjustorXRotation = pi/2 - .....Sign * pi/2; // This ellipsoid is defined by the gh_rotated1 node as its third node.
       #include "CalEllipsMembers_3nodes.any"
     };
     
+    
+//    Ellipsoid_DeltoidWrappingLateral1 = {
+//      AnySurfCylinder Extra_cyl= {
+//        sRel = {0,......Sign*0.05,0};
+//        Radius=0.05;
+//        Length=0.2;
+//        CapRatio = 1;
+//        CenterOrigin = On;
+//      };
+//    };
+//    Ellipsoid_DeltoidWrappingLateral2 = {
+//      AnySurfCylinder Extra_cyl= {
+//        sRel = {0,......Sign*0.05,0};
+//        Radius=0.05;
+//        Length=0.2;
+//        CapRatio = 1;
+//        CenterOrigin = On;
+//      };
+//    };
+    Ellipsoid_DeltoidWrappingLateral3 = {
+      AnySurfCylinder Extra_cyl= {
+        sRel = {0,......Sign*0.05,0};
+        Radius=0.05;
+        Length=0.2;
+        CapRatio = 1;
+        CenterOrigin = On;
+      };
+    };
+    Ellipsoid_DeltoidWrappingLateral4 = {
+      AnySurfCylinder Extra_cyl= {
+        sRel = {0,......Sign*0.05,0};
+        Radius=0.05;
+        Length=0.2;
+        CapRatio = 1;
+        CenterOrigin = On;
+      };
+    };
     
     AnyRefNode LocalReferenceFrame_ConstraintNode = {sRel= {0,0,0}; ARel= .ScapulaRef.Axes0;};
     AnyRefNode DeltoideusPosteriorWrappingRotNode = {sRel= {0,0,0};
@@ -326,6 +431,7 @@ AnyFolder DeltoidWrappingAnterior = {
       AnyRefNode &Node3 = .ScapulaRef.O_DeltoideusLateral3;
       pos_node2 =  .ClaviculaRef.r0 + (.ClaviculaRef.Axes0 * Node2.sRel')'-.r0;
       axes_node2 = .ClaviculaRef.Axes0 * Node2.ARel;
+//      AdjustorDirection = {1,.....Sign*0.2,0};
       AdjustorXRotation = 3*pi/2;
       DistanceRatio = 1.25;
     #include "CalEllipsMembers_3nodes.any"
@@ -337,8 +443,9 @@ AnyFolder DeltoidWrappingAnterior = {
       AnyRefNode &Node3 = .ScapulaRef.O_DeltoideusLateral3; 
       pos_node2 =  .ClaviculaRef.r0 + (.ClaviculaRef.Axes0 * Node2.sRel')'-.r0;
       axes_node2 = .ClaviculaRef.Axes0 * Node2.ARel;
+      AdjustorDirection = {1,.....Sign*0.2,0};
       AdjustorXRotation = 3*pi/2;
-      DistanceRatio = 1.3;
+      DistanceRatio = 1.2;
       #include "CalEllipsMembers_3nodes.any"
     };
     AnySurfEllipsoid Ellipsoid_DeltoidWrappingAnterior3 = 
@@ -348,8 +455,9 @@ AnyFolder DeltoidWrappingAnterior = {
       AnyRefNode &Node3 = .ScapulaRef.O_DeltoideusLateral3; 
       pos_node2 =  .ClaviculaRef.r0 + (.ClaviculaRef.Axes0 * Node2.sRel')'-.r0;
       axes_node2 = .ClaviculaRef.Axes0 * Node2.ARel;
+      AdjustorDirection = {1,.....Sign*0.2,0};
       AdjustorXRotation = 3*pi/2;
-      DistanceRatio = 1.3;
+      DistanceRatio = 1.2;
       #include "CalEllipsMembers_3nodes.any"
     };
     AnySurfEllipsoid Ellipsoid_DeltoidWrappingAnterior4 = 
@@ -359,8 +467,9 @@ AnyFolder DeltoidWrappingAnterior = {
       AnyRefNode &Node3 = .ScapulaRef.O_DeltoideusLateral4;
       pos_node2 =  .ClaviculaRef.r0 + (.ClaviculaRef.Axes0 * Node2.sRel')'-.r0;
       axes_node2 = .ClaviculaRef.Axes0 * Node2.ARel;
+      AdjustorDirection = {1,.....Sign*0.2,0};
       AdjustorXRotation = 3*pi/2;
-      DistanceRatio = 1.3;
+      DistanceRatio = 1.2;
       #include "CalEllipsMembers_3nodes.any"
     };
   };

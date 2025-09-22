@@ -462,8 +462,9 @@ AnyFolder Ulna = {
 AnyFolder Scapula = {
   AnyFloat sCoM_pos = {-0.06,-0.04,0.02};
 
+  AnyFloat deltoid_cyl_P1_pos = {-0.1307360, -0.1002360, -0.016280000};//{-0.128825, -0.076236, 0.036280};//{-0.0707360, -0.0902360, 0.009280000};//
   AnyFloat deltoid_cyl_P2_pos = {0.027588, -0.047361, -0.015292};
-  AnyFloat deltoid_cyl_P3_pos = {-0.128825, -0.129236, 0.024150};
+  AnyFloat deltoid_cyl_P3_pos = {-0.1307360, -0.1002360, 0.006280000};//{-0.128825, -0.076236, -0.04150};//{-0.0707360, -0.0902360, 0.02280000};//
 
   AnyFloat margo_medialis_P2_pos= {-0.1114460,  0.0300000, -0.003720};
   AnyFloat margo_medialis_P3_pos= {-0.1157360, -0.1402360,  0.01628000};
