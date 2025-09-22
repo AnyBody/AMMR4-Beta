@@ -332,7 +332,7 @@ AnyBodyCalibrationStudy ArmCalibrationStudyShoulder = {
   AnyFolder &ref=.ShoulderCal;
   nStep = SizesOf(ref.GHPosData)[1]*6;
   FiberAndTendonLengthAdjustment.CalibrateTendonAtMaxForceOnOff = On;
-  Kinematics.SmallStepAssumptionOnOff = On;
+  Kinematics.SmallStepAssumptionOnOff = Off;
   Kinematics.PosAnalysisOnlyOnOff = On;
   InitialConditions.PosAnalysisOnlyOnOff = On;
 
