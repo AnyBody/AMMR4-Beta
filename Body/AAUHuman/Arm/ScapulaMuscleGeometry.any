@@ -43,20 +43,7 @@ Scapula = {
     AnyVec3 P3 = .Scale(.Data.deltoid_cyl_P3_pos*.Mirror); //P3=.ai.sRel - VX*Radius;
 
     sRel= P1;
-
-
-    //Calculate rot matrix for cylinder using three points
-    //p2-p1 used to find x axis
-    //p3-p1 used to find the y axis
-    //z axis found as cross product
-    AnyMat33  Mat = RotMat(sRel,P3,P2);
-
-    //Switch around the on the columns to compensate that the cylinder has
-    //main axis along the zaxis
-    ARel={
-      {Mat[0][2],Mat[0][0],Mat[0][1]},
-      {Mat[1][2],Mat[1][0],Mat[1][1]},
-      {Mat[2][2],Mat[2][0],Mat[2][1]}};
+    ARel=RotMat(sRel,P3,P2)*RotMat(-pi/2,x)*RotMat(-pi/2,z);
 
     AnySurfCylinder cyl = {
       Radius= vnorm(.sRel-.P3);

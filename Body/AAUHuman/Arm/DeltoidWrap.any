@@ -25,7 +25,7 @@ AnyFolder DeltoidWrappingPosterior = {
     Mass=1e-5;
     Jii={0.0,0.0,0.0};
     
-    r0= ScapulaRef.r0 + (ScapulaRef.Axes0 * ScapulaRef.gh.sRel')';
+    r0= ScapulaRef.r0 ;
     
     AnySeg &ScapulaRef = ....Segments.Scapula;
     AnySeg &HumerusRef = ....Segments.Humerus;
@@ -76,46 +76,25 @@ AnyFolder DeltoidWrappingPosterior = {
     };
     
     
-//    AnyRefNode deltoid_cyl={
-//      
-//      AnyVec3 P2 = .....Segments.Scapula.Scale(.....Segments.Scapula.Data.deltoid_cyl_P2_pos*.....Segments.Scapula.Mirror); //P2=.ai.sRel + VZ*Length;
-//      AnyVec3 P3 = .....Segments.Scapula.Scale(.....Segments.Scapula.Data.deltoid_cyl_P3_pos*.....Segments.Scapula.Mirror); //P3=.ai.sRel - VX*Radius;
-//      
-//      sRel= .ScapulaRef.ai.sRel-.r0+.ScapulaRef.r0;
-//      
-//      
-//      //Calculate rot matrix for cylinder using three points
-//      //p2-p1 used to find x axis
-//      //p3-p1 used to find the y axis
-//      //z axis found as cross product
-//      AnyMat33  Mat = RotMat(sRel,P3,P2);
-//      
-//      //Switch around the on the columns to compensate that the cylinder has
-//      //main axis along the zaxis
-//      ARel=.....Segments.Scapula.Axes0* {
-//        {Mat[0][2],Mat[0][0],Mat[0][1]},
-//        {Mat[1][2],Mat[1][0],Mat[1][1]},
-//        {Mat[2][2],Mat[2][0],Mat[2][1]}};
-//      
-//      AnySurfCylinder cyl = {
-//        Radius= vnorm(..ScapulaRef.ai.sRel-.P3);
-//        Length= vnorm(..ScapulaRef.ai.sRel-.P2);
-//        CapRatio=1.0;
-//        //AnyDrawParamSurf drw={RGB={0,0,1};};
-//      };
-//      
-//    };
-      
-//    AnyRefNode Deltoid_cyl = {
-//      sRel = Main.HumanModel.BodyModel.Right.ShoulderArm.Segments.Scapula.deltoid_cyl.sRel - .r0 + .ScapulaRef.r0;
-//    ARel = .ScapulaRef.Axes0*Main.HumanModel.BodyModel.Right.ShoulderArm.Segments.Scapula.deltoid_cyl.ARel;
+//  // Definition of cylinder used for wrapping of Deltoid scapula muscles
+//  // the cylinder starts in gh and points towards ts.
+//  AnyRefNode deltoid_cyl={
+//
+//    AnyVec3 P1 = (.ScapulaRef.Axes0*(.ScapulaRef.Scale(.ScapulaRef.Data.deltoid_cyl_P1_pos*.ScapulaRef.Mirror))')';
+//    AnyVec3 P2 = (.ScapulaRef.Axes0*(.ScapulaRef.Scale(.ScapulaRef.Data.deltoid_cyl_P2_pos*.ScapulaRef.Mirror))')';
+//    AnyVec3 P3 = (.ScapulaRef.Axes0*(.ScapulaRef.Scale(.ScapulaRef.Data.deltoid_cyl_P3_pos*.ScapulaRef.Mirror))')';
+//
+//    sRel= P1;
+//    ARel= RotMat(sRel,P3,P2)*RotMat(-pi/2,x)*RotMat(-pi/2,z);
 //    
-//    AnySurfCylinder Deltoid_humCyl= {
-//      Radius=Main.HumanModel.BodyModel.Right.ShoulderArm.Segments.Scapula.deltoid_cyl.cyl.Radius;
-//      Length=Main.HumanModel.BodyModel.Right.ShoulderArm.Segments.Scapula.deltoid_cyl.cyl.Length;
-//      CapRatio = 1;
+//    AnySurfCylinder cyl = {
+//      Radius= vnorm(.sRel-.P3);
+//      Length= vnorm(.sRel-.P2)*2;
+//      CapRatio=1.0;
+//      //AnyDrawParamSurf drw={RGB={0,0,1};};
 //      CenterOrigin = On;
 //    };
+//
 //  };
     
     AnyRefNode LocalReferenceFrame_ConstraintNode = {sRel= {0,0,0}; ARel= .ScapulaRef.Axes0;};
@@ -222,7 +201,7 @@ AnyFolder DeltoidWrappingLateral = {
     Mass=1e-5;
     Jii={0.0,0.0,0.0};
     
-    r0= ScapulaRef.r0 + (ScapulaRef.Axes0 * ScapulaRef.gh.sRel')';
+    r0= ScapulaRef.r0;
     
     AnySeg &ScapulaRef = ....Segments.Scapula;
     AnySeg &HumerusRef = ....Segments.Humerus;
@@ -265,25 +244,28 @@ AnyFolder DeltoidWrappingLateral = {
     };
     
     
-//    Ellipsoid_DeltoidWrappingLateral1 = {
-//      AnySurfCylinder Extra_cyl= {
-//        sRel = {0,......Sign*0.05,0};
-//        Radius=0.05;
-//        Length=0.2;
-//        CapRatio = 1;
-//        CenterOrigin = On;
-//      };
-//    };
-//    Ellipsoid_DeltoidWrappingLateral2 = {
-//      AnySurfCylinder Extra_cyl= {
-//        sRel = {0,......Sign*0.05,0};
-//        Radius=0.05;
-//        Length=0.2;
-//        CapRatio = 1;
-//        CenterOrigin = On;
-//      };
-//    };
-    Ellipsoid_DeltoidWrappingLateral3 = {
+  // Definition of cylinder used for wrapping of Deltoid scapula muscles
+  // the cylinder starts in gh and points towards ts.
+  AnyRefNode deltoid_cyl={
+
+    AnyVec3 P1 = (.ScapulaRef.Axes0*(.ScapulaRef.Scale(.ScapulaRef.Data.deltoid_cyl_P1_pos*.ScapulaRef.Mirror))')';
+    AnyVec3 P2 = (.ScapulaRef.Axes0*(.ScapulaRef.Scale(.ScapulaRef.Data.deltoid_cyl_P2_pos*.ScapulaRef.Mirror))')';
+    AnyVec3 P3 = (.ScapulaRef.Axes0*(.ScapulaRef.Scale(.ScapulaRef.Data.deltoid_cyl_P3_pos*.ScapulaRef.Mirror))')';
+
+    sRel= P1;
+    ARel= RotMat(sRel,P3,P2)*RotMat(-pi/2,x)*RotMat(-pi/2,z);
+    
+    AnySurfCylinder cyl = {
+      Radius= vnorm(.sRel-.P3);
+      Length= vnorm(.sRel-.P2)*2;
+      CapRatio=1.0;
+      //AnyDrawParamSurf drw={RGB={0,0,1};};
+      CenterOrigin = On;
+    };
+
+  };
+
+Ellipsoid_DeltoidWrappingLateral3 = {
       AnySurfCylinder Extra_cyl= {
         sRel = {0,......Sign*0.05,0};
         Radius=0.05;
@@ -415,7 +397,7 @@ AnyFolder DeltoidWrappingAnterior = {
     Mass=1e-5;
     Jii={0.0,0.0,0.0};
     
-    r0= ScapulaRef.r0 + (ScapulaRef.Axes0 * ScapulaRef.gh.sRel')';
+    r0= ScapulaRef.r0;
     
     AnySeg &ScapulaRef = ....Segments.Scapula;
     AnySeg &HumerusRef = ....Segments.Humerus;
