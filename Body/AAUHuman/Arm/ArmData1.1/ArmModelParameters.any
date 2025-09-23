@@ -10,11 +10,11 @@ AnyFolder Humerus = {
 
   AnyVar Length = ((gh_pos[1]-fe_pos[1])^2)^0.5; // Find the length using bonylandmark x coordinates!
 
-  AnyFloat sCoM_pos ={0,-0.18*Length,0};
+  //anyFloat sCoM_pos ={0,-0.18*Length,0};
 
 
 
-  AnyFloat WJinNeutralConf_Pos = {-0.024023294507094263, -0.60948752197862499, 0.0038287243831224282};
+  //AnyFloat WJinNeutralConf_Pos = {-0.024023294507094263, -0.60948752197862499, 0.0038287243831224282};
 
   AnyFloat OffSet =-{-0.001379, 0.008999 , -0.009119};
   // Wrapping objects
@@ -278,18 +278,6 @@ AnyFolder Humerus = {
 
 
 AnyFolder Radius = {
-  //begin: not used, but taken from NeutralPositionOnUlna
-  AnyVec3 Radius_R = {0.110509, 0.020415, 0.280149};
-  AnyVec3 Ulna_R = {0.098238, 0.059976, 0.261779};
-  AnyMat33 Radius_Axes = {{-0.279448, -0.020684, -0.959938}, {0.956474, -0.093525, -0.276425}, {-0.084061, -0.995402, 0.045919}};
-  AnyMat33 Ulna_Axes = {{0.020302, 0.279477, -0.959938}, {-0.232048, -0.932600, -0.276425}, {-0.972492, 0.228363, 0.045919}};
-  //end: not used, but taken from NeutralPositionOnUlna
-
-  AnyFloat sCoM_pos ={-0.43*.Ulna.Length,0,0};
-
-
-
-
 
 
 AnyFloat MedialHumerusCondyleInNeutralConf_pos = {0.027538343006661335, 0.013130974625821943, -0.044747478871313959};
@@ -417,8 +405,6 @@ AnyFloat RadioStylo_pos =rs_pos; //renaming
 
 AnyFolder Ulna = {
   //For the forearm the data comes from MAYO sub2.
-  AnyVar Length = ((us_pos[1]-ol_pos[1])^2)^0.5; // Find the length using bonylandmark x coordinates!
-  AnyFloat sCoM_pos={0,0.43*Length,0};
 
   AnyFloat ScalingNode_pos = {0.0000000, 0.0000000, 0.0000000};
   AnyFloat fe_pos = {0.0000000, 0.008000000, 0.0000000};
@@ -538,16 +524,6 @@ AnyFolder Scapula = {
   AnyFloat Subscapulariscyl_P2_pos =Subscapulariscyl_pos + {0.015-0.02,-0.06,0.025+0.005};
   AnyFloat Subscapulariscyl_P3_pos =Subscapulariscyl_pos + {0.0,0.008,0.008};//sRel+VX*Radius;
   AnyFloat Subscapulariscyl_pos = gh_pos+{-0.03-0.015,0.015+0.01,-0.02+0.005};
-
-
-
-  AnyFloat NeutralPositionOnPelvis_pos = {-0.0808, 1.6551, 0.16928};
-  AnyFloat Scapula_Axes =
-   {{0.39807674220255507, -0.16141538644427236, -0.90303930165660407},
-    {0.36916871646552452, 0.92935623664317468, -0.0033829270806418343},
-    {0.8397912634104967, -0.33202719531912139, 0.42954461405996036}};
-
-
 
 AnyFloat RightAsisInNeutralConf_Scapula_pos = {-0.15045800633409701, -0.47950813471378922, -0.18082693431790708};
 AnyFloat LeftAsisInNeutralConf_Scapula_pos = {-0.39258137593015513, -0.39849052243118388, -0.24137592601451668};
@@ -728,29 +704,10 @@ AnyFloat C7InNeutralConf_Scapula_pos = {-0.13643708852333292, 0.0589924886150544
 
 AnyFolder Clavicula = {
 
-  AnyFloat NeutralPositionOnPelvis_pos = {0.002932, 1.61958, 0.02070};
-  AnyFloat Clavicula_Axes =
-    {{-0.38288708567101515, -0.007233363949379179, -0.92376683100895784},
-      {0.1993679344171973, 0.9757575413694155, -0.090275396354340925},
-      {0.90202544662142248, -0.21873476839928549, -0.372162860506975}};
-
-
-
-
-
-  AnyFloat ac_pos = {0.1688740, 0.0000000, 0.0000000};
-  AnyFloat acj_pos = {0.1552540, 0.002989000, -0.006589000};
-  AnyFloat scj_pos = {0.0000000, 0.0000000, 0.0000000};
-  AnyFloat scj_y_pos = scj_pos+{0.0000000, 0.0500000, 0.0000000};  //vertical point above sjc
-
-
-
-AnyFloat AIScapulaInNeutralConf_pos  = {0.077030920560702487, -0.16581912813059413, 0.03186117632050757};
-AnyFloat AAScapulaInNeutralConf_pos = {0.19119763741656021, -0.015988653795991754, 0.0059626988358676969};
-AnyFloat TSScapulaInNeutralConf_pos = {0.07874585688236635, -0.061400340475473672, 0.075862171627971389};
-AnyFloat ACJScapulaInNeutralConf_pos = {0.15525399999999992, 0.0029890000000001703, -0.0065889999999998727};
-
-
+ AnyFloat ac_pos = {0.1688740, 0.0000000, 0.0000000};
+ AnyFloat acj_pos = {0.1552540, 0.002989000, -0.006589000};
+ AnyFloat scj_pos = {0.0000000, 0.0000000, 0.0000000};
+ AnyFloat scj_y_pos = scj_pos+{0.0000000, -0.0500000, 0.0000000};  //vertical point below sjc
 
   AnyFloat conoid_pos = {0.1271050, 0.006526000, 0.002547000};
   AnyFloat trapezoid_pos = {0.1394170, 0.004248000, -0.006785000};
