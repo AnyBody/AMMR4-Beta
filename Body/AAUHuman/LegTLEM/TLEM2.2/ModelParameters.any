@@ -695,7 +695,12 @@ AnyFolder ModelParameters = {
   };
 
   AnyFolder Foot = {
-
+    /// Vertical offset between Heel Node and SubTalar Joint
+    AnyVar HeelNodeSTJointAxisNodeVerOffset = 0.002470;
+    
+    AnyVar TendonCalcaneusSTJointAxisNodeVerOffset = HeelNodeSTJointAxisNodeVerOffset;
+    AnyVar TendonCalcaneusWidth = 0.006;
+    
     // Metatarsal1ContactNode, point using 1 elements
     AnyVec3 Metatarsal1ContactNode = {0.1219,  -0.0491,   -0.0196}*.TF';
 
@@ -715,7 +720,7 @@ AnyFolder ModelParameters = {
     AnyVec3 HeelPlantarNode = {-0.021301, -0.03769, -0.00823}*.TF';
 
     AnyVec3 BigToeNode = {0.1741 + 0.013   , -0.0408 - 0.01 , -0.0060 +0.005}*.TF';
-    AnyVec3 HeelNode = TendonCalcaneousNode;
+    AnyVec3 HeelNode = SubTalarJointAxisNode + {0,HeelNodeSTJointAxisNodeVerOffset,0}*.TF';
     AnyVec3 ToeMedialContactNode = {0.1219 + 0.045,  -0.0491 + 0.005,   -0.0196-0.005}*.TF';
     AnyVec3 ToeLateralContactNode = {0.0979 + 0.035, -0.0491 + 0.005, 0.0330+0.008}*.TF';
     AnyVec3 HeelContactNodeLow = HeelContactNode1Node;
@@ -730,12 +735,15 @@ AnyFolder ModelParameters = {
     AnyVec3 LateralMalleolus = {-0.007908084, 0.02393846, 0.02036821}*.TF';
     // This is the coordinate of the ankle joint in default configuration in foot coordinate system.
     AnyVec3 AnkleJointInNeutralConf = {0.009856931, 0.01487197, -0.006810152}*.TF';
-
-
-    // TendonCalcaneousNode, Point using 1 elements
-    AnyVec3 TendonCalcaneousNode = {-0.03679,-0.01718,-0.00514}*.TF';
-    AnyVec3 TendonCalcaneousMedialisNode  = TendonCalcaneousNode-{0, 0, 0.003}*.TF';
-    AnyVec3 TendonCalcaneousLateralisNode = TendonCalcaneousNode+{-0.001, 0, 0.003}*.TF';
+    
+    /// Compute a direction normal to the SubTalar joint axis and the vertical for creating offset for the Tendon Calcaneus
+    AnyVec3 TendonCalcaneusHorOffsetDirection = normalize(cross({0,1,0},(SubTalarJointAxisNode-SubTalarJoint)));
+    AnyVec3 TendonCalcaneusHalfWidthOffset = 0.5*TendonCalcaneusWidth*TendonCalcaneusHorOffsetDirection;
+    
+    // TendonCalcaneousNode
+    AnyVec3 TendonCalcaneousNode = SubTalarJointAxisNode + {0,TendonCalcaneusSTJointAxisNodeVerOffset,0}*.TF';
+    AnyVec3 TendonCalcaneousMedialisNode  = TendonCalcaneousNode - ..Sign*TendonCalcaneusHalfWidthOffset;
+    AnyVec3 TendonCalcaneousLateralisNode = TendonCalcaneousNode + ..Sign*TendonCalcaneusHalfWidthOffset;
     AnyVec3 GastrocnemiusLateralis1Node = TendonCalcaneousLateralisNode;
     AnyVec3 GastrocnemiusMedialis1Node =  TendonCalcaneousMedialisNode;
     AnyVec3 Plantaris1Node = TendonCalcaneousMedialisNode;
