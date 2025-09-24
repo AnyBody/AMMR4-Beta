@@ -33,12 +33,12 @@ ModelParameters = {
     
     // Model parameters from TLEM 2 dataset transformed to GM Foot segmental frame.
     AnyVec3 SubTalarJoint = ..Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(.Foot.SubTalarJoint);
-    AnyVec3 SubTalarJointAxis = .Foot.SubTalarJointAxis;
+    AnyVec3 SubTalarJointAxisNode = ..Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(.Foot.SubTalarJointAxisNode);
     AnyVec3 AnkleJoint = ..Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(.Talus.AnkleJoint);
     AnyVec3 LateralControlPoint = ..Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(.Talus.LateralControlPoint);
     AnyVec3 MedialControlPoint = ..Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(.Talus.MedialControlPoint);
     
-    AnyVec3 HeelNode = ..Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(.Foot.TendonCalcaneousNode);
+    AnyVec3 HeelNode = ..Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(.Foot.HeelNode);
     AnyVec3 HeelContactNodeLow = ..Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(.Foot.HeelContactNodeLow);
     AnyVec3 HeelContactNodeLateral = ..Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(.Foot.HeelContactNodeLow + {0.02, 0.0, ..Sign*0.015});
     AnyVec3 HeelContactNodeMedial = ..Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(.Foot.HeelContactNodeLow + {0.02, 0.0, ..Sign*-0.015});
@@ -58,7 +58,7 @@ ModelParameters = {
       AnyVec3 Metatarsal5PlantarNode = .Metatarsal5PlantarNode;
       AnyVec3 HeelPlantarNode = .HeelPlantarNode;
       AnyVec3 SubTalarJoint = .SubTalarJoint;
-      AnyVec3 SubTalarJointAxis = .SubTalarJointAxis;
+      AnyVec3 SubTalarJointAxisNode = .SubTalarJointAxisNode;
       AnyVec3 AnkleJoint = .AnkleJoint;
       AnyVec3 LateralControlPoint = .LateralControlPoint;
       AnyVec3 MedialControlPoint = .MedialControlPoint;
@@ -72,7 +72,7 @@ ModelParameters = {
       
     AnyFolder Calcaneus = {
       AnyVec3 SubTalarJoint = .SubTalarJoint;
-      AnyVec3 SubTalarJointAxis = .SubTalarJointAxis;
+      AnyVec3 SubTalarJointAxisNode = .SubTalarJointAxisNode;
       AnyVec3 SubTalarJointAxisRef = {-0.012, 0.105, 0.015}*..TF';
       AnyVec3 HeelNode = .HeelNode; //Taken from TLEM2 dataset
       AnyVec3 HeelPlantarNode = .HeelPlantarNode;
