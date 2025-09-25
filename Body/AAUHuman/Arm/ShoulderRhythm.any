@@ -1,4 +1,3 @@
-
 ///************ Shoulder Rhythm **********************
 /// The ShoulderRhythm  creates two constraints that will drive ClaviculaElevation and ClaviculaProtraction based on rotations measured btw thorax and humerus
 /// Based on the concepts from
@@ -6,8 +5,8 @@
 /// The data for the rhythm does not apply for negative elevation planes so the contribution for negative plane are zeroed
 AnyKinEq ShoulderRhythm ={
  
-  ///Measure for clavicula protraction as a function of thorax humerus elevation and elevation plane 
-    AnyKinMeasureLinComb ClaviculaProtractionRhythm =  {
+   ///Measure for clavicula protraction as a function of thorax humerus elevation and elevation plane 
+   AnyKinMeasureLinComb ClaviculaProtractionRhythm =  {
       AnyKinMeasure& ClaviculaProtraction = ...InterfaceFolder.SternoClavicularProtraction;
       AnyKinMeasure& HumerusElevation =   .Measures.Elevation;
       AnyKinMeasure& HumerusElevationPlane = .Measures.ElevationPlane;
@@ -19,7 +18,7 @@ AnyKinEq ShoulderRhythm ={
       //    Const = -1*{(-4.983*pi/180)};
       Coef = {{1, 0.14, -0.15}};
       Const = -1*{(-23*pi/180)};
-    };
+   };
   
     ///Measure for clavicula protraction as a function of thorax humerus elevation and elevation plane
     AnyKinMeasureLinComb ClaviculaElevationRhythm =  {
