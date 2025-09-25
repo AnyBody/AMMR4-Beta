@@ -153,6 +153,7 @@ You can [enable backwards compatibility](changes-to-bodymodel-folders) by settin
   ``` AnyScriptDoc
   #define BM_LEG_MODEL _LEG_MODEL_TLEM_
   ```
+* Remove a number of previously deprecated `BM_XXX` switches and constants. 
 
 (ammr-3.1.4-changelog)=
 ## AMMR 3.1.4 (2025-09-03)
