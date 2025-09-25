@@ -697,10 +697,10 @@ AnyFolder ModelParameters = {
   AnyFolder Foot = {
     /// Vertical offset between Heel Node and SubTalar Joint
     AnyVar HeelNodeSTJointAxisNodeVerOffset = 0.002470;
-    
+
     AnyVar TendonCalcaneusSTJointAxisNodeVerOffset = HeelNodeSTJointAxisNodeVerOffset;
     AnyVar TendonCalcaneusWidth = 0.006;
-    
+
     // Metatarsal1ContactNode, point using 1 elements
     AnyVec3 Metatarsal1ContactNode = {0.1219,  -0.0491,   -0.0196}*.TF';
 
@@ -735,37 +735,37 @@ AnyFolder ModelParameters = {
     AnyVec3 LateralMalleolus = {-0.007908084, 0.02393846, 0.02036821}*.TF';
     // This is the coordinate of the ankle joint in default configuration in foot coordinate system.
     AnyVec3 AnkleJointInNeutralConf = {0.009856931, 0.01487197, -0.006810152}*.TF';
-    
+
     /// Compute a direction normal to the SubTalar joint axis and the vertical for creating offset for the Tendon Calcaneus
     AnyVec3 TendonCalcaneusHorOffsetDirection = normalize(cross({0,1,0},(SubTalarJointAxisNode-SubTalarJoint)));
     AnyVec3 TendonCalcaneusHalfWidthOffset = 0.5*TendonCalcaneusWidth*TendonCalcaneusHorOffsetDirection;
-    
-    // TendonCalcaneousNode
-    AnyVec3 TendonCalcaneousNode = SubTalarJointAxisNode + {0,TendonCalcaneusSTJointAxisNodeVerOffset,0}*.TF';
-    AnyVec3 TendonCalcaneousMedialisNode  = TendonCalcaneousNode - ..Sign*TendonCalcaneusHalfWidthOffset;
-    AnyVec3 TendonCalcaneousLateralisNode = TendonCalcaneousNode + ..Sign*TendonCalcaneusHalfWidthOffset;
-    AnyVec3 GastrocnemiusLateralis1Node = TendonCalcaneousLateralisNode;
-    AnyVec3 GastrocnemiusMedialis1Node =  TendonCalcaneousMedialisNode;
-    AnyVec3 Plantaris1Node = TendonCalcaneousMedialisNode;
-    AnyVec3 SoleusMedialis1Node = TendonCalcaneousMedialisNode;
-    AnyVec3 SoleusMedialis2Node = TendonCalcaneousMedialisNode;
-    AnyVec3 SoleusMedialis3Node =  TendonCalcaneousMedialisNode;
-    AnyVec3 SoleusLateralis1Node = TendonCalcaneousLateralisNode;
-    AnyVec3 SoleusLateralis2Node = TendonCalcaneousLateralisNode;
-    AnyVec3 SoleusLateralis3Node = TendonCalcaneousLateralisNode;
 
-    AnyVec3 TendonCalcaneousSuperiorNode = {-0.03679,-0.003,-0.00514}*.TF';
-    AnyVec3 TendonCalcaneousMedialisSuperiorNode  = TendonCalcaneousSuperiorNode-{0, 0,0.003}*.TF';
-    AnyVec3 TendonCalcaneousLateralisSuperiorNode = TendonCalcaneousSuperiorNode+{-0.001, 0,0.003}*.TF';
-    AnyVec3 GastrocnemiusLateralis1SuperiorNode = TendonCalcaneousLateralisSuperiorNode;
-    AnyVec3 GastrocnemiusMedialis1SuperiorNode =  TendonCalcaneousMedialisSuperiorNode;
-    AnyVec3 Plantaris1SuperiorNode = TendonCalcaneousMedialisSuperiorNode;
-    AnyVec3 SoleusMedialis1SuperiorNode = TendonCalcaneousMedialisSuperiorNode;
-    AnyVec3 SoleusMedialis2SuperiorNode = TendonCalcaneousMedialisSuperiorNode;
-    AnyVec3 SoleusMedialis3SuperiorNode =  TendonCalcaneousMedialisSuperiorNode;
-    AnyVec3 SoleusLateralis1SuperiorNode = TendonCalcaneousLateralisSuperiorNode;
-    AnyVec3 SoleusLateralis2SuperiorNode = TendonCalcaneousLateralisSuperiorNode;
-    AnyVec3 SoleusLateralis3SuperiorNode = TendonCalcaneousLateralisSuperiorNode;
+    // TendonCalcaneusNode
+    AnyVec3 TendonCalcaneusNode = SubTalarJointAxisNode + {0,TendonCalcaneusSTJointAxisNodeVerOffset,0}*.TF';
+    AnyVec3 TendonCalcaneusMedialisNode  = TendonCalcaneusNode - ..Sign*TendonCalcaneusHalfWidthOffset;
+    AnyVec3 TendonCalcaneusLateralisNode = TendonCalcaneusNode + ..Sign*TendonCalcaneusHalfWidthOffset;
+    AnyVec3 GastrocnemiusLateralis1Node = TendonCalcaneusLateralisNode;
+    AnyVec3 GastrocnemiusMedialis1Node =  TendonCalcaneusMedialisNode;
+    AnyVec3 Plantaris1Node = TendonCalcaneusMedialisNode;
+    AnyVec3 SoleusMedialis1Node = TendonCalcaneusMedialisNode;
+    AnyVec3 SoleusMedialis2Node = TendonCalcaneusMedialisNode;
+    AnyVec3 SoleusMedialis3Node =  TendonCalcaneusMedialisNode;
+    AnyVec3 SoleusLateralis1Node = TendonCalcaneusLateralisNode;
+    AnyVec3 SoleusLateralis2Node = TendonCalcaneusLateralisNode;
+    AnyVec3 SoleusLateralis3Node = TendonCalcaneusLateralisNode;
+
+    AnyVec3 TendonCalcaneusSuperiorNode = {-0.03679,-0.003,-0.00514}*.TF';
+    AnyVec3 TendonCalcaneusMedialisSuperiorNode  = TendonCalcaneusSuperiorNode-{0, 0,0.003}*.TF';
+    AnyVec3 TendonCalcaneusLateralisSuperiorNode = TendonCalcaneusSuperiorNode+{-0.001, 0,0.003}*.TF';
+    AnyVec3 GastrocnemiusLateralis1SuperiorNode = TendonCalcaneusLateralisSuperiorNode;
+    AnyVec3 GastrocnemiusMedialis1SuperiorNode =  TendonCalcaneusMedialisSuperiorNode;
+    AnyVec3 Plantaris1SuperiorNode = TendonCalcaneusMedialisSuperiorNode;
+    AnyVec3 SoleusMedialis1SuperiorNode = TendonCalcaneusMedialisSuperiorNode;
+    AnyVec3 SoleusMedialis2SuperiorNode = TendonCalcaneusMedialisSuperiorNode;
+    AnyVec3 SoleusMedialis3SuperiorNode =  TendonCalcaneusMedialisSuperiorNode;
+    AnyVec3 SoleusLateralis1SuperiorNode = TendonCalcaneusLateralisSuperiorNode;
+    AnyVec3 SoleusLateralis2SuperiorNode = TendonCalcaneusLateralisSuperiorNode;
+    AnyVec3 SoleusLateralis3SuperiorNode = TendonCalcaneusLateralisSuperiorNode;
 
 
     // PeroneusBrevisDistal, Point using 1 elements

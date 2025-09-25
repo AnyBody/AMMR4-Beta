@@ -399,7 +399,7 @@ AnySeg Foot =
   AnyRefNode FlexorHallucisLongusViaNode7 = {sRel = .Scale( .Data.FlexorHallucisLongusViaNode1 );};
 
   //Insertion points on Hindfoot:
-  AnyRefNode TendonCalcaneousNode = {sRel = .Scale( .Data.TendonCalcaneousNode );};
+  AnyRefNode TendonCalcaneusNode = {sRel = .Scale( .Data.TendonCalcaneusNode );};
 
   AnyRefNode GastrocnemiusLateralis1Node = {sRel = .Scale( .Data.GastrocnemiusLateralis1Node );};
   AnyRefNode GastrocnemiusMedialis1Node =  {sRel = .Scale( .Data.GastrocnemiusMedialis1Node );};
@@ -413,7 +413,7 @@ AnySeg Foot =
   AnyRefNode SoleusLateralis2Node = {sRel = .Scale( .Data.SoleusLateralis2Node );};
   AnyRefNode SoleusLateralis3Node =  {sRel = .Scale( .Data.SoleusLateralis3Node );};
 
-  AnyRefNode TendonCalcaneousSuperiorNode = {sRel = .Scale( .Data.TendonCalcaneousSuperiorNode );};
+  AnyRefNode TendonCalcaneusSuperiorNode = {sRel = .Scale( .Data.TendonCalcaneusSuperiorNode );};
   AnyRefNode GastrocnemiusLateralis1SuperiorNode = {sRel = .Scale( .Data.GastrocnemiusLateralis1SuperiorNode );};
   AnyRefNode GastrocnemiusMedialis1SuperiorNode =  {sRel = .Scale( .Data.GastrocnemiusMedialis1SuperiorNode );};
   AnyRefNode Plantaris1SuperiorNode = {sRel = .Scale( .Data.Plantaris1SuperiorNode );};
@@ -513,8 +513,8 @@ AnySeg Foot =
       AnyMat33 ARelUnscaled = RotMat({0.0, 0.0, 0.0 }, (.Data.SubTalarJointAxisNode-.Data.SubTalarJoint), .AnatomicalFrame.ARelUnscaled'[1])*RotMat(pi/2,y);
       /// Point where the SubTalar Joint Axis interesects with the calcaneus
       AnyVec3 SubTalarJointAxisNode = .Scale(.Data.SubTalarJointAxisNode);
-      
-      sRel = .Scale(.Data.SubTalarJoint);      
+
+      sRel = .Scale(.Data.SubTalarJoint);
       ARel = RotMat({0.0, 0.0, 0.0 }, ....Sign*(SubTalarJointAxisNode-sRel), .AnatomicalFrame.ARel'[1])*RotMat(pi/2,y);
 
       #include "../DrawSettings/JointAxesProximal.any"
@@ -587,8 +587,8 @@ AnySeg Foot =
       AnyMat33 ARelUnscaled = RotMat({0.0, 0.0, 0.0 }, (.Data.SubTalarJointAxisNode-.Data.SubTalarJoint), .AnatomicalFrame.ARelUnscaled'[1])*RotMat(pi/2,y);
       /// Point where the SubTalar Joint Axis interesects with the calcaneus
       AnyVec3 SubTalarJointAxisNode = .Scale(.Data.SubTalarJointAxisNode);
-      
-      sRel = .Scale(.Data.SubTalarJoint);      
+
+      sRel = .Scale(.Data.SubTalarJoint);
       ARel = RotMat({0.0, 0.0, 0.0 }, ....Sign*(SubTalarJointAxisNode-sRel), .AnatomicalFrame.ARel'[1])*RotMat(pi/2,y);
     };
     #endif
