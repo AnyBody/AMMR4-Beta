@@ -2,6 +2,8 @@
 //the added rotnodes are needed to be able to have the same rotation definitions for
 //the right and left side
 
+
+
 AnyKinMeasureOrg SternoClavicularProtraction = {
 
   AnyRefNode &sternum = ....Trunk.Segments.SternumSeg._SIDE_;
@@ -37,11 +39,18 @@ AnyKinMeasureOrg SternoClavicularAxialRotation ={
 };
 
 
-
 //This measure will be zero when SC protraction and SternoClavicularProtraction is -23 and SternoClavicularElevationVec is 11.5
 AnyKinMeasureOrg SternoClavicularProtraction_Postural = {
+  AnyRefNode &sternum = ....Trunk.Segments.SternumSeg._SIDE_;
+  sternum = {
+    //introduce a node used for rotational measure, no scaling needed copies sRel and ARel 
+    AnyRefNode PosturalFrame = {
+       sRel=.scj.sRel;
+       ARel=......Trunk.Segments.SternumSeg.ScalingNode.ARel; 
+     };
+   };
   AnyKinRotational SCRot = {
-    AnyRefNode &thorax = .....Trunk.Segments.SternumSeg.ScalingNode;
+    AnyRefNode &sternum= .....Trunk.Segments.SternumSeg._SIDE_.PosturalFrame;
     AnyRefNode &clavicula = ...Segments.Clavicula.PosturalFrame;
     Type = RotAxesAngles;
     Axis1 = x;
