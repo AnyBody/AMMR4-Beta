@@ -24,15 +24,6 @@ ADD_NODEGROUP = "Off"
    #var AnyInt LinePointsNo;
 
   
-  //  #var AnyInt Sphere1PointsNo=floor(3*(100/10)); 
-  //  #var AnyInt Sphere2PointsNo=floor(3*(100/10));
-  //  #var AnyInt LinePointsNo=floor(4*(100/10));
-  
-//  #var AnyInt Sphere1PointsNo=floor(PointsNo*Calculations.d1/Calculations.TotalLength);//Points used for sphere1   
-//  #var AnyInt Sphere2PointsNo=floor(PointsNo*Calculations.d2/Calculations.TotalLength);//Points used for sphere2 
-//  #var AnyInt LinePointsNo=floor(PointsNo*Calculations.d3/Calculations.TotalLength);   //Points used for line section
-  
-  
   #var AnyInt RotationNo=20;  //number of angle discretizations
   #var AnyFloat RGB={0,0,1};
   #var AnyFloat Opacity=1;
@@ -152,11 +143,6 @@ ADD_NODEGROUP = "Off"
     AnyFloat temp   = reshape(repmat(SizesOf(Py1)[0],cos(angles)),{SizesOf(Py1)[0],number_of_points});
     AnyFloat PointsRingsy = flatten( mult(temp,Py1_2));
    
-
-   
-
-
-    
     //here we create z values matrix
     AnyFloat Pz1   = Py1;
     AnyFloat Pz1_1 = repmat(number_of_points,1,Pz1) ;
