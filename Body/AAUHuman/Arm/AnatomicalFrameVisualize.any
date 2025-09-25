@@ -104,7 +104,7 @@ AnyFolder UlnaAnatomicalVisual={
 };
 };
 
-
+/* 
 AnyFolder HandAnatomicalVisual={
   AnySeg &seg= ..Segments.Hand;
   //#define MACRO_CONSTRUCT_ANATOMICAL_FRAME_A(p, SIGN) RotMat(p[0],0.5*(p[1]+p[2]),p[1])*RotMat(0.5*pi,z)*RotMat(0.5*pi,y)*RotMat(0.5*(1-SIGN)*pi,y)
@@ -124,7 +124,7 @@ AnyFolder HandAnatomicalVisual={
      
     };
   };
-};
+}; */
 
 
 
