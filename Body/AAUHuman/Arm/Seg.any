@@ -1,6 +1,9 @@
 
 #include "<AMMR_TOOLS>/ModelUtilities\SolidModeling/MeshClasses.any"
 
+//this file can be used to visualize anatomical frames in the arm model
+#include "AnatomicalFrameVisualize.any"
+
 // This file contains segment inertia properties and geometry used for muscle wrapping.
 // The file includes a number of segment files which contains muscles attachment points and
 // bonylandmarks.
@@ -32,6 +35,7 @@ AnyFloat Points0 = {
   #include "..\Scaling\SegScaleFunWrtAnatomicalFrame_RigidBodyTransformation.any"
 
 
+ 
   //#define MACRO_CONSTRUCT_ANATOMICAL_FRAME_A(p, SIGN) RotMat(p[0],p[1], p[2])*RotMat(0.5*pi,y)*RotMat(0.5*(SIGN-1)*pi,y)
   AnyRefNode AnatomicalFrame =  {
     //^ The anatomical frame is separate from the scaling frame
@@ -44,7 +48,7 @@ AnyFloat Points0 = {
     AnyVar Sign = .Sign;
     #define MACRO_CONSTRUCT_ANATOMICAL_FRAME_s(p, SIGN) p[0]
    // #define MACRO_CONSTRUCT_ANATOMICAL_FRAME_A(p, SIGN) RotMat(p[0],p[1], p[2])*RotMat(0.5*(SIGN-1)*pi,x)
-   #define MACRO_CONSTRUCT_ANATOMICAL_FRAME_A(p, SIGN) RotMat(p[0],p[1], p[2])*RotMat(0.5*pi,y)*RotMat(0.5*(SIGN-1)*pi,y)
+   #define MACRO_CONSTRUCT_ANATOMICAL_FRAME_A(p, SIGN) RotMat(p[0],p[1], p[2])*RotMat(0.5*pi,y)*RotMat(0.5*(SIGN-1)*pi,y)*RotMat(pi,z)
 
     AnyFloat pScaled = .Scale(pUnscaledAnatomicalFrame);
 
@@ -313,16 +317,19 @@ AnySeg Humerus ={
   };
 
 
-  AnyFloat pUnscaled = {Data.gh_pos, Data.EpicondylusHumerusMedialis_pos, Data.EpicondylusHumerusLateralis_pos}*Mirror;
   Scale = {AnyFunTransform3D& GeomScale = ...Scaling.Humerus.ScaleFunction;};
   AnyVar Sign = ..Sign;
   #define MACRO_CONSTRUCT_ANATOMICAL_FRAME_s(p, SIGN) p[0]
   #define MACRO_CONSTRUCT_ANATOMICAL_FRAME_A(p, SIGN) RotMat(p[0],0.5*(p[1]+p[2]), p[1]) * RotMat(pi*0.5,x) * RotMat(pi*0.5,z) * RotMat(0.5*(SIGN-1)*pi,y)
   #include "..\Scaling\SegScaleFunWrtAnatomicalFrame.any"
 
+AnyFloat pUnscaled= {Data.gh_pos, Data.EpicondylusHumerusMedialis_pos, Data.EpicondylusHumerusLateralis_pos}*Mirror;
 
   AnyRefNode AnatomicalFrame =  {
-    AnyFloat pScaled = .Scale(.pUnscaled);
+
+    AnyFloat pUnscaledAnatomicalFrame = .pUnscaled;
+
+    AnyFloat pScaled = .Scale(pUnscaledAnatomicalFrame);
     sRel = MACRO_CONSTRUCT_ANATOMICAL_FRAME_s(pScaled, .Sign);
     ARel = MACRO_CONSTRUCT_ANATOMICAL_FRAME_A(pScaled, .Sign);
     AnyVec3 sRelUnscaled = MACRO_CONSTRUCT_ANATOMICAL_FRAME_s(.pUnscaled, .Sign); ///< Generic unscaled position of ScalingNode
