@@ -19,10 +19,6 @@
 
 
 
-
-
-
-
 //Test model
 
 //The model can test in six different configs...
@@ -40,13 +36,10 @@
 
 
 //Select between three different scaling options
-
 #ifndef TEST_NAME
   #define SCALING_TYPE "NONE"
   #define RIGHT_LEFT_SCALE_SYM "Off"
-
 #endif
-
 
 #if  SCALING_TYPE  =="RBF_SCALING"
    #define BM_SCALING _SCALING_STANDARD_
@@ -78,7 +71,7 @@
 Main ={
 
 
-   #include "Mannequin.any"
+  #include "Mannequin.any"
 
   Model={
     ModelEnvironmentConnection = {
