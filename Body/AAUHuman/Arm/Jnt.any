@@ -5,55 +5,45 @@ AnySphericalJoint SternoClavicularJoint = {
   AnyRefNode &thorax_sc = ....Trunk.Segments.SternumSeg._SIDE_.scj;
   AnyRefNode &clavicula_sc = ..Segments.Clavicula.scj;
   Orientation = {
-    // These settings are kept to mimic the
-    // previous implementation.
     Type = RotAxesAngles;
     Axis1 = y;
     Axis2 = z;
     Axis3 = x;
   };
 };
-
 
 /// Defintion of Acromial-Clavicular (AC) joint
 AnySphericalJoint AcromioClavicularJoint = {
   AnyRefNode &clavicula_ac = ..Segments.Clavicula.acj;
   AnyRefNode &scapula_ac = ..Segments.Scapula.acj;
   Orientation = {
-    // These settings are kept to mimic the
-    // previous implementation.
     Type = RotAxesAngles;
     Axis1 = y;
     Axis2 = z;
     Axis3 = x;
   };
-
 };
 
 
-/// Definition of GH joint
+
+/// Definition of Glenohumeral (GH)joint
 AnySphericalJoint GlenoHumeralJoint = {
   AnyRefNode &scapula_gh = ..Segments.Scapula.gh;
   AnyRefNode &humerus_gh = ..Segments.Humerus.gh;
-  //These are the reactions of the GH joint they are normally set to "Off Off Off" if the file
-  // GHReactions.any is being used, if this is not the case the reactions should be set to "On On On"
+  ///These are the reactions of the GH joint they are normally set to "Off Off Off" if the file
+  ///GHReactions.any is being used, if this is not the case the reactions should be set to "On On On"
   Constraints.Reaction.Type={Off,Off,Off};
   Orientation = {
-    // These settings are kept to mimic the
-    // previous implementation.
     Type = RotAxesAngles;
     Axis1 = y;
     Axis2 = z;
     Axis3 = y;
   };
-
 };
 
 //This file includes the glenohumeral reactions created by a number of pushing muscles
 //if this file is not include the normal reactions of the GH joint should be set to "On On On"6
 #include "GHReactions.any"
-
-
 
 
 ///Definition of the HumeroUlnarJoint (elbow flexion extension).
@@ -63,12 +53,12 @@ AnyRevoluteJoint HumeroUlnarJoint = {
   AnyRefNode &UlnaFE = ..Segments.Ulna.HumeroUlnar;
 };
 
-
 /// This binds one DOF between humerus and Radius. Since AnyBody
 /// does not have a 5 DOF joint type we implement in manually here.
 AnyFolder HumeroRadialJoint = {
    AnyKinLinear Linear = {
-     AnyRefNode &RadiusPs = ...Segments.Radius.PointHumeralRadioJoint;
+     ///This node is located on FE axis (HumeroUlnarJoint)
+     AnyRefNode &RadiusPs = ...Segments.Radius.PointHumeralRadioJoint; 
      AnyRefNode &UlnaPs = ...Segments.Humerus.HumeroUlnar;
      Ref = 0;
    };
@@ -78,23 +68,23 @@ AnyFolder HumeroRadialJoint = {
      // Reactions are implemented explicitly below
      Reaction.Type = {Off};
    };
-
-
-
-  // Since the previous implementation implemented reaction forces
-  // between some explicit points 'ProximalRadiusUlnaReac' we do the same here.
+   ///Reactions between ulna and radius, uses a proximal node on radius, 
+   ///to allow forces being applied in correct position on bone (usefull for FE exports) 
    AnyReacForce ReacForce =    {
      AnyKinMeasureOrg RadiusHumerus = {
        MeasureOrganizer = {0};
        AnyKinLinear Lin =        {
          Ref = 0;
-         AnyRefFrame &Radius = .....Segments.Radius.ProximalRadiusUlnaReac;
+         AnyRefFrame &Radius = .....Segments.Radius.ProximalRadiusUlnaReac; //This node is located at proximal end of radius
          AnyRefFrame &Humerus = .....Segments.Humerus.HumeroUlnar;
        };
      };
    };
 };
 
+
+
+///Proximal radio ulnar joint, creates two constraints between radius and ulna
 AnyTransSphericalJoint ProximalRadioUlnarJoint = {
   AnyRefNode &RadiusPs = ..Segments.Radius.ProximalRadioUlnar;
   AnyRefNode &UlnaPs = ..Segments.Ulna.ProximalRadioUlnar;
@@ -102,16 +92,11 @@ AnyTransSphericalJoint ProximalRadioUlnarJoint = {
   Constraints.Reaction.Type={Off,Off};
   Axis = x;
   Orientation = {
-    // These settings are kept to mimic the previous
-    // implementation from the PSRotProximal measure.
     Axis1 = x;
     Axis2 = y;
     Axis3 = z;
     Type = RotAxesAngles;
   };
-
-  // Since the previous implementation implemented reaction forces
-  // between some explicit points 'ps2Reac' we do the same here.
   AnyReacForce ReacForce =   {
     AnyKinMeasureOrg RadiusUlna = {
       MeasureOrganizer = {1,2};
@@ -124,6 +109,8 @@ AnyTransSphericalJoint ProximalRadioUlnarJoint = {
   };
 };
 
+
+///Distal radio ulnar joint, creates two constraints between radius and ulna
 AnyTransSphericalJoint DistalRadioUlnarJoint = {
     AnyRefNode &UlnaPs = ..Segments.Ulna.DistalRadioUlnar;
     AnyRefNode &RadiusPs = ..Segments.Radius.DistalRadioUlnar;
@@ -352,7 +339,7 @@ AnyKinEq SternoClavicularRotationRhythm  =
 #endif
 
 
-// Deprecated, Use the name HumeroUlnarJoint instead. Left here for backwards Compatibility.
+/// Deprecated, Use the name HumeroUlnarJoint instead. Left here for backwards Compatibility.
 AnyFolder &FE = HumeroUlnarJoint;
 
 
