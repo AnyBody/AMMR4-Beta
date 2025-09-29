@@ -7,10 +7,9 @@
 // ----------------------------------------------------------
 
 // Use interpolation drivers to define motion
-#ifndef DriverSelection 
+#ifndef DriverSelection
   #define DriverSelection "FreePostureMove"
 #endif
-
 
 // actual model
 #include "FreePostureFullBodyStatic.Main.any"

@@ -55,7 +55,7 @@ Main = {
     // use different initial positions for two configurations
     #include "Model/Mannequin.any"
   #endif
-    #if DriverSelection == "FreePostureMove"
+  #if DriverSelection == "FreePostureMove"
     // use different initial positions for two configurations
     #include "Model/MannequinInterpolation.any"
   #endif
@@ -104,4 +104,3 @@ Main = {
     #include "<ANYBODY_PATH_MODELUTILS>\Operations\RunAppSequence.any"
 
 }; //Main
-
