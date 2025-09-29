@@ -511,8 +511,8 @@ AnySeg Foot =
     {
       AnyVec3 sRelUnscaled = .Data.SubTalarJoint;
       AnyMat33 ARelUnscaled = RotMat({0.0, 0.0, 0.0 }, (.Data.SubTalarJointAxisNode-.Data.SubTalarJoint), .AnatomicalFrame.ARelUnscaled'[1])*RotMat(pi/2,y);
-      /// Point where the SubTalar Joint Axis interesects with the calcaneus
-      AnyVec3 SubTalarJointAxisNode = .Scale(.Data.SubTalarJointAxisNode);
+
+      AnyVec3 SubTalarJointAxisNode = ..Calcaneus.SubTalarJoint.SubTalarJointAxisNode;
 
       sRel = .Scale(.Data.SubTalarJoint);
       ARel = RotMat({0.0, 0.0, 0.0 }, ....Sign*(SubTalarJointAxisNode-sRel), .AnatomicalFrame.ARel'[1])*RotMat(pi/2,y);
@@ -585,11 +585,29 @@ AnySeg Foot =
     {
       AnyVec3 sRelUnscaled = .Data.SubTalarJoint;
       AnyMat33 ARelUnscaled = RotMat({0.0, 0.0, 0.0 }, (.Data.SubTalarJointAxisNode-.Data.SubTalarJoint), .AnatomicalFrame.ARelUnscaled'[1])*RotMat(pi/2,y);
-      /// Point where the SubTalar Joint Axis interesects with the calcaneus
-      AnyVec3 SubTalarJointAxisNode = .Scale(.Data.SubTalarJointAxisNode);
+
+      AnyVec3 SubTalarJointAxisNode = JointAxisComputation.STJointAxisNodeComputed;
 
       sRel = .Scale(.Data.SubTalarJoint);
       ARel = RotMat({0.0, 0.0, 0.0 }, ....Sign*(SubTalarJointAxisNode-sRel), .AnatomicalFrame.ARel'[1])*RotMat(pi/2,y);
+      
+      AnyFolder JointAxisComputation = {
+        /// Unscaled points used for defining Achilles tendon path on calcaneus
+        AnyMatrix TCNodesUnscaled ={..Data.TendonCalcaneusMedialisNode,
+                                    ..Data.TendonCalcaneusLateralisNode,
+                                    ..Data.TendonCalcaneusMedialisSuperiorNode,
+                                    ..Data.TendonCalcaneusLateralisSuperiorNode,};
+        /// SubTalar joint axis node unscaled
+        AnyVec3 STJointAxisNodeUnscaled = ..Data.SubTalarJointAxisNode;
+        AnyMatrix TCNodesScaled = ..Scale(TCNodesUnscaled);
+        AnyVec3 STJointAxisNodeScaled = ..Scale(STJointAxisNodeUnscaled);
+        AnyVec3 TCNodesMidPointScaled = mean(TCNodesScaled');
+        AnyVar TCNodesMidPointSTJointAxisNode_DistanceScaled = vnorm(TCNodesMidPointScaled-STJointAxisNodeScaled);
+        AnyFloat VerticalDirectionScaled = normalize(mean({TCNodesScaled[0]-TCNodesScaled[2],
+                                                           TCNodesScaled[1]-TCNodesScaled[3],}'));
+        AnyVec3 STJointAxisNodeComputed = TCNodesMidPointScaled 
+                                          + TCNodesMidPointSTJointAxisNode_DistanceScaled*VerticalDirectionScaled;
+      };
     };
     #endif
 
