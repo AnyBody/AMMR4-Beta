@@ -74,9 +74,7 @@ Talus = {
 //  AnyFunTransform3D &ShankScale = ..Seg.Shank.Scale;
 
   AnyVec3 SubTalarJoint = .Foot.SubTalarJoint;
-  /// Node on Calcaneus at intersection of SubTalar joint axis.
-  /// SubTalar joint axis is calculated as: 
-  /// SubTalarJointAxis = ..Sign*normalize(SubTalarJointAxisNode - SubTalarJoint);
+  /// Node on Calcaneus at intersection of SubTalar joint axis with Calcaneus.
   AnyVec3 SubTalarJointAxisNode = .Foot.SubTalarJointAxisNode;
   
   // Fitted ankle joint location
@@ -96,9 +94,7 @@ Foot = {
 //  AnyFunTransform3D &ShankScale = ..Seg.Shank.Scale;
 
   AnyVec3 SubTalarJoint = {0,0,0};
-  /// Node on Calcaneus at intersection of SubTalar joint axis.
-  /// SubTalar joint axis is calculated as: 
-  /// SubTalarJointAxis = ..Sign*normalize(SubTalarJointAxisNode - SubTalarJoint);
+  /// Node on Calcaneus at intersection of SubTalar joint axis with Calcaneus.
   AnyVec3 SubTalarJointAxisNode = {-0.037218, -0.019650, -0.004882} *.TF';
 
   AnyVec3 MetatarsalJoint1Node = {0.1277626, -0.03047019, -0.02127657}*.TF';  ///< Estimated from GM foot dataset using InterfaceMorphingDef.IM_Foot_GM_To_TLEM. Not part of the original TLEM dataset.
