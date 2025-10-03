@@ -250,9 +250,36 @@ AnyMessage TestMarkerExist ={
   MarkerPlacementSegment = {
     AnyRefNode __NAME__##_MARKER_NODE_POSTFIX  ={
       #if ScaleMarkerPosOnOff == 1
-        AnyVec3 MarkerOffset = (.Scale.GeomScale(..sRelOpt) + ..sRelOptEdit )*.ScalingNode.ARel' ;
+        AnyFloat scale_offset_allowed =  not(vnorm(arrcat(Obj2Num(ObjSearch(.Scale.GeomScale.Custom, "Offset")), {{1.0,1,1}})[0]));
+        AnyVec3 MarkerOffset = iffun(scale_offset_allowed,
+            (.Scale.GeomScale(..sRelOpt) + ..sRelOptEdit )*.ScalingNode.ARel',
+            (..sRelOpt + ..sRelOptEdit )*.ScalingNode.ARel',
+        );
         sRel = .PlaceMarkerAt.sRel + MarkerOffset;
         ARel= .ScalingNode.ARel;
+
+        #if (PlaceMarkerAt != ScalingNode & PlaceMarkerAt != AnatomicalFrameTrunk)
+        AnyMessage ScalingDisabled_##__NAME__##_marker = {
+          Type = MSG_Warning;
+
+          AnyFloat scale_offset_allowed =  not(vnorm(arrcat(Obj2Num(ObjSearch(..Scale.GeomScale.Custom, "Offset")), {{1.0,1,1}})[0]));
+          TriggerRuntime = not(scale_offset_allowed);
+          AnyStringVar SegmentName = NameOf(ObjGetParent(2));
+          AnyStringVar RefName = NameOf(&..PlaceMarkerAt);
+          Message =strformat("\n"+
+          "-------------------------------------------------------------------------------------------------------------------\n"+
+          "    The scale function for the '" + SegmentName + "' segment does not support scaling the marker offset (sRelOpt)   \n"+
+          "    when the marker is placed relative to a reframe, i.e. when using 'PlaceMarkerAt=" + RefName +"'  \n" +
+          " \n" +
+          "    Note: \n"+
+          "    This only affects the offset. The position (" + SegmentName + "." + RefName +") where the marker is located, is still scaled.\n"+
+          "    Set `ScaleMarkerPosOnOff = OFF` to suppress this warning.  \n" +
+          "-------------------------------------------------------------------------------------------------------------------\n"
+          );
+        };
+        #endif
+//
+
       #else
         sRel = .PlaceMarkerAt.sRel + (..sRelOpt + ..sRelOptEdit )*.PlaceMarkerAt.ARel';
         ARel= .PlaceMarkerAt.ARel;
