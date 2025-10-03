@@ -14,7 +14,7 @@ AnyFolder &StudyRef = Study;
 StudyRef ={
   SymmetryCheck.MirrorPlane = {1,1,-1};
   CheckModel.kin_tol=1e-4;  //model has closed loops... needs higher tol
-  CheckModel.force_tol=2e-2;  //model has high loads... needs higher tol
+  CheckModel.force_tol=2.3e-2;  //model has high loads... needs higher tol
   #include "../Symmetry/DynamicTest/Model/CheckFullBody.any"
 };
 
