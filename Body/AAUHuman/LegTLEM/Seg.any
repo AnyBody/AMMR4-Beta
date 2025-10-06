@@ -586,27 +586,31 @@ AnySeg Foot =
       AnyVec3 sRelUnscaled = .Data.SubTalarJoint;
       AnyMat33 ARelUnscaled = RotMat({0.0, 0.0, 0.0 }, (.Data.SubTalarJointAxisNode-.Data.SubTalarJoint), .AnatomicalFrame.ARelUnscaled'[1])*RotMat(pi/2,y);
 
-      AnyVec3 SubTalarJointAxisNode = JointAxisComputation.STJointAxisNodeComputed;
+      AnyVec3 SubTalarJointAxisNode = JointAxisNodeComputation.STJointAxisNodeComputed;
 
       sRel = .Scale(.Data.SubTalarJoint);
       ARel = RotMat({0.0, 0.0, 0.0 }, ....Sign*(SubTalarJointAxisNode-sRel), .AnatomicalFrame.ARel'[1])*RotMat(pi/2,y);
       
-      AnyFolder JointAxisComputation = {
-        /// Unscaled points used for defining Achilles tendon path on calcaneus
-        AnyMatrix TCNodesUnscaled ={..Data.TendonCalcaneusMedialisNode,
-                                    ..Data.TendonCalcaneusLateralisNode,
-                                    ..Data.TendonCalcaneusMedialisSuperiorNode,
-                                    ..Data.TendonCalcaneusLateralisSuperiorNode,};
-        /// SubTalar joint axis node unscaled
-        AnyVec3 STJointAxisNodeUnscaled = ..Data.SubTalarJointAxisNode;
-        AnyMatrix TCNodesScaled = ..Scale(TCNodesUnscaled);
-        AnyVec3 STJointAxisNodeScaled = ..Scale(STJointAxisNodeUnscaled);
-        AnyVec3 TCNodesMidPointScaled = mean(TCNodesScaled');
-        AnyVar TCNodesMidPointSTJointAxisNode_DistanceScaled = vnorm(TCNodesMidPointScaled-STJointAxisNodeScaled);
-        AnyFloat VerticalDirectionScaled = normalize(mean({TCNodesScaled[0]-TCNodesScaled[2],
-                                                           TCNodesScaled[1]-TCNodesScaled[3],}'));
-        AnyVec3 STJointAxisNodeComputed = TCNodesMidPointScaled 
-                                          + TCNodesMidPointSTJointAxisNode_DistanceScaled*VerticalDirectionScaled;
+      /// Computation of SubTalar joint axis node
+      AnyFolder JointAxisNodeComputation = {
+        AnyMatrix TendonCalcaneusNodes = ..Scale({..Data.TendonCalcaneusMedialisNode,
+                                                  ..Data.TendonCalcaneusLateralisNode,
+                                                  ..Data.TendonCalcaneusMedialisSuperiorNode,
+                                                  ..Data.TendonCalcaneusLateralisSuperiorNode,});
+        AnyVec3 STJointAxisNode = ..Scale(..Data.SubTalarJointAxisNode);
+        AnyVec3 TCNodesMidPoint = mean(TendonCalcaneusNodes');
+        AnyVar TCNodesMidPointSTJointAxisNode_Distance = vnorm(TCNodesMidPoint-STJointAxisNode);
+        AnyFloat VerticalDirection = normalize(mean({TendonCalcaneusNodes[0]-TendonCalcaneusNodes[2],
+                                                           TendonCalcaneusNodes[1]-TendonCalcaneusNodes[3],}'));
+        /// The SubTalar joint axis node is relocated to be vertically below 
+        /// the midpoint of the tendon calcaneus nodes, which define the
+        /// insertion and via points of the gastrocnemius and soleus muscles 
+        /// on calcaneus.
+        AnyVec3 STJointAxisNodeComputed = TCNodesMidPoint 
+                                          + TCNodesMidPointSTJointAxisNode_Distance*VerticalDirection;
+        /// Distance between scaled and computed Subtalar joint axis node.
+        /// This will be affected by scaling, but should be small.
+        AnyVar STJointAxisNodeComputed_Distance = vnorm(STJointAxisNodeComputed-STJointAxisNode);
       };
     };
     #endif
