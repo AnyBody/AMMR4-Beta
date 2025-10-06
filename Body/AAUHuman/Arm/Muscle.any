@@ -2440,7 +2440,7 @@ MuscleGroup TricepsBrachiiMediale = {
 
 WrappingSurfaces = {
 AnyFolder Pectoralis_minor1_cyl={
-  AnyFolder &ThoraxWrappingSufaceSegRef = .ThoraxWrappingSufaceSegRef;//..WrappingSurfaces.TrunkNodeAttachement.R3Seg.O_PectoralisMinor1;//
+  AnyFolder &ThoraxWrappingSufaceSegRef = .ThoraxWrappingSufaceSegRef;
   ThoraxWrappingSufaceSegRef = {
     AnyRefNode PectoralisWrapAttachement = {
       sRel = ....WrappingSurfaces.TrunkNodeAttachement.R3Seg.O_PectoralisMinor1.sRel;
