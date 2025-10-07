@@ -919,6 +919,10 @@ Foot = {
       sRel = .Scale(.Data.Metatarsal1PlantarNode);
     };
     AnyRefFrame &MetatarsalJoint1Node = MtPhalJoint;
+    AnyRefNode ToeJoint = {
+      sRel = .MtPhalJoint.sRel;
+      ARel = .ScalingNode.ARel;
+    };
     
     //***********************
     //Muscles nodes
