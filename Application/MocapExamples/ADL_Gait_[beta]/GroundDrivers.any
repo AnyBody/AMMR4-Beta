@@ -4,7 +4,7 @@ AnyFolder FootGroundDrivers ={
 
     AnyKinMeasureOrg HeelContactHeight ={
       AnyKinLinear lin ={
-        AnyRefNode &ref1=  Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.HeelContactNode;
+        AnyRefNode &ref1=  Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.Calcaneus.HeelContactNodeLow;
         ref1= {AnyDrawNode drw ={ScaleXYZ ={1,1,1}*0.004; RGB={0,0,0};};};
       };
       MeasureOrganizer = {2};
@@ -63,7 +63,7 @@ AnyFolder FootGroundDrivers ={
 
     AnyKinMeasureOrg HeelContactHeight ={
       AnyKinLinear lin ={
-        AnyRefNode &ref1=  Main.HumanModel.BodyModel.Left.Leg.Seg.Foot.HeelContactNode;
+        AnyRefNode &ref1=  Main.HumanModel.BodyModel.Left.Leg.Seg.Foot.Calcaneus.HeelContactNodeLow;
       };
       MeasureOrganizer = {2};
     };

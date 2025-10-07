@@ -413,7 +413,7 @@ AnyFolder Drivers = {
   AnyKinEqSimpleDriver RHeelGroundConstraint ={
     AnyKinLinear HeelPos = {
       AnyRefNode &Ground = Main.Model.EnvironmentModel.GlobalRef.FloorNode;
-      AnyRefNode &Ball = Main.Model.BodyModel.Right.Leg.Seg.Foot.HeelContactNode;
+      AnyRefNode &Ball = Main.Model.BodyModel.Right.Leg.Seg.Foot.Calcaneus.HeelContactNodeLow;
     };
     MeasureOrganizer = {1};  // Only the y coordinate
     DriverPos = {0.0};
@@ -444,7 +444,7 @@ AnyFolder Drivers = {
   AnyKinEqSimpleDriver LHeelGroundConstraint ={
     AnyKinLinear HeelPos = {
       AnyRefNode &Ground = Main.Model.EnvironmentModel.GlobalRef.FloorNode;
-      AnyRefNode &Ball = Main.Model.BodyModel.Left.Leg.Seg.Foot.HeelContactNode;
+      AnyRefNode &Ball = Main.Model.BodyModel.Left.Leg.Seg.Foot.Calcaneus.HeelContactNodeLow;
     };
     MeasureOrganizer = {1};  // Only the y coordinate
     DriverPos = {0.0};

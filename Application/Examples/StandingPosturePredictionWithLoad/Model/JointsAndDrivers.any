@@ -40,7 +40,7 @@ AnyFolder Drivers = {
   {
     AnyKinLinear TranslationHeel =    {
       AnyRefFrame &ref1 = Main.Model.Environment.GlobalRef.RightFootPoint;
-      AnyRefFrame &ref2 =  Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.HeelContactNode;
+      AnyRefFrame &ref2 =  Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.Calcaneus.HeelContactNodeLow;
     };
 
     AnyKinMeasureOrg HeelHeight ={
@@ -101,7 +101,7 @@ AnyFolder Drivers = {
   {
     AnyKinLinear TranslationHeel =  {
       AnyRefFrame &ref1 = Main.Model.Environment.GlobalRef.LeftFootPoint;
-      AnyRefFrame &ref2 =  Main.HumanModel.BodyModel.Left.Leg.Seg.Foot.HeelContactNode;
+      AnyRefFrame &ref2 =  Main.HumanModel.BodyModel.Left.Leg.Seg.Foot.Calcaneus.HeelContactNodeLow;
     };
 
     AnyKinMeasureOrg HeelHeight ={

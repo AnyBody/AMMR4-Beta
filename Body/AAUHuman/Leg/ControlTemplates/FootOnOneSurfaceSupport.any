@@ -104,7 +104,7 @@ AnyFolder FootSupportOneSurface={
 
   AnyFolder HeelSupport = {
     AnySeg &StartNode = .Surface;
-    AnyRefNode &EndNode = ..SideFolder.Leg.Seg.Foot.HeelContactNode;
+    AnyRefNode &EndNode = ..SideFolder.Leg.Seg.Foot.Calcaneus.HeelContactNodeLow;
 
     //The terms push and pull are determined wrt. the coordinate system of the StartNode!
     //StrenghtOfReactionsLin         = {XPush,XPull,YPush,YPull,ZPush,ZPull}
