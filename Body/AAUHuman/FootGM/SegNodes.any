@@ -167,6 +167,7 @@ Foot = {
     AnyRefNode HeelContactNodeLow =
     {
       sRel = .Scale(.Data.HeelContactNodeLow);
+      ARel = .AnatomicalFrame.ARel;
     };  
     AnyRefNode HeelContactNodeLateral =
     {
