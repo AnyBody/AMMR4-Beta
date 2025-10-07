@@ -9,7 +9,7 @@ AnyKinMotion HeelFloorContraintRight =
    {
        AnyRefFrame &FloorRef = ....Environment.GlobalRef.FloorOffset;
        #if BM_LEG_MODEL == _LEG_MODEL_LEG_
-          AnyRefFrame &HeelRef = ....BodyModel.Right.Leg.Seg.Foot.Calcaneus.HeelContactNodeLow;
+          AnyRefFrame &HeelRef = ....BodyModel.Right.Leg.Seg.Foot.HeelJoint;
        #else
           AnyRefFrame &HeelRef = ....BodyModel.Right.Leg.Seg.Foot.HeelContactNodeLow;
        #endif

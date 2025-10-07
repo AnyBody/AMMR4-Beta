@@ -125,8 +125,8 @@ AnyFolder Drivers = {
 //  };
 //  AnyKinEqSimpleDriver HeelsDisConstraint ={
 //    AnyKinLinear HeelsDis = {
-//      AnyRefNode &Right = Main.Model.BodyModel.Right.Leg.Seg.Foot.Calcaneus.HeelContactNodeLow;
-//      AnyRefNode &Left = Main.Model.BodyModel.Left.Leg.Seg.Foot.Calcaneus.HeelContactNodeLow;
+//      AnyRefNode &Right = Main.Model.BodyModel.Right.Leg.Seg.Foot.HeelJoint;
+//      AnyRefNode &Left = Main.Model.BodyModel.Left.Leg.Seg.Foot.HeelJoint;
 //    };
 //    MeasureOrganizer = {2};  // Only the z coordinate
 //    DriverPos = {-0.5};
@@ -136,7 +136,7 @@ AnyFolder Drivers = {
   AnyKinEqSimpleDriver RHeelDisConstraint ={
     AnyKinLinear HeelsDis = {
       AnyFixedRefFrame &Ground = Main.Model.EnvironmentModel.GlobalRef;
-      AnyRefNode &Right = Main.Model.BodyModel.Right.Leg.Seg.Foot.Calcaneus.HeelContactNodeLow;
+      AnyRefNode &Right = Main.Model.BodyModel.Right.Leg.Seg.Foot.HeelJoint;
     };
     MeasureOrganizer = {2};  // Only the z coordinate
     DriverPos = {0.25};
@@ -146,7 +146,7 @@ AnyFolder Drivers = {
   AnyKinEqSimpleDriver LHeelDisConstraint ={
     AnyKinLinear HeelsDis = {
       AnyFixedRefFrame &Ground = Main.Model.EnvironmentModel.GlobalRef;
-      AnyRefNode &Left = Main.Model.BodyModel.Left.Leg.Seg.Foot.Calcaneus.HeelContactNodeLow;
+      AnyRefNode &Left = Main.Model.BodyModel.Left.Leg.Seg.Foot.HeelJoint;
     };
     MeasureOrganizer = {2};  // Only the z coordinate
     DriverPos = {-0.25};
@@ -171,7 +171,7 @@ AnyFolder Drivers = {
   AnyKinEqSimpleDriver RHeelGroundConstraint ={
     AnyKinLinear HeelPos = {
       AnyFixedRefFrame &Ground = Main.Model.EnvironmentModel.GlobalRef;
-      AnyRefNode &Ball = Main.Model.BodyModel.Right.Leg.Seg.Foot.Calcaneus.HeelContactNodeLow;
+      AnyRefNode &Ball = Main.Model.BodyModel.Right.Leg.Seg.Foot.HeelJoint;
     };
     MeasureOrganizer = {1};  // Only the y coordinate
     DriverPos = {0.0};
@@ -195,7 +195,7 @@ AnyKinEqSimpleDriver LToeGroundConstraint ={
   AnyKinEqSimpleDriver LHeelGroundConstraint ={
     AnyKinLinear HeelPos = {
       AnyFixedRefFrame &Ground = Main.Model.EnvironmentModel.GlobalRef;
-      AnyRefNode &Ball = Main.Model.BodyModel.Left.Leg.Seg.Foot.Calcaneus.HeelContactNodeLow;
+      AnyRefNode &Ball = Main.Model.BodyModel.Left.Leg.Seg.Foot.HeelJoint;
     };
     MeasureOrganizer = {1};  // Only the y coordinate
     DriverPos = {0.0};
