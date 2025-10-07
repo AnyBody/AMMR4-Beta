@@ -105,8 +105,8 @@ Your browser does not support the video tag.
 
 ## Muscle Switch
 
-The muscle behavior in the GM foot model can be controlled by switches for the foot muscle, for example, ```#define BM_FOOT_MUSCLES_BOTH _MUSCLES_SIMPLE_```.
-The switch defaults to ```BM_LEG_MUSCLES_BOTH```. Currently, the GM foot model can work with simple muscle model. The switch allows the foot 
+The muscle behavior in the GM foot model can be controlled by switches for the foot muscle, for example, ```#define BM_FOOT_MUSCLES_LEFT _MUSCLES_SIMPLE_```.
+The switch defaults to the corresponding leg muscle choice. Currently, the GM foot model can work with simple muscle model. The switch allows the foot 
 muscles to be set to 3 element Hill muscle model, however the user must provide a calibration routine for the Hill muscle models in the foot.
 This switch allows the user to control the foot muscles independently of the leg muscles. Please note that the foot muscles can only be included 
 if leg muscles are also enabled.

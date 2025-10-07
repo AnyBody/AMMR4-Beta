@@ -66,7 +66,7 @@ You can [enable backwards compatibility](changes-to-bodymodel-folders) by settin
   parameters as the TLEM foot. The muscle parameters of the foot instead come from the GM foot. The GM foot models are available 
   in multiple configurations: rigid foot (which will eventually become the default foot), toe flexion configuration 
   (which has linked flexion extension degree of freedom for all toes), and the full-blown detailed foot model with 
-  26 segments. The GM foot model is also accompanied by new switches, for example, {bm_statement}`BM_FOOT_MUSCLES_BOTH` to 
+  26 segments. The GM foot model is also accompanied by new switches, for example, {bm_statement}`BM_FOOT_MUSCLES_LEFT` to 
   control the muscle behavior in GM foot model. See the {ref}`documentation page <GM Foot Model>` for more info.
 
 * A new system for handling mass and inertia calculation for segments in the
