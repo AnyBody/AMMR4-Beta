@@ -29,7 +29,7 @@
   AnyKinEqSimpleDriver LHeelGroundConstraint ={
     AnyKinLinear HeelPos = {
       AnyFixedRefFrame &Ground = ....Environment.GlobalRef;
-      AnyRefNode &Ball = ....BodyModel.BodyModel.Left.Leg.Seg.Foot.HeelJoint;
+      AnyRefNode &Ball = ....BodyModel.BodyModel.Left.Leg.Seg.Foot.Calcaneus.HeelContactNodeLow;
     };
     MeasureOrganizer = {1};  // Only the y coordinate
     DriverPos = {0.0};

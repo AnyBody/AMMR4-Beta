@@ -6,7 +6,7 @@
 
     AnyRefFrame &TargetObject1 = Foot.ToeLateralContactNode;
     AnyRefFrame &TargetObject2 = Foot.ToeMedialContactNode;
-    AnyRefFrame &TargetObject3 = Foot.HeelJoint;
+    AnyRefFrame &TargetObject3 = Foot.Calcaneus.HeelContactNodeLow;
 
     //low limit for the strength measure function, if the distance measured along Direction[0] is below this val. the strength will be zero (negative)
     #var AnyVar UserDefinedLimitLow;
