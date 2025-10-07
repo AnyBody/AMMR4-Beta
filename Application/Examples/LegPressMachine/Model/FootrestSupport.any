@@ -170,7 +170,7 @@ AnyFolder FootSupport =
   AnyFolder FootSupportBackRight =
   {
     AnyRefFrame &BaseObject = .VFPlate_Right;
-    AnyRefFrame &TargetObject =....BodyModel.Right.Leg.Seg.Foot.HeelJoint;
+    AnyRefFrame &TargetObject =....BodyModel.Right.Leg.Seg.Foot.Calcaneus.HeelContactNodeLow;
 
     TargetObject =
     {
@@ -196,7 +196,7 @@ AnyFolder FootSupport =
   AnyFolder FootSupportBackLeft =
   {
     AnyRefFrame &BaseObject = .VFPlate_Left;
-    AnyRefFrame &TargetObject =....BodyModel.Left.Leg.Seg.Foot.HeelJoint;
+    AnyRefFrame &TargetObject =....BodyModel.Left.Leg.Seg.Foot.Calcaneus.HeelContactNodeLow;
 
     TargetObject =
     {

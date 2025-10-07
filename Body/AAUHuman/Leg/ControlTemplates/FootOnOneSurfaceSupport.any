@@ -50,12 +50,12 @@ AnyFolder FootSupportOneSurface={
     //This is the joint which connects the Pelvis segment to the bike.
     AnyKinLinear Lin ={
       Ref=0;
-      AnyRefNode &Ball = ...SideFolder.Leg.Seg.Foot.HeelJoint;
+      AnyRefNode &Ball = ...SideFolder.Leg.Seg.Foot.Calcaneus.HeelContactNodeLow;
       AnySeg &Ref2  = ..Surface;
     };
     AnyKinRotational Rot ={
       Ref=0;
-      AnyRefNode &Ball = ...SideFolder.Leg.Seg.Foot.HeelJoint;
+      AnyRefNode &Ball = ...SideFolder.Leg.Seg.Foot.Calcaneus.HeelContactNodeLow;
       AnySeg &Ref2  = ..Surface;
       Type=RotVector;
     };

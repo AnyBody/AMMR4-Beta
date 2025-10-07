@@ -388,7 +388,7 @@ AnyFolder Drivers = {
   AnyKinEqSimpleDriver RHeelGroundConstraint ={
     AnyKinLinear HeelPos = {
       AnyFixedRefFrame &Ground = Main.Model.EnvironmentModel.GlobalRef;
-      AnyRefNode &Ball = Main.Model.BodyModel.Right.Leg.Seg.Foot.HeelJoint;
+      AnyRefNode &Ball = Main.Model.BodyModel.Right.Leg.Seg.Foot.Calcaneus.HeelContactNodeLow;
     };
     MeasureOrganizer = {1};  // Only the y coordinate
     DriverPos = {0.0};
@@ -409,7 +409,7 @@ AnyFolder Drivers = {
   AnyKinEqSimpleDriver LHeelGroundConstraint ={
     AnyKinLinear HeelPos = {
       AnyFixedRefFrame &Ground = Main.Model.EnvironmentModel.GlobalRef;
-      AnyRefNode &Ball = Main.Model.BodyModel.Left.Leg.Seg.Foot.HeelJoint;
+      AnyRefNode &Ball = Main.Model.BodyModel.Left.Leg.Seg.Foot.Calcaneus.HeelContactNodeLow;
     };
     MeasureOrganizer = {1};  // Only the y coordinate
     DriverPos = {0.0};
@@ -474,7 +474,7 @@ AnyFolder Drivers = {
 
 
     AnyFolder HeelSupportLeft = {
-      AnyRefNode &TargetObject = ..LegL.Seg.Foot.HeelJoint;
+      AnyRefNode &TargetObject = ..LegL.Seg.Foot.Calcaneus.HeelContactNodeLow;
       AnyRefFrame &BaseObject=Main.Model.EnvironmentModel.GlobalRef; //Object which delivers the forces
       AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 
@@ -547,7 +547,7 @@ AnyFolder Drivers = {
 
     AnyFolder HeelSupportRight = {
 
-      AnyRefNode &TargetObject = ..LegR.Seg.Foot.HeelJoint;
+      AnyRefNode &TargetObject = ..LegR.Seg.Foot.Calcaneus.HeelContactNodeLow;
       AnyRefFrame &BaseObject=Main.Model.EnvironmentModel.GlobalRef; //Object which delivers the forces
       AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 

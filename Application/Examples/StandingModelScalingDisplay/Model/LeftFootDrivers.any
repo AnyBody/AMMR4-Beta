@@ -30,7 +30,7 @@
     AnyKinLinear HeelPos = {
       AnyFixedRefFrame &Ground = ...Environment.GlobalRef;
       #if BM_LEG_MODEL == _LEG_MODEL_LEG_
-        AnyRefNode &Ball = ...HumanModel.BodyModel.Left.Leg.Seg.Foot.HeelJoint;
+        AnyRefNode &Ball = ...HumanModel.BodyModel.Left.Leg.Seg.Foot.Calcaneus.HeelContactNodeLow;
       #else
         AnyRefNode &Ball = ...HumanModel.BodyModel.Left.Leg.Seg.Foot.HeelNode;
       #endif
