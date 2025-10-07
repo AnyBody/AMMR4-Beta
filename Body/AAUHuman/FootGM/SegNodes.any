@@ -2090,7 +2090,10 @@ Foot = {
       //     AnyDrawRefFrame drw={ScaleXYZ={0.01,0.01,0.01};RGB={0,0,1};};
       sRel = .Scale(.Data.GroundContactNode*.FootType.DistPhalScale);
     };
-    AnyRefFrame &BigToeNode = ToeTip;
+    AnyRefNode BigToeNode = {
+      sRel = .ToeTip.sRel;
+      ARel = .AnatomicalFrame.ARel;
+    };
     
     //***********************
     //Muscles nodes
