@@ -488,7 +488,7 @@ AnyFolder Drivers = {
       SubGroupRegexReplace = "$1";
     };
     AnyFixedRefFrame &StartNode = Main.Model.EnvironmentModel.GlobalRef;
-    AnyRefNode &EndNode = Main.Model.BodyModel.Left.Leg.Seg.Foot.ToeJoint;
+    AnyRefNode &EndNode = Main.Model.BodyModel.Left.Leg.Seg.Foot.Metatarsal1.ToeJoint;
 
     //The terms push and pull are determined wrt. the coordinate system of the StartNode!
     //StrenghtOfReactionsLin         = {XPush,XPull,YPush,YPull,ZPush,ZPull}
@@ -555,7 +555,7 @@ AnyFolder Drivers = {
       SubGroupRegexReplace = "$1";
     };
     AnyFixedRefFrame &StartNode = Main.Model.EnvironmentModel.GlobalRef;
-    AnyRefNode &EndNode = Main.Model.BodyModel.Right.Leg.Seg.Foot.ToeJoint;
+    AnyRefNode &EndNode = Main.Model.BodyModel.Right.Leg.Seg.Foot.Metatarsal1.ToeJoint;
 
     //The terms push and pull are determined wrt. the coordinate system of the StartNode!
     //StrenghtOfReactionsLin         = {XPush,XPull,YPush,YPull,ZPush,ZPull}
