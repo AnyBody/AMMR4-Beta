@@ -559,7 +559,8 @@ MarkerPlacement=Right.ShoulderArm.Segments.Clavicula,
 OptX=OFF,OptY=OFF,OptZ=OFF,
 UseC3DWeightResiduals = ON,
 WeightX=5,WeightY=5,WeightZ=5,
-PlaceMarkerAt = acj
+PlaceMarkerAt = acj,
+ScaleMarkerPosOnOff=OFF,
 ) = {
   sRelOpt = {0.01, 0.025, 0.03};
 };
@@ -688,7 +689,8 @@ MarkerPlacement=Left.ShoulderArm.Segments.Clavicula,
 OptX=OFF,OptY=OFF,OptZ=OFF,
 UseC3DWeightResiduals = ON,
 WeightX=5,WeightY=5,WeightZ=5,
-PlaceMarkerAt = acj
+PlaceMarkerAt = acj,
+ScaleMarkerPosOnOff=OFF,
 ) = {
   sRelOpt = {0.01, 0.025, -0.03};
 };
@@ -904,12 +906,14 @@ OptX=ON,OptY=OFF,OptZ= ON
 #ifdef _SXS
 // Marker on the Sternum
 CreateMarkerDriver SXS (
-MarkerPlacement=Trunk.Segments.ThoraxSeg,
+MarkerPlacement=Trunk.Segments.SternalBodySeg,
+PlaceMarkerAt = XiphoidProcess,
+ScaleMarkerPosOnOff=OFF,
 OptX=ON,OptY=ON,OptZ=OFF,
 UseC3DWeightResiduals = ON,
 WeightX=1,WeightY=1,WeightZ=1
 ) = {
-  sRelOpt = {0.180,0.25,0.0};
+  sRelOpt = {0.02, 0, 0};
 };
 #endif
 
@@ -918,10 +922,11 @@ WeightX=1,WeightY=1,WeightZ=1
 CreateMarkerDriver SJN (
 MarkerPlacement=Trunk.Segments.SternumSeg,
 PlaceMarkerAt=ij,
+ScaleMarkerPosOnOff=OFF,
 UseC3DWeightResiduals = ON,
 OptX=ON,OptY=OFF,OptZ=OFF
 ) = {
-  sRelOpt = {0.01,0.015,0.0};
+  sRelOpt = {0.025, 0.00, 0.0};
   #ifdef REFERENCE_TRIAL
   // High weight in Parameter optimization ensure this
   // marker determines body height
@@ -939,7 +944,7 @@ ScaleMarkerPosOnOff = OFF,
 UseC3DWeightResiduals = ON,
 OptX=ON,OptY=ON,OptZ=OFF
 ) = {
-  sRelOpt = {-0.06,0.0,0.0};
+  sRelOpt = {-0.015,0,0};
 };
 #endif
 
@@ -947,11 +952,12 @@ OptX=ON,OptY=ON,OptZ=OFF
 // Marker on the Cervical Vertebra 10
 CreateMarkerDriver CV7 (
 MarkerPlacement=Trunk.Segments.T1Seg,
-OptX=OFF,OptY=ON,OptZ=OFF,
+OptX=ON,OptY=ON,OptZ=OFF,
 UseC3DWeightResiduals = ON,
-PlaceMarkerAt = T1C7JntNode
+PlaceMarkerAt = SpinousProcess,
+ScaleMarkerPosOnOff=OFF,
 ) = {
-  sRelOpt = {-0.075, 0.02, 0};
+  sRelOpt = {-0.03, 0.02, 0};
 };
 #endif
 
@@ -1134,7 +1140,8 @@ CreateMarkerDriver R_SAA (
 MarkerPlacement=Right.ShoulderArm.Segments.Scapula,
 OptX=ON, OptY=ON,OptZ=ON,
 UseC3DWeightResiduals  = ON,
-PlaceMarkerAt = acj
+PlaceMarkerAt = acj,
+ScaleMarkerPosOnOff = OFF,
 ) = {
   sRelOpt = {-0.03, 0.005, 0.03};
 };
@@ -1146,7 +1153,8 @@ CreateMarkerDriver L_SAA (
 MarkerPlacement=Left.ShoulderArm.Segments.Scapula,
 OptX=ON, OptY=ON, OptZ=ON,
 UseC3DWeightResiduals  = ON,
-PlaceMarkerAt = acj
+PlaceMarkerAt = acj,
+ScaleMarkerPosOnOff = OFF,
 ) = {
   sRelOpt = {-0.03, 0.005, -0.03};
 };
@@ -1158,7 +1166,8 @@ CreateMarkerDriver R_SRS (
 MarkerPlacement=Right.ShoulderArm.Segments.Scapula,
 OptX=ON,OptY=ON,OptZ=ON,
 UseC3DWeightResiduals  = ON,
-PlaceMarkerAt = ts
+PlaceMarkerAt = ts,
+ScaleMarkerPosOnOff = OFF,
 ) = {
   sRelOpt = {-0.015,0.00,0};
   // Low weights for markers in dynmic trials because of
@@ -1173,7 +1182,8 @@ CreateMarkerDriver L_SRS (
 MarkerPlacement=Left.ShoulderArm.Segments.Scapula,
 OptX=ON,OptY=ON,OptZ=ON,
 UseC3DWeightResiduals  = ON,
-PlaceMarkerAt = ts
+PlaceMarkerAt = ts,
+ScaleMarkerPosOnOff = OFF,
 ) = {
   sRelOpt = {-0.015,-0.00,0};
   // Low weights for markers in dynmic trials because of
@@ -1189,7 +1199,8 @@ CreateMarkerDriver R_SIA (
 MarkerPlacement=Right.ShoulderArm.Segments.Scapula,
 OptX=ON,OptY=ON,OptZ=ON,
 UseC3DWeightResiduals  = ON,
-PlaceMarkerAt = ai
+PlaceMarkerAt = ai,
+ScaleMarkerPosOnOff = OFF,
 ) = {
   sRelOpt = {-0.02,0.00,0};
   // Low weights for markers in dynmic trials because of
@@ -1204,7 +1215,8 @@ CreateMarkerDriver L_SIA (
 MarkerPlacement=Left.ShoulderArm.Segments.Scapula,
 OptX=ON,OptY=ON,OptZ=ON,
 UseC3DWeightResiduals  = ON,
-PlaceMarkerAt = ai
+PlaceMarkerAt = ai,
+ScaleMarkerPosOnOff = OFF,
 ) = {
   sRelOpt = {-0.02,-0.00,0};
   // Low weights for markers in dynmic trials because of
