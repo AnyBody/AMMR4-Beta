@@ -902,6 +902,7 @@ Foot = {
     {
       //AnyDrawRefFrame drw={ScaleXYZ={0.005,0.005,0.005};RGB={1.0,0.0,1.0};};
       sRel = .Scale(.Data.ToeMedialContactNode*.FootType.MetaScale);
+      ARel = .AnatomicalFrame.ARel;
     };    
     //For arch driving
     AnyRefNode MTHeadPlantarNode = {
@@ -1349,6 +1350,7 @@ Foot = {
     {
       //AnyDrawRefFrame drw={ScaleXYZ={0.005,0.005,0.005};RGB={1.0,0.0,1.0};};
       sRel = .Scale(.Data.ToeLateralContactNode);
+      ARel = .AnatomicalFrame.ARel;
     };
     AnyRefNode FDLSegNode= 
     {
