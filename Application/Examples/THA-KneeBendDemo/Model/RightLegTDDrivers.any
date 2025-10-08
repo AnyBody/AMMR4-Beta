@@ -87,13 +87,13 @@
 
 
     AnyKinRotational rot = {
-      AnySeg &ref1=..LegR.Seg.Foot;
+      AnyRefFrame &ref1=..LegR.Seg.Foot.Calcaneus;
       AnyFixedRefFrame &ref2 = ....EnvironmentModel.GlobalRef;
       Type = RotVector;
     };
 
     AnyKinLinear RightFootLinMeasure = {
-      AnySeg &ref1=..LegR.Seg.Foot;
+      AnyRefFrame &ref1=..LegR.Seg.Foot.Calcaneus;
       AnyFixedRefFrame &ref2 = ....EnvironmentModel.GlobalRef;
     };
 
