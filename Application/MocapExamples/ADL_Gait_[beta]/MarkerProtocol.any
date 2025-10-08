@@ -606,7 +606,7 @@ UseC3DWeightResiduals = ON
 #ifdef _R_UOA
 CreateMarkerDriver R_UOA (
 MarkerPlacement=Right.ShoulderArm.Segments.Ulna,
-OptX=OFF,OptY=OFF,OptZ=OFF,
+OptX=OFF,OptY=ON,OptZ=OFF,
 UseC3DWeightResiduals = ON,
 WeightY=0.1, WeightZ=5,
 PlaceMarkerAt = ol
