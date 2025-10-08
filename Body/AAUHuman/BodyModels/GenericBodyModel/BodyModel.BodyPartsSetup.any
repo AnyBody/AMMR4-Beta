@@ -98,6 +98,25 @@
 #if (BM_FOOT_MODEL == _FOOT_MODEL_RIGID_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 #ifndef ANYBODY_GM_FOOT_MODEL_SUPPRESS_NOTICES
 
+  #if BM_LEG_MODEL == _LEG_MODEL_LEG_
+  AnyInt bm_foot_model_gm_notice1= notice(0, strformat("\n"+
+      "------------------------------------------------------------------------------------------------------\n"+
+      "    Please note the GM foot model can only be used with the TLEM leg model. \n"+
+      "    The foot model is set to the default foot model by the system. \n"+
+      "    The notice can be disabled by setting: ANYBODY_GM_FOOT_MODEL_SUPPRESS_NOTICES\n"+
+      "-------------------------------------------------------------------------------------------------------"));
+  #endif
+
+#endif // SUPPRESS_FOOT_MODEL_GM_NOTICES
+  #if BM_LEG_MODEL == _LEG_MODEL_LEG_
+    #undef BM_FOOT_MODEL
+    #define BM_FOOT_MODEL _FOOT_MODEL_DEFAULT_
+  #endif
+#endif
+
+#if (BM_FOOT_MODEL == _FOOT_MODEL_RIGID_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
+#ifndef ANYBODY_GM_FOOT_MODEL_SUPPRESS_NOTICES
+
   AnyInt bm_foot_model_gm_notice1= notice(0, strformat("\n"+
       "------------------------------------------------------------------------------------------------------\n"+
       "    Please note that GM foot model is currently in a beta state. \n"+
