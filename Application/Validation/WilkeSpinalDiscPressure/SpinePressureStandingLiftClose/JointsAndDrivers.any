@@ -425,7 +425,7 @@ AnyFolder Drivers = {
 
     AnyFolder ToeLateralContactNodeLeft= {
 
-      AnyRefFrame &TargetObject=  ..LegL.Seg.Foot.ToeLateralContactNode;//Location where the force is applied
+      AnyRefFrame &TargetObject=  ..LegL.Seg.Foot.ProximalPhalange5.ToeLateralContactNode;//Location where the force is applied
       AnyRefFrame &BaseObject=Main.Model.EnvironmentModel.GlobalRef; //Object which delivers the forces
       AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 
@@ -449,7 +449,7 @@ AnyFolder Drivers = {
 
 
     AnyFolder ToeMedialContactNodeLeft= {
-      AnyRefNode &TargetObject = ..LegL.Seg.Foot.ToeMedialContactNode;
+      AnyRefNode &TargetObject = ..LegL.Seg.Foot.ProximalPhalange1.ToeMedialContactNode;
       AnyRefFrame &BaseObject=Main.Model.EnvironmentModel.GlobalRef; //Object which delivers the forces
       AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 
@@ -498,7 +498,7 @@ AnyFolder Drivers = {
     };
 
     AnyFolder ToeMedialContactNodeRight = {
-      AnyRefNode &TargetObject = ..LegR.Seg.Foot.ToeMedialContactNode;
+      AnyRefNode &TargetObject = ..LegR.Seg.Foot.ProximalPhalange1.ToeMedialContactNode;
       AnyRefFrame &BaseObject=Main.Model.EnvironmentModel.GlobalRef; //Object which delivers the forces
       AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 
@@ -521,7 +521,7 @@ AnyFolder Drivers = {
     };
 
     AnyFolder ToeLateralContactNodeRight = {
-      AnyRefNode &TargetObject  = ..LegR.Seg.Foot.ToeLateralContactNode;
+      AnyRefNode &TargetObject  = ..LegR.Seg.Foot.ProximalPhalange5.ToeLateralContactNode;
       AnyRefFrame &BaseObject=Main.Model.EnvironmentModel.GlobalRef; //Object which delivers the forces
       AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 

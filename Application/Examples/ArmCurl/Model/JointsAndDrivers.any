@@ -395,7 +395,7 @@ AnyFolder Drivers = {
   AnyKinEq RToeGroundConstraint ={
     AnyKinLinear ToePos = {
       AnyRefFrame &Ground = Main.Model.EnvironmentModel.GlobalRef.FloorNode.Right;
-      AnyRefNode &Ball = Main.Model.BodyModel.Right.Leg.Seg.Foot.ToeLateralContactNode;
+      AnyRefNode &Ball = Main.Model.BodyModel.Right.Leg.Seg.Foot.ProximalPhalange5.ToeLateralContactNode;
     };
     MeasureOrganizer = {0,1,2};  // Only the y coordinate
     Reaction.Type={On,On,On};
@@ -404,7 +404,7 @@ AnyFolder Drivers = {
   AnyKinEq RToePGroundConstraint ={
     AnyKinLinear ToePos = {
       AnyRefFrame &Ground = Main.Model.EnvironmentModel.GlobalRef.FloorNode;
-      AnyRefNode &Ball = Main.Model.BodyModel.Right.Leg.Seg.Foot.ToeMedialContactNode;
+      AnyRefNode &Ball = Main.Model.BodyModel.Right.Leg.Seg.Foot.ProximalPhalange1.ToeMedialContactNode;
     };
     MeasureOrganizer = {1};  // Only the y coordinate
     Reaction.Type={Off};
@@ -425,7 +425,7 @@ AnyFolder Drivers = {
   AnyKinEq LToeGroundConstraint ={
     AnyKinLinear ToePos = {
       AnyRefNode &Ground = Main.Model.EnvironmentModel.GlobalRef.FloorNode.Left;
-      AnyRefNode &Ball = Main.Model.BodyModel.Left.Leg.Seg.Foot.ToeLateralContactNode;
+      AnyRefNode &Ball = Main.Model.BodyModel.Left.Leg.Seg.Foot.ProximalPhalange5.ToeLateralContactNode;
     };
     MeasureOrganizer = {0,1,2};  // Only the y coordinate
     Reaction.Type={On,On,On};
@@ -435,7 +435,7 @@ AnyFolder Drivers = {
   AnyKinEq LToePGroundConstraint ={
     AnyKinLinear ToePos = {
       AnyRefNode &Ground = Main.Model.EnvironmentModel.GlobalRef.FloorNode;
-      AnyRefNode &Ball = Main.Model.BodyModel.Left.Leg.Seg.Foot.ToeMedialContactNode;
+      AnyRefNode &Ball = Main.Model.BodyModel.Left.Leg.Seg.Foot.ProximalPhalange1.ToeMedialContactNode;
     };
     MeasureOrganizer = {1};  // Only the y coordinate
     Reaction.Type={Off};
@@ -510,7 +510,7 @@ AnyFolder Drivers = {
       SubGroupRegexReplace = "$1";
     };
     AnyFixedRefFrame &StartNode = Main.Model.EnvironmentModel.GlobalRef;
-    AnyRefNode &EndNode = Main.Model.BodyModel.Left.Leg.Seg.Foot.ToeMedialContactNode;
+    AnyRefNode &EndNode = Main.Model.BodyModel.Left.Leg.Seg.Foot.ProximalPhalange1.ToeMedialContactNode;
 
     //The terms push and pull are determined wrt. the coordinate system of the StartNode!
     //StrenghtOfReactionsLin         = {XPush,XPull,YPush,YPull,ZPush,ZPull}
@@ -578,7 +578,7 @@ AnyFolder Drivers = {
       SubGroupRegexReplace = "$1";
     };
     AnyFixedRefFrame &StartNode = Main.Model.EnvironmentModel.GlobalRef;
-    AnyRefNode &EndNode = Main.Model.BodyModel.Right.Leg.Seg.Foot.ToeMedialContactNode;
+    AnyRefNode &EndNode = Main.Model.BodyModel.Right.Leg.Seg.Foot.ProximalPhalange1.ToeMedialContactNode;
 
     //The terms push and pull are determined wrt. the coordinate system of the StartNode!
     //StrenghtOfReactionsLin         = {XPush,XPull,YPush,YPull,ZPush,ZPull}
