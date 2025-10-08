@@ -69,15 +69,15 @@ AnyFolder Segments = {
 //    };
 //  }; // Thorax
   
-  FootRight.Calcaneus = {
+  FootRight = {
     AnyRefNode FootFootRestJntNode = {
-      sRel = .HeelContactNodeLow.sRel;
+      sRel = .HeelContactNode.sRel;
     };
   };
   
-  FootLeft.Calcaneus = {
+  FootLeft = {
     AnyRefNode FootFootRestJntNode = {
-      sRel = .HeelContactNodeLow.sRel;
+      sRel = .HeelContactNode.sRel;
     };
   };
   
