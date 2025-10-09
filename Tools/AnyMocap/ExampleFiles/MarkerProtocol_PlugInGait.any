@@ -231,7 +231,7 @@ OptX=ON,OptY=ON,OptZ=ON
 CreateMarkerDriver RANK (
 MarkerPlacement=Right.Leg.Seg.Shank,
 PlaceMarkerAt = LateralMalleolus,
-OptX=ON,OptY=ON,OptZ=ON,
+OptX=ON,OptY=OFF,OptZ=ON,
 ) = {
   sRelOpt = {-0.00, -0.0, 0.015};
 };
@@ -311,7 +311,7 @@ OptX=ON,OptY=ON,OptZ=ON,
 CreateMarkerDriver LANK (
 MarkerPlacement=Left.Leg.Seg.Shank,
 PlaceMarkerAt = LateralMalleolus,
-OptX=ON,OptY=ON,OptZ=ON,
+OptX=ON,OptY=OFF,OptZ=ON,
 ) = {
   sRelOpt = {-0.0, -0.0, -0.015};
 };
@@ -408,10 +408,10 @@ OptX=ON,OptY=ON,OptZ=ON,
 // Marker on the Right Elbow
 CreateMarkerDriver RELB (
 MarkerPlacement=Right.ShoulderArm.Segments.Humerus,
-PlaceMarkerAt=el,
+PlaceMarkerAt=EpicondylusHumerusLateralis,
 OptX=OFF,OptY=OFF,OptZ=OFF,
 ) = {
-  sRelOpt = 0*{-0.01,-0.325, 0.045};
+  sRelOpt = {0,0, 0.015};
 };
 #endif
 
@@ -420,10 +420,10 @@ OptX=OFF,OptY=OFF,OptZ=OFF,
 // Marker on the Left Elbow
 CreateMarkerDriver LELB (
 MarkerPlacement=Left.ShoulderArm.Segments.Humerus,
-PlaceMarkerAt=AnatomicalFrame,
+PlaceMarkerAt=EpicondylusHumerusLateralis,
 OptX=OFF,OptY=OFF,OptZ=OFF,
 ) = {
-  sRelOpt = {-0.01,-0.325, -0.045};
+  sRelOpt = {0,0, -0.015};
 };
 #endif
 
@@ -457,7 +457,7 @@ MarkerPlacement=Right.ShoulderArm.Segments.Radius,
 PlaceMarkerAt=RadiusStylo,
 OptX=OFF,OptY=OFF,OptZ=OFF,
 ) = {
-  sRelOpt = 0*{-0.21, -0.05, 0.01};
+  sRelOpt = {0.01, 0, 0};
 };
 #endif
 
@@ -467,9 +467,9 @@ CreateMarkerDriver RWRB (
 MarkerPlacement=Right.ShoulderArm.Segments.Radius,
 PlaceMarkerAt=UlnaStylo,
 OptX=ON ,OptY=ON,OptZ=OFF,
-WeightX=0.1,WeightY=0.1,WeightZ=0.1,
+WeightX=1,WeightY=1,WeightZ=1,
 ) = {
-  sRelOpt =0* {-0.22, 0.05, 0.025};
+  sRelOpt = {0.0, 0.0, 0.0};
 };
 #endif
 
@@ -480,7 +480,7 @@ MarkerPlacement=Left.ShoulderArm.Segments.Radius,
 PlaceMarkerAt=RadiusStylo,
 OptX=OFF,OptY=OFF,OptZ=OFF,
 ) = {
-  sRelOpt = 0*{-0.21, 0.05, 0.01};
+  sRelOpt = {0.01, 0.0, 0.0};
 };
 #endif
 
@@ -490,9 +490,9 @@ CreateMarkerDriver LWRB (
 MarkerPlacement=Left.ShoulderArm.Segments.Radius,
 PlaceMarkerAt=UlnaStylo,
 OptX=ON  ,OptY=ON ,OptZ=OFF,
-WeightX=0.1,WeightY=0.1,WeightZ=0.1,
+WeightX=1,WeightY=1,WeightZ=1,
 ) = {
-  sRelOpt = 0*{-0.22, -0.05, 0.025};
+  sRelOpt = {0.0, 0.0, 0.0};
 };
 #endif
 

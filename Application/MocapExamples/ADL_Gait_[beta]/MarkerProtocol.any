@@ -383,7 +383,7 @@ UseC3DWeightResiduals = ON
 #endif
 
 #ifdef _R_FM5
-// Marker on the Right Metatarsel 5
+// Marker on the Right Metatarsal 5
 CreateMarkerDriver R_FM5 (
 MarkerPlacement=Right.Leg.Seg.Foot.Metatarsal5,
 PlaceMarkerAt=AnatomicalFrame,
@@ -515,7 +515,7 @@ UseC3DWeightResiduals = ON
 #endif
 
 #ifdef _L_FM1
-// Marker on the Right Toe
+// Marker on the Left Toe
 CreateMarkerDriver L_FM1 (
 MarkerPlacement=Left.Leg.Seg.Foot.Metatarsal1,
 PlaceMarkerAt=AnatomicalFrame,
@@ -540,7 +540,7 @@ UseC3DWeightResiduals = ON
 #endif
 
 #ifdef _L_FM5
-// Marker on the Left Metatarsel 5
+// Marker on the Left Metatarsal 5
 CreateMarkerDriver L_FM5 (
 MarkerPlacement=Left.Leg.Seg.Foot.Metatarsal5,
 PlaceMarkerAt=AnatomicalFrame,
@@ -1045,7 +1045,7 @@ WeightX=1.0,WeightY=1.0,WeightZ=1.0
 #endif
 
 
-// Marker on the Right Metatarsel 5
+// Marker on the Right Metatarsal 5
 #ifdef _RMT5
 CreateMarkerDriver RMT5 (
 MarkerPlacement=Right.Leg.Seg.Foot.Metatarsal5,
@@ -1122,7 +1122,7 @@ WeightX=1.0,WeightY=1.0,WeightZ=1.0
 #endif
 
 #ifdef _LMT5
-// Marker on the Right Metatarsel 5
+// Marker on the Left Metatarsal 5
 CreateMarkerDriver LMT5 (
 MarkerPlacement=Left.Leg.Seg.Foot.Metatarsal5,
 PlaceMarkerAt = MetatarsalJoint5Node,
