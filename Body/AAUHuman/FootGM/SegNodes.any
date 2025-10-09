@@ -1504,6 +1504,7 @@ Foot = {
     };    
     AnyRefNode ToeMedialContactNode = {
       sRel = .Scale(.Data.ToeMedialContactNode);
+      ARel = .AnatomicalFrame.ARel;
     };
     //***********************
     //Muscles nodes
@@ -1770,6 +1771,7 @@ Foot = {
     };
     AnyRefNode ToeLateralContactNode = {
       sRel = .Scale(.Data.ToeLateralContactNode);
+      ARel = .AnatomicalFrame.ARel;
     };
 
     //***********************
