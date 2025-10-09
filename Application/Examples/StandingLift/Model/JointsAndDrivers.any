@@ -181,8 +181,8 @@ AnyFolder Drivers = {
   //Constrain the feet to be symmetrical about the xy plane
   AnyKinEqSimpleDriver FeetXDriver = {
     AnyKinCoM CoM = {
-      AnySeg &rf = Main.Model.BodyModel.Right.Leg.Seg.Foot;
-      AnySeg &ff = Main.Model.BodyModel.Left.Leg.Seg.Foot;
+      RefFrames = arrcat(ObjSearch("Main.Model.BodyModel.*.Leg.Seg.Foot","AnySeg"),
+                                      ObjSearch("Main.Model.BodyModel.*.Leg.Seg.Foot.*","AnySeg"),);
     };
     MeasureOrganizer = {2};  // Only the z direction
     DriverPos = {0};
