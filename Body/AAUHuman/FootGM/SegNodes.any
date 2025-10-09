@@ -920,6 +920,9 @@ Foot = {
     AnyRefNode Metatarsal1Plantar = {
       sRel = .Scale(.Data.Metatarsal1PlantarNode);
     };
+    AnyRefNode Metatarsal1Contact = {
+      sRel = .Scale(.Data.Metatarsal1ContactNode);
+    };
     AnyRefFrame &MetatarsalJoint1Node = MtPhalJoint;
     AnyRefNode ToeJoint = {
       sRel = .MtPhalJoint.sRel;
@@ -1026,6 +1029,9 @@ Foot = {
     };
     AnyRefNode Metatarsal2Plantar = {
       sRel = .Scale(.Data.Metatarsal2PlantarNode);
+    };
+    AnyRefNode Metatarsal2Contact = {
+      sRel = .Scale(.Data.Metatarsal2ContactNode);
     };
     AnyRefFrame &MetatarsalJoint2Node = MtPhalJoint;
     
@@ -1372,6 +1378,9 @@ Foot = {
     };
     AnyRefNode Metatarsal5Plantar = {
       sRel = .Scale(.Data.Metatarsal5PlantarNode);
+    };
+    AnyRefNode Metatarsal5Contact = {
+      sRel = .Scale(.Data.Metatarsal5ContactNode);
     };
     AnyRefFrame &MetatarsalJoint5Node = MtPhalJoint;
     

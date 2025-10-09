@@ -44,6 +44,9 @@ ModelParameters = {
     AnyVec3 HeelContactNodeMedial = ..Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(.Foot.HeelContactNodeLow + {0.02, 0.0, ..Sign*-0.015});
     AnyVec3 ToeMedialContactNode = ..Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(.Foot.ToeMedialContactNode);
     AnyVec3 ToeLateralContactNode = ..Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(.Foot.ToeLateralContactNode);
+    AnyVec3 Metatarsal1ContactNode = ..Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(.Foot.Metatarsal1ContactNode);
+    AnyVec3 Metatarsal2ContactNode = ..Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(.Foot.Metatarsal2ContactNode);
+    AnyVec3 Metatarsal5ContactNode = ..Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(.Foot.Metatarsal5ContactNode);
     
     AnyFolder Talus = {
       
@@ -242,6 +245,7 @@ ModelParameters = {
       AnyVec3 MTBasePlantarNode = {0.003362707, -0.01443166, -0.007165866}*..TF';
       AnyVec3 MTHeadMedialNode = {0.004, -0.066, -0.031}*..TF';
       AnyVec3 Metatarsal1PlantarNode = .Metatarsal1PlantarNode;
+      AnyVec3 Metatarsal1ContactNode = .Metatarsal1ContactNode;
       //***********************
       //Muscles nodes
       //***********************
@@ -265,6 +269,7 @@ ModelParameters = {
       AnyVec3 MTHeadPlantarNode = {-0.006963247, -0.06338102, 0.009121777}*..TF';
       AnyVec3 MTBasePlantarNode = {0.01356838, -0.005666247, 0.00490277}*..TF';
       AnyVec3 Metatarsal2PlantarNode = .Metatarsal2PlantarNode;
+      AnyVec3 Metatarsal2ContactNode = .Metatarsal2ContactNode;
       //***********************
       //Muscles nodes
       //***********************
@@ -339,6 +344,7 @@ ModelParameters = {
       AnyVec3 MTBasePlantarNode = {-0.007076697, 0.01189963, 0.03306715}*..TF';
       AnyVec3 MTHeadLateralNode = {-0.01012619, -0.03599002, 0.06112629}*..TF';
       AnyVec3 Metatarsal5PlantarNode = .Metatarsal5PlantarNode;
+      AnyVec3 Metatarsal5ContactNode = .Metatarsal5ContactNode;
       //***********************
       //Muscles nodes
       //***********************
