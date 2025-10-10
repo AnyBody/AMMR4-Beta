@@ -17,9 +17,12 @@ ModelParameters = {
   AnyFolder FootGM = {
     
     AnyVar MassStandard = 1.30; // kg Klein Horsman dataset Mass of Foot
-    AnyVar LengthStandard = 0.2353423; //Back of heel (tuber calcanei) to second toe tip.
-    AnyVar WidthStandard = 0.07649351; //MPjnt1 center to MPjnt5 center.
-    AnyVar HeightStandard = 0.07116012; //vertical from base of heel (medial process) to ankle joint.
+    AnyVar LengthStandard = 0.2353423; ///< Back of heel (tuber calcanei) to second toe tip.
+    AnyVar WidthStandard = 0.07649351; ///< MPjnt1 center to MPjnt5 center.
+    AnyVar HeightStandard = 0.07116012; ///< Vertical from base of heel (medial process) to ankle joint.
+    AnyVar LengthStandard_Landmark = vnorm(.FootGM.DistalPhalange1.BigToeNode-.FootGM.Calcaneus.HeelNode); ///< Landmark based definition as in TLEM foot.
+    AnyVar HeightStandard_Landmark = vnorm(.FootGM.Calcaneus.SubTalarJoint-.FootGM.Calcaneus.HeelContactNodeLow); ///< Landmark based definition as in TLEM foot
+    AnyVar WidthStandard_Landmark = vnorm(.FootGM.ProximalPhalange5.ToeLateralContactNode-.FootGM.ProximalPhalange1.ToeMedialContactNode); ///< Landmark based definition as in TLEM foot
     AnyVar Density = 1000;
     AnyVar HeelHeight=0.05;  //measured from floor to ankle joint
     
