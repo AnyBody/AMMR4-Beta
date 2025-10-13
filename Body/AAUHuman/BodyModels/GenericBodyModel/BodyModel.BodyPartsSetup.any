@@ -96,9 +96,9 @@
 // Foot model related logic
 //
 #if (BM_FOOT_MODEL == _FOOT_MODEL_RIGID_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
-#ifndef ANYBODY_GM_FOOT_MODEL_SUPPRESS_NOTICES
+#if BM_LEG_MODEL == _LEG_MODEL_LEG_
 
-  #if BM_LEG_MODEL == _LEG_MODEL_LEG_
+  #ifndef ANYBODY_GM_FOOT_MODEL_SUPPRESS_NOTICES
   AnyInt bm_foot_model_gm_notice1= notice(0, strformat("\n"+
       "------------------------------------------------------------------------------------------------------\n"+
       "    Please note the GM foot model can only be used with the TLEM leg model. \n"+
@@ -107,20 +107,13 @@
       "-------------------------------------------------------------------------------------------------------"));
   #endif
 
-#endif // SUPPRESS_FOOT_MODEL_GM_NOTICES
-  #if BM_LEG_MODEL == _LEG_MODEL_LEG_
-    #undef BM_FOOT_MODEL
-    #define BM_FOOT_MODEL _FOOT_MODEL_DEFAULT_
-  #endif
+  #undef BM_FOOT_MODEL
+  #define BM_FOOT_MODEL _FOOT_MODEL_DEFAULT_
+#endif
 #endif
 
 #if (BM_FOOT_MODEL == _FOOT_MODEL_RIGID_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 #ifndef ANYBODY_GM_FOOT_MODEL_SUPPRESS_NOTICES
-
-  AnyInt bm_foot_model_gm_notice1= notice(0, strformat("\n"+
-      "------------------------------------------------------------------------------------------------------\n"+
-      "    Please note that GM foot model is currently in a beta state. \n"+
-      "-------------------------------------------------------------------------------------------------------"));
 
   #if ((BM_LEG_MUSCLES_LEFT == 0) & (BM_FOOT_MUSCLES_LEFT > 0) & (BM_LEG_LEFT > 0)) | ((BM_LEG_MUSCLES_RIGHT == 0) & (BM_FOOT_MUSCLES_RIGHT > 0) & (BM_LEG_RIGHT > 0))
   AnyInt bm_foot_model_gm_muscle_notice1= notice(0, strformat("\n"+
