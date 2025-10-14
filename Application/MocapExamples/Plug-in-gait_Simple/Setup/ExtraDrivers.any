@@ -16,6 +16,7 @@ AnyFolder ExtraDrivers = {
   // Mannequin drivers are off per default, but can be activated individually
   #define BM_MANNEQUIN_DRIVER_DEFAULT OFF
 
+  #ifdef BM_FOOT_MODEL
   #if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_  
   // RotationPenetrationCombiDriver class template creates soft drivers that drive rotational 
   // and linear measures to ensure that the rotational measure (toe flexion) is normally at zero  
@@ -49,6 +50,7 @@ AnyFolder ExtraDrivers = {
             Settings.DepthLowerLimit = 0.007; // to account for shoe thickness
             Settings.UsePlaneBordersForBoundsCheck = 0; // to check for penetration on an infinite plane defined by the corners
           };
+  #endif
   #endif
 
 
