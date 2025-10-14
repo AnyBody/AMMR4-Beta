@@ -211,7 +211,7 @@ This is planned for the future.
 :::
 
 :::{grid-item-card} C3D driven models with Toe Flexion
-:link: /Applications/Beta/Plug-in-gait_Simple_ToeFlexion
+:link: /Applications/Mocap/Plug-in-gait_Simple_ToeFlexion
 :link-type: doc
 :text-align: center
 
