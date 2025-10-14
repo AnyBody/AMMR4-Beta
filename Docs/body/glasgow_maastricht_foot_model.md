@@ -219,15 +219,6 @@ This is planned for the future.
 ^^^
 :::
 
-:::{grid-item-card} Free posture with GM Foot
-:link: /Applications/Beta/FreePosture_GMFoot
-:link-type: doc
-:text-align: center
-
-![Free posture with GM Foot](/Applications/images/FreePostureFullBodyStatic_GMFoot.webp)
-^^^
-:::
-
 ::::
 
 ## Model structure
