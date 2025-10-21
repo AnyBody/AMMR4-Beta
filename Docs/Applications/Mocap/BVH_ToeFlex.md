@@ -18,12 +18,14 @@ demonstrates toe flexion.
 :::{admonition} **Main file location in AMMR:**
 :class: see-also
 
-  {menuselection}`Application --> Beta --> BVH_Xsens_ToeFlex_GM --> Subjects --> S1 --> S01_Trial01 --> Main.any`
+  {menuselection}`Application --> MocapExamples --> SpecialFeatures --> BVH_Xsens_ToeFlexion.main.any`
 :::
 
 
 In this example, the left and right foot are treated differently for the user to see the different
 options for toe flexion. The left foot uses the measured motion data to drive the bending of
-the toes, while the right foot uses the RotationPenetrationCombiDriver class template to keep the
-toes in the neutral position normally and bend them to prevent the penetration between toes and ground.
+the toes, while the right foot uses the 
+{ref}`RotationPenetrationCombiDriver <Utilities.Kinematic-limits.RotationPenetrationCombiDriver_template.RotationPenetrationCombiDriver>` 
+class template to keep the toes in the neutral position normally and bend them to prevent the 
+penetration between toes and ground.
 

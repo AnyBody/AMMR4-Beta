@@ -193,7 +193,7 @@ This is planned for the future.
 :gutter: 3
 
 :::{grid-item-card} BVH driven model with Toe Flexion
-:link: /Applications/Beta/BVH_ToeFlex
+:link: /Applications/Mocap/BVH_ToeFlex
 :link-type: doc
 :text-align: center
 
