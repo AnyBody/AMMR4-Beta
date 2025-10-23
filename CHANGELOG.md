@@ -219,6 +219,7 @@ You can revert to the TLEM foot model by setting:
 *   Fixed a regression in the `VideoLookAtCamera` VideoTool that prevented
     animated GIFs from being created when the video source was not an `.mp4`
     file. It now supports any video format compatible with the ffmpeg library.
+*   Correct spelling of 'EvaluateJointStrength' in multiple files
 
 ### 🔧 Changed:
 
