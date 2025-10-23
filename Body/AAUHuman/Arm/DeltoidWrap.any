@@ -26,54 +26,55 @@ AnyFolder DeltoidWrappingPosterior = {
     Jii={0.0,0.0,0.0};
     
     r0= ScapulaRef.r0 ;
+//    Axes0= ScapulaRef.Axes0 ;
     
     AnySeg &ScapulaRef = ....Segments.Scapula;
     AnySeg &HumerusRef = ....Segments.Humerus;
     AnySeg &ClaviculaRef = ....Segments.Clavicula;
     
-    AnySurfEllipsoid Ellipsoid_DeltoidWrappingPosterior1 = 
-    {
-      AnyRefNode &Node1 = .HumerusRef.I_DeltoideusPosterior1;
-      AnyRefNode &Node2 = .ScapulaRef.O_DeltoideusPosterior1;
-      AnyRefNode &Node3 = .ScapulaRef.I_LevatorScapulae1;
-      AdjustorDirection = {1,.....Sign*0.3,0};//{1,.....Sign*1,0};
-      AdjustorXRotation = 3*pi/2;
-      DistanceRatio = 1.2;//1.5;
-      //ARel = RotMatrix * RotMat(pi/2 - .....Sign * pi/2,x) * RotMat(25*pi/180,x);
-      #include "CalEllipsMembers_3nodes.any"
-    };    
-
-    AnySurfEllipsoid Ellipsoid_DeltoidWrappingPosterior2 = 
-    {
-      AnyRefNode &Node1 = .HumerusRef.I_DeltoideusPosterior2;
-      AnyRefNode &Node2 = .ScapulaRef.O_DeltoideusPosterior2;
-      AnyRefNode &Node3 = .ScapulaRef.I_LevatorScapulae1;
-      //AdjustorDirection = {1,.....Sign*0.8,0};
-      AdjustorXRotation = 3*pi/2;
-      DistanceRatio = 1.2;//1.5;
-      //ARel = RotMatrix * RotMat(pi/2 - .....Sign * pi/2,x) * RotMat(20*pi/180,x);
-      #include "CalEllipsMembers_3nodes.any"
-    };
-    AnySurfEllipsoid Ellipsoid_DeltoidWrappingPosterior3 = 
-    {
-      AnyRefNode &Node1 = .HumerusRef.I_DeltoideusPosterior3;
-      AnyRefNode &Node2 = .ScapulaRef.O_DeltoideusPosterior3;
-      AnyRefNode &Node3 = .ScapulaRef.O_DeltoideusLateral1;
-      AdjustorDirection = {1,.....Sign*0.6,0};
-      DistanceRatio = 1.2;//1.5;
-      //ARel = RotMatrix * RotMat(pi/2 - .....Sign * pi/2,x) * RotMat(10*pi/180,x);
-      #include "CalEllipsMembers_3nodes.any"
-    };
-    AnySurfEllipsoid Ellipsoid_DeltoidWrappingPosterior4 = 
-    {
-      AnyRefNode &Node1 = .HumerusRef.I_DeltoideusPosterior4;
-      AnyRefNode &Node2 = .ScapulaRef.O_DeltoideusPosterior4;
-      AnyRefNode &Node3 = .ScapulaRef.O_DeltoideusLateral1;
-      AdjustorDirection = {0.9,.....Sign*0.5,0};
-      DistanceRatio = 1.1;
-//      ARel = RotMatrix * RotMat(pi/2 - .....Sign * pi/2,x) * RotMat(20*pi/180,x);
-      #include "CalEllipsMembers_3nodes.any"
-    };
+//    AnySurfEllipsoid Ellipsoid_DeltoidWrappingPosterior1 = 
+//    {
+//      AnyRefNode &Node1 = .HumerusRef.I_DeltoideusPosterior1;
+//      AnyRefNode &Node2 = .ScapulaRef.O_DeltoideusPosterior1;
+//      AnyRefNode &Node3 = .ScapulaRef.I_LevatorScapulae1;
+//      AdjustorDirection = {1,.....Sign*0.3,0};//{1,.....Sign*1,0};
+//      AdjustorXRotation = 3*pi/2;
+//      DistanceRatio = 1.2;//1.5;
+//      //ARel = RotMatrix * RotMat(pi/2 - .....Sign * pi/2,x) * RotMat(25*pi/180,x);
+//      #include "CalEllipsMembers_3nodes.any"
+//    };    
+//
+//    AnySurfEllipsoid Ellipsoid_DeltoidWrappingPosterior2 = 
+//    {
+//      AnyRefNode &Node1 = .HumerusRef.I_DeltoideusPosterior2;
+//      AnyRefNode &Node2 = .ScapulaRef.O_DeltoideusPosterior2;
+//      AnyRefNode &Node3 = .ScapulaRef.I_LevatorScapulae1;
+//      //AdjustorDirection = {1,.....Sign*0.8,0};
+//      AdjustorXRotation = 3*pi/2;
+//      DistanceRatio = 1.2;//1.5;
+//      //ARel = RotMatrix * RotMat(pi/2 - .....Sign * pi/2,x) * RotMat(20*pi/180,x);
+//      #include "CalEllipsMembers_3nodes.any"
+//    };
+//    AnySurfEllipsoid Ellipsoid_DeltoidWrappingPosterior3 = 
+//    {
+//      AnyRefNode &Node1 = .HumerusRef.I_DeltoideusPosterior3;
+//      AnyRefNode &Node2 = .ScapulaRef.O_DeltoideusPosterior3;
+//      AnyRefNode &Node3 = .ScapulaRef.O_DeltoideusLateral1;
+//      AdjustorDirection = {1,.....Sign*0.6,0};
+//      DistanceRatio = 1.2;//1.5;
+//      //ARel = RotMatrix * RotMat(pi/2 - .....Sign * pi/2,x) * RotMat(10*pi/180,x);
+//      #include "CalEllipsMembers_3nodes.any"
+//    };
+//    AnySurfEllipsoid Ellipsoid_DeltoidWrappingPosterior4 = 
+//    {
+//      AnyRefNode &Node1 = .HumerusRef.I_DeltoideusPosterior4;
+//      AnyRefNode &Node2 = .ScapulaRef.O_DeltoideusPosterior4;
+//      AnyRefNode &Node3 = .ScapulaRef.O_DeltoideusLateral1;
+//      AdjustorDirection = {0.9,.....Sign*0.5,0};
+//      DistanceRatio = 1.1;
+////      ARel = RotMatrix * RotMat(pi/2 - .....Sign * pi/2,x) * RotMat(20*pi/180,x);
+//      #include "CalEllipsMembers_3nodes.any"
+//    };
     
     
 //  // Definition of cylinder used for wrapping of Deltoid scapula muscles
@@ -96,7 +97,72 @@ AnyFolder DeltoidWrappingPosterior = {
 //    };
 //
 //  };
-    
+
+//    AnyRefNode p1 = {sRel = .Deltoid_Cyl.P1;};
+//    AnyRefNode p2 = {sRel = .Deltoid_Cyl.P2;};
+//    AnyRefNode p3 = {sRel = .Deltoid_Cyl.P3;};
+  // Definition of cylinder used for wrapping of Deltoid scapula muscles
+  // the cylinder starts in gh and points towards ts.
+//  AnyRefNode Deltoid_Cyl={
+//
+//    AnyVec3 P1 = (.ScapulaRef.Axes0*(.ScapulaRef.Scale(.ScapulaRef.Data.Deltoid_Cyl_P1_pos*.ScapulaRef.Mirror))')';
+//    AnyVec3 P2 = .gh_joint.sRel;//(.ScapulaRef.Axes0*(.ScapulaRef.Scale(.ScapulaRef.Data.Deltoid_Cyl_P2_pos*.ScapulaRef.Mirror))')';
+//    AnyVec3 P3 = (.ScapulaRef.Axes0*(.ScapulaRef.Scale(.ScapulaRef.Data.Deltoid_Cyl_P3_pos*.ScapulaRef.Mirror))')';
+//
+//    sRel= P1;
+//    ARel= RotMat(sRel,P3,P2)*RotMat(-pi/2,x)*RotMat(-pi/2,z);
+//    
+//    AnySurfCylinder cyl = {
+//      Radius= vnorm(.sRel-.P3);
+//      Length= vnorm(.sRel-.P2)*2;
+//      CapRatio=1.0;
+//      //AnyDrawParamSurf drw={RGB={0,0,1};};
+//      CenterOrigin = On;
+//    };
+//
+//  };
+AnyRefNode AlignmentRefNode = {
+  ARel = .ScapulaRef.Axes0;
+
+  AnyRefNode Deltoid_Scapula_Cyl={
+
+    AnyVec3 P1 = ..ScapulaRef.Scale(..ScapulaRef.Data.deltoid_cyl_P1_pos*..ScapulaRef.Mirror);
+    AnyVec3 P2 = ..ScapulaRef.Scale(..ScapulaRef.Data.gh_pos*..ScapulaRef.Mirror);
+    AnyVec3 P3 = ..ScapulaRef.GHReactionCenterNode.sRel;
+
+    sRel= P1;
+    ARel=RotMat(sRel,P2,P3)*RotMat(pi/2,y);
+
+    AnySurfCylinder cyl = {
+      Radius= vnorm(.P2-.P3)*1.3;
+      Length= vnorm(.sRel-.P2)*2;
+      CapRatio=1;
+      //AnyDrawParamSurf drw={RGB={0,0,1};};
+      CenterOrigin = On;
+    };
+
+  };
+  
+    AnyRefNode Deltoid_Scapula_Cyl_Extra={
+
+    AnyVec3 P1 = ..ScapulaRef.Scale(..ScapulaRef.Data.deltoid_cyl_P1_pos*..ScapulaRef.Mirror);
+    AnyVec3 P1_1 = ..ScapulaRef.Scale((..ScapulaRef.Data.deltoid_cyl_P1_pos+{-0.04,0.04,0})*..ScapulaRef.Mirror);
+    AnyVec3 P2 = ..ScapulaRef.Scale(..ScapulaRef.Data.gh_pos*..ScapulaRef.Mirror);
+    AnyVec3 P3 = ..ScapulaRef.GHReactionCenterNode.sRel;
+
+    sRel= P1_1;
+    ARel=RotMat(P1,P2,P3)*RotMat(pi/2,y);
+
+    AnySurfCylinder cyl = {
+      Radius= vnorm(.P2-.P3)*1.3;
+      Length= vnorm(.sRel-.P2)*2;
+      CapRatio=1;
+      CenterOrigin = On;
+    };
+
+  };
+
+};
     AnyRefNode LocalReferenceFrame_ConstraintNode = {sRel= {0,0,0}; ARel= .ScapulaRef.Axes0;};
     AnyRefNode O_DeltoideusPosterior1 = {sRel= .ScapulaRef.r0 -.r0 + (.ScapulaRef.Axes0 * .ScapulaRef.O_DeltoideusPosterior1.sRel')';};
     AnyRefNode O_DeltoideusPosterior3 = {sRel= .ScapulaRef.r0 -.r0 + (.ScapulaRef.Axes0 * .ScapulaRef.O_DeltoideusPosterior3.sRel')';};
@@ -107,6 +173,7 @@ AnyFolder DeltoidWrappingPosterior = {
     AnyRefNode HumerusMedial = {sRel= .ScapulaRef.r0 -.r0 + (.ScapulaRef.Axes0 * .ScapulaRef.GHReactionCenterNodeRotated.sRel')'+ 
       (.ScapulaRef.Axes0 *.ScapulaRef.GHReactionCenterNodeRotated.ARel* .ScapulaRef.GHReactionCenterNodeRotated.CavityEdgeNode8.sRel')';};
     AnyRefNode I_DeltoideusPosterior3 = {sRel= .HumerusRef.r0 -.r0 + (.HumerusRef.Axes0 * .HumerusRef.I_DeltoideusPosterior3.sRel')';};
+    AnyRefNode deltoid_cyl_P1 = {sRel= .ScapulaRef.r0 -.r0 + (.ScapulaRef.Axes0 * .ScapulaRef.deltoid_cyl_P1.sRel')';};    
   };
   
   AnyKinLinear m_O_DeltoideusPosterior1 = {
@@ -114,11 +181,11 @@ AnyFolder DeltoidWrappingPosterior = {
     AnyRefNode &ref2 = ....Segments.Scapula.O_DeltoideusPosterior1; 
     Ref=0;  
   };
-  AnyKinLinear m_O_DeltoideusPosterior3 = {
-    AnyRefNode &ref1 = .WrappingSegment.O_DeltoideusPosterior3; 
-    AnyRefNode &ref2 = ....Segments.Scapula.O_DeltoideusPosterior3; 
-    Ref=0;     
-  };
+//  AnyKinLinear m_O_DeltoideusPosterior3 = {
+//    AnyRefNode &ref1 = .WrappingSegment.O_DeltoideusPosterior3; 
+//    AnyRefNode &ref2 = ....Segments.Scapula.O_DeltoideusPosterior3; 
+//    Ref=0;     
+//  };
   AnyKinLinear m_O_DeltoideusPosterior4 = {
     AnyRefNode &ref1 = .WrappingSegment.O_DeltoideusPosterior4; 
     AnyRefNode &ref2 = ....Segments.Scapula.O_DeltoideusPosterior4; 
@@ -129,24 +196,29 @@ AnyFolder DeltoidWrappingPosterior = {
     AnyRefNode &ref2= ....Segments.Humerus.gh;
     Ref=0;      
   };
-  AnyKinLinear HumerusLateral = {
-    AnyRefNode &ref1 = .WrappingSegment.HumerusLateral; 
-    AnyRefNode &ref2=....Segments.Humerus.TeresMinorhumurus_wrap;
-    Ref=0;    
-  };
-  AnyKinLinear HumerusAnterior = {
-    AnyRefNode &ref1 = .WrappingSegment.HumerusAnterior; 
-    AnyRefNode &ref2=....Segments.Humerus.I_Subscapularis3;
-    Ref=0;
-  };
-  AnyKinLinear HumerusMedial = {
-    AnyRefNode &ref1 = .WrappingSegment.HumerusMedial; 
-    AnyRefNode &ref2= ....Segments.Scapula.GHReactionCenterNodeRotated.CavityEdgeNode8;
-    Ref=0;
-  };
-  AnyKinLinear m_I_DeltoideusPosterior3 = {
-    AnyRefNode &ref1 = .WrappingSegment.I_DeltoideusPosterior3; 
-    AnyRefNode &ref2= ....Segments.Humerus.I_DeltoideusPosterior3;
+//  AnyKinLinear HumerusLateral = {
+//    AnyRefNode &ref1 = .WrappingSegment.HumerusLateral; 
+//    AnyRefNode &ref2=....Segments.Humerus.TeresMinorhumurus_wrap;
+//    Ref=0;    
+//  };
+//  AnyKinLinear HumerusAnterior = {
+//    AnyRefNode &ref1 = .WrappingSegment.HumerusAnterior; 
+//    AnyRefNode &ref2=....Segments.Humerus.I_Subscapularis3;
+//    Ref=0;
+//  };
+//  AnyKinLinear HumerusMedial = {
+//    AnyRefNode &ref1 = .WrappingSegment.HumerusMedial; 
+//    AnyRefNode &ref2= ....Segments.Scapula.GHReactionCenterNodeRotated.CavityEdgeNode8;
+//    Ref=0;
+//  };
+//  AnyKinLinear m_I_DeltoideusPosterior3 = {
+//    AnyRefNode &ref1 = .WrappingSegment.I_DeltoideusPosterior3; 
+//    AnyRefNode &ref2= ....Segments.Humerus.I_DeltoideusPosterior3;
+//    Ref=0;
+//  };
+  AnyKinLinear m_deltoid_cyl_P1 = {
+    AnyRefNode &ref1 = .WrappingSegment.deltoid_cyl_P1; 
+    AnyRefNode &ref2= ....Segments.Scapula.deltoid_cyl_P1;
     Ref=0;
   };
   
@@ -159,12 +231,13 @@ AnyFolder DeltoidWrappingPosterior = {
         &..m_O_DeltoideusPosterior1,
         &..m_O_DeltoideusPosterior4,
         &..m_gh_joint,
-        &..HumerusLateral,
-        &..HumerusAnterior,
-        &..HumerusMedial,
-        &..m_I_DeltoideusPosterior3
+        &..m_deltoid_cyl_P1,
+//        &..HumerusAnterior,
+//        &..HumerusMedial,
+//        &..m_I_DeltoideusPosterior3
       };
-      WeightCoefficients = {4,6,20,1,1,1,0.5};
+//      WeightCoefficients = {4,6,20,1,1,1,0.5};
+      WeightCoefficients = {0.5,0.5,20,20};
     };
     Reaction.Type ??= repmat(nDim, Off); 
   };
@@ -213,7 +286,7 @@ AnyFolder DeltoidWrappingLateral = {
       AnyRefNode &Node1 = .HumerusRef.I_DeltoideusLateral1;
       AnyRefNode &Node2 = .ScapulaRef.O_DeltoideusLateral1;
       AnyRefNode &Node3 = .ScapulaRef.O_DeltoideusLateral2;
-      AdjustorDirection = {1,.....Sign*0.3,0};
+//      AdjustorDirection = {1,.....Sign*0.3,0};
       #include "CalEllipsMembers_3nodes.any"
     };
     AnySurfEllipsoid Ellipsoid_DeltoidWrappingLateral2 = 
@@ -221,7 +294,7 @@ AnyFolder DeltoidWrappingLateral = {
       AnyRefNode &Node1 = .HumerusRef.I_DeltoideusLateral2;
       AnyRefNode &Node2 = .ScapulaRef.O_DeltoideusLateral2;
       AnyRefNode &Node3 = .ScapulaRef.O_DeltoideusLateral3;
-      AdjustorDirection = {1,.....Sign*0.3,0};
+//      AdjustorDirection = {1,.....Sign*0.3,0};
       #include "CalEllipsMembers_3nodes.any"
     };
     AnySurfEllipsoid Ellipsoid_DeltoidWrappingLateral3 = 
@@ -229,7 +302,7 @@ AnyFolder DeltoidWrappingLateral = {
       AnyRefNode &Node1 = .HumerusRef.I_DeltoideusLateral3;
       AnyRefNode &Node2 = .ScapulaRef.O_DeltoideusLateral3;
       AnyRefNode &Node3 = .ScapulaRef.O_DeltoideusLateral4;
-      AdjustorDirection = {1,.....Sign*0.25,0};
+//      AdjustorDirection = {1,.....Sign*0.25,0};
       #include "CalEllipsMembers_3nodes.any"
     };
     AnySurfEllipsoid Ellipsoid_DeltoidWrappingLateral4 = 
@@ -237,33 +310,33 @@ AnyFolder DeltoidWrappingLateral = {
       AnyRefNode &Node1 = .HumerusRef.I_DeltoideusLateral4;
       AnyRefNode &Node2 = .ScapulaRef.O_DeltoideusLateral4;
       AnyRefNode &Node3 = .ScapulaRef.gh_rotated1;
-      AdjustorDirection = {1,.....Sign*0.25,0};
-//      AdjustorDirection = {0.8,.....Sign*0.3,0};
+//      AdjustorDirection = {1,.....Sign*0.25,0};
+////      AdjustorDirection = {0.8,.....Sign*0.3,0};
       AdjustorXRotation = pi/2 - .....Sign * pi/2; // This ellipsoid is defined by the gh_rotated1 node as its third node.
       #include "CalEllipsMembers_3nodes.any"
     };
     
     
-  // Definition of cylinder used for wrapping of Deltoid scapula muscles
-  // the cylinder starts in gh and points towards ts.
-  AnyRefNode deltoid_cyl={
-
-    AnyVec3 P1 = (.ScapulaRef.Axes0*(.ScapulaRef.Scale(.ScapulaRef.Data.deltoid_cyl_P1_pos*.ScapulaRef.Mirror))')';
-    AnyVec3 P2 = (.ScapulaRef.Axes0*(.ScapulaRef.Scale(.ScapulaRef.Data.deltoid_cyl_P2_pos*.ScapulaRef.Mirror))')';
-    AnyVec3 P3 = (.ScapulaRef.Axes0*(.ScapulaRef.Scale(.ScapulaRef.Data.deltoid_cyl_P3_pos*.ScapulaRef.Mirror))')';
-
-    sRel= P1;
-    ARel= RotMat(sRel,P3,P2)*RotMat(-pi/2,x)*RotMat(-pi/2,z);
-    
-    AnySurfCylinder cyl = {
-      Radius= vnorm(.sRel-.P3);
-      Length= vnorm(.sRel-.P2)*2;
-      CapRatio=1.0;
-      //AnyDrawParamSurf drw={RGB={0,0,1};};
-      CenterOrigin = On;
-    };
-
-  };
+//  // Definition of cylinder used for wrapping of Deltoid scapula muscles
+//  // the cylinder starts in gh and points towards ts.
+//  AnyRefNode deltoid_cyl={
+//
+//    AnyVec3 P1 = (.ScapulaRef.Axes0*(.ScapulaRef.Scale(.ScapulaRef.Data.deltoid_cyl_P1_pos*.ScapulaRef.Mirror))')';
+//    AnyVec3 P2 = (.ScapulaRef.Axes0*(.ScapulaRef.Scale(.ScapulaRef.Data.deltoid_cyl_P2_pos*.ScapulaRef.Mirror))')';
+//    AnyVec3 P3 = (.ScapulaRef.Axes0*(.ScapulaRef.Scale(.ScapulaRef.Data.deltoid_cyl_P3_pos*.ScapulaRef.Mirror))')';
+//
+//    sRel= P1;
+//    ARel= RotMat(sRel,P3,P2)*RotMat(-pi/2,x)*RotMat(-pi/2,z);
+//    
+//    AnySurfCylinder cyl = {
+//      Radius= vnorm(.sRel-.P3);
+//      Length= vnorm(.sRel-.P2)*2;
+//      CapRatio=1.0;
+//      //AnyDrawParamSurf drw={RGB={0,0,1};};
+//      CenterOrigin = On;
+//    };
+//
+//  };
 
 Ellipsoid_DeltoidWrappingLateral3 = {
       AnySurfCylinder Extra_cyl= {
@@ -284,6 +357,101 @@ Ellipsoid_DeltoidWrappingLateral3 = {
       };
     };
     
+AnyRefNode AlignmentRefNode = {
+  ARel = .ScapulaRef.Axes0;
+    AnyRefNode Deltoid_Scapula_Cyl_Stop3_Ant={
+
+      AnyVec3 P1 = ..ScapulaRef.gh.sRel;
+      AnyVec3 P2 = ..ScapulaRef.O_DeltoideusLateral3.sRel;
+      AnyVec3 P3 = ..ScapulaRef.GHReactionCenterNode.sRel;
+      
+      sRel= P1;
+      ARel= RotMat(sRel,P2,P3)*RotMat(pi/2,y);
+      
+      AnySurfCylinder cyl = {
+      Radius= .....DeltoidWrappingPosterior.WrappingSegment.AlignmentRefNode.Deltoid_Scapula_Cyl.cyl.Radius*0.98;
+        Length= vnorm(.sRel-.P2)*5;
+        CapRatio=1;
+        //AnyDrawParamSurf drw={RGB={0,0,1};};
+        //      CenterOrigin = On;
+      };
+      
+    };
+    
+    
+      AnyRefNode Deltoid_Scapula_Cyl_Stop1={
+
+    AnyVec3 P1 = ..ScapulaRef.Scale(..ScapulaRef.Data.gh_pos*..ScapulaRef.Mirror); //P2=.ai.sRel + VZ*Length;
+    AnyVec3 P2 = ..ScapulaRef.O_DeltoideusLateral1.sRel; //P2=.ai.sRel + VZ*Length;
+    AnyVec3 P3 = ..ScapulaRef.GHReactionCenterNode.sRel;//.Scale(.Data.deltoid_cyl_P3_pos*.Mirror); //P3=.ai.sRel - VX*Radius;
+
+    sRel= P1;
+    ARel=RotMat(sRel,P2,P3)*RotMat(pi/2,y);
+
+    AnySurfCylinder cyl = {
+      Radius= .....DeltoidWrappingPosterior.WrappingSegment.AlignmentRefNode.Deltoid_Scapula_Cyl.cyl.Radius*0.98;
+      Length= vnorm(.sRel-.P2)*5;
+      CapRatio=1;
+      //AnyDrawParamSurf drw={RGB={0,0,1};};
+//      CenterOrigin = On;
+    };
+
+  };
+  AnyRefNode Deltoid_Scapula_Cyl_Stop2={
+
+    AnyVec3 P1 = ..ScapulaRef.Scale(..ScapulaRef.Data.gh_pos*..ScapulaRef.Mirror); //P2=.ai.sRel + VZ*Length;
+    AnyVec3 P2 = ..ScapulaRef.O_DeltoideusLateral2.sRel; //P2=.ai.sRel + VZ*Length;
+    AnyVec3 P3 = ..ScapulaRef.GHReactionCenterNode.sRel;//.Scale(.Data.deltoid_cyl_P3_pos*.Mirror); //P3=.ai.sRel - VX*Radius;
+
+    sRel= P1;
+    ARel=RotMat(sRel,P2,P3)*RotMat(pi/2,y);
+
+    AnySurfCylinder cyl = {
+      Radius= .....DeltoidWrappingPosterior.WrappingSegment.AlignmentRefNode.Deltoid_Scapula_Cyl.cyl.Radius*0.98;
+      Length= vnorm(.sRel-.P2)*5;
+      CapRatio=1;
+      //AnyDrawParamSurf drw={RGB={0,0,1};};
+//      CenterOrigin = On;
+    };
+
+  };
+  AnyRefNode Deltoid_Scapula_Cyl_Stop3={
+
+    AnyVec3 P1 = ..ScapulaRef.Scale(..ScapulaRef.Data.gh_pos*..ScapulaRef.Mirror); //P2=.ai.sRel + VZ*Length;
+    AnyVec3 P2 = ..ScapulaRef.O_DeltoideusLateral3.sRel; //P2=.ai.sRel + VZ*Length;
+    AnyVec3 P3 = ..ScapulaRef.GHReactionCenterNode.sRel;//.Scale(.Data.deltoid_cyl_P3_pos*.Mirror); //P3=.ai.sRel - VX*Radius;
+
+    sRel= P1;
+    ARel=RotMat(sRel,P2,P3)*RotMat(pi/2,y);
+
+    AnySurfCylinder cyl = {
+      Radius= .....DeltoidWrappingPosterior.WrappingSegment.AlignmentRefNode.Deltoid_Scapula_Cyl.cyl.Radius*0.98;
+      Length= vnorm(.sRel-.P2)*5;
+      CapRatio=1;
+      //AnyDrawParamSurf drw={RGB={0,0,1};};
+//      CenterOrigin = On;
+    };
+
+  };
+  AnyRefNode Deltoid_Scapula_Cyl_Stop4={
+
+    AnyVec3 P1 = ..ScapulaRef.Scale(..ScapulaRef.Data.gh_pos*..ScapulaRef.Mirror); //P2=.ai.sRel + VZ*Length;
+    AnyVec3 P2 = ..ScapulaRef.O_DeltoideusLateral4.sRel; //P2=.ai.sRel + VZ*Length;
+    AnyVec3 P3 = ..ScapulaRef.GHReactionCenterNode.sRel;//.Scale(.Data.deltoid_cyl_P3_pos*.Mirror); //P3=.ai.sRel - VX*Radius;
+
+    sRel= P1;
+    ARel=RotMat(sRel,P2,P3)*RotMat(pi/2,y);
+
+    AnySurfCylinder cyl = {
+      Radius= .....DeltoidWrappingPosterior.WrappingSegment.AlignmentRefNode.Deltoid_Scapula_Cyl.cyl.Radius*0.98;
+      Length= vnorm(.sRel-.P2)*5;
+      CapRatio=1;
+      //AnyDrawParamSurf drw={RGB={0,0,1};};
+//      CenterOrigin = On;
+    };
+
+  };
+};
     AnyRefNode LocalReferenceFrame_ConstraintNode = {sRel= {0,0,0}; ARel= .ScapulaRef.Axes0;};
     AnyRefNode DeltoideusPosteriorWrappingRotNode = {sRel= {0,0,0};
       ARel = .ScapulaRef.Axes0* .ScapulaRef.gh_rotated1.ARel;};
@@ -296,7 +464,8 @@ Ellipsoid_DeltoidWrappingLateral3 = {
       (.ScapulaRef.Axes0 *.ScapulaRef.GHReactionCenterNodeRotated.ARel* .ScapulaRef.GHReactionCenterNodeRotated.CavityEdgeNode8.sRel')';};
     AnyRefNode O_DeltoideusLateral1 = {sRel= .ScapulaRef.r0 -.r0 + (.ScapulaRef.Axes0 * .ScapulaRef.O_DeltoideusLateral1.sRel')';};
     AnyRefNode O_DeltoideusLateral4 = {sRel= .ScapulaRef.r0 -.r0 + (.ScapulaRef.Axes0 * .ScapulaRef.O_DeltoideusLateral4.sRel')';};
-    
+    AnyRefNode I_DeltoideusPosterior3 = {sRel= .HumerusRef.r0 -.r0 + (.HumerusRef.Axes0 * .HumerusRef.I_DeltoideusPosterior3.sRel')';};
+   
   };
   
   AnyKinLinear m_O_DeltoideusPosterior1 = {
@@ -342,7 +511,12 @@ Ellipsoid_DeltoidWrappingLateral3 = {
     AnyRefNode &ref2 = ....Segments.Scapula.O_DeltoideusLateral4; 
     Ref=0;   
   };
-  
+    AnyKinLinear m_I_DeltoideusPosterior3 = {
+    AnyRefNode &ref1 = .WrappingSegment.I_DeltoideusPosterior3; 
+    AnyRefNode &ref2= ....Segments.Humerus.I_DeltoideusPosterior3;
+    Ref=0;
+  };
+
   
   AnyKinEq Constraint = {
     RigidBodyAverageMeasure CombinationMeasure(ROTATIONAL=On, LINEAR=On,POWER =1) = { 
@@ -357,6 +531,7 @@ Ellipsoid_DeltoidWrappingLateral3 = {
         &..HumerusLateral,
         &..HumerusAnterior,
         &..HumerusMedial,
+//        &..m_I_DeltoideusPosterior3,
       };
       WeightCoefficients = {1,1,8,8,2,2,2,2};
     };
@@ -398,6 +573,7 @@ AnyFolder DeltoidWrappingAnterior = {
     Jii={0.0,0.0,0.0};
     
     r0= ScapulaRef.r0;
+    //Axes0 = ScapulaRef.Axes0;
     
     AnySeg &ScapulaRef = ....Segments.Scapula;
     AnySeg &HumerusRef = ....Segments.Humerus;
@@ -405,71 +581,213 @@ AnyFolder DeltoidWrappingAnterior = {
     
     AnyRefNode LocalReferenceFrame_ConstraintNode = {sRel= {0,0,0}; ARel= .ScapulaRef.Axes0;};
     AnyRefNode gh_joint = {sRel= .ScapulaRef.r0 -.r0 + (.ScapulaRef.Axes0 * .ScapulaRef.gh_rotated1.sRel')';};
+    AnyRefNode clav_AnatomicalFrame = {sRel= .ClaviculaRef.r0 -.r0 + (.ClaviculaRef.Axes0 * .ClaviculaRef.AnatomicalFrame.sRel')';};//.ClaviculaRef.Scale({-0.10452, 0.00285061, -0.139346});};
+    AnyRefNode O_DeltoideusAnterior1 = {sRel= .ClaviculaRef.r0 -.r0 + (.ClaviculaRef.Axes0 * .ClaviculaRef.O_DeltoideusAnterior1.sRel')';};
+    AnyRefNode O_DeltoideusAnterior4 = {sRel= .ClaviculaRef.r0 -.r0 + (.ClaviculaRef.Axes0 * .ClaviculaRef.O_DeltoideusAnterior4.sRel')';};
     
-    AnySurfEllipsoid Ellipsoid_DeltoidWrappingAnterior1 = 
-    {
-      AnyRefNode &Node1 = .HumerusRef.I_DeltoideusAnterior1;
-      AnyRefNode &Node2 = .ClaviculaRef.O_DeltoideusAnterior1;
-      AnyRefNode &Node3 = .ScapulaRef.O_DeltoideusLateral3;
-      pos_node2 =  .ClaviculaRef.r0 + (.ClaviculaRef.Axes0 * Node2.sRel')'-.r0;
-      axes_node2 = .ClaviculaRef.Axes0 * Node2.ARel;
+//    AnySurfEllipsoid Ellipsoid_DeltoidWrappingAnterior1 = 
+//    {
+//      AnyRefNode &Node1 = .HumerusRef.I_DeltoideusAnterior1;
+//      AnyRefNode &Node2 = .ClaviculaRef.O_DeltoideusAnterior1;
+//      AnyRefNode &Node3 = .ScapulaRef.O_DeltoideusLateral3;
+//      pos_node2 =  .ClaviculaRef.r0 + (.ClaviculaRef.Axes0 * Node2.sRel')'-.r0;
+//      axes_node2 = .ClaviculaRef.Axes0 * Node2.ARel;
+////      AdjustorDirection = {1,.....Sign*0.2,0};
+//      AdjustorXRotation = 3*pi/2;
+////      DistanceRatio = 1.25;
+//    #include "CalEllipsMembers_3nodes.any"
+//    };
+//    AnySurfEllipsoid Ellipsoid_DeltoidWrappingAnterior2 = 
+//    {
+//      AnyRefNode &Node1 = .HumerusRef.I_DeltoideusAnterior2;
+//      AnyRefNode &Node2 = .ClaviculaRef.O_DeltoideusAnterior2;
+//      AnyRefNode &Node3 = .ScapulaRef.O_DeltoideusLateral3; 
+//      pos_node2 =  .ClaviculaRef.r0 + (.ClaviculaRef.Axes0 * Node2.sRel')'-.r0;
+//      axes_node2 = .ClaviculaRef.Axes0 * Node2.ARel;
 //      AdjustorDirection = {1,.....Sign*0.2,0};
-      AdjustorXRotation = 3*pi/2;
-      DistanceRatio = 1.25;
-    #include "CalEllipsMembers_3nodes.any"
-    };
-    AnySurfEllipsoid Ellipsoid_DeltoidWrappingAnterior2 = 
-    {
-      AnyRefNode &Node1 = .HumerusRef.I_DeltoideusAnterior2;
-      AnyRefNode &Node2 = .ClaviculaRef.O_DeltoideusAnterior2;
-      AnyRefNode &Node3 = .ScapulaRef.O_DeltoideusLateral3; 
-      pos_node2 =  .ClaviculaRef.r0 + (.ClaviculaRef.Axes0 * Node2.sRel')'-.r0;
-      axes_node2 = .ClaviculaRef.Axes0 * Node2.ARel;
-      AdjustorDirection = {1,.....Sign*0.2,0};
-      AdjustorXRotation = 3*pi/2;
-      DistanceRatio = 1.2;
-      #include "CalEllipsMembers_3nodes.any"
-    };
-    AnySurfEllipsoid Ellipsoid_DeltoidWrappingAnterior3 = 
-    {
-      AnyRefNode &Node1 = .HumerusRef.I_DeltoideusAnterior3;
-      AnyRefNode &Node2 = .ClaviculaRef.O_DeltoideusAnterior3;
-      AnyRefNode &Node3 = .ScapulaRef.O_DeltoideusLateral3; 
-      pos_node2 =  .ClaviculaRef.r0 + (.ClaviculaRef.Axes0 * Node2.sRel')'-.r0;
-      axes_node2 = .ClaviculaRef.Axes0 * Node2.ARel;
-      AdjustorDirection = {1,.....Sign*0.2,0};
-      AdjustorXRotation = 3*pi/2;
-      DistanceRatio = 1.2;
-      #include "CalEllipsMembers_3nodes.any"
-    };
-    AnySurfEllipsoid Ellipsoid_DeltoidWrappingAnterior4 = 
-    {
-      AnyRefNode &Node1 = .HumerusRef.I_DeltoideusAnterior4;
-      AnyRefNode &Node2 = .ClaviculaRef.O_DeltoideusAnterior4;
-      AnyRefNode &Node3 = .ScapulaRef.O_DeltoideusLateral4;
-      pos_node2 =  .ClaviculaRef.r0 + (.ClaviculaRef.Axes0 * Node2.sRel')'-.r0;
-      axes_node2 = .ClaviculaRef.Axes0 * Node2.ARel;
-      AdjustorDirection = {1,.....Sign*0.2,0};
-      AdjustorXRotation = 3*pi/2;
-      DistanceRatio = 1.2;
-      #include "CalEllipsMembers_3nodes.any"
+//      AdjustorXRotation = 3*pi/2;
+//      DistanceRatio = 1.2;
+//      #include "CalEllipsMembers_3nodes.any"
+//    };
+//    AnySurfEllipsoid Ellipsoid_DeltoidWrappingAnterior3 = 
+//    {
+//      AnyRefNode &Node1 = .HumerusRef.I_DeltoideusAnterior3;
+//      AnyRefNode &Node2 = .ClaviculaRef.O_DeltoideusAnterior3;
+//      AnyRefNode &Node3 = .ScapulaRef.O_DeltoideusLateral3; 
+//      pos_node2 =  .ClaviculaRef.r0 + (.ClaviculaRef.Axes0 * Node2.sRel')'-.r0;
+//      axes_node2 = .ClaviculaRef.Axes0 * Node2.ARel;
+//      AdjustorDirection = {1,.....Sign*0.2,0};
+//      AdjustorXRotation = 3*pi/2;
+//      DistanceRatio = 1.2;
+//      #include "CalEllipsMembers_3nodes.any"
+//    };
+//    AnySurfEllipsoid Ellipsoid_DeltoidWrappingAnterior4 = 
+//    {
+//      AnyRefNode &Node1 = .HumerusRef.I_DeltoideusAnterior4;
+//      AnyRefNode &Node2 = .ClaviculaRef.O_DeltoideusAnterior4;
+//      AnyRefNode &Node3 = .ScapulaRef.O_DeltoideusLateral4;
+//      pos_node2 =  .ClaviculaRef.r0 + (.ClaviculaRef.Axes0 * Node2.sRel')'-.r0;
+//      axes_node2 = .ClaviculaRef.Axes0 * Node2.ARel;
+//      AdjustorDirection = {1,.....Sign*0.2,0};
+//      AdjustorXRotation = 3*pi/2;
+//      DistanceRatio = 1.2;
+//      #include "CalEllipsMembers_3nodes.any"
+//    };
+
+
+AnyRefNode AlignmentRefNode = {
+  ARel = .ScapulaRef.Axes0;
+AnyRefNode p1 = {sRel=.Deltoid_Clavicula_Cyl.P1;};  
+AnyRefNode p2 = {sRel=.Deltoid_Clavicula_Cyl.P2;};  
+AnyRefNode p3 = {sRel=.Deltoid_Clavicula_Cyl.P3;};  
+//AnyRefNode p11 = {sRel=.Deltoid_Clavicula_Cyl.P11;};  
+
+AnyRefNode Deltoid_Clavicula_Cyl={
+//    AnyVec3 P1 = ..ClaviculaRef.Scale(..ScapulaRef.Data.Deltoid_Anterior_Cyl_pos*..ScapulaRef.Mirror); //P2=.ai.sRel + VZ*Length;
+//    AnyVec3 P2 = ..ScapulaRef.Scale(..ScapulaRef.Data.gh_pos*..ScapulaRef.Mirror); //P2=.ai.sRel + VZ*Length;
+//    AnyVec3 P3 = ..ScapulaRef.GHReactionCenterNode.sRel;//.Scale(.Data.deltoid_cyl_P3_pos*.Mirror); //P3=.ai.sRel - VX*Radius;
+    AnyVec3 P1 = (
+    {{0.3980767, 0.3691687, 0.8397913}, 
+     {-0.1614154, 0.9293562, -0.3320272}, 
+     {-0.9030393, -0.003382927, 0.4295446}}*(..ClaviculaRef.r0-..r0)')';//(..ScapulaRef.Axes0*(..ClaviculaRef.r0-..r0)')'; //P2=.ai.sRel + VZ*Length;
+    AnyVec3 P2 = ..ScapulaRef.Scale(..ScapulaRef.Data.gh_pos*..ScapulaRef.Mirror); //P2=.ai.sRel + VZ*Length;
+    AnyVec3 P3 = ..ScapulaRef.GHReactionCenterNode.sRel;//.Scale(.Data.deltoid_cyl_P3_pos*.Mirror); //P3=.ai.sRel - VX*Radius;
+//    AnyVec3 P4 = ..HumerusRef.gh_rotated1.sRel;
+//    AnyVec3 P5 = ..HumerusRef.Scale(..HumerusRef.Data.Deltoid_hum*..HumerusRef.Mirror);
+
+    sRel= P1;
+    ARel=RotMat(sRel,P2,P3)*RotMat(pi/2,y);
+
+    AnySurfCylinder cyl = {
+      Radius= vnorm(.P2-.P3)*1.3;
+      Length= vnorm(.sRel-.P2)*1.2;//vnorm(.P4-.P5);//
+      CapRatio=1;
+//      CenterOrigin = On;
     };
   };
+
+//  AnyRefNode Deltoid_Clavicula_Cyl2={
+//    AnyVec3 P1 = ..ScapulaRef.Scale(..ScapulaRef.Data.Deltoid_Anterior_Cyl2_pos*..ScapulaRef.Mirror); //P2=.ai.sRel + VZ*Length;
+//    AnyVec3 P2 = ..ScapulaRef.Scale(..ScapulaRef.Data.gh_pos*..ScapulaRef.Mirror); //P2=.ai.sRel + VZ*Length;
+//    AnyVec3 P3 = ..ScapulaRef.GHReactionCenterNode.sRel;//.Scale(.Data.deltoid_cyl_P3_pos*.Mirror); //P3=.ai.sRel - VX*Radius;
+//    
+//    sRel= P1;
+//    ARel=RotMat(sRel,P2,P3)*RotMat(pi/2,y);
+//
+//    AnySurfCylinder cyl = {
+//      Radius= vnorm(.P2-.P3)*1.3;
+//      Length= vnorm(.sRel-.P2)*2;
+//      CapRatio=1;
+//      //AnyDrawParamSurf drw={RGB={0,0,1};};
+//      CenterOrigin = On;
+//    };
+//  };
+//  AnyRefNode Deltoid_Clavicula_Cyl_Stop1={
+//    AnyVec3 P1 = ..ScapulaRef.Scale(..ScapulaRef.Data.gh_pos*..ScapulaRef.Mirror); //P2=.ai.sRel + VZ*Length;
+//    AnyVec3 P2 = ..ScapulaRef.O_DeltoideusLateral1.sRel; //P2=.ai.sRel + VZ*Length;
+//    AnyVec3 P3 = ..ScapulaRef.GHReactionCenterNode.sRel;//.Scale(.Data.deltoid_cyl_P3_pos*.Mirror); //P3=.ai.sRel - VX*Radius;
+//
+//    sRel= P1;
+//    ARel=RotMat(sRel,P2,P3)*RotMat(pi/2,y);
+//
+//    AnySurfCylinder cyl = {
+//      Radius= ..Deltoid_Clavicula_Cyl.cyl.Radius*0.98;
+//      Length= vnorm(.sRel-.P2)*5;
+//      CapRatio=1;
+//      //AnyDrawParamSurf drw={RGB={0,0,1};};
+////      CenterOrigin = On;
+//    };
+//  };
+//  AnyRefNode Deltoid_Clavicula_Cyl_Stop2={
+//    AnyVec3 P1 = ..ScapulaRef.Scale(..ScapulaRef.Data.gh_pos*..ScapulaRef.Mirror); //P2=.ai.sRel + VZ*Length;
+//    AnyVec3 P2 = ..ScapulaRef.O_DeltoideusLateral2.sRel; //P2=.ai.sRel + VZ*Length;
+//    AnyVec3 P3 = ..ScapulaRef.GHReactionCenterNode.sRel;//.Scale(.Data.deltoid_cyl_P3_pos*.Mirror); //P3=.ai.sRel - VX*Radius;
+//
+//    sRel= P1;
+//    ARel=RotMat(sRel,P2,P3)*RotMat(pi/2,y);
+//
+//    AnySurfCylinder cyl = {
+//      Radius= ..Deltoid_Clavicula_Cyl.cyl.Radius*0.5;
+//      Length= vnorm(.sRel-.P2)*5;
+//      CapRatio=1;
+//      //AnyDrawParamSurf drw={RGB={0,0,1};};
+////      CenterOrigin = On;
+//    };
+//};
+
+};
+//if we want to make new segment for humerus cyl
+//  AnyRefNode Deltoid_hum = {
+//    sRel = .HumerusRef.Scale(.HumerusRef.Data.Deltoid_hum_TransformedToScapulaRef*.HumerusRef.Mirror);
+//    ARel = RotMat(sRel,P2,P3)* RotMat (-pi/2, y);
+//    AnyFloat P2 = .HumerusRef.Scale(.HumerusRef.Data.gh_pos_TransformedToScapulaRef*.HumerusRef.Mirror);//.HumerusRef.gh_rotated1.sRel;
+//    AnyFloat P3 = .HumerusRef.Scale(.HumerusRef.Data.Deltoid_hum_p3_TransformedToScapulaRef*.HumerusRef.Mirror);
+//    
+//    AnySurfCylinder Deltoid_humCyl= {
+//      Radius=vnorm(.sRel-.P3);
+//      Length=2*vnorm(.sRel-.P2);
+//      CapRatio = 1;
+////      CenterOrigin = On;
+//    };
+//  };
+
+
+  };
   
+      
+  AnyKinLinear m_clav_AnatomicalFrame = {
+    AnyRefNode &ref1 = .WrappingSegment.clav_AnatomicalFrame; 
+    AnyRefNode &ref2 = ....Segments.Clavicula.AnatomicalFrame; 
+    Ref=0;   
+  };
   
+  AnyKinLinear m_O_DeltoideusAnterior1 = {
+    AnyRefNode &ref1 = .WrappingSegment.O_DeltoideusAnterior1; 
+    AnyRefNode &ref2 = ....Segments.Clavicula.O_DeltoideusAnterior1; 
+    Ref=0;   
+  };
+  AnyKinLinear m_O_DeltoideusAnterior4 = {
+    AnyRefNode &ref1 = .WrappingSegment.O_DeltoideusAnterior4; 
+    AnyRefNode &ref2 = ....Segments.Clavicula.O_DeltoideusAnterior4; 
+    Ref=0;   
+  };
+  
+    AnyKinLinear m_gh_joint = {
+    AnyRefNode &ref1 = .WrappingSegment.gh_joint; 
+    AnyRefNode &ref2=....Segments.Humerus.gh;
+    Ref=0;   
+  };
+
   AnyKinEq Constraint = {
-    AnyKinLinear lin ={
-      AnyRefNode &ref1=...DeltoidWrappingLateral.WrappingSegment.LocalReferenceFrame_ConstraintNode ;
-      AnyRefNode &ref2=..WrappingSegment.LocalReferenceFrame_ConstraintNode;
-      Ref = 0;
+    RigidBodyAverageMeasure CombinationMeasure(ROTATIONAL=On, LINEAR=On,POWER =1) = { 
+      
+      LocalReferenceFrame = &..WrappingSegment.LocalReferenceFrame_ConstraintNode;
+      InputMeasures = {
+        &..m_clav_AnatomicalFrame,
+        &..m_O_DeltoideusAnterior1,
+        &..m_O_DeltoideusAnterior4,
+        &..m_gh_joint,
+      };
+      WeightCoefficients = {10,0.5,0.5,10};
     };
-    AnyKinRotational rot ={
-      AnyRefNode &ref1=...DeltoidWrappingLateral.WrappingSegment.LocalReferenceFrame_ConstraintNode ;
-      AnyRefNode &ref2=..WrappingSegment.LocalReferenceFrame_ConstraintNode;
-      Type=RotVector;
-    };
-    Reaction.Type ??= repmat(nDim, Off);  
-  };
+    Reaction.Type ??= repmat(nDim, Off);
+      };
+
+  
+  
+//  AnyKinEq Constraint = {
+//    AnyKinLinear lin ={
+//      AnyRefNode &ref1=...DeltoidWrappingLateral.WrappingSegment.LocalReferenceFrame_ConstraintNode ;
+//      AnyRefNode &ref2=..WrappingSegment.LocalReferenceFrame_ConstraintNode;
+//      Ref = 0;
+//    };
+//    AnyKinRotational rot ={
+//      AnyRefNode &ref1=...DeltoidWrappingLateral.WrappingSegment.LocalReferenceFrame_ConstraintNode ;
+//      AnyRefNode &ref2=..WrappingSegment.LocalReferenceFrame_ConstraintNode;
+//      Type=RotVector;
+//    };
+//    Reaction.Type ??= repmat(nDim, Off);  
+//  };
   
   AnyReacForce ForceToGHJoint = {
     AnyKinLinear lin ={
@@ -488,6 +806,229 @@ AnyFolder DeltoidWrappingAnterior = {
     };
   };
   
+  
+  
+//  AnySeg WrappingSegment_RepresentLateralStopper ={
+//    
+//    Mass=1e-5;
+//    Jii={0.0,0.0,0.0};
+//    
+//    r0= ScapulaRef.r0;
+//    //Axes0 = ScapulaRef.Axes0;
+//    
+//    AnySeg &ScapulaRef = ....Segments.Scapula;
+//    AnySeg &HumerusRef = ....Segments.Humerus;
+//    AnySeg &ClaviculaRef = ....Segments.Clavicula;
+//    
+//    AnyRefNode LocalReferenceFrame_ConstraintNode = {sRel= {0,0,0}; ARel= .ScapulaRef.Axes0;};
+//    AnyRefNode gh_joint = {sRel= .ScapulaRef.r0 -.r0 + (.ScapulaRef.Axes0 * .ScapulaRef.gh_rotated1.sRel')';ARel = .ScapulaRef.Axes0;};
+//    AnyRefNode clav_AnatomicalFrame = {sRel= .ClaviculaRef.r0 -.r0 + (.ClaviculaRef.Axes0 * .ClaviculaRef.AnatomicalFrame.sRel')';};//.ClaviculaRef.Scale({-0.10452, 0.00285061, -0.139346});};
+//    AnyRefNode O_DeltoideusLateral1 = {sRel= .ScapulaRef.r0 -.r0 + (.ScapulaRef.Axes0 * .ScapulaRef.O_DeltoideusLateral1.sRel')';};
+//    AnyRefNode O_DeltoideusLateral4 = {sRel= .ScapulaRef.r0 -.r0 + (.ScapulaRef.Axes0 * .ScapulaRef.O_DeltoideusLateral4.sRel')';};
+//    AnyRefNode I_DeltoideusLateral1 = {sRel= .HumerusRef.r0 -.r0 + (.HumerusRef.Axes0 * .HumerusRef.I_DeltoideusLateral1.sRel')';};
+//    AnyRefNode I_DeltoideusLateral4 = {sRel= .HumerusRef.r0 -.r0 + (.HumerusRef.Axes0 * .HumerusRef.I_DeltoideusLateral4.sRel')';};
+//    AnyRefNode O_DeltoideusAnterior1 = {sRel= .ClaviculaRef.r0 -.r0 + (.ClaviculaRef.Axes0 * .ClaviculaRef.O_DeltoideusAnterior1.sRel')';};
+//    
+////    AnyRefNode AlignmentRefNode = {
+////      ARel = .ScapulaRef.Axes0;
+////      AnyRefNode p1 = {sRel=.Deltoid_Clavicula_Cyl_Stop1.P1;};  
+////      AnyRefNode p2 = {sRel=.Deltoid_Clavicula_Cyl_Stop1.P2;};  
+////      AnyRefNode p3 = {sRel=.Deltoid_Clavicula_Cyl_Stop1.P3;}; 
+////      
+////      AnyRefNode Deltoid_Clavicula_Cyl_Stop1={
+////        AnyVec3 P1 = ..ScapulaRef.Scale(..ScapulaRef.Data.gh_pos*..ScapulaRef.Mirror);
+//////        AnyVec3 P2 = 0.7*..ScapulaRef.O_DeltoideusLateral4.sRel+
+//////        0.3*
+//////        ({{0.3980767, 0.3691687, 0.8397913}, 
+//////     {-0.1614154, 0.9293562, -0.3320272}, 
+//////     {-0.9030393, -0.003382927, 0.4295446}}*(..HumerusRef.r0-..ScapulaRef.r0+(..HumerusRef.Axes0*(..HumerusRef.I_DeltoideusLateral4.sRel)')')')';
+////        AnyVec3 P2 = 
+////        ({{0.3980767, 0.3691687, 0.8397913}, 
+////     {-0.1614154, 0.9293562, -0.3320272}, 
+////     {-0.9030393, -0.003382927, 0.4295446}}*(..HumerusRef.r0-..ScapulaRef.r0+(..HumerusRef.Axes0*(..HumerusRef.Scale(..HumerusRef.Data.DeltoidStopperP2_pos))')')')';
+////
+////        AnyVec3 P3 = ..ScapulaRef.GHReactionCenterNode.sRel;
+////        AnyFloat P4 = ..HumerusRef.Scale(..HumerusRef.Data.Deltoid_hum*..HumerusRef.Mirror);
+////        AnyFloat P5 = ..HumerusRef.Scale(..HumerusRef.Data.Deltoid_hum_p3*..HumerusRef.Mirror);
+////        
+////        sRel= P1;
+////        ARel=RotMat(sRel,P2,P3)*RotMat(pi/3,z);//*RotMat(pi/2,y);
+////        
+////        AnySurfCylinder cyl = {
+////          Radius= vnorm(.P4-.P5)*1.02;
+////          Length= vnorm(.sRel-.P2)*2;
+////          CapRatio=1;
+////          //AnyDrawParamSurf drw={RGB={0,0,1};};
+////          //      CenterOrigin = On;
+////        };
+////      };
+////      
+////    };
+//
+//    AnyRefNode AlignmentRefNode = {
+//      ARel = .ScapulaRef.Axes0;
+//      AnyRefNode p1 = {sRel=.Deltoid_Clavicula_Cyl_Stop1.P1;};  
+//      AnyRefNode p2 = {sRel=.Deltoid_Clavicula_Cyl_Stop1.P2;};  
+//      AnyRefNode p3 = {sRel=.Deltoid_Clavicula_Cyl_Stop1.P3;}; 
+//      AnyRefNode DeltoidLat4_CylCenter = {sRel=
+//                        0.7*..ScapulaRef.O_DeltoideusLateral4.sRel +
+//
+////                (0.7*{{0.3980767, 0.3691687, 0.8397913}, {-0.1614154, 0.9293562, -0.3320272}, {-0.9030393, -0.003382927, 0.4295446}}*
+////        (..ClaviculaRef.r0-..ScapulaRef.r0+(..ClaviculaRef.Axes0*(..ClaviculaRef.O_DeltoideusLateral4.sRel)')')')' +
+//        (0.3*{{0.3980767, 0.3691687, 0.8397913}, {-0.1614154, 0.9293562, -0.3320272}, {-0.9030393, -0.003382927, 0.4295446}}*
+//        (..HumerusRef.r0-..ScapulaRef.r0+(..HumerusRef.Axes0*(..HumerusRef.I_DeltoideusLateral4.sRel)')')')';};
+//      
+//      AnyRefNode Deltoid_Clavicula_Cyl_Stop1={
+//        AnyVec3 P1 = ..ScapulaRef.Scale(..ScapulaRef.Data.gh_pos*..ScapulaRef.Mirror);
+////        AnyVec3 P2 = 0.7*..ScapulaRef.O_DeltoideusLateral4.sRel+
+////        0.3*
+////        ({{0.3980767, 0.3691687, 0.8397913}, 
+////     {-0.1614154, 0.9293562, -0.3320272}, 
+////     {-0.9030393, -0.003382927, 0.4295446}}*(..HumerusRef.r0-..ScapulaRef.r0+(..HumerusRef.Axes0*(..HumerusRef.I_DeltoideusLateral4.sRel)')')')';
+//        AnyVec3 P2 = 
+//        ({{0.3980767, 0.3691687, 0.8397913}, 
+//     {-0.1614154, 0.9293562, -0.3320272}, 
+//     {-0.9030393, -0.003382927, 0.4295446}}*(..HumerusRef.r0-..ScapulaRef.r0+(..HumerusRef.Axes0*(..HumerusRef.Scale(..HumerusRef.Data.DeltoidStopperP2_pos))')')')';
+//
+//        AnyVec3 P3 = ..ScapulaRef.GHReactionCenterNode.sRel;
+//        AnyFloat P4 = ..HumerusRef.Scale(..HumerusRef.Data.Deltoid_hum*..HumerusRef.Mirror);
+//        AnyFloat P5 = ..HumerusRef.Scale(..HumerusRef.Data.Deltoid_hum_p3*..HumerusRef.Mirror);
+//        
+//        sRel= P1;
+//        ARel=RotMat(sRel,P2,P3)*RotMat(pi/3,z);//*RotMat(pi/2,y);
+//        
+//        AnySurfCylinder cyl = {
+//          Radius= vnorm(.P4-.P5)*1.02;
+//          Length= vnorm(.sRel-.P2)*2;
+//          CapRatio=1;
+//          //AnyDrawParamSurf drw={RGB={0,0,1};};
+//          //      CenterOrigin = On;
+//        };
+//      };
+//      
+//    };
+//
+//  };
+//  
+//  AnyKinLinear LatStop_m_O_DeltoideusLateral1 = {
+//    AnyRefNode &ref1 = .WrappingSegment_RepresentLateralStopper.O_DeltoideusLateral1; 
+//    AnyRefNode &ref2 = ....Segments.Scapula.O_DeltoideusLateral1; 
+//    Ref=0;   
+//  };
+//  AnyKinLinear LatStop_m_O_DeltoideusLateral4 = {
+//    AnyRefNode &ref1 = .WrappingSegment_RepresentLateralStopper.O_DeltoideusLateral4; 
+//    AnyRefNode &ref2 = ....Segments.Scapula.O_DeltoideusLateral4; 
+//    Ref=0;   
+//  };
+//  AnyKinLinear LatStop_m_I_DeltoideusLateral1 = {
+//    AnyRefNode &ref1 = .WrappingSegment_RepresentLateralStopper.I_DeltoideusLateral1; 
+//    AnyRefNode &ref2 = ....Segments.Humerus.I_DeltoideusLateral1; 
+//    Ref=0;   
+//  };
+//  AnyKinLinear LatStop_m_I_DeltoideusLateral4 = {
+//    AnyRefNode &ref1 = .WrappingSegment_RepresentLateralStopper.I_DeltoideusLateral4; 
+//    AnyRefNode &ref2 = ....Segments.Humerus.I_DeltoideusLateral4; 
+//    Ref=0;   
+//  };
+//  AnyKinLinear LatStop_m_O_DeltoideusAnterior1 = {
+//    AnyRefNode &ref1 = .WrappingSegment_RepresentLateralStopper.O_DeltoideusAnterior1; 
+//    AnyRefNode &ref2 = ....Segments.Clavicula.O_DeltoideusAnterior1; 
+//    Ref=0;   
+//  };
+
+//  AnyKinLinear LatStop_m_gh_joint = {
+//    AnyRefNode &ref1 = .WrappingSegment.gh_joint; 
+//    AnyRefNode &ref2=....Segments.Humerus.gh;
+//    Ref=0;   
+//  };
+
+
+//  AnyKinEq LatStop_Constraint = {
+//    RigidBodyAverageMeasure CombinationMeasure(ROTATIONAL=On, LINEAR=On,POWER =1) = { 
+//      
+//      LocalReferenceFrame = &..WrappingSegment_RepresentLateralStopper.LocalReferenceFrame_ConstraintNode;
+//      InputMeasures = {
+//        &..LatStop_m_O_DeltoideusLateral1,
+//        &..LatStop_m_O_DeltoideusLateral4,
+////        &..LatStop_m_I_DeltoideusLateral1,
+//        &..LatStop_m_I_DeltoideusLateral4,
+////        &..m_gh_joint,
+//      };
+//      WeightCoefficients = {1,20,20};//{1,20,0.5,1};
+//    };
+//    MeasureOrganizer = {3,4,5};
+//    Reaction.Type ??= repmat(nDim, Off);
+//      };
+   
+//        AnySphericalJoint LatStopSeg_LinConstraint = {
+////    AnyKinLinear lin ={
+//      AnyRefNode &ref1=....Segments.Humerus.gh ;
+//      AnyRefNode &ref2=.WrappingSegment_RepresentLateralStopper.gh_joint;
+////      Ref = 0;
+////    };
+//  };
+  
+////  AnyKinEq LatStop_RotConstraint = {
+////    AnyKinRotational rot = {
+//////    AnyRefNode &ref1=.....Segments.Scapula.gh_rotated1 ;
+////    AnyRefNode &ref1=.....Segments.Humerus.gh;
+////    AnyRefNode &ref2=..WrappingSegment_RepresentLateralStopper.gh_joint;
+////    Type = RotAxesAngles;
+////  };
+////};
+
+//AnySphericalJoint LatStopSeg_LinConstraint = {
+//  //    AnyKinLinear lin ={
+//  AnyRefNode &ref1=....Segments.Humerus.gh ;
+//  AnyRefNode &ref2=.WrappingSegment_RepresentLateralStopper.gh_joint;
+//  //      Ref = 0;
+//  //    };
+//};
+//AnyKinEq LatStopSeg_RotConstraint = {
+//      AnyKinLinear lin ={
+//  AnyRefNode &ref1=.....Segments.Humerus.gh ;
+//  AnyRefNode &ref2=..WrappingSegment_RepresentLateralStopper.gh_joint;
+//        Ref = 0;
+//      };
+//};
+
+//  AnyKinEq LatStop_Constraint = {
+//    RigidBodyAverageMeasure CombinationMeasure(ROTATIONAL=On, LINEAR=On,POWER =1) = { 
+//      
+//      LocalReferenceFrame = &..WrappingSegment_RepresentLateralStopper.LocalReferenceFrame_ConstraintNode;
+//      InputMeasures = {
+////        &..LatStop_m_O_DeltoideusLateral1,
+//        &..LatStop_m_O_DeltoideusLateral4,
+////        &..LatStop_m_I_DeltoideusLateral1,
+//        &..LatStop_m_I_DeltoideusLateral4,
+//        &..m_gh_joint,
+//        &..LatStop_m_O_DeltoideusAnterior1,
+//      };
+//      WeightCoefficients = {1,1,5,20};//{1,20,0.5,1};
+//    };
+////    MeasureOrganizer = {3,4,5};
+//    Reaction.Type ??= repmat(nDim, Off);
+//      };
+//
+//
+//    AnyReacForce LatStopSeg_ForceToGHJoint = {
+//    AnyKinLinear lin ={
+//      AnyRefNode &ref1=.....Segments.Humerus.gh ;
+//      AnyRefNode &ref2=..WrappingSegment_RepresentLateralStopper.gh_joint;
+//      Ref = 0;
+//    };
+//  };
+//
+//  AnyReacForce LatStopSeg_MomentsToCalvicula =
+//  {
+//    AnyKinRotational rot ={
+//      AnyRefFrame &ref1=..WrappingSegment_RepresentLateralStopper;
+//      AnyRefFrame &ref2=.....Segments.Clavicula;
+//      Type=RotVector;
+//    };
+//  };
+
+
 };
 
 
