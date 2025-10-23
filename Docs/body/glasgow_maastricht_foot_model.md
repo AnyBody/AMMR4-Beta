@@ -2,11 +2,6 @@
 
 # The Glasgow-Maastricht Foot Model (GM Foot)
 
-:::{admonition} **Beta model:** 
-:class: caution 
-The model is currently in a beta state. It may lack some functionality.
-:::
-
 AnyBody Technology, in corporation with Glasgow Caledonian
 University and University of Maastricht inside the [AFootprint EU project](https://web.archive.org/web/20190502001603/https://www.afootprint.eu/),
 developed a detailed multisegmented foot model, which is fully dynamic and
@@ -34,7 +29,7 @@ full list of configuration parameters.
 :::
 
 The GM foot model can be used in one of the following configurations:
--	Rigid: ```#define BM_FOOT_MODEL _FOOT_MODEL_RIGID_GM_```: This is the equivalent of the current default foot model with ankle 
+-	Rigid: ```#define BM_FOOT_MODEL _FOOT_MODEL_RIGID_GM_```: This is the equivalent of the default TLEM foot model with ankle 
   and subtalar joint. The foot consists of two segments, talus and the rigid part consisting of the intrinsic bones of the 
   foot. The intrinsic muscles of the foot are not included in this model 
   
@@ -51,7 +46,9 @@ The GM foot model can be used in one of the following configurations:
   is constrained to have the same joint angle, thereby, adding just one degree of freedom 
   for toe flexion when comparing to the rigid foot model. This model can improve kinematics in applications such as gait by allowing 
   bending of toes. The motion of the toes can be driven by motion capture data, for example, by using a toe tip marker, or 
-  automatically through a new class template that prevents penetration of the toes with the ground. 
+  automatically through the 
+  {ref}`RotationPenetrationCombiDriver <Utilities.Kinematic-limits.RotationPenetrationCombiDriver_template.RotationPenetrationCombiDriver>` 
+  class template that prevents penetration of the toes with the ground. 
   
 
     :::{admonition} **Kinematic improvement only**
@@ -111,12 +108,13 @@ muscles to be set to 3 element Hill muscle model, however the user must provide 
 This switch allows the user to control the foot muscles independently of the leg muscles. Please note that the foot muscles can only be included 
 if leg muscles are also enabled.
 
-
+(GM foot model usage)=
 ## Usage
 
-The model can be added to the TLEM 2.2 leg model and requires AMMR 4.0 or later.
+The GM foot model can be used with the TLEM 2.2 (or later) leg model and requires AMMR 4.0 or later.
 
-To use the GM foot model, you can simply add a BM statement in your model.
+The rigid configuration of the GM foot model is the default foot model for the TLEM leg since AMMR 4.0. 
+To use another configuration of the GM foot model, you can simply add a BM statement in your model:
 
 ```AnyScriptDoc
 Main = {
@@ -196,17 +194,15 @@ This is planned for the future.
 :link: /Applications/Mocap/BVH_ToeFlex
 :link-type: doc
 :text-align: center
+```{anylink-gallery}
+:anylink: Application/MocapExamples/SpecialFeatures/BVH_Xsens_ToeFlexion.main.any
+:image: /Applications/images/BVH_ToeFlex_GM.webp
+:title: BVH driven model with Toe Flexion
+:style: gallery
+:link-classes: sd-text-right
+![Load into AnyBody](/_static/AnyLinkLoad.svg){.anylink-svg .dark-light h="1.8em"}
 
-![BVH driven model with Toe Flexion](/Applications/images/BVH_ToeFlex_GM.webp)
-^^^
-:::
-
-:::{grid-item-card} GM Foot MoCap Model
-:link: /Applications/Beta/Plug-in-gait_Simple_DetailedFootGM
-:link-type: doc
-:text-align: center
-
-![GM Foot MoCap Model](/Applications/images/Plug-in-gait_simple_lowerbody_DetailedFoot_GM.webp)
+```
 ^^^
 :::
 
@@ -214,8 +210,31 @@ This is planned for the future.
 :link: /Applications/Mocap/Plug-in-gait_Simple_ToeFlexion
 :link-type: doc
 :text-align: center
+```{anylink-gallery}
+:anylink: Application/MocapExamples/Plug-in-gait_Simple/LowerExtremity_ToeFlexion.main.any
+:image: /Applications/images/Plug-in-gait_simple_lowerbody_ToeFlex_GM.webp
+:title: C3D driven models with Toe Flexion
+:style: gallery
+:link-classes: sd-text-right
+![Load into AnyBody](/_static/AnyLinkLoad.svg){.anylink-svg .dark-light h="1.8em"}
 
-![C3D driven models with Toe Flexion](/Applications/images/Plug-in-gait_simple_lowerbody_ToeFlex_GM.webp)
+```
+^^^
+:::
+
+:::{grid-item-card} GM Foot MoCap Model
+:link: /Applications/Beta/Plug-in-gait_Simple_DetailedFootGM
+:link-type: doc
+:text-align: center
+```{anylink-gallery}
+:anylink: Application/Beta/Plug-in-gait_Simple_DetailedFoot_GM/LowerExtremity.main.any
+:image: /Applications/images/Plug-in-gait_simple_lowerbody_DetailedFoot_GM.webp
+:title: GM Foot MoCap Model
+:style: gallery
+:link-classes: sd-text-right
+![Load into AnyBody](/_static/AnyLinkLoad.svg){.anylink-svg .dark-light h="1.8em"}
+
+```
 ^^^
 :::
 
@@ -223,7 +242,7 @@ This is planned for the future.
 
 ## Model structure
 
-The foot model includes 26 rigid segments representing all the bones of
+The detailed foot model includes 26 rigid segments representing all the bones of
 the human foot (except the sesamoid bones), namely:
 
 > Talus, Calcaneus,
@@ -248,7 +267,7 @@ It includes the following joints and kinematic constraints:
 > transverse arch,*  *Tarsal transverse arch,*  *Longitudinal medial
 > arch,*  *Longitudinal lateral arch.*
 
-The GM-Foot model includes following additional ligaments:
+The GM-Foot model also includes the following additional ligaments:
 
 > Collateral
 > (tibiotalar anterior, tibiotalar posterior, tibiocalcaneal and
