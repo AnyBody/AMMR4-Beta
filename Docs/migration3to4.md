@@ -103,7 +103,7 @@ structure regardless of how detailed the foot model is. This particular error
 can be fixed by changing `HeelContactNode` -> `Calcaneus.HeelContactNodeLow`.
 See the {ref}`section on foot model errors <Foot Unresolved Objects>`
 
-
+:::
 
 
 (Foot Unresolved Objects)=
