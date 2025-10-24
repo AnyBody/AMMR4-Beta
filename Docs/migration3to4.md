@@ -130,6 +130,7 @@ Similar errors can be expected for the following:
 * `HeelContactNode` -> `Calcaneus.HeelContactNodeLow`
 * `ToeLateralContactNode` -> `ProximalPhalange5.ToeLateralContactNode`
 * `ToeMedialContactNode` -> `ProximalPhalange1.ToeMedialContactNode`
+* `ToeJoint` -> `Metatarsal1.ToeJoint`
 
 
 It is advised to always construct pointers to foot segment objects using the intrinsic foot segment.
