@@ -132,7 +132,7 @@ Parameter defining the foot model used.
 :Example: `#define BM_FOOT_MODEL _FOOT_MODEL_RIGID_GM_`
 :Options:
   - {any}`_FOOT_MODEL_NONE_` -> Switch off foot model"
-  - {any}`_FOOT_MODEL_LEG_DEFAULT_` -> Switch for using the foot model from the leg model
+  - {any}`_FOOT_MODEL_LEG_FOOT_` -> Switch for using the foot model from the selected leg model
   - {any}`_FOOT_MODEL_RIGID_GM_` -> Switch for using the GM foot model in the rigid configuration
   - {any}`_FOOT_MODEL_TOE_FLEX_GM_` -> Switch for using the GM foot model with toe flexion
   - {any}`_FOOT_MODEL_DETAILED_GM_` -> Switch for using the detailed GM foot model

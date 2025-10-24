@@ -138,13 +138,13 @@ Switch off foot model"
 
 
 
-::::{dropdown} `_FOOT_MODEL_LEG_DEFAULT_`
+::::{dropdown} `_FOOT_MODEL_LEG_FOOT_`
 :animate: fade-in-slide-down
 :margin: 0 0 2 2
 
-:::{ammr:bm_constant} _FOOT_MODEL_LEG_DEFAULT_
+:::{ammr:bm_constant} _FOOT_MODEL_LEG_FOOT_
 :value: 1
-Switch for using the foot model from the leg model
+Switch for using the foot model from the selected leg model
 :::
 ::::
 
