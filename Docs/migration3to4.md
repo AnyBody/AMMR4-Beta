@@ -97,7 +97,7 @@ The `MoCapMarkerFrameAMMR24` have been removed in AMMR4. Remove the argument com
 ERROR(SCR.PRS9) :   "C:\####\GroundDrivers.any(7)"  :   'HeelContactNode'  :  Unresolved object
 ```
 
-This node has been renamed to `HeelContactNodeLow` in the new foot model, and is
+This node has been renamed to `HeelContactNodeLow` in the new GM foot model, and is
 now located under different sub-frame, to ensure the model has the same
 structure regardless of how detailed the foot model is. This particular error
 can be fixed by changing `HeelContactNode` -> `Calcaneus.HeelContactNodeLow`.
