@@ -403,6 +403,25 @@ Index parameter to specify strength for trunk muscles.
 ::::
 
 
+::::{dropdown} `BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH`
+:animate: fade-in-slide-down
+:margin: 0 0 3 3
+
+```{ammr:bm_statement} BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
+:deprecated:
+
+Internal switch to enable test of optimized string mesh.
+
+:Default: ON
+:Example: `#define BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH ON`
+:Options:
+  - {any}`OFF` -> Switch OFF
+  - {any}`ON` -> Switch ON
+
+```
+::::
+
+
 ::::{dropdown} `BM_TRUNK_EXPERIMENTAL_RECTUS_ABDOMINIS`
 :animate: fade-in-slide-down
 :margin: 0 0 3 3
