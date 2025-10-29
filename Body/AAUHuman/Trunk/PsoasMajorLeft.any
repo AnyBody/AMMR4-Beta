@@ -55,7 +55,7 @@ AnyFolder PsoasMajor = {
 
     AnySurfCylinder &Surf1 =....Segments.PelvisSeg.Left.PsoasWrapSurf;
     #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
-    SPLine.StringMesh = {.StringMesh, 0, 0, 0, 0};
+    SPLine.StringMesh = {.StringMesh, 1, 1, 1, 1};
     #else
     SPLine.StringMesh = .StringMesh;
     #endif
@@ -80,7 +80,7 @@ AnyFolder PsoasMajor = {
     AnyRefNode &Org = ....Segments.L1Seg.PsoasMajorL1_2NodeL;
     AnySurfCylinder &Surf1 =....Segments.PelvisSeg.Left.PsoasWrapSurf;
     #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
-    SPLine.StringMesh = {.StringMesh, 0, 0, 0, 0, 0};
+    SPLine.StringMesh = {.StringMesh, 1, 1, 1, 1, 1};
     #else
     SPLine.StringMesh = .StringMesh;
     #endif
@@ -103,7 +103,7 @@ AnyFolder PsoasMajor = {
     AnyRefNode &Org = ....Segments.L2Seg.PsoasMajorL2_1NodeL;
     AnySurfCylinder &Surf1 =....Segments.PelvisSeg.Left.PsoasWrapSurf;
     #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
-    SPLine.StringMesh = {.StringMesh, 0, 0, 0};
+    SPLine.StringMesh = {.StringMesh, 1, 1, 1};
     #else
     SPLine.StringMesh = .StringMesh;
     #endif
@@ -127,7 +127,7 @@ AnyFolder PsoasMajor = {
     AnyRefNode &Org = ....Segments.L2Seg.PsoasMajorL2_2NodeL;
     AnySurfCylinder &Surf1 =....Segments.PelvisSeg.Left.PsoasWrapSurf;
     #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
-    SPLine.StringMesh = {.StringMesh, 0, 0, 0, 0};
+    SPLine.StringMesh = {.StringMesh, 1, 1, 1, 1};
     #else
     SPLine.StringMesh = .StringMesh;
     #endif
@@ -149,7 +149,7 @@ AnyFolder PsoasMajor = {
     AnyRefNode &Org = ....Segments.L3Seg.PsoasMajorL3_1NodeL;
     AnySurfCylinder &Surf1 =....Segments.PelvisSeg.Left.PsoasWrapSurf;
     #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
-    SPLine.StringMesh = {.StringMesh, 0, 0};
+    SPLine.StringMesh = {.StringMesh, 1, 1};
     #else
     SPLine.StringMesh = .StringMesh;
     #endif
@@ -172,7 +172,7 @@ AnyFolder PsoasMajor = {
     AnyRefNode &Org = ....Segments.L3Seg.PsoasMajorL3_2NodeL;
     AnySurfCylinder &Surf1 =....Segments.PelvisSeg.Left.PsoasWrapSurf;
     #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
-    SPLine.StringMesh = {.StringMesh, 0, 0, 0};
+    SPLine.StringMesh = {.StringMesh, 1, 1, 1};
     #else
     SPLine.StringMesh = .StringMesh;
     #endif
@@ -194,7 +194,7 @@ AnyFolder PsoasMajor = {
     AnyRefNode &Org = ....Segments.L4Seg.PsoasMajorL4_1NodeL;
     AnySurfCylinder &Surf1 =....Segments.PelvisSeg.Left.PsoasWrapSurf;
     #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
-    SPLine.StringMesh = {.StringMesh, 0};
+    SPLine.StringMesh = {.StringMesh, 1};
     #else
     SPLine.StringMesh = .StringMesh;
     #endif
@@ -217,7 +217,7 @@ AnyFolder PsoasMajor = {
     AnyRefNode &Org = ....Segments.L4Seg.PsoasMajorL4_2NodeL;
     AnySurfCylinder &Surf1 =....Segments.PelvisSeg.Left.PsoasWrapSurf;
     #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
-    SPLine.StringMesh = {.StringMesh, 0, 0};
+    SPLine.StringMesh = {.StringMesh, 1, 1};
     #else
     SPLine.StringMesh = .StringMesh;
     #endif
@@ -238,7 +238,7 @@ AnyFolder PsoasMajor = {
     AnyRefNode &Org = ....Segments.L5Seg.PsoasMajorL5_1NodeL;
     AnySurfCylinder &Surf1 =....Segments.PelvisSeg.Left.PsoasWrapSurf;
     #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
-    SPLine.StringMesh = {.StringMesh, 0};
+    SPLine.StringMesh = {.StringMesh, 1};
     #else
     SPLine.StringMesh = .StringMesh;
     #endif
@@ -260,7 +260,7 @@ AnyFolder PsoasMajor = {
     AnyRefNode &Org = ....Segments.L5Seg.PsoasMajorL5_2NodeL;
     AnySurfCylinder &Surf1 =....Segments.PelvisSeg.Left.PsoasWrapSurf;
     #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
-    SPLine.StringMesh = {.StringMesh, 0};
+    SPLine.StringMesh = {.StringMesh, 1};
     #else
     SPLine.StringMesh = .StringMesh;
     #endif
