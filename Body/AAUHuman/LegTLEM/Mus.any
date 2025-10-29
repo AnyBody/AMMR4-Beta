@@ -143,7 +143,7 @@
       SPLine = {
         #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
         StringMesh = {30,1,1,30,1};
-        StringSurfaceMap = {{On,Off,Off}, {Off,Off,Off}, {Off,Off,Off}, {Off,On,On}, {Off,Off,Off}};
+        //StringSurfaceMap = {{On,Off,Off}, {Off,Off,Off}, {Off,Off,Off}, {Off,On,On}, {Off,Off,Off}};
         #else
         StringMesh = 30;
         #endif
@@ -177,7 +177,7 @@
       AnyRefNode &Ins = ...Seg.Foot.Calcaneus.GastrocnemiusMedialis1Node;
       #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
       SPLine.StringMesh = {1,30,1,1,1,30,1};
-      SPLine.StringSurfaceMap = {{Off,Off,Off}, {On,Off,Off}, {Off,Off,Off},{Off,Off,Off},{Off,Off,Off},{Off,On,On}, {Off,Off,Off}};
+      //SPLine.StringSurfaceMap = {{Off,Off,Off}, {On,Off,Off}, {Off,Off,Off},{Off,Off,Off},{Off,Off,Off},{Off,On,On}, {Off,Off,Off}};
       #else
       SPLine.StringMesh = 30;
       #endif

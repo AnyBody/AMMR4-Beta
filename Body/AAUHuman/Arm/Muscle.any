@@ -70,7 +70,7 @@ MuscleGroup BicepsBrachiiLongum = {
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
 #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
    SPLine.StringMesh = {20,1,150};
-   SPLine.StringSurfaceMap = {{On,Off,Off},{Off,Off,Off},{Off,On,On}};
+   //SPLine.StringSurfaceMap = {{On,Off,Off},{Off,Off,Off},{Off,On,On}};
 #else
   SPLine.StringMesh = 150;
 #endif
@@ -641,7 +641,7 @@ MuscleGroup ExtensorCarpiRadialisBrevis = {
       InitWrapPosVecArr = {None,&InitWrapPos,None};
     };
     #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
-    SPLine.StringSurfaceMap = {{Off},{On},{Off}};
+    //SPLine.StringSurfaceMap = {{Off},{On},{Off}};
     SPLine.StringMesh = {1,60,1};
     #else
     SPLine.StringMesh = 60;
@@ -661,7 +661,7 @@ MuscleGroup ExtensorCarpiRadialisLongus = {
     AnyRefNode &Ins = ...Segments.Hand.Finger2MetaRef.I_ExtensorCarpiRadialisLongus;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
-    SPLine.StringSurfaceMap = {{Off},{On}};
+    //SPLine.StringSurfaceMap = {{Off},{On}};
     SPLine.StringMesh = {1,45};
     #else
     SPLine.StringMesh = {45};
@@ -687,7 +687,7 @@ MuscleGroup ExtensorCarpiUlnaris = {
     AnySurfCylinder &Surf2 = ...Segments.Radius.MedialExtensorCyl.cyl;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
-    SPLine.StringSurfaceMap = {{Off},{Off},{On}};
+    //SPLine.StringSurfaceMap = {{Off},{Off},{On}};
     SPLine.StringMesh = {1,1,35};
     #else
     SPLine.StringMesh = 35;
@@ -719,7 +719,7 @@ MuscleGroup ExtensorDigitiMinimi = {
       InitWrapPosVecArr = {None,&InitWrapPos,None};
     };
     #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
-    SPLine.StringSurfaceMap = {{Off},{On},{Off}};
+    //SPLine.StringSurfaceMap = {{Off},{On},{Off}};
     SPLine.StringMesh = {1,30,1};
     #else
     SPLine.StringMesh = 30;
@@ -748,7 +748,7 @@ MuscleGroup ExtensorDigitorum ={
       InitWrapPosVecArr = {None,&InitWrapPos,None};
     };
     #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
-    SPLine.StringSurfaceMap = {{Off},{On},{Off}};
+    //SPLine.StringSurfaceMap = {{Off},{On},{Off}};
     SPLine.StringMesh = {1,50,1};
     #else
     SPLine.StringMesh = 50;
@@ -772,7 +772,7 @@ MuscleGroup ExtensorDigitorum ={
       InitWrapPosVecArr = {None,&InitWrapPos,None};
     };
     #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
-    SPLine.StringSurfaceMap = {{Off},{On},{Off}};
+    //SPLine.StringSurfaceMap = {{Off},{On},{Off}};
     SPLine.StringMesh = {1,50,1};
     #else
     SPLine.StringMesh = 50;
@@ -799,7 +799,7 @@ MuscleGroup ExtensorDigitorum ={
       InitWrapPosVecArr = {None,&InitWrapPos,None};
     };
     #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
-    SPLine.StringSurfaceMap = {{Off},{On},{Off}};
+    //SPLine.StringSurfaceMap = {{Off},{On},{Off}};
     SPLine.StringMesh = {1,50,1};
     #else
     SPLine.StringMesh = 50;
@@ -828,7 +828,7 @@ MuscleGroup ExtensorDigitorum ={
       InitWrapPosVecArr = {None,&InitWrapPos,None};
     };
     #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
-    SPLine.StringSurfaceMap = {{Off},{On},{Off}};
+    //SPLine.StringSurfaceMap = {{Off},{On},{Off}};
     SPLine.StringMesh = {1,51,1};
     #else
     SPLine.StringMesh = 50;
@@ -857,7 +857,7 @@ MuscleGroup ExtensorIndicis = {
       InitWrapPosVecArr = {None,&InitWrapPos,None};
     };
     #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
-    SPLine.StringSurfaceMap = {{Off},{On},{Off}};
+    //SPLine.StringSurfaceMap = {{Off},{On},{Off}};
         SPLine.StringMesh = {1,25,1};
     #else
       SPLine.StringMesh = 25;
@@ -879,7 +879,7 @@ MuscleGroup ExtensorPollicisBrevis = {
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     AnySurfCylinder &Surf2 = ...Segments.Radius.MedialExtensorCyl.cyl;
     #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
-      SPLine.StringSurfaceMap = {{Off},{On},{Off}};
+      //SPLine.StringSurfaceMap = {{Off},{On},{Off}};
       SPLine.StringMesh = {1,30,1};
     #else
       SPLine.StringMesh = 30;
@@ -906,7 +906,7 @@ MuscleGroup ExtensorPollicisLongus = {
     AnySurfCylinder &Surf2 = ...Segments.Radius.MedialExtensorCyl.cyl;
 
     #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
-    SPLine.StringSurfaceMap = {{Off},{On},{Off}};
+    //SPLine.StringSurfaceMap = {{Off},{On},{Off}};
     SPLine.StringMesh = {1,45,1};
     #else
     SPLine.StringMesh = 45;
@@ -939,7 +939,7 @@ MuscleGroup FlexorCarpiRadialis = {
       InitWrapPosVecArr = {None,&InitWrapPos};
     };
     #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
-    SPLine.StringSurfaceMap = {{Off},{On}};
+    //SPLine.StringSurfaceMap = {{Off},{On}};
     SPLine.StringMesh = {1,25};
     #else
     SPLine.StringMesh = 25;
@@ -987,7 +987,7 @@ MuscleGroup FlexorDigitorumProfundus = {
       InitWrapPosVecArr = {None,&InitWrapPos,None};
     };
     #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
-    SPLine.StringSurfaceMap = {{Off},{On},{Off}};
+    //SPLine.StringSurfaceMap = {{Off},{On},{Off}};
     SPLine.StringMesh = {1,35,1};
     #else
     SPLine.StringMesh = 35;
@@ -1012,7 +1012,7 @@ MuscleGroup FlexorDigitorumProfundus = {
       InitWrapPosVecArr = {None,&InitWrapPos,None};
     };
     #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
-    SPLine.StringSurfaceMap = {{Off},{On},{Off}};
+    //SPLine.StringSurfaceMap = {{Off},{On},{Off}};
     SPLine.StringMesh = {1,35,1};
     #else
     SPLine.StringMesh = 35;
@@ -1037,7 +1037,7 @@ MuscleGroup FlexorDigitorumProfundus = {
       InitWrapPosVecArr = {None,&InitWrapPos,None};
     };
     #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
-    SPLine.StringSurfaceMap = {{Off},{On},{Off}};
+    //SPLine.StringSurfaceMap = {{Off},{On},{Off}};
     SPLine.StringMesh = {1,35,1};
     #else
     SPLine.StringMesh = 35;
@@ -1062,7 +1062,7 @@ MuscleGroup FlexorDigitorumProfundus = {
       InitWrapPosVecArr = {None,&InitWrapPos,None};
     };
     #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
-    SPLine.StringSurfaceMap = {{Off},{On},{Off}};
+    //SPLine.StringSurfaceMap = {{Off},{On},{Off}};
     SPLine.StringMesh = {1,35,1};
     #else
     SPLine.StringMesh = 35;
@@ -1089,7 +1089,7 @@ MuscleGroup FlexorDigitorumSuperficialis = {
       InitWrapPosVecArr = {None,&InitWrapPos,None};
     };
     #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
-    SPLine.StringSurfaceMap = {{Off},{On},{Off}};
+    //SPLine.StringSurfaceMap = {{Off},{On},{Off}};
     SPLine.StringMesh = {1,30,1};
     #else
     SPLine.StringMesh = 30;
@@ -1113,7 +1113,7 @@ MuscleGroup FlexorDigitorumSuperficialis = {
       InitWrapPosVecArr = {None,&InitWrapPos,None};
     };
     #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
-    SPLine.StringSurfaceMap = {{Off},{On},{Off}};
+    //SPLine.StringSurfaceMap = {{Off},{On},{Off}};
     SPLine.StringMesh = {1,25,1};
     #else
     SPLine.StringMesh = 25;
@@ -1139,7 +1139,7 @@ MuscleGroup FlexorDigitorumSuperficialis = {
       InitWrapPosVecArr = {None,&InitWrapPos,None};
     };
     #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
-    SPLine.StringSurfaceMap = {{Off},{On},{Off}};
+    //SPLine.StringSurfaceMap = {{Off},{On},{Off}};
     SPLine.StringMesh = {1,25,1};
     #else
     SPLine.StringMesh = 25;
@@ -1165,7 +1165,7 @@ MuscleGroup FlexorDigitorumSuperficialis = {
       InitWrapPosVecArr = {None,&InitWrapPos,None};
     };
     #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
-    SPLine.StringSurfaceMap = {{Off},{On},{Off}};
+    //SPLine.StringSurfaceMap = {{Off},{On},{Off}};
     SPLine.StringMesh = {1,25,1};
     #else
     SPLine.StringMesh = 25;
@@ -1193,7 +1193,7 @@ MuscleGroup FlexorPollicisLongus = {
       InitWrapPosVecArr = {None,&InitWrapPos,None};
     };
     #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
-    SPLine.StringSurfaceMap = {{Off},{On},{Off}};
+    //SPLine.StringSurfaceMap = {{Off},{On},{Off}};
     SPLine.StringMesh = {1,25,1};
     #else
     SPLine.StringMesh = 25;
@@ -1283,7 +1283,7 @@ MuscleGroup LatissimusDorsi = {
     AnyRefNode &Via = ..WrappingSurfaces.ThoraxWrappingSufaceSegRef.O_LatissimusDorsi1_via;
     AnyRefNode &Ins = ...Segments.Humerus.I_LatissimusDorsi1;
     #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
-    SPLine.StringSurfaceMap = {{Off,Off,Off,Off},{On,On,On,On}};
+    //SPLine.StringSurfaceMap = {{Off,Off,Off,Off},{On,On,On,On}};
     SPLine.StringMesh = {1,100};
     #else
     SPLine.StringMesh = 100;
@@ -1314,7 +1314,7 @@ MuscleGroup LatissimusDorsi = {
     AnyRefNode &Via = ..WrappingSurfaces.ThoraxWrappingSufaceSegRef.O_LatissimusDorsi2_via;
     AnyRefNode &Ins = ...Segments.Humerus.I_LatissimusDorsi2;
     #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
-    SPLine.StringSurfaceMap = {{Off,Off,Off,Off},{On,On,On,On}};
+    //SPLine.StringSurfaceMap = {{Off,Off,Off,Off},{On,On,On,On}};
     SPLine.StringMesh = {1,100};
     #else
     SPLine.StringMesh = 100;
@@ -1335,7 +1335,7 @@ MuscleGroup LatissimusDorsi = {
     AnyRefNode &Via = ..WrappingSurfaces.ThoraxWrappingSufaceSegRef.O_LatissimusDorsi3_via;
     AnyRefNode &Ins = ...Segments.Humerus.I_LatissimusDorsi3;
     #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
-    SPLine.StringSurfaceMap = {{Off,Off,Off,Off},{On,On,On,On}};
+    //SPLine.StringSurfaceMap = {{Off,Off,Off,Off},{On,On,On,On}};
     SPLine.StringMesh = {1,110};
     #else
     SPLine.StringMesh = 110;
@@ -1356,7 +1356,7 @@ MuscleGroup LatissimusDorsi = {
     AnyRefNode &Via = ..WrappingSurfaces.ThoraxWrappingSufaceSegRef.O_LatissimusDorsi4_via;
     AnyRefNode &Ins = ...Segments.Humerus.I_LatissimusDorsi4;
     #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
-    SPLine.StringSurfaceMap = {{Off,Off,Off,Off},{On,On,On,On}};
+    //SPLine.StringSurfaceMap = {{Off,Off,Off,Off},{On,On,On,On}};
     SPLine.StringMesh = {1,110};
     #else
     SPLine.StringMesh = 110;
@@ -1377,7 +1377,7 @@ MuscleGroup LatissimusDorsi = {
     AnyRefNode &Via = ..WrappingSurfaces.ThoraxWrappingSufaceSegRef.O_LatissimusDorsi5_via;
     AnyRefNode &Ins = ...Segments.Humerus.I_LatissimusDorsi5;
     #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
-    SPLine.StringSurfaceMap = {{Off,Off,Off,Off},{On,On,On,On}};
+    //SPLine.StringSurfaceMap = {{Off,Off,Off,Off},{On,On,On,On}};
     SPLine.StringMesh = {1,120};
     #else
     SPLine.StringMesh = 120;
@@ -1398,7 +1398,7 @@ MuscleGroup LatissimusDorsi = {
     AnyRefNode &Via = ..WrappingSurfaces.ThoraxWrappingSufaceSegRef.O_LatissimusDorsi6_via;
     AnyRefNode &Ins = ...Segments.Humerus.I_LatissimusDorsi6;
     #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
-    SPLine.StringSurfaceMap = {{Off,Off,Off,Off},{On,On,On,On}};
+    //SPLine.StringSurfaceMap = {{Off,Off,Off,Off},{On,On,On,On}};
     SPLine.StringMesh = {1,110};
     #else
     SPLine.StringMesh = 110;
@@ -1419,7 +1419,7 @@ MuscleGroup LatissimusDorsi = {
     AnyRefNode &Via = ..WrappingSurfaces.ThoraxWrappingSufaceSegRef.O_LatissimusDorsi7_via;
     AnyRefNode &Ins = ...Segments.Humerus.I_LatissimusDorsi7;
     #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
-    SPLine.StringSurfaceMap = {{Off,Off,Off,Off},{On,On,On,On}};
+    //SPLine.StringSurfaceMap = {{Off,Off,Off,Off},{On,On,On,On}};
     SPLine.StringMesh = {1,110};
     #else
     SPLine.StringMesh = 110;
@@ -1440,7 +1440,7 @@ MuscleGroup LatissimusDorsi = {
     AnyRefNode &Via = ..WrappingSurfaces.ThoraxWrappingSufaceSegRef.O_LatissimusDorsi8_via;
     AnyRefNode &Ins = ...Segments.Humerus.I_LatissimusDorsi8;
     #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
-    SPLine.StringSurfaceMap = {{Off,Off,Off,Off},{On,On,On,On}};
+    //SPLine.StringSurfaceMap = {{Off,Off,Off,Off},{On,On,On,On}};
     SPLine.StringMesh = {1,110};
     #else
     SPLine.StringMesh = 110;
@@ -1461,7 +1461,7 @@ MuscleGroup LatissimusDorsi = {
     AnyRefNode &Via = ..WrappingSurfaces.ThoraxWrappingSufaceSegRef.O_LatissimusDorsi9_via;
     AnyRefNode &Ins = ...Segments.Humerus.I_LatissimusDorsi9;
     #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
-    SPLine.StringSurfaceMap = {{Off,Off,Off,Off},{On,On,On,On}};
+    //SPLine.StringSurfaceMap = {{Off,Off,Off,Off},{On,On,On,On}};
     SPLine.StringMesh = {1,110};
     #else
     SPLine.StringMesh = 110;
@@ -1482,7 +1482,7 @@ MuscleGroup LatissimusDorsi = {
     AnyRefNode &Via = ..WrappingSurfaces.ThoraxWrappingSufaceSegRef.O_LatissimusDorsi10_via;
     AnyRefNode &Ins = ...Segments.Humerus.I_LatissimusDorsi10;
     #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
-    SPLine.StringSurfaceMap = {{Off,Off,Off,Off},{On,On,On,On}};
+    //SPLine.StringSurfaceMap = {{Off,Off,Off,Off},{On,On,On,On}};
     SPLine.StringMesh = {1,110};
     #else
     SPLine.StringMesh = 110;
@@ -1505,7 +1505,7 @@ MuscleGroup LatissimusDorsi = {
 
     AnyRefNode &Ins = ...Segments.Humerus.I_LatissimusDorsi11;
     #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
-    SPLine.StringSurfaceMap = {{Off,Off,Off,Off},{On,On,On,On}};
+    //SPLine.StringSurfaceMap = {{Off,Off,Off,Off},{On,On,On,On}};
     SPLine.StringMesh = {1,200};
     #else
     SPLine.StringMesh = 200;
@@ -1568,7 +1568,7 @@ MuscleGroup PalmarisLongus = {
       InitWrapPosVecArr = {None,&InitWrapPos};
     };
     #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
-    SPLine.StringSurfaceMap = {{Off},{On}};
+    //SPLine.StringSurfaceMap = {{Off},{On}};
     SPLine.StringMesh = {1,25};
     #else
     SPLine.StringMesh = 25;
@@ -2583,7 +2583,7 @@ MuscleGroup TricepsBrachiiLongum = {
     AnyRefNode &Ins = ...Segments.Ulna.I_TricepsBrachiiLongum1;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
-    SPLine.StringSurfaceMap = {{On,Off},{Off,On}};
+    //SPLine.StringSurfaceMap = {{On,Off},{Off,On}};
     SPLine.StringMesh = {70,70};
     #else
     SPLine.StringMesh = 70;
@@ -2611,7 +2611,7 @@ MuscleGroup TricepsBrachiiLongum = {
     AnyRefNode &Ins = ...Segments.Ulna.I_TricepsBrachiiLongum2;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
-    SPLine.StringSurfaceMap = {{On,Off},{Off,On}};
+    //SPLine.StringSurfaceMap = {{On,Off},{Off,On}};
     SPLine.StringMesh = {70,70};
     #else
     SPLine.StringMesh = 70;
