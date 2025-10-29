@@ -24,7 +24,7 @@ AnyFolder PsoasMajor = {
 
     AnySurfCylinder &Surf1 =....Segments.PelvisSeg.Left.PsoasWrapSurf;
     #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
-    SPLine.StringMesh = {.StringMesh, 0, 0, 0, 0, 0};
+    SPLine.StringMesh = {.StringMesh, 1, 1, 1, 1, 1};
     #else
     SPLine.StringMesh = .StringMesh;
     #endif
