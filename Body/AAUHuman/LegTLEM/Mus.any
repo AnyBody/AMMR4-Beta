@@ -31,7 +31,7 @@
       AnySurface &srf1 = ...Seg.Shank.AchillesWrapping1.Cyl;
       AnySurface &srf2 = ...Seg.Shank.AchillesWrapping2.Cyl;
       SPLine = {
-        #ifdef OPTIMIZE_STRING_MESH
+        #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
         StringMesh = {30,0};
         #else
         StringMesh = 30;
@@ -52,7 +52,7 @@
       AnyRefNode &Ins = ...Seg.Foot.Calcaneus.SoleusMedialis2Node;
       AnySurface &srf1 = ...Seg.Shank.AchillesWrapping1.Cyl;
       AnySurface &srf2 = ...Seg.Shank.AchillesWrapping2.Cyl;
-      #ifdef OPTIMIZE_STRING_MESH
+      #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
       SPLine.StringMesh = {30,0};
       #else
       SPLine.StringMesh = 30;
@@ -68,7 +68,7 @@
       AnyRefNode &Ins = ...Seg.Foot.Calcaneus.SoleusMedialis3Node;
       AnySurface &srf1 = ...Seg.Shank.AchillesWrapping1.Cyl;
       AnySurface &srf2 = ...Seg.Shank.AchillesWrapping2.Cyl;
-      #ifdef OPTIMIZE_STRING_MESH
+      #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
       SPLine.StringMesh = {30,0};
       #else
       SPLine.StringMesh = 30;
@@ -86,7 +86,7 @@
       AnyRefNode &Ins = ...Seg.Foot.Calcaneus.SoleusLateralis1Node;
       AnySurface &srf1 = ...Seg.Shank.AchillesWrapping1.Cyl;
       AnySurface &srf2 = ...Seg.Shank.AchillesWrapping2.Cyl;
-      #ifdef OPTIMIZE_STRING_MESH
+      #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
       SPLine.StringMesh = {30,0};
       #else
       SPLine.StringMesh = 30;
@@ -102,7 +102,7 @@
       AnyRefNode &Ins = ...Seg.Foot.Calcaneus.SoleusLateralis2Node;
       AnySurface &srf1 = ...Seg.Shank.AchillesWrapping1.Cyl;
       AnySurface &srf2 = ...Seg.Shank.AchillesWrapping2.Cyl;
-      #ifdef OPTIMIZE_STRING_MESH
+      #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
       SPLine.StringMesh = {30,0};
       #else
       SPLine.StringMesh = 30;
@@ -118,7 +118,7 @@
       AnyRefNode &Ins = ...Seg.Foot.Calcaneus.SoleusLateralis3Node;
       AnySurface &srf1 = ...Seg.Shank.AchillesWrapping1.Cyl;
       AnySurface &srf2 = ...Seg.Shank.AchillesWrapping2.Cyl;
-      #ifdef OPTIMIZE_STRING_MESH
+      #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
       SPLine.StringMesh = {30,0};
       #else
       SPLine.StringMesh = 30;
@@ -141,7 +141,7 @@
       AnyRefNode &Via10 = ...Seg.Foot.Calcaneus.GastrocnemiusLateralis1SuperiorNode;
       AnyRefNode &Ins = ...Seg.Foot.Calcaneus.GastrocnemiusLateralis1Node;
       SPLine = {
-        #ifdef OPTIMIZE_STRING_MESH
+        #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
         StringMesh = {30,0,0,30,0};
         StringSurfaceMap = {{On,Off,Off}, {Off,Off,Off}, {Off,Off,Off}, {Off,On,On}, {Off,Off,Off}};
         #else
@@ -175,7 +175,7 @@
       AnyRefNode &Via7 = ...Seg.Shank.GastrocnemiusMedialis7ViaNode;
       AnyRefNode &Via8 = ...Seg.Foot.Calcaneus.GastrocnemiusMedialis1SuperiorNode;
       AnyRefNode &Ins = ...Seg.Foot.Calcaneus.GastrocnemiusMedialis1Node;
-      #ifdef OPTIMIZE_STRING_MESH
+      #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
       SPLine.StringMesh = {0,30,0,0,0,30,0};
       SPLine.StringSurfaceMap = {{Off,Off,Off}, {On,Off,Off}, {Off,Off,Off},{Off,Off,Off},{Off,Off,Off},{Off,On,On}, {Off,Off,Off}};
       #else
@@ -204,7 +204,7 @@
       AnyRefNode &Via1 = ...Seg.Foot.Calcaneus.Plantaris1SuperiorNode;
       AnyRefNode &Ins = ...Seg.Foot.Calcaneus.Plantaris1Node;
       SPLine = {
-        #ifdef OPTIMIZE_STRING_MESH
+        #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
         StringMesh = {30,0};
         #else
         StringMesh = 30;
@@ -972,7 +972,7 @@ MuscleGroup Semitendinosus() = {
     AnyRefNode &Ins = ...Seg.Shank.Semitendinosus1Node;
 
     AnySurface &srf2 = ...Seg.Pelvis.Muscles.Semitendinosus1WrapSurf.cyl;
-    #ifdef OPTIMIZE_STRING_MESH
+    #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
     SPLine.StringMesh = {160,0};
     #else
     SPLine.StringMesh = 160;
@@ -1115,7 +1115,7 @@ MuscleGroup IliacusLateralis() = {
     AnySurface &srf = ...Seg.Thigh.IliacusWrapSurf.cyl;
     AnyRefNode &Ins = ...Seg.Thigh.Iliopsoas3Node;
     SPLine = {
-      #ifdef OPTIMIZE_STRING_MESH
+      #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
       StringMesh = {0,80};
       #else
       StringMesh = 80;
@@ -1160,7 +1160,7 @@ MuscleGroup IliacusMid() = {
     AnyRefNode &Via1 = ...Seg.Pelvis.Muscles.IliacusMidViaNode2;
     AnySurface &srf = ...Seg.Thigh.IliacusWrapSurf.cyl;
     AnyRefNode &Ins = ...Seg.Thigh.Iliopsoas2Node;
-    #ifdef OPTIMIZE_STRING_MESH
+    #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
     SPLine.StringMesh = {0,90};
     #else
     SPLine.StringMesh = 90;
@@ -1188,7 +1188,7 @@ MuscleGroup IliacusMedialis() = {
     AnyRefNode &Via1 = ...Seg.Pelvis.Muscles.IliacusMedialisViaNode1;
     AnySurface &srf = ...Seg.Thigh.IliacusWrapSurf.cyl;
     AnyRefNode &Ins = ...Seg.Thigh.Iliopsoas1Node;
-    #ifdef OPTIMIZE_STRING_MESH
+    #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
     SPLine.StringMesh = {0,90};
     #else
     SPLine.StringMesh = 90;
