@@ -76,6 +76,13 @@ valuetype = "integer"
 descr = "Switch for using the foot model from the selected leg model"
 nicename = "Leg Foot Model"
 
+[constants._FOOT_MODEL_DEFAULT_]
+default = "9"
+deprecated = "true"
+valuetype = "integer"
+descr = "_FOOT_MODEL_DEFAULT_ is deprecated. Please use _FOOT_MODEL_RIGID_GM_ instead."
+nicename = "Depreacated switch"
+
 [constants._FOOT_MODEL_RIGID_GM_]
 default = "2"
 valuetype = "integer"

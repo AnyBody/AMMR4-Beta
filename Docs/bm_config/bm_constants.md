@@ -150,6 +150,19 @@ Switch for using the foot model from the selected leg model
 
 
 
+::::{dropdown} `_FOOT_MODEL_DEFAULT_`
+:animate: fade-in-slide-down
+:margin: 0 0 2 2
+
+:::{ammr:bm_constant} _FOOT_MODEL_DEFAULT_
+:value: 9
+:deprecated:
+_FOOT_MODEL_DEFAULT_ is deprecated. Please use _FOOT_MODEL_RIGID_GM_ instead.
+:::
+::::
+
+
+
 ::::{dropdown} `_FOOT_MODEL_RIGID_GM_`
 :animate: fade-in-slide-down
 :margin: 0 0 2 2
