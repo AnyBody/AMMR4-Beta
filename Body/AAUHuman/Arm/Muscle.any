@@ -68,7 +68,7 @@ MuscleGroup BicepsBrachiiLongum = {
     AnyRefNode &Ins = ...Segments.Radius.I_Biceps_LH;  //this point has been taken from MAYO study
 
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-   SPLine.StringMesh = {20,3,150};
+   SPLine.StringMesh = {150,3,150};
    SPLine.StringSurfaceMap = {{On,Off,Off},{Off,Off,Off},{Off,On,On}};
     AnySurfEllipsoid &Surfgh = ...Segments.Humerus.art_gh_hum.art_gh_humSurf;
     AnySurfCylinder &Surf0 = ...Segments.Humerus.condylus_hum.cyl;
