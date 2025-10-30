@@ -132,7 +132,7 @@ Switch to use leg model: "Leg"
 
 :::{ammr:bm_constant} _FOOT_MODEL_NONE_
 :value: 0
-Switch off foot model"
+Switch off foot model
 :::
 ::::
 
@@ -157,7 +157,7 @@ Switch for using the foot model from the selected leg model
 :::{ammr:bm_constant} _FOOT_MODEL_DEFAULT_
 :value: 9
 :deprecated:
-_FOOT_MODEL_DEFAULT_ is deprecated. Please use _FOOT_MODEL_RIGID_GM_ instead.
+`_FOOT_MODEL_DEFAULT_` is deprecated. Please use `_FOOT_MODEL_RIGID_GM_` instead.
 :::
 ::::
 
