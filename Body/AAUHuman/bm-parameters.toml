@@ -502,13 +502,6 @@ default = "1.0"
 valuetype = "float"
 descr = "Index parameter to specify strength for trunk muscles."
 
-[parameters.BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH]
-default = "ON"
-deprecated = "true"
-valuetype = "integer"
-descr = "Internal switch to enable test of optimized string mesh."
-opt = [ "OFF", "ON"]
-
 [parameters.BM_TRUNK_EXPERIMENTAL_RECTUS_ABDOMINIS]
 default = "ON"
 deprecated = "true"

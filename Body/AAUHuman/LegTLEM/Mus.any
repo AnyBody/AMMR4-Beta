@@ -31,12 +31,8 @@
       AnySurface &srf1 = ...Seg.Shank.AchillesWrapping1.Cyl;
       AnySurface &srf2 = ...Seg.Shank.AchillesWrapping2.Cyl;
       SPLine = {
-        #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
         StringSurfaceMap = {{On,On},{Off,Off}};
         StringMesh = {30,3};
-        #else
-        StringMesh = 30;
-        #endif
         AnyMatrix InitWrapPos = {
           transf3D({1.005*.srf1.Radius, 0, 0.5*.srf1.Length }, &.srf1 ) ,
           transf3D({-1.005*.srf2.Radius, 0, 0.5*.srf2.Length }, &.srf2 )
@@ -53,12 +49,8 @@
       AnyRefNode &Ins = ...Seg.Foot.Calcaneus.SoleusMedialis2Node;
       AnySurface &srf1 = ...Seg.Shank.AchillesWrapping1.Cyl;
       AnySurface &srf2 = ...Seg.Shank.AchillesWrapping2.Cyl;
-      #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
       SPLine.StringSurfaceMap = {{On,On},{Off,Off}};
       SPLine.StringMesh = {30,3};
-      #else
-      SPLine.StringMesh = 30;
-      #endif
       SPLine.InitWrapPosVecArr = .SoleusMedialis1.SPLine.InitWrapPosVecArr;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     };
@@ -70,12 +62,8 @@
       AnyRefNode &Ins = ...Seg.Foot.Calcaneus.SoleusMedialis3Node;
       AnySurface &srf1 = ...Seg.Shank.AchillesWrapping1.Cyl;
       AnySurface &srf2 = ...Seg.Shank.AchillesWrapping2.Cyl;
-      #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
       SPLine.StringSurfaceMap = {{On,On},{Off,Off}};
       SPLine.StringMesh = {30,3};
-      #else
-      SPLine.StringMesh = 30;
-      #endif
       SPLine.InitWrapPosVecArr = .SoleusMedialis1.SPLine.InitWrapPosVecArr;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     };
@@ -89,12 +77,8 @@
       AnyRefNode &Ins = ...Seg.Foot.Calcaneus.SoleusLateralis1Node;
       AnySurface &srf1 = ...Seg.Shank.AchillesWrapping1.Cyl;
       AnySurface &srf2 = ...Seg.Shank.AchillesWrapping2.Cyl;
-      #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
       SPLine.StringSurfaceMap = {{On,On},{Off,Off}};
       SPLine.StringMesh = {30,3};
-      #else
-      SPLine.StringMesh = 30;
-      #endif
       SPLine.InitWrapPosVecArr = ..SoleusMedialis.SoleusMedialis1.SPLine.InitWrapPosVecArr;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     };
@@ -106,12 +90,8 @@
       AnyRefNode &Ins = ...Seg.Foot.Calcaneus.SoleusLateralis2Node;
       AnySurface &srf1 = ...Seg.Shank.AchillesWrapping1.Cyl;
       AnySurface &srf2 = ...Seg.Shank.AchillesWrapping2.Cyl;
-      #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
       SPLine.StringSurfaceMap = {{On,On},{Off,Off}};
       SPLine.StringMesh = {30,3};
-      #else
-      SPLine.StringMesh = 30;
-      #endif
       SPLine.InitWrapPosVecArr = ..SoleusMedialis.SoleusMedialis1.SPLine.InitWrapPosVecArr;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     };
@@ -123,12 +103,8 @@
       AnyRefNode &Ins = ...Seg.Foot.Calcaneus.SoleusLateralis3Node;
       AnySurface &srf1 = ...Seg.Shank.AchillesWrapping1.Cyl;
       AnySurface &srf2 = ...Seg.Shank.AchillesWrapping2.Cyl;
-      #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
       SPLine.StringSurfaceMap = {{On,On},{Off,Off}};
       SPLine.StringMesh = {30,3};
-      #else
-      SPLine.StringMesh = 30;
-      #endif
       SPLine.InitWrapPosVecArr = ..SoleusMedialis.SoleusMedialis1.SPLine.InitWrapPosVecArr;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     };
@@ -147,12 +123,8 @@
       AnyRefNode &Via10 = ...Seg.Foot.Calcaneus.GastrocnemiusLateralis1SuperiorNode;
       AnyRefNode &Ins = ...Seg.Foot.Calcaneus.GastrocnemiusLateralis1Node;
       SPLine = {
-        #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
         StringMesh = {30,3,3,30,3};
         StringSurfaceMap = {{On,Off,Off}, {Off,Off,Off}, {Off,Off,Off}, {Off,On,On}, {Off,Off,Off}};
-        #else
-        StringMesh = 30;
-        #endif
         AnyMatrix InitWrapPos1 = {
           transf3D({1.1*.srf.Radius, ....Sign*1.1*.srf.Radius, 0.5*.srf.Length }, &.srf ) ,
         };
@@ -181,12 +153,8 @@
       AnyRefNode &Via7 = ...Seg.Shank.GastrocnemiusMedialis7ViaNode;
       AnyRefNode &Via8 = ...Seg.Foot.Calcaneus.GastrocnemiusMedialis1SuperiorNode;
       AnyRefNode &Ins = ...Seg.Foot.Calcaneus.GastrocnemiusMedialis1Node;
-      #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
       SPLine.StringMesh = {3,30,3,3,3,30,3};
       SPLine.StringSurfaceMap = {{Off,Off,Off}, {On,Off,Off}, {Off,Off,Off},{Off,Off,Off},{Off,Off,Off},{Off,On,On}, {Off,Off,Off}};
-      #else
-      SPLine.StringMesh = 30;
-      #endif
       SPLine.InitWrapPosVecArr = {
         None,
         &..GastrocnemiusLateralis.GastrocnemiusLateralis1.SPLine.InitWrapPos1,
@@ -210,12 +178,8 @@
       AnyRefNode &Via1 = ...Seg.Foot.Calcaneus.Plantaris1SuperiorNode;
       AnyRefNode &Ins = ...Seg.Foot.Calcaneus.Plantaris1Node;
       SPLine = {
-        #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
         StringSurfaceMap = {{On,On,On},{Off,Off,Off}};
         StringMesh = {30,3};
-        #else
-        StringMesh = 30;
-        #endif
         AnyMatrix InitWrapPos = {
           transf3D({1.1*.srf.Radius, ....Sign*1.1*.srf.Radius, 0.5*.srf.Length }, &.srf ) ,
           transf3D({1.005*.srf1.Radius, 0, 0.5*.srf1.Length }, &.srf1 ) ,
@@ -979,12 +943,8 @@ MuscleGroup Semitendinosus() = {
     AnyRefNode &Ins = ...Seg.Shank.Semitendinosus1Node;
 
     AnySurface &srf2 = ...Seg.Pelvis.Muscles.Semitendinosus1WrapSurf.cyl;
-    #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
     SPLine.StringSurfaceMap = {{On,On},{Off,Off}};
     SPLine.StringMesh = {160,3};
-    #else
-    SPLine.StringMesh = 160;
-    #endif
 
     SPLine =
     {
@@ -1123,12 +1083,8 @@ MuscleGroup IliacusLateralis() = {
     AnySurface &srf = ...Seg.Thigh.IliacusWrapSurf.cyl;
     AnyRefNode &Ins = ...Seg.Thigh.Iliopsoas3Node;
     SPLine = {
-      #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
       StringSurfaceMap = {{Off},{On}};
       StringMesh = {3,80};
-      #else
-      StringMesh = 80;
-      #endif
       AnyMatrix InitWrapPos = {
           transf3D({....Sign*0.8*.srf.Radius, 0.8*.srf.Radius, 1.2*.srf.Length }, &.srf ) ,
           transf3D({....Sign*0*.srf.Radius, 1.2*.srf.Radius, 1*.srf.Length }, &.srf ) ,
@@ -1171,12 +1127,8 @@ MuscleGroup IliacusMid() = {
     AnyRefNode &Via1 = ...Seg.Pelvis.Muscles.IliacusMidViaNode2;
     AnySurface &srf = ...Seg.Thigh.IliacusWrapSurf.cyl;
     AnyRefNode &Ins = ...Seg.Thigh.Iliopsoas2Node;
-    #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
     SPLine.StringSurfaceMap ={{Off},{On}};
     SPLine.StringMesh = {3,90};
-    #else
-    SPLine.StringMesh = 90;
-    #endif
     SPLine.InitWrapPosVecArr = ..IliacusLateralis.IliacusLateralis1.SPLine.InitWrapPosVecArr;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
@@ -1201,12 +1153,8 @@ MuscleGroup IliacusMedialis() = {
     AnyRefNode &Via1 = ...Seg.Pelvis.Muscles.IliacusMedialisViaNode1;
     AnySurface &srf = ...Seg.Thigh.IliacusWrapSurf.cyl;
     AnyRefNode &Ins = ...Seg.Thigh.Iliopsoas1Node;
-    #if BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
     SPLine.StringSurfaceMap ={{Off},{On}};
     SPLine.StringMesh = {3,90};
-    #else
-    SPLine.StringMesh = 90;
-    #endif
     SPLine.InitWrapPosVecArr = ..IliacusLateralis.IliacusLateralis1.SPLine.InitWrapPosVecArr;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
