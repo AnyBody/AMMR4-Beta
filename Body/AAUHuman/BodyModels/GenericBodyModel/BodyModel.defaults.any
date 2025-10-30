@@ -97,6 +97,11 @@
 #define BM_TRUNK_STRENGTH_INDEX 1.0
 #endif
 
+// Internal switch to enable test of optimized string mesh.
+#ifndef BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH
+#define BM_EXPERIMENTAL_OPTIMIZE_STRING_MESH ON
+#endif
+
 // Internal swtich to enable a different implementation of the Rectus Abdominis muscles.
 #ifndef BM_TRUNK_EXPERIMENTAL_RECTUS_ABDOMINIS
 #define BM_TRUNK_EXPERIMENTAL_RECTUS_ABDOMINIS ON
