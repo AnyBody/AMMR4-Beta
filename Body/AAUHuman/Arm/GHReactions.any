@@ -30,7 +30,7 @@ AnyFolder GHReactions={
   Scapula={
 
     AnyRefNode    GHReactionCenterNode = {
-      sRel=.Scale({  -0.001,-0.048,-0.030}*.Mirror);
+      sRel=.Scale({  -0.001,-0.048,-0.030}*.Mirror);//move the data
       //AnyDrawRefFrame drw={ScaleXYZ={0.05,0.05,0.05};};
     };
 
