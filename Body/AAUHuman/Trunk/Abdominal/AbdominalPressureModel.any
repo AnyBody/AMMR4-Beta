@@ -952,25 +952,25 @@ AnyFolder Abdominal = {
     AnyRecruitedActuator LayerMomentReactionsNonNegative = {
       AnyKinMeasureOrg Measures = {
         AnyKinRotational L1L2 = {
-          AnyRefFrame& r0 ??=  ....Layer_L1.BaseSegAnterior;
+          AnyRefFrame& r0 = ....Layer_L1.BaseSegAnterior;
           AnyRefFrame& r1 = ....Layer_L2.BaseSegAnterior;
           Axis1 = x; Axis2 = y; Axis3 = z;
           Type = RotAxesAngles;
         };
         AnyKinRotational L2L3 = {
-          AnyRefFrame& r0 ??=  ....Layer_L2.BaseSegAnterior;
+          AnyRefFrame& r0 = ....Layer_L2.BaseSegAnterior;
           AnyRefFrame& r1 = ....Layer_L3.BaseSegAnterior;
           Axis1 = x; Axis2 = y; Axis3 = z;
           Type = RotAxesAngles;
         };
         AnyKinRotational L3L4 = {
-          AnyRefFrame& r0 ??=  ....Layer_L3.BaseSegAnterior;
+          AnyRefFrame& r0 = ....Layer_L3.BaseSegAnterior;
           AnyRefFrame& r1 = ....Layer_L4.BaseSegAnterior;
           Axis1 = x; Axis2 = y; Axis3 = z;
           Type = RotAxesAngles;
         };
         AnyKinRotational L4L5 = {
-          AnyRefFrame& r0 ??=  ....Layer_L4.BaseSegAnterior;
+          AnyRefFrame& r0 = ....Layer_L4.BaseSegAnterior;
           AnyRefFrame& r1 = ....Layer_L5.BaseSegAnterior;
           Axis1 = x; Axis2 = y; Axis3 = z;
           Type = RotAxesAngles;
@@ -994,14 +994,14 @@ AnyFolder Abdominal = {
     AnyRecruitedActuator LayerMomentReactionsNonNegative_Extra = {
       AnyKinMeasureOrg Measures = {
         AnyKinRotational ThoraxL1 = {
-          AnyRefFrame& r0 ??=  .....Segments.SternalBodySeg;
+          AnyRefFrame& r0 = .....Segments.SternalBodySeg;
           AnyRefFrame& r1 = ....Layer_L1.BaseSegAnterior;
           Axis1 = x; Axis2 = y; Axis3 = z;
           Type = RotAxesAngles;
         };
 
         AnyKinRotational L5Pelvis = {
-          AnyRefFrame& r0 ??=  ....Layer_L5.BaseSegAnterior;
+          AnyRefFrame& r0 = ....Layer_L5.BaseSegAnterior;
           AnyRefFrame& r1 = ....Layer_Pelvic1.BaseSegAnterior;
           Axis1 = x; Axis2 = y; Axis3 = z;
           Type = RotAxesAngles;
