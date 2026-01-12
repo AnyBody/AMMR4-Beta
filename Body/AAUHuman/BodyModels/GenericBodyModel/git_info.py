@@ -16,7 +16,7 @@ class AMSContext:
 
 
 
-def git_info(context: tuple, fpath: str) -> tuple[str, str]:
+def git_info(context: tuple, fpath: str) -> tuple[str, str, str]:
     """
     Get the git information of a repository.
 
@@ -40,7 +40,9 @@ def git_info(context: tuple, fpath: str) -> tuple[str, str]:
     # debugpy.breakpoint()
     # print('break on this line')
     
-    assert sys.version_info >= (3, 14), "Python 3.14 or higher is required"
+    if sys.version_info < (3, 14):
+        return str(sys.version_info), "unknown", "error"
+
 
 
     context = AMSContext(*context)
@@ -102,4 +104,4 @@ def git_info(context: tuple, fpath: str) -> tuple[str, str]:
         error = str(e)
 
     ref = branch_name or tag_name
-    return ref, hashref, error
+    return str(ref), str(hashref), str(error)
