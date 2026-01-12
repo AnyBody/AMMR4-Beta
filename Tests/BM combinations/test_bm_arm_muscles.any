@@ -33,6 +33,8 @@
 
 Main =
 {
+  
+  AnyInt test = assert(eqfun(Main.HumanModel.Config._AMMR_BETA_INFO_.GitInfo[0], "py314"));
   // #path HTML_DOC "<AMMR_PATH_DOC>/bm_config/index.html"
   #include "<ANYBODY_PATH_BODY>\HumanModel.any"
 
