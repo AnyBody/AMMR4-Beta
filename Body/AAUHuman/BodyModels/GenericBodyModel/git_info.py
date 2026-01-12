@@ -1,7 +1,7 @@
 import subprocess
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Tuple
+import sys
 
 
 @dataclass
@@ -16,7 +16,7 @@ class AMSContext:
 
 
 
-def git_info(context: tuple, fpath: str) -> Tuple[str, str]:
+def git_info(context: tuple, fpath: str) -> tuple[str, str]:
     """
     Get the git information of a repository.
 
@@ -25,7 +25,7 @@ def git_info(context: tuple, fpath: str) -> Tuple[str, str]:
         fpath (str): The path to the git repository.
 
     Returns:
-        Tuple[str, str]: A tuple containing the reference (branch or tag name) and the commit hash.
+        tuple[str, str]: A tuple containing the reference (branch or tag name) and the commit hash.
 
     Raises:
         subprocess.CalledProcessError: If the git command fails.
@@ -40,6 +40,8 @@ def git_info(context: tuple, fpath: str) -> Tuple[str, str]:
     # debugpy.breakpoint()
     # print('break on this line')
     
+    assert sys.version_info >= (3, 14), "Python 3.14 or higher is required"
+
 
     context = AMSContext(*context)
     gitfolder = Path(fpath)
@@ -55,6 +57,7 @@ def git_info(context: tuple, fpath: str) -> Tuple[str, str]:
         text=True,
         stderr=subprocess.STDOUT,
     )
+
 
     try:
         subprocess.check_output(["git", "--version"], **options)
