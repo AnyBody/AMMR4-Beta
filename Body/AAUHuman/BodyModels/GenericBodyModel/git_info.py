@@ -41,7 +41,7 @@ def git_info(context: tuple, fpath: str) -> tuple[str, str, str]:
     # print('break on this line')
     
     if sys.version_info < (3, 14):
-        return str(sys.version_info), "unknown", "error"
+        return str(sys.executable), "unknown", "error"
 
 
 
