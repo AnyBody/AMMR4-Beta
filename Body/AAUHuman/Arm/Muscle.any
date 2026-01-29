@@ -514,13 +514,15 @@ AnyParamSurfAnalytical &Surf5 = ...Segments.Scapula.DeltoidAnterior_NormaltoScap
       AnyRefNode &Org = ...Segments.Scapula.O_DeltoideusLateral1;
 //      AnyRefNode &Via1 = ..WrappingSurfaces.DeltoidWrappingAnterior.WrappingSegment_RepresentDeltoidLateral.ViaNode1_DL1;
       AnyRefNode &Via1 = ..WrappingSurfaces.LateralDeltoid_ViaNodeSegment.ViaNode1_DL1;
+//      AnyRefNode &Via2 = ..WrappingSurfaces.HumerusViaNodeSegment.ViaNode2_DL1;
+//      AnyRefNode &Via2 = ..WrappingSurfaces.DLVia3_gh_HumI1_DeltoidSurface_Segment.ViaNode2_DL1;
       AnyRefNode &Ins = ...Segments.Humerus.I_DeltoideusLateral1;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
       SPLine.StringMesh = 30;
 //      AnyParamSurfAnalytical &Surf11 = ..WrappingSurfaces.DeltoidWrappingAnterior.WrappingSegment_RepresentDeltoidLateral_1DOF.DeltoidLateral_Posterior_Cyl1.cyl;
 AnyParamSurfAnalytical &Surf10 = ...Muscles.WrappingSurfaces.DeltoidWrappingPosterior.WrappingSegment.AlignmentRefNode.Represent_Infraspinatus_Cyl.cyl;
 AnyParamSurfAnalytical &Surf6 = ...Muscles.WrappingSurfaces.DeltoidWrappingAnterior.WrappingSegment.AlignmentRefNode.Deltoid_Clavicula_Cyl_ForLateral.cyl;
-AnyParamSurfAnalytical &Surf5 = ...Segments.Scapula.DeltoidPosterior_NormaltoScapula.cyl_lat1;
+AnyParamSurfAnalytical &Surf5 = ...Segments.Scapula.Lat1_tilted_anterior_wrapping.cyl;
 AnyParamSurfAnalytical &Surf12 = ...Muscles.WrappingSurfaces.DeltoidWrappingAnterior.WrappingSegment_RepresentDeltoidLateral.FillGap_Cyl.cyl;
 AnyParamSurfAnalytical &Surf2 = ...Segments.Humerus.Deltoid_hum.Deltoid_humCyl;
 //      SPLine = {
@@ -570,12 +572,15 @@ AnyParamSurfAnalytical &Surf2 = ...Segments.Humerus.Deltoid_hum.Deltoid_humCyl;
       AnyRefNode &Org = ...Segments.Scapula.O_DeltoideusLateral2;
 //      AnyRefNode &Via1 = ..WrappingSurfaces.DeltoidWrappingAnterior.WrappingSegment_RepresentDeltoidLateral.ViaNode1_DL2;
       AnyRefNode &Via1 = ..WrappingSurfaces.LateralDeltoid_ViaNodeSegment.ViaNode1_DL2;
+//      AnyRefNode &Via2 = ..WrappingSurfaces.HumerusViaNodeSegment.ViaNode2_DL2;
+//      AnyRefNode &Via2 = ..WrappingSurfaces.DLVia3_gh_HumI1_DeltoidSurface_Segment.ViaNode2_DL2;
       AnyRefNode &Ins = ...Segments.Humerus.I_DeltoideusLateral2;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
       SPLine.StringMesh = 30;
 //      AnyParamSurfAnalytical &Surf11 = ..WrappingSurfaces.DeltoidWrappingAnterior.WrappingSegment_RepresentDeltoidLateral_1DOF.DeltoidLateral_Posterior_Cyl1.cyl;
 AnyParamSurfAnalytical &Surf10 = ...Muscles.WrappingSurfaces.DeltoidWrappingPosterior.WrappingSegment.AlignmentRefNode.Represent_Infraspinatus_Cyl.cyl;
 AnyParamSurfAnalytical &Surf6 = ...Muscles.WrappingSurfaces.DeltoidWrappingAnterior.WrappingSegment.AlignmentRefNode.Deltoid_Clavicula_Cyl_ForLateral.cyl;
+AnyParamSurfAnalytical &Surf5 = ...Segments.Scapula.Lat2_tilted_anterior_wrapping.cyl;
 AnyParamSurfAnalytical &Surf12 = ...Muscles.WrappingSurfaces.DeltoidWrappingAnterior.WrappingSegment_RepresentDeltoidLateral.FillGap_Cyl.cyl;
 AnyParamSurfAnalytical &Surf2 = ...Segments.Humerus.Deltoid_hum.Deltoid_humCyl;
 //      SPLine = { AnyMatrix InitWrapPos = { 
@@ -612,12 +617,15 @@ AnyParamSurfAnalytical &Surf2 = ...Segments.Humerus.Deltoid_hum.Deltoid_humCyl;
       AnyRefNode &Org = ...Segments.Scapula.O_DeltoideusLateral3;
 //      AnyRefNode &Via1 = ..WrappingSurfaces.DeltoidWrappingAnterior.WrappingSegment_RepresentDeltoidLateral.ViaNode1_DL3;
       AnyRefNode &Via1 = ..WrappingSurfaces.LateralDeltoid_ViaNodeSegment.ViaNode1_DL3;
+//      AnyRefNode &Via2 = ..WrappingSurfaces.HumerusViaNodeSegment.ViaNode2_DL3;
+//      AnyRefNode &Via2 = ..WrappingSurfaces.DLVia3_gh_HumI1_DeltoidSurface_Segment.ViaNode2_DL3;
       AnyRefNode &Ins = ...Segments.Humerus.I_DeltoideusLateral3;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
       SPLine.StringMesh = 30;
 //      AnyParamSurfAnalytical &Surf11 = ..WrappingSurfaces.DeltoidWrappingAnterior.WrappingSegment_RepresentDeltoidLateral_1DOF.DeltoidLateral_Posterior_Cyl1.cyl;
 AnyParamSurfAnalytical &Surf10 = ...Muscles.WrappingSurfaces.DeltoidWrappingPosterior.WrappingSegment.AlignmentRefNode.Represent_Infraspinatus_Cyl.cyl;
 AnyParamSurfAnalytical &Surf6 = ...Muscles.WrappingSurfaces.DeltoidWrappingAnterior.WrappingSegment.AlignmentRefNode.Deltoid_Clavicula_Cyl_ForLateral.cyl;
+AnyParamSurfAnalytical &Surf5 = ...Segments.Scapula.Lat3_tilted_anterior_wrapping.cyl;
 AnyParamSurfAnalytical &Surf2 = ...Segments.Humerus.Deltoid_hum.Deltoid_humCyl;
 //      SPLine = { AnyMatrix InitWrapPos = { 
 //          transf3D({-.Surf11.Radius,.Surf11.Radius,0},  &.Surf11),
@@ -655,7 +663,8 @@ AnyParamSurfAnalytical &Surf2 = ...Segments.Humerus.Deltoid_hum.Deltoid_humCyl;
       AnyRefNode &Org = ...Segments.Scapula.O_DeltoideusLateral4;
 //      AnyRefNode &Via1 = ..WrappingSurfaces.DeltoidWrappingAnterior.WrappingSegment_RepresentDeltoidLateral.ViaNode1_DL4;
       AnyRefNode &Via1 = ..WrappingSurfaces.LateralDeltoid_ViaNodeSegment.ViaNode1_DL4;
-//      AnyRefNode &Via2 = Main.HumanModel.BodyModel.Right.ShoulderArm.Segments.Humerus.ViaNode2_DL4;
+//      AnyRefNode &Via2 = ..WrappingSurfaces.HumerusViaNodeSegment.ViaNode2_DL4;
+//      AnyRefNode &Via2 = ..WrappingSurfaces.DLVia3_gh_HumI1_DeltoidSurface_Segment.ViaNode2_DL4;
       AnyRefNode &Ins = ...Segments.Humerus.I_DeltoideusLateral4;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any" };
       SPLine.StringMesh = 30;
@@ -663,9 +672,10 @@ AnyParamSurfAnalytical &Surf2 = ...Segments.Humerus.Deltoid_hum.Deltoid_humCyl;
 //AnyParamSurfAnalytical &Surf10 = ...Muscles.WrappingSurfaces.DeltoidWrappingPosterior.WrappingSegment.AlignmentRefNode.Represent_Infraspinatus_Cyl.cyl;
 //AnyParamSurfAnalytical &Surf6 = ...Muscles.WrappingSurfaces.DeltoidWrappingAnterior.WrappingSegment.AlignmentRefNode.Deltoid_Clavicula_Cyl_ForLateral.cyl;
 AnyParamSurfAnalytical &Surf1 = ..WrappingSurfaces.DeltoidWrappingAnterior.WrappingSegment_RepresentDeltoidLateral.WrappingShpereCylRadius;
-AnyParamSurfAnalytical &Surf12 = ...Segments.Scapula.Lat4_tilted_posterior_wrapping.cyl;
-AnyParamSurfAnalytical &Surf13 = ...Segments.Scapula.Lat4_tilted_anterior_wrapping.cyl;
-AnyParamSurfAnalytical &Surf2 = ...Segments.Humerus.Deltoid_hum.Deltoid_humCyl;
+//////AnyParamSurfAnalytical &Surf12 = ...Segments.Scapula.Lat4_tilted_posterior_wrapping.cyl;
+//////AnyParamSurfAnalytical &Surf13 = ...Segments.Scapula.Lat4_tilted_anterior_wrapping.cyl;
+//////AnyParamSurfAnalytical &Surf2 = ...Segments.Humerus.Deltoid_hum.Deltoid_humCyl;
+
 //      SPLine = { AnyMatrix InitWrapPos = { 
 //          transf3D({.Surf1.Radius,.Surf1.Radius,.Surf1.Radius},  &.Surf1),
 //          transf3D({0*.Surf2.Radius,-2*.Surf2.Radius,0},  &.Surf2),
