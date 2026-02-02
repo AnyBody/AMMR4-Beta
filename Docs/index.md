@@ -17,7 +17,7 @@ sd_hide_title: true
 
 ```{image} ./_static/ammr_bodyparts2.png
 :width: 180px
-:class: sd-m-auto sd-animate-grow50-rot20
+:class: sd-m-auto sd-animate-grow50-rot20 no-image-click
 ```
 :::
 
@@ -34,6 +34,7 @@ The AnyBody Managed Model Repository
 :class: sd-px-4 sd-fs-5
 
 {material-outlined}`timeline;1.5em` New in AMMR {{AMMR_VERSION}}
+```
 :::
 ::::
 

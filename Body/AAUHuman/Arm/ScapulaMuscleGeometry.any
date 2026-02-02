@@ -34,330 +34,37 @@ Scapula = {
     };
   };
 
-  AnyRefNode deltoid_cyl_P1 = {sRel = .Scale(.Data.deltoid_cyl_P1_pos*.Mirror);};
-  
-//  // Definition of cylinder used for wrapping of Deltoid scapula muscles
-//  // the cylinder starts in gh and points towards ts.
-//  AnyRefNode deltoid_cyl={
-//
-//    AnyVec3 P1 = .Scale(.Data.deltoid_cyl_P1_pos*.Mirror); //P2=.ai.sRel + VZ*Length;
-//    AnyVec3 P2 = .Scale(.Data.deltoid_cyl_P2_pos*.Mirror); //P2=.ai.sRel + VZ*Length;
-//    AnyVec3 P3 = .Scale(.Data.deltoid_cyl_P3_pos*.Mirror); //P3=.ai.sRel - VX*Radius;
-//
-//    sRel= P1;
-//    ARel=RotMat(sRel,P3,P2)*RotMat(-pi/2,x)*RotMat(-pi/2,z);
-//
-//    AnySurfCylinder cyl = {
-//      Radius= vnorm(.sRel-.P3);
-//      Length= vnorm(.sRel-.P2)*2;
-//      CapRatio=1.0;
-//      //AnyDrawParamSurf drw={RGB={0,0,1};};
-//      CenterOrigin = On;
-//    };
-//
-//  };
+  // Definition of cylinder used for wrapping of Deltoid scapula muscles
+  // the cylinder starts in gh and points towards ts.
+  AnyRefNode deltoid_cyl={
 
-//  // Definition of cylinder used for wrapping of Deltoid scapula muscles
-//  // the cylinder starts in gh and points towards ts.
-//  AnyRefNode Deltoid_Scapula_Cyl={
-//
-//    AnyVec3 P1 = .Scale(.Data.deltoid_cyl_P1_pos*.Mirror); //P2=.ai.sRel + VZ*Length;
-//    AnyVec3 P2 = .Scale(.Data.gh_pos*.Mirror); //P2=.ai.sRel + VZ*Length;
-//    AnyVec3 P3 = .GHReactionCenterNode.sRel;//.Scale(.Data.deltoid_cyl_P3_pos*.Mirror); //P3=.ai.sRel - VX*Radius;
-//
-//    sRel= P1;
-//    ARel=RotMat(sRel,P2,P3)*RotMat(pi/2,y);
-//
-//    AnySurfCylinder cyl = {
-//      Radius= vnorm(.P2-.P3)*1.3;
-//      Length= vnorm(.sRel-.P2)*2;
-//      CapRatio=1;
-//      //AnyDrawParamSurf drw={RGB={0,0,1};};
-//      CenterOrigin = On;
-//    };
-//
-//  };
-//  AnyRefNode Deltoid_Scapula_Cyl_Extra={
-//
-//    AnyVec3 P1 = .Scale(.Data.deltoid_cyl_P1_pos*.Mirror); //P2=.ai.sRel + VZ*Length;
-//    AnyVec3 P1_1 = .Scale((.Data.deltoid_cyl_P1_pos+{-0.04,0.04,0})*.Mirror); //P2=.ai.sRel + VZ*Length;
-//    AnyVec3 P2 = .Scale(.Data.gh_pos*.Mirror); //P2=.ai.sRel + VZ*Length;
-//    AnyVec3 P3 = .GHReactionCenterNode.sRel;//.Scale(.Data.deltoid_cyl_P3_pos*.Mirror); //P3=.ai.sRel - VX*Radius;
-//
-//    sRel= P1_1;
-//    ARel=RotMat(P1,P2,P3)*RotMat(pi/2,y);
-//
-//    AnySurfCylinder cyl = {
-//      Radius= vnorm(.P2-.P3)*1.3;
-//      Length= vnorm(.sRel-.P2)*2;
-//      CapRatio=1;
-//      //AnyDrawParamSurf drw={RGB={0,0,1};};
-//      CenterOrigin = On;
-//    };
-//
-//  };
+    AnyVec3 P2 = .Scale(.Data.deltoid_cyl_P2_pos*.Mirror); //P2=.ai.sRel + VZ*Length;
+    AnyVec3 P3 = .Scale(.Data.deltoid_cyl_P3_pos*.Mirror); //P3=.ai.sRel - VX*Radius;
 
-//  AnyRefNode Deltoid_Scapula_Cyl_Stop1={
-//
-//    AnyVec3 P1 = .Scale(.Data.gh_pos*.Mirror); //P2=.ai.sRel + VZ*Length;
-//    AnyVec3 P2 = .O_DeltoideusLateral1.sRel; //P2=.ai.sRel + VZ*Length;
-//    AnyVec3 P3 = .GHReactionCenterNode.sRel;//.Scale(.Data.deltoid_cyl_P3_pos*.Mirror); //P3=.ai.sRel - VX*Radius;
-//
-//    sRel= P1;
-//    ARel=RotMat(sRel,P2,P3)*RotMat(pi/2,y);
-//
-//    AnySurfCylinder cyl = {
-//      Radius= ..Deltoid_Scapula_Cyl.cyl.Radius*0.98;
-//      Length= vnorm(.sRel-.P2)*5;
-//      CapRatio=1;
-//      //AnyDrawParamSurf drw={RGB={0,0,1};};
-////      CenterOrigin = On;
-//    };
-//
-//  };
-//  AnyRefNode Deltoid_Scapula_Cyl_Stop2={
-//
-//    AnyVec3 P1 = .Scale(.Data.gh_pos*.Mirror); //P2=.ai.sRel + VZ*Length;
-//    AnyVec3 P2 = .O_DeltoideusLateral2.sRel; //P2=.ai.sRel + VZ*Length;
-//    AnyVec3 P3 = .GHReactionCenterNode.sRel;//.Scale(.Data.deltoid_cyl_P3_pos*.Mirror); //P3=.ai.sRel - VX*Radius;
-//
-//    sRel= P1;
-//    ARel=RotMat(sRel,P2,P3)*RotMat(pi/2,y);
-//
-//    AnySurfCylinder cyl = {
-//      Radius= ..Deltoid_Scapula_Cyl.cyl.Radius*0.98;
-//      Length= vnorm(.sRel-.P2)*5;
-//      CapRatio=1;
-//      //AnyDrawParamSurf drw={RGB={0,0,1};};
-////      CenterOrigin = On;
-//    };
-//
-//  };
-//  AnyRefNode Deltoid_Scapula_Cyl_Stop3={
-//
-//    AnyVec3 P1 = .Scale(.Data.gh_pos*.Mirror); //P2=.ai.sRel + VZ*Length;
-//    AnyVec3 P2 = .O_DeltoideusLateral3.sRel; //P2=.ai.sRel + VZ*Length;
-//    AnyVec3 P3 = .GHReactionCenterNode.sRel;//.Scale(.Data.deltoid_cyl_P3_pos*.Mirror); //P3=.ai.sRel - VX*Radius;
-//
-//    sRel= P1;
-//    ARel=RotMat(sRel,P2,P3)*RotMat(pi/2,y);
-//
-//    AnySurfCylinder cyl = {
-//      Radius= ..Deltoid_Scapula_Cyl.cyl.Radius*0.98;
-//      Length= vnorm(.sRel-.P2)*5;
-//      CapRatio=1;
-//      //AnyDrawParamSurf drw={RGB={0,0,1};};
-////      CenterOrigin = On;
-//    };
-//
-//  };
-//  AnyRefNode Deltoid_Scapula_Cyl_Stop4={
-//
-//    AnyVec3 P1 = .Scale(.Data.gh_pos*.Mirror); //P2=.ai.sRel + VZ*Length;
-//    AnyVec3 P2 = .O_DeltoideusLateral4.sRel; //P2=.ai.sRel + VZ*Length;
-//    AnyVec3 P3 = .GHReactionCenterNode.sRel;//.Scale(.Data.deltoid_cyl_P3_pos*.Mirror); //P3=.ai.sRel - VX*Radius;
-//
-//    sRel= P1;
-//    ARel=RotMat(sRel,P2,P3)*RotMat(pi/2,y);
-//
-//    AnySurfCylinder cyl = {
-//      Radius= ..Deltoid_Scapula_Cyl.cyl.Radius*0.98;
-//      Length= vnorm(.sRel-.P2)*5;
-//      CapRatio=1;
-//      //AnyDrawParamSurf drw={RGB={0,0,1};};
-////      CenterOrigin = On;
-//    };
-//
-//  };
-////////////////  AnyRefNode Deltoid_Scapula_Cyl_Stop3_Ant={
-////////////////
-////////////////    AnyVec3 P1 = .Scale(.Data.gh_pos*.Mirror); //P2=.ai.sRel + VZ*Length;
-////////////////    AnyVec3 P2 = .O_DeltoideusLateral3.sRel; //P2=.ai.sRel + VZ*Length;
-////////////////    AnyVec3 P3 = .GHReactionCenterNode.sRel;//.Scale(.Data.deltoid_cyl_P3_pos*.Mirror); //P3=.ai.sRel - VX*Radius;
-////////////////
-////////////////    sRel= P1;
-////////////////    ARel=RotMat(sRel,P2,P3)*RotMat(pi/2,y);
-////////////////
-////////////////    AnySurfCylinder cyl = {
-////////////////      Radius= ..Deltoid_Scapula_Cyl.cyl.Radius*0.98*0.7;
-////////////////      Length= vnorm(.sRel-.P2)*5;
-////////////////      CapRatio=1;
-////////////////      //AnyDrawParamSurf drw={RGB={0,0,1};};
-//////////////////      CenterOrigin = On;
-////////////////    };
-////////////////
-////////////////  };
+    sRel=.ai.sRel;
 
-//    AnyRefNode Deltoid_Clavicula_Cyl_Stop1={
-//
-//    AnyVec3 P1 = .Scale(.Data.gh_pos*.Mirror); //P2=.ai.sRel + VZ*Length;
-//    AnyVec3 P2 = .Scale(.Data.Deltoid_Anterior_CylStop1_pos*.Mirror); //P2=.ai.sRel + VZ*Length;
-//    AnyVec3 P3 = .GHReactionCenterNode.sRel;//.Scale(.Data.deltoid_cyl_P3_pos*.Mirror); //P3=.ai.sRel - VX*Radius;
-//
-//    sRel= P1;
-//    ARel=RotMat(sRel,P2,P3)*RotMat(pi/2,y);
-//
-//    AnySurfCylinder cyl = {
-//      Radius= ..Deltoid_Scapula_Cyl.cyl.Radius*0.98;
-//      Length= vnorm(.sRel-.P2)*0.3;
-//      CapRatio=3;
-//      CapRatio2 = 1;
-//      //AnyDrawParamSurf drw={RGB={0,0,1};};
-////      CenterOrigin = On;
-//    };
-//
-//  };
-//    AnyRefNode Deltoid_Clavicula_Cyl_Stop2={
-//
-//    AnyVec3 P1 = .Scale(.Data.gh_pos*.Mirror); //P2=.ai.sRel + VZ*Length;
-//    AnyVec3 P2 = .Scale(.Data.Deltoid_Anterior_CylStop2_pos*.Mirror); //P2=.ai.sRel + VZ*Length;
-//    AnyVec3 P3 = .GHReactionCenterNode.sRel;//.Scale(.Data.deltoid_cyl_P3_pos*.Mirror); //P3=.ai.sRel - VX*Radius;
-//
-//    sRel= P1;
-//    ARel=RotMat(sRel,P2,P3)*RotMat(pi/2,y);
-//
-//    AnySurfCylinder cyl = {
-//      Radius= ..Deltoid_Scapula_Cyl.cyl.Radius*0.98;
-//      Length= vnorm(.sRel-.P2)*0.3;
-//      CapRatio=3;
-//      CapRatio2 = 1;
-//      //AnyDrawParamSurf drw={RGB={0,0,1};};
-////      CenterOrigin = On;
-//    };
-//
-//  };
-//    AnyRefNode Deltoid_Clavicula_Cyl_Stop3={
-//
-//    AnyVec3 P1 = .Scale(.Data.gh_pos*.Mirror); //P2=.ai.sRel + VZ*Length;
-//    AnyVec3 P2 = .Scale(.Data.Deltoid_Anterior_CylStop3_pos*.Mirror); //P2=.ai.sRel + VZ*Length;
-//    AnyVec3 P3 = .GHReactionCenterNode.sRel;//.Scale(.Data.deltoid_cyl_P3_pos*.Mirror); //P3=.ai.sRel - VX*Radius;
-//
-//    sRel= P1;
-//    ARel=RotMat(sRel,P2,P3)*RotMat(pi/2,y);
-//
-//    AnySurfCylinder cyl = {
-//      Radius= ..Deltoid_Scapula_Cyl.cyl.Radius*0.98;
-//      Length= vnorm(.sRel-.P2)*0.3;
-//      CapRatio=3;
-//      CapRatio2 = 1;
-//      //AnyDrawParamSurf drw={RGB={0,0,1};};
-////      CenterOrigin = On;
-//    };
-//
-//  };
-//    AnyRefNode Deltoid_Clavicula_Cyl_Stop4={
-//
-//    AnyVec3 P1 = .Scale(.Data.gh_pos*.Mirror); //P2=.ai.sRel + VZ*Length;
-//    AnyVec3 P2 = .Scale(.Data.Deltoid_Anterior_CylStop4_pos*.Mirror); //P2=.ai.sRel + VZ*Length;
-//    AnyVec3 P3 = .GHReactionCenterNode.sRel;//.Scale(.Data.deltoid_cyl_P3_pos*.Mirror); //P3=.ai.sRel - VX*Radius;
-//
-//    sRel= P1;
-//    ARel=RotMat(sRel,P2,P3)*RotMat(pi/2,y);
-//
-//    AnySurfCylinder cyl = {
-//      Radius= ..Deltoid_Scapula_Cyl.cyl.Radius*0.98;
-//      Length= vnorm(.sRel-.P2)*2;
-//      CapRatio=1;
-//      //AnyDrawParamSurf drw={RGB={0,0,1};};
-////      CenterOrigin = On;
-//    };
-//
-//  };
 
-//  AnyRefNode Deltoid_Anterior_CylNode = {sRel = .Scale(.Data.Deltoid_Anterior_Cyl_pos*.Mirror);};
-  
-//    AnyRefNode Deltoid_Clavicula_Cyl1={
-//
-//    AnyVec3 P1 = .Scale(.Data.Deltoid_Anterior_Cyl1_pos*.Mirror); //P2=.ai.sRel + VZ*Length;
-//    AnyVec3 P2 = .Scale(.Data.gh_pos*.Mirror); //P2=.ai.sRel + VZ*Length;
-//    AnyVec3 P3 = .GHReactionCenterNode.sRel;//.Scale(.Data.deltoid_cyl_P3_pos*.Mirror); //P3=.ai.sRel - VX*Radius;
-//    
-//    sRel= P1;
-//    ARel=RotMat(sRel,P2,P3)*RotMat(pi/2,y);
-//
-//    AnySurfCylinder cyl = {
-//      Radius= vnorm(.P2-.P3)*1.3;
-//      Length= vnorm(.sRel-.P2)*2;
-//      CapRatio=1;
-//      //AnyDrawParamSurf drw={RGB={0,0,1};};
-//      CenterOrigin = On;
-//    };
-//  };
-//  
-//  AnyRefNode Deltoid_Clavicula_Cyl2={
-//
-//    AnyVec3 P1 = .Scale(.Data.Deltoid_Anterior_Cyl2_pos*.Mirror); //P2=.ai.sRel + VZ*Length;
-//    AnyVec3 P2 = .Scale(.Data.gh_pos*.Mirror); //P2=.ai.sRel + VZ*Length;
-//    AnyVec3 P3 = .GHReactionCenterNode.sRel;//.Scale(.Data.deltoid_cyl_P3_pos*.Mirror); //P3=.ai.sRel - VX*Radius;
-//    
-//    sRel= P1;
-//    ARel=RotMat(sRel,P2,P3)*RotMat(pi/2,y);
-//
-//    AnySurfCylinder cyl = {
-//      Radius= vnorm(.P2-.P3)*1.3;
-//      Length= vnorm(.sRel-.P2)*2;
-//      CapRatio=1;
-//      //AnyDrawParamSurf drw={RGB={0,0,1};};
-//      CenterOrigin = On;
-//    };
-//  };
-//  
-//  AnyRefNode Deltoid_Clavicula_Cyl={
-//
-//    AnyVec3 P1 = .Scale(.Data.Deltoid_Anterior_Cyl_pos*.Mirror); //P2=.ai.sRel + VZ*Length;
-//    AnyVec3 P2 = .Scale(.Data.gh_pos*.Mirror); //P2=.ai.sRel + VZ*Length;
-//    AnyVec3 P3 = .GHReactionCenterNode.sRel;//.Scale(.Data.deltoid_cyl_P3_pos*.Mirror); //P3=.ai.sRel - VX*Radius;
-//    
-//    sRel= P1;
-//    ARel=RotMat(sRel,P2,P3)*RotMat(pi/2,y);
-//
-//    AnySurfCylinder cyl = {
-//      Radius= vnorm(.P2-.P3)*1.3;
-//      Length= vnorm(.sRel-.P2)*2;
-//      CapRatio=1;
-//      //AnyDrawParamSurf drw={RGB={0,0,1};};
-//      CenterOrigin = On;
-//    };
-//  };
+    //Calculate rot matrix for cylinder using three points
+    //p2-p1 used to find x axis
+    //p3-p1 used to find the y axis
+    //z axis found as cross product
+    AnyMat33  Mat = RotMat(sRel,P3,P2);
 
-//    AnyRefNode Deltoid_Cyl_Anterior_Stopper1={
-//
-//    AnyVec3 P1 = .Scale(.Data.gh_pos*.Mirror); //P2=.ai.sRel + VZ*Length;
-//    AnyVec3 P2 = ..Clavicula.O_DeltoideusAnterior1.sRel; //P2=.ai.sRel + VZ*Length;
-//    AnyVec3 P3 = .GHReactionCenterNode.sRel;//.Scale(.Data.deltoid_cyl_P3_pos*.Mirror); //P3=.ai.sRel - VX*Radius;
-//
-//    sRel= P1;
-//    ARel=RotMat(sRel,P2,P3)*RotMat(pi/2,y);
-//
-//    AnySurfCylinder cyl = {
-//      Radius= ..Deltoid_Scapula_Cyl.cyl.Radius*0.98;
-//      Length= vnorm(.sRel-.P2)*5;
-//      CapRatio=1;
-//      //AnyDrawParamSurf drw={RGB={0,0,1};};
-////      CenterOrigin = On;
-//    };
-//  };
+    //Switch around the on the columns to compensate that the cylinder has
+    //main axis along the zaxis
+    ARel={
+      {Mat[0][2],Mat[0][0],Mat[0][1]},
+      {Mat[1][2],Mat[1][0],Mat[1][1]},
+      {Mat[2][2],Mat[2][0],Mat[2][1]}};
 
-//  AnyRefNode deltoid_torus = {
-//    AnyVar minor_radius = 0.96*abs(.gh.sRel-.I_Infraspinatus5.sRel)[0];
-//    AnyVar major_radius = minor_radius*1.9;
-//
-//    AnyVec3 minor_center = {0, .I_Infraspinatus5.sRel[1],0};
-//    AnyMat33 orientation = RotMat(0.0*....Sign,y);
-//
-//    AnyVec3 major_center = minor_center+major_radius*....Sign*orientation'[0];
-//
-//    sRel=major_center;
-//    ARel = orientation;
-//    //viewRefFrame.Visible = Off;
-//
-//    AnySurfTorus torus = {
-//       MajorRadius = ..Deltoid_Scapula_Cyl.cyl.Radius;
-//       MinorRadius = ..Deltoid_Scapula_Cyl.cyl.Radius;
-//       //viewSurface.Visible=On;
-//    };
-//
-//  };
+    AnySurfCylinder cyl = {
+      Radius= vnorm(.sRel-.P3);
+      Length= vnorm(.sRel-.P2);
+      CapRatio=1.0;
+      //AnyDrawParamSurf drw={RGB={0,0,1};};
+    };
+
+  };
 
 
   AnyRefNode TricepsBrachiiLongumellipsoid = {

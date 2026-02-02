@@ -11,20 +11,31 @@ Main.ModelSetup.TrialSpecificData =
   #define EXCLUDE_SXS
   #define EXCLUDE_SJN
   Main.ModelSetup.MocapDrivers = {
-  CreateMarkerDriver SXS (
-    MarkerName= SJN,
-    MarkerPlacement=Trunk.Segments.ThoraxSeg,
-    OptX=OFF,OptY=ON,OptZ=OFF,
-    WeightX=1,WeightY=1,WeightZ=1
+    // Marker on the Sternum
+    CreateMarkerDriver SXS (
+      MarkerName= SJN,
+      PlaceMarkerAt = XiphoidProcess,
+      ScaleMarkerPosOnOff=OFF,
+      MarkerPlacement=Trunk.Segments.SternalBodySeg, 
+      OptX=ON,OptY=ON,OptZ=OFF,
+      WeightX=1,WeightY=1,WeightZ=1
     ) = {
-    sRelOpt = {0.190,0.24,0.0};
-  };
-  CreateMarkerDriver SJN (
-    MarkerName= SXS,
-    MarkerPlacement=Trunk.Segments.ThoraxSeg,
-    OptX=ON,OptY=OFF,OptZ=OFF
+      sRelOpt = {0.02, 0, 0};
+    };
+    // Marker on the Clavicle
+    CreateMarkerDriver SJN (
+      MarkerName= SXS,
+      PlaceMarkerAt=ij,
+      ScaleMarkerPosOnOff=OFF,
+      MarkerPlacement=Trunk.Segments.SternumSeg, 
+      OptX=ON,OptY=OFF,OptZ=OFF
     ) = {
-    sRelOpt = {0.15,0.42,0.0};
+      sRelOpt = {0.025, 0.01, 0.0};
+      #ifdef REFERENCE_TRIAL
+      // High weight in Parameter optimization ensure this
+      // marker determines body height
+      ConstMarkerWeightY = 5;
+      #endif
     };
   };
 

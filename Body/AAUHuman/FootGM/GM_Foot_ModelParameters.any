@@ -1,5 +1,5 @@
 ModelParameters = {
-  
+
   Shank = {
     AnyVec3 LigTibioTalarPosterior = {0.005, 0.006, -0.025}*.TF';
     AnyVec3 LigTibioTalarAnterior = {0.026, 0.008, -0.021}*.TF';
@@ -13,52 +13,58 @@ ModelParameters = {
     AnyVec3 PeroneusTertius3Node = { -0.01402+0.01,0.09700-0.04,0.02065-0.005 }*.TF';
     AnyVec3 PeroneusTertiusViaNode1 = { 0.01858+0.008,0.00757+0.0,0.01443+0.01}*.TF';
   };
-  
+
   AnyFolder FootGM = {
-    
+
     AnyVar MassStandard = 1.30; // kg Klein Horsman dataset Mass of Foot
-    AnyVar LengthStandard = 0.2353423; //Back of heel (tuber calcanei) to second toe tip.
-    AnyVar WidthStandard = 0.07649351; //MPjnt1 center to MPjnt5 center.
-    AnyVar HeightStandard = 0.07116012; //vertical from base of heel (medial process) to ankle joint.
+    AnyVar LengthStandard = 0.2353423; ///< Back of heel (tuber calcanei) to second toe tip.
+    AnyVar WidthStandard = 0.07649351; ///< MPjnt1 center to MPjnt5 center.
+    AnyVar HeightStandard = 0.07116012; ///< Vertical from base of heel (medial process) to ankle joint.
+    AnyVar LengthStandard_Landmark = vnorm(.FootGM.DistalPhalange1.BigToeNode-.FootGM.Calcaneus.HeelNode); ///< Landmark based definition as in TLEM foot.
+    AnyVar HeightStandard_Landmark = vnorm(.FootGM.Calcaneus.SubTalarJoint-.FootGM.Calcaneus.HeelContactNodeLow); ///< Landmark based definition as in TLEM foot
+    AnyVar WidthStandard_Landmark = vnorm(.FootGM.ProximalPhalange5.ToeLateralContactNode-.FootGM.ProximalPhalange1.ToeMedialContactNode); ///< Landmark based definition as in TLEM foot
     AnyVar Density = 1000;
     AnyVar HeelHeight=0.05;  //measured from floor to ankle joint
-    
-    
+
+
     AnyVec3 LateralMalleolus = {0.0429171, 0.0815658, 0.032548}*.TF'; // LatMal - estimated from skin
     AnyVec3 MedialMalleolus = {0.0604137, 0.063059, -0.040193}*.TF'; // MedMal - estimated from skin
     AnyVec3 Metatarsal1PlantarNode = {-0.01293344, -0.05830658, -0.01899186}*.TF';
     AnyVec3 Metatarsal2PlantarNode = {-0.007463424, -0.06155794, 0.01020253}*.TF';
     AnyVec3 Metatarsal5PlantarNode = {-0.01524367, -0.03055783, 0.04927201}*.TF';
     AnyVec3 HeelPlantarNode = {-0.01923199, 0.08287545, -0.005511518}*.TF';
-    
+
     // Model parameters from TLEM 2 dataset transformed to GM Foot segmental frame.
     AnyVec3 SubTalarJoint = ..Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(.Foot.SubTalarJoint);
-    AnyVec3 SubTalarJointAxis = .Foot.SubTalarJointAxis;
+    AnyVec3 SubTalarJointAxisNode = ..Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(.Foot.SubTalarJointAxisNode);
     AnyVec3 AnkleJoint = ..Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(.Talus.AnkleJoint);
     AnyVec3 LateralControlPoint = ..Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(.Talus.LateralControlPoint);
     AnyVec3 MedialControlPoint = ..Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(.Talus.MedialControlPoint);
-    
-    AnyVec3 HeelNode = ..Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(.Foot.TendonCalcaneousNode);
+
+    AnyVec3 HeelNode = ..Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(.Foot.HeelNode);
     AnyVec3 HeelContactNodeLow = ..Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(.Foot.HeelContactNodeLow);
     AnyVec3 HeelContactNodeLateral = ..Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(.Foot.HeelContactNodeLow + {0.02, 0.0, ..Sign*0.015});
     AnyVec3 HeelContactNodeMedial = ..Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(.Foot.HeelContactNodeLow + {0.02, 0.0, ..Sign*-0.015});
     AnyVec3 ToeMedialContactNode = ..Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(.Foot.ToeMedialContactNode);
     AnyVec3 ToeLateralContactNode = ..Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(.Foot.ToeLateralContactNode);
-    
+    AnyVec3 Metatarsal1ContactNode = ..Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(.Foot.Metatarsal1ContactNode);
+    AnyVec3 Metatarsal2ContactNode = ..Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(.Foot.Metatarsal2ContactNode);
+    AnyVec3 Metatarsal5ContactNode = ..Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(.Foot.Metatarsal5ContactNode);
+
     AnyFolder Talus = {
-      
+
       AnyVar MassStandard = .MassStandard*0.20286341; //calculated from volume ratio
       AnyVar Density = .Density;
       AnyVar LengthStandard = 0.133*.LengthStandard;
-      
-      AnyVec3 LateralMalleolus = .LateralMalleolus;      
+
+      AnyVec3 LateralMalleolus = .LateralMalleolus;
       AnyVec3 MedialMalleolus = .MedialMalleolus;
       AnyVec3 Metatarsal1PlantarNode = .Metatarsal1PlantarNode;
       AnyVec3 Metatarsal2PlantarNode = .Metatarsal2PlantarNode;
       AnyVec3 Metatarsal5PlantarNode = .Metatarsal5PlantarNode;
       AnyVec3 HeelPlantarNode = .HeelPlantarNode;
       AnyVec3 SubTalarJoint = .SubTalarJoint;
-      AnyVec3 SubTalarJointAxis = .SubTalarJointAxis;
+      AnyVec3 SubTalarJointAxisNode = .SubTalarJointAxisNode;
       AnyVec3 AnkleJoint = .AnkleJoint;
       AnyVec3 LateralControlPoint = .LateralControlPoint;
       AnyVec3 MedialControlPoint = .MedialControlPoint;
@@ -69,10 +75,13 @@ ModelParameters = {
       AnyVec3 LigTaloFibularAnterior = {0.0491532, 0.03202142, 0.010479483}*..TF';
       AnyVec3 FlexorHallucisLongusViaNode1 = {0.02368694+0.0125, 0.0760648+0.01, (-0.01597639-0.002)}*..TF';
     }; // Talus
-      
+
     AnyFolder Calcaneus = {
+
+      AnyVar MassStandard = .MassStandard*0.360683468;
+
       AnyVec3 SubTalarJoint = .SubTalarJoint;
-      AnyVec3 SubTalarJointAxis = .SubTalarJointAxis;
+      AnyVec3 SubTalarJointAxisNode = .SubTalarJointAxisNode;
       AnyVec3 SubTalarJointAxisRef = {-0.012, 0.105, 0.015}*..TF';
       AnyVec3 HeelNode = .HeelNode; //Taken from TLEM2 dataset
       AnyVec3 HeelPlantarNode = .HeelPlantarNode;
@@ -91,9 +100,9 @@ ModelParameters = {
       //Muscles nodes
       //***********************
       // Muscle nodes from TLEM 2 dataset transformed to GM Foot segmental frame.
-      AnyVec3 TendonCalcaneousNode = ...Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(..Foot.TendonCalcaneousNode);
-      AnyVec3 TendonCalcaneousMedialisNode = ...Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(..Foot.TendonCalcaneousMedialisNode);
-      AnyVec3 TendonCalcaneousLateralisNode = ...Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(..Foot.TendonCalcaneousLateralisNode);
+      AnyVec3 TendonCalcaneusNode = ...Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(..Foot.TendonCalcaneusNode);
+      AnyVec3 TendonCalcaneusMedialisNode = ...Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(..Foot.TendonCalcaneusMedialisNode);
+      AnyVec3 TendonCalcaneusLateralisNode = ...Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(..Foot.TendonCalcaneusLateralisNode);
       AnyVec3 GastrocnemiusLateralis1Node = ...Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(..Foot.GastrocnemiusLateralis1Node);
       AnyVec3 GastrocnemiusMedialis1Node =  ...Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(..Foot.GastrocnemiusMedialis1Node);
       AnyVec3 Plantaris1Node = ...Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(..Foot.Plantaris1Node);
@@ -103,10 +112,10 @@ ModelParameters = {
       AnyVec3 SoleusLateralis1Node = ...Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(..Foot.SoleusLateralis1Node);
       AnyVec3 SoleusLateralis2Node = ...Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(..Foot.SoleusLateralis2Node);
       AnyVec3 SoleusLateralis3Node = ...Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(..Foot.SoleusLateralis3Node);
-      
-      AnyVec3 TendonCalcaneousSuperiorNode = ...Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(..Foot.TendonCalcaneousSuperiorNode);
-      AnyVec3 TendonCalcaneousMedialisSuperiorNode = ...Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(..Foot.TendonCalcaneousMedialisSuperiorNode);
-      AnyVec3 TendonCalcaneousLateralisSuperiorNode = ...Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(..Foot.TendonCalcaneousLateralisSuperiorNode);
+
+      AnyVec3 TendonCalcaneusSuperiorNode = ...Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(..Foot.TendonCalcaneusSuperiorNode);
+      AnyVec3 TendonCalcaneusMedialisSuperiorNode = ...Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(..Foot.TendonCalcaneusMedialisSuperiorNode);
+      AnyVec3 TendonCalcaneusLateralisSuperiorNode = ...Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(..Foot.TendonCalcaneusLateralisSuperiorNode);
       AnyVec3 GastrocnemiusLateralis1SuperiorNode = ...Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(..Foot.GastrocnemiusLateralis1SuperiorNode);
       AnyVec3 GastrocnemiusMedialis1SuperiorNode = ...Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(..Foot. GastrocnemiusMedialis1SuperiorNode);
       AnyVec3 Plantaris1SuperiorNode = ...Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(..Foot.Plantaris1SuperiorNode);
@@ -116,7 +125,7 @@ ModelParameters = {
       AnyVec3 SoleusLateralis1SuperiorNode = ...Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(..Foot.SoleusLateralis1SuperiorNode);
       AnyVec3 SoleusLateralis2SuperiorNode = ...Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(..Foot.SoleusLateralis2SuperiorNode);
       AnyVec3 SoleusLateralis3SuperiorNode = ...Seg.Foot.InterfaceMorphingDef.IM_Foot_TLEM_To_GM(..Foot.SoleusLateralis3SuperiorNode);
-      
+
       AnyVec3 FlexorHallucisLongusViaNode6 = {0.02368694+0.0, 0.0760648-0.005, (-0.01597639+0.00)}*..TF';
       AnyVec3 FlexorHallucisLongusViaNode7 = {0.02368694-0.01, 0.0760648-0.02, (-0.01597639+0.005)}*..TF';
       AnyVec3 FlexorHallucisLongusViaNode8 = {0.01211299, 0.04574652, -0.01602832}*..TF';
@@ -132,7 +141,7 @@ ModelParameters = {
       AnyVec3 PeroneusTertiusViaNode3 = {0.0408379558, 0.03140739, 0.03076334}*..TF';
       AnyVec3 ExtensorDigitorumLongusViaNode5 = {0.05546308, 0.0229197, 0.01298886}*..TF';
       AnyVec3 ExtensorDigitorumLongusViaNode5Bis = {0.05346308, 0.0200197, 0.01348886}*..TF';
-      AnyVec3 ExtensorHallucisLongusViaNode7 = {0.05312341, 0.007704016, -0.001000253} *..TF';     
+      AnyVec3 ExtensorHallucisLongusViaNode7 = {0.05312341, 0.007704016, -0.001000253} *..TF';
       //***********************
       //Ligaments nodes
       //***********************
@@ -148,8 +157,11 @@ ModelParameters = {
       AnyVec3 LigCalcaneoCuboidPlantar1 = {0.001287836, 0.05222258, 0.01243312}*..TF';
       AnyVec3 LigCalcaneoCuboidPlantar2 = {0.005218107, 0.05034289, 0.00337628}*..TF';
     }; // Calcaneus
-      
+
     AnyFolder Cuboid = {
+
+      AnyVar MassStandard = .MassStandard*0.071723351;
+
       AnyVec3 CalcaneoCuboidJoint = {0.01998136, 0.04740945, 0.01530706}*..TF';
       AnyVec3 RefDist = {0.0169189, 0.006236519, 0.02435441}*..TF';
       AnyVec3 RefProx = {0.01501178, 0.04133683, 0.02271292}*..TF';
@@ -172,8 +184,11 @@ ModelParameters = {
       AnyVec3 LigCalcaneoCuboidPlantar1 = {0.0021128067, 0.03313358, 0.01663392}*..TF';
       AnyVec3 LigCalcaneoCuboidPlantar2 = {0.007521058, 0.02705763, 0.010644199}*..TF';
     }; // Cuboid
-    
+
     AnyFolder Navicular = {
+
+      AnyVar MassStandard = .MassStandard*0.048581127;
+
       AnyVec3 TaloNavicularJoint = {0.0412847, 0.0394277, -0.00418293}*..TF';
       AnyVec3 RefDist = {0.03207851, 0.006374134, -0.00}*..TF';
       AnyVec3 RefProx = {0.04078921, 0.03050495, -0.004127318}*..TF';
@@ -194,10 +209,13 @@ ModelParameters = {
       AnyVec3 LigCalcaneoNavicularPlantar4 = {0.02459,0.0324901,-0.0126953}*..TF';
       AnyVec3 LigCalcaneoNavicularPlantar5 = { 0.0228703,0.0333343,-0.00746194}*..TF';
       AnyVec3 LigCalcaneoNavicularPlantar6 = { 0.022755,0.0341731,-0.00223565}*..TF';
-      AnyVec3 ExtensorHallucisLongusViaNode7 = {0.05312341, 0.007704016, -0.001000253}*..TF';    
+      AnyVec3 ExtensorHallucisLongusViaNode7 = {0.05312341, 0.007704016, -0.001000253}*..TF';
     }; // Navicular
-    
+
     AnyFolder MedialCuneiform = {
+
+      AnyVar MassStandard = .MassStandard*0.048888141;
+
       AnyVec3 CuneiNaviJoint = {0.03425049, 0.02063769, -0.0120163}*..TF';
       AnyVec3 RefDist = {0.02021981, -0.01710036, -0.00764076}*..TF';
       AnyVec3 RefProx = {0.02274339, 0.01484567, -0.01290666}*..TF';
@@ -211,18 +229,24 @@ ModelParameters = {
       AnyVec3 PeroneusLongusNode = {0.005196392, -0.001617243, -0.003879015}*..TF';
       AnyVec3 TibialisPosteriorNode = {0.007535917, 0.0138324, -0.01333547}*..TF';
     }; // MedialCuneiform
-    
+
     AnyFolder IntermediateCuneiform = {
+
+      AnyVar MassStandard = .MassStandard*0.011344111;
+
       AnyVec3 CuneiNaviJoint = {0.03425049, 0.02163769, -0.00}*..TF';
       AnyVec3 RefDist = {0.02720337, -0.007425747, 0.004325873}*..TF';
       AnyVec3 RefProx = {0.02901805, 0.01426308, 0.003278877}*..TF';
       //***********************
       //Muscles nodes
       //***********************
-      AnyVec3 TibialisPosteriorNode = {0.01643715, 0.009019729, 0.001469}*..TF';      
+      AnyVec3 TibialisPosteriorNode = {0.01643715, 0.009019729, 0.001469}*..TF';
     }; // IntermediateCuneiform
-    
-    AnyFolder LateralCuneiform = { 
+
+    AnyFolder LateralCuneiform = {
+
+      AnyVar MassStandard = .MassStandard*0.021885718;
+
       AnyVec3 CuneiNaviJoint = {0.03425049, 0.02663769, 0.008}*..TF';
       AnyVec3 RefDist = {0.01832511, -0.002470206, 0.01754009}*..TF';
       AnyVec3 RefProx = {0.03005463, 0.02050315, 0.01087503}*..TF';
@@ -231,8 +255,11 @@ ModelParameters = {
       //***********************
       AnyVec3 TibialisPosteriorNode = {0.01260536, 0.01329963, 0.003394764}*..TF';
     };
-    
+
     AnyFolder Metatarsal1 = {
+
+      AnyVar MassStandard = .MassStandard*0.079950498;
+
       AnyVec3 TarsoMtJoint = {0.01914963, -0.005595438, -0.007328187}*..TF';
       AnyVec3 RefDist = {0.001281104, -0.07378177, -0.01694805}*..TF';
       AnyVec3 RefProx = {0.02043713, -0.01768618, -0.005930602}*..TF';
@@ -242,6 +269,7 @@ ModelParameters = {
       AnyVec3 MTBasePlantarNode = {0.003362707, -0.01443166, -0.007165866}*..TF';
       AnyVec3 MTHeadMedialNode = {0.004, -0.066, -0.031}*..TF';
       AnyVec3 Metatarsal1PlantarNode = .Metatarsal1PlantarNode;
+      AnyVec3 Metatarsal1ContactNode = .Metatarsal1ContactNode;
       //***********************
       //Muscles nodes
       //***********************
@@ -257,14 +285,18 @@ ModelParameters = {
       AnyVec3 LigMtTransversumProfundumVia1 = {-0.008019808+0.002, -0.05859427-0.001, (-0.01423272+0.01)}*..TF';
       AnyVec3 LigMtTransversumProfundumVia2 = {-0.008019808+0.003, -0.05859427-0.004, (-0.01423272-0.003)}*..TF';
     }; // Metatarsal1
-    
+
     AnyFolder Metatarsal2 = {
+
+      AnyVar MassStandard = .MassStandard*0.022272746;
+
       AnyVec3 TarsoMtJoint = {0.02818961, 0.00300708, 0.005696584}*..TF';
       AnyVec3 RefDist = {-0.002583532, -0.07378442, 0.01133846}*..TF';
       AnyVec3 RefProx = {0.03360497, -0.003129372, 0.00865457}*..TF';
       AnyVec3 MTHeadPlantarNode = {-0.006963247, -0.06338102, 0.009121777}*..TF';
       AnyVec3 MTBasePlantarNode = {0.01356838, -0.005666247, 0.00490277}*..TF';
       AnyVec3 Metatarsal2PlantarNode = .Metatarsal2PlantarNode;
+      AnyVec3 Metatarsal2ContactNode = .Metatarsal2ContactNode;
       //***********************
       //Muscles nodes
       //***********************
@@ -281,8 +313,11 @@ ModelParameters = {
       AnyVec3 LigMtTransversumProfundumVia1 = {-0.00756642+0.002, -0.06334756+0.002, (0.01050367+0.004)}*..TF';
       AnyVec3 LigMtTransversumProfundumVia2 = {-0.00756642+0.003, -0.06334756-0.00, (0.01050367-0.004)}*..TF';
     }; // Metatarsal2
-    
+
     AnyFolder Metatarsal3 = {
+
+      AnyVar MassStandard = .MassStandard*0.018827431;
+
       AnyVec3 TarsoMtJoint = {0.02039496, 0.00767156, 0.01477314}*..TF';
       AnyVec3 RefDist = {-0.003279205, -0.06856769, 0.02516251}*..TF';
       AnyVec3 RefProx = {0.02540494, 0.001358806, 0.02256901}*..TF';
@@ -304,8 +339,11 @@ ModelParameters = {
       AnyVec3 LigMtTransversumProfundumVia1 = {-0.009191576+0.002, -0.05713054+0.004, (0.02343944+0.004)}*..TF';
       AnyVec3 LigMtTransversumProfundumVia2 = {-0.009191576+0.004, -0.05713054-0.002, (0.02343944-0.004)}*..TF';
     }; // Metatarsal3
-    
+
     AnyFolder Metatarsal4 = {
+
+      AnyVar MassStandard = .MassStandard*0.017399045;
+
       AnyVec3 TarsoMtJoint = {0.01154973, 0.01612223, 0.0229518}*..TF';
       AnyVec3 RefDist = {-0.004182283, -0.05773099, 0.03925701}*..TF';
       AnyVec3 RefProx = {0.01618675, 0.01049928, 0.03054708}*..TF';
@@ -329,6 +367,9 @@ ModelParameters = {
     };
 
     AnyFolder Metatarsal5 = {
+
+      AnyVar MassStandard = .MassStandard*0.038130794;
+
       AnyVec3 TarsoMtJoint = {0.006738373, 0.02296503, 0.02914318}*..TF';
       AnyVec3 RefDist = {-0.001300164, 0.006966656, 0.04349853}*..TF';
       AnyVec3 RefDist2 = {-0.00878843, -0.04335999, 0.05328835}*..TF';
@@ -339,6 +380,7 @@ ModelParameters = {
       AnyVec3 MTBasePlantarNode = {-0.007076697, 0.01189963, 0.03306715}*..TF';
       AnyVec3 MTHeadLateralNode = {-0.01012619, -0.03599002, 0.06112629}*..TF';
       AnyVec3 Metatarsal5PlantarNode = .Metatarsal5PlantarNode;
+      AnyVec3 Metatarsal5ContactNode = .Metatarsal5ContactNode;
       //***********************
       //Muscles nodes
       //***********************
@@ -359,8 +401,11 @@ ModelParameters = {
       AnyVec3 LigMtTransversumProfundumVia1 = {-0.01374553+0.002, -0.03369623+0.004, (0.05109619+0.004)}*..TF';
       AnyVec3 LigMtTransversumProfundumVia2 = {-0.01374553+0.003, -0.03369623-0.004, (0.05109619-0.004)}*..TF';
     };
-  
+
     AnyFolder ProximalPhalange1 = {
+
+      AnyVar MassStandard = .MassStandard*0.017790222;
+
       AnyVec3 MtPhalJoint = {0.00461532, -0.0629641, -0.0155316}*..TF';
       AnyVec3 RefDist = {-0.000441674, -0.1014964, -0.006944514}*..TF';
       AnyVec3 ToeMedialContactNode = .ToeMedialContactNode;
@@ -376,6 +421,9 @@ ModelParameters = {
     };
 
     AnyFolder ProximalPhalange2 = {
+
+      AnyVar MassStandard = .MassStandard*0.007562741;
+
       AnyVec3 MtPhalJoint = {0.0006, -0.0675, 0.0126588}*..TF';
       AnyVec3 RefDist = {-0.001707296, -0.09941698, 0.01747704}*..TF';
       AnyVec3 RefProx = {0.005556107, -0.07297692, 0.01393468}*..TF';
@@ -391,6 +439,9 @@ ModelParameters = {
     };
 
     AnyFolder ProximalPhalange3 = {
+
+      AnyVar MassStandard = .MassStandard*0.006408771;
+
       AnyVec3 MtPhalJoint = {-0.00169444, -0.063321, 0.0259938}*..TF';
       AnyVec3 RefDist = {-0.002001345, -0.09177314, 0.03132222}*..TF';
       AnyVec3 RefProx = {0.003101825, -0.06753456, 0.02756303}*..TF';
@@ -406,6 +457,9 @@ ModelParameters = {
     };
 
     AnyFolder ProximalPhalange4 = {
+
+      AnyVar MassStandard = .MassStandard*0.00596366;
+
       AnyVec3 MtPhalJoint = {-0.00371203, -0.052253, 0.0387849}*..TF';
       AnyVec3 RefDist = {-0.001343082, -0.07598902, 0.04605937}*..TF';
       AnyVec3 RefProx = {0.00141203, -0.056253, 0.0417849}*..TF';
@@ -421,6 +475,9 @@ ModelParameters = {
     };
 
     AnyFolder ProximalPhalange5 = {
+
+      AnyVar MassStandard = .MassStandard*0.00440014;
+
       AnyVec3 MtPhalJoint = {-0.00784451, -0.0350961, 0.0532479}*..TF';
       AnyVec3 RefDist = {-0.006638374, -0.06325011, 0.05860036}*..TF';
       AnyVec3 RefProx = {-0.00484451, -0.0400961, 0.0562479}*..TF';
@@ -437,6 +494,9 @@ ModelParameters = {
     };
 
     AnyFolder MiddlePhalange2 = {
+
+      AnyVar MassStandard = .MassStandard*0.001591376;
+
       AnyVec3 ProxPhalJoint = {-0.003158194+0.002, -0.0962966, 0.01694824}*..TF';
       AnyVec3 RefDist = {-0.00495792, -0.111385, 0.02043704}*..TF';
       AnyVec3 RefProx = {0.004356564, -0.09994124, 0.01804176}*..TF';
@@ -449,6 +509,9 @@ ModelParameters = {
     };
 
     AnyFolder MiddlePhalange3 = {
+
+      AnyVar MassStandard = .MassStandard*0.001243466;
+
       AnyVec3 ProxPhalJoint = {-0.001918323, -0.08935672, 0.03099156}*..TF';
       AnyVec3 RefDist = {-0.004356479, -0.1043722, 0.03404669}*..TF';
       AnyVec3 RefProx = {0.003532243, -0.09107391, 0.03195742}*..TF';
@@ -461,6 +524,9 @@ ModelParameters = {
     };
 
     AnyFolder MiddlePhalange4 = {
+
+      AnyVar MassStandard = .MassStandard*0.001188346;
+
       AnyVec3 ProxPhalJoint = {-0.0027960183, -0.07382266-0.003, 0.0455907}*..TF';
       AnyVec3 RefDist = {-0.008519062, -0.08734421, 0.04636958}*..TF';
       AnyVec3 RefProx = {0.00146524, -0.07926898, 0.0481871}*..TF';
@@ -473,6 +539,9 @@ ModelParameters = {
     };
 
     AnyFolder MiddlePhalange5 = {
+
+      AnyVar MassStandard = .MassStandard*0.000644255;
+
       AnyVec3 ProxPhalJoint = {-0.007358133, -0.06222843, 0.05913591}*..TF';
       AnyVec3 RefDist = {-0.009230679, -0.06886453, 0.0593412}*..TF';
       AnyVec3 RefProx = {-0.003861642, -0.06663538, 0.06283306}*..TF';
@@ -485,6 +554,9 @@ ModelParameters = {
     };
 
     AnyFolder DistalPhalange1 = {
+
+      AnyVar MassStandard = .MassStandard*0.008262117;
+
       AnyVec3 DistPhalJoint = {-0.001083079, -0.10166927+0.003, -0.008109532}*..TF';
       AnyVec3 RefDist = {0.00136714, -0.1228519, 0.002927616}*..TF';
       AnyVec3 ToeTip = {0.00136714, -0.1268519, 0.002927616}*..TF';
@@ -502,6 +574,9 @@ ModelParameters = {
     };
 
     AnyFolder DistalPhalange2 = {
+
+      AnyVar MassStandard = .MassStandard*0.000724269;
+
       AnyVec3 DistPhalJoint = {-0.004708046, -0.1116229, 0.01957764}*..TF';
       AnyVec3 RefDist = {-0.004763274, -0.1197475, 0.02273006}*..TF';
       AnyVec3 RefProx = {0.001242716, -0.1129332, 0.0203853}*..TF';
@@ -515,6 +590,9 @@ ModelParameters = {
     };
 
     AnyFolder DistalPhalange3 = {
+
+      AnyVar MassStandard = .MassStandard*0.000608694;
+
       AnyVec3 DistPhalJoint = {-0.006065235, -0.1034911, 0.03371704}*..TF';
       AnyVec3 RefDist = {-0.008175768, -0.1130482, 0.03630654}*..TF';
       AnyVec3 RefProx = {-0.0023865434, -0.1051697, 0.03456902}*..TF';
@@ -526,6 +604,9 @@ ModelParameters = {
     };
 
     AnyFolder DistalPhalange4 = {
+
+      AnyVar MassStandard = .MassStandard*0.000541127;
+
       AnyVec3 DistPhalJoint = {-0.007880441, -0.08457409, 0.04647917}*..TF';
       AnyVec3 RefDist = {-0.01278651, -0.09533569, 0.0466897}*..TF';
       AnyVec3 RefProx = {-0.003069028, -0.08662697, 0.04918238}*..TF';
@@ -537,6 +618,9 @@ ModelParameters = {
     };
 
     AnyFolder DistalPhalange5 = {
+
+      AnyVar MassStandard = .MassStandard*0.000520976;
+
       AnyVec3 DistPhalJoint = {-0.009056971, -0.06675649, 0.05883433}*..TF';
       AnyVec3 RefDist = {-0.01316917, -0.0758413, 0.05632038}*..TF';
       AnyVec3 RefProx = {-0.00686618, -0.07157046, 0.06129555}*..TF';

@@ -24,7 +24,7 @@
 
 // Parameter defining the foot model used.
 #ifndef BM_FOOT_MODEL
-#define BM_FOOT_MODEL _FOOT_MODEL_DEFAULT_
+#define BM_FOOT_MODEL _FOOT_MODEL_RIGID_GM_
 #endif
 
 // Parameter defining the existing of reaction on toes when using _FOOT_MODEL_TOE_FLEX_GM_.
@@ -39,7 +39,7 @@
 
 // Read only parameter to check if Leg Model is a variant of the TLEM model.
 #ifndef BM_LEG_MODEL_IS_TLEM
-#define BM_LEG_MODEL_IS_TLEM
+#define BM_LEG_MODEL_IS_TLEM 
 #endif
 
 // Parameter defining the contact type between Thorax and Scapula. This defaults to _MULTIPLE_POINT_CONTACT_ when full thoracic model is used.
@@ -77,19 +77,14 @@
 #define BM_LEG_MUSCLES_RIGHT BM_LEG_MUSCLES_BOTH
 #endif
 
-// Parameter to define muscle behavior of both right and left foot
-#ifndef BM_FOOT_MUSCLES_BOTH
-#define BM_FOOT_MUSCLES_BOTH BM_LEG_MUSCLES_BOTH
-#endif
-
 // Parameter to define muscle behavior of the left foot
 #ifndef BM_FOOT_MUSCLES_LEFT
-#define BM_FOOT_MUSCLES_LEFT BM_FOOT_MUSCLES_BOTH
+#define BM_FOOT_MUSCLES_LEFT BM_LEG_MUSCLES_LEFT
 #endif
 
 // Parameter to define muscle behavior of the right foot
 #ifndef BM_FOOT_MUSCLES_RIGHT
-#define BM_FOOT_MUSCLES_RIGHT BM_FOOT_MUSCLES_BOTH
+#define BM_FOOT_MUSCLES_RIGHT BM_LEG_MUSCLES_RIGHT
 #endif
 
 // Parameter to define a trunk model dataset.
@@ -122,7 +117,7 @@
 #define BM_TRUNK_DIAGPHRAM_FIXED_POSITION ON
 #endif
 
-// The topology of the sternum segment, i.e. number of segments into which sternum is split. Current options are 2, or 4 segments.
+// The topology of the sternum segment, i.e. number of segments into which sternum is split. Current options are 2, or 4 segments. 
 #ifndef BM_TRUNK_THORACIC_STERNUM_TOPOLOGY
 #define BM_TRUNK_THORACIC_STERNUM_TOPOLOGY 2
 #endif
@@ -232,29 +227,9 @@
 #define BM_ARM_LEFT ON
 #endif
 
-// Keyword for the type of left hand.
-#ifndef BM_ARM_DETAIL_HAND_LEFT
-#define BM_ARM_DETAIL_HAND_LEFT OFF
-#endif
-
-// Switch for the shoulder rhythm constraints for the left arm being present or not.
-#ifndef BM_ARM_SHOULDER_RHYTHM_LEFT
-#define BM_ARM_SHOULDER_RHYTHM_LEFT OFF
-#endif
-
 // Switch for the right arm model being present or not.
 #ifndef BM_ARM_RIGHT
 #define BM_ARM_RIGHT ON
-#endif
-
-// Keyword for the type of right hand.
-#ifndef BM_ARM_DETAIL_HAND_RIGHT
-#define BM_ARM_DETAIL_HAND_RIGHT OFF
-#endif
-
-// Switch for the shoulder rhythm constraints for the right arm being present or not.
-#ifndef BM_ARM_SHOULDER_RHYTHM_RIGHT
-#define BM_ARM_SHOULDER_RHYTHM_RIGHT OFF
 #endif
 
 // Switch for the shoulder rhythm constraints. ON indicate that the rhythm is a hard contraint while _RHYTHM_SOFT_ will make the rhythm as soft kinematic contraint.
@@ -528,11 +503,6 @@
 #endif
 
 // Switch for the mannequin driver being active or not
-#ifndef BM_MANNEQUIN_DRIVER_ANKLE_EVERSION_RIGHT
-#define BM_MANNEQUIN_DRIVER_ANKLE_EVERSION_RIGHT BM_MANNEQUIN_DRIVER_DEFAULT
-#endif
-
-// Switch for the mannequin driver being active or not
 #ifndef BM_MANNEQUIN_DRIVER_ANKLE_SUBTALAR_EVERSION_RIGHT
 #define BM_MANNEQUIN_DRIVER_ANKLE_SUBTALAR_EVERSION_RIGHT BM_MANNEQUIN_DRIVER_DEFAULT
 #endif
@@ -565,11 +535,6 @@
 // Switch for the mannequin driver being active or not
 #ifndef BM_MANNEQUIN_DRIVER_ANKLE_FLEXION_LEFT
 #define BM_MANNEQUIN_DRIVER_ANKLE_FLEXION_LEFT BM_MANNEQUIN_DRIVER_DEFAULT
-#endif
-
-// Switch for the mannequin driver being active or not
-#ifndef BM_MANNEQUIN_DRIVER_ANKLE_EVERSION_LEFT
-#define BM_MANNEQUIN_DRIVER_ANKLE_EVERSION_LEFT BM_MANNEQUIN_DRIVER_DEFAULT
 #endif
 
 // Switch for the mannequin driver being active or not
@@ -650,6 +615,11 @@
 // An object path leading to the selected global reference frame
 #ifndef BM_GLOBAL_REFERENCE_FRAME
 #define BM_GLOBAL_REFERENCE_FRAME ..GenericGlobalRefFrame
+#endif
+
+// Switch to include git version information in the model metadata if available.
+#ifndef BM_INCLUDE_GIT_INFO
+#define BM_INCLUDE_GIT_INFO ON
 #endif
 
 // A compatability switch to include the trunk selected outputs joint reaction force from AMMR 2.4

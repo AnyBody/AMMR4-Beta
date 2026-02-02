@@ -86,7 +86,7 @@ AnyFolder STL =
   #include "<BM_LEG_DATASET_PATH>STL.any"
 };
 
-#if BM_FOOT_MODEL == _FOOT_MODEL_DEFAULT_
+#if BM_FOOT_MODEL == _FOOT_MODEL_LEG_FOOT_
 AnySeg &Talus = Foot.Talus;
 
 AnySeg Foot =
@@ -122,7 +122,7 @@ AnySeg Foot =
 
   JaboutCoMOnOff = On;
 
-  r0=.Talus.SubTalarJoint.sRel*.Talus.Axes0'+.Talus.r0-SubTalarJoint.sRel*Axes0';
+  r0 ??= .Talus.SubTalarJoint.sRel*.Talus.Axes0'+.Talus.r0-SubTalarJoint.sRel*Axes0';
 
   /// pUnscaled = {LateralMalleolus, MedialMalleolus, Metatarsal2} //bony landmarks to define orgin and long axis of the foot and three coplanar points to define the
   /// horizontal plane parallel to the ground. These can be on the bones, skin, shoe, etc. and determine the proximal-distal axis of the foot and ankle plantarflexion zero value
@@ -152,7 +152,7 @@ AnySeg Foot =
     JaboutCoMOnOff = On;
     AnyVar  MassS=...MassScaling.Talus.MassScale;
 
-    r0=..Shank.AnkleJoint.sRel*..Shank.Axes0'+..Shank.r0-AnkleJoint.sRel*Axes0';
+    r0 ??= ..Shank.AnkleJoint.sRel*..Shank.Axes0'+..Shank.r0-AnkleJoint.sRel*Axes0';
 
     /// pUnscaled = pUnscaled from foot = {LateralMalleolus, MedialMalleolus, Metatarsal2, Heel, Metatarsal5, Metatarsal1} //bony landmarks to define orgin and long axis of the foot
     /// and three coplanar points to define the horizontal plane parallel to the ground. These can be on the bones, skin, shoe, etc. and
@@ -171,8 +171,7 @@ AnySeg Foot =
       AnyMat33 ARelUnscaled = MACRO_CONSTRUCT_ANATOMICAL_FRAME_A(.pUnscaled, .Sign);///< Generic unscaled rotation of talus ScalingNode
     };
 
-    /// For backwards Compatibility with AMMR 2.4 MoCap Marker protocols
-    AnyRefNode& MoCapMarkerFrameAMMR24 = AnatomicalFrame;
+
 
     AnyRefNode& ScalingNode = AnatomicalFrame ;
 
@@ -221,8 +220,7 @@ AnySeg Foot =
     };
   }; // end of Talus segment
 
-  /// For backwards Compatibility with AMMR 2.4 MoCap Marker protocols
-  AnyRefNode& MoCapMarkerFrameAMMR24 = AnatomicalFrame;
+
 
   AnyRefNode& ScalingNode=AnatomicalFrame;
   #undef MACRO_CONSTRUCT_ANATOMICAL_FRAME_s
@@ -399,7 +397,7 @@ AnySeg Foot =
   AnyRefNode FlexorHallucisLongusViaNode7 = {sRel = .Scale( .Data.FlexorHallucisLongusViaNode1 );};
 
   //Insertion points on Hindfoot:
-  AnyRefNode TendonCalcaneousNode = {sRel = .Scale( .Data.TendonCalcaneousNode );};
+  AnyRefNode TendonCalcaneusNode = {sRel = .Scale( .Data.TendonCalcaneusNode );};
 
   AnyRefNode GastrocnemiusLateralis1Node = {sRel = .Scale( .Data.GastrocnemiusLateralis1Node );};
   AnyRefNode GastrocnemiusMedialis1Node =  {sRel = .Scale( .Data.GastrocnemiusMedialis1Node );};
@@ -413,7 +411,7 @@ AnySeg Foot =
   AnyRefNode SoleusLateralis2Node = {sRel = .Scale( .Data.SoleusLateralis2Node );};
   AnyRefNode SoleusLateralis3Node =  {sRel = .Scale( .Data.SoleusLateralis3Node );};
 
-  AnyRefNode TendonCalcaneousSuperiorNode = {sRel = .Scale( .Data.TendonCalcaneousSuperiorNode );};
+  AnyRefNode TendonCalcaneusSuperiorNode = {sRel = .Scale( .Data.TendonCalcaneusSuperiorNode );};
   AnyRefNode GastrocnemiusLateralis1SuperiorNode = {sRel = .Scale( .Data.GastrocnemiusLateralis1SuperiorNode );};
   AnyRefNode GastrocnemiusMedialis1SuperiorNode =  {sRel = .Scale( .Data.GastrocnemiusMedialis1SuperiorNode );};
   AnyRefNode Plantaris1SuperiorNode = {sRel = .Scale( .Data.Plantaris1SuperiorNode );};
@@ -500,7 +498,7 @@ AnySeg Foot =
 };// End of foot
 
 
-#endif //BM_FOOT_MODEL == _FOOT_MODEL_DEFAULT_
+#endif //BM_FOOT_MODEL == _FOOT_MODEL_LEG_FOOT_
 
 #if BM_FOOT_MODEL != _FOOT_MODEL_NONE_
 
@@ -509,8 +507,13 @@ AnySeg Foot =
     #if TLEM_JOINT_TYPE_SUBTALAR != _JOINT_TYPE_USERDEFINED_
     AnyRefNode SubTalarJoint =
     {
+      AnyVec3 sRelUnscaled = .Data.SubTalarJoint;
+      AnyMat33 ARelUnscaled = RotMat({0.0, 0.0, 0.0 }, (.Data.SubTalarJointAxisNode-.Data.SubTalarJoint), .AnatomicalFrame.ARelUnscaled'[1])*RotMat(pi/2,y);
+
+      AnyVec3 SubTalarJointAxisNode = ..Calcaneus.SubTalarJoint.SubTalarJointAxisNode;
+
       sRel = .Scale(.Data.SubTalarJoint);
-      ARel = RotMat({0.0,0,0}, .Data.SubTalarJointAxis, .AnatomicalFrame.ARel'[1])*RotMat(pi/2,y);
+      ARel = RotMat({0.0, 0.0, 0.0 }, ....Sign*(SubTalarJointAxisNode-sRel), .AnatomicalFrame.ARel'[1])*RotMat(pi/2,y);
 
       #include "../DrawSettings/JointAxesProximal.any"
 
@@ -579,9 +582,34 @@ AnySeg Foot =
     AnyRefNode SubTalarJoint =
     {
       AnyVec3 sRelUnscaled = .Data.SubTalarJoint;
-      AnyMat33 ARelUnscaled = RotMat({0.0, 0.0, 0.0 }, .Data.SubTalarJointAxis, .AnatomicalFrame.ARelUnscaled'[1])*RotMat(pi/2,y);
+      AnyMat33 ARelUnscaled = RotMat({0.0, 0.0, 0.0 }, (.Data.SubTalarJointAxisNode-.Data.SubTalarJoint), .AnatomicalFrame.ARelUnscaled'[1])*RotMat(pi/2,y);
+
+      AnyVec3 SubTalarJointAxisNode = JointAxisNodeComputation.STJointAxisNodeComputed;
+
       sRel = .Scale(.Data.SubTalarJoint);
-      ARel = RotMat({0.0, 0.0, 0.0 }, .Data.SubTalarJointAxis, .AnatomicalFrame.ARel'[1])*RotMat(pi/2,y);
+      ARel = RotMat({0.0, 0.0, 0.0 }, ....Sign*(SubTalarJointAxisNode-sRel), .AnatomicalFrame.ARel'[1])*RotMat(pi/2,y);
+
+      /// Computation of SubTalar joint axis node
+      AnyFolder JointAxisNodeComputation = {
+        AnyMatrix TendonCalcaneusNodes = ..Scale({..Data.TendonCalcaneusMedialisNode,
+                                                  ..Data.TendonCalcaneusLateralisNode,
+                                                  ..Data.TendonCalcaneusMedialisSuperiorNode,
+                                                  ..Data.TendonCalcaneusLateralisSuperiorNode,});
+        AnyVec3 STJointAxisNode = ..Scale(..Data.SubTalarJointAxisNode);
+        AnyVec3 TCNodesMidPoint = mean(TendonCalcaneusNodes');
+        AnyVar TCNodesMidPointSTJointAxisNode_Distance = vnorm(TCNodesMidPoint-STJointAxisNode);
+        AnyFloat VerticalDirection = normalize(mean({TendonCalcaneusNodes[0]-TendonCalcaneusNodes[2],
+                                                           TendonCalcaneusNodes[1]-TendonCalcaneusNodes[3],}'));
+        /// The SubTalar joint axis node is relocated to be vertically below
+        /// the midpoint of the tendon calcaneus nodes, which define the
+        /// insertion and via points of the gastrocnemius and soleus muscles
+        /// on calcaneus.
+        AnyVec3 STJointAxisNodeComputed = TCNodesMidPoint
+                                          + TCNodesMidPointSTJointAxisNode_Distance*VerticalDirection;
+        /// Distance between scaled and computed Subtalar joint axis node.
+        /// This will be affected by scaling, but should be small.
+        AnyVar STJointAxisNodeComputed_Distance = vnorm(STJointAxisNodeComputed-STJointAxisNode);
+      };
     };
     #endif
 
@@ -595,7 +623,7 @@ AnySeg Shank =
   AnyFolder &Data = ..ModelParameters.Shank;
 
   JaboutCoMOnOff = On;
-  r0=.Thigh.KneeJoint.sRel*.Thigh.Axes0'+.Thigh.r0-KneeJoint.sRel*Axes0';
+  r0 ??= .Thigh.KneeJoint.sRel*.Thigh.Axes0'+.Thigh.r0-KneeJoint.sRel*Axes0';
 
   AnyVec3 r01 = .Thigh.KneeJoint.sRel;
   AnyVec3 r02 = .Thigh.KneeJoint.sRel*.Thigh.Axes0';
@@ -633,8 +661,7 @@ AnySeg Shank =
     AnyVec3 sRelUnscaled = MACRO_CONSTRUCT_ANATOMICAL_FRAME_s(.pUnscaled, .Sign); ///< Generic unscaled position of shank ScalingNode
     AnyMat33 ARelUnscaled = MACRO_CONSTRUCT_ANATOMICAL_FRAME_A(.pUnscaled, .Sign);///< Generic unscaled rotation of shank ScalingNode
   };
-  /// For backwards Compatibility with AMMR 2.4 MoCap Marker protocols
-  AnyRefNode& MoCapMarkerFrameAMMR24 = AnatomicalFrame;
+
 
   #undef MACRO_CONSTRUCT_ANATOMICAL_FRAME_s
   #undef MACRO_CONSTRUCT_ANATOMICAL_FRAME_A
@@ -1061,7 +1088,7 @@ AnySeg Thigh =
   AnyFolder &Data = ..ModelParameters.Thigh;
 
   JaboutCoMOnOff = On;
-  r0=.Pelvis.HipJoint.sRel*....Trunk.Segments.PelvisSeg.Axes0'+    ....Trunk.Segments.PelvisSeg.r0-    HipJoint.sRel*Axes0';
+  r0 ??= .Pelvis.HipJoint.sRel*....Trunk.Segments.PelvisSeg.Axes0'+    ....Trunk.Segments.PelvisSeg.r0-    HipJoint.sRel*Axes0';
 
   #include "../DrawSettings/Nodes.any"
   #include "../DrawSettings/SegmentAxes.any"
@@ -1081,8 +1108,7 @@ AnySeg Thigh =
     AnyVec3 sRelUnscaled = MACRO_CONSTRUCT_ANATOMICAL_FRAME_s(.pUnscaled, .Sign); ///< Generic unscaled position of thigh ScalingNode
     AnyMat33 ARelUnscaled = MACRO_CONSTRUCT_ANATOMICAL_FRAME_A(.pUnscaled, .Sign);///< Generic unscaled rotation of thigh ScalingNode
   };
-  /// For backwards Compatibility with AMMR 2.4 MoCap Marker protocols
-  AnyRefNode& MoCapMarkerFrameAMMR24 = AnatomicalFrame;
+
 
   AnyRefNode& ScalingNode=AnatomicalFrame ;
   #undef MACRO_CONSTRUCT_ANATOMICAL_FRAME_s
@@ -1541,7 +1567,7 @@ AnySeg Patella =
   AnyFolder &Data = ..ModelParameters.Patella;
   JaboutCoMOnOff = On;
 
-  r0=.Thigh.PatellaFemurJoint.sRel*.Thigh.Axes0'+.Thigh.r0-PatellaFemurJoint.sRel*Axes0';
+  r0 ??= .Thigh.PatellaFemurJoint.sRel*.Thigh.Axes0'+.Thigh.r0-PatellaFemurJoint.sRel*Axes0';
 
   AnyFloat pUnscaled = {Data.HipJoint, Data.EpicondylusFemorisMedialis, Data.EpicondylusFemorisLateralis};
   #define MACRO_CONSTRUCT_ANATOMICAL_FRAME_s(p, SIGN) p[0]
@@ -1564,8 +1590,7 @@ AnySeg Patella =
     ARel = ..Thigh.AnatomicalFrame.ARel;
     sRel = .PatellaFemurJoint.sRel;
   };
-  /// For backwards Compatibility with AMMR 2.4 MoCap Marker protocols
-  AnyRefNode& MoCapMarkerFrameAMMR24 = AnatomicalFrame;
+
   AnyRefNode& ScalingNode=AnatomicalFrame ;
 
   #if TLEM_JOINT_TYPE_PATELLOFEMORAL != _JOINT_TYPE_USERDEFINED_

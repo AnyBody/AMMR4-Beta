@@ -67,14 +67,21 @@ nicename = "Simple Leg"
 [constants._FOOT_MODEL_NONE_]
 default = "0"
 valuetype = "integer"
-descr = "Switch off foot model\""
+descr = "Switch off foot model"
 nicename = "No Foot Model"
 
-[constants._FOOT_MODEL_DEFAULT_]
+[constants._FOOT_MODEL_LEG_FOOT_]
 default = "1"
 valuetype = "integer"
-descr = "Switch for using the default foot model"
-nicename = "Default Foot Model"
+descr = "Switch for using the foot model from the selected leg model"
+nicename = "Leg Foot Model"
+
+[constants._FOOT_MODEL_DEFAULT_]
+default = "9"
+deprecated = "true"
+valuetype = "integer"
+descr = "`_FOOT_MODEL_DEFAULT_` is deprecated. Please use `_FOOT_MODEL_RIGID_GM_` instead."
+nicename = "Depreacated switch"
 
 [constants._FOOT_MODEL_RIGID_GM_]
 default = "2"
@@ -363,167 +370,6 @@ default = "0"
 valuetype = "integer"
 descr = "Use custom calibration. I.e. disables calibration so the user can add their own code."
 
-[constants.CONST_MUSCLES_NONE]
-deprecated = "true"
-default = "0"
-valuetype = "integer"
-descr = "Constant to switch off muscles"
-
-[constants.CONST_MUSCLES_SIMPLE]
-deprecated = "true"
-default = "1"
-valuetype = "integer"
-descr = "Constant to use simple muscles"
-
-[constants.CONST_MUSCLES_3E_HILL]
-deprecated = "true"
-default = "2"
-valuetype = "integer"
-descr = "Constant to use 3 element Hill-type muscle"
-
-[constants.CONST_HAND_SIMPLE]
-deprecated = "true"
-default = "0"
-valuetype = "integer"
-descr = "Constant to use simplified hand model"
-
-[constants.CONST_HAND_DETAILED]
-deprecated = "true"
-default = "1"
-valuetype = "integer"
-descr = "Constant to use detailed hand model"
-
-[constants.CONST_LEG_MODEL_OFF]
-deprecated = "true"
-default = "0"
-valuetype = "integer"
-descr = "Switch off a leg"
-
-[constants.CONST_LEG_MODEL_TLEM]
-deprecated = "true"
-default = "1"
-valuetype = "integer"
-descr = "Switch to use leg model: \"TLEM 1\""
-
-[constants.CONST_LEG_MODEL_TLEM2]
-deprecated = "true"
-default = "2"
-valuetype = "integer"
-descr = "Switch to use leg model: \"TLEM 2\""
-
-[constants.CONST_LEG_MODEL_Leg]
-deprecated = "true"
-default = "3"
-valuetype = "integer"
-descr = "Switch to use leg model: \"Leg\""
-
-[constants.CONST_MORPH_NONE]
-deprecated = "true"
-default = "0"
-valuetype = "integer"
-descr = "Constant for no-morphing between the upper and lower bodies."
-
-[constants.CONST_MORPH_TRUNK_TO_LEG]
-deprecated = "true"
-default = "1"
-valuetype = "integer"
-descr = "Constant for the trunk-to-leg morphing"
-
-[constants.CONST_MORPH_LEG_TO_TRUNK]
-deprecated = "true"
-default = "2"
-valuetype = "integer"
-descr = "Constant for the leg-to-trunk morhping"
-
-[constants.CONST_PELVIS_DISPLAY_NONE]
-deprecated = "true"
-default = "0"
-valuetype = "integer"
-descr = "Constant to switch off pelvis visualization"
-
-[constants.CONST_PELVIS_DISPLAY_LEGPELVIS_ONLY]
-deprecated = "true"
-default = "1"
-valuetype = "integer"
-descr = "Constant to display leg-dependent pevlis only"
-
-[constants.CONST_PELVIS_DISPLAY_LEGANDTRUNKPELVIS]
-deprecated = "true"
-default = "2"
-valuetype = "integer"
-descr = "Constant to display both trunk and leg pelvises"
-
-[constants.CONST_DISC_STIFFNESS_NONE]
-deprecated = "true"
-default = "0"
-valuetype = "integer"
-descr = "Constant to switch off disc spring in the spine"
-
-[constants.CONST_DISC_STIFFNESS_LINEAR]
-deprecated = "true"
-default = "1"
-valuetype = "integer"
-descr = "Constant to switch linear disc spring on in the spine"
-
-[constants.CONST_DISC_STIFFNESS_NONLINEAR ]
-deprecated = "true"
-default = "2"
-valuetype = "integer"
-descr = "Constant to switch nonlinear disc spring on in the spine"
-
-[constants.CONST_SCALING_STANDARD]
-deprecated = "true"
-default = "1"
-valuetype = "integer"
-descr = "Standard scaling law to be used by the entire model."
-
-[constants.CONST_SCALING_UNIFORM]
-deprecated = "true"
-default = "2"
-valuetype = "integer"
-descr = "Uniform anthropometric scaling law to be used by the entire model."
-
-[constants.CONST_SCALING_LENGTHMASS]
-deprecated = "true"
-default = "3"
-valuetype = "integer"
-descr = "Length/mass anthropometric scaling law to be used by the entire model."
-
-[constants.CONST_SCALING_LENGTHMASSFAT]
-deprecated = "true"
-default = "4"
-valuetype = "integer"
-descr = "Length/mass/fat anthropometric scaling law to be used by the entire model."
-
-[constants.CONST_SCALING_UNIFORM_EXTMEASUREMENTS]
-deprecated = "true"
-default = "5"
-valuetype = "integer"
-descr = "Uniform anthropometric scaling law  with external measurements to be used by the entire model."
-
-[constants.CONST_SCALING_LENGTHMASS_EXTMEASUREMENTS]
-deprecated = "true"
-default = "6"
-valuetype = "integer"
-descr = "Length/mass anthropometric with external measurements scaling law to be used by the entire model."
-
-[constants.CONST_SCALING_LENGTHMASSFAT_EXTMEASUREMENTS]
-deprecated = "true"
-default = "7"
-valuetype = "integer"
-descr = "Length/mass/fat anthropometric with external measurements scaling law to be used by the entire model."
-
-[constants.CONST_SCALING_LENGTHMASSFAT_MULTIDOFS]
-deprecated = "true"
-default = "8"
-valuetype = "integer"
-descr = "Length/mass/fat anthropometric with for multiple degree of freedom."
-
-[constants.CONST_SCALING_CUSTOM]
-deprecated = "true"
-default = "10"
-valuetype = "integer"
-descr = "Custom anthropometric scaling law for the entire model"
 
 [parameters.BM_SCALING]
 default = "_SCALING_STANDARD_"
@@ -535,12 +381,6 @@ opt = [ "_SCALING_NONE_", "_SCALING_STANDARD_", "_SCALING_UNIFORM_", "_SCALING_L
 type = "#path"
 valuetype = "string"
 descr = "Custom file with all anthropometric measurements used by the scaling law. This is some times called the AnyMan file."
-
-[parameters.BM_SCALING_MY_FILE]
-deprecated = "true"
-type = "#path"
-valuetype = "string"
-descr = "Path with the ScalingLaw used. Can be set to override the BM_SCALING parameter and select a custom scaling law."
 
 [parameters.BM_SCALING_FILE]
 type = "#path"
@@ -571,10 +411,10 @@ descr = "A flag to switch on/off inclusion of the draw settings (may be needed i
 opt = [ "ON", "OFF"]
 
 [parameters.BM_FOOT_MODEL]
-default = "_FOOT_MODEL_DEFAULT_"
+default = "_FOOT_MODEL_RIGID_GM_"
 valuetype = "integer"
 descr = "Parameter defining the foot model used."
-opt = [ "_FOOT_MODEL_NONE_", "_FOOT_MODEL_DEFAULT_", "_FOOT_MODEL_RIGID_GM_", "_FOOT_MODEL_TOE_FLEX_GM_", "_FOOT_MODEL_DETAILED_GM_",]
+opt = [ "_FOOT_MODEL_NONE_", "_FOOT_MODEL_LEG_FOOT_", "_FOOT_MODEL_RIGID_GM_", "_FOOT_MODEL_TOE_FLEX_GM_", "_FOOT_MODEL_DETAILED_GM_",]
 
 [parameters.BM_FOOT_MODEL_TOE_FLEX_GM_REACTION]
 default = "ON"
@@ -640,25 +480,19 @@ descr = "Parameter to define muscle behavior of the right leg"
 nicename = "Right"
 opt = [ "OFF", "_MUSCLES_SIMPLE_", "_MUSCLES_3E_HILL_", "BM_LEG_MUSCLES_BOTH",]
 
-[parameters.BM_FOOT_MUSCLES_BOTH]
-default = "BM_LEG_MUSCLES_BOTH"
-valuetype = "integer"
-descr = "Parameter to define muscle behavior of both right and left foot"
-opt = [ "OFF", "_MUSCLES_SIMPLE_", "_MUSCLES_3E_HILL_",]
-
 [parameters.BM_FOOT_MUSCLES_LEFT]
-default = "BM_FOOT_MUSCLES_BOTH"
+default = "BM_LEG_MUSCLES_LEFT"
 valuetype = "integer"
 descr = "Parameter to define muscle behavior of the left foot"
 nicename = "Left"
-opt = [ "OFF", "_MUSCLES_SIMPLE_", "_MUSCLES_3E_HILL_", "BM_FOOT_MUSCLES_BOTH",]
+opt = [ "OFF", "_MUSCLES_SIMPLE_", "_MUSCLES_3E_HILL_",]
 
 [parameters.BM_FOOT_MUSCLES_RIGHT]
-default = "BM_FOOT_MUSCLES_BOTH"
+default = "BM_LEG_MUSCLES_RIGHT"
 valuetype = "integer"
 descr = "Parameter to define muscle behavior of the right foot"
 nicename = "Right"
-opt = [ "OFF", "_MUSCLES_SIMPLE_", "_MUSCLES_3E_HILL_", "BM_FOOT_MUSCLES_BOTH",]
+opt = [ "OFF", "_MUSCLES_SIMPLE_", "_MUSCLES_3E_HILL_",]
 
 [parameters.BM_LEG_DATASET]
 type = "#path"
@@ -841,17 +675,6 @@ descr = "Switch for the left arm model being present or not."
 nicename = "Left Arm"
 opt = [ "ON", "OFF"]
 
-[parameters.BM_ARM_DETAIL_HAND_LEFT]
-deprecated = "true"
-default = "OFF"
-valuetype = "integer"
-descr = "Keyword for the type of left hand."
-
-[parameters.BM_ARM_SHOULDER_RHYTHM_LEFT]
-deprecated = "true"
-default = "OFF"
-valuetype = "integer"
-descr = "Switch for the shoulder rhythm constraints for the left arm being present or not."
 
 [parameters.BM_ARM_RIGHT]
 default = "ON"
@@ -860,17 +683,6 @@ descr = "Switch for the right arm model being present or not."
 nicename = "Right Arm"
 opt = [ "ON", "OFF"]
 
-[parameters.BM_ARM_DETAIL_HAND_RIGHT]
-deprecated = "true"
-default = "OFF"
-valuetype = "integer"
-descr = "Keyword for the type of right hand."
-
-[parameters.BM_ARM_SHOULDER_RHYTHM_RIGHT]
-deprecated = "true"
-default = "OFF"
-valuetype = "integer"
-descr = "Switch for the shoulder rhythm constraints for the right arm being present or not."
 
 [parameters.BM_ARM_SHOULDER_RHYTHM]
 default = "OFF"
@@ -1252,14 +1064,6 @@ descr = "Switch for the mannequin driver being active or not"
 nicename = "Right Ankle Flexion"
 opt = [ "ON", "OFF", "BM_MANNEQUIN_DRIVER_DEFAULT",]
 
-[parameters.BM_MANNEQUIN_DRIVER_ANKLE_EVERSION_RIGHT]
-default = "BM_MANNEQUIN_DRIVER_DEFAULT"
-valuetype = "integer"
-deprecated = "true"
-descr = "Switch for the mannequin driver being active or not"
-nicename = "Right Ankle Eversion"
-opt = [ "ON", "OFF", "BM_MANNEQUIN_DRIVER_DEFAULT",]
-
 [parameters.BM_MANNEQUIN_DRIVER_ANKLE_SUBTALAR_EVERSION_RIGHT]
 default = "BM_MANNEQUIN_DRIVER_DEFAULT"
 valuetype = "integer"
@@ -1307,14 +1111,6 @@ default = "BM_MANNEQUIN_DRIVER_DEFAULT"
 valuetype = "integer"
 descr = "Switch for the mannequin driver being active or not"
 nicename = "Left Ankle Flexion"
-opt = [ "ON", "OFF", "BM_MANNEQUIN_DRIVER_DEFAULT",]
-
-[parameters.BM_MANNEQUIN_DRIVER_ANKLE_EVERSION_LEFT]
-default = "BM_MANNEQUIN_DRIVER_DEFAULT"
-valuetype = "integer"
-deprecated = "true"
-descr = "Switch for the mannequin driver being active or not"
-nicename = "Left Ankle Eversion"
 opt = [ "ON", "OFF", "BM_MANNEQUIN_DRIVER_DEFAULT",]
 
 [parameters.BM_MANNEQUIN_DRIVER_ANKLE_SUBTALAR_EVERSION_LEFT]
@@ -1415,6 +1211,12 @@ default = "..GenericGlobalRefFrame"
 valuetype = "reference"
 descr = "An object path leading to the selected global reference frame"
 nicename = "Global Reference Frame"
+
+[parameters.BM_INCLUDE_GIT_INFO]
+default = "ON"
+valuetype = "integer"
+descr = "Switch to include git version information in the model metadata if available."
+nicename = "Include Git Info in Model Metadata if available"
 
 [parameters.BM_COMPATIBILITY_24_TRUNK_SELECTED_OUTPUTS_JRF]
 default = "OFF"

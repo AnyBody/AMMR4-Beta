@@ -78,4 +78,68 @@ the marker protocol.
 ## Load time errors
 
 
+
+:::{dropdown}  `'MoCapMarkerFrameAMMR24'  :  Unresolved object`
+
+
+```
+ERROR(SCR.PRS9) :   "MarkerProtocol.any(###)"  :     Defined at :   "MarkerProtocol.any(###)"  :   'MoCapMarkerFrameAMMR24'  :  Unresolved object
+```
+
+The `MoCapMarkerFrameAMMR24` have been removed in AMMR4. Remove the argument completely or change it to `ScalingNode`(default). Please see the {anylink-file}`marker protocol <Application/MocapExamples/Plug-in-gait_Simple/Setup/MarkerProtocol.any>` in the gallery models for examples on how to define markers at different bony landmarks.  
+
+:::
+
+
+:::{dropdown}  `'HeelContactNode'  :  Unresolved object`
+
+```
+ERROR(SCR.PRS9) :   "C:\####\GroundDrivers.any(7)"  :   'HeelContactNode'  :  Unresolved object
+```
+
+This node has been renamed to `HeelContactNodeLow` in the new GM foot model, and is
+now located under different sub-frame, to ensure the model has the same
+structure regardless of how detailed the foot model is. This particular error
+can be fixed by changing `HeelContactNode` -> `Calcaneus.HeelContactNodeLow`.
+See the {ref}`section on foot model errors <Foot Unresolved Objects>`
+
+:::
+
+
+(Foot Unresolved Objects)=
+### Foot model errors
+
+The default foot model for the TLEM leg is now changed to the rigid variant of the 
+{ref}`GM foot model <GM Foot Model>` instead of the default TLEM foot. This is done to 
+make use of the more detailed dataset available in the GM foot model. This change might
+lead to `Unresolved object` errors for objects referring to objects within the foot model.
+These can be resolved by including the name of the intrinsic foot segment in the path. For
+example, the unresolved MetatarsalJoint1Node node on the foot:
+
+```AnyScriptDoc
+AnyRefNode &MyNode = .Foot.MetatarsalJoint1Node;
+```
+can be resolved by inserting the intrinsic Metatarsal1 foot segment in the path:
+
+```AnyScriptDoc
+AnyRefNode &MyNode = .Foot.Metatarsal1.MetatarsalJoint1Node;
+```
+
+Similar errors can be expected for the following: 
+
+* `HeelContactNode` -> `Calcaneus.HeelContactNodeLow`
+* `ToeLateralContactNode` -> `ProximalPhalange5.ToeLateralContactNode`
+* `ToeMedialContactNode` -> `ProximalPhalange1.ToeMedialContactNode`
+* `ToeJoint` -> `Metatarsal1.ToeJoint`
+
+
+It is advised to always construct pointers to foot segment objects using the intrinsic foot segment.
+See {ref}`usage of GM foot model <GM foot model usage>` for more info.
+
+If you would like to work with the TLEM foot model, it can be selected by the following
+BM Statement:
+```AnyScriptDoc
+#define BM_FOOT_MODEL _FOOT_MODEL_LEG_FOOT_
+```  
+
 ## Deprecation warnings

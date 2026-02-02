@@ -1,7 +1,7 @@
 //This file contains the interface to the leg it consist of joints and
 //nodes which can be used for defining contact with the sorroundings
 
-#if (BM_FOOT_MODEL == _FOOT_MODEL_DEFAULT_) | (BM_FOOT_MODEL == _FOOT_MODEL_RIGID_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
+#if (BM_FOOT_MODEL == _FOOT_MODEL_LEG_FOOT_) | (BM_FOOT_MODEL == _FOOT_MODEL_RIGID_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
 
 AnyKinMeasureLinComb AnklePlantarFlexion = {
   AnyKinRotational RotMeasure = {
@@ -169,9 +169,9 @@ AnyKinMeasureOrg HipExternalRotationJntMus ={
 
 
 
-//AnyRefNode &HeelContactNode =.Seg.Foot.HeelNode;
-//AnyRefNode &ToeMedialContactNode  =.Seg.Foot.ToeMedialContactNode;
-//AnyRefNode &ToeLateralContactNode =.Seg.Foot.ToeLateralContactNode;
+//AnyRefNode &HeelContactNode =.Seg.Foot.Calcaneus.HeelNode;
+//AnyRefNode &ToeMedialContactNode  =.Seg.Foot.ProximalPhalange1.ToeMedialContactNode;
+//AnyRefNode &ToeLateralContactNode =.Seg.Foot.ProximalPhalange5.ToeLateralContactNode;
 //
 
 

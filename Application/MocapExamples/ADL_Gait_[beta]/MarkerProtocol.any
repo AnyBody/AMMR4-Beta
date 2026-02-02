@@ -207,7 +207,7 @@ UseC3DWeightResiduals = ON
 // Marker on the upper sternum
 CreateMarkerDriver SME (
 MarkerPlacement=Trunk.Segments.ThoraxSeg,
-PlaceMarkerAt=MoCapMarkerFrameAMMR24,
+PlaceMarkerAt=ScalingNode,
 OptX=OFF,OptY=OFF,OptZ=OFF,
 UseC3DWeightResiduals = ON
 ) = {
@@ -220,7 +220,7 @@ UseC3DWeightResiduals = ON
 // Marker on the Thoracic Vertebra 10
 CreateMarkerDriver TV12 (
 MarkerPlacement=Trunk.Segments.ThoraxSeg,
-PlaceMarkerAt=MoCapMarkerFrameAMMR24,
+PlaceMarkerAt=ScalingNode,
 OptX=OFF,OptY=ON,OptZ=OFF,
 UseC3DWeightResiduals = ON
 ) = {
@@ -234,7 +234,7 @@ UseC3DWeightResiduals = ON
 // Marker on the Cervical Vertebra 7
 CreateMarkerDriver TV2 (
 MarkerPlacement=Trunk.Segments.ThoraxSeg,
-PlaceMarkerAt=MoCapMarkerFrameAMMR24,
+PlaceMarkerAt=ScalingNode,
 OptX=OFF,OptY=OFF,OptZ=OFF,
 UseC3DWeightResiduals = ON
 ) = {
@@ -349,7 +349,7 @@ LinkDesignVars SymmetricRightAnkleMarkers(DesVar1 =R_FAL_Z, DesVar2=R_TAM_Z, Coe
 #ifdef _R_FM2
 // Marker on the Right Toe
 CreateMarkerDriver R_FM2 (
-MarkerPlacement=Right.Leg.Seg.Foot,
+MarkerPlacement=Right.Leg.Seg.Foot.Metatarsal2,
 PlaceMarkerAt=AnatomicalFrame,
 OptX=OFF,OptY=ON,OptZ=ON,
 UseC3DWeightResiduals = ON
@@ -361,7 +361,7 @@ UseC3DWeightResiduals = ON
 #ifdef _R_FM1
 // Marker on the Right Toe
 CreateMarkerDriver R_FM1 (
-MarkerPlacement=Right.Leg.Seg.Foot,
+MarkerPlacement=Right.Leg.Seg.Foot.Metatarsal1,
 PlaceMarkerAt=AnatomicalFrame,
 OptX=ON,OptY=OFF,OptZ=OFF,
 UseC3DWeightResiduals = ON
@@ -373,7 +373,7 @@ UseC3DWeightResiduals = ON
 #ifdef _R_FCC
 // Marker on the Right Heel
 CreateMarkerDriver R_FCC (
-MarkerPlacement=Right.Leg.Seg.Foot,
+MarkerPlacement=Right.Leg.Seg.Foot.Calcaneus,
 PlaceMarkerAt=AnatomicalFrame,
 OptX=OFF,OptY=OFF,OptZ=OFF,
 UseC3DWeightResiduals = ON
@@ -385,7 +385,7 @@ UseC3DWeightResiduals = ON
 #ifdef _R_FM5
 // Marker on the Right Metatarsel 5
 CreateMarkerDriver R_FM5 (
-MarkerPlacement=Right.Leg.Seg.Foot,
+MarkerPlacement=Right.Leg.Seg.Foot.Metatarsal5,
 PlaceMarkerAt=AnatomicalFrame,
 OptX=ON,OptY=OFF,OptZ=OFF,
 UseC3DWeightResiduals = ON
@@ -505,7 +505,7 @@ LinkDesignVars SymmetricLeftAnkleMarkers(DesVar1 =L_FAL_Z, DesVar2=L_TAM_Z, Coef
 #ifdef _L_FM2
 // Marker on the Left Toe
 CreateMarkerDriver L_FM2 (
-MarkerPlacement=Left.Leg.Seg.Foot,
+MarkerPlacement=Left.Leg.Seg.Foot.Metatarsal2,
 PlaceMarkerAt=AnatomicalFrame,
 OptX=OFF,OptY=ON,OptZ=ON,
 UseC3DWeightResiduals = ON
@@ -517,7 +517,7 @@ UseC3DWeightResiduals = ON
 #ifdef _L_FM1
 // Marker on the Right Toe
 CreateMarkerDriver L_FM1 (
-MarkerPlacement=Left.Leg.Seg.Foot,
+MarkerPlacement=Left.Leg.Seg.Foot.Metatarsal1,
 PlaceMarkerAt=AnatomicalFrame,
 OptX=ON,OptY=OFF,OptZ=OFF,
 UseC3DWeightResiduals = ON
@@ -530,7 +530,7 @@ UseC3DWeightResiduals = ON
 #ifdef _L_FCC
 // Marker on the Left Heel
 CreateMarkerDriver L_FCC (
-MarkerPlacement=Left.Leg.Seg.Foot,
+MarkerPlacement=Left.Leg.Seg.Foot.Calcaneus,
 PlaceMarkerAt=AnatomicalFrame,
 OptX=OFF,OptY=OFF,OptZ=OFF,
 UseC3DWeightResiduals = ON
@@ -542,7 +542,7 @@ UseC3DWeightResiduals = ON
 #ifdef _L_FM5
 // Marker on the Left Metatarsel 5
 CreateMarkerDriver L_FM5 (
-MarkerPlacement=Left.Leg.Seg.Foot,
+MarkerPlacement=Left.Leg.Seg.Foot.Metatarsal5,
 PlaceMarkerAt=AnatomicalFrame,
 OptX=ON,OptY=OFF,OptZ=OFF,
 UseC3DWeightResiduals = ON
@@ -552,16 +552,17 @@ UseC3DWeightResiduals = ON
 #endif
 
 
-
 #ifdef _R_SAE
 // Marker on the Right Acromio-clavicular joint
 CreateMarkerDriver R_SAE (
 MarkerPlacement=Right.ShoulderArm.Segments.Clavicula,
 OptX=OFF,OptY=OFF,OptZ=OFF,
 UseC3DWeightResiduals = ON,
-PlaceMarkerAt = acj
+WeightX=5,WeightY=5,WeightZ=5,
+PlaceMarkerAt = acj,
+ScaleMarkerPosOnOff=OFF,
 ) = {
-  sRelOpt = {0.020, 0.005, -0.038};
+  sRelOpt = {0.01, 0.025, 0.03};
 };
 #endif
 
@@ -570,18 +571,18 @@ PlaceMarkerAt = acj
 // Marker on the medial Right Elbow
 CreateMarkerDriver R_HME (
 MarkerPlacement=Right.ShoulderArm.Segments.Humerus,
-OptX=ON,OptY=ON,OptZ=ON,
-PlaceMarkerAt=fe,
+OptX=OFF,OptY=ON,OptZ=OFF,
+PlaceMarkerAt=EpicondylusHumerusMedialis,
 UseC3DWeightResiduals = ON
 ) = {
-  sRelOpt = {-0.04,0,0};
+  sRelOpt = {0.00, 0, -0.01};
   #ifdef REFERENCE_TRIAL
-  ConstMarkerWeightX = 5;
-  ConstMarkerWeightZ = 5;
+//  ConstMarkerWeightZ = 5;
+//  ConstMarkerWeightX = 5;
   #endif
 };
 #ifdef _R_HLE
-LinkDesignVars R_HME_HLE_Z_LINK (DesVar1=R_HME_Z, DesVar2=R_HLE_Z)={};
+//LinkDesignVars R_HME_HLE_X_LINK (DesVar1=R_HME_X, DesVar2=R_HLE_X)={};
 #endif
 #endif
 
@@ -589,14 +590,14 @@ LinkDesignVars R_HME_HLE_Z_LINK (DesVar1=R_HME_Z, DesVar2=R_HLE_Z)={};
 // Marker on the lateral Right Elbow
 CreateMarkerDriver R_HLE (
 MarkerPlacement=Right.ShoulderArm.Segments.Humerus,
-OptX=OFF,OptY=OFF,OptZ=ON,
-PlaceMarkerAt=fe,
+OptX=OFF,OptY=OFF,OptZ=OFF,
+PlaceMarkerAt=EpicondylusHumerusLateralis,
 UseC3DWeightResiduals = ON
 ) = {
-  sRelOpt = {0.045, 0, 0};
+  sRelOpt = {0, 0, 0.010};
   #ifdef REFERENCE_TRIAL
-  ConstMarkerWeightZ = 5;
-  ConstMarkerWeightX = 5;
+//  ConstMarkerWeightZ = 5;
+//  ConstMarkerWeightX = 5;
   #endif
 };
 #endif
@@ -605,9 +606,7 @@ UseC3DWeightResiduals = ON
 #ifdef _R_UOA
 CreateMarkerDriver R_UOA (
 MarkerPlacement=Right.ShoulderArm.Segments.Ulna,
-OptX=OFF,OptY=OFF,OptZ=OFF,
-UseC3DWeightResiduals = ON,
-WeightY=0.1, WeightZ=5,
+OptX=OFF,OptY=ON,OptZ=OFF,
 PlaceMarkerAt = ol
 ) = {
   sRelOpt = {-0.0,0,0};
@@ -620,14 +619,14 @@ PlaceMarkerAt = ol
 // Marker on the Right Wrist A
 CreateMarkerDriver R_RSP (
 MarkerPlacement=Right.ShoulderArm.Segments.Radius,
-PlaceMarkerAt = wj,
-OptX=OFF,OptY=ON,OptZ=OFF,
+PlaceMarkerAt=RadiusStylo,
+OptX=ON,OptY=OFF,OptZ=OFF,
 UseC3DWeightResiduals = ON
 ) = {
-      sRelOpt = {-0, -0.045, 0.00};
+      sRelOpt = {0.005, 0.005, 0.00};
 };
 #ifdef _R_UHE
-LinkDesignVars R_RSP_UHE_SYMMETRY (DesVar1=R_RSP_Y, DesVar2=R_UHE_Y, Coef2=-1 )={};
+LinkDesignVars R_RSP_UHE_SYMMETRY (DesVar1=R_RSP_X, DesVar2=R_UHE_X, Coef2=-1 )={};
 #endif
 #endif
 
@@ -635,11 +634,11 @@ LinkDesignVars R_RSP_UHE_SYMMETRY (DesVar1=R_RSP_Y, DesVar2=R_UHE_Y, Coef2=-1 )=
 // Marker on the Right Wrist B
 CreateMarkerDriver R_UHE (
 MarkerPlacement=Right.ShoulderArm.Segments.Radius,
-PlaceMarkerAt = wj,
-OptX=OFF,OptY=ON,OptZ=OFF,
+PlaceMarkerAt=UlnaStylo,
+OptX=ON,OptY=OFF,OptZ=OFF,
 UseC3DWeightResiduals = ON
 ) = {
-     sRelOpt = {-0, 0.045, 0.00};
+     sRelOpt = {-0.015, 0, 0.00};
 };
 #endif
 
@@ -649,13 +648,12 @@ UseC3DWeightResiduals = ON
 #ifdef _R_HM2
 // Marker on the Right Finger
 CreateMarkerDriver R_HM2 (
-MarkerPlacement=Right.ShoulderArm.Segments.Hand,
-PlaceMarkerAt=AnatomicalFrame,
-OptX=ON,OptY=OFF,OptZ=OFF,
-WeightX=0.3,WeightY=0.3,WeightZ=0.3,
+MarkerPlacement=Right.ShoulderArm.Segments.Hand.Carpals,
+PlaceMarkerAt=HandMid,
+OptX=OFF,OptY=ON,OptZ=OFF,
 UseC3DWeightResiduals = ON
 ) = {
-  sRelOpt = {-0.085,-0.05, 0.01};
+  sRelOpt = {0,0, 0.03};
 };
 #endif
 
@@ -663,19 +661,18 @@ UseC3DWeightResiduals = ON
 #ifdef _R_HM5
 // Marker on the Right Finger
 CreateMarkerDriver R_HM5 (
-MarkerPlacement=Right.ShoulderArm.Segments.Hand,
-OptX=ON,OptY=ON,OptZ=OFF,
-WeightX=0.3,WeightY=0.3,WeightZ=0.3,
-PlaceMarkerAt=AnatomicalFrame,
+MarkerPlacement=Right.ShoulderArm.Segments.Hand.Carpals,
+OptX=OFF,OptY=ON,OptZ=ON,
+PlaceMarkerAt=HandMid,
 UseC3DWeightResiduals = ON
 ) = {
-  sRelOpt = {-0.08,0.033, 0.00};
+  sRelOpt = {0,0.0, -0.03};
 };
 #endif
 
 #ifdef _R_HM5
 #ifdef _R_HM2
-LinkDesignVars SymetricRightHandMarkers_XDIR(DesVar1=R_HM2_X, DesVar2=R_HM5_X)={};
+LinkDesignVars SymetricRightHandMarkers_YDIR(DesVar1=R_HM2_Y, DesVar2=R_HM5_Y)={};
 #endif
 #endif
 
@@ -687,45 +684,47 @@ CreateMarkerDriver L_SAE (
 MarkerPlacement=Left.ShoulderArm.Segments.Clavicula,
 OptX=OFF,OptY=OFF,OptZ=OFF,
 UseC3DWeightResiduals = ON,
-PlaceMarkerAt = acj
+WeightX=5,WeightY=5,WeightZ=5,
+PlaceMarkerAt = acj,
+ScaleMarkerPosOnOff=OFF,
 ) = {
-  sRelOpt = {0.020, -0.005, -0.038};
+  sRelOpt = {0.01, 0.025, -0.03};
 };
 #endif
 
 
 #ifdef _L_HME
-// Marker on the medial Elbow
+// Marker on the medial Left Elbow
 CreateMarkerDriver L_HME (
 MarkerPlacement=Left.ShoulderArm.Segments.Humerus,
-OptX=ON,OptY=ON,OptZ=ON,
-PlaceMarkerAt=fe,
+OptX=OFF,OptY=ON,OptZ=OFF,
+PlaceMarkerAt=EpicondylusHumerusMedialis,
 UseC3DWeightResiduals = ON
 ) = {
-  sRelOpt = {0.04,0,0};
-  #ifdef REFERENCE_TRIAL
-  ConstMarkerWeightZ = 5;
-  ConstMarkerWeightX = 5;
-  #endif
+  sRelOpt = {0.00, 0, 0.005};
+//  #ifdef REFERENCE_TRIAL
+//  ConstMarkerWeightX = 5;
+//  ConstMarkerWeightZ = 5;
+//  #endif
 };
 #ifdef _L_HLE
-LinkDesignVars L_HME_HLE_Z_LINK (DesVar1=L_HME_Z, DesVar2=L_HLE_Z)={};
+//LinkDesignVars L_HME_HLE_X_LINK (DesVar1=L_HME_X, DesVar2=L_HLE_X)={};
 #endif
 #endif
 
 #ifdef _L_HLE
-// Marker on the lateral Elbow
+// Marker on the lateral Left Elbow
 CreateMarkerDriver L_HLE (
 MarkerPlacement=Left.ShoulderArm.Segments.Humerus,
-OptX=OFF,OptY=OFF,OptZ=ON,
-PlaceMarkerAt=fe,
+OptX=OFF,OptY=OFF,OptZ=OFF,
+PlaceMarkerAt=EpicondylusHumerusLateralis,
 UseC3DWeightResiduals = ON
 ) = {
-  sRelOpt = {-0.045, 0, 0};
-  #ifdef REFERENCE_TRIAL
-  ConstMarkerWeightZ = 5;
-  ConstMarkerWeightX = 5;
-  #endif
+  sRelOpt = {0, 0, -0.010};
+//  #ifdef REFERENCE_TRIAL
+//  ConstMarkerWeightZ = 5;
+//  ConstMarkerWeightX = 5;
+//  #endif
 };
 #endif
 
@@ -734,9 +733,7 @@ UseC3DWeightResiduals = ON
 #ifdef _L_UOA
 CreateMarkerDriver L_UOA (
 MarkerPlacement=Left.ShoulderArm.Segments.Ulna,
-OptX=OFF,OptY=OFF,OptZ=OFF,
-UseC3DWeightResiduals = ON,
-WeightY=0.1, WeightZ=5,
+OptX=OFF,OptY=ON,OptZ=OFF,
 PlaceMarkerAt = ol
 ) = {
   sRelOpt = {-0.0,0,0};
@@ -745,61 +742,60 @@ PlaceMarkerAt = ol
 #endif
 
 #ifdef _L_RSP
-// Marker on the Wrist A
+// Marker on the Left Wrist A
 CreateMarkerDriver L_RSP (
 MarkerPlacement=Left.ShoulderArm.Segments.Radius,
-PlaceMarkerAt = wj,
-OptX=OFF, OptY=ON, OptZ=OFF,
+PlaceMarkerAt=RadiusStylo,
+OptX=ON,OptY=OFF,OptZ=OFF,
 UseC3DWeightResiduals = ON
 ) = {
-      sRelOpt = {-0, 0.045, 0.00};
+      sRelOpt = {0.005, 0.005, 0.00};
 };
 #ifdef _L_UHE
-LinkDesignVars L_RSP_UHE_SYMMETRY (DesVar1=L_RSP_Y, DesVar2=L_UHE_Y, Coef2=-1 )={};
+LinkDesignVars L_RSP_UHE_SYMMETRY (DesVar1=L_RSP_X, DesVar2=L_UHE_X, Coef2=-1 )={};
 #endif
 #endif
 
 #ifdef _L_UHE
-// Marker on the Wrist B
+// Marker on the Right Wrist B
 CreateMarkerDriver L_UHE (
 MarkerPlacement=Left.ShoulderArm.Segments.Radius,
-PlaceMarkerAt = wj,
-OptX=OFF, OptY=ON, OptZ=OFF,
-UseC3DWeightResiduals = ON
-) = {
-     sRelOpt = {-0, -0.045, 0.00};
-};
-#endif
-
-#ifdef _L_HM2
-// Marker on the Finger 2
-CreateMarkerDriver L_HM2 (
-MarkerPlacement=Left.ShoulderArm.Segments.Hand,
-PlaceMarkerAt=AnatomicalFrame,
+PlaceMarkerAt=UlnaStylo,
 OptX=ON,OptY=OFF,OptZ=OFF,
-WeightX=0.3,WeightY=0.3,WeightZ=0.3,
 UseC3DWeightResiduals = ON
 ) = {
-  sRelOpt = {-0.085,-0.05,-0.01};
+     sRelOpt = {-0.015, 0, 0.00};
 };
 #endif
 
-#ifdef _L_HM5
-// Marker on the Finger 5
-CreateMarkerDriver L_HM5 (
-MarkerPlacement=Left.ShoulderArm.Segments.Hand,
-OptX=ON,OptY=ON,OptZ=OFF,
-WeightX=0.3,WeightY=0.3,WeightZ=0.3,
-PlaceMarkerAt=AnatomicalFrame,
+#ifdef _L_HM2
+// Marker on the Left Finger
+CreateMarkerDriver L_HM2 (
+MarkerPlacement=Left.ShoulderArm.Segments.Hand.Carpals,
+PlaceMarkerAt=HandMid,
+OptX=OFF,OptY=ON,OptZ=OFF,
 UseC3DWeightResiduals = ON
 ) = {
-  sRelOpt = {-0.080,0.033,-0.0};
+  sRelOpt = {0,0, -0.03};
+};
+#endif
+
+
+#ifdef _L_HM5
+// Marker on the Left Finger
+CreateMarkerDriver L_HM5 (
+MarkerPlacement=Left.ShoulderArm.Segments.Hand.Carpals,
+OptX=OFF,OptY=ON,OptZ=ON,
+PlaceMarkerAt=HandMid,
+UseC3DWeightResiduals = ON
+) = {
+  sRelOpt = {0,0.0, 0.03};
 };
 #endif
 
 #ifdef _L_HM5
 #ifdef _L_HM2
-LinkDesignVars SymetricLeftHandMarkers_XDIR(DesVar1 =L_HM2_X, DesVar2=L_HM5_X)={};
+LinkDesignVars SymetricLeftHandMarkers_YDIR(DesVar1=L_HM2_Y, DesVar2=L_HM5_Y)={};
 #endif
 #endif
 
@@ -903,11 +899,13 @@ OptX=ON,OptY=OFF,OptZ= ON
 // Marker on the Sternum
 CreateMarkerDriver SXS (
 MarkerPlacement=Trunk.Segments.SternalBodySeg,
+PlaceMarkerAt = XiphoidProcess,
+ScaleMarkerPosOnOff=OFF,
 OptX=ON,OptY=ON,OptZ=OFF,
 UseC3DWeightResiduals = ON,
 WeightX=1,WeightY=1,WeightZ=1
 ) = {
-  sRelOpt = {0.180,0.25,0.0};
+  sRelOpt = {0.02, 0, 0};
 };
 #endif
 
@@ -916,14 +914,15 @@ WeightX=1,WeightY=1,WeightZ=1
 CreateMarkerDriver SJN (
 MarkerPlacement=Trunk.Segments.SternumSeg,
 PlaceMarkerAt=ij,
+ScaleMarkerPosOnOff=OFF,
 UseC3DWeightResiduals = ON,
 OptX=ON,OptY=OFF,OptZ=OFF
 ) = {
-  sRelOpt = {0.01,0.015,0.0};
+  sRelOpt = {0.025, 0.01, 0.0};
   #ifdef REFERENCE_TRIAL
   // High weight in Parameter optimization ensure this
   // marker determines body height
-  ConstMarkerWeightY = 10;
+  ConstMarkerWeightY = 5;
   #endif
 };
 #endif
@@ -932,11 +931,12 @@ OptX=ON,OptY=OFF,OptZ=OFF
 // Marker on the Thoracic Vertebra 10
 CreateMarkerDriver TV10 (
 MarkerPlacement=Trunk.Segments.T10Seg,
-PlaceMarkerAt= T10T11JntNode,
+PlaceMarkerAt=SpinousProcess,
+ScaleMarkerPosOnOff = OFF,
 UseC3DWeightResiduals = ON,
 OptX=ON,OptY=ON,OptZ=OFF
 ) = {
-  sRelOpt = {-0.06,0.0,0.0};
+  sRelOpt = {-0.015,0,0};
 };
 #endif
 
@@ -946,9 +946,10 @@ CreateMarkerDriver CV7 (
 MarkerPlacement=Trunk.Segments.T1Seg,
 OptX=ON,OptY=ON,OptZ=OFF,
 UseC3DWeightResiduals = ON,
-PlaceMarkerAt = T1C7JntNode
+PlaceMarkerAt = SpinousProcess,
+ScaleMarkerPosOnOff=OFF,
 ) = {
-  sRelOpt = {-0.060, 0.02, 0};
+  sRelOpt = {-0.03, 0.02, 0};
 };
 #endif
 
@@ -1035,8 +1036,9 @@ WeightX=1.0,WeightY=1.0,WeightZ=1.0
 };
 #endif
 
+
+// Marker on the Right Metatarsel 5
 #ifdef _RMT5
-// Marker on the Right Metatarsal 5
 CreateMarkerDriver RMT5 (
 MarkerPlacement=Right.Leg.Seg.Foot.Metatarsal5,
 PlaceMarkerAt = MetatarsalJoint5Node,
@@ -1112,7 +1114,7 @@ WeightX=1.0,WeightY=1.0,WeightZ=1.0
 #endif
 
 #ifdef _LMT5
-// Marker on the Left Metatarsal 5
+// Marker on the Right Metatarsel 5
 CreateMarkerDriver LMT5 (
 MarkerPlacement=Left.Leg.Seg.Foot.Metatarsal5,
 PlaceMarkerAt = MetatarsalJoint5Node,
@@ -1128,10 +1130,12 @@ WeightX=1.0,WeightY=1.0,WeightZ=1.0) = {
 #ifdef _R_SAA
 CreateMarkerDriver R_SAA (
 MarkerPlacement=Right.ShoulderArm.Segments.Scapula,
-OptX=OFF, OptY=ON,OptZ=ON,
-UseC3DWeightResiduals  = ON
+OptX=ON, OptY=ON,OptZ=ON,
+UseC3DWeightResiduals  = ON,
+PlaceMarkerAt = acj,
+ScaleMarkerPosOnOff = OFF,
 ) = {
-  sRelOpt = {0.01,0.00,0.005};
+  sRelOpt = {-0.03, 0.005, 0.03};
 };
 #endif
 
@@ -1140,9 +1144,11 @@ UseC3DWeightResiduals  = ON
 CreateMarkerDriver L_SAA (
 MarkerPlacement=Left.ShoulderArm.Segments.Scapula,
 OptX=ON, OptY=ON, OptZ=ON,
-UseC3DWeightResiduals  = ON
+UseC3DWeightResiduals  = ON,
+PlaceMarkerAt = acj,
+ScaleMarkerPosOnOff = OFF,
 ) = {
-  sRelOpt = {0.01,-0.00,0.005};
+  sRelOpt = {-0.03, 0.005, -0.03};
 };
 #endif
 
@@ -1152,12 +1158,13 @@ CreateMarkerDriver R_SRS (
 MarkerPlacement=Right.ShoulderArm.Segments.Scapula,
 OptX=ON,OptY=ON,OptZ=ON,
 UseC3DWeightResiduals  = ON,
-PlaceMarkerAt = ts
+PlaceMarkerAt = ts,
+ScaleMarkerPosOnOff = OFF,
 ) = {
-  sRelOpt = {0.00,0.00,0};
+  sRelOpt = {-0.015,0.00,0};
   // Low weights for markers in dynmic trials because of
   // large soft tisssue artifacts on scapula
-  ConstMarkerWeightX = 0.05;
+  ConstMarkerWeightZ = 0.05;
   ConstMarkerWeightY = 0.05;
 };
 #endif
@@ -1167,12 +1174,13 @@ CreateMarkerDriver L_SRS (
 MarkerPlacement=Left.ShoulderArm.Segments.Scapula,
 OptX=ON,OptY=ON,OptZ=ON,
 UseC3DWeightResiduals  = ON,
-PlaceMarkerAt = ts
+PlaceMarkerAt = ts,
+ScaleMarkerPosOnOff = OFF,
 ) = {
-  sRelOpt = {0.00,-0.00,0};
+  sRelOpt = {-0.015,-0.00,0};
   // Low weights for markers in dynmic trials because of
   // large soft tisssue artifacts on scapula
-  ConstMarkerWeightX = 0.05;
+  ConstMarkerWeightZ = 0.05;
   ConstMarkerWeightY = 0.05;
 };
 #endif
@@ -1183,12 +1191,13 @@ CreateMarkerDriver R_SIA (
 MarkerPlacement=Right.ShoulderArm.Segments.Scapula,
 OptX=ON,OptY=ON,OptZ=ON,
 UseC3DWeightResiduals  = ON,
-PlaceMarkerAt = ai
+PlaceMarkerAt = ai,
+ScaleMarkerPosOnOff = OFF,
 ) = {
-  sRelOpt = {0.00,0.00,0};
+  sRelOpt = {-0.02,0.00,0};
   // Low weights for markers in dynmic trials because of
   // large soft tisssue artifacts on scapula
-  ConstMarkerWeightX = 0.1;
+  ConstMarkerWeightZ = 0.1;
   ConstMarkerWeightY = 0.1;
 };
 #endif
@@ -1198,29 +1207,30 @@ CreateMarkerDriver L_SIA (
 MarkerPlacement=Left.ShoulderArm.Segments.Scapula,
 OptX=ON,OptY=ON,OptZ=ON,
 UseC3DWeightResiduals  = ON,
-PlaceMarkerAt = ai
+PlaceMarkerAt = ai,
+ScaleMarkerPosOnOff = OFF,
 ) = {
-  sRelOpt = {0.00,-0.00,0};
+  sRelOpt = {-0.02,-0.00,0};
   // Low weights for markers in dynmic trials because of
   // large soft tisssue artifacts on scapula
-  ConstMarkerWeightX = 0.1;
+  ConstMarkerWeightZ = 0.1;
   ConstMarkerWeightY = 0.1;
 };
 #endif
 
-#ifdef _L_SIA
-#ifdef _L_SRS
-LinkDesignVars Aligned_Left_TS_AI_Scapula_markers_ZDIR(DesVar1=L_SIA_Z, DesVar2=L_SRS_Z)={};
-LinkDesignVars Aligned_Left_TS_AI_Scapula_markers_XDIR(DesVar1=L_SIA_X, DesVar2=L_SRS_X)={};
-#endif
-#endif
-
-#ifdef _R_SIA
-#ifdef _R_SRS
-LinkDesignVars Aligned_Right_TS_AI_Scapula_markers_ZDIR(DesVar1=R_SIA_Z, DesVar2=R_SRS_Z)={};
-LinkDesignVars Aligned_Right_TS_AI_Scapula_markers_XDIR(DesVar1=R_SIA_X, DesVar2=R_SRS_X)={};
-#endif
-#endif
+//#ifdef _L_SIA
+//#ifdef _L_SRS
+//LinkDesignVars Aligned_Left_TS_AI_Scapula_markers_ZDIR(DesVar1=L_SIA_Z, DesVar2=L_SRS_Z)={};
+//LinkDesignVars Aligned_Left_TS_AI_Scapula_markers_XDIR(DesVar1=L_SIA_X, DesVar2=L_SRS_X)={};
+//#endif
+//#endif
+//
+//#ifdef _R_SIA
+//#ifdef _R_SRS
+//LinkDesignVars Aligned_Right_TS_AI_Scapula_markers_ZDIR(DesVar1=R_SIA_Z, DesVar2=R_SRS_Z)={};
+//LinkDesignVars Aligned_Right_TS_AI_Scapula_markers_XDIR(DesVar1=R_SIA_X, DesVar2=R_SRS_X)={};
+//#endif
+//#endif
 
 
 #ifdef _RUPA
@@ -1348,3 +1358,9 @@ OptX=OFF ,OptY=OFF,OptZ=OFF
   sRelOpt = {-0.065,-0.02,-0.02};
 };
 #endif
+
+
+
+
+
+

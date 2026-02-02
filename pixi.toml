@@ -1,36 +1,44 @@
-[project]
+[workspace]
 name = "ammr"
 authors = ["Morten Enemark Lund <mel@anybodytech.com>"]
 channels = ["conda-forge", "anybody", "anybody/label/rc", "https://prefix.dev/anybody-beta"]
 platforms = ["linux-64", "win-64"]
 
-[dependencies]
-python = ">=3.12.8,<3.14"
-jinja2 = ">=3.1.4"
-debugpy = ">=1.8.11"
-sphinxcontrib-video = ">=0.4.1,<0.5"
 
+[environments]
+default = []
+anybodycon = ["anybodycon"]
+test = ["test", "anybodycon"]
+docs = {features = ["docs"], no-default-feature = true}
+
+
+[dependencies]
+python = ">=3.13.2,<3.14"
+jinja2 = ">=3.1.6,<4"
+debugpy = ">=1.8.18,<2"
+
+
+[tasks]
+bmconfig = {cmd = "python render_templates.py", cwd = "Body/AAUHuman/BuildTools", description = "Create BM config files", default-environment = "default"}
 
 [feature.anybodycon.dependencies]
-python = ">=3.13.5,<3.14"
-anypytools=">=1.17.0"
-nomkl = "*"
+anypytools=">=1.20.4,<2"
+nomkl = ">=1.0,<2"
 
 [feature.anybodycon.target.win-64.dependencies]
-anybodycon = "==8.2.0beta5"
+anybodycon = { version = ">=8.2.0Beta9",  build-number = ">=14069"}
 
 
 [feature.anybodycon.tasks]
 update-mocap-files = {cmd = "python recreate_mocap_intermediate_files.py", cwd = "Tests", description = "Recreate MoCap application intermediate files"}
-bmconfig = {cmd = "python render_templates.py", cwd = "Body/AAUHuman/BuildTools", description = "Create BM config files"}
 
 
 [feature.test.dependencies]
-pytest = ">=8.3.4,<9"
+pytest = ">=9.0,<10.0"
 pytest-split = ">=0.10.0,<0.11"
-pytest-xdist = ">=3.6.1,<4"
-azure-storage-blob = ">=12.24.0,<13"
-pillow = ">=11.1.0,<12"
+pytest-xdist = ">=3.8.0,<4"
+azure-storage-blob = ">=12.28.0,<13"
+pillow = ">=12.1.0,<13"
 
 
 [feature.test.tasks]
@@ -40,33 +48,30 @@ create-application-images = "python Docs/Applications/images/get_application_ima
 
 
 [feature.docs.dependencies]
-python = ">=3.13.2,<3.14"
-sphinx-book-theme = ">=1.1.3,<2"
+python = ">=3.14.2,<3.15"
+sphinx-book-theme = ">=1.1.4,<2"
 sphinx-thebe = ">=0.3.1,<0.4"
 sphinxcontrib-youtube = ">=1.4.1,<2"
 sphinx-tabs = ">=3.4.1,<4"
 sphinx-design = ">=0.6.1,<0.7"
 sphinx-togglebutton = ">=0.3.2,<0.4"
-sphinxext-opengraph = ">=0.9.1,<0.10"
-sphinxcontrib-bibtex = ">=2.6.3,<3"
+sphinxext-opengraph = ">=0.13.0,<0.14"
+sphinxcontrib-bibtex = ">=2.6.5,<3"
 sphinx-copybutton = ">=0.5.2,<0.6"
 myst-parser = ">=4.0.1,<5"
-pygments_anyscript = ">=1.4.0,<2"
-jinja2 = ">=3.1.5,<4"
+pygments_anyscript = ">=1.5.0,<2"
+jinja2 = ">=3.1.6,<4"
 python-frontmatter = ">=1.1.0,<2"
-pydantic = ">=2.10.6,<3"
+pydantic = ">=2.12.5,<3"
 tqdm = ">=4.67.1,<5"
-pydata-sphinx-theme = "==0.15.4"
+pydata-sphinx-theme = ">=0.15.4,<0.16"
 sphinxcontrib-video = ">=0.4.1,<0.5"
+debugpy = ">=1.8.18,<2"
 
 
 [feature.docs.tasks]
-docs = {cmd = "sphinx-build -M html . _build -W --keep-going", cwd = "Docs", description = "Build documentation"}
+docs = {cmd = "sphinx-build -M html . _build -W --keep-going -t offline -t anylink", cwd = "Docs", description = "Build documentation"}
 docs-linkcheck = {cmd = "sphinx-build -M linkcheck . _build -W --keep-going -a -q ", cwd = "Docs"}
 docs-clean = {cmd = "rm -rf _build", cwd = "Docs"}
 
 
-[environments]
-anybodycon = ["anybodycon"]
-test = ["test", "anybodycon"]
-docs = {features = ["docs"], no-default-feature = true}
