@@ -545,7 +545,7 @@ MuscleGroup Coracobrachialis = {
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
       SPLine.StringMesh = 45;
       AnyParamSurfAnalytical &Surf = ..WrappingSurfaces.DeltoidWrappingPosterior.BASE_FRAME.Wrapping_1.Surf;
-      AnyParamSurfAnalytical &Surf2 = ...Segments.Scapula.deltoid_cyl.cyl;
+      AnyParamSurfAnalytical &Surf2 = ...Segments.Scapula.DeltoidCyl.cyl;
       SPLine = {
         AnyMatrix InitWrapPos = {
             transf3D({0.8*.Surf.Sizes[0],0.8*.Surf.Sizes[0 ],0}, &...WrappingSurfaces.DeltoidWrappingPosterior.BASE_FRAME.Wrapping_1.Center),
@@ -565,7 +565,7 @@ MuscleGroup Coracobrachialis = {
       SPLine.StringMesh = 40;
 
       AnyParamSurfAnalytical &Surf = ..WrappingSurfaces.DeltoidWrappingPosterior.BASE_FRAME.Wrapping_3.Surf;
-      AnyParamSurfAnalytical &Surf2 = ...Segments.Scapula.deltoid_cyl.cyl;
+      AnyParamSurfAnalytical &Surf2 = ...Segments.Scapula.DeltoidCyl.cyl;
 
       SPLine = {
         AnyMatrix InitWrapPos = {
@@ -586,7 +586,7 @@ MuscleGroup Coracobrachialis = {
       SPLine.StringMesh = 30;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
       AnyParamSurfAnalytical &Surf = ..WrappingSurfaces.DeltoidWrappingPosterior.BASE_FRAME.Wrapping_2.Surf;
-      AnyParamSurfAnalytical &Surf2 = ...Segments.Scapula.deltoid_cyl.cyl;
+      AnyParamSurfAnalytical &Surf2 = ...Segments.Scapula.DeltoidCyl.cyl;
       SPLine = {
         AnyMatrix InitWrapPos = {
             transf3D({0.8*.Surf.Sizes[0],0.8*.Surf.Sizes[0 ],0}, &...WrappingSurfaces.DeltoidWrappingPosterior.BASE_FRAME.Wrapping_2.Center),
@@ -604,7 +604,7 @@ MuscleGroup Coracobrachialis = {
       SPLine.StringMesh = 20;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
       AnyParamSurfAnalytical &Surf = ..WrappingSurfaces.DeltoidWrappingPosterior.BASE_FRAME.Wrapping_4.Surf;
-      AnyParamSurfAnalytical &Surf2 = ...Segments.Scapula.deltoid_cyl.cyl;
+      AnyParamSurfAnalytical &Surf2 = ...Segments.Scapula.DeltoidCyl.cyl;
 
       SPLine = {
         AnyMatrix InitWrapPos = {
