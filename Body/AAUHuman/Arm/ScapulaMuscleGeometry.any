@@ -36,10 +36,10 @@ Scapula = {
 
   // Definition of cylinder used for wrapping of Deltoid scapula muscles
   // the cylinder starts in gh and points towards ts.
-  AnyRefNode deltoid_cyl={
+  AnyRefNode DeltoidCyl={
 
-    AnyVec3 P2 = .Scale(.Data.deltoid_cyl_P2_pos*.Mirror); //P2=.ai.sRel + VZ*Length;
-    AnyVec3 P3 = .Scale(.Data.deltoid_cyl_P3_pos*.Mirror); //P3=.ai.sRel - VX*Radius;
+    AnyVec3 P2 = .Scale(.Data.DeltoidCyl_P2_pos*.Mirror); //P2=.ai.sRel + VZ*Length;
+    AnyVec3 P3 = .Scale(.Data.DeltoidCyl_P3_pos*.Mirror); //P3=.ai.sRel - VX*Radius;
 
     sRel=.ai.sRel;
 
