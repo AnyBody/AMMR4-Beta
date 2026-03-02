@@ -4862,7 +4862,7 @@ MuscleGroup QuadratusLumborum = {
   };
   AnyMuscleViaPoint QuadratusLumborumR12IC_2 = {
     AnyMuscleModel &MusMdl = ....MuscleModels.Left.QuadratusLumborum.QuadratusLumborumR12IC_2;
-    AnyRefNode &Org = ....Segments.Left.R12Seg.QuadratusLumborumR12LateralNode2L;
+    AnyRefNode &Org = ....Segments.Left.R12Seg.QuadratusLumborumR12LateralNode3L;
     AnyRefNode &Ins = ....Segments.PelvisSeg.QuadratusLumborumLateralNode2L;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     
