@@ -1240,8 +1240,8 @@ Segments.T11Seg = {
 };
 
 Segments.T12Seg = {
-  AnyRefNode QLT12_CINodeR = {  sRel= .Scale(.Data.T12.Right.QLT12_CINode_pos );};
-  AnyRefNode QLT12_CINodeL = {  sRel= .Scale(.Data.T12.Left.QLT12_CINode_pos );};
+  AnyRefNode QuadratusLumborumT12NodeR = {  sRel= .Scale(.Data.T12.Right.QuadratusLumborumT12Node_pos );};
+  AnyRefNode QuadratusLumborumT12NodeL = {  sRel= .Scale(.Data.T12.Left.QuadratusLumborumT12Node_pos );};
   AnyRefNode SemispinalisThoracisT12TransversusR = {  sRel= .Scale(.Data.T12.Right.SemispinalisThoracisTransversus_pos );};
   AnyRefNode SemispinalisThoracisT12TransversusL = {  sRel= .Scale(.Data.T12.Left.SemispinalisThoracisTransversus_pos );};
   AnyRefNode MultifidusThoracisL3T12NodeRIns = {sRel = .Scale(.Data.Thorax.Right.MultifidusThoracisL3T12Node_pos);};

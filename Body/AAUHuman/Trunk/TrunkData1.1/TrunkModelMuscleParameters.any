@@ -5491,7 +5491,7 @@ AnyFolder Muscles =
     AnyVar Volume ??= DesignVar(39.85); ///< Total volume of the muscle group (ml)
     AnyFolder QuadratusLumborumR12IC_1 = 
     {
-      AnyString Muscle = "QLC12Lat_CILat"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "QuadratusLumborumR12Lat_CILat"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -5509,7 +5509,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder QuadratusLumborumR12IC_2 = 
     {
-      AnyString Muscle = "QLC12InterMedian_CILat"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "QuadratusLumborumR12InterMedian_CILat"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -5527,7 +5527,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder QuadratusLumborumR12IC_3 = 
     {
-      AnyString Muscle = "QLC12Median_CILat"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "QuadratusLumborumR12Median_CILat"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -5545,7 +5545,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder QuadratusLumborumR12IC_4 = 
     {
-      AnyString Muscle = "QLC12InterMedian_CIInterMedian"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "QuadratusLumborumR12InterMedian_CIInterMedian"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -5563,7 +5563,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder QuadratusLumborumR12IC_5 = 
     {
-      AnyString Muscle = "QLC12Median_CIInterMedian"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "QuadratusLumborumR12Median_CIInterMedian"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -5581,7 +5581,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder QuadratusLumborumT12IC_1 = 
     {
-      AnyString Muscle = "QLT12_CILat"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "QuadratusLumborumT12_CILat"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -5599,7 +5599,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder QuadratusLumborumL1IC_1 = 
     {
-      AnyString Muscle = "QLL1_CILat"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "QuadratusLumborumL1_CILat"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -5617,7 +5617,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder QuadratusLumborumL2IC_1 = 
     {
-      AnyString Muscle = "QLL2_CILat"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "QuadratusLumborumL2_CILat"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -5635,7 +5635,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder QuadratusLumborumL3IC_1 = 
     {
-      AnyString Muscle = "QLL3_CILat"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "QuadratusLumborumL3_CILat"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -5653,7 +5653,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder QuadratusLumborumT12IC_2 = 
     {
-      AnyString Muscle = "QLT12_CIInterMedian"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "QuadratusLumborumT12_CIInterMedian"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -5671,7 +5671,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder QuadratusLumborumL1IC_2 = 
     {
-      AnyString Muscle = "QLL1_CIInterMedian"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "QuadratusLumborumL1_CIInterMedian"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -5689,7 +5689,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder QuadratusLumborumL2IC_2 = 
     {
-      AnyString Muscle = "QLL2_CIInterMedian"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "QuadratusLumborumL2_CIInterMedian"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -5707,7 +5707,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder QuadratusLumborumL3IC_2 = 
     {
-      AnyString Muscle = "QLL3_CIInterMedian"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "QuadratusLumborumL3_CIInterMedian"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -5725,7 +5725,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder QuadratusLumborumL4IC_1 = 
     {
-      AnyString Muscle = "QLL4_CIInterMedian"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "QuadratusLumborumL4_CIInterMedian"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -5743,7 +5743,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder QuadratusLumborumT12IC_3 = 
     {
-      AnyString Muscle = "QLT12_CIMedian"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "QuadratusLumborumT12_CIMedian"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -5761,7 +5761,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder QuadratusLumborumL1IC_3 = 
     {
-      AnyString Muscle = "QLL1_CIMedian"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "QuadratusLumborumL1_CIMedian"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -5779,7 +5779,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder QuadratusLumborumL2IC_3 = 
     {
-      AnyString Muscle = "QLL2_CIMedian"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "QuadratusLumborumL2_CIMedian"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -5797,7 +5797,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder QuadratusLumborumL3IC_3 = 
     {
-      AnyString Muscle = "QLL3_CIMedian"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "QuadratusLumborumL3_CIMedian"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -5815,7 +5815,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder QuadratusLumborumL4IC_2 = 
     {
-      AnyString Muscle = "QLL4_CIMedian"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "QuadratusLumborumL4_CIMedian"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -5833,7 +5833,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder QuadratusLumborumR12L4_1 = 
     {
-      AnyString Muscle = "QLC12Lat_L4"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "QuadratusLumborumR12Lateral_L4"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -5851,7 +5851,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder QuadratusLumborumR12L3_1 = 
     {
-      AnyString Muscle = "QLC12Lat_L3"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "QuadratusLumborumR12Lateral_L3"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -5869,7 +5869,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder QuadratusLumborumR12L2_1 = 
     {
-      AnyString Muscle = "QLC12Lat_L2"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "QuadratusLumborumR12Lateral_L2"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -5887,7 +5887,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder QuadratusLumborumR12L4_2 = 
     {
-      AnyString Muscle = "QLC12InterMedian_L4"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "QuadratusLumborumR12InterMedian_L4"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -5905,7 +5905,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder QuadratusLumborumR12L3_2 = 
     {
-      AnyString Muscle = "QLC12InterMedian_L3"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "QuadratusLumborumR12InterMedian_L3"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -5923,7 +5923,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder QuadratusLumborumR12L2_2 = 
     {
-      AnyString Muscle = "QLC12InterMedian_L2"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "QuadratusLumborumR12InterMedian_L2"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -5941,7 +5941,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder QuadratusLumborumR12L4_3 = 
     {
-      AnyString Muscle = "QLC12Median_L4"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "QuadratusLumborumR12Median_L4"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -5959,7 +5959,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder QuadratusLumborumR12L3_3 = 
     {
-      AnyString Muscle = "QLC12Median_L3"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "QuadratusLumborumR12Median_L3"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -5977,7 +5977,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder QuadratusLumborumR12L2_3 = 
     {
-      AnyString Muscle = "QLC12Median_L2"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "QuadratusLumborumR12Median_L2"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
