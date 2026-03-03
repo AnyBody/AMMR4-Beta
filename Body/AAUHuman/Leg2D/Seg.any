@@ -19,20 +19,20 @@ AnySeg Thigh = {
   AnyRefNode HipJoint = {sRel = {0.0,1.09*0.179,0};};
   AnyRefNode KneeJoint = {sRel = {0.0,1.09*-0.240,0};};
 
-  AnyRefNode BiFemShNodeR = {sRel ={0.005,-0.2111,0.0}+.HipJoint.sRel;};
+  AnyRefNode BicepsFemorisCaputBreveNodeR = {sRel ={0.005,-0.2111,0.0}+.HipJoint.sRel;};
 
-  AnyRefNode GlutMaxNodeR = {sRel ={-0.006,-0.1419,0.0}+.HipJoint.sRel;};
-  AnyRefNode GlutMaxViaNode2R = {sRel ={-0.055,-0.0641,0.0}+.HipJoint.sRel;};
+  AnyRefNode GluteusMaximusNodeR = {sRel ={-0.006,-0.1419,0.0}+.HipJoint.sRel;};
+  AnyRefNode GluteusMaximusViaNode2R = {sRel ={-0.055,-0.0641,0.0}+.HipJoint.sRel;};
 
-  AnyRefNode HamsViaNode1R = {sRel ={-0.065,-0.03,0.0}+.HipJoint.sRel;};
+  AnyRefNode HamstringsViaNode1R = {sRel ={-0.065,-0.03,0.0}+.HipJoint.sRel;};
 
-  AnyRefNode Rect_FemViaNode2R = {sRel ={0.0501,-0.3767,0.0}+.HipJoint.sRel;};
+  AnyRefNode RectusFemorisViaNode2R = {sRel ={0.0501,-0.3767,0.0}+.HipJoint.sRel;};
 
   AnyRefNode VastiNodeR = {sRel ={0.0048,-0.1854,0.0}+.HipJoint.sRel;};
   AnyRefNode VastiViaNode1R = {sRel ={0.0269,-0.2591,0.0}+.HipJoint.sRel;};
   AnyRefNode VastiViaNode2R = {sRel ={0.0510,-0.3801,0.0}+.HipJoint.sRel;};
 
-  AnyRefNode GasNodeR = {sRel ={0.0 ,-0.3729,0.0}+.HipJoint.sRel;};
+  AnyRefNode GastrocnemiusNodeR = {sRel ={0.0 ,-0.3729,0.0}+.HipJoint.sRel;};
 
   AnyDrawSeg DrwSeg = {
     RGB =....ColorRef.Segments;
@@ -56,20 +56,20 @@ AnySeg Shank={
   AnyRefNode KneeJoint = {sRel = {0.0,0.1776,0};};
   AnyRefNode AnkleJoint = {sRel = {0.0,-0.2314,0};};
 
-  AnyRefNode HamNodeR = {sRel ={-0.0081,-0.0729,0.0}+.KneeJoint.sRel;};
+  AnyRefNode HamstringsNodeR = {sRel ={-0.0081,-0.0729,0.0}+.KneeJoint.sRel;};
 
-  AnyRefNode BiFemShNodeR = {sRel ={-0.0101,-0.0725,0.0}+.KneeJoint.sRel;};
+  AnyRefNode BicepsFemorisCaputBreveNodeR = {sRel ={-0.0101,-0.0725,0.0}+.KneeJoint.sRel;};
 
-  AnyRefNode Rect_FemNodeR = {sRel ={0.0601,0.0213,0.0}+.KneeJoint.sRel;};
+  AnyRefNode RectusFemorisNodeR = {sRel ={0.0601,0.0213,0.0}+.KneeJoint.sRel;};
 
   AnyRefNode VastiNodeR = {sRel ={0.061,0.0179,0.0}+.KneeJoint.sRel;};
 
-  AnyRefNode GasViaNode2R = {sRel ={-0.0217,-0.0487,0.0}+.KneeJoint.sRel;};
+  AnyRefNode GastrocnemiusViaNode2R = {sRel ={-0.0217,-0.0487,0.0}+.KneeJoint.sRel;};
 
-  AnyRefNode SolNodeR = {sRel ={-0.0024,-0.1533,0.0}+.KneeJoint.sRel;};
+  AnyRefNode SoleusNodeR = {sRel ={-0.0024,-0.1533,0.0}+.KneeJoint.sRel;};
 
-  AnyRefNode Tib_AntNodeR = {sRel ={0.0179,-0.1624,0.0}+.KneeJoint.sRel;};
-  AnyRefNode Tib_AntViaNode1R = {sRel ={0.0329,-0.3951,0.0}+.KneeJoint.sRel;};
+  AnyRefNode TibialisAnteriorNodeR = {sRel ={0.0179,-0.1624,0.0}+.KneeJoint.sRel;};
+  AnyRefNode TibialisAnteriorViaNode1R = {sRel ={0.0329,-0.3951,0.0}+.KneeJoint.sRel;};
 
   AnyDrawSeg DrwSeg = {
     RGB =....ColorRef.Segments;
@@ -101,11 +101,11 @@ AnySeg Foot = {
   AnyRefNode ToeJoint = {sRel = {-0.019,-0.0671,0};};
   AnyRefNode HeelJoint = {sRel = {-0.019,0.1095,0};};
 
-  AnyRefNode GasNodeR = {sRel ={-0.01095,0.04437,0.0}+.AnkleJoint.sRel;};
+  AnyRefNode GastrocnemiusNodeR = {sRel ={-0.01095,0.04437,0.0}+.AnkleJoint.sRel;};
 
-  AnyRefNode SolNodeR = {sRel ={-0.01095,0.04437,0.0}+.AnkleJoint.sRel;};
+  AnyRefNode SoleusNodeR = {sRel ={-0.01095,0.04437,0.0}+.AnkleJoint.sRel;};
 
-  AnyRefNode Tib_AntNodeR = {sRel ={-0.02415,-0.06783,0.0}+.AnkleJoint.sRel;};
+  AnyRefNode TibialisAnteriorNodeR = {sRel ={-0.02415,-0.06783,0.0}+.AnkleJoint.sRel;};
 
   AnyDrawSeg DrwSeg = {
     RGB =....ColorRef.Segments;

@@ -14,13 +14,13 @@ HipNodeRef = {
 
   // Pelvis to HJc = .0976m
 
-  AnyRefNode HamNodeR = {sRel = -.T+{-0.0387,-0.0976,0.0}+.L5PelvisJntNode.sRel;};
+  AnyRefNode HamstringsNodeR = {sRel = -.T+{-0.0387,-0.0976,0.0}+.L5PelvisJntNode.sRel;};
 
-  AnyRefNode GlutMaxNodeR = {sRel = -.T+{-0.0699,-0.0598,0.0}+.L5PelvisJntNode.sRel;};
-  AnyRefNode GlutMaxViaNode1R = {sRel = -.T+{-0.0672,-0.1336,0.0}+.L5PelvisJntNode.sRel;};
-  AnyRefNode GlutMaxViaNode2R = {sRel = -.T+{-0.055, -0.1736,0.0}+.L5PelvisJntNode.sRel;};
+  AnyRefNode GluteusMaximusNodeR = {sRel = -.T+{-0.0699,-0.0598,0.0}+.L5PelvisJntNode.sRel;};
+  AnyRefNode GluteusMaximusViaNode1R = {sRel = -.T+{-0.0672,-0.1336,0.0}+.L5PelvisJntNode.sRel;};
+  AnyRefNode GluteusMaximusViaNode2R = {sRel = -.T+{-0.055, -0.1736,0.0}+.L5PelvisJntNode.sRel;};
 
-  AnyRefNode Rect_FemNodeR = {sRel = -.T+{0.0562,-0.0295,0.0}+.L5PelvisJntNode.sRel;};
+  AnyRefNode RectusFemorisNodeR = {sRel = -.T+{0.0562,-0.0295,0.0}+.L5PelvisJntNode.sRel;};
 
   AnyRefNode MusNode1 = {sRel = -.T+{0.05,-0.0945,0.0};};
   AnyRefNode MusNode2 = {sRel = -.T+{-0.05,-0.0945,0.0};};

@@ -8,36 +8,36 @@
 
 AnyFolder &Ref = ..MusDrawRef;
 
-AnyMuscleViaPoint Ham = {
-  AnyMuscleModel &MusMdl = ..MusPar.HamMdl;
-  AnyRefNode &Ins = ..Seg.Shank.HamNodeR;
-  AnyRefNode &Via1 = ..Seg.Thigh.HamsViaNode1R;
-  AnyRefNode &Org = ..HipNodeRef.HamNodeR;
+AnyMuscleViaPoint Hammstrings = {
+  AnyMuscleModel &MusMdl = ..MusPar.HamstringsMdl;
+  AnyRefNode &Ins = ..Seg.Shank.HamstringsNodeR;
+  AnyRefNode &Via1 = ..Seg.Thigh.HamstringsViaNode1R;
+  AnyRefNode &Org = ..HipNodeRef.HamstringsNodeR;
   viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
 };
 
-AnyMuscleViaPoint BiFemSh = {
-  AnyMuscleModel &MusMdl = ..MusPar.BiFemShMdl;
-  AnyRefNode &Ins = ..Seg.Shank.BiFemShNodeR;
-  AnyRefNode &Org = ..Seg.Thigh.BiFemShNodeR;
+AnyMuscleViaPoint BicepsFemorisCaputBreve = {
+  AnyMuscleModel &MusMdl = ..MusPar.BicepsFemorisCaputBreveMdl;
+  AnyRefNode &Ins = ..Seg.Shank.BicepsFemorisCaputBreveNodeR;
+  AnyRefNode &Org = ..Seg.Thigh.BicepsFemorisCaputBreveNodeR;
   viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
 };
 
-AnyMuscleViaPoint GlutMax = {
-  AnyMuscleModel &MusMdl = ..MusPar.GlutMaxMdl;
-  AnyRefNode &Ins = ..Seg.Thigh.GlutMaxNodeR;
-  AnyRefNode &Via3 = ..Seg.Thigh.GlutMaxViaNode2R;
-  AnyRefNode &Via2 = ..HipNodeRef.GlutMaxViaNode2R;
-  AnyRefNode &Via1 = ..HipNodeRef.GlutMaxViaNode1R;
-  AnyRefNode &Org = ..HipNodeRef.GlutMaxNodeR;
+AnyMuscleViaPoint GluteusMaximus = {
+  AnyMuscleModel &MusMdl = ..MusPar.GluteusMaximusMdl;
+  AnyRefNode &Ins = ..Seg.Thigh.GluteusMaximusNodeR;
+  AnyRefNode &Via3 = ..Seg.Thigh.GluteusMaximusViaNode2R;
+  AnyRefNode &Via2 = ..HipNodeRef.GluteusMaximusViaNode2R;
+  AnyRefNode &Via1 = ..HipNodeRef.GluteusMaximusViaNode1R;
+  AnyRefNode &Org = ..HipNodeRef.GluteusMaximusNodeR;
   viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
 };
 
-AnyMuscleViaPoint RectFem = {
-  AnyMuscleModel &MusMdl = ..MusPar.RectFemMdl;
-  AnyRefNode &Ins = ..Seg.Shank.Rect_FemNodeR;
-  AnyRefNode &Via2 = ..Seg.Thigh.Rect_FemViaNode2R;
-  AnyRefNode &Org = ..HipNodeRef.Rect_FemNodeR;
+AnyMuscleViaPoint RectusFemoris = {
+  AnyMuscleModel &MusMdl = ..MusPar.RectusFemorisMdl;
+  AnyRefNode &Ins = ..Seg.Shank.RectusFemorisNodeR;
+  AnyRefNode &Via2 = ..Seg.Thigh.RectusFemorisViaNode2R;
+  AnyRefNode &Org = ..HipNodeRef.RectusFemorisNodeR;
   viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
 };
 
@@ -50,27 +50,27 @@ AnyMuscleViaPoint Vasti = {
   viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
 };
 
-AnyMuscleViaPoint Gas = {
-  AnyMuscleModel &MusMdl = ..MusPar.GasMdl;
-  AnyRefNode &Ins = ..Seg.Foot.GasNodeR;
-  AnyRefNode &Via2 = ..Seg.Shank.GasViaNode2R;
-  //AnyRefNode &Via1 = ..Seg.Thigh.GasViaNode1R; //In SIMM one can define in which range this ViaPoint is working, which is not possible in AnyBody
-  AnyRefNode &Org = ..Seg.Thigh.GasNodeR;
+AnyMuscleViaPoint Gastrocnemius = {
+  AnyMuscleModel &MusMdl = ..MusPar.GastrocnemiusMdl;
+  AnyRefNode &Ins = ..Seg.Foot.GastrocnemiusNodeR;
+  AnyRefNode &Via2 = ..Seg.Shank.GastrocnemiusViaNode2R;
+  //AnyRefNode &Via1 = ..Seg.Thigh.GastrocnemiusViaNode1R; //In SIMM one can define in which range this ViaPoint is working, which is not possible in AnyBody
+  AnyRefNode &Org = ..Seg.Thigh.GastrocnemiusNodeR;
   viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
 };
 
-AnyMuscleViaPoint Sol = {
-  AnyMuscleModel &MusMdl = ..MusPar.SolMdl;
-  AnyRefNode &Ins = ..Seg.Foot.SolNodeR;
-  AnyRefNode &Org = ..Seg.Shank.SolNodeR;
+AnyMuscleViaPoint Soleus = {
+  AnyMuscleModel &MusMdl = ..MusPar.SoleusMdl;
+  AnyRefNode &Ins = ..Seg.Foot.SoleusNodeR;
+  AnyRefNode &Org = ..Seg.Shank.SoleusNodeR;
   viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
 };
 
-AnyMuscleViaPoint TibAnt = {
-  AnyMuscleModel &MusMdl = ..MusPar.TibAntMdl;
-  AnyRefNode &Ins = ..Seg.Foot.Tib_AntNodeR;
-  AnyRefNode &Via1 = ..Seg.Shank.Tib_AntViaNode1R;
-  AnyRefNode &Org = ..Seg.Shank.Tib_AntNodeR;
+AnyMuscleViaPoint TibialisAnterior = {
+  AnyMuscleModel &MusMdl = ..MusPar.TibialisAnteriorMdl;
+  AnyRefNode &Ins = ..Seg.Foot.TibialisAnteriorNodeR;
+  AnyRefNode &Via1 = ..Seg.Shank.TibialisAnteriorViaNode1R;
+  AnyRefNode &Org = ..Seg.Shank.TibialisAnteriorNodeR;
   viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
 };
 
