@@ -6994,7 +6994,7 @@ AnyFolder Muscles =
     AnyVar Volume ??= DesignVar(12.85); ///< Total volume of the muscle group (ml)
     AnyFolder SemispinalisThoracisT12T4 = 
     {
-      AnyString Muscle = "SSTT12T4"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "SemispinalisThoracisT12T4"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -7012,7 +7012,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder SemispinalisThoracisT11T3 = 
     {
-      AnyString Muscle = "SSTT11T3"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "SemispinalisThoracisT11T3"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -7030,7 +7030,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder SemispinalisThoracisT10T2 = 
     {
-      AnyString Muscle = "SSTT10T2"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "SemispinalisThoracisT10T2"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -7048,7 +7048,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder SemispinalisThoracisT9T1 = 
     {
-      AnyString Muscle = "SSTT9T1"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "SemispinalisThoracisT9T1"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -7066,7 +7066,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder SemispinalisThoracisT8C7 = 
     {
-      AnyString Muscle = "SSTT8C7"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "SemispinalisThoracisT8C7"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -7084,7 +7084,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder SemispinalisThoracisT7C6 = 
     {
-      AnyString Muscle = "SSTT7C6"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "SemispinalisThoracisT7C6"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
