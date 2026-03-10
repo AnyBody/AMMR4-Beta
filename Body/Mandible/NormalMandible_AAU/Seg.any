@@ -212,14 +212,11 @@ AnySeg Mandible = {
    AnySurfSTL SurfContactRight = {
       FileName = "Smoothed_Mandible_RightContact3";
       AnyFunTransform3D &Scale =..Scale;
-// ScaleXYZ = {1.000000, 1.000000, 1.000000}/1000;
 
      AnyDrawSurf DrwSurf = {
         FileName = .FileName;
         RGB = .......DrawSettings.Colors.AnyBodyPaleYellow;
         Opacity = 0.9;
-  //       ScaleXYZ = {1.000000, 1.000000, 1.000000}/1000;
-
         AnyFunTransform3D &Scale =...Scale;
       };
 
