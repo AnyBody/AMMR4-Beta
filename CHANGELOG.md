@@ -177,6 +177,11 @@ You can revert to the TLEM foot model by setting:
   of gastrocnemius and soleus muscles. The change causes a minor shift in the joint axis, but it should 
   not significantly impact results.
 
+
+(changes-to-mandible-model)=
+
+*  The NormalMandible_AAU model has been updated to use more cleaned-up surfaces for contact in FDK models. This helps FDK models to converge. Most importantly the backside of the contact surfaces has been removed.
+
 ### Removed:
 
 * The deprecated TLEM 1 model has been removed from the AMMR. The TLEM 2.2 model is now the only TLEM based model 
