@@ -44,6 +44,7 @@ You can revert to the TLEM foot model by setting:
 
 * Fixed the inclusion of the buckle segmental masses in the calculation of the TotalBodyMass variable.
 * Fixed the cervical spine axial rotation rhythm coefficients. The distribution between C2C1 and the rest of cervical spine was incorrect.
+* The BM statement BM_TRUNK_THORACIC_RHYTHM _RHYTHM_SOFT did not previously have any effect, this has been fixed
 
 **Added:**
 
