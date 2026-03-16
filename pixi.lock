@@ -1286,8 +1286,9 @@ packages:
   md5: 80fd7ff9877570d12cabb5c5037dac89
   depends:
   - python
-  - __glibc >=2.17,<3.0.a0
   - libstdcxx >=14
+  - libgcc >=14
+  - __glibc >=2.17,<3.0.a0
   - libgcc >=14
   - python_abi 3.13.* *_cp313
   license: MIT
@@ -3177,6 +3178,16 @@ packages:
   constrains:
   - numpy-base <0a0
   license: BSD-3-Clause
+  size: 7463065
+  timestamp: 1757504921589
+- conda: https://conda.anaconda.org/conda-forge/win-64/openh264-2.6.0-hb17fa0b_0.conda
+  sha256: 914702d9a64325ff3afb072c8bc0f8cbea3f19955a8395a8c190e45604f83c76
+  md5: ad4cac6ceb9e4c8e01802e3f15e87bb2
+  depends:
+  - ucrt >=10.0.20348.0
+  - vc >=14.2,<15
+  - vc14_runtime >=14.29.30139
+  license: BSD-2-Clause
   license_family: BSD
   size: 7251637
   timestamp: 1768085589970

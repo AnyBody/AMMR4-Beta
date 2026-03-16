@@ -313,8 +313,8 @@
    AnyOperation &SCProtractionRight = .Right.Arm.SCProtraction.Run;
    AnyOperation &SCElevationRight = .Right.Arm.SCElevation.Run;
    #endif
-   AnyOperation &GHFlexionRight = .Right.Arm.GHAbduction.Run;
-   AnyOperation &GHAbductionRight = .Right.Arm.GHFlexion.Run;
+   AnyOperation &GHFlexionRight = .Right.Arm.GHFlexion.Run;
+   AnyOperation &GHAbductionRight = .Right.Arm.GHAbduction.Run;
    AnyOperation &GHExternalRotationRight = .Right.Arm.GHExternalRotation.Run;
    AnyOperation &ElbowFlexionRight = .Right.Arm.ElbowFlexion.Run;
    AnyOperation &ElbowPronationRight = .Right.Arm.ElbowPronation.Run;

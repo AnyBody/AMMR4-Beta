@@ -292,7 +292,7 @@ AnyBodyCalibrationStudy ArmCalibrationStudySpineDependent = {
   AnyFolder &ref=.SpineDependentCal;
   nStep = 8;
 
-  Kinematics.SmallStepAssumptionOnOff = On;
+  Kinematics.SmallStepAssumptionOnOff = Off;
   Kinematics.PosAnalysisOnlyOnOff = On;
   InitialConditions.PosAnalysisOnlyOnOff = On;
 

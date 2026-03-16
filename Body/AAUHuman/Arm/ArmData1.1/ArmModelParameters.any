@@ -109,6 +109,12 @@ AnyFloat sulcus_intertubercularis_pos = {0.018879, -0.031999, -0.0083810000};
 AnyFloat sulcus_intertubercularisTop_pos = {0.018379, 0.014001, -0.0173810000};
 
 
+  AnyFloat art_tub_minus_pos = {0.014, 0.009 , -0.03}+OffSet;
+  AnyFloat art_tub_majus_pos = {0.021, 0.009 , -0.02}+OffSet;
+  AnyFloat sulcus_intertubercularis_pos = {0.017500, -0.023000, -0.0175000}+OffSet; // 0.5*(.art_tub_majus.sRel+.art_tub_minus.sRel)+.Scale({.....Sign*0.003,0.0,0.0}); // midpoint
+  AnyFloat sulcus_intertubercularisTop_pos = {0.017, 0.023000, -0.02650}+OffSet; //.sulcus_intertubercularis.sRel+.Scale({.....Sign*-0.005,0.015,0.003});
+  AnyFloat Deltoid_hum = {0.0006969078, -0.145082, 0.007705414};
+  AnyFloat Deltoid_hum_p3 = {0.012821, -0.13903, 0.01491};
 
 #if BM_ARM_DELTOID_WRAPPING == _DELTOID_WRAPPING_RAKE_
   AnyFloat I_deltoideus_scapular_part_1_pos         = {0.009442, -0.095031 , -0.005209}+{0,0,0.005}+ds1;
@@ -294,7 +300,7 @@ AnyFloat RadioStylo_pos =rs_pos; //renaming
   AnyFloat SupinatorCyl_pos = {-0.1821030, -0.02722700, 0.005000000};
   AnyFloat SupinatorCyl_P2_pos = {0.0406227,-0.000, 0.008321};//sRel+VZ*Length;
   AnyFloat SupinatorCyl_P3_pos = {-0.182219,-0.027245, -0.002};//sRel+VX*Radius;
-  
+
   AnyFloat MedialExtensorCyl_pos = wj_pos + {0.005, 0.001000, 0.00000};
   AnyFloat MedialExtensorCyl_P3_pos = MedialExtensorCyl_pos + {0.0,0.0,0.0120};
   AnyFloat MedialExtensorCyl_P2_pos = MedialExtensorCyl_pos + {0.004, 0.025,0.0};
@@ -376,7 +382,7 @@ AnyFolder Ulna = {
   AnyFloat ps2Reac_pos = ps2_pos + {0.00000, 0.0250000, 0.0000000}*ps2_rot';
 
   AnyFloat ps2_usRot_pos =  ps2_pos + ({0.0, vnorm(us_pos-ps2_pos),0.0} + {0.0,-0.008,0.0})*ps2_rot';
-  
+
   AnyFloat us_pos = {0.02487800, 0.2704510, 0.0000000};
   AnyFloat ol_pos = {0.01966500, -0.005124000, 0.03300000};
   AnyFloat ps_pos = {-0.01006300, 0.04506600, -0.002620000};
@@ -450,10 +456,21 @@ AnyFloat ps2_RotNode_pos = {0.0, 0.0, 0.0};
 };
 
 AnyFolder Scapula = {
- 
 
-  AnyFloat deltoid_cyl_P2_pos = {0.027588, -0.047361, -0.015292};
-  AnyFloat deltoid_cyl_P3_pos = {-0.128825, -0.129236, 0.024150};
+
+  AnyFloat deltoid_cyl_P1_pos = {-0.1307360, -0.1302360, 0.006280000}+{0,0.02,0};
+  AnyFloat deltoid_cyl_P2_pos = {0.027588, -0.047361, -0.015292}+{0,0.02,0};
+  AnyFloat deltoid_cyl_P3_pos = {-0.128825, -0.129236, 0.024150}+{0,0.02,0};
+//  AnyFloat Deltoid_Cyl_P1_pos = {-0.1307360, -0.1302360, 0.006280000};//+{0,0.02,0};
+//  AnyFloat Deltoid_Cyl_P2_pos = {0.027588, -0.047361, -0.015292};//+{0,0.02,0};
+//  AnyFloat Deltoid_Cyl_P3_pos = {-0.001,-0.048,-0.030};//{-0.128825, -0.129236, 0.024150};//+{0,0.02,0};
+//  AnyFloat Deltoid_Anterior_Cyl1_pos = {0.02339800, -0.05086300, -0.03438100}+{-0.1,0.06,-0.1};
+//  AnyFloat Deltoid_Anterior_Cyl2_pos = {0.02339800, -0.05086300, -0.03438100}+{-0.1,0.06,-0.08}+{0,-0.03,-0.01};
+//  AnyFloat Deltoid_Anterior_Cyl_pos = {0.02339800, -0.05086300, -0.03438100}+{-0.1,0.06,-0.06};
+//  AnyFloat Deltoid_Anterior_CylStop1_pos = {0.02339800, -0.05086300, -0.03438100}+{0.05,0.04,0.0};
+//  AnyFloat Deltoid_Anterior_CylStop2_pos = {0.02339800, -0.05086300, -0.03438100}+{0.05,0.04,-0.01};
+//  AnyFloat Deltoid_Anterior_CylStop3_pos = {0.02339800, -0.05086300, -0.03438100}+{0.05,0.04,-0.03};
+//  AnyFloat Deltoid_Anterior_CylStop4_pos = {0.02339800, -0.05086300, -0.03438100}+{0.05,0.04,-0.05};
 
   AnyFloat margo_medialis_P2_pos= {-0.1114460,  0.0300000, -0.003720};
   AnyFloat margo_medialis_P3_pos= {-0.1157360, -0.1402360,  0.01628000};
@@ -665,7 +682,7 @@ AnyFolder Clavicula = {
   AnyFloat conoid_pos = {0.1271050, 0.006526000, 0.002547000};
   AnyFloat trapezoid_pos = {0.1394170, 0.004248000, -0.006785000};
 
- 
+
   // Below originated from ClavicleMuscleGeometry: clavicle segment data from VU sub 2.
   // The original coordinates have been transformed from global coordinates to the segment local
   // coordinate system

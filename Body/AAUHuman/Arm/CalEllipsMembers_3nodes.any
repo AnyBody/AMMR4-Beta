@@ -1,0 +1,19 @@
+// Define ellipsoid's raduis, sRel, and ARel based on origin and insertion nodes
+AnyFloat pos_node1 = .HumerusRef.r0 + (.HumerusRef.Axes0 * Node1.sRel')'-.r0;
+AnyFloat pos_node2 ??=  .ScapulaRef.r0 + (.ScapulaRef.Axes0 * Node2.sRel')'-.r0;
+AnyFloat axes_node2 ??= .ScapulaRef.Axes0 * Node2.ARel;
+AnyFloat pos_node3 ??= .ScapulaRef.r0 + (.ScapulaRef.Axes0 * Node3.sRel')'-.r0;
+AnyFloat pos_gh = .ScapulaRef.r0 + (.ScapulaRef.Axes0 * .ScapulaRef.gh.sRel')'-.r0;
+
+AnyFloat Rxy ??= ...DeltoidWrappingPosterior.WrappingSegment.AlignmentRefNode.Deltoid_Scapula_Cyl.cyl.Radius;//.....Segments.Scapula.Deltoid_Scapula_Cyl.cyl.Radius;//vnorm( (pos_node2 - pos_node1) )/5;
+AnyFloat Rz = Rxy*5;
+//AnyFloat DistanceRatio ??= 1.45;
+//AnyFloat AdjustorDirection ??= {1,.....Sign*0.3,0};
+AnyFloat AdjustorXRotation ??= pi/2;
+Radius = {Rxy, Rxy, Rz};
+AnyFloat Sizes = Radius;
+AnyMatrix RotMatrix ??= RotMat(pos_node1, pos_node2, pos_node3) * RotMat(AdjustorXRotation,x);
+sRel ??= pos_gh;//(pos_node2 + pos_node1)/2;// + Rxy*DistanceRatio * (RotMatrix*(AdjustorDirection/vnorm(AdjustorDirection))')';
+ARel ??= RotMatrix * RotMat(pi/2 - .....Sign * pi/2,x);
+
+// viewSurface = {Visible = On; Opacity = 0.1; RGB = {0.5, 0.1, 0.1}; Transparency = 0.7; };

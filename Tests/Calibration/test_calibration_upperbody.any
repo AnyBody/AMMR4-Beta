@@ -12,11 +12,8 @@
 //
 #include "libdef.any"
 
-#ifndef TEST_NAME
-  #define BM_CALIBRATION_TYPE 3
-  #define TEST_NAME "test_calibration_upperbody.any_1"
-#endif
-
+  #define BM_CALIBRATION_TYPE 2
+  #define TEST_NAME "test_calibration_upperbody_1"
 
 #define BM_ARM_SHOULDER_RHYTHM ON
 
@@ -53,6 +50,22 @@ Main =
       "The number of muscles in the calibration studies do not match the number of muscles in the model!"
     );
   #endif
+  
+  Main.HumanModel.Calibration.RightShoulderCal.ArmCalibrationStudyShoulder.FiberAndTendonLengthAdjustment = {
+  AnyFixedRefFrame fix = {
+  AnyDrawLine ViaI = {
+    p0 = Main.HumanModel.BodyModel.Right.ShoulderArm.Muscles.WrappingSurfaces.DeltoidWrappingLateral.LateralDeltoid_ViaNodeSegment.ViaNode1_DL4.r;
+    p1 = Main.HumanModel.BodyModel.Right.ShoulderArm.Muscles.DeltoideusLateral.DeltoideusLateral4.Ins.r;
+  };
+  AnyDrawLine GHVIA = {
+    p0 = Main.HumanModel.BodyModel.Right.ShoulderArm.Muscles.WrappingSurfaces.DeltoidWrappingLateral.LateralDeltoid_ViaNodeSegment.ViaNode1_DL4.r;
+    p1 = Main.HumanModel.BodyModel.Right.ShoulderArm.Muscles.WrappingSurfaces.DeltoidWrappingAnterior.WrappingSegment_RepresentDeltoidLateral.gh_joint.r;
+  };
+  AnyDrawLine GHI = {
+    p0 = Main.HumanModel.BodyModel.Right.ShoulderArm.Muscles.DeltoideusLateral.DeltoideusLateral4.Ins.r;
+    p1 = Main.HumanModel.BodyModel.Right.ShoulderArm.Muscles.WrappingSurfaces.DeltoidWrappingAnterior.WrappingSegment_RepresentDeltoidLateral.gh_joint.r;
+  };
+};};
 };
 
 

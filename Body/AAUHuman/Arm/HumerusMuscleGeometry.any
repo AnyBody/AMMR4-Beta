@@ -186,6 +186,34 @@ Humerus = {
       Length=vnorm(.sRel-.P2);
     };
   };
+   
+  AnyRefNode Deltoid_hum = {
+    sRel = .Scale(.Data.Deltoid_hum*.Mirror);
+    ARel = RotMat (pi/2, x);
+    AnyFloat P2 = ..Humerus.gh_rotated1.sRel;
+    AnyFloat P3 = .Scale(.Data.Deltoid_hum_p3*.Mirror);
+    
+    AnySurfCylinder Deltoid_humCyl= {
+      Radius=vnorm(.sRel-.P3);
+      Length=2*vnorm(.sRel-.P2);
+      CapRatio = 1;
+      CenterOrigin = On;
+    };
+  };
+  AnyRefNode Deltoid_hum_ext = {
+    sRel = ..Humerus.gh_rotated1.sRel;
+    ARel = RotMat (pi/2, x);
+    AnyFloat P2 = .Scale(.Data.Deltoid_hum*.Mirror);
+    AnyFloat P3 = .Scale(.Data.Deltoid_hum_p3*.Mirror);
+    
+    AnySurfCylinder Deltoid_humCyl= {
+      Radius=0.98*Main.HumanModel.BodyModel.Right.ShoulderArm.Muscles.WrappingSurfaces.DeltoidWrappingAnterior.WrappingSegment.AlignmentRefNode.Deltoid_Clavicula_Cyl.cyl.Radius;//vnorm(.sRel-.P3);
+      Length=Radius*2;//2*vnorm(.sRel-.P2);
+      CapRatio = 1;//3;
+//      CapRatio2 = 1;
+//      CenterOrigin = On;
+    };
+  };
 
 #if BM_ARM_DELTOID_WRAPPING == _DELTOID_WRAPPING_RAKE_
   AnyRefNode I_deltoideus_scapular_part_1         = {sRel = .Scale(.Data.I_deltoideus_scapular_part_1_pos*.Mirror);};
