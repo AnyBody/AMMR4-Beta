@@ -1667,7 +1667,7 @@ AnyFolder Muscles =
     AnyVar Volume ??= DesignVar(22.42); ///< Total volume of the muscle group (ml)
     AnyFolder LevatorCostarumC7R1 = 
     {
-      AnyString Muscle = "LCBrC7R1"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "LevatorCostarumC7R1"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -1685,7 +1685,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder LevatorCostarumT1R2 = 
     {
-      AnyString Muscle = "LCBrT1R2"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "LevatorCostarumT1R2"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -1703,7 +1703,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder LevatorCostarumT2R3 = 
     {
-      AnyString Muscle = "LCBrT2R3"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "LevatorCostarumT2R3"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -1721,7 +1721,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder LevatorCostarumT3R4 = 
     {
-      AnyString Muscle = "LCBrT3R4"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "LevatorCostarumT3R4"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -1739,7 +1739,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder LevatorCostarumT4R5 = 
     {
-      AnyString Muscle = "LCBrT4R5"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "LevatorCostarumT4R5"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -1757,7 +1757,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder LevatorCostarumT5R6 = 
     {
-      AnyString Muscle = "LCBrT5R6"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "LevatorCostarumT5R6"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -1775,7 +1775,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder LevatorCostarumT6R7 = 
     {
-      AnyString Muscle = "LCBrT6R7"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "LevatorCostarumT6R7"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -1793,7 +1793,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder LevatorCostarumT7R8 = 
     {
-      AnyString Muscle = "LCBrT7R8"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "LevatorCostarumT7R8"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -1811,7 +1811,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder LevatorCostarumT8R9 = 
     {
-      AnyString Muscle = "LCBrT8R9"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "LevatorCostarumT8R9"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -1829,7 +1829,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder LevatorCostarumT9R10 = 
     {
-      AnyString Muscle = "LCBrT9R10"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "LevatorCostarumT9R10"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -1847,7 +1847,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder LevatorCostarumT10R11 = 
     {
-      AnyString Muscle = "LCBrT10R11"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "LevatorCostarumT10R11"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -1865,7 +1865,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder LevatorCostarumT11R12 = 
     {
-      AnyString Muscle = "LCBrT11R12"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "LevatorCostarumT11R12"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -1883,7 +1883,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder LevatorCostarumT5R7 = 
     {
-      AnyString Muscle = "LCLgT5R7"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "LevatorCostarumT5R7"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -1901,7 +1901,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder LevatorCostarumT6R8 = 
     {
-      AnyString Muscle = "LCLgT6R8"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "LevatorCostarumT6R8"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -1919,7 +1919,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder LevatorCostarumT7R9 = 
     {
-      AnyString Muscle = "LCLgT7R9"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "LevatorCostarumT7R9"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -1937,7 +1937,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder LevatorCostarumT8R10 = 
     {
-      AnyString Muscle = "LCLgT8R10"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "LevatorCostarumT8R10"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -1955,7 +1955,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder LevatorCostarumT9R11 = 
     {
-      AnyString Muscle = "LCLgT9R11"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "LevatorCostarumT9R11"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -1973,7 +1973,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder LevatorCostarumT10R12 = 
     {
-      AnyString Muscle = "LCLgT10R12"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "LevatorCostarumT10R12"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
