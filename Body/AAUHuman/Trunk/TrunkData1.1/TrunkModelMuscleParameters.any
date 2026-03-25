@@ -7405,7 +7405,7 @@ AnyFolder Muscles =
     AnyVar Volume ??= DesignVar(36.20); ///< Total volume of the muscle group (ml)
     AnyFolder SubcostalisR1R3 = 
     {
-      AnyString Muscle = "SCR1R3"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "SubcostalisR1R3"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -7423,7 +7423,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder SubcostalisR1R4 = 
     {
-      AnyString Muscle = "SCR1R4"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "SubcostalisR1R4"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -7441,7 +7441,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder SubcostalisR2R4 = 
     {
-      AnyString Muscle = "SCR2R4"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "SubcostalisR2R4"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -7459,7 +7459,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder SubcostalisR2R5 = 
     {
-      AnyString Muscle = "SCR2R5"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "SubcostalisR2R5"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -7477,7 +7477,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder SubcostalisR3R5 = 
     {
-      AnyString Muscle = "SCR3R5"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "SubcostalisR3R5"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -7495,7 +7495,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder SubcostalisR3R6 = 
     {
-      AnyString Muscle = "SCR3R6"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "SubcostalisR3R6"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -7513,7 +7513,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder SubcostalisR4R6 = 
     {
-      AnyString Muscle = "SCR4R6"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "SubcostalisR4R6"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -7531,7 +7531,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder SubcostalisR4R7 = 
     {
-      AnyString Muscle = "SCR4R7"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "SubcostalisR4R7"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -7549,7 +7549,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder SubcostalisR5R7 = 
     {
-      AnyString Muscle = "SCR5R7"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "SubcostalisR5R7"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -7567,7 +7567,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder SubcostalisR5R8 = 
     {
-      AnyString Muscle = "SCR5R8"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "SubcostalisR5R8"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -7585,7 +7585,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder SubcostalisR6R8 = 
     {
-      AnyString Muscle = "SCR6R8"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "SubcostalisR6R8"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -7603,7 +7603,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder SubcostalisR6R9 = 
     {
-      AnyString Muscle = "SCR6R9"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "SubcostalisR6R9"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -7621,7 +7621,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder SubcostalisR7R9 = 
     {
-      AnyString Muscle = "SCR7R9"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "SubcostalisR7R9"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -7639,7 +7639,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder SubcostalisR7R10 = 
     {
-      AnyString Muscle = "SCR7R10"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "SubcostalisR7R10"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -7657,7 +7657,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder SubcostalisR8R10 = 
     {
-      AnyString Muscle = "SCR8R10"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "SubcostalisR8R10"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -7675,7 +7675,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder SubcostalisR8R11 = 
     {
-      AnyString Muscle = "SCR8R11"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "SubcostalisR8R11"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -7693,7 +7693,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder SubcostalisR9R11 = 
     {
-      AnyString Muscle = "SCR9R11"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "SubcostalisR9R11"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
