@@ -7105,7 +7105,7 @@ AnyFolder Muscles =
     AnyVar Volume ??= DesignVar(22.03); ///< Total volume of the muscle group (ml)
     AnyFolder SerratusPosteriorInferiorL2R12 = 
     {
-      AnyString Muscle = "SPIL2R12"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "SerratusPosteriorInferiorL2R12"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -7123,7 +7123,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder SerratusPosteriorInferiorL1R11 = 
     {
-      AnyString Muscle = "SPIL1R11"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "SerratusPosteriorInferiorL1R11"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -7141,7 +7141,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder SerratusPosteriorInferiorT12R10 = 
     {
-      AnyString Muscle = "SPIT12R10"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "SerratusPosteriorInferiorT12R10"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -7159,7 +7159,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder SerratusPosteriorInferiorT11R9 = 
     {
-      AnyString Muscle = "SPIT11R9"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "SerratusPosteriorInferiorT11R9"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -7180,7 +7180,7 @@ AnyFolder Muscles =
     AnyVar Volume ??= DesignVar(17.42); ///< Total volume of the muscle group (ml)
     AnyFolder SerratusPosteriorSuperiorR2C7 = 
     {
-      AnyString Muscle = "SPSR2C7"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "SerratusPosteriorSuperiorR2C7"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -7198,7 +7198,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder SerratusPosteriorSuperiorR3T1 = 
     {
-      AnyString Muscle = "SPSR3T1"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "SerratusPosteriorSuperiorR3T1"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -7216,7 +7216,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder SerratusPosteriorSuperiorR4T2 = 
     {
-      AnyString Muscle = "SPSR4T2"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "SerratusPosteriorSuperiorR4T2"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -7234,7 +7234,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder SerratusPosteriorSuperiorR5T3 = 
     {
-      AnyString Muscle = "SPSR5T3"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "SerratusPosteriorSuperiorR5T3"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
