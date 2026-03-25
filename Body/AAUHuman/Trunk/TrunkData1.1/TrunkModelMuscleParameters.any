@@ -4412,7 +4412,7 @@ AnyFolder Muscles =
     AnyVar Volume ??= DesignVar(93.94); ///< Total volume of the muscle group (ml)
     AnyFolder ObliquusExternusR6Abd = 
     {
-      AnyString Muscle = "OEC_1"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "ObliquusExternusR6Abd"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -4430,7 +4430,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_BUCKLE_
     AnyFolder ObliquusExternusR7Abd = 
     {
-      AnyString Muscle = "OEC_2"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "ObliquusExternusR7Abd"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -4448,7 +4448,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_BUCKLE_
     AnyFolder ObliquusExternusR8Abd = 
     {
-      AnyString Muscle = "OEC_3"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "ObliquusExternusR8Abd"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -4466,7 +4466,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_BUCKLE_
     AnyFolder ObliquusExternusR9Abd = 
     {
-      AnyString Muscle = "OEC_4"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "ObliquusExternusR9Abd"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -4484,7 +4484,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_BUCKLE_
     AnyFolder ObliquusExternusR10Abd_1 = 
     {
-      AnyString Muscle = "OEC_5"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "ObliquusExternusR10Abd_1"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -4502,7 +4502,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_BUCKLE_
     AnyFolder ObliquusExternusR10Abd_2 = 
     {
-      AnyString Muscle = "OEC_6"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "ObliquusExternusR10Abd_2"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -4520,7 +4520,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_BUCKLE_
     AnyFolder ObliquusExternusR11IC = 
     {
-      AnyString Muscle = "OEC_7"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "ObliquusExternusR11IC"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -4538,7 +4538,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_BUCKLE_
     AnyFolder ObliquusExternusR12IC = 
     {
-      AnyString Muscle = "OEC_8"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "ObliquusExternusR12IC"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -4557,7 +4557,7 @@ AnyFolder Muscles =
     AnyVar Volume ??= DesignVar(178.46); ///< Total volume of the muscle group (ml)
     AnyFolder ObliquusExternusR6Abd = 
     {
-      AnyString Muscle = "OEC_1"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "ObliquusExternusR6Abd"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -4575,7 +4575,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
     AnyFolder ObliquusExternusR7Abd = 
     {
-      AnyString Muscle = "OEC_2"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "ObliquusExternusR7Abd"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -4593,7 +4593,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
     AnyFolder ObliquusExternusR8Abd = 
     {
-      AnyString Muscle = "OEC_3"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "ObliquusExternusR8Abd"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -4611,7 +4611,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
     AnyFolder ObliquusExternusR9Abd_1 = 
     {
-      AnyString Muscle = "OEC_4"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "ObliquusExternusR9Abd_1"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -4629,7 +4629,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
     AnyFolder ObliquusExternusR9Abd_2 = 
     {
-      AnyString Muscle = "OEC_5"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "ObliquusExternusR9Abd_2"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -4647,7 +4647,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
     AnyFolder ObliquusExternusR10Abd_1 = 
     {
-      AnyString Muscle = "OEC_6"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "ObliquusExternusR10Abd_1"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -4665,7 +4665,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
     AnyFolder ObliquusExternusR10Abd_2 = 
     {
-      AnyString Muscle = "OEC_7"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "ObliquusExternusR10Abd_2"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -4683,7 +4683,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
     AnyFolder ObliquusExternusR10IC_1 = 
     {
-      AnyString Muscle = "OEC_8"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "ObliquusExternusR10IC_1"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -4701,7 +4701,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
     AnyFolder ObliquusExternusR10IC_2 = 
     {
-      AnyString Muscle = "OEC_9"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "ObliquusExternusR10IC_2"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -4719,7 +4719,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
     AnyFolder ObliquusExternusR11IC_1 = 
     {
-      AnyString Muscle = "OEC_10"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "ObliquusExternusR11IC_1"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -4737,7 +4737,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
     AnyFolder ObliquusExternusR11IC_2 = 
     {
-      AnyString Muscle = "OEC_11"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "ObliquusExternusR11IC_2"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -4755,7 +4755,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
     AnyFolder ObliquusExternusR12IC = 
     {
-      AnyString Muscle = "OEC_12"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "ObliquusExternusR12IC"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -4776,7 +4776,7 @@ AnyFolder Muscles =
     AnyVar Volume ??= DesignVar(91.37); ///< Total volume of the muscle group (ml)
     AnyFolder ObliquusInternusR11 = 
     {
-      AnyString Muscle = "OIC_1"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "ObliquusInternusR11"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -4794,7 +4794,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_BUCKLE_
     AnyFolder ObliquusInternusR10_1 = 
     {
-      AnyString Muscle = "OIC_2"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "ObliquusInternusR10_1"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -4812,7 +4812,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_BUCKLE_
     AnyFolder ObliquusInternusR10_2 = 
     {
-      AnyString Muscle = "OIC_3"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "ObliquusInternusR10_2"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -4830,7 +4830,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_BUCKLE_
     AnyFolder ObliquusInternusCC_1 = 
     {
-      AnyString Muscle = "OIC_4"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "ObliquusInternusCC_1"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -4848,7 +4848,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_BUCKLE_
     AnyFolder ObliquusInternusCC_2 = 
     {
-      AnyString Muscle = "OIC_5"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "ObliquusInternusCC_2"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -4866,7 +4866,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_BUCKLE_
     AnyFolder ObliquusInternusAbd_1 = 
     {
-      AnyString Muscle = "OIC_6"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "ObliquusInternusAbd_1"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -4884,7 +4884,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_BUCKLE_
     AnyFolder ObliquusInternusAbd_2 = 
     {
-      AnyString Muscle = "OIC_7"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "ObliquusInternusAbd_2"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -4902,7 +4902,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_BUCKLE_
     AnyFolder ObliquusInternusAbd_3 = 
     {
-      AnyString Muscle = "OIC_8"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "ObliquusInternusAbd_3"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -4920,7 +4920,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_BUCKLE_
     AnyFolder ObliquusInternusAbd_4 = 
     {
-      AnyString Muscle = "OIC_9"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "ObliquusInternusAbd_4"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -4938,7 +4938,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_BUCKLE_
     AnyFolder ObliquusInternusAbd_5 = 
     {
-      AnyString Muscle = "OIC_10"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "ObliquusInternusAbd_5"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -4957,7 +4957,7 @@ AnyFolder Muscles =
     AnyVar Volume ??= DesignVar(145.36); ///< Total volume of the muscle group (ml)
     AnyFolder ObliquusInternusR12 = 
     {
-      AnyString Muscle = "OIC_1"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "ObliquusInternusR12"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -4975,7 +4975,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
     AnyFolder ObliquusInternusR11_1 = 
     {
-      AnyString Muscle = "OIC_2"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "ObliquusInternusR11_1"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -4993,7 +4993,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
     AnyFolder ObliquusInternusR11_2 = 
     {
-      AnyString Muscle = "OIC_3"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "ObliquusInternusR11_2"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -5011,7 +5011,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
     AnyFolder ObliquusInternusR10_1 = 
     {
-      AnyString Muscle = "OIC_4"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "ObliquusInternusR10_1"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -5029,7 +5029,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
     AnyFolder ObliquusInternusR10_2 = 
     {
-      AnyString Muscle = "OIC_5"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "ObliquusInternusR10_2"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -5047,7 +5047,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
     AnyFolder ObliquusInternusCC_1 = 
     {
-      AnyString Muscle = "OIC_6"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "ObliquusInternusCC_1"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -5065,7 +5065,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
     AnyFolder ObliquusInternusCC_2 = 
     {
-      AnyString Muscle = "OIC_7"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "ObliquusInternusCC_2"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -5083,7 +5083,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
     AnyFolder ObliquusInternusCC_3 = 
     {
-      AnyString Muscle = "OIC_8"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "ObliquusInternusCC_3"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -5101,7 +5101,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
     AnyFolder ObliquusInternusXiphoid = 
     {
-      AnyString Muscle = "OIC_9"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "ObliquusInternusXiphoid"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -5119,7 +5119,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
     AnyFolder ObliquusInternusAbd_1 = 
     {
-      AnyString Muscle = "OIC_10"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "ObliquusInternusAbd_1"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -5137,7 +5137,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
     AnyFolder ObliquusInternusAbd_2 = 
     {
-      AnyString Muscle = "OIC_11"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "ObliquusInternusAbd_2"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -5155,7 +5155,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
     AnyFolder ObliquusInternusAbd_3 = 
     {
-      AnyString Muscle = "OIC_12"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "ObliquusInternusAbd_3"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -5173,7 +5173,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
     AnyFolder ObliquusInternusAbd_4 = 
     {
-      AnyString Muscle = "OIC_13"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "ObliquusInternusAbd_4"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -5191,7 +5191,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES & BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
     AnyFolder ObliquusInternusAbd_5 = 
     {
-      AnyString Muscle = "OIC_14"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "ObliquusInternusAbd_5"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
