@@ -7807,7 +7807,7 @@ AnyFolder Muscles =
     AnyVar Volume ??= DesignVar(46.62); ///< Total volume of the muscle group (ml)
     AnyFolder TransversusThoracisR2St = 
     {
-      AnyString Muscle = "TrThR2S"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "TransversusThoracisR2St"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -7825,7 +7825,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder TransversusThoracisR2R4 = 
     {
-      AnyString Muscle = "TrThR2R4S"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "TransversusThoracisR2R4"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -7843,7 +7843,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder TransversusThoracisR3St = 
     {
-      AnyString Muscle = "TrThR3S"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "TransversusThoracisR3St"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -7861,7 +7861,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder TransversusThoracisR3R5 = 
     {
-      AnyString Muscle = "TrThR3R5S"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "TransversusThoracisR3R5"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -7879,7 +7879,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder TransversusThoracisR4St = 
     {
-      AnyString Muscle = "TrThR4S"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "TransversusThoracisR4St"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -7897,7 +7897,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder TransversusThoracisR4R6 = 
     {
-      AnyString Muscle = "TrThR4R6S"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "TransversusThoracisR4R6"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -7915,7 +7915,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder TransversusThoracisR5St = 
     {
-      AnyString Muscle = "TrThR5S"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "TransversusThoracisR5St"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -7933,7 +7933,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder TransversusThoracisR5R7 = 
     {
-      AnyString Muscle = "TrThR5R7S"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "TransversusThoracisR5R7"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -7951,7 +7951,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder TransversusThoracisR6St = 
     {
-      AnyString Muscle = "TrThR6S"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "TransversusThoracisR6St"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -7969,7 +7969,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder TransversusThoracisR7St = 
     {
-      AnyString Muscle = "TrThR7S"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "TransversusThoracisR7St"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -7987,7 +7987,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder TransversusThoracisR8St = 
     {
-      AnyString Muscle = "TrThR8S"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "TransversusThoracisR8St"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -8005,7 +8005,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder TransversusThoracisR9St = 
     {
-      AnyString Muscle = "TrThR9S"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "TransversusThoracisR9St"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
@@ -8023,7 +8023,7 @@ AnyFolder Muscles =
     #if BM_TRUNK_MUSCLES
     AnyFolder TransversusThoracisR10St = 
     {
-      AnyString Muscle = "TrThR10S"; ///< Descriptive name for the muscle, e.g. for plotting
+      AnyString Muscle = "TransversusThoracisR10St"; ///< Descriptive name for the muscle, e.g. for plotting
       AnyIntVar MuscleElemAmount = 1; ///< The total amount of elements for this muscle
       AnyFloat Pennationangle ??= DesignVar(0); ///< Pennation angle of the muscle fibers (degres)
       AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume
