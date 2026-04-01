@@ -11,11 +11,12 @@
 //fatal_warnings = True;
 //ignore_errors = ['Close to singular position']
 
-
+//#define BM_ARM_THORAX_SCAPULA_CONTACT _ELLIPSOID_CONTACT_
 #include "../libdef.any"
 
 #ifndef TEST_NAME
-  #define BM_ARM_THORAX_SCAPULA_CONTACT 0
+//  #define BM_ARM_THORAX_SCAPULA_CONTACT 0
+  #define BM_ARM_THORAX_SCAPULA_CONTACT _ELLIPSOID_CONTACT_
   #define STUDY_TYPE 2
   #define TEST_NAME "test_ShoulderTestModel.main.any_3"
 
@@ -35,7 +36,7 @@
 
 
 Main ={
-
+  #include "ScapulaDrv4.any"
   #if STUDY_TYPE == 1
   AnyOperation& RunTest = Main.Study.Kinematics;
   #endif

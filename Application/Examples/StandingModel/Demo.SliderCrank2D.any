@@ -1,0 +1,237 @@
+#include "libdef.any"
+#include "<ANYBODY_PATH_MODELUTILS>/KinematicLimits/RangeOfMotionLimits_template.any"
+/**
+Demo: SliderCrank2D
+
+This file contains a model of a planar slider-crank linkage 
+Notice that the mechanism is kinematically over-determined
+according to the joint configuration. Motion is however 
+possible because some of the kinematic constraints are not 
+independent, i.e. the system contains redundant constraints.
+
+The model demonstrates the definition of revolute (hinge), 
+spherical (ball-and-socket), and prismatic (translational) 
+joints. 
+
+Notice how the Coupler 's local reference axes are oriented 
+quite differently than the other segments. The Coupler is 
+the red segment. It has the y-axis, not the x-axis, 
+being normal to the mechanism's plane. 
+This is realized by use of relative orientation of a node 
+on the segment (AnyRefNode). This feature is needed in systems 
+where the axes of joints are not coinciding well on the 
+connected segments; in joints rotation/translation axes are 
+typically specified by simple a x, y, or z specification 
+defining the axis on both segments. Thus proper alignment 
+must be obtained rotation of the nodes (e.g. by means of 
+AnyRefNode) the joint connects.
+
+Moreover, the models applies a simple kinematical driver by 
+using an AnyKinDriver object.
+
+*/
+Main = {
+  
+  // =======================================================
+  // The mechanical components
+  // =======================================================
+  AnyFolder SliderCrank = {
+    
+    // -----------------------------------------------------
+    // Basic Reference Frames
+    // -----------------------------------------------------
+    AnyFixedRefFrame GlobalRef = {
+      AnyDrawRefFrame DrwGlobalRef = { RGB = {0,0,1}; };
+    };
+    
+    
+    AnyFixedRefFrame SliderRef = {
+      Origin = {0,3.5,0};
+      AnyDrawRefFrame DrwGlobalRef = { RGB = {0,0,1}; };
+      AnySurfEllipsoid ElSurf = {
+        sRel = {0,-1,0};
+        Radius = {0.5,0.25,0.5};
+        viewSurface.Visible = On;
+      };
+    };
+    
+    AnyKinMeasureOrg Measure = {
+      AnyKinLinear LinTest = {
+        AnyRefFrame &refframe = ..SliderRef;
+        AnyRefFrame &Seg = Main.SliderCrank.Segs.Slider;
+        Ref = 0;
+      };
+      MeasureOrganizer = {1};
+    };
+    
+      KinLimitsDriver LimitDrv( 
+        KinMeasure = .Measure
+        ) = {
+          AnyFloat ROM ??= {-2.0,-1.0};
+          DriverPhaseIn = 0.5;
+          ErrorAtHardLimit = 2.0;
+          LowerLimit = ROM[0]; 
+          HighLimit = ROM[1]; 
+      };
+      
+      AnyKinPointSurface PtSurfMeasure = {
+        AnyRefFrame &Point = Main.SliderCrank.Segs.Slider;
+        AnySurface &surf = .SliderRef.ElSurf;
+      };
+      
+      AnyKinMeasureQuadComb PtSurfSquareMeasure = {
+        AnyKinMeasure &meas1 = .PtSurfMeasure;
+        AnyKinMeasure &meas2 = .PtSurfMeasure;
+        OutDim = 1;
+        // Product of two measures
+        CoefQuadTensor = {{{0.0, 1.0}, {0.0, 0.0}}};
+      };       
+      
+      AnyFunInterpol AbsoluteFun = {
+        Type = PiecewiseLinear;
+        T = {-100,-0.000001,0,0.000001,100};
+        Data = {{-1,-1,0,1,1}};
+      };
+      
+      // Generate a -1 signal if Meas is neg or +1 signal if Meas is positive
+      AnyKinMeasureFunComb1 PosNegSignalPtSurfMeasure = {
+        AnyKinMeasure &meas = .PtSurfMeasure;
+        Functions = {&.AbsoluteFun};
+      };
+      AnyKinMeasureQuadComb PtSurfAbsoluteMeasure = {
+        AnyKinMeasure &meas1 = .PtSurfMeasure;
+        AnyKinMeasure &meas2 = .PosNegSignalPtSurfMeasure;
+        OutDim = 1;
+        // Product of two measures
+        CoefQuadTensor = {{{0.0, 1.0}, {0.0, 0.0}}};
+      };      
+      
+    // -----------------------------------------------------
+    // Segments
+    // -----------------------------------------------------
+    AnyFolder Segs = {
+      
+      //---------------------------------
+      AnySeg Crank = {
+        Mass = 5.0;
+        Jii = {1,0.5,1};
+        //Axes0 = RotMat(20.0/180.0*pi,x);
+
+        AnyRefNode Tip = {
+          sRel = {0,1.5,0};
+          AnyDrawRefFrame DrwNode = {};
+        };
+        AnyDrawSeg DrwSeg= {};
+      };
+      
+      //---------------------------------
+      AnySeg Coupler = {
+        r0 = {0,2.5,0};
+        Axes0 = RotMat(1.5,z)*RotMat(20.0/180.0*pi,y);
+        
+        
+        Mass = 5.0;
+        Jii = {0.5,1,1};
+        AnyRefNode CrankNode = {
+          sRel = {-1,0,0};
+          ARel = {{0,1,0},{-1,0,0},{0,0,1}};
+          //sRel = {0,-1,0};
+          AnyDrawRefFrame DrwNode = { RGB = {1,0,0}; };
+        };
+        AnyRefNode SliderNode = {
+          sRel = {1,0,0};
+          //sRel = {0,1,0};
+          AnyDrawRefFrame DrwNode = { RGB = {1,0,0}; };
+        };
+        AnyDrawSeg DrwSeg= { RGB = {1,0,0}; };
+      };
+      
+      //---------------------------------
+      AnySeg Slider = {
+        r0 = {0,3.5,0};
+        Mass = 5.0;
+        Jii = {1,0.5,1};
+        AnyDrawSeg DrwSeg= {};
+      };
+      
+      
+    };
+    
+    // -----------------------------------------------------
+    // Joints
+    // -----------------------------------------------------
+    AnyFolder Jnts = {
+      
+      //---------------------------------
+      AnyRevoluteJoint Shaft = {
+        Axis = x;
+        AnyFixedRefFrame& Ground = Main.SliderCrank.GlobalRef;
+        AnySeg &Crank = Main.SliderCrank.Segs.Crank;
+      };
+      
+      //---------------------------------
+      AnyRevoluteJoint Knee = {
+      //AnyCylindricalJoint Knee = {
+        Axis = x;
+        AnyRefNode &CrankNode = Main.SliderCrank.Segs.Crank.Tip;
+        AnyRefNode &CouplerNode = Main.SliderCrank.Segs.Coupler.CrankNode;
+        
+        Constraints.CType = {Soft,Hard,Hard,Hard,Hard};
+      };
+      
+      //---------------------------------
+      AnySphericalJoint Ball = {
+        AnyRefNode &CouplerNode = Main.SliderCrank.Segs.Coupler.SliderNode;
+        AnySeg &Slider = Main.SliderCrank.Segs.Slider;
+      };
+      
+      //---------------------------------
+      AnyPrismaticJoint Rail = {
+        Axis = y;
+        AnyFixedRefFrame& Ground = Main.SliderCrank.SliderRef;
+        AnySeg &Slider = Main.SliderCrank.Segs.Slider;
+      };
+      
+      
+    };
+    
+    // -----------------------------------------------------
+    // Actuator
+    // -----------------------------------------------------
+    AnyKinDriver Actuator = {
+      AnyCylindricalJoint &Jnt = Main.SliderCrank.Jnts.Shaft;
+      DriverPos0 = {0.0};
+      DriverVel0 = 0.5*{6.28};
+      MeasureOrganizer = {0};
+    };
+    
+  };
+  
+  // =======================================================
+  // The mechanical study
+  // =======================================================
+  AnyMechStudy MechStudy_does_not_run = {
+    
+    AnyFolder& Model = Main.SliderCrank;
+    
+    Gravity = {0,0,-1}*9.81;
+  };
+  
+  // =======================================================
+  // The mechanical study
+  // =======================================================
+  AnyMechStudy MechStudy = {
+    AnyMechObjectExcluder ExcludeLimitDriver = {
+      Objects = {
+        &Main.SliderCrank.LimitDrv.JointLimitDriver,
+      };
+    };
+    AnyFolder& Model = Main.SliderCrank;
+    nStep = 100;
+    InitialConditions.SolverType = KinSolOverDeterminate;
+    Kinematics.SolverType = KinSolOverDeterminate;
+    
+    Gravity = {0,0,-1}*9.81;
+  };
+  
+};

@@ -137,6 +137,16 @@ AnyFunInterpol AbscissaFunction =
 AnyFunInterpol JointLimitErrorFunction= 
 {  
   Type = Bspline;
+  AnyFloat checkfun = .AbscissaFunction(1.0*459);
+  AnyFloat Set1 = .AbscissaFunction(1.0*iarr(0,490))';
+  AnyFloat Set2 = .AbscissaFunction(1.0*iarr(491,509))';
+  AnyFloat Set3 = .AbscissaFunction(1.0*iarr(510,999))';
+  AnyFloat Test2 = arrcat(Set1,Set2,Set3);
+//  AnyFloat TestT = arrcat(
+//                          .AbscissaFunction(1.0*iarr(0,489))',
+//                          .AbscissaFunction(1.0*iarr(590,510))',
+//                          .AbscissaFunction(1.0*iarr(511,999))',
+//                          );
   T = .AbscissaFunction(1.0*iarr(0,999))' ;
   Data = {.ErrorAtLowerHardLimit*KIN_LIMIT_SMOOTHRAMP(.LowerLimit, .LowerLimitHard, T) + 
           .ErrorAtHighHardLimit*KIN_LIMIT_SMOOTHRAMP(.HighLimit, .HighLimitHard, T)} ;

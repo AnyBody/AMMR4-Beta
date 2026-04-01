@@ -1,0 +1,129 @@
+#include "<ANYBODY_PATH_MODELUTILS>/KinematicLimits/RangeOfMotionLimits_template.any"
+
+Main.HumanModel.BodyModel.Right.ShoulderArm.Jnt = {
+  AnyFolder ScapulaComboMeasure = {
+    AnyFolder PLineMeasures = {
+      AnyKinPLine M1 = {
+        AnyRefFrame &ref1= Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Scapula.conoid;
+        AnyRefFrame &ref2= Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Clavicula.conoid;
+        AnyDrawPLine drw ={Thickness=0.0025;};   
+        ref1= {AnyDrawRefFrame drw1 ={RGB={1,0,0};ScaleXYZ={1,1,1}*0.1;};};      
+        ref2= {AnyDrawRefFrame drw2 ={RGB={0,0,1};ScaleXYZ={1,1,1}*0.1;};};     
+      };
+      AnyKinPLine M2 = {
+        AnyRefFrame &ref1= Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Scapula.I_rhomboideus_1;
+        AnyRefFrame &ref2= Main.HumanModel.BodyModel.Trunk.Segments.C7Seg.Right.O_rhomboideus_1;
+        AnyDrawPLine drw ={Thickness=0.0025;};   
+        ref1= {AnyDrawRefFrame drw1 ={RGB={1,0,0};ScaleXYZ={1,1,1}*0.1;};};      
+        ref2= {AnyDrawRefFrame drw2 ={RGB={0,0,1};ScaleXYZ={1,1,1}*0.1;};};     
+      };
+      AnyKinPLine M3 = {
+        AnyRefFrame &ref1= Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Scapula.I_rhomboideus_6;
+        AnyRefFrame &ref2= Main.HumanModel.BodyModel.Trunk.Segments.ThoraxSeg.T5.Right.O_rhomboideus_6;
+        AnyDrawPLine drw ={Thickness=0.0025;};   
+        ref1= {AnyDrawRefFrame drw1 ={RGB={1,0,0};ScaleXYZ={1,1,1}*0.1;};};      
+        ref2= {AnyDrawRefFrame drw2 ={RGB={0,0,1};ScaleXYZ={1,1,1}*0.1;};};     
+      };
+      KinLimitsDriver LimitM2( 
+        KinMeasure = .M2
+        ) = {
+          AnyFloat ROM ??= 0.1103 + {-0.05, 0.05};
+          LowerLimit = ROM[0]; 
+          HighLimit = ROM[1]; 
+        };
+      KinLimitsDriver LimitM3( 
+        KinMeasure = .M3
+        ) = {
+          AnyFloat ROM ??= 0.0858 + {-0.05, 0.05};
+          LowerLimit = ROM[0]; 
+          HighLimit = ROM[1]; 
+        };
+      AnyKinMeasureLinComb LinCombM1M2M3 = {
+        AnyKinMeasure &meas1 = .M1;
+        AnyKinMeasure &meas2 = .LimitM2.JointLimitMeasure;
+        AnyKinMeasure &meas3 = .LimitM3.JointLimitMeasure;
+        OutDim = 1;
+        Coef = {{1,1,1}};
+        Const = {0};
+      };
+    }; // PLineMeasures
+    AnyKinEqSimpleDriver DrvCombMeasure = {
+      AnyKinMeasure &CombMeas = .PLineMeasures.LinCombM1M2M3;
+      DriverPos = {Main.HumanModel.BodyModel.Right.ShoulderArm.Jnt.ConoideumLigamentDrv.ScaleStdConoidVectorLength};
+      DriverVel = {0.0};
+    };    
+  }; // ScapulaComboMeasure
+  
+};
+
+
+////////////////// LEFT
+Main.HumanModel.BodyModel.Left.ShoulderArm.Jnt = {
+  AnyFolder ScapulaComboMeasure = {
+    AnyFolder PLineMeasures = {
+      AnyKinPLine M1 = {
+        AnyRefFrame &ref1= Main.HumanModel.BodyModel.Left.ShoulderArm.Seg.Scapula.conoid;
+        AnyRefFrame &ref2= Main.HumanModel.BodyModel.Left.ShoulderArm.Seg.Clavicula.conoid;
+        AnyDrawPLine drw ={Thickness=0.0025;};   
+        ref1= {AnyDrawRefFrame drw1 ={RGB={1,0,0};ScaleXYZ={1,1,1}*0.1;};};      
+        ref2= {AnyDrawRefFrame drw2 ={RGB={0,0,1};ScaleXYZ={1,1,1}*0.1;};};     
+      };
+      AnyKinPLine M2 = {
+        AnyRefFrame &ref1= Main.HumanModel.BodyModel.Left.ShoulderArm.Seg.Scapula.I_rhomboideus_1;
+        AnyRefFrame &ref2= Main.HumanModel.BodyModel.Trunk.Segments.C7Seg.Left.O_rhomboideus_1;
+        AnyDrawPLine drw ={Thickness=0.0025;};   
+        ref1= {AnyDrawRefFrame drw1 ={RGB={1,0,0};ScaleXYZ={1,1,1}*0.1;};};      
+        ref2= {AnyDrawRefFrame drw2 ={RGB={0,0,1};ScaleXYZ={1,1,1}*0.1;};};     
+      };
+      AnyKinPLine M3 = {
+        AnyRefFrame &ref1= Main.HumanModel.BodyModel.Left.ShoulderArm.Seg.Scapula.I_rhomboideus_6;
+        AnyRefFrame &ref2= Main.HumanModel.BodyModel.Trunk.Segments.ThoraxSeg.T5.Left.O_rhomboideus_6;
+        AnyDrawPLine drw ={Thickness=0.0025;};   
+        ref1= {AnyDrawRefFrame drw1 ={RGB={1,0,0};ScaleXYZ={1,1,1}*0.1;};};      
+        ref2= {AnyDrawRefFrame drw2 ={RGB={0,0,1};ScaleXYZ={1,1,1}*0.1;};};     
+      };
+      KinLimitsDriver LimitM2( 
+        KinMeasure = .M2
+        ) = {
+          AnyFloat ROM ??= 0.1103 + {-0.05, 0.05};
+          LowerLimit = ROM[0]; 
+          HighLimit = ROM[1]; 
+        };
+      KinLimitsDriver LimitM3( 
+        KinMeasure = .M3
+        ) = {
+          AnyFloat ROM ??= 0.0858 + {-0.05, 0.05};
+          LowerLimit = ROM[0]; 
+          HighLimit = ROM[1]; 
+        };
+      AnyKinMeasureLinComb LinCombM1M2M3 = {
+        AnyKinMeasure &meas1 = .M1;
+        AnyKinMeasure &meas2 = .LimitM2.JointLimitMeasure;
+        AnyKinMeasure &meas3 = .LimitM3.JointLimitMeasure;
+        OutDim = 1;
+        Coef = {{1,1,1}};
+        Const = {0};
+      };
+    }; // PLineMeasures
+    AnyKinEqSimpleDriver DrvCombMeasure = {
+      AnyKinMeasure &CombMeas = .PLineMeasures.LinCombM1M2M3;
+      DriverPos = {Main.HumanModel.BodyModel.Left.ShoulderArm.Jnt.ConoideumLigamentDrv.ScaleStdConoidVectorLength};
+      DriverVel = {0.0};
+    };    
+  }; // ScapulaComboMeasure
+  
+};
+
+
+Main.Study = {
+  AnyMechObjectExcluder ExcludeConoidDriver = {
+    Objects = {
+               &Main.HumanModel.BodyModel.Right.ShoulderArm.Jnt.ConoideumLigamentDrv,
+               &Main.HumanModel.BodyModel.Left.ShoulderArm.Jnt.ConoideumLigamentDrv,
+               &Main.HumanModel.BodyModel.Right.ShoulderArm.Jnt.ScapulaComboMeasure.PLineMeasures.LimitM2.JointLimitDriver,
+               &Main.HumanModel.BodyModel.Right.ShoulderArm.Jnt.ScapulaComboMeasure.PLineMeasures.LimitM3.JointLimitDriver,
+               &Main.HumanModel.BodyModel.Left.ShoulderArm.Jnt.ScapulaComboMeasure.PLineMeasures.LimitM2.JointLimitDriver,
+               &Main.HumanModel.BodyModel.Left.ShoulderArm.Jnt.ScapulaComboMeasure.PLineMeasures.LimitM3.JointLimitDriver,
+              };
+  };
+};

@@ -1,0 +1,236 @@
+#include "<ANYBODY_PATH_MODELUTILS>/KinematicLimits/RangeOfMotionLimits_template.any"
+
+Main.HumanModel.BodyModel.Right.ShoulderArm.Jnt = {
+  AnyFolder ScapulaComboMeasure = {
+    AnyFolder LateralConstraint = {
+      AnyKinLinear Lin = {
+        AnyRefFrame &Thorax = Main.HumanModel.BodyModel.Trunk.Segments.ThoraxSeg.Right.ScapulaContactSurface.P2;
+        AnyRefFrame &Scapula = Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Scapula.ScapulaSlidingAI;
+        Ref = 0;
+      };
+      AnyKinMeasureOrg MeasOrg = {
+        AnyKinLinear &Lin = .Lin;
+        MeasureOrganizer = {2};
+      };
+      KinLimitsDriver LimitDrv( 
+        KinMeasure = .MeasOrg
+        ) = {
+          AnyFloat ROM ??= {-1.5,0.0};
+          LowerLimit = ROM[0]; 
+          HighLimit = ROM[1]; 
+      };
+    }; // Lateral Constraint
+    AnyFolder FrontalConstraint = {
+      AnyKinLinear Lin = {
+        AnyRefFrame &Thorax = Main.HumanModel.BodyModel.Trunk.Segments.ThoraxSeg.Right.ScapulaContactSurface.P2;
+        AnyRefFrame &Scapula = Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Scapula.ScapulaSlidingAI;
+        Ref = 0;
+      };
+      AnyKinMeasureOrg MeasOrg = {
+        AnyKinLinear &Lin = .Lin;
+        MeasureOrganizer = {0};
+      };
+      KinLimitsDriver LimitDrv( 
+        KinMeasure = .MeasOrg
+        ) = {
+          AnyFloat ROM ??= {-1.5,0.0};
+          LowerLimit = ROM[0]; 
+          HighLimit = ROM[1]; 
+      };
+    }; // Frontal Constraint
+    AnyFolder DistalConstraint = {
+      AnyKinLinear Lin = {
+        AnyRefFrame &Thorax = Main.HumanModel.BodyModel.Trunk.Segments.ThoraxSeg.Right.ScapulaContactSurface.P3;
+        AnyRefFrame &Scapula = Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Scapula.ScapulaSlidingAI;
+        Ref = 0;
+      };
+      AnyKinMeasureOrg MeasOrg = {
+        AnyKinLinear &Lin = .Lin;
+        MeasureOrganizer = {1};
+      };
+      KinLimitsDriver LimitDrv( 
+        KinMeasure = .MeasOrg
+        ) = {
+          AnyFloat ROM ??= {-1.5,0.0};
+          LowerLimit = ROM[0]; 
+          HighLimit = ROM[1]; 
+      };
+    }; // Distal Constraint
+    AnyFolder MedialConstraint = {
+      AnyKinLinear Lin = {
+        AnyRefFrame &Thorax = Main.HumanModel.BodyModel.Trunk.Segments.T6Seg.T6T7JntNode;
+        AnyRefFrame &Scapula = Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Scapula.ScapulaSlidingAI;
+        Ref = 0;
+      };
+      AnyKinMeasureOrg MeasOrg = {
+        AnyKinLinear &Lin = .Lin;
+        MeasureOrganizer = {2};
+      };
+      KinLimitsDriver LimitDrv( 
+        KinMeasure = .MeasOrg
+        ) = {
+          AnyFloat ROM ??= {0.0,1.5};
+          LowerLimit = ROM[0]; 
+          HighLimit = ROM[1]; 
+      };
+    }; // Medial Constraint
+    AnyFolder EllipsoidPenetrationConstraint = {
+      AnyKinMeasure &Measure = ..ScapulaAIThoraxNodeDriver.Measure1;
+      KinLimitsDriver LimitDrv( 
+        KinMeasure = .Measure
+        ) = {
+          AnyFloat ROM ??= {-0.0,1.5};
+//          DriverPhaseIn = 0.5; 
+          LowerLimit = ROM[0]; 
+          HighLimit = ROM[1]; 
+      };
+    }; // Ellipsoid penetration Constraint
+    
+    AnyKinMeasureLinComb LinComb5Measures = {
+//      AnyKinMeasure &meas0 = ..ScapulaAIThoraxNodeDriver.Measure1;
+//      AnyKinMeasure &meas00 = .EllipsoidPenetrationConstraint.LimitDrv.JointLimitMeasure;
+      AnyKinMeasure &meas1 = .LateralConstraint.LimitDrv.JointLimitMeasure;
+      AnyKinMeasure &meas2 = .FrontalConstraint.LimitDrv.JointLimitMeasure;
+      AnyKinMeasure &meas3 = .DistalConstraint.LimitDrv.JointLimitMeasure;
+      AnyKinMeasure &meas4 = .MedialConstraint.LimitDrv.JointLimitMeasure;
+      OutDim = 1;
+      Coef = {{1,1,1,1}};
+      Const = {0};
+    };
+  }; // Scapula Combo Measure
+  AnyKinEqSimpleDriver ScapulaAIThoraxDriver = {
+    AnyKinMeasure &Measure = .ScapulaComboMeasure.LinComb5Measures;
+    DriverPos = {0};
+    DriverVel = {0};
+    Reaction.Type = {Off};
+  };
+};
+
+
+////////////////////////////////////////////////// LEFT
+
+Main.HumanModel.BodyModel.Left.ShoulderArm.Jnt = {
+  AnyFolder ScapulaComboMeasure = {
+    AnyFolder LateralConstraint = {
+      AnyKinLinear Lin = {
+        AnyRefFrame &Thorax = Main.HumanModel.BodyModel.Trunk.Segments.ThoraxSeg.Left.ScapulaContactSurface.P2;
+        AnyRefFrame &Scapula = Main.HumanModel.BodyModel.Left.ShoulderArm.Seg.Scapula.ScapulaSlidingAI;
+        Ref = 0;
+      };
+      AnyKinMeasureOrg MeasOrg = {
+        AnyKinLinear &Lin = .Lin;
+        MeasureOrganizer = {2};
+      };
+      KinLimitsDriver LimitDrv( 
+        KinMeasure = .MeasOrg
+        ) = {
+          AnyFloat ROM ??= {0.0,1.5};
+          LowerLimit = ROM[0]; 
+          HighLimit = ROM[1]; 
+      };
+    }; // Lateral Constraint
+    AnyFolder FrontalConstraint = {
+      AnyKinLinear Lin = {
+        AnyRefFrame &Thorax = Main.HumanModel.BodyModel.Trunk.Segments.ThoraxSeg.Left.ScapulaContactSurface.P2;
+        AnyRefFrame &Scapula = Main.HumanModel.BodyModel.Left.ShoulderArm.Seg.Scapula.ScapulaSlidingAI;
+        Ref = 0;
+      };
+      AnyKinMeasureOrg MeasOrg = {
+        AnyKinLinear &Lin = .Lin;
+        MeasureOrganizer = {0};
+      };
+      KinLimitsDriver LimitDrv( 
+        KinMeasure = .MeasOrg
+        ) = {
+          AnyFloat ROM ??= {-1.5,0.0};
+          LowerLimit = ROM[0]; 
+          HighLimit = ROM[1]; 
+      };
+    }; // Frontal Constraint
+    AnyFolder DistalConstraint = {
+      AnyKinLinear Lin = {
+        AnyRefFrame &Thorax = Main.HumanModel.BodyModel.Trunk.Segments.ThoraxSeg.Left.ScapulaContactSurface.P3;
+        AnyRefFrame &Scapula = Main.HumanModel.BodyModel.Left.ShoulderArm.Seg.Scapula.ScapulaSlidingAI;
+        Ref = 0;
+      };
+      AnyKinMeasureOrg MeasOrg = {
+        AnyKinLinear &Lin = .Lin;
+        MeasureOrganizer = {1};
+      };
+      KinLimitsDriver LimitDrv( 
+        KinMeasure = .MeasOrg
+        ) = {
+          AnyFloat ROM ??= {-1.5,0.0};
+          LowerLimit = ROM[0]; 
+          HighLimit = ROM[1]; 
+      };
+    }; // Distal Constraint
+    AnyFolder MedialConstraint = {
+      AnyKinLinear Lin = {
+        AnyRefFrame &Thorax = Main.HumanModel.BodyModel.Trunk.Segments.T6Seg.T6T7JntNode;
+        AnyRefFrame &Scapula = Main.HumanModel.BodyModel.Left.ShoulderArm.Seg.Scapula.ScapulaSlidingAI;
+        Ref = 0;
+      };
+      AnyKinMeasureOrg MeasOrg = {
+        AnyKinLinear &Lin = .Lin;
+        MeasureOrganizer = {2};
+      };
+      KinLimitsDriver LimitDrv( 
+        KinMeasure = .MeasOrg
+        ) = {
+          AnyFloat ROM ??= {-1.5,0.0};
+          LowerLimit = ROM[0]; 
+          HighLimit = ROM[1]; 
+      };
+    }; // Medial Constraint
+    AnyFolder EllipsoidPenetrationConstraint = {
+      AnyKinMeasure &Measure = ..ScapulaAIThoraxNodeDriver.Measure1;
+      KinLimitsDriver LimitDrv( 
+        KinMeasure = .Measure
+        ) = {
+          AnyFloat ROM ??= {0.0,1.5};
+          LowerLimit = ROM[0]; 
+          HighLimit = ROM[1]; 
+      };
+    }; // Ellipsoid penetration Constraint
+    
+    AnyKinMeasureLinComb LinComb5Measures = {
+//      AnyKinMeasure &meas0 = ..ScapulaAIThoraxNodeDriver.Measure1;
+//      AnyKinMeasure &meas00 = .EllipsoidPenetrationConstraint.LimitDrv.JointLimitMeasure;
+      AnyKinMeasure &meas1 = .LateralConstraint.LimitDrv.JointLimitMeasure;
+      AnyKinMeasure &meas2 = .FrontalConstraint.LimitDrv.JointLimitMeasure;
+      AnyKinMeasure &meas3 = .DistalConstraint.LimitDrv.JointLimitMeasure;
+      AnyKinMeasure &meas4 = .MedialConstraint.LimitDrv.JointLimitMeasure;
+      OutDim = 1;
+      Coef = {{1,1,1,1}};
+      Const = {0};
+    };
+  }; // Scapula Combo Measure
+  AnyKinEqSimpleDriver ScapulaAIThoraxDriver = {
+    AnyKinMeasure &Measure = .ScapulaComboMeasure.LinComb5Measures;
+    DriverPos = {0};
+    DriverVel = {0};
+    Reaction.Type = {Off};
+  };
+};
+
+
+Main.Study = {
+  AnyMechObjectExcluder ExcludeConoidDriver = {
+    Objects = {
+//               &Main.HumanModel.BodyModel.Right.ShoulderArm.Jnt.ScapulaAIThoraxNodeDriver,
+               &Main.HumanModel.BodyModel.Right.ShoulderArm.Jnt.ScapulaComboMeasure.EllipsoidPenetrationConstraint.LimitDrv.JointLimitDriver,
+               &Main.HumanModel.BodyModel.Right.ShoulderArm.Jnt.ScapulaComboMeasure.LateralConstraint.LimitDrv.JointLimitDriver,
+               &Main.HumanModel.BodyModel.Right.ShoulderArm.Jnt.ScapulaComboMeasure.FrontalConstraint.LimitDrv.JointLimitDriver,
+               &Main.HumanModel.BodyModel.Right.ShoulderArm.Jnt.ScapulaComboMeasure.DistalConstraint.LimitDrv.JointLimitDriver,
+               &Main.HumanModel.BodyModel.Right.ShoulderArm.Jnt.ScapulaComboMeasure.MedialConstraint.LimitDrv.JointLimitDriver,
+///////////////////////////
+//               &Main.HumanModel.BodyModel.Left.ShoulderArm.Jnt.ScapulaAIThoraxNodeDriver,
+               &Main.HumanModel.BodyModel.Left.ShoulderArm.Jnt.ScapulaComboMeasure.EllipsoidPenetrationConstraint.LimitDrv.JointLimitDriver,
+               &Main.HumanModel.BodyModel.Left.ShoulderArm.Jnt.ScapulaComboMeasure.LateralConstraint.LimitDrv.JointLimitDriver,
+               &Main.HumanModel.BodyModel.Left.ShoulderArm.Jnt.ScapulaComboMeasure.FrontalConstraint.LimitDrv.JointLimitDriver,
+               &Main.HumanModel.BodyModel.Left.ShoulderArm.Jnt.ScapulaComboMeasure.DistalConstraint.LimitDrv.JointLimitDriver,
+               &Main.HumanModel.BodyModel.Left.ShoulderArm.Jnt.ScapulaComboMeasure.MedialConstraint.LimitDrv.JointLimitDriver,
+              };
+  };
+};

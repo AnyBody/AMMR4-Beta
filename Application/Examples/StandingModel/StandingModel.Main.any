@@ -3,6 +3,10 @@
 Main = 
 {
 
+//  #include "ScapulaDrv.any"
+//  #include "ScapulaDrv2.any"
+//  #include "ScapulaDrv3.any"
+  #include "ScapulaDrv4.any"
   
   #define BM_COMPATIBILITY_MUSCLE_STRUCTURE ON
   
@@ -60,7 +64,9 @@ Main =
     AnyFolder &Model = .Model;  
 
     Gravity={0.0, -9.81, 0.0};
-    nStep = 1;
+    nStep = 10;
+    
+    tEnd = 10;
         
     // Overdeterminate solver is needed while using the 
     // soft default mannequin drivers.

@@ -26,11 +26,11 @@ HumanModel.Mannequin = {
     
     Right = {
       //Arm 
-      SternoClavicularProtraction=-23;   //This value is not used for initial position
+      SternoClavicularProtraction=-43;   //This value is not used for initial position
       SternoClavicularElevation=11.5;    //This value is not used for initial position
       SternoClavicularAxialRotation=-20; // Only used when the clavicular axial rotation rhythm is diabled
       
-//      GlenohumeralFlexion =0; 
+      GlenohumeralFlexion =10; 
       GlenohumeralAbduction = 4; 
       GlenohumeralExternalRotation = 2; 
       
@@ -175,7 +175,7 @@ HumanModel.Mannequin = {
       SternoClavicularElevation=0;    //This value is not used for initial position
       SternoClavicularAxialRotation=0; ///< Only used when the clavicular axial rotation rhythm is diabled
       
-      GlenohumeralFlexion =0; 
+      GlenohumeralFlexion =15; 
       GlenohumeralAbduction = 0; 
       GlenohumeralExternalRotation = 0; 
       
