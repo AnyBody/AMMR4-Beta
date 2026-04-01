@@ -384,9 +384,19 @@ AnyMessage TestMarkerExist ={
             Data = .LowPassFilter(.MarkerDataRef.Pos');
           };
 
+        AnyFloat PosDiff_Filt_NoFilt= FilteredPosInterpol.Data'-MarkerDataRef.Pos;
+        AnyFloat Norm_PosDiff_Filt_NoFilt= vnorm(PosDiff_Filt_NoFilt);
+        AnyFloat Max_Norm_PosDiff_Filt_NoFilt= max(Norm_PosDiff_Filt_NoFilt);
+        AnyInt Warn_Filt_Freq = warn(ltfun(Max_Norm_PosDiff_Filt_NoFilt,0.02),"Check filter cut-off frequency. It may be too low. Error between raw data and filtered data is "+strval(Max_Norm_PosDiff_Filt_NoFilt,"%.3f"));
+
         #else
 
         AnyParamFun &InterpolRef = MarkerDataRef.PosInterpol;
+
+        AnyFloat PosDiff_Filt_NoFilt= InterpolRef.Data'-MarkerDataRef.Pos;
+        AnyFloat Norm_PosDiff_Filt_NoFilt= vnorm(PosDiff_Filt_NoFilt);
+        AnyFloat Max_Norm_PosDiff_Filt_NoFilt= max(Norm_PosDiff_Filt_NoFilt);
+        AnyInt Warn_Filt_Freq = warn(ltfun(Max_Norm_PosDiff_Filt_NoFilt,0.02),"Check filter cut-off frequency. It may be too low. Error between raw data and filtered data is "+strval(Max_Norm_PosDiff_Filt_NoFilt,"%.3f"));
 
         #endif
 
