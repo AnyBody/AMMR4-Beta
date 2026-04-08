@@ -652,8 +652,8 @@ AnySeg L4Seg = {
   // End of Psoas Major Nodes
 
   // Quadratus Lumborum Nodes
-  AnyRefNode QLL4_CINodeR = {sRel = .Scale(.Data.Right.QLL4_CINode_pos);};
-  AnyRefNode QLL4_CINodeL = {sRel = .Scale(.Data.Left.QLL4_CINode_pos);};
+  AnyRefNode QuadratusLumborumL4NodeR = {sRel = .Scale(.Data.Right.QuadratusLumborumL4Node_pos);};
+  AnyRefNode QuadratusLumborumL4NodeL = {sRel = .Scale(.Data.Left.QuadratusLumborumL4Node_pos);};
   // End of Quadratus Lumborum Nodes
 
   // Obliquus Externus Nodes
@@ -918,8 +918,8 @@ AnySeg L3Seg = {
   // End of Psoas Major Nodes
 
   // Quadratus Lumborum Nodes
-  AnyRefNode QLL3_CINodeR = {sRel = .Scale(.Data.Right.QLL3_CINode_pos);};
-  AnyRefNode QLL3_CINodeL = {sRel = .Scale(.Data.Left.QLL3_CINode_pos);};
+  AnyRefNode QuadratusLumborumL3NodeR = {sRel = .Scale(.Data.Right.QuadratusLumborumL3Node_pos);};
+  AnyRefNode QuadratusLumborumL3NodeL = {sRel = .Scale(.Data.Left.QuadratusLumborumL3Node_pos);};
   // End of Quadratus Lumborum Nodes
 
   // Obliquus Externus Nodes
@@ -1184,8 +1184,8 @@ AnySeg L2Seg = {
     // End of Psoas Major Nodes
 
     // Quadratus Lumborum Nodes
-    AnyRefNode QLL2_CINodeR = {sRel = .Scale(.Data.Right.QLL2_CINode_pos);};
-    AnyRefNode QLL2_CINodeL = {sRel = .Scale(.Data.Left.QLL2_CINode_pos);};
+    AnyRefNode QuadratusLumborumL2NodeR = {sRel = .Scale(.Data.Right.QuadratusLumborumL2Node_pos);};
+    AnyRefNode QuadratusLumborumL2NodeL = {sRel = .Scale(.Data.Left.QuadratusLumborumL2Node_pos);};
     // End of Quadratus Lumborum Nodes
 
     // Obliquus Externus Nodes
@@ -1445,8 +1445,8 @@ AnySeg L1Seg = {
     // End of Psoas Major Nodes
 
     // Quadratus Lumborum Nodes
-    AnyRefNode QLL1_CINodeR = {sRel = .Scale(.Data.Right.QLL1_CINode_pos);};
-    AnyRefNode QLL1_CINodeL = {sRel = .Scale(.Data.Left.QLL1_CINode_pos);};
+    AnyRefNode QuadratusLumborumL1NodeR = {sRel = .Scale(.Data.Right.QuadratusLumborumL1Node_pos);};
+    AnyRefNode QuadratusLumborumL1NodeL = {sRel = .Scale(.Data.Left.QuadratusLumborumL1Node_pos);};
     // End of Quadratus Lumborum Nodes
 
     // Diaphragm Muscles Nodes
