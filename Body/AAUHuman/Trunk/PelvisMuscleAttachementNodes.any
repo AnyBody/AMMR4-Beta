@@ -92,9 +92,9 @@ Right ={
     AnyVar Z_rotation =0;
   };
 
-  AnyRefNode ObliquusExternusNode_1 = {sRel = ..Scale(..Data.Right.OEC10a_CINode_pos);};
-  AnyRefNode ObliquusExternusNode_2 = {sRel = ..Scale(..Data.Right.OEC11_CINode_pos);};
-  AnyRefNode ObliquusExternusNode_3 = {sRel = ..Scale(..Data.Right.OEC12_CINode_pos);};
+  AnyRefNode ObliquusExternusNode_1 = {sRel = ..Scale(..Data.Right.ObliquusExternusR10aNode_pos);};
+  AnyRefNode ObliquusExternusNode_2 = {sRel = ..Scale(..Data.Right.ObliquusExternusR11Node_pos);};
+  AnyRefNode ObliquusExternusNode_3 = {sRel = ..Scale(..Data.Right.ObliquusExternusR12Node_pos);};
 
   AnyRefNode ObliquusInternusNode_1 = {sRel = ..Scale(..Data.Right.OICI_C11Node_pos);};
   AnyRefNode ObliquusInternusNode_2 = {sRel = ..Scale(..Data.Right.OICI_C10aNode_pos);};
@@ -127,9 +127,9 @@ Left =
     AnyVar Z_rotation =0;
   };
 
-  AnyRefNode ObliquusExternusNode_1 = {sRel = ..Scale(..Data.Left.OEC10a_CINode_pos);};
-  AnyRefNode ObliquusExternusNode_2 = {sRel = ..Scale(..Data.Left.OEC11_CINode_pos);};
-  AnyRefNode ObliquusExternusNode_3 = {sRel = ..Scale(..Data.Left.OEC12_CINode_pos);};
+  AnyRefNode ObliquusExternusNode_1 = {sRel = ..Scale(..Data.Left.ObliquusExternusR10aNode_pos);};
+  AnyRefNode ObliquusExternusNode_2 = {sRel = ..Scale(..Data.Left.ObliquusExternusR11Node_pos);};
+  AnyRefNode ObliquusExternusNode_3 = {sRel = ..Scale(..Data.Left.ObliquusExternusR12Node_pos);};
 
   AnyRefNode ObliquusInternusNode_1 = {sRel = ..Scale(..Data.Left.OICI_C11Node_pos);};
   AnyRefNode ObliquusInternusNode_2 = {sRel = ..Scale(..Data.Left.OICI_C10aNode_pos);};
