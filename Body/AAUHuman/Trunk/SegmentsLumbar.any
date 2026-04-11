@@ -662,8 +662,8 @@ AnySeg L4Seg = {
   // End of Obliquus Externus Nodes
 
   // Obliquus Internus Nodes
-  AnyRefNode OICI_RS3NodeR = {sRel = .Scale(.Data.Right.OICI_RS3Node_pos);};
-  AnyRefNode OICI_RS3NodeL = {sRel = .Scale(.Data.Left.OICI_RS3Node_pos);};
+  AnyRefNode ObliquusInternusRS3NodeR = {sRel = .Scale(.Data.Right.ObliquusInternusRS3Node_pos);};
+  AnyRefNode ObliquusInternusRS3NodeL = {sRel = .Scale(.Data.Left.ObliquusInternusRS3Node_pos);};
   // End of Obliquus Internus Nodes
 
   AnyDrawSurf BoneDraw = {
@@ -928,8 +928,8 @@ AnySeg L3Seg = {
   // End of Obliquus Externus Nodes
 
   // Obliquus Internus Nodes
-  AnyRefNode OICI_RS2NodeR = {sRel = .Scale(.Data.Right.OICI_RS2Node_pos);};
-  AnyRefNode OICI_RS2NodeL = {sRel = .Scale(.Data.Left.OICI_RS2Node_pos);};
+  AnyRefNode ObliquusInternusRS2NodeR = {sRel = .Scale(.Data.Right.ObliquusInternusRS2Node_pos);};
+  AnyRefNode ObliquusInternusRS2NodeL = {sRel = .Scale(.Data.Left.ObliquusInternusRS2Node_pos);};
   // End of Obliquus Internus Nodes
 
   //AnyDrawSeg DrwSeg = {};
@@ -1194,8 +1194,8 @@ AnySeg L2Seg = {
     // End of Obliquus Externus Nodes
 
     // Obliquus Internus Nodes
-    AnyRefNode OICI_RS1NodeR = {sRel = .Scale(.Data.Right.OICI_RS1Node_pos);};
-    AnyRefNode OICI_RS1NodeL = {sRel = .Scale(.Data.Left.OICI_RS1Node_pos);};
+    AnyRefNode ObliquusInternusRS1NodeR = {sRel = .Scale(.Data.Right.ObliquusInternusRS1Node_pos);};
+    AnyRefNode ObliquusInternusRS1NodeL = {sRel = .Scale(.Data.Left.ObliquusInternusRS1Node_pos);};
     // End of Obliquus Internus Nodes
 
     // Diaphragm Muscles Nodes
