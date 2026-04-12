@@ -29,8 +29,8 @@ S = Sacral segment
   AnyRefNode MultifidusThoracisL1T10NodeROrg = {sRel = .Scale(.Data.Right.MultifidusThoracisL1T10Node_pos); };
   AnyRefNode MultifidusThoracisL1T10NodeLOrg = {sRel = .Scale(.Data.Left.MultifidusThoracisL1T10Node_pos); };
   AnyRefNode SpinalisL1T3NodeOrg = {sRel = .Scale(.Data.SpinalisL1T3Node_pos);};
-  AnyRefNode SPL1T4NodeOrg = {sRel = .Scale(.Data.SPL1T4Node_pos);};
-  AnyRefNode SPL1T5NodeOrg = {sRel = .Scale(.Data.SPL1T5Node_pos);};
+  AnyRefNode SpinalisL1T4NodeOrg = {sRel = .Scale(.Data.SpinalisL1T4Node_pos);};
+  AnyRefNode SpinalisL1T5NodeOrg = {sRel = .Scale(.Data.SpinalisL1T5Node_pos);};
   AnyRefNode SpinalisL1T2NodeOrg  = {  sRel= .Scale(.Data.SpinalisL1T2Node_pos);};
   AnyRefNode SpinalisL2T1Via1Node = {  sRel= .Scale(.Data.SpinalisL2T1Node_pos);};
   AnyRefNode O_serratus_posterior_inferior_R = {sRel = .Scale(.Data.Right.O_serratus_posterior_inferior_pos);};
@@ -375,7 +375,7 @@ Segments.T3Seg = {
 
 Segments.T4Seg = {
   AnyRefNode SemispinalisThoracisT4Spinous = {sRel = .Scale(.Data.T4.SSTSpinous_pos); };
-  AnyRefNode SPL1T4NodeIns  = {sRel = .Scale(.Data.Thorax.SPL1T4Node_pos);};
+  AnyRefNode SpinalisL1T4NodeIns  = {sRel = .Scale(.Data.Thorax.SpinalisL1T4Node_pos);};
   AnyRefNode SpinalisT12T4NodeIns = {sRel= .Scale(.Data.T4.SpinalisT12T4NodeIns_pos );};
   AnyRefNode SpinalisL1T3Via9Node = {sRel= .Scale(.Data.T4.SpinalisL1T3Via9Node_pos );};
   AnyRefNode SpinalisL1T2Via9Node = {sRel= .Scale(.Data.T4.SpinalisL1T2Via9Node_pos );};
@@ -491,7 +491,7 @@ Segments.T5Seg = {
   AnyRefNode SET9T5NodeLIns = {sRel = .Scale(.Data.T5.Left.SET9T5NodeIns_pos );};
   AnyRefNode SET8T5NodeLIns = {sRel = .Scale(.Data.T5.Left.SET8T5NodeIns_pos );};
   AnyRefNode SET7T5NodeLIns = {sRel = .Scale(.Data.T5.Left.SET7T5NodeIns_pos );};
-  AnyRefNode SPL1T5NodeIns   = {sRel = .Scale(.Data.Thorax.SPL1T5Node_pos);};
+  AnyRefNode SpinalisL1T5NodeIns   = {sRel = .Scale(.Data.Thorax.SpinalisL1T5Node_pos );};
   AnyRefNode SpinalisT12T5NodeIns = {sRel= .Scale(.Data.T5.SpinalisT12T5NodeIns_pos );};
   AnyRefNode SpinalisT12T4Via7Node = {sRel= .Scale(.Data.T5.SpinalisT12T4Via7Node_pos );};
   AnyRefNode SpinalisL1T3Via8Node = {sRel= .Scale(.Data.T5.SpinalisL1T3Via8Node_pos );};
