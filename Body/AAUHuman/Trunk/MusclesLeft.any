@@ -3943,7 +3943,7 @@ MuscleGroup ObliquusInternus = {
 
   AnyMuscleShortestPath ObliquusInternusCC_3_extra = {
     AnyMuscleModel &MusMdl = ....MuscleModels.Left.ObliquusInternus.ObliquusInternusCC_3;
-    AnyRefNode &Org = ....Segments.SternalBodySeg.RACP_Via_2_L;
+    AnyRefNode &Org = ....Segments.SternalBodySeg.RectusAbdominisCP_Via_2_L;
     AnyRefNode &Ins = ....Segments.PelvisSeg.Left.ObliquusInternusNode_6;
 
     AnyParamSurf &srf2 =....Abdominal.ObliquusWrapping.WrappingSeg.Layer2WrappingPoints.Left.nn10.Translate.InwardCyl;
@@ -4261,7 +4261,7 @@ MuscleGroup ObliquusInternus = {
 
   AnyMuscleShortestPath ObliquusInternusCC_3 = {
     AnyMuscleModel &MusMdl = ....MuscleModels.Left.ObliquusInternus.ObliquusInternusCC_3;
-    AnyRefNode &Org = ....Segments.SternalBodySeg.RACP_Via_2_L;
+    AnyRefNode &Org = ....Segments.SternalBodySeg.RectusAbdominisCP_Via_2_L;
     // AnyRefNode &Via = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L1.BaseSegAnterior.TransversusPoints.Left.nn05;
 
     AnyRefNode &Ins = ....Segments.PelvisSeg.Left.ObliquusInternusNode_6;
@@ -5098,7 +5098,7 @@ MuscleGroup RectusAbdominis = {
 
   AnyMuscleViaPoint RectusAbdominis_1= {
     AnyMuscleModel &MusMdl = ....MuscleModels.Left.RectusAbdominis.RectusAbdominis_1;
-    AnyRefNode &Org = ....Segments.SternalBodySeg.RACP_CO6_2_L;
+    AnyRefNode &Org = ....Segments.SternalBodySeg.RectusAbdominisCP_CO6_2_L;
     AnyRefNode& Via3 = ....Segments.PelvisSeg.RectusAbdominis_1_ViaL;
     AnyRefNode &Ins = ....Segments.PelvisSeg.RectusAbdominis_1_L;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -5107,8 +5107,8 @@ MuscleGroup RectusAbdominis = {
 
   AnyMuscleViaPoint RectusAbdominis_2 = {
     AnyMuscleModel &MusMdl = ....MuscleModels.Left.RectusAbdominis.RectusAbdominis_2;
-    AnyRefNode &Org = ....Segments.SternalBodySeg.RACP_CO5_2_L;
-    AnyRefNode &Via1 = ....Segments.SternalBodySeg.RACP_Via_2_L;
+    AnyRefNode &Org = ....Segments.SternalBodySeg.RectusAbdominisCP_CO5_2_L;
+    AnyRefNode &Via1 = ....Segments.SternalBodySeg.RectusAbdominisCP_Via_2_L;
     AnyRefNode& Via3 = ....Segments.PelvisSeg.RectusAbdominis_2_ViaL;
     AnyRefNode &Ins = ....Segments.PelvisSeg.RectusAbdominis_2_L;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -5126,7 +5126,7 @@ MuscleGroup RectusAbdominis = {
   #if RECTUS_MUSCLE_LINE == SP
 
   AnyMuscleShortestPath RectusAbdominis_1 = {
-    AnyRefNode &Org = ....Segments.SternalBodySeg.RACP_CO6_2_L;
+    AnyRefNode &Org = ....Segments.SternalBodySeg.RectusAbdominisCP_CO6_2_L;
 
     AnySurfEllipsoid &mesh1 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L1.BaseSegAnterior.mesh;
     AnySurfEllipsoid &mesh2 = Main.HumanModel.BodyModel.Trunk.Abdominal.Layer_L2.BaseSegAnterior.mesh;
@@ -5154,11 +5154,11 @@ MuscleGroup RectusAbdominis = {
     AnyMuscleModel& MusMdl = ....MuscleModels.Left.RectusAbdominis.RectusAbdominis_1;
   };
   AnyMuscleViaPoint RectusAbdominis_2_1 = {
-    AnyRefNode &Org = ....Segments.SternalBodySeg.RACP_CO5_2_L;
+    AnyRefNode &Org = ....Segments.SternalBodySeg.RectusAbdominisCP_CO5_2_L;
     #if BM_TRUNK_THORACIC_STERNUM_TOPOLOGY == 4
-    AnyRefNode &Via1 = ....Segments.Left.CostalCartilageSeg.RACP_Via_2_L;
+    AnyRefNode &Via1 = ....Segments.Left.CostalCartilageSeg.RectusAbdominisCP_Via_2_L;
     #else
-    AnyRefNode &Via1 = ....Segments.SternalBodySeg.RACP_Via_2_L;
+    AnyRefNode &Via1 = ....Segments.SternalBodySeg.RectusAbdominisCP_Via_2_L;
     #endif
     AnyRefNode &Ins = ....Abdominal.Layer_L1.BaseSegAnterior.rectus2L;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -5257,7 +5257,7 @@ MuscleGroup RectusAbdominis = {
     viewForce.Visible ??= Off;
     AnyMuscleModel& MusMdl = ....MuscleModels.Left.RectusAbdominis.RectusAbdominis_1;
 
-    AnyRefNode &Org = ....Segments.SternalBodySeg.RACP_CO6_2_L;
+    AnyRefNode &Org = ....Segments.SternalBodySeg.RectusAbdominisCP_CO6_2_L;
     AnyRefNode &Via2 = ....Abdominal.Layer_L1.BaseSegAnterior.rectus1L;
     AnyRefNode &Via3 = ....Abdominal.Layer_L2.BaseSegAnterior.rectus1L;
     AnyRefNode &Via4 = ....Abdominal.Layer_L3.BaseSegAnterior.rectus1L;
@@ -5271,7 +5271,7 @@ MuscleGroup RectusAbdominis = {
     viewForce.Visible ??= Off;
     AnyMuscleModel& MusMdl = ....MuscleModels.Left.RectusAbdominis.RectusAbdominis_2;
 
-    AnyRefNode &Org = ....Segments.SternalBodySeg.RACP_CO5_2_L;
+    AnyRefNode &Org = ....Segments.SternalBodySeg.RectusAbdominisCP_CO5_2_L;
     AnyRefNode &Via2 = ....Abdominal.Layer_L1.BaseSegAnterior.rectus2L;
     AnyRefNode &Via3 = ....Abdominal.Layer_L2.BaseSegAnterior.rectus2L;
     AnyRefNode &Via4 = ....Abdominal.Layer_L3.BaseSegAnterior.rectus2L;
@@ -5287,11 +5287,11 @@ MuscleGroup RectusAbdominis = {
   #if BM_TRUNK_EXPERIMENTAL_RECTUS_ABDOMINIS == OFF
 
   AnyMuscleViaPoint RectusAbdominis_1_1 = {
-    AnyRefNode &Org = ....Segments.SternalBodySeg.RACP_CO6_2_L;
+    AnyRefNode &Org = ....Segments.SternalBodySeg.RectusAbdominisCP_CO6_2_L;
     //      #if BM_TRUNK_THORACIC_STERNUM_TOPOLOGY == 4
-    //        AnyRefNode &Via1 = ....Segments.Left.CostalCartilageSeg.RACP_Via_2_L;
+    //        AnyRefNode &Via1 = ....Segments.Left.CostalCartilageSeg.RectusAbdominisCP_Via_2_L;
     //      #else
-    //        AnyRefNode &Via1 = ....Segments.SternalBodySeg.RACP_Via_2_L;
+    //        AnyRefNode &Via1 = ....Segments.SternalBodySeg.RectusAbdominisCP_Via_2_L;
     //      #endif
 
     AnyRefNode &Ins = ....Abdominal.Layer_L1.BaseSegAnterior.rectus1L;
@@ -5384,11 +5384,11 @@ MuscleGroup RectusAbdominis = {
   };
 
   AnyMuscleViaPoint RectusAbdominis_2_1 = {
-    AnyRefNode &Org = ....Segments.SternalBodySeg.RACP_CO5_2_L;
+    AnyRefNode &Org = ....Segments.SternalBodySeg.RectusAbdominisCP_CO5_2_L;
     #if BM_TRUNK_THORACIC_STERNUM_TOPOLOGY == 4
-    AnyRefNode &Via1 = ....Segments.Left.CostalCartilageSeg.RACP_Via_2_L;
+    AnyRefNode &Via1 = ....Segments.Left.CostalCartilageSeg.RectusAbdominisCP_Via_2_L;
     #else
-    AnyRefNode &Via1 = ....Segments.SternalBodySeg.RACP_Via_2_L;
+    AnyRefNode &Via1 = ....Segments.SternalBodySeg.RectusAbdominisCP_Via_2_L;
     #endif
     AnyRefNode &Ins = ....Abdominal.Layer_L1.BaseSegAnterior.rectus2L;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};

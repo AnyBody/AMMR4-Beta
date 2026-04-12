@@ -38,7 +38,7 @@ Segments = {
 
   SternalBodySeg = {
     AnyRefNode Mid                ={ sRel =.Scale (.Data.Sternum.MidNode_pos);};
-    AnyRefNode RACP_CO6_2_mid = {sRel= (.RACP_CO6_2_R.sRel+.RACP_CO6_2_L.sRel)/2;};
+    AnyRefNode RectusAbdominisCP_CO6_2_mid = {sRel= (.RectusAbdominisCP_CO6_2_R.sRel+.RectusAbdominisCP_CO6_2_L.sRel)/2;};
     //----------------------------------------------CS Nodes-----------------------------------------------
     AnyRefNode CS2NodeR     ={ sRel =.Scale (.Data.Sternum.Right.CS2Node_pos);};
     AnyRefNode CS3NodeR     ={ sRel =.Scale (.Data.Sternum.Right.CS3Node_pos);};
@@ -121,7 +121,7 @@ Segments = {
       AnyRefNode CCNodeR10 = { sRel = ..Scale(..Data.Sternum.Left.R10Node_pos); AnyRefNode RotNode = { ARel = RotMat(.sRel, ..CCTangetNodeR10.sRel,sRel+{0.10,0,0})*RotMat(-pi/2,y)*RotMat(-pi,z);};};
     };
 
-    AnyRefNode RACP_CO6Node= {sRel = .Scale(.Data.Sternum.RACP_CO6Node_pos);};
+    AnyRefNode RectusAbdominisCP_CO6Node= {sRel = .Scale(.Data.Sternum.RectusAbdominisCP_CO6Node_pos);};
     AnyRefNode TransversusThoracisR2StNodeRIns         = {sRel = .Scale(.Data.Sternum.Right.TransversusThoracisR2StNode_pos);};
     AnyRefNode TransversusThoracisR3StNodeRIns         = {sRel = .Scale(.Data.Sternum.Right.TransversusThoracisR3StNode_pos);};
     AnyRefNode TransversusThoracisR4StNodeRIns         = {sRel = .Scale(.Data.Sternum.Right.TransversusThoracisR4StNode_pos);};
@@ -658,7 +658,7 @@ Segments = {
         AnyRefNode R10NodeRinf     ={ sRel =.Scale (.Data.Sternum.Right.R10Node_pos + {0,-.Data.AllRibs.CCOffset[0],0});  };
         AnyRefNode R10NodeRpos     ={ sRel =.Scale (.Data.Sternum.Right.R10Node_pos + {-.Data.AllRibs.CCOffset[0],0,0});  };
         AnyRefNode R10NodeRant     ={ sRel =.Scale (.Data.Sternum.Right.R10Node_pos + {.Data.AllRibs.CCOffset[0],0,0});  };
-        AnyRefNode RACP_CO6Node= {sRel = .Scale(.Data.Sternum.RACP_CO6Node_pos);};
+        AnyRefNode RectusAbdominisCP_CO6Node= {sRel = .Scale(.Data.Sternum.RectusAbdominisCP_CO6Node_pos);};
         AnyRefNode TransversusThoracisR2StNodeRIns         = {sRel = .Scale(.Data.Sternum.Right.TransversusThoracisR2StNode_pos);};
         AnyRefNode TransversusThoracisR3StNodeRIns         = {sRel = .Scale(.Data.Sternum.Right.TransversusThoracisR3StNode_pos);};
         AnyRefNode TransversusThoracisR4StNodeRIns         = {sRel = .Scale(.Data.Sternum.Right.TransversusThoracisR4StNode_pos);};
@@ -1128,7 +1128,7 @@ Segments = {
         AnyRefNode R10NodeLant     ={ sRel =.Scale (.Data.Sternum.Left.R10Node_pos + {.Data.AllRibs.CCOffset[0],0,0});  };
 
 
-        AnyRefNode RACP_CO6Node= {sRel = .Scale(.Data.Sternum.RACP_CO6Node_pos);};
+        AnyRefNode RectusAbdominisCP_CO6Node= {sRel = .Scale(.Data.Sternum.RectusAbdominisCP_CO6Node_pos);};
 
 
         AnyRefNode TransversusThoracisR2StNodeLIns         = {sRel = .Scale(.Data.Sternum.Left.TransversusThoracisR2StNode_pos);};

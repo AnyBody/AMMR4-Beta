@@ -1362,14 +1362,14 @@ Segments.SternumSeg = {
 
 Segments.SternalBodySeg = {
   // Rectus Abdominis Nodes
-  AnyRefNode RACP_CO7_1_R = {sRel = .Scale(.Data.Thorax.Right.RACP_CO7Node_1_pos);};
-  AnyRefNode RACP_CO6_2_R = {sRel = .Scale(.Data.Thorax.Right.RACP_CO6Node_2_pos);};
-  AnyRefNode RACP_CO5_2_R = {sRel = .Scale(.Data.Thorax.Right.RACP_CO5Node_2_pos);};
-  AnyRefNode RACP_Via_2_R = {sRel = .Scale(.Data.Thorax.Right.RACP_Via_2_pos);};
-  AnyRefNode RACP_CO7_1_L = {sRel = .Scale(.Data.Thorax.Left.RACP_CO7Node_1_pos);};
-  AnyRefNode RACP_CO6_2_L = {sRel = .Scale(.Data.Thorax.Left.RACP_CO6Node_2_pos);};
-  AnyRefNode RACP_CO5_2_L = {sRel = .Scale(.Data.Thorax.Left.RACP_CO5Node_2_pos);};
-  AnyRefNode RACP_Via_2_L = {sRel = .Scale(.Data.Thorax.Left.RACP_Via_2_pos);};
+  AnyRefNode RectusAbdominisCP_CO7_1_R = {sRel = .Scale(.Data.Thorax.Right.RectusAbdominisCP_CO7Node_1_pos);};
+  AnyRefNode RectusAbdominisCP_CO6_2_R = {sRel = .Scale(.Data.Thorax.Right.RectusAbdominisCP_CO6Node_2_pos);};
+  AnyRefNode RectusAbdominisCP_CO5_2_R = {sRel = .Scale(.Data.Thorax.Right.RectusAbdominisCP_CO5Node_2_pos);};
+  AnyRefNode RectusAbdominisCP_Via_2_R = {sRel = .Scale(.Data.Thorax.Right.RectusAbdominisCP_Via_2_pos);};
+  AnyRefNode RectusAbdominisCP_CO7_1_L = {sRel = .Scale(.Data.Thorax.Left.RectusAbdominisCP_CO7Node_1_pos);};
+  AnyRefNode RectusAbdominisCP_CO6_2_L = {sRel = .Scale(.Data.Thorax.Left.RectusAbdominisCP_CO6Node_2_pos);};
+  AnyRefNode RectusAbdominisCP_CO5_2_L = {sRel = .Scale(.Data.Thorax.Left.RectusAbdominisCP_CO5Node_2_pos);};
+  AnyRefNode RectusAbdominisCP_Via_2_L = {sRel = .Scale(.Data.Thorax.Left.RectusAbdominisCP_Via_2_pos);};
   // End of Rectus Abdominis Nodes
 
   #if BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_ | BM_TRUNK_THORACIC_MODEL == _THORACIC_MODEL_FLEXIBLE_ | BM_TRUNK_THORACIC_MODEL == _THORACIC_MODEL_FLEXIBLE_KINEMATIC_ONLY_
@@ -1511,15 +1511,15 @@ Segments.SternalBodySeg = {
 
 #if BM_TRUNK_THORACIC_STERNUM_TOPOLOGY == 4
   Segments.Right.CostalCartilageSeg={
-    AnyRefNode RACP_Via_2_R = {sRel = .Scale(.Data.Thorax.Right.RACP_Via_2_pos);};
-    AnyRefNode RACP_Via_3_R = {sRel = .Scale(.Data.Thorax.Right.RACP_Via_3_pos);};
-    AnyRefNode RACP_Via_4_R = {sRel = .Scale(.Data.Thorax.Right.RACP_Via_4_pos);};
+    AnyRefNode RectusAbdominisCP_Via_2_R = {sRel = .Scale(.Data.Thorax.Right.RectusAbdominisCP_Via_2_pos);};
+    AnyRefNode RectusAbdominisCP_Via_3_R = {sRel = .Scale(.Data.Thorax.Right.RectusAbdominisCP_Via_3_pos);};
+    AnyRefNode RectusAbdominisCP_Via_4_R = {sRel = .Scale(.Data.Thorax.Right.RectusAbdominisCP_Via_4_pos);};
   };
 
   Segments.Left.CostalCartilageSeg={
-    AnyRefNode RACP_Via_2_L = {sRel = .Scale(.Data.Thorax.Left.RACP_Via_2_pos);};
-    AnyRefNode RACP_Via_3_L = {sRel = .Scale(.Data.Thorax.Left.RACP_Via_3_pos);};
-    AnyRefNode RACP_Via_4_L = {sRel = .Scale(.Data.Thorax.Left.RACP_Via_4_pos);};
+    AnyRefNode RectusAbdominisCP_Via_2_L = {sRel = .Scale(.Data.Thorax.Left.RectusAbdominisCP_Via_2_pos);};
+    AnyRefNode RectusAbdominisCP_Via_3_L = {sRel = .Scale(.Data.Thorax.Left.RectusAbdominisCP_Via_3_pos);};
+    AnyRefNode RectusAbdominisCP_Via_4_L = {sRel = .Scale(.Data.Thorax.Left.RectusAbdominisCP_Via_4_pos);};
   };
 #endif
 

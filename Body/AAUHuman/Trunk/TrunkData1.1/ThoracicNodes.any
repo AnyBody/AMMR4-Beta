@@ -36,7 +36,7 @@ AnyFolder Skull = {
 
 
 AnyFolder Sternum = {
-  AnyFloat RACP_CO6Node_pos            = {0.141 , 0.26599976, 0};
+  AnyFloat RectusAbdominisCP_CO6Node_pos            = {0.141 , 0.26599976, 0};
   AnyFloat ManubriosternalJointNode_Pos    = {0.090100003, 0.37379976, 0.00};
   AnyFloat ManubriosternalJointWidth = 0.05;
   AnyFloat ij_pos = {0.06, 0.422, 0};
@@ -4889,7 +4889,7 @@ AnyFloat Int_Inf_End_ABS_pos = .Right.Int_Inf_End_ABS_pos* ..MirrorTransform;
 
 AnyFolder R10 = {
   AnyFolder Right = {
-    AnyFloat ObliquusExternusR10aNode_pos       = {0.086559363-0.03,0.12617856+0.01, 0.12822376+0.0075}+{-0.005,0.007,-0.003}; 
+    AnyFloat ObliquusExternusR10aNode_pos       = {0.086559363-0.03,0.12617856+0.01, 0.12822376+0.0075}+{-0.005,0.007,-0.003};
     AnyFloat IliocostalisThoracisR4R10Node_posIns     = {-0.04930874, 0.22891201, 0.039300000};
     AnyFloat IliocostalisThoracisR5R11Via5Node_pos    = {-0.05230874, 0.22691201, 0.041300000};
     AnyFloat IliocostalisThoracisR6R12Via4Node_pos    = {-0.05230874, 0.22591201, 0.043300000};
@@ -5697,7 +5697,7 @@ AnyFolder Thorax = {
   AnyVar UBHeight =  0.50; //Upperbody height
   AnyVar Height = vnorm( .C1.C1C0JntNode_pos - .L5.L5SacrumJntNode_pos);///< Height computed from the L5SacrumJnt to C1 node
   AnyVar Width = 0.3881839;///< Shoulder width
-  AnyVar Depth = 0.1870;///< Horizontal distance between (midpoint of LongissimusThoracisT8S3Via3NodeL and LongissimusThoracisT8S3Via3NodeR) and (midpoint of RACP_CO6ViaNodeR and RACP_CO6ViaNodeL)
+  AnyVar Depth = 0.1870;///< Horizontal distance between (midpoint of LongissimusThoracisT8S3Via3NodeL and LongissimusThoracisT8S3Via3NodeR) and (midpoint of RectusAbdominisCP_CO6ViaNodeR and RectusAbdominisCP_CO6ViaNodeL)
 
   AnyFloat sCoM_pos = {0.060,0.303,0};
 
@@ -5954,10 +5954,10 @@ AnyFloat scj_InNeutralConf_pos = {-0.06838000000000001, 0.47619162999999998, 0.0
     AnyFloat LongissimusThoracisT10S3Via2Node_pos = {-0.023,0.147,(LongissimusThoracisT10S3Node_pos[2] - .LongissimusThoracisT10S3Z*(LongissimusThoracisT10S3Node_pos[1] - 0.147))};
     AnyFloat LongissimusThoracisT11S3Via1Node_pos = {-0.023,0.149,(LongissimusThoracisT11S3Node_pos[2] - .LongissimusThoracisT11S3Z*(LongissimusThoracisT11S3Node_pos[1] - 0.149))};
 
-    AnyFloat RACP_CO7Node_1_pos                            = {0.1450000, 0.2360000, 0.010000};
-    AnyFloat RACP_CO6Node_2_pos                            = {0.14021569, 0.23908326,   0.005};
-    AnyFloat RACP_CO5Node_2_pos                            = {0.1350000, 0.290000, 0.0400000};
-    AnyFloat RACP_Via_2_pos                                = {0.1550000, 0.200000, 0.0400000};
+    AnyFloat RectusAbdominisCP_CO7Node_1_pos                            = {0.1450000, 0.2360000, 0.010000};
+    AnyFloat RectusAbdominisCP_CO6Node_2_pos                            = {0.14021569, 0.23908326,   0.005};
+    AnyFloat RectusAbdominisCP_CO5Node_2_pos                            = {0.1350000, 0.290000, 0.0400000};
+    AnyFloat RectusAbdominisCP_Via_2_pos                                = {0.1550000, 0.200000, 0.0400000};
     AnyFloat ObliquusExternusR6Node_pos                                = {0.12831205,0.25798428, 0.11569053}+{-0.015,0.007,0.017};
     AnyFloat ObliquusExternusR7Node_pos                                = {0.13488244,0.22149785, 0.12089419}+{-0.022,0.011,0.018};
     AnyFloat ObliquusExternusR8Node_pos                                = {0.14111029,0.18604259, 0.12809466}+{-0.025,0.015,0.015};
@@ -6326,10 +6326,10 @@ AnyFloat scj_InNeutralConf_pos = {-0.06838000000000001, 0.47619162999999998, 0.0
     AnyFloat LongissimusThoracisR9S4Via1Node_pos      = .Right.LongissimusThoracisR9S4Via1Node_pos       * ..MirrorTransform;
     AnyFloat LongissimusThoracisR9S4Via2Node_pos      = .Right.LongissimusThoracisR9S4Via2Node_pos       * ..MirrorTransform;
     AnyFloat LongissimusThoracisR10S3Via1Node_pos = .Right.LongissimusThoracisR10S3Via1Node_pos  * ..MirrorTransform;
-    AnyFloat RACP_CO7Node_1_pos  = .Right.RACP_CO7Node_1_pos * ..MirrorTransform;
-    AnyFloat RACP_CO6Node_2_pos  = .Right.RACP_CO6Node_2_pos * ..MirrorTransform;
-    AnyFloat RACP_CO5Node_2_pos = .Right.RACP_CO5Node_2_pos * ..MirrorTransform;
-    AnyFloat RACP_Via_2_pos     = .Right.RACP_Via_2_pos * ..MirrorTransform;
+    AnyFloat RectusAbdominisCP_CO7Node_1_pos  = .Right.RectusAbdominisCP_CO7Node_1_pos * ..MirrorTransform;
+    AnyFloat RectusAbdominisCP_CO6Node_2_pos  = .Right.RectusAbdominisCP_CO6Node_2_pos * ..MirrorTransform;
+    AnyFloat RectusAbdominisCP_CO5Node_2_pos = .Right.RectusAbdominisCP_CO5Node_2_pos * ..MirrorTransform;
+    AnyFloat RectusAbdominisCP_Via_2_pos     = .Right.RectusAbdominisCP_Via_2_pos * ..MirrorTransform;
     AnyFloat ObliquusExternusR6Node_pos          = .Right.ObliquusExternusR6Node_pos * ..MirrorTransform;
     AnyFloat ObliquusExternusR6_1Node_pos         = .Right.ObliquusExternusR6_1Node_pos * ..MirrorTransform;
     AnyFloat ObliquusExternusR6_2Node_pos         = .Right.ObliquusExternusR6_2Node_pos * ..MirrorTransform;
