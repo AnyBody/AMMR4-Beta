@@ -106,17 +106,12 @@ Information on how to configure the body models, and enable or disable various b
 
 ::::
 
-
 The models are developed in research projects at academic institutions or by
 AnyBody Technology in collaboration with academic institutions. The models are
 maintained by AnyBody Technology who ensure that various body part models can be
 used together as a full body, scalable musculoskeletal model.
 
-
-
 [anybody modeling system]: https://www.anybodytech.com/software/anybodymodelingsystem/
-
-
 
 ```{toctree}
 :includehidden: true
@@ -124,7 +119,6 @@ used together as a full body, scalable musculoskeletal model.
 
 Gallery of examples <Applications/index>
 ```
-
 
 ```{toctree}
 :caption: Body Models
@@ -136,7 +130,6 @@ bm_config/index
 migration
 ```
 
-
 ```{toctree}
 :caption: Applications and Tools
 :includehidden: true
@@ -146,25 +139,10 @@ migration
 
 anymocap/index
 grf_prediction/grf-prediction
+body/spine-rhythm
 Scaling/intro
 tools/class-templates
 ```
-
-
-
-```{toctree}
-:caption: Guides
-:includehidden: true
-:hidden:
-:maxdepth: 2
-:titlesonly:
-
-creating_model_from_scratch
-Scaling/intro
-anymocap/index
-body/spine-rhythm
-```
-
 
 ```{toctree}
 :caption: About
