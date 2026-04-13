@@ -193,14 +193,15 @@ You can revert to the TLEM foot model by setting:
 * Remove a number of previously deprecated `BM_XXX` switches and constants. 
 
 (ammr-3.1.5-changelog)=
-## AMMR 3.1.5 (2025-??-??)
+## AMMR 3.1.5 (2026-03-31)
 
 ### 🩹 Fixed:
 * The BVH marker protocol have been improved to better handling scaling of
   people which are very different from a standard size. Now the pelvis height
   follows the scaling of the rest of the trunk, and neck-length head-height are
   linked. 
-
+* Asymmetric ground reaction force in the {ref}`Squat model <example_squat>` have 
+  been fixed.
 
 
 ### 🔧 Changed:
