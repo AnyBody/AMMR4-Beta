@@ -239,7 +239,7 @@ AnyFolder ArmCal2 ={
   #if BM_ARM_DELTOID_WRAPPING == _DELTOID_WRAPPING_RAKE_
   AnyObjectPtrArray DeltoideusClavicularMuscles = ObjSearch(MusPrefix+".*.DeltoideusClavicular*", "AnyMuscle");
   #else
-  AnyObjectPtrArray DeltoideusClavicularMuscles = ObjSearch(MusPrefix+".*.deltoideus_anterior*", "AnyMuscle");
+  AnyObjectPtrArray DeltoideusClavicularMuscles = ObjSearch(MusPrefix+".*.DeltoideusAnterior*", "AnyMuscle");
   #endif
 
 };

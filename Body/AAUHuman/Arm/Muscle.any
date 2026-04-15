@@ -283,13 +283,13 @@ MuscleGroup Coracobrachialis = {
   };
 
   MuscleGroup DeltoideusScapular = {
-    AnyMuscleShortestPath deltoideus_scapular_part_1 = {
-      AnyMuscleModel &MusMdl = ...MuscleModels.deltoideus_scapular_part_1;
-      AnyRefNode &Org = ...Segments.Scapula.O_deltoideus_scapular_part_1;
+    AnyMuscleShortestPath DeltoideusScapular1 = {
+      AnyMuscleModel &MusMdl = ...MuscleModels.DeltoideusScapular1;
+      AnyRefNode &Org = ...Segments.Scapula.O_DeltoideusScapular1;
       AnyRefNode &Via = .ArtificialRake.DeltoidMuscleConnector.DeltoidVia1;
       //AnySurfEllipsoid &surf1= .ArtificialRake.DeltoidMuscleConnector.EllipsoidCyl.Ellipsoid ;
 
-      AnyRefNode &Ins = ...Segments.Humerus.I_deltoideus_scapular_part_1;
+      AnyRefNode &Ins = ...Segments.Humerus.I_DeltoideusScapular1;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
       SPLine.StringMesh = 30;
       AnySurfSphere &Surf = ...Segments.Humerus.art_tub_minus_tub_majus.art_tub_minus_tub_majusSurf;
@@ -299,12 +299,12 @@ MuscleGroup Coracobrachialis = {
       };
     };
 
-    AnyMuscleShortestPath deltoideus_scapular_part_2 = {
-      AnyMuscleModel &MusMdl = ...MuscleModels.deltoideus_scapular_part_2;
-      AnyRefNode &Org = ...Segments.Scapula.O_deltoideus_scapular_part_2;
+    AnyMuscleShortestPath DeltoideusScapular2 = {
+      AnyMuscleModel &MusMdl = ...MuscleModels.DeltoideusScapular2;
+      AnyRefNode &Org = ...Segments.Scapula.O_DeltoideusScapular2;
       AnyRefNode &Via = .ArtificialRake.DeltoidMuscleConnector.DeltoidVia2;
 
-      AnyRefNode &Ins = ...Segments.Humerus.I_deltoideus_scapular_part_2;
+      AnyRefNode &Ins = ...Segments.Humerus.I_DeltoideusScapular2;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
       SPLine.StringMesh = 30;
       AnySurfSphere &Surf = ...Segments.Humerus.art_tub_minus_tub_majus.art_tub_minus_tub_majusSurf;
@@ -314,11 +314,11 @@ MuscleGroup Coracobrachialis = {
       };
     };
 
-    AnyMuscleShortestPath deltoideus_scapular_part_3 = {
-      AnyMuscleModel &MusMdl = ...MuscleModels.deltoideus_scapular_part_3;
-      AnyRefNode &Org = ...Segments.Scapula.O_deltoideus_scapular_part_3;
+    AnyMuscleShortestPath DeltoideusScapular3 = {
+      AnyMuscleModel &MusMdl = ...MuscleModels.DeltoideusScapular3;
+      AnyRefNode &Org = ...Segments.Scapula.O_DeltoideusScapular3;
       AnyRefNode &Via = .ArtificialRake.DeltoidMuscleConnector.DeltoidVia3;
-      AnyRefNode &Ins = ...Segments.Humerus.I_deltoideus_scapular_part_3;
+      AnyRefNode &Ins = ...Segments.Humerus.I_DeltoideusScapular3;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
       SPLine.StringMesh = 40;
       AnySurfSphere &Surf = ...Segments.Humerus.art_tub_minus_tub_majus.art_tub_minus_tub_majusSurf;
@@ -328,11 +328,11 @@ MuscleGroup Coracobrachialis = {
       };
     };
 
-    AnyMuscleShortestPath deltoideus_scapular_part_4 = {
-      AnyMuscleModel &MusMdl = ...MuscleModels.deltoideus_scapular_part_4;
-      AnyRefNode &Org = ...Segments.Scapula.O_deltoideus_scapular_part_4;
+    AnyMuscleShortestPath DeltoideusScapular4 = {
+      AnyMuscleModel &MusMdl = ...MuscleModels.DeltoideusScapular4;
+      AnyRefNode &Org = ...Segments.Scapula.O_DeltoideusScapular4;
       AnyRefNode &Via = .ArtificialRake.DeltoidMuscleConnector.DeltoidVia4;
-      AnyRefNode &Ins = ...Segments.Humerus.I_deltoideus_scapular_part_4;
+      AnyRefNode &Ins = ...Segments.Humerus.I_DeltoideusScapular4;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
       SPLine.StringMesh = 35;
       AnySurfSphere &Surf = ...Segments.Humerus.art_tub_minus_tub_majus.art_tub_minus_tub_majusSurf;
@@ -342,11 +342,11 @@ MuscleGroup Coracobrachialis = {
       };
     };
 
-    AnyMuscleShortestPath deltoideus_scapular_part_5 = {
-      AnyMuscleModel &MusMdl = ...MuscleModels.deltoideus_scapular_part_5;
-      AnyRefNode &Org = ...Segments.Scapula.O_deltoideus_scapular_part_5;
+    AnyMuscleShortestPath DeltoideusScapular5 = {
+      AnyMuscleModel &MusMdl = ...MuscleModels.DeltoideusScapular5;
+      AnyRefNode &Org = ...Segments.Scapula.O_DeltoideusScapular5;
       AnyRefNode &Via = .ArtificialRake.DeltoidMuscleConnector.DeltoidVia5;
-      AnyRefNode &Ins = ...Segments.Humerus.I_deltoideus_scapular_part_5;
+      AnyRefNode &Ins = ...Segments.Humerus.I_DeltoideusScapular5;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any" };
       SPLine.StringMesh = 40;
       AnySurfSphere &Surf = ...Segments.Humerus.art_tub_minus_tub_majus.art_tub_minus_tub_majusSurf;
@@ -356,11 +356,11 @@ MuscleGroup Coracobrachialis = {
       };
     };
 
-    AnyMuscleShortestPath deltoideus_scapular_part_6 = {
-      AnyMuscleModel &MusMdl = ...MuscleModels.deltoideus_scapular_part_6;
-      AnyRefNode &Org = ...Segments.Scapula.O_deltoideus_scapular_part_6;
+    AnyMuscleShortestPath DeltoideusScapular6 = {
+      AnyMuscleModel &MusMdl = ...MuscleModels.DeltoideusScapular6;
+      AnyRefNode &Org = ...Segments.Scapula.O_DeltoideusScapular6;
       AnyRefNode &Via = .ArtificialRake.DeltoidMuscleConnector.DeltoidVia6;
-      AnyRefNode &Ins = ...Segments.Humerus.I_deltoideus_scapular_part_6;
+      AnyRefNode &Ins = ...Segments.Humerus.I_DeltoideusScapular6;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
       SPLine.StringMesh = 30;
       AnySurfSphere &Surf = ...Segments.Humerus.art_tub_minus_tub_majus.art_tub_minus_tub_majusSurf;

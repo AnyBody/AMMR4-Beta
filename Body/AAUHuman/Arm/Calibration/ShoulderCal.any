@@ -262,15 +262,15 @@ AnyFolder ShoulderCal ={
   AnyFloat  CoracobrachialisRmax = repmat(NumElemOf(CoracobrachialisMuscles), ..RMax);
 
   #if BM_ARM_DELTOID_WRAPPING == _DELTOID_WRAPPING_RAKE_
-  AnyObjectPtrArray deltoideus_scapularMuscles = ObjSearch(MusPrefix+".*.deltoideus_scapular*", "AnyMuscle");
+  AnyObjectPtrArray DeltoideusScapularMuscles = ObjSearch(MusPrefix+".*.DeltoideusScapular*", "AnyMuscle");
   #else
-  AnyObjectPtrArray deltoideus_scapularMuscles = arrcat(
+  AnyObjectPtrArray DeltoideusScapularMuscles = arrcat(
     ObjSearch(MusPrefix+".*.DeltoideusPosterior*", "AnyMuscle"),
     ObjSearch(MusPrefix+".*.DeltoideusLateral*", "AnyMuscle")
   );
   #endif
-  AnyFloat  deltoideus_scapularRmin = repmat(NumElemOf(deltoideus_scapularMuscles), ..RMin);
-  AnyFloat  deltoideus_scapularRmax = repmat(NumElemOf(deltoideus_scapularMuscles), ..RMax);
+  AnyFloat  DeltoideusScapularRmin = repmat(NumElemOf(DeltoideusScapularMuscles), ..RMin);
+  AnyFloat  DeltoideusScapularRmax = repmat(NumElemOf(DeltoideusScapularMuscles), ..RMax);
 
   #if BM_ARM_DELTOID_WRAPPING == _DELTOID_WRAPPING_RAKE_
   AnyObjectPtrArray DeltoideusClavicularMuscles = ObjSearch(MusPrefix+".*.DeltoideusClavicular*", "AnyMuscle");
@@ -338,7 +338,7 @@ AnyBodyCalibrationStudy ArmCalibrationStudyShoulder = {
 
   MuscleArr = arrcat(arrcat(
       ref.CoracobrachialisMuscles,
-      ref.deltoideus_scapularMuscles,
+      ref.DeltoideusScapularMuscles,
       ref.DeltoideusClavicularMuscles,
       ref.InfraspinatusMuscles,
       ref.PectoralisMajorSternocostalMuscles,
@@ -354,7 +354,7 @@ AnyBodyCalibrationStudy ArmCalibrationStudyShoulder = {
   );
   RminMuscleFiber = arrcat(arrcat(
       ref.CoracobrachialisRmin,
-      ref.deltoideus_scapularRmin,
+      ref.DeltoideusScapularRmin,
       ref.DeltoideusClavicularRmin,
       ref.InfraspinatusRmin,
       ref.PectoralisMajorSternocostalRmin,
@@ -370,7 +370,7 @@ AnyBodyCalibrationStudy ArmCalibrationStudyShoulder = {
   );
   RmaxMuscleFiber = arrcat(arrcat(
       ref.CoracobrachialisRmax,
-      ref.deltoideus_scapularRmax,
+      ref.DeltoideusScapularRmax,
       ref.DeltoideusClavicularRmax,
       ref.InfraspinatusRmax,
       ref.PectoralisMajorSternocostalRmax,

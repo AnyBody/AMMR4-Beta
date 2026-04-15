@@ -111,12 +111,12 @@ AnyFloat sulcus_intertubercularisTop_pos = {0.018379, 0.014001, -0.0173810000};
 
 
 #if BM_ARM_DELTOID_WRAPPING == _DELTOID_WRAPPING_RAKE_
-  AnyFloat I_deltoideus_scapular_part_1_pos         = {0.009442, -0.095031 , -0.005209}+{0,0,0.005}+ds1;
-  AnyFloat I_deltoideus_scapular_part_2_pos         = {0.010509, -0.109575 , -0.001490}+ds1;
-  AnyFloat I_deltoideus_scapular_part_3_pos         = {0.006940, -0.081782 , -0.013010}+{0,0,0.015}+ds1;
-  AnyFloat I_deltoideus_scapular_part_4_pos         = {0.009462, -0.116191 , -0.004216}+ds1;
-  AnyFloat I_deltoideus_scapular_part_5_pos         = {0.005849, -0.085435 , -0.016010}+ds1;
-  AnyFloat I_deltoideus_scapular_part_6_pos         = {0.008066, -0.115681 , -0.008272}+ds1;
+  AnyFloat I_DeltoideusScapular1_pos         = {0.009442, -0.095031 , -0.005209}+{0,0,0.005}+ds1;
+  AnyFloat I_DeltoideusScapular2_pos         = {0.010509, -0.109575 , -0.001490}+ds1;
+  AnyFloat I_DeltoideusScapular3_pos         = {0.006940, -0.081782 , -0.013010}+{0,0,0.015}+ds1;
+  AnyFloat I_DeltoideusScapular4_pos         = {0.009462, -0.116191 , -0.004216}+ds1;
+  AnyFloat I_DeltoideusScapular5_pos         = {0.005849, -0.085435 , -0.016010}+ds1;
+  AnyFloat I_DeltoideusScapular6_pos         = {0.008066, -0.115681 , -0.008272}+ds1;
   AnyFloat I_DeltoideusClavicular1_pos       = {0.004982, -0.088709 , -0.018372}+ds1;
   AnyFloat I_DeltoideusClavicular2_pos       = {0.007234, -0.119509 , -0.010489}+ds1;
   AnyFloat I_DeltoideusClavicular3_pos       = {0.004818, -0.093455 , -0.018628}+ds1;
@@ -499,12 +499,12 @@ AnyFloat C7InNeutralConf_Scapula_pos = {-0.1364370885, 0.0589924886, -0.08493164
   AnyFloat EdgeNode2_pos = {0.001000000, -0.03500000, -0.03000000};
   AnyFloat GHReactionCenterNodeRotated_pos = {-0.001000000, -0.04800000, -0.03000000};
 #if BM_ARM_DELTOID_WRAPPING == _DELTOID_WRAPPING_RAKE_
-  AnyFloat O_deltoideus_scapular_part_1_pos = {-0.021964, -0.018987, 0.017237}+{-0.06,0.008,-0.0040};                                 //{-0.08196400, -0.01098700, 0.01323700};
-  AnyFloat O_deltoideus_scapular_part_2_pos = {-0.021964, -0.018987, 0.017237}+{0.01,0.011,-0.008};                                   //{-0.01196400, -0.007987000, 0.009237000};
-  AnyFloat O_deltoideus_scapular_part_3_pos = {0.018565-0.01, -0.020427, 0.008868}+{0.02,0.009,-0.01};                                //{0.02856500, -0.01142700, -0.001132000};
-  AnyFloat O_deltoideus_scapular_part_4_pos = {0.018565+0.01, -0.020427, 0.008868}+{0.01,0.012,-0.035};                               //{0.03856500, -0.008427000, -0.02613200};
-  AnyFloat O_deltoideus_scapular_part_5_pos = {0.027144+0.025, (-0.013524-0.005), -0.008283-0.0025}+{-0.01,0.012,-0.035};             //{0.04214400, -0.006524000, -0.04578300};
-  AnyFloat O_deltoideus_scapular_part_6_pos = {0.027144+0.025, (-0.013524-0.0025), -0.008283-.015}+{-0.015,0.012,-0.03};              //{0.03714400, -0.004024000, -0.05328300};
+  AnyFloat O_DeltoideusScapular1_pos = {-0.021964, -0.018987, 0.017237}+{-0.06,0.008,-0.0040};                                 //{-0.08196400, -0.01098700, 0.01323700};
+  AnyFloat O_DeltoideusScapular2_pos = {-0.021964, -0.018987, 0.017237}+{0.01,0.011,-0.008};                                   //{-0.01196400, -0.007987000, 0.009237000};
+  AnyFloat O_DeltoideusScapular3_pos = {0.018565-0.01, -0.020427, 0.008868}+{0.02,0.009,-0.01};                                //{0.02856500, -0.01142700, -0.001132000};
+  AnyFloat O_DeltoideusScapular4_pos = {0.018565+0.01, -0.020427, 0.008868}+{0.01,0.012,-0.035};                               //{0.03856500, -0.008427000, -0.02613200};
+  AnyFloat O_DeltoideusScapular5_pos = {0.027144+0.025, (-0.013524-0.005), -0.008283-0.0025}+{-0.01,0.012,-0.035};             //{0.04214400, -0.006524000, -0.04578300};
+  AnyFloat O_DeltoideusScapular6_pos = {0.027144+0.025, (-0.013524-0.0025), -0.008283-.015}+{-0.015,0.012,-0.03};              //{0.03714400, -0.004024000, -0.05328300};
 #else
 
 AnyFloat O_DeltoideusPosterior1_pos = {-0.0819639999, -0.010987, 0.0132369999};

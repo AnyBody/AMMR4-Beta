@@ -23,9 +23,9 @@ AnyFolder ArmCal1 ={
   #endif
 
   #if BM_ARM_DELTOID_WRAPPING == _DELTOID_WRAPPING_RAKE_
-  AnyMuscleShortestPath &del1 =  .SideHumanFolderRef.ShoulderArm.Muscles.DeltoideusScapular.deltoideus_scapular_part_1;
-  AnyMuscleShortestPath &del2 =  .SideHumanFolderRef.ShoulderArm.Muscles.DeltoideusScapular.deltoideus_scapular_part_2;
-  AnyMuscleShortestPath &del3 =  .SideHumanFolderRef.ShoulderArm.Muscles.DeltoideusScapular.deltoideus_scapular_part_3;
+  AnyMuscleShortestPath &del1 =  .SideHumanFolderRef.ShoulderArm.Muscles.DeltoideusScapular.DeltoideusScapular1;
+  AnyMuscleShortestPath &del2 =  .SideHumanFolderRef.ShoulderArm.Muscles.DeltoideusScapular.DeltoideusScapular2;
+  AnyMuscleShortestPath &del3 =  .SideHumanFolderRef.ShoulderArm.Muscles.DeltoideusScapular.DeltoideusScapular3;
   #else
   AnyMuscleShortestPath &del1 =  .SideHumanFolderRef.ShoulderArm.Muscles.DeltoideusPosterior.DeltoideusPosterior1;
   AnyMuscleShortestPath &del2 =  .SideHumanFolderRef.ShoulderArm.Muscles.DeltoideusPosterior.DeltoideusPosterior2;
