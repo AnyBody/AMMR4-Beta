@@ -117,12 +117,12 @@ AnyFloat sulcus_intertubercularisTop_pos = {0.018379, 0.014001, -0.0173810000};
   AnyFloat I_deltoideus_scapular_part_4_pos         = {0.009462, -0.116191 , -0.004216}+ds1;
   AnyFloat I_deltoideus_scapular_part_5_pos         = {0.005849, -0.085435 , -0.016010}+ds1;
   AnyFloat I_deltoideus_scapular_part_6_pos         = {0.008066, -0.115681 , -0.008272}+ds1;
-  AnyFloat I_deltoideus_clavicular_part_1_pos       = {0.004982, -0.088709 , -0.018372}+ds1;
-  AnyFloat I_deltoideus_clavicular_part_2_pos       = {0.007234, -0.119509 , -0.010489}+ds1;
-  AnyFloat I_deltoideus_clavicular_part_3_pos       = {0.004818, -0.093455 , -0.018628}+ds1;
-  AnyFloat I_deltoideus_clavicular_part_4_pos       = {0.006682, -0.118890 , -0.012126}+ds1;
-  AnyFloat I_deltoideus_clavicular_part_5_pos       = {0.004941, -0.104487 , -0.017775}+ds1;
-  AnyFloat I_deltoideus_clavicular_part_6_pos       = {0.005662, -0.114302 , -0.015263}+ds1;
+  AnyFloat I_DeltoideusClavicular1_pos       = {0.004982, -0.088709 , -0.018372}+ds1;
+  AnyFloat I_DeltoideusClavicular2_pos       = {0.007234, -0.119509 , -0.010489}+ds1;
+  AnyFloat I_DeltoideusClavicular3_pos       = {0.004818, -0.093455 , -0.018628}+ds1;
+  AnyFloat I_DeltoideusClavicular4_pos       = {0.006682, -0.118890 , -0.012126}+ds1;
+  AnyFloat I_DeltoideusClavicular5_pos       = {0.004941, -0.104487 , -0.017775}+ds1;
+  AnyFloat I_DeltoideusClavicular6_pos       = {0.005662, -0.114302 , -0.015263}+ds1;
 #else
   AnyFloat I_DeltoideusPosterior1_pos = {0.0088210000, -0.1340300000, 0.0199100000};
 AnyFloat I_DeltoideusPosterior2_pos = {0.0128209999, -0.1390300000, 0.0149100000};
@@ -294,7 +294,7 @@ AnyFloat RadioStylo_pos =rs_pos; //renaming
   AnyFloat SupinatorCyl_pos = {-0.1821030, -0.02722700, 0.005000000};
   AnyFloat SupinatorCyl_P2_pos = {0.0406227,-0.000, 0.008321};//sRel+VZ*Length;
   AnyFloat SupinatorCyl_P3_pos = {-0.182219,-0.027245, -0.002};//sRel+VX*Radius;
-  
+
   AnyFloat MedialExtensorCyl_pos = wj_pos + {0.005, 0.001000, 0.00000};
   AnyFloat MedialExtensorCyl_P3_pos = MedialExtensorCyl_pos + {0.0,0.0,0.0120};
   AnyFloat MedialExtensorCyl_P2_pos = MedialExtensorCyl_pos + {0.004, 0.025,0.0};
@@ -376,7 +376,7 @@ AnyFolder Ulna = {
   AnyFloat ps2Reac_pos = ps2_pos + {0.00000, 0.0250000, 0.0000000}*ps2_rot';
 
   AnyFloat ps2_usRot_pos =  ps2_pos + ({0.0, vnorm(us_pos-ps2_pos),0.0} + {0.0,-0.008,0.0})*ps2_rot';
-  
+
   AnyFloat us_pos = {0.02487800, 0.2704510, 0.0000000};
   AnyFloat ol_pos = {0.01966500, -0.005124000, 0.03300000};
   AnyFloat ps_pos = {-0.01006300, 0.04506600, -0.002620000};
@@ -450,7 +450,7 @@ AnyFloat ps2_RotNode_pos = {0.0, 0.0, 0.0};
 };
 
 AnyFolder Scapula = {
- 
+
 
   AnyFloat deltoid_cyl_P2_pos = {0.027588, -0.047361, -0.015292};
   AnyFloat deltoid_cyl_P3_pos = {-0.128825, -0.129236, 0.024150};
@@ -665,19 +665,19 @@ AnyFolder Clavicula = {
   AnyFloat conoid_pos = {0.1271050, 0.006526000, 0.002547000};
   AnyFloat trapezoid_pos = {0.1394170, 0.004248000, -0.006785000};
 
- 
+
   // Below originated from ClavicleMuscleGeometry: clavicle segment data from VU sub 2.
   // The original coordinates have been transformed from global coordinates to the segment local
   // coordinate system
 
   AnyVec3 correction ={-0.01,0.005,0};
 #if BM_ARM_DELTOID_WRAPPING == _DELTOID_WRAPPING_RAKE_
-  AnyFloat O_deltoideus_clavicular_part_1_pos = {0.153611, 0.003833, -0.026054}+correction+{0.01,0.005,0};    //{0.1536110, 0.01383300, -0.02605400};
-  AnyFloat O_deltoideus_clavicular_part_2_pos = {0.153611, 0.003833, -0.026054}+correction+{0,0.005,0};       //{0.1436110, 0.01383300, -0.02605400};
-  AnyFloat O_deltoideus_clavicular_part_3_pos = {0.141158, 0.008015, -0.021351}+correction;                  //{0.1311580, 0.01301500, -0.02135100};
-  AnyFloat O_deltoideus_clavicular_part_4_pos = {0.141158, 0.008015, -0.021351}+correction+{-0.007,0.00,0};   //{0.1241580, 0.01301500, -0.02135100};
-  AnyFloat O_deltoideus_clavicular_part_5_pos = {0.125129, 0.012248, -0.014889}+correction+{0,-0.005,0};      //{0.1151290, 0.01224800, -0.01488900};
-  AnyFloat O_deltoideus_clavicular_part_6_pos = {0.125129, 0.012248, -0.014889}+correction+{-0.007,-0.005,0}; //{0.1081290, 0.01224800, -0.01488900};
+  AnyFloat O_DeltoideusClavicular1_pos = {0.153611, 0.003833, -0.026054}+correction+{0.01,0.005,0};    //{0.1536110, 0.01383300, -0.02605400};
+  AnyFloat O_DeltoideusClavicular2_pos = {0.153611, 0.003833, -0.026054}+correction+{0,0.005,0};       //{0.1436110, 0.01383300, -0.02605400};
+  AnyFloat O_DeltoideusClavicular3_pos = {0.141158, 0.008015, -0.021351}+correction;                  //{0.1311580, 0.01301500, -0.02135100};
+  AnyFloat O_DeltoideusClavicular4_pos = {0.141158, 0.008015, -0.021351}+correction+{-0.007,0.00,0};   //{0.1241580, 0.01301500, -0.02135100};
+  AnyFloat O_DeltoideusClavicular5_pos = {0.125129, 0.012248, -0.014889}+correction+{0,-0.005,0};      //{0.1151290, 0.01224800, -0.01488900};
+  AnyFloat O_DeltoideusClavicular6_pos = {0.125129, 0.012248, -0.014889}+correction+{-0.007,-0.005,0}; //{0.1081290, 0.01224800, -0.01488900};
 #else
   AnyFloat O_DeltoideusAnterior1_pos = {0.1486109999, 0.0138330000, -0.0300540000};
 AnyFloat O_DeltoideusAnterior2_pos = {0.137158, 0.0120149999, -0.0233509999};

@@ -196,11 +196,11 @@ MuscleGroup Coracobrachialis = {
 
 #if BM_ARM_DELTOID_WRAPPING == _DELTOID_WRAPPING_RAKE_
   MuscleGroup DeltoideusClavicular = {
-    AnyMuscleShortestPath deltoideus_clavicular_part_1 = {
-      AnyMuscleModel &MusMdl = ...MuscleModels.deltoideus_clavicular_part_1;
-      AnyRefNode &Org = ...Segments.Clavicula.O_deltoideus_clavicular_part_1;
+    AnyMuscleShortestPath DeltoideusClavicular1 = {
+      AnyMuscleModel &MusMdl = ...MuscleModels.DeltoideusClavicular1;
+      AnyRefNode &Org = ...Segments.Clavicula.O_DeltoideusClavicular1;
       AnyRefNode &Via = .ArtificialRake.DeltoidMuscleConnector.DeltoidVia7;
-      AnyRefNode &Ins = ...Segments.Humerus.I_deltoideus_clavicular_part_1;
+      AnyRefNode &Ins = ...Segments.Humerus.I_DeltoideusClavicular1;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
       AnySurfSphere &Surf = ...Segments.Humerus.art_tub_minus_tub_majus.art_tub_minus_tub_majusSurf;
       SPLine.StringMesh = 35;
@@ -210,11 +210,11 @@ MuscleGroup Coracobrachialis = {
       };
     };
 
-    AnyMuscleShortestPath deltoideus_clavicular_part_2 = {
-      AnyMuscleModel &MusMdl = ...MuscleModels.deltoideus_clavicular_part_2;
-      AnyRefNode &Org = ...Segments.Clavicula.O_deltoideus_clavicular_part_2;
+    AnyMuscleShortestPath DeltoideusClavicular2 = {
+      AnyMuscleModel &MusMdl = ...MuscleModels.DeltoideusClavicular2;
+      AnyRefNode &Org = ...Segments.Clavicula.O_DeltoideusClavicular2;
       AnyRefNode &Via = .ArtificialRake.DeltoidMuscleConnector.DeltoidVia8;
-      AnyRefNode &Ins = ...Segments.Humerus.I_deltoideus_clavicular_part_2;
+      AnyRefNode &Ins = ...Segments.Humerus.I_DeltoideusClavicular2;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
       SPLine.StringMesh = 42;
       AnySurfSphere &Surf = ...Segments.Humerus.art_tub_minus_tub_majus.art_tub_minus_tub_majusSurf;
@@ -224,11 +224,11 @@ MuscleGroup Coracobrachialis = {
       };
     };
 
-    AnyMuscleShortestPath deltoideus_clavicular_part_3 = {
-      AnyMuscleModel &MusMdl = ...MuscleModels.deltoideus_clavicular_part_3;
-      AnyRefNode &Org = ...Segments.Clavicula.O_deltoideus_clavicular_part_3;
+    AnyMuscleShortestPath DeltoideusClavicular3 = {
+      AnyMuscleModel &MusMdl = ...MuscleModels.DeltoideusClavicular3;
+      AnyRefNode &Org = ...Segments.Clavicula.O_DeltoideusClavicular3;
       AnyRefNode &Via = .ArtificialRake.DeltoidMuscleConnector.DeltoidVia9;
-      AnyRefNode &Ins = ...Segments.Humerus.I_deltoideus_clavicular_part_3;
+      AnyRefNode &Ins = ...Segments.Humerus.I_DeltoideusClavicular3;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
       AnySurfSphere &Surf = ...Segments.Humerus.art_tub_minus_tub_majus.art_tub_minus_tub_majusSurf;
       SPLine.StringMesh = 35;
@@ -238,11 +238,11 @@ MuscleGroup Coracobrachialis = {
       };
     };
 
-    AnyMuscleShortestPath deltoideus_clavicular_part_4 = {
-      AnyMuscleModel &MusMdl = ...MuscleModels.deltoideus_clavicular_part_4;
-      AnyRefNode &Org = ...Segments.Clavicula.O_deltoideus_clavicular_part_4;
+    AnyMuscleShortestPath DeltoideusClavicular4 = {
+      AnyMuscleModel &MusMdl = ...MuscleModels.DeltoideusClavicular4;
+      AnyRefNode &Org = ...Segments.Clavicula.O_DeltoideusClavicular4;
       AnyRefNode &Via = .ArtificialRake.DeltoidMuscleConnector.DeltoidVia10;
-      AnyRefNode &Ins = ...Segments.Humerus.I_deltoideus_clavicular_part_4;
+      AnyRefNode &Ins = ...Segments.Humerus.I_DeltoideusClavicular4;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
       SPLine.StringMesh = 30;
       AnySurfSphere &Surf = ...Segments.Humerus.art_tub_minus_tub_majus.art_tub_minus_tub_majusSurf;
@@ -252,11 +252,11 @@ MuscleGroup Coracobrachialis = {
       };
     };
 
-    AnyMuscleShortestPath deltoideus_clavicular_part_5 = {
-      AnyMuscleModel &MusMdl = ...MuscleModels.deltoideus_clavicular_part_5;
-      AnyRefNode &Org = ...Segments.Clavicula.O_deltoideus_clavicular_part_5;
+    AnyMuscleShortestPath DeltoideusClavicular5 = {
+      AnyMuscleModel &MusMdl = ...MuscleModels.DeltoideusClavicular5;
+      AnyRefNode &Org = ...Segments.Clavicula.O_DeltoideusClavicular5;
       AnyRefNode &Via = .ArtificialRake.DeltoidMuscleConnector.DeltoidVia11;
-      AnyRefNode &Ins = ...Segments.Humerus.I_deltoideus_clavicular_part_5;
+      AnyRefNode &Ins = ...Segments.Humerus.I_DeltoideusClavicular5;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
       SPLine.StringMesh = 35;
       AnySurfSphere &Surf = ...Segments.Humerus.art_tub_minus_tub_majus.art_tub_minus_tub_majusSurf;
@@ -267,11 +267,11 @@ MuscleGroup Coracobrachialis = {
     };
 
     //most proximal unit
-    AnyMuscleShortestPath deltoideus_clavicular_part_6 = {
-      AnyMuscleModel &MusMdl = ...MuscleModels.deltoideus_clavicular_part_6;
-      AnyRefNode &Org = ...Segments.Clavicula.O_deltoideus_clavicular_part_6;
+    AnyMuscleShortestPath DeltoideusClavicular6 = {
+      AnyMuscleModel &MusMdl = ...MuscleModels.DeltoideusClavicular6;
+      AnyRefNode &Org = ...Segments.Clavicula.O_DeltoideusClavicular6;
       AnyRefNode &Via = .ArtificialRake.DeltoidMuscleConnector.DeltoidVia12;
-      AnyRefNode &Ins = ...Segments.Humerus.I_deltoideus_clavicular_part_6;
+      AnyRefNode &Ins = ...Segments.Humerus.I_DeltoideusClavicular6;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
       SPLine.StringMesh = 20;
       AnySurfSphere &Surf = ...Segments.Humerus.art_tub_minus_tub_majus.art_tub_minus_tub_majusSurf;
