@@ -192,6 +192,22 @@ You can revert to the TLEM foot model by setting:
   ```
 * Remove a number of previously deprecated `BM_XXX` switches and constants. 
 
+(ammr-3-2-1-changelog)=
+
+## AMMR 3.2.1 (2026-??-?? - TO BE UPDATED)
+<!-- [![Zenodo link](https://zenodo.org/badge/DOI/10.5281/zenodo.20082156.svg)](https://doi.org/10.5281/zenodo.20082156) -->
+[![AnyBody link](https://img.shields.io/badge/Included_with_AnyBody-8.2.1-yellowgreen)](https://www.anybodytech.com/resources/customer-downloads/)
+
+### 🩹 Fixed
+
+* Fixed use of deprecated members of AnyInputC3D in the AnyMoCap framework.
+
+### 🔧 Changed
+
+* AnyMoCap/CreateMarkerDriver class-template is extended for working
+  with virtual markers associated with moving reference frames given
+  by ROTATION data in C3D files.
+
 (ammr-3-2-0-changelog)=
 
 ## AMMR 3.2.0 (2026-05-08)
