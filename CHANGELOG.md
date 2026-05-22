@@ -193,9 +193,8 @@ You can revert to the TLEM foot model by setting:
 * Remove a number of previously deprecated `BM_XXX` switches and constants. 
 
 (ammr-3-2-1-changelog)=
-
-## AMMR 3.2.1 (2026-??-?? - TO BE UPDATED)
-<!-- [![Zenodo link](https://zenodo.org/badge/DOI/10.5281/zenodo.20082156.svg)](https://doi.org/10.5281/zenodo.20082156) -->
+## AMMR 3.2.1 (2026-05-21)
+[![Zenodo link](https://zenodo.org/badge/DOI/10.5281/zenodo.20321946.svg)](https://doi.org/10.5281/zenodo.20321946)
 [![AnyBody link](https://img.shields.io/badge/Included_with_AnyBody-8.2.1-yellowgreen)](https://www.anybodytech.com/resources/customer-downloads/)
 
 ### 🩹 Fixed
@@ -208,12 +207,17 @@ You can revert to the TLEM foot model by setting:
   with virtual markers associated with moving reference frames given
   by ROTATION data in C3D files.
 
+
 (ammr-3-2-0-changelog)=
 
 ## AMMR 3.2.0 (2026-05-08)
-
 [![Zenodo link](https://zenodo.org/badge/DOI/10.5281/zenodo.20082156.svg)](https://doi.org/10.5281/zenodo.20082156)
 [![AnyBody link](https://img.shields.io/badge/Included_with_AnyBody-8.2.0-yellowgreen)](https://www.anybodytech.com/resources/customer-downloads/)
+
+:::{note} This version of AMMR was not properly released on Zenodo due to issues in the release process. 
+Version 3.2.1 was released as replacement shortly after, containing fixes and improvements of these and other issues (see above).
+:::
+
 
 ### 🩹 Fixed
 
