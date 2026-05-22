@@ -58,6 +58,11 @@ for more info about the abdominal model.
 
 It is possible to revert to the old buckle implementation with switch {bm_statement}`_CAVITY_MODEL_BUCKLE_`.
 
+#### New Hand Model
+
+A new hand model is introduced.
+More detail to come.
+
 #### Integrated Glasgow-Maastricht (GM) Foot Model
 
 The Glasgow-Maastricht (GM) foot model is now integrated into the AMMR.
@@ -77,6 +82,12 @@ and Thoracic model uses geometry-based inertia. The old models keep the standard
 inertia properties. The system also controls how mass is scaled when setting
 `Main.HumanModel.Anthropometrics.BodyMass`. It will distribute the mass to the different
 segments based on whether they are marked as being part of the distribution.
+
+### ➕ Added
+
+* New morphing tools:
+* New environment tools:
+* New Postural reference frames:
 
 ### 🩹 Fixed
 
