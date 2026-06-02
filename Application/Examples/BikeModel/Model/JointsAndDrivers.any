@@ -81,7 +81,7 @@ AnyKinEqSimpleDriver PostureDriver ={
   DriverPos = pi/180*{
     .JntPos.PelvisThoraxLateralBending,
     .JntPos.PelvisThoraxRotation,
-    .JntPos.PelvisThoraxExtension
+    -27
   };
   DriverVel = pi/180*{
     .JntVel.PelvisThoraxLateralBending,
@@ -101,8 +101,8 @@ AnyFolder Right={
     #include "<ANYBODY_PATH_MODELUTILS>/JointReactions/DrawJointReactions.any"
     AnyFolder &DrawRef=Main.DrawSettings;
   };
-  AnyFolder& Ref_Foot = ..ModelFolder.Right.Leg.Seg.Foot;
-  Ref_Foot.Metatarsal2 =
+  AnySeg& Ref_Foot = ..ModelFolder.Right.Leg.Seg.Foot;
+  Ref_Foot =
   {
     AnyRefNode PedalConnectNode =
     {
@@ -235,13 +235,13 @@ AnyFolder Left = {
 
   AnySphericalJoint PedalFootJoint = {
     AnyRefNode &ref1= ....BikeModel.Crank.LPedal;
-    AnyRefNode &ref2 = ...ModelFolder.Left.Leg.Seg.Foot.Metatarsal2.PedalConnectNode;
+    AnyRefNode &ref2 = ...ModelFolder.Left.Leg.Seg.Foot.PedalConnectNode;
     //    AnyDrawRefFrame Drw={}; //this lines adds a visible coordinate system in the ref2 node, and since the ref2 node points at the groundjoint at the foot it will display it there .. you could also have inserted it directly where the GroundJointNode was created
     #include "<ANYBODY_PATH_MODELUTILS>/JointReactions/DrawJointReactions.any"
     AnyFolder &DrawRef=Main.DrawSettings;
   };
-  AnyFolder& Ref_Foot = ..ModelFolder.Left.Leg.Seg.Foot;
-  Ref_Foot.Metatarsal2 =
+  AnySeg& Ref_Foot = ..ModelFolder.Left.Leg.Seg.Foot;
+  Ref_Foot =
   {
     AnyRefNode PedalConnectNode =
     {
@@ -375,7 +375,7 @@ of the knee when the pedal width is increased. */
   //This joint locks the hand to the bike
   //-------------------------------------------------------
   AnySphericalJoint HandToBike = {
-    AnyRefNode &ref1 = ....BikeModel.BikeFrame.RightHand;
+    AnyRefNode &ref1 = ....BikeModel.BikeFrame.Handlebar.RightHand;
     AnyRefFrame &ref2= ...ModelFolder.Right.ShoulderArm.Segments.Glove;
  #include "<ANYBODY_PATH_MODELUTILS>/JointReactions/DrawJointReactions.any"
       AnyFolder &DrawRef=Main.DrawSettings;
@@ -383,7 +383,7 @@ of the knee when the pedal width is increased. */
   }; //Hand to ground
 
   AnyKinRotational HandToBikeRot = {
-    AnyRefNode &GroundNode = ....BikeModel.BikeFrame.RightHand;
+    AnyRefNode &GroundNode = ....BikeModel.BikeFrame.Handlebar.RightHand;
     AnyRefFrame &ref2= ...ModelFolder.Right.ShoulderArm.Segments.Glove;
     Type=RotVector;
   }; //Hand to ground
@@ -395,10 +395,10 @@ of the knee when the pedal width is increased. */
 //    DriverPos = {0.446805, 0.850377, 2.871550};
 //    DriverVel={0,0,0};
 //    Reaction.Type={On,On,On};
-    DriverPos = {0.446805, 0.850377};
+    DriverPos = {0.446805, 2.250377};
     DriverVel={0,0};
     Reaction.Type={On,On};
-MeasureOrganizer={0,1};
+    MeasureOrganizer={0,2};
   };
 
 
@@ -445,14 +445,14 @@ MeasureOrganizer={0,1};
   //This joint locks the hand to the bike
   //-------------------------------------------------------
   AnySphericalJoint HandToBike = {
-    AnyRefNode &ref1 = ....BikeModel.BikeFrame.LeftHand;
+    AnyRefNode &ref1 = ....BikeModel.BikeFrame.Handlebar.LeftHand;
    AnyRefFrame &ref2= ...ModelFolder.Left.ShoulderArm.Segments.Glove;
         #include "<ANYBODY_PATH_MODELUTILS>/JointReactions/DrawJointReactions.any"
   AnyFolder &DrawRef=Main.DrawSettings;
    }; //Hand to bike
 
   AnyKinRotational HandToBikeRot = {
-    AnyRefNode &GroundNode = ....BikeModel.BikeFrame.LeftHand;
+    AnyRefNode &GroundNode = ....BikeModel.BikeFrame.Handlebar.LeftHand;
     AnyRefFrame &ref2= ...ModelFolder.Left.ShoulderArm.Segments.Glove;
     Type=RotVector;
   }; //Hand to ground
@@ -464,11 +464,10 @@ MeasureOrganizer={0,1};
 //    DriverPos = {-0.446805, -0.850377, 2.871550};
 //    DriverVel={0,0,0};
 //    Reaction.Type={On,On,On};
-    DriverPos = {-0.446805, -0.850377};
+    DriverPos = {-0.446805, 2.250377};
     DriverVel={0,0};
     Reaction.Type={On,On};
-
-    MeasureOrganizer={0,1};
+    MeasureOrganizer={0,2};
   };
 
 
@@ -501,7 +500,7 @@ MeasureOrganizer={0,1};
     AnyKinMeasure& ref2 =....BodyModel.Interface.Left.WristAbduction;
     DriverPos = pi/180*{
          ..JntPos.Left.WristFlexion,
-         ..JntPos.Left.WristAbduction};
+         20};
 
     DriverVel = pi/180*{
          ..JntVel.Left.WristFlexion,
@@ -513,5 +512,7 @@ MeasureOrganizer={0,1};
 };//left
 
 #endif
+
+
 
 

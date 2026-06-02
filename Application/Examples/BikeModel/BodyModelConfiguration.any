@@ -13,6 +13,18 @@
 // The application is not designed use with the old Leg model
 #define BM_LEG_MODEL _LEG_MODEL_TLEM_
 
+#define BM_FOOT_MODEL _FOOT_MODEL_LEG_FOOT_
+#ifdef BM_FOOT_MODEL
+  #if BM_FOOT_MODEL != _FOOT_MODEL_LEG_FOOT_
+    AnyMessage unsupported_foot_model = {
+      TriggerPreProcess = On;
+      Type = MSG_ErrorFatal;
+      Message = "The Bike model does not support the newer GM based foot models! use #define BM_FOOT_MODEL _FOOT_MODEL_LEG_FOOT_";
+    };
+  #endif
+#endif
+
+
 // use 3 element hill muscles for arms and legs
 #define BM_LEG_MUSCLES_RIGHT _MUSCLES_3E_HILL_
 #define BM_LEG_MUSCLES_LEFT _MUSCLES_3E_HILL_
