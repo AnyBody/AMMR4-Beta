@@ -36,7 +36,7 @@ AnyFolder Skull = {
 
 
 AnyFolder Sternum = {
-  AnyFloat RACP_CO6Node_pos            = {0.141 , 0.26599976, 0};
+  AnyFloat RectusAbdominisCP_CO6Node_pos            = {0.141 , 0.26599976, 0};
   AnyFloat ManubriosternalJointNode_Pos    = {0.090100003, 0.37379976, 0.00};
   AnyFloat ManubriosternalJointWidth = 0.05;
   AnyFloat ij_pos = {0.06, 0.422, 0};
@@ -90,8 +90,8 @@ AnyFolder Sternum = {
     AnyFloat TransversusThoracisR5StNode_pos         = {0.13589801, 0.24411453,   0.005};
     AnyFloat TransversusThoracisR6StNode_pos         = {0.14021569, 0.23908326,   0.005};
     AnyFloat TransversusThoracisNode_pos            = {0.14021569, 0.23908326,   0.005};
-    AnyFloat OICI_C9Node_pos         = {0.14556067,0.14319959, 0.1200842}+{0.005,0.003,-0.005}; //OIC6
-    AnyFloat OICI_C8Node_pos         = {0.16391572,0.1695137, 0.078600362};
+    AnyFloat ObliquusInternusR9Node_pos         = {0.14556067,0.14319959, 0.1200842}+{0.005,0.003,-0.005}; //OIC6
+    AnyFloat ObliquusInternusR8Node_pos         = {0.16391572,0.1695137, 0.078600362};
 
     AnyFloat DiaphragmCC_1_pos     = {0.1409616, 0.232155, 0.022334};
     AnyFloat DiaphragmCC_2_pos     = {0.1487132, 0.215477, 0.041995};
@@ -166,8 +166,8 @@ AnyFolder Sternum = {
     AnyFloat TransversusThoracisR5StNode_pos = .Right.TransversusThoracisR5StNode_pos * ..MirrorTransform;
     AnyFloat TransversusThoracisR6StNode_pos = .Right.TransversusThoracisR6StNode_pos * ..MirrorTransform;
     AnyFloat TransversusThoracisNode_pos = .Right.TransversusThoracisNode_pos * ..MirrorTransform;
-    AnyFloat OICI_C9Node_pos = .Right.OICI_C9Node_pos * ..MirrorTransform;
-    AnyFloat OICI_C8Node_pos = .Right.OICI_C8Node_pos * ..MirrorTransform;
+    AnyFloat ObliquusInternusR9Node_pos = .Right.ObliquusInternusR9Node_pos * ..MirrorTransform;
+    AnyFloat ObliquusInternusR8Node_pos = .Right.ObliquusInternusR8Node_pos * ..MirrorTransform;
     AnyFloat DiaphragmCC_1_pos     = .Right.DiaphragmCC_1_pos * ..MirrorTransform;
     AnyFloat DiaphragmCC_2_pos     = .Right.DiaphragmCC_2_pos * ..MirrorTransform;
     AnyFloat DiaphragmCC_3_pos     = .Right.DiaphragmCC_3_pos * ..MirrorTransform;
@@ -283,7 +283,7 @@ AnyFolder T12 = {
     AnyFloat SET12T8NodeOrg_pos  =  {-0.017,0.175,0.019};
     AnyFloat SET12T9NodeOrg_pos  =  {-0.013,0.176,0.016};
     AnyFloat SET12T10NodeOrg_pos =  {-0.010,0.176,0.013};
-    AnyFloat QLT12_CINode_pos = {-0.007,0.165,0.025};
+    AnyFloat QuadratusLumborumT12Node_pos = {-0.007,0.165,0.025};
     AnyFloat O_serratus_posterior_inferior_T12R10ViaNodepos = {-0.045, 0.165, 0.04};
 
 
@@ -391,7 +391,7 @@ AnyFolder T12 = {
     AnyFloat SET12T8NodeOrg_pos = .Right.SET12T8NodeOrg_pos * ..MirrorTransform;
     AnyFloat SET12T9NodeOrg_pos = .Right.SET12T9NodeOrg_pos * ..MirrorTransform;
     AnyFloat SET12T10NodeOrg_pos = .Right.SET12T10NodeOrg_pos * ..MirrorTransform;
-    AnyFloat QLT12_CINode_pos = .Right.QLT12_CINode_pos * ..MirrorTransform;
+    AnyFloat QuadratusLumborumT12Node_pos = .Right.QuadratusLumborumT12Node_pos * ..MirrorTransform;
     AnyFloat O_serratus_posterior_inferior_T12R10ViaNodepos = .Right.O_serratus_posterior_inferior_T12R10ViaNodepos * ..MirrorTransform;
 
     AnyFloat Flavum_inferior_points = .Right.Flavum_inferior_points * ..MirrorTransform;
@@ -495,7 +495,7 @@ AnyFolder T11 = {
     AnyFloat SubcostalisR8R11_Org_pos = {-0.024680909, 0.19310249, 0.04120000};
     AnyFloat SubcostalisR9R11_Org_pos = {-0.026680909, 0.19010249, 0.04720000};
     AnyFloat SemispinalisThoracisTransversus_pos = {-0.022,0.195,0.020};
-    AnyFloat SSTViaNode_pos = {-0.022,0.195,0.018};
+    AnyFloat SemispinalisThoracisViaNode_pos = {-0.022,0.195,0.018};
     AnyFloat MultifidusThoracisT11T6NodeOrg_pos =  {-0.022,0.195,0.020};
     AnyFloat MultifidusThoracisT11T7NodeOrg_pos =  {-0.022,0.195,0.020};
     AnyFloat MultifidusThoracisT11T8NodeOrg_pos =  {-0.022,0.195,0.020};
@@ -586,7 +586,7 @@ AnyFolder T11 = {
     AnyFloat SubcostalisR8R11_Org_pos = .Right.SubcostalisR8R11_Org_pos * ..MirrorTransform;
     AnyFloat SubcostalisR9R11_Org_pos = .Right.SubcostalisR9R11_Org_pos * ..MirrorTransform;
     AnyFloat SemispinalisThoracisTransversus_pos = .Right.SemispinalisThoracisTransversus_pos * ..MirrorTransform;
-    AnyFloat SSTViaNode_pos   = .Right.SSTViaNode_pos * ..MirrorTransform;
+    AnyFloat SemispinalisThoracisViaNode_pos   = .Right.SemispinalisThoracisViaNode_pos * ..MirrorTransform;
     AnyFloat IC_AntIns_pos = .Right.IC_AntIns_pos * ..MirrorTransform;
     AnyFloat IC_IntIns_pos = .Right.IC_IntIns_pos * ..MirrorTransform;
     AnyFloat IC_PosIns_pos = .Right.IC_PosIns_pos * ..MirrorTransform;
@@ -700,7 +700,7 @@ AnyFolder T10 = {
     AnyFloat CTinf_pos       = CT_pos - {0, ..AllRibs.CTOffset[2], 0};
 
     AnyFloat SemispinalisThoracisTransversus_pos = {-0.036,0.230, 0.019};
-    AnyFloat SSTViaNode_pos = {-0.032,0.230, 0.016};
+    AnyFloat SemispinalisThoracisViaNode_pos = {-0.032,0.230, 0.016};
     AnyFloat LevatorCostarumT10R11_pos = {-0.04164089, 0.2302117, 0.01826163};
     AnyFloat LevatorCostarumT10R12_pos = {-0.04264089, 0.2302117, 0.01626163};
 
@@ -780,7 +780,7 @@ AnyFolder T10 = {
     AnyFloat CTinf_pos       = .Right.CTinf_pos * ..MirrorTransform;
 
     AnyFloat SemispinalisThoracisTransversus_pos = .Right.SemispinalisThoracisTransversus_pos * ..MirrorTransform;
-    AnyFloat SSTViaNode_pos = .Right.SSTViaNode_pos * ..MirrorTransform;
+    AnyFloat SemispinalisThoracisViaNode_pos = .Right.SemispinalisThoracisViaNode_pos * ..MirrorTransform;
     AnyFloat LevatorCostarumT10R11_pos = .Right.LevatorCostarumT10R11_pos * ..MirrorTransform;
     AnyFloat LevatorCostarumT10R12_pos = .Right.LevatorCostarumT10R12_pos * ..MirrorTransform;
 
@@ -875,7 +875,7 @@ AnyFolder T9 = {
 
   AnyFolder Right = {
     AnyFloat SemispinalisThoracisTransversus_pos = {-0.041,0.265, 0.021};
-    AnyFloat SSTViaNode_pos = {-0.04,0.265, 0.014};
+    AnyFloat SemispinalisThoracisViaNode_pos = {-0.04,0.265, 0.014};
     AnyFloat MultifidusThoracisT9T4NodeOrg_pos =  {-0.048,0.262,0.020};
     AnyFloat MultifidusThoracisT9T5NodeOrg_pos =  {-0.048,0.262,0.020};
     AnyFloat MultifidusThoracisT9T6NodeOrg_pos =  {-0.048,0.262,0.020};
@@ -972,7 +972,7 @@ AnyFolder T9 = {
 
   AnyFolder Left = {
     AnyFloat SemispinalisThoracisTransversus_pos = .Right.SemispinalisThoracisTransversus_pos * ..MirrorTransform;
-    AnyFloat SSTViaNode_pos = .Right.SSTViaNode_pos * ..MirrorTransform;
+    AnyFloat SemispinalisThoracisViaNode_pos = .Right.SemispinalisThoracisViaNode_pos * ..MirrorTransform;
     AnyFloat LevatorCostarumT9R10_pos = .Right.LevatorCostarumT9R10_pos * ..MirrorTransform;
     AnyFloat LevatorCostarumT9R11_pos = .Right.LevatorCostarumT9R11_pos * ..MirrorTransform;
     AnyFloat MultifidusThoracisT9T4NodeOrg_pos = .Right.MultifidusThoracisT9T4NodeOrg_pos * ..MirrorTransform;
@@ -1078,9 +1078,9 @@ AnyFolder T8 = {
 
   AnyFolder Right = {
     AnyFloat SemispinalisThoracisTransversus_pos = {-0.045,0.288,0.023};
-    AnyFloat SSTViaNode_pos = {-0.045,0.288,0.012};
+    AnyFloat SemispinalisThoracisViaNode_pos = {-0.045,0.288,0.012};
     AnyFloat SemispinalisThoracisT1ViaNode_pos = {-0.042,0.288,0.014};
-    AnyFloat SST8C7ViaNode_pos = {-0.0415,0.288,0.014};
+    AnyFloat SemispinalisThoracisT8C7ViaNode_pos = {-0.0415,0.288,0.014};
     AnyFloat SemispinalisThoracisC6ViaNode_pos = {-0.041,0.288,0.014};
     AnyFloat SemispinalisThoracisT9T4ViaNode_pos = {-0.045,0.288,0.016};
     AnyFloat MultifidusThoracisT8T3NodeOrg_pos =  {-0.050,0.287,0.020};
@@ -1184,9 +1184,9 @@ AnyFolder T8 = {
 
   AnyFolder Left = {
     AnyFloat SemispinalisThoracisTransversus_pos = .Right.SemispinalisThoracisTransversus_pos * ..MirrorTransform;
-    AnyFloat SSTViaNode_pos = .Right.SSTViaNode_pos * ..MirrorTransform;
+    AnyFloat SemispinalisThoracisViaNode_pos = .Right.SemispinalisThoracisViaNode_pos * ..MirrorTransform;
     AnyFloat SemispinalisThoracisT1ViaNode_pos = .Right.SemispinalisThoracisT1ViaNode_pos * ..MirrorTransform;
-    AnyFloat SST8C7ViaNode_pos = .Right.SST8C7ViaNode_pos * ..MirrorTransform;
+    AnyFloat SemispinalisThoracisT8C7ViaNode_pos = .Right.SemispinalisThoracisT8C7ViaNode_pos * ..MirrorTransform;
     AnyFloat SemispinalisThoracisC6ViaNode_pos = .Right.SemispinalisThoracisC6ViaNode_pos * ..MirrorTransform;
     AnyFloat SemispinalisThoracisT9T4ViaNode_pos = .Right.SemispinalisThoracisT9T4ViaNode_pos * ..MirrorTransform;
     AnyFloat LevatorCostarumT8R9_pos = .Right.LevatorCostarumT8R9_pos * ..MirrorTransform;
@@ -1299,10 +1299,10 @@ AnyFolder T7 = {
     AnyFloat SemispinalisThoracisT4ViaNode_pos = {-0.051,0.315,0.008};
     AnyFloat SemispinalisThoracisT3ViaNode_pos = {-0.049,0.315,0.008};
     AnyFloat SemispinalisThoracisT2ViaNode_pos = {-0.046,0.315,0.008};
-    AnyFloat SSTViaNode_pos = {-0.045,0.315,0.011};
+    AnyFloat SemispinalisThoracisViaNode_pos = {-0.045,0.315,0.011};
     AnyFloat SemispinalisThoracisC7ViaNode_pos = {-0.043,0.315,0.011};
-    AnyFloat SST7C6ViaNode_pos = {-0.0425,0.315,0.011};
-    AnyFloat SST7T9T4ViaNode_pos = {-0.051,0.315,0.01};
+    AnyFloat SemispinalisThoracisT7C6ViaNode_pos = {-0.0425,0.315,0.011};
+    AnyFloat SemispinalisThoracisT7T9T4ViaNode_pos = {-0.051,0.315,0.01};
     AnyFloat SemispinalisThoracisT9T1ViaNode_pos = {-0.049,0.315,0.012};
     AnyFloat SemispinalisThoracisT8T4ViaNode_pos = {-0.049,0.315,0.02};
     AnyFloat MultifidusThoracisT7T2NodeOrg_pos =  {-0.052,0.315,0.020};
@@ -1407,10 +1407,10 @@ AnyFolder T7 = {
     AnyFloat SemispinalisThoracisT4ViaNode_pos = .Right.SemispinalisThoracisT4ViaNode_pos * ..MirrorTransform;
     AnyFloat SemispinalisThoracisT3ViaNode_pos = .Right.SemispinalisThoracisT3ViaNode_pos * ..MirrorTransform;
     AnyFloat SemispinalisThoracisT2ViaNode_pos = .Right.SemispinalisThoracisT2ViaNode_pos * ..MirrorTransform;
-    AnyFloat SSTViaNode_pos = .Right.SSTViaNode_pos * ..MirrorTransform;
+    AnyFloat SemispinalisThoracisViaNode_pos = .Right.SemispinalisThoracisViaNode_pos * ..MirrorTransform;
     AnyFloat SemispinalisThoracisC7ViaNode_pos = .Right.SemispinalisThoracisC7ViaNode_pos * ..MirrorTransform;
-    AnyFloat SST7C6ViaNode_pos = .Right.SST7C6ViaNode_pos * ..MirrorTransform;
-    AnyFloat SST7T9T4ViaNode_pos = .Right.SST7T9T4ViaNode_pos * ..MirrorTransform;
+    AnyFloat SemispinalisThoracisT7C6ViaNode_pos = .Right.SemispinalisThoracisT7C6ViaNode_pos * ..MirrorTransform;
+    AnyFloat SemispinalisThoracisT7T9T4ViaNode_pos = .Right.SemispinalisThoracisT7T9T4ViaNode_pos * ..MirrorTransform;
     AnyFloat SemispinalisThoracisT9T1ViaNode_pos = .Right.SemispinalisThoracisT9T1ViaNode_pos * ..MirrorTransform;
     AnyFloat SemispinalisThoracisT8T4ViaNode_pos = .Right.SemispinalisThoracisT8T4ViaNode_pos * ..MirrorTransform;
     AnyFloat LevatorCostarumT7R8_pos = .Right.LevatorCostarumT7R8_pos * ..MirrorTransform;
@@ -1861,7 +1861,7 @@ AnyFolder T4 = {
   AnyFloat SpinalisL1T3Via9Node_pos =  {-0.065+0.004,0.360,0};
   AnyFloat SpinalisL1T2Via9Node_pos =  {-0.066+0.004,0.359,0};
   AnyFloat SpinalisL2T1Via10Node_pos=  {-0.067+0.004,0.359,0};
-  AnyFloat SSTSpinous_pos = {-0.067+0.004,0.359,0};
+  AnyFloat SemispinalisThoracisSpinous_pos = {-0.067+0.004,0.359,0};
   AnyMatrix AnteriorLongitudinal_inferior_points = {
     {0.00097868941, 0.37507743, 0.015397767}, // 0
     {0.0025795551, 0.37420332, 0.011388062}, // 1
@@ -2053,7 +2053,7 @@ AnyFolder T3 = {
   AnyFloat SuperiorEndplatePosteriorNode_pos = {-0.005000, 0.420300, 0.000000};
   AnyFloat SpinalisL1T2Via10Node_pos =  {-0.056+0.003,0.39,0};
   AnyFloat SpinalisL2T1Via11Node_pos =  {-0.058+0.003,0.39,0};
-  AnyFloat SSTSpinous_pos = {-0.056+0.003,0.39,0};
+  AnyFloat SemispinalisThoracisSpinous_pos = {-0.056+0.003,0.39,0};
   AnyMatrix AnteriorLongitudinal_inferior_points = {
     {0.0054523242, 0.39810166, 0.013605706}, // 0
     {0.0086870221, 0.39785364, 0.0073726587}, // 1
@@ -2245,7 +2245,7 @@ AnyFolder T2 = {
   AnyFloat SuperiorEndplatePosteriorNode_pos = {0.002700, 0.441700, 0.000000};
   AnyFloat SpinalisL1T2NodeIns_pos =   {-0.047+0.002,0.415,0};
   AnyFloat SpinalisL2T1Via12Node_pos = {-0.048+0.002,0.418,0};
-  AnyFloat SSTSpinous_pos = {-0.047+0.002,0.415,0};
+  AnyFloat SemispinalisThoracisSpinous_pos = {-0.047+0.002,0.415,0};
   AnyMatrix AnteriorLongitudinal_inferior_points = {
     {0.011029888, 0.42044431, 0.012170446}, // 0
     {0.01339056, 0.4197109, 0.0072623086}, // 1
@@ -2434,7 +2434,7 @@ AnyFolder T1 = {
   AnyFloat SpinalisL2T1NodeIns_pos =   {-0.039,0.438,0};
   AnyFloat SuperiorEndplateAnteriorNode_pos = {0.022700, 0.456400, 0.000000};
   AnyFloat SuperiorEndplatePosteriorNode_pos = {0.008600, 0.462600, 0.000000};
-  AnyFloat SSTSpinous_pos = {-0.039,0.438,0};
+  AnyFloat SemispinalisThoracisSpinous_pos = {-0.039,0.438,0};
   AnyFloat C7Tip_pos = {-0.036,0.47,0};
   AnyMatrix AnteriorLongitudinal_inferior_points = {
     {0.016996624, 0.44139472, 0.012152981}, // 0
@@ -4889,7 +4889,7 @@ AnyFloat Int_Inf_End_ABS_pos = .Right.Int_Inf_End_ABS_pos* ..MirrorTransform;
 
 AnyFolder R10 = {
   AnyFolder Right = {
-    AnyFloat OEC10a_CINode_pos       = {0.086559363-0.03,0.12617856+0.01, 0.12822376+0.0075}+{-0.005,0.007,-0.003}; // oec7
+    AnyFloat ObliquusExternusR10aNode_pos       = {0.086559363-0.03,0.12617856+0.01, 0.12822376+0.0075}+{-0.005,0.007,-0.003};
     AnyFloat IliocostalisThoracisR4R10Node_posIns     = {-0.04930874, 0.22891201, 0.039300000};
     AnyFloat IliocostalisThoracisR5R11Via5Node_pos    = {-0.05230874, 0.22691201, 0.041300000};
     AnyFloat IliocostalisThoracisR6R12Via4Node_pos    = {-0.05230874, 0.22591201, 0.043300000};
@@ -5062,7 +5062,7 @@ AnyFloat Int_Inf_End_ABS_pos = {0.080364800999901731, 0.12798364000004445, 0.126
 };
 
   AnyFolder Left = {
-    AnyFloat OEC10a_CINode_pos = .Right.OEC10a_CINode_pos * ..MirrorTransform;
+    AnyFloat ObliquusExternusR10aNode_pos = .Right.ObliquusExternusR10aNode_pos * ..MirrorTransform;
     AnyFloat IliocostalisThoracisR4R10Node_posIns = .Right.IliocostalisThoracisR4R10Node_posIns * ..MirrorTransform;
     AnyFloat IliocostalisThoracisR5R11Via5Node_pos = .Right.IliocostalisThoracisR5R11Via5Node_pos * ..MirrorTransform;
     AnyFloat IliocostalisThoracisR6R12Via4Node_pos = .Right.IliocostalisThoracisR6R12Via4Node_pos * ..MirrorTransform;
@@ -5294,7 +5294,7 @@ AnyFloat Int_Inf_End_ABS_pos = {0.009999999999941226, 0.14000000000002663, 0.109
     AnyFloat CC_AlignmentNode = {0.02514449, 0.1320337, 0.1160614}; //0.5*(IC_R11_Ext_Inf.Fun(0.8)+IC_R11_Ext_Sup.Fun(0.9));
     #endif
 
-    AnyFloat CCTangetNodeR11R10 = ..Thorax.Right.OEC11_CINode_pos+{0.0,0.03,0.01};
+    AnyFloat CCTangetNodeR11R10 = ..Thorax.Right.ObliquusExternusR11Node_pos+{0.0,0.03,0.01};
 };
 
   AnyFolder Left = {
@@ -5417,23 +5417,23 @@ AnyFolder R12 = {
     AnyFloat LongissimusThoracisR9S4Via3Node_pos      = ({-0.023,0.152,(..Thorax.Right.LongissimusThoracisR9S4Node_pos[2] - ..Thorax.LongissimusThoracisR9S4Z*(..Thorax.Right.LongissimusThoracisR9S4Node_pos[1] - 0.152))}-..R12.Right.CV_pos)+..R12.Right.CV_pos;
     AnyFloat LongissimusThoracisR10S3Via2Node_pos = ({-0.023,0.147,(..Thorax.Right.LongissimusThoracisR10S3Node_pos[2] - ..Thorax.LongissimusThoracisR10S3Z*(..Thorax.Right.LongissimusThoracisR10S3Node_pos[1] - 0.147))}-..R12.Right.CV_pos)+..R12.Right.CV_pos;
     AnyFloat LongissimusThoracisR11S3Via1Node_pos = ({-0.023,0.149,(..Thorax.Right.LongissimusThoracisR11S3Node_pos[2] - ..Thorax.LongissimusThoracisR11S3Z*(..Thorax.Right.LongissimusThoracisR11S3Node_pos[1] - 0.149))}-..R12.Right.CV_pos)+..R12.Right.CV_pos;
-    AnyFloat QLC12Lat_CINode1_pos                               = (.Transformation*({0.000, 0.135, 0.070}-..R12.Right.CV_pos)')'+..R12.Right.CV_pos;
-    AnyFloat QLC12Lat_CINode2_pos                               = (.Transformation*({0.000, 0.135, 0.070}*0.8+{-0.010, 0.147, 0.057}*0.2-..R12.Right.CV_pos)')'+..R12.Right.CV_pos;
-    AnyFloat QLC12Lat_CINode3_pos                               = (.Transformation*({0.000, 0.135, 0.070}*0.6+{-0.010, 0.147, 0.057}*0.4-..R12.Right.CV_pos)')'+..R12.Right.CV_pos;
-    AnyFloat QLC12Lat_CINode4_pos                               = (.Transformation*({0.000, 0.135, 0.070}*0.4+{-0.010, 0.147, 0.057}*0.6-..R12.Right.CV_pos)')'+..R12.Right.CV_pos;
-    AnyFloat QLC12Lat_CINode5_pos                               = (.Transformation*({0.000, 0.135, 0.070}*0.2+{-0.010, 0.147, 0.057}*0.8-..R12.Right.CV_pos)')'+..R12.Right.CV_pos;
-    AnyFloat QLC12InterMedian_CINode1_pos                       = (.Transformation*({-0.010, 0.147, 0.057}-..R12.Right.CV_pos)')'+..R12.Right.CV_pos;
-    AnyFloat QLC12InterMedian_CINode2_pos                       = (.Transformation*({-0.010, 0.147, 0.057}*0.8+{-0.011, 0.161, 0.040}*0.2-..R12.Right.CV_pos)')'+..R12.Right.CV_pos;
-    AnyFloat QLC12InterMedian_CINode3_pos                       = (.Transformation*({-0.010, 0.147, 0.057}*0.6+{-0.011, 0.161, 0.040}*0.4-..R12.Right.CV_pos)')'+..R12.Right.CV_pos;
-    AnyFloat QLC12InterMedian_CINode4_pos                       = (.Transformation*({-0.010, 0.147, 0.057}*0.4+{-0.011, 0.161, 0.040}*0.6-..R12.Right.CV_pos)')'+..R12.Right.CV_pos;
-    AnyFloat QLC12InterMedian_CINode5_pos                       = (.Transformation*({-0.010, 0.147, 0.057}*0.2+{-0.011, 0.161, 0.040}*0.8-..R12.Right.CV_pos)')'+..R12.Right.CV_pos;
-    AnyFloat QLC12Median_CINode1_pos                            = (.Transformation*({-0.011, 0.161, 0.040}-..R12.Right.CV_pos)')'+..R12.Right.CV_pos;
-    AnyFloat QLC12Median_CINode2_pos                            = (.Transformation*({-0.011, 0.161, 0.040}*0.8+{-0.003, 0.168, 0.0248837}*0.2-..R12.Right.CV_pos)')'+..R12.Right.CV_pos;
-    AnyFloat QLC12Median_CINode3_pos                            = (.Transformation*({-0.011, 0.161, 0.040}*0.5+{-0.003, 0.168, 0.0248837}*0.5-..R12.Right.CV_pos)')'+..R12.Right.CV_pos;
-    AnyFloat QLC12Median_CINode4_pos                            = (.Transformation*({-0.011, 0.161, 0.040}*0.2+{-0.003, 0.168, 0.0248837}*0.8-..R12.Right.CV_pos)')'+..R12.Right.CV_pos;
-    AnyFloat OEC12_CINode_pos                               = (.Transformation*({0.0067108595,0.13162032, 0.079510987}-..R12.Right.CV_pos)')'+..R12.Right.CV_pos;
-    AnyFloat OEC12_CINode1_pos                              = (.Transformation*({0.0067108595,0.13162032, 0.079510987}+{-0.025, 0.005,-0.025}-..R12.Right.CV_pos)')'+..R12.Right.CV_pos;
-    AnyFloat OICI_C12Node_pos                               = (.Transformation*({0.003000000, 0.1300000, 0.07500000}-..R12.Right.CV_pos)')'+..R12.Right.CV_pos;
+    AnyFloat QuadratusLumborumR12LateralNode1_pos                               = (.Transformation*({0.000, 0.135, 0.070}-..R12.Right.CV_pos)')'+..R12.Right.CV_pos;
+    AnyFloat QuadratusLumborumR12LateralNode2_pos                               = (.Transformation*({0.000, 0.135, 0.070}*0.8+{-0.010, 0.147, 0.057}*0.2-..R12.Right.CV_pos)')'+..R12.Right.CV_pos;
+    AnyFloat QuadratusLumborumR12LateralNode3_pos                               = (.Transformation*({0.000, 0.135, 0.070}*0.6+{-0.010, 0.147, 0.057}*0.4-..R12.Right.CV_pos)')'+..R12.Right.CV_pos;
+    AnyFloat QuadratusLumborumR12LateralNode4_pos                               = (.Transformation*({0.000, 0.135, 0.070}*0.4+{-0.010, 0.147, 0.057}*0.6-..R12.Right.CV_pos)')'+..R12.Right.CV_pos;
+    AnyFloat QuadratusLumborumR12LateralNode5_pos                               = (.Transformation*({0.000, 0.135, 0.070}*0.2+{-0.010, 0.147, 0.057}*0.8-..R12.Right.CV_pos)')'+..R12.Right.CV_pos;
+    AnyFloat QuadratusLumborumR12InterMedianNode1_pos                       = (.Transformation*({-0.010, 0.147, 0.057}-..R12.Right.CV_pos)')'+..R12.Right.CV_pos;
+    AnyFloat QuadratusLumborumR12InterMedianNode2_pos                       = (.Transformation*({-0.010, 0.147, 0.057}*0.8+{-0.011, 0.161, 0.040}*0.2-..R12.Right.CV_pos)')'+..R12.Right.CV_pos;
+    AnyFloat QuadratusLumborumR12InterMedianNode3_pos                       = (.Transformation*({-0.010, 0.147, 0.057}*0.6+{-0.011, 0.161, 0.040}*0.4-..R12.Right.CV_pos)')'+..R12.Right.CV_pos;
+    AnyFloat QuadratusLumborumR12InterMedianNode4_pos                       = (.Transformation*({-0.010, 0.147, 0.057}*0.4+{-0.011, 0.161, 0.040}*0.6-..R12.Right.CV_pos)')'+..R12.Right.CV_pos;
+    AnyFloat QuadratusLumborumR12InterMedianNode5_pos                       = (.Transformation*({-0.010, 0.147, 0.057}*0.2+{-0.011, 0.161, 0.040}*0.8-..R12.Right.CV_pos)')'+..R12.Right.CV_pos;
+    AnyFloat QuadratusLumborumR12MedianNode1_pos                            = (.Transformation*({-0.011, 0.161, 0.040}-..R12.Right.CV_pos)')'+..R12.Right.CV_pos;
+    AnyFloat QuadratusLumborumR12MedianNode2_pos                            = (.Transformation*({-0.011, 0.161, 0.040}*0.8+{-0.003, 0.168, 0.0248837}*0.2-..R12.Right.CV_pos)')'+..R12.Right.CV_pos;
+    AnyFloat QuadratusLumborumR12MedianNode3_pos                            = (.Transformation*({-0.011, 0.161, 0.040}*0.5+{-0.003, 0.168, 0.0248837}*0.5-..R12.Right.CV_pos)')'+..R12.Right.CV_pos;
+    AnyFloat QuadratusLumborumR12MedianNode4_pos                            = (.Transformation*({-0.011, 0.161, 0.040}*0.2+{-0.003, 0.168, 0.0248837}*0.8-..R12.Right.CV_pos)')'+..R12.Right.CV_pos;
+    AnyFloat ObliquusExternusR12Node_pos                               = (.Transformation*({0.0067108595,0.13162032, 0.079510987}-..R12.Right.CV_pos)')'+..R12.Right.CV_pos;
+    AnyFloat ObliquusExternusR12Node1_pos                              = (.Transformation*({0.0067108595,0.13162032, 0.079510987}+{-0.025, 0.005,-0.025}-..R12.Right.CV_pos)')'+..R12.Right.CV_pos;
+    AnyFloat ObliquusInternusR12Node_pos                               = (.Transformation*({0.003000000, 0.1300000, 0.07500000}-..R12.Right.CV_pos)')'+..R12.Right.CV_pos;
     AnyVec3 IliocostalisLumborumR12Node_pos = (.Transformation*({-0.009,0.146,0.060}-..R12.Right.CV_pos)')'+..R12.Right.CV_pos;
     AnyVec3 LongissimusThoracisR12S3Node_pos = (.Transformation*({-0.011,0.161,0.040}-..R12.Right.CV_pos)')'+..R12.Right.CV_pos;
     AnyMatrix SuperiorCostoTransverse_points = {
@@ -5586,7 +5586,7 @@ AnyFloat Int_Inf_End_ABS_pos = {0.0097643869999717078, 0.12774380000001903, 0.08
     AnyFloat CC_AlignmentNode ={0.001001966, 0.1358947, 0.07161119}; // 0.5*(IC_R12_Ext_Inf.Fun(0.8)+IC_R12_Ext_Sup.Fun(0.9));
     #endif
 
-   AnyFloat CCTangetNodeR12R11 = ..R12.Right.OEC12_CINode_pos+{0.0,0.01,0.03};
+   AnyFloat CCTangetNodeR12R11 = ..R12.Right.ObliquusExternusR12Node_pos+{0.0,0.01,0.03};
   };
 
   AnyFolder Left = {
@@ -5622,23 +5622,23 @@ AnyFloat Int_Inf_End_ABS_pos = {0.0097643869999717078, 0.12774380000001903, 0.08
     AnyFloat LongissimusThoracisR9S4Via3Node_pos      = .Right.LongissimusThoracisR9S4Via3Node_pos * ..MirrorTransform;
     AnyFloat LongissimusThoracisR10S3Via2Node_pos = .Right.LongissimusThoracisR10S3Via2Node_pos * ..MirrorTransform;
     AnyFloat LongissimusThoracisR11S3Via1Node_pos = .Right.LongissimusThoracisR11S3Via1Node_pos * ..MirrorTransform;
-    AnyFloat QLC12Lat_CINode1_pos                               = .Right.QLC12Lat_CINode1_pos * ..MirrorTransform;
-    AnyFloat QLC12Lat_CINode2_pos                               = .Right.QLC12Lat_CINode2_pos * ..MirrorTransform;
-    AnyFloat QLC12Lat_CINode3_pos                               = .Right.QLC12Lat_CINode3_pos * ..MirrorTransform;
-    AnyFloat QLC12Lat_CINode4_pos                               = .Right.QLC12Lat_CINode4_pos * ..MirrorTransform;
-    AnyFloat QLC12Lat_CINode5_pos                               = .Right.QLC12Lat_CINode5_pos * ..MirrorTransform;
-    AnyFloat QLC12InterMedian_CINode1_pos                       = .Right.QLC12InterMedian_CINode1_pos * ..MirrorTransform;
-    AnyFloat QLC12InterMedian_CINode2_pos                       = .Right.QLC12InterMedian_CINode2_pos * ..MirrorTransform;
-    AnyFloat QLC12InterMedian_CINode3_pos                       = .Right.QLC12InterMedian_CINode3_pos * ..MirrorTransform;
-    AnyFloat QLC12InterMedian_CINode4_pos                       = .Right.QLC12InterMedian_CINode4_pos * ..MirrorTransform;
-    AnyFloat QLC12InterMedian_CINode5_pos                       = .Right.QLC12InterMedian_CINode5_pos * ..MirrorTransform;
-    AnyFloat QLC12Median_CINode1_pos                            = .Right.QLC12Median_CINode1_pos * ..MirrorTransform;
-    AnyFloat QLC12Median_CINode2_pos                            = .Right.QLC12Median_CINode2_pos * ..MirrorTransform;
-    AnyFloat QLC12Median_CINode3_pos                            = .Right.QLC12Median_CINode3_pos * ..MirrorTransform;
-    AnyFloat QLC12Median_CINode4_pos                            = .Right.QLC12Median_CINode4_pos * ..MirrorTransform;
-    AnyFloat OEC12_CINode_pos                               = .Right.OEC12_CINode_pos * ..MirrorTransform;
-    AnyFloat OEC12_CINode1_pos                              = .Right.OEC12_CINode1_pos * ..MirrorTransform;
-    AnyFloat OICI_C12Node_pos                               = .Right.OICI_C12Node_pos * ..MirrorTransform;
+    AnyFloat QuadratusLumborumR12LateralNode1_pos                               = .Right.QuadratusLumborumR12LateralNode1_pos * ..MirrorTransform;
+    AnyFloat QuadratusLumborumR12LateralNode2_pos                               = .Right.QuadratusLumborumR12LateralNode2_pos * ..MirrorTransform;
+    AnyFloat QuadratusLumborumR12LateralNode3_pos                               = .Right.QuadratusLumborumR12LateralNode3_pos * ..MirrorTransform;
+    AnyFloat QuadratusLumborumR12LateralNode4_pos                               = .Right.QuadratusLumborumR12LateralNode4_pos * ..MirrorTransform;
+    AnyFloat QuadratusLumborumR12LateralNode5_pos                               = .Right.QuadratusLumborumR12LateralNode5_pos * ..MirrorTransform;
+    AnyFloat QuadratusLumborumR12InterMedianNode1_pos                       = .Right.QuadratusLumborumR12InterMedianNode1_pos * ..MirrorTransform;
+    AnyFloat QuadratusLumborumR12InterMedianNode2_pos                       = .Right.QuadratusLumborumR12InterMedianNode2_pos * ..MirrorTransform;
+    AnyFloat QuadratusLumborumR12InterMedianNode3_pos                       = .Right.QuadratusLumborumR12InterMedianNode3_pos * ..MirrorTransform;
+    AnyFloat QuadratusLumborumR12InterMedianNode4_pos                       = .Right.QuadratusLumborumR12InterMedianNode4_pos * ..MirrorTransform;
+    AnyFloat QuadratusLumborumR12InterMedianNode5_pos                       = .Right.QuadratusLumborumR12InterMedianNode5_pos * ..MirrorTransform;
+    AnyFloat QuadratusLumborumR12MedianNode1_pos                            = .Right.QuadratusLumborumR12MedianNode1_pos * ..MirrorTransform;
+    AnyFloat QuadratusLumborumR12MedianNode2_pos                            = .Right.QuadratusLumborumR12MedianNode2_pos * ..MirrorTransform;
+    AnyFloat QuadratusLumborumR12MedianNode3_pos                            = .Right.QuadratusLumborumR12MedianNode3_pos * ..MirrorTransform;
+    AnyFloat QuadratusLumborumR12MedianNode4_pos                            = .Right.QuadratusLumborumR12MedianNode4_pos * ..MirrorTransform;
+    AnyFloat ObliquusExternusR12Node_pos                               = .Right.ObliquusExternusR12Node_pos * ..MirrorTransform;
+    AnyFloat ObliquusExternusR12Node1_pos                              = .Right.ObliquusExternusR12Node1_pos * ..MirrorTransform;
+    AnyFloat ObliquusInternusR12Node_pos                               = .Right.ObliquusInternusR12Node_pos * ..MirrorTransform;
     AnyVec3 IliocostalisLumborumR12Node_pos = .Right.IliocostalisLumborumR12Node_pos * ..MirrorTransform;
     AnyVec3 LongissimusThoracisR12S3Node_pos = .Right.LongissimusThoracisR12S3Node_pos * ..MirrorTransform;
 
@@ -5697,7 +5697,7 @@ AnyFolder Thorax = {
   AnyVar UBHeight =  0.50; //Upperbody height
   AnyVar Height = vnorm( .C1.C1C0JntNode_pos - .L5.L5SacrumJntNode_pos);///< Height computed from the L5SacrumJnt to C1 node
   AnyVar Width = 0.3881839;///< Shoulder width
-  AnyVar Depth = 0.1870;///< Horizontal distance between (midpoint of LongissimusThoracisT8S3Via3NodeL and LongissimusThoracisT8S3Via3NodeR) and (midpoint of RACP_CO6ViaNodeR and RACP_CO6ViaNodeL)
+  AnyVar Depth = 0.1870;///< Horizontal distance between (midpoint of LongissimusThoracisT8S3Via3NodeL and LongissimusThoracisT8S3Via3NodeR) and (midpoint of RectusAbdominisCP_CO6ViaNodeR and RectusAbdominisCP_CO6ViaNodeL)
 
   AnyFloat sCoM_pos = {0.060,0.303,0};
 
@@ -5710,8 +5710,8 @@ AnyFolder Thorax = {
       AnyFloat BuckleNodeTopCenter_pos                         = {0.1500000, 0.1500000, 0.0000000};
   #endif
 
-  AnyFloat SPL1T5Node_pos                                  = {-0.06970000, 0.3403000, 0.0000000};
-  AnyFloat SPL1T4Node_pos                                  = {-0.06250000, 0.3602000, 0};
+  AnyFloat SpinalisL1T5Node_pos                                  = {-0.06970000, 0.3403000, 0.0000000};
+  AnyFloat SpinalisL1T4Node_pos                                  = {-0.06250000, 0.3602000, 0};
   AnyFloat SpinalisL1T3Node_pos                                  = {-0.05440000, 0.3882000, 0};
   AnyFloat SpinalisT11T6Via1Node_pos                            = {-0.048+0.01,0.19,0};
   AnyFloat SpinalisT12T5Via2Node_pos                            = {-0.049+0.01,0.188,0};
@@ -5953,16 +5953,16 @@ AnyFloat scj_InNeutralConf_pos = {-0.06838000000000001, 0.47619162999999998, 0.0
     AnyFloat LongissimusThoracisT10S3Via1Node_pos = {-0.037,0.197,(LongissimusThoracisT10S3Node_pos[2] - .LongissimusThoracisT10S3Z*(LongissimusThoracisT10S3Node_pos[1] - 0.197))};
     AnyFloat LongissimusThoracisT10S3Via2Node_pos = {-0.023,0.147,(LongissimusThoracisT10S3Node_pos[2] - .LongissimusThoracisT10S3Z*(LongissimusThoracisT10S3Node_pos[1] - 0.147))};
     AnyFloat LongissimusThoracisT11S3Via1Node_pos = {-0.023,0.149,(LongissimusThoracisT11S3Node_pos[2] - .LongissimusThoracisT11S3Z*(LongissimusThoracisT11S3Node_pos[1] - 0.149))};
-    
-    AnyFloat RACP_CO7Node_1_pos                            = {0.1450000, 0.2360000, 0.010000};
-    AnyFloat RACP_CO6Node_2_pos                            = {0.14021569, 0.23908326,   0.005};
-    AnyFloat RACP_CO5Node_2_pos                            = {0.1350000, 0.290000, 0.0400000};
-    AnyFloat RACP_Via_2_pos                                = {0.1550000, 0.200000, 0.0400000};
-    AnyFloat OEC6_RSNode_pos                                = {0.12831205,0.25798428, 0.11569053}+{-0.015,0.007,0.017};  // OEC1
-    AnyFloat OEC7_RSNode_pos                                = {0.13488244,0.22149785, 0.12089419}+{-0.022,0.011,0.018};  // OEC2
-    AnyFloat OEC8_RSNode_pos                                = {0.14111029,0.18604259, 0.12809466}+{-0.025,0.015,0.015};  // OEC3
-    AnyFloat OEC9_RSNode_pos                                = {0.13291441,0.14830206, 0.12934342}+{-0.03,0.016,0.014};   // OEC4
-    AnyFloat OEC9_RSNode_1_pos                              = {0.13291441,0.14830206, 0.12934342}+{-0.06,0.025,0.005}+{0,0,0.005};    // OEC5
+
+    AnyFloat RectusAbdominisCP_CO7Node_1_pos                            = {0.1450000, 0.2360000, 0.010000};
+    AnyFloat RectusAbdominisCP_CO6Node_2_pos                            = {0.14021569, 0.23908326,   0.005};
+    AnyFloat RectusAbdominisCP_CO5Node_2_pos                            = {0.1350000, 0.290000, 0.0400000};
+    AnyFloat RectusAbdominisCP_Via_2_pos                                = {0.1550000, 0.200000, 0.0400000};
+    AnyFloat ObliquusExternusR6Node_pos                                = {0.12831205,0.25798428, 0.11569053}+{-0.015,0.007,0.017};
+    AnyFloat ObliquusExternusR7Node_pos                                = {0.13488244,0.22149785, 0.12089419}+{-0.022,0.011,0.018};
+    AnyFloat ObliquusExternusR8Node_pos                                = {0.14111029,0.18604259, 0.12809466}+{-0.025,0.015,0.015};
+    AnyFloat ObliquusExternusR9Node_pos                                = {0.13291441,0.14830206, 0.12934342}+{-0.03,0.016,0.014};
+    AnyFloat ObliquusExternusR9Node_1_pos                              = {0.13291441,0.14830206, 0.12934342}+{-0.06,0.025,0.005}+{0,0,0.005};
     AnyFloat LongissimusThoracisR3L3Via1Node_pos      = {-0.041,0.394,(LongissimusThoracisR3L3Node_pos[2] - .LongissimusThoracisR3L3Z*(LongissimusThoracisR3L3Node_pos[1] - 0.394))};
     AnyFloat LongissimusThoracisR3L3Via2Node_pos      = {-0.049,0.372,(LongissimusThoracisR3L3Node_pos[2] - .LongissimusThoracisR3L3Z*(LongissimusThoracisR3L3Node_pos[1] - 0.372))};
     AnyFloat LongissimusThoracisR3L3Via3Node_pos      = {-0.057,0.346,(LongissimusThoracisR3L3Node_pos[2] - .LongissimusThoracisR3L3Z*(LongissimusThoracisR3L3Node_pos[1] - 0.346))};
@@ -6007,20 +6007,20 @@ AnyFloat scj_InNeutralConf_pos = {-0.06838000000000001, 0.47619162999999998, 0.0
 
 
 
-    AnyFloat OEC10_RSNode_pos                              = {0.11703116-0.03,0.120634+0.005, 0.12460914}+{0.005,0.0,0.003}; //   OEC6
+    AnyFloat ObliquusExternusR10Node_pos                              = {0.11703116-0.03,0.120634+0.005, 0.12460914}+{0.005,0.0,0.003};
 
-    AnyFloat OEC6_1_RSNode_pos                              = {0.11703116,0.120634, 0.12460914}+{-0.05-0.03,0.01+0.01,0.005};
-    AnyFloat OEC6_2_RSNode_pos                              = {0.11703116,0.120634, 0.12460914}+{-0.02-0.03,0.005+0.02,0.005}+{-0.01,0,0.005};  // OEC9
+    AnyFloat ObliquusExternusR6_1Node_pos                              = {0.11703116,0.120634, 0.12460914}+{-0.05-0.03,0.01+0.01,0.005};
+    AnyFloat ObliquusExternusR6_2Node_pos                              = {0.11703116,0.120634, 0.12460914}+{-0.02-0.03,0.005+0.02,0.005}+{-0.01,0,0.005};
 
 
-    AnyFloat OEC10a_RSNode_pos                               = {0.086559363,0.12617856, 0.12822376};
-    AnyFloat OEC11_CINode_pos                               = {0.050685782,0.11664285, 0.11891787};
+    AnyFloat ObliquusExternusR10aNode_pos                               = {0.086559363,0.12617856, 0.12822376};
+    AnyFloat ObliquusExternusR11Node_pos                               = {0.050685782,0.11664285, 0.11891787};
 
-    AnyFloat OEC11_CINode1_pos                              = {0.050685782,0.11664285, 0.11891787}+{-0.025,0.01,-0.005};
+    AnyFloat ObliquusExternusR11Node1_pos                              = {0.050685782,0.11664285, 0.11891787}+{-0.025,0.01,-0.005};
 
-    AnyFloat OICI_C10aNode_pos                              = {0.086559363,0.12617856, 0.12822376};
-    AnyFloat OICI_C10Node_pos                              = {0.12267275,0.11959027, 0.12383152};
-    AnyFloat OICI_C11Node_pos                               = {0.039111104,0.12144548, 0.11866689};
+    AnyFloat ObliquusInternusR10aNode_pos                              = {0.086559363,0.12617856, 0.12822376};
+    AnyFloat ObliquusInternusR10Node_pos                              = {0.12267275,0.11959027, 0.12383152};
+    AnyFloat ObliquusInternusR11Node_pos                               = {0.039111104,0.12144548, 0.11866689};
     AnyFloat MultifidusThoracisL1T8Node_pos                                 = {-0.05600000, 0.2530000, 0.005000000};
     AnyFloat MultifidusThoracisL1T9Node_pos                                 = {-0.05100000, 0.2320000, 0.005000000};
     AnyFloat MultifidusThoracisL1T10Node_pos                                = {-0.03700000, 0.2100000, 0.007000000};
@@ -6284,7 +6284,7 @@ AnyFloat scj_InNeutralConf_pos = {-0.06838000000000001, 0.47619162999999998, 0.0
     AnyFloat LongissimusThoracisT10S3Via1Node_pos = .Right.LongissimusThoracisT10S3Via1Node_pos  * ..MirrorTransform;
     AnyFloat LongissimusThoracisT10S3Via2Node_pos = .Right.LongissimusThoracisT10S3Via2Node_pos  * ..MirrorTransform;
     AnyFloat LongissimusThoracisT11S3Via1Node_pos = .Right.LongissimusThoracisT11S3Via1Node_pos  * ..MirrorTransform;
-    
+
     AnyFloat LongissimusThoracisR3L3Via1Node_pos      = .Right.LongissimusThoracisR3L3Via1Node_pos       * ..MirrorTransform;
     AnyFloat LongissimusThoracisR3L3Via2Node_pos      = .Right.LongissimusThoracisR3L3Via2Node_pos       * ..MirrorTransform;
     AnyFloat LongissimusThoracisR3L3Via3Node_pos      = .Right.LongissimusThoracisR3L3Via3Node_pos       * ..MirrorTransform;
@@ -6326,27 +6326,27 @@ AnyFloat scj_InNeutralConf_pos = {-0.06838000000000001, 0.47619162999999998, 0.0
     AnyFloat LongissimusThoracisR9S4Via1Node_pos      = .Right.LongissimusThoracisR9S4Via1Node_pos       * ..MirrorTransform;
     AnyFloat LongissimusThoracisR9S4Via2Node_pos      = .Right.LongissimusThoracisR9S4Via2Node_pos       * ..MirrorTransform;
     AnyFloat LongissimusThoracisR10S3Via1Node_pos = .Right.LongissimusThoracisR10S3Via1Node_pos  * ..MirrorTransform;
-    AnyFloat RACP_CO7Node_1_pos  = .Right.RACP_CO7Node_1_pos * ..MirrorTransform;
-    AnyFloat RACP_CO6Node_2_pos  = .Right.RACP_CO6Node_2_pos * ..MirrorTransform;
-    AnyFloat RACP_CO5Node_2_pos = .Right.RACP_CO5Node_2_pos * ..MirrorTransform;
-    AnyFloat RACP_Via_2_pos     = .Right.RACP_Via_2_pos * ..MirrorTransform;
-    AnyFloat OEC6_RSNode_pos          = .Right.OEC6_RSNode_pos * ..MirrorTransform;
-    AnyFloat OEC6_1_RSNode_pos         = .Right.OEC6_1_RSNode_pos * ..MirrorTransform;
-    AnyFloat OEC6_2_RSNode_pos         = .Right.OEC6_2_RSNode_pos * ..MirrorTransform;
+    AnyFloat RectusAbdominisCP_CO7Node_1_pos  = .Right.RectusAbdominisCP_CO7Node_1_pos * ..MirrorTransform;
+    AnyFloat RectusAbdominisCP_CO6Node_2_pos  = .Right.RectusAbdominisCP_CO6Node_2_pos * ..MirrorTransform;
+    AnyFloat RectusAbdominisCP_CO5Node_2_pos = .Right.RectusAbdominisCP_CO5Node_2_pos * ..MirrorTransform;
+    AnyFloat RectusAbdominisCP_Via_2_pos     = .Right.RectusAbdominisCP_Via_2_pos * ..MirrorTransform;
+    AnyFloat ObliquusExternusR6Node_pos          = .Right.ObliquusExternusR6Node_pos * ..MirrorTransform;
+    AnyFloat ObliquusExternusR6_1Node_pos         = .Right.ObliquusExternusR6_1Node_pos * ..MirrorTransform;
+    AnyFloat ObliquusExternusR6_2Node_pos         = .Right.ObliquusExternusR6_2Node_pos * ..MirrorTransform;
 
-    AnyFloat OEC7_RSNode_pos        = .Right.OEC7_RSNode_pos * ..MirrorTransform;
-    AnyFloat OEC8_RSNode_pos        = .Right.OEC8_RSNode_pos * ..MirrorTransform;
-    AnyFloat OEC9_RSNode_pos        = .Right.OEC9_RSNode_pos * ..MirrorTransform;
-    AnyFloat OEC9_RSNode_1_pos        = .Right.OEC9_RSNode_1_pos * ..MirrorTransform;
+    AnyFloat ObliquusExternusR7Node_pos        = .Right.ObliquusExternusR7Node_pos * ..MirrorTransform;
+    AnyFloat ObliquusExternusR8Node_pos        = .Right.ObliquusExternusR8Node_pos * ..MirrorTransform;
+    AnyFloat ObliquusExternusR9Node_pos        = .Right.ObliquusExternusR9Node_pos * ..MirrorTransform;
+    AnyFloat ObliquusExternusR9Node_1_pos        = .Right.ObliquusExternusR9Node_1_pos * ..MirrorTransform;
 
-    AnyFloat OEC10_RSNode_pos    = .Right.OEC10_RSNode_pos * ..MirrorTransform;
-    AnyFloat OEC10a_RSNode_pos        = .Right.OEC10a_RSNode_pos * ..MirrorTransform;
-    AnyFloat OEC11_CINode_pos        = .Right.OEC11_CINode_pos * ..MirrorTransform;
-    AnyFloat OEC11_CINode1_pos        = .Right.OEC11_CINode1_pos * ..MirrorTransform;
+    AnyFloat ObliquusExternusR10Node_pos    = .Right.ObliquusExternusR10Node_pos * ..MirrorTransform;
+    AnyFloat ObliquusExternusR10aNode_pos        = .Right.ObliquusExternusR10aNode_pos * ..MirrorTransform;
+    AnyFloat ObliquusExternusR11Node_pos        = .Right.ObliquusExternusR11Node_pos * ..MirrorTransform;
+    AnyFloat ObliquusExternusR11Node1_pos        = .Right.ObliquusExternusR11Node1_pos * ..MirrorTransform;
 
-    AnyFloat OICI_C10aNode_pos        = .Right.OICI_C10aNode_pos * ..MirrorTransform;
-    AnyFloat OICI_C10Node_pos       = .Right.OICI_C10Node_pos * ..MirrorTransform;
-    AnyFloat OICI_C11Node_pos         = .Right.OICI_C11Node_pos * ..MirrorTransform;
+    AnyFloat ObliquusInternusR10aNode_pos        = .Right.ObliquusInternusR10aNode_pos * ..MirrorTransform;
+    AnyFloat ObliquusInternusR10Node_pos       = .Right.ObliquusInternusR10Node_pos * ..MirrorTransform;
+    AnyFloat ObliquusInternusR11Node_pos         = .Right.ObliquusInternusR11Node_pos * ..MirrorTransform;
     AnyFloat MultifidusThoracisL1T8Node_pos           = .Right.MultifidusThoracisL1T8Node_pos * ..MirrorTransform;
     AnyFloat MultifidusThoracisL1T9Node_pos           = .Right.MultifidusThoracisL1T9Node_pos * ..MirrorTransform;
     AnyFloat MultifidusThoracisL1T10Node_pos          = .Right.MultifidusThoracisL1T10Node_pos * ..MirrorTransform;

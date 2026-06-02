@@ -38,7 +38,7 @@ Segments = {
 
   SternalBodySeg = {
     AnyRefNode Mid                ={ sRel =.Scale (.Data.Sternum.MidNode_pos);};
-    AnyRefNode RACP_CO6_2_mid = {sRel= (.RACP_CO6_2_R.sRel+.RACP_CO6_2_L.sRel)/2;};
+    AnyRefNode RectusAbdominisCP_CO6_2_mid = {sRel= (.RectusAbdominisCP_CO6_2_R.sRel+.RectusAbdominisCP_CO6_2_L.sRel)/2;};
     //----------------------------------------------CS Nodes-----------------------------------------------
     AnyRefNode CS2NodeR     ={ sRel =.Scale (.Data.Sternum.Right.CS2Node_pos);};
     AnyRefNode CS3NodeR     ={ sRel =.Scale (.Data.Sternum.Right.CS3Node_pos);};
@@ -121,7 +121,7 @@ Segments = {
       AnyRefNode CCNodeR10 = { sRel = ..Scale(..Data.Sternum.Left.R10Node_pos); AnyRefNode RotNode = { ARel = RotMat(.sRel, ..CCTangetNodeR10.sRel,sRel+{0.10,0,0})*RotMat(-pi/2,y)*RotMat(-pi,z);};};
     };
 
-    AnyRefNode RACP_CO6Node= {sRel = .Scale(.Data.Sternum.RACP_CO6Node_pos);};
+    AnyRefNode RectusAbdominisCP_CO6Node= {sRel = .Scale(.Data.Sternum.RectusAbdominisCP_CO6Node_pos);};
     AnyRefNode TransversusThoracisR2StNodeRIns         = {sRel = .Scale(.Data.Sternum.Right.TransversusThoracisR2StNode_pos);};
     AnyRefNode TransversusThoracisR3StNodeRIns         = {sRel = .Scale(.Data.Sternum.Right.TransversusThoracisR3StNode_pos);};
     AnyRefNode TransversusThoracisR4StNodeRIns         = {sRel = .Scale(.Data.Sternum.Right.TransversusThoracisR4StNode_pos);};
@@ -136,10 +136,10 @@ Segments = {
     AnyRefNode TransversusThoracisR6StNodeLIns         = {sRel = .Scale(.Data.Sternum.Left.TransversusThoracisR6StNode_pos);};
     AnyRefNode TransversusThoracisNodeLIns= {sRel = .Scale(.Data.Sternum.Left.TransversusThoracisNode_pos);};
     AnyRefNode XiphoidProcess =  {sRel = .Scale(0.5*(.Data.Sternum.Left.DiaphragmXiphoidNode_pos+.Data.Sternum.Right.DiaphragmXiphoidNode_pos));};
-    
+
     Right = {
-      AnyRefNode ObliquusInternusNode_1= {sRel = ..Scale(..Data.Sternum.Right.OICI_C9Node_pos);};
-      AnyRefNode ObliquusInternusNode_2= {sRel = ..Scale(..Data.Sternum.Right.OICI_C8Node_pos);};
+      AnyRefNode ObliquusInternusNode_1= {sRel = ..Scale(..Data.Sternum.Right.ObliquusInternusR9Node_pos);};
+      AnyRefNode ObliquusInternusNode_2= {sRel = ..Scale(..Data.Sternum.Right.ObliquusInternusR8Node_pos);};
 
       #if BM_TRUNK_THORACIC_STERNUM_TOPOLOGY != 4
         Torus3PointOuterFit ObliquusWrapping() = {
@@ -151,8 +151,8 @@ Segments = {
     };
 
     Left = {
-      AnyRefNode ObliquusInternusNode_1= {sRel = ..Scale(..Data.Sternum.Left.OICI_C9Node_pos);};
-      AnyRefNode ObliquusInternusNode_2= {sRel = ..Scale(..Data.Sternum.Left.OICI_C8Node_pos);};
+      AnyRefNode ObliquusInternusNode_1= {sRel = ..Scale(..Data.Sternum.Left.ObliquusInternusR9Node_pos);};
+      AnyRefNode ObliquusInternusNode_2= {sRel = ..Scale(..Data.Sternum.Left.ObliquusInternusR8Node_pos);};
 
       #if BM_TRUNK_THORACIC_STERNUM_TOPOLOGY != 4
         Torus3PointOuterFit ObliquusWrapping() = {
@@ -339,7 +339,7 @@ Segments = {
       AnyRefNode LongissimusThoracisR6S1NodeR       = { sRel =  .Scale(.Data.Thorax.Right.LongissimusThoracisR6S1Node_pos);};
       AnyRefNode IliocostalisLumborumR5Via1NodeR = { sRel =  .Scale(.Data.Thorax.Right.IliocostalisLumborumR5Via1Node_pos);};
       AnyRefNode IliocostalisLumborumR6NodeR     = { sRel =  .Scale(.Data.Thorax.Right.IliocostalisLumborumR6Node_pos);};
-      AnyRefNode ObliquusExternusNode        = { sRel =  .Scale(.Data.Thorax.Right.OEC6_RSNode_pos);};
+      AnyRefNode ObliquusExternusNode        = { sRel =  .Scale(.Data.Thorax.Right.ObliquusExternusR6Node_pos);};
       AnyRefNode IliocostalisThoracisC7R7Via6NodeR     = { sRel =  .Scale(.Data.R6.Right.IliocostalisThoracisC7R7Via6Node_pos);};
       AnyRefNode IliocostalisThoracisR1R7Via5NodeR     = { sRel =  .Scale(.Data.R6.Right.IliocostalisThoracisR1R7Via5Node_pos);};
       AnyRefNode IliocostalisThoracisR2R8Via4NodeR     = { sRel =  .Scale(.Data.R6.Right.IliocostalisThoracisR2R8Via4Node_pos);};
@@ -371,7 +371,7 @@ Segments = {
       AnyRefNode LongissimusThoracisR7S2NodeR       = { sRel =  .Scale(.Data.Thorax.Right.LongissimusThoracisR7S2Node_pos);};
       AnyRefNode IliocostalisLumborumR5Via2NodeR = { sRel =  .Scale(.Data.Thorax.Right.IliocostalisLumborumR5Via2Node_pos);};
       AnyRefNode IliocostalisLumborumR6Via1NodeR = { sRel =  .Scale(.Data.Thorax.Right.IliocostalisLumborumR6Via1Node_pos);};
-      AnyRefNode ObliquusExternusNode        = { sRel =  .Scale(.Data.Thorax.Right.OEC7_RSNode_pos);};
+      AnyRefNode ObliquusExternusNode        = { sRel =  .Scale(.Data.Thorax.Right.ObliquusExternusR7Node_pos);};
       AnyRefNode IliocostalisThoracisC7R7NodeRIns      = { sRel =  .Scale(.Data.R7.Right.IliocostalisThoracisC7R7Node_posIns);};
       AnyRefNode IliocostalisThoracisR1R7NodeRIns      = { sRel =  .Scale(.Data.R7.Right.IliocostalisThoracisR1R7Node_posIns);};
       AnyRefNode IliocostalisThoracisR2R8Via5NodeR     = { sRel =  .Scale(.Data.R7.Right.IliocostalisThoracisR2R8Via5Node_pos);};
@@ -405,7 +405,7 @@ Segments = {
       AnyRefNode LongissimusThoracisR8S3NodeR       = { sRel =  .Scale(.Data.Thorax.Right.LongissimusThoracisR8S3Node_pos);};
       AnyRefNode IliocostalisLumborumR5Via3NodeR = { sRel =  .Scale(.Data.Thorax.Right.IliocostalisLumborumR5Via3Node_pos);};
       AnyRefNode IliocostalisLumborumR6Via2NodeR = { sRel =  .Scale(.Data.Thorax.Right.IliocostalisLumborumR6Via2Node_pos);};
-      AnyRefNode ObliquusExternusNode        = { sRel =  .Scale(.Data.Thorax.Right.OEC8_RSNode_pos);};
+      AnyRefNode ObliquusExternusNode        = { sRel =  .Scale(.Data.Thorax.Right.ObliquusExternusR8Node_pos);};
       AnyRefNode IliocostalisThoracisR2R8NodeRIns      = { sRel =  .Scale(.Data.R8.Right.IliocostalisThoracisR2R8Node_posIns);};
       AnyRefNode IliocostalisThoracisR3R9Via5NodeR     = { sRel =  .Scale(.Data.R8.Right.IliocostalisThoracisR3R9Via5Node_pos);};
       AnyRefNode IliocostalisThoracisR4R10Via4NodeR    = { sRel =  .Scale(.Data.R8.Right.IliocostalisThoracisR4R10Via4Node_pos);};
@@ -438,8 +438,8 @@ Segments = {
       AnyRefNode LongissimusThoracisR9S4NodeR       = { sRel =  .Scale(.Data.Thorax.Right.LongissimusThoracisR9S4Node_pos);};
       AnyRefNode IliocostalisLumborumR5Via4NodeR = { sRel =  .Scale(.Data.Thorax.Right.IliocostalisLumborumR5Via4Node_pos);};
       AnyRefNode IliocostalisLumborumR6Via3NodeR = { sRel =  .Scale(.Data.Thorax.Right.IliocostalisLumborumR6Via3Node_pos);};
-      AnyRefNode ObliquusExternusNode        = { sRel =  .Scale(.Data.Thorax.Right.OEC9_RSNode_pos);};
-     AnyRefNode ObliquusExternusNode_1        = { sRel =  .Scale(.Data.Thorax.Right.OEC9_RSNode_1_pos);};
+      AnyRefNode ObliquusExternusNode        = { sRel =  .Scale(.Data.Thorax.Right.ObliquusExternusR9Node_pos);};
+     AnyRefNode ObliquusExternusNode_1        = { sRel =  .Scale(.Data.Thorax.Right.ObliquusExternusR9Node_1_pos);};
 
       AnyRefNode IliocostalisThoracisR3R9NodeRIns      = { sRel =  .Scale(.Data.R9.Right.IliocostalisThoracisR3R9Node_posIns);};
       AnyRefNode IliocostalisThoracisR4R10Via5NodeR    = { sRel =  .Scale(.Data.R9.Right.IliocostalisThoracisR4R10Via5Node_pos);};
@@ -474,12 +474,12 @@ Segments = {
       AnyRefNode LongissimusThoracisR10S3NodeR  = { sRel =  .Scale(.Data.Thorax.Right.LongissimusThoracisR10S3Node_pos);};
       AnyRefNode IliocostalisLumborumR5Via5NodeR = { sRel =  .Scale(.Data.Thorax.Right.IliocostalisLumborumR5Via5Node_pos);};
       AnyRefNode IliocostalisLumborumR6Via4NodeR = { sRel =  .Scale(.Data.Thorax.Right.IliocostalisLumborumR6Via4Node_pos);};
-      AnyRefNode ObliquusExternusNode_00       = { sRel =  .Scale(.Data.Thorax.Right.OEC6_1_RSNode_pos);};
-      AnyRefNode ObliquusExternusNode_0       = { sRel =  .Scale(.Data.Thorax.Right.OEC6_2_RSNode_pos);};
-      AnyRefNode ObliquusExternusNode_1       = { sRel =  .Scale(.Data.Thorax.Right.OEC10_RSNode_pos);};
-      AnyRefNode ObliquusExternusNode_2       = { sRel =  .Scale(.Data.R10.Right.OEC10a_CINode_pos);};
-      AnyRefNode ObliquusInternusNode_1       = { sRel =  .Scale(.Data.Thorax.Right.OICI_C10Node_pos);};
-      AnyRefNode ObliquusInternusNode_2       = { sRel =  .Scale(.Data.Thorax.Right.OICI_C10aNode_pos);};
+      AnyRefNode ObliquusExternusNode_00       = { sRel =  .Scale(.Data.Thorax.Right.ObliquusExternusR6_1Node_pos);};
+      AnyRefNode ObliquusExternusNode_0       = { sRel =  .Scale(.Data.Thorax.Right.ObliquusExternusR6_2Node_pos);};
+      AnyRefNode ObliquusExternusNode_1       = { sRel =  .Scale(.Data.Thorax.Right.ObliquusExternusR10Node_pos);};
+      AnyRefNode ObliquusExternusNode_2       = { sRel =  .Scale(.Data.R10.Right.ObliquusExternusR10aNode_pos);};
+      AnyRefNode ObliquusInternusNode_1       = { sRel =  .Scale(.Data.Thorax.Right.ObliquusInternusR10Node_pos);};
+      AnyRefNode ObliquusInternusNode_2       = { sRel =  .Scale(.Data.Thorax.Right.ObliquusInternusR10aNode_pos);};
       AnyRefNode IliocostalisThoracisR4R10NodeRIns     = { sRel =  .Scale(.Data.R10.Right.IliocostalisThoracisR4R10Node_posIns);};
       AnyRefNode IliocostalisThoracisR5R11Via5NodeR    = { sRel =  .Scale(.Data.R10.Right.IliocostalisThoracisR5R11Via5Node_pos);};
       AnyRefNode IliocostalisThoracisR6R12Via4NodeR    = { sRel =  .Scale(.Data.R10.Right.IliocostalisThoracisR6R12Via4Node_pos);};
@@ -493,7 +493,7 @@ Segments = {
       AnyRefNode DiaphragmR10_2NodeR = {sRel = .Scale(.Data.R10.Right.DiaphragmR10_2Node_pos); };
       AnyRefNode DiaphragmR10_3NodeR = {sRel = .Scale(.Data.R10.Right.DiaphragmR10_3Node_pos); };
       AnyRefNode IntercostalisInternusR9R10_elem_sternum = {sRel = .Scale(.Data.R10.Right.IntercostalisInternusR9R10_elem_sternum_pos); };
-      AnyRefNode CCNodeR11 ={ sRel = .Scale(.Data.Thorax.Right.OEC11_CINode_pos);};
+      AnyRefNode CCNodeR11 ={ sRel = .Scale(.Data.Thorax.Right.ObliquusExternusR11Node_pos);};
       AnyRefNode MidNode        = { sRel =  .Scale(.Data.R10.Right.MidNode_pos); };
       AnyFolder &DataRib =Data.R10.Right;
       #if BM_TRUNK_THORACIC_MODEL == _THORACIC_MODEL_FLEXIBLE_
@@ -502,12 +502,12 @@ Segments = {
     };
 
     R11Seg = {
-      AnyRefNode ObliquusExternusNode = { sRel =  .Scale(.Data.Thorax.Right.OEC11_CINode_pos);};
-      AnyRefNode ObliquusInternusNode       = { sRel =  .Scale(.Data.Thorax.Right.OICI_C11Node_pos);};
+      AnyRefNode ObliquusExternusNode = { sRel =  .Scale(.Data.Thorax.Right.ObliquusExternusR11Node_pos);};
+      AnyRefNode ObliquusInternusNode       = { sRel =  .Scale(.Data.Thorax.Right.ObliquusInternusR11Node_pos);};
 
 
-      AnyRefNode ObliquusExternusNode1       = { sRel =  .Scale(.Data.Thorax.Right.OEC11_CINode1_pos);};
-      AnyRefNode ObliquusInternusNode1       = { sRel =  .Scale(.Data.R12.Right.OEC12_CINode1_pos);};
+      AnyRefNode ObliquusExternusNode1       = { sRel =  .Scale(.Data.Thorax.Right.ObliquusExternusR11Node1_pos);};
+      AnyRefNode ObliquusInternusNode1       = { sRel =  .Scale(.Data.R12.Right.ObliquusExternusR12Node1_pos);};
 
       AnyRefNode O_serratus_posterior_inferior_R11R = {sRel = .Scale(.Data.R11.Right.O_serratus_posterior_inferior_pos);};
       AnyRefNode LongissimusThoracisR7S2Via4NodeR    = {sRel = .Scale(.Data.Thorax.Right.LongissimusThoracisR7S2Via4Node_pos); };
@@ -527,8 +527,8 @@ Segments = {
       AnyRefNode DiaphragmR11_3NodeR = {sRel = .Scale(.Data.R11.Right.DiaphragmR11_3Node_pos); };
       AnyRefNode CCTangetNodeR11 ={ sRel = .Scale(.Data.R11.Right.CC_AlignmentNode); };
       AnyRefNode CCTangetNodeR11R10 ={ sRel = .Scale(.Data.R11.Right.CCTangetNodeR11R10); };
-      AnyRefNode CCNodeR11 ={ sRel = .Scale(.Data.Thorax.Right.OEC11_CINode_pos);AnyRefNode RotNode ={ ARel=RotMat(.sRel,..CCTangetNodeR11.sRel,..CCTangetNodeR11R10.sRel);};};
-      AnyRefNode CCNodeR12 ={ sRel = .Scale(.Data.R12.Right.OEC12_CINode_pos);};
+      AnyRefNode CCNodeR11 ={ sRel = .Scale(.Data.Thorax.Right.ObliquusExternusR11Node_pos);AnyRefNode RotNode ={ ARel=RotMat(.sRel,..CCTangetNodeR11.sRel,..CCTangetNodeR11R10.sRel);};};
+      AnyRefNode CCNodeR12 ={ sRel = .Scale(.Data.R12.Right.ObliquusExternusR12Node_pos);};
       AnyFolder &DataRib =Data.R11.Right;
       #if BM_TRUNK_THORACIC_MODEL == _THORACIC_MODEL_FLEXIBLE_
       #include "ICPoints.any"  //create points for inter costal muscles
@@ -536,7 +536,7 @@ Segments = {
     };
 
     R12Seg = {
-      AnyRefNode ObliquusExternusNode = { sRel =  .Scale(.Data.R12.Right.OEC12_CINode_pos);};
+      AnyRefNode ObliquusExternusNode = { sRel =  .Scale(.Data.R12.Right.ObliquusExternusR12Node_pos);};
 
       AnyRefNode IliocostalisThoracisR6R12NodeRIns = {sRel =  .Scale(.Data.R12.Right.IliocostalisThoracisR6R12Node_pos); };
       AnyRefNode LongissimusThoracisR8S3Via4NodeR    = {sRel = .Scale(.Data.R12.Right.LongissimusThoracisR8S3Via4Node_pos);};
@@ -544,20 +544,20 @@ Segments = {
       AnyRefNode LongissimusThoracisR10S3Via2NodeR = {sRel = .Scale(.Data.R12.Right.LongissimusThoracisR10S3Via2Node_pos); };
       AnyRefNode LongissimusThoracisR11S3Via1NodeR = {sRel = .Scale(.Data.R12.Right.LongissimusThoracisR11S3Via1Node_pos); };
       AnyRefNode LongissimusThoracisR12S3NodeR   = {sRel = .Scale(.Data.R12.Right.LongissimusThoracisR12S3Node_pos); };
-      AnyRefNode QLC12Lat_CINode1R = {sRel = .Scale(.Data.R12.Right.QLC12Lat_CINode1_pos); };
-      AnyRefNode QLC12Lat_CINode2R = {sRel = .Scale(.Data.R12.Right.QLC12Lat_CINode2_pos); };
-      AnyRefNode QLC12Lat_CINode3R = {sRel = .Scale(.Data.R12.Right.QLC12Lat_CINode3_pos); };
-      AnyRefNode QLC12Lat_CINode4R = {sRel = .Scale(.Data.R12.Right.QLC12Lat_CINode4_pos); };
-      AnyRefNode QLC12Lat_CINode5R = {sRel = .Scale(.Data.R12.Right.QLC12Lat_CINode5_pos); };
-      AnyRefNode QLC12InterMedian_CINode1R = {sRel = .Scale(.Data.R12.Right.QLC12InterMedian_CINode1_pos); };
-      AnyRefNode QLC12InterMedian_CINode2R = {sRel = .Scale(.Data.R12.Right.QLC12InterMedian_CINode2_pos); };
-      AnyRefNode QLC12InterMedian_CINode3R = {sRel = .Scale(.Data.R12.Right.QLC12InterMedian_CINode3_pos); };
-      AnyRefNode QLC12InterMedian_CINode4R = {sRel = .Scale(.Data.R12.Right.QLC12InterMedian_CINode4_pos); };
-      AnyRefNode QLC12InterMedian_CINode5R = {sRel = .Scale(.Data.R12.Right.QLC12InterMedian_CINode5_pos); };
-      AnyRefNode QLC12Median_CINode1R = {sRel = .Scale(.Data.R12.Right.QLC12Median_CINode1_pos); };
-      AnyRefNode QLC12Median_CINode2R = {sRel = .Scale(.Data.R12.Right.QLC12Median_CINode2_pos); };
-      AnyRefNode QLC12Median_CINode3R = {sRel = .Scale(.Data.R12.Right.QLC12Median_CINode3_pos); };
-      AnyRefNode QLC12Median_CINode4R = {sRel = .Scale(.Data.R12.Right.QLC12Median_CINode4_pos); };
+      AnyRefNode QuadratusLumborumR12LateralNode1R = {sRel = .Scale(.Data.R12.Right.QuadratusLumborumR12LateralNode1_pos); };
+      AnyRefNode QuadratusLumborumR12LateralNode2R = {sRel = .Scale(.Data.R12.Right.QuadratusLumborumR12LateralNode2_pos); };
+      AnyRefNode QuadratusLumborumR12LateralNode3R = {sRel = .Scale(.Data.R12.Right.QuadratusLumborumR12LateralNode3_pos); };
+      AnyRefNode QuadratusLumborumR12LateralNode4R = {sRel = .Scale(.Data.R12.Right.QuadratusLumborumR12LateralNode4_pos); };
+      AnyRefNode QuadratusLumborumR12LateralNode5R = {sRel = .Scale(.Data.R12.Right.QuadratusLumborumR12LateralNode5_pos); };
+      AnyRefNode QuadratusLumborumR12InterMedianNode1R = {sRel = .Scale(.Data.R12.Right.QuadratusLumborumR12InterMedianNode1_pos); };
+      AnyRefNode QuadratusLumborumR12InterMedianNode2R = {sRel = .Scale(.Data.R12.Right.QuadratusLumborumR12InterMedianNode2_pos); };
+      AnyRefNode QuadratusLumborumR12InterMedianNode3R = {sRel = .Scale(.Data.R12.Right.QuadratusLumborumR12InterMedianNode3_pos); };
+      AnyRefNode QuadratusLumborumR12InterMedianNode4R = {sRel = .Scale(.Data.R12.Right.QuadratusLumborumR12InterMedianNode4_pos); };
+      AnyRefNode QuadratusLumborumR12InterMedianNode5R = {sRel = .Scale(.Data.R12.Right.QuadratusLumborumR12InterMedianNode5_pos); };
+      AnyRefNode QuadratusLumborumR12MedianNode1R = {sRel = .Scale(.Data.R12.Right.QuadratusLumborumR12MedianNode1_pos); };
+      AnyRefNode QuadratusLumborumR12MedianNode2R = {sRel = .Scale(.Data.R12.Right.QuadratusLumborumR12MedianNode2_pos); };
+      AnyRefNode QuadratusLumborumR12MedianNode3R = {sRel = .Scale(.Data.R12.Right.QuadratusLumborumR12MedianNode3_pos); };
+      AnyRefNode QuadratusLumborumR12MedianNode4R = {sRel = .Scale(.Data.R12.Right.QuadratusLumborumR12MedianNode4_pos); };
       AnyRefNode IliocostalisLumborumR12NodeR    = {sRel = .Scale(.Data.R12.Right.IliocostalisLumborumR12Node_pos );};
       AnyRefNode IliocostalisLumborumR10Via1NodeR= {sRel = .Scale(.Data.R12.Right.IliocostalisLumborumR10Via1Node_pos );};
       AnyRefNode IliocostalisLumborumR9Via2NodeR = {sRel = .Scale(.Data.R12.Right.IliocostalisLumborumR9Via2Node_pos );};
@@ -572,7 +572,7 @@ Segments = {
       AnyRefNode DiaphragmR12_2NodeR = {sRel = .Scale(.Data.R12.Right.DiaphragmR12_2Node_pos); };
       AnyRefNode CCTangetNodeR12 ={ sRel = .Scale(.Data.R12.Right.CC_AlignmentNode); };
       AnyRefNode CCTangetNodeR12R11 ={ sRel = .Scale(.Data.R12.Right.CCTangetNodeR12R11); };
-      AnyRefNode CCNodeR12 ={ sRel = .Scale(.Data.R12.Right.OEC12_CINode_pos);AnyRefNode RotNode ={ ARel=RotMat(.sRel,..CCTangetNodeR12.sRel,..CCTangetNodeR12R11.sRel);};};
+      AnyRefNode CCNodeR12 ={ sRel = .Scale(.Data.R12.Right.ObliquusExternusR12Node_pos);AnyRefNode RotNode ={ ARel=RotMat(.sRel,..CCTangetNodeR12.sRel,..CCTangetNodeR12R11.sRel);};};
       AnyFolder &DataRib =Data.R12.Right;
       #if BM_TRUNK_THORACIC_MODEL == _THORACIC_MODEL_FLEXIBLE_
       #include "ICPoints.any"  //create points for inter costal muscles
@@ -658,15 +658,15 @@ Segments = {
         AnyRefNode R10NodeRinf     ={ sRel =.Scale (.Data.Sternum.Right.R10Node_pos + {0,-.Data.AllRibs.CCOffset[0],0});  };
         AnyRefNode R10NodeRpos     ={ sRel =.Scale (.Data.Sternum.Right.R10Node_pos + {-.Data.AllRibs.CCOffset[0],0,0});  };
         AnyRefNode R10NodeRant     ={ sRel =.Scale (.Data.Sternum.Right.R10Node_pos + {.Data.AllRibs.CCOffset[0],0,0});  };
-        AnyRefNode RACP_CO6Node= {sRel = .Scale(.Data.Sternum.RACP_CO6Node_pos);};
+        AnyRefNode RectusAbdominisCP_CO6Node= {sRel = .Scale(.Data.Sternum.RectusAbdominisCP_CO6Node_pos);};
         AnyRefNode TransversusThoracisR2StNodeRIns         = {sRel = .Scale(.Data.Sternum.Right.TransversusThoracisR2StNode_pos);};
         AnyRefNode TransversusThoracisR3StNodeRIns         = {sRel = .Scale(.Data.Sternum.Right.TransversusThoracisR3StNode_pos);};
         AnyRefNode TransversusThoracisR4StNodeRIns         = {sRel = .Scale(.Data.Sternum.Right.TransversusThoracisR4StNode_pos);};
         AnyRefNode TransversusThoracisR5StNodeRIns         = {sRel = .Scale(.Data.Sternum.Right.TransversusThoracisR5StNode_pos);};
         AnyRefNode TransversusThoracisR6StNodeRIns         = {sRel = .Scale(.Data.Sternum.Right.TransversusThoracisR6StNode_pos);};
         AnyRefNode TransversusThoracisNodeRIns= {sRel = .Scale(.Data.Sternum.Right.TransversusThoracisNode_pos);};
-        AnyRefNode ObliquusInternus_1 = {sRel = .Scale(.Data.Sternum.Right.OICI_C9Node_pos);};
-        AnyRefNode ObliquusInternus_2 =  {sRel = .Scale(.Data.Sternum.Right.OICI_C8Node_pos);};
+        AnyRefNode ObliquusInternus_1 = {sRel = .Scale(.Data.Sternum.Right.ObliquusInternusR9Node_pos);};
+        AnyRefNode ObliquusInternus_2 =  {sRel = .Scale(.Data.Sternum.Right.ObliquusInternusR8Node_pos);};
 
         Right = {
           Torus3PointOuterFit ObliquusWrapping() = {
@@ -838,7 +838,7 @@ Segments = {
       AnyRefNode LongissimusThoracisR6S1NodeL       = { sRel =  .Scale(.Data.Thorax.Left.LongissimusThoracisR6S1Node_pos);};
       AnyRefNode IliocostalisLumborumR5Via1NodeL = { sRel =  .Scale(.Data.Thorax.Left.IliocostalisLumborumR5Via1Node_pos);};
       AnyRefNode IliocostalisLumborumR6NodeL     = { sRel =  .Scale(.Data.Thorax.Left.IliocostalisLumborumR6Node_pos);};
-      AnyRefNode ObliquusExternusNode        = { sRel =  .Scale(.Data.Thorax.Left.OEC6_RSNode_pos);};
+      AnyRefNode ObliquusExternusNode        = { sRel =  .Scale(.Data.Thorax.Left.ObliquusExternusR6Node_pos);};
       AnyRefNode IliocostalisThoracisC7R7Via6NodeL     = { sRel =  .Scale(.Data.R6.Left.IliocostalisThoracisC7R7Via6Node_pos);};
       AnyRefNode IliocostalisThoracisR1R7Via5NodeL     = { sRel =  .Scale(.Data.R6.Left.IliocostalisThoracisR1R7Via5Node_pos);};
       AnyRefNode IliocostalisThoracisR2R8Via4NodeL     = { sRel =  .Scale(.Data.R6.Left.IliocostalisThoracisR2R8Via4Node_pos);};
@@ -870,7 +870,7 @@ Segments = {
       AnyRefNode LongissimusThoracisR7S2NodeL       = { sRel =  .Scale(.Data.Thorax.Left.LongissimusThoracisR7S2Node_pos);};
       AnyRefNode IliocostalisLumborumR5Via2NodeL = { sRel =  .Scale(.Data.Thorax.Left.IliocostalisLumborumR5Via2Node_pos);};
       AnyRefNode IliocostalisLumborumR6Via1NodeL = { sRel =  .Scale(.Data.Thorax.Left.IliocostalisLumborumR6Via1Node_pos);};
-      AnyRefNode ObliquusExternusNode        = { sRel =  .Scale(.Data.Thorax.Left.OEC7_RSNode_pos);};
+      AnyRefNode ObliquusExternusNode        = { sRel =  .Scale(.Data.Thorax.Left.ObliquusExternusR7Node_pos);};
       AnyRefNode IliocostalisThoracisC7R7NodeLIns      = { sRel =  .Scale(.Data.R7.Left.IliocostalisThoracisC7R7Node_posIns);};
       AnyRefNode IliocostalisThoracisR1R7NodeLIns      = { sRel =  .Scale(.Data.R7.Left.IliocostalisThoracisR1R7Node_posIns);};
       AnyRefNode IliocostalisThoracisR2R8Via5NodeL     = { sRel =  .Scale(.Data.R7.Left.IliocostalisThoracisR2R8Via5Node_pos);};
@@ -904,7 +904,7 @@ Segments = {
       AnyRefNode LongissimusThoracisR8S3NodeL       = { sRel =  .Scale(.Data.Thorax.Left.LongissimusThoracisR8S3Node_pos);};
       AnyRefNode IliocostalisLumborumR5Via3NodeL = { sRel =  .Scale(.Data.Thorax.Left.IliocostalisLumborumR5Via3Node_pos);};
       AnyRefNode IliocostalisLumborumR6Via2NodeL = { sRel =  .Scale(.Data.Thorax.Left.IliocostalisLumborumR6Via2Node_pos);};
-      AnyRefNode ObliquusExternusNode        = { sRel =  .Scale(.Data.Thorax.Left.OEC8_RSNode_pos);};
+      AnyRefNode ObliquusExternusNode        = { sRel =  .Scale(.Data.Thorax.Left.ObliquusExternusR8Node_pos);};
       AnyRefNode IliocostalisThoracisR2R8NodeLIns      = { sRel =  .Scale(.Data.R8.Left.IliocostalisThoracisR2R8Node_posIns);};
       AnyRefNode IliocostalisThoracisR3R9Via5NodeL     = { sRel =  .Scale(.Data.R8.Left.IliocostalisThoracisR3R9Via5Node_pos);};
       AnyRefNode IliocostalisThoracisR4R10Via4NodeL    = { sRel =  .Scale(.Data.R8.Left.IliocostalisThoracisR4R10Via4Node_pos);};
@@ -937,8 +937,8 @@ Segments = {
       AnyRefNode LongissimusThoracisR9S4NodeL       = { sRel =  .Scale(.Data.Thorax.Left.LongissimusThoracisR9S4Node_pos);};
       AnyRefNode IliocostalisLumborumR5Via4NodeL = { sRel =  .Scale(.Data.Thorax.Left.IliocostalisLumborumR5Via4Node_pos);};
       AnyRefNode IliocostalisLumborumR6Via3NodeL = { sRel =  .Scale(.Data.Thorax.Left.IliocostalisLumborumR6Via3Node_pos);};
-      AnyRefNode ObliquusExternusNode        = { sRel =  .Scale(.Data.Thorax.Left.OEC9_RSNode_pos);};
-      AnyRefNode ObliquusExternusNode_1        = { sRel =  .Scale(.Data.Thorax.Left.OEC9_RSNode_1_pos);};
+      AnyRefNode ObliquusExternusNode        = { sRel =  .Scale(.Data.Thorax.Left.ObliquusExternusR9Node_pos);};
+      AnyRefNode ObliquusExternusNode_1        = { sRel =  .Scale(.Data.Thorax.Left.ObliquusExternusR9Node_1_pos);};
       AnyRefNode IliocostalisThoracisR3R9NodeLIns      = { sRel =  .Scale(.Data.R9.Left.IliocostalisThoracisR3R9Node_posIns);};
       AnyRefNode IliocostalisThoracisR4R10Via5NodeL    = { sRel =  .Scale(.Data.R9.Left.IliocostalisThoracisR4R10Via5Node_pos);};
       AnyRefNode IliocostalisThoracisR5R11Via4NodeL    = { sRel =  .Scale(.Data.R9.Left.IliocostalisThoracisR5R11Via4Node_pos);};
@@ -973,12 +973,12 @@ Segments = {
       AnyRefNode IliocostalisLumborumR5Via5NodeL = { sRel =  .Scale(.Data.Thorax.Left.IliocostalisLumborumR5Via5Node_pos);};
       AnyRefNode IliocostalisLumborumR6Via4NodeL = { sRel =  .Scale(.Data.Thorax.Left.IliocostalisLumborumR6Via4Node_pos);};
 
-      AnyRefNode ObliquusExternusNode_00       = { sRel =  .Scale(.Data.Thorax.Left.OEC6_1_RSNode_pos);};
-      AnyRefNode ObliquusExternusNode_0       = { sRel =  .Scale(.Data.Thorax.Left.OEC6_2_RSNode_pos);};
-      AnyRefNode ObliquusExternusNode_1       = { sRel =  .Scale(.Data.Thorax.Left.OEC10_RSNode_pos);};
-      AnyRefNode ObliquusExternusNode_2       = { sRel =  .Scale(.Data.R10.Left.OEC10a_CINode_pos);};
-      AnyRefNode ObliquusInternusNode_1       = { sRel =  .Scale(.Data.Thorax.Left.OICI_C10Node_pos);};
-      AnyRefNode ObliquusInternusNode_2       = { sRel =  .Scale(.Data.Thorax.Left.OICI_C10aNode_pos);};
+      AnyRefNode ObliquusExternusNode_00       = { sRel =  .Scale(.Data.Thorax.Left.ObliquusExternusR6_1Node_pos);};
+      AnyRefNode ObliquusExternusNode_0       = { sRel =  .Scale(.Data.Thorax.Left.ObliquusExternusR6_2Node_pos);};
+      AnyRefNode ObliquusExternusNode_1       = { sRel =  .Scale(.Data.Thorax.Left.ObliquusExternusR10Node_pos);};
+      AnyRefNode ObliquusExternusNode_2       = { sRel =  .Scale(.Data.R10.Left.ObliquusExternusR10aNode_pos);};
+      AnyRefNode ObliquusInternusNode_1       = { sRel =  .Scale(.Data.Thorax.Left.ObliquusInternusR10Node_pos);};
+      AnyRefNode ObliquusInternusNode_2       = { sRel =  .Scale(.Data.Thorax.Left.ObliquusInternusR10aNode_pos);};
 
 
       AnyRefNode IliocostalisThoracisR4R10NodeLIns     = { sRel =  .Scale(.Data.R10.Left.IliocostalisThoracisR4R10Node_posIns);};
@@ -994,7 +994,7 @@ Segments = {
       AnyRefNode DiaphragmR10_2NodeL = {sRel = .Scale(.Data.R10.Left.DiaphragmR10_2Node_pos); };
       AnyRefNode DiaphragmR10_3NodeL = {sRel = .Scale(.Data.R10.Left.DiaphragmR10_3Node_pos); };
       AnyRefNode IntercostalisInternusR9R10_elem_sternum = {sRel = .Scale(.Data.R10.Left.IntercostalisInternusR9R10_elem_sternum_pos); };
-      AnyRefNode CCNodeR11 ={ sRel = .Scale(.Data.Thorax.Left.OEC11_CINode_pos);};
+      AnyRefNode CCNodeR11 ={ sRel = .Scale(.Data.Thorax.Left.ObliquusExternusR11Node_pos);};
       AnyRefNode MidNode        = { sRel =  .Scale(.Data.R10.Left.MidNode_pos); };
       AnyFolder &DataRib =Data.R10.Left;
       #if BM_TRUNK_THORACIC_MODEL == _THORACIC_MODEL_FLEXIBLE_
@@ -1003,10 +1003,10 @@ Segments = {
  };
 
     R11Seg = {
-      AnyRefNode ObliquusExternusNode       = { sRel =  .Scale(.Data.Thorax.Left.OEC11_CINode_pos);};
-      AnyRefNode ObliquusInternusNode       = { sRel =  .Scale(.Data.Thorax.Left.OICI_C11Node_pos);};
-      AnyRefNode ObliquusExternusNode1       = { sRel =  .Scale(.Data.Thorax.Left.OEC11_CINode1_pos);};
-      AnyRefNode ObliquusInternusNode1       = { sRel =  .Scale(.Data.R12.Left.OEC12_CINode1_pos);};
+      AnyRefNode ObliquusExternusNode       = { sRel =  .Scale(.Data.Thorax.Left.ObliquusExternusR11Node_pos);};
+      AnyRefNode ObliquusInternusNode       = { sRel =  .Scale(.Data.Thorax.Left.ObliquusInternusR11Node_pos);};
+      AnyRefNode ObliquusExternusNode1       = { sRel =  .Scale(.Data.Thorax.Left.ObliquusExternusR11Node1_pos);};
+      AnyRefNode ObliquusInternusNode1       = { sRel =  .Scale(.Data.R12.Left.ObliquusExternusR12Node1_pos);};
 
       AnyRefNode O_serratus_posterior_inferior_R11L = {sRel = .Scale(.Data.R11.Left.O_serratus_posterior_inferior_pos);};
       AnyRefNode LongissimusThoracisR7S2Via4NodeL      = {sRel = .Scale(.Data.Thorax.Left.LongissimusThoracisR7S2Via4Node_pos); };
@@ -1026,8 +1026,8 @@ Segments = {
       AnyRefNode DiaphragmR11_3NodeL = {sRel = .Scale(.Data.R11.Left.DiaphragmR11_3Node_pos); };
       AnyRefNode CCTangetNodeR11 ={ sRel = .Scale(.Data.R11.Left.CC_AlignmentNode); };
       AnyRefNode CCTangetNodeR11R10 ={ sRel = .Scale(.Data.R11.Left.CCTangetNodeR11R10); };
-      AnyRefNode CCNodeR11 ={ sRel = .Scale(.Data.Thorax.Left.OEC11_CINode_pos);AnyRefNode RotNode ={ ARel=RotMat(.sRel,..CCTangetNodeR11.sRel,..CCTangetNodeR11R10.sRel);};};
-      AnyRefNode CCNodeR12 ={ sRel = .Scale(.Data.R12.Left.OEC12_CINode_pos);};
+      AnyRefNode CCNodeR11 ={ sRel = .Scale(.Data.Thorax.Left.ObliquusExternusR11Node_pos);AnyRefNode RotNode ={ ARel=RotMat(.sRel,..CCTangetNodeR11.sRel,..CCTangetNodeR11R10.sRel);};};
+      AnyRefNode CCNodeR12 ={ sRel = .Scale(.Data.R12.Left.ObliquusExternusR12Node_pos);};
       AnyFolder &DataRib =Data.R11.Left;
       #if BM_TRUNK_THORACIC_MODEL == _THORACIC_MODEL_FLEXIBLE_
       #include "ICPoints.any"  //create points for inter costal muscles
@@ -1035,7 +1035,7 @@ Segments = {
  };
 
     R12Seg = {
-     AnyRefNode ObliquusExternusNode       = { sRel =  .Scale(.Data.R12.Left.OEC12_CINode_pos);};
+     AnyRefNode ObliquusExternusNode       = { sRel =  .Scale(.Data.R12.Left.ObliquusExternusR12Node_pos);};
 
       AnyRefNode IliocostalisThoracisR6R12NodeLIns = {sRel =  .Scale(.Data.R12.Left.IliocostalisThoracisR6R12Node_pos); };
       AnyRefNode LongissimusThoracisR8S3Via4NodeL      = {sRel = .Scale(.Data.R12.Left.LongissimusThoracisR8S3Via4Node_pos);};
@@ -1043,20 +1043,20 @@ Segments = {
       AnyRefNode LongissimusThoracisR10S3Via2NodeL = {sRel = .Scale(.Data.R12.Left.LongissimusThoracisR10S3Via2Node_pos); };
       AnyRefNode LongissimusThoracisR11S3Via1NodeL = {sRel = .Scale(.Data.R12.Left.LongissimusThoracisR11S3Via1Node_pos); };
       AnyRefNode LongissimusThoracisR12S3NodeL     = {sRel = .Scale(.Data.R12.Left.LongissimusThoracisR12S3Node_pos); };
-      AnyRefNode QLC12Lat_CINode1L =    {sRel = .Scale(.Data.R12.Left.QLC12Lat_CINode1_pos); };
-      AnyRefNode QLC12Lat_CINode2L =    {sRel = .Scale(.Data.R12.Left.QLC12Lat_CINode2_pos); };
-      AnyRefNode QLC12Lat_CINode3L =    {sRel = .Scale(.Data.R12.Left.QLC12Lat_CINode3_pos); };
-      AnyRefNode QLC12Lat_CINode4L =    {sRel = .Scale(.Data.R12.Left.QLC12Lat_CINode4_pos); };
-      AnyRefNode QLC12Lat_CINode5L =    {sRel = .Scale(.Data.R12.Left.QLC12Lat_CINode5_pos); };
-      AnyRefNode QLC12InterMedian_CINode1L = {sRel = .Scale(.Data.R12.Left.QLC12InterMedian_CINode1_pos); };
-      AnyRefNode QLC12InterMedian_CINode2L = {sRel = .Scale(.Data.R12.Left.QLC12InterMedian_CINode2_pos); };
-      AnyRefNode QLC12InterMedian_CINode3L = {sRel = .Scale(.Data.R12.Left.QLC12InterMedian_CINode3_pos); };
-      AnyRefNode QLC12InterMedian_CINode4L = {sRel = .Scale(.Data.R12.Left.QLC12InterMedian_CINode4_pos); };
-      AnyRefNode QLC12InterMedian_CINode5L = {sRel = .Scale(.Data.R12.Left.QLC12InterMedian_CINode5_pos); };
-      AnyRefNode QLC12Median_CINode1L =    {sRel = .Scale(.Data.R12.Left.QLC12Median_CINode1_pos); };
-      AnyRefNode QLC12Median_CINode2L =    {sRel = .Scale(.Data.R12.Left.QLC12Median_CINode2_pos); };
-      AnyRefNode QLC12Median_CINode3L =    {sRel = .Scale(.Data.R12.Left.QLC12Median_CINode3_pos); };
-      AnyRefNode QLC12Median_CINode4L =    {sRel = .Scale(.Data.R12.Left.QLC12Median_CINode4_pos); };
+      AnyRefNode QuadratusLumborumR12LateralNode1L =    {sRel = .Scale(.Data.R12.Left.QuadratusLumborumR12LateralNode1_pos); };
+      AnyRefNode QuadratusLumborumR12LateralNode2L =    {sRel = .Scale(.Data.R12.Left.QuadratusLumborumR12LateralNode2_pos); };
+      AnyRefNode QuadratusLumborumR12LateralNode3L =    {sRel = .Scale(.Data.R12.Left.QuadratusLumborumR12LateralNode3_pos); };
+      AnyRefNode QuadratusLumborumR12LateralNode4L =    {sRel = .Scale(.Data.R12.Left.QuadratusLumborumR12LateralNode4_pos); };
+      AnyRefNode QuadratusLumborumR12LateralNode5L =    {sRel = .Scale(.Data.R12.Left.QuadratusLumborumR12LateralNode5_pos); };
+      AnyRefNode QuadratusLumborumR12InterMedianNode1L = {sRel = .Scale(.Data.R12.Left.QuadratusLumborumR12InterMedianNode1_pos); };
+      AnyRefNode QuadratusLumborumR12InterMedianNode2L = {sRel = .Scale(.Data.R12.Left.QuadratusLumborumR12InterMedianNode2_pos); };
+      AnyRefNode QuadratusLumborumR12InterMedianNode3L = {sRel = .Scale(.Data.R12.Left.QuadratusLumborumR12InterMedianNode3_pos); };
+      AnyRefNode QuadratusLumborumR12InterMedianNode4L = {sRel = .Scale(.Data.R12.Left.QuadratusLumborumR12InterMedianNode4_pos); };
+      AnyRefNode QuadratusLumborumR12InterMedianNode5L = {sRel = .Scale(.Data.R12.Left.QuadratusLumborumR12InterMedianNode5_pos); };
+      AnyRefNode QuadratusLumborumR12MedianNode1L =    {sRel = .Scale(.Data.R12.Left.QuadratusLumborumR12MedianNode1_pos); };
+      AnyRefNode QuadratusLumborumR12MedianNode2L =    {sRel = .Scale(.Data.R12.Left.QuadratusLumborumR12MedianNode2_pos); };
+      AnyRefNode QuadratusLumborumR12MedianNode3L =    {sRel = .Scale(.Data.R12.Left.QuadratusLumborumR12MedianNode3_pos); };
+      AnyRefNode QuadratusLumborumR12MedianNode4L =    {sRel = .Scale(.Data.R12.Left.QuadratusLumborumR12MedianNode4_pos); };
       AnyRefNode IliocostalisLumborumR12NodeL      = {sRel = .Scale(.Data.R12.Left.IliocostalisLumborumR12Node_pos );};
       AnyRefNode IliocostalisLumborumR10Via1NodeL  = {sRel = .Scale(.Data.R12.Left.IliocostalisLumborumR10Via1Node_pos );};
       AnyRefNode IliocostalisLumborumR9Via2NodeL   = {sRel = .Scale(.Data.R12.Left.IliocostalisLumborumR9Via2Node_pos );};
@@ -1071,7 +1071,7 @@ Segments = {
       AnyRefNode DiaphragmR12_2NodeL = {sRel = .Scale(.Data.R12.Left.DiaphragmR12_2Node_pos); };
       AnyRefNode CCTangetNodeR12 ={ sRel = .Scale(.Data.R12.Left.CC_AlignmentNode); };
       AnyRefNode CCTangetNodeR12R11 ={ sRel = .Scale(.Data.R12.Left.CCTangetNodeR12R11); };
-      AnyRefNode CCNodeR12 ={ sRel = .Scale(.Data.R12.Left.OEC12_CINode_pos);
+      AnyRefNode CCNodeR12 ={ sRel = .Scale(.Data.R12.Left.ObliquusExternusR12Node_pos);
       AnyRefNode RotNode ={ ARel=RotMat(.sRel,..CCTangetNodeR12.sRel,..CCTangetNodeR12R11.sRel);};};
       AnyFolder &DataRib =Data.R12.Left;
       #if BM_TRUNK_THORACIC_MODEL == _THORACIC_MODEL_FLEXIBLE_
@@ -1128,7 +1128,7 @@ Segments = {
         AnyRefNode R10NodeLant     ={ sRel =.Scale (.Data.Sternum.Left.R10Node_pos + {.Data.AllRibs.CCOffset[0],0,0});  };
 
 
-        AnyRefNode RACP_CO6Node= {sRel = .Scale(.Data.Sternum.RACP_CO6Node_pos);};
+        AnyRefNode RectusAbdominisCP_CO6Node= {sRel = .Scale(.Data.Sternum.RectusAbdominisCP_CO6Node_pos);};
 
 
         AnyRefNode TransversusThoracisR2StNodeLIns         = {sRel = .Scale(.Data.Sternum.Left.TransversusThoracisR2StNode_pos);};
@@ -1138,8 +1138,8 @@ Segments = {
         AnyRefNode TransversusThoracisR6StNodeLIns         = {sRel = .Scale(.Data.Sternum.Left.TransversusThoracisR6StNode_pos);};
         AnyRefNode TransversusThoracisNodeLIns= {sRel = .Scale(.Data.Sternum.Left.TransversusThoracisNode_pos);};
 
-        AnyRefNode ObliquusInternus_1 = {sRel = .Scale(.Data.Sternum.Left.OICI_C9Node_pos);};
-        AnyRefNode ObliquusInternus_2 = {sRel = .Scale(.Data.Sternum.Left.OICI_C8Node_pos);};
+        AnyRefNode ObliquusInternus_1 = {sRel = .Scale(.Data.Sternum.Left.ObliquusInternusR9Node_pos);};
+        AnyRefNode ObliquusInternus_2 = {sRel = .Scale(.Data.Sternum.Left.ObliquusInternusR8Node_pos);};
 
 
 
