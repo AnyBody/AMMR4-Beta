@@ -329,21 +329,18 @@ AnySeg PelvisSeg = {
   };
 
   #if (BM_PELVIS_DISPLAY == _PELVIS_DISPLAY_LEGANDTRUNKPELVIS_)
-  AnyDrawSurf Drw_TrunkSacrum =
-  #else
-  AnyDrawSurf DrwSacrum =
+    AnyDrawSurf Drw_TrunkSacrum = {
+      FileName = ...Data.unscaled.STL.FilenameSacrumSeg           ;
+      #if (BM_LEG_LEFT == OFF) & (BM_LEG_RIGHT == OFF)
+        Opacity ??= Main.DrawSettings.BonesOpacity.Pelvis;
+        RGB = ...ColorRef.Segments;
+      #else
+        Opacity ??= Main.DrawSettings.BonesOpacity.Pelvis * 0.5;
+        RGB = ...ColorRef.Segments;
+      #endif
+      AnyFunTransform3D &Scale = .Scale;
+    };
   #endif
-  {
-    FileName = ...Data.unscaled.STL.FilenameSacrumSeg           ;
-    #if (BM_LEG_LEFT == OFF) & (BM_LEG_RIGHT == OFF)
-      Opacity ??= Main.DrawSettings.BonesOpacity.Pelvis;
-      RGB = ...ColorRef.Segments;
-    #else
-      Opacity ??= Main.DrawSettings.BonesOpacity.Pelvis * 0.5;
-      RGB = ...ColorRef.Segments;
-    #endif
-    AnyFunTransform3D &Scale = .Scale;
-  };
 
   #endif
 
