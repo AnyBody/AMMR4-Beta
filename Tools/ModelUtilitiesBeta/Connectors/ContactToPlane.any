@@ -1,4 +1,4 @@
-
+/*
 
 // =============================================================================
 /// ContactToPlane Class Template
@@ -9,6 +9,7 @@
 /// reference plane, and applies normal and tangential force constraints.
 /// Contact activation uses distance, velocity, and optional plane border checks.
 /// =============================================================================
+*/
 #class_template ContactToPlane (
 TARGETOBJECT = TargetObject, // Array of target contact frames
 BOUNDSOBJECT = 0,          // Reference plane node group for contact surface
