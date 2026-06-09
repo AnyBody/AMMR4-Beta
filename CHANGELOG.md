@@ -109,6 +109,8 @@ segments based on whether they are marked as being part of the distribution.
   plate class template to calculate the COP on sloped offset surface. Like if
   you added a sloped wedge on top of the force plate.
 
+* Improved biceps wrapping for large elbow flexion angles.
+
 * Type 4 and type 2 now has the option to set a baseline offset to the measured
   force channels
   (`Plate.ForcePlate.BaselineOffset.Fx`/`Fy`/`Fz`/`Mx`/`My`/`Mz`). This can be
