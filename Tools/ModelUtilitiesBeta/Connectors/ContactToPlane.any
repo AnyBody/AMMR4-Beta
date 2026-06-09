@@ -1,0 +1,417 @@
+
+
+// =============================================================================
+/// ContactToPlane Class Template
+/// =============================================================================
+///
+/// Implements smooth plane-based contact constraints with friction.
+/// This template computes contact forces between target objects and a
+/// reference plane, and applies normal and tangential force constraints.
+/// Contact activation uses distance, velocity, and optional plane border checks.
+/// =============================================================================
+#class_template ContactToPlane (
+TARGETOBJECT = TargetObject, // Array of target contact frames
+BOUNDSOBJECT = 0,          // Reference plane node group for contact surface
+ARG_INI_SWITCH = 0,        // 0 = use default activation limits, 1 = use ARG_INI input
+ARG_INI = NOT_DEFINED,      // Optional initialization folder with UserDefined* parameters
+VerticalDirection = "Z",  // Reserved for axis mapping (currently default Z normal)
+NORMALIZESTRENGTHS = Off,  // Off = absolute strength, On = normalized strength across contacts
+)
+
+{
+  /// ---------------------------------------------------------------------------
+  /// Input handles
+  /// ---------------------------------------------------------------------------
+  AnyObjectPtr TargetObject = TARGETOBJECT;
+  AnyRefNodeGroup &BoundsObject = BOUNDSOBJECT;
+  
+  /// ---------------------------------------------------------------------------
+  /// Default contact parameters
+  /// ---------------------------------------------------------------------------
+  #var AnyFloat UsePlaneBordersForContactDetection = 1;    // Enable border checking
+  #var AnyVar NormalStrength = DesignVar(1000.0);               // Base contact force strength [N]
+  #var AnyVar FrictionStrength = DesignVar(1000.0);               // Base contact force strength [N]
+
+  #var AnyVar StaticFrictionCoefficient = DesignVar(0.75); // Friction coefficient
+  #var AnyVar ScaleFactor = DesignVar(0.005);                 // Visualization scaling only
+  
+  AnyInt TargetObjCount = NumElemOf(TargetObject);
+  #var AnyVar NormalTotalStrength = NormalStrength * TargetObjCount;   // Total strength when normalized
+  #var AnyVar FrictionTotalStrength = FrictionStrength * TargetObjCount;   // Total strength when normalized
+
+  // Activation limits
+  #if ARG_INI_SWITCH == 0
+  
+  #var AnyVec3 GroundVel = {0, 0, 0}; 
+  #var AnyVar VelLimit = DesignVar(0.8);     // Maximum relative velocity [m/s]
+  #var AnyVar TransitionVel=VelLimit*0.1;
+  #var AnyVar TransitionHeight=HeightLimit*0.1;
+  #var AnyVar TransitionDepth=DepthLimit*0.1;
+  #var AnyVar DepthLimit =DesignVar(-0.1);
+  #var AnyVar HeightLimit=DesignVar(0.04);   // Maximum contact distance [m]
+  #var AnyVar TransitionEdge=0.1;
+  
+  
+  
+  // Ground velocity reference [m/s]
+  #else
+  AnyFolder& InitializationArgs = ARG_INI;
+  #var AnyVec3 GroundVel = ARG_INI.GroundVel;
+  #var AnyVar VelLimit = ARG_INI.VelLimit;     // Maximum relative velocity [m/s]
+  #var AnyVar TransitionVel=ARG_INI.TransitionVel;
+  #var AnyVar TransitionHeight=ARG_INI.TransitionHeight;
+  #var AnyVar TransitionDepth=ARG_INI.TransitionDepth;
+  #var AnyVar DepthLimit =ARG_INI.DepthLimit;
+  #var AnyVar HeightLimit=ARG_INI.HeightLimit;   // Maximum contact distance [m]
+  #var AnyVar TransitionEdge=ARG_INI.TransitionEdge;
+  
+  #endif
+     
+  
+  // ---------------------------------------------------------------------------
+  // Axis mapping helper (reserved for future use)
+  // ---------------------------------------------------------------------------
+  #if VerticalDirection == "X"
+  AnyIntArray Index = {1, 2, 0};
+  #endif
+  #if VerticalDirection == "Y"
+  AnyIntArray Index = {0, 2, 1};
+  #endif
+  #if VerticalDirection == "Z"
+  AnyIntArray Index = {0, 1, 2};
+  #endif
+  
+  // ---------------------------------------------------------------------------
+  // Build repeated index list for measure assembly
+  // ---------------------------------------------------------------------------
+  // The target references are repeated 4 times so each object can be matched with
+  // the corresponding plane reference nodes in the measurement matrix.
+  AnyInt List = iarr(0, TargetObjCount-1);
+  AnyInt diag_mat = diag(List);
+  AnyInt onesss = floor(ones(TargetObjCount, BoundsObject.NodeAmount));
+  AnyInt Takelist = diag_mat * onesss;
+  
+  /// ---------------------------------------------------------------------------
+  /// Measure relative motion between plane and target objects
+  /// ---------------------------------------------------------------------------
+  AnyObjectPtr BoundsObjectCorners=  ObjSearch(&BoundsObject, "CCC*", "AnyRefNode");
+  AnyKinLinear Lin = {
+    Ref = 0;
+    RefFrames = {
+      repmat(.TargetObjCount, .BoundsObjectCorners),
+      reshape(take(.TargetObject, .Takelist), {1, .TargetObjCount*.BoundsObject.NodeAmount})[0]
+    };
+  };
+  
+  /// OrgY extracts the Y-direction component from the concatenated linear
+  /// measurements. This is used later for plane border detection.
+  AnyKinMeasureOrg OrgY = {
+    AnyKinLinear &ref = .Lin;
+    MeasureOrganizer = iarr(1, 3, 3*.BoundsObject.NodeAmount*.TargetObjCount);
+  };
+  
+  /// ---------------------------------------------------------------------------
+  /// Contact direction measurements from plane midpoints
+  /// ---------------------------------------------------------------------------
+  AnyFolder Mid = {
+    AnyKinLinear Lin = {
+      Ref = 0;
+      RefFrames = {
+        repmat(..TargetObjCount, ObjSearch(&..BoundsObject, "MidNode", "AnyRefNode")),
+        ..TargetObject
+      };
+    };
+    ///Normal = contact normal direction 
+    AnyKinMeasureOrg Normal = {
+      AnyKinLinear &ref = .Lin;
+      MeasureOrganizer = iarr(2, 3, 3*..TargetObjCount-1);
+    };
+    ///Friction1 = tangential direction 1
+    AnyKinMeasureOrg Friction1 = {
+      AnyKinLinear &ref = .Lin;
+      MeasureOrganizer = iarr(0, 3, 3*..TargetObjCount-1);
+    };
+    ///Friction2 = tangential direction 2
+    AnyKinMeasureOrg Friction2 = {
+      AnyKinLinear &ref = .Lin;
+      MeasureOrganizer = iarr(1, 3, 3*..TargetObjCount-1);
+    };
+  };
+  
+  /// ---------------------------------------------------------------------------
+  /// Plane border detection
+  /// ---------------------------------------------------------------------------
+  /// NegPos is a binary indicator of whether each measurement is inside the plane
+  /// border. A value of 0 means the point is outside the plane boundary.
+  AnyFloat NegPos = iffun(ltfun(OrgY.Pos, 0.0), 0.0, 1.0);
+  AnyFloat EdgeDist = OrgY.Pos;
+  
+  /// Group the corner checks for each target object and require all corners to
+  /// be inside the border to count the object as inside bounds.
+  AnyInt take_index = reshape(iarr(0, 1, BoundsObject.NodeAmount*TargetObjCount-1), {TargetObjCount, BoundsObject.NodeAmount}); 
+    
+  /// ---------------------------------------------------------------------------
+  /// Height and velocity detection
+  /// ---------------------------------------------------------------------------
+  AnyFloat LinMeasureOrgPosNormal = Mid.Normal.Pos;
+  AnyFloat LinVel = {0*Mid.Normal.Vel, Mid.Friction1.Vel, Mid.Friction2.Vel}; //disregard normal vel
+  AnyFloat UserDefinedVelMeasure = vnorm(LinVel' - repmat(1, SizesOf(LinVel)[1], GroundVel)', 2);
+  
+  AnyFloat NormalDistMeasure = LinMeasureOrgPosNormal;
+  
+    
+  AnyFunInterpol  VelocityFun_interpol ={
+    /// Limit zero values to a small negative number to avoid degenerate interval widths.
+    AnyVar VelLimit = iffun(eqfun(.VelLimit, 0), 1e-5, .VelLimit); 
+    AnyVar TransitionVel = iffun(eqfun(.TransitionVel, 0), 1e-6, .TransitionVel); 
+    /// Piecewise linear velocity smoothing: full strength below VelLimit,
+    /// then falling to zero over TransitionVel beyond VelLimit.
+    T={0, VelLimit, VelLimit+TransitionVel, 1000.0};
+    Data={{1.0, 1.0, 0.0, 0.0}};
+    Type=PiecewiseLinear;
+  };
+  
+  
+  AnyFunInterpol  HeightFun_interpol ={
+    /// Avoid zero transition widths by replacing zero values with small offsets.
+    AnyVar DepthLimit = iffun(eqfun(.DepthLimit, 0), -1e-5, .DepthLimit); 
+    AnyVar TransitionDepth = iffun(eqfun(.TransitionDepth, 0), -1e-6, .TransitionDepth); 
+    AnyVar HeightLimit = iffun(eqfun(.HeightLimit, 0), 1e-5, .HeightLimit);
+    AnyVar TransitionHeight = iffun(eqfun(.TransitionHeight, 0), 1e-6, .TransitionHeight);
+    /// Piecewise linear height smoothing:
+    /// - below the depth limit: zero strength
+    /// - across the depth transition: ramp to full strength
+    /// - between depth and height limits: full strength
+    /// - across the height transition: ramp down to zero
+    T={-100, TransitionDepth+DepthLimit, DepthLimit, 0.0, HeightLimit, HeightLimit+TransitionHeight, 100.0};
+    Data={{0, 0, 1.0, 1.0, 1.0, 0.0, 0.0}};
+    Type=PiecewiseLinear;
+  };
+  
+  
+  AnyFunInterpol  EdgeFun_interpol ={
+    /// Replace a zero transition width with a small negative value to keep
+    /// the piecewise interval valid.
+    AnyVar TransitionEdge = iffun(eqfun(.TransitionEdge, 0), 1e-6, .TransitionEdge); 
+    /// Piecewise linear edge factor:
+    /// - outside the edge transition region: value 0
+    /// - inside the edge transition region: value ramps from 0 to 1
+    /// - on or inside the edge boundary: value 1
+    T={-1000, -TransitionEdge, 0, 1000.0};
+    Data={{ 0.0, 0.0, 1.0, 1.0 }};
+    Type=PiecewiseLinear;
+  };
+    
+  
+  /// Evaluate the height-based smoothing factor from the normal distance measure.
+  AnyFloat HeightFactorFun = HeightFun_interpol(NormalDistMeasure )';
+  /// Evaluate the velocity-based smoothing factor from the relative tangential speed.
+  AnyFloat VelFactorFun = VelocityFun_interpol(UserDefinedVelMeasure)';
+  /// Evaluate the edge-based smoothing factor using all border edge distances.
+  AnyFloat EdgesFactorFun = min(take(EdgeFun_interpol(EdgeDist), take_index)); 
+  /// Combine height, velocity, and edge factors into the final contact smoothing modifier.
+  AnyFloat SmoothingFunction = mult(mult(HeightFactorFun, VelFactorFun),EdgesFactorFun);
+  
+  
+  // ---------------------------------------------------------------------------
+  // Contact strength calculation
+  // ---------------------------------------------------------------------------
+  // Combine distance/velocity smoothing with border detection to compute the
+  // active contact strength for each target object.
+  #if NORMALIZESTRENGTHS == Off
+  
+  AnyFloat NormalContactStrengthSmoothed = SmoothingFunction * NormalStrength;
+  AnyFloat FrictionContactStrengthSmoothed = SmoothingFunction * FrictionStrength;
+
+  #else
+  AnyFloat NormalContactStrengthSmoothed_unscaled = SmoothingFunction * NormalStrength; //iffun(InsideBounds, SmoothingFunction, 0.0);
+  AnyFloat FrictionContactStrengthSmoothed_unscaled = SmoothingFunction * FrictionStrength; //iffun(InsideBounds, SmoothingFunction, 0.0);
+
+  AnyFloat NormalTotalStrengthSum = sum(NormalContactStrengthSmoothed_unscaled);
+  AnyFloat FrictionTotalStrengthSum = sum(FrictionContactStrengthSmoothed_unscaled);
+
+  // Normalize to avoid division by zero when no contacts are active.
+  AnyFloat NormalContactStrengthSmoothed_normalized = NormalContactStrengthSmoothed_unscaled / iffun(eqfun(NormalTotalStrengthSum, 0), 1.0, NormalTotalStrengthSum);
+  AnyFloat NormalContactStrengthSmoothed = NormalContactStrengthSmoothed_normalized * NormalTotalStrength;
+
+  AnyFloat FrictionContactStrengthSmoothed_normalized = FrictionContactStrengthSmoothed_unscaled / iffun(eqfun(FrictionTotalStrengthSum, 0), 1.0, FrictionTotalStrengthSum);
+  AnyFloat FrictionContactStrengthSmoothed = FrictionContactStrengthSmoothed_normalized * FrictionTotalStrength;
+
+  #endif
+  
+  /// ---------------------------------------------------------------------------
+  /// Friction coefficient matrices
+  /// ---------------------------------------------------------------------------
+  /// Coef_pos is positive friction direction and Coef_neg is negative friction direction.
+  AnyFloat Coef_pos = reshape(arrcat(eye(Mid.Normal.nDim), StaticFrictionCoefficient*eye(Mid.Normal.nDim))', {Mid.Normal.nDim, Mid.Normal.nDim*2});
+  AnyFloat Coef_neg = reshape(arrcat(-eye(Mid.Normal.nDim), StaticFrictionCoefficient*eye(Mid.Normal.nDim))', {Mid.Normal.nDim, Mid.Normal.nDim*2});
+  
+  /// ---------------------------------------------------------------------------
+  /// Contact actuator definition
+  /// ---------------------------------------------------------------------------
+  /// The actuator combines a normal contact measure with two friction directions.
+  /// Four linear combinations are used to represent positive and negative friction
+  /// forces in each tangential direction.
+  AnyRecruitedActuator Contact = {
+    AnyKinMeasure& NormalDir = .Mid.Normal;
+    
+    AnyKinMeasureLinComb Friction1_pos = {
+      AnyKinMeasure& u1 = ..Mid.Normal;
+      AnyKinMeasure& u2 = ..Mid.Friction1;
+      Coef = ..Coef_pos;
+      OutDim = ..Mid.Normal.nDim;
+    };
+    
+    AnyKinMeasureLinComb Friction1_neg = {
+      AnyKinMeasure& u1 = ..Mid.Normal;
+      AnyKinMeasure& u2 = ..Mid.Friction1;
+      Coef = ..Coef_neg;
+      OutDim = ..Mid.Normal.nDim;
+    };
+    
+    AnyKinMeasureLinComb Friction2_pos = {
+      AnyKinMeasure& u1 = ..Mid.Normal;
+      AnyKinMeasure& u2 = ..Mid.Friction2;
+      Coef = ..Coef_pos;
+      OutDim = ..Mid.Normal.nDim;
+    };
+    
+    AnyKinMeasureLinComb Friction2_neg = {
+      AnyKinMeasure& u1 = ..Mid.Normal;
+      AnyKinMeasure& u2 = ..Mid.Friction2;
+      Coef = ..Coef_neg;
+      OutDim = ..Mid.Normal.nDim;
+    };
+    
+    Strength = arrcat(.NormalContactStrengthSmoothed,repmat(4, .FrictionContactStrengthSmoothed));
+
+    Type = arrcat(
+    repmat(.Mid.Normal.nDim, NonNegative),
+    repmat(.Mid.Normal.nDim, NonNegative),
+    repmat(.Mid.Normal.nDim, NonPositive),
+    repmat(.Mid.Normal.nDim, NonNegative),
+    repmat(.Mid.Normal.nDim, NonPositive)
+    );
+    Volume = 1e-5;
+  };
+  
+ 
+  
+  
+AnyFixedRefFrame   Visualizations ={
+     AnyDrawPointCloud DrawSphereContact = {
+      AnyObjectPtr PointsPtr3 = ObjSearch(..Mid.Lin.RefFrames[1], "r", "AnyFloat");
+      Points = Obj2Num(take(PointsPtr3, iarr(0, ..Mid.Normal.nDim-1), 0));
+      Points3D = On;
+      PointStyle.Size = 0.005;
+       PointCloudRGBs = {iffun(gtfun(..NormalContactStrengthSmoothed,0),1,0), repmat(..Mid.Normal.nDim, 0), repmat(..Mid.Normal.nDim, 0)}';
+    };
+    
+    AnyDrawPointCloud DrawVector = {
+      AnyObjectPtr frames2 = ..Contact.RefFrameOutput.RefFrameArr;
+      AnyObjectPtr PointsPtr = ObjSearchRecursive(frames2, "r", "AnyFloat", 100);
+      Points = Obj2Num(take(PointsPtr, iarr(1, ..Mid.Normal.nDim), 0));
+      Points3D = Off;
+      RGB = {0, 1, 0};
+      PointStyle.Size = 2.5*0.01;
+      VectorFields =..ScaleFactor* take(..Contact.RefFrameOutput.F, iarr(1, ..Mid.Normal.nDim), 0);
+    };
+};
+
+  
+  
+  
+  //// ---------------------------------------------------------------------------
+  //// Debug visualization
+  //// ---------------------------------------------------------------------------
+  //// Transparent contact visualization for debugging: active contacts are shown
+  //// through color coding and force vectors.
+   BoundsObject ={
+   
+   AnyRefNode Visualizations##__NAME__ = {
+ 
+    AnyFolder Calculations ={
+      /// Original plane boundary node positions in surface-relative coordinates.
+      AnyFloat Points_sRel = ...BoundsObject.Node_sRels;
+      /// Node-related direction data used to obtain edge normals.
+      AnyFloat Points_ARel0 = ...BoundsObject.Node_ARels;
+
+      /// Extract edge-normal directions from the second component of the ARel data.
+      AnyFloat EgdeNormals = take(Points_ARel0,1,2);
+      
+      /// Create a small offset along the edge normal for visualization boundary smoothing.
+      AnyFloat PointOffsets=-EgdeNormals*...TransitionEdge;
+      /// Number of boundary nodes.
+      AnyInt Size=...BoundsObject.NodeAmount;
+      
+      /// Duplicate boundary indices to form a closed edge loop with repeated end points.
+      AnyIntArray take_index1= arrcat(0,reshape({iarr(1,1,Size-1),iarr(1,1,Size-1)}',{1,2*(Size-1)})[0],0);
+      /// Duplicate offset indices so each point has a matching offset entry.
+      AnyIntArray take_index2= arrcat(reshape({iarr(0,1,Size-1),iarr(0,1,Size-1)}',{1,2*Size})[0]);
+      /// Repeated original boundary points for looped mesh construction.
+      AnyFloat PointsLoop= take(Points_sRel,take_index1,0);  
+      /// Repeated offset vectors aligned with the duplicated points.
+      AnyFloat OffsetsLoop= take(PointOffsets,take_index2,0);  
+      /// Final shifted boundary points used by the outer bound visual meshes.
+      AnyFloat Points = PointsLoop+OffsetsLoop;
+    
+      ///Create visualization rings for the high and low contact limits
+      /// Central ring for the midpoint of the high-limit boundary.
+      AnyFloat HighLimitCenterRing = reshape(repmat(2*Size, mean(HighLimitRing')'), {2*Size,3});
+      /// Outer boundary points offset by the upper distance limit.
+      AnyFloat HighLimitRing = reshape(repmat(2*Size, ...BoundsObject.MidNode.ARel'[2]*...HeightLimit), {2*Size,3}) + .Calculations.Points;
+      /// Inner boundary points at the current plane geometry.
+      AnyFloat MidRing = .Calculations.Points;
+      AnyFloat MidCenterRing = reshape(repmat(2*Size, mean(MidRing')'), {2*Size,3});
+      /// Offset the boundary inward by the lower distance limit.
+      AnyFloat LowLimitRing = reshape(repmat(2*Size, ...BoundsObject.MidNode.ARel'[2]*...DepthLimit), {2*Size,3}) + (.Calculations.Points);
+      /// Central ring for the midpoint of the low-limit boundary.
+      AnyFloat LowLimitCenterRing = reshape(repmat(2*Size, mean(LowLimitRing')'), {2*Size,3});
+      
+    };
+
+    
+    
+
+    
+    AnySurfTriCylMesh OuterBoundsHigh={
+      /// Enable the high-contact visualization surface.
+      viewSurface.Visible = On;      viewSurface.Opacity = 0.1;      viewSurface.RGB={0,1,0};      
+      /// Combine four rings into a single surf-triangular cylinder mesh.
+      Points = arrcat(
+        .Calculations.HighLimitCenterRing,
+        .Calculations.HighLimitRing,
+        .Calculations.MidRing,
+        .Calculations.MidCenterRing,
+      );
+      /// Twice the node amount because the point list contains duplicated ring points.
+      AnyInt Size = ...BoundsObject.NodeAmount*2;
+      CylMesh={
+        Size*0+iarr(0,1,Size-1),
+        Size*1+iarr(0,1,Size-1),
+        Size*2+iarr(0,1,Size-1),
+        Size*3+iarr(0,1,Size-1),
+      };
+     };
+    
+    
+    AnySurfTriCylMesh OuterBoundsLow={
+      /// Enable the low-contact visualization surface.
+      viewSurface.Visible = On;      viewSurface.Opacity = 0.1;      viewSurface.RGB={1,0,0};
+              
+      /// Combine four rings into a single surf-triangular cylinder mesh.
+      Points = arrcat(
+        .Calculations.MidCenterRing,
+        .Calculations.MidRing,
+        .Calculations.LowLimitRing,
+        .Calculations.LowLimitCenterRing
+      );
+       CylMesh = .OuterBoundsHigh.CylMesh; // Reuse the same connectivity for the inner boundary mesh since the point ordering is consistent.
+       
+      
+    };
+  };
+  };
+};
+
+
