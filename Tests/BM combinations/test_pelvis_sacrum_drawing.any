@@ -1,0 +1,46 @@
+//define = (
+//  [
+//    {'BM_PELVIS_DISPLAY': '_PELVIS_DISPLAY_NONE_'},
+//    {'BM_PELVIS_DISPLAY': '_PELVIS_DISPLAY_LEGPELVIS_ONLY_'},
+//    {'BM_PELVIS_DISPLAY': '_PELVIS_DISPLAY_LEGANDTRUNKPELVIS_'},
+//  ]
+//)
+
+#ifndef BM_PELVIS_DISPLAY
+  #define BM_PELVIS_DISPLAY 2
+#endif
+
+#include "libdef.any"
+
+Main =
+{
+  // #path HTML_DOC "<AMMR_PATH_DOC>/bm_config/index.html"
+  #include "<ANYBODY_PATH_BODY>\HumanModel.any"
+
+  AnyOperationDummy RunApplication = {};
+
+  // Tests
+  AnyObjectPtr pelvis = &Main.HumanModel.BodyModel.Trunk.Segments.PelvisSeg;
+  AnyObjectPtr sacrum = &Main.HumanModel.BodyModel.Trunk.Segments.SacrumSeg;
+
+  AnyObjectPtr pelvis_drawObjects = ObjSearch(pelvis, "*", "AnyDrawSurf");
+  AnyObjectPtr sacrum_drawObjects = ObjSearch(sacrum, "*", "AnyDrawSurf");
+
+  #if BM_PELVIS_DISPLAY == _PELVIS_DISPLAY_NONE_
+    AnyInt test_no_drawings_pelvis = expect(eqfun(NumElemOf(pelvis_drawObjects), 0), "pelvis has draw objects when drawing is turned off!");
+    AnyInt test_no_drawings_sacrum = expect(eqfun(NumElemOf(sacrum_drawObjects), 0), "sacrum has draw objects when drawing is turned off!");
+  #endif
+
+  #if BM_PELVIS_DISPLAY == _PELVIS_DISPLAY_LEGPELVIS_ONLY_
+    AnyInt test_no_drawings_pelvis = expect(eqfun(NumElemOf(pelvis_drawObjects), 1), "pelvis has a wrong number of draw objects!");
+    AnyInt test_no_drawings_sacrum = expect(eqfun(NumElemOf(sacrum_drawObjects), 1), "sacrum has a wrong number of draw objects!");
+  #endif
+  
+  #if BM_PELVIS_DISPLAY == _PELVIS_DISPLAY_LEGANDTRUNKPELVIS_
+    /// We currently put pelvis and sacrum drawnings for both trunk and leg data sets on the pelvis segement.
+    /// this was done prior to defining the sacrum as a real segment.
+    /// we could consider to move the sacrum drawings into the sacrum segment for consistency
+    AnyInt test_no_drawings_pelvis = expect(eqfun(NumElemOf(pelvis_drawObjects), 4), "pelvis has a wrong number of draw objects!");
+    AnyInt test_no_drawings_sacrum = expect(eqfun(NumElemOf(sacrum_drawObjects), 0), "sacrum has draw objects but all are expected on pelvis!");
+  #endif
+};
