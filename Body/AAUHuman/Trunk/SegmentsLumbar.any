@@ -46,10 +46,9 @@ AnySeg SacrumSeg = {
         enableMassCorrection = Off;
       };
       AnySurfSTL surface = {
-        FileName = ..DrwSacrum.FileName;
+        FileName = ....Data.unscaled.STL.FilenameSacrumSeg;
         AnyFunTransform3D &scale = ..Scale;
-        viewSurface.RGB = {0,0,1};
-        ScaleXYZ = ..DrwSacrum.ScaleXYZ;
+
       };
     };
   #else
@@ -213,27 +212,18 @@ AnySeg SacrumSeg = {
 
   AnyRefNode LongissimusThoracisR12S3ViaNodeR = {sRel = .Scale(.Data.Right.LongissimusThoracisR12S3ViaNode_pos);};
   AnyRefNode LongissimusThoracisR12S3ViaNodeL = {sRel = .Scale(.Data.Left.LongissimusThoracisR12S3ViaNode_pos);};
-}; // SacrumSeg
 
-
-// -------- Drawing object section (pelvis&sacrum)--------
-#if (! BM_LEG_MODEL_IS_TLEM ) | (BM_PELVIS_DISPLAY == _PELVIS_DISPLAY_LEGANDTRUNKPELVIS_)
-  SacrumSeg = {
-    #if (BM_PELVIS_DISPLAY == _PELVIS_DISPLAY_LEGANDTRUNKPELVIS_)
-    DrwSacrumForTrunk.Opacity = Main.DrawSettings.BonesOpacity.Sacrum*0.5;
-    AnyDrawSurf DrwSacrumForTrunk =
-    #else
-    DrwSacrum.Opacity = Main.DrawSettings.BonesOpacity.Sacrum;
-    AnyDrawSurf DrwSacrum =
-    #endif
-    {
+    // -------- Drawing object section sacrum--------
+    #if BM_PELVIS_DISPLAY == _PELVIS_DISPLAY_LEGPELVIS_ONLY_
+    AnyDrawSurf DrwSacrum = {
+      Opacity = Main.DrawSettings.BonesOpacity.Sacrum;
       FileName = ...Data.unscaled.STL.FilenameSacrumSeg;
       RGB = ...ColorRef.Segments;
       AnyFunTransform3D &Scale =.Scale;
     };
+    // -------- End of drawing section sacrum--------
+    #endif
   }; // SacrumSeg
-#endif
-// -------- End of drawing section (pelvis&sacrum)--------
 
 
 AnySeg L5Seg = {
