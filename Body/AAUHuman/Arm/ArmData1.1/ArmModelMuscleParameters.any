@@ -444,7 +444,7 @@ AnyFolder Muscles =
 
   AnyFolder PectoralisMajorSternocostal = 
   {
-    AnyString Muscle = "Pectoralis major thoracic"; ///< Descriptive name for the muscle, e.g. for plotting
+    AnyString Muscle = "Pectoralis major sternocostal"; ///< Descriptive name for the muscle, e.g. for plotting
     AnyIntVar MuscleElemAmount = 10; ///< The total amount of elements for this muscle
     AnyFloat Pennationangle ??= DesignVar(5); ///< Pennation angle of the muscle fibers (degres)
     AnyFloat VolumeScaleFactor ??= DesignVar(1.0); ///< Factor for scaling the muscle volume

@@ -23,7 +23,7 @@ AnyFolder Spinalis = {
         F0 ??= ..DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
         Lf0 ??= MuscleParameters.OptimalFiberlength / cos(pi/180*MuscleParameters.Pennationangle); //< Optimal fiber length corrected by pennation angle
         AnyVar PCSA ??= 1e4*..StrengthScaleSpine*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
-        Vol0 = (1e-4*PCSA) * Lf0; // New calculation of the vol for the specific muscle branch
+        Vol0 ??= (1e-4*PCSA) * Lf0; // New calculation of the vol for the specific muscle branch
     };
     #endif
     
@@ -35,7 +35,7 @@ AnyFolder Spinalis = {
         F0 ??= ..DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
         Lf0 ??= MuscleParameters.OptimalFiberlength / cos(pi/180*MuscleParameters.Pennationangle); //< Optimal fiber length corrected by pennation angle
         AnyVar PCSA ??= 1e4*..StrengthScaleSpine*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
-        Vol0 = (1e-4*PCSA) * Lf0; // New calculation of the vol for the specific muscle branch
+        Vol0 ??= (1e-4*PCSA) * Lf0; // New calculation of the vol for the specific muscle branch
     };
     #endif
     
@@ -47,7 +47,7 @@ AnyFolder Spinalis = {
         F0 ??= ..DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
         Lf0 ??= MuscleParameters.OptimalFiberlength / cos(pi/180*MuscleParameters.Pennationangle); //< Optimal fiber length corrected by pennation angle
         AnyVar PCSA ??= 1e4*..StrengthScaleSpine*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
-        Vol0 = (1e-4*PCSA) * Lf0; // New calculation of the vol for the specific muscle branch
+        Vol0 ??= (1e-4*PCSA) * Lf0; // New calculation of the vol for the specific muscle branch
     };
     #endif
     
@@ -59,7 +59,7 @@ AnyFolder Spinalis = {
         F0 ??= ..DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
         Lf0 ??= MuscleParameters.OptimalFiberlength / cos(pi/180*MuscleParameters.Pennationangle); //< Optimal fiber length corrected by pennation angle
         AnyVar PCSA ??= 1e4*..StrengthScaleSpine*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
-        Vol0 = (1e-4*PCSA) * Lf0; // New calculation of the vol for the specific muscle branch
+        Vol0 ??= (1e-4*PCSA) * Lf0; // New calculation of the vol for the specific muscle branch
     };
     #endif
     
@@ -71,7 +71,7 @@ AnyFolder Spinalis = {
         F0 ??= ..DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
         Lf0 ??= MuscleParameters.OptimalFiberlength / cos(pi/180*MuscleParameters.Pennationangle); //< Optimal fiber length corrected by pennation angle
         AnyVar PCSA ??= 1e4*..StrengthScaleSpine*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
-        Vol0 = (1e-4*PCSA) * Lf0; // New calculation of the vol for the specific muscle branch
+        Vol0 ??= (1e-4*PCSA) * Lf0; // New calculation of the vol for the specific muscle branch
     };
     #endif
     
@@ -83,7 +83,7 @@ AnyFolder Spinalis = {
         F0 ??= ..DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
         Lf0 ??= MuscleParameters.OptimalFiberlength / cos(pi/180*MuscleParameters.Pennationangle); //< Optimal fiber length corrected by pennation angle
         AnyVar PCSA ??= 1e4*..StrengthScaleSpine*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
-        Vol0 = (1e-4*PCSA) * Lf0; // New calculation of the vol for the specific muscle branch
+        Vol0 ??= (1e-4*PCSA) * Lf0; // New calculation of the vol for the specific muscle branch
     };
     #endif
     
@@ -99,7 +99,7 @@ AnyFolder TransversusSingle = {
         F0 ??= ..DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
         Lf0 ??= MuscleParameters.OptimalFiberlength / cos(pi/180*MuscleParameters.Pennationangle); //< Optimal fiber length corrected by pennation angle
         AnyVar PCSA ??= 1e4*..StrengthScaleSpine*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
-        Vol0 = (1e-4*PCSA) * Lf0; // New calculation of the vol for the specific muscle branch
+        Vol0 ??= (1e-4*PCSA) * Lf0; // New calculation of the vol for the specific muscle branch
     };
     #endif
     
@@ -111,7 +111,7 @@ AnyFolder TransversusSingle = {
         F0 ??= ..DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
         Lf0 ??= MuscleParameters.OptimalFiberlength / cos(pi/180*MuscleParameters.Pennationangle); //< Optimal fiber length corrected by pennation angle
         AnyVar PCSA ??= 1e4*..StrengthScaleSpine*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
-        Vol0 = (1e-4*PCSA) * Lf0; // New calculation of the vol for the specific muscle branch
+        Vol0 ??= (1e-4*PCSA) * Lf0; // New calculation of the vol for the specific muscle branch
     };
     #endif
     
@@ -123,7 +123,7 @@ AnyFolder TransversusSingle = {
         F0 ??= ..DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
         Lf0 ??= MuscleParameters.OptimalFiberlength / cos(pi/180*MuscleParameters.Pennationangle); //< Optimal fiber length corrected by pennation angle
         AnyVar PCSA ??= 1e4*..StrengthScaleSpine*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
-        Vol0 = (1e-4*PCSA) * Lf0; // New calculation of the vol for the specific muscle branch
+        Vol0 ??= (1e-4*PCSA) * Lf0; // New calculation of the vol for the specific muscle branch
     };
     #endif
     
@@ -135,7 +135,7 @@ AnyFolder TransversusSingle = {
         F0 ??= ..DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
         Lf0 ??= MuscleParameters.OptimalFiberlength / cos(pi/180*MuscleParameters.Pennationangle); //< Optimal fiber length corrected by pennation angle
         AnyVar PCSA ??= 1e4*..StrengthScaleSpine*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
-        Vol0 = (1e-4*PCSA) * Lf0; // New calculation of the vol for the specific muscle branch
+        Vol0 ??= (1e-4*PCSA) * Lf0; // New calculation of the vol for the specific muscle branch
     };
     #endif
     
@@ -147,7 +147,7 @@ AnyFolder TransversusSingle = {
         F0 ??= ..DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
         Lf0 ??= MuscleParameters.OptimalFiberlength / cos(pi/180*MuscleParameters.Pennationangle); //< Optimal fiber length corrected by pennation angle
         AnyVar PCSA ??= 1e4*..StrengthScaleSpine*MuscleParameters.MuscleVolumeSIScaled/(Lf0); ///< PCSA (cm2) of the individual element is total volumen divided by the sum of muscle element fiber lengths.
-        Vol0 = (1e-4*PCSA) * Lf0; // New calculation of the vol for the specific muscle branch
+        Vol0 ??= (1e-4*PCSA) * Lf0; // New calculation of the vol for the specific muscle branch
     };
     #endif
     
