@@ -206,14 +206,14 @@ AnyFolder Buckle={
       };
 
       //Rectus abdominis Left side
-      AnyRefNode RACP_CO5NodeL ={        sRel= .Scale({-0.0000, 0.0, 0.02});      };
-      AnyRefNode RACP_CO6NodeL={        sRel= .Scale({-0.0000, 0.0, 0.02});      };
-      AnyRefNode RACP_CO7NodeL={        sRel= .Scale({-0.0000, 0.0, 0.02});      };
+      AnyRefNode RectusAbdominisCP_CO5NodeL ={        sRel= .Scale({-0.0000, 0.0, 0.02});      };
+      AnyRefNode RectusAbdominisCP_CO6NodeL={        sRel= .Scale({-0.0000, 0.0, 0.02});      };
+      AnyRefNode RectusAbdominisCP_CO7NodeL={        sRel= .Scale({-0.0000, 0.0, 0.02});      };
 
       //Rectus abdominis Right side
-      AnyRefNode RACP_CO5NodeR ={        sRel= .Scale({-0.0000, 0.0, -0.02});      };
-      AnyRefNode RACP_CO6NodeR={        sRel= .Scale({-0.0000, 0.0, -0.02});      };
-      AnyRefNode RACP_CO7NodeR={        sRel= .Scale({-0.0000, 0.0, -0.02});      };
+      AnyRefNode RectusAbdominisCP_CO5NodeR ={        sRel= .Scale({-0.0000, 0.0, -0.02});      };
+      AnyRefNode RectusAbdominisCP_CO6NodeR={        sRel= .Scale({-0.0000, 0.0, -0.02});      };
+      AnyRefNode RectusAbdominisCP_CO7NodeR={        sRel= .Scale({-0.0000, 0.0, -0.02});      };
 
       AnySurfEllipsoid elipsoid={
         AnyDrawParamSurf drw={Opacity=0.5;};

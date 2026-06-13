@@ -642,7 +642,7 @@ AnyFolder Abdominal = {
     AnySeg Dummy ={
       AnyRefNode JntNode={
         sRel = ....Segments.PelvisSeg.RectusAbdominis_1_R.sRel;
-        ARel =  RotMat (sRel, ....Segments.SternalBodySeg.RACP_CO6_2_mid.sRel, sRel+{0.1,0,0})* RotMat (-pi/2,z)*RotMat(pi,y);
+        ARel =  RotMat (sRel, ....Segments.SternalBodySeg.RectusAbdominisCP_CO6_2_mid.sRel, sRel+{0.1,0,0})* RotMat (-pi/2,z)*RotMat(pi,y);
       };
       Mass=0;Jii={0,0,0};
       r0 ??=  ...Segments.PelvisSeg.r0;
@@ -661,7 +661,7 @@ AnyFolder Abdominal = {
         AnyKinLinear Lin={
           Ref=0;
           AnyRefNode &ref2 = ...Dummy.JntNode;
-          AnyRefNode &ref1 = .....Segments.SternalBodySeg.RACP_CO6_2_mid;
+          AnyRefNode &ref1 = .....Segments.SternalBodySeg.RectusAbdominisCP_CO6_2_mid;
         };
       };
       AnyKinMeasureOrg OrgY ={

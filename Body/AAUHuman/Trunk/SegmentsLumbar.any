@@ -426,8 +426,8 @@ AnySeg L5Seg = {
   // End of Psoas Major Nodes
 
   // Obliquus Externus Nodes
-  AnyRefNode OEC10_RSNodeR = {sRel = .Scale(.Data.Right.OEC10_RSNode_pos);};
-  AnyRefNode OEC10_RSNodeL = {sRel = .Scale(.Data.Left.OEC10_RSNode_pos);};
+  AnyRefNode ObliquusExternusR10NodeR = {sRel = .Scale(.Data.Right.ObliquusExternusR10Node_pos);};
+  AnyRefNode ObliquusExternusR10NodeL = {sRel = .Scale(.Data.Left.ObliquusExternusR10Node_pos);};
   // End of Obliquus Externus Nodes
 
   AnyDrawSurf BoneDraw = {
@@ -652,18 +652,18 @@ AnySeg L4Seg = {
   // End of Psoas Major Nodes
 
   // Quadratus Lumborum Nodes
-  AnyRefNode QLL4_CINodeR = {sRel = .Scale(.Data.Right.QLL4_CINode_pos);};
-  AnyRefNode QLL4_CINodeL = {sRel = .Scale(.Data.Left.QLL4_CINode_pos);};
+  AnyRefNode QuadratusLumborumL4NodeR = {sRel = .Scale(.Data.Right.QuadratusLumborumL4Node_pos);};
+  AnyRefNode QuadratusLumborumL4NodeL = {sRel = .Scale(.Data.Left.QuadratusLumborumL4Node_pos);};
   // End of Quadratus Lumborum Nodes
 
   // Obliquus Externus Nodes
-  AnyRefNode OEC9_RSNodeR = {sRel = .Scale(.Data.Right.OEC9_RSNode_pos);};
-  AnyRefNode OEC9_RSNodeL = {sRel = .Scale(.Data.Left.OEC9_RSNode_pos);};
+  AnyRefNode ObliquusExternusR9NodeR = {sRel = .Scale(.Data.Right.ObliquusExternusR9Node_pos);};
+  AnyRefNode ObliquusExternusR9NodeL = {sRel = .Scale(.Data.Left.ObliquusExternusR9Node_pos);};
   // End of Obliquus Externus Nodes
 
   // Obliquus Internus Nodes
-  AnyRefNode OICI_RS3NodeR = {sRel = .Scale(.Data.Right.OICI_RS3Node_pos);};
-  AnyRefNode OICI_RS3NodeL = {sRel = .Scale(.Data.Left.OICI_RS3Node_pos);};
+  AnyRefNode ObliquusInternusRS3NodeR = {sRel = .Scale(.Data.Right.ObliquusInternusRS3Node_pos);};
+  AnyRefNode ObliquusInternusRS3NodeL = {sRel = .Scale(.Data.Left.ObliquusInternusRS3Node_pos);};
   // End of Obliquus Internus Nodes
 
   AnyDrawSurf BoneDraw = {
@@ -918,18 +918,18 @@ AnySeg L3Seg = {
   // End of Psoas Major Nodes
 
   // Quadratus Lumborum Nodes
-  AnyRefNode QLL3_CINodeR = {sRel = .Scale(.Data.Right.QLL3_CINode_pos);};
-  AnyRefNode QLL3_CINodeL = {sRel = .Scale(.Data.Left.QLL3_CINode_pos);};
+  AnyRefNode QuadratusLumborumL3NodeR = {sRel = .Scale(.Data.Right.QuadratusLumborumL3Node_pos);};
+  AnyRefNode QuadratusLumborumL3NodeL = {sRel = .Scale(.Data.Left.QuadratusLumborumL3Node_pos);};
   // End of Quadratus Lumborum Nodes
 
   // Obliquus Externus Nodes
-  AnyRefNode OEC8_RSNodeR = {sRel = .Scale(.Data.Right.OEC8_RSNode_pos);};
-  AnyRefNode OEC8_RSNodeL = {sRel = .Scale(.Data.Left.OEC8_RSNode_pos);};
+  AnyRefNode ObliquusExternusR8NodeR = {sRel = .Scale(.Data.Right.ObliquusExternusR8Node_pos);};
+  AnyRefNode ObliquusExternusR8NodeL = {sRel = .Scale(.Data.Left.ObliquusExternusR8Node_pos);};
   // End of Obliquus Externus Nodes
 
   // Obliquus Internus Nodes
-  AnyRefNode OICI_RS2NodeR = {sRel = .Scale(.Data.Right.OICI_RS2Node_pos);};
-  AnyRefNode OICI_RS2NodeL = {sRel = .Scale(.Data.Left.OICI_RS2Node_pos);};
+  AnyRefNode ObliquusInternusRS2NodeR = {sRel = .Scale(.Data.Right.ObliquusInternusRS2Node_pos);};
+  AnyRefNode ObliquusInternusRS2NodeL = {sRel = .Scale(.Data.Left.ObliquusInternusRS2Node_pos);};
   // End of Obliquus Internus Nodes
 
   //AnyDrawSeg DrwSeg = {};
@@ -1075,8 +1075,8 @@ AnySeg L2Seg = {
   AnyRefNode LongissimusThoracisT2L2NodeR = {sRel = .Scale(.Data.Right.LongissimusThoracisT2L2Node_pos);};
   AnyRefNode LongissimusThoracisT2L2NodeL = {sRel = .Scale(.Data.Left.LongissimusThoracisT2L2Node_pos);};
 
-  AnyRefNode LTptC2L2NodeR = {sRel = .Scale(.Data.Right.LTptC2L2Node_pos);};
-  AnyRefNode LTptC2L2NodeL = {sRel = .Scale(.Data.Left.LTptC2L2Node_pos);};
+  AnyRefNode LongissimusThoracisC2L2NodeR = {sRel = .Scale(.Data.Right.LongissimusThoracisC2L2Node_pos);};
+  AnyRefNode LongissimusThoracisC2L2NodeL = {sRel = .Scale(.Data.Left.LongissimusThoracisC2L2Node_pos);};
 
   AnyRefNode IliocostalisLumborumL1ViaNodeR = {sRel = .Scale(.Data.Right.IliocostalisLumborumL1ViaNode_pos);};
   AnyRefNode IliocostalisLumborumL1ViaNodeL = {sRel = .Scale(.Data.Left.IliocostalisLumborumL1ViaNode_pos);};
@@ -1184,18 +1184,18 @@ AnySeg L2Seg = {
     // End of Psoas Major Nodes
 
     // Quadratus Lumborum Nodes
-    AnyRefNode QLL2_CINodeR = {sRel = .Scale(.Data.Right.QLL2_CINode_pos);};
-    AnyRefNode QLL2_CINodeL = {sRel = .Scale(.Data.Left.QLL2_CINode_pos);};
+    AnyRefNode QuadratusLumborumL2NodeR = {sRel = .Scale(.Data.Right.QuadratusLumborumL2Node_pos);};
+    AnyRefNode QuadratusLumborumL2NodeL = {sRel = .Scale(.Data.Left.QuadratusLumborumL2Node_pos);};
     // End of Quadratus Lumborum Nodes
 
     // Obliquus Externus Nodes
-    AnyRefNode OEC7_RSNodeR = {sRel = .Scale(.Data.Right.OEC7_RSNode_pos);};
-    AnyRefNode OEC7_RSNodeL = {sRel = .Scale(.Data.Left.OEC7_RSNode_pos);};
+    AnyRefNode ObliquusExternusR7NodeR = {sRel = .Scale(.Data.Right.ObliquusExternusR7Node_pos);};
+    AnyRefNode ObliquusExternusR7NodeL = {sRel = .Scale(.Data.Left.ObliquusExternusR7Node_pos);};
     // End of Obliquus Externus Nodes
 
     // Obliquus Internus Nodes
-    AnyRefNode OICI_RS1NodeR = {sRel = .Scale(.Data.Right.OICI_RS1Node_pos);};
-    AnyRefNode OICI_RS1NodeL = {sRel = .Scale(.Data.Left.OICI_RS1Node_pos);};
+    AnyRefNode ObliquusInternusRS1NodeR = {sRel = .Scale(.Data.Right.ObliquusInternusRS1Node_pos);};
+    AnyRefNode ObliquusInternusRS1NodeL = {sRel = .Scale(.Data.Left.ObliquusInternusRS1Node_pos);};
     // End of Obliquus Internus Nodes
 
     // Diaphragm Muscles Nodes
@@ -1345,8 +1345,8 @@ AnySeg L1Seg = {
   AnyRefNode LongissimusThoracisT1L1NodeR = {sRel = .Scale(.Data.Right.LongissimusThoracisT1L1Node_pos);};
   AnyRefNode LongissimusThoracisT1L1NodeL = {sRel = .Scale(.Data.Left.LongissimusThoracisT1L1Node_pos);};
 
-  AnyRefNode LTptC1L1NodeR = {sRel = .Scale(.Data.Right.LTptC1L1Node_pos);};
-  AnyRefNode LTptC1L1NodeL = {sRel = .Scale(.Data.Left.LTptC1L1Node_pos);};
+  AnyRefNode LongissimusThoracisC1L1NodeR = {sRel = .Scale(.Data.Right.LongissimusThoracisC1L1Node_pos);};
+  AnyRefNode LongissimusThoracisC1L1NodeL = {sRel = .Scale(.Data.Left.LongissimusThoracisC1L1Node_pos);};
 
   AnyRefNode IliocostalisLumborumR5Via7NodeR = {sRel = .Scale(.Data.Right.IliocostalisLumborumR5Via7Node_pos);};
   AnyRefNode IliocostalisLumborumR5Via7NodeL = {sRel = .Scale(.Data.Left.IliocostalisLumborumR5Via7Node_pos);};
@@ -1445,8 +1445,8 @@ AnySeg L1Seg = {
     // End of Psoas Major Nodes
 
     // Quadratus Lumborum Nodes
-    AnyRefNode QLL1_CINodeR = {sRel = .Scale(.Data.Right.QLL1_CINode_pos);};
-    AnyRefNode QLL1_CINodeL = {sRel = .Scale(.Data.Left.QLL1_CINode_pos);};
+    AnyRefNode QuadratusLumborumL1NodeR = {sRel = .Scale(.Data.Right.QuadratusLumborumL1Node_pos);};
+    AnyRefNode QuadratusLumborumL1NodeL = {sRel = .Scale(.Data.Left.QuadratusLumborumL1Node_pos);};
     // End of Quadratus Lumborum Nodes
 
     // Diaphragm Muscles Nodes

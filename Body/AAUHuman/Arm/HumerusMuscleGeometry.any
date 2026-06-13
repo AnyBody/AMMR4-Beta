@@ -188,18 +188,18 @@ Humerus = {
   };
 
 #if BM_ARM_DELTOID_WRAPPING == _DELTOID_WRAPPING_RAKE_
-  AnyRefNode I_deltoideus_scapular_part_1         = {sRel = .Scale(.Data.I_deltoideus_scapular_part_1_pos*.Mirror);};
-  AnyRefNode I_deltoideus_scapular_part_2         = {sRel = .Scale(.Data.I_deltoideus_scapular_part_2_pos*.Mirror);};
-  AnyRefNode I_deltoideus_scapular_part_3         = {sRel = .Scale(.Data.I_deltoideus_scapular_part_3_pos*.Mirror);};
-  AnyRefNode I_deltoideus_scapular_part_4         = {sRel = .Scale(.Data.I_deltoideus_scapular_part_4_pos*.Mirror);};
-  AnyRefNode I_deltoideus_scapular_part_5         = {sRel = .Scale(.Data.I_deltoideus_scapular_part_5_pos*.Mirror);};
-  AnyRefNode I_deltoideus_scapular_part_6         = {sRel = .Scale(.Data.I_deltoideus_scapular_part_6_pos*.Mirror);};
-  AnyRefNode I_deltoideus_clavicular_part_1       = {sRel = .Scale(.Data.I_deltoideus_clavicular_part_1_pos*.Mirror);};
-  AnyRefNode I_deltoideus_clavicular_part_2       = {sRel = .Scale(.Data.I_deltoideus_clavicular_part_2_pos*.Mirror);};
-  AnyRefNode I_deltoideus_clavicular_part_3       = {sRel = .Scale(.Data.I_deltoideus_clavicular_part_3_pos*.Mirror);};
-  AnyRefNode I_deltoideus_clavicular_part_4       = {sRel = .Scale(.Data.I_deltoideus_clavicular_part_4_pos*.Mirror);};
-  AnyRefNode I_deltoideus_clavicular_part_5       = {sRel = .Scale(.Data.I_deltoideus_clavicular_part_5_pos*.Mirror);};
-  AnyRefNode I_deltoideus_clavicular_part_6       = {sRel = .Scale(.Data.I_deltoideus_clavicular_part_6_pos*.Mirror);};
+  AnyRefNode I_DeltoideusScapular1         = {sRel = .Scale(.Data.I_DeltoideusScapular1_pos*.Mirror);};
+  AnyRefNode I_DeltoideusScapular2         = {sRel = .Scale(.Data.I_DeltoideusScapular2_pos*.Mirror);};
+  AnyRefNode I_DeltoideusScapular3         = {sRel = .Scale(.Data.I_DeltoideusScapular3_pos*.Mirror);};
+  AnyRefNode I_DeltoideusScapular4         = {sRel = .Scale(.Data.I_DeltoideusScapular4_pos*.Mirror);};
+  AnyRefNode I_DeltoideusScapular5         = {sRel = .Scale(.Data.I_DeltoideusScapular5_pos*.Mirror);};
+  AnyRefNode I_DeltoideusScapular6         = {sRel = .Scale(.Data.I_DeltoideusScapular6_pos*.Mirror);};
+  AnyRefNode I_DeltoideusClavicular1       = {sRel = .Scale(.Data.I_DeltoideusClavicular1_pos*.Mirror);};
+  AnyRefNode I_DeltoideusClavicular2       = {sRel = .Scale(.Data.I_DeltoideusClavicular2_pos*.Mirror);};
+  AnyRefNode I_DeltoideusClavicular3       = {sRel = .Scale(.Data.I_DeltoideusClavicular3_pos*.Mirror);};
+  AnyRefNode I_DeltoideusClavicular4       = {sRel = .Scale(.Data.I_DeltoideusClavicular4_pos*.Mirror);};
+  AnyRefNode I_DeltoideusClavicular5       = {sRel = .Scale(.Data.I_DeltoideusClavicular5_pos*.Mirror);};
+  AnyRefNode I_DeltoideusClavicular6       = {sRel = .Scale(.Data.I_DeltoideusClavicular6_pos*.Mirror);};
 #else
   AnyRefNode I_DeltoideusPosterior1         = {sRel = .Scale(.Data.I_DeltoideusPosterior1_pos*.Mirror);};
   AnyRefNode I_DeltoideusPosterior2        = {sRel = .Scale(.Data.I_DeltoideusPosterior2_pos*.Mirror);};
