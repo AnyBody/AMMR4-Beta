@@ -6,8 +6,12 @@ Right = {
     #ifdef SignRef
       #undef SignRef
     #endif
-
     #define SignRef 1
+
+    #ifdef _SIDE_
+      #undef _SIDE_
+    #endif
+    #define _SIDE_ Right
 
     AnyFolder Data = {
       AnyFolder unscaled = {
@@ -20,7 +24,7 @@ Right = {
         #include "<BM_LEG_TLEM_PATH>/rangeOfMotion.any"
       #endif
 
-      AnyFolder MassDistribution = {}; ///< To be implemented!
+      #include "MassDistribution.any"
     };
 
     #include "<BM_LEG_DATASET_PATH>/ModelParameters.any"
