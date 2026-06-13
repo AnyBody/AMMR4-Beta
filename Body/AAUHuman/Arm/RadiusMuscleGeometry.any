@@ -14,7 +14,8 @@ Radius = {
 
     AnySurfCylinder cyl = {
       Radius=vnorm(.sRel-.P3);
-      Length= vnorm(.sRel-.P2);
+      Length= 2*vnorm(.sRel-.P2);
+      CenterOrigin = On;
     };
   };
 
