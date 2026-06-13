@@ -38,6 +38,9 @@ ADD_NODEGROUP = "Off"
   
   #var AnyFloat Direction = 1;
 
+  #var AnyString Name ="C";
+
+
   AnyInt PointsNo=  Sphere1PointsNo +Sphere2PointsNo+LinePointsNo; //total number of points along length of mesh
 
   
@@ -192,7 +195,7 @@ ADD_NODEGROUP = "Off"
     CreateMotionOutput.r=On;
     NodeDefaults.CreateMotionOutput.r=On;
     NodeAmount = .PointsNo*.RotationNo; 
-    NodeName = "C"; // base name for
+    NodeName = .Name; // base name for
     Node_sRels =  .Calculations.all;  
   };
   #endif
