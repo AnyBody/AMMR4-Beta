@@ -9,7 +9,7 @@ SelectedOutput.Right = {
   AnyFolder Leg = {
 
 
-    AnyFolder JointReactionForce = {
+    SelectedOutputGroup JointReactionForce = {
 
 
       /// Lateral positive
@@ -55,7 +55,7 @@ SelectedOutput.Right = {
 
 
 
-    AnyFolder JointMomentMeasure = {
+    SelectedOutputGroup JointMomentMeasure = {
 
 
       AnyVar HipAbduction = ....Right.Leg.MomentMeasure.HipNetMomentMuscle.MHipAbduction;
