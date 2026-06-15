@@ -38,7 +38,7 @@ Main.HumanModel = {
       #endif
       #if BM_LEG_RIGHT
       AnyFolder Leg = {
-        AnyFolder &Seg = Main.HumanModel.BodyModel.Right.Leg.Seg;
+        AnyFolder &Seg = Main.HumanModel.BodyModel.Right.Leg.Segments;
         AnyFolder &Jnt = Main.HumanModel.BodyModel.Right.Leg.Jnt;
       };
       #endif
@@ -59,7 +59,7 @@ Main.HumanModel = {
       #endif
       #if BM_LEG_LEFT
       AnyFolder Leg = {
-        AnyFolder &Seg = Main.HumanModel.BodyModel.Left.Leg.Seg;
+        AnyFolder &Seg = Main.HumanModel.BodyModel.Left.Leg.Segments;
         AnyFolder &Jnt = Main.HumanModel.BodyModel.Left.Leg.Jnt;
       };
       #endif

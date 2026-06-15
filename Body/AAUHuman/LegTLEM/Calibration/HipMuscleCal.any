@@ -18,7 +18,7 @@ AnyFolder LegCalHip =
 
   AnyFolder &Thorax = ...BodyModel.Trunk.Segments.ThoraxSeg;
 
-  AnyFolder &LegSegSide = .SideHumanFolderRef.Leg.Seg;
+  AnyFolder &LegSegSide = .SideHumanFolderRef.Leg.Segments;
 
   AnyFolder &LegJointsSide = .SideHumanFolderRef.Leg.Jnt;
   AnyFolder &TrunkJoints = ...BodyModel.Trunk.Joints.Lumbar;
