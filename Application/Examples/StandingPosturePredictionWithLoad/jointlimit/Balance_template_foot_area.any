@@ -7,7 +7,7 @@
 
   AnyFolder BalanceDrivers =   {
 
-    Main.HumanModel.BodyModel.Right.Leg.Seg.Foot = {
+    Main.HumanModel.BodyModel.Right.Leg.Segments.Foot = {
       Metatarsal3 = {
         AnyRefNode Centre = {
           sRel = (..Calcaneus.HeelContactNodeLow.sRel + ..ProximalPhalange5.ToeLateralContactNode.sRel + ..ProximalPhalange1.ToeMedialContactNode.sRel)/3;
@@ -16,7 +16,7 @@
       };
     };
 
-    Main.HumanModel.BodyModel.Left.Leg.Seg.Foot = {
+    Main.HumanModel.BodyModel.Left.Leg.Segments.Foot = {
       Metatarsal3 = {
         AnyRefNode Centre =  {
           sRel = (..Calcaneus.HeelContactNodeLow.sRel + ..ProximalPhalange5.ToeLateralContactNode.sRel + ..ProximalPhalange1.ToeMedialContactNode.sRel)/3;
@@ -30,8 +30,8 @@
       AnyVar Thickness=0.0075;
       //line between toe tips
       AnyDrawLine ToeTipsLineRightLeft ={
-        p0=Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.ConditionalContact_Nodes.Node3.r*{{1.0,0,0},{0,1.0,0},{0,0.0,0}}+Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.Metatarsal3.Centre.sRel*{{0.0,0,0},{0,0.0,0},{0,0.0,1.0}};
-        p1=Main.HumanModel.BodyModel.Left.Leg.Seg.Foot.ConditionalContact_Nodes.Node3.r*{{1.0,0,0},{0,1.0,0},{0,0.0,0}}+Main.HumanModel.BodyModel.Left.Leg.Seg.Foot.Metatarsal3.Centre.sRel*{{0.0,0,0},{0,0.0,0},{0,0.0,1.0}};
+        p0=Main.HumanModel.BodyModel.Right.Leg.Segments.Foot.ConditionalContact_Nodes.Node3.r*{{1.0,0,0},{0,1.0,0},{0,0.0,0}}+Main.HumanModel.BodyModel.Right.Leg.Segments.Foot.Metatarsal3.Centre.sRel*{{0.0,0,0},{0,0.0,0},{0,0.0,1.0}};
+        p1=Main.HumanModel.BodyModel.Left.Leg.Segments.Foot.ConditionalContact_Nodes.Node3.r*{{1.0,0,0},{0,1.0,0},{0,0.0,0}}+Main.HumanModel.BodyModel.Left.Leg.Segments.Foot.Metatarsal3.Centre.sRel*{{0.0,0,0},{0,0.0,0},{0,0.0,1.0}};
 
         Line.Thickness=.Thickness;
         Line.RGB={1,0,0};
@@ -39,32 +39,32 @@
 
       //line on front of foot
       AnyDrawLine ToeFrontLineRight ={
-        p0=Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.ConditionalContact_Nodes.Node3.r*{{1.0,0,0},{0,1.0,0},{0,0.0,0}}+Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.Metatarsal3.Centre.sRel*{{0.0,0,0},{0,0.0,0},{0,0.0,1.0}};
-        p1=Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.ConditionalContact_Nodes.Node20.r*{{1.0,0,0},{0,1.0,0},{0,0.0,0}}+Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.Metatarsal3.Centre.sRel*{{0.0,0,0},{0,0.0,0},{0,0.0,1.0}};
+        p0=Main.HumanModel.BodyModel.Right.Leg.Segments.Foot.ConditionalContact_Nodes.Node3.r*{{1.0,0,0},{0,1.0,0},{0,0.0,0}}+Main.HumanModel.BodyModel.Right.Leg.Segments.Foot.Metatarsal3.Centre.sRel*{{0.0,0,0},{0,0.0,0},{0,0.0,1.0}};
+        p1=Main.HumanModel.BodyModel.Right.Leg.Segments.Foot.ConditionalContact_Nodes.Node20.r*{{1.0,0,0},{0,1.0,0},{0,0.0,0}}+Main.HumanModel.BodyModel.Right.Leg.Segments.Foot.Metatarsal3.Centre.sRel*{{0.0,0,0},{0,0.0,0},{0,0.0,1.0}};
         Line.Thickness=.Thickness;
         Line.RGB={1,0,0};
       };
 
       //line on lateral side of foot
       AnyDrawLine FootLateralLineRight ={
-        p0=Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.ConditionalContact_Nodes.Node0.r*{{1.0,0,0},{0,1.0,0},{0,0.0,0}}+Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.Metatarsal3.Centre.sRel*{{0.0,0,0},{0,0.0,0},{0,0.0,1.0}};
-        p1=Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.ConditionalContact_Nodes.Node20.r*{{1.0,0,0},{0,1.0,0},{0,0.0,0}}+Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.Metatarsal3.Centre.sRel*{{0.0,0,0},{0,0.0,0},{0,0.0,1.0}};
+        p0=Main.HumanModel.BodyModel.Right.Leg.Segments.Foot.ConditionalContact_Nodes.Node0.r*{{1.0,0,0},{0,1.0,0},{0,0.0,0}}+Main.HumanModel.BodyModel.Right.Leg.Segments.Foot.Metatarsal3.Centre.sRel*{{0.0,0,0},{0,0.0,0},{0,0.0,1.0}};
+        p1=Main.HumanModel.BodyModel.Right.Leg.Segments.Foot.ConditionalContact_Nodes.Node20.r*{{1.0,0,0},{0,1.0,0},{0,0.0,0}}+Main.HumanModel.BodyModel.Right.Leg.Segments.Foot.Metatarsal3.Centre.sRel*{{0.0,0,0},{0,0.0,0},{0,0.0,1.0}};
         Line.Thickness=.Thickness;
         Line.RGB={1,0,0};
       };
 
       //line on front of foot
       AnyDrawLine ToeTipsLeft ={
-        p0=Main.HumanModel.BodyModel.Left.Leg.Seg.Foot.ConditionalContact_Nodes.Node3.r*{{1.0,0,0},{0,1.0,0},{0,0.0,0}}+Main.HumanModel.BodyModel.Left.Leg.Seg.Foot.Metatarsal3.Centre.sRel*{{0.0,0,0},{0,0.0,0},{0,0.0,1.0}};
-        p1=Main.HumanModel.BodyModel.Left.Leg.Seg.Foot.ConditionalContact_Nodes.Node20.r*{{1.0,0,0},{0,1.0,0},{0,0.0,0}}+Main.HumanModel.BodyModel.Left.Leg.Seg.Foot.Metatarsal3.Centre.sRel*{{0.0,0,0},{0,0.0,0},{0,0.0,1.0}};
+        p0=Main.HumanModel.BodyModel.Left.Leg.Segments.Foot.ConditionalContact_Nodes.Node3.r*{{1.0,0,0},{0,1.0,0},{0,0.0,0}}+Main.HumanModel.BodyModel.Left.Leg.Segments.Foot.Metatarsal3.Centre.sRel*{{0.0,0,0},{0,0.0,0},{0,0.0,1.0}};
+        p1=Main.HumanModel.BodyModel.Left.Leg.Segments.Foot.ConditionalContact_Nodes.Node20.r*{{1.0,0,0},{0,1.0,0},{0,0.0,0}}+Main.HumanModel.BodyModel.Left.Leg.Segments.Foot.Metatarsal3.Centre.sRel*{{0.0,0,0},{0,0.0,0},{0,0.0,1.0}};
         Line.Thickness=.Thickness;
         Line.RGB={1,0,0};
       };
 
       //line on lateral side of foot
       AnyDrawLine FootLateralLineLeft ={
-        p0=Main.HumanModel.BodyModel.Left.Leg.Seg.Foot.ConditionalContact_Nodes.Node0.r*{{1.0,0,0},{0,1.0,0},{0,0.0,0}}+Main.HumanModel.BodyModel.Left.Leg.Seg.Foot.Metatarsal3.Centre.sRel*{{0.0,0,0},{0,0.0,0},{0,0.0,1.0}};
-        p1=Main.HumanModel.BodyModel.Left.Leg.Seg.Foot.ConditionalContact_Nodes.Node20.r*{{1.0,0,0},{0,1.0,0},{0,0.0,0}}+Main.HumanModel.BodyModel.Left.Leg.Seg.Foot.Metatarsal3.Centre.sRel*{{0.0,0,0},{0,0.0,0},{0,0.0,1.0}};
+        p0=Main.HumanModel.BodyModel.Left.Leg.Segments.Foot.ConditionalContact_Nodes.Node0.r*{{1.0,0,0},{0,1.0,0},{0,0.0,0}}+Main.HumanModel.BodyModel.Left.Leg.Segments.Foot.Metatarsal3.Centre.sRel*{{0.0,0,0},{0,0.0,0},{0,0.0,1.0}};
+        p1=Main.HumanModel.BodyModel.Left.Leg.Segments.Foot.ConditionalContact_Nodes.Node20.r*{{1.0,0,0},{0,1.0,0},{0,0.0,0}}+Main.HumanModel.BodyModel.Left.Leg.Segments.Foot.Metatarsal3.Centre.sRel*{{0.0,0,0},{0,0.0,0},{0,0.0,1.0}};
         Line.Thickness=.Thickness;
         Line.RGB={1,0,0};
       };
@@ -72,8 +72,8 @@
 
       //line between heel points
       AnyDrawLine HeelLine ={
-        p0=Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.ConditionalContact_Nodes.Node0.r*{{1.0,0,0},{0,1.0,0},{0,0.0,0}}+Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.Metatarsal3.Centre.sRel*{{0.0,0,0},{0,0.0,0},{0,0.0,1.0}};
-        p1=Main.HumanModel.BodyModel.Left.Leg.Seg.Foot.ConditionalContact_Nodes.Node0.r*{{1.0,0,0},{0,1.0,0},{0,0.0,0}}+Main.HumanModel.BodyModel.Left.Leg.Seg.Foot.Metatarsal3.Centre.sRel*{{0.0,0,0},{0,0.0,0},{0,0.0,1.0}};
+        p0=Main.HumanModel.BodyModel.Right.Leg.Segments.Foot.ConditionalContact_Nodes.Node0.r*{{1.0,0,0},{0,1.0,0},{0,0.0,0}}+Main.HumanModel.BodyModel.Right.Leg.Segments.Foot.Metatarsal3.Centre.sRel*{{0.0,0,0},{0,0.0,0},{0,0.0,1.0}};
+        p1=Main.HumanModel.BodyModel.Left.Leg.Segments.Foot.ConditionalContact_Nodes.Node0.r*{{1.0,0,0},{0,1.0,0},{0,0.0,0}}+Main.HumanModel.BodyModel.Left.Leg.Segments.Foot.Metatarsal3.Centre.sRel*{{0.0,0,0},{0,0.0,0},{0,0.0,1.0}};
         Line.RGB={1,0,0};
         Line.Thickness=.Thickness;
 
@@ -95,14 +95,14 @@
             ARel=RotMat(-0.5*pi,z);
             AnyDrawRefFrame drw ={ScaleXYZ={0,1,0}*0.05; RGB={0,0,1};};
           };
-          r0=Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.Calcaneus.r0+Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.ConditionalContact_Nodes.Node3.sRel*Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.Calcaneus.Axes0'   ;
-          Axes0=Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.Calcaneus.Axes0*Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.ConditionalContact_Nodes.Node0.ARel*RotMat(pi,y);
+          r0=Main.HumanModel.BodyModel.Right.Leg.Segments.Foot.Calcaneus.r0+Main.HumanModel.BodyModel.Right.Leg.Segments.Foot.ConditionalContact_Nodes.Node3.sRel*Main.HumanModel.BodyModel.Right.Leg.Segments.Foot.Calcaneus.Axes0'   ;
+          Axes0=Main.HumanModel.BodyModel.Right.Leg.Segments.Foot.Calcaneus.Axes0*Main.HumanModel.BodyModel.Right.Leg.Segments.Foot.ConditionalContact_Nodes.Node0.ARel*RotMat(pi,y);
           AnyRefNode PointAtNodeX ={sRel={0.1,0,0};};
           AnyRefNode PointAtNodeZ ={sRel={0,0,0.1};};
 
         };
         AnyKinLinear lin ={
-          AnyRefFrame &ref1=Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.ConditionalContact_Nodes.Node3;
+          AnyRefFrame &ref1=Main.HumanModel.BodyModel.Right.Leg.Segments.Foot.ConditionalContact_Nodes.Node3;
           AnySeg &ref2 =.CoordinateSystem;
         };
         AnyKinEq linCon ={
@@ -111,7 +111,7 @@
         AnyKinLinear lin2 ={
           Ref=0;
           AnyRefFrame &ref2 =.CoordinateSystem.PointAtNodeZ;
-          AnyRefFrame &ref1=Main.HumanModel.BodyModel.Left.Leg.Seg.Foot.ConditionalContact_Nodes.Node3;
+          AnyRefFrame &ref1=Main.HumanModel.BodyModel.Left.Leg.Segments.Foot.ConditionalContact_Nodes.Node3;
         };
 
         AnyKinEq linCon2 ={
@@ -121,7 +121,7 @@
         AnyKinLinear lin3 ={
           Ref=1;
           AnyRefFrame &ref2 =.CoordinateSystem.PointAtNodeX;
-          AnyRefFrame &ref1=Main.HumanModel.BodyModel.Left.Leg.Seg.Foot.ConditionalContact_Nodes.Node3;
+          AnyRefFrame &ref1=Main.HumanModel.BodyModel.Left.Leg.Segments.Foot.ConditionalContact_Nodes.Node3;
         };
         AnyKinEq linCon3 ={
           AnyKinLinear &ref=.lin3;
@@ -136,8 +136,8 @@
         AnySeg CoordinateSystem ={
           Mass=0;
           Jii={0,0,0};
-          r0=Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.Calcaneus.r0+Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.ConditionalContact_Nodes.Node0.sRel*Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.Calcaneus.Axes0'   ;
-          Axes0=Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.Calcaneus.Axes0*Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.ConditionalContact_Nodes.Node0.ARel*RotMat(pi,y)*RotMat(-0.5*pi,z);
+          r0=Main.HumanModel.BodyModel.Right.Leg.Segments.Foot.Calcaneus.r0+Main.HumanModel.BodyModel.Right.Leg.Segments.Foot.ConditionalContact_Nodes.Node0.sRel*Main.HumanModel.BodyModel.Right.Leg.Segments.Foot.Calcaneus.Axes0'   ;
+          Axes0=Main.HumanModel.BodyModel.Right.Leg.Segments.Foot.Calcaneus.Axes0*Main.HumanModel.BodyModel.Right.Leg.Segments.Foot.ConditionalContact_Nodes.Node0.ARel*RotMat(pi,y)*RotMat(-0.5*pi,z);
           AnyRefNode MeasuringNode ={
             ARel=RotMat(pi,z);
             AnyDrawRefFrame drw ={ScaleXYZ={1,1,1}*0.05; RGB={0,0,1};};
@@ -153,7 +153,7 @@
 
         AnyKinLinear lin1 ={
           Ref=-1;
-          AnyRefFrame &ref1=Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.ConditionalContact_Nodes.Node0;
+          AnyRefFrame &ref1=Main.HumanModel.BodyModel.Right.Leg.Segments.Foot.ConditionalContact_Nodes.Node0;
           AnySeg &ref2 =.CoordinateSystem;
         };
         AnyKinEq linCon ={
@@ -195,7 +195,7 @@
         AnyKinLinear lin5 ={
           Ref=0;
           AnyRefFrame &ref2 =.CoordinateSystem.PointAtNodeZ;
-          AnyRefFrame &ref1=Main.HumanModel.BodyModel.Left.Leg.Seg.Foot.ConditionalContact_Nodes.Node0;
+          AnyRefFrame &ref1=Main.HumanModel.BodyModel.Left.Leg.Segments.Foot.ConditionalContact_Nodes.Node0;
         };
         AnyKinEq linCon5 ={
           AnyKinLinear &ref=.lin5;
@@ -210,12 +210,12 @@
       //line on front of foot
       AnyFolder ToeFrontLineRight ={
 
-        AnyFolder &ref= Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.ConditionalContact_Nodes.Node3;
+        AnyFolder &ref= Main.HumanModel.BodyModel.Right.Leg.Segments.Foot.ConditionalContact_Nodes.Node3;
         ref={
           AnyRefNode CoordinateSystem ={ARel =RotMat(
-            Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.ConditionalContact_Nodes.Node3.sRel,
-            Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.ConditionalContact_Nodes.Node20.sRel,
-            Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.ConditionalContact_Nodes.Node0.sRel)*RotMat(pi,y);
+            Main.HumanModel.BodyModel.Right.Leg.Segments.Foot.ConditionalContact_Nodes.Node3.sRel,
+            Main.HumanModel.BodyModel.Right.Leg.Segments.Foot.ConditionalContact_Nodes.Node20.sRel,
+            Main.HumanModel.BodyModel.Right.Leg.Segments.Foot.ConditionalContact_Nodes.Node0.sRel)*RotMat(pi,y);
             AnyDrawRefFrame drw ={ScaleXYZ={0,1,0}*0.05; RGB={0,0,1};};
           };
         };
@@ -224,12 +224,12 @@
 
       AnyFolder FootLateralLineRight ={
 
-        AnyFolder &ref= Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.ConditionalContact_Nodes.Node20;
+        AnyFolder &ref= Main.HumanModel.BodyModel.Right.Leg.Segments.Foot.ConditionalContact_Nodes.Node20;
         ref={
           AnyRefNode CoordinateSystem ={ARel =RotMat(
-            Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.ConditionalContact_Nodes.Node20.sRel,
-            Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.ConditionalContact_Nodes.Node0.sRel,
-            Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.ConditionalContact_Nodes.Node3.sRel)*RotMat(pi,y);
+            Main.HumanModel.BodyModel.Right.Leg.Segments.Foot.ConditionalContact_Nodes.Node20.sRel,
+            Main.HumanModel.BodyModel.Right.Leg.Segments.Foot.ConditionalContact_Nodes.Node0.sRel,
+            Main.HumanModel.BodyModel.Right.Leg.Segments.Foot.ConditionalContact_Nodes.Node3.sRel)*RotMat(pi,y);
             AnyDrawRefFrame drw ={ScaleXYZ={0,1,0}*0.05; RGB={0,0,1};};
           };
         };
@@ -239,12 +239,12 @@
       //line on front of foot
       AnyFolder ToeFrontLineLeft ={
 
-        AnyFolder &ref= Main.HumanModel.BodyModel.Left.Leg.Seg.Foot.ConditionalContact_Nodes.Node3;
+        AnyFolder &ref= Main.HumanModel.BodyModel.Left.Leg.Segments.Foot.ConditionalContact_Nodes.Node3;
         ref={
           AnyRefNode CoordinateSystem ={ARel =RotMat(
-            Main.HumanModel.BodyModel.Left.Leg.Seg.Foot.ConditionalContact_Nodes.Node3.sRel,
-            Main.HumanModel.BodyModel.Left.Leg.Seg.Foot.ConditionalContact_Nodes.Node20.sRel,
-            Main.HumanModel.BodyModel.Left.Leg.Seg.Foot.ConditionalContact_Nodes.Node0.sRel)*RotMat(pi,y);
+            Main.HumanModel.BodyModel.Left.Leg.Segments.Foot.ConditionalContact_Nodes.Node3.sRel,
+            Main.HumanModel.BodyModel.Left.Leg.Segments.Foot.ConditionalContact_Nodes.Node20.sRel,
+            Main.HumanModel.BodyModel.Left.Leg.Segments.Foot.ConditionalContact_Nodes.Node0.sRel)*RotMat(pi,y);
             AnyDrawRefFrame drw ={ScaleXYZ={0,1,0}*0.05; RGB={0,0,1};};
           };
         };
@@ -253,12 +253,12 @@
 
       AnyFolder FootLateralLineLeft ={
 
-        AnyFolder &ref= Main.HumanModel.BodyModel.Left.Leg.Seg.Foot.ConditionalContact_Nodes.Node20;
+        AnyFolder &ref= Main.HumanModel.BodyModel.Left.Leg.Segments.Foot.ConditionalContact_Nodes.Node20;
         ref={
           AnyRefNode CoordinateSystem ={ARel =RotMat(
-            Main.HumanModel.BodyModel.Left.Leg.Seg.Foot.ConditionalContact_Nodes.Node20.sRel,
-            Main.HumanModel.BodyModel.Left.Leg.Seg.Foot.ConditionalContact_Nodes.Node0.sRel,
-            Main.HumanModel.BodyModel.Left.Leg.Seg.Foot.ConditionalContact_Nodes.Node3.sRel)*RotMat(pi,y);
+            Main.HumanModel.BodyModel.Left.Leg.Segments.Foot.ConditionalContact_Nodes.Node20.sRel,
+            Main.HumanModel.BodyModel.Left.Leg.Segments.Foot.ConditionalContact_Nodes.Node0.sRel,
+            Main.HumanModel.BodyModel.Left.Leg.Segments.Foot.ConditionalContact_Nodes.Node3.sRel)*RotMat(pi,y);
             AnyDrawRefFrame drw ={ScaleXYZ={0,1,0}*0.05; RGB={0,0,1};};
           };
         };

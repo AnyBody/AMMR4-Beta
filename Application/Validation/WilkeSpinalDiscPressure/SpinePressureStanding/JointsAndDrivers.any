@@ -29,7 +29,7 @@ AnyFolder Drivers = {
   AnyKinEqSimpleDriver RToeGroundConstraint ={
     AnyKinLinear ToePos = {
       AnyFixedRefFrame &Ground = Main.Model.EnvironmentModel.GlobalRef;
-      AnyRefNode &Ball = Main.Model.BodyModel.Right.Leg.Seg.Foot.Metatarsal1.ToeJoint;
+      AnyRefNode &Ball = Main.Model.BodyModel.Right.Leg.Segments.Foot.Metatarsal1.ToeJoint;
     };
    MeasureOrganizer = {1};  // Only the y coordinate
     DriverPos = {0.0};
@@ -41,7 +41,7 @@ AnyFolder Drivers = {
   AnyKinEqSimpleDriver RHeelGroundConstraint ={
     AnyKinLinear HeelPos = {
       AnyFixedRefFrame &Ground = Main.Model.EnvironmentModel.GlobalRef;
-      AnyRefNode &Ball = Main.Model.BodyModel.Right.Leg.Seg.Foot.Calcaneus.HeelContactNodeLow;
+      AnyRefNode &Ball = Main.Model.BodyModel.Right.Leg.Segments.Foot.Calcaneus.HeelContactNodeLow;
     };
     MeasureOrganizer = {1};  // Only the y coordinate
     DriverPos = {0.0};
@@ -53,7 +53,7 @@ AnyFolder Drivers = {
 AnyKinEqSimpleDriver LToeGroundConstraint ={
     AnyKinLinear ToePos = {
       AnyFixedRefFrame &Ground = Main.Model.EnvironmentModel.GlobalRef;
-      AnyRefNode &Ball = Main.Model.BodyModel.Left.Leg.Seg.Foot.Metatarsal1.ToeJoint;
+      AnyRefNode &Ball = Main.Model.BodyModel.Left.Leg.Segments.Foot.Metatarsal1.ToeJoint;
     };
     MeasureOrganizer = {1};  // Only the y coordinate
     DriverPos = {0.0};
@@ -65,7 +65,7 @@ AnyKinEqSimpleDriver LToeGroundConstraint ={
   AnyKinEqSimpleDriver LHeelGroundConstraint ={
     AnyKinLinear HeelPos = {
       AnyFixedRefFrame &Ground = Main.Model.EnvironmentModel.GlobalRef;
-      AnyRefNode &Ball = Main.Model.BodyModel.Left.Leg.Seg.Foot.Calcaneus.HeelContactNodeLow;
+      AnyRefNode &Ball = Main.Model.BodyModel.Left.Leg.Segments.Foot.Calcaneus.HeelContactNodeLow;
     };
     MeasureOrganizer = {1};  // Only the y coordinate
     DriverPos = {0.0};
@@ -446,17 +446,17 @@ AnyFolder MannequinLoads = {
     };
 
     AnyForce3D Hip = {
-      AnyRefNode &ApplPoint = .rhm.Leg.Seg.Thigh.HipJoint;
+      AnyRefNode &ApplPoint = .rhm.Leg.Segments.Thigh.HipJoint;
       F = .locmql.Hip;
     };
 
     AnyForce3D Knee = {
-      AnyRefNode &ApplPoint = .rhm.Leg.Seg.Thigh.KneeJoint;
+      AnyRefNode &ApplPoint = .rhm.Leg.Segments.Thigh.KneeJoint;
       F = .locmql.Knee;
     };
 
     AnyForce3D Ankle = {
-      AnyRefNode &ApplPoint = .rhm.Leg.Seg.Talus.AnkleJoint;
+      AnyRefNode &ApplPoint = .rhm.Leg.Segments.Talus.AnkleJoint;
       F = .locmql.Ankle;
     };
   };  // Right
@@ -482,17 +482,17 @@ AnyFolder MannequinLoads = {
     };
 
     AnyForce3D Hip = {
-      AnyRefNode &ApplPoint = .lhm.Leg.Seg.Thigh.HipJoint;
+      AnyRefNode &ApplPoint = .lhm.Leg.Segments.Thigh.HipJoint;
       F = .locmql.Hip;
     };
 
     AnyForce3D Knee = {
-      AnyRefNode &ApplPoint = .lhm.Leg.Seg.Thigh.KneeJoint;
+      AnyRefNode &ApplPoint = .lhm.Leg.Segments.Thigh.KneeJoint;
       F = .locmql.Knee;
     };
 
     AnyForce3D Ankle = {
-      AnyRefNode &ApplPoint = .lhm.Leg.Seg.Talus.AnkleJoint;
+      AnyRefNode &ApplPoint = .lhm.Leg.Segments.Talus.AnkleJoint;
       F = .locmql.Ankle;
     };
   };  // Left

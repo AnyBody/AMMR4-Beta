@@ -237,7 +237,7 @@ AnyFolder JointsAndDrivers={
 
     AnyKinLinear FootToGroundLin = {
       AnyRefNode &groundfootr= Main.Model.Environment.GlobalRef.FootGroundR;
-      AnyRefNode &Foot = ..RefHM.Right.Leg.Seg.Foot.Metatarsal1.Metatarsal1Plantar;
+      AnyRefNode &Foot = ..RefHM.Right.Leg.Segments.Foot.Metatarsal1.Metatarsal1Plantar;
     }; //Foot to ground
 
     AnyKinMeasureOrg FootToGroundLinOrgY={
@@ -270,8 +270,8 @@ AnyFolder JointsAndDrivers={
     AnyKinMotion ToesLevelWithGround = {
       AnyKinMeasureOrg ToeMeasure = {
          AnyKinLinear Lin = {
-           AnyRefNode& toetip = Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.DistalPhalange1.BigToeNode;
-           AnyRefNode &Foot = Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.Metatarsal1.Metatarsal1Plantar;
+           AnyRefNode& toetip = Main.HumanModel.BodyModel.Right.Leg.Segments.Foot.DistalPhalange1.BigToeNode;
+           AnyRefNode &Foot = Main.HumanModel.BodyModel.Right.Leg.Segments.Foot.Metatarsal1.Metatarsal1Plantar;
          };
         MeasureOrganizer ={1};
       };
@@ -432,7 +432,7 @@ AnyFolder JointsAndDrivers={
 
     AnyKinLinear FootToGroundLin = {
       AnyRefNode &groundfootr= Main.Model.Environment.GlobalRef.FootGroundL;
-      AnyRefNode &Foot = ..RefHM.Left.Leg.Seg.Foot.Metatarsal1.Metatarsal1Plantar;
+      AnyRefNode &Foot = ..RefHM.Left.Leg.Segments.Foot.Metatarsal1.Metatarsal1Plantar;
     }; //Foot to ground
 
     AnyKinMeasureOrg FootToGroundLinOrgY={
@@ -469,8 +469,8 @@ AnyFolder JointsAndDrivers={
     AnyKinMotion ToesLevelWithGround = {
       AnyKinMeasureOrg ToeMeasure = {
          AnyKinLinear Lin = {
-           AnyRefNode& toetip = Main.HumanModel.BodyModel.Left.Leg.Seg.Foot.DistalPhalange1.BigToeNode;
-           AnyRefNode &Foot = Main.HumanModel.BodyModel.Left.Leg.Seg.Foot.Metatarsal1.Metatarsal1Plantar;
+           AnyRefNode& toetip = Main.HumanModel.BodyModel.Left.Leg.Segments.Foot.DistalPhalange1.BigToeNode;
+           AnyRefNode &Foot = Main.HumanModel.BodyModel.Left.Leg.Segments.Foot.Metatarsal1.Metatarsal1Plantar;
          };
         MeasureOrganizer ={1};
       };

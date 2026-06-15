@@ -1,4 +1,4 @@
-Main.HumanModel.BodyModel.Right.Leg.Seg.Thigh.HipJointAnatomicalFrame = {
+Main.HumanModel.BodyModel.Right.Leg.Segments.Thigh.HipJointAnatomicalFrame = {
 
   /// Node to position the femoral implant
   AnyRefNode FemImplantNode =
@@ -20,9 +20,9 @@ ARel =  {{0.09657985, -0.02002884, 0.9951241}, {-0.672307, -0.7385564, 0.0503846
 
   #if FEM_STEM_ROT
     AnyDrawWidgetRot DrwWidgetRot = {
-      RefFrame = &Main.HumanModel.BodyModel.Right.Leg.Seg.Thigh.HipJointAnatomicalFrame ;
-      Target = &Main.HumanModel.BodyModel.Right.Leg.Seg.Thigh.HipJointAnatomicalFrame .FemImplantNode.ARel;
-      RelPos = &Main.HumanModel.BodyModel.Right.Leg.Seg.Thigh.HipJointAnatomicalFrame .FemImplantNode.sRel;
+      RefFrame = &Main.HumanModel.BodyModel.Right.Leg.Segments.Thigh.HipJointAnatomicalFrame ;
+      Target = &Main.HumanModel.BodyModel.Right.Leg.Segments.Thigh.HipJointAnatomicalFrame .FemImplantNode.ARel;
+      RelPos = &Main.HumanModel.BodyModel.Right.Leg.Segments.Thigh.HipJointAnatomicalFrame .FemImplantNode.sRel;
       AxisOnOff = {On,On,On};
       UpdateEvent = OnMouseRelease;
       Operation = &Main.Study.InitialConditions;
@@ -31,8 +31,8 @@ ARel =  {{0.09657985, -0.02002884, 0.9951241}, {-0.672307, -0.7385564, 0.0503846
 #if FEM_STEM_LIN
     AnyDrawWidgetLin DrwWidgetLin =
    {
-       RefFrame = &Main.HumanModel.BodyModel.Right.Leg.Seg.Thigh;
-       Target = &Main.HumanModel.BodyModel.Right.Leg.Seg.Thigh.HipJointAnatomicalFrame.sRel;
+       RefFrame = &Main.HumanModel.BodyModel.Right.Leg.Segments.Thigh;
+       Target = &Main.HumanModel.BodyModel.Right.Leg.Segments.Thigh.HipJointAnatomicalFrame.sRel;
        UpdateEvent = OnMouseRelease;
        Operation = &Main.Study.InitialConditions;
    };

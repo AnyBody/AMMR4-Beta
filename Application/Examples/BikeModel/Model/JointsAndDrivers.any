@@ -97,11 +97,11 @@ AnyFolder Right={
 
   AnySphericalJoint PedalFootJoint = {
     AnyRefNode &ref1= ....BikeModel.Crank.RPedal;
-    AnyRefNode &ref2 = ...ModelFolder.Right.Leg.Seg.Foot.Metatarsal2.PedalConnectNode;
+    AnyRefNode &ref2 = ...ModelFolder.Right.Leg.Segments.Foot.Metatarsal2.PedalConnectNode;
     #include "<ANYBODY_PATH_MODELUTILS>/JointReactions/DrawJointReactions.any"
     AnyFolder &DrawRef=Main.DrawSettings;
   };
-  AnySeg& Ref_Foot = ..ModelFolder.Right.Leg.Seg.Foot;
+  AnySeg& Ref_Foot = ..ModelFolder.Right.Leg.Segments.Foot;
   Ref_Foot =
   {
     AnyRefNode PedalConnectNode =
@@ -118,8 +118,8 @@ AnyFolder Right={
   AnyKinEq FootPedal = {
     AnyKinRotational rot = {
       AnyRefFrame &Pedal = .....BikeModel.Crank.RPedal;
-      //AnyRefFrame &Foot = ....ModelFolder.Right.Leg.Seg.Foot.GroundJoint;
-      AnyRefFrame &Foot = ....ModelFolder.Right.Leg.Seg.Foot.Metatarsal2.PedalConnectNode;
+      //AnyRefFrame &Foot = ....ModelFolder.Right.Leg.Segments.Foot.GroundJoint;
+      AnyRefFrame &Foot = ....ModelFolder.Right.Leg.Segments.Foot.Metatarsal2.PedalConnectNode;
       Type = RotAxesAngles;
 
     //Foot={AnyDrawRefFrame drw={};};
@@ -157,7 +157,7 @@ of the knee when the pedal width is increased. */
 
   // Create a point near the greater trochanter for fixing
   // the datum
-  Main.HumanModel.BodyModel.Right.Leg.Seg.Thigh = {
+  Main.HumanModel.BodyModel.Right.Leg.Segments.Thigh = {
     AnyRefNode DatumPoint = {
       sRel = .Piriformis1Node.sRel;
       //AnyDrawRefFrame drw = {ScaleXYZ = {1,1,0}/5;};
@@ -166,14 +166,14 @@ of the knee when the pedal width is increased. */
 
   // Spherical joint between the datum and the hip joint
   AnySphericalJoint DatumJoint1 = {
-    AnyRefFrame &Thigh = Main.Model.BodyModel.Right.Leg.Seg.Thigh.DatumPoint;
+    AnyRefFrame &Thigh = Main.Model.BodyModel.Right.Leg.Segments.Thigh.DatumPoint;
     AnyRefFrame &Datum = .Datum;
   };
 
   // The datum must touch the ankle
   AnyKinEq AnkleContact = {
     AnyKinLinear lin = {
-      AnyRefFrame &Ankle = Main.Model.BodyModel.Right.Leg.Seg.Shank.AnkleJoint;
+      AnyRefFrame &Ankle = Main.Model.BodyModel.Right.Leg.Segments.Shank.AnkleJoint;
       AnyRefFrame &Datum = ..Datum.Ankle;
       Ref = 1;
     };
@@ -184,7 +184,7 @@ of the knee when the pedal width is increased. */
   AnyKinEq KneeDatum = {
     AnyKinLinear lin = {
       AnyRefFrame &Datum = ..Datum;
-      AnyRefFrame &Knee = ....ModelFolder.Right.Leg.Seg.Thigh.KneeJoint;
+      AnyRefFrame &Knee = ....ModelFolder.Right.Leg.Segments.Thigh.KneeJoint;
       Ref = 0;
     };
     MeasureOrganizer = {2};
@@ -194,7 +194,7 @@ of the knee when the pedal width is increased. */
   // This measure is for controlling the rotation.
   AnyKinRotational PedalJointRot = {
     AnyRefFrame &Ground = ....BikeModel.BikeFrame;
-    AnyRefNode &Foot = ...ModelFolder.Right.Leg.Seg.Foot.Metatarsal2.PedalConnectNode;
+    AnyRefNode &Foot = ...ModelFolder.Right.Leg.Segments.Foot.Metatarsal2.PedalConnectNode;
     Type=RotAxesAngles;
   };
 
@@ -224,7 +224,7 @@ AnyFolder Left = {
   // This is the joint connecting the foot to the pedal. It simply
   // specifies that the linear distances between the two mush be zero
   /*  AnyKinLinear PedalJointLin = {
-  AnyRefNode &Foot = ...ModelFolder.Left.Leg.Seg.Foot.GroundJoint;
+  AnyRefNode &Foot = ...ModelFolder.Left.Leg.Segments.Foot.GroundJoint;
   AnyRefNode &PedalR= ....BikeModel.Crank.LPedal;
   };
 
@@ -235,12 +235,12 @@ AnyFolder Left = {
 
   AnySphericalJoint PedalFootJoint = {
     AnyRefNode &ref1= ....BikeModel.Crank.LPedal;
-    AnyRefNode &ref2 = ...ModelFolder.Left.Leg.Seg.Foot.PedalConnectNode;
+    AnyRefNode &ref2 = ...ModelFolder.Left.Leg.Segments.Foot.PedalConnectNode;
     //    AnyDrawRefFrame Drw={}; //this lines adds a visible coordinate system in the ref2 node, and since the ref2 node points at the groundjoint at the foot it will display it there .. you could also have inserted it directly where the GroundJointNode was created
     #include "<ANYBODY_PATH_MODELUTILS>/JointReactions/DrawJointReactions.any"
     AnyFolder &DrawRef=Main.DrawSettings;
   };
-  AnySeg& Ref_Foot = ..ModelFolder.Left.Leg.Seg.Foot;
+  AnySeg& Ref_Foot = ..ModelFolder.Left.Leg.Segments.Foot;
   Ref_Foot =
   {
     AnyRefNode PedalConnectNode =
@@ -257,7 +257,7 @@ AnyFolder Left = {
   AnyKinEq FootPedal = {
     AnyKinRotational rot = {
       AnyRefFrame &Pedal = .....BikeModel.Crank.LPedal;
-      AnyRefFrame &Foot = ....ModelFolder.Left.Leg.Seg.Foot.Metatarsal2.PedalConnectNode;
+      AnyRefFrame &Foot = ....ModelFolder.Left.Leg.Segments.Foot.Metatarsal2.PedalConnectNode;
       Type = RotAxesAngles;
     };
     MeasureOrganizer = {2};
@@ -268,7 +268,7 @@ AnyFolder Left = {
 //    AnyKinMeasureOrg Org = {
 //      AnyKinRotational rot = {
 //        AnyRefFrame &Pedal = ......BikeModel.Crank.LPedal;
-//        AnyRefFrame &Foot = .....ModelFolder.Left.Leg.Seg.Foot.GroundJoint;
+//        AnyRefFrame &Foot = .....ModelFolder.Left.Leg.Segments.Foot.GroundJoint;
 //        Type = RotAxesAngles;
 //      };
 //      MeasureOrganizer = {0};
@@ -304,7 +304,7 @@ of the knee when the pedal width is increased. */
 
   // Create a point near the greater trochanter for fixing
   // the datum
-  Main.HumanModel.BodyModel.Left.Leg.Seg.Thigh = {
+  Main.HumanModel.BodyModel.Left.Leg.Segments.Thigh = {
     AnyRefNode DatumPoint = {
       sRel = .Piriformis1Node.sRel;
       //AnyDrawRefFrame drw = {ScaleXYZ = {1,1,1}/5;};
@@ -313,14 +313,14 @@ of the knee when the pedal width is increased. */
 
   // Spherical joint between the datum and the hip joint
   AnySphericalJoint DatumJoint1 = {
-    AnyRefFrame &Thigh = Main.Model.BodyModel.Left.Leg.Seg.Thigh.DatumPoint;
+    AnyRefFrame &Thigh = Main.Model.BodyModel.Left.Leg.Segments.Thigh.DatumPoint;
     AnyRefFrame &Datum = .Datum;
   };
 
   // The datum must touch the ankle
   AnyKinEq AnkleContact = {
     AnyKinLinear lin = {
-      AnyRefFrame &Ankle = Main.Model.BodyModel.Left.Leg.Seg.Shank.AnkleJoint;
+      AnyRefFrame &Ankle = Main.Model.BodyModel.Left.Leg.Segments.Shank.AnkleJoint;
       AnyRefFrame &Datum = ..Datum.Ankle;
       Ref = 1;
     };
@@ -331,7 +331,7 @@ of the knee when the pedal width is increased. */
   AnyKinEq KneeDatum = {
     AnyKinLinear lin = {
       AnyRefFrame &Datum = ..Datum;
-      AnyRefFrame &Knee = ....ModelFolder.Left.Leg.Seg.Thigh.KneeJoint;
+      AnyRefFrame &Knee = ....ModelFolder.Left.Leg.Segments.Thigh.KneeJoint;
       Ref = 0;
     };
     MeasureOrganizer = {2};
@@ -341,7 +341,7 @@ of the knee when the pedal width is increased. */
   // This measure is for controlling the rotation.
   AnyKinRotational PedalJointRot = {
     AnyRefFrame &Ground = ....BikeModel.BikeFrame;
-    AnyRefNode &Foot = ...ModelFolder.Left.Leg.Seg.Foot.Metatarsal2.PedalConnectNode;
+    AnyRefNode &Foot = ...ModelFolder.Left.Leg.Segments.Foot.Metatarsal2.PedalConnectNode;
     Type=RotAxesAngles;
   };
 

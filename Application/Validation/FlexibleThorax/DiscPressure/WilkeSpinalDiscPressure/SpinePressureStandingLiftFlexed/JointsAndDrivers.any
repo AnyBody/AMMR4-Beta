@@ -109,8 +109,8 @@ AnyFolder Drivers = {
 
 //  AnyKinEqSimpleDriver ToesDisConstraint ={
 //    AnyKinLinear ToesDis = {
-//      AnyRefNode &Right = Main.Model.BodyModel.Right.Leg.Seg.Foot.Metatarsal1.ToeJoint;
-//      AnyRefNode &Left = Main.Model.BodyModel.Left.Leg.Seg.Foot.Metatarsal1.ToeJoint;
+//      AnyRefNode &Right = Main.Model.BodyModel.Right.Leg.Segments.Foot.Metatarsal1.ToeJoint;
+//      AnyRefNode &Left = Main.Model.BodyModel.Left.Leg.Segments.Foot.Metatarsal1.ToeJoint;
 //    };
 //    MeasureOrganizer = {2};  // Only the z coordinate
 //    DriverPos = {-0.467};
@@ -119,8 +119,8 @@ AnyFolder Drivers = {
 //  };
 //  AnyKinEqSimpleDriver HeelsDisConstraint ={
 //    AnyKinLinear HeelsDis = {
-//      AnyRefNode &Right = Main.Model.BodyModel.Right.Leg.Seg.Foot.Calcaneus.HeelContactNodeLow;
-//      AnyRefNode &Left = Main.Model.BodyModel.Left.Leg.Seg.Foot.Calcaneus.HeelContactNodeLow;
+//      AnyRefNode &Right = Main.Model.BodyModel.Right.Leg.Segments.Foot.Calcaneus.HeelContactNodeLow;
+//      AnyRefNode &Left = Main.Model.BodyModel.Left.Leg.Segments.Foot.Calcaneus.HeelContactNodeLow;
 //    };
 //    MeasureOrganizer = {2};  // Only the z coordinate
 //    DriverPos = {-0.5};
@@ -130,7 +130,7 @@ AnyFolder Drivers = {
   AnyKinEqSimpleDriver RHeelDisConstraint ={
     AnyKinLinear HeelsDis = {
       AnyFixedRefFrame &Ground = Main.Model.EnvironmentModel.GlobalRef;
-      AnyRefNode &Right = Main.Model.BodyModel.Right.Leg.Seg.Foot.Calcaneus.HeelContactNodeLow;
+      AnyRefNode &Right = Main.Model.BodyModel.Right.Leg.Segments.Foot.Calcaneus.HeelContactNodeLow;
     };
     MeasureOrganizer = {2};  // Only the z coordinate
     DriverPos = {0.35};
@@ -140,7 +140,7 @@ AnyFolder Drivers = {
   AnyKinEqSimpleDriver LHeelDisConstraint ={
     AnyKinLinear HeelsDis = {
       AnyFixedRefFrame &Ground = Main.Model.EnvironmentModel.GlobalRef;
-      AnyRefNode &Left = Main.Model.BodyModel.Left.Leg.Seg.Foot.Calcaneus.HeelContactNodeLow;
+      AnyRefNode &Left = Main.Model.BodyModel.Left.Leg.Segments.Foot.Calcaneus.HeelContactNodeLow;
     };
     MeasureOrganizer = {2};  // Only the z coordinate
     DriverPos = {-0.35};
@@ -153,7 +153,7 @@ AnyFolder Drivers = {
   AnyKinEqSimpleDriver RToeGroundConstraint ={
     AnyKinLinear ToePos = {
       AnyFixedRefFrame &Ground = Main.Model.EnvironmentModel.GlobalRef;
-      AnyRefNode &Ball = Main.Model.BodyModel.Right.Leg.Seg.Foot.Metatarsal1.ToeJoint;
+      AnyRefNode &Ball = Main.Model.BodyModel.Right.Leg.Segments.Foot.Metatarsal1.ToeJoint;
     };
    MeasureOrganizer = {1};  // Only the y coordinate
     DriverPos = {0.0};
@@ -165,7 +165,7 @@ AnyFolder Drivers = {
   AnyKinEqSimpleDriver RHeelGroundConstraint ={
     AnyKinLinear HeelPos = {
       AnyFixedRefFrame &Ground = Main.Model.EnvironmentModel.GlobalRef;
-      AnyRefNode &Ball = Main.Model.BodyModel.Right.Leg.Seg.Foot.Calcaneus.HeelContactNodeLow;
+      AnyRefNode &Ball = Main.Model.BodyModel.Right.Leg.Segments.Foot.Calcaneus.HeelContactNodeLow;
     };
     MeasureOrganizer = {1};  // Only the y coordinate
     DriverPos = {0.0};
@@ -177,7 +177,7 @@ AnyFolder Drivers = {
 AnyKinEqSimpleDriver LToeGroundConstraint ={
     AnyKinLinear ToePos = {
       AnyFixedRefFrame &Ground = Main.Model.EnvironmentModel.GlobalRef;
-      AnyRefNode &Ball = Main.Model.BodyModel.Left.Leg.Seg.Foot.Metatarsal1.ToeJoint;
+      AnyRefNode &Ball = Main.Model.BodyModel.Left.Leg.Segments.Foot.Metatarsal1.ToeJoint;
     };
     MeasureOrganizer = {1};  // Only the y coordinate
     DriverPos = {0.0};
@@ -189,7 +189,7 @@ AnyKinEqSimpleDriver LToeGroundConstraint ={
   AnyKinEqSimpleDriver LHeelGroundConstraint ={
     AnyKinLinear HeelPos = {
       AnyFixedRefFrame &Ground = Main.Model.EnvironmentModel.GlobalRef;
-      AnyRefNode &Ball = Main.Model.BodyModel.Left.Leg.Seg.Foot.Calcaneus.HeelContactNodeLow;
+      AnyRefNode &Ball = Main.Model.BodyModel.Left.Leg.Segments.Foot.Calcaneus.HeelContactNodeLow;
     };
     MeasureOrganizer = {1};  // Only the y coordinate
     DriverPos = {0.0};

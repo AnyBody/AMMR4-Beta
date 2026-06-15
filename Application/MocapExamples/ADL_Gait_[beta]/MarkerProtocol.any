@@ -247,7 +247,7 @@ UseC3DWeightResiduals = ON
 #ifdef _R_PAS
 // Marker on the Right Patella
 CreateMarkerDriver R_PAS (
-MarkerPlacement=Right.Leg.Seg.Patella,
+MarkerPlacement=Right.Leg.Segments.Patella,
 PlaceMarkerAt=AnatomicalFrame,
 OptX=OFF,OptY=ON,OptZ=OFF,
 WeightY =0.1,
@@ -261,7 +261,7 @@ UseC3DWeightResiduals = ON
 #ifdef _R_FLE
 // Marker on the Right Knee
 CreateMarkerDriver R_FLE (
-MarkerPlacement=Right.Leg.Seg.Thigh,
+MarkerPlacement=Right.Leg.Segments.Thigh,
 OptX=OFF,OptY=OFF,OptZ=ON,
 UseC3DWeightResiduals = ON,
 PlaceMarkerAt = EpicondylusFemorisLateralis
@@ -273,7 +273,7 @@ PlaceMarkerAt = EpicondylusFemorisLateralis
 #ifdef _R_FME
 // Marker on the Left Knee
 CreateMarkerDriver R_FME (
-MarkerPlacement=Right.Leg.Seg.Thigh,
+MarkerPlacement=Right.Leg.Segments.Thigh,
 OptX=OFF,OptY=ON,OptZ=ON,
 UseC3DWeightResiduals = ON,
 PlaceMarkerAt = EpicondylusFemorisMedialis
@@ -291,7 +291,7 @@ LinkDesignVars SymetricRightKneeMarkers(DesVar1 =R_FLE_Z, DesVar2=R_FME_Z, Coef1
 #ifdef _R_TTC
 // Marker on the Right Tibia
 CreateMarkerDriver R_TTC (
-MarkerPlacement=Right.Leg.Seg.Shank,
+MarkerPlacement=Right.Leg.Segments.Shank,
 PlaceMarkerAt=AnatomicalFrame,
 OptX=OFF,OptY=ON,OptZ=OFF,
 UseC3DWeightResiduals = ON
@@ -306,7 +306,7 @@ LinkDesignVars Aligned_TTC_Markers_YDIR(DesVar1 =R_TTC_Y, DesVar2=L_TTC_Y)={};
 #ifdef _R_FAX
 // Marker on the Right Tibia
 CreateMarkerDriver R_FAX (
-MarkerPlacement=Right.Leg.Seg.Shank,
+MarkerPlacement=Right.Leg.Segments.Shank,
 OptX=OFF,OptY=ON,OptZ=ON,
 UseC3DWeightResiduals = ON,
 PlaceMarkerAt = FibularHead
@@ -319,7 +319,7 @@ PlaceMarkerAt = FibularHead
 #ifdef _R_FAL
 // Marker on the Right Lateral Ankle
 CreateMarkerDriver R_FAL (
-MarkerPlacement=Right.Leg.Seg.Shank,
+MarkerPlacement=Right.Leg.Segments.Shank,
 PlaceMarkerAt = LateralMalleolus,
 OptX=OFF,OptY=OFF,OptZ=ON,
 UseC3DWeightResiduals = ON
@@ -331,7 +331,7 @@ UseC3DWeightResiduals = ON
 #ifdef _R_TAM
 // Marker on the medial Ankle
 CreateMarkerDriver R_TAM (
-MarkerPlacement=Right.Leg.Seg.Shank,
+MarkerPlacement=Right.Leg.Segments.Shank,
 PlaceMarkerAt = MedialMalleolus,
 OptX=OFF,OptY=ON,OptZ=ON,
 UseC3DWeightResiduals = ON
@@ -349,7 +349,7 @@ LinkDesignVars SymmetricRightAnkleMarkers(DesVar1 =R_FAL_Z, DesVar2=R_TAM_Z, Coe
 #ifdef _R_FM2
 // Marker on the Right Toe
 CreateMarkerDriver R_FM2 (
-MarkerPlacement=Right.Leg.Seg.Foot.Metatarsal2,
+MarkerPlacement=Right.Leg.Segments.Foot.Metatarsal2,
 PlaceMarkerAt=AnatomicalFrame,
 OptX=OFF,OptY=ON,OptZ=ON,
 UseC3DWeightResiduals = ON
@@ -361,7 +361,7 @@ UseC3DWeightResiduals = ON
 #ifdef _R_FM1
 // Marker on the Right Toe
 CreateMarkerDriver R_FM1 (
-MarkerPlacement=Right.Leg.Seg.Foot.Metatarsal1,
+MarkerPlacement=Right.Leg.Segments.Foot.Metatarsal1,
 PlaceMarkerAt=AnatomicalFrame,
 OptX=ON,OptY=OFF,OptZ=OFF,
 UseC3DWeightResiduals = ON
@@ -373,7 +373,7 @@ UseC3DWeightResiduals = ON
 #ifdef _R_FCC
 // Marker on the Right Heel
 CreateMarkerDriver R_FCC (
-MarkerPlacement=Right.Leg.Seg.Foot.Calcaneus,
+MarkerPlacement=Right.Leg.Segments.Foot.Calcaneus,
 PlaceMarkerAt=AnatomicalFrame,
 OptX=OFF,OptY=OFF,OptZ=OFF,
 UseC3DWeightResiduals = ON
@@ -385,7 +385,7 @@ UseC3DWeightResiduals = ON
 #ifdef _R_FM5
 // Marker on the Right Metatarsel 5
 CreateMarkerDriver R_FM5 (
-MarkerPlacement=Right.Leg.Seg.Foot.Metatarsal5,
+MarkerPlacement=Right.Leg.Segments.Foot.Metatarsal5,
 PlaceMarkerAt=AnatomicalFrame,
 OptX=ON,OptY=OFF,OptZ=OFF,
 UseC3DWeightResiduals = ON
@@ -403,7 +403,7 @@ UseC3DWeightResiduals = ON
 #ifdef _L_PAS
 // Marker on the Left Patella
 CreateMarkerDriver L_PAS (
-MarkerPlacement=Left.Leg.Seg.Patella,
+MarkerPlacement=Left.Leg.Segments.Patella,
 PlaceMarkerAt=AnatomicalFrame,
 OptX=OFF,OptY=ON,OptZ=OFF,
 WeightY =0.1,
@@ -417,7 +417,7 @@ UseC3DWeightResiduals = ON
 #ifdef _L_FLE
 // Marker on the Left Knee
 CreateMarkerDriver L_FLE (
-MarkerPlacement=Left.Leg.Seg.Thigh,
+MarkerPlacement=Left.Leg.Segments.Thigh,
 OptX=OFF,OptY=OFF,OptZ=ON,
 UseC3DWeightResiduals = ON,
 PlaceMarkerAt = EpicondylusFemorisLateralis
@@ -429,7 +429,7 @@ PlaceMarkerAt = EpicondylusFemorisLateralis
 #ifdef _L_FME
 // Marker on the Left Knee
 CreateMarkerDriver L_FME (
-MarkerPlacement=Left.Leg.Seg.Thigh,
+MarkerPlacement=Left.Leg.Segments.Thigh,
 PlaceMarkerAt=AnatomicalFrame,
 OptX=OFF,OptY=ON,OptZ=ON,
 UseC3DWeightResiduals = ON,
@@ -450,7 +450,7 @@ LinkDesignVars SymetricLeftKneeMarkers(DesVar1 =L_FLE_Z, DesVar2=L_FME_Z, Coef1 
 #ifdef _L_TTC
 // Marker on the Left Tibia
 CreateMarkerDriver L_TTC (
-MarkerPlacement=Left.Leg.Seg.Shank,
+MarkerPlacement=Left.Leg.Segments.Shank,
 PlaceMarkerAt=AnatomicalFrame,
 OptX=OFF,OptY=ON,OptZ=OFF,
 UseC3DWeightResiduals = ON
@@ -462,7 +462,7 @@ UseC3DWeightResiduals = ON
 #ifdef _L_FAX
 // Marker on the Left Tibia
 CreateMarkerDriver L_FAX (
-MarkerPlacement=Left.Leg.Seg.Shank,
+MarkerPlacement=Left.Leg.Segments.Shank,
 OptX=OFF,OptY=ON,OptZ=ON,
 UseC3DWeightResiduals = ON,
 PlaceMarkerAt = FibularHead
@@ -475,7 +475,7 @@ PlaceMarkerAt = FibularHead
 #ifdef _L_FAL
 // Marker on the Left Lateral Ankle
 CreateMarkerDriver L_FAL (
-MarkerPlacement=Left.Leg.Seg.Shank,
+MarkerPlacement=Left.Leg.Segments.Shank,
 PlaceMarkerAt = LateralMalleolus,
 OptX=OFF,OptY=OFF,OptZ=ON,
 UseC3DWeightResiduals = ON
@@ -487,7 +487,7 @@ UseC3DWeightResiduals = ON
 #ifdef _L_TAM
 // Marker on the medial Ankle
 CreateMarkerDriver L_TAM (
-MarkerPlacement=Left.Leg.Seg.Shank,
+MarkerPlacement=Left.Leg.Segments.Shank,
 PlaceMarkerAt = MedialMalleolus,
 OptX=OFF,OptY=ON,OptZ=ON,
 UseC3DWeightResiduals = ON
@@ -505,7 +505,7 @@ LinkDesignVars SymmetricLeftAnkleMarkers(DesVar1 =L_FAL_Z, DesVar2=L_TAM_Z, Coef
 #ifdef _L_FM2
 // Marker on the Left Toe
 CreateMarkerDriver L_FM2 (
-MarkerPlacement=Left.Leg.Seg.Foot.Metatarsal2,
+MarkerPlacement=Left.Leg.Segments.Foot.Metatarsal2,
 PlaceMarkerAt=AnatomicalFrame,
 OptX=OFF,OptY=ON,OptZ=ON,
 UseC3DWeightResiduals = ON
@@ -517,7 +517,7 @@ UseC3DWeightResiduals = ON
 #ifdef _L_FM1
 // Marker on the Right Toe
 CreateMarkerDriver L_FM1 (
-MarkerPlacement=Left.Leg.Seg.Foot.Metatarsal1,
+MarkerPlacement=Left.Leg.Segments.Foot.Metatarsal1,
 PlaceMarkerAt=AnatomicalFrame,
 OptX=ON,OptY=OFF,OptZ=OFF,
 UseC3DWeightResiduals = ON
@@ -530,7 +530,7 @@ UseC3DWeightResiduals = ON
 #ifdef _L_FCC
 // Marker on the Left Heel
 CreateMarkerDriver L_FCC (
-MarkerPlacement=Left.Leg.Seg.Foot.Calcaneus,
+MarkerPlacement=Left.Leg.Segments.Foot.Calcaneus,
 PlaceMarkerAt=AnatomicalFrame,
 OptX=OFF,OptY=OFF,OptZ=OFF,
 UseC3DWeightResiduals = ON
@@ -542,7 +542,7 @@ UseC3DWeightResiduals = ON
 #ifdef _L_FM5
 // Marker on the Left Metatarsel 5
 CreateMarkerDriver L_FM5 (
-MarkerPlacement=Left.Leg.Seg.Foot.Metatarsal5,
+MarkerPlacement=Left.Leg.Segments.Foot.Metatarsal5,
 PlaceMarkerAt=AnatomicalFrame,
 OptX=ON,OptY=OFF,OptZ=OFF,
 UseC3DWeightResiduals = ON
@@ -972,7 +972,7 @@ LinkDesignVars Symmetric_CV7_TV10_X(DesVar1=TV10_X, DesVar2=CV7_X) = {};
 // Marker on the trochanter
 CreateMarkerDriver R_FTC (
 OptX=OFF,OptY=ON,OptZ=ON,
-MarkerPlacement =Right.Leg.Seg.Thigh)= {
+MarkerPlacement =Right.Leg.Segments.Thigh)= {
   sRelOpt = {0.00, -0.03, 0.09};
 };
 #endif
@@ -980,7 +980,7 @@ MarkerPlacement =Right.Leg.Seg.Thigh)= {
 #ifdef _RFLE
 // Marker on the Right Knee
 CreateMarkerDriver RFLE (
-MarkerPlacement= Right.Leg.Seg.Thigh,
+MarkerPlacement= Right.Leg.Segments.Thigh,
 PlaceMarkerAt = EpicondylusFemorisLateralis,
 OptX=OFF,OptY=OFF,OptZ=OFF,
 WeightX=1.0,WeightY=1.0,WeightZ=1.0
@@ -992,7 +992,7 @@ WeightX=1.0,WeightY=1.0,WeightZ=1.0
 #ifdef _RTIB
 // Marker on the Right Tibia
 CreateMarkerDriver RTIB (
-MarkerPlacement=Right.Leg.Seg.Shank,
+MarkerPlacement=Right.Leg.Segments.Shank,
 OptX=ON,OptY=ON,OptZ=ON
 ) = {
   sRelOpt = {0.0, -0.1, 0.05};
@@ -1003,7 +1003,7 @@ OptX=ON,OptY=ON,OptZ=ON
 // Marker on the Right Lateral Ankle
 CreateMarkerDriver RANK (
 MarkerName= RANK ,
-MarkerPlacement=Right.Leg.Seg.Shank,
+MarkerPlacement=Right.Leg.Segments.Shank,
 PlaceMarkerAt = LateralMalleolus,
 OptX=ON,OptY=ON,OptZ=ON
 ) = {
@@ -1014,7 +1014,7 @@ OptX=ON,OptY=ON,OptZ=ON
 #ifdef _RTOE
 // Marker on the Right Toe
 CreateMarkerDriver RTOE (
-MarkerPlacement=Right.Leg.Seg.Foot.Metatarsal1,
+MarkerPlacement=Right.Leg.Segments.Foot.Metatarsal1,
 PlaceMarkerAt = MetatarsalJoint1Node,
 OptX=OFF , OptY=OFF , OptZ=OFF,
 WeightX=1.0,WeightY=1.0,WeightZ=1.0
@@ -1027,7 +1027,7 @@ WeightX=1.0,WeightY=1.0,WeightZ=1.0
 // Marker on the Right Heel
 CreateMarkerDriver RHEE (
 MarkerName= RHEE ,
-MarkerPlacement=Right.Leg.Seg.Foot.Calcaneus,
+MarkerPlacement=Right.Leg.Segments.Foot.Calcaneus,
 PlaceMarkerAt = HeelNode,
 OptX=OFF, OptY=OFF , OptZ=OFF,
 WeightX=1.0,WeightY=1.0,WeightZ=1.0
@@ -1040,7 +1040,7 @@ WeightX=1.0,WeightY=1.0,WeightZ=1.0
 // Marker on the Right Metatarsel 5
 #ifdef _RMT5
 CreateMarkerDriver RMT5 (
-MarkerPlacement=Right.Leg.Seg.Foot.Metatarsal5,
+MarkerPlacement=Right.Leg.Segments.Foot.Metatarsal5,
 PlaceMarkerAt = MetatarsalJoint5Node,
 OptX=OFF,OptY=OFF,OptZ=OFF,
 WeightX=1.0,WeightY=1.0,WeightZ=1.0) = {
@@ -1052,7 +1052,7 @@ WeightX=1.0,WeightY=1.0,WeightZ=1.0) = {
 // Marker on the trochanter
 CreateMarkerDriver L_FTC (
 OptX=OFF,OptY=ON,OptZ=ON,
-MarkerPlacement =Left.Leg.Seg.Thigh)= {
+MarkerPlacement =Left.Leg.Segments.Thigh)= {
   sRelOpt = {0.00, -0.03, -0.09};
 };
 #endif
@@ -1061,7 +1061,7 @@ MarkerPlacement =Left.Leg.Seg.Thigh)= {
 // Marker on the Left Knee
 CreateMarkerDriver LFLE (
 MarkerName= LFLE ,
-MarkerPlacement=Left.Leg.Seg.Thigh,
+MarkerPlacement=Left.Leg.Segments.Thigh,
 PlaceMarkerAt = EpicondylusFemorisLateralis,
 OptX=OFF,OptY=OFF,OptZ=OFF
 ) = {
@@ -1072,7 +1072,7 @@ OptX=OFF,OptY=OFF,OptZ=OFF
 #ifdef _LTIB
 // Marker on the Left Tibia
 CreateMarkerDriver LTIB (
-MarkerPlacement=Left.Leg.Seg.Shank,
+MarkerPlacement=Left.Leg.Segments.Shank,
 OptX=ON,OptY=ON,OptZ=ON
 ) = {
   sRelOpt = {0.0, -0.1, -0.05};
@@ -1082,7 +1082,7 @@ OptX=ON,OptY=ON,OptZ=ON
 #ifdef _LANK
 // Marker on the Left Ankle
 CreateMarkerDriver LANK (
-MarkerPlacement=Left.Leg.Seg.Shank,
+MarkerPlacement=Left.Leg.Segments.Shank,
 PlaceMarkerAt = LateralMalleolus,
 OptX=ON,OptY=ON,OptZ=ON
 ) = {
@@ -1093,7 +1093,7 @@ OptX=ON,OptY=ON,OptZ=ON
 #ifdef _LTOE
 // Marker on the Left Toe
 CreateMarkerDriver LTOE (
-MarkerPlacement=Left.Leg.Seg.Foot.Metatarsal1,
+MarkerPlacement=Left.Leg.Segments.Foot.Metatarsal1,
 PlaceMarkerAt = MetatarsalJoint1Node,
 OptX=OFF,OptY=ON ,OptZ=OFF
 ) = {
@@ -1104,7 +1104,7 @@ OptX=OFF,OptY=ON ,OptZ=OFF
 #ifdef _LHEE
 // Marker on the Left Heel
 CreateMarkerDriver LHEE(
-MarkerPlacement=Left.Leg.Seg.Foot.Calcaneus,
+MarkerPlacement=Left.Leg.Segments.Foot.Calcaneus,
 PlaceMarkerAt = HeelNode,
 OptX=OFF, OptY=OFF, OptZ=OFF,
 WeightX=1.0,WeightY=1.0,WeightZ=1.0
@@ -1116,7 +1116,7 @@ WeightX=1.0,WeightY=1.0,WeightZ=1.0
 #ifdef _LMT5
 // Marker on the Right Metatarsel 5
 CreateMarkerDriver LMT5 (
-MarkerPlacement=Left.Leg.Seg.Foot.Metatarsal5,
+MarkerPlacement=Left.Leg.Segments.Foot.Metatarsal5,
 PlaceMarkerAt = MetatarsalJoint5Node,
 OptX=OFF,OptY=OFF,OptZ=OFF,
 WeightX=1.0,WeightY=1.0,WeightZ=1.0) = {

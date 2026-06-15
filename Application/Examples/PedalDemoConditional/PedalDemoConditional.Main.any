@@ -39,14 +39,14 @@ Main = {
     /// Reference to the mannequin folder (used by drivers)
     AnyFolder &Mannequin =.HumanModel.Mannequin;
 
-    BodyModel.Left.Leg.Seg.Foot = {
+    BodyModel.Left.Leg.Segments.Foot = {
       ProximalPhalange2 = {
         AnyRefNode FootBall = {
           sRel = (..ProximalPhalange5.ToeLateralContactNode.sRel + ..ProximalPhalange1.ToeMedialContactNode.sRel)/2.0;
         };
       };
     };
-    BodyModel.Right.Leg.Seg.Foot = {
+    BodyModel.Right.Leg.Segments.Foot = {
       ProximalPhalange2 = {
         AnyRefNode FootBall = {
           sRel = (..ProximalPhalange5.ToeLateralContactNode.sRel + ..ProximalPhalange1.ToeMedialContactNode.sRel)/2.0;
