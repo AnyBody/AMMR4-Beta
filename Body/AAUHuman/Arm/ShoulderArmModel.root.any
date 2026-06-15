@@ -169,6 +169,7 @@ AnyFolder Data = {
     };
   };
   #include "rangeOfMotion.any"
+  #include "ArmMassDistribution.any"
 };
 
 AnyFolder Muscles = {};
@@ -305,17 +306,6 @@ AnyFolder MassSummation = {
     .Segments.Hand.Mass
   );
 };
-
-
-
-/// Folder containing all the data for the trunk model
-Data = {
-  #include "ArmMassDistribution.any"
-};
-
-
-
-
 
 
 InterfaceFolder={
