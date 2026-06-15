@@ -33,10 +33,10 @@
 
       AnyOperationSetValue TouchOtherValues =  {
         Source = arrcat(
-          ObjSearch("Main.HumanModel.BodyModel.Left.Leg.Seg.Thigh.KneeJoint.VarusValgusRotation", "AnyValue"),
-          ObjSearch("Main.HumanModel.BodyModel.Right.Leg.Seg.Thigh.KneeJoint.VarusValgusRotation", "AnyValue"),
-          ObjSearch("Main.HumanModel.BodyModel.Left.Leg.Seg.Shank.AnkleJoint.TibialTorsionOffset", "AnyValue"),
-          ObjSearch("Main.HumanModel.BodyModel.Right.Leg.Seg.Shank.AnkleJoint.TibialTorsionOffset", "AnyValue")
+          ObjSearch("Main.HumanModel.BodyModel.Left.Leg.Segments.Thigh.KneeJoint.VarusValgusRotation", "AnyValue"),
+          ObjSearch("Main.HumanModel.BodyModel.Right.Leg.Segments.Thigh.KneeJoint.VarusValgusRotation", "AnyValue"),
+          ObjSearch("Main.HumanModel.BodyModel.Left.Leg.Segments.Shank.AnkleJoint.TibialTorsionOffset", "AnyValue"),
+          ObjSearch("Main.HumanModel.BodyModel.Right.Leg.Segments.Shank.AnkleJoint.TibialTorsionOffset", "AnyValue")
          );
 
         Target = Source;

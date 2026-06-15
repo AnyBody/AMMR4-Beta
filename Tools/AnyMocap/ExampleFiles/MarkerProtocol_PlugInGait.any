@@ -196,7 +196,7 @@ ScaleMarkerPosOnOff=OFF
 // Marker on the Right Thigh
 CreateMarkerDriver RTHI (
 OptX=ON,OptY=ON,OptZ=ON,
-MarkerPlacement =Right.Leg.Seg.Thigh,
+MarkerPlacement =Right.Leg.Segments.Thigh,
 PlaceMarkerAt=AnatomicalFrame,
 )= {
   sRelOpt = {0.00, -0.15, 0.1};
@@ -206,7 +206,7 @@ PlaceMarkerAt=AnatomicalFrame,
 #ifdef _RKNE
 // Marker on the Right Knee
 CreateMarkerDriver RKNE (
-MarkerPlacement= Right.Leg.Seg.Thigh,
+MarkerPlacement= Right.Leg.Segments.Thigh,
 PlaceMarkerAt = EpicondylusFemorisLateralis,
 OptX=OFF,OptY=OFF,OptZ=OFF,
 WeightX=1.0,WeightY=1.0,WeightZ=1.0,
@@ -218,7 +218,7 @@ WeightX=1.0,WeightY=1.0,WeightZ=1.0,
 #ifdef _RTIB
 // Marker on the Right Tibia
 CreateMarkerDriver RTIB (
-MarkerPlacement=Right.Leg.Seg.Shank,
+MarkerPlacement=Right.Leg.Segments.Shank,
 PlaceMarkerAt=AnatomicalFrame,
 OptX=ON,OptY=ON,OptZ=ON
 ) = {
@@ -229,7 +229,7 @@ OptX=ON,OptY=ON,OptZ=ON
 #ifdef _RANK
 // Marker on the Right Lateral Ankle
 CreateMarkerDriver RANK (
-MarkerPlacement=Right.Leg.Seg.Shank,
+MarkerPlacement=Right.Leg.Segments.Shank,
 PlaceMarkerAt = LateralMalleolus,
 OptX=ON,OptY=OFF,OptZ=ON,
 ) = {
@@ -240,7 +240,7 @@ OptX=ON,OptY=OFF,OptZ=ON,
 #ifdef _RTOE
 // Marker on the Right Toe
 CreateMarkerDriver RTOE (
-MarkerPlacement=Right.Leg.Seg.Foot.Metatarsal1,
+MarkerPlacement=Right.Leg.Segments.Foot.Metatarsal1,
 PlaceMarkerAt = MetatarsalJoint1Node,
 OptX=OFF , OptY=OFF , OptZ=OFF,
 WeightX=1.0,WeightY=1.0,WeightZ=1.0,
@@ -252,7 +252,7 @@ WeightX=1.0,WeightY=1.0,WeightZ=1.0,
 #ifdef _RHEE
 // Marker on the Right Heel
 CreateMarkerDriver RHEE (
-MarkerPlacement=Right.Leg.Seg.Foot.Calcaneus,
+MarkerPlacement=Right.Leg.Segments.Foot.Calcaneus,
 PlaceMarkerAt = HeelNode,
 OptX=OFF, OptY=OFF , OptZ=OFF,
 WeightX=1.0,WeightY=1.0,WeightZ=1.0,
@@ -264,7 +264,7 @@ WeightX=1.0,WeightY=1.0,WeightZ=1.0,
 #ifdef _RMT5
 // Marker on the Right Metatarsal 5
 CreateMarkerDriver RMT5 (
-MarkerPlacement=Right.Leg.Seg.Foot.Metatarsal5,
+MarkerPlacement=Right.Leg.Segments.Foot.Metatarsal5,
 PlaceMarkerAt = MetatarsalJoint5Node,
 OptX=ON,OptY=OFF,OptZ=OFF,
 WeightX=1.0,WeightY=1.0,WeightZ=1.0,
@@ -276,7 +276,7 @@ WeightX=1.0,WeightY=1.0,WeightZ=1.0,
 #ifdef _LTHI
 // Marker on the Left Thigh
 CreateMarkerDriver LTHI (
-MarkerPlacement=Left.Leg.Seg.Thigh,
+MarkerPlacement=Left.Leg.Segments.Thigh,
 PlaceMarkerAt=AnatomicalFrame,
 OptX=ON,OptY=ON,OptZ=ON,
 ) = {
@@ -287,7 +287,7 @@ OptX=ON,OptY=ON,OptZ=ON,
 #ifdef _LKNE
 // Marker on the Left Knee
 CreateMarkerDriver LKNE (
-MarkerPlacement=Left.Leg.Seg.Thigh,
+MarkerPlacement=Left.Leg.Segments.Thigh,
 PlaceMarkerAt = EpicondylusFemorisLateralis,
 OptX=OFF,OptY=OFF,OptZ=OFF,
 ) = {
@@ -298,7 +298,7 @@ OptX=OFF,OptY=OFF,OptZ=OFF,
 #ifdef _LTIB
 // Marker on the Left Tibia
 CreateMarkerDriver LTIB (
-MarkerPlacement=Left.Leg.Seg.Shank,
+MarkerPlacement=Left.Leg.Segments.Shank,
 PlaceMarkerAt=AnatomicalFrame,
 OptX=ON,OptY=ON,OptZ=ON,
 ) = {
@@ -309,7 +309,7 @@ OptX=ON,OptY=ON,OptZ=ON,
 #ifdef _LANK
 // Marker on the Left Ankle
 CreateMarkerDriver LANK (
-MarkerPlacement=Left.Leg.Seg.Shank,
+MarkerPlacement=Left.Leg.Segments.Shank,
 PlaceMarkerAt = LateralMalleolus,
 OptX=ON,OptY=OFF,OptZ=ON,
 ) = {
@@ -320,7 +320,7 @@ OptX=ON,OptY=OFF,OptZ=ON,
 #ifdef _LTOE
 // Marker on the Left Toe
 CreateMarkerDriver LTOE (
-MarkerPlacement=Left.Leg.Seg.Foot.Metatarsal1,
+MarkerPlacement=Left.Leg.Segments.Foot.Metatarsal1,
 PlaceMarkerAt = MetatarsalJoint1Node,
 OptX=OFF,OptY=OFF ,OptZ=OFF,
 ) = {
@@ -331,7 +331,7 @@ OptX=OFF,OptY=OFF ,OptZ=OFF,
 #ifdef _LHEE
 // Marker on the Left Heel
 CreateMarkerDriver LHEE(
-MarkerPlacement=Left.Leg.Seg.Foot.Calcaneus,
+MarkerPlacement=Left.Leg.Segments.Foot.Calcaneus,
 PlaceMarkerAt = HeelNode,
 OptX=OFF, OptY=OFF, OptZ=OFF,
 WeightX=1.0,WeightY=1.0,WeightZ=1.0,
@@ -343,7 +343,7 @@ WeightX=1.0,WeightY=1.0,WeightZ=1.0,
 #ifdef _LMT5
 // Marker on the Left Metatarsal 5
 CreateMarkerDriver LMT5 (
-MarkerPlacement=Left.Leg.Seg.Foot.Metatarsal5,
+MarkerPlacement=Left.Leg.Segments.Foot.Metatarsal5,
 PlaceMarkerAt = MetatarsalJoint5Node,
 OptX=ON,OptY=OFF,OptZ=OFF,
 WeightX=1.0,WeightY=1.0,WeightZ=1.0,
