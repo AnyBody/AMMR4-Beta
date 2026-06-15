@@ -32,6 +32,13 @@ Please find a description of the model in the seg.any file.
 
   #include "JointTypeDefinitions.any"
 
+  #if BM_COMPATIBILITY_BODYMODEL_STRUCTURE  ==  ON
+    // AnyFolder &ModelParameters = Data.unscaled.ModelParameters;
+    // AnyFolder &Mus = Muscles;
+    // AnyFolder &Jnt = Joints;
+    AnyFolder &Seg = Segments;
+  #endif
+
   // Definition of the leg segments
   AnyFolder Segments = {
     #include "Seg.any"
