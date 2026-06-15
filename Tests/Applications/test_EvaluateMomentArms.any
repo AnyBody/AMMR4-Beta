@@ -41,8 +41,17 @@ Main = {
   AnyObjectPtr MuscleFoldersResolved = unique(ObjRefResolve(MuscleRefFolders));
 
   AnyObjectPtr MusclesInMomentArmStudies = ObjSearchRecursive(MuscleFoldersResolved, "*", "AnyMuscle");
-  AnyObjectPtr MusclesInBodyModel = ObjSearchRecursive(&Main.HumanModel.BodyModel, "*", "AnyMuscle");
+  AnyObjectPtr MusclesInBodyModelAll = ObjSearchRecursive(&Main.HumanModel.BodyModel, "*", "AnyMuscle");
 
+  #if BM_ARM_THORAX_SCAPULA_CONTACT == _ELLIPSOID_CONTACT_
+    /// Exclude ligaments made as muscles since they are not part of the momentarm studies
+    AnyObjectPtr LigamentMusclesToExclude = ObjSearchRecursive(&Main.HumanModel.BodyModel, "*LigamentReaction", "AnyMuscle");
+    AnyObjectPtr MusclesInBodyModel = set_difference(MusclesInBodyModelAll, LigamentMusclesToExclude);
+  #else
+    AnyObjectPtr MusclesInBodyModel = MusclesInBodyModelAll;
+  #endif
+
+  AnyObjectPtr diff = set_difference(MusclesInBodyModel,MusclesInMomentArmStudies);
   AnyInt test_all_muscles_in_studies_are_in_body_model = expect(
     eqfun(
       NumElemOf(MusclesInMomentArmStudies),
