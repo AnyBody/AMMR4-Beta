@@ -15,7 +15,7 @@
 
 
 //// Run Analysis with a reduced number of time steps
-//// to make test go faster. 
+//// to make test go faster.
 //#define N_STEP_PARAM_OPT 10
 //#define N_STEP_KINEMATICS 197
 #define N_STEP 20
@@ -24,28 +24,28 @@
 
 #include "<MOCAP_PATH_MAINFILE>"
 
-Main = 
+Main =
 {
-  AnyOperationSequence  TestRunApplication = 
+  AnyOperationSequence  TestRunApplication =
   {
    // AnyOperation& BVH_StickFigure = Main.Studies.BVH_StickFigure.Kinematics;
-    AnyOperation& RunAnalysis = Main.RunAnalysis; 
+    AnyOperation& RunAnalysis = Main.RunAnalysis;
   };
 
-  
+
   #ifndef CREATE_IMAGE
     AnyOperation& RunTest = Main.TestRunApplication;
   #else
     Main.ModelSetup.TrialSpecificData.tStart = 3.45;
     #include "../Cameras.any"
     AnyOperationSequence CameraInitPos = {
-      AnyOperation& ref0 = Main.Studies.MarkerTracking.InitialConditions; 
+      AnyOperation& ref0 = Main.Studies.MarkerTracking.InitialConditions;
 //      AnyOperation& ref1 = Main.Studies.InverseDynamicStudy.InitialConditions;
       Template_OperationUpdateValues UpdateValues = {};
     };
-    LoadTimeCam.CameraLookAtPoint = Main.HumanModel.BodyModel.Left.Leg.Seg.Foot.Toe1.DistalPhalange1.r+{0.0,0.15,-0.0};
+    LoadTimeCam.CameraLookAtPoint = Main.HumanModel.BodyModel.Left.Leg.Segments.Foot.Toe1.DistalPhalange1.r+{0.0,0.15,-0.0};
     LoadTimeCam.CameraFieldOfView = DesignVar(0.6);
     LoadTimeCam.CameraDirection  = {1,0.0,-0.7};
-  #endif  
-  
+  #endif
+
 };
