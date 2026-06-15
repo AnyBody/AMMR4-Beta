@@ -168,7 +168,7 @@ Main = {
     };
   };
 
-  Main.HumanModel.BodyModel.Right.Leg.Seg.Shank = {
+  Main.HumanModel.BodyModel.Right.Leg.Segments.Shank = {
   AnyRefNode OldAnkleJoint = {
      AnyVar TibialTorsionOffset = DesignVar(0);
        AnyVec3 sRelUnscaled =  .StdPar.AnkleJoint;
@@ -189,7 +189,7 @@ Main = {
      };
   };
 
-  Main.HumanModel.BodyModel.Right.Leg.Seg.Shank.OldAnkleJoint = {
+  Main.HumanModel.BodyModel.Right.Leg.Segments.Shank.OldAnkleJoint = {
     AnyDrawLine line = {
       p0 = 0.05*{0,0,1};
       p1 = -0.05*{0,0,1};
@@ -197,14 +197,14 @@ Main = {
       GlobalCoord = Off;
     };
   };
-  Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.Talus.AnkleJoint = {
+  Main.HumanModel.BodyModel.Right.Leg.Segments.Foot.Talus.AnkleJoint = {
     AnyDrawLine line = {
       p0 = 0.05*{0,0,1};
       p1 = -0.05*{0,0,1};
       GlobalCoord = Off;
     };
   };
-  Main.HumanModel.BodyModel.Right.Leg.Seg.Shank.KneeJoint = {
+  Main.HumanModel.BodyModel.Right.Leg.Segments.Shank.KneeJoint = {
     AnyDrawLine line = {
       p0 = 0.05*{0,0,1};
       p1 = -0.05*{0,0,1};
@@ -212,7 +212,7 @@ Main = {
     };
   };
 
-  Main.HumanModel.BodyModel.Right.Leg.Seg.Shank2 = {
+  Main.HumanModel.BodyModel.Right.Leg.Segments.Shank2 = {
 
 
     #if SHOW_AMMR25_FOOT == 1
@@ -225,7 +225,7 @@ Main = {
       sRel = take(LinRotZYXPos, {0,1,2});
       ARel = RotMat(LinRotZYXPos[3],z)*RotMat(LinRotZYXPos[4],y)*RotMat(LinRotZYXPos[5],x);
       AnyDrawSurf FootSurf = {
-        //        FileName = Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.DrwSurf.FileName;
+        //        FileName = Main.HumanModel.BodyModel.Right.Leg.Segments.Foot.DrwSurf.FileName;
         FileName = "Surfs25/foot";
         RGB = {1,0,0};
       };
@@ -276,7 +276,7 @@ Main = {
     VideoInputScale = 5;
     VideoResolution = {600,600};
 //    CameraLookAtPoint = Main.HumanModel.BodyModel.Trunk.SegmentsLumbar.PelvisSeg.r+{0,-0.96,0};
-    CameraLookAtPoint = Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.r + {0,0.15,0};
+    CameraLookAtPoint = Main.HumanModel.BodyModel.Right.Leg.Segments.Foot.r + {0,0.15,0};
     CameraFieldOfView = DesignVar(0.45);
     CameraDirection  = {1,0.2,0.50};
     BackgroundColor = DesignVar({1,1,1});
@@ -294,7 +294,7 @@ Main = {
     VideoInputScale = 5;
     VideoResolution = {600,600};
 //    CameraLookAtPoint = Main.HumanModel.BodyModel.Trunk.SegmentsLumbar.PelvisSeg.r+{0,-0.96,0};
-    CameraLookAtPoint = Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.r + {0.05,0.0,0};
+    CameraLookAtPoint = Main.HumanModel.BodyModel.Right.Leg.Segments.Foot.r + {0.05,0.0,0};
     CameraFieldOfView = DesignVar(0.65);
     CameraDirection  = {0.0001,0.65,0.0};
     BackgroundColor = DesignVar({1,1,1});
@@ -313,7 +313,7 @@ Main = {
     VideoInputScale = 5;
     VideoResolution = {600,600};
 //    CameraLookAtPoint = Main.HumanModel.BodyModel.Trunk.SegmentsLumbar.PelvisSeg.r+{0,-0.96,0};
-    CameraLookAtPoint = Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.r + {0.0,0.15,0};
+    CameraLookAtPoint = Main.HumanModel.BodyModel.Right.Leg.Segments.Foot.r + {0.0,0.15,0};
     CameraFieldOfView = DesignVar(0.65);
     CameraDirection  = {1,0.0,0.0};
     BackgroundColor = DesignVar({1,1,1});
@@ -332,7 +332,7 @@ Main = {
     VideoInputScale = 5;
     VideoResolution = {600,600};
 //    CameraLookAtPoint = Main.HumanModel.BodyModel.Trunk.SegmentsLumbar.PelvisSeg.r+{0,-0.96,0};
-    CameraLookAtPoint = Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.r + {0.0,0.15,0};
+    CameraLookAtPoint = Main.HumanModel.BodyModel.Right.Leg.Segments.Foot.r + {0.0,0.15,0};
     CameraFieldOfView = DesignVar(0.65);
     CameraDirection  = {0,0.0,1.0};
     BackgroundColor = DesignVar({1,1,1});
@@ -351,7 +351,7 @@ Main = {
     VideoInputScale = 5;
     VideoResolution = {600,600};
 //    CameraLookAtPoint = Main.HumanModel.BodyModel.Trunk.SegmentsLumbar.PelvisSeg.r+{0,-0.96,0};
-    CameraLookAtPoint = Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.r + {0.0,0.0,0};
+    CameraLookAtPoint = Main.HumanModel.BodyModel.Right.Leg.Segments.Foot.r + {0.0,0.0,0};
     CameraFieldOfView = DesignVar(0.25);
     CameraDirection  = {1,0.0,0.0};
     BackgroundColor = DesignVar({1,1,1});
@@ -370,7 +370,7 @@ Main = {
     VideoInputScale = 5;
     VideoResolution = {600,600};
 //    CameraLookAtPoint = Main.HumanModel.BodyModel.Trunk.SegmentsLumbar.PelvisSeg.r+{0,-0.96,0};
-    CameraLookAtPoint = Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.r + {0.08,0.0,0};
+    CameraLookAtPoint = Main.HumanModel.BodyModel.Right.Leg.Segments.Foot.r + {0.08,0.0,0};
     CameraFieldOfView = DesignVar(0.25);
     CameraDirection  = {0,0.0,1.0};
     BackgroundColor = DesignVar({1,1,1});
@@ -392,7 +392,7 @@ Main = {
     VideoInputFrameRate = 30;
     VideoOutputFrameRate = 30;
 //    CameraLookAtPoint = Main.HumanModel.BodyModel.Trunk.SegmentsLumbar.PelvisSeg.r+{0, -0.90, 0};
-    CameraLookAtPoint = Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.r + {0,0.18,0};
+    CameraLookAtPoint = Main.HumanModel.BodyModel.Right.Leg.Segments.Foot.r + {0,0.18,0};
     CameraFieldOfView = DesignVar(0.55);
     CameraDirection  = {cos(2*pi*Main.study.t),0,sin(2*pi*Main.study.t) };
     BackgroundColor = DesignVar({1,1,1});
