@@ -243,6 +243,10 @@ You can revert to the TLEM foot model by setting:
 
 * Remove a number of previously deprecated `BM_XXX` switches and constants.
 
+* The AMS Plugins based on the `ANyGUIPlugin` class has been deprecated and removed. A new
+  AnyBody Studio Extensions platform will take over and re-implement the funtionality with
+  the new `AnyAppExtensionStudio` class.
+
 (ammr-3-2-1-changelog)=
 ## AMMR 3.2.1 (2026-05-21)
 [![Zenodo link](https://zenodo.org/badge/DOI/10.5281/zenodo.20321946.svg)](https://doi.org/10.5281/zenodo.20321946)

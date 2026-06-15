@@ -7,10 +7,6 @@ AnyFolder HumanModel=
   {
     DocumentationLink = AMMR_PATH_DOC + "/index.html";
 
-    #if (ANYBODY_V1 > 7)|(ANYBODY_V1 == 7 & ANYBODY_V2 > 1)
-    #include "BodyModels\GenericBodyModel\BM_Plugin.any"
-    #endif
-
     #include "BodyModels\GenericBodyModel\BodyModel.defaults.preprocess.any"
     #include "BodyModels\GenericBodyModel\BodyModel.defaults.any"
     #include "BodyModels\GenericBodyModel\BodyModel.BodyPartsSetup.any"
