@@ -41,7 +41,7 @@ AnyFolder Scaling = {
         AnyFunTransform3D &ScaleFunction = ...Scaling.GeometricalScaling.Right.Foot.ScaleFunction;
         #else
         /// The rigid body transform from segmental to scaling reference frame
-        AnyFunTransform3D &TSeg2ScaleFrame = ....BodyModel.Right.Leg.Seg.Foot.Scale.T0;
+        AnyFunTransform3D &TSeg2ScaleFrame = ....BodyModel.Right.Leg.Segments.Foot.Scale.T0;
         AnyMessage scaling_message_Right_Foot =
         {
           TriggerPreProcess = On;
@@ -56,7 +56,7 @@ AnyFolder Scaling = {
         AnyFunTransform3D &ScaleFunction = ...Scaling.GeometricalScaling.Right.Talus.ScaleFunction;
         #else
         /// The rigid body transform from segmental to scaling reference frame
-        AnyFunTransform3D &TSeg2ScaleFrame = ....BodyModel.Right.Leg.Seg.Talus.Scale.T0;
+        AnyFunTransform3D &TSeg2ScaleFrame = ....BodyModel.Right.Leg.Segments.Talus.Scale.T0;
         AnyMessage scaling_message_Right_Talus =
         {
           TriggerPreProcess = On;
@@ -71,7 +71,7 @@ AnyFolder Scaling = {
         AnyFunTransform3D &ScaleFunction = ...Scaling.GeometricalScaling.Right.Patella.ScaleFunction;
         #else
         /// The rigid body transform from segmental to scaling reference frame
-        AnyFunTransform3D &TSeg2ScaleFrame = ....BodyModel.Right.Leg.Seg.Patella.Scale.T0;
+        AnyFunTransform3D &TSeg2ScaleFrame = ....BodyModel.Right.Leg.Segments.Patella.Scale.T0;
         AnyMessage scaling_message_Right_Patella =
         {
           TriggerPreProcess = On;
@@ -86,7 +86,7 @@ AnyFolder Scaling = {
         AnyFunTransform3D &ScaleFunction = ...Scaling.GeometricalScaling.Right.Shank.ScaleFunction;
         #else
         /// The rigid body transform from segmental to scaling reference frame
-        AnyFunTransform3D &TSeg2ScaleFrame = ....BodyModel.Right.Leg.Seg.Shank.Scale.T0;
+        AnyFunTransform3D &TSeg2ScaleFrame = ....BodyModel.Right.Leg.Segments.Shank.Scale.T0;
         AnyMessage scaling_message_Right_Shank =
         {
           TriggerPreProcess = On;
@@ -101,7 +101,7 @@ AnyFolder Scaling = {
         AnyFunTransform3D &ScaleFunction = ...Scaling.GeometricalScaling.Right.Thigh.ScaleFunction;
         #else
         /// The rigid body transform from segmental to scaling reference frame
-        AnyFunTransform3D &TSeg2ScaleFrame = ....BodyModel.Right.Leg.Seg.Thigh.Scale.T0;
+        AnyFunTransform3D &TSeg2ScaleFrame = ....BodyModel.Right.Leg.Segments.Thigh.Scale.T0;
         AnyMessage scaling_message_Right_Thigh =
         {
           TriggerPreProcess = On;
@@ -221,7 +221,7 @@ AnyFolder Scaling = {
         AnyFunTransform3D &ScaleFunction = ...Scaling.GeometricalScaling.Left.Foot.ScaleFunction;
         #else
         /// The rigid body transform from segmental to scaling reference frame
-        AnyFunTransform3D &TSeg2ScaleFrame = ....BodyModel.Left.Leg.Seg.Foot.Scale.T0;
+        AnyFunTransform3D &TSeg2ScaleFrame = ....BodyModel.Left.Leg.Segments.Foot.Scale.T0;
         AnyMessage scaling_message_Left_Foot =
         {
           TriggerPreProcess = On;
@@ -235,7 +235,7 @@ AnyFolder Scaling = {
         AnyFunTransform3D &ScaleFunction = ...Scaling.GeometricalScaling.Left.Talus.ScaleFunction;
         #else
         /// The rigid body transform from segmental to scaling reference frame
-        AnyFunTransform3D &TSeg2ScaleFrame = ....BodyModel.Left.Leg.Seg.Talus.Scale.T0;
+        AnyFunTransform3D &TSeg2ScaleFrame = ....BodyModel.Left.Leg.Segments.Talus.Scale.T0;
         AnyMessage scaling_message_Left_Talus =
         {
           TriggerPreProcess = On;
@@ -249,7 +249,7 @@ AnyFolder Scaling = {
         AnyFunTransform3D &ScaleFunction = ...Scaling.GeometricalScaling.Left.Patella.ScaleFunction;
         #else
         /// The rigid body transform from segmental to scaling reference frame
-        AnyFunTransform3D &TSeg2ScaleFrame = ....BodyModel.Left.Leg.Seg.Patella.Scale.T0;
+        AnyFunTransform3D &TSeg2ScaleFrame = ....BodyModel.Left.Leg.Segments.Patella.Scale.T0;
         AnyMessage scaling_message_Left_Patella =
         {
           TriggerPreProcess = On;
@@ -264,7 +264,7 @@ AnyFolder Scaling = {
         AnyFunTransform3D &ScaleFunction = ...Scaling.GeometricalScaling.Left.Shank.ScaleFunction;
         #else
         /// The rigid body transform from segmental to scaling reference frame
-        AnyFunTransform3D &TSeg2ScaleFrame = ....BodyModel.Left.Leg.Seg.Shank.Scale.T0;
+        AnyFunTransform3D &TSeg2ScaleFrame = ....BodyModel.Left.Leg.Segments.Shank.Scale.T0;
         AnyMessage scaling_message_Left_Shank =
         {
           TriggerPreProcess = On;
@@ -278,7 +278,7 @@ AnyFolder Scaling = {
         AnyFunTransform3D &ScaleFunction = ...Scaling.GeometricalScaling.Left.Thigh.ScaleFunction;
         #else
         /// The rigid body transform from segmental to scaling reference frame
-        AnyFunTransform3D &TSeg2ScaleFrame = ....BodyModel.Left.Leg.Seg.Thigh.Scale.T0;
+        AnyFunTransform3D &TSeg2ScaleFrame = ....BodyModel.Left.Leg.Segments.Thigh.Scale.T0;
         AnyMessage scaling_message_Left_Thigh =
         {
           TriggerPreProcess = On;

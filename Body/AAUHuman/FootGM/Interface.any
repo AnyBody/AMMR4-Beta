@@ -1,11 +1,11 @@
 //This file is used for making a interface to the dof of the foot
-//the added rotnodes are needed to be able to have the same rotation definitions for 
+//the added rotnodes are needed to be able to have the same rotation definitions for
 //the right and left side
 
 #if BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_
 
 AnyKinMeasureOrg CalcaneoCuboidDorsiFlexion = {
-  AnyFolder &Calcaneus = ..Seg.Foot.Calcaneus.CalcaneoCuboidJoint;
+  AnyFolder &Calcaneus = ..Segments.Foot.Calcaneus.CalcaneoCuboidJoint;
   Calcaneus ={
 //    AnyDrawRefFrame drw = {};
     AnyRefNode RotNode={
@@ -13,25 +13,25 @@ AnyKinMeasureOrg CalcaneoCuboidDorsiFlexion = {
 //      AnyDrawRefFrame drw = {};
     };
   };
-  AnyFolder &Cuboid = ..Seg.Foot.Cuboid.CalcaneoCuboidJoint;
+  AnyFolder &Cuboid = ..Segments.Foot.Cuboid.CalcaneoCuboidJoint;
   Cuboid ={
     AnyRefNode RotNode={
       ARel={{....Sign*-1,0,0},{0,....Sign*-1,0},{0,0,1}};
     };
   };
   AnyKinRotational Rot={
-    AnyRefNode &CalcaneusNode = ...Seg.Foot.Calcaneus.CalcaneoCuboidJoint.RotNode;
-    AnyRefNode &CuboidNode = ...Seg.Foot.Cuboid.CalcaneoCuboidJoint.RotNode;
+    AnyRefNode &CalcaneusNode = ...Segments.Foot.Calcaneus.CalcaneoCuboidJoint.RotNode;
+    AnyRefNode &CuboidNode = ...Segments.Foot.Cuboid.CalcaneoCuboidJoint.RotNode;
     Type=RotAxesAngles;
   };
   MeasureOrganizer={0};//z
-}; 
+};
 AnyKinMeasureOrg CalcaneoCuboidAbduction = {
-  AnyKinRotational &Rot =.CalcaneoCuboidDorsiFlexion.Rot; 
+  AnyKinRotational &Rot =.CalcaneoCuboidDorsiFlexion.Rot;
   MeasureOrganizer={1};//y
 };
 AnyKinMeasureOrg CalcaneoCuboidEversion ={
-  AnyKinRotational &Rot =.CalcaneoCuboidDorsiFlexion.Rot; 
+  AnyKinRotational &Rot =.CalcaneoCuboidDorsiFlexion.Rot;
   MeasureOrganizer={2};//x
 };
 
@@ -39,7 +39,7 @@ AnyKinMeasureOrg CalcaneoCuboidEversion ={
 
 
 AnyKinMeasureOrg TaloNavicularDorsiFlexion = {
-  AnyFolder &Calcaneus = ..Seg.Foot.Talus.TaloNavicularJoint;
+  AnyFolder &Calcaneus = ..Segments.Foot.Talus.TaloNavicularJoint;
   Calcaneus ={
 //    AnyDrawRefFrame drw = {};
     AnyRefNode RotNode={
@@ -47,25 +47,25 @@ AnyKinMeasureOrg TaloNavicularDorsiFlexion = {
 //      AnyDrawRefFrame drw = {};
     };
   };
-  AnyFolder &Navicular = ..Seg.Foot.Navicular.TaloNavicularJoint;
+  AnyFolder &Navicular = ..Segments.Foot.Navicular.TaloNavicularJoint;
   Navicular ={
     AnyRefNode RotNode={
       ARel={{....Sign*-1,0,0},{0,....Sign*-1,0},{0,0,1}};
     };
   };
   AnyKinRotational Rot={
-    AnyRefNode &TalusNode = ...Seg.Foot.Talus.TaloNavicularJoint.RotNode;
-    AnyRefNode &NavicularNode = ...Seg.Foot.Navicular.TaloNavicularJoint.RotNode;
+    AnyRefNode &TalusNode = ...Segments.Foot.Talus.TaloNavicularJoint.RotNode;
+    AnyRefNode &NavicularNode = ...Segments.Foot.Navicular.TaloNavicularJoint.RotNode;
     Type=RotAxesAngles;
   };
   MeasureOrganizer={0};//z
-}; 
+};
 AnyKinMeasureOrg TaloNavicularAbduction = {
-  AnyKinRotational &Rot =.TaloNavicularDorsiFlexion.Rot; 
+  AnyKinRotational &Rot =.TaloNavicularDorsiFlexion.Rot;
   MeasureOrganizer={1};//y
 };
 AnyKinMeasureOrg TaloNavicularEversion ={
-  AnyKinRotational &Rot =.TaloNavicularDorsiFlexion.Rot; 
+  AnyKinRotational &Rot =.TaloNavicularDorsiFlexion.Rot;
   MeasureOrganizer={2};//x
 };
 
@@ -74,7 +74,7 @@ AnyKinMeasureOrg TaloNavicularEversion ={
 
 
 AnyKinMeasureOrg NaviculoMedialCuneiformDorsiFlexion = {
-  AnyFolder &Navicular = ..Seg.Foot.Navicular.MedCuneiNaviJoint;
+  AnyFolder &Navicular = ..Segments.Foot.Navicular.MedCuneiNaviJoint;
   Navicular ={
 //    AnyDrawRefFrame drw = {};
     AnyRefNode RotNode={
@@ -82,34 +82,34 @@ AnyKinMeasureOrg NaviculoMedialCuneiformDorsiFlexion = {
 //      AnyDrawRefFrame drw = {};
     };
   };
-  AnyFolder &MedialCuneiform = ..Seg.Foot.MedialCuneiform.CuneiNaviJoint;
+  AnyFolder &MedialCuneiform = ..Segments.Foot.MedialCuneiform.CuneiNaviJoint;
   MedialCuneiform ={
     AnyRefNode RotNode={
       ARel={{....Sign*-1,0,0},{0,....Sign*-1,0},{0,0,1}};
     };
   };
   AnyKinRotational Rot={
-    AnyRefNode &NavicularNode = ...Seg.Foot.Navicular.MedCuneiNaviJoint.RotNode;
-    AnyRefNode &MedialCuneiformNode = ...Seg.Foot.MedialCuneiform.CuneiNaviJoint.RotNode;
+    AnyRefNode &NavicularNode = ...Segments.Foot.Navicular.MedCuneiNaviJoint.RotNode;
+    AnyRefNode &MedialCuneiformNode = ...Segments.Foot.MedialCuneiform.CuneiNaviJoint.RotNode;
     Type=RotAxesAngles;
   };
   MeasureOrganizer={0};//z
-}; 
+};
 AnyKinMeasureOrg NaviculoMedialCuneiformAbduction = {
-  AnyKinRotational &Rot =.NaviculoMedialCuneiformDorsiFlexion.Rot; 
+  AnyKinRotational &Rot =.NaviculoMedialCuneiformDorsiFlexion.Rot;
   MeasureOrganizer={1};//y
 };
 //AnyKinMeasureOrg NaviculoMedialCuneiformEversion ={
-//  AnyKinRotational &Rot =.NaviculoMedialCuneiformDorsiFlexion.Rot; 
+//  AnyKinRotational &Rot =.NaviculoMedialCuneiformDorsiFlexion.Rot;
 //  MeasureOrganizer={2};//x
 //};
- 
+
 
 
 
 
 AnyKinMeasureOrg NaviculoIntermediateCuneiformDorsiFlexion = {
-  AnyFolder &Navicular = ..Seg.Foot.Navicular.IntCuneiNaviJoint;
+  AnyFolder &Navicular = ..Segments.Foot.Navicular.IntCuneiNaviJoint;
   Navicular ={
 //    AnyDrawRefFrame drw = {};
     AnyRefNode RotNode={
@@ -117,21 +117,21 @@ AnyKinMeasureOrg NaviculoIntermediateCuneiformDorsiFlexion = {
 //      AnyDrawRefFrame drw = {};
     };
   };
-  AnyFolder &IntermediateCuneiform = ..Seg.Foot.IntermediateCuneiform.CuneiNaviJoint;
+  AnyFolder &IntermediateCuneiform = ..Segments.Foot.IntermediateCuneiform.CuneiNaviJoint;
   IntermediateCuneiform ={
     AnyRefNode RotNode={
       ARel={{....Sign*-1,0,0},{0,....Sign*-1,0},{0,0,1}};
     };
   };
   AnyKinRotational Rot={
-    AnyRefNode &NavicularNode = ...Seg.Foot.Navicular.IntCuneiNaviJoint.RotNode;
-    AnyRefNode &IntermediateCuneiformNode = ...Seg.Foot.IntermediateCuneiform.CuneiNaviJoint.RotNode;
+    AnyRefNode &NavicularNode = ...Segments.Foot.Navicular.IntCuneiNaviJoint.RotNode;
+    AnyRefNode &IntermediateCuneiformNode = ...Segments.Foot.IntermediateCuneiform.CuneiNaviJoint.RotNode;
     Type=RotAxesAngles;
   };
   MeasureOrganizer={0};//z
-}; 
+};
 AnyKinMeasureOrg NaviculoIntermediateCuneiformAbduction = {
-  AnyKinRotational &Rot =.NaviculoIntermediateCuneiformDorsiFlexion.Rot; 
+  AnyKinRotational &Rot =.NaviculoIntermediateCuneiformDorsiFlexion.Rot;
   MeasureOrganizer={1};//y
 };
 
@@ -140,7 +140,7 @@ AnyKinMeasureOrg NaviculoIntermediateCuneiformAbduction = {
 
 
 AnyKinMeasureOrg NaviculoLateralCuneiformDorsiFlexion = {
-  AnyFolder &Navicular = ..Seg.Foot.Navicular.LatCuneiNaviJoint;
+  AnyFolder &Navicular = ..Segments.Foot.Navicular.LatCuneiNaviJoint;
   Navicular ={
 //    AnyDrawRefFrame drw = {};
     AnyRefNode RotNode={
@@ -148,29 +148,29 @@ AnyKinMeasureOrg NaviculoLateralCuneiformDorsiFlexion = {
 //      AnyDrawRefFrame drw = {};
     };
   };
-  AnyFolder &LateralCuneiform = ..Seg.Foot.LateralCuneiform.CuneiNaviJoint;
+  AnyFolder &LateralCuneiform = ..Segments.Foot.LateralCuneiform.CuneiNaviJoint;
   LateralCuneiform ={
     AnyRefNode RotNode={
       ARel={{....Sign*-1,0,0},{0,....Sign*-1,0},{0,0,1}};
     };
   };
   AnyKinRotational Rot={
-    AnyRefNode &NavicularNode = ...Seg.Foot.Navicular.LatCuneiNaviJoint.RotNode;
-    AnyRefNode &LateralCuneiformNode = ...Seg.Foot.LateralCuneiform.CuneiNaviJoint.RotNode;
+    AnyRefNode &NavicularNode = ...Segments.Foot.Navicular.LatCuneiNaviJoint.RotNode;
+    AnyRefNode &LateralCuneiformNode = ...Segments.Foot.LateralCuneiform.CuneiNaviJoint.RotNode;
     Type=RotAxesAngles;
   };
   MeasureOrganizer={0};//z
-}; 
+};
 AnyKinMeasureOrg NaviculoLateralCuneiformAbduction = {
-  AnyKinRotational &Rot =.NaviculoLateralCuneiformDorsiFlexion.Rot; 
+  AnyKinRotational &Rot =.NaviculoLateralCuneiformDorsiFlexion.Rot;
   MeasureOrganizer={1};//y
 };
-  
-  
+
+
 
 
 AnyKinMeasureOrg TarsoMetatarsal1DorsiFlexion = {
-  AnyFolder &MedialCuneiform = ..Seg.Foot.MedialCuneiform.TarsoMtJoint;
+  AnyFolder &MedialCuneiform = ..Segments.Foot.MedialCuneiform.TarsoMtJoint;
   MedialCuneiform ={
 //    AnyDrawRefFrame drw = {};
     AnyRefNode RotNode={
@@ -178,25 +178,25 @@ AnyKinMeasureOrg TarsoMetatarsal1DorsiFlexion = {
 //      AnyDrawRefFrame drw = {};
     };
   };
-  AnyFolder &Metatarsal1 = ..Seg.Foot.Metatarsal1.TarsoMtJoint;
+  AnyFolder &Metatarsal1 = ..Segments.Foot.Metatarsal1.TarsoMtJoint;
   Metatarsal1 ={
     AnyRefNode RotNode={
       ARel={{....Sign*-1,0,0},{0,....Sign*-1,0},{0,0,1}};
     };
   };
   AnyKinRotational Rot={
-    AnyRefNode &MedialCuneiformNode = ...Seg.Foot.MedialCuneiform.TarsoMtJoint.RotNode;
-    AnyRefNode &Metatarsal1 = ...Seg.Foot.Metatarsal1.TarsoMtJoint.RotNode;
+    AnyRefNode &MedialCuneiformNode = ...Segments.Foot.MedialCuneiform.TarsoMtJoint.RotNode;
+    AnyRefNode &Metatarsal1 = ...Segments.Foot.Metatarsal1.TarsoMtJoint.RotNode;
     Type=RotAxesAngles;
   };
   MeasureOrganizer={0};//z
-}; 
+};
 AnyKinMeasureOrg TarsoMetatarsal1Abduction = {
-  AnyKinRotational &Rot =.TarsoMetatarsal1DorsiFlexion.Rot; 
+  AnyKinRotational &Rot =.TarsoMetatarsal1DorsiFlexion.Rot;
   MeasureOrganizer={1};//y
 };
 //AnyKinMeasureOrg TarsoMetatarsal1Eversion ={
-//  AnyKinRotational &Rot =.TarsoMetatarsal1DorsiFlexion.Rot; 
+//  AnyKinRotational &Rot =.TarsoMetatarsal1DorsiFlexion.Rot;
 //  MeasureOrganizer={2};//x
 //};
 
@@ -205,7 +205,7 @@ AnyKinMeasureOrg TarsoMetatarsal1Abduction = {
 
 
 AnyKinMeasureOrg TarsoMetatarsal2DorsiFlexion = {
-  AnyFolder &IntermediateCuneiform = ..Seg.Foot.IntermediateCuneiform.TarsoMtJoint;
+  AnyFolder &IntermediateCuneiform = ..Segments.Foot.IntermediateCuneiform.TarsoMtJoint;
   IntermediateCuneiform ={
 //    AnyDrawRefFrame drw = {};
     AnyRefNode RotNode={
@@ -213,21 +213,21 @@ AnyKinMeasureOrg TarsoMetatarsal2DorsiFlexion = {
 //      AnyDrawRefFrame drw = {};
     };
   };
-  AnyFolder &Metatarsal2 = ..Seg.Foot.Metatarsal2.TarsoMtJoint;
+  AnyFolder &Metatarsal2 = ..Segments.Foot.Metatarsal2.TarsoMtJoint;
   Metatarsal2 ={
     AnyRefNode RotNode={
       ARel={{....Sign*-1,0,0},{0,....Sign*-1,0},{0,0,1}};
     };
   };
   AnyKinRotational Rot={
-    AnyRefNode &IntermediateCuneiformNode = ...Seg.Foot.IntermediateCuneiform.TarsoMtJoint.RotNode;
-    AnyRefNode &Metatarsal2 = ...Seg.Foot.Metatarsal2.TarsoMtJoint.RotNode;
+    AnyRefNode &IntermediateCuneiformNode = ...Segments.Foot.IntermediateCuneiform.TarsoMtJoint.RotNode;
+    AnyRefNode &Metatarsal2 = ...Segments.Foot.Metatarsal2.TarsoMtJoint.RotNode;
     Type=RotAxesAngles;
   };
   MeasureOrganizer={0};//z
-}; 
+};
 AnyKinMeasureOrg TarsoMetatarsal2Abduction = {
-  AnyKinRotational &Rot =.TarsoMetatarsal2DorsiFlexion.Rot; 
+  AnyKinRotational &Rot =.TarsoMetatarsal2DorsiFlexion.Rot;
   MeasureOrganizer={1};//y
 };
 
@@ -236,7 +236,7 @@ AnyKinMeasureOrg TarsoMetatarsal2Abduction = {
 
 
 AnyKinMeasureOrg TarsoMetatarsal3DorsiFlexion = {
-  AnyFolder &LateralCuneiform = ..Seg.Foot.LateralCuneiform.TarsoMtJoint;
+  AnyFolder &LateralCuneiform = ..Segments.Foot.LateralCuneiform.TarsoMtJoint;
   LateralCuneiform ={
 //    AnyDrawRefFrame drw = {};
     AnyRefNode RotNode={
@@ -244,21 +244,21 @@ AnyKinMeasureOrg TarsoMetatarsal3DorsiFlexion = {
 //      AnyDrawRefFrame drw = {};
     };
   };
-  AnyFolder &Metatarsal3 = ..Seg.Foot.Metatarsal3.TarsoMtJoint;
+  AnyFolder &Metatarsal3 = ..Segments.Foot.Metatarsal3.TarsoMtJoint;
   Metatarsal3 ={
     AnyRefNode RotNode={
       ARel={{....Sign*-1,0,0},{0,....Sign*-1,0},{0,0,1}};
     };
   };
   AnyKinRotational Rot={
-    AnyRefNode &LateralCuneiformNode = ...Seg.Foot.LateralCuneiform.TarsoMtJoint.RotNode;
-    AnyRefNode &Metatarsal3 = ...Seg.Foot.Metatarsal3.TarsoMtJoint.RotNode;
+    AnyRefNode &LateralCuneiformNode = ...Segments.Foot.LateralCuneiform.TarsoMtJoint.RotNode;
+    AnyRefNode &Metatarsal3 = ...Segments.Foot.Metatarsal3.TarsoMtJoint.RotNode;
     Type=RotAxesAngles;
   };
   MeasureOrganizer={0};//z
-}; 
+};
 AnyKinMeasureOrg TarsoMetatarsal3Abduction = {
-  AnyKinRotational &Rot =.TarsoMetatarsal3DorsiFlexion.Rot; 
+  AnyKinRotational &Rot =.TarsoMetatarsal3DorsiFlexion.Rot;
   MeasureOrganizer={1};//y
 };
 
@@ -267,7 +267,7 @@ AnyKinMeasureOrg TarsoMetatarsal3Abduction = {
 
 
 AnyKinMeasureOrg TarsoMetatarsal4DorsiFlexion = {
-  AnyFolder &Cuboid = ..Seg.Foot.Cuboid.TarsoMt4Joint;
+  AnyFolder &Cuboid = ..Segments.Foot.Cuboid.TarsoMt4Joint;
   Cuboid ={
 //    AnyDrawRefFrame drw = {};
     AnyRefNode RotNode={
@@ -275,21 +275,21 @@ AnyKinMeasureOrg TarsoMetatarsal4DorsiFlexion = {
 //      AnyDrawRefFrame drw = {};
     };
   };
-  AnyFolder &Metatarsal4 = ..Seg.Foot.Metatarsal4.TarsoMtJoint;
+  AnyFolder &Metatarsal4 = ..Segments.Foot.Metatarsal4.TarsoMtJoint;
   Metatarsal4 ={
     AnyRefNode RotNode={
       ARel={{....Sign*-1,0,0},{0,....Sign*-1,0},{0,0,1}};
     };
   };
   AnyKinRotational Rot={
-    AnyRefNode &CuboidNode = ...Seg.Foot.Cuboid.TarsoMt4Joint.RotNode;
-    AnyRefNode &Metatarsal4 = ...Seg.Foot.Metatarsal4.TarsoMtJoint.RotNode;
+    AnyRefNode &CuboidNode = ...Segments.Foot.Cuboid.TarsoMt4Joint.RotNode;
+    AnyRefNode &Metatarsal4 = ...Segments.Foot.Metatarsal4.TarsoMtJoint.RotNode;
     Type=RotAxesAngles;
   };
   MeasureOrganizer={0};//z
-}; 
+};
 AnyKinMeasureOrg TarsoMetatarsal4Abduction = {
-  AnyKinRotational &Rot =.TarsoMetatarsal4DorsiFlexion.Rot; 
+  AnyKinRotational &Rot =.TarsoMetatarsal4DorsiFlexion.Rot;
   MeasureOrganizer={1};//y
 };
 
@@ -297,7 +297,7 @@ AnyKinMeasureOrg TarsoMetatarsal4Abduction = {
 
 
 AnyKinMeasureOrg TarsoMetatarsal5SkewDorsiFlexion = {
-  AnyFolder &Cuboid = ..Seg.Foot.Cuboid.TarsoMt5Joint;
+  AnyFolder &Cuboid = ..Segments.Foot.Cuboid.TarsoMt5Joint;
   Cuboid ={
 //    AnyDrawRefFrame drw = {};
     AnyRefNode RotNode={
@@ -305,25 +305,25 @@ AnyKinMeasureOrg TarsoMetatarsal5SkewDorsiFlexion = {
 //      AnyDrawRefFrame drw = {};
     };
   };
-  AnyFolder &Metatarsal5 = ..Seg.Foot.Metatarsal5.TarsoMtJoint;
+  AnyFolder &Metatarsal5 = ..Segments.Foot.Metatarsal5.TarsoMtJoint;
   Metatarsal5 ={
     AnyRefNode RotNode={
       ARel={{....Sign*-1,0,0},{0,....Sign*-1,0},{0,0,1}};
     };
   };
   AnyKinRotational Rot={
-    AnyRefNode &CuboidNode = ...Seg.Foot.Cuboid.TarsoMt5Joint.RotNode;
-    AnyRefNode &Metatarsal5 = ...Seg.Foot.Metatarsal5.TarsoMtJoint.RotNode;
+    AnyRefNode &CuboidNode = ...Segments.Foot.Cuboid.TarsoMt5Joint.RotNode;
+    AnyRefNode &Metatarsal5 = ...Segments.Foot.Metatarsal5.TarsoMtJoint.RotNode;
     Type=RotAxesAngles;
   };
   MeasureOrganizer={0};//z
-}; 
+};
 AnyKinMeasureOrg TarsoMetatarsal5Abduction = {
-  AnyKinRotational &Rot =.TarsoMetatarsal5SkewDorsiFlexion.Rot; 
+  AnyKinRotational &Rot =.TarsoMetatarsal5SkewDorsiFlexion.Rot;
   MeasureOrganizer={1};//y
 };
 //AnyKinMeasureOrg TarsoMetatarsal5SkewEversion = {
-//  AnyKinRotational &Rot =.TarsoMetatarsal5SkewDorsiFlexion.Rot; 
+//  AnyKinRotational &Rot =.TarsoMetatarsal5SkewDorsiFlexion.Rot;
 //  MeasureOrganizer={2};//x
 //};
 
@@ -333,7 +333,7 @@ AnyKinMeasureOrg TarsoMetatarsal5Abduction = {
 
 
 AnyKinMeasureOrg MetatarsoPhalangeal1DorsiFlexion = {
-  AnyFolder &Metatarsal1 = ..Seg.Foot.Metatarsal1.MtPhalJoint;
+  AnyFolder &Metatarsal1 = ..Segments.Foot.Metatarsal1.MtPhalJoint;
   Metatarsal1 ={
 //    AnyDrawRefFrame drw = {};
     AnyRefNode RotNode={
@@ -341,23 +341,23 @@ AnyKinMeasureOrg MetatarsoPhalangeal1DorsiFlexion = {
 //      AnyDrawRefFrame drw = {};
     };
   };
-  AnyFolder &ProximalPhalange1 = ..Seg.Foot.ProximalPhalange1.MtPhalJoint;
+  AnyFolder &ProximalPhalange1 = ..Segments.Foot.ProximalPhalange1.MtPhalJoint;
   ProximalPhalange1 ={
     AnyRefNode RotNode={
       ARel={{....Sign*-1,0,0},{0,....Sign*-1,0},{0,0,1}};
     };
   };
   AnyKinRotational Rot={
-    AnyRefNode &Metatarsal1Node = ...Seg.Foot.Metatarsal1.MtPhalJoint.RotNode;
-    AnyRefNode &ProximalPhalange1 = ...Seg.Foot.ProximalPhalange1.MtPhalJoint.RotNode;
+    AnyRefNode &Metatarsal1Node = ...Segments.Foot.Metatarsal1.MtPhalJoint.RotNode;
+    AnyRefNode &ProximalPhalange1 = ...Segments.Foot.ProximalPhalange1.MtPhalJoint.RotNode;
     Type=RotAxesAngles;
   };
   MeasureOrganizer={0};//z
-}; 
+};
 
 #if BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_
 AnyKinMeasureOrg MetatarsoPhalangeal1Abduction = {
-  AnyKinRotational &Rot =.MetatarsoPhalangeal1DorsiFlexion.Rot; 
+  AnyKinRotational &Rot =.MetatarsoPhalangeal1DorsiFlexion.Rot;
   MeasureOrganizer={1};//y
 };
 #endif
@@ -366,7 +366,7 @@ AnyKinMeasureOrg MetatarsoPhalangeal1Abduction = {
 
 
 AnyKinMeasureOrg MetatarsoPhalangeal2DorsiFlexion = {
-  AnyFolder &Metatarsal2 = ..Seg.Foot.Metatarsal2.MtPhalJoint;
+  AnyFolder &Metatarsal2 = ..Segments.Foot.Metatarsal2.MtPhalJoint;
   Metatarsal2 ={
 //    AnyDrawRefFrame drw = {};
     AnyRefNode RotNode={
@@ -374,23 +374,23 @@ AnyKinMeasureOrg MetatarsoPhalangeal2DorsiFlexion = {
 //      AnyDrawRefFrame drw = {};
     };
   };
-  AnyFolder &ProximalPhalange2 = ..Seg.Foot.ProximalPhalange2.MtPhalJoint;
+  AnyFolder &ProximalPhalange2 = ..Segments.Foot.ProximalPhalange2.MtPhalJoint;
   ProximalPhalange2 ={
     AnyRefNode RotNode={
       ARel={{....Sign*-1,0,0},{0,....Sign*-1,0},{0,0,1}};
     };
   };
   AnyKinRotational Rot={
-    AnyRefNode &Metatarsal2Node = ...Seg.Foot.Metatarsal2.MtPhalJoint.RotNode;
-    AnyRefNode &ProximalPhalange2 = ...Seg.Foot.ProximalPhalange2.MtPhalJoint.RotNode;
+    AnyRefNode &Metatarsal2Node = ...Segments.Foot.Metatarsal2.MtPhalJoint.RotNode;
+    AnyRefNode &ProximalPhalange2 = ...Segments.Foot.ProximalPhalange2.MtPhalJoint.RotNode;
     Type=RotAxesAngles;
   };
   MeasureOrganizer={0};//z
-}; 
+};
 
 #if BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_
 AnyKinMeasureOrg MetatarsoPhalangeal2Abduction = {
-  AnyKinRotational &Rot =.MetatarsoPhalangeal2DorsiFlexion.Rot; 
+  AnyKinRotational &Rot =.MetatarsoPhalangeal2DorsiFlexion.Rot;
   MeasureOrganizer={1};//y
 };
 #endif
@@ -399,7 +399,7 @@ AnyKinMeasureOrg MetatarsoPhalangeal2Abduction = {
 
 
 AnyKinMeasureOrg MetatarsoPhalangeal3DorsiFlexion = {
-  AnyFolder &Metatarsal3 = ..Seg.Foot.Metatarsal3.MtPhalJoint;
+  AnyFolder &Metatarsal3 = ..Segments.Foot.Metatarsal3.MtPhalJoint;
   Metatarsal3 ={
 //    AnyDrawRefFrame drw = {};
     AnyRefNode RotNode={
@@ -407,23 +407,23 @@ AnyKinMeasureOrg MetatarsoPhalangeal3DorsiFlexion = {
 //      AnyDrawRefFrame drw = {};
     };
   };
-  AnyFolder &ProximalPhalange3 = ..Seg.Foot.ProximalPhalange3.MtPhalJoint;
+  AnyFolder &ProximalPhalange3 = ..Segments.Foot.ProximalPhalange3.MtPhalJoint;
   ProximalPhalange3 ={
     AnyRefNode RotNode={
       ARel={{....Sign*-1,0,0},{0,....Sign*-1,0},{0,0,1}};
     };
   };
   AnyKinRotational Rot={
-    AnyRefNode &Metatarsal3Node = ...Seg.Foot.Metatarsal3.MtPhalJoint.RotNode;
-    AnyRefNode &ProximalPhalange3 = ...Seg.Foot.ProximalPhalange3.MtPhalJoint.RotNode;
+    AnyRefNode &Metatarsal3Node = ...Segments.Foot.Metatarsal3.MtPhalJoint.RotNode;
+    AnyRefNode &ProximalPhalange3 = ...Segments.Foot.ProximalPhalange3.MtPhalJoint.RotNode;
     Type=RotAxesAngles;
   };
   MeasureOrganizer={0};//z
-}; 
+};
 
 #if BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_
 AnyKinMeasureOrg MetatarsoPhalangeal3Abduction = {
-  AnyKinRotational &Rot =.MetatarsoPhalangeal3DorsiFlexion.Rot; 
+  AnyKinRotational &Rot =.MetatarsoPhalangeal3DorsiFlexion.Rot;
   MeasureOrganizer={1};//y
 };
 #endif
@@ -432,7 +432,7 @@ AnyKinMeasureOrg MetatarsoPhalangeal3Abduction = {
 
 
 AnyKinMeasureOrg MetatarsoPhalangeal4DorsiFlexion = {
-  AnyFolder &Metatarsal4 = ..Seg.Foot.Metatarsal4.MtPhalJoint;
+  AnyFolder &Metatarsal4 = ..Segments.Foot.Metatarsal4.MtPhalJoint;
   Metatarsal4 ={
 //    AnyDrawRefFrame drw = {};
     AnyRefNode RotNode={
@@ -440,23 +440,23 @@ AnyKinMeasureOrg MetatarsoPhalangeal4DorsiFlexion = {
 //      AnyDrawRefFrame drw = {};
     };
   };
-  AnyFolder &ProximalPhalange4 = ..Seg.Foot.ProximalPhalange4.MtPhalJoint;
+  AnyFolder &ProximalPhalange4 = ..Segments.Foot.ProximalPhalange4.MtPhalJoint;
   ProximalPhalange4 ={
     AnyRefNode RotNode={
       ARel={{....Sign*-1,0,0},{0,....Sign*-1,0},{0,0,1}};
     };
   };
   AnyKinRotational Rot={
-    AnyRefNode &Metatarsal4Node = ...Seg.Foot.Metatarsal4.MtPhalJoint.RotNode;
-    AnyRefNode &ProximalPhalange4 = ...Seg.Foot.ProximalPhalange4.MtPhalJoint.RotNode;
+    AnyRefNode &Metatarsal4Node = ...Segments.Foot.Metatarsal4.MtPhalJoint.RotNode;
+    AnyRefNode &ProximalPhalange4 = ...Segments.Foot.ProximalPhalange4.MtPhalJoint.RotNode;
     Type=RotAxesAngles;
   };
   MeasureOrganizer={0};//z
-}; 
+};
 
 #if BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_
 AnyKinMeasureOrg MetatarsoPhalangeal4Abduction = {
-  AnyKinRotational &Rot =.MetatarsoPhalangeal4DorsiFlexion.Rot; 
+  AnyKinRotational &Rot =.MetatarsoPhalangeal4DorsiFlexion.Rot;
   MeasureOrganizer={1};//y
 };
 #endif
@@ -464,7 +464,7 @@ AnyKinMeasureOrg MetatarsoPhalangeal4Abduction = {
 
 
 AnyKinMeasureOrg MetatarsoPhalangeal5DorsiFlexion = {
-  AnyFolder &Metatarsal5 = ..Seg.Foot.Metatarsal5.MtPhalJoint;
+  AnyFolder &Metatarsal5 = ..Segments.Foot.Metatarsal5.MtPhalJoint;
   Metatarsal5 ={
 //    AnyDrawRefFrame drw = {};
     AnyRefNode RotNode={
@@ -472,23 +472,23 @@ AnyKinMeasureOrg MetatarsoPhalangeal5DorsiFlexion = {
 //      AnyDrawRefFrame drw = {};
     };
   };
-  AnyFolder &ProximalPhalange5 = ..Seg.Foot.ProximalPhalange5.MtPhalJoint;
+  AnyFolder &ProximalPhalange5 = ..Segments.Foot.ProximalPhalange5.MtPhalJoint;
   ProximalPhalange5 ={
     AnyRefNode RotNode={
       ARel={{....Sign*-1,0,0},{0,....Sign*-1,0},{0,0,1}};
     };
   };
   AnyKinRotational Rot={
-    AnyRefNode &Metatarsal5Node = ...Seg.Foot.Metatarsal5.MtPhalJoint.RotNode;
-    AnyRefNode &ProximalPhalange5 = ...Seg.Foot.ProximalPhalange5.MtPhalJoint.RotNode;
+    AnyRefNode &Metatarsal5Node = ...Segments.Foot.Metatarsal5.MtPhalJoint.RotNode;
+    AnyRefNode &ProximalPhalange5 = ...Segments.Foot.ProximalPhalange5.MtPhalJoint.RotNode;
     Type=RotAxesAngles;
   };
   MeasureOrganizer={0};//z
-}; 
+};
 
 #if BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_
 AnyKinMeasureOrg MetatarsoPhalangeal5Abduction = {
-  AnyKinRotational &Rot =.MetatarsoPhalangeal5DorsiFlexion.Rot; 
+  AnyKinRotational &Rot =.MetatarsoPhalangeal5DorsiFlexion.Rot;
   MeasureOrganizer={1};//y
 };
 
@@ -497,50 +497,50 @@ AnyKinMeasureOrg MetatarsoPhalangeal5Abduction = {
 
 AnyKinMeasureOrg ProximoDistalPhalange1DorsiFlexion = {
   AnyRevoluteJoint &JntProxPhal1 = ..Jnt.Foot.ProxPhDistPh1;
-}; 
+};
 
 
 
 AnyKinMeasureOrg ProximoMedialPhalange2DorsiFlexion = {
   AnyRevoluteJoint &JntProxPhal2 = ..Jnt.Foot.ProxPhMidPh2;
-}; 
+};
 
 
 
 AnyKinMeasureOrg ProximoMedialPhalange3DorsiFlexion = {
   AnyRevoluteJoint &JntProxPhal3 = ..Jnt.Foot.ProxPhMidPh3;
-}; 
+};
 
 
 AnyKinMeasureOrg ProximoMedialPhalange4DorsiFlexion = {
   AnyRevoluteJoint &JntProxPhal4 = ..Jnt.Foot.ProxPhMidPh4;
-}; 
+};
 
 
 
 AnyKinMeasureOrg ProximoMedialPhalange5DorsiFlexion = {
   AnyRevoluteJoint &JntProxPhal5 = ..Jnt.Foot.ProxPhMidPh5;
-}; 
+};
 
 
 AnyKinMeasureOrg MedioDistalPhalange2DorsiFlexion = {
   AnyRevoluteJoint &JntDistPhal2 = ..Jnt.Foot.MidPhDistPh2;
-}; 
+};
 
 
 AnyKinMeasureOrg MedioDistalPhalange3DorsiFlexion = {
   AnyRevoluteJoint &JntDistPhal3 = ..Jnt.Foot.MidPhDistPh3;
-}; 
+};
 
 
 AnyKinMeasureOrg MedioDistalPhalange4DorsiFlexion = {
   AnyRevoluteJoint &JntDistPhal4 = ..Jnt.Foot.MidPhDistPh4;
-}; 
+};
 
 
 AnyKinMeasureOrg MedioDistalPhalange5DorsiFlexion = {
   AnyRevoluteJoint &JntDistPhal5 = ..Jnt.Foot.MidPhDistPh5;
-}; 
+};
 
 
 
@@ -550,19 +550,19 @@ AnyKinMeasureOrg MedioDistalPhalange5DorsiFlexion = {
 
 AnyKinMeasureOrg CalcaneoCuboidDorsiFlexionJntMus = {
   AnyKinRotational Rot={
-    AnyRefNode &CalcaneusNode = ...Seg.Foot.Calcaneus.CalcaneoCuboidJoint.RotNode;
-    AnyRefNode &CuboidNode = ...Seg.Foot.Cuboid.CalcaneoCuboidJoint.RotNode;
-    AngVelOnOff = On; 
+    AnyRefNode &CalcaneusNode = ...Segments.Foot.Calcaneus.CalcaneoCuboidJoint.RotNode;
+    AnyRefNode &CuboidNode = ...Segments.Foot.Cuboid.CalcaneoCuboidJoint.RotNode;
+    AngVelOnOff = On;
     Type=RotAxesAngles;
   };
   MeasureOrganizer={0};//z
-}; 
+};
 AnyKinMeasureOrg CalcaneoCuboidAbductionJntMus = {
-  AnyKinRotational &Rot =.CalcaneoCuboidDorsiFlexionJntMus.Rot; 
+  AnyKinRotational &Rot =.CalcaneoCuboidDorsiFlexionJntMus.Rot;
   MeasureOrganizer={1};//y
 };
 AnyKinMeasureOrg CalcaneoCuboidEversionJntMus ={
-  AnyKinRotational &Rot =.CalcaneoCuboidDorsiFlexionJntMus.Rot; 
+  AnyKinRotational &Rot =.CalcaneoCuboidDorsiFlexionJntMus.Rot;
   MeasureOrganizer={2};//x
 };
 
@@ -570,19 +570,19 @@ AnyKinMeasureOrg CalcaneoCuboidEversionJntMus ={
 
 AnyKinMeasureOrg TaloNavicularDorsiFlexionJntMus = {
   AnyKinRotational Rot={
-    AnyRefNode &TalusNode = ...Seg.Foot.Talus.TaloNavicularJoint.RotNode;
-    AnyRefNode &NavicularNode = ...Seg.Foot.Navicular.TaloNavicularJoint.RotNode;
-    AngVelOnOff = On; 
+    AnyRefNode &TalusNode = ...Segments.Foot.Talus.TaloNavicularJoint.RotNode;
+    AnyRefNode &NavicularNode = ...Segments.Foot.Navicular.TaloNavicularJoint.RotNode;
+    AngVelOnOff = On;
     Type=RotAxesAngles;
   };
   MeasureOrganizer={0};//z
-}; 
+};
 AnyKinMeasureOrg TaloNavicularAbductionJntMus = {
-  AnyKinRotational &Rot =.TaloNavicularDorsiFlexionJntMus.Rot; 
+  AnyKinRotational &Rot =.TaloNavicularDorsiFlexionJntMus.Rot;
   MeasureOrganizer={1};//y
 };
 AnyKinMeasureOrg TaloNavicularEversionJntMus ={
-  AnyKinRotational &Rot =.TaloNavicularDorsiFlexionJntMus.Rot; 
+  AnyKinRotational &Rot =.TaloNavicularDorsiFlexionJntMus.Rot;
   MeasureOrganizer={2};//x
 };
 
@@ -590,19 +590,19 @@ AnyKinMeasureOrg TaloNavicularEversionJntMus ={
 
 //AnyKinMeasureOrg NaviculoMedialCuneiformDorsiFlexionJntMus = {
 //  AnyKinRotational Rot={
-//    AnyRefNode &NavicularNode = ...Seg.Foot.Navicular.MedCuneiNaviJoint.RotNode;
-//    AnyRefNode &MedialCuneiformNode = ...Seg.Foot.MedialCuneiform.CuneiNaviJoint.RotNode;
-//    AngVelOnOff = On; 
+//    AnyRefNode &NavicularNode = ...Segments.Foot.Navicular.MedCuneiNaviJoint.RotNode;
+//    AnyRefNode &MedialCuneiformNode = ...Segments.Foot.MedialCuneiform.CuneiNaviJoint.RotNode;
+//    AngVelOnOff = On;
 //    Type=RotAxesAngles;
 //  };
 //  MeasureOrganizer={0};//z
-//}; 
+//};
 //AnyKinMeasureOrg NaviculoMedialCuneiformAbductionJntMus = {
-//  AnyKinRotational &Rot =.NaviculoMedialCuneiformDorsiFlexionJntMus.Rot; 
+//  AnyKinRotational &Rot =.NaviculoMedialCuneiformDorsiFlexionJntMus.Rot;
 //  MeasureOrganizer={1};//y
 //};
 //AnyKinMeasureOrg NaviculoMedialCuneiformEversionJntMus ={
-//  AnyKinRotational &Rot =.NaviculoMedialCuneiformDorsiFlexionJntMus.Rot; 
+//  AnyKinRotational &Rot =.NaviculoMedialCuneiformDorsiFlexionJntMus.Rot;
 //  MeasureOrganizer={2};//x
 //};
 
@@ -610,19 +610,19 @@ AnyKinMeasureOrg TaloNavicularEversionJntMus ={
 
 //AnyKinMeasureOrg TarsoMetatarsal1DorsiFlexionJntMus = {
 //  AnyKinRotational Rot={
-//    AnyRefNode &MedialCuneiformNode = ...Seg.Foot.MedialCuneiform.TarsoMtJoint.RotNode;
-//    AnyRefNode &Metatarsal1 = ...Seg.Foot.Metatarsal1.TarsoMtJoint.RotNode;
-//    AngVelOnOff = On; 
+//    AnyRefNode &MedialCuneiformNode = ...Segments.Foot.MedialCuneiform.TarsoMtJoint.RotNode;
+//    AnyRefNode &Metatarsal1 = ...Segments.Foot.Metatarsal1.TarsoMtJoint.RotNode;
+//    AngVelOnOff = On;
 //    Type=RotAxesAngles;
 //  };
 //  MeasureOrganizer={0};//z
-//}; 
+//};
 //AnyKinMeasureOrg TarsoMetatarsal1AbductionJntMus = {
-//  AnyKinRotational &Rot =.TarsoMetatarsal1DorsiFlexionJntMus.Rot; 
+//  AnyKinRotational &Rot =.TarsoMetatarsal1DorsiFlexionJntMus.Rot;
 //  MeasureOrganizer={1};//y
 //};
 //AnyKinMeasureOrg TarsoMetatarsal1EversionJntMus ={
-//  AnyKinRotational &Rot =.TarsoMetatarsal1DorsiFlexionJntMus.Rot; 
+//  AnyKinRotational &Rot =.TarsoMetatarsal1DorsiFlexionJntMus.Rot;
 //  MeasureOrganizer={2};//x
 //};
 
@@ -630,19 +630,19 @@ AnyKinMeasureOrg TaloNavicularEversionJntMus ={
 
 //AnyKinMeasureOrg TarsoMetatarsal5SkewDorsiFlexionJntMus = {
 //  AnyKinRotational Rot={
-//    AnyRefNode &CuboidNode = ...Seg.Foot.Cuboid.TarsoMt5Joint.RotNode;
-//    AnyRefNode &Metatarsal5 = ...Seg.Foot.Metatarsal5.TarsoMtJoint.RotNode;
-//    AngVelOnOff = On; 
+//    AnyRefNode &CuboidNode = ...Segments.Foot.Cuboid.TarsoMt5Joint.RotNode;
+//    AnyRefNode &Metatarsal5 = ...Segments.Foot.Metatarsal5.TarsoMtJoint.RotNode;
+//    AngVelOnOff = On;
 //    Type=RotAxesAngles;
 //  };
 //  MeasureOrganizer={0};//z
-//}; 
+//};
 //AnyKinMeasureOrg TarsoMetatarsal5AbductionJntMus = {
-//  AnyKinRotational &Rot =.TarsoMetatarsal5SkewDorsiFlexionJntMus.Rot; 
+//  AnyKinRotational &Rot =.TarsoMetatarsal5SkewDorsiFlexionJntMus.Rot;
 //  MeasureOrganizer={1};//y
 //};
 //AnyKinMeasureOrg TarsoMetatarsal5SkewEversionJntMus = {
-//  AnyKinRotational &Rot =.TarsoMetatarsal5SkewDorsiFlexionJntMus.Rot; 
+//  AnyKinRotational &Rot =.TarsoMetatarsal5SkewDorsiFlexionJntMus.Rot;
 //  MeasureOrganizer={2};//x
 //};
 

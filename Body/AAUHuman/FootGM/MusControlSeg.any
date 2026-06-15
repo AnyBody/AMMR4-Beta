@@ -10,8 +10,8 @@
 
   AnySeg FDLControlSeg =
   {
-    r0 ??= ....Seg.Foot.MedialCuneiform.r0+....Seg.Foot.MedialCuneiform.FDLSegNode.sRel*....Seg.Foot.MedialCuneiform.Axes0';
-    Axes0 = ....Seg.Foot.MedialCuneiform.Axes0*RotMat(0.5*pi,z);
+    r0 ??= ....Segments.Foot.MedialCuneiform.r0+....Segments.Foot.MedialCuneiform.FDLSegNode.sRel*....Segments.Foot.MedialCuneiform.Axes0';
+    Axes0 = ....Segments.Foot.MedialCuneiform.Axes0*RotMat(0.5*pi,z);
     Mass = 0;
     Jii = {0, 0, 0};
     //AnyDrawRefFrame drw={ScaleXYZ=3*{0.01,0.01,0.01};RGB={0,0,1};};
@@ -21,8 +21,8 @@
 
   AnySphericalJoint FDLControlSegJnt =
   {
-//    AnyRefFrame &ref1 = ....Seg.Foot.MedialCuneiform.FDLSegNode;
-  AnyRefFrame &ref1 =  ....Seg.Foot.MedialCuneiform.FDLSegNode;
+//    AnyRefFrame &ref1 = ....Segments.Foot.MedialCuneiform.FDLSegNode;
+  AnyRefFrame &ref1 =  ....Segments.Foot.MedialCuneiform.FDLSegNode;
     AnyRefFrame &ref2 = .FDLControlSeg;
      Constraints.Reaction={ #include "DrawForceInJoint.any"};
 
@@ -37,7 +37,7 @@
       {
         Ref = 0;
         AnyRefFrame &ref1 = ...FDLControlSeg;
-        AnyRefFrame &ref2 = ......Seg.Foot.Metatarsal5.FDLSegNode;
+        AnyRefFrame &ref2 = ......Segments.Foot.Metatarsal5.FDLSegNode;
       };
     };
     AnyKinMeasureOrg Measure2 = {
@@ -46,7 +46,7 @@
       {
         Ref = 0;
         AnyRefFrame &ref1 = ...FDLControlSeg;
-        AnyRefFrame &ref2 = ......Seg.Foot.Calcaneus.SustentaculumTali;
+        AnyRefFrame &ref2 = ......Segments.Foot.Calcaneus.SustentaculumTali;
       };
     };
     Reaction.Type = {On, On, On};
@@ -148,7 +148,7 @@ Constraints.Reaction={ #include "DrawForceInJoint.any"};
         {
           Ref = 0;
           AnyRefFrame &ref1 = ....FDLControlSeg;
-          AnyRefFrame &ref2 = .......Seg.Foot.Metatarsal5.FDLSegNode;
+          AnyRefFrame &ref2 = .......Segments.Foot.Metatarsal5.FDLSegNode;
         };
       };
       AnyPrismaticJoint &Jnt = ..FDLDummySegJnt;
@@ -171,19 +171,19 @@ Constraints.Reaction={ #include "DrawForceInJoint.any"};
       AnyKinLinear Lin1 =
       {
         Ref = 0;
-        AnyRefFrame &ref1 = ......Seg.Foot.Navicular;
+        AnyRefFrame &ref1 = ......Segments.Foot.Navicular;
         AnyRefFrame &ref2 = ...FDLDummySeg.FlexorDigitorumLongusViaNode8;
       };
       AnyKinLinear Lin2 =
       {
         Ref = 0;
-        AnyRefFrame &ref1 = ......Seg.Foot.IntermediateCuneiform;
+        AnyRefFrame &ref1 = ......Segments.Foot.IntermediateCuneiform;
         AnyRefFrame &ref2 = ...FDLDummySeg.LB2_Org;
       };
       AnyKinLinear Lin3 =
       {
         Ref = 0;
-        AnyRefFrame &ref1 = ......Seg.Foot.LateralCuneiform;
+        AnyRefFrame &ref1 = ......Segments.Foot.LateralCuneiform;
         AnyRefFrame &ref2 = ...FDLDummySeg.LB5_Org;
       };
     };
@@ -204,19 +204,19 @@ Constraints.Reaction={ #include "DrawForceInJoint.any"};
       AnyKinLinear Lin1 =
       {
         Ref = 0;
-        AnyRefFrame &ref1 = ......Seg.Foot.Navicular;
+        AnyRefFrame &ref1 = ......Segments.Foot.Navicular;
         AnyRefFrame &ref2 = ...FDLDummySeg.FlexorDigitorumLongusViaNode8;
       };
       AnyKinLinear Lin2 =
       {
         Ref = 0;
-        AnyRefFrame &ref1 = ......Seg.Foot.IntermediateCuneiform;
+        AnyRefFrame &ref1 = ......Segments.Foot.IntermediateCuneiform;
         AnyRefFrame &ref2 = ...FDLDummySeg.LB2_Org;
       };
       AnyKinLinear Lin3 =
       {
         Ref = 0;
-        AnyRefFrame &ref1 = ......Seg.Foot.LateralCuneiform;
+        AnyRefFrame &ref1 = ......Segments.Foot.LateralCuneiform;
         AnyRefFrame &ref2 = ...FDLDummySeg.LB5_Org;
       };
     };

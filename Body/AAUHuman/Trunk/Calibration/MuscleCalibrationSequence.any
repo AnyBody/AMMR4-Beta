@@ -1,32 +1,32 @@
 //This will run calibration on the spine ligaments
 AnyFolder ThoraxMuscleCalibration = {
   AnyFolder CalibrationSettings ={
-    AnyComponentDefinition obj = {};  
+    AnyComponentDefinition obj = {};
     AnyFolder& Segments =  ...BodyModel.Trunk.Segments;
     #if BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_BUCKLE_
     AnyFolder& Buckle = ...BodyModel.Trunk.Buckle;
     #endif
     #if BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
-    AnyFolder& Abdominal = ...BodyModel.Trunk.Abdominal;    
+    AnyFolder& Abdominal = ...BodyModel.Trunk.Abdominal;
     #endif
-    
-    
+
+
     AnyFolder& Joints =  ...BodyModel.Trunk.Joints;
     AnyFolder& Muscles =  ...BodyModel.Trunk.Muscles;
     #if BM_LEG_MODEL & BM_LEG_RIGHT
-    AnyFolder& RightThigh = ...BodyModel.Right.Leg.Seg.Thigh;
+    AnyFolder& RightThigh = ...BodyModel.Right.Leg.Segments.Thigh;
     AnyFolder& RightHipJoint =  ...BodyModel.Right.Leg.Jnt.Hip;
     #endif
     #if BM_LEG_MODEL & BM_LEG_LEFT
-    AnyFolder& LeftThigh = ...BodyModel.Left.Leg.Seg.Thigh;
+    AnyFolder& LeftThigh = ...BodyModel.Left.Leg.Segments.Thigh;
     AnyFolder& LeftHipJoint =  ...BodyModel.Left.Leg.Jnt.Hip;
     #endif
-    
-    
-    
-    
+
+
+
+
     AnyFixedRefFrame ground = {
-      AnyRefNode node = { 
+      AnyRefNode node = {
         ARel=..Segments.PelvisSeg.Axes0;
         sRel=..Segments.PelvisSeg.r0;
       };
@@ -45,8 +45,8 @@ AnyFolder ThoraxMuscleCalibration = {
       };
     };
 
-    
-    
+
+
     AnyKinEqSimpleDriver AllRelevantJoints = {
       AnyKinMeasureOrg DOFs = {
         AnyKinMeasure &u1 = .....BodyModel.Interface.Trunk.PelvisThoraxExtension;
@@ -74,24 +74,24 @@ AnyFolder ThoraxMuscleCalibration = {
 
   // The study: Operations to be performed on the model
   AnyBodyCalibrationStudy CalibrationStudy = {
-    AnyFolder &ref=.CalibrationSettings; 
+    AnyFolder &ref=.CalibrationSettings;
     nStep = 1;
     InitialConditions.SmallStepAssumptionOnOff = Off;
     Kinematics.SmallStepAssumptionOnOff = Off;
     Kinematics.PosAnalysisOnlyOnOff = On;
     InitialConditions.PosAnalysisOnlyOnOff = On;
-    
+
     /// Array of muscles to calibrate
     /// The Pelvic floor muscles are excluded as they cross the Pelvis-Sacrum joint which has no movement.
     /// This gives them zero range of motion and thereby no fiberlength [Lf0] when calibrated.
     MuscleArr = set_difference(
-      ObjSearchRecursive(&...BodyModel.Trunk.Muscles, "*", "AnyMuscle", 3), 
+      ObjSearchRecursive(&...BodyModel.Trunk.Muscles, "*", "AnyMuscle", 3),
       ObjSearch(&Main.HumanModel.BodyModel.Trunk.Muscles, "*.Pubococcygeus.*"),
       ObjSearch(&Main.HumanModel.BodyModel.Trunk.Muscles, "*.Puborectalis.*")
     );
   };
 };
-  
-CalibrationSequence ={ 
+
+CalibrationSequence ={
   AnyOperation &ThoraxMusCal = .ThoraxMuscleCalibration.CalibrationStudy.TendonLengthAdjustment;
 };
