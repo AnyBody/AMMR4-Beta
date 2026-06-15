@@ -20,7 +20,7 @@ AnyFolder LegCal4={
 
   AnyRevoluteJoint PelvisGround={
     AnyRefFrame &Ground = .ground.node;
-    AnySeg &Sacrum= Main.HumanModel.Right.Leg.Seg.Pelvis;
+    AnySeg &Sacrum= Main.HumanModel.Right.Leg.Segments.Pelvis;
     Axis=z;
   };
 
