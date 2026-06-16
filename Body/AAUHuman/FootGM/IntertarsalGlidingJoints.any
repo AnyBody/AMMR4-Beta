@@ -24,7 +24,7 @@ AnyFolder IntertarsalGlidingJoints = {
 
 
   //round version
-  Seg.MedialCuneiform = {
+  Segments.MedialCuneiform = {
 
     AnyRefNode EllipsoidNodeDorsal = {
       sRel = .Scale({0.03726055, -0.006417992, ......Sign*-0.00888518});
@@ -62,7 +62,7 @@ AnyFolder IntertarsalGlidingJoints = {
   };
 
 
-  Seg.IntermediateCuneiform = {
+  Segments.IntermediateCuneiform = {
 
     AnyRefNode EllipsoidNodeDorsal1 = {
       sRel = .Scale({0.03838044, -0.0020309633, ......Sign*-0.003424041});
@@ -137,7 +137,7 @@ AnyFolder IntertarsalGlidingJoints = {
 
 
   //round version
-  Seg.LateralCuneiform = {
+  Segments.LateralCuneiform = {
 
     AnyRefNode EllipsoidNodeDorsal = {
       sRel = .Scale({0.0354965, 0.005603182, ......Sign*0.01801589});
@@ -464,7 +464,7 @@ AnyFolder IntertarsalGlidingJoints = {
 
   };
 
-  Seg.Navicular = {
+  Segments.Navicular = {
     AnyRefNode EllipsoidNode = {
       sRel = .Scale({0.02879977, 0.03029272, ......Sign*0.005409719});
       ARel = ...NaviCuneiEllipsoidDummySeg.EllipsoidNode.ARel;
@@ -554,7 +554,7 @@ AnyFolder IntertarsalGlidingJoints = {
 
 
   //Round ellipsoid covering the whole bone, works better.
-  Seg.Cuboid = {
+  Segments.Cuboid = {
 
     AnyRefNode EllipsoidNodeDorsal = {
       sRel = .Scale({0.02428825, 0.02301223, ......Sign*0.02806874});
