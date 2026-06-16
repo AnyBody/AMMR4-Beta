@@ -30,7 +30,7 @@
   AnyKinEqSimpleDriver RAnkleX = {
     AnyKinLinear AnklePos = {
       AnyFixedRefFrame &Ground = Main.Model.EnvironmentModel.GlobalRef;
-      AnyRefNode &Ankle = ..LegR.Seg.Foot.AnkleJoint;
+      AnyRefNode &Ankle = ..LegR.Segments.Foot.AnkleJoint;
     };
     MeasureOrganizer = {0};  // Only the x coordinate
     DriverPos = {0.0};
@@ -88,13 +88,13 @@
 
 
     AnyKinRotational rot = {
-      AnySeg &ref1=..LegR.Seg.Foot;
+      AnySeg &ref1=..LegR.Segments.Foot;
       AnyFixedRefFrame &ref2 = ....EnvironmentModel.GlobalRef;
       Type = RotVector;
     };
 
     AnyKinLinear RightFootLinMeasure = {
-      AnySeg &ref1=..LegR.Seg.Foot;
+      AnySeg &ref1=..LegR.Segments.Foot;
       AnyFixedRefFrame &ref2 = ....EnvironmentModel.GlobalRef;
     };
 

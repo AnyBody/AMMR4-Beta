@@ -77,7 +77,7 @@ AnyKinEqSimpleDriver LToeGroundConstraint ={
   AnyKinEqSimpleDriver RAnkleX = {
     AnyKinLinear AnklePos = {
       AnyFixedRefFrame &Ground = Main.Model.EnvironmentModel.GlobalRef;
-      AnyRefNode &Ankle = ..LegR.Seg.Talus.AnkleJoint;
+      AnyRefNode &Ankle = ..LegR.Segments.Talus.AnkleJoint;
     };
     MeasureOrganizer = {0};  // Only the x coordinate
     DriverPos = {0.0};
@@ -87,7 +87,7 @@ AnyKinEqSimpleDriver LToeGroundConstraint ={
   AnyKinEqSimpleDriver LAnkleX ={
     AnyKinLinear AnklePos = {
       AnyFixedRefFrame &Ground = Main.Model.EnvironmentModel.GlobalRef;
-      AnyRefNode &Ankle = ..LegL.Seg.Talus.AnkleJoint;
+      AnyRefNode &Ankle = ..LegL.Segments.Talus.AnkleJoint;
     };
     MeasureOrganizer = {0};  // Only the x coordinate
     DriverPos = {0.0};
@@ -384,13 +384,13 @@ AnyKinEqSimpleDriver LToeGroundConstraint ={
 
 
     AnyKinRotational rot = {
-      AnyRefFrame &ref1=..LegR.Seg.Foot.Calcaneus;
+      AnyRefFrame &ref1=..LegR.Segments.Foot.Calcaneus;
       AnyFixedRefFrame &ref2 = ....EnvironmentModel.GlobalRef;
       Type = RotVector;
     };
 
     AnyKinLinear RightFootLinMeasure = {
-      AnyRefFrame &ref1=..LegR.Seg.Foot.Calcaneus;
+      AnyRefFrame &ref1=..LegR.Segments.Foot.Calcaneus;
       AnyFixedRefFrame &ref2 = ....EnvironmentModel.GlobalRef;
     };
 
@@ -399,11 +399,11 @@ AnyKinEqSimpleDriver LToeGroundConstraint ={
   AnyReacForce LeftFootReaction = {
 
     AnyKinLinear LeftFootLinMeasure = {
-      AnyRefFrame &ref1=..LegL.Seg.Foot.Calcaneus;
+      AnyRefFrame &ref1=..LegL.Segments.Foot.Calcaneus;
       AnyFixedRefFrame &ref2 = ....EnvironmentModel.GlobalRef;
     };
     AnyKinRotational LeftFootRotMeasure = {
-      AnyRefFrame &ref1=..LegL.Seg.Foot.Calcaneus;
+      AnyRefFrame &ref1=..LegL.Segments.Foot.Calcaneus;
       AnyFixedRefFrame &ref2 = ....EnvironmentModel.GlobalRef;
       Type = RotVector;
     };

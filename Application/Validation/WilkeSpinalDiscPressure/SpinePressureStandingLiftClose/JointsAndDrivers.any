@@ -141,7 +141,7 @@ AnyFolder Drivers = {
   AnyKinEqSimpleDriver RAnkleX = {
     AnyKinLinear AnklePos = {
       AnyFixedRefFrame &Ground = Main.Model.EnvironmentModel.GlobalRef;
-      AnyRefNode &Ankle = ..LegR.Seg.Talus.AnkleJoint;
+      AnyRefNode &Ankle = ..LegR.Segments.Talus.AnkleJoint;
     };
     MeasureOrganizer = {0};  // Only the x coordinate
     DriverPos = {0.0};
@@ -152,7 +152,7 @@ AnyFolder Drivers = {
   AnyKinEqSimpleDriver LAnkleX ={
     AnyKinLinear AnklePos = {
       AnyFixedRefFrame &Ground = Main.Model.EnvironmentModel.GlobalRef;
-      AnyRefNode &Ankle = ..LegL.Seg.Talus.AnkleJoint;
+      AnyRefNode &Ankle = ..LegL.Segments.Talus.AnkleJoint;
     };
     MeasureOrganizer = {0};  // Only the x coordinate
     DriverPos = {0.0};
@@ -425,7 +425,7 @@ AnyFolder Drivers = {
 
     AnyFolder ToeLateralContactNodeLeft= {
 
-      AnyRefFrame &TargetObject=  ..LegL.Seg.Foot.ProximalPhalange5.ToeLateralContactNode;//Location where the force is applied
+      AnyRefFrame &TargetObject=  ..LegL.Segments.Foot.ProximalPhalange5.ToeLateralContactNode;//Location where the force is applied
       AnyRefFrame &BaseObject=Main.Model.EnvironmentModel.GlobalRef; //Object which delivers the forces
       AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 
@@ -449,7 +449,7 @@ AnyFolder Drivers = {
 
 
     AnyFolder ToeMedialContactNodeLeft= {
-      AnyRefNode &TargetObject = ..LegL.Seg.Foot.ProximalPhalange1.ToeMedialContactNode;
+      AnyRefNode &TargetObject = ..LegL.Segments.Foot.ProximalPhalange1.ToeMedialContactNode;
       AnyRefFrame &BaseObject=Main.Model.EnvironmentModel.GlobalRef; //Object which delivers the forces
       AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 
@@ -474,7 +474,7 @@ AnyFolder Drivers = {
 
 
     AnyFolder HeelSupportLeft = {
-      AnyRefNode &TargetObject = ..LegL.Seg.Foot.Calcaneus.HeelContactNodeLow;
+      AnyRefNode &TargetObject = ..LegL.Segments.Foot.Calcaneus.HeelContactNodeLow;
       AnyRefFrame &BaseObject=Main.Model.EnvironmentModel.GlobalRef; //Object which delivers the forces
       AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 
@@ -498,7 +498,7 @@ AnyFolder Drivers = {
     };
 
     AnyFolder ToeMedialContactNodeRight = {
-      AnyRefNode &TargetObject = ..LegR.Seg.Foot.ProximalPhalange1.ToeMedialContactNode;
+      AnyRefNode &TargetObject = ..LegR.Segments.Foot.ProximalPhalange1.ToeMedialContactNode;
       AnyRefFrame &BaseObject=Main.Model.EnvironmentModel.GlobalRef; //Object which delivers the forces
       AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 
@@ -521,7 +521,7 @@ AnyFolder Drivers = {
     };
 
     AnyFolder ToeLateralContactNodeRight = {
-      AnyRefNode &TargetObject  = ..LegR.Seg.Foot.ProximalPhalange5.ToeLateralContactNode;
+      AnyRefNode &TargetObject  = ..LegR.Segments.Foot.ProximalPhalange5.ToeLateralContactNode;
       AnyRefFrame &BaseObject=Main.Model.EnvironmentModel.GlobalRef; //Object which delivers the forces
       AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 
@@ -547,7 +547,7 @@ AnyFolder Drivers = {
 
     AnyFolder HeelSupportRight = {
 
-      AnyRefNode &TargetObject = ..LegR.Seg.Foot.Calcaneus.HeelContactNodeLow;
+      AnyRefNode &TargetObject = ..LegR.Segments.Foot.Calcaneus.HeelContactNodeLow;
       AnyRefFrame &BaseObject=Main.Model.EnvironmentModel.GlobalRef; //Object which delivers the forces
       AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 

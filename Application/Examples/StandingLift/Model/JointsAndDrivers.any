@@ -140,9 +140,9 @@ AnyFolder Drivers = {
     AnyKinLinear AnklePos = {
       AnyFixedRefFrame &Ground = Main.Model.EnvironmentModel.GlobalRef;
       #if BM_LEG_MODEL == _LEG_MODEL_LEG_
-        AnyRefNode &Ankle = ..LegR.Seg.Foot.AnkleJoint;
+        AnyRefNode &Ankle = ..LegR.Segments.Foot.AnkleJoint;
       #else
-        AnyRefNode &Ankle = ..LegR.Seg.Talus.AnkleJoint;
+        AnyRefNode &Ankle = ..LegR.Segments.Talus.AnkleJoint;
       #endif
     };
     MeasureOrganizer = {0};  // Only the x coordinate
@@ -155,9 +155,9 @@ AnyFolder Drivers = {
     AnyKinLinear AnklePos = {
       AnyFixedRefFrame &Ground = Main.Model.EnvironmentModel.GlobalRef;
       #if BM_LEG_MODEL == _LEG_MODEL_LEG_
-        AnyRefNode &Ankle = ..LegL.Seg.Foot.AnkleJoint;
+        AnyRefNode &Ankle = ..LegL.Segments.Foot.AnkleJoint;
       #else
-        AnyRefNode &Ankle = ..LegL.Seg.Talus.AnkleJoint;
+        AnyRefNode &Ankle = ..LegL.Segments.Talus.AnkleJoint;
       #endif
     };
     MeasureOrganizer = {0};  // Only the x coordinate
@@ -456,7 +456,7 @@ AnyFolder Drivers = {
 
     ConditionalContactFootPlaneClass LeftFootSupport (
     BaseObject = Main.Model.EnvironmentModel.GlobalRef,
-    Foot = ..LegL.Seg.Foot,
+    Foot = ..LegL.Segments.Foot,
     DisplayTriggerVolume = 1,
     DisplayTargetNode =1
     ) = {
@@ -473,7 +473,7 @@ AnyFolder Drivers = {
 
     ConditionalContactFootPlaneClass RightFootSupport (
     BaseObject = Main.Model.EnvironmentModel.GlobalRef,
-    Foot = ..LegR.Seg.Foot,
+    Foot = ..LegR.Segments.Foot,
     DisplayTriggerVolume = 0,
     DisplayTargetNode =1
     ) = {
