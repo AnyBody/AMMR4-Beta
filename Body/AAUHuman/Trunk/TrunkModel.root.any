@@ -20,6 +20,18 @@ AnyFolder Data = {
   #include "TrunkMassDistribution.any"
 };
 
+  #if BM_COMPATIBILITY_BODYMODEL_STRUCTURE   ==   ON
+    AnyFolder &ModelParameters = Data.unscaled.ModelParameters;
+    AnyFolder &MusclesSpineRight = Muscles.Right;
+    AnyFolder &MusclesSpineLeft = Muscles.Left;
+    AnyFolder &MusclesSpine = Muscles;
+    AnyFolder &JointsLumbar = Joints;
+    AnyFolder &JointsCervicalSpine = Joints;
+    AnyFolder &SegmentsLumbar = Segments;
+    AnyFolder &SegmentsCervicalSpine = Segments;
+    AnyFolder &SegmentsRibCage = Segments;
+    AnyFolder &SegmentsThorax = Segments;
+  #endif
 
 /* Segment & node construction section */
 AnyFolder Segments = {
