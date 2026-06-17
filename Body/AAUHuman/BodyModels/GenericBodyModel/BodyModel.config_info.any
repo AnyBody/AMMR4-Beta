@@ -253,7 +253,7 @@ AnyMessage msg_BM_ARM_DETAILED_HAND = { TriggerPreProcess = On; Type = MSG_Messa
 #endif
 
 #ifdef BM_ARM_DELTOID_WRAPPING
-// Switch for deltoid wrapping. Setting this to OFF or _DELTOID_WRAPPING_RAKE_ will revert to the older rake based implementation of the deltoid.
+// Switch for deltoid wrapping using the elipsoids or cylinders implementation.
 AnyMessage msg_BM_ARM_DELTOID_WRAPPING = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_ARM_DELTOID_WRAPPING);};
 #endif
 
@@ -895,7 +895,7 @@ AnyIntVar value_BM_ARM_DETAILED_HAND=BM_ARM_DETAILED_HAND;
 #endif
 
 #ifdef BM_ARM_DELTOID_WRAPPING
-// Switch for deltoid wrapping. Setting this to OFF or _DELTOID_WRAPPING_RAKE_ will revert to the older rake based implementation of the deltoid.
+// Switch for deltoid wrapping using the elipsoids or cylinders implementation.
 AnyIntVar value_BM_ARM_DELTOID_WRAPPING=BM_ARM_DELTOID_WRAPPING;
 #endif
 
