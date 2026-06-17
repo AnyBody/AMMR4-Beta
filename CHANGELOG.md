@@ -234,6 +234,10 @@ You can revert to the TLEM foot model by setting:
 
 ### ❌ Removed
 
+* The deprecated deltoid wrapping method `_DELTOID_WRAPPING_RAKE_` has been
+  removed. The deltoid wrapping implementation now only uses the cylinder
+  or ellipsoid wrapping methods.
+
 * The deprecated TLEM 1 model has been removed from the AMMR. The TLEM 2.2 model is now the only TLEM based model
   available in the AMMR. It is activated by default or by setting:
 
