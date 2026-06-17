@@ -20,12 +20,11 @@ inertia and mass-scaling system** based on `AnyInertia` subclasses provides more
 accurate mass distribution and geometry-based inertia for the new thoracic and
 abdominal models.
 
-Beyond new features, the **shoulder-arm model** received anatomical frame, scaling,
-and inertia updates, and the **default pelvis morphology** now comes from the trunk
-model. Muscle elements in the arm and TLEM2 leg have been regrouped into folders
-representing physiological muscles — backward compatibility switches are available
-for both changes during the transition period. The deprecated **TLEM 1 model** has
-been removed; TLEM 2.2 is now the only available leg model.
+Beyond new features, the whole bodymodel received anatomical frame, scaling, and inertia
+updates. Muscle elements in the whole body have been regrouped into folders representing
+physiological muscles — backward compatibility switches are available mor migrating from
+AMMR3. The bodymodel folder structure have been unified across each bodypart for easier overview and aggregations. The **default pelvis morphology** now comes from the trunk model.The deprecated
+**TLEM 1 model** has been removed; TLEM 2.2 is now the only available leg model.
 
 ### New Features
 
@@ -186,7 +185,18 @@ You can [enable backwards compatibility](changes-to-bodymodel-folders) by settin
 
 (changes-to-bodymodel-folders)=
 
-* Many of the key folders inside the Leg and Arm models have been renamed to create a unified structure across the full BodyModel. To bring back the old structure we have temporarily included a backward compatibility switch `BM_COMPATIBILITY_BODYMODEL_STRUCTURE` To ensure a smooth transition.
+* Many of the key folders inside the bodymodel have been renamed to create a unified structure across the full BodyModel. To bring back the old structure we have temporarily included a backward compatibility switch `BM_COMPATIBILITY_BODYMODEL_STRUCTURE` To ensure a smooth transition. The switch re-introduces the old folders as references to the new ones and with a deprecation warning emitted when used. A detailed migration guide can be found in the AMMR4 documentation.
+
+All the data of the bodymodel have a new unified structure. In each bodypart there is a `Data` folder with the following structure:
+
+```txt
+Data: 
+  - unscaled: 
+    - ModelParameters
+    - STL
+    - StandardParameters
+  - ...
+```
 
 :::{admonition} Default foot model changed.
 :class: warning

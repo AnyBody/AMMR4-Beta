@@ -66,6 +66,19 @@ You can enable the old names and locations by setting
 This will re-create the old folders as references to the new ones and ease the transition
 to use the new structure.
 
+Examples of folders renamed are:
+
+- `Seg` -> `Segments`
+- `Jnt` -> `Joints`
+- `Mus` -> `Muscles`
+
+Some folders have also been moved to another location. Examples are:
+
+- `ModelParameters`-> `Data.unscaled.ModelParameters`
+- `StandardParameters` -> `Data.unscaled.StandardParameters`
+
+Troughout the bodymodel a lot of reference objects have been removed to make the Model Tree view focus more on the most relevant model objects and not references only used for convienient development.
+
 ### MoCap models
 
 The metatarsal joint nodes in the TLEM foot model have been updated to be at the joint
