@@ -33,16 +33,16 @@ Please find a description of the model in the seg.any file.
   #include "JointTypeDefinitions.any"
 
   #if BM_COMPATIBILITY_BODYMODEL_STRUCTURE  ==  ON
-    // AnyMessageOnObjectUse DeprecatedFolderMessage = {
-    //     Objects = {&.ModelParameters, &.Mus, &.Jnt, &.Seg};
-    //     DeprecationMessage = On;
-    //     Message = strformat("\n"+
-    //     "------------------------------------------------------------------------------------------------------\n"+
-    //     "    The folder structure of the leg model has been deprecated.\n"+
-    //     "    Please update your model to use the new structure.\n"+
-    //     "    See the changelog and AMMR4 migration guide for more information.\n"+
-    //     "-------------------------------------------------------------------------------------------------------\n");
-    // };
+    AnyMessageOnObjectUse DeprecatedFolderMessage = {
+      Objects = {&.Seg};
+      DeprecationMessage = On;
+      Message = strformat("\n"+
+      "----------------------------------------------------------------------------\n"+
+      "    The folder structure of the leg model has been deprecated.\n"+
+      "    Please update your model to use the new structure.\n"+
+      "    See the changelog and AMMR4 migration guide for more information.\n"+
+      "-----------------------------------------------------------------------------\n");
+    };
     // AnyFolder &ModelParameters = Data.unscaled.ModelParameters;
     // AnyFolder &Mus = Muscles;
     // AnyFolder &Jnt = Joints;

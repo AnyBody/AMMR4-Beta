@@ -36,7 +36,14 @@ Main = {
   // This allows us to check if any references (that points to muscles) exist in the folder
 
   // NB. could have been cool if ObjSearch could resolve references when applying class filter as argument...
-  AnyObjectPtr arm_muscles_30_location = ObjFilterByClass(ObjRefResolve(ObjFilterByClass(ObjSearch("Main.HumanModel.BodyModel.Right.ShoulderArm.Muscles.*"), "AnyRefObject")), "AnyMuscle");
+  AnyObjectPtr arm_muscles_30_location = ObjFilterByClass(
+    ObjRefResolve(
+      ObjFilterByClass(
+        ObjSearch("Main.HumanModel.BodyModel.Right.ShoulderArm.Muscles.*"), "AnyRefObject"
+      )
+    ),
+    "AnyMuscle"
+  );
   AnyInt OldStructure = bool(NumElemOf(arm_muscles_30_location));
 
   #if BM_COMPATIBILITY_MUSCLE_STRUCTURE == ON
@@ -61,8 +68,5 @@ Main = {
     AnyFolder &seg_trunk_new = trunk.Segments;
     AnyFolder &seg_rArm_new = rArm.Segments;
     AnyFolder &seg_rLeg_new = rLeg.Segments;
-
-
-
   #endif
 };

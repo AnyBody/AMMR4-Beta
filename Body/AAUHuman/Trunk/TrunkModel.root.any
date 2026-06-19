@@ -21,20 +21,20 @@ AnyFolder Data = {
 };
 
   #if BM_COMPATIBILITY_BODYMODEL_STRUCTURE   ==   ON
-    // AnyMessageOnObjectUse DeprecatedFolderMessage = {
-      //   Objects = {
-      //     &.ModelParameters, &.MusclesSpineRight,, &MusclesSpineLeft,
-      //     &MusclesSpine &.JointsLumbar, &.SegmentsLumbar, &.JointsCervicalSpine,
-      //     &.SegmentsCervicalSpine, &.SegmentsRibCage, &.SegmentsThorax
-      //   };
-      //   DeprecationMessage = On;
-      //   Message = strformat("\n"+
-      //   "------------------------------------------------------------------------------------------------------\n"+
-      //   "    The folder structure of the trunk model has been deprecated.\n"+
-      //   "    Please update your model to use the new structure.\n"+
-      //   "    See the changelog and AMMR4 migration guide for more information.\n"+
-      //   "-------------------------------------------------------------------------------------------------------\n");
-    // };
+    AnyMessageOnObjectUse DeprecatedFolderMessage = {
+      Objects = {
+        &.ModelParameters, &.MusclesSpineRight, &.MusclesSpineLeft,
+        &.MusclesSpine, &.JointsLumbar, &.SegmentsLumbar, &.JointsCervicalSpine,
+        &.SegmentsCervicalSpine, &.SegmentsRibCage, &.SegmentsThorax
+      };
+      DeprecationMessage = On;
+      Message = strformat("\n"+
+      "-------------------------------------------------------------------------------\n"+
+      "    The folder structure of the trunk model has been deprecated.\n"+
+      "    Please update your model to use the new structure.\n"+
+      "    See the changelog and AMMR4 migration guide for more information.\n"+
+      "---------------------------------------------------------------------------- ---\n");
+    };
 
     AnyFolder &ModelParameters = Data.unscaled.ModelParameters;
     AnyFolder &MusclesSpineRight = Muscles.Right;
