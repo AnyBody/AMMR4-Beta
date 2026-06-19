@@ -175,23 +175,6 @@ AnyFolder Data = {
 AnyFolder Muscles = {};
 AnyFolder MuscleModels = {};
 
-#if BM_COMPATIBILITY_BODYMODEL_STRUCTURE == ON
-   AnyMessageOnObjectUse DeprecatedFolderMessage = {
-     Objects = {&.ModelParameters, &.Mus, &.Jnt, &.Seg};
-     DeprecationMessage = On;
-     Message = strformat("\n"+
-     "-------------------------------------------------------------------------------\n"+
-     "    The folder structure of the arm model has been deprecated.\n"+
-     "    Please update your model to use the new structure.\n"+
-     "    See the changelog and AMMR4 migration guide for more information.\n"+
-     "--------------------------------------------------------------------------------\n");
-   };
-
-  AnyFolder &ModelParameters = Data.unscaled.ModelParameters;
-  AnyFolder &Mus = Muscles;
-  AnyFolder &Jnt = Joints;
-  AnyFolder &Seg = Segments;
-#endif
 
 #ifndef BM_ARM_DETAILED_HAND
   #define BM_ARM_DETAILED_HAND OFF

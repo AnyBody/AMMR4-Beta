@@ -20,33 +20,6 @@ AnyFolder Data = {
   #include "TrunkMassDistribution.any"
 };
 
-  #if BM_COMPATIBILITY_BODYMODEL_STRUCTURE   ==   ON
-    AnyMessageOnObjectUse DeprecatedFolderMessage = {
-      Objects = {
-        &.ModelParameters, &.MusclesSpineRight, &.MusclesSpineLeft,
-        &.MusclesSpine, &.JointsLumbar, &.SegmentsLumbar, &.JointsCervicalSpine,
-        &.SegmentsCervicalSpine, &.SegmentsRibCage, &.SegmentsThorax
-      };
-      DeprecationMessage = On;
-      Message = strformat("\n"+
-      "-------------------------------------------------------------------------------\n"+
-      "    The folder structure of the trunk model has been deprecated.\n"+
-      "    Please update your model to use the new structure.\n"+
-      "    See the changelog and AMMR4 migration guide for more information.\n"+
-      "---------------------------------------------------------------------------- ---\n");
-    };
-
-    AnyFolder &ModelParameters = Data.unscaled.ModelParameters;
-    AnyFolder &MusclesSpineRight = Muscles.Right;
-    AnyFolder &MusclesSpineLeft = Muscles.Left;
-    AnyFolder &MusclesSpine = Muscles;
-    AnyFolder &JointsLumbar = Joints;
-    AnyFolder &JointsCervicalSpine = Joints;
-    AnyFolder &SegmentsLumbar = Segments;
-    AnyFolder &SegmentsCervicalSpine = Segments;
-    AnyFolder &SegmentsRibCage = Segments;
-    AnyFolder &SegmentsThorax = Segments;
-  #endif
 
 /* Segment & node construction section */
 AnyFolder Segments = {
