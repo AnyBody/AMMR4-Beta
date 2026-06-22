@@ -12,13 +12,9 @@ AnyFolder ArmCal2 ={
   AnyFolder &SegSideCal = .SideHumanFolderRef.ShoulderArm.Segments;
   AnyFolder &JointsSideCal = .SideHumanFolderRef.ShoulderArm.Joints;
 
-  #if BM_ARM_DELTOID_WRAPPING == _DELTOID_WRAPPING_RAKE_
-  AnyFolder& DeltoidRakeRef = .SideHumanFolderRef.ShoulderArm.Muscles.ArtificialRake;
-  #else
   AnyFolder& DeltoidWrappingPosteriorRef = .SideHumanFolderRef.ShoulderArm.Muscles.WrappingSurfaces.DeltoidWrappingPosterior;
   AnyFolder& DeltoidWrappingLateralRef = .SideHumanFolderRef.ShoulderArm.Muscles.WrappingSurfaces.DeltoidWrappingLateral;
   AnyFolder& DeltoidWrappingAnteriorRef = .SideHumanFolderRef.ShoulderArm.Muscles.WrappingSurfaces.DeltoidWrappingAnterior;
-  #endif
 
   AnyFolder &MusParCalSide =  .SideHumanFolderRef.ShoulderArm.MuscleModels;
 
@@ -236,11 +232,8 @@ AnyFolder ArmCal2 ={
   #endif
 
   AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.ShoulderArm.Muscles);
-  #if BM_ARM_DELTOID_WRAPPING == _DELTOID_WRAPPING_RAKE_
-  AnyObjectPtrArray deltoideus_clavicularMuscles = ObjSearch(MusPrefix+".*.deltoideus_clavicular*", "AnyMuscle");
-  #else
-  AnyObjectPtrArray deltoideus_clavicularMuscles = ObjSearch(MusPrefix+".*.deltoideus_anterior*", "AnyMuscle");
-  #endif
+
+  AnyObjectPtrArray DeltoideusClavicularMuscles = ObjSearch(MusPrefix+".*.DeltoideusAnterior*", "AnyMuscle");
 
 };
 
@@ -250,7 +243,7 @@ AnyBodyCalibrationStudy ArmCalibrationStudy2 = {
   AnyFolder &ref=.ArmCal2;
   nStep = 1;
   MuscleArr = arrcat(
-  ref.deltoideus_clavicularMuscles
+  ref.DeltoideusClavicularMuscles
   );
   Kinematics.KinematicTol = 1e-07;
   Kinematics.SmallStepAssumptionOnOff = Off;

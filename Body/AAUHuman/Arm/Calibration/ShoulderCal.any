@@ -261,24 +261,16 @@ AnyFolder ShoulderCal ={
   AnyFloat  CoracobrachialisRmin = repmat(NumElemOf(CoracobrachialisMuscles), ..RMin);
   AnyFloat  CoracobrachialisRmax = repmat(NumElemOf(CoracobrachialisMuscles), ..RMax);
 
-  #if BM_ARM_DELTOID_WRAPPING == _DELTOID_WRAPPING_RAKE_
-  AnyObjectPtrArray deltoideus_scapularMuscles = ObjSearch(MusPrefix+".*.deltoideus_scapular*", "AnyMuscle");
-  #else
-  AnyObjectPtrArray deltoideus_scapularMuscles = arrcat(
+  AnyObjectPtrArray DeltoideusScapularMuscles = arrcat(
     ObjSearch(MusPrefix+".*.DeltoideusPosterior*", "AnyMuscle"),
     ObjSearch(MusPrefix+".*.DeltoideusLateral*", "AnyMuscle")
   );
-  #endif
-  AnyFloat  deltoideus_scapularRmin = repmat(NumElemOf(deltoideus_scapularMuscles), ..RMin);
-  AnyFloat  deltoideus_scapularRmax = repmat(NumElemOf(deltoideus_scapularMuscles), ..RMax);
+  AnyFloat  DeltoideusScapularRmin = repmat(NumElemOf(DeltoideusScapularMuscles), ..RMin);
+  AnyFloat  DeltoideusScapularRmax = repmat(NumElemOf(DeltoideusScapularMuscles), ..RMax);
 
-  #if BM_ARM_DELTOID_WRAPPING == _DELTOID_WRAPPING_RAKE_
-  AnyObjectPtrArray deltoideus_clavicularMuscles = ObjSearch(MusPrefix+".*.deltoideus_clavicular*", "AnyMuscle");
-  #else
-  AnyObjectPtrArray deltoideus_clavicularMuscles = ObjSearch(MusPrefix+".*.DeltoideusAnterior*", "AnyMuscle");
-  #endif
-  AnyFloat  deltoideus_clavicularRmin = repmat(NumElemOf(deltoideus_clavicularMuscles), ..RMin);
-  AnyFloat  deltoideus_clavicularRmax = repmat(NumElemOf(deltoideus_clavicularMuscles), ..RMax);
+  AnyObjectPtrArray DeltoideusClavicularMuscles = ObjSearch(MusPrefix+".*.DeltoideusAnterior*", "AnyMuscle");
+  AnyFloat  DeltoideusClavicularRmin = repmat(NumElemOf(DeltoideusClavicularMuscles), ..RMin);
+  AnyFloat  DeltoideusClavicularRmax = repmat(NumElemOf(DeltoideusClavicularMuscles), ..RMax);
 
   AnyObjectPtrArray InfraspinatusMuscles = ObjSearch(MusPrefix+".*.Infraspinatus*", "AnyMuscle");
   AnyFloat  InfraspinatusRmin = repmat(NumElemOf(InfraspinatusMuscles), ..RMin);
@@ -338,8 +330,8 @@ AnyBodyCalibrationStudy ArmCalibrationStudyShoulder = {
 
   MuscleArr = arrcat(arrcat(
       ref.CoracobrachialisMuscles,
-      ref.deltoideus_scapularMuscles,
-      ref.deltoideus_clavicularMuscles,
+      ref.DeltoideusScapularMuscles,
+      ref.DeltoideusClavicularMuscles,
       ref.InfraspinatusMuscles,
       ref.PectoralisMajorSternocostalMuscles,
       ref.PectoralisMajorClavicularMuscles,
@@ -354,8 +346,8 @@ AnyBodyCalibrationStudy ArmCalibrationStudyShoulder = {
   );
   RminMuscleFiber = arrcat(arrcat(
       ref.CoracobrachialisRmin,
-      ref.deltoideus_scapularRmin,
-      ref.deltoideus_clavicularRmin,
+      ref.DeltoideusScapularRmin,
+      ref.DeltoideusClavicularRmin,
       ref.InfraspinatusRmin,
       ref.PectoralisMajorSternocostalRmin,
       ref.PectoralisMajorClavicularRmin,
@@ -370,8 +362,8 @@ AnyBodyCalibrationStudy ArmCalibrationStudyShoulder = {
   );
   RmaxMuscleFiber = arrcat(arrcat(
       ref.CoracobrachialisRmax,
-      ref.deltoideus_scapularRmax,
-      ref.deltoideus_clavicularRmax,
+      ref.DeltoideusScapularRmax,
+      ref.DeltoideusClavicularRmax,
       ref.InfraspinatusRmax,
       ref.PectoralisMajorSternocostalRmax,
       ref.PectoralisMajorClavicularRmax,

@@ -35,33 +35,18 @@ AnyFolder &coracobrachialis_4 = Coracobrachialis.Coracobrachialis4;
 AnyFolder &coracobrachialis_5 = Coracobrachialis.Coracobrachialis5;
 AnyFolder &coracobrachialis_6 = Coracobrachialis.Coracobrachialis6;
 
-#if BM_ARM_DELTOID_WRAPPING == _DELTOID_WRAPPING_RAKE_
-  AnyFolder &deltoideus_scapular_part_1 = DeltoideusScapular.deltoideus_scapular_part_1;
-  AnyFolder &deltoideus_scapular_part_2 = DeltoideusScapular.deltoideus_scapular_part_2;
-  AnyFolder &deltoideus_scapular_part_3 = DeltoideusScapular.deltoideus_scapular_part_3;
-  AnyFolder &deltoideus_scapular_part_4 = DeltoideusScapular.deltoideus_scapular_part_4;
-  AnyFolder &deltoideus_scapular_part_5 = DeltoideusScapular.deltoideus_scapular_part_5;
-  AnyFolder &deltoideus_scapular_part_6 = DeltoideusScapular.deltoideus_scapular_part_6;
-  AnyFolder &deltoideus_clavicular_part_1 = DeltoideusClavicular.deltoideus_clavicular_part_1;
-  AnyFolder &deltoideus_clavicular_part_2 = DeltoideusClavicular.deltoideus_clavicular_part_2;
-  AnyFolder &deltoideus_clavicular_part_3 = DeltoideusClavicular.deltoideus_clavicular_part_3;
-  AnyFolder &deltoideus_clavicular_part_4 = DeltoideusClavicular.deltoideus_clavicular_part_4;
-  AnyFolder &deltoideus_clavicular_part_5 = DeltoideusClavicular.deltoideus_clavicular_part_5;
-  AnyFolder &deltoideus_clavicular_part_6 = DeltoideusClavicular.deltoideus_clavicular_part_6;
-#else
-  AnyFolder &deltoideus_posterior_part_1 = DeltoideusPosterior.DeltoideusPosterior1;
-  AnyFolder &deltoideus_posterior_part_3 = DeltoideusPosterior.DeltoideusPosterior3;
-  AnyFolder &deltoideus_posterior_part_2 = DeltoideusPosterior.DeltoideusPosterior2;
-  AnyFolder &deltoideus_posterior_part_4 = DeltoideusPosterior.DeltoideusPosterior4;
-  AnyFolder &deltoideus_lateral_part_1 = DeltoideusLateral.DeltoideusLateral1;
-  AnyFolder &deltoideus_lateral_part_3 = DeltoideusLateral.DeltoideusLateral3;
-  AnyFolder &deltoideus_lateral_part_2 = DeltoideusLateral.DeltoideusLateral2;
-  AnyFolder &deltoideus_lateral_part_4 = DeltoideusLateral.DeltoideusLateral4;
-  AnyFolder &deltoideus_anterior_part_1 = DeltoideusAnterior.DeltoideusAnterior1;
-  AnyFolder &deltoideus_anterior_part_2 = DeltoideusAnterior.DeltoideusAnterior2;
-  AnyFolder &deltoideus_anterior_part_3 = DeltoideusAnterior.DeltoideusAnterior3;
-  AnyFolder &deltoideus_anterior_part_4 = DeltoideusAnterior.DeltoideusAnterior4;
-#endif
+AnyFolder &deltoideus_posterior_part_1 = DeltoideusPosterior.DeltoideusPosterior1;
+AnyFolder &deltoideus_posterior_part_3 = DeltoideusPosterior.DeltoideusPosterior3;
+AnyFolder &deltoideus_posterior_part_2 = DeltoideusPosterior.DeltoideusPosterior2;
+AnyFolder &deltoideus_posterior_part_4 = DeltoideusPosterior.DeltoideusPosterior4;
+AnyFolder &deltoideus_lateral_part_1 = DeltoideusLateral.DeltoideusLateral1;
+AnyFolder &deltoideus_lateral_part_3 = DeltoideusLateral.DeltoideusLateral3;
+AnyFolder &deltoideus_lateral_part_2 = DeltoideusLateral.DeltoideusLateral2;
+AnyFolder &deltoideus_lateral_part_4 = DeltoideusLateral.DeltoideusLateral4;
+AnyFolder &deltoideus_anterior_part_1 = DeltoideusAnterior.DeltoideusAnterior1;
+AnyFolder &deltoideus_anterior_part_2 = DeltoideusAnterior.DeltoideusAnterior2;
+AnyFolder &deltoideus_anterior_part_3 = DeltoideusAnterior.DeltoideusAnterior3;
+AnyFolder &deltoideus_anterior_part_4 = DeltoideusAnterior.DeltoideusAnterior4;
 
 AnyFolder &infraspinatus_1 = Infraspinatus.Infraspinatus1;
 AnyFolder &infraspinatus_2 = Infraspinatus.Infraspinatus2;

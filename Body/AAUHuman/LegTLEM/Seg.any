@@ -2046,21 +2046,13 @@ PelvisSeg =
       };
 
       #if (BM_PELVIS_DISPLAY == _PELVIS_DISPLAY_LEGANDTRUNKPELVIS_)
-      AnyDrawSurf Drw_LegSacrum =
-      #else
-      AnyDrawSurf DrwSacrum =
-      #endif
-      {
+      AnyDrawSurf Drw_LegSacrum = {
         FileName ??= ..STL.FilenameSacrum;
         Opacity ??=  Main.DrawSettings.BonesOpacity.Pelvis;
         RGB ??= ...ColorRef.Segments;
         AnyFunTransform3D &Scale = .AnatomicalFrameTrunk.Scale_Leg_Pelvis ;
       };
-
       #endif
       #endif
-
-
+      #endif
 }; // End Pelvis
-
-
