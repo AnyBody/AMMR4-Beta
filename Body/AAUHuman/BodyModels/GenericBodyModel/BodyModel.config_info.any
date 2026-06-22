@@ -4,650 +4,653 @@
 
 //
 
-
 #if BM_CONFIG_MESSAGES == ON
-AnyFolder Messages = {
-#ifdef BM_SCALING
-// Definition of an anthropometric scaling law
-AnyMessage msg_BM_SCALING = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_SCALING);};
-#endif
-
-#ifdef BM_SCALING_ANTHRO_FILE
-// Custom file with all anthropometric measurements used by the scaling law. This is some times called the AnyMan file.
-AnyMessage msg_BM_SCALING_ANTHRO_FILE = { TriggerPreProcess = On; Type = MSG_Message; Message = BM_SCALING_ANTHRO_FILE;};
-#endif
-
-#ifdef BM_SCALING_FILE
-// Path with the ScalingLaw used. Can be set to override the BM_SCALING parameter and select a user defined scaling law.
-AnyMessage msg_BM_SCALING_FILE = { TriggerPreProcess = On; Type = MSG_Message; Message = BM_SCALING_FILE;};
-#endif
-
-#ifdef BM_CONFIG_MESSAGES
-// Switch for automatic display of all configuration values
-AnyMessage msg_BM_CONFIG_MESSAGES = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_CONFIG_MESSAGES);};
-#endif
-
-#ifdef BM_CONFIG_VALUES
-// Switch for enabling configuration value information in the model tree
-AnyMessage msg_BM_CONFIG_VALUES = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_CONFIG_VALUES);};
-#endif
-
-#ifdef BM_DRAWSETTINGS_FILE
-// A file with draw settings
-AnyMessage msg_BM_DRAWSETTINGS_FILE = { TriggerPreProcess = On; Type = MSG_Message; Message = BM_DRAWSETTINGS_FILE;};
-#endif
-
-#ifdef BM_DRAWSETTINGS_SKIP
-// A flag to switch on/off inclusion of the draw settings (may be needed in case of two human models)
-AnyMessage msg_BM_DRAWSETTINGS_SKIP = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_DRAWSETTINGS_SKIP);};
-#endif
-
-#ifdef BM_FOOT_MODEL
-// Parameter defining the foot model used.
-AnyMessage msg_BM_FOOT_MODEL = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_FOOT_MODEL);};
-#endif
-
-#ifdef BM_FOOT_MODEL_TOE_FLEX_GM_REACTION
-// Parameter defining the existing of reaction on toes when using _FOOT_MODEL_TOE_FLEX_GM_.
-AnyMessage msg_BM_FOOT_MODEL_TOE_FLEX_GM_REACTION = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_FOOT_MODEL_TOE_FLEX_GM_REACTION);};
-#endif
-
-#ifdef BM_LEG_MODEL
-// Parameter defining the Leg model used.
-AnyMessage msg_BM_LEG_MODEL = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_LEG_MODEL);};
-#endif
-
-#ifdef BM_LEG_MODEL_IS_TLEM
-// Read only parameter to check if Leg Model is a variant of the TLEM model.
-AnyMessage msg_BM_LEG_MODEL_IS_TLEM = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_LEG_MODEL_IS_TLEM);};
-#endif
-
-#ifdef BM_ARM_THORAX_SCAPULA_CONTACT
-// Parameter defining the contact type between Thorax and Scapula. This defaults to _MULTIPLE_POINT_CONTACT_ when full thoracic model is used.
-AnyMessage msg_BM_ARM_THORAX_SCAPULA_CONTACT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_ARM_THORAX_SCAPULA_CONTACT);};
-#endif
-
-#ifdef BM_LEG_LEFT
-// Parameter for switching the left leg On/Off. To control which leg model is used, please use the {any}`BM_LEG_MODEL` parameter.
-AnyMessage msg_BM_LEG_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_LEG_LEFT);};
-#endif
-
-#ifdef BM_LEG_RIGHT
-// Parameter for switching the right leg On/Off. To control which leg model is used, please use the {any}`BM_LEG_MODEL` parameter.
-AnyMessage msg_BM_LEG_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_LEG_RIGHT);};
-#endif
-
-#ifdef BM_LEG_STRENGTH_INDEX
-// Index parameter to specify muscle strength for lower extremities
-AnyMessage msg_BM_LEG_STRENGTH_INDEX = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_LEG_STRENGTH_INDEX, "%5.3f");};
-#endif
-
-#ifdef BM_LEG_MUSCLES_BOTH
-// Parameter to define muscle behavior of both right and left leg
-AnyMessage msg_BM_LEG_MUSCLES_BOTH = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_LEG_MUSCLES_BOTH);};
-#endif
-
-#ifdef BM_LEG_MUSCLES_LEFT
-// Parameter to define muscle behavior of the left leg
-AnyMessage msg_BM_LEG_MUSCLES_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_LEG_MUSCLES_LEFT);};
-#endif
-
-#ifdef BM_LEG_MUSCLES_RIGHT
-// Parameter to define muscle behavior of the right leg
-AnyMessage msg_BM_LEG_MUSCLES_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_LEG_MUSCLES_RIGHT);};
-#endif
-
-#ifdef BM_FOOT_MUSCLES_LEFT
-// Parameter to define muscle behavior of the left foot
-AnyMessage msg_BM_FOOT_MUSCLES_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_FOOT_MUSCLES_LEFT);};
-#endif
-
-#ifdef BM_FOOT_MUSCLES_RIGHT
-// Parameter to define muscle behavior of the right foot
-AnyMessage msg_BM_FOOT_MUSCLES_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_FOOT_MUSCLES_RIGHT);};
-#endif
-
-#ifdef BM_LEG_DATASET
-// Path to specify the underlying dataset. This currently only affects the TLEM based models. Valid options depends on which model (TLEM1/2) is used, and what dataset are available. If not specified, this will be configure automatically.
-AnyMessage msg_BM_LEG_DATASET = { TriggerPreProcess = On; Type = MSG_Message; Message = BM_LEG_DATASET;};
-#endif
-
-#ifdef BM_TRUNK_DATASET
-// Parameter to define a trunk model dataset.
-AnyMessage msg_BM_TRUNK_DATASET = { TriggerPreProcess = On; Type = MSG_Message; Message = BM_TRUNK_DATASET;};
-#endif
-
-#ifdef BM_TRUNK_STRENGTH_INDEX
-// Index parameter to specify strength for trunk muscles.
-AnyMessage msg_BM_TRUNK_STRENGTH_INDEX = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_TRUNK_STRENGTH_INDEX, "%5.3f");};
-#endif
-
-#ifdef BM_TRUNK_THORACIC_MODEL
-// The type of thoracic/ribcage model used in the model.
-AnyMessage msg_BM_TRUNK_THORACIC_MODEL = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_TRUNK_THORACIC_MODEL);};
-#endif
-
-#ifdef BM_TRUNK_CAVITY_MODEL
-// The type of thoracic/ribcage model used in the model.
-AnyMessage msg_BM_TRUNK_CAVITY_MODEL = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_TRUNK_CAVITY_MODEL);};
-#endif
-
-#ifdef BM_TRUNK_DIAGPHRAM_FIXED_POSITION
-// Switch to control a fix on the diaphragm position. To simulate breathing this needs to be disabled, and replaced by an other driver on `Trunk.Abdominal.Diaphragm.Joints.AbdominalLayerBase_DiaphragmBase`.
-AnyMessage msg_BM_TRUNK_DIAGPHRAM_FIXED_POSITION = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_TRUNK_DIAGPHRAM_FIXED_POSITION);};
-#endif
-
-#ifdef BM_TRUNK_THORACIC_STERNUM_TOPOLOGY
-// The topology of the sternum segment, i.e. number of segments into which sternum is split. Current options are 2, or 4 segments. 
-AnyMessage msg_BM_TRUNK_THORACIC_STERNUM_TOPOLOGY = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_TRUNK_THORACIC_STERNUM_TOPOLOGY);};
-#endif
-
-#ifdef BM_TRUNK_MUSCLES
-// Definition of the type of all spine muscles.
-AnyMessage msg_BM_TRUNK_MUSCLES = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_TRUNK_MUSCLES);};
-#endif
-
-#ifdef BM_TRUNK_CERVICAL_MUSCLES
-// Definition of the cervical spine muscles type.
-AnyMessage msg_BM_TRUNK_CERVICAL_MUSCLES = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_TRUNK_CERVICAL_MUSCLES);};
-#endif
-
-#ifdef BM_TRUNK_DISC_STIFFNESS
-// Definition of the disc model of all spine parts.
-AnyMessage msg_BM_TRUNK_DISC_STIFFNESS = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_TRUNK_DISC_STIFFNESS);};
-#endif
-
-#ifdef BM_TRUNK_LUMBAR_DISC_STIFFNESS
-// Definition of the lumbar spine disc model.
-AnyMessage msg_BM_TRUNK_LUMBAR_DISC_STIFFNESS = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_TRUNK_LUMBAR_DISC_STIFFNESS);};
-#endif
-
-#ifdef BM_TRUNK_THORACIC_DISC_STIFFNESS
-// Definition of the thoracic spine disc model.
-AnyMessage msg_BM_TRUNK_THORACIC_DISC_STIFFNESS = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_TRUNK_THORACIC_DISC_STIFFNESS);};
-#endif
-
-#ifdef BM_TRUNK_CERVICAL_DISC_STIFFNESS
-// Definition of the cervical spine disc model.
-AnyMessage msg_BM_TRUNK_CERVICAL_DISC_STIFFNESS = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_TRUNK_CERVICAL_DISC_STIFFNESS);};
-#endif
-
-#ifdef BM_TRUNK_RHYTHM
-// A switch to use a kinematic rhythm for the whole spine. ON indicate that the rhythm is a hard contraint while _RHYTHM_SOFT_ will make the rhythm as soft kinematic contraint.
-AnyMessage msg_BM_TRUNK_RHYTHM = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_TRUNK_RHYTHM);};
-#endif
-
-#ifdef BM_TRUNK_LUMBAR_RHYTHM
-// A switch to use a kinematic rhythm for the lumbar spine. ON indicate that the rhythm is a hard contraint while _RHYTHM_SOFT_ will make the rhythm as soft kinematic contraint.
-AnyMessage msg_BM_TRUNK_LUMBAR_RHYTHM = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_TRUNK_LUMBAR_RHYTHM);};
-#endif
-
-#ifdef BM_TRUNK_THORACIC_RHYTHM
-// A switch to use a kinematic rhythm for the thoracic spine. ON indicate that the rhythm is a hard contraint while _RHYTHM_SOFT_ will make the rhythm as soft kinematic contraint.
-AnyMessage msg_BM_TRUNK_THORACIC_RHYTHM = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_TRUNK_THORACIC_RHYTHM);};
-#endif
-
-#ifdef BM_TRUNK_CERVICAL_RHYTHM
-// A switch to use a kinematic rhythm for the cervical spine. ON indicate that the rhythm is a hard contraint while _RHYTHM_SOFT_ will make the rhythm as soft kinematic contraint.
-AnyMessage msg_BM_TRUNK_CERVICAL_RHYTHM = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_TRUNK_CERVICAL_RHYTHM);};
-#endif
-
-#ifdef BM_TRUNK_CERVICAL_THORACIC_LINK
-// The cervical and thoracic movements are linked so the move simultaneously. This switch is used to enable this link.
-AnyMessage msg_BM_TRUNK_CERVICAL_THORACIC_LINK = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_TRUNK_CERVICAL_THORACIC_LINK);};
-#endif
-
-#ifdef BM_TRUNK_LUMBAR_THORACIC_LINK
-// The lumbar and thoracic movements are linked so the move simultaneously. This switch is used to enable this link.
-AnyMessage msg_BM_TRUNK_LUMBAR_THORACIC_LINK = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_TRUNK_LUMBAR_THORACIC_LINK);};
-#endif
-
-#ifdef BM_TRUNK_LIGAMENTS
-// A switch to control all the ligaments in the spine.
-AnyMessage msg_BM_TRUNK_LIGAMENTS = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_TRUNK_LIGAMENTS);};
-#endif
-
-#ifdef BM_TRUNK_CERVICAL_LIGAMENTS
-// A switch to control the cervical spine ligaments.
-AnyMessage msg_BM_TRUNK_CERVICAL_LIGAMENTS = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_TRUNK_CERVICAL_LIGAMENTS);};
-#endif
-
-#ifdef BM_TRUNK_THORACIC_LIGAMENTS
-// A switch to control the thoracic spine ligaments.
-AnyMessage msg_BM_TRUNK_THORACIC_LIGAMENTS = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_TRUNK_THORACIC_LIGAMENTS);};
-#endif
-
-#ifdef BM_TRUNK_LUMBAR_LIGAMENTS
-// A switch to control the lumbar spine ligaments.
-AnyMessage msg_BM_TRUNK_LUMBAR_LIGAMENTS = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_TRUNK_LUMBAR_LIGAMENTS);};
-#endif
-
-#ifdef BM_ARM_STRENGTH_INDEX
-// Index parameter to specify muscle strength for upper extremities.
-AnyMessage msg_BM_ARM_STRENGTH_INDEX = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_ARM_STRENGTH_INDEX, "%5.3f");};
-#endif
-
-#ifdef BM_ARM_LEFT
-// Switch for the left arm model being present or not.
-AnyMessage msg_BM_ARM_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_ARM_LEFT);};
-#endif
-
-#ifdef BM_ARM_RIGHT
-// Switch for the right arm model being present or not.
-AnyMessage msg_BM_ARM_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_ARM_RIGHT);};
-#endif
-
-#ifdef BM_ARM_SHOULDER_RHYTHM
-// Switch for the shoulder rhythm constraints. ON indicate that the rhythm is a hard contraint while _RHYTHM_SOFT_ will make the rhythm as soft kinematic contraint.
-AnyMessage msg_BM_ARM_SHOULDER_RHYTHM = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_ARM_SHOULDER_RHYTHM);};
-#endif
-
-#ifdef BM_ARM_CLAVICULA_ROTATION_RHYTHM
-// Switch for the clavicula rotation rhythm. If enabled axial rotation of the clavicula will be distributed evenly between the sterno-clavicula and acromio-clavicula joint. Effectively removing clavicula axial rotation as an independent degree of freedom.resterno-clavicula axial rotation.
-AnyMessage msg_BM_ARM_CLAVICULA_ROTATION_RHYTHM = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_ARM_CLAVICULA_ROTATION_RHYTHM);};
-#endif
-
-#ifdef BM_ARM_DETAILED_HAND
-// Switch for enabling the detailed hand.
-AnyMessage msg_BM_ARM_DETAILED_HAND = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_ARM_DETAILED_HAND);};
-#endif
-
-#ifdef BM_ARM_DELTOID_WRAPPING
-// Switch for deltoid wrapping. Setting this to OFF or _DELTOID_WRAPPING_RAKE_ will revert to the older rake based implementation of the deltoid.
-AnyMessage msg_BM_ARM_DELTOID_WRAPPING = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_ARM_DELTOID_WRAPPING);};
-#endif
-
-#ifdef BM_ARM_MUSCLES_BOTH
-// Keyword for the muscle model type for both left and right arms.
-AnyMessage msg_BM_ARM_MUSCLES_BOTH = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_ARM_MUSCLES_BOTH);};
-#endif
-
-#ifdef BM_ARM_MUSCLES_LEFT
-// Keyword for the muscle model type for the left arm.
-AnyMessage msg_BM_ARM_MUSCLES_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_ARM_MUSCLES_LEFT);};
-#endif
-
-#ifdef BM_ARM_MUSCLES_RIGHT
-// Keyword for the muscle model for both the right arm.
-AnyMessage msg_BM_ARM_MUSCLES_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_ARM_MUSCLES_RIGHT);};
-#endif
-
-#ifdef BM_PELVIS_DISPLAY
-// Keyword for pelvis display setting.
-AnyMessage msg_BM_PELVIS_DISPLAY = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_PELVIS_DISPLAY);};
-#endif
-
-#ifdef BM_MANNEQUIN_FILE
-// File name of the mannequin definition file. By default this is no longer used, since the values in ``HumanModel.Mannequin`` can be assigned directly in your applicaiton ( E.g. ``Main.HumanModel.Mannequin.Posture.NeckExtension = 30;``). However, the parameter can still be used to set your own mannequin file. Just define your own mannequin file in your applicaiton like this: ``#path BM_MANNEQUIN_FILE "<ANYBODY_PATH_BODY>\BodyModels\GenericBodyModel\BodyModel.mannequin.any";``
-AnyMessage msg_BM_MANNEQUIN_FILE = { TriggerPreProcess = On; Type = MSG_Message; Message = BM_MANNEQUIN_FILE;};
-#endif
-
-#ifdef BM_MANNEQUIN_DRIVER_DEFAULT
-// Setting of the default value for all mannequin drivers.
-AnyMessage msg_BM_MANNEQUIN_DRIVER_DEFAULT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_DEFAULT);};
-#endif
-
-#ifdef BM_MANNEQUIN_DRIVER_WEAK_SWITCH
-// By default constraint type of mannequin drivers will be soft.
-AnyMessage msg_BM_MANNEQUIN_DRIVER_WEAK_SWITCH = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_WEAK_SWITCH);};
-#endif
-
-#ifdef BM_LEG_TRUNK_INTERFACE
-// Keyword for the interface morhping between the trunk and the leg pelvis segments.
-AnyMessage msg_BM_LEG_TRUNK_INTERFACE = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_LEG_TRUNK_INTERFACE);};
-#endif
-
-#ifdef BM_CALIBRATION_TYPE
-// Parameter to choose type of muscle tendon calibration
-AnyMessage msg_BM_CALIBRATION_TYPE = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_CALIBRATION_TYPE);};
-#endif
-
-#ifdef BM_MANNEQUIN_DRIVER_PELVIS_POS_X
-// Switch for the mannequin driver being active or not
-AnyMessage msg_BM_MANNEQUIN_DRIVER_PELVIS_POS_X = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_PELVIS_POS_X);};
-#endif
-
-#ifdef BM_MANNEQUIN_DRIVER_PELVIS_POS_Y
-// Switch for the mannequin driver being active or not
-AnyMessage msg_BM_MANNEQUIN_DRIVER_PELVIS_POS_Y = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_PELVIS_POS_Y);};
-#endif
-
-#ifdef BM_MANNEQUIN_DRIVER_PELVIS_POS_Z
-// Switch for the mannequin driver being active or not
-AnyMessage msg_BM_MANNEQUIN_DRIVER_PELVIS_POS_Z = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_PELVIS_POS_Z);};
-#endif
-
-#ifdef BM_MANNEQUIN_DRIVER_PELVIS_ROT_Z
-// Switch for the mannequin driver being active or not
-AnyMessage msg_BM_MANNEQUIN_DRIVER_PELVIS_ROT_Z = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_PELVIS_ROT_Z);};
-#endif
-
-#ifdef BM_MANNEQUIN_DRIVER_PELVIS_ROT_Y
-// Switch for the mannequin driver being active or not
-AnyMessage msg_BM_MANNEQUIN_DRIVER_PELVIS_ROT_Y = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_PELVIS_ROT_Y);};
-#endif
-
-#ifdef BM_MANNEQUIN_DRIVER_PELVIS_ROT_X
-// Switch for the mannequin driver being active or not
-AnyMessage msg_BM_MANNEQUIN_DRIVER_PELVIS_ROT_X = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_PELVIS_ROT_X);};
-#endif
-
-#ifdef BM_MANNEQUIN_DRIVER_NECK
-// Switch for the mannequin driver being active or not
-AnyMessage msg_BM_MANNEQUIN_DRIVER_NECK = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_NECK);};
-#endif
-
-#ifdef BM_MANNEQUIN_DRIVER_SKULL_THORAX_FLEXION
-// Switch for the mannequin driver being active or not
-AnyMessage msg_BM_MANNEQUIN_DRIVER_SKULL_THORAX_FLEXION = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_SKULL_THORAX_FLEXION);};
-#endif
-
-#ifdef BM_MANNEQUIN_DRIVER_SKULL_THORAX_LATERALBENDING
-// Switch for the mannequin driver being active or not
-AnyMessage msg_BM_MANNEQUIN_DRIVER_SKULL_THORAX_LATERALBENDING = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_SKULL_THORAX_LATERALBENDING);};
-#endif
-
-#ifdef BM_MANNEQUIN_DRIVER_SKULL_THORAX_ROTATION
-// Switch for the mannequin driver being active or not
-AnyMessage msg_BM_MANNEQUIN_DRIVER_SKULL_THORAX_ROTATION = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_SKULL_THORAX_ROTATION);};
-#endif
-
-#ifdef BM_MANNEQUIN_DRIVER_PELVIS_THORAX_LATERAL_BENDING
-// Switch for the mannequin driver being active or not
-AnyMessage msg_BM_MANNEQUIN_DRIVER_PELVIS_THORAX_LATERAL_BENDING = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_PELVIS_THORAX_LATERAL_BENDING);};
-#endif
-
-#ifdef BM_MANNEQUIN_DRIVER_PELVIS_THORAX_ROTATION
-// Switch for the mannequin driver being active or not
-AnyMessage msg_BM_MANNEQUIN_DRIVER_PELVIS_THORAX_ROTATION = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_PELVIS_THORAX_ROTATION);};
-#endif
-
-#ifdef BM_MANNEQUIN_DRIVER_PELVIS_THORAX_EXTENSION
-// Switch for the mannequin driver being active or not
-AnyMessage msg_BM_MANNEQUIN_DRIVER_PELVIS_THORAX_EXTENSION = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_PELVIS_THORAX_EXTENSION);};
-#endif
-
-#ifdef BM_MANNEQUIN_DRIVER_STERNO_CLAVICULAR_RIGHT
-// Switch for all the mannequin drivers for the sterno clavicular degrees of freedom.
-AnyMessage msg_BM_MANNEQUIN_DRIVER_STERNO_CLAVICULAR_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_STERNO_CLAVICULAR_RIGHT);};
-#endif
-
-#ifdef BM_MANNEQUIN_DRIVER_STERNOCLAVICULAR_PROTRACTION_RIGHT
-// Switch for the mannequin driver being active or not.
-AnyMessage msg_BM_MANNEQUIN_DRIVER_STERNOCLAVICULAR_PROTRACTION_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_STERNOCLAVICULAR_PROTRACTION_RIGHT);};
-#endif
-
-#ifdef BM_MANNEQUIN_DRIVER_STERNOCLAVICULAR_ELEVATION_RIGHT
-// Switch for the mannequin driver being active or not.
-AnyMessage msg_BM_MANNEQUIN_DRIVER_STERNOCLAVICULAR_ELEVATION_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_STERNOCLAVICULAR_ELEVATION_RIGHT);};
-#endif
-
-#ifdef BM_MANNEQUIN_DRIVER_STERNOCLAVICULAR_AXIAL_ROTATION_RIGHT
-// Switch for the mannequin driver being active or not.
-AnyMessage msg_BM_MANNEQUIN_DRIVER_STERNOCLAVICULAR_AXIAL_ROTATION_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_STERNOCLAVICULAR_AXIAL_ROTATION_RIGHT);};
-#endif
-
-#ifdef BM_MANNEQUIN_DRIVER_GLENOHUMERAL_ABDUCTION_RIGHT
-// Switch for the mannequin driver being active or not
-AnyMessage msg_BM_MANNEQUIN_DRIVER_GLENOHUMERAL_ABDUCTION_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_GLENOHUMERAL_ABDUCTION_RIGHT);};
-#endif
-
-#ifdef BM_MANNEQUIN_DRIVER_GLENOHUMERAL_FLEXION_RIGHT
-// Switch for the mannequin driver being active or not
-AnyMessage msg_BM_MANNEQUIN_DRIVER_GLENOHUMERAL_FLEXION_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_GLENOHUMERAL_FLEXION_RIGHT);};
-#endif
-
-#ifdef BM_MANNEQUIN_DRIVER_GLENOHUMERAL_EXTERNAL_ROTATION_RIGHT
-// Switch for the mannequin driver being active or not
-AnyMessage msg_BM_MANNEQUIN_DRIVER_GLENOHUMERAL_EXTERNAL_ROTATION_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_GLENOHUMERAL_EXTERNAL_ROTATION_RIGHT);};
-#endif
-
-#ifdef BM_MANNEQUIN_DRIVER_ELBOW_FLEXION_RIGHT
-// Switch for the mannequin driver being active or not
-AnyMessage msg_BM_MANNEQUIN_DRIVER_ELBOW_FLEXION_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_ELBOW_FLEXION_RIGHT);};
-#endif
-
-#ifdef BM_MANNEQUIN_DRIVER_ELBOW_PRONATION_RIGHT
-// Switch for the mannequin driver being active or not
-AnyMessage msg_BM_MANNEQUIN_DRIVER_ELBOW_PRONATION_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_ELBOW_PRONATION_RIGHT);};
-#endif
-
-#ifdef BM_MANNEQUIN_DRIVER_WRIST_FLEXION_RIGHT
-// Switch for the mannequin driver being active or not
-AnyMessage msg_BM_MANNEQUIN_DRIVER_WRIST_FLEXION_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_WRIST_FLEXION_RIGHT);};
-#endif
-
-#ifdef BM_MANNEQUIN_DRIVER_WRIST_ABDUCTION_RIGHT
-// Switch for the mannequin driver being active or not
-AnyMessage msg_BM_MANNEQUIN_DRIVER_WRIST_ABDUCTION_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_WRIST_ABDUCTION_RIGHT);};
-#endif
-
-#ifdef BM_MANNEQUIN_DRIVER_HAND_RIGHT
-// Switch for the mannequin driver being active or not
-AnyMessage msg_BM_MANNEQUIN_DRIVER_HAND_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_HAND_RIGHT);};
-#endif
-
-#ifdef BM_MANNEQUIN_DRIVER_STERNO_CLAVICULAR_LEFT
-// Switch for all the mannequin drivers for the sterno clavicular degrees of freedom.
-AnyMessage msg_BM_MANNEQUIN_DRIVER_STERNO_CLAVICULAR_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_STERNO_CLAVICULAR_LEFT);};
-#endif
-
-#ifdef BM_MANNEQUIN_DRIVER_STERNOCLAVICULAR_PROTRACTION_LEFT
-// Switch for the mannequin driver being active or not.
-AnyMessage msg_BM_MANNEQUIN_DRIVER_STERNOCLAVICULAR_PROTRACTION_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_STERNOCLAVICULAR_PROTRACTION_LEFT);};
-#endif
-
-#ifdef BM_MANNEQUIN_DRIVER_STERNOCLAVICULAR_ELEVATION_LEFT
-// Switch for the mannequin driver being active or not.
-AnyMessage msg_BM_MANNEQUIN_DRIVER_STERNOCLAVICULAR_ELEVATION_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_STERNOCLAVICULAR_ELEVATION_LEFT);};
-#endif
-
-#ifdef BM_MANNEQUIN_DRIVER_STERNOCLAVICULAR_AXIAL_ROTATION_LEFT
-// Switch for the mannequin driver being active or not.
-AnyMessage msg_BM_MANNEQUIN_DRIVER_STERNOCLAVICULAR_AXIAL_ROTATION_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_STERNOCLAVICULAR_AXIAL_ROTATION_LEFT);};
-#endif
-
-#ifdef BM_MANNEQUIN_DRIVER_GLENOHUMERAL_ABDUCTION_LEFT
-// Switch for the mannequin driver being active or not
-AnyMessage msg_BM_MANNEQUIN_DRIVER_GLENOHUMERAL_ABDUCTION_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_GLENOHUMERAL_ABDUCTION_LEFT);};
-#endif
-
-#ifdef BM_MANNEQUIN_DRIVER_GLENOHUMERAL_FLEXION_LEFT
-// Switch for the mannequin driver being active or not
-AnyMessage msg_BM_MANNEQUIN_DRIVER_GLENOHUMERAL_FLEXION_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_GLENOHUMERAL_FLEXION_LEFT);};
-#endif
-
-#ifdef BM_MANNEQUIN_DRIVER_GLENOHUMERAL_EXTERNAL_ROTATION_LEFT
-// Switch for the mannequin driver being active or not
-AnyMessage msg_BM_MANNEQUIN_DRIVER_GLENOHUMERAL_EXTERNAL_ROTATION_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_GLENOHUMERAL_EXTERNAL_ROTATION_LEFT);};
-#endif
-
-#ifdef BM_MANNEQUIN_DRIVER_ELBOW_FLEXION_LEFT
-// Switch for the mannequin driver being active or not
-AnyMessage msg_BM_MANNEQUIN_DRIVER_ELBOW_FLEXION_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_ELBOW_FLEXION_LEFT);};
-#endif
-
-#ifdef BM_MANNEQUIN_DRIVER_ELBOW_PRONATION_LEFT
-// Switch for the mannequin driver being active or not
-AnyMessage msg_BM_MANNEQUIN_DRIVER_ELBOW_PRONATION_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_ELBOW_PRONATION_LEFT);};
-#endif
-
-#ifdef BM_MANNEQUIN_DRIVER_WRIST_FLEXION_LEFT
-// Switch for the mannequin driver being active or not
-AnyMessage msg_BM_MANNEQUIN_DRIVER_WRIST_FLEXION_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_WRIST_FLEXION_LEFT);};
-#endif
-
-#ifdef BM_MANNEQUIN_DRIVER_WRIST_ABDUCTION_LEFT
-// Switch for the mannequin driver being active or not
-AnyMessage msg_BM_MANNEQUIN_DRIVER_WRIST_ABDUCTION_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_WRIST_ABDUCTION_LEFT);};
-#endif
-
-#ifdef BM_MANNEQUIN_DRIVER_HAND_LEFT
-// Switch for the mannequin driver being active or not
-AnyMessage msg_BM_MANNEQUIN_DRIVER_HAND_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_HAND_LEFT);};
-#endif
-
-#ifdef BM_MANNEQUIN_DRIVER_HIP_FLEXION_RIGHT
-// Switch for the mannequin driver being active or not
-AnyMessage msg_BM_MANNEQUIN_DRIVER_HIP_FLEXION_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_HIP_FLEXION_RIGHT);};
-#endif
-
-#ifdef BM_MANNEQUIN_DRIVER_HIP_EXTERNAL_ROTATION_RIGHT
-// Switch for the mannequin driver being active or not
-AnyMessage msg_BM_MANNEQUIN_DRIVER_HIP_EXTERNAL_ROTATION_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_HIP_EXTERNAL_ROTATION_RIGHT);};
-#endif
-
-#ifdef BM_MANNEQUIN_DRIVER_HIP_ABDUCTION_RIGHT
-// Switch for the mannequin driver being active or not
-AnyMessage msg_BM_MANNEQUIN_DRIVER_HIP_ABDUCTION_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_HIP_ABDUCTION_RIGHT);};
-#endif
-
-#ifdef BM_MANNEQUIN_DRIVER_KNEE_FLEXION_RIGHT
-// Switch for the mannequin driver being active or not
-AnyMessage msg_BM_MANNEQUIN_DRIVER_KNEE_FLEXION_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_KNEE_FLEXION_RIGHT);};
-#endif
-
-#ifdef BM_MANNEQUIN_DRIVER_ANKLE_FLEXION_RIGHT
-// Switch for the mannequin driver being active or not
-AnyMessage msg_BM_MANNEQUIN_DRIVER_ANKLE_FLEXION_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_ANKLE_FLEXION_RIGHT);};
-#endif
-
-#ifdef BM_MANNEQUIN_DRIVER_ANKLE_SUBTALAR_EVERSION_RIGHT
-// Switch for the mannequin driver being active or not
-AnyMessage msg_BM_MANNEQUIN_DRIVER_ANKLE_SUBTALAR_EVERSION_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_ANKLE_SUBTALAR_EVERSION_RIGHT);};
-#endif
-
-#ifdef BM_MANNEQUIN_DRIVER_TOES_FLEXION_RIGHT
-// Switch for the mannequin driver being active or not
-AnyMessage msg_BM_MANNEQUIN_DRIVER_TOES_FLEXION_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_TOES_FLEXION_RIGHT);};
-#endif
-
-#ifdef BM_MANNEQUIN_DRIVER_HIP_FLEXION_LEFT
-// Switch for the mannequin driver being active or not
-AnyMessage msg_BM_MANNEQUIN_DRIVER_HIP_FLEXION_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_HIP_FLEXION_LEFT);};
-#endif
-
-#ifdef BM_MANNEQUIN_DRIVER_HIP_EXTERNAL_ROTATION_LEFT
-// Switch for the mannequin driver being active or not
-AnyMessage msg_BM_MANNEQUIN_DRIVER_HIP_EXTERNAL_ROTATION_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_HIP_EXTERNAL_ROTATION_LEFT);};
-#endif
-
-#ifdef BM_MANNEQUIN_DRIVER_HIP_ABDUCTION_LEFT
-// Switch for the mannequin driver being active or not
-AnyMessage msg_BM_MANNEQUIN_DRIVER_HIP_ABDUCTION_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_HIP_ABDUCTION_LEFT);};
-#endif
-
-#ifdef BM_MANNEQUIN_DRIVER_KNEE_FLEXION_LEFT
-// Switch for the mannequin driver being active or not
-AnyMessage msg_BM_MANNEQUIN_DRIVER_KNEE_FLEXION_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_KNEE_FLEXION_LEFT);};
-#endif
-
-#ifdef BM_MANNEQUIN_DRIVER_ANKLE_FLEXION_LEFT
-// Switch for the mannequin driver being active or not
-AnyMessage msg_BM_MANNEQUIN_DRIVER_ANKLE_FLEXION_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_ANKLE_FLEXION_LEFT);};
-#endif
-
-#ifdef BM_MANNEQUIN_DRIVER_ANKLE_SUBTALAR_EVERSION_LEFT
-// Switch for the mannequin driver being active or not
-AnyMessage msg_BM_MANNEQUIN_DRIVER_ANKLE_SUBTALAR_EVERSION_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_ANKLE_SUBTALAR_EVERSION_LEFT);};
-#endif
-
-#ifdef BM_MANNEQUIN_DRIVER_TOES_FLEXION_LEFT
-// Switch for the mannequin driver being active or not
-AnyMessage msg_BM_MANNEQUIN_DRIVER_TOES_FLEXION_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_TOES_FLEXION_LEFT);};
-#endif
-
-#ifdef BM_JOINT_TYPE_HIP_RIGHT
-// Parameter for switching between different joint types. Can also be used to completely exclude the joint, which then must be re-implemented manually.
-AnyMessage msg_BM_JOINT_TYPE_HIP_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_JOINT_TYPE_HIP_RIGHT);};
-#endif
-
-#ifdef BM_JOINT_TYPE_HIP_LEFT
-// Parameter for switching between different joint types. Can also be used to completely exclude the joint, which then must be re-implemented manually.
-AnyMessage msg_BM_JOINT_TYPE_HIP_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_JOINT_TYPE_HIP_LEFT);};
-#endif
-
-#ifdef BM_JOINT_TYPE_KNEE_RIGHT
-// Parameter for switching between different joint types. Can also be used to completely exclude the joint, which then must be re-implemented manually.
-AnyMessage msg_BM_JOINT_TYPE_KNEE_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_JOINT_TYPE_KNEE_RIGHT);};
-#endif
-
-#ifdef BM_JOINT_TYPE_KNEE_LEFT
-// Parameter for switching between different joint types. Can also be used to completely exclude the joint, which then must be re-implemented manually.
-AnyMessage msg_BM_JOINT_TYPE_KNEE_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_JOINT_TYPE_KNEE_LEFT);};
-#endif
-
-#ifdef BM_JOINT_TYPE_PATELLOFEMORAL_RIGHT
-// Parameter for switching between different joint types. Can also be used to completely exclude the joint, which then must be re-implemented manually.
-AnyMessage msg_BM_JOINT_TYPE_PATELLOFEMORAL_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_JOINT_TYPE_PATELLOFEMORAL_RIGHT);};
-#endif
-
-#ifdef BM_JOINT_TYPE_PATELLOFEMORAL_LEFT
-// Parameter for switching between different joint types. Can also be used to completely exclude the joint, which then must be re-implemented manually.
-AnyMessage msg_BM_JOINT_TYPE_PATELLOFEMORAL_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_JOINT_TYPE_PATELLOFEMORAL_LEFT);};
-#endif
-
-#ifdef BM_JOINT_TYPE_ANKLE_RIGHT
-// Parameter for switching between different joint types. Can also be used to completely exclude the joint, which then must be re-implemented manually.
-AnyMessage msg_BM_JOINT_TYPE_ANKLE_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_JOINT_TYPE_ANKLE_RIGHT);};
-#endif
-
-#ifdef BM_JOINT_TYPE_ANKLE_LEFT
-// Parameter for switching between different joint types. Can also be used to completely exclude the joint, which then must be re-implemented manually.
-AnyMessage msg_BM_JOINT_TYPE_ANKLE_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_JOINT_TYPE_ANKLE_LEFT);};
-#endif
-
-#ifdef BM_JOINT_TYPE_SUBTALAR_RIGHT
-// Parameter for switching between different joint types. Can also be used to completely exclude the joint, which then must be re-implemented manually.
-AnyMessage msg_BM_JOINT_TYPE_SUBTALAR_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_JOINT_TYPE_SUBTALAR_RIGHT);};
-#endif
-
-#ifdef BM_JOINT_TYPE_SUBTALAR_LEFT
-// Parameter for switching between different joint types. Can also be used to completely exclude the joint, which then must be re-implemented manually.
-AnyMessage msg_BM_JOINT_TYPE_SUBTALAR_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_JOINT_TYPE_SUBTALAR_LEFT);};
-#endif
-
-#ifdef BM_JOINT_TYPE_PATELLATENDON_RIGHT
-// Parameter for switching between different joint types. Can also be used to completely exclude the joint, which then must be re-implemented manually.
-AnyMessage msg_BM_JOINT_TYPE_PATELLATENDON_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_JOINT_TYPE_PATELLATENDON_RIGHT);};
-#endif
-
-#ifdef BM_JOINT_TYPE_PATELLATENDON_LEFT
-// Parameter for switching between different joint types. Can also be used to completely exclude the joint, which then must be re-implemented manually.
-AnyMessage msg_BM_JOINT_TYPE_PATELLATENDON_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_JOINT_TYPE_PATELLATENDON_LEFT);};
-#endif
-
-#ifdef BM_GLOBAL_REFERENCE_FRAME_SWITCH
-// A switch to use different ref. frame than the default global reference frame
-AnyMessage msg_BM_GLOBAL_REFERENCE_FRAME_SWITCH = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_GLOBAL_REFERENCE_FRAME_SWITCH);};
-#endif
-
-#ifdef BM_INCLUDE_GIT_INFO
-// Switch to include git version information in the model metadata if available.
-AnyMessage msg_BM_INCLUDE_GIT_INFO = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_INCLUDE_GIT_INFO);};
-#endif
-
-#ifdef BM_COMPATIBILITY_24_TRUNK_SELECTED_OUTPUTS_JRF
-// A compatability switch to include the trunk selected outputs joint reaction force from AMMR 2.4
-AnyMessage msg_BM_COMPATIBILITY_24_TRUNK_SELECTED_OUTPUTS_JRF = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_COMPATIBILITY_24_TRUNK_SELECTED_OUTPUTS_JRF);};
-#endif
-
-#ifdef BM_COMPATIBILITY_MUSCLE_STRUCTURE
-// A compatability switch to add the model tree structure of the muscles from AMMR 4. Use this option to easily load older models.
-AnyMessage msg_BM_COMPATIBILITY_MUSCLE_STRUCTURE = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_COMPATIBILITY_MUSCLE_STRUCTURE);};
-#endif
-
-#ifdef BM_COMPATIBILITY_BODYMODEL_STRUCTURE
-// A compatability switch to add the model tree structure of the BodyModel folders from AMMR <4. Use this option to easily load older models.
-AnyMessage msg_BM_COMPATIBILITY_BODYMODEL_STRUCTURE = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_COMPATIBILITY_BODYMODEL_STRUCTURE);};
-#endif
-
-
-}; // AnyFolder Messages
+Messages = {
+  /// Folder with messages related to the BM configuation statements
+  AnyFolder BM = {
+  #ifdef BM_SCALING
+  // Definition of an anthropometric scaling law
+  AnyMessage msg_BM_SCALING = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_SCALING);};
+  #endif
+  
+  #ifdef BM_SCALING_ANTHRO_FILE
+  // Custom file with all anthropometric measurements used by the scaling law. This is some times called the AnyMan file.
+  AnyMessage msg_BM_SCALING_ANTHRO_FILE = { TriggerPreProcess = On; Type = MSG_Message; Message = BM_SCALING_ANTHRO_FILE;};
+  #endif
+  
+  #ifdef BM_SCALING_FILE
+  // Path with the ScalingLaw used. Can be set to override the BM_SCALING parameter and select a user defined scaling law.
+  AnyMessage msg_BM_SCALING_FILE = { TriggerPreProcess = On; Type = MSG_Message; Message = BM_SCALING_FILE;};
+  #endif
+  
+  #ifdef BM_CONFIG_MESSAGES
+  // Switch for automatic display of all configuration values
+  AnyMessage msg_BM_CONFIG_MESSAGES = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_CONFIG_MESSAGES);};
+  #endif
+  
+  #ifdef BM_CONFIG_VALUES
+  // Switch for enabling configuration value information in the model tree
+  AnyMessage msg_BM_CONFIG_VALUES = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_CONFIG_VALUES);};
+  #endif
+  
+  #ifdef BM_DRAWSETTINGS_FILE
+  // A file with draw settings
+  AnyMessage msg_BM_DRAWSETTINGS_FILE = { TriggerPreProcess = On; Type = MSG_Message; Message = BM_DRAWSETTINGS_FILE;};
+  #endif
+  
+  #ifdef BM_DRAWSETTINGS_SKIP
+  // A flag to switch on/off inclusion of the draw settings (may be needed in case of two human models)
+  AnyMessage msg_BM_DRAWSETTINGS_SKIP = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_DRAWSETTINGS_SKIP);};
+  #endif
+  
+  #ifdef BM_FOOT_MODEL
+  // Parameter defining the foot model used.
+  AnyMessage msg_BM_FOOT_MODEL = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_FOOT_MODEL);};
+  #endif
+  
+  #ifdef BM_FOOT_MODEL_TOE_FLEX_GM_REACTION
+  // Parameter defining the existing of reaction on toes when using _FOOT_MODEL_TOE_FLEX_GM_.
+  AnyMessage msg_BM_FOOT_MODEL_TOE_FLEX_GM_REACTION = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_FOOT_MODEL_TOE_FLEX_GM_REACTION);};
+  #endif
+  
+  #ifdef BM_LEG_MODEL
+  // Parameter defining the Leg model used.
+  AnyMessage msg_BM_LEG_MODEL = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_LEG_MODEL);};
+  #endif
+  
+  #ifdef BM_LEG_MODEL_IS_TLEM
+  // Read only parameter to check if Leg Model is a variant of the TLEM model.
+  AnyMessage msg_BM_LEG_MODEL_IS_TLEM = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_LEG_MODEL_IS_TLEM);};
+  #endif
+  
+  #ifdef BM_ARM_THORAX_SCAPULA_CONTACT
+  // Parameter defining the contact type between Thorax and Scapula. This defaults to _MULTIPLE_POINT_CONTACT_ when full thoracic model is used.
+  AnyMessage msg_BM_ARM_THORAX_SCAPULA_CONTACT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_ARM_THORAX_SCAPULA_CONTACT);};
+  #endif
+  
+  #ifdef BM_LEG_LEFT
+  // Parameter for switching the left leg On/Off. To control which leg model is used, please use the {any}`BM_LEG_MODEL` parameter.
+  AnyMessage msg_BM_LEG_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_LEG_LEFT);};
+  #endif
+  
+  #ifdef BM_LEG_RIGHT
+  // Parameter for switching the right leg On/Off. To control which leg model is used, please use the {any}`BM_LEG_MODEL` parameter.
+  AnyMessage msg_BM_LEG_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_LEG_RIGHT);};
+  #endif
+  
+  #ifdef BM_LEG_STRENGTH_INDEX
+  // Index parameter to specify muscle strength for lower extremities
+  AnyMessage msg_BM_LEG_STRENGTH_INDEX = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_LEG_STRENGTH_INDEX, "%5.3f");};
+  #endif
+  
+  #ifdef BM_LEG_MUSCLES_BOTH
+  // Parameter to define muscle behavior of both right and left leg
+  AnyMessage msg_BM_LEG_MUSCLES_BOTH = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_LEG_MUSCLES_BOTH);};
+  #endif
+  
+  #ifdef BM_LEG_MUSCLES_LEFT
+  // Parameter to define muscle behavior of the left leg
+  AnyMessage msg_BM_LEG_MUSCLES_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_LEG_MUSCLES_LEFT);};
+  #endif
+  
+  #ifdef BM_LEG_MUSCLES_RIGHT
+  // Parameter to define muscle behavior of the right leg
+  AnyMessage msg_BM_LEG_MUSCLES_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_LEG_MUSCLES_RIGHT);};
+  #endif
+  
+  #ifdef BM_FOOT_MUSCLES_LEFT
+  // Parameter to define muscle behavior of the left foot
+  AnyMessage msg_BM_FOOT_MUSCLES_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_FOOT_MUSCLES_LEFT);};
+  #endif
+  
+  #ifdef BM_FOOT_MUSCLES_RIGHT
+  // Parameter to define muscle behavior of the right foot
+  AnyMessage msg_BM_FOOT_MUSCLES_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_FOOT_MUSCLES_RIGHT);};
+  #endif
+  
+  #ifdef BM_LEG_DATASET
+  // Path to specify the underlying dataset. This currently only affects the TLEM based models. Valid options depends on which model (TLEM1/2) is used, and what dataset are available. If not specified, this will be configure automatically.
+  AnyMessage msg_BM_LEG_DATASET = { TriggerPreProcess = On; Type = MSG_Message; Message = BM_LEG_DATASET;};
+  #endif
+  
+  #ifdef BM_TRUNK_DATASET
+  // Parameter to define a trunk model dataset.
+  AnyMessage msg_BM_TRUNK_DATASET = { TriggerPreProcess = On; Type = MSG_Message; Message = BM_TRUNK_DATASET;};
+  #endif
+  
+  #ifdef BM_TRUNK_STRENGTH_INDEX
+  // Index parameter to specify strength for trunk muscles.
+  AnyMessage msg_BM_TRUNK_STRENGTH_INDEX = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_TRUNK_STRENGTH_INDEX, "%5.3f");};
+  #endif
+  
+  #ifdef BM_TRUNK_THORACIC_MODEL
+  // The type of thoracic/ribcage model used in the model.
+  AnyMessage msg_BM_TRUNK_THORACIC_MODEL = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_TRUNK_THORACIC_MODEL);};
+  #endif
+  
+  #ifdef BM_TRUNK_CAVITY_MODEL
+  // The type of thoracic/ribcage model used in the model.
+  AnyMessage msg_BM_TRUNK_CAVITY_MODEL = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_TRUNK_CAVITY_MODEL);};
+  #endif
+  
+  #ifdef BM_TRUNK_DIAGPHRAM_FIXED_POSITION
+  // Switch to control a fix on the diaphragm position. To simulate breathing this needs to be disabled, and replaced by an other driver on `Trunk.Abdominal.Diaphragm.Joints.AbdominalLayerBase_DiaphragmBase`.
+  AnyMessage msg_BM_TRUNK_DIAGPHRAM_FIXED_POSITION = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_TRUNK_DIAGPHRAM_FIXED_POSITION);};
+  #endif
+  
+  #ifdef BM_TRUNK_THORACIC_STERNUM_TOPOLOGY
+  // The topology of the sternum segment, i.e. number of segments into which sternum is split. Current options are 2, or 4 segments. 
+  AnyMessage msg_BM_TRUNK_THORACIC_STERNUM_TOPOLOGY = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_TRUNK_THORACIC_STERNUM_TOPOLOGY);};
+  #endif
+  
+  #ifdef BM_TRUNK_MUSCLES
+  // Definition of the type of all spine muscles.
+  AnyMessage msg_BM_TRUNK_MUSCLES = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_TRUNK_MUSCLES);};
+  #endif
+  
+  #ifdef BM_TRUNK_CERVICAL_MUSCLES
+  // Definition of the cervical spine muscles type.
+  AnyMessage msg_BM_TRUNK_CERVICAL_MUSCLES = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_TRUNK_CERVICAL_MUSCLES);};
+  #endif
+  
+  #ifdef BM_TRUNK_DISC_STIFFNESS
+  // Definition of the disc model of all spine parts.
+  AnyMessage msg_BM_TRUNK_DISC_STIFFNESS = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_TRUNK_DISC_STIFFNESS);};
+  #endif
+  
+  #ifdef BM_TRUNK_LUMBAR_DISC_STIFFNESS
+  // Definition of the lumbar spine disc model.
+  AnyMessage msg_BM_TRUNK_LUMBAR_DISC_STIFFNESS = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_TRUNK_LUMBAR_DISC_STIFFNESS);};
+  #endif
+  
+  #ifdef BM_TRUNK_THORACIC_DISC_STIFFNESS
+  // Definition of the thoracic spine disc model.
+  AnyMessage msg_BM_TRUNK_THORACIC_DISC_STIFFNESS = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_TRUNK_THORACIC_DISC_STIFFNESS);};
+  #endif
+  
+  #ifdef BM_TRUNK_CERVICAL_DISC_STIFFNESS
+  // Definition of the cervical spine disc model.
+  AnyMessage msg_BM_TRUNK_CERVICAL_DISC_STIFFNESS = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_TRUNK_CERVICAL_DISC_STIFFNESS);};
+  #endif
+  
+  #ifdef BM_TRUNK_RHYTHM
+  // A switch to use a kinematic rhythm for the whole spine. ON indicate that the rhythm is a hard contraint while _RHYTHM_SOFT_ will make the rhythm as soft kinematic contraint.
+  AnyMessage msg_BM_TRUNK_RHYTHM = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_TRUNK_RHYTHM);};
+  #endif
+  
+  #ifdef BM_TRUNK_LUMBAR_RHYTHM
+  // A switch to use a kinematic rhythm for the lumbar spine. ON indicate that the rhythm is a hard contraint while _RHYTHM_SOFT_ will make the rhythm as soft kinematic contraint.
+  AnyMessage msg_BM_TRUNK_LUMBAR_RHYTHM = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_TRUNK_LUMBAR_RHYTHM);};
+  #endif
+  
+  #ifdef BM_TRUNK_THORACIC_RHYTHM
+  // A switch to use a kinematic rhythm for the thoracic spine. ON indicate that the rhythm is a hard contraint while _RHYTHM_SOFT_ will make the rhythm as soft kinematic contraint.
+  AnyMessage msg_BM_TRUNK_THORACIC_RHYTHM = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_TRUNK_THORACIC_RHYTHM);};
+  #endif
+  
+  #ifdef BM_TRUNK_CERVICAL_RHYTHM
+  // A switch to use a kinematic rhythm for the cervical spine. ON indicate that the rhythm is a hard contraint while _RHYTHM_SOFT_ will make the rhythm as soft kinematic contraint.
+  AnyMessage msg_BM_TRUNK_CERVICAL_RHYTHM = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_TRUNK_CERVICAL_RHYTHM);};
+  #endif
+  
+  #ifdef BM_TRUNK_CERVICAL_THORACIC_LINK
+  // The cervical and thoracic movements are linked so the move simultaneously. This switch is used to enable this link.
+  AnyMessage msg_BM_TRUNK_CERVICAL_THORACIC_LINK = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_TRUNK_CERVICAL_THORACIC_LINK);};
+  #endif
+  
+  #ifdef BM_TRUNK_LUMBAR_THORACIC_LINK
+  // The lumbar and thoracic movements are linked so the move simultaneously. This switch is used to enable this link.
+  AnyMessage msg_BM_TRUNK_LUMBAR_THORACIC_LINK = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_TRUNK_LUMBAR_THORACIC_LINK);};
+  #endif
+  
+  #ifdef BM_TRUNK_LIGAMENTS
+  // A switch to control all the ligaments in the spine.
+  AnyMessage msg_BM_TRUNK_LIGAMENTS = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_TRUNK_LIGAMENTS);};
+  #endif
+  
+  #ifdef BM_TRUNK_CERVICAL_LIGAMENTS
+  // A switch to control the cervical spine ligaments.
+  AnyMessage msg_BM_TRUNK_CERVICAL_LIGAMENTS = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_TRUNK_CERVICAL_LIGAMENTS);};
+  #endif
+  
+  #ifdef BM_TRUNK_THORACIC_LIGAMENTS
+  // A switch to control the thoracic spine ligaments.
+  AnyMessage msg_BM_TRUNK_THORACIC_LIGAMENTS = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_TRUNK_THORACIC_LIGAMENTS);};
+  #endif
+  
+  #ifdef BM_TRUNK_LUMBAR_LIGAMENTS
+  // A switch to control the lumbar spine ligaments.
+  AnyMessage msg_BM_TRUNK_LUMBAR_LIGAMENTS = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_TRUNK_LUMBAR_LIGAMENTS);};
+  #endif
+  
+  #ifdef BM_ARM_STRENGTH_INDEX
+  // Index parameter to specify muscle strength for upper extremities.
+  AnyMessage msg_BM_ARM_STRENGTH_INDEX = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_ARM_STRENGTH_INDEX, "%5.3f");};
+  #endif
+  
+  #ifdef BM_ARM_LEFT
+  // Switch for the left arm model being present or not.
+  AnyMessage msg_BM_ARM_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_ARM_LEFT);};
+  #endif
+  
+  #ifdef BM_ARM_RIGHT
+  // Switch for the right arm model being present or not.
+  AnyMessage msg_BM_ARM_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_ARM_RIGHT);};
+  #endif
+  
+  #ifdef BM_ARM_SHOULDER_RHYTHM
+  // Switch for the shoulder rhythm constraints. ON indicate that the rhythm is a hard contraint while _RHYTHM_SOFT_ will make the rhythm as soft kinematic contraint.
+  AnyMessage msg_BM_ARM_SHOULDER_RHYTHM = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_ARM_SHOULDER_RHYTHM);};
+  #endif
+  
+  #ifdef BM_ARM_CLAVICULA_ROTATION_RHYTHM
+  // Switch for the clavicula rotation rhythm. If enabled axial rotation of the clavicula will be distributed evenly between the sterno-clavicula and acromio-clavicula joint. Effectively removing clavicula axial rotation as an independent degree of freedom.resterno-clavicula axial rotation.
+  AnyMessage msg_BM_ARM_CLAVICULA_ROTATION_RHYTHM = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_ARM_CLAVICULA_ROTATION_RHYTHM);};
+  #endif
+  
+  #ifdef BM_ARM_DETAILED_HAND
+  // Switch for enabling the detailed hand.
+  AnyMessage msg_BM_ARM_DETAILED_HAND = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_ARM_DETAILED_HAND);};
+  #endif
+  
+  #ifdef BM_ARM_DELTOID_WRAPPING
+  // Switch for deltoid wrapping. Setting this to OFF or _DELTOID_WRAPPING_RAKE_ will revert to the older rake based implementation of the deltoid.
+  AnyMessage msg_BM_ARM_DELTOID_WRAPPING = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_ARM_DELTOID_WRAPPING);};
+  #endif
+  
+  #ifdef BM_ARM_MUSCLES_BOTH
+  // Keyword for the muscle model type for both left and right arms.
+  AnyMessage msg_BM_ARM_MUSCLES_BOTH = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_ARM_MUSCLES_BOTH);};
+  #endif
+  
+  #ifdef BM_ARM_MUSCLES_LEFT
+  // Keyword for the muscle model type for the left arm.
+  AnyMessage msg_BM_ARM_MUSCLES_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_ARM_MUSCLES_LEFT);};
+  #endif
+  
+  #ifdef BM_ARM_MUSCLES_RIGHT
+  // Keyword for the muscle model for both the right arm.
+  AnyMessage msg_BM_ARM_MUSCLES_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_ARM_MUSCLES_RIGHT);};
+  #endif
+  
+  #ifdef BM_PELVIS_DISPLAY
+  // Keyword for pelvis display setting.
+  AnyMessage msg_BM_PELVIS_DISPLAY = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_PELVIS_DISPLAY);};
+  #endif
+  
+  #ifdef BM_MANNEQUIN_FILE
+  // File name of the mannequin definition file. By default this is no longer used, since the values in ``HumanModel.Mannequin`` can be assigned directly in your applicaiton ( E.g. ``Main.HumanModel.Mannequin.Posture.NeckExtension = 30;``). However, the parameter can still be used to set your own mannequin file. Just define your own mannequin file in your applicaiton like this: ``#path BM_MANNEQUIN_FILE "<ANYBODY_PATH_BODY>\BodyModels\GenericBodyModel\BodyModel.mannequin.any";``
+  AnyMessage msg_BM_MANNEQUIN_FILE = { TriggerPreProcess = On; Type = MSG_Message; Message = BM_MANNEQUIN_FILE;};
+  #endif
+  
+  #ifdef BM_MANNEQUIN_DRIVER_DEFAULT
+  // Setting of the default value for all mannequin drivers.
+  AnyMessage msg_BM_MANNEQUIN_DRIVER_DEFAULT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_DEFAULT);};
+  #endif
+  
+  #ifdef BM_MANNEQUIN_DRIVER_WEAK_SWITCH
+  // By default constraint type of mannequin drivers will be soft.
+  AnyMessage msg_BM_MANNEQUIN_DRIVER_WEAK_SWITCH = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_WEAK_SWITCH);};
+  #endif
+  
+  #ifdef BM_LEG_TRUNK_INTERFACE
+  // Keyword for the interface morhping between the trunk and the leg pelvis segments.
+  AnyMessage msg_BM_LEG_TRUNK_INTERFACE = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_LEG_TRUNK_INTERFACE);};
+  #endif
+  
+  #ifdef BM_CALIBRATION_TYPE
+  // Parameter to choose type of muscle tendon calibration
+  AnyMessage msg_BM_CALIBRATION_TYPE = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_CALIBRATION_TYPE);};
+  #endif
+  
+  #ifdef BM_MANNEQUIN_DRIVER_PELVIS_POS_X
+  // Switch for the mannequin driver being active or not
+  AnyMessage msg_BM_MANNEQUIN_DRIVER_PELVIS_POS_X = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_PELVIS_POS_X);};
+  #endif
+  
+  #ifdef BM_MANNEQUIN_DRIVER_PELVIS_POS_Y
+  // Switch for the mannequin driver being active or not
+  AnyMessage msg_BM_MANNEQUIN_DRIVER_PELVIS_POS_Y = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_PELVIS_POS_Y);};
+  #endif
+  
+  #ifdef BM_MANNEQUIN_DRIVER_PELVIS_POS_Z
+  // Switch for the mannequin driver being active or not
+  AnyMessage msg_BM_MANNEQUIN_DRIVER_PELVIS_POS_Z = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_PELVIS_POS_Z);};
+  #endif
+  
+  #ifdef BM_MANNEQUIN_DRIVER_PELVIS_ROT_Z
+  // Switch for the mannequin driver being active or not
+  AnyMessage msg_BM_MANNEQUIN_DRIVER_PELVIS_ROT_Z = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_PELVIS_ROT_Z);};
+  #endif
+  
+  #ifdef BM_MANNEQUIN_DRIVER_PELVIS_ROT_Y
+  // Switch for the mannequin driver being active or not
+  AnyMessage msg_BM_MANNEQUIN_DRIVER_PELVIS_ROT_Y = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_PELVIS_ROT_Y);};
+  #endif
+  
+  #ifdef BM_MANNEQUIN_DRIVER_PELVIS_ROT_X
+  // Switch for the mannequin driver being active or not
+  AnyMessage msg_BM_MANNEQUIN_DRIVER_PELVIS_ROT_X = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_PELVIS_ROT_X);};
+  #endif
+  
+  #ifdef BM_MANNEQUIN_DRIVER_NECK
+  // Switch for the mannequin driver being active or not
+  AnyMessage msg_BM_MANNEQUIN_DRIVER_NECK = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_NECK);};
+  #endif
+  
+  #ifdef BM_MANNEQUIN_DRIVER_SKULL_THORAX_FLEXION
+  // Switch for the mannequin driver being active or not
+  AnyMessage msg_BM_MANNEQUIN_DRIVER_SKULL_THORAX_FLEXION = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_SKULL_THORAX_FLEXION);};
+  #endif
+  
+  #ifdef BM_MANNEQUIN_DRIVER_SKULL_THORAX_LATERALBENDING
+  // Switch for the mannequin driver being active or not
+  AnyMessage msg_BM_MANNEQUIN_DRIVER_SKULL_THORAX_LATERALBENDING = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_SKULL_THORAX_LATERALBENDING);};
+  #endif
+  
+  #ifdef BM_MANNEQUIN_DRIVER_SKULL_THORAX_ROTATION
+  // Switch for the mannequin driver being active or not
+  AnyMessage msg_BM_MANNEQUIN_DRIVER_SKULL_THORAX_ROTATION = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_SKULL_THORAX_ROTATION);};
+  #endif
+  
+  #ifdef BM_MANNEQUIN_DRIVER_PELVIS_THORAX_LATERAL_BENDING
+  // Switch for the mannequin driver being active or not
+  AnyMessage msg_BM_MANNEQUIN_DRIVER_PELVIS_THORAX_LATERAL_BENDING = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_PELVIS_THORAX_LATERAL_BENDING);};
+  #endif
+  
+  #ifdef BM_MANNEQUIN_DRIVER_PELVIS_THORAX_ROTATION
+  // Switch for the mannequin driver being active or not
+  AnyMessage msg_BM_MANNEQUIN_DRIVER_PELVIS_THORAX_ROTATION = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_PELVIS_THORAX_ROTATION);};
+  #endif
+  
+  #ifdef BM_MANNEQUIN_DRIVER_PELVIS_THORAX_EXTENSION
+  // Switch for the mannequin driver being active or not
+  AnyMessage msg_BM_MANNEQUIN_DRIVER_PELVIS_THORAX_EXTENSION = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_PELVIS_THORAX_EXTENSION);};
+  #endif
+  
+  #ifdef BM_MANNEQUIN_DRIVER_STERNO_CLAVICULAR_RIGHT
+  // Switch for all the mannequin drivers for the sterno clavicular degrees of freedom.
+  AnyMessage msg_BM_MANNEQUIN_DRIVER_STERNO_CLAVICULAR_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_STERNO_CLAVICULAR_RIGHT);};
+  #endif
+  
+  #ifdef BM_MANNEQUIN_DRIVER_STERNOCLAVICULAR_PROTRACTION_RIGHT
+  // Switch for the mannequin driver being active or not.
+  AnyMessage msg_BM_MANNEQUIN_DRIVER_STERNOCLAVICULAR_PROTRACTION_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_STERNOCLAVICULAR_PROTRACTION_RIGHT);};
+  #endif
+  
+  #ifdef BM_MANNEQUIN_DRIVER_STERNOCLAVICULAR_ELEVATION_RIGHT
+  // Switch for the mannequin driver being active or not.
+  AnyMessage msg_BM_MANNEQUIN_DRIVER_STERNOCLAVICULAR_ELEVATION_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_STERNOCLAVICULAR_ELEVATION_RIGHT);};
+  #endif
+  
+  #ifdef BM_MANNEQUIN_DRIVER_STERNOCLAVICULAR_AXIAL_ROTATION_RIGHT
+  // Switch for the mannequin driver being active or not.
+  AnyMessage msg_BM_MANNEQUIN_DRIVER_STERNOCLAVICULAR_AXIAL_ROTATION_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_STERNOCLAVICULAR_AXIAL_ROTATION_RIGHT);};
+  #endif
+  
+  #ifdef BM_MANNEQUIN_DRIVER_GLENOHUMERAL_ABDUCTION_RIGHT
+  // Switch for the mannequin driver being active or not
+  AnyMessage msg_BM_MANNEQUIN_DRIVER_GLENOHUMERAL_ABDUCTION_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_GLENOHUMERAL_ABDUCTION_RIGHT);};
+  #endif
+  
+  #ifdef BM_MANNEQUIN_DRIVER_GLENOHUMERAL_FLEXION_RIGHT
+  // Switch for the mannequin driver being active or not
+  AnyMessage msg_BM_MANNEQUIN_DRIVER_GLENOHUMERAL_FLEXION_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_GLENOHUMERAL_FLEXION_RIGHT);};
+  #endif
+  
+  #ifdef BM_MANNEQUIN_DRIVER_GLENOHUMERAL_EXTERNAL_ROTATION_RIGHT
+  // Switch for the mannequin driver being active or not
+  AnyMessage msg_BM_MANNEQUIN_DRIVER_GLENOHUMERAL_EXTERNAL_ROTATION_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_GLENOHUMERAL_EXTERNAL_ROTATION_RIGHT);};
+  #endif
+  
+  #ifdef BM_MANNEQUIN_DRIVER_ELBOW_FLEXION_RIGHT
+  // Switch for the mannequin driver being active or not
+  AnyMessage msg_BM_MANNEQUIN_DRIVER_ELBOW_FLEXION_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_ELBOW_FLEXION_RIGHT);};
+  #endif
+  
+  #ifdef BM_MANNEQUIN_DRIVER_ELBOW_PRONATION_RIGHT
+  // Switch for the mannequin driver being active or not
+  AnyMessage msg_BM_MANNEQUIN_DRIVER_ELBOW_PRONATION_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_ELBOW_PRONATION_RIGHT);};
+  #endif
+  
+  #ifdef BM_MANNEQUIN_DRIVER_WRIST_FLEXION_RIGHT
+  // Switch for the mannequin driver being active or not
+  AnyMessage msg_BM_MANNEQUIN_DRIVER_WRIST_FLEXION_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_WRIST_FLEXION_RIGHT);};
+  #endif
+  
+  #ifdef BM_MANNEQUIN_DRIVER_WRIST_ABDUCTION_RIGHT
+  // Switch for the mannequin driver being active or not
+  AnyMessage msg_BM_MANNEQUIN_DRIVER_WRIST_ABDUCTION_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_WRIST_ABDUCTION_RIGHT);};
+  #endif
+  
+  #ifdef BM_MANNEQUIN_DRIVER_HAND_RIGHT
+  // Switch for the mannequin driver being active or not
+  AnyMessage msg_BM_MANNEQUIN_DRIVER_HAND_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_HAND_RIGHT);};
+  #endif
+  
+  #ifdef BM_MANNEQUIN_DRIVER_STERNO_CLAVICULAR_LEFT
+  // Switch for all the mannequin drivers for the sterno clavicular degrees of freedom.
+  AnyMessage msg_BM_MANNEQUIN_DRIVER_STERNO_CLAVICULAR_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_STERNO_CLAVICULAR_LEFT);};
+  #endif
+  
+  #ifdef BM_MANNEQUIN_DRIVER_STERNOCLAVICULAR_PROTRACTION_LEFT
+  // Switch for the mannequin driver being active or not.
+  AnyMessage msg_BM_MANNEQUIN_DRIVER_STERNOCLAVICULAR_PROTRACTION_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_STERNOCLAVICULAR_PROTRACTION_LEFT);};
+  #endif
+  
+  #ifdef BM_MANNEQUIN_DRIVER_STERNOCLAVICULAR_ELEVATION_LEFT
+  // Switch for the mannequin driver being active or not.
+  AnyMessage msg_BM_MANNEQUIN_DRIVER_STERNOCLAVICULAR_ELEVATION_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_STERNOCLAVICULAR_ELEVATION_LEFT);};
+  #endif
+  
+  #ifdef BM_MANNEQUIN_DRIVER_STERNOCLAVICULAR_AXIAL_ROTATION_LEFT
+  // Switch for the mannequin driver being active or not.
+  AnyMessage msg_BM_MANNEQUIN_DRIVER_STERNOCLAVICULAR_AXIAL_ROTATION_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_STERNOCLAVICULAR_AXIAL_ROTATION_LEFT);};
+  #endif
+  
+  #ifdef BM_MANNEQUIN_DRIVER_GLENOHUMERAL_ABDUCTION_LEFT
+  // Switch for the mannequin driver being active or not
+  AnyMessage msg_BM_MANNEQUIN_DRIVER_GLENOHUMERAL_ABDUCTION_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_GLENOHUMERAL_ABDUCTION_LEFT);};
+  #endif
+  
+  #ifdef BM_MANNEQUIN_DRIVER_GLENOHUMERAL_FLEXION_LEFT
+  // Switch for the mannequin driver being active or not
+  AnyMessage msg_BM_MANNEQUIN_DRIVER_GLENOHUMERAL_FLEXION_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_GLENOHUMERAL_FLEXION_LEFT);};
+  #endif
+  
+  #ifdef BM_MANNEQUIN_DRIVER_GLENOHUMERAL_EXTERNAL_ROTATION_LEFT
+  // Switch for the mannequin driver being active or not
+  AnyMessage msg_BM_MANNEQUIN_DRIVER_GLENOHUMERAL_EXTERNAL_ROTATION_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_GLENOHUMERAL_EXTERNAL_ROTATION_LEFT);};
+  #endif
+  
+  #ifdef BM_MANNEQUIN_DRIVER_ELBOW_FLEXION_LEFT
+  // Switch for the mannequin driver being active or not
+  AnyMessage msg_BM_MANNEQUIN_DRIVER_ELBOW_FLEXION_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_ELBOW_FLEXION_LEFT);};
+  #endif
+  
+  #ifdef BM_MANNEQUIN_DRIVER_ELBOW_PRONATION_LEFT
+  // Switch for the mannequin driver being active or not
+  AnyMessage msg_BM_MANNEQUIN_DRIVER_ELBOW_PRONATION_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_ELBOW_PRONATION_LEFT);};
+  #endif
+  
+  #ifdef BM_MANNEQUIN_DRIVER_WRIST_FLEXION_LEFT
+  // Switch for the mannequin driver being active or not
+  AnyMessage msg_BM_MANNEQUIN_DRIVER_WRIST_FLEXION_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_WRIST_FLEXION_LEFT);};
+  #endif
+  
+  #ifdef BM_MANNEQUIN_DRIVER_WRIST_ABDUCTION_LEFT
+  // Switch for the mannequin driver being active or not
+  AnyMessage msg_BM_MANNEQUIN_DRIVER_WRIST_ABDUCTION_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_WRIST_ABDUCTION_LEFT);};
+  #endif
+  
+  #ifdef BM_MANNEQUIN_DRIVER_HAND_LEFT
+  // Switch for the mannequin driver being active or not
+  AnyMessage msg_BM_MANNEQUIN_DRIVER_HAND_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_HAND_LEFT);};
+  #endif
+  
+  #ifdef BM_MANNEQUIN_DRIVER_HIP_FLEXION_RIGHT
+  // Switch for the mannequin driver being active or not
+  AnyMessage msg_BM_MANNEQUIN_DRIVER_HIP_FLEXION_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_HIP_FLEXION_RIGHT);};
+  #endif
+  
+  #ifdef BM_MANNEQUIN_DRIVER_HIP_EXTERNAL_ROTATION_RIGHT
+  // Switch for the mannequin driver being active or not
+  AnyMessage msg_BM_MANNEQUIN_DRIVER_HIP_EXTERNAL_ROTATION_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_HIP_EXTERNAL_ROTATION_RIGHT);};
+  #endif
+  
+  #ifdef BM_MANNEQUIN_DRIVER_HIP_ABDUCTION_RIGHT
+  // Switch for the mannequin driver being active or not
+  AnyMessage msg_BM_MANNEQUIN_DRIVER_HIP_ABDUCTION_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_HIP_ABDUCTION_RIGHT);};
+  #endif
+  
+  #ifdef BM_MANNEQUIN_DRIVER_KNEE_FLEXION_RIGHT
+  // Switch for the mannequin driver being active or not
+  AnyMessage msg_BM_MANNEQUIN_DRIVER_KNEE_FLEXION_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_KNEE_FLEXION_RIGHT);};
+  #endif
+  
+  #ifdef BM_MANNEQUIN_DRIVER_ANKLE_FLEXION_RIGHT
+  // Switch for the mannequin driver being active or not
+  AnyMessage msg_BM_MANNEQUIN_DRIVER_ANKLE_FLEXION_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_ANKLE_FLEXION_RIGHT);};
+  #endif
+  
+  #ifdef BM_MANNEQUIN_DRIVER_ANKLE_SUBTALAR_EVERSION_RIGHT
+  // Switch for the mannequin driver being active or not
+  AnyMessage msg_BM_MANNEQUIN_DRIVER_ANKLE_SUBTALAR_EVERSION_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_ANKLE_SUBTALAR_EVERSION_RIGHT);};
+  #endif
+  
+  #ifdef BM_MANNEQUIN_DRIVER_TOES_FLEXION_RIGHT
+  // Switch for the mannequin driver being active or not
+  AnyMessage msg_BM_MANNEQUIN_DRIVER_TOES_FLEXION_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_TOES_FLEXION_RIGHT);};
+  #endif
+  
+  #ifdef BM_MANNEQUIN_DRIVER_HIP_FLEXION_LEFT
+  // Switch for the mannequin driver being active or not
+  AnyMessage msg_BM_MANNEQUIN_DRIVER_HIP_FLEXION_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_HIP_FLEXION_LEFT);};
+  #endif
+  
+  #ifdef BM_MANNEQUIN_DRIVER_HIP_EXTERNAL_ROTATION_LEFT
+  // Switch for the mannequin driver being active or not
+  AnyMessage msg_BM_MANNEQUIN_DRIVER_HIP_EXTERNAL_ROTATION_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_HIP_EXTERNAL_ROTATION_LEFT);};
+  #endif
+  
+  #ifdef BM_MANNEQUIN_DRIVER_HIP_ABDUCTION_LEFT
+  // Switch for the mannequin driver being active or not
+  AnyMessage msg_BM_MANNEQUIN_DRIVER_HIP_ABDUCTION_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_HIP_ABDUCTION_LEFT);};
+  #endif
+  
+  #ifdef BM_MANNEQUIN_DRIVER_KNEE_FLEXION_LEFT
+  // Switch for the mannequin driver being active or not
+  AnyMessage msg_BM_MANNEQUIN_DRIVER_KNEE_FLEXION_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_KNEE_FLEXION_LEFT);};
+  #endif
+  
+  #ifdef BM_MANNEQUIN_DRIVER_ANKLE_FLEXION_LEFT
+  // Switch for the mannequin driver being active or not
+  AnyMessage msg_BM_MANNEQUIN_DRIVER_ANKLE_FLEXION_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_ANKLE_FLEXION_LEFT);};
+  #endif
+  
+  #ifdef BM_MANNEQUIN_DRIVER_ANKLE_SUBTALAR_EVERSION_LEFT
+  // Switch for the mannequin driver being active or not
+  AnyMessage msg_BM_MANNEQUIN_DRIVER_ANKLE_SUBTALAR_EVERSION_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_ANKLE_SUBTALAR_EVERSION_LEFT);};
+  #endif
+  
+  #ifdef BM_MANNEQUIN_DRIVER_TOES_FLEXION_LEFT
+  // Switch for the mannequin driver being active or not
+  AnyMessage msg_BM_MANNEQUIN_DRIVER_TOES_FLEXION_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_MANNEQUIN_DRIVER_TOES_FLEXION_LEFT);};
+  #endif
+  
+  #ifdef BM_JOINT_TYPE_HIP_RIGHT
+  // Parameter for switching between different joint types. Can also be used to completely exclude the joint, which then must be re-implemented manually.
+  AnyMessage msg_BM_JOINT_TYPE_HIP_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_JOINT_TYPE_HIP_RIGHT);};
+  #endif
+  
+  #ifdef BM_JOINT_TYPE_HIP_LEFT
+  // Parameter for switching between different joint types. Can also be used to completely exclude the joint, which then must be re-implemented manually.
+  AnyMessage msg_BM_JOINT_TYPE_HIP_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_JOINT_TYPE_HIP_LEFT);};
+  #endif
+  
+  #ifdef BM_JOINT_TYPE_KNEE_RIGHT
+  // Parameter for switching between different joint types. Can also be used to completely exclude the joint, which then must be re-implemented manually.
+  AnyMessage msg_BM_JOINT_TYPE_KNEE_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_JOINT_TYPE_KNEE_RIGHT);};
+  #endif
+  
+  #ifdef BM_JOINT_TYPE_KNEE_LEFT
+  // Parameter for switching between different joint types. Can also be used to completely exclude the joint, which then must be re-implemented manually.
+  AnyMessage msg_BM_JOINT_TYPE_KNEE_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_JOINT_TYPE_KNEE_LEFT);};
+  #endif
+  
+  #ifdef BM_JOINT_TYPE_PATELLOFEMORAL_RIGHT
+  // Parameter for switching between different joint types. Can also be used to completely exclude the joint, which then must be re-implemented manually.
+  AnyMessage msg_BM_JOINT_TYPE_PATELLOFEMORAL_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_JOINT_TYPE_PATELLOFEMORAL_RIGHT);};
+  #endif
+  
+  #ifdef BM_JOINT_TYPE_PATELLOFEMORAL_LEFT
+  // Parameter for switching between different joint types. Can also be used to completely exclude the joint, which then must be re-implemented manually.
+  AnyMessage msg_BM_JOINT_TYPE_PATELLOFEMORAL_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_JOINT_TYPE_PATELLOFEMORAL_LEFT);};
+  #endif
+  
+  #ifdef BM_JOINT_TYPE_ANKLE_RIGHT
+  // Parameter for switching between different joint types. Can also be used to completely exclude the joint, which then must be re-implemented manually.
+  AnyMessage msg_BM_JOINT_TYPE_ANKLE_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_JOINT_TYPE_ANKLE_RIGHT);};
+  #endif
+  
+  #ifdef BM_JOINT_TYPE_ANKLE_LEFT
+  // Parameter for switching between different joint types. Can also be used to completely exclude the joint, which then must be re-implemented manually.
+  AnyMessage msg_BM_JOINT_TYPE_ANKLE_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_JOINT_TYPE_ANKLE_LEFT);};
+  #endif
+  
+  #ifdef BM_JOINT_TYPE_SUBTALAR_RIGHT
+  // Parameter for switching between different joint types. Can also be used to completely exclude the joint, which then must be re-implemented manually.
+  AnyMessage msg_BM_JOINT_TYPE_SUBTALAR_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_JOINT_TYPE_SUBTALAR_RIGHT);};
+  #endif
+  
+  #ifdef BM_JOINT_TYPE_SUBTALAR_LEFT
+  // Parameter for switching between different joint types. Can also be used to completely exclude the joint, which then must be re-implemented manually.
+  AnyMessage msg_BM_JOINT_TYPE_SUBTALAR_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_JOINT_TYPE_SUBTALAR_LEFT);};
+  #endif
+  
+  #ifdef BM_JOINT_TYPE_PATELLATENDON_RIGHT
+  // Parameter for switching between different joint types. Can also be used to completely exclude the joint, which then must be re-implemented manually.
+  AnyMessage msg_BM_JOINT_TYPE_PATELLATENDON_RIGHT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_JOINT_TYPE_PATELLATENDON_RIGHT);};
+  #endif
+  
+  #ifdef BM_JOINT_TYPE_PATELLATENDON_LEFT
+  // Parameter for switching between different joint types. Can also be used to completely exclude the joint, which then must be re-implemented manually.
+  AnyMessage msg_BM_JOINT_TYPE_PATELLATENDON_LEFT = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_JOINT_TYPE_PATELLATENDON_LEFT);};
+  #endif
+  
+  #ifdef BM_GLOBAL_REFERENCE_FRAME_SWITCH
+  // A switch to use different ref. frame than the default global reference frame
+  AnyMessage msg_BM_GLOBAL_REFERENCE_FRAME_SWITCH = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_GLOBAL_REFERENCE_FRAME_SWITCH);};
+  #endif
+  
+  #ifdef BM_INCLUDE_GIT_INFO
+  // Switch to include git version information in the model metadata if available.
+  AnyMessage msg_BM_INCLUDE_GIT_INFO = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_INCLUDE_GIT_INFO);};
+  #endif
+  
+  #ifdef BM_COMPATIBILITY_24_TRUNK_SELECTED_OUTPUTS_JRF
+  // A compatability switch to include the trunk selected outputs joint reaction force from AMMR 2.4
+  AnyMessage msg_BM_COMPATIBILITY_24_TRUNK_SELECTED_OUTPUTS_JRF = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_COMPATIBILITY_24_TRUNK_SELECTED_OUTPUTS_JRF);};
+  #endif
+  
+  #ifdef BM_COMPATIBILITY_MUSCLE_STRUCTURE
+  // A compatability switch to add the model tree structure of the muscles from AMMR 4. Use this option to easily load older models.
+  AnyMessage msg_BM_COMPATIBILITY_MUSCLE_STRUCTURE = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_COMPATIBILITY_MUSCLE_STRUCTURE);};
+  #endif
+  
+  #ifdef BM_COMPATIBILITY_BODYMODEL_STRUCTURE
+  // A compatability switch to add the model tree structure of the BodyModel folders from AMMR <4. Use this option to easily load older models.
+  AnyMessage msg_BM_COMPATIBILITY_BODYMODEL_STRUCTURE = { TriggerPreProcess = On; Type = MSG_Message; Message = strval(BM_COMPATIBILITY_BODYMODEL_STRUCTURE);};
+  #endif
+  
+  
+  }; // AnyFolder Messages
+};
 #endif
 
 #if BM_CONFIG_VALUES == ON
-AnyFolder Values = {
+/// Folder containing the values of each BM configuation statement in the model
+AnyFolder BMValues = {
 
 #ifdef BM_SCALING
 // Definition of an anthropometric scaling law
@@ -1287,6 +1290,3 @@ AnyIntVar value_BM_COMPATIBILITY_BODYMODEL_STRUCTURE=BM_COMPATIBILITY_BODYMODEL_
 
 };// AnyFolder Values
 #endif
-
-
-

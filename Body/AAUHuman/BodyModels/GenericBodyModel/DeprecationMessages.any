@@ -1,11 +1,13 @@
 
-AnyFolder Messages = {
+/// Folder containing deprecation messages for the BodyModel.
+AnyFolder Deprecations = {
+  
   // Deprecation messages for the AMMR 3 bodymodel folder structure. These messages will be
   // triggered when the old folder structure is used, and will inform the user about the
   // deprecation and guide them to update their model to the new structure.
   #if BM_COMPATIBILITY_BODYMODEL_STRUCTURE  ==  ON
     #if BM_ARM_LEFT  ==  ON
-      AnyMessageOnObjectUse DeprecatedFolderArmLeft = {
+      AnyMessageOnObjectUse FoldersArmLeft = {
         AnyFolder &ref = Main.HumanModel.BodyModel.Left.ShoulderArm;
         Objects = {&ref.ModelParameters, &ref.Mus, &ref.Jnt, &ref.Seg};
         DeprecationMessage = On;
@@ -26,7 +28,7 @@ AnyFolder Messages = {
     #endif
 
     #if BM_ARM_RIGHT  ==  ON
-      AnyMessageOnObjectUse DeprecatedFolderArmRight = {
+      AnyMessageOnObjectUse FoldersArmRight = {
         AnyFolder &ref = Main.HumanModel.BodyModel.Right.ShoulderArm;
         Objects = {&ref.ModelParameters, &ref.Mus, &ref.Jnt, &ref.Seg};
         DeprecationMessage = On;
@@ -47,7 +49,7 @@ AnyFolder Messages = {
     #endif
 
     #if BM_LEG_RIGHT  ==  ON
-      AnyMessageOnObjectUse DeprecatedFolderLegRight = {
+      AnyMessageOnObjectUse FoldersLegRight = {
         AnyFolder &ref = Main.HumanModel.BodyModel.Right.Leg;
         Objects = {&ref.Seg};
         DeprecationMessage = On;
@@ -68,7 +70,7 @@ AnyFolder Messages = {
     #endif
 
     #if BM_LEG_LEFT  ==  ON
-      AnyMessageOnObjectUse DeprecatedFolderLegLeft = {
+      AnyMessageOnObjectUse FoldersLegLeft = {
         AnyFolder &ref = Main.HumanModel.BodyModel.Left.Leg;
         Objects = {&ref.Seg};
         DeprecationMessage = On;
@@ -89,7 +91,7 @@ AnyFolder Messages = {
     #endif
 
     #if BM_COMPATIBILITY_BODYMODEL_STRUCTURE    ==    ON
-    AnyMessageOnObjectUse DeprecatedFolderTrunk = {
+    AnyMessageOnObjectUse FoldersTrunk = {
       AnyFolder &ref = Main.HumanModel.BodyModel.Trunk;
       Objects = {
         &ref.ModelParameters, &ref.MusclesSpineRight, &ref.MusclesSpineLeft,
