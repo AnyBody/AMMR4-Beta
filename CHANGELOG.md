@@ -234,6 +234,10 @@ You can revert to the TLEM foot model by setting:
 
 ### ❌ Removed
 
+* The deprecated deltoid wrapping method `_DELTOID_WRAPPING_RAKE_` has been
+  removed. The deltoid wrapping implementation now only uses the cylinder
+  or ellipsoid wrapping methods.
+
 * The deprecated TLEM 1 model has been removed from the AMMR. The TLEM 2.2 model is now the only TLEM based model
   available in the AMMR. It is activated by default or by setting:
 
@@ -242,6 +246,10 @@ You can revert to the TLEM foot model by setting:
   ```
 
 * Remove a number of previously deprecated `BM_XXX` switches and constants.
+
+* The AMS Plugins based on the `ANyGUIPlugin` class has been deprecated and removed. A new
+  AnyBody Studio Extensions platform will take over and re-implement the funtionality with
+  the new `AnyAppExtensionStudio` class.
 
 (ammr-3-2-1-changelog)=
 ## AMMR 3.2.1 (2026-05-21)

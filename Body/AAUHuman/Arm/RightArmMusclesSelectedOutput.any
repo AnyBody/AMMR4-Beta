@@ -5,7 +5,7 @@ SelectedOutput.Right = {
   AnyFolder ShoulderArm = {
 
 
-    AnyFolder JointReactionForce = {
+    SelectedOutputGroup JointReactionForce = {
 
       /// Lateral positive
       AnyVar SternoClavicular_MedioLateralForce = ....Right.ShoulderArm.Joints.SternoClavicularJoint.Constraints.Reaction.Fout[0];
@@ -86,7 +86,7 @@ SelectedOutput.Right = {
 
 
 
-    AnyFolder JointMomentMeasure = {
+    SelectedOutputGroup JointMomentMeasure = {
 
 
       AnyVar GlenoHumeralAbduction = ....Right.ShoulderArm.MomentMeasure.GHNetMomentMuscles.GHAbduction;
