@@ -65,7 +65,7 @@ Main = {
   #else
     #include "../Cameras.any"
     #if BM_LEG_MODEL
-    // Use a a spical time for the initial position picture.
+    // Use a a special time for the initial position picture.
     AnyOperationSequence CameraInitPos =
     {
       AnyOperationSetValue setTime =
