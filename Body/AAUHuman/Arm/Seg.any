@@ -350,9 +350,6 @@ AnyFloat pUnscaled= {Data.gh_pos, Data.EpicondylusHumerusMedialis_pos, Data.Epic
     Opacity ??= ...BonesOpacity.Humerus;
   };
 
-  #if BM_ARM_DELTOID_WRAPPING == _DELTOID_WRAPPING_RAKE_
-  AnyRefNode DeltoidConnectorCenter = {sRel=.art_tub_minus_tub_majus.sRel;};
-  #endif
 
 
   AnyRefNode gh = {

@@ -9,7 +9,7 @@ SelectedOutput.Left = {
   AnyFolder Leg = {
 
 
-    AnyFolder JointReactionForce = {
+    SelectedOutputGroup JointReactionForce = {
 
 
       /// Medial positive
@@ -53,7 +53,7 @@ SelectedOutput.Left = {
 
 
 
-    AnyFolder JointMomentMeasure = {
+    SelectedOutputGroup JointMomentMeasure = {
 
 
       AnyVar HipAbduction = ....Left.Leg.JointMuscles.HipJnt.HipAbduction.dof0.Muscle.PosMuscle.Fm

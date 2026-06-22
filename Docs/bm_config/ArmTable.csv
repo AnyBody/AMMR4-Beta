@@ -5,7 +5,7 @@
 '{any}`BM_ARM_SHOULDER_RHYTHM`', 'Switch for the shoulder rhythm constraints. ON indicate that the rhythm is a hard contraint while _RHYTHM_SOFT_ will make the rhythm as soft kinematic contraint.'
 '{any}`BM_ARM_CLAVICULA_ROTATION_RHYTHM`', 'Switch for the clavicula rotation rhythm. If enabled axial rotation of the clavicula will be distributed evenly between the sterno-clavicula and acromio-clavicula joint. Effectively removing clavicula axial rotation as an independent degree of freedom.resterno-clavicula axial rotation.'
 '{any}`BM_ARM_DETAILED_HAND`', 'Switch for enabling the detailed hand.'
-'{any}`BM_ARM_DELTOID_WRAPPING`', 'Switch for deltoid wrapping. Setting this to OFF or _DELTOID_WRAPPING_RAKE_ will revert to the older rake based implementation of the deltoid.'
+'{any}`BM_ARM_DELTOID_WRAPPING`', 'Switch for deltoid wrapping using the elipsoids or cylinders implementation.'
 '{any}`BM_ARM_MUSCLES_BOTH`', 'Keyword for the muscle model type for both left and right arms.'
 '{any}`BM_ARM_MUSCLES_LEFT`', 'Keyword for the muscle model type for the left arm.'
 '{any}`BM_ARM_MUSCLES_RIGHT`', 'Keyword for the muscle model for both the right arm.'
