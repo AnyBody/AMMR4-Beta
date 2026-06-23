@@ -27,18 +27,14 @@ Main.HumanModel = {
       AnyFolder ShoulderArm = {
         AnyFolder &Segments = Main.HumanModel.BodyModel.Right.ShoulderArm.Segments;
         AnyFolder &Joints = Main.HumanModel.BodyModel.Right.ShoulderArm.Joints;
-        #if BM_ARM_DELTOID_WRAPPING == _DELTOID_WRAPPING_RAKE_
-        AnyFolder &rake = Main.HumanModel.BodyModel.Right.ShoulderArm.Muscles.ArtificialRake;
-        #else
         AnyFolder &DeltoidWrappingPosteriorRef = Main.HumanModel.BodyModel.Right.ShoulderArm.Muscles.WrappingSurfaces.DeltoidWrappingPosterior;
         AnyFolder &DeltoidWrappingLateralRef = Main.HumanModel.BodyModel.Right.ShoulderArm.Muscles.WrappingSurfaces.DeltoidWrappingLateral;
         AnyFolder &DeltoidWrappingAnteriorRef = Main.HumanModel.BodyModel.Right.ShoulderArm.Muscles.WrappingSurfaces.DeltoidWrappingAnterior;
-        #endif
       };
       #endif
       #if BM_LEG_RIGHT
       AnyFolder Leg = {
-        AnyFolder &Seg = Main.HumanModel.BodyModel.Right.Leg.Seg;
+        AnyFolder &Seg = Main.HumanModel.BodyModel.Right.Leg.Segments;
         AnyFolder &Jnt = Main.HumanModel.BodyModel.Right.Leg.Jnt;
       };
       #endif
@@ -48,18 +44,14 @@ Main.HumanModel = {
       AnyFolder ShoulderArm = {
         AnyFolder &Segments = Main.HumanModel.BodyModel.Left.ShoulderArm.Segments;
         AnyFolder &Joints = Main.HumanModel.BodyModel.Left.ShoulderArm.Joints;
-        #if BM_ARM_DELTOID_WRAPPING == _DELTOID_WRAPPING_RAKE_
-        AnyFolder &rake = Main.HumanModel.BodyModel.Left.ShoulderArm.Muscles.ArtificialRake;
-        #else
         AnyFolder &DeltoidWrappingPosteriorRef = Main.HumanModel.BodyModel.Left.ShoulderArm.Muscles.WrappingSurfaces.DeltoidWrappingPosterior;
         AnyFolder &DeltoidWrappingLateralRef = Main.HumanModel.BodyModel.Left.ShoulderArm.Muscles.WrappingSurfaces.DeltoidWrappingLateral;
         AnyFolder &DeltoidWrappingAnteriorRef = Main.HumanModel.BodyModel.Left.ShoulderArm.Muscles.WrappingSurfaces.DeltoidWrappingAnterior;
-        #endif
       };
       #endif
       #if BM_LEG_LEFT
       AnyFolder Leg = {
-        AnyFolder &Seg = Main.HumanModel.BodyModel.Left.Leg.Seg;
+        AnyFolder &Seg = Main.HumanModel.BodyModel.Left.Leg.Segments;
         AnyFolder &Jnt = Main.HumanModel.BodyModel.Left.Leg.Jnt;
       };
       #endif

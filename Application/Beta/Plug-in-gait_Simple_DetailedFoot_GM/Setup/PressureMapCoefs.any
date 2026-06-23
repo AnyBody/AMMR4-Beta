@@ -26,7 +26,7 @@ AnyMatrix FootPressureNodeMatInitial = {
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0
   };
-  AnyFolder &HumanModelRef=.Main.HumanModel.BodyModel.Right.Leg.Seg.Foot;
+  AnyFolder &HumanModelRef=.Main.HumanModel.BodyModel.Right.Leg.Segments.Foot;
    AnyMatrix FootPressureNodeMat = {
     HumanModelRef.Calcaneus.PressureNode1.r,
     HumanModelRef.Calcaneus.PressureNode2.r,
@@ -59,14 +59,14 @@ AnyMatrix FootPressureNodeMatInitial = {
     HumanModelRef.Calcaneus.PressureNode29.r,
     HumanModelRef.Calcaneus.PressureNode30.r,
     HumanModelRef.Calcaneus.PressureNode31.r,
-    
+
     HumanModelRef.Navicular.PressureNode1.r,
     HumanModelRef.Navicular.PressureNode2.r,
     HumanModelRef.Navicular.PressureNode3.r,
     HumanModelRef.Navicular.PressureNode4.r,
     HumanModelRef.Navicular.PressureNode5.r,
     HumanModelRef.Navicular.PressureNode6.r,
-    
+
     HumanModelRef.Cuboid.PressureNode1.r,
     HumanModelRef.Cuboid.PressureNode2.r,
     HumanModelRef.Cuboid.PressureNode3.r,
@@ -81,7 +81,7 @@ AnyMatrix FootPressureNodeMatInitial = {
     HumanModelRef.Cuboid.PressureNode12.r,
     HumanModelRef.Cuboid.PressureNode13.r,
     HumanModelRef.Cuboid.PressureNode14.r,
-    
+
     HumanModelRef.LateralCuneiform.PressureNode1.r,
     HumanModelRef.LateralCuneiform.PressureNode2.r,
     HumanModelRef.LateralCuneiform.PressureNode3.r,
@@ -98,7 +98,7 @@ AnyMatrix FootPressureNodeMatInitial = {
     HumanModelRef.MedialCuneiform.PressureNode8.r,
     HumanModelRef.MedialCuneiform.PressureNode9.r,
     HumanModelRef.MedialCuneiform.PressureNode10.r,
-    
+
     HumanModelRef.Metatarsal1.PressureNode1.r,
     HumanModelRef.Metatarsal1.PressureNode2.r,
     HumanModelRef.Metatarsal1.PressureNode3.r,
@@ -126,7 +126,7 @@ AnyMatrix FootPressureNodeMatInitial = {
     HumanModelRef.Metatarsal1.PressureNode25.r,
     HumanModelRef.Metatarsal1.PressureNode26.r,
     HumanModelRef.Metatarsal1.PressureNode27.r,
-    
+
     HumanModelRef.Metatarsal2.PressureNode1.r,
     HumanModelRef.Metatarsal2.PressureNode2.r,
     HumanModelRef.Metatarsal2.PressureNode3.r,
@@ -143,7 +143,7 @@ AnyMatrix FootPressureNodeMatInitial = {
     HumanModelRef.Metatarsal2.PressureNode14.r,
     HumanModelRef.Metatarsal2.PressureNode15.r,
     HumanModelRef.Metatarsal2.PressureNode16.r,
-    
+
     HumanModelRef.Metatarsal3.PressureNode1.r,
     HumanModelRef.Metatarsal3.PressureNode2.r,
     HumanModelRef.Metatarsal3.PressureNode3.r,
@@ -159,7 +159,7 @@ AnyMatrix FootPressureNodeMatInitial = {
     HumanModelRef.Metatarsal3.PressureNode13.r,
     HumanModelRef.Metatarsal3.PressureNode14.r,
     HumanModelRef.Metatarsal3.PressureNode15.r,
-    
+
     HumanModelRef.Metatarsal4.PressureNode1.r,
     HumanModelRef.Metatarsal4.PressureNode2.r,
     HumanModelRef.Metatarsal4.PressureNode3.r,
@@ -175,7 +175,7 @@ AnyMatrix FootPressureNodeMatInitial = {
     HumanModelRef.Metatarsal4.PressureNode13.r,
     HumanModelRef.Metatarsal4.PressureNode14.r,
     HumanModelRef.Metatarsal4.PressureNode15.r,
-    
+
     HumanModelRef.Metatarsal5.PressureNode1.r,
     HumanModelRef.Metatarsal5.PressureNode2.r,
     HumanModelRef.Metatarsal5.PressureNode3.r,
@@ -193,11 +193,11 @@ AnyMatrix FootPressureNodeMatInitial = {
     HumanModelRef.Metatarsal5.PressureNode15.r,
     HumanModelRef.Metatarsal5.PressureNode16.r,
     HumanModelRef.Metatarsal5.PressureNode17.r,
-    
+
     HumanModelRef.ProximalPhalange1.PressureNode1.r,
     HumanModelRef.ProximalPhalange1.PressureNode2.r,
     HumanModelRef.ProximalPhalange1.PressureNode3.r,
-    
+
     HumanModelRef.DistalPhalange1.PressureNode1.r,
     HumanModelRef.DistalPhalange1.PressureNode2.r,
     HumanModelRef.DistalPhalange1.PressureNode3.r,
@@ -223,17 +223,17 @@ AnyMatrix FootPressureNodeMatInitial = {
         };
       };
     };
-    
-    AnyVector FootPressureNodeCoeffVec =  PressureFun(FootPressureNodeMat, 
+
+    AnyVector FootPressureNodeCoeffVec =  PressureFun(FootPressureNodeMat,
                                                       iffun(eqfun(Main.Studies.MarkerTracking.iStep,0),0.0,Main.Studies.MarkerTracking.t - Main.Studies.MarkerTracking.tStart),
                                                       MOCAP_PATH_MAINFILEDIR + "/Input/" + Main.ModelSetup.TrialSpecificData.TrialFileName + "-PressureData.txt");
-   
+
     AnyOutputFile CoeffVecOutput =  {
       FileName = "../Input/" + Main.ModelSetup.TrialSpecificData.TrialFileName + "-CoeffVec.txt";
       SepSign = " ";
       AnyVector Ref1 = .FootPressureNodeCoeffVec;
     };
-   
+
     #endif
-   
+
   };

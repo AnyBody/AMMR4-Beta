@@ -4,7 +4,7 @@ AnyFolder FootPrintGeneration =
   FootPrint FootPrintRight(
   BaseNode = Main.Model.Environment.GlobalRef.FootPrintBase_Right,
   FootPrintSubNodeName = FP1,
-  Limb = Main.HumanModel.BodyModel.Right.Leg.Seg.Foot
+  Limb = Main.HumanModel.BodyModel.Right.Leg.Segments.Foot
   )=
   {
     FootPrintVisible = On;
@@ -17,7 +17,7 @@ AnyFolder FootPrintGeneration =
   FootPrint FootPrintLeft(
   BaseNode = Main.Model.Environment.GlobalRef.FootPrintBase_Left,
   FootPrintSubNodeName = FP1,
-  Limb = Main.HumanModel.BodyModel.Left.Leg.Seg.Foot
+  Limb = Main.HumanModel.BodyModel.Left.Leg.Segments.Foot
   )=
   {
     FootPrintVisible = On;

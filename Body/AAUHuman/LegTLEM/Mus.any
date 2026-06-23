@@ -25,11 +25,11 @@
   MuscleGroup SoleusMedialis() = {
     AnyMuscleShortestPath SoleusMedialis1 = {
       AnyMuscleModel &MusMdl = ...MuscleModels.SoleusMedialis1Par;
-      AnyRefNode &Org = ...Seg.Shank.SoleusMedialis1Node;
-      AnyRefNode &Via1 = ...Seg.Foot.Calcaneus.SoleusMedialis1SuperiorNode;
-      AnyRefNode &Ins = ...Seg.Foot.Calcaneus.SoleusMedialis1Node;
-      AnySurface &srf1 = ...Seg.Shank.AchillesWrapping1.Cyl;
-      AnySurface &srf2 = ...Seg.Shank.AchillesWrapping2.Cyl;
+      AnyRefNode &Org = ...Segments.Shank.SoleusMedialis1Node;
+      AnyRefNode &Via1 = ...Segments.Foot.Calcaneus.SoleusMedialis1SuperiorNode;
+      AnyRefNode &Ins = ...Segments.Foot.Calcaneus.SoleusMedialis1Node;
+      AnySurface &srf1 = ...Segments.Shank.AchillesWrapping1.Cyl;
+      AnySurface &srf2 = ...Segments.Shank.AchillesWrapping2.Cyl;
       SPLine = {
         StringSurfaceMap = {{On,On},{Off,Off}};
         StringMesh = {30,3};
@@ -44,11 +44,11 @@
 
     AnyMuscleShortestPath SoleusMedialis2 = {
       AnyMuscleModel &MusMdl = ...MuscleModels.SoleusMedialis2Par;
-      AnyRefNode &Org = ...Seg.Shank.SoleusMedialis2Node;
-      AnyRefNode &Via1 = ...Seg.Foot.Calcaneus.SoleusMedialis2SuperiorNode;
-      AnyRefNode &Ins = ...Seg.Foot.Calcaneus.SoleusMedialis2Node;
-      AnySurface &srf1 = ...Seg.Shank.AchillesWrapping1.Cyl;
-      AnySurface &srf2 = ...Seg.Shank.AchillesWrapping2.Cyl;
+      AnyRefNode &Org = ...Segments.Shank.SoleusMedialis2Node;
+      AnyRefNode &Via1 = ...Segments.Foot.Calcaneus.SoleusMedialis2SuperiorNode;
+      AnyRefNode &Ins = ...Segments.Foot.Calcaneus.SoleusMedialis2Node;
+      AnySurface &srf1 = ...Segments.Shank.AchillesWrapping1.Cyl;
+      AnySurface &srf2 = ...Segments.Shank.AchillesWrapping2.Cyl;
       SPLine.StringSurfaceMap = {{On,On},{Off,Off}};
       SPLine.StringMesh = {30,3};
       SPLine.InitWrapPosVecArr = .SoleusMedialis1.SPLine.InitWrapPosVecArr;
@@ -57,11 +57,11 @@
 
     AnyMuscleShortestPath SoleusMedialis3 = {
       AnyMuscleModel &MusMdl = ...MuscleModels.SoleusMedialis3Par;
-      AnyRefNode &Org = ...Seg.Shank.SoleusMedialis3Node;
-      AnyRefNode &Via1 = ...Seg.Foot.Calcaneus.SoleusMedialis3SuperiorNode;
-      AnyRefNode &Ins = ...Seg.Foot.Calcaneus.SoleusMedialis3Node;
-      AnySurface &srf1 = ...Seg.Shank.AchillesWrapping1.Cyl;
-      AnySurface &srf2 = ...Seg.Shank.AchillesWrapping2.Cyl;
+      AnyRefNode &Org = ...Segments.Shank.SoleusMedialis3Node;
+      AnyRefNode &Via1 = ...Segments.Foot.Calcaneus.SoleusMedialis3SuperiorNode;
+      AnyRefNode &Ins = ...Segments.Foot.Calcaneus.SoleusMedialis3Node;
+      AnySurface &srf1 = ...Segments.Shank.AchillesWrapping1.Cyl;
+      AnySurface &srf2 = ...Segments.Shank.AchillesWrapping2.Cyl;
       SPLine.StringSurfaceMap = {{On,On},{Off,Off}};
       SPLine.StringMesh = {30,3};
       SPLine.InitWrapPosVecArr = .SoleusMedialis1.SPLine.InitWrapPosVecArr;
@@ -72,11 +72,11 @@
   MuscleGroup SoleusLateralis() = {
     AnyMuscleShortestPath SoleusLateralis1 = {
       AnyMuscleModel &MusMdl = ...MuscleModels.SoleusLateralis1Par;
-      AnyRefNode &Org = ...Seg.Shank.SoleusLateralis1Node;
-      AnyRefNode &Via1 = ...Seg.Foot.Calcaneus.SoleusLateralis1SuperiorNode;
-      AnyRefNode &Ins = ...Seg.Foot.Calcaneus.SoleusLateralis1Node;
-      AnySurface &srf1 = ...Seg.Shank.AchillesWrapping1.Cyl;
-      AnySurface &srf2 = ...Seg.Shank.AchillesWrapping2.Cyl;
+      AnyRefNode &Org = ...Segments.Shank.SoleusLateralis1Node;
+      AnyRefNode &Via1 = ...Segments.Foot.Calcaneus.SoleusLateralis1SuperiorNode;
+      AnyRefNode &Ins = ...Segments.Foot.Calcaneus.SoleusLateralis1Node;
+      AnySurface &srf1 = ...Segments.Shank.AchillesWrapping1.Cyl;
+      AnySurface &srf2 = ...Segments.Shank.AchillesWrapping2.Cyl;
       SPLine.StringSurfaceMap = {{On,On},{Off,Off}};
       SPLine.StringMesh = {30,3};
       SPLine.InitWrapPosVecArr = ..SoleusMedialis.SoleusMedialis1.SPLine.InitWrapPosVecArr;
@@ -85,11 +85,11 @@
 
     AnyMuscleShortestPath SoleusLateralis2 = {
       AnyMuscleModel &MusMdl = ...MuscleModels.SoleusLateralis2Par;
-      AnyRefNode &Org = ...Seg.Shank.SoleusLateralis2Node;
-      AnyRefNode &Via1 = ...Seg.Foot.Calcaneus.SoleusLateralis2SuperiorNode;
-      AnyRefNode &Ins = ...Seg.Foot.Calcaneus.SoleusLateralis2Node;
-      AnySurface &srf1 = ...Seg.Shank.AchillesWrapping1.Cyl;
-      AnySurface &srf2 = ...Seg.Shank.AchillesWrapping2.Cyl;
+      AnyRefNode &Org = ...Segments.Shank.SoleusLateralis2Node;
+      AnyRefNode &Via1 = ...Segments.Foot.Calcaneus.SoleusLateralis2SuperiorNode;
+      AnyRefNode &Ins = ...Segments.Foot.Calcaneus.SoleusLateralis2Node;
+      AnySurface &srf1 = ...Segments.Shank.AchillesWrapping1.Cyl;
+      AnySurface &srf2 = ...Segments.Shank.AchillesWrapping2.Cyl;
       SPLine.StringSurfaceMap = {{On,On},{Off,Off}};
       SPLine.StringMesh = {30,3};
       SPLine.InitWrapPosVecArr = ..SoleusMedialis.SoleusMedialis1.SPLine.InitWrapPosVecArr;
@@ -98,11 +98,11 @@
 
     AnyMuscleShortestPath SoleusLateralis3 = {
       AnyMuscleModel &MusMdl = ...MuscleModels.SoleusLateralis3Par;
-      AnyRefNode &Org = ...Seg.Shank.SoleusLateralis3Node;
-      AnyRefNode &Via1 = ...Seg.Foot.Calcaneus.SoleusLateralis3SuperiorNode;
-      AnyRefNode &Ins = ...Seg.Foot.Calcaneus.SoleusLateralis3Node;
-      AnySurface &srf1 = ...Seg.Shank.AchillesWrapping1.Cyl;
-      AnySurface &srf2 = ...Seg.Shank.AchillesWrapping2.Cyl;
+      AnyRefNode &Org = ...Segments.Shank.SoleusLateralis3Node;
+      AnyRefNode &Via1 = ...Segments.Foot.Calcaneus.SoleusLateralis3SuperiorNode;
+      AnyRefNode &Ins = ...Segments.Foot.Calcaneus.SoleusLateralis3Node;
+      AnySurface &srf1 = ...Segments.Shank.AchillesWrapping1.Cyl;
+      AnySurface &srf2 = ...Segments.Shank.AchillesWrapping2.Cyl;
       SPLine.StringSurfaceMap = {{On,On},{Off,Off}};
       SPLine.StringMesh = {30,3};
       SPLine.InitWrapPosVecArr = ..SoleusMedialis.SoleusMedialis1.SPLine.InitWrapPosVecArr;
@@ -113,15 +113,15 @@
   MuscleGroup GastrocnemiusLateralis() = {
     AnyMuscleShortestPath GastrocnemiusLateralis1 = {
       AnyMuscleModel &MusMdl = ...MuscleModels.GastrocnemiusLateralis1Par;
-      AnyRefNode &Org = ...Seg.Thigh.GastrocnemiusLateralis1Node;
-      AnySurface &srf = ...Seg.Thigh.GastroWrapSurf.cyl;
-      AnySurface &srf1 = ...Seg.Shank.AchillesWrapping1.Cyl;
-      AnySurface &srf2 = ...Seg.Shank.AchillesWrapping2.Cyl;
-      AnyRefNode &Via7 = ...Seg.Shank.GastrocnemiusLateralis7ViaNode;
-      AnyRefNode &Via8 = ...Seg.Shank.GastrocnemiusLateralis8ViaNode;
-      AnyRefNode &Via9 = ...Seg.Shank.GastrocnemiusLateralis9ViaNode;
-      AnyRefNode &Via10 = ...Seg.Foot.Calcaneus.GastrocnemiusLateralis1SuperiorNode;
-      AnyRefNode &Ins = ...Seg.Foot.Calcaneus.GastrocnemiusLateralis1Node;
+      AnyRefNode &Org = ...Segments.Thigh.GastrocnemiusLateralis1Node;
+      AnySurface &srf = ...Segments.Thigh.GastroWrapSurf.cyl;
+      AnySurface &srf1 = ...Segments.Shank.AchillesWrapping1.Cyl;
+      AnySurface &srf2 = ...Segments.Shank.AchillesWrapping2.Cyl;
+      AnyRefNode &Via7 = ...Segments.Shank.GastrocnemiusLateralis7ViaNode;
+      AnyRefNode &Via8 = ...Segments.Shank.GastrocnemiusLateralis8ViaNode;
+      AnyRefNode &Via9 = ...Segments.Shank.GastrocnemiusLateralis9ViaNode;
+      AnyRefNode &Via10 = ...Segments.Foot.Calcaneus.GastrocnemiusLateralis1SuperiorNode;
+      AnyRefNode &Ins = ...Segments.Foot.Calcaneus.GastrocnemiusLateralis1Node;
       SPLine = {
         StringMesh = {30,3,3,30,3};
         StringSurfaceMap = {{On,Off,Off}, {Off,Off,Off}, {Off,Off,Off}, {Off,On,On}, {Off,Off,Off}};
@@ -142,17 +142,17 @@
   MuscleGroup GastrocnemiusMedialis() = {
     AnyMuscleShortestPath GastrocnemiusMedialis1 = {
       AnyMuscleModel &MusMdl = ...MuscleModels.GastrocnemiusMedialis1Par;
-      AnyRefNode &Org = ...Seg.Thigh.GastrocnemiusMedialis1Node;
-      AnyRefNode &Via1 = ...Seg.Thigh.GastrocnemiusMedialis1ViaNode;
-      AnySurface &srf = ...Seg.Thigh.GastroWrapSurf.cyl;
-      AnySurface &srf1 = ...Seg.Shank.AchillesWrapping1.Cyl;
-      AnySurface &srf2 = ...Seg.Shank.AchillesWrapping2.Cyl;
-      AnyRefNode &Via4 = ...Seg.Shank.GastrocnemiusMedialis4ViaNode;
-      AnyRefNode &Via5 = ...Seg.Shank.GastrocnemiusMedialis5ViaNode;
-      AnyRefNode &Via6 = ...Seg.Shank.GastrocnemiusMedialis6ViaNode;
-      AnyRefNode &Via7 = ...Seg.Shank.GastrocnemiusMedialis7ViaNode;
-      AnyRefNode &Via8 = ...Seg.Foot.Calcaneus.GastrocnemiusMedialis1SuperiorNode;
-      AnyRefNode &Ins = ...Seg.Foot.Calcaneus.GastrocnemiusMedialis1Node;
+      AnyRefNode &Org = ...Segments.Thigh.GastrocnemiusMedialis1Node;
+      AnyRefNode &Via1 = ...Segments.Thigh.GastrocnemiusMedialis1ViaNode;
+      AnySurface &srf = ...Segments.Thigh.GastroWrapSurf.cyl;
+      AnySurface &srf1 = ...Segments.Shank.AchillesWrapping1.Cyl;
+      AnySurface &srf2 = ...Segments.Shank.AchillesWrapping2.Cyl;
+      AnyRefNode &Via4 = ...Segments.Shank.GastrocnemiusMedialis4ViaNode;
+      AnyRefNode &Via5 = ...Segments.Shank.GastrocnemiusMedialis5ViaNode;
+      AnyRefNode &Via6 = ...Segments.Shank.GastrocnemiusMedialis6ViaNode;
+      AnyRefNode &Via7 = ...Segments.Shank.GastrocnemiusMedialis7ViaNode;
+      AnyRefNode &Via8 = ...Segments.Foot.Calcaneus.GastrocnemiusMedialis1SuperiorNode;
+      AnyRefNode &Ins = ...Segments.Foot.Calcaneus.GastrocnemiusMedialis1Node;
       SPLine.StringMesh = {3,30,3,3,3,30,3};
       SPLine.StringSurfaceMap = {{Off,Off,Off}, {On,Off,Off}, {Off,Off,Off},{Off,Off,Off},{Off,Off,Off},{Off,On,On}, {Off,Off,Off}};
       SPLine.InitWrapPosVecArr = {
@@ -171,12 +171,12 @@
   MuscleGroup Plantaris = {
     AnyMuscleShortestPath Plantaris1 = {
       AnyMuscleModel &MusMdl = ...MuscleModels.Plantaris1Par;
-      AnyRefNode &Org = ...Seg.Thigh.Plantaris1Node;
-      AnySurface &srf = ...Seg.Thigh.GastroWrapSurf.cyl;
-      AnySurface &srf1 = ...Seg.Shank.AchillesWrapping1.Cyl;
-      AnySurface &srf2 = ...Seg.Shank.AchillesWrapping2.Cyl;
-      AnyRefNode &Via1 = ...Seg.Foot.Calcaneus.Plantaris1SuperiorNode;
-      AnyRefNode &Ins = ...Seg.Foot.Calcaneus.Plantaris1Node;
+      AnyRefNode &Org = ...Segments.Thigh.Plantaris1Node;
+      AnySurface &srf = ...Segments.Thigh.GastroWrapSurf.cyl;
+      AnySurface &srf1 = ...Segments.Shank.AchillesWrapping1.Cyl;
+      AnySurface &srf2 = ...Segments.Shank.AchillesWrapping2.Cyl;
+      AnyRefNode &Via1 = ...Segments.Foot.Calcaneus.Plantaris1SuperiorNode;
+      AnyRefNode &Ins = ...Segments.Foot.Calcaneus.Plantaris1Node;
       SPLine = {
         StringSurfaceMap = {{On,On,On},{Off,Off,Off}};
         StringMesh = {30,3};
@@ -196,64 +196,64 @@
   MuscleGroup FlexorDigitorumLongus() = {
     AnyMuscleViaPoint FlexorDigitorumLongus1 = {
       AnyMuscleModel &MusMdl = ...MuscleModels.FlexorDigitorumLongus1Par;
-      AnyRefNode &Org = ...Seg.Shank.FlexorDigitorumLongus1Node;
-      AnyRefNode &Via1 = ...Seg.Shank.FlexorDigitorumLongusViaNode1;
-      AnyRefNode &Via2 = ...Seg.Shank.FlexorDigitorumLongusViaNode2;
-      AnyRefNode &Via3 = ...Seg.Shank.FlexorDigitorumLongusViaNode3;
-      AnyRefNode &Via4 = ...Seg.Shank.FlexorDigitorumLongusViaNode4;
-      AnyRefNode &Via5 = ...Seg.Shank.FlexorDigitorumLongusViaNode5;
-    //  AnyRefNode &Via6 = ...Seg.Shank.FlexorDigitorumLongusViaNode6;
-      AnyRefNode &Via7 = ...Seg.Foot.FlexorDigitorumLongusViaNode7;
-      AnyRefNode &Via8 = ...Seg.Foot.FlexorDigitorumLongusViaNode8;
-    //  AnyRefNode &Via9 = ...Seg.Foot.FlexorDigitorumLongusViaNode9;
-      AnyRefNode &Ins = ...Seg.Foot.FlexorDigitorumLongus1Node;
+      AnyRefNode &Org = ...Segments.Shank.FlexorDigitorumLongus1Node;
+      AnyRefNode &Via1 = ...Segments.Shank.FlexorDigitorumLongusViaNode1;
+      AnyRefNode &Via2 = ...Segments.Shank.FlexorDigitorumLongusViaNode2;
+      AnyRefNode &Via3 = ...Segments.Shank.FlexorDigitorumLongusViaNode3;
+      AnyRefNode &Via4 = ...Segments.Shank.FlexorDigitorumLongusViaNode4;
+      AnyRefNode &Via5 = ...Segments.Shank.FlexorDigitorumLongusViaNode5;
+    //  AnyRefNode &Via6 = ...Segments.Shank.FlexorDigitorumLongusViaNode6;
+      AnyRefNode &Via7 = ...Segments.Foot.FlexorDigitorumLongusViaNode7;
+      AnyRefNode &Via8 = ...Segments.Foot.FlexorDigitorumLongusViaNode8;
+    //  AnyRefNode &Via9 = ...Segments.Foot.FlexorDigitorumLongusViaNode9;
+      AnyRefNode &Ins = ...Segments.Foot.FlexorDigitorumLongus1Node;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     };
 
     AnyMuscleViaPoint FlexorDigitorumLongus2 = {
       AnyMuscleModel &MusMdl = ...MuscleModels.FlexorDigitorumLongus2Par;
-      AnyRefNode &Org = ...Seg.Shank.FlexorDigitorumLongus2Node;
-      AnyRefNode &Via1 = ...Seg.Shank.FlexorDigitorumLongusViaNode1;
-      AnyRefNode &Via2 = ...Seg.Shank.FlexorDigitorumLongusViaNode2;
-      AnyRefNode &Via3 = ...Seg.Shank.FlexorDigitorumLongusViaNode3;
-      AnyRefNode &Via4 = ...Seg.Shank.FlexorDigitorumLongusViaNode4;
-      AnyRefNode &Via5 = ...Seg.Shank.FlexorDigitorumLongusViaNode5;
-    //  AnyRefNode &Via6 = ...Seg.Shank.FlexorDigitorumLongusViaNode6;
-      AnyRefNode &Via7 = ...Seg.Foot.FlexorDigitorumLongusViaNode7;
-      AnyRefNode &Via8 = ...Seg.Foot.FlexorDigitorumLongusViaNode8;
-    // AnyRefNode &Via9 = ...Seg.Foot.FlexorDigitorumLongusViaNode10;
-      AnyRefNode &Ins = ...Seg.Foot.FlexorDigitorumLongus2Node;
+      AnyRefNode &Org = ...Segments.Shank.FlexorDigitorumLongus2Node;
+      AnyRefNode &Via1 = ...Segments.Shank.FlexorDigitorumLongusViaNode1;
+      AnyRefNode &Via2 = ...Segments.Shank.FlexorDigitorumLongusViaNode2;
+      AnyRefNode &Via3 = ...Segments.Shank.FlexorDigitorumLongusViaNode3;
+      AnyRefNode &Via4 = ...Segments.Shank.FlexorDigitorumLongusViaNode4;
+      AnyRefNode &Via5 = ...Segments.Shank.FlexorDigitorumLongusViaNode5;
+    //  AnyRefNode &Via6 = ...Segments.Shank.FlexorDigitorumLongusViaNode6;
+      AnyRefNode &Via7 = ...Segments.Foot.FlexorDigitorumLongusViaNode7;
+      AnyRefNode &Via8 = ...Segments.Foot.FlexorDigitorumLongusViaNode8;
+    // AnyRefNode &Via9 = ...Segments.Foot.FlexorDigitorumLongusViaNode10;
+      AnyRefNode &Ins = ...Segments.Foot.FlexorDigitorumLongus2Node;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     };
 
     AnyMuscleViaPoint FlexorDigitorumLongus3 = {
       AnyMuscleModel &MusMdl = ...MuscleModels.FlexorDigitorumLongus3Par;
-      AnyRefNode &Org = ...Seg.Shank.FlexorDigitorumLongus3Node;
-      AnyRefNode &Via1 = ...Seg.Shank.FlexorDigitorumLongusViaNode1;
-      AnyRefNode &Via2 = ...Seg.Shank.FlexorDigitorumLongusViaNode2;
-      AnyRefNode &Via3 = ...Seg.Shank.FlexorDigitorumLongusViaNode3;
-      AnyRefNode &Via4 = ...Seg.Shank.FlexorDigitorumLongusViaNode4;
-      AnyRefNode &Via5 = ...Seg.Shank.FlexorDigitorumLongusViaNode5;
-    //  AnyRefNode &Via6 = ...Seg.Shank.FlexorDigitorumLongusViaNode6;
-      AnyRefNode &Via7 = ...Seg.Foot.FlexorDigitorumLongusViaNode7;
-      AnyRefNode &Via8 = ...Seg.Foot.FlexorDigitorumLongusViaNode8;
-    // AnyRefNode &Via9 = ...Seg.Foot.FlexorDigitorumLongusViaNode11;
-      AnyRefNode &Ins = ...Seg.Foot.FlexorDigitorumLongus3Node;
+      AnyRefNode &Org = ...Segments.Shank.FlexorDigitorumLongus3Node;
+      AnyRefNode &Via1 = ...Segments.Shank.FlexorDigitorumLongusViaNode1;
+      AnyRefNode &Via2 = ...Segments.Shank.FlexorDigitorumLongusViaNode2;
+      AnyRefNode &Via3 = ...Segments.Shank.FlexorDigitorumLongusViaNode3;
+      AnyRefNode &Via4 = ...Segments.Shank.FlexorDigitorumLongusViaNode4;
+      AnyRefNode &Via5 = ...Segments.Shank.FlexorDigitorumLongusViaNode5;
+    //  AnyRefNode &Via6 = ...Segments.Shank.FlexorDigitorumLongusViaNode6;
+      AnyRefNode &Via7 = ...Segments.Foot.FlexorDigitorumLongusViaNode7;
+      AnyRefNode &Via8 = ...Segments.Foot.FlexorDigitorumLongusViaNode8;
+    // AnyRefNode &Via9 = ...Segments.Foot.FlexorDigitorumLongusViaNode11;
+      AnyRefNode &Ins = ...Segments.Foot.FlexorDigitorumLongus3Node;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     };
     AnyMuscleViaPoint FlexorDigitorumLongus4 = {
       AnyMuscleModel &MusMdl = ...MuscleModels.FlexorDigitorumLongus4Par;
-      AnyRefNode &Org = ...Seg.Shank.FlexorDigitorumLongus4Node;
-      AnyRefNode &Via1 = ...Seg.Shank.FlexorDigitorumLongusViaNode1;
-      AnyRefNode &Via2 = ...Seg.Shank.FlexorDigitorumLongusViaNode2;
-      AnyRefNode &Via3 = ...Seg.Shank.FlexorDigitorumLongusViaNode3;
-      AnyRefNode &Via4 = ...Seg.Shank.FlexorDigitorumLongusViaNode4;
-      AnyRefNode &Via5 = ...Seg.Shank.FlexorDigitorumLongusViaNode5;
-    //  AnyRefNode &Via6 = ...Seg.Shank.FlexorDigitorumLongusViaNode6;
-      AnyRefNode &Via7 = ...Seg.Foot.FlexorDigitorumLongusViaNode7;
-      AnyRefNode &Via8 = ...Seg.Foot.FlexorDigitorumLongusViaNode8;
-      //AnyRefNode &Via9 = ...Seg.Foot.FlexorDigitorumLongusViaNode12;
-      AnyRefNode &Ins = ...Seg.Foot.FlexorDigitorumLongus4Node;
+      AnyRefNode &Org = ...Segments.Shank.FlexorDigitorumLongus4Node;
+      AnyRefNode &Via1 = ...Segments.Shank.FlexorDigitorumLongusViaNode1;
+      AnyRefNode &Via2 = ...Segments.Shank.FlexorDigitorumLongusViaNode2;
+      AnyRefNode &Via3 = ...Segments.Shank.FlexorDigitorumLongusViaNode3;
+      AnyRefNode &Via4 = ...Segments.Shank.FlexorDigitorumLongusViaNode4;
+      AnyRefNode &Via5 = ...Segments.Shank.FlexorDigitorumLongusViaNode5;
+    //  AnyRefNode &Via6 = ...Segments.Shank.FlexorDigitorumLongusViaNode6;
+      AnyRefNode &Via7 = ...Segments.Foot.FlexorDigitorumLongusViaNode7;
+      AnyRefNode &Via8 = ...Segments.Foot.FlexorDigitorumLongusViaNode8;
+      //AnyRefNode &Via9 = ...Segments.Foot.FlexorDigitorumLongusViaNode12;
+      AnyRefNode &Ins = ...Segments.Foot.FlexorDigitorumLongus4Node;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     };
   };
@@ -261,44 +261,44 @@
   MuscleGroup FlexorHallucisLongus() = {
     AnyMuscleViaPoint FlexorHallucisLongus1 = {
       AnyMuscleModel &MusMdl = ...MuscleModels.FlexorHallucisLongus1Par;
-      AnyRefNode &Org = ...Seg.Shank.FlexorHallucisLongus1Node;
-      AnyRefNode &Via1 = ...Seg.Shank.FlexorHallucisLongusViaNode1;
-      AnyRefNode &Via2 = ...Seg.Shank.FlexorHallucisLongusViaNode2;
-      AnyRefNode &Via3 = ...Seg.Shank.FlexorHallucisLongusViaNode3;
-      AnyRefNode &Via4 = ...Seg.Shank.FlexorHallucisLongusViaNode4;
-    //  AnyRefNode &Via5 = ...Seg.Shank.FlexorHallucisLongusViaNode5;
-    //  AnyRefNode &Via6 = ...Seg.Shank.FlexorHallucisLongusViaNode6;
-      AnyRefNode &Via7 = ...Seg.Foot.FlexorHallucisLongusViaNode7;
-    //  AnyRefNode &Via8 = ...Seg.Foot.FlexorHallucisLongusViaNode8;
-      AnyRefNode &Ins = ...Seg.Foot.FlexorHallucisLongus1Node;
+      AnyRefNode &Org = ...Segments.Shank.FlexorHallucisLongus1Node;
+      AnyRefNode &Via1 = ...Segments.Shank.FlexorHallucisLongusViaNode1;
+      AnyRefNode &Via2 = ...Segments.Shank.FlexorHallucisLongusViaNode2;
+      AnyRefNode &Via3 = ...Segments.Shank.FlexorHallucisLongusViaNode3;
+      AnyRefNode &Via4 = ...Segments.Shank.FlexorHallucisLongusViaNode4;
+    //  AnyRefNode &Via5 = ...Segments.Shank.FlexorHallucisLongusViaNode5;
+    //  AnyRefNode &Via6 = ...Segments.Shank.FlexorHallucisLongusViaNode6;
+      AnyRefNode &Via7 = ...Segments.Foot.FlexorHallucisLongusViaNode7;
+    //  AnyRefNode &Via8 = ...Segments.Foot.FlexorHallucisLongusViaNode8;
+      AnyRefNode &Ins = ...Segments.Foot.FlexorHallucisLongus1Node;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     };
     AnyMuscleViaPoint FlexorHallucisLongus2 = {
       AnyMuscleModel &MusMdl = ...MuscleModels.FlexorHallucisLongus2Par;
-      AnyRefNode &Org = ...Seg.Shank.FlexorHallucisLongus2Node;
-      AnyRefNode &Via1 = ...Seg.Shank.FlexorHallucisLongusViaNode1;
-      AnyRefNode &Via2 = ...Seg.Shank.FlexorHallucisLongusViaNode2;
-      AnyRefNode &Via3 = ...Seg.Shank.FlexorHallucisLongusViaNode3;
-      AnyRefNode &Via4 = ...Seg.Shank.FlexorHallucisLongusViaNode4;
-    //  AnyRefNode &Via5 = ...Seg.Shank.FlexorHallucisLongusViaNode5;
-    //  AnyRefNode &Via6 = ...Seg.Shank.FlexorHallucisLongusViaNode6;
-      AnyRefNode &Via7 = ...Seg.Foot.FlexorHallucisLongusViaNode7;
-    // AnyRefNode &Via8 = ...Seg.Foot.FlexorHallucisLongusViaNode8;
-      AnyRefNode &Ins = ...Seg.Foot.FlexorHallucisLongus2Node;
+      AnyRefNode &Org = ...Segments.Shank.FlexorHallucisLongus2Node;
+      AnyRefNode &Via1 = ...Segments.Shank.FlexorHallucisLongusViaNode1;
+      AnyRefNode &Via2 = ...Segments.Shank.FlexorHallucisLongusViaNode2;
+      AnyRefNode &Via3 = ...Segments.Shank.FlexorHallucisLongusViaNode3;
+      AnyRefNode &Via4 = ...Segments.Shank.FlexorHallucisLongusViaNode4;
+    //  AnyRefNode &Via5 = ...Segments.Shank.FlexorHallucisLongusViaNode5;
+    //  AnyRefNode &Via6 = ...Segments.Shank.FlexorHallucisLongusViaNode6;
+      AnyRefNode &Via7 = ...Segments.Foot.FlexorHallucisLongusViaNode7;
+    // AnyRefNode &Via8 = ...Segments.Foot.FlexorHallucisLongusViaNode8;
+      AnyRefNode &Ins = ...Segments.Foot.FlexorHallucisLongus2Node;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     };
     AnyMuscleViaPoint FlexorHallucisLongus3 = {
       AnyMuscleModel &MusMdl = ...MuscleModels.FlexorHallucisLongus3Par;
-      AnyRefNode &Org = ...Seg.Shank.FlexorHallucisLongus3Node;
-      AnyRefNode &Via1 = ...Seg.Shank.FlexorHallucisLongusViaNode1;
-      AnyRefNode &Via2 = ...Seg.Shank.FlexorHallucisLongusViaNode2;
-      AnyRefNode &Via3 = ...Seg.Shank.FlexorHallucisLongusViaNode3;
-      AnyRefNode &Via4 = ...Seg.Shank.FlexorHallucisLongusViaNode4;
-    //  AnyRefNode &Via5 = ...Seg.Shank.FlexorHallucisLongusViaNode5;
-    //  AnyRefNode &Via6 = ...Seg.Shank.FlexorHallucisLongusViaNode6;
-      AnyRefNode &Via7 = ...Seg.Foot.FlexorHallucisLongusViaNode7;
-    // AnyRefNode &Via8 = ...Seg.Foot.FlexorHallucisLongusViaNode8;
-      AnyRefNode &Ins = ...Seg.Foot.FlexorHallucisLongus3Node;
+      AnyRefNode &Org = ...Segments.Shank.FlexorHallucisLongus3Node;
+      AnyRefNode &Via1 = ...Segments.Shank.FlexorHallucisLongusViaNode1;
+      AnyRefNode &Via2 = ...Segments.Shank.FlexorHallucisLongusViaNode2;
+      AnyRefNode &Via3 = ...Segments.Shank.FlexorHallucisLongusViaNode3;
+      AnyRefNode &Via4 = ...Segments.Shank.FlexorHallucisLongusViaNode4;
+    //  AnyRefNode &Via5 = ...Segments.Shank.FlexorHallucisLongusViaNode5;
+    //  AnyRefNode &Via6 = ...Segments.Shank.FlexorHallucisLongusViaNode6;
+      AnyRefNode &Via7 = ...Segments.Foot.FlexorHallucisLongusViaNode7;
+    // AnyRefNode &Via8 = ...Segments.Foot.FlexorHallucisLongusViaNode8;
+      AnyRefNode &Ins = ...Segments.Foot.FlexorHallucisLongus3Node;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     };
   };
@@ -306,43 +306,43 @@
   MuscleGroup TibialisPosteriorLateralis() = {
     AnyMuscleViaPoint TibialisPosteriorLateralis1 = {
       AnyMuscleModel &MusMdl = ...MuscleModels.TibialisPosteriorLateralis1Par;
-      AnyRefNode &Org = ...Seg.Shank.TibialisPosteriorLateralis1Node;
-      AnyRefNode &Via1 = ...Seg.Shank.TibialisPosteriorViaNode1;
-    //  AnyRefNode &Via2 = ...Seg.Shank.TibialisPosteriorViaNode2;
-    //  AnyRefNode &Via3 = ...Seg.Shank.TibialisPosteriorViaNode3;
-      //AnyRefNode &Via4 = ...Seg.Shank.TibialisPosteriorViaNode4;
-    //  AnyRefNode &Via5 = ...Seg.Foot.TibialisPosteriorViaNode5;
-      AnyRefNode &Via6 = ...Seg.Foot.TibialisPosteriorViaNode6;
-      AnyRefNode &Via7 = ...Seg.Foot.TibialisPosteriorViaNode7;
-      AnyRefNode &Ins = ...Seg.Foot.TibialisPosteriorLateralis1Node;
+      AnyRefNode &Org = ...Segments.Shank.TibialisPosteriorLateralis1Node;
+      AnyRefNode &Via1 = ...Segments.Shank.TibialisPosteriorViaNode1;
+    //  AnyRefNode &Via2 = ...Segments.Shank.TibialisPosteriorViaNode2;
+    //  AnyRefNode &Via3 = ...Segments.Shank.TibialisPosteriorViaNode3;
+      //AnyRefNode &Via4 = ...Segments.Shank.TibialisPosteriorViaNode4;
+    //  AnyRefNode &Via5 = ...Segments.Foot.TibialisPosteriorViaNode5;
+      AnyRefNode &Via6 = ...Segments.Foot.TibialisPosteriorViaNode6;
+      AnyRefNode &Via7 = ...Segments.Foot.TibialisPosteriorViaNode7;
+      AnyRefNode &Ins = ...Segments.Foot.TibialisPosteriorLateralis1Node;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     };
 
     AnyMuscleViaPoint TibialisPosteriorLateralis2 = {
       AnyMuscleModel &MusMdl = ...MuscleModels.TibialisPosteriorLateralis2Par;
-      AnyRefNode &Org = ...Seg.Shank.TibialisPosteriorLateralis2Node;
-      AnyRefNode &Via1 = ...Seg.Shank.TibialisPosteriorViaNode1;
-    //  AnyRefNode &Via2 = ...Seg.Shank.TibialisPosteriorViaNode2;
-    //  AnyRefNode &Via3 = ...Seg.Shank.TibialisPosteriorViaNode3;
-      //AnyRefNode &Via4 = ...Seg.Shank.TibialisPosteriorViaNode4;
-    //  AnyRefNode &Via5 = ...Seg.Foot.TibialisPosteriorViaNode5;
-      AnyRefNode &Via6 = ...Seg.Foot.TibialisPosteriorViaNode6;
-      AnyRefNode &Via7 = ...Seg.Foot.TibialisPosteriorViaNode7;
-      AnyRefNode &Ins = ...Seg.Foot.TibialisPosteriorLateralis2Node;
+      AnyRefNode &Org = ...Segments.Shank.TibialisPosteriorLateralis2Node;
+      AnyRefNode &Via1 = ...Segments.Shank.TibialisPosteriorViaNode1;
+    //  AnyRefNode &Via2 = ...Segments.Shank.TibialisPosteriorViaNode2;
+    //  AnyRefNode &Via3 = ...Segments.Shank.TibialisPosteriorViaNode3;
+      //AnyRefNode &Via4 = ...Segments.Shank.TibialisPosteriorViaNode4;
+    //  AnyRefNode &Via5 = ...Segments.Foot.TibialisPosteriorViaNode5;
+      AnyRefNode &Via6 = ...Segments.Foot.TibialisPosteriorViaNode6;
+      AnyRefNode &Via7 = ...Segments.Foot.TibialisPosteriorViaNode7;
+      AnyRefNode &Ins = ...Segments.Foot.TibialisPosteriorLateralis2Node;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     };
 
     AnyMuscleViaPoint TibialisPosteriorLateralis3 = {
       AnyMuscleModel &MusMdl = ...MuscleModels.TibialisPosteriorLateralis3Par;
-      AnyRefNode &Org = ...Seg.Shank.TibialisPosteriorLateralis3Node;
-      AnyRefNode &Via1 = ...Seg.Shank.TibialisPosteriorViaNode1;
-    //  AnyRefNode &Via2 = ...Seg.Shank.TibialisPosteriorViaNode2;
-    //  AnyRefNode &Via3 = ...Seg.Shank.TibialisPosteriorViaNode3;
-      //AnyRefNode &Via4 = ...Seg.Shank.TibialisPosteriorViaNode4;
-    //  AnyRefNode &Via5 = ...Seg.Foot.TibialisPosteriorViaNode5;
-      AnyRefNode &Via6 = ...Seg.Foot.TibialisPosteriorViaNode6;
-      AnyRefNode &Via7 = ...Seg.Foot.TibialisPosteriorViaNode7;
-      AnyRefNode &Ins = ...Seg.Foot.TibialisPosteriorLateralis3Node;
+      AnyRefNode &Org = ...Segments.Shank.TibialisPosteriorLateralis3Node;
+      AnyRefNode &Via1 = ...Segments.Shank.TibialisPosteriorViaNode1;
+    //  AnyRefNode &Via2 = ...Segments.Shank.TibialisPosteriorViaNode2;
+    //  AnyRefNode &Via3 = ...Segments.Shank.TibialisPosteriorViaNode3;
+      //AnyRefNode &Via4 = ...Segments.Shank.TibialisPosteriorViaNode4;
+    //  AnyRefNode &Via5 = ...Segments.Foot.TibialisPosteriorViaNode5;
+      AnyRefNode &Via6 = ...Segments.Foot.TibialisPosteriorViaNode6;
+      AnyRefNode &Via7 = ...Segments.Foot.TibialisPosteriorViaNode7;
+      AnyRefNode &Ins = ...Segments.Foot.TibialisPosteriorLateralis3Node;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     };
   };
@@ -350,43 +350,43 @@
   MuscleGroup TibialisPosteriorMedialis() = {
     AnyMuscleViaPoint TibialisPosteriorMedialis1 = {
       AnyMuscleModel &MusMdl = ...MuscleModels.TibialisPosteriorMedialis1Par;
-      AnyRefNode &Org = ...Seg.Shank.TibialisPosteriorMedialis1Node;
-      AnyRefNode &Via1 = ...Seg.Shank.TibialisPosteriorViaNode1;
-    //  AnyRefNode &Via2 = ...Seg.Shank.TibialisPosteriorViaNode2;
-    //  AnyRefNode &Via3 = ...Seg.Shank.TibialisPosteriorViaNode3;
-      //AnyRefNode &Via4 = ...Seg.Shank.TibialisPosteriorViaNode4;
-    //  AnyRefNode &Via5 = ...Seg.Foot.TibialisPosteriorViaNode5;
-      AnyRefNode &Via6 = ...Seg.Foot.TibialisPosteriorViaNode6;
-      AnyRefNode &Via7 = ...Seg.Foot.TibialisPosteriorViaNode7;
-      AnyRefNode &Ins = ...Seg.Foot.TibialisPosteriorMedialis1Node;
+      AnyRefNode &Org = ...Segments.Shank.TibialisPosteriorMedialis1Node;
+      AnyRefNode &Via1 = ...Segments.Shank.TibialisPosteriorViaNode1;
+    //  AnyRefNode &Via2 = ...Segments.Shank.TibialisPosteriorViaNode2;
+    //  AnyRefNode &Via3 = ...Segments.Shank.TibialisPosteriorViaNode3;
+      //AnyRefNode &Via4 = ...Segments.Shank.TibialisPosteriorViaNode4;
+    //  AnyRefNode &Via5 = ...Segments.Foot.TibialisPosteriorViaNode5;
+      AnyRefNode &Via6 = ...Segments.Foot.TibialisPosteriorViaNode6;
+      AnyRefNode &Via7 = ...Segments.Foot.TibialisPosteriorViaNode7;
+      AnyRefNode &Ins = ...Segments.Foot.TibialisPosteriorMedialis1Node;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     };
 
     AnyMuscleViaPoint TibialisPosteriorMedialis2 = {
       AnyMuscleModel &MusMdl = ...MuscleModels.TibialisPosteriorMedialis2Par;
-      AnyRefNode &Org = ...Seg.Shank.TibialisPosteriorMedialis2Node;
-      AnyRefNode &Via1 = ...Seg.Shank.TibialisPosteriorViaNode1;
-      AnyRefNode &Via2 = ...Seg.Shank.TibialisPosteriorViaNode2;
-    //  AnyRefNode &Via3 = ...Seg.Shank.TibialisPosteriorViaNode3;
-      //AnyRefNode &Via4 = ...Seg.Shank.TibialisPosteriorViaNode4;
-    //  AnyRefNode &Via5 = ...Seg.Foot.TibialisPosteriorViaNode5;
-      AnyRefNode &Via6 = ...Seg.Foot.TibialisPosteriorViaNode6;
-      AnyRefNode &Via7 = ...Seg.Foot.TibialisPosteriorViaNode7;
-      AnyRefNode &Ins = ...Seg.Foot.TibialisPosteriorMedialis2Node;
+      AnyRefNode &Org = ...Segments.Shank.TibialisPosteriorMedialis2Node;
+      AnyRefNode &Via1 = ...Segments.Shank.TibialisPosteriorViaNode1;
+      AnyRefNode &Via2 = ...Segments.Shank.TibialisPosteriorViaNode2;
+    //  AnyRefNode &Via3 = ...Segments.Shank.TibialisPosteriorViaNode3;
+      //AnyRefNode &Via4 = ...Segments.Shank.TibialisPosteriorViaNode4;
+    //  AnyRefNode &Via5 = ...Segments.Foot.TibialisPosteriorViaNode5;
+      AnyRefNode &Via6 = ...Segments.Foot.TibialisPosteriorViaNode6;
+      AnyRefNode &Via7 = ...Segments.Foot.TibialisPosteriorViaNode7;
+      AnyRefNode &Ins = ...Segments.Foot.TibialisPosteriorMedialis2Node;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     };
 
     AnyMuscleViaPoint TibialisPosteriorMedialis3 = {
       AnyMuscleModel &MusMdl = ...MuscleModels.TibialisPosteriorMedialis3Par;
-      AnyRefNode &Org = ...Seg.Shank.TibialisPosteriorMedialis3Node;
-      AnyRefNode &Via1 = ...Seg.Shank.TibialisPosteriorViaNode1;
-      AnyRefNode &Via2 = ...Seg.Shank.TibialisPosteriorViaNode2;
-    //  AnyRefNode &Via3 = ...Seg.Shank.TibialisPosteriorViaNode3;
-      //AnyRefNode &Via4 = ...Seg.Shank.TibialisPosteriorViaNode4;
-    //  AnyRefNode &Via5 = ...Seg.Foot.TibialisPosteriorViaNode5;
-      AnyRefNode &Via6 = ...Seg.Foot.TibialisPosteriorViaNode6;
-      AnyRefNode &Via7 = ...Seg.Foot.TibialisPosteriorViaNode7;
-      AnyRefNode &Ins = ...Seg.Foot.TibialisPosteriorMedialis3Node;
+      AnyRefNode &Org = ...Segments.Shank.TibialisPosteriorMedialis3Node;
+      AnyRefNode &Via1 = ...Segments.Shank.TibialisPosteriorViaNode1;
+      AnyRefNode &Via2 = ...Segments.Shank.TibialisPosteriorViaNode2;
+    //  AnyRefNode &Via3 = ...Segments.Shank.TibialisPosteriorViaNode3;
+      //AnyRefNode &Via4 = ...Segments.Shank.TibialisPosteriorViaNode4;
+    //  AnyRefNode &Via5 = ...Segments.Foot.TibialisPosteriorViaNode5;
+      AnyRefNode &Via6 = ...Segments.Foot.TibialisPosteriorViaNode6;
+      AnyRefNode &Via7 = ...Segments.Foot.TibialisPosteriorViaNode7;
+      AnyRefNode &Ins = ...Segments.Foot.TibialisPosteriorMedialis3Node;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     };
   };
@@ -394,28 +394,28 @@
   MuscleGroup TibialisAnterior() = {
     AnyMuscleViaPoint TibialisAnterior1 = {
       AnyMuscleModel &MusMdl = ...MuscleModels.TibialisAnterior1Par;
-      AnyRefNode &Org = ...Seg.Shank.TibialisAnterior1Node;
-      AnyRefNode &Via1 = ...Seg.Shank.TibialisAnteriorViaNode1;
-      AnyRefNode &Via3 = ...Seg.Foot.TibialisAnteriorViaNode3;
-      AnyRefNode &Ins = ...Seg.Foot.TibialisAnterior1Node;
+      AnyRefNode &Org = ...Segments.Shank.TibialisAnterior1Node;
+      AnyRefNode &Via1 = ...Segments.Shank.TibialisAnteriorViaNode1;
+      AnyRefNode &Via3 = ...Segments.Foot.TibialisAnteriorViaNode3;
+      AnyRefNode &Ins = ...Segments.Foot.TibialisAnterior1Node;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     };
 
     AnyMuscleViaPoint TibialisAnterior2 = {
       AnyMuscleModel &MusMdl = ...MuscleModels.TibialisAnterior2Par;
-      AnyRefNode &Org = ...Seg.Shank.TibialisAnterior2Node;
-      AnyRefNode &Via1 = ...Seg.Shank.TibialisAnteriorViaNode1;
-      AnyRefNode &Via3 = ...Seg.Foot.TibialisAnteriorViaNode3;
-      AnyRefNode &Ins = ...Seg.Foot.TibialisAnterior2Node;
+      AnyRefNode &Org = ...Segments.Shank.TibialisAnterior2Node;
+      AnyRefNode &Via1 = ...Segments.Shank.TibialisAnteriorViaNode1;
+      AnyRefNode &Via3 = ...Segments.Foot.TibialisAnteriorViaNode3;
+      AnyRefNode &Ins = ...Segments.Foot.TibialisAnterior2Node;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     };
 
     AnyMuscleViaPoint TibialisAnterior3 = {
       AnyMuscleModel &MusMdl = ...MuscleModels.TibialisAnterior3Par;
-      AnyRefNode &Org = ...Seg.Shank.TibialisAnterior3Node;
-      AnyRefNode &Via1 = ...Seg.Shank.TibialisAnteriorViaNode1;
-      AnyRefNode &Via3 = ...Seg.Foot.TibialisAnteriorViaNode3;
-      AnyRefNode &Ins = ...Seg.Foot.TibialisAnterior1Node;
+      AnyRefNode &Org = ...Segments.Shank.TibialisAnterior3Node;
+      AnyRefNode &Via1 = ...Segments.Shank.TibialisAnteriorViaNode1;
+      AnyRefNode &Via3 = ...Segments.Foot.TibialisAnteriorViaNode3;
+      AnyRefNode &Ins = ...Segments.Foot.TibialisAnterior1Node;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     };
   };
@@ -423,37 +423,37 @@
   MuscleGroup PeroneusBrevis() = {
     AnyMuscleViaPoint PeroneusBrevis1 = {
       AnyMuscleModel &MusMdl = ...MuscleModels.PeroneusBrevis1Par;
-      AnyRefNode &Org = ...Seg.Shank.PeroneusBrevis1Node;
-      AnyRefNode &Via1 = ...Seg.Shank.PeroneusBrevisViaNode1;
-      AnyRefNode &Via2 = ...Seg.Shank.PeroneusBrevisViaNode2;
-      AnyRefNode &Via3 = ...Seg.Shank.PeroneusBrevisViaNode3;
-      AnyRefNode &Via4 = ...Seg.Foot.PeroneusBrevisViaNode4;
-      AnyRefNode &Via6 = ...Seg.Foot.PeroneusBrevisSplitPoint1Node;
-      AnyRefNode &Ins = ...Seg.Foot.PeroneusBrevis1Node;
+      AnyRefNode &Org = ...Segments.Shank.PeroneusBrevis1Node;
+      AnyRefNode &Via1 = ...Segments.Shank.PeroneusBrevisViaNode1;
+      AnyRefNode &Via2 = ...Segments.Shank.PeroneusBrevisViaNode2;
+      AnyRefNode &Via3 = ...Segments.Shank.PeroneusBrevisViaNode3;
+      AnyRefNode &Via4 = ...Segments.Foot.PeroneusBrevisViaNode4;
+      AnyRefNode &Via6 = ...Segments.Foot.PeroneusBrevisSplitPoint1Node;
+      AnyRefNode &Ins = ...Segments.Foot.PeroneusBrevis1Node;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     };
 
     AnyMuscleViaPoint PeroneusBrevis2 = {
       AnyMuscleModel &MusMdl = ...MuscleModels.PeroneusBrevis2Par;
-      AnyRefNode &Org = ...Seg.Shank.PeroneusBrevis2Node;
-      AnyRefNode &Via1 = ...Seg.Shank.PeroneusBrevisViaNode1;
-      AnyRefNode &Via2 = ...Seg.Shank.PeroneusBrevisViaNode2;
-      AnyRefNode &Via3 = ...Seg.Shank.PeroneusBrevisViaNode3;
-      AnyRefNode &Via4 = ...Seg.Foot.PeroneusBrevisViaNode4;
-      AnyRefNode &Via6 = ...Seg.Foot.PeroneusBrevisSplitPoint1Node;
-      AnyRefNode &Ins = ...Seg.Foot.PeroneusBrevis2Node;
+      AnyRefNode &Org = ...Segments.Shank.PeroneusBrevis2Node;
+      AnyRefNode &Via1 = ...Segments.Shank.PeroneusBrevisViaNode1;
+      AnyRefNode &Via2 = ...Segments.Shank.PeroneusBrevisViaNode2;
+      AnyRefNode &Via3 = ...Segments.Shank.PeroneusBrevisViaNode3;
+      AnyRefNode &Via4 = ...Segments.Foot.PeroneusBrevisViaNode4;
+      AnyRefNode &Via6 = ...Segments.Foot.PeroneusBrevisSplitPoint1Node;
+      AnyRefNode &Ins = ...Segments.Foot.PeroneusBrevis2Node;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     };
 
     AnyMuscleViaPoint PeroneusBrevis3 = {
       AnyMuscleModel &MusMdl = ...MuscleModels.PeroneusBrevis3Par;
-      AnyRefNode &Org = ...Seg.Shank.PeroneusBrevis3Node;
-      AnyRefNode &Via1 = ...Seg.Shank.PeroneusBrevisViaNode1;
-      AnyRefNode &Via2 = ...Seg.Shank.PeroneusBrevisViaNode2;
-      AnyRefNode &Via3 = ...Seg.Shank.PeroneusBrevisViaNode3;
-      AnyRefNode &Via4 = ...Seg.Foot.PeroneusBrevisViaNode4;
-      AnyRefNode &Via5 = ...Seg.Foot.PeroneusBrevisSplitPoint1Node;
-      AnyRefNode &Ins = ...Seg.Foot.PeroneusBrevis2Node;
+      AnyRefNode &Org = ...Segments.Shank.PeroneusBrevis3Node;
+      AnyRefNode &Via1 = ...Segments.Shank.PeroneusBrevisViaNode1;
+      AnyRefNode &Via2 = ...Segments.Shank.PeroneusBrevisViaNode2;
+      AnyRefNode &Via3 = ...Segments.Shank.PeroneusBrevisViaNode3;
+      AnyRefNode &Via4 = ...Segments.Foot.PeroneusBrevisViaNode4;
+      AnyRefNode &Via5 = ...Segments.Foot.PeroneusBrevisSplitPoint1Node;
+      AnyRefNode &Ins = ...Segments.Foot.PeroneusBrevis2Node;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     };
   };
@@ -461,43 +461,43 @@
   MuscleGroup PeroneusLongus() = {
     AnyMuscleViaPoint PeroneusLongus1 = {
       AnyMuscleModel &MusMdl = ...MuscleModels.PeroneusLongus1Par;
-      AnyRefNode &Org = ...Seg.Shank.PeroneusLongus1Node;
-      AnyRefNode &Via1 = ...Seg.Shank.PeroneusLongusViaNode1;
-      AnyRefNode &Via2 = ...Seg.Shank.PeroneusLongusViaNode2;
-      AnyRefNode &Via3 = ...Seg.Shank.PeroneusLongusViaNode3;
-    //  AnyRefNode &Via4 = ...Seg.Shank.PeroneusLongusViaNode4;
-      AnyRefNode &Via5 = ...Seg.Foot.PeroneusLongusViaNode5;
-      AnyRefNode &Via6 = ...Seg.Foot.PeroneusLongusViaNode6;
-      AnyRefNode &Via7 = ...Seg.Foot.PeroneusLongusViaNode7;
-      AnyRefNode &Ins = ...Seg.Foot.PeroneusLongus1Node;
+      AnyRefNode &Org = ...Segments.Shank.PeroneusLongus1Node;
+      AnyRefNode &Via1 = ...Segments.Shank.PeroneusLongusViaNode1;
+      AnyRefNode &Via2 = ...Segments.Shank.PeroneusLongusViaNode2;
+      AnyRefNode &Via3 = ...Segments.Shank.PeroneusLongusViaNode3;
+    //  AnyRefNode &Via4 = ...Segments.Shank.PeroneusLongusViaNode4;
+      AnyRefNode &Via5 = ...Segments.Foot.PeroneusLongusViaNode5;
+      AnyRefNode &Via6 = ...Segments.Foot.PeroneusLongusViaNode6;
+      AnyRefNode &Via7 = ...Segments.Foot.PeroneusLongusViaNode7;
+      AnyRefNode &Ins = ...Segments.Foot.PeroneusLongus1Node;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     };
 
     AnyMuscleViaPoint PeroneusLongus2 = {
       AnyMuscleModel &MusMdl = ...MuscleModels.PeroneusLongus2Par;
-      AnyRefNode &Org = ...Seg.Shank.PeroneusLongus2Node;
-      AnyRefNode &Via1 = ...Seg.Shank.PeroneusLongusViaNode1;
-      AnyRefNode &Via2 = ...Seg.Shank.PeroneusLongusViaNode2;
-      AnyRefNode &Via3 = ...Seg.Shank.PeroneusLongusViaNode3;
-    //  AnyRefNode &Via4 = ...Seg.Shank.PeroneusLongusViaNode4;
-      AnyRefNode &Via5 = ...Seg.Foot.PeroneusLongusViaNode5;
-      AnyRefNode &Via6 = ...Seg.Foot.PeroneusLongusViaNode6;
-      AnyRefNode &Via7 = ...Seg.Foot.PeroneusLongusViaNode7;
-      AnyRefNode &Ins = ...Seg.Foot.PeroneusLongus2Node;
+      AnyRefNode &Org = ...Segments.Shank.PeroneusLongus2Node;
+      AnyRefNode &Via1 = ...Segments.Shank.PeroneusLongusViaNode1;
+      AnyRefNode &Via2 = ...Segments.Shank.PeroneusLongusViaNode2;
+      AnyRefNode &Via3 = ...Segments.Shank.PeroneusLongusViaNode3;
+    //  AnyRefNode &Via4 = ...Segments.Shank.PeroneusLongusViaNode4;
+      AnyRefNode &Via5 = ...Segments.Foot.PeroneusLongusViaNode5;
+      AnyRefNode &Via6 = ...Segments.Foot.PeroneusLongusViaNode6;
+      AnyRefNode &Via7 = ...Segments.Foot.PeroneusLongusViaNode7;
+      AnyRefNode &Ins = ...Segments.Foot.PeroneusLongus2Node;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     };
 
     AnyMuscleViaPoint PeroneusLongus3 = {
       AnyMuscleModel &MusMdl = ...MuscleModels.PeroneusLongus3Par;
-      AnyRefNode &Org = ...Seg.Shank.PeroneusLongus3Node;
-      AnyRefNode &Via1 = ...Seg.Shank.PeroneusLongusViaNode1;
-      AnyRefNode &Via2 = ...Seg.Shank.PeroneusLongusViaNode2;
-      AnyRefNode &Via3 = ...Seg.Shank.PeroneusLongusViaNode3;
-    //  AnyRefNode &Via4 = ...Seg.Shank.PeroneusLongusViaNode4;
-      AnyRefNode &Via5 = ...Seg.Foot.PeroneusLongusViaNode5;
-      AnyRefNode &Via6 = ...Seg.Foot.PeroneusLongusViaNode6;
-      AnyRefNode &Via7 = ...Seg.Foot.PeroneusLongusViaNode7;
-      AnyRefNode &Ins = ...Seg.Foot.PeroneusLongus3Node;
+      AnyRefNode &Org = ...Segments.Shank.PeroneusLongus3Node;
+      AnyRefNode &Via1 = ...Segments.Shank.PeroneusLongusViaNode1;
+      AnyRefNode &Via2 = ...Segments.Shank.PeroneusLongusViaNode2;
+      AnyRefNode &Via3 = ...Segments.Shank.PeroneusLongusViaNode3;
+    //  AnyRefNode &Via4 = ...Segments.Shank.PeroneusLongusViaNode4;
+      AnyRefNode &Via5 = ...Segments.Foot.PeroneusLongusViaNode5;
+      AnyRefNode &Via6 = ...Segments.Foot.PeroneusLongusViaNode6;
+      AnyRefNode &Via7 = ...Segments.Foot.PeroneusLongusViaNode7;
+      AnyRefNode &Ins = ...Segments.Foot.PeroneusLongus3Node;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     };
   };
@@ -505,54 +505,54 @@
   MuscleGroup ExtensorDigitorumLongus() = {
     AnyMuscleViaPoint ExtensorDigitorumLongus1 = {
       AnyMuscleModel &MusMdl = ...MuscleModels.ExtensorDigitorumLongus1Par;
-      AnyRefNode &Org = ...Seg.Shank.ExtensorDigitorumLongus1Node;
-      AnyRefNode &Via1 = ...Seg.Shank.ExtensorDigitorumLongusViaNode1;
-      AnyRefNode &Via2 = ...Seg.Shank.ExtensorDigitorumLongusViaNode2;
-      AnyRefNode &Via3 = ...Seg.Shank.ExtensorDigitorumLongusViaNode3;
-    //  AnyRefNode &Via4 = ...Seg.Shank.ExtensorDigitorumLongusViaNode4;
-      //AnyRefNode &Via5 = ...Seg.Foot.ExtensorDigitorumLongusViaNode5; //Commented out in TLEMsafe2.0-trunk as the node has been removed there. Needs review.
-      AnyRefNode &Via7 = ...Seg.Foot.  ExtensorDigitorumSplitPoint1Node;
-      AnyRefNode &Via6 = ...Seg.Foot.ExtensorDigitorumLongusViaNode1;
-      AnyRefNode&Ins = ...Seg.Foot.ExtensorDigitorumLongus1Node;
+      AnyRefNode &Org = ...Segments.Shank.ExtensorDigitorumLongus1Node;
+      AnyRefNode &Via1 = ...Segments.Shank.ExtensorDigitorumLongusViaNode1;
+      AnyRefNode &Via2 = ...Segments.Shank.ExtensorDigitorumLongusViaNode2;
+      AnyRefNode &Via3 = ...Segments.Shank.ExtensorDigitorumLongusViaNode3;
+    //  AnyRefNode &Via4 = ...Segments.Shank.ExtensorDigitorumLongusViaNode4;
+      //AnyRefNode &Via5 = ...Segments.Foot.ExtensorDigitorumLongusViaNode5; //Commented out in TLEMsafe2.0-trunk as the node has been removed there. Needs review.
+      AnyRefNode &Via7 = ...Segments.Foot.  ExtensorDigitorumSplitPoint1Node;
+      AnyRefNode &Via6 = ...Segments.Foot.ExtensorDigitorumLongusViaNode1;
+      AnyRefNode&Ins = ...Segments.Foot.ExtensorDigitorumLongus1Node;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     };
     AnyMuscleViaPoint ExtensorDigitorumLongus2 = {
       AnyMuscleModel &MusMdl = ...MuscleModels.ExtensorDigitorumLongus2Par;
-      AnyRefNode &Org = ...Seg.Shank.ExtensorDigitorumLongus2Node;
-      AnyRefNode &Via1 = ...Seg.Shank.ExtensorDigitorumLongusViaNode1;
-      AnyRefNode &Via2 = ...Seg.Shank.ExtensorDigitorumLongusViaNode2;
-      AnyRefNode &Via3 = ...Seg.Shank.ExtensorDigitorumLongusViaNode3;
-    //  AnyRefNode &Via4 = ...Seg.Shank.ExtensorDigitorumLongusViaNode4;
-      //AnyRefNode &Via5 = ...Seg.Foot.ExtensorDigitorumLongusViaNode5; //Commented out in TLEMsafe2.0-trunk as the node has been removed there. Needs review.
-      AnyRefNode &Via7 = ...Seg.Foot.  ExtensorDigitorumSplitPoint1Node;
-      AnyRefNode &Via6 = ...Seg.Foot.ExtensorDigitorumLongusViaNode2;
-      AnyRefNode &Ins = ...Seg.Foot.ExtensorDigitorumLongus2Node;
+      AnyRefNode &Org = ...Segments.Shank.ExtensorDigitorumLongus2Node;
+      AnyRefNode &Via1 = ...Segments.Shank.ExtensorDigitorumLongusViaNode1;
+      AnyRefNode &Via2 = ...Segments.Shank.ExtensorDigitorumLongusViaNode2;
+      AnyRefNode &Via3 = ...Segments.Shank.ExtensorDigitorumLongusViaNode3;
+    //  AnyRefNode &Via4 = ...Segments.Shank.ExtensorDigitorumLongusViaNode4;
+      //AnyRefNode &Via5 = ...Segments.Foot.ExtensorDigitorumLongusViaNode5; //Commented out in TLEMsafe2.0-trunk as the node has been removed there. Needs review.
+      AnyRefNode &Via7 = ...Segments.Foot.  ExtensorDigitorumSplitPoint1Node;
+      AnyRefNode &Via6 = ...Segments.Foot.ExtensorDigitorumLongusViaNode2;
+      AnyRefNode &Ins = ...Segments.Foot.ExtensorDigitorumLongus2Node;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     };
     AnyMuscleViaPoint ExtensorDigitorumLongus3 = {
       AnyMuscleModel &MusMdl = ...MuscleModels.ExtensorDigitorumLongus3Par;
-      AnyRefNode &Org = ...Seg.Shank.ExtensorDigitorumLongus3Node;
-      AnyRefNode &Via1 = ...Seg.Shank.ExtensorDigitorumLongusViaNode1;
-      AnyRefNode &Via2 = ...Seg.Shank.ExtensorDigitorumLongusViaNode2;
-      AnyRefNode &Via3 = ...Seg.Shank.ExtensorDigitorumLongusViaNode3;
-    //  AnyRefNode &Via4 = ...Seg.Shank.ExtensorDigitorumLongusViaNode4;
-      //AnyRefNode &Via5 = ...Seg.Foot.ExtensorDigitorumLongusViaNode5; //Commented out in TLEMsafe2.0-trunk as the node has been removed there. Needs review.
-        AnyRefNode &Via7 = ...Seg.Foot.  ExtensorDigitorumSplitPoint1Node;
-      AnyRefNode &Via6 = ...Seg.Foot.ExtensorDigitorumLongusViaNode3;
-      AnyRefNode &Ins = ...Seg.Foot.ExtensorDigitorumLongus3Node;
+      AnyRefNode &Org = ...Segments.Shank.ExtensorDigitorumLongus3Node;
+      AnyRefNode &Via1 = ...Segments.Shank.ExtensorDigitorumLongusViaNode1;
+      AnyRefNode &Via2 = ...Segments.Shank.ExtensorDigitorumLongusViaNode2;
+      AnyRefNode &Via3 = ...Segments.Shank.ExtensorDigitorumLongusViaNode3;
+    //  AnyRefNode &Via4 = ...Segments.Shank.ExtensorDigitorumLongusViaNode4;
+      //AnyRefNode &Via5 = ...Segments.Foot.ExtensorDigitorumLongusViaNode5; //Commented out in TLEMsafe2.0-trunk as the node has been removed there. Needs review.
+        AnyRefNode &Via7 = ...Segments.Foot.  ExtensorDigitorumSplitPoint1Node;
+      AnyRefNode &Via6 = ...Segments.Foot.ExtensorDigitorumLongusViaNode3;
+      AnyRefNode &Ins = ...Segments.Foot.ExtensorDigitorumLongus3Node;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     };
     AnyMuscleViaPoint ExtensorDigitorumLongus4 = {
       AnyMuscleModel &MusMdl = ...MuscleModels.ExtensorDigitorumLongus4Par;
-      AnyRefNode &Org = ...Seg.Shank.ExtensorDigitorumLongus4Node;
-      AnyRefNode &Via1 = ...Seg.Shank.ExtensorDigitorumLongusViaNode1;
-      AnyRefNode &Via2 = ...Seg.Shank.ExtensorDigitorumLongusViaNode2;
-      AnyRefNode &Via3 = ...Seg.Shank.ExtensorDigitorumLongusViaNode3;
-    //  AnyRefNode &Via4 = ...Seg.Shank.ExtensorDigitorumLongusViaNode4;
-      //AnyRefNode &Via5 = ...Seg.Foot.ExtensorDigitorumLongusViaNode5;
-      AnyRefNode &Via7 = ...Seg.Foot.  ExtensorDigitorumSplitPoint1Node;
-      AnyRefNode &Via6 = ...Seg.Foot.ExtensorDigitorumLongusViaNode4;
-      AnyRefNode &Ins = ...Seg.Foot.ExtensorDigitorumLongus4Node;
+      AnyRefNode &Org = ...Segments.Shank.ExtensorDigitorumLongus4Node;
+      AnyRefNode &Via1 = ...Segments.Shank.ExtensorDigitorumLongusViaNode1;
+      AnyRefNode &Via2 = ...Segments.Shank.ExtensorDigitorumLongusViaNode2;
+      AnyRefNode &Via3 = ...Segments.Shank.ExtensorDigitorumLongusViaNode3;
+    //  AnyRefNode &Via4 = ...Segments.Shank.ExtensorDigitorumLongusViaNode4;
+      //AnyRefNode &Via5 = ...Segments.Foot.ExtensorDigitorumLongusViaNode5;
+      AnyRefNode &Via7 = ...Segments.Foot.  ExtensorDigitorumSplitPoint1Node;
+      AnyRefNode &Via6 = ...Segments.Foot.ExtensorDigitorumLongusViaNode4;
+      AnyRefNode &Ins = ...Segments.Foot.ExtensorDigitorumLongus4Node;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     };
   };
@@ -560,42 +560,42 @@
   MuscleGroup ExtensorHallucisLongus() = {
     AnyMuscleViaPoint ExtensorHallucisLongus1 = {
       AnyMuscleModel &MusMdl = ...MuscleModels.ExtensorHallucisLongus1Par;
-      AnyRefNode &Org = ...Seg.Shank.ExtensorHallucisLongus1Node;
-      AnyRefNode &Via1 = ...Seg.Shank.ExtensorHallucisLongusViaNode1;
-      AnyRefNode &Via2 = ...Seg.Shank.ExtensorHallucisLongusViaNode2;
-    //  AnyRefNode &Via3 = ...Seg.Shank.ExtensorHallucisLongusViaNode3;
-      AnyRefNode &Via4 = ...Seg.Foot.ExtensorHallucisLongusViaNode4;
-    // AnyRefNode &Via5 = ...Seg.Foot.ExtensorHallucisLongusViaNode5;
-      //  AnyRefNode &Via9 = ...Seg.Foot.ExtensorHallucisLongusViaNode9;
-      //  AnyRefNode &Via10 = ...Seg.Foot.ExtensorHallucisLongusViaNode10;
-      //  AnyRefNode &Via11 = ...Seg.Foot.ExtensorHallucisLongusViaNode11;
-      //  AnyRefNode &Via12 = ...Seg.Foot.ExtensorHallucisLongusViaNode12;
-      //  AnyRefNode &Via13 = ...Seg.Foot.ExtensorHallucisLongusViaNode13;
-      AnyRefNode &Ins = ...Seg.Foot.ExtensorHallucisLongus1Node;
+      AnyRefNode &Org = ...Segments.Shank.ExtensorHallucisLongus1Node;
+      AnyRefNode &Via1 = ...Segments.Shank.ExtensorHallucisLongusViaNode1;
+      AnyRefNode &Via2 = ...Segments.Shank.ExtensorHallucisLongusViaNode2;
+    //  AnyRefNode &Via3 = ...Segments.Shank.ExtensorHallucisLongusViaNode3;
+      AnyRefNode &Via4 = ...Segments.Foot.ExtensorHallucisLongusViaNode4;
+    // AnyRefNode &Via5 = ...Segments.Foot.ExtensorHallucisLongusViaNode5;
+      //  AnyRefNode &Via9 = ...Segments.Foot.ExtensorHallucisLongusViaNode9;
+      //  AnyRefNode &Via10 = ...Segments.Foot.ExtensorHallucisLongusViaNode10;
+      //  AnyRefNode &Via11 = ...Segments.Foot.ExtensorHallucisLongusViaNode11;
+      //  AnyRefNode &Via12 = ...Segments.Foot.ExtensorHallucisLongusViaNode12;
+      //  AnyRefNode &Via13 = ...Segments.Foot.ExtensorHallucisLongusViaNode13;
+      AnyRefNode &Ins = ...Segments.Foot.ExtensorHallucisLongus1Node;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     };
 
     AnyMuscleViaPoint ExtensorHallucisLongus2 = {
       AnyMuscleModel &MusMdl = ...MuscleModels.ExtensorHallucisLongus2Par;
-      AnyRefNode &Org = ...Seg.Shank.ExtensorHallucisLongus2Node;
-      AnyRefNode &Via1 = ...Seg.Shank.ExtensorHallucisLongusViaNode1;
-      AnyRefNode &Via2 = ...Seg.Shank.ExtensorHallucisLongusViaNode2;
-    //  AnyRefNode &Via3 = ...Seg.Shank.ExtensorHallucisLongusViaNode3;
-      AnyRefNode &Via4 = ...Seg.Foot.ExtensorHallucisLongusViaNode4;
-    // AnyRefNode &Via5 = ...Seg.Foot.ExtensorHallucisLongusViaNode5;
-      AnyRefNode &Ins = ...Seg.Foot.ExtensorHallucisLongus2Node;
+      AnyRefNode &Org = ...Segments.Shank.ExtensorHallucisLongus2Node;
+      AnyRefNode &Via1 = ...Segments.Shank.ExtensorHallucisLongusViaNode1;
+      AnyRefNode &Via2 = ...Segments.Shank.ExtensorHallucisLongusViaNode2;
+    //  AnyRefNode &Via3 = ...Segments.Shank.ExtensorHallucisLongusViaNode3;
+      AnyRefNode &Via4 = ...Segments.Foot.ExtensorHallucisLongusViaNode4;
+    // AnyRefNode &Via5 = ...Segments.Foot.ExtensorHallucisLongusViaNode5;
+      AnyRefNode &Ins = ...Segments.Foot.ExtensorHallucisLongus2Node;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     };
 
     AnyMuscleViaPoint ExtensorHallucisLongus3 = {
       AnyMuscleModel &MusMdl = ...MuscleModels.ExtensorHallucisLongus3Par;
-      AnyRefNode &Org = ...Seg.Shank.ExtensorHallucisLongus3Node;
-      AnyRefNode &Via1 = ...Seg.Shank.ExtensorHallucisLongusViaNode1;
-      AnyRefNode &Via2 = ...Seg.Shank.ExtensorHallucisLongusViaNode2;
-    //  AnyRefNode &Via3 = ...Seg.Shank.ExtensorHallucisLongusViaNode3;
-      AnyRefNode &Via4 = ...Seg.Foot.ExtensorHallucisLongusViaNode4;
-    // AnyRefNode &Via5 = ...Seg.Foot.ExtensorHallucisLongusViaNode5;
-      AnyRefNode &Ins = ...Seg.Foot.ExtensorHallucisLongus3Node;
+      AnyRefNode &Org = ...Segments.Shank.ExtensorHallucisLongus3Node;
+      AnyRefNode &Via1 = ...Segments.Shank.ExtensorHallucisLongusViaNode1;
+      AnyRefNode &Via2 = ...Segments.Shank.ExtensorHallucisLongusViaNode2;
+    //  AnyRefNode &Via3 = ...Segments.Shank.ExtensorHallucisLongusViaNode3;
+      AnyRefNode &Via4 = ...Segments.Foot.ExtensorHallucisLongusViaNode4;
+    // AnyRefNode &Via5 = ...Segments.Foot.ExtensorHallucisLongusViaNode5;
+      AnyRefNode &Ins = ...Segments.Foot.ExtensorHallucisLongus3Node;
       viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
     };
   };
@@ -612,9 +612,9 @@
 MuscleGroup VastusLateralisInferior() = {
   AnyMuscleShortestPath VastusLateralisInferior1 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.VastusLateralisInferior1Par;
-    AnyRefNode &Org = ...Seg.Thigh.VastusLateralisInferior1Node;
-    AnySurface &srf = ...Seg.Thigh.RectusVastiiWrapSurf.cyl;
-    AnyRefNode &Ins = ...Seg.Patella.VastusLateralisInferior1Node;
+    AnyRefNode &Org = ...Segments.Thigh.VastusLateralisInferior1Node;
+    AnySurface &srf = ...Segments.Thigh.RectusVastiiWrapSurf.cyl;
+    AnyRefNode &Ins = ...Segments.Patella.VastusLateralisInferior1Node;
     SPLine = {
       StringMesh = 60;
       AnyMatrix InitWrapPos = {
@@ -631,9 +631,9 @@ MuscleGroup VastusLateralisInferior() = {
 
   AnyMuscleShortestPath VastusLateralisInferior2 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.VastusLateralisInferior2Par;
-    AnyRefNode &Org = ...Seg.Thigh.VastusLateralisInferior2Node;
-    AnySurface &srf = ...Seg.Thigh.RectusVastiiWrapSurf.cyl;
-    AnyRefNode &Ins = ...Seg.Patella.VastusLateralisInferior2Node;
+    AnyRefNode &Org = ...Segments.Thigh.VastusLateralisInferior2Node;
+    AnySurface &srf = ...Segments.Thigh.RectusVastiiWrapSurf.cyl;
+    AnyRefNode &Ins = ...Segments.Patella.VastusLateralisInferior2Node;
     SPLine =   {
       StringMesh = 60;
       InitWrapPosVecArr =  ..VastusLateralisInferior1.SPLine.InitWrapPosVecArr;
@@ -643,9 +643,9 @@ MuscleGroup VastusLateralisInferior() = {
 
   AnyMuscleShortestPath VastusLateralisInferior3 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.VastusLateralisInferior3Par;
-    AnyRefNode &Org = ...Seg.Thigh.VastusLateralisInferior3Node;
-    AnySurface &srf = ...Seg.Thigh.RectusVastiiWrapSurf.cyl;
-    AnyRefNode &Ins = ...Seg.Patella.VastusLateralisInferior3Node;
+    AnyRefNode &Org = ...Segments.Thigh.VastusLateralisInferior3Node;
+    AnySurface &srf = ...Segments.Thigh.RectusVastiiWrapSurf.cyl;
+    AnyRefNode &Ins = ...Segments.Patella.VastusLateralisInferior3Node;
     SPLine =   {
       StringMesh = 60;
       InitWrapPosVecArr =  ..VastusLateralisInferior1.SPLine.InitWrapPosVecArr;
@@ -655,9 +655,9 @@ MuscleGroup VastusLateralisInferior() = {
 
   AnyMuscleShortestPath VastusLateralisInferior4 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.VastusLateralisInferior4Par;
-    AnyRefNode &Org = ...Seg.Thigh.VastusLateralisInferior4Node;
-    AnySurface &srf = ...Seg.Thigh.RectusVastiiWrapSurf.cyl;
-    AnyRefNode &Ins = ...Seg.Patella.VastusLateralisInferior4Node;
+    AnyRefNode &Org = ...Segments.Thigh.VastusLateralisInferior4Node;
+    AnySurface &srf = ...Segments.Thigh.RectusVastiiWrapSurf.cyl;
+    AnyRefNode &Ins = ...Segments.Patella.VastusLateralisInferior4Node;
     SPLine =   {
       StringMesh = 60;
       InitWrapPosVecArr =  ..VastusLateralisInferior1.SPLine.InitWrapPosVecArr;
@@ -667,9 +667,9 @@ MuscleGroup VastusLateralisInferior() = {
 
   AnyMuscleShortestPath VastusLateralisInferior5 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.VastusLateralisInferior5Par;
-    AnyRefNode &Org = ...Seg.Thigh.VastusLateralisInferior5Node;
-    AnySurface &srf = ...Seg.Thigh.RectusVastiiWrapSurf.cyl;
-    AnyRefNode &Ins = ...Seg.Patella.VastusLateralisInferior5Node;
+    AnyRefNode &Org = ...Segments.Thigh.VastusLateralisInferior5Node;
+    AnySurface &srf = ...Segments.Thigh.RectusVastiiWrapSurf.cyl;
+    AnyRefNode &Ins = ...Segments.Patella.VastusLateralisInferior5Node;
     SPLine =   {
       StringMesh = 60;
       InitWrapPosVecArr =  ..VastusLateralisInferior1.SPLine.InitWrapPosVecArr;
@@ -679,9 +679,9 @@ MuscleGroup VastusLateralisInferior() = {
 
   AnyMuscleShortestPath VastusLateralisInferior6 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.VastusLateralisInferior6Par;
-    AnyRefNode &Org = ...Seg.Thigh.VastusLateralisInferior6Node;
-    AnySurface &srf = ...Seg.Thigh.RectusVastiiWrapSurf.cyl;
-    AnyRefNode &Ins = ...Seg.Patella.VastusLateralisInferior6Node;
+    AnyRefNode &Org = ...Segments.Thigh.VastusLateralisInferior6Node;
+    AnySurface &srf = ...Segments.Thigh.RectusVastiiWrapSurf.cyl;
+    AnyRefNode &Ins = ...Segments.Patella.VastusLateralisInferior6Node;
     SPLine =   {
       StringMesh = 60;
       InitWrapPosVecArr =  ..VastusLateralisInferior1.SPLine.InitWrapPosVecArr;
@@ -694,9 +694,9 @@ MuscleGroup VastusLateralisInferior() = {
 MuscleGroup VastusLateralisSuperior() = {
   AnyMuscleShortestPath VastusLateralisSuperior1 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.VastusLateralisSuperior1Par;
-    AnyRefNode &Org = ...Seg.Thigh.VastusLateralisSuperior1Node;
-    AnySurface &srf = ...Seg.Thigh.RectusVastiiWrapSurf.cyl;
-    AnyRefNode &Ins = ...Seg.Patella.VastusLateralisSuperior1Node;
+    AnyRefNode &Org = ...Segments.Thigh.VastusLateralisSuperior1Node;
+    AnySurface &srf = ...Segments.Thigh.RectusVastiiWrapSurf.cyl;
+    AnyRefNode &Ins = ...Segments.Patella.VastusLateralisSuperior1Node;
     SPLine =   {
       StringMesh = 65;
       InitWrapPosVecArr =  ...VastusLateralisInferior.VastusLateralisInferior1.SPLine.InitWrapPosVecArr;
@@ -706,9 +706,9 @@ MuscleGroup VastusLateralisSuperior() = {
 
   AnyMuscleShortestPath VastusLateralisSuperior2 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.VastusLateralisSuperior2Par;
-    AnyRefNode &Org = ...Seg.Thigh.VastusLateralisSuperior2Node;
-    AnySurface &srf = ...Seg.Thigh.RectusVastiiWrapSurf.cyl;
-    AnyRefNode &Ins = ...Seg.Patella.VastusLateralisSuperior2Node;
+    AnyRefNode &Org = ...Segments.Thigh.VastusLateralisSuperior2Node;
+    AnySurface &srf = ...Segments.Thigh.RectusVastiiWrapSurf.cyl;
+    AnyRefNode &Ins = ...Segments.Patella.VastusLateralisSuperior2Node;
     SPLine =   {
       StringMesh = 65;
       InitWrapPosVecArr =  ...VastusLateralisInferior.VastusLateralisInferior1.SPLine.InitWrapPosVecArr;
@@ -720,9 +720,9 @@ MuscleGroup VastusLateralisSuperior() = {
 MuscleGroup VastusMedialisInferior() = {
   AnyMuscleShortestPath VastusMedialisInferior1 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.VastusMedialisInferior1Par;
-    AnyRefNode &Org = ...Seg.Thigh.VastusMedialisInferior1Node;
-    AnySurface &srf = ...Seg.Thigh.RectusVastiiWrapSurf.cyl;
-    AnyRefNode &Ins = ...Seg.Patella.VastusMedialisInferior1Node;
+    AnyRefNode &Org = ...Segments.Thigh.VastusMedialisInferior1Node;
+    AnySurface &srf = ...Segments.Thigh.RectusVastiiWrapSurf.cyl;
+    AnyRefNode &Ins = ...Segments.Patella.VastusMedialisInferior1Node;
     SPLine =   {
       StringMesh = 65;
       InitWrapPosVecArr =  ...VastusLateralisInferior.VastusLateralisInferior1.SPLine.InitWrapPosVecArr;
@@ -732,9 +732,9 @@ MuscleGroup VastusMedialisInferior() = {
 
   AnyMuscleShortestPath VastusMedialisInferior2 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.VastusMedialisInferior2Par;
-    AnyRefNode &Org = ...Seg.Thigh.VastusMedialisInferior2Node;
-    AnySurface &srf = ...Seg.Thigh.RectusVastiiWrapSurf.cyl;
-    AnyRefNode &Ins = ...Seg.Patella.VastusMedialisInferior2Node;
+    AnyRefNode &Org = ...Segments.Thigh.VastusMedialisInferior2Node;
+    AnySurface &srf = ...Segments.Thigh.RectusVastiiWrapSurf.cyl;
+    AnyRefNode &Ins = ...Segments.Patella.VastusMedialisInferior2Node;
     SPLine =   {
       StringMesh = 65;
       InitWrapPosVecArr =  ...VastusLateralisInferior.VastusLateralisInferior1.SPLine.InitWrapPosVecArr;
@@ -746,9 +746,9 @@ MuscleGroup VastusMedialisInferior() = {
 MuscleGroup VastusMedialisMid() = {
   AnyMuscleShortestPath VastusMedialisMid1 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.VastusMedialisMid1Par;
-    AnyRefNode &Org = ...Seg.Thigh.VastusMedialisMid1Node;
-    AnySurface &srf = ...Seg.Thigh.RectusVastiiWrapSurf.cyl;
-    AnyRefNode &Ins = ...Seg.Patella.VastusMedialisMid1Node;
+    AnyRefNode &Org = ...Segments.Thigh.VastusMedialisMid1Node;
+    AnySurface &srf = ...Segments.Thigh.RectusVastiiWrapSurf.cyl;
+    AnyRefNode &Ins = ...Segments.Patella.VastusMedialisMid1Node;
     SPLine =   {
       StringMesh = 65;
       InitWrapPosVecArr =  ...VastusLateralisInferior.VastusLateralisInferior1.SPLine.InitWrapPosVecArr;
@@ -758,9 +758,9 @@ MuscleGroup VastusMedialisMid() = {
 
   AnyMuscleShortestPath VastusMedialisMid2 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.VastusMedialisMid2Par;
-    AnyRefNode &Org = ...Seg.Thigh.VastusMedialisMid2Node;
-    AnySurface &srf = ...Seg.Thigh.RectusVastiiWrapSurf.cyl;
-    AnyRefNode &Ins = ...Seg.Patella.VastusMedialisMid2Node;
+    AnyRefNode &Org = ...Segments.Thigh.VastusMedialisMid2Node;
+    AnySurface &srf = ...Segments.Thigh.RectusVastiiWrapSurf.cyl;
+    AnyRefNode &Ins = ...Segments.Patella.VastusMedialisMid2Node;
     SPLine =   {
       StringMesh = 65;
       InitWrapPosVecArr =  ...VastusLateralisInferior.VastusLateralisInferior1.SPLine.InitWrapPosVecArr;
@@ -773,9 +773,9 @@ MuscleGroup VastusMedialisMid() = {
 MuscleGroup VastusMedialisSuperior() = {
   AnyMuscleShortestPath VastusMedialisSuperior1 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.VastusMedialisSuperior1Par;
-    AnyRefNode &Org = ...Seg.Thigh.VastusMedialisSuperior1Node;
-    AnySurface &srf = ...Seg.Thigh.RectusVastiiWrapSurf.cyl;
-    AnyRefNode &Ins = ...Seg.Patella.VastusMedialisSuperior1Node;
+    AnyRefNode &Org = ...Segments.Thigh.VastusMedialisSuperior1Node;
+    AnySurface &srf = ...Segments.Thigh.RectusVastiiWrapSurf.cyl;
+    AnyRefNode &Ins = ...Segments.Patella.VastusMedialisSuperior1Node;
     SPLine =   {
       StringMesh = 65;
       InitWrapPosVecArr =  ...VastusLateralisInferior.VastusLateralisInferior1.SPLine.InitWrapPosVecArr;
@@ -785,9 +785,9 @@ MuscleGroup VastusMedialisSuperior() = {
 
   AnyMuscleShortestPath VastusMedialisSuperior2 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.VastusMedialisSuperior2Par;
-    AnyRefNode &Org = ...Seg.Thigh.VastusMedialisSuperior2Node;
-    AnySurface &srf = ...Seg.Thigh.RectusVastiiWrapSurf.cyl;
-    AnyRefNode &Ins = ...Seg.Patella.VastusMedialisSuperior2Node;
+    AnyRefNode &Org = ...Segments.Thigh.VastusMedialisSuperior2Node;
+    AnySurface &srf = ...Segments.Thigh.RectusVastiiWrapSurf.cyl;
+    AnyRefNode &Ins = ...Segments.Patella.VastusMedialisSuperior2Node;
     SPLine =   {
       StringMesh = 65;
       InitWrapPosVecArr =  ...VastusLateralisInferior.VastusLateralisInferior1.SPLine.InitWrapPosVecArr;
@@ -797,9 +797,9 @@ MuscleGroup VastusMedialisSuperior() = {
 
   AnyMuscleShortestPath VastusMedialisSuperior3 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.VastusMedialisSuperior3Par;
-    AnyRefNode &Org = ...Seg.Thigh.VastusMedialisSuperior3Node;
-    AnySurface &srf = ...Seg.Thigh.RectusVastiiWrapSurf.cyl;
-    AnyRefNode &Ins = ...Seg.Patella.VastusMedialisSuperior3Node;
+    AnyRefNode &Org = ...Segments.Thigh.VastusMedialisSuperior3Node;
+    AnySurface &srf = ...Segments.Thigh.RectusVastiiWrapSurf.cyl;
+    AnyRefNode &Ins = ...Segments.Patella.VastusMedialisSuperior3Node;
     SPLine =   {
       StringMesh = 65;
       InitWrapPosVecArr =  ...VastusLateralisInferior.VastusLateralisInferior1.SPLine.InitWrapPosVecArr;
@@ -809,9 +809,9 @@ MuscleGroup VastusMedialisSuperior() = {
 
   AnyMuscleShortestPath VastusMedialisSuperior4 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.VastusMedialisSuperior4Par;
-    AnyRefNode &Org = ...Seg.Thigh.VastusMedialisSuperior4Node;
-    AnySurface &srf = ...Seg.Thigh.RectusVastiiWrapSurf.cyl;
-    AnyRefNode &Ins = ...Seg.Patella.VastusMedialisSuperior4Node;
+    AnyRefNode &Org = ...Segments.Thigh.VastusMedialisSuperior4Node;
+    AnySurface &srf = ...Segments.Thigh.RectusVastiiWrapSurf.cyl;
+    AnyRefNode &Ins = ...Segments.Patella.VastusMedialisSuperior4Node;
     SPLine =   {
       StringMesh = 65;
       InitWrapPosVecArr =  ...VastusLateralisInferior.VastusLateralisInferior1.SPLine.InitWrapPosVecArr;
@@ -824,9 +824,9 @@ MuscleGroup VastusMedialisSuperior() = {
 MuscleGroup VastusIntermedius() = {
   AnyMuscleShortestPath VastusIntermedius1 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.VastusIntermedius1Par;
-    AnyRefNode &Org = ...Seg.Thigh.VastusIntermedius1Node;
-    AnySurface &srf = ...Seg.Thigh.RectusVastiiWrapSurf.cyl;
-    AnyRefNode &Ins = ...Seg.Patella.VastusIntermedius1Node;
+    AnyRefNode &Org = ...Segments.Thigh.VastusIntermedius1Node;
+    AnySurface &srf = ...Segments.Thigh.RectusVastiiWrapSurf.cyl;
+    AnyRefNode &Ins = ...Segments.Patella.VastusIntermedius1Node;
     SPLine =   {
       StringMesh = 65;
       InitWrapPosVecArr =  ...VastusLateralisInferior.VastusLateralisInferior1.SPLine.InitWrapPosVecArr;
@@ -836,9 +836,9 @@ MuscleGroup VastusIntermedius() = {
 
   AnyMuscleShortestPath VastusIntermedius2 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.VastusIntermedius2Par;
-    AnyRefNode &Org = ...Seg.Thigh.VastusIntermedius2Node;
-    AnySurface &srf = ...Seg.Thigh.RectusVastiiWrapSurf.cyl;
-    AnyRefNode &Ins = ...Seg.Patella.VastusIntermedius2Node;
+    AnyRefNode &Org = ...Segments.Thigh.VastusIntermedius2Node;
+    AnySurface &srf = ...Segments.Thigh.RectusVastiiWrapSurf.cyl;
+    AnyRefNode &Ins = ...Segments.Patella.VastusIntermedius2Node;
     SPLine =   {
       StringMesh = 65;
       InitWrapPosVecArr =  ...VastusLateralisInferior.VastusLateralisInferior1.SPLine.InitWrapPosVecArr;
@@ -848,9 +848,9 @@ MuscleGroup VastusIntermedius() = {
 
   AnyMuscleShortestPath VastusIntermedius3 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.VastusIntermedius3Par;
-    AnyRefNode &Org = ...Seg.Thigh.VastusIntermedius3Node;
-    AnySurface &srf = ...Seg.Thigh.RectusVastiiWrapSurf.cyl;
-    AnyRefNode &Ins = ...Seg.Patella.VastusIntermedius3Node;
+    AnyRefNode &Org = ...Segments.Thigh.VastusIntermedius3Node;
+    AnySurface &srf = ...Segments.Thigh.RectusVastiiWrapSurf.cyl;
+    AnyRefNode &Ins = ...Segments.Patella.VastusIntermedius3Node;
     SPLine =   {
       StringMesh = 65;
       InitWrapPosVecArr =  ...VastusLateralisInferior.VastusLateralisInferior1.SPLine.InitWrapPosVecArr;
@@ -860,9 +860,9 @@ MuscleGroup VastusIntermedius() = {
 
   AnyMuscleShortestPath VastusIntermedius4 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.VastusIntermedius4Par;
-    AnyRefNode &Org = ...Seg.Thigh.VastusIntermedius4Node;
-    AnySurface &srf = ...Seg.Thigh.RectusVastiiWrapSurf.cyl;
-    AnyRefNode &Ins = ...Seg.Patella.VastusIntermedius4Node;
+    AnyRefNode &Org = ...Segments.Thigh.VastusIntermedius4Node;
+    AnySurface &srf = ...Segments.Thigh.RectusVastiiWrapSurf.cyl;
+    AnyRefNode &Ins = ...Segments.Patella.VastusIntermedius4Node;
     SPLine =   {
       StringMesh = 65;
       InitWrapPosVecArr =  ...VastusLateralisInferior.VastusLateralisInferior1.SPLine.InitWrapPosVecArr;
@@ -872,9 +872,9 @@ MuscleGroup VastusIntermedius() = {
 
   AnyMuscleShortestPath VastusIntermedius5 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.VastusIntermedius5Par;
-    AnyRefNode &Org = ...Seg.Thigh.VastusIntermedius5Node;
-    AnySurface &srf = ...Seg.Thigh.RectusVastiiWrapSurf.cyl;
-    AnyRefNode &Ins = ...Seg.Patella.VastusIntermedius5Node;
+    AnyRefNode &Org = ...Segments.Thigh.VastusIntermedius5Node;
+    AnySurface &srf = ...Segments.Thigh.RectusVastiiWrapSurf.cyl;
+    AnyRefNode &Ins = ...Segments.Patella.VastusIntermedius5Node;
     SPLine =   {
       StringMesh = 65;
       InitWrapPosVecArr =  ...VastusLateralisInferior.VastusLateralisInferior1.SPLine.InitWrapPosVecArr;
@@ -884,9 +884,9 @@ MuscleGroup VastusIntermedius() = {
 
   AnyMuscleShortestPath VastusIntermedius6 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.VastusIntermedius6Par;
-    AnyRefNode &Org = ...Seg.Thigh.VastusIntermedius6Node;
-    AnySurface &srf = ...Seg.Thigh.RectusVastiiWrapSurf.cyl;
-    AnyRefNode &Ins = ...Seg.Patella.VastusIntermedius6Node;
+    AnyRefNode &Org = ...Segments.Thigh.VastusIntermedius6Node;
+    AnySurface &srf = ...Segments.Thigh.RectusVastiiWrapSurf.cyl;
+    AnyRefNode &Ins = ...Segments.Patella.VastusIntermedius6Node;
     SPLine =   {
       StringMesh = 65;
       InitWrapPosVecArr =  ...VastusLateralisInferior.VastusLateralisInferior1.SPLine.InitWrapPosVecArr;
@@ -899,15 +899,15 @@ MuscleGroup VastusIntermedius() = {
 MuscleGroup RectusFemoris() = {
   AnyMuscleShortestPath RectusFemoris1 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.RectusFemoris1Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.RectusFemoris1Node;
-    AnySurface &srf1 = ...Seg.Thigh.RectusWrapSurf.cyl;
-    AnySurface &srf2 = ...Seg.Thigh.RectusVastiiWrapSurf.cyl;
-    AnyRefNode &Ins = ...Seg.Patella.RectusFemoris1Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.RectusFemoris1Node;
+    AnySurface &srf1 = ...Segments.Thigh.RectusWrapSurf.cyl;
+    AnySurface &srf2 = ...Segments.Thigh.RectusVastiiWrapSurf.cyl;
+    AnyRefNode &Ins = ...Segments.Patella.RectusFemoris1Node;
     SPLine = {
       StringMesh = 75;
       AnyMatrix InitWrapPos = {
-          transf3D({0.5*.srf1.Radius, 1.5*.srf1.Radius , ....Sign*0.5*.srf1.Radius}, &....Seg.Thigh.HipJoint),
-          transf3D({1.5*.srf1.Radius, 0 , ....Sign*0.5*.srf1.Radius}, &....Seg.Thigh.HipJoint),
+          transf3D({0.5*.srf1.Radius, 1.5*.srf1.Radius , ....Sign*0.5*.srf1.Radius}, &....Segments.Thigh.HipJoint),
+          transf3D({1.5*.srf1.Radius, 0 , ....Sign*0.5*.srf1.Radius}, &....Segments.Thigh.HipJoint),
           transf3D({1*.srf2.Radius, ....Sign*1*.srf2.Radius, 0.5*.srf2.Length }, &.srf2 ) ,
           transf3D({1.4*.srf2.Radius, ....Sign*0*.srf2.Radius, 0.5*.srf2.Length }, &.srf2 )
       };
@@ -918,10 +918,10 @@ MuscleGroup RectusFemoris() = {
 
   AnyMuscleShortestPath RectusFemoris2 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.RectusFemoris2Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.RectusFemoris2Node;
-    AnySurface &srf1 = ...Seg.Thigh.RectusWrapSurf.cyl;
-    AnySurface &srf2 = ...Seg.Thigh.RectusVastiiWrapSurf.cyl;
-    AnyRefNode &Ins = ...Seg.Patella.RectusFemoris2Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.RectusFemoris2Node;
+    AnySurface &srf1 = ...Segments.Thigh.RectusWrapSurf.cyl;
+    AnySurface &srf2 = ...Segments.Thigh.RectusVastiiWrapSurf.cyl;
+    AnyRefNode &Ins = ...Segments.Patella.RectusFemoris2Node;
 
     SPLine = {
       StringMesh = 75;
@@ -937,12 +937,12 @@ MuscleGroup RectusFemoris() = {
 MuscleGroup Semitendinosus() = {
   AnyMuscleShortestPath Semitendinosus1 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.Semitendinosus1Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.Semitendinosus1Node;
-    AnySurface &srf = ...Seg.Thigh.HamstringWrapSurf.cyl;
-    AnyRefNode &Via1 = ...Seg.Shank.SemitendinosusViaNode1;
-    AnyRefNode &Ins = ...Seg.Shank.Semitendinosus1Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.Semitendinosus1Node;
+    AnySurface &srf = ...Segments.Thigh.HamstringWrapSurf.cyl;
+    AnyRefNode &Via1 = ...Segments.Shank.SemitendinosusViaNode1;
+    AnyRefNode &Ins = ...Segments.Shank.Semitendinosus1Node;
 
-    AnySurface &srf2 = ...Seg.Pelvis.Muscles.Semitendinosus1WrapSurf.cyl;
+    AnySurface &srf2 = ...Segments.Pelvis.Muscles.Semitendinosus1WrapSurf.cyl;
     SPLine.StringSurfaceMap = {{On,On},{Off,Off}};
     SPLine.StringMesh = {160,3};
 
@@ -963,9 +963,9 @@ MuscleGroup Semitendinosus() = {
 MuscleGroup Semimembranosus() = {
   AnyMuscleShortestPath Semimembranosus1 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.Semimembranosus1Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.Semimembranosus1Node;
-    AnySurface &srf = ...Seg.Thigh.HamstringWrapSurf.cyl;
-    AnyRefNode &Ins = ...Seg.Shank.Semimembranosus1Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.Semimembranosus1Node;
+    AnySurface &srf = ...Segments.Thigh.HamstringWrapSurf.cyl;
+    AnyRefNode &Ins = ...Segments.Shank.Semimembranosus1Node;
     SPLine.StringMesh = 160;
     SPLine =
     {
@@ -978,9 +978,9 @@ MuscleGroup Semimembranosus() = {
   };
   AnyMuscleShortestPath Semimembranosus2 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.Semimembranosus2Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.Semimembranosus2Node;
-    AnySurface &srf = ...Seg.Thigh.HamstringWrapSurf.cyl;
-    AnyRefNode &Ins = ...Seg.Shank.Semimembranosus2Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.Semimembranosus2Node;
+    AnySurface &srf = ...Segments.Thigh.HamstringWrapSurf.cyl;
+    AnyRefNode &Ins = ...Segments.Shank.Semimembranosus2Node;
     SPLine.StringMesh = 160;
     SPLine.InitWrapPosVecArr = .Semimembranosus1.SPLine.InitWrapPosVecArr;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -988,9 +988,9 @@ MuscleGroup Semimembranosus() = {
 
   AnyMuscleShortestPath Semimembranosus3 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.Semimembranosus3Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.Semimembranosus3Node;
-    AnySurface &srf = ...Seg.Thigh.HamstringWrapSurf.cyl;
-    AnyRefNode &Ins = ...Seg.Shank.Semimembranosus3Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.Semimembranosus3Node;
+    AnySurface &srf = ...Segments.Thigh.HamstringWrapSurf.cyl;
+    AnyRefNode &Ins = ...Segments.Shank.Semimembranosus3Node;
     SPLine.StringMesh = 100;
     SPLine.InitWrapPosVecArr = .Semimembranosus1.SPLine.InitWrapPosVecArr;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -1000,10 +1000,10 @@ MuscleGroup Semimembranosus() = {
 MuscleGroup BicepsFemorisCaputLongum() = {
   AnyMuscleShortestPath BicepsFemorisCaputLongum1 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.BicepsFemorisCaputLongum1Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.BicepsFemorisCaputLongum1Node;
-    AnyRefNode &Ins = ...Seg.Shank.BicepsFemorisCaputLongum1Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.BicepsFemorisCaputLongum1Node;
+    AnyRefNode &Ins = ...Segments.Shank.BicepsFemorisCaputLongum1Node;
 
-    AnySurface &srf = ...Seg.Pelvis.Muscles.BicepsFemorisCaputLongumWrapSurf.cyl;
+    AnySurface &srf = ...Segments.Pelvis.Muscles.BicepsFemorisCaputLongumWrapSurf.cyl;
     SPLine.StringMesh = 100;
     SPLine ={
       AnyMatrix InitWrapPos = {
@@ -1020,9 +1020,9 @@ MuscleGroup BicepsFemorisCaputLongum() = {
 MuscleGroup BicepsFemorisCaputBreve() = {
   AnyMuscleShortestPath BicepsFemorisCaputBreve1 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.BicepsFemorisCaputBreve1Par;
-    AnyRefNode &Org = ...Seg.Thigh.BicepsFemorisCaputBreve1Node;
-    AnySurface &srf = ...Seg.Thigh.HamstringWrapSurf.cyl;
-    AnyRefNode &Ins = ...Seg.Shank.BicepsFemorisCaputBreve1Node;
+    AnyRefNode &Org = ...Segments.Thigh.BicepsFemorisCaputBreve1Node;
+    AnySurface &srf = ...Segments.Thigh.HamstringWrapSurf.cyl;
+    AnyRefNode &Ins = ...Segments.Shank.BicepsFemorisCaputBreve1Node;
     SPLine.StringMesh = 75;
     SPLine =
     {
@@ -1036,9 +1036,9 @@ MuscleGroup BicepsFemorisCaputBreve() = {
 
   AnyMuscleShortestPath BicepsFemorisCaputBreve2 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.BicepsFemorisCaputBreve2Par;
-    AnyRefNode &Org = ...Seg.Thigh.BicepsFemorisCaputBreve2Node;
-    AnySurface &srf = ...Seg.Thigh.HamstringWrapSurf.cyl;
-    AnyRefNode &Ins = ...Seg.Shank.BicepsFemorisCaputBreve2Node;
+    AnyRefNode &Org = ...Segments.Thigh.BicepsFemorisCaputBreve2Node;
+    AnySurface &srf = ...Segments.Thigh.HamstringWrapSurf.cyl;
+    AnyRefNode &Ins = ...Segments.Shank.BicepsFemorisCaputBreve2Node;
     SPLine.StringMesh = 60;
     SPLine.InitWrapPosVecArr = .BicepsFemorisCaputBreve1.SPLine.InitWrapPosVecArr;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -1046,9 +1046,9 @@ MuscleGroup BicepsFemorisCaputBreve() = {
 
   AnyMuscleShortestPath BicepsFemorisCaputBreve3 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.BicepsFemorisCaputBreve3Par;
-    AnyRefNode &Org = ...Seg.Thigh.BicepsFemorisCaputBreve3Node;
-    AnySurface &srf = ...Seg.Thigh.HamstringWrapSurf.cyl;
-    AnyRefNode &Ins = ...Seg.Shank.BicepsFemorisCaputBreve3Node;
+    AnyRefNode &Org = ...Segments.Thigh.BicepsFemorisCaputBreve3Node;
+    AnySurface &srf = ...Segments.Thigh.HamstringWrapSurf.cyl;
+    AnyRefNode &Ins = ...Segments.Shank.BicepsFemorisCaputBreve3Node;
     SPLine.StringMesh = 60;
     SPLine.InitWrapPosVecArr = .BicepsFemorisCaputBreve1.SPLine.InitWrapPosVecArr;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
@@ -1060,17 +1060,17 @@ MuscleGroup BicepsFemorisCaputBreve() = {
 MuscleGroup Sartorius() = {
   AnyMuscleViaPoint Sartorius1 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.Sartorius1Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.Sartorius1Node;
-    //AnyRefNode &Via1 = ...Seg.Thigh.SartoriusVia1Node;
-    AnyRefNode &Via2 = ...Seg.Thigh.SartoriusVia2Node;
-    AnyRefNode &Via3 = ...Seg.Thigh.SartoriusVia3Node;
-    AnyRefNode &Via4 = ...Seg.Thigh.SartoriusVia4Node;
-    AnyRefNode &Via5 = ...Seg.Thigh.SartoriusVia5Node;
-    AnyRefNode &Via6 = ...Seg.Thigh.SartoriusVia6Node;
-    AnyRefNode &Via7 = ...Seg.Shank.SartoriusVia1Node;
-    AnyRefNode &Via8 = ...Seg.Shank.SartoriusVia2Node;
-    AnyRefNode &Via9 = ...Seg.Shank.SartoriusVia3Node;
-    AnyRefNode &Ins = ...Seg.Shank.Sartorius1Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.Sartorius1Node;
+    //AnyRefNode &Via1 = ...Segments.Thigh.SartoriusVia1Node;
+    AnyRefNode &Via2 = ...Segments.Thigh.SartoriusVia2Node;
+    AnyRefNode &Via3 = ...Segments.Thigh.SartoriusVia3Node;
+    AnyRefNode &Via4 = ...Segments.Thigh.SartoriusVia4Node;
+    AnyRefNode &Via5 = ...Segments.Thigh.SartoriusVia5Node;
+    AnyRefNode &Via6 = ...Segments.Thigh.SartoriusVia6Node;
+    AnyRefNode &Via7 = ...Segments.Shank.SartoriusVia1Node;
+    AnyRefNode &Via8 = ...Segments.Shank.SartoriusVia2Node;
+    AnyRefNode &Via9 = ...Segments.Shank.SartoriusVia3Node;
+    AnyRefNode &Ins = ...Segments.Shank.Sartorius1Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 };
@@ -1078,10 +1078,10 @@ MuscleGroup Sartorius() = {
 MuscleGroup IliacusLateralis() = {
   AnyMuscleShortestPath IliacusLateralis1 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.IliacusLateralis1Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.IliacusLateralis1Node;
-    AnyRefNode &Via1 = ...Seg.Pelvis.Muscles.IliacusLateralisViaNode1;
-    AnySurface &srf = ...Seg.Thigh.IliacusWrapSurf.cyl;
-    AnyRefNode &Ins = ...Seg.Thigh.Iliopsoas3Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.IliacusLateralis1Node;
+    AnyRefNode &Via1 = ...Segments.Pelvis.Muscles.IliacusLateralisViaNode1;
+    AnySurface &srf = ...Segments.Thigh.IliacusWrapSurf.cyl;
+    AnyRefNode &Ins = ...Segments.Thigh.Iliopsoas3Node;
     SPLine = {
       StringSurfaceMap = {{Off},{On}};
       StringMesh = {3,80};
@@ -1097,10 +1097,10 @@ MuscleGroup IliacusLateralis() = {
 
   AnyMuscleShortestPath IliacusLateralis2 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.IliacusLateralis2Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.IliacusLateralis2Node;
-    AnyRefNode &Via1 = ...Seg.Pelvis.Muscles.IliacusLateralisViaNode2;
-    AnySurface &srf = ...Seg.Thigh.IliacusWrapSurf.cyl;
-    AnyRefNode &Ins = ...Seg.Thigh.Iliopsoas3Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.IliacusLateralis2Node;
+    AnyRefNode &Via1 = ...Segments.Pelvis.Muscles.IliacusLateralisViaNode2;
+    AnySurface &srf = ...Segments.Thigh.IliacusWrapSurf.cyl;
+    AnyRefNode &Ins = ...Segments.Thigh.Iliopsoas3Node;
     SPLine.StringSurfaceMap = ..IliacusLateralis.IliacusLateralis1.SPLine.StringSurfaceMap ;
     SPLine.StringMesh = .IliacusLateralis1.SPLine.StringMesh ;
     SPLine.InitWrapPosVecArr = ..IliacusLateralis.IliacusLateralis1.SPLine.InitWrapPosVecArr;
@@ -1111,10 +1111,10 @@ MuscleGroup IliacusLateralis() = {
 MuscleGroup IliacusMid() = {
   AnyMuscleShortestPath IliacusMid1 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.IliacusMid1Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.IliacusMid1Node;
-    AnyRefNode &Via1 = ...Seg.Pelvis.Muscles.IliacusMidViaNode1;
-    AnySurface &srf = ...Seg.Thigh.IliacusWrapSurf.cyl;
-    AnyRefNode &Ins = ...Seg.Thigh.Iliopsoas2Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.IliacusMid1Node;
+    AnyRefNode &Via1 = ...Segments.Pelvis.Muscles.IliacusMidViaNode1;
+    AnySurface &srf = ...Segments.Thigh.IliacusWrapSurf.cyl;
+    AnyRefNode &Ins = ...Segments.Thigh.Iliopsoas2Node;
     SPLine.StringSurfaceMap = ..IliacusLateralis.IliacusLateralis1.SPLine.StringSurfaceMap ;
     SPLine.StringMesh = ..IliacusLateralis.IliacusLateralis1.SPLine.StringMesh ;
     SPLine.InitWrapPosVecArr = ..IliacusLateralis.IliacusLateralis1.SPLine.InitWrapPosVecArr;
@@ -1123,10 +1123,10 @@ MuscleGroup IliacusMid() = {
 
   AnyMuscleShortestPath IliacusMid2 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.IliacusMid2Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.IliacusMid2Node;
-    AnyRefNode &Via1 = ...Seg.Pelvis.Muscles.IliacusMidViaNode2;
-    AnySurface &srf = ...Seg.Thigh.IliacusWrapSurf.cyl;
-    AnyRefNode &Ins = ...Seg.Thigh.Iliopsoas2Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.IliacusMid2Node;
+    AnyRefNode &Via1 = ...Segments.Pelvis.Muscles.IliacusMidViaNode2;
+    AnySurface &srf = ...Segments.Thigh.IliacusWrapSurf.cyl;
+    AnyRefNode &Ins = ...Segments.Thigh.Iliopsoas2Node;
     SPLine.StringSurfaceMap ={{Off},{On}};
     SPLine.StringMesh = {3,90};
     SPLine.InitWrapPosVecArr = ..IliacusLateralis.IliacusLateralis1.SPLine.InitWrapPosVecArr;
@@ -1137,10 +1137,10 @@ MuscleGroup IliacusMid() = {
 MuscleGroup IliacusMedialis() = {
   AnyMuscleShortestPath IliacusMedialis1 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.IliacusMedialis1Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.IliacusMedialis1Node;
-    AnyRefNode &Via1 = ...Seg.Pelvis.Muscles.IliacusMedialisViaNode2;
-    AnySurface &srf = ...Seg.Thigh.IliacusWrapSurf.cyl;
-    AnyRefNode &Ins = ...Seg.Thigh.Iliopsoas1Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.IliacusMedialis1Node;
+    AnyRefNode &Via1 = ...Segments.Pelvis.Muscles.IliacusMedialisViaNode2;
+    AnySurface &srf = ...Segments.Thigh.IliacusWrapSurf.cyl;
+    AnyRefNode &Ins = ...Segments.Thigh.Iliopsoas1Node;
     SPLine.StringSurfaceMap = ..IliacusLateralis.IliacusLateralis1.SPLine.StringSurfaceMap ;
     SPLine.StringMesh = ..IliacusLateralis.IliacusLateralis1.SPLine.StringMesh ;
     SPLine.InitWrapPosVecArr = ..IliacusLateralis.IliacusLateralis1.SPLine.InitWrapPosVecArr;
@@ -1149,10 +1149,10 @@ MuscleGroup IliacusMedialis() = {
 
   AnyMuscleShortestPath IliacusMedialis2 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.IliacusMedialis2Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.IliacusMedialis2Node;
-    AnyRefNode &Via1 = ...Seg.Pelvis.Muscles.IliacusMedialisViaNode1;
-    AnySurface &srf = ...Seg.Thigh.IliacusWrapSurf.cyl;
-    AnyRefNode &Ins = ...Seg.Thigh.Iliopsoas1Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.IliacusMedialis2Node;
+    AnyRefNode &Via1 = ...Segments.Pelvis.Muscles.IliacusMedialisViaNode1;
+    AnySurface &srf = ...Segments.Thigh.IliacusWrapSurf.cyl;
+    AnyRefNode &Ins = ...Segments.Thigh.Iliopsoas1Node;
     SPLine.StringSurfaceMap ={{Off},{On}};
     SPLine.StringMesh = {3,90};
     SPLine.InitWrapPosVecArr = ..IliacusLateralis.IliacusLateralis1.SPLine.InitWrapPosVecArr;
@@ -1177,25 +1177,25 @@ MuscleGroup PsoasMajor(searchString="..TrunkMuscles.PsoasMajor.*") = {
 MuscleGroup GluteusMinimus = {
   AnyMuscleViaPoint GluteusMinimusAnterior1 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.GluteusMinimusAnterior1Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.GluteusMinimusAnterior1Node;
-    AnyRefNode &Via1 = ...Seg.Thigh.GluteusMinimusAnterior1Via;
-    AnyRefNode &Ins = ...Seg.Thigh.GluteusMinimusAnterior1Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.GluteusMinimusAnterior1Node;
+    AnyRefNode &Via1 = ...Segments.Thigh.GluteusMinimusAnterior1Via;
+    AnyRefNode &Ins = ...Segments.Thigh.GluteusMinimusAnterior1Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
   AnyMuscleViaPoint GluteusMinimusMid1 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.GluteusMinimusMid1Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.GluteusMinimusMid1Node;
-    AnyRefNode &Via1 = ...Seg.Thigh.GluteusMinimusMid1Via;
-    AnyRefNode &Ins = ...Seg.Thigh.GluteusMinimusMid1Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.GluteusMinimusMid1Node;
+    AnyRefNode &Via1 = ...Segments.Thigh.GluteusMinimusMid1Via;
+    AnyRefNode &Ins = ...Segments.Thigh.GluteusMinimusMid1Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
   AnyMuscleViaPoint GluteusMinimusPosterior1 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.GluteusMinimusPosterior1Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.GluteusMinimusPosterior1Node;
-    AnyRefNode &Via1 = ...Seg.Thigh.GluteusMinimusPosterior1Via;
-    AnyRefNode &Ins = ...Seg.Thigh.GluteusMinimusPosterior1Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.GluteusMinimusPosterior1Node;
+    AnyRefNode &Via1 = ...Segments.Thigh.GluteusMinimusPosterior1Via;
+    AnyRefNode &Ins = ...Segments.Thigh.GluteusMinimusPosterior1Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 };
@@ -1203,43 +1203,43 @@ MuscleGroup GluteusMinimus = {
 MuscleGroup GluteusMediusAnterior = {
   AnyMuscleViaPoint GluteusMediusAnterior1 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.GluteusMediusAnterior1Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.GluteusMediusAnterior1Node;
-    AnyRefNode &Ins = ...Seg.Thigh.GluteusMediusAnterior1Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.GluteusMediusAnterior1Node;
+    AnyRefNode &Ins = ...Segments.Thigh.GluteusMediusAnterior1Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
   AnyMuscleViaPoint GluteusMediusAnterior2 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.GluteusMediusAnterior2Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.GluteusMediusAnterior2Node;
-    AnyRefNode &Ins = ...Seg.Thigh.GluteusMediusAnterior2Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.GluteusMediusAnterior2Node;
+    AnyRefNode &Ins = ...Segments.Thigh.GluteusMediusAnterior2Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
   AnyMuscleViaPoint GluteusMediusAnterior3 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.GluteusMediusAnterior3Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.GluteusMediusAnterior3Node;
-    AnyRefNode &Ins = ...Seg.Thigh.GluteusMediusAnterior3Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.GluteusMediusAnterior3Node;
+    AnyRefNode &Ins = ...Segments.Thigh.GluteusMediusAnterior3Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
   AnyMuscleViaPoint GluteusMediusAnterior4 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.GluteusMediusAnterior4Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.GluteusMediusAnterior4Node;
-    AnyRefNode &Ins = ...Seg.Thigh.GluteusMediusAnterior4Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.GluteusMediusAnterior4Node;
+    AnyRefNode &Ins = ...Segments.Thigh.GluteusMediusAnterior4Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
   AnyMuscleViaPoint GluteusMediusAnterior5 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.GluteusMediusAnterior5Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.GluteusMediusAnterior5Node;
-    AnyRefNode &Ins = ...Seg.Thigh.GluteusMediusAnterior5Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.GluteusMediusAnterior5Node;
+    AnyRefNode &Ins = ...Segments.Thigh.GluteusMediusAnterior5Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
   AnyMuscleViaPoint GluteusMediusAnterior6 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.GluteusMediusAnterior6Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.GluteusMediusAnterior6Node;
-    AnyRefNode &Ins = ...Seg.Thigh.GluteusMediusAnterior6Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.GluteusMediusAnterior6Node;
+    AnyRefNode &Ins = ...Segments.Thigh.GluteusMediusAnterior6Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 };
@@ -1247,43 +1247,43 @@ MuscleGroup GluteusMediusAnterior = {
 MuscleGroup GluteusMediusPosterior = {
   AnyMuscleViaPoint GluteusMediusPosterior1 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.GluteusMediusPosterior1Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.GluteusMediusPosterior1Node;
-    AnyRefNode &Ins = ...Seg.Thigh.GluteusMediusPosterior1Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.GluteusMediusPosterior1Node;
+    AnyRefNode &Ins = ...Segments.Thigh.GluteusMediusPosterior1Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
   AnyMuscleViaPoint GluteusMediusPosterior2 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.GluteusMediusPosterior2Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.GluteusMediusPosterior2Node;
-    AnyRefNode &Ins = ...Seg.Thigh.GluteusMediusPosterior2Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.GluteusMediusPosterior2Node;
+    AnyRefNode &Ins = ...Segments.Thigh.GluteusMediusPosterior2Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
   AnyMuscleViaPoint GluteusMediusPosterior3 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.GluteusMediusPosterior3Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.GluteusMediusPosterior3Node;
-    AnyRefNode &Ins = ...Seg.Thigh.GluteusMediusPosterior3Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.GluteusMediusPosterior3Node;
+    AnyRefNode &Ins = ...Segments.Thigh.GluteusMediusPosterior3Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
   AnyMuscleViaPoint GluteusMediusPosterior4 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.GluteusMediusPosterior4Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.GluteusMediusPosterior4Node;
-    AnyRefNode &Ins = ...Seg.Thigh.GluteusMediusPosterior4Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.GluteusMediusPosterior4Node;
+    AnyRefNode &Ins = ...Segments.Thigh.GluteusMediusPosterior4Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
   AnyMuscleViaPoint GluteusMediusPosterior5 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.GluteusMediusPosterior5Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.GluteusMediusPosterior5Node;
-    AnyRefNode &Ins = ...Seg.Thigh.GluteusMediusPosterior5Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.GluteusMediusPosterior5Node;
+    AnyRefNode &Ins = ...Segments.Thigh.GluteusMediusPosterior5Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
   AnyMuscleViaPoint GluteusMediusPosterior6 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.GluteusMediusPosterior6Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.GluteusMediusPosterior6Node;
-    AnyRefNode &Ins = ...Seg.Thigh.GluteusMediusPosterior6Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.GluteusMediusPosterior6Node;
+    AnyRefNode &Ins = ...Segments.Thigh.GluteusMediusPosterior6Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 };
@@ -1291,9 +1291,9 @@ MuscleGroup GluteusMediusPosterior = {
 MuscleGroup GluteusMaximusSuperior = {
   AnyMuscleShortestPath GluteusMaximusSuperior1 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.GluteusMaximusSuperior1Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.GluteusMaximusSuperior1Node;
-    AnySurface &srf = ...Seg.Pelvis.Muscles.GlueteusMaximusWrapSurfaces.Superior1.cyl;
-    AnyRefNode &Ins = ...Seg.Thigh.GluteusMaximusSuperior1Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.GluteusMaximusSuperior1Node;
+    AnySurface &srf = ...Segments.Pelvis.Muscles.GlueteusMaximusWrapSurfaces.Superior1.cyl;
+    AnyRefNode &Ins = ...Segments.Thigh.GluteusMaximusSuperior1Node;
     SPLine = {
       StringMesh = 15;
       AnyMatrix InitWrapPos = {
@@ -1313,9 +1313,9 @@ MuscleGroup GluteusMaximusSuperior = {
 
   AnyMuscleShortestPath GluteusMaximusSuperior2 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.GluteusMaximusSuperior2Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.GluteusMaximusSuperior2Node;
-    AnySurface &srf = ...Seg.Pelvis.Muscles.GlueteusMaximusWrapSurfaces.Superior2.cyl;
-    AnyRefNode &Ins = ...Seg.Thigh.GluteusMaximusSuperior2Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.GluteusMaximusSuperior2Node;
+    AnySurface &srf = ...Segments.Pelvis.Muscles.GlueteusMaximusWrapSurfaces.Superior2.cyl;
+    AnyRefNode &Ins = ...Segments.Thigh.GluteusMaximusSuperior2Node;
     SPLine = {
       StringMesh = 15;
 
@@ -1334,9 +1334,9 @@ MuscleGroup GluteusMaximusSuperior = {
 
   AnyMuscleShortestPath GluteusMaximusSuperior3 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.GluteusMaximusSuperior3Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.GluteusMaximusSuperior3Node;
-    AnySurface &srf = ...Seg.Pelvis.Muscles.GlueteusMaximusWrapSurfaces.Superior3.cyl;
-    AnyRefNode &Ins = ...Seg.Thigh.GluteusMaximusSuperior3Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.GluteusMaximusSuperior3Node;
+    AnySurface &srf = ...Segments.Pelvis.Muscles.GlueteusMaximusWrapSurfaces.Superior3.cyl;
+    AnyRefNode &Ins = ...Segments.Thigh.GluteusMaximusSuperior3Node;
     SPLine = {
       StringMesh = 15;
       AnyMatrix InitWrapPos = {
@@ -1354,9 +1354,9 @@ MuscleGroup GluteusMaximusSuperior = {
 
   AnyMuscleShortestPath GluteusMaximusSuperior4 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.GluteusMaximusSuperior4Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.GluteusMaximusSuperior4Node;
-    AnySurface &srf = ...Seg.Pelvis.Muscles.GlueteusMaximusWrapSurfaces.Superior4.cyl;
-    AnyRefNode &Ins = ...Seg.Thigh.GluteusMaximusSuperior4Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.GluteusMaximusSuperior4Node;
+    AnySurface &srf = ...Segments.Pelvis.Muscles.GlueteusMaximusWrapSurfaces.Superior4.cyl;
+    AnyRefNode &Ins = ...Segments.Thigh.GluteusMaximusSuperior4Node;
     SPLine = {
       StringMesh = 15;
       AnyMatrix InitWrapPos = {
@@ -1374,9 +1374,9 @@ MuscleGroup GluteusMaximusSuperior = {
 
   AnyMuscleShortestPath GluteusMaximusSuperior5 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.GluteusMaximusSuperior5Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.GluteusMaximusSuperior5Node;
-    AnySurface &srf = ...Seg.Pelvis.Muscles.GlueteusMaximusWrapSurfaces.Superior5.cyl;
-    AnyRefNode &Ins = ...Seg.Thigh.GluteusMaximusSuperior5Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.GluteusMaximusSuperior5Node;
+    AnySurface &srf = ...Segments.Pelvis.Muscles.GlueteusMaximusWrapSurfaces.Superior5.cyl;
+    AnyRefNode &Ins = ...Segments.Thigh.GluteusMaximusSuperior5Node;
     SPLine = {
       StringMesh = 15;
       AnyMatrix InitWrapPos = {
@@ -1395,9 +1395,9 @@ MuscleGroup GluteusMaximusSuperior = {
 
   AnyMuscleShortestPath GluteusMaximusSuperior6 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.GluteusMaximusSuperior6Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.GluteusMaximusSuperior6Node;
-    AnySurface &srf = ...Seg.Pelvis.Muscles.GlueteusMaximusWrapSurfaces.Superior6.cyl;
-    AnyRefNode &Ins = ...Seg.Thigh.GluteusMaximusSuperior6Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.GluteusMaximusSuperior6Node;
+    AnySurface &srf = ...Segments.Pelvis.Muscles.GlueteusMaximusWrapSurfaces.Superior6.cyl;
+    AnyRefNode &Ins = ...Segments.Thigh.GluteusMaximusSuperior6Node;
     SPLine = {
       StringMesh = 15;
       AnyMatrix InitWrapPos = {
@@ -1418,9 +1418,9 @@ MuscleGroup GluteusMaximusSuperior = {
 MuscleGroup GluteusMaximusInferior = {
   AnyMuscleShortestPath GluteusMaximusInferior1 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.GluteusMaximusInferior1Par;
-    AnyRefNode &Org = ...Seg.Sacrum.LegAttachmentNodes.GluteusMaximusInferior1Node;
-    AnySurface &srf = ...Seg.Pelvis.Muscles.GlueteusMaximusWrapSurfaces.Inferior1.cyl;
-    AnyRefNode &Ins = ...Seg.Thigh.GluteusMaximusInferior1Node;
+    AnyRefNode &Org = ...Segments.Sacrum.LegAttachmentNodes.GluteusMaximusInferior1Node;
+    AnySurface &srf = ...Segments.Pelvis.Muscles.GlueteusMaximusWrapSurfaces.Inferior1.cyl;
+    AnyRefNode &Ins = ...Segments.Thigh.GluteusMaximusInferior1Node;
     SPLine = {
       StringMesh = 15;
       AnyMatrix InitWrapPos = {
@@ -1439,9 +1439,9 @@ MuscleGroup GluteusMaximusInferior = {
 
   AnyMuscleShortestPath GluteusMaximusInferior2 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.GluteusMaximusInferior2Par;
-    AnyRefNode &Org = ...Seg.Sacrum.LegAttachmentNodes.GluteusMaximusInferior2Node;
-    AnySurface &srf = ...Seg.Pelvis.Muscles.GlueteusMaximusWrapSurfaces.Inferior2.cyl;
-    AnyRefNode &Ins = ...Seg.Thigh.GluteusMaximusInferior2Node;
+    AnyRefNode &Org = ...Segments.Sacrum.LegAttachmentNodes.GluteusMaximusInferior2Node;
+    AnySurface &srf = ...Segments.Pelvis.Muscles.GlueteusMaximusWrapSurfaces.Inferior2.cyl;
+    AnyRefNode &Ins = ...Segments.Thigh.GluteusMaximusInferior2Node;
     SPLine = {
       StringMesh = 25;
       AnyMatrix InitWrapPos = {
@@ -1460,9 +1460,9 @@ MuscleGroup GluteusMaximusInferior = {
 
   AnyMuscleShortestPath GluteusMaximusInferior3 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.GluteusMaximusInferior3Par;
-    AnyRefNode &Org = ...Seg.Sacrum.LegAttachmentNodes.GluteusMaximusInferior3Node;
-    AnySurface &srf = ...Seg.Pelvis.Muscles.GlueteusMaximusWrapSurfaces.Inferior3.cyl;
-    AnyRefNode &Ins = ...Seg.Thigh.GluteusMaximusInferior3Node;
+    AnyRefNode &Org = ...Segments.Sacrum.LegAttachmentNodes.GluteusMaximusInferior3Node;
+    AnySurface &srf = ...Segments.Pelvis.Muscles.GlueteusMaximusWrapSurfaces.Inferior3.cyl;
+    AnyRefNode &Ins = ...Segments.Thigh.GluteusMaximusInferior3Node;
     SPLine = {
       StringMesh = 25;
       AnyMatrix InitWrapPos = {
@@ -1481,9 +1481,9 @@ MuscleGroup GluteusMaximusInferior = {
 
   AnyMuscleShortestPath GluteusMaximusInferior4 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.GluteusMaximusInferior4Par;
-    AnyRefNode &Org = ...Seg.Sacrum.LegAttachmentNodes.GluteusMaximusInferior4Node;
-    AnySurface &srf = ...Seg.Pelvis.Muscles.GlueteusMaximusWrapSurfaces.Inferior4.cyl;
-    AnyRefNode &Ins = ...Seg.Thigh.GluteusMaximusInferior4Node;
+    AnyRefNode &Org = ...Segments.Sacrum.LegAttachmentNodes.GluteusMaximusInferior4Node;
+    AnySurface &srf = ...Segments.Pelvis.Muscles.GlueteusMaximusWrapSurfaces.Inferior4.cyl;
+    AnyRefNode &Ins = ...Segments.Thigh.GluteusMaximusInferior4Node;
     SPLine = {
       StringMesh = 30;
       AnyMatrix InitWrapPos = {
@@ -1502,9 +1502,9 @@ MuscleGroup GluteusMaximusInferior = {
 
   AnyMuscleShortestPath GluteusMaximusInferior5 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.GluteusMaximusInferior5Par;
-    AnyRefNode &Org = ...Seg.Sacrum.LegAttachmentNodes.GluteusMaximusInferior5Node;
-    AnySurface &srf = ...Seg.Pelvis.Muscles.GlueteusMaximusWrapSurfaces.Inferior5.cyl;
-    AnyRefNode &Ins = ...Seg.Thigh.GluteusMaximusInferior5Node;
+    AnyRefNode &Org = ...Segments.Sacrum.LegAttachmentNodes.GluteusMaximusInferior5Node;
+    AnySurface &srf = ...Segments.Pelvis.Muscles.GlueteusMaximusWrapSurfaces.Inferior5.cyl;
+    AnyRefNode &Ins = ...Segments.Thigh.GluteusMaximusInferior5Node;
     SPLine = {
       StringMesh = 30;
       AnyMatrix InitWrapPos = {
@@ -1523,9 +1523,9 @@ MuscleGroup GluteusMaximusInferior = {
 
   AnyMuscleShortestPath GluteusMaximusInferior6 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.GluteusMaximusInferior6Par;
-    AnyRefNode &Org = ...Seg.Sacrum.LegAttachmentNodes.GluteusMaximusInferior6Node;
-    AnySurface &srf = ...Seg.Pelvis.Muscles.GlueteusMaximusWrapSurfaces.Inferior6.cyl;
-    AnyRefNode &Ins = ...Seg.Thigh.GluteusMaximusInferior6Node;
+    AnyRefNode &Org = ...Segments.Sacrum.LegAttachmentNodes.GluteusMaximusInferior6Node;
+    AnySurface &srf = ...Segments.Pelvis.Muscles.GlueteusMaximusWrapSurfaces.Inferior6.cyl;
+    AnyRefNode &Ins = ...Segments.Thigh.GluteusMaximusInferior6Node;
     SPLine = {
       StringMesh = 30;
       AnyMatrix InitWrapPos = {
@@ -1542,17 +1542,17 @@ MuscleGroup GluteusMaximusInferior = {
 MuscleGroup TensorFasciaeLatae = {
   AnyMuscleViaPoint TensorFasciaeLatae1 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.TensorFasciaeLatae1Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.TensorFasciaeLatae1Node;
-    AnyRefNode &Via = ...Seg.Thigh.TensorFasciaeLatae1ViaNode;
-    AnyRefNode &Ins = ...Seg.Shank.TensorFasciaeLatae1Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.TensorFasciaeLatae1Node;
+    AnyRefNode &Via = ...Segments.Thigh.TensorFasciaeLatae1ViaNode;
+    AnyRefNode &Ins = ...Segments.Shank.TensorFasciaeLatae1Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
   AnyMuscleViaPoint TensorFasciaeLatae2 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.TensorFasciaeLatae2Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.TensorFasciaeLatae2Node;
-    AnyRefNode &Via = ...Seg.Thigh.TensorFasciaeLatae2ViaNode;
-    AnyRefNode &Ins = ...Seg.Shank.TensorFasciaeLatae2Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.TensorFasciaeLatae2Node;
+    AnyRefNode &Via = ...Segments.Thigh.TensorFasciaeLatae2ViaNode;
+    AnyRefNode &Ins = ...Segments.Shank.TensorFasciaeLatae2Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 };
@@ -1560,8 +1560,8 @@ MuscleGroup TensorFasciaeLatae = {
 MuscleGroup Piriformis = {
   AnyMuscleViaPoint Piriformis1 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.Piriformis1Par;
-    AnyRefNode &Org = ...Seg.Sacrum.LegAttachmentNodes.Piriformis1Node;
-    AnyRefNode &Ins = ...Seg.Thigh.Piriformis1Node;
+    AnyRefNode &Org = ...Segments.Sacrum.LegAttachmentNodes.Piriformis1Node;
+    AnyRefNode &Ins = ...Segments.Thigh.Piriformis1Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 };
@@ -1569,20 +1569,20 @@ MuscleGroup Piriformis = {
 MuscleGroup Gracilis = {
   AnyMuscleViaPoint Gracilis1 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.Gracilis1Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.Gracilis1Node;
-    AnyRefNode &Via1 = ...Seg.Shank.GracilisViaNode1;
-    AnyRefNode &Via2 = ...Seg.Shank.GracilisViaNode2;
-    AnyRefNode &Via3 = ...Seg.Shank.GracilisViaNode3;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.Gracilis1Node;
+    AnyRefNode &Via1 = ...Segments.Shank.GracilisViaNode1;
+    AnyRefNode &Via2 = ...Segments.Shank.GracilisViaNode2;
+    AnyRefNode &Via3 = ...Segments.Shank.GracilisViaNode3;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
   AnyMuscleViaPoint Gracilis2 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.Gracilis2Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.Gracilis2Node;
-    AnyRefNode &Via1 = ...Seg.Shank.GracilisViaNode1;
-    AnyRefNode &Via2 = ...Seg.Shank.GracilisViaNode2;
-    AnyRefNode &Via3 = ...Seg.Shank.GracilisViaNode3;
-    AnyRefNode &Ins = ...Seg.Shank.Gracilis2Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.Gracilis2Node;
+    AnyRefNode &Via1 = ...Segments.Shank.GracilisViaNode1;
+    AnyRefNode &Via2 = ...Segments.Shank.GracilisViaNode2;
+    AnyRefNode &Via3 = ...Segments.Shank.GracilisViaNode3;
+    AnyRefNode &Ins = ...Segments.Shank.Gracilis2Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 };
@@ -1590,43 +1590,43 @@ MuscleGroup Gracilis = {
 MuscleGroup AdductorLongus = {
   AnyMuscleViaPoint AdductorLongus1 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.AdductorLongus1Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.AdductorLongus1Node;
-    AnyRefNode &Ins = ...Seg.Thigh.AdductorLongus1Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.AdductorLongus1Node;
+    AnyRefNode &Ins = ...Segments.Thigh.AdductorLongus1Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
   AnyMuscleViaPoint AdductorLongus2 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.AdductorLongus2Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.AdductorLongus2Node;
-    AnyRefNode &Ins = ...Seg.Thigh.AdductorLongus2Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.AdductorLongus2Node;
+    AnyRefNode &Ins = ...Segments.Thigh.AdductorLongus2Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
   AnyMuscleViaPoint AdductorLongus3 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.AdductorLongus3Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.AdductorLongus3Node;
-    AnyRefNode &Ins = ...Seg.Thigh.AdductorLongus3Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.AdductorLongus3Node;
+    AnyRefNode &Ins = ...Segments.Thigh.AdductorLongus3Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
   AnyMuscleViaPoint AdductorLongus4 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.AdductorLongus4Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.AdductorLongus4Node;
-    AnyRefNode &Ins = ...Seg.Thigh.AdductorLongus4Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.AdductorLongus4Node;
+    AnyRefNode &Ins = ...Segments.Thigh.AdductorLongus4Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
   AnyMuscleViaPoint AdductorLongus5 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.AdductorLongus5Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.AdductorLongus5Node;
-    AnyRefNode &Ins = ...Seg.Thigh.AdductorLongus5Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.AdductorLongus5Node;
+    AnyRefNode &Ins = ...Segments.Thigh.AdductorLongus5Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
   AnyMuscleViaPoint AdductorLongus6 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.AdductorLongus6Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.AdductorLongus6Node;
-    AnyRefNode &Ins = ...Seg.Thigh.AdductorLongus6Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.AdductorLongus6Node;
+    AnyRefNode &Ins = ...Segments.Thigh.AdductorLongus6Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 };
@@ -1635,23 +1635,23 @@ MuscleGroup AdductorMagnusDistal = {
   //muscle changed to insert on thigh
   AnyMuscleViaPoint AdductorMagnusDistal1 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.AdductorMagnusDistal1Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.AdductorMagnusDistal1Node;
-    AnyRefNode &Ins = ...Seg.Thigh.AdductorMagnusDistal1Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.AdductorMagnusDistal1Node;
+    AnyRefNode &Ins = ...Segments.Thigh.AdductorMagnusDistal1Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
   //muscle changed to insert on thigh
   AnyMuscleViaPoint AdductorMagnusDistal2 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.AdductorMagnusDistal2Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.AdductorMagnusDistal2Node;
-    AnyRefNode &Ins = ...Seg.Thigh.AdductorMagnusDistal2Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.AdductorMagnusDistal2Node;
+    AnyRefNode &Ins = ...Segments.Thigh.AdductorMagnusDistal2Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
   //muscle changed to insert on thigh
   AnyMuscleViaPoint AdductorMagnusDistal3 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.AdductorMagnusDistal3Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.AdductorMagnusDistal3Node;
-    AnyRefNode &Ins = ...Seg.Thigh.AdductorMagnusDistal3Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.AdductorMagnusDistal3Node;
+    AnyRefNode &Ins = ...Segments.Thigh.AdductorMagnusDistal3Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 };
@@ -1659,43 +1659,43 @@ MuscleGroup AdductorMagnusDistal = {
 MuscleGroup AdductorMagnusMid = {
   AnyMuscleViaPoint AdductorMagnusMid1 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.AdductorMagnusMid1Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.AdductorMagnusMid1Node;
-    AnyRefNode &Ins = ...Seg.Thigh.AdductorMagnusMid1Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.AdductorMagnusMid1Node;
+    AnyRefNode &Ins = ...Segments.Thigh.AdductorMagnusMid1Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
   AnyMuscleViaPoint AdductorMagnusMid2 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.AdductorMagnusMid2Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.AdductorMagnusMid2Node;
-    AnyRefNode &Ins = ...Seg.Thigh.AdductorMagnusMid2Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.AdductorMagnusMid2Node;
+    AnyRefNode &Ins = ...Segments.Thigh.AdductorMagnusMid2Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
   AnyMuscleViaPoint AdductorMagnusMid3 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.AdductorMagnusMid3Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.AdductorMagnusMid3Node;
-    AnyRefNode &Ins = ...Seg.Thigh.AdductorMagnusMid3Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.AdductorMagnusMid3Node;
+    AnyRefNode &Ins = ...Segments.Thigh.AdductorMagnusMid3Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
   AnyMuscleViaPoint AdductorMagnusMid4 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.AdductorMagnusMid4Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.AdductorMagnusMid4Node;
-    AnyRefNode &Ins = ...Seg.Thigh.AdductorMagnusMid4Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.AdductorMagnusMid4Node;
+    AnyRefNode &Ins = ...Segments.Thigh.AdductorMagnusMid4Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
   AnyMuscleViaPoint AdductorMagnusMid5 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.AdductorMagnusMid5Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.AdductorMagnusMid5Node;
-    AnyRefNode &Ins = ...Seg.Thigh.AdductorMagnusMid5Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.AdductorMagnusMid5Node;
+    AnyRefNode &Ins = ...Segments.Thigh.AdductorMagnusMid5Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
   AnyMuscleViaPoint AdductorMagnusMid6 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.AdductorMagnusMid6Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.AdductorMagnusMid6Node;
-    AnyRefNode &Ins = ...Seg.Thigh.AdductorMagnusMid6Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.AdductorMagnusMid6Node;
+    AnyRefNode &Ins = ...Segments.Thigh.AdductorMagnusMid6Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 };
@@ -1703,29 +1703,29 @@ MuscleGroup AdductorMagnusMid = {
 MuscleGroup AdductorMagnusProximal = {
   AnyMuscleViaPoint AdductorMagnusProximal1 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.AdductorMagnusProximal1Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.AdductorMagnusProximal1Node;
-    AnyRefNode &Ins = ...Seg.Thigh.AdductorMagnusProximal1Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.AdductorMagnusProximal1Node;
+    AnyRefNode &Ins = ...Segments.Thigh.AdductorMagnusProximal1Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
   AnyMuscleViaPoint AdductorMagnusProximal2 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.AdductorMagnusProximal2Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.AdductorMagnusProximal2Node;
-    AnyRefNode &Ins = ...Seg.Thigh.AdductorMagnusProximal2Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.AdductorMagnusProximal2Node;
+    AnyRefNode &Ins = ...Segments.Thigh.AdductorMagnusProximal2Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
   AnyMuscleViaPoint AdductorMagnusProximal3 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.AdductorMagnusProximal3Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.AdductorMagnusProximal3Node;
-    AnyRefNode &Ins = ...Seg.Thigh.AdductorMagnusProximal3Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.AdductorMagnusProximal3Node;
+    AnyRefNode &Ins = ...Segments.Thigh.AdductorMagnusProximal3Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
   AnyMuscleViaPoint AdductorMagnusProximal4 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.AdductorMagnusProximal4Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.AdductorMagnusProximal4Node;
-    AnyRefNode &Ins = ...Seg.Thigh.AdductorMagnusProximal4Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.AdductorMagnusProximal4Node;
+    AnyRefNode &Ins = ...Segments.Thigh.AdductorMagnusProximal4Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 };
@@ -1733,15 +1733,15 @@ MuscleGroup AdductorMagnusProximal = {
 MuscleGroup AdductorBrevisProximal = {
   AnyMuscleViaPoint AdductorBrevisProximal1 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.AdductorBrevisProximal1Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.AdductorBrevisProximal1Node;
-    AnyRefNode &Ins = ...Seg.Thigh.AdductorBrevisProximal1Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.AdductorBrevisProximal1Node;
+    AnyRefNode &Ins = ...Segments.Thigh.AdductorBrevisProximal1Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
   AnyMuscleViaPoint AdductorBrevisProximal2 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.AdductorBrevisProximal2Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.AdductorBrevisProximal2Node;
-    AnyRefNode &Ins = ...Seg.Thigh.AdductorBrevisProximal2Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.AdductorBrevisProximal2Node;
+    AnyRefNode &Ins = ...Segments.Thigh.AdductorBrevisProximal2Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 };
@@ -1749,15 +1749,15 @@ MuscleGroup AdductorBrevisProximal = {
 MuscleGroup AdductorBrevisMid = {
   AnyMuscleViaPoint AdductorBrevisMid1 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.AdductorBrevisMid1Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.AdductorBrevisMid1Node;
-    AnyRefNode &Ins = ...Seg.Thigh.AdductorBrevisMid1Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.AdductorBrevisMid1Node;
+    AnyRefNode &Ins = ...Segments.Thigh.AdductorBrevisMid1Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
   AnyMuscleViaPoint AdductorBrevisMid2 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.AdductorBrevisMid2Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.AdductorBrevisMid2Node;
-    AnyRefNode &Ins = ...Seg.Thigh.AdductorBrevisMid2Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.AdductorBrevisMid2Node;
+    AnyRefNode &Ins = ...Segments.Thigh.AdductorBrevisMid2Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 };
@@ -1765,15 +1765,15 @@ MuscleGroup AdductorBrevisMid = {
 MuscleGroup AdductorBrevisDistal = {
   AnyMuscleViaPoint AdductorBrevisDistal1 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.AdductorBrevisDistal1Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.AdductorBrevisDistal1Node;
-    AnyRefNode &Ins = ...Seg.Thigh.AdductorBrevisDistal1Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.AdductorBrevisDistal1Node;
+    AnyRefNode &Ins = ...Segments.Thigh.AdductorBrevisDistal1Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
   AnyMuscleViaPoint AdductorBrevisDistal2 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.AdductorBrevisDistal2Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.AdductorBrevisDistal2Node;
-    AnyRefNode &Ins = ...Seg.Thigh.AdductorBrevisDistal2Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.AdductorBrevisDistal2Node;
+    AnyRefNode &Ins = ...Segments.Thigh.AdductorBrevisDistal2Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 };
@@ -1781,15 +1781,15 @@ MuscleGroup AdductorBrevisDistal = {
 MuscleGroup Gemellus = {
   AnyMuscleViaPoint GemellusInferior1 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.GemellusInferior1Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.GemellusInferior1Node;
-    AnyRefNode &Ins = ...Seg.Thigh.GemellusInferior1Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.GemellusInferior1Node;
+    AnyRefNode &Ins = ...Segments.Thigh.GemellusInferior1Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
   AnyMuscleViaPoint GemellusSuperior1 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.GemellusSuperior1Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.GemellusSuperior1Node;
-    AnyRefNode &Ins = ...Seg.Thigh.GemellusSuperior1Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.GemellusSuperior1Node;
+    AnyRefNode &Ins = ...Segments.Thigh.GemellusSuperior1Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 };
@@ -1797,25 +1797,25 @@ MuscleGroup Gemellus = {
 MuscleGroup ObturatorExternusSuperior = {
   AnyMuscleViaPoint ObturatorExternusSuperior1 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.ObturatorExternusSuperior1Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.ObturatorExternusSuperior1Node;
-    AnyRefNode &Via1 = ...Seg.Thigh.ObturatorExternusVia1Node;
-    AnyRefNode &Ins = ...Seg.Thigh.ObturatorExternus1Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.ObturatorExternusSuperior1Node;
+    AnyRefNode &Via1 = ...Segments.Thigh.ObturatorExternusVia1Node;
+    AnyRefNode &Ins = ...Segments.Thigh.ObturatorExternus1Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
   AnyMuscleViaPoint ObturatorExternusSuperior2 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.ObturatorExternusSuperior2Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.ObturatorExternusSuperior2Node;
-    AnyRefNode &Via1 = ...Seg.Thigh.ObturatorExternusVia1Node;
-    AnyRefNode &Ins = ...Seg.Thigh.ObturatorExternus1Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.ObturatorExternusSuperior2Node;
+    AnyRefNode &Via1 = ...Segments.Thigh.ObturatorExternusVia1Node;
+    AnyRefNode &Ins = ...Segments.Thigh.ObturatorExternus1Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
   AnyMuscleViaPoint ObturatorExternusSuperior3 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.ObturatorExternusSuperior3Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.ObturatorExternusSuperior3Node;
-    AnyRefNode &Via1 = ...Seg.Thigh.ObturatorExternusVia1Node;
-    AnyRefNode &Ins = ...Seg.Thigh.ObturatorExternus1Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.ObturatorExternusSuperior3Node;
+    AnyRefNode &Via1 = ...Segments.Thigh.ObturatorExternusVia1Node;
+    AnyRefNode &Ins = ...Segments.Thigh.ObturatorExternus1Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 };
@@ -1823,17 +1823,17 @@ MuscleGroup ObturatorExternusSuperior = {
 MuscleGroup ObturatorExternusInferior = {
   AnyMuscleViaPoint ObturatorExternusInferior1 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.ObturatorExternusInferior1Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.ObturatorExternusInferior1Node;
-    AnyRefNode &Via1 = ...Seg.Thigh.ObturatorExternusVia1Node;
-    AnyRefNode &Ins = ...Seg.Thigh.ObturatorExternus1Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.ObturatorExternusInferior1Node;
+    AnyRefNode &Via1 = ...Segments.Thigh.ObturatorExternusVia1Node;
+    AnyRefNode &Ins = ...Segments.Thigh.ObturatorExternus1Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
   AnyMuscleViaPoint ObturatorExternusInferior2 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.ObturatorExternusInferior2Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.ObturatorExternusInferior2Node;
-    AnyRefNode &Via1 = ...Seg.Thigh.ObturatorExternusVia1Node;
-    AnyRefNode &Ins = ...Seg.Thigh.ObturatorExternus1Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.ObturatorExternusInferior2Node;
+    AnyRefNode &Via1 = ...Segments.Thigh.ObturatorExternusVia1Node;
+    AnyRefNode &Ins = ...Segments.Thigh.ObturatorExternus1Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 };
@@ -1841,49 +1841,49 @@ MuscleGroup ObturatorExternusInferior = {
 MuscleGroup ObturatorInternus = {
   AnyMuscleViaPoint ObturatorInternus1 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.ObturatorInternus1Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.ObturatorInternus1Node;
-    AnyRefNode &Via1 = ...Seg.Pelvis.Muscles.ObturatorInternusViaNode1;
-    AnyRefNode &Ins = ...Seg.Thigh.ObturatorInternus1Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.ObturatorInternus1Node;
+    AnyRefNode &Via1 = ...Segments.Pelvis.Muscles.ObturatorInternusViaNode1;
+    AnyRefNode &Ins = ...Segments.Thigh.ObturatorInternus1Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
   AnyMuscleViaPoint ObturatorInternus2 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.ObturatorInternus2Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.ObturatorInternus2Node;
-    AnyRefNode &Via1 = ...Seg.Pelvis.Muscles.ObturatorInternusViaNode1;
-    AnyRefNode &Ins = ...Seg.Thigh.ObturatorInternus1Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.ObturatorInternus2Node;
+    AnyRefNode &Via1 = ...Segments.Pelvis.Muscles.ObturatorInternusViaNode1;
+    AnyRefNode &Ins = ...Segments.Thigh.ObturatorInternus1Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
   AnyMuscleViaPoint ObturatorInternus3 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.ObturatorInternus3Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.ObturatorInternus3Node;
-    AnyRefNode &Via1 = ...Seg.Pelvis.Muscles.ObturatorInternusViaNode1;
-    AnyRefNode &Ins = ...Seg.Thigh.ObturatorInternus1Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.ObturatorInternus3Node;
+    AnyRefNode &Via1 = ...Segments.Pelvis.Muscles.ObturatorInternusViaNode1;
+    AnyRefNode &Ins = ...Segments.Thigh.ObturatorInternus1Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
   AnyMuscleViaPoint ObturatorInternus4 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.ObturatorInternus4Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.ObturatorInternus4Node;
-    AnyRefNode &Via1 = ...Seg.Pelvis.Muscles.ObturatorInternusViaNode1;
-    AnyRefNode &Ins = ...Seg.Thigh.ObturatorInternus1Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.ObturatorInternus4Node;
+    AnyRefNode &Via1 = ...Segments.Pelvis.Muscles.ObturatorInternusViaNode1;
+    AnyRefNode &Ins = ...Segments.Thigh.ObturatorInternus1Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
   AnyMuscleViaPoint ObturatorInternus5 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.ObturatorInternus5Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.ObturatorInternus5Node;
-    AnyRefNode &Via1 = ...Seg.Pelvis.Muscles.ObturatorInternusViaNode1;
-    AnyRefNode &Ins = ...Seg.Thigh.ObturatorInternus1Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.ObturatorInternus5Node;
+    AnyRefNode &Via1 = ...Segments.Pelvis.Muscles.ObturatorInternusViaNode1;
+    AnyRefNode &Ins = ...Segments.Thigh.ObturatorInternus1Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
   AnyMuscleViaPoint ObturatorInternus6 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.ObturatorInternus6Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.ObturatorInternus6Node;
-    AnyRefNode &Via1 = ...Seg.Pelvis.Muscles.ObturatorInternusViaNode1;
-    AnyRefNode &Ins = ...Seg.Thigh.ObturatorInternus1Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.ObturatorInternus6Node;
+    AnyRefNode &Via1 = ...Segments.Pelvis.Muscles.ObturatorInternusViaNode1;
+    AnyRefNode &Ins = ...Segments.Thigh.ObturatorInternus1Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 };
@@ -1891,30 +1891,30 @@ MuscleGroup ObturatorInternus = {
 MuscleGroup Pectineus = {
   AnyMuscleViaPoint Pectineus1 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.Pectineus1Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.Pectineus1Node;
-    AnyRefNode &Via = ...Seg.Pelvis.Muscles.Pectineus1ViaNode;
-    AnyRefNode &Ins = ...Seg.Thigh.Pectineus1Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.Pectineus1Node;
+    AnyRefNode &Via = ...Segments.Pelvis.Muscles.Pectineus1ViaNode;
+    AnyRefNode &Ins = ...Segments.Thigh.Pectineus1Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
   AnyMuscleViaPoint Pectineus2 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.Pectineus2Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.Pectineus2Node;
-    AnyRefNode &Ins = ...Seg.Thigh.Pectineus2Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.Pectineus2Node;
+    AnyRefNode &Ins = ...Segments.Thigh.Pectineus2Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
   AnyMuscleViaPoint Pectineus3 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.Pectineus3Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.Pectineus3Node;
-    AnyRefNode &Ins = ...Seg.Thigh.Pectineus3Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.Pectineus3Node;
+    AnyRefNode &Ins = ...Segments.Thigh.Pectineus3Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
   AnyMuscleViaPoint Pectineus4 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.Pectineus4Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.Pectineus4Node;
-    AnyRefNode &Ins = ...Seg.Thigh.Pectineus4Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.Pectineus4Node;
+    AnyRefNode &Ins = ...Segments.Thigh.Pectineus4Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 };
@@ -1922,28 +1922,28 @@ MuscleGroup Pectineus = {
 MuscleGroup Popliteus = {
   AnyMuscleViaPoint Popliteus1 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.Popliteus1Par;
-    AnyRefNode &Org = ...Seg.Thigh.Popliteus1Node;
-    AnyRefNode &Via1 = ...Seg.Shank.PopliteusViaNode1;
-    AnyRefNode &Via2 = ...Seg.Shank.PopliteusViaNode2;
-    AnyRefNode &Ins = ...Seg.Shank.Popliteus1Node;
+    AnyRefNode &Org = ...Segments.Thigh.Popliteus1Node;
+    AnyRefNode &Via1 = ...Segments.Shank.PopliteusViaNode1;
+    AnyRefNode &Via2 = ...Segments.Shank.PopliteusViaNode2;
+    AnyRefNode &Ins = ...Segments.Shank.Popliteus1Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
   AnyMuscleViaPoint Popliteus2 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.Popliteus2Par;
-    AnyRefNode &Org = ...Seg.Thigh.Popliteus2Node;
-    AnyRefNode &Via1 = ...Seg.Shank.PopliteusViaNode1;
-    AnyRefNode &Via2 = ...Seg.Shank.PopliteusViaNode2;
-    AnyRefNode &Ins = ...Seg.Shank.Popliteus2Node;
+    AnyRefNode &Org = ...Segments.Thigh.Popliteus2Node;
+    AnyRefNode &Via1 = ...Segments.Shank.PopliteusViaNode1;
+    AnyRefNode &Via2 = ...Segments.Shank.PopliteusViaNode2;
+    AnyRefNode &Ins = ...Segments.Shank.Popliteus2Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
   AnyMuscleViaPoint Popliteus3 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.Popliteus3Par;
-    AnyRefNode &Org = ...Seg.Thigh.Popliteus3Node;
-    AnyRefNode &Via1 = ...Seg.Shank.PopliteusViaNode1;
-    AnyRefNode &Via2 = ...Seg.Shank.PopliteusViaNode2;
-    AnyRefNode &Ins = ...Seg.Shank.Popliteus3Node;
+    AnyRefNode &Org = ...Segments.Thigh.Popliteus3Node;
+    AnyRefNode &Via1 = ...Segments.Shank.PopliteusViaNode1;
+    AnyRefNode &Via2 = ...Segments.Shank.PopliteusViaNode2;
+    AnyRefNode &Ins = ...Segments.Shank.Popliteus3Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 };
@@ -1951,29 +1951,29 @@ MuscleGroup Popliteus = {
 MuscleGroup QuadratusFemoris = {
   AnyMuscleViaPoint QuadratusFemoris1 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.QuadratusFemoris1Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.QuadratusFemoris1Node;
-    AnyRefNode &Ins = ...Seg.Thigh.QuadratusFemoris1Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.QuadratusFemoris1Node;
+    AnyRefNode &Ins = ...Segments.Thigh.QuadratusFemoris1Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
   AnyMuscleViaPoint QuadratusFemoris2 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.QuadratusFemoris2Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.QuadratusFemoris2Node;
-    AnyRefNode &Ins = ...Seg.Thigh.QuadratusFemoris2Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.QuadratusFemoris2Node;
+    AnyRefNode &Ins = ...Segments.Thigh.QuadratusFemoris2Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
   AnyMuscleViaPoint QuadratusFemoris3 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.QuadratusFemoris3Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.QuadratusFemoris3Node;
-    AnyRefNode &Ins = ...Seg.Thigh.QuadratusFemoris3Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.QuadratusFemoris3Node;
+    AnyRefNode &Ins = ...Segments.Thigh.QuadratusFemoris3Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 
   AnyMuscleViaPoint QuadratusFemoris4 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.QuadratusFemoris4Par;
-    AnyRefNode &Org = ...Seg.Pelvis.Muscles.QuadratusFemoris4Node;
-    AnyRefNode &Ins = ...Seg.Thigh.QuadratusFemoris4Node;
+    AnyRefNode &Org = ...Segments.Pelvis.Muscles.QuadratusFemoris4Node;
+    AnyRefNode &Ins = ...Segments.Thigh.QuadratusFemoris4Node;
     viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
   };
 };

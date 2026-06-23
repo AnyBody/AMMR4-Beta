@@ -12,13 +12,9 @@ AnyFolder ArmCal2 ={
   AnyFolder &SegSideCal = .SideHumanFolderRef.ShoulderArm.Segments;
   AnyFolder &JointsSideCal = .SideHumanFolderRef.ShoulderArm.Joints;
 
-  #if BM_ARM_DELTOID_WRAPPING == _DELTOID_WRAPPING_RAKE_
-  AnyFolder& DeltoidRakeRef = .SideHumanFolderRef.ShoulderArm.Muscles.ArtificialRake;
-  #else
   AnyFolder& DeltoidWrappingPosteriorRef = .SideHumanFolderRef.ShoulderArm.Muscles.WrappingSurfaces.DeltoidWrappingPosterior;
   AnyFolder& DeltoidWrappingLateralRef = .SideHumanFolderRef.ShoulderArm.Muscles.WrappingSurfaces.DeltoidWrappingLateral;
   AnyFolder& DeltoidWrappingAnteriorRef = .SideHumanFolderRef.ShoulderArm.Muscles.WrappingSurfaces.DeltoidWrappingAnterior;
-  #endif
 
   AnyFolder &MusParCalSide =  .SideHumanFolderRef.ShoulderArm.MuscleModels;
 
@@ -236,11 +232,8 @@ AnyFolder ArmCal2 ={
   #endif
 
   AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.ShoulderArm.Muscles);
-  #if BM_ARM_DELTOID_WRAPPING == _DELTOID_WRAPPING_RAKE_
-  AnyObjectPtrArray DeltoideusClavicularMuscles = ObjSearch(MusPrefix+".*.DeltoideusClavicular*", "AnyMuscle");
-  #else
+
   AnyObjectPtrArray DeltoideusClavicularMuscles = ObjSearch(MusPrefix+".*.DeltoideusAnterior*", "AnyMuscle");
-  #endif
 
 };
 

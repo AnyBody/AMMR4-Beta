@@ -3,7 +3,7 @@ AnyFolder LegCal3={
   AnyComponentDefinition obj = {};
 
   AnyFolder &Pelvis = ...BodyModel.Trunk.Segments.PelvisSeg; //This is a reference to the folder which holds the human part of the model
-  AnyFolder &LegSegSide = .SideHumanFolderRef.Leg.Seg; //This is a reference to the folder which holds the human part of the model
+  AnyFolder &LegSegSide = .SideHumanFolderRef.Leg.Segments; //This is a reference to the folder which holds the human part of the model
 
   AnyFolder &JointsCal2 = .SideHumanFolderRef.Leg.Jnt;
 

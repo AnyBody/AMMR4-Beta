@@ -6,7 +6,7 @@ AnyFolder LegCal1 ={
   AnyComponentDefinition obj = {};
 
   AnyFolder &Pelvis = ...BodyModel.Trunk.Segments.PelvisSeg; //This is a reference to the folder which holds the human part of the model
-  AnyFolder &LegSegSide = .SideHumanFolderRef.Leg.Seg; //This is a reference to the folder which holds the human part of the model
+  AnyFolder &LegSegSide = .SideHumanFolderRef.Leg.Segments; //This is a reference to the folder which holds the human part of the model
 
   // Segments needed for the Psoas Major muscles
   AnySeg &L1 = ...BodyModel.Trunk.Segments.L1Seg;

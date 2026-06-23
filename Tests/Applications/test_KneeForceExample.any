@@ -33,7 +33,7 @@ Study = { FixTestStudyConfig TestStudyConfig = {  }; };
           "reset"};
      };
   };
-  LoadTimeCam.CameraLookAtPoint = Main.HumanModel.BodyModel.Right.Leg.Seg.Shank.KneeJoint.r+{0,-0.1,0};
+  LoadTimeCam.CameraLookAtPoint = Main.HumanModel.BodyModel.Right.Leg.Segments.Shank.KneeJoint.r+{0,-0.1,0};
   LoadTimeCam.CameraFieldOfView = DesignVar(0.4);
   LoadTimeCam.CameraDirection  = DesignVar({0.7,0.2,0.7});
 #endif

@@ -1,31 +1,31 @@
-/** 
-  Class template for creating a model that can be used to calibrate the legs 
+/**
+  Class template for creating a model that can be used to calibrate the legs
 */
 #class_template LegCalibrationModel(Side, BodyModelRef) {
   AnyComponentDefinition CDef = {};
-  
+
   #var AnyObjectPtr HipPositions;
   #var AnyObjectPtr KneePositions;
   #var AnyObjectPtr AnklePositions;
   #var AnyObjectPtr SubTalarPositions;
-  
+
   AnyFolder &Pelvis = BodyModelRef.Trunk.Segments.PelvisSeg;
   AnyFolder &Sacrum = BodyModelRef.Trunk.Segments.SacrumSeg;
   AnyFolder &Thorax = BodyModelRef.Trunk.Segments.ThoraxSeg;
-  
+
   AnySeg &L1 = BodyModelRef.Trunk.Segments.L1Seg;
   AnySeg &L2 = BodyModelRef.Trunk.Segments.L2Seg;
   AnySeg &L3 = BodyModelRef.Trunk.Segments.L3Seg;
   AnySeg &L4 = BodyModelRef.Trunk.Segments.L4Seg;
   AnySeg &L5 = BodyModelRef.Trunk.Segments.L5Seg;
-  
+
   AnyFolder &LumbarJoints = BodyModelRef.Trunk.Joints.Lumbar;
-  
-  AnyFolder &LegSegments = BodyModelRef.Side.Leg.Seg;
+
+  AnyFolder &LegSegments = BodyModelRef.Side.Leg.Segments;
   AnyFolder &LegJoints = BodyModelRef.Side.Leg.Jnt;
-  
+
   AnyFolder &Muscles = BodyModelRef.Side.Leg.Mus;
-  
+
   // Constraints
   AnyFixedRefFrame ground = {
     AnyRefNode node = {
@@ -33,13 +33,13 @@
       sRel = ..Pelvis.r0;
     };
   };
-  
+
   AnyKinEq ThoraxFix = {
     AnyKinMeasure& PelvisThoraxExtension = BodyModelRef.Interface.Trunk.PelvisThoraxExtension;
     AnyKinMeasure& PelvisThoraxLateralBending = BodyModelRef.Interface.Trunk.PelvisThoraxLateralBending;
     AnyKinMeasure& PelvisThoraxRotation = BodyModelRef.Interface.Trunk.PelvisThoraxRotation;
   };
-  
+
   AnyKinEq PelvisFix = {
     AnyKinLinear Lin = {
       AnyRefFrame &ground = ..ground.node;
@@ -51,7 +51,7 @@
       AnyRefFrame &Pelvis = ..Pelvis;
     };
   };
-  
+
   AnyKinEqInterPolDriver Hip = {
     AnyKinRotational &Spherical = .BodyModelRef.Interface.Side.HipFlexion.HipMeasure;
     Type = PiecewiseLinear;
@@ -59,9 +59,9 @@
     Data = Obj2Num(.HipPositions)' * pi/180;
     Reaction.Type = {Off, Off, Off};
     AnyInt expect_nPos_to_match_nStep = warn(eqfun(NumElemOf(T), ..nStep), strformat("The number of calibration positions (Data) in the: " + NameOf(ObjGetParent(0)) + " driver does not match the number of positions (nStep) in the study."));
-    
+
   };
-  
+
   AnyKinEqInterPolDriver Knee = {
     AnyKinMeasure& Hinge = .BodyModelRef.Interface.Side.KneeFlexion;
     Type = PiecewiseLinear;
@@ -69,9 +69,9 @@
     Data = {Obj2Num(.KneePositions)} * pi/180;
     Reaction.Type = {Off};
     AnyInt expect_nPos_to_match_nStep = warn(eqfun(NumElemOf(T), ..nStep), strformat("The number of calibration positions (Data) in the: " + NameOf(ObjGetParent(0)) + " driver does not match the number of positions (nStep) in the study."));
-    
+
   };
-  
+
   AnyKinEqInterPolDriver Ankle = {
     AnyKinMeasure& Hinge = .BodyModelRef.Interface.Side.AnklePlantarFlexion;
     Type = PiecewiseLinear;
@@ -79,9 +79,9 @@
     Data = {Obj2Num(.AnklePositions)} * pi/180;
     Reaction.Type = {Off};
     AnyInt expect_nPos_to_match_nStep = warn(eqfun(NumElemOf(T), ..nStep), strformat("The number of calibration positions (Data) in the: " + NameOf(ObjGetParent(0)) + " driver does not match the number of positions (nStep) in the study."));
-    
+
   };
-  
+
   AnyKinEqInterPolDriver SubTalar = {
     AnyKinMeasure& Hinge = .BodyModelRef.Interface.Side.SubTalarEversion;
     Type = PiecewiseLinear;
@@ -89,7 +89,7 @@
     Data = {Obj2Num(.SubTalarPositions)} * pi/180;
     Reaction.Type = {Off};
     AnyInt expect_nPos_to_match_nStep = warn(eqfun(NumElemOf(T), ..nStep), strformat("The number of calibration positions (Data) in the: " + NameOf(ObjGetParent(0)) + " driver does not match the number of positions (nStep) in the study."));
-    
+
   };
 };
 
@@ -108,7 +108,7 @@
   InitialConditions.SmallStepAssumptionOnOff = Off;
   Kinematics.PosAnalysisOnlyOnOff = On;
   InitialConditions.PosAnalysisOnlyOnOff = On;
-  
+
   LegCalibrationModel ModelRef(Side=Side, BodyModelRef=BodyModelRef) = {
     HipPositions = .HipPositions;
     KneePositions = .KneePositions;

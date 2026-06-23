@@ -116,7 +116,7 @@ AnyDrawVector  Vector12 = {
 //Knee
 
 AnyDrawVector  Vector13 = {
-  AnyRefFrame &ref2=Main.Model.HumanModel.Right.Leg.Seg.Thigh.KneeMarkerR;
+  AnyRefFrame &ref2=Main.Model.HumanModel.Right.Leg.Segments.Thigh.KneeMarkerR;
   Vec = {.Length,0,0};  //use zero length
   Line.Thickness = ..Thickness;
   Line.RGB=..RGB;//make reference to color
@@ -124,7 +124,7 @@ AnyDrawVector  Vector13 = {
 };
 
 AnyDrawVector  Vector14 = {
-  AnyRefFrame &ref2=Main.Model.HumanModel.Right.Leg.Seg.Thigh.KneeMarkerR;
+  AnyRefFrame &ref2=Main.Model.HumanModel.Right.Leg.Segments.Thigh.KneeMarkerR;
   Vec = {-.Length,0,0};  //use zero length
   Line.Thickness = ..Thickness;
   Line.RGB=..RGB;//make reference to color
@@ -133,7 +133,7 @@ AnyDrawVector  Vector14 = {
 
 
 AnyDrawVector  Vector15 = {
-  AnyRefFrame &ref2=Main.Model.HumanModel.Left.Leg.Seg.Thigh.KneeMarkerL;
+  AnyRefFrame &ref2=Main.Model.HumanModel.Left.Leg.Segments.Thigh.KneeMarkerL;
   Vec = {.Length,0,0};  //use zero length
   Line.Thickness = ..Thickness;
   Line.RGB=..RGB;//make reference to color
@@ -141,7 +141,7 @@ AnyDrawVector  Vector15 = {
 };
 
 AnyDrawVector  Vector16 = {
-  AnyRefFrame &ref2=Main.Model.HumanModel.Left.Leg.Seg.Thigh.KneeMarkerL;
+  AnyRefFrame &ref2=Main.Model.HumanModel.Left.Leg.Segments.Thigh.KneeMarkerL;
   Vec = {-.Length,0,0};  //use zero length
   Line.Thickness = ..Thickness;
   Line.RGB=..RGB;//make reference to color
@@ -153,7 +153,7 @@ AnyDrawVector  Vector16 = {
 //Malleolus
 
 AnyDrawVector  Vector17 = {
-  AnyRefFrame &ref2=Main.Model.HumanModel.Right.Leg.Seg.Shank.MalleolusMarkerR;
+  AnyRefFrame &ref2=Main.Model.HumanModel.Right.Leg.Segments.Shank.MalleolusMarkerR;
   Vec = {0,.Length,0};  //use zero length
   Line.Thickness = ..Thickness;
   Line.RGB=..RGB;//make reference to color
@@ -161,7 +161,7 @@ AnyDrawVector  Vector17 = {
 };
 
 AnyDrawVector  Vector18 = {
-  AnyRefFrame &ref2=Main.Model.HumanModel.Right.Leg.Seg.Shank.MalleolusMarkerR;
+  AnyRefFrame &ref2=Main.Model.HumanModel.Right.Leg.Segments.Shank.MalleolusMarkerR;
   Vec = {0,-.Length,0};  //use zero length
   Line.Thickness = ..Thickness;
   Line.RGB=..RGB;//make reference to color
@@ -170,7 +170,7 @@ AnyDrawVector  Vector18 = {
 
 
 AnyDrawVector  Vector19 = {
-  AnyRefFrame &ref2=Main.Model.HumanModel.Left.Leg.Seg.Shank.MalleolusMarkerL;
+  AnyRefFrame &ref2=Main.Model.HumanModel.Left.Leg.Segments.Shank.MalleolusMarkerL;
   Vec = {0,.Length,0};  //use zero length
   Line.Thickness = ..Thickness;
   Line.RGB=..RGB;//make reference to color
@@ -178,7 +178,7 @@ AnyDrawVector  Vector19 = {
 };
 
 AnyDrawVector  Vector20 = {
-  AnyRefFrame &ref2=Main.Model.HumanModel.Left.Leg.Seg.Shank.MalleolusMarkerL;
+  AnyRefFrame &ref2=Main.Model.HumanModel.Left.Leg.Segments.Shank.MalleolusMarkerL;
   Vec = {0,-.Length,0};  //use zero length
   Line.Thickness = ..Thickness;
   Line.RGB=..RGB;//make reference to color
@@ -192,7 +192,7 @@ AnyDrawVector  Vector20 = {
 
 
 AnyDrawVector  Vector21 = {
-  AnyRefFrame &ref2=Main.Model.HumanModel.Right.Leg.Seg.Foot.MetatarsalMarkerR;
+  AnyRefFrame &ref2=Main.Model.HumanModel.Right.Leg.Segments.Foot.MetatarsalMarkerR;
   Vec = {.Length,0,0};  //use zero length
   Line.Thickness = ..Thickness;
   Line.RGB=..RGB;//make reference to color
@@ -200,7 +200,7 @@ AnyDrawVector  Vector21 = {
 };
 
 AnyDrawVector  Vector22 = {
-  AnyRefFrame &ref2=Main.Model.HumanModel.Right.Leg.Seg.Foot.MetatarsalMarkerR;
+  AnyRefFrame &ref2=Main.Model.HumanModel.Right.Leg.Segments.Foot.MetatarsalMarkerR;
   Vec = {-.Length,0,0};  //use zero length
   Line.Thickness = ..Thickness;
   Line.RGB=..RGB;//make reference to color
@@ -209,7 +209,7 @@ AnyDrawVector  Vector22 = {
 
 
 AnyDrawVector  Vector23 = {
-  AnyRefFrame &ref2=Main.Model.HumanModel.Right.Leg.Seg.Foot.MetatarsalMarkerR;
+  AnyRefFrame &ref2=Main.Model.HumanModel.Right.Leg.Segments.Foot.MetatarsalMarkerR;
   Vec = {0,0,.Length};  //use zero length
   Line.Thickness = ..Thickness;
   Line.RGB=..RGB;//make reference to color
@@ -217,7 +217,7 @@ AnyDrawVector  Vector23 = {
 };
 
 AnyDrawVector  Vector24 = {
-  AnyRefFrame &ref2=Main.Model.HumanModel.Right.Leg.Seg.Foot.MetatarsalMarkerR;
+  AnyRefFrame &ref2=Main.Model.HumanModel.Right.Leg.Segments.Foot.MetatarsalMarkerR;
   Vec = {0,0,-.Length};  //use zero length
   Line.Thickness = ..Thickness;
   Line.RGB=..RGB;//make reference to color
@@ -227,7 +227,7 @@ AnyDrawVector  Vector24 = {
 
 
 AnyDrawVector  Vector25 = {
-  AnyRefFrame &ref2=Main.Model.HumanModel.Left.Leg.Seg.Foot.MetatarsalMarkerL;
+  AnyRefFrame &ref2=Main.Model.HumanModel.Left.Leg.Segments.Foot.MetatarsalMarkerL;
   Vec = {.Length,0,0};  //use zero length
   Line.Thickness = ..Thickness;
   Line.RGB=..RGB;//make reference to color
@@ -235,7 +235,7 @@ AnyDrawVector  Vector25 = {
 };
 
 AnyDrawVector  Vector26 = {
-  AnyRefFrame &ref2=Main.Model.HumanModel.Left.Leg.Seg.Foot.MetatarsalMarkerL;
+  AnyRefFrame &ref2=Main.Model.HumanModel.Left.Leg.Segments.Foot.MetatarsalMarkerL;
   Vec = {-.Length,0,0};  //use zero length
   Line.Thickness = ..Thickness;
   Line.RGB=..RGB;//make reference to color
@@ -244,7 +244,7 @@ AnyDrawVector  Vector26 = {
 
 
 AnyDrawVector  Vector27 = {
-  AnyRefFrame &ref2=Main.Model.HumanModel.Left.Leg.Seg.Foot.MetatarsalMarkerL;
+  AnyRefFrame &ref2=Main.Model.HumanModel.Left.Leg.Segments.Foot.MetatarsalMarkerL;
   Vec = {0,0,.Length};  //use zero length
   Line.Thickness = ..Thickness;
   Line.RGB=..RGB;//make reference to color
@@ -252,7 +252,7 @@ AnyDrawVector  Vector27 = {
 };
 
 AnyDrawVector  Vector28 = {
-  AnyRefFrame &ref2=Main.Model.HumanModel.Left.Leg.Seg.Foot.MetatarsalMarkerL;
+  AnyRefFrame &ref2=Main.Model.HumanModel.Left.Leg.Segments.Foot.MetatarsalMarkerL;
   Vec = {0,0,-.Length};  //use zero length
   Line.Thickness = ..Thickness;
   Line.RGB=..RGB;//make reference to color
@@ -263,7 +263,7 @@ AnyDrawVector  Vector28 = {
 
 //Heel right
 AnyDrawVector  Vector29 = {
-  AnyRefFrame &ref2=Main.Model.HumanModel.Right.Leg.Seg.Foot.HeelMarkerR;
+  AnyRefFrame &ref2=Main.Model.HumanModel.Right.Leg.Segments.Foot.HeelMarkerR;
   Vec = {.Length,0,0};  //use zero length
   Line.Thickness = ..Thickness;
   Line.RGB=..RGB;//make reference to color
@@ -271,7 +271,7 @@ AnyDrawVector  Vector29 = {
 };
 
 AnyDrawVector  Vector30 = {
-  AnyRefFrame &ref2=Main.Model.HumanModel.Right.Leg.Seg.Foot.HeelMarkerR;
+  AnyRefFrame &ref2=Main.Model.HumanModel.Right.Leg.Segments.Foot.HeelMarkerR;
   Vec = {-.Length,0,0};  //use zero length
   Line.Thickness = ..Thickness;
   Line.RGB=..RGB;//make reference to color
@@ -280,7 +280,7 @@ AnyDrawVector  Vector30 = {
 
 
 AnyDrawVector  Vector31 = {
-  AnyRefFrame &ref2=Main.Model.HumanModel.Right.Leg.Seg.Foot.HeelMarkerR;
+  AnyRefFrame &ref2=Main.Model.HumanModel.Right.Leg.Segments.Foot.HeelMarkerR;
   Vec = {0,.Length,0};  //use zero length
   Line.Thickness = ..Thickness;
   Line.RGB=..RGB;//make reference to color
@@ -288,7 +288,7 @@ AnyDrawVector  Vector31 = {
 };
 
 AnyDrawVector  Vector32 = {
-  AnyRefFrame &ref2=Main.Model.HumanModel.Right.Leg.Seg.Foot.HeelMarkerR;
+  AnyRefFrame &ref2=Main.Model.HumanModel.Right.Leg.Segments.Foot.HeelMarkerR;
   Vec = {0,-.Length,0};  //use zero length
   Line.Thickness = ..Thickness;
   Line.RGB=..RGB;//make reference to color
@@ -299,7 +299,7 @@ AnyDrawVector  Vector32 = {
 
 
 AnyDrawVector  Vector33 = {
-  AnyRefFrame &ref2=Main.Model.HumanModel.Right.Leg.Seg.Foot.HeelMarkerR;
+  AnyRefFrame &ref2=Main.Model.HumanModel.Right.Leg.Segments.Foot.HeelMarkerR;
   Vec = {0,0,.Length};  //use zero length
   Line.Thickness = ..Thickness;
   Line.RGB=..RGB;//make reference to color
@@ -307,7 +307,7 @@ AnyDrawVector  Vector33 = {
 };
 
 AnyDrawVector  Vector34 = {
-  AnyRefFrame &ref2=Main.Model.HumanModel.Right.Leg.Seg.Foot.HeelMarkerR;
+  AnyRefFrame &ref2=Main.Model.HumanModel.Right.Leg.Segments.Foot.HeelMarkerR;
   Vec = {0,0,-.Length};  //use zero length
   Line.Thickness = ..Thickness;
   Line.RGB=..RGB;//make reference to color
@@ -316,7 +316,7 @@ AnyDrawVector  Vector34 = {
 
 //Heel left
 AnyDrawVector  Vector35 = {
-  AnyRefFrame &ref2=Main.Model.HumanModel.Left.Leg.Seg.Foot.HeelMarkerL;
+  AnyRefFrame &ref2=Main.Model.HumanModel.Left.Leg.Segments.Foot.HeelMarkerL;
   Vec = {.Length,0,0};  //use zero length
   Line.Thickness = ..Thickness;
   Line.RGB=..RGB;//make reference to color
@@ -324,7 +324,7 @@ AnyDrawVector  Vector35 = {
 };
 
 AnyDrawVector  Vector36 = {
-  AnyRefFrame &ref2=Main.Model.HumanModel.Left.Leg.Seg.Foot.HeelMarkerL;
+  AnyRefFrame &ref2=Main.Model.HumanModel.Left.Leg.Segments.Foot.HeelMarkerL;
   Vec = {-.Length,0,0};  //use zero length
   Line.Thickness = ..Thickness;
   Line.RGB=..RGB;//make reference to color
@@ -333,7 +333,7 @@ AnyDrawVector  Vector36 = {
 
 
 AnyDrawVector  Vector37 = {
-  AnyRefFrame &ref2=Main.Model.HumanModel.Left.Leg.Seg.Foot.HeelMarkerL;
+  AnyRefFrame &ref2=Main.Model.HumanModel.Left.Leg.Segments.Foot.HeelMarkerL;
   Vec = {0,.Length,0};  //use zero length
   Line.Thickness = ..Thickness;
   Line.RGB=..RGB;//make reference to color
@@ -341,7 +341,7 @@ AnyDrawVector  Vector37 = {
 };
 
 AnyDrawVector  Vector38 = {
-  AnyRefFrame &ref2=Main.Model.HumanModel.Left.Leg.Seg.Foot.HeelMarkerL;
+  AnyRefFrame &ref2=Main.Model.HumanModel.Left.Leg.Segments.Foot.HeelMarkerL;
   Vec = {0,-.Length,0};  //use zero length
   Line.Thickness = ..Thickness;
   Line.RGB=..RGB;//make reference to color
@@ -349,7 +349,7 @@ AnyDrawVector  Vector38 = {
 };
 
 AnyDrawVector  Vector40 = {
-  AnyRefFrame &ref2=Main.Model.HumanModel.Left.Leg.Seg.Foot.HeelMarkerL;
+  AnyRefFrame &ref2=Main.Model.HumanModel.Left.Leg.Segments.Foot.HeelMarkerL;
   Vec = {0,0,.Length};  //use zero length
   Line.Thickness = ..Thickness;
   Line.RGB=..RGB;//make reference to color
@@ -357,7 +357,7 @@ AnyDrawVector  Vector40 = {
 };
 
 AnyDrawVector  Vector41 = {
-  AnyRefFrame &ref2=Main.Model.HumanModel.Left.Leg.Seg.Foot.HeelMarkerL;
+  AnyRefFrame &ref2=Main.Model.HumanModel.Left.Leg.Segments.Foot.HeelMarkerL;
   Vec = {0,0,-.Length};  //use zero length
   Line.Thickness = ..Thickness;
   Line.RGB=..RGB;//make reference to color

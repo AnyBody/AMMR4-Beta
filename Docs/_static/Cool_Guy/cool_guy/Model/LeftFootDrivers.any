@@ -1,11 +1,11 @@
   AnyReacForce LeftFootReaction = {
 
     AnyKinLinear LeftFootLinMeasure = {
-      AnySeg &ref1=....BodyModel.BodyModel.Left.Leg.Seg.Foot;
+      AnySeg &ref1=....BodyModel.BodyModel.Left.Leg.Segments.Foot;
       AnyFixedRefFrame &ref2 = ....Environment.GlobalRef;
     };
     AnyKinRotational LeftFootRotMeasure = {
-      AnySeg &ref1=....BodyModel.BodyModel.Left.Leg.Seg.Foot;
+      AnySeg &ref1=....BodyModel.BodyModel.Left.Leg.Segments.Foot;
       AnyFixedRefFrame &ref2 = ....Environment.GlobalRef;
       Type = RotVector;
     };
@@ -17,7 +17,7 @@
   AnyKinEqSimpleDriver LToeGroundConstraint ={
     AnyKinLinear ToePos = {
       AnyFixedRefFrame &Ground = ....Environment.GlobalRef;
-      AnyRefNode &Ball = ....BodyModel.BodyModel.Left.Leg.Seg.Foot.Metatarsal1.ToeJoint;
+      AnyRefNode &Ball = ....BodyModel.BodyModel.Left.Leg.Segments.Foot.Metatarsal1.ToeJoint;
     };
    MeasureOrganizer = {1};  // Only the y coordinate
     DriverPos = {0.0};
@@ -29,7 +29,7 @@
   AnyKinEqSimpleDriver LHeelGroundConstraint ={
     AnyKinLinear HeelPos = {
       AnyFixedRefFrame &Ground = ....Environment.GlobalRef;
-      AnyRefNode &Ball = ....BodyModel.BodyModel.Left.Leg.Seg.Foot.Calcaneus.HeelContactNodeLow;
+      AnyRefNode &Ball = ....BodyModel.BodyModel.Left.Leg.Segments.Foot.Calcaneus.HeelContactNodeLow;
     };
     MeasureOrganizer = {1};  // Only the y coordinate
     DriverPos = {0.0};
@@ -42,7 +42,7 @@
   AnyKinEqSimpleDriver LAnkleX = {
     AnyKinLinear AnklePos = {
       AnyFixedRefFrame &Ground = ....Environment.GlobalRef;
-      AnyRefNode &Ankle = ....BodyModel.BodyModel.Left.Leg.Seg.Foot.AnkleJoint;
+      AnyRefNode &Ankle = ....BodyModel.BodyModel.Left.Leg.Segments.Foot.AnkleJoint;
     };
     MeasureOrganizer = {0};  // Only the x coordinate
     DriverPos = {0.0};

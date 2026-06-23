@@ -31,15 +31,15 @@
 
 AnyForceMomentMeasure2 AnklePlantarFlexionNetMomentMuscle =
 {
-  AnyRefFrame &ref = ..Seg.Shank.AnkleJoint;
-  //RefPoint = &..Seg.Shank.AnkleJoint;
+  AnyRefFrame &ref = ..Segments.Shank.AnkleJoint;
+  //RefPoint = &..Segments.Shank.AnkleJoint;
 //  IncludeSegments =
 //  {
-//    &..Seg.Foot, &..Seg.Talus
+//    &..Segments.Foot, &..Segments.Talus
 //  };
   IncludeSegments =
-    arrcat(ObjSearch("..Seg.Foot", "AnySeg"),
-           ObjSearch("..Seg.Foot.*", "AnySeg"));
+    arrcat(ObjSearch("..Segments.Foot", "AnySeg"),
+           ObjSearch("..Segments.Foot.*", "AnySeg"));
 
   IncludeForces = arrcat(
     ObjSearch("..Mus.*.*", "AnyMuscle"),
@@ -52,16 +52,16 @@ AnyForceMomentMeasure2 AnklePlantarFlexionNetMomentMuscle =
 
 AnyForceMomentMeasure2 SubTalarEversionNetMomentMuscle =
 {
-  AnyRefFrame &ref = ..Seg.Talus.SubTalarJoint;
-  //RefPoint = &..Seg.Talus.SubTalarJoint;
+  AnyRefFrame &ref = ..Segments.Talus.SubTalarJoint;
+  //RefPoint = &..Segments.Talus.SubTalarJoint;
 //  IncludeSegments =
 //  {
-//    &..Seg.Foot
+//    &..Segments.Foot
 //  };
   IncludeSegments =
-   set_difference(arrcat(ObjSearch("..Seg.Foot", "AnySeg"),
-                         ObjSearch("..Seg.Foot.*", "AnySeg")),
-                  ObjSearch("..Seg.Foot.Talus", "AnySeg"));
+   set_difference(arrcat(ObjSearch("..Segments.Foot", "AnySeg"),
+                         ObjSearch("..Segments.Foot.*", "AnySeg")),
+                  ObjSearch("..Segments.Foot.Talus", "AnySeg"));
 
   IncludeForces = arrcat(
     ObjSearch("..Mus.*.*", "AnyMuscle"),
@@ -73,12 +73,12 @@ AnyForceMomentMeasure2 SubTalarEversionNetMomentMuscle =
 };
 
 AnyForceMomentMeasure2 AchillesTendonSubtalarEversion = {
-  AnyRefNode &ref=..Seg.Talus.SubTalarJoint;
-//  AnySeg &seg=..Seg.Foot;
+  AnyRefNode &ref=..Segments.Talus.SubTalarJoint;
+//  AnySeg &seg=..Segments.Foot;
   IncludeSegments =
-   set_difference(arrcat(ObjSearch("..Seg.Foot", "AnySeg"),
-                         ObjSearch("..Seg.Foot.*", "AnySeg")),
-                  ObjSearch("..Seg.Foot.Talus", "AnySeg"));
+   set_difference(arrcat(ObjSearch("..Segments.Foot", "AnySeg"),
+                         ObjSearch("..Segments.Foot.*", "AnySeg")),
+                  ObjSearch("..Segments.Foot.Talus", "AnySeg"));
 
   #ifndef LEG_WITH_JOINT_MUSCLES
   IncludeForces = arrcat(
@@ -92,12 +92,12 @@ AnyForceMomentMeasure2 AchillesTendonSubtalarEversion = {
 };
 
 AnyForceMomentMeasure2 InversionMusclesSubtalarEversion = {
-  AnyRefNode &ref=..Seg.Talus.SubTalarJoint;
-//  AnySeg &seg=..Seg.Foot;
+  AnyRefNode &ref=..Segments.Talus.SubTalarJoint;
+//  AnySeg &seg=..Segments.Foot;
   IncludeSegments =
-   set_difference(arrcat(ObjSearch("..Seg.Foot", "AnySeg"),
-                         ObjSearch("..Seg.Foot.*", "AnySeg")),
-                  ObjSearch("..Seg.Foot.Talus", "AnySeg"));
+   set_difference(arrcat(ObjSearch("..Segments.Foot", "AnySeg"),
+                         ObjSearch("..Segments.Foot.*", "AnySeg")),
+                  ObjSearch("..Segments.Foot.Talus", "AnySeg"));
 
   #ifndef LEG_WITH_JOINT_MUSCLES
   IncludeForces = arrcat(
@@ -115,12 +115,12 @@ AnyForceMomentMeasure2 InversionMusclesSubtalarEversion = {
 };
 
 AnyForceMomentMeasure2 EversionMusclesSubtalarEversion = {
-  AnyRefNode &ref=..Seg.Talus.SubTalarJoint;
-//  AnySeg &seg=..Seg.Foot;
+  AnyRefNode &ref=..Segments.Talus.SubTalarJoint;
+//  AnySeg &seg=..Segments.Foot;
   IncludeSegments =
-   set_difference(arrcat(ObjSearch("..Seg.Foot", "AnySeg"),
-                         ObjSearch("..Seg.Foot.*", "AnySeg")),
-                  ObjSearch("..Seg.Foot.Talus", "AnySeg"));
+   set_difference(arrcat(ObjSearch("..Segments.Foot", "AnySeg"),
+                         ObjSearch("..Segments.Foot.*", "AnySeg")),
+                  ObjSearch("..Segments.Foot.Talus", "AnySeg"));
 
   #ifndef LEG_WITH_JOINT_MUSCLES
   IncludeForces = arrcat(
@@ -135,16 +135,16 @@ AnyForceMomentMeasure2 EversionMusclesSubtalarEversion = {
 
 AnyForceMomentMeasure2 KneeNetMomentMuscle =
 {
-  AnyRefFrame &ref = ..Seg.Thigh.KneeJoint.RotNode;
-  //RefPoint = &..Seg.Thigh.KneeJoint.RotNode;
+  AnyRefFrame &ref = ..Segments.Thigh.KneeJoint.RotNode;
+  //RefPoint = &..Segments.Thigh.KneeJoint.RotNode;
 //  IncludeSegments =
 //  {
-//    &..Seg.Shank, &..Seg.Foot, &..Seg.Talus
+//    &..Segments.Shank, &..Segments.Foot, &..Segments.Talus
 //  };
   IncludeSegments =
-      arrcat(&..Seg.Shank,
-             ObjSearch("..Seg.Foot", "AnySeg"),
-             ObjSearch("..Seg.Foot.*", "AnySeg"));
+      arrcat(&..Segments.Shank,
+             ObjSearch("..Segments.Foot", "AnySeg"),
+             ObjSearch("..Segments.Foot.*", "AnySeg"));
 
   AnyObjectPtrArray pArrJntReactions = {
     &..Jnt.PatellaMovement.Reaction
@@ -160,7 +160,7 @@ AnyForceMomentMeasure2 KneeNetMomentMuscle =
   AnyVar MKneeFlexion=Mlocal[2];
 };
 
-AnyFolder &HipNodeRef =.Seg.Pelvis;
+AnyFolder &HipNodeRef =.Segments.Pelvis;
 HipNodeRef={
   HipJoint ={
     AnyRefNode NeutralOrientation ={
@@ -174,15 +174,15 @@ HipNodeRef={
 
 AnyForceMomentMeasure2 HipNetMomentMuscle =
 {
-  AnyRefFrame &ref = ..Seg.Pelvis.HipJoint.NeutralOrientation.RotNode;
+  AnyRefFrame &ref = ..Segments.Pelvis.HipJoint.NeutralOrientation.RotNode;
 //  IncludeSegments =
 //  {
-//    &..Seg.Shank, &..Seg.Foot, &..Seg.Thigh, &..Seg.Talus, &..Seg.Patella
+//    &..Segments.Shank, &..Segments.Foot, &..Segments.Thigh, &..Segments.Talus, &..Segments.Patella
 //  };
   IncludeSegments =
-      arrcat(&..Seg.Shank, &..Seg.Thigh, &..Seg.Patella,
-             ObjSearch("..Seg.Foot", "AnySeg"),
-             ObjSearch("..Seg.Foot.*", "AnySeg"));
+      arrcat(&..Segments.Shank, &..Segments.Thigh, &..Segments.Patella,
+             ObjSearch("..Segments.Foot", "AnySeg"),
+             ObjSearch("..Segments.Foot.*", "AnySeg"));
 
   IncludeForces = arrcat(
     ObjSearch("..Mus.*.*", "AnyMuscle"),
@@ -200,15 +200,15 @@ AnyForceMomentMeasure2 HipNetMomentMuscle =
 
 AnyForceMomentMeasure2 AnklePlantarFlexionNetMoment =
 {
-  AnyRefNode &ref = ..Seg.Shank.AnkleJoint;
-  //RefPoint = &..Seg.Shank.AnkleJoint;
+  AnyRefNode &ref = ..Segments.Shank.AnkleJoint;
+  //RefPoint = &..Segments.Shank.AnkleJoint;
 //  IncludeSegments =
 //  {
-//    &..Seg.Foot, &..Seg.Talus
+//    &..Segments.Foot, &..Segments.Talus
 //  };
   IncludeSegments =
-    arrcat(ObjSearch("..Seg.Foot", "AnySeg"),
-           ObjSearch("..Seg.Foot.*", "AnySeg"));
+    arrcat(ObjSearch("..Segments.Foot", "AnySeg"),
+           ObjSearch("..Segments.Foot.*", "AnySeg"));
 
   AnyObjectPtrArray pArrJntReactions = {
     &..Jnt.Ankle.Constraints.Reaction,
@@ -224,16 +224,16 @@ AnyForceMomentMeasure2 AnklePlantarFlexionNetMoment =
 
 AnyForceMomentMeasure2 SubTalarEversionNetMoment =
 {
-  AnyRefFrame &ref = ..Seg.Talus.SubTalarJoint;
-  //RefPoint = &..Seg.Talus.SubTalarJoint;
+  AnyRefFrame &ref = ..Segments.Talus.SubTalarJoint;
+  //RefPoint = &..Segments.Talus.SubTalarJoint;
 //  IncludeSegments =
 //  {
-//    &..Seg.Foot
+//    &..Segments.Foot
 //  };
   IncludeSegments =
-   set_difference(arrcat(ObjSearch("..Seg.Foot", "AnySeg"),
-                         ObjSearch("..Seg.Foot.*", "AnySeg")),
-                  ObjSearch("..Seg.Foot.Talus", "AnySeg"));
+   set_difference(arrcat(ObjSearch("..Segments.Foot", "AnySeg"),
+                         ObjSearch("..Segments.Foot.*", "AnySeg")),
+                  ObjSearch("..Segments.Foot.Talus", "AnySeg"));
 
   AnyObjectPtrArray pArrJntReactions = {
     &..Jnt.SubTalar.Constraints.Reaction
@@ -248,16 +248,16 @@ AnyForceMomentMeasure2 SubTalarEversionNetMoment =
 
 AnyForceMomentMeasure2 KneeNetMoment =
 {
-  AnyRefFrame &ref = ..Seg.Thigh.KneeJoint.RotNode;
-  //RefPoint = &..Seg.Thigh.KneeJoint.RotNode;
+  AnyRefFrame &ref = ..Segments.Thigh.KneeJoint.RotNode;
+  //RefPoint = &..Segments.Thigh.KneeJoint.RotNode;
 //  IncludeSegments =
 //  {
-//    &..Seg.Shank, &..Seg.Foot, &..Seg.Talus
+//    &..Segments.Shank, &..Segments.Foot, &..Segments.Talus
 //  };
   IncludeSegments =
-      arrcat(&..Seg.Shank,
-             ObjSearch("..Seg.Foot", "AnySeg"),
-             ObjSearch("..Seg.Foot.*", "AnySeg"));
+      arrcat(&..Segments.Shank,
+             ObjSearch("..Segments.Foot", "AnySeg"),
+             ObjSearch("..Segments.Foot.*", "AnySeg"));
 
   AnyObjectPtrArray pArrJntReactions =
   {
@@ -272,16 +272,16 @@ AnyForceMomentMeasure2 KneeNetMoment =
 
 AnyForceMomentMeasure2 HipNetMoment =
 {
-  AnyRefFrame &ref = ..Seg.Pelvis.HipJoint.RotNode;
-  //RefPoint = &..Seg.Pelvis.HipJoint.RotNode;
+  AnyRefFrame &ref = ..Segments.Pelvis.HipJoint.RotNode;
+  //RefPoint = &..Segments.Pelvis.HipJoint.RotNode;
 //  IncludeSegments =
 //  {
-//    &..Seg.Shank, &..Seg.Foot, &..Seg.Thigh, &..Seg.Patella, &..Seg.Talus
+//    &..Segments.Shank, &..Segments.Foot, &..Segments.Thigh, &..Segments.Patella, &..Segments.Talus
 //  };
   IncludeSegments =
-      arrcat(&..Seg.Shank, &..Seg.Thigh, &..Seg.Patella,
-             ObjSearch("..Seg.Foot", "AnySeg"),
-             ObjSearch("..Seg.Foot.*", "AnySeg"));
+      arrcat(&..Segments.Shank, &..Segments.Thigh, &..Segments.Patella,
+             ObjSearch("..Segments.Foot", "AnySeg"),
+             ObjSearch("..Segments.Foot.*", "AnySeg"));
 
   AnyObjectPtrArray pArrJntReactions =
   {
@@ -304,7 +304,7 @@ AnyForceMomentMeasure2 HipNetMoment =
 AnyForceMomentMeasure AnkleJointReactionMoments =
 {
   AnyForceBase &Force = ..Jnt.Ankle.Constraints.Reaction;
-  AnyRefFrame &Shankankle = ..Seg.Shank.AnkleJoint;
+  AnyRefFrame &Shankankle = ..Segments.Shank.AnkleJoint;
   AnyVec3 Mlocal = M*Shankankle.Axes;
 };
 
@@ -313,7 +313,7 @@ AnyForceMomentMeasure AnkleJointReactionMoments =
 AnyForceMomentMeasure2 KneeJointReactionMoments =
 {
   AnyForceBase &Force = ..Jnt.Knee.Constraints.Reaction;
-  AnyRefFrame &Thighknee = ..Seg.Thigh.KneeJoint;
-  IncludeSegments = {&..Seg.Thigh};
+  AnyRefFrame &Thighknee = ..Segments.Thigh.KneeJoint;
+  IncludeSegments = {&..Segments.Thigh};
   AnyVec3 Mlocal = M*Thighknee.Axes;
 };

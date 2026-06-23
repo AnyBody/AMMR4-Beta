@@ -44,14 +44,14 @@ AnyFolder Human_RefNodes =
     };
   };
 
-  AnyFolder& Ref_Right_Foot = Main.HumanModel.BodyModel.Right.Leg.Seg.Foot;
+  AnyFolder& Ref_Right_Foot = Main.HumanModel.BodyModel.Right.Leg.Segments.Foot;
   Ref_Right_Foot =
   {
     MiddlePhalange2 = {
       AnyRefNode ToeNode =
       {
         AnyVec3 ToeNode_Avg = (..DistalPhalange1.BigToeNode.sRel + ..ProximalPhalange5.ToeLateralContactNode.sRel + ..ProximalPhalange1.ToeMedialContactNode.sRel)/3;
-        
+
         sRel = ToeNode_Avg ;
         //ARel = RotMat(ToeNode_Avg, .ToeMedialContactNode.sRel, .BigToeNode.sRel)*RotMat(-pi/2,x)*RotMat(-pi/2,y);
         ARel = RotMat(..Calcaneus.HeelContactNodeLow.sRel, ..DistalPhalange1.BigToeNode.sRel, ..ProximalPhalange5.ToeLateralContactNode.sRel)*RotMat(-pi/2,x);
@@ -60,18 +60,18 @@ AnyFolder Human_RefNodes =
           ScaleXYZ = 0.1 * {1,1,1};
           RGB = {1,0,0};
         };
-        
+
       };
     };
   };
-  AnyFolder& Ref_Left_Foot = Main.HumanModel.BodyModel.Left.Leg.Seg.Foot;
+  AnyFolder& Ref_Left_Foot = Main.HumanModel.BodyModel.Left.Leg.Segments.Foot;
   Ref_Left_Foot =
   {
     MiddlePhalange2 = {
       AnyRefNode ToeNode =
       {
         AnyVec3 ToeNode_Avg = (..DistalPhalange1.BigToeNode.sRel + ..ProximalPhalange5.ToeLateralContactNode.sRel + ..ProximalPhalange1.ToeMedialContactNode.sRel)/3;
-        
+
         sRel = ToeNode_Avg ;
         //ARel = RotMat(ToeNode_Avg, .ToeMedialContactNode.sRel, .BigToeNode.sRel)*RotMat(pi/2,x)*RotMat(pi/2,y);
         ARel = RotMat(..Calcaneus.HeelContactNodeLow.sRel, ..DistalPhalange1.BigToeNode.sRel, ..ProximalPhalange5.ToeLateralContactNode.sRel)*RotMat(pi/2,x);
@@ -80,7 +80,7 @@ AnyFolder Human_RefNodes =
           ScaleXYZ = 0.1 * {1,1,1};
           RGB = {1,0,0};
         };
-        
+
       };
     };
   };

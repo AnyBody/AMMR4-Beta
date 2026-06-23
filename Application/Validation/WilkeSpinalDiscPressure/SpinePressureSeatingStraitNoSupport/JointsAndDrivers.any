@@ -66,7 +66,7 @@ AnyFolder Jnt={
 
       AnyKinLinear FootRestFootLinMeasure = {
        AnyRefFrame &FootRestRef = ...RefP.Seg.FootRest.FootRestRotNodeRight;//FootRestFootJntNodeRight;
-        AnyRefFrame &FootRef = ...RefH.Right.Leg.Seg.Foot.AnatomicalFrame.FootFootRestJntNode;
+        AnyRefFrame &FootRef = ...RefH.Right.Leg.Segments.Foot.AnatomicalFrame.FootFootRestJntNode;
         Ref = 0;
       };
 
@@ -106,7 +106,7 @@ AnyFolder Jnt={
 
       AnyKinLinear FootRestFootLinMeasure = {
           AnyRefFrame &FootRestRef = ...RefP.Seg.FootRest.FootRestRotNodeLeft;//FootRestFootJntNodeRight;
-        AnyRefFrame &FootRef = ...RefH.Left.Leg.Seg.Foot.AnatomicalFrame.FootFootRestJntNode;
+        AnyRefFrame &FootRef = ...RefH.Left.Leg.Segments.Foot.AnatomicalFrame.FootFootRestJntNode;
         Ref = 0;
       };
 
@@ -324,7 +324,7 @@ AnyFolder Drivers = {
       AnyKinMeasureOrg LinY = {
        AnyKinLinear lin = {
          AnyRefFrame& Ulna = Main.HumanModel.BodyModel.Right.ShoulderArm.Segments.Ulna.UlnaArmRestJntNode;
-         AnyRefFrame& Thigh = Main.HumanModel.BodyModel.Right.Leg.Seg.Thigh;
+         AnyRefFrame& Thigh = Main.HumanModel.BodyModel.Right.Leg.Segments.Thigh;
        };
        MeasureOrganizer = {1};
      };
@@ -400,7 +400,7 @@ AnyFolder Drivers = {
       AnyKinMeasureOrg LinY = {
        AnyKinLinear lin = {
          AnyRefFrame& Ulna = Main.HumanModel.BodyModel.Left.ShoulderArm.Segments.Ulna.UlnaArmRestJntNode;
-         AnyRefFrame& Thigh = Main.HumanModel.BodyModel.Left.Leg.Seg.Thigh;
+         AnyRefFrame& Thigh = Main.HumanModel.BodyModel.Left.Leg.Segments.Thigh;
        };
        MeasureOrganizer = {1};
      };

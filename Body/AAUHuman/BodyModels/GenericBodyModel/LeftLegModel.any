@@ -46,7 +46,7 @@ Left =
         AnyForceMomentMeasure KneeJointReactionMoments =
         {
           AnyForceBase &Force = ..Jnt.Knee.Constraints.Reaction;
-          AnyRefFrame &Thighknee = ..Seg.Thigh.KneeJoint;
+          AnyRefFrame &Thighknee = ..Segments.Thigh.KneeJoint;
           AnyVec3 Mlocal = M*Thighknee.Axes;
         };
       #else
@@ -63,7 +63,7 @@ Left =
 
 Trunk =
 {
-  AnyRefFrame &PsoasMajorLeftReference=.Left.Leg.Seg.Thigh;
+  AnyRefFrame &PsoasMajorLeftReference=.Left.Leg.Segments.Thigh;
 };
 
 

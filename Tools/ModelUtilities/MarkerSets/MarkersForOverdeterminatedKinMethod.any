@@ -17,7 +17,7 @@
 
 
   AnyFolder  M1 ={
-    AnySeg &Seg=..HumanModel.Right.Leg.Seg.Thigh;
+    AnySeg &Seg=..HumanModel.Right.Leg.Segments.Thigh;
     Seg={
       AnyRefNode RTHI={ sRel= .Scale(sRelOpt);
         AnyVec3 sRelOpt = {-0.0717627324329,-0.1724679985805,0.0763244306406};
@@ -29,7 +29,7 @@
 
 
   AnyFolder  M2 ={
-    AnySeg &Seg=..HumanModel.Right.Leg.Seg.Thigh;
+    AnySeg &Seg=..HumanModel.Right.Leg.Segments.Thigh;
     Seg={
       AnyRefNode RKNE = { sRel= .Scale(sRelOpt);
         AnyVec3 sRelOpt = {-0.0360087765362,-0.4018638695800,0.0823124789225};
@@ -41,7 +41,7 @@
 
 
   AnyFolder  M3 ={
-    AnySeg &Seg=..HumanModel.Left.Leg.Seg.Thigh;
+    AnySeg &Seg=..HumanModel.Left.Leg.Segments.Thigh;
     Seg={
       AnyRefNode LKNE={ sRel= .Scale(sRelOpt);
         AnyVec3 sRelOpt = {-0.0360087765362,-0.4018638695800,-0.0823124789225};
@@ -77,7 +77,7 @@
 
 
   AnyFolder  M6 ={
-    AnySeg &Seg=..HumanModel.Right.Leg.Seg.Shank;
+    AnySeg &Seg=..HumanModel.Right.Leg.Segments.Shank;
     Seg={
       AnyRefNode RTIB={ sRel= .Scale(sRelOpt);
         AnyVec3 sRelOpt = {-0.0176043591042,-0.5289245519849,0.1069613358650};
@@ -90,7 +90,7 @@
 
 
   AnyFolder  M7 ={
-    AnySeg &Seg=..HumanModel.Right.Leg.Seg.Shank;
+    AnySeg &Seg=..HumanModel.Right.Leg.Segments.Shank;
     Seg={
       AnyRefNode RANK={ sRel= .Scale(sRelOpt);
         AnyVec3 sRelOpt = {0.0762973905073,-0.8233340713391,0.0867524045603}+{-0.03,-0.0,-0.03};
@@ -103,7 +103,7 @@
 
 
   AnyFolder  M8 ={
-    AnySeg &Seg=..HumanModel.Right.Leg.Seg.Foot;
+    AnySeg &Seg=..HumanModel.Right.Leg.Segments.Foot;
     Seg={
       AnyRefNode RTOE={ sRel= .Scale(sRelOpt);
         AnyVec3 sRelOpt = {0.2000436337426,-0.9315836934644,0.1154381507332}+{-0.005,0.0,-0.015};
@@ -116,7 +116,7 @@
 
 
   AnyFolder  M9 ={
-    AnySeg &Seg=..HumanModel.Left.Leg.Seg.Shank;
+    AnySeg &Seg=..HumanModel.Left.Leg.Segments.Shank;
     Seg={
       AnyRefNode LTIB={ sRel= .Scale(sRelOpt);
         AnyVec3 sRelOpt = {0.0366768924813,-0.6927212030999,-0.0916837377067};
@@ -129,7 +129,7 @@
 
 
   AnyFolder  M10 ={
-    AnySeg &Seg=..HumanModel.Left.Leg.Seg.Shank;
+    AnySeg &Seg=..HumanModel.Left.Leg.Segments.Shank;
     Seg={
       AnyRefNode LANK={ sRel= .Scale(sRelOpt);
         AnyVec3 sRelOpt = {0.0762973905073,-0.8233340713391,-0.0867524045603}+{-0.03,-0.0,0.03};
@@ -142,7 +142,7 @@
 
 
   AnyFolder  M11 ={
-    AnySeg &Seg=..HumanModel.Right.Leg.Seg.Foot;
+    AnySeg &Seg=..HumanModel.Right.Leg.Segments.Foot;
     Seg={
       AnyRefNode RHEE={ sRel= .Scale(sRelOpt);
         AnyVec3 sRelOpt = {0.0240761847216,-0.8192284210589,-0.0190000000000}+{-0.025,-0.01,0};
@@ -155,7 +155,7 @@
 
 
   AnyFolder  M12 ={
-    AnySeg &Seg=..HumanModel.Left.Leg.Seg.Foot;
+    AnySeg &Seg=..HumanModel.Left.Leg.Segments.Foot;
     Seg={
       AnyRefNode LHEE={ sRel= .Scale(sRelOpt);
         AnyVec3 sRelOpt = {0.0240761847216,-0.8192284210589,0.0190000000000}+{-0.025,-0.01,0};
@@ -181,7 +181,7 @@
 
 
   AnyFolder  M14 ={
-    AnySeg &Seg=..HumanModel.Left.Leg.Seg.Foot;
+    AnySeg &Seg=..HumanModel.Left.Leg.Segments.Foot;
     Seg={
       AnyRefNode LTOE={ sRel= .Scale(sRelOpt);
         AnyVec3 sRelOpt = {0.2000436337426,-0.9315836934644,-0.1154381507332}+{-0.005,0.0,0.015};
@@ -207,7 +207,7 @@
 
 
   AnyFolder  M16 ={
-    AnySeg &Seg=..HumanModel.Left.Leg.Seg.Thigh;
+    AnySeg &Seg=..HumanModel.Left.Leg.Segments.Thigh;
     Seg={
       AnyRefNode LTHI={ sRel= .Scale(sRelOpt);
         AnyVec3 sRelOpt = {-0.0416373959213,-0.2882367269552,-0.0799662287952};
@@ -522,7 +522,7 @@
 
 
   AnyFolder  M40 ={
-    AnySeg &Seg=..HumanModel.Left.Leg.Seg.Foot;
+    AnySeg &Seg=..HumanModel.Left.Leg.Segments.Foot;
     Seg={
       AnyRefNode LMT5={ sRel= .Scale(sRelOpt);
         AnyVec3 sRelOpt = {0.100436337426,-0.9315836934644,-0.1154381507332}+{-0.005,0.0,0.015};
@@ -534,7 +534,7 @@
 
 
   AnyFolder  M41 ={
-    AnySeg &Seg=..HumanModel.Right.Leg.Seg.Foot;
+    AnySeg &Seg=..HumanModel.Right.Leg.Segments.Foot;
     Seg={
       AnyRefNode RMT5={ sRel= .Scale(sRelOpt);
         AnyVec3 sRelOpt = {0.100436337426,-0.9315836934644,0.1154381507332}+{-0.005,0.0,-0.015};
@@ -546,7 +546,7 @@
 
   //Replace LTOE from Plug-in-gait
   AnyFolder  M42 ={
-    AnySeg &Seg=..HumanModel.Left.Leg.Seg.Foot;
+    AnySeg &Seg=..HumanModel.Left.Leg.Segments.Foot;
     Seg={
       AnyRefNode LTOE={ sRel= .Scale(sRelOpt);
         AnyVec3 sRelOpt = {0.200,-0.931,-0.115}+{0.015, -0.04, 0.035};
@@ -558,7 +558,7 @@
 
   //Replace RTOE from Plug-in-gait
   AnyFolder  M43 ={
-    AnySeg &Seg=..HumanModel.Right.Leg.Seg.Foot;
+    AnySeg &Seg=..HumanModel.Right.Leg.Segments.Foot;
     Seg={
       AnyRefNode RTOE={ sRel= .Scale(sRelOpt);
         AnyVec3 sRelOpt = {0.200,-0.931,0.115}+{0.015, -0.04, -0.035};
@@ -569,7 +569,7 @@
 
 
   AnyFolder  M44 ={
-    AnySeg &Seg=..HumanModel.Left.Leg.Seg.Foot;
+    AnySeg &Seg=..HumanModel.Left.Leg.Segments.Foot;
     Seg={
       AnyRefNode LMT1={ sRel= .Scale(sRelOpt);
         AnyVec3 sRelOpt = {0.200,-0.931,-0.115}+{-0.025, 0.01, 0.065};
@@ -580,7 +580,7 @@
 
 
   AnyFolder  M45 ={
-    AnySeg &Seg=..HumanModel.Right.Leg.Seg.Foot;
+    AnySeg &Seg=..HumanModel.Right.Leg.Segments.Foot;
     Seg={
       AnyRefNode RMT1={ sRel= .Scale(sRelOpt);
         AnyVec3 sRelOpt = {0.200,-0.931,0.115}+{-0.025, 0.01, -0.065};
@@ -592,7 +592,7 @@
 
 
   AnyFolder  M46 ={
-    AnySeg &Seg=..HumanModel.Left.Leg.Seg.Foot;
+    AnySeg &Seg=..HumanModel.Left.Leg.Segments.Foot;
     Seg={
       AnyRefNode LRSTBEEF={ sRel= .Scale(sRelOpt);
         AnyVec3 sRelOpt = {0.200,-0.931,-0.115}+{-0.015, -0.04, 0.005};
@@ -604,7 +604,7 @@
 
 
   AnyFolder  M47 ={
-    AnySeg &Seg=..HumanModel.Right.Leg.Seg.Foot;
+    AnySeg &Seg=..HumanModel.Right.Leg.Segments.Foot;
     Seg={
       AnyRefNode RRSTBEEF={ sRel= .Scale(sRelOpt);
         AnyVec3 sRelOpt = {0.200,-0.931,0.115}+{-0.015, -0.04, -0.005};
@@ -729,7 +729,7 @@
 
 
   AnyFolder  M44 ={
-    AnySeg &Seg=..HumanModel.Left.Leg.Seg.Thigh;
+    AnySeg &Seg=..HumanModel.Left.Leg.Segments.Thigh;
     Seg={
         AnyRefNode LHIP={ sRel= .Scale(sRelOpt);
           AnyVec3 sRelOpt = {-0.051, -0.022, -0.056};
@@ -741,7 +741,7 @@
 
 
   AnyFolder  M45 ={
-    AnySeg &Seg=..HumanModel.Right.Leg.Seg.Thigh;
+    AnySeg &Seg=..HumanModel.Right.Leg.Segments.Thigh;
     Seg={
         AnyRefNode RHIP={ sRel= .Scale(sRelOpt);
           AnyVec3 sRelOpt = {-0.051, -0.022, 0.056};

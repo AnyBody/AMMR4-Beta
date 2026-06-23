@@ -19,11 +19,11 @@
 //    EXAMPLE:
 //    CreateJointMeasures Right (
 //    PELVIS_FRAME= BodyModelRef.Trunk.Segments.PelvisSeg.StaticMarkerFrame,
-//    THIGH_HIP_FRAME = BodyModelRef.Right.Leg.Seg.Thigh.HipStaticMarkerFrame,
-//    THIGH_KNEE_FRAME = BodyModelRef.Right.Leg.Seg.Thigh.KneeStaticMarkerFrame,
-//    SHANK_KNEE_FRAME = BodyModelRef.Right.Leg.Seg.Shank.KneeStaticMarkerFrame,
-//    SHANK_ANKLE_FRAME = BodyModelRef.Right.Leg.Seg.Shank.AnkleStaticMarkerFrame,
-//    FOOT_ANKLE_FRAME = BodyModelRef.Right.Leg.Seg.Foot.AnkleStaticMarkerFrame,
+//    THIGH_HIP_FRAME = BodyModelRef.Right.Leg.Segments.Thigh.HipStaticMarkerFrame,
+//    THIGH_KNEE_FRAME = BodyModelRef.Right.Leg.Segments.Thigh.KneeStaticMarkerFrame,
+//    SHANK_KNEE_FRAME = BodyModelRef.Right.Leg.Segments.Shank.KneeStaticMarkerFrame,
+//    SHANK_ANKLE_FRAME = BodyModelRef.Right.Leg.Segments.Shank.AnkleStaticMarkerFrame,
+//    FOOT_ANKLE_FRAME = BodyModelRef.Right.Leg.Segments.Foot.AnkleStaticMarkerFrame,
 //    ) = { Sign = 1;};
 //
 //
@@ -37,11 +37,11 @@
 //    EXAMPLE:
 //    CreateJointAnglesAndMomentMeasures Left (
 //    PELVIS_FRAME= BodyModelRef.Trunk.Segments.PelvisSeg.StaticMarkerFrame,
-//    THIGH_HIP_FRAME = BodyModelRef.Left.Leg.Seg.Thigh.HipStaticMarkerFrame,
-//    THIGH_KNEE_FRAME = BodyModelRef.Left.Leg.Seg.Thigh.KneeStaticMarkerFrame,
-//    SHANK_KNEE_FRAME = BodyModelRef.Left.Leg.Seg.Shank.KneeStaticMarkerFrame,
-//    SHANK_ANKLE_FRAME = BodyModelRef.Left.Leg.Seg.Shank.AnkleStaticMarkerFrame,
-//    FOOT_ANKLE_FRAME = BodyModelRef.Left.Leg.Seg.Foot.AnkleStaticMarkerFrame,
+//    THIGH_HIP_FRAME = BodyModelRef.Left.Leg.Segments.Thigh.HipStaticMarkerFrame,
+//    THIGH_KNEE_FRAME = BodyModelRef.Left.Leg.Segments.Thigh.KneeStaticMarkerFrame,
+//    SHANK_KNEE_FRAME = BodyModelRef.Left.Leg.Segments.Shank.KneeStaticMarkerFrame,
+//    SHANK_ANKLE_FRAME = BodyModelRef.Left.Leg.Segments.Shank.AnkleStaticMarkerFrame,
+//    FOOT_ANKLE_FRAME = BodyModelRef.Left.Leg.Segments.Foot.AnkleStaticMarkerFrame,
 //    HIPMOMENT = BodyModelRef.Left.Leg.MomentMeasure.HipNetMoment.M,
 //    KNEEMOMENT = BodyModelRef.Left.Leg.MomentMeasure.KneeNetMoment.M,
 //    ANKLEMOMENT = BodyModelRef.Left.Leg.MomentMeasure.AnklePlantarFlexionNetMoment.M

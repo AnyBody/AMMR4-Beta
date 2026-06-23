@@ -247,7 +247,7 @@
 #define BM_ARM_DETAILED_HAND OFF
 #endif
 
-// Switch for deltoid wrapping. Setting this to OFF or _DELTOID_WRAPPING_RAKE_ will revert to the older rake based implementation of the deltoid.
+// Switch for deltoid wrapping using the elipsoids or cylinders implementation.
 #ifndef BM_ARM_DELTOID_WRAPPING
 #define BM_ARM_DELTOID_WRAPPING _DELTOID_WRAPPING_ELIPSOIDS_
 #endif
