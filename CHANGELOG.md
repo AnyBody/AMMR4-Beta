@@ -133,12 +133,12 @@ segments based on whether they are marked as being part of the distribution.
 
 :::{admonition} Default pelvis changed.
 :class: warning
-The default pelvis morphology now comes from trunk pelvis. The topology remain unchanged as the leg model pelvis is morphed to match the Trunk. See [below how to control this behaviour](changes-to-default-pelvis-morphology).
+The default pelvis morphology now comes from trunk pelvis. The topology remain unchanged as the leg model pelvis is morphed to match the `Trunk`. See [below how to control this behaviour](changes-to-default-pelvis-morphology).
 :::
 
 (changes-to-default-pelvis-morphology)=
 
-* The default pelvis morphology is now the one from the trunk model, as opposed to the pelvis belonging
+* The default pelvis morphology is now the one from the `Trunk` model, as opposed to the pelvis belonging
   to whatever leg model has been selected. This was done to get a consistent
   trunk model and considering all the recent improvements to the trunk. This option can be controlled with:
 
@@ -162,19 +162,18 @@ You can [enable backwards compatibility](changes-to-muscles-locations) by settin
 
 (changes-to-muscles-locations)=
 
-* The muscles of the arm and TLEM2 leg models have been reorganized in the body model. The
-  individual muscle elements are grouped into folders that represent the physiological
+* The muscles of the arm and TLEM2 leg models have been reorganized in the `BodyModel`.
+  The individual muscle elements are grouped into folders that represent the physiological
   muscles (e.g., all Soleus Medial elements are collected in a Soleus Medial folder). This
   change affects the path to the actual muscle elements throughout the model. The complete
   AMMR has been updated to support this. To allow users a smooth transition to the new
-  structure, a `BM_COMPATIBILITY_MUSCLE_STRUCTURE` switch has been temporarily
-  introduced. This switch will create backward-compatible references to the muscles as
-  they are defined in AMMR 3.x. This BM switch will be deprecated in a future AMMR
-  version.
+  structure, a `BM_COMPATIBILITY_MUSCLE_STRUCTURE` switch has been temporarily introduced.
+  This switch will create backward-compatible references to the muscles as they are
+  defined in AMMR 3.x. This BM switch will be deprecated in a future AMMR version.
 
 :::{admonition} Folder locations restructured
 :class: warning
-Many folders inside the Leg and Arm models have been renamed and/or moved to ensure a consistent BodyModel structure.
+Many folders inside the `Leg` and `ShoulderArm` models have been renamed and/or moved to ensure a consistent `BodyModel` structure.
 You can [enable backwards compatibility](changes-to-bodymodel-folders) by setting:
 
 ```AnyScriptDoc
@@ -185,9 +184,9 @@ You can [enable backwards compatibility](changes-to-bodymodel-folders) by settin
 
 (changes-to-bodymodel-folders)=
 
-* Many of the key folders inside the bodymodel have been renamed to create a unified structure across the full BodyModel. To bring back the old structure we have temporarily included a backward compatibility switch `BM_COMPATIBILITY_BODYMODEL_STRUCTURE` To ensure a smooth transition. The switch re-introduces the old folders as references to the new ones and with a deprecation warning emitted when used. A detailed migration guide can be found in the AMMR4 documentation.
+* Many of the key folders inside the `BodyModel` have been renamed to create a unified structure across the full `BodyModel`. To bring back the old structure we have temporarily included a backward compatibility switch `BM_COMPATIBILITY_BODYMODEL_STRUCTURE` To ensure a smooth transition. The switch re-introduces the old folders as references to the new ones and with a deprecation warning emitted when used. A detailed migration guide can be found in the AMMR4 documentation.
 
-All the data of the bodymodel have a new unified structure. In each bodypart there is a `Data` folder with the following structure:
+All the data of the `BodyModel` have a new unified structure. In each bodypart there is a `Data` folder with the following structure:
 
 ```txt
 Data: 
