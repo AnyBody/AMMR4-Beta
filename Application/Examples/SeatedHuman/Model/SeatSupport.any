@@ -47,7 +47,7 @@ AnyFolder SeatSupport = {
     };
   };
 
-  AnyFolder &ThighR  =....HumanModel.BodyModel.Right.Leg.Seg.Thigh;
+  AnyFolder &ThighR  =....HumanModel.BodyModel.Right.Leg.Segments.Thigh;
   ThighR.AnatomicalFrame={
       AnyRefNode SupportNodeFront = {
         sRel = {-0.0000, -0.35000, 0.01000};
@@ -60,7 +60,7 @@ AnyFolder SeatSupport = {
       };
   };
 
-  AnyFolder &ThighL = ....HumanModel.BodyModel.Left.Leg.Seg.Thigh;
+  AnyFolder &ThighL = ....HumanModel.BodyModel.Left.Leg.Segments.Thigh;
   ThighL.AnatomicalFrame = {
       AnyRefNode SupportNodeFront = {
         ARel = {{0.8829644, -0.1335883, 0.4500312}, {0.1317235, 0.9906462, 0.03562311}, {-0.4505805, 0.02782576, 0.892302}}';
@@ -74,7 +74,7 @@ AnyFolder SeatSupport = {
 
   AnyFolder ThighSupportFrontR={
     AnyRefFrame &BaseObject =....EnvironmentModel.Seg.Seat;
-    AnyRefFrame &TargetObject =....BodyModel.Right.Leg.Seg.Thigh.AnatomicalFrame.SupportNodeFront;
+    AnyRefFrame &TargetObject =....BodyModel.Right.Leg.Segments.Thigh.AnatomicalFrame.SupportNodeFront;
 
     AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 
@@ -97,7 +97,7 @@ AnyFolder SeatSupport = {
 
   AnyFolder ThighSupportBackR={
     AnyRefFrame &BaseObject =....EnvironmentModel.Seg.Seat;
-    AnyRefFrame &TargetObject =....BodyModel.Right.Leg.Seg.Thigh.AnatomicalFrame.SupportNodeBack;
+    AnyRefFrame &TargetObject =....BodyModel.Right.Leg.Segments.Thigh.AnatomicalFrame.SupportNodeBack;
 
     AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 
@@ -120,7 +120,7 @@ AnyFolder SeatSupport = {
 
   AnyFolder ThighSupportFrontL={
     AnyRefFrame &BaseObject =....EnvironmentModel.Seg.Seat;
-    AnyRefFrame &TargetObject =....BodyModel.Left.Leg.Seg.Thigh.AnatomicalFrame.SupportNodeFront;
+    AnyRefFrame &TargetObject =....BodyModel.Left.Leg.Segments.Thigh.AnatomicalFrame.SupportNodeFront;
 
     AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 
@@ -143,7 +143,7 @@ AnyFolder SeatSupport = {
 
   AnyFolder ThighSupportBackL={
     AnyRefFrame &BaseObject =....EnvironmentModel.Seg.Seat;
-    AnyRefFrame &TargetObject =....BodyModel.Left.Leg.Seg.Thigh.AnatomicalFrame.SupportNodeBack;
+    AnyRefFrame &TargetObject =....BodyModel.Left.Leg.Segments.Thigh.AnatomicalFrame.SupportNodeBack;
 
     AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 

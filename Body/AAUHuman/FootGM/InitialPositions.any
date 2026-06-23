@@ -2,233 +2,233 @@
 
 
 //Talus
-Seg.Foot.Talus.Axes0 ??=
-Seg.Shank.Axes0*
-Seg.Shank.AnkleJoint.ARel*
+Segments.Foot.Talus.Axes0 ??=
+Segments.Shank.Axes0*
+Segments.Shank.AnkleJoint.ARel*
 RotMat((-pi/180)*.JointPos.AnklePlantarFlexion ,z)*
-Seg.Foot.Talus.AnkleJoint.ARel';
+Segments.Foot.Talus.AnkleJoint.ARel';
 
 
 //Foot
-Seg.Foot.Calcaneus.Axes0 ??=
-Seg.Foot.Talus.Axes0*
-Seg.Foot.Talus.SubTalarJoint.ARel*
+Segments.Foot.Calcaneus.Axes0 ??=
+Segments.Foot.Talus.Axes0*
+Segments.Foot.Talus.SubTalarJoint.ARel*
 RotMat((pi/180)*.JointPos.SubTalarEversion ,z)*
-Seg.Foot.SubTalarJoint.ARel';
+Segments.Foot.SubTalarJoint.ARel';
 
 
-Seg.Foot.Cuboid.Axes0 ??=
-Seg.Foot.Calcaneus.Axes0*
-Seg.Foot.Calcaneus.CalcaneoCuboidJoint.ARel*
-Seg.Foot.Calcaneus.CalcaneoCuboidJoint.RotNode.ARel*
+Segments.Foot.Cuboid.Axes0 ??=
+Segments.Foot.Calcaneus.Axes0*
+Segments.Foot.Calcaneus.CalcaneoCuboidJoint.ARel*
+Segments.Foot.Calcaneus.CalcaneoCuboidJoint.RotNode.ARel*
 RotMat((pi/180)*.JointPos.Foot.CalcaneoCuboidDorsiFlexion,z)*
 RotMat((pi/180)*.JointPos.Foot.CalcaneoCuboidAbduction,y)*
 RotMat((pi/180)*.JointPos.Foot.CalcaneoCuboidEversion,x)*
-Seg.Foot.Cuboid.CalcaneoCuboidJoint.RotNode.ARel'*
-Seg.Foot.Cuboid.CalcaneoCuboidJoint.ARel';
+Segments.Foot.Cuboid.CalcaneoCuboidJoint.RotNode.ARel'*
+Segments.Foot.Cuboid.CalcaneoCuboidJoint.ARel';
 
 
-Seg.Foot.Navicular.Axes0 ??=
-Seg.Foot.Talus.Axes0*
-Seg.Foot.Talus.TaloNavicularJoint.ARel*
-Seg.Foot.Talus.TaloNavicularJoint.RotNode.ARel*
+Segments.Foot.Navicular.Axes0 ??=
+Segments.Foot.Talus.Axes0*
+Segments.Foot.Talus.TaloNavicularJoint.ARel*
+Segments.Foot.Talus.TaloNavicularJoint.RotNode.ARel*
 RotMat((pi/180)*.JointPos.Foot.TaloNavicularDorsiFlexion,z)*
 RotMat((pi/180)*.JointPos.Foot.TaloNavicularAbduction,y)*
 RotMat((pi/180)*.JointPos.Foot.TaloNavicularEversion,x)*
-Seg.Foot.Navicular.TaloNavicularJoint.RotNode.ARel'*
-Seg.Foot.Navicular.TaloNavicularJoint.ARel';
+Segments.Foot.Navicular.TaloNavicularJoint.RotNode.ARel'*
+Segments.Foot.Navicular.TaloNavicularJoint.ARel';
 
 
-Seg.Foot.MedialCuneiform.Axes0 ??=
-Seg.Foot.Navicular.Axes0*
-Seg.Foot.Navicular.MedCuneiNaviJoint.ARel*
-Seg.Foot.Navicular.MedCuneiNaviJoint.RotNode.ARel*
+Segments.Foot.MedialCuneiform.Axes0 ??=
+Segments.Foot.Navicular.Axes0*
+Segments.Foot.Navicular.MedCuneiNaviJoint.ARel*
+Segments.Foot.Navicular.MedCuneiNaviJoint.RotNode.ARel*
 RotMat((pi/180)*.JointPos.Foot.NaviculoMedialCuneiformDorsiFlexion,z)*
 RotMat((pi/180)*.JointPos.Foot.NaviculoMedialCuneiformAbduction,y)*
-Seg.Foot.MedialCuneiform.CuneiNaviJoint.RotNode.ARel'*
-Seg.Foot.MedialCuneiform.CuneiNaviJoint.ARel';
+Segments.Foot.MedialCuneiform.CuneiNaviJoint.RotNode.ARel'*
+Segments.Foot.MedialCuneiform.CuneiNaviJoint.ARel';
 
 
-Seg.Foot.IntermediateCuneiform.Axes0 ??=
-Seg.Foot.Navicular.Axes0*
-Seg.Foot.Navicular.IntCuneiNaviJoint.ARel*
-Seg.Foot.Navicular.IntCuneiNaviJoint.RotNode.ARel*
+Segments.Foot.IntermediateCuneiform.Axes0 ??=
+Segments.Foot.Navicular.Axes0*
+Segments.Foot.Navicular.IntCuneiNaviJoint.ARel*
+Segments.Foot.Navicular.IntCuneiNaviJoint.RotNode.ARel*
 RotMat((pi/180)*.JointPos.Foot.NaviculoIntermediateCuneiformDorsiFlexion,z)*
 RotMat((pi/180)*.JointPos.Foot.NaviculoIntermediateCuneiformAbduction,y)*
-Seg.Foot.IntermediateCuneiform.CuneiNaviJoint.RotNode.ARel'*
-Seg.Foot.IntermediateCuneiform.CuneiNaviJoint.ARel';
+Segments.Foot.IntermediateCuneiform.CuneiNaviJoint.RotNode.ARel'*
+Segments.Foot.IntermediateCuneiform.CuneiNaviJoint.ARel';
 
 
-Seg.Foot.LateralCuneiform.Axes0 ??=
-Seg.Foot.Navicular.Axes0*
-Seg.Foot.Navicular.LatCuneiNaviJoint.ARel*
-Seg.Foot.Navicular.LatCuneiNaviJoint.RotNode.ARel*
+Segments.Foot.LateralCuneiform.Axes0 ??=
+Segments.Foot.Navicular.Axes0*
+Segments.Foot.Navicular.LatCuneiNaviJoint.ARel*
+Segments.Foot.Navicular.LatCuneiNaviJoint.RotNode.ARel*
 RotMat((pi/180)*.JointPos.Foot.NaviculoLateralCuneiformDorsiFlexion,z)*
 RotMat((pi/180)*.JointPos.Foot.NaviculoLateralCuneiformAbduction,y)*
-Seg.Foot.LateralCuneiform.CuneiNaviJoint.RotNode.ARel'*
-Seg.Foot.LateralCuneiform.CuneiNaviJoint.ARel';
+Segments.Foot.LateralCuneiform.CuneiNaviJoint.RotNode.ARel'*
+Segments.Foot.LateralCuneiform.CuneiNaviJoint.ARel';
 
 
-Seg.Foot.Metatarsal1.Axes0 ??=
-Seg.Foot.MedialCuneiform.Axes0*
-Seg.Foot.MedialCuneiform.TarsoMtJoint.ARel*
-Seg.Foot.MedialCuneiform.TarsoMtJoint.RotNode.ARel*
+Segments.Foot.Metatarsal1.Axes0 ??=
+Segments.Foot.MedialCuneiform.Axes0*
+Segments.Foot.MedialCuneiform.TarsoMtJoint.ARel*
+Segments.Foot.MedialCuneiform.TarsoMtJoint.RotNode.ARel*
 RotMat((pi/180)*.JointPos.Foot.TarsoMetatarsal1DorsiFlexion,z)*
 RotMat((pi/180)*.JointPos.Foot.TarsoMetatarsal1Abduction,y)*
-Seg.Foot.Metatarsal1.TarsoMtJoint.RotNode.ARel'*
-Seg.Foot.Metatarsal1.TarsoMtJoint.ARel';
+Segments.Foot.Metatarsal1.TarsoMtJoint.RotNode.ARel'*
+Segments.Foot.Metatarsal1.TarsoMtJoint.ARel';
 
 
-Seg.Foot.Metatarsal2.Axes0 ??=
-Seg.Foot.IntermediateCuneiform.Axes0*
-Seg.Foot.IntermediateCuneiform.TarsoMtJoint.ARel*
-Seg.Foot.IntermediateCuneiform.TarsoMtJoint.RotNode.ARel*
+Segments.Foot.Metatarsal2.Axes0 ??=
+Segments.Foot.IntermediateCuneiform.Axes0*
+Segments.Foot.IntermediateCuneiform.TarsoMtJoint.ARel*
+Segments.Foot.IntermediateCuneiform.TarsoMtJoint.RotNode.ARel*
 RotMat((pi/180)*.JointPos.Foot.TarsoMetatarsal2DorsiFlexion,z)*
 RotMat((pi/180)*.JointPos.Foot.TarsoMetatarsal2Abduction,y)*
-Seg.Foot.Metatarsal2.TarsoMtJoint.RotNode.ARel'*
-Seg.Foot.Metatarsal2.TarsoMtJoint.ARel';
+Segments.Foot.Metatarsal2.TarsoMtJoint.RotNode.ARel'*
+Segments.Foot.Metatarsal2.TarsoMtJoint.ARel';
 
 
-Seg.Foot.Metatarsal3.Axes0 ??=
-Seg.Foot.LateralCuneiform.Axes0*
-Seg.Foot.LateralCuneiform.TarsoMtJoint.ARel*
-Seg.Foot.LateralCuneiform.TarsoMtJoint.RotNode.ARel*
+Segments.Foot.Metatarsal3.Axes0 ??=
+Segments.Foot.LateralCuneiform.Axes0*
+Segments.Foot.LateralCuneiform.TarsoMtJoint.ARel*
+Segments.Foot.LateralCuneiform.TarsoMtJoint.RotNode.ARel*
 RotMat((pi/180)*.JointPos.Foot.TarsoMetatarsal3DorsiFlexion,z)*
 RotMat((pi/180)*.JointPos.Foot.TarsoMetatarsal3Abduction,y)*
-Seg.Foot.Metatarsal3.TarsoMtJoint.RotNode.ARel'*
-Seg.Foot.Metatarsal3.TarsoMtJoint.ARel';
+Segments.Foot.Metatarsal3.TarsoMtJoint.RotNode.ARel'*
+Segments.Foot.Metatarsal3.TarsoMtJoint.ARel';
 
 
-Seg.Foot.Metatarsal4.Axes0 ??=
-Seg.Foot.Cuboid.Axes0*
-Seg.Foot.Cuboid.TarsoMt4Joint.ARel*
-Seg.Foot.Cuboid.TarsoMt4Joint.RotNode.ARel*
+Segments.Foot.Metatarsal4.Axes0 ??=
+Segments.Foot.Cuboid.Axes0*
+Segments.Foot.Cuboid.TarsoMt4Joint.ARel*
+Segments.Foot.Cuboid.TarsoMt4Joint.RotNode.ARel*
 RotMat((pi/180)*.JointPos.Foot.TarsoMetatarsal4DorsiFlexion,z)*
 RotMat((pi/180)*.JointPos.Foot.TarsoMetatarsal4Abduction,y)*
-Seg.Foot.Metatarsal4.TarsoMtJoint.RotNode.ARel'*
-Seg.Foot.Metatarsal4.TarsoMtJoint.ARel';
+Segments.Foot.Metatarsal4.TarsoMtJoint.RotNode.ARel'*
+Segments.Foot.Metatarsal4.TarsoMtJoint.ARel';
 
 
 
-Seg.Foot.Metatarsal5.Axes0 ??=
-Seg.Foot.Cuboid.Axes0*
-Seg.Foot.Cuboid.TarsoMt5Joint.ARel*
-Seg.Foot.Cuboid.TarsoMt5Joint.RotNode.ARel*
+Segments.Foot.Metatarsal5.Axes0 ??=
+Segments.Foot.Cuboid.Axes0*
+Segments.Foot.Cuboid.TarsoMt5Joint.ARel*
+Segments.Foot.Cuboid.TarsoMt5Joint.RotNode.ARel*
 RotMat((pi/180)*.JointPos.Foot.TarsoMetatarsal5Abduction,y)*
 RotMat((pi/180)*.JointPos.Foot.TarsoMetatarsal5SkewDorsiFlexion,z)*
-Seg.Foot.Metatarsal5.TarsoMtJoint.RotNode.ARel'*
-Seg.Foot.Metatarsal5.TarsoMtJoint.ARel';
+Segments.Foot.Metatarsal5.TarsoMtJoint.RotNode.ARel'*
+Segments.Foot.Metatarsal5.TarsoMtJoint.ARel';
 
 
-Seg.Foot.ProximalPhalange1.Axes0 ??=
-Seg.Foot.Metatarsal1.Axes0*
-Seg.Foot.Metatarsal1.MtPhalJoint.ARel*
-Seg.Foot.Metatarsal1.MtPhalJoint.RotNode.ARel*
+Segments.Foot.ProximalPhalange1.Axes0 ??=
+Segments.Foot.Metatarsal1.Axes0*
+Segments.Foot.Metatarsal1.MtPhalJoint.ARel*
+Segments.Foot.Metatarsal1.MtPhalJoint.RotNode.ARel*
 RotMat((pi/180)*.JointPos.Foot.MetatarsoPhalangeal1DorsiFlexion,z)*
 RotMat((pi/180)*.JointPos.Foot.MetatarsoPhalangeal1Abduction,y)*
-Seg.Foot.ProximalPhalange1.MtPhalJoint.RotNode.ARel'*
-Seg.Foot.ProximalPhalange1.MtPhalJoint.ARel';
+Segments.Foot.ProximalPhalange1.MtPhalJoint.RotNode.ARel'*
+Segments.Foot.ProximalPhalange1.MtPhalJoint.ARel';
 
 
-Seg.Foot.ProximalPhalange2.Axes0 ??=
-Seg.Foot.Metatarsal2.Axes0*
-Seg.Foot.Metatarsal2.MtPhalJoint.ARel*
-Seg.Foot.Metatarsal2.MtPhalJoint.RotNode.ARel*
+Segments.Foot.ProximalPhalange2.Axes0 ??=
+Segments.Foot.Metatarsal2.Axes0*
+Segments.Foot.Metatarsal2.MtPhalJoint.ARel*
+Segments.Foot.Metatarsal2.MtPhalJoint.RotNode.ARel*
 RotMat((pi/180)*.JointPos.Foot.MetatarsoPhalangeal2DorsiFlexion,z)*
 RotMat((pi/180)*.JointPos.Foot.MetatarsoPhalangeal2Abduction,y)*
-Seg.Foot.ProximalPhalange2.MtPhalJoint.RotNode.ARel'*
-Seg.Foot.ProximalPhalange2.MtPhalJoint.ARel';
+Segments.Foot.ProximalPhalange2.MtPhalJoint.RotNode.ARel'*
+Segments.Foot.ProximalPhalange2.MtPhalJoint.ARel';
 
 
-Seg.Foot.ProximalPhalange3.Axes0 ??=
-Seg.Foot.Metatarsal3.Axes0*
-Seg.Foot.Metatarsal3.MtPhalJoint.ARel*
-Seg.Foot.Metatarsal3.MtPhalJoint.RotNode.ARel*
+Segments.Foot.ProximalPhalange3.Axes0 ??=
+Segments.Foot.Metatarsal3.Axes0*
+Segments.Foot.Metatarsal3.MtPhalJoint.ARel*
+Segments.Foot.Metatarsal3.MtPhalJoint.RotNode.ARel*
 RotMat((pi/180)*.JointPos.Foot.MetatarsoPhalangeal3DorsiFlexion,z)*
 RotMat((pi/180)*.JointPos.Foot.MetatarsoPhalangeal3Abduction,y)*
-Seg.Foot.ProximalPhalange3.MtPhalJoint.RotNode.ARel'*
-Seg.Foot.ProximalPhalange3.MtPhalJoint.ARel';
+Segments.Foot.ProximalPhalange3.MtPhalJoint.RotNode.ARel'*
+Segments.Foot.ProximalPhalange3.MtPhalJoint.ARel';
 
 
-Seg.Foot.ProximalPhalange4.Axes0 ??=
-Seg.Foot.Metatarsal4.Axes0*
-Seg.Foot.Metatarsal4.MtPhalJoint.ARel*
-Seg.Foot.Metatarsal4.MtPhalJoint.RotNode.ARel*
+Segments.Foot.ProximalPhalange4.Axes0 ??=
+Segments.Foot.Metatarsal4.Axes0*
+Segments.Foot.Metatarsal4.MtPhalJoint.ARel*
+Segments.Foot.Metatarsal4.MtPhalJoint.RotNode.ARel*
 RotMat((pi/180)*.JointPos.Foot.MetatarsoPhalangeal4DorsiFlexion,z)*
 RotMat((pi/180)*.JointPos.Foot.MetatarsoPhalangeal4Abduction,y)*
-Seg.Foot.ProximalPhalange4.MtPhalJoint.RotNode.ARel'*
-Seg.Foot.ProximalPhalange4.MtPhalJoint.ARel';
+Segments.Foot.ProximalPhalange4.MtPhalJoint.RotNode.ARel'*
+Segments.Foot.ProximalPhalange4.MtPhalJoint.ARel';
 
 
-Seg.Foot.ProximalPhalange5.Axes0 ??=
-Seg.Foot.Metatarsal5.Axes0*
-Seg.Foot.Metatarsal5.MtPhalJoint.ARel*
-Seg.Foot.Metatarsal5.MtPhalJoint.RotNode.ARel*
+Segments.Foot.ProximalPhalange5.Axes0 ??=
+Segments.Foot.Metatarsal5.Axes0*
+Segments.Foot.Metatarsal5.MtPhalJoint.ARel*
+Segments.Foot.Metatarsal5.MtPhalJoint.RotNode.ARel*
 RotMat((pi/180)*.JointPos.Foot.MetatarsoPhalangeal5DorsiFlexion,z)*
 RotMat((pi/180)*.JointPos.Foot.MetatarsoPhalangeal5Abduction,y)*
-Seg.Foot.ProximalPhalange5.MtPhalJoint.RotNode.ARel'*
-Seg.Foot.ProximalPhalange5.MtPhalJoint.ARel';
+Segments.Foot.ProximalPhalange5.MtPhalJoint.RotNode.ARel'*
+Segments.Foot.ProximalPhalange5.MtPhalJoint.ARel';
 
 
-Seg.Foot.MiddlePhalange2.Axes0 ??=
-Seg.Foot.ProximalPhalange2.Axes0*
-Seg.Foot.ProximalPhalange2.ProxPhalJoint.ARel*
+Segments.Foot.MiddlePhalange2.Axes0 ??=
+Segments.Foot.ProximalPhalange2.Axes0*
+Segments.Foot.ProximalPhalange2.ProxPhalJoint.ARel*
 RotMat((pi/180)*.JointPos.Foot.ProximoMedialPhalange2DorsiFlexion,z)*
-Seg.Foot.MiddlePhalange2.ProxPhalJoint.ARel';
+Segments.Foot.MiddlePhalange2.ProxPhalJoint.ARel';
 
 
-Seg.Foot.MiddlePhalange3.Axes0 ??=
-Seg.Foot.ProximalPhalange3.Axes0*
-Seg.Foot.ProximalPhalange3.ProxPhalJoint.ARel*
+Segments.Foot.MiddlePhalange3.Axes0 ??=
+Segments.Foot.ProximalPhalange3.Axes0*
+Segments.Foot.ProximalPhalange3.ProxPhalJoint.ARel*
 RotMat((pi/180)*.JointPos.Foot.ProximoMedialPhalange3DorsiFlexion,z)*
-Seg.Foot.MiddlePhalange3.ProxPhalJoint.ARel';
+Segments.Foot.MiddlePhalange3.ProxPhalJoint.ARel';
 
 
-Seg.Foot.MiddlePhalange4.Axes0 ??=
-Seg.Foot.ProximalPhalange4.Axes0*
-Seg.Foot.ProximalPhalange4.ProxPhalJoint.ARel*
+Segments.Foot.MiddlePhalange4.Axes0 ??=
+Segments.Foot.ProximalPhalange4.Axes0*
+Segments.Foot.ProximalPhalange4.ProxPhalJoint.ARel*
 RotMat((pi/180)*.JointPos.Foot.ProximoMedialPhalange4DorsiFlexion,z)*
-Seg.Foot.MiddlePhalange4.ProxPhalJoint.ARel';
+Segments.Foot.MiddlePhalange4.ProxPhalJoint.ARel';
 
 
-Seg.Foot.MiddlePhalange5.Axes0 ??=
-Seg.Foot.ProximalPhalange5.Axes0*
-Seg.Foot.ProximalPhalange5.ProxPhalJoint.ARel*
+Segments.Foot.MiddlePhalange5.Axes0 ??=
+Segments.Foot.ProximalPhalange5.Axes0*
+Segments.Foot.ProximalPhalange5.ProxPhalJoint.ARel*
 RotMat((pi/180)*.JointPos.Foot.ProximoMedialPhalange5DorsiFlexion,z)*
-Seg.Foot.MiddlePhalange5.ProxPhalJoint.ARel';
+Segments.Foot.MiddlePhalange5.ProxPhalJoint.ARel';
 
 
-Seg.Foot.DistalPhalange1.Axes0 ??=
-Seg.Foot.ProximalPhalange1.Axes0*
-Seg.Foot.ProximalPhalange1.DistPhalJoint.ARel*
+Segments.Foot.DistalPhalange1.Axes0 ??=
+Segments.Foot.ProximalPhalange1.Axes0*
+Segments.Foot.ProximalPhalange1.DistPhalJoint.ARel*
 RotMat((pi/180)*.JointPos.Foot.ProximoDistalPhalange1DorsiFlexion,z)*
-Seg.Foot.DistalPhalange1.DistPhalJoint.ARel';
+Segments.Foot.DistalPhalange1.DistPhalJoint.ARel';
 
 
-Seg.Foot.DistalPhalange2.Axes0 ??=
-Seg.Foot.MiddlePhalange2.Axes0*
-Seg.Foot.MiddlePhalange2.DistPhalJoint.ARel*
+Segments.Foot.DistalPhalange2.Axes0 ??=
+Segments.Foot.MiddlePhalange2.Axes0*
+Segments.Foot.MiddlePhalange2.DistPhalJoint.ARel*
 RotMat((pi/180)*.JointPos.Foot.MedioDistalPhalange2DorsiFlexion,z)*
-Seg.Foot.DistalPhalange2.DistPhalJoint.ARel';
+Segments.Foot.DistalPhalange2.DistPhalJoint.ARel';
 
 
-Seg.Foot.DistalPhalange3.Axes0 ??=
-Seg.Foot.MiddlePhalange3.Axes0*
-Seg.Foot.MiddlePhalange3.DistPhalJoint.ARel*
+Segments.Foot.DistalPhalange3.Axes0 ??=
+Segments.Foot.MiddlePhalange3.Axes0*
+Segments.Foot.MiddlePhalange3.DistPhalJoint.ARel*
 RotMat((pi/180)*.JointPos.Foot.MedioDistalPhalange3DorsiFlexion,z)*
-Seg.Foot.DistalPhalange3.DistPhalJoint.ARel';
+Segments.Foot.DistalPhalange3.DistPhalJoint.ARel';
 
 
-Seg.Foot.DistalPhalange4.Axes0 ??=
-Seg.Foot.MiddlePhalange4.Axes0*
-Seg.Foot.MiddlePhalange4.DistPhalJoint.ARel*
+Segments.Foot.DistalPhalange4.Axes0 ??=
+Segments.Foot.MiddlePhalange4.Axes0*
+Segments.Foot.MiddlePhalange4.DistPhalJoint.ARel*
 RotMat((pi/180)*.JointPos.Foot.MedioDistalPhalange4DorsiFlexion,z)*
-Seg.Foot.DistalPhalange4.DistPhalJoint.ARel';
+Segments.Foot.DistalPhalange4.DistPhalJoint.ARel';
 
 
-Seg.Foot.DistalPhalange5.Axes0 ??=
-Seg.Foot.MiddlePhalange5.Axes0*
-Seg.Foot.MiddlePhalange5.DistPhalJoint.ARel*
+Segments.Foot.DistalPhalange5.Axes0 ??=
+Segments.Foot.MiddlePhalange5.Axes0*
+Segments.Foot.MiddlePhalange5.DistPhalJoint.ARel*
 RotMat((pi/180)*.JointPos.Foot.MedioDistalPhalange5DorsiFlexion,z)*
-Seg.Foot.DistalPhalange5.DistPhalJoint.ARel';
+Segments.Foot.DistalPhalange5.DistPhalJoint.ARel';
 

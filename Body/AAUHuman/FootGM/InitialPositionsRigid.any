@@ -2,16 +2,16 @@
 
 
 //Talus
-Seg.Foot.Talus.Axes0 = 
-Seg.Shank.Axes0*
-Seg.Shank.AnkleJoint.ARel*
+Segments.Foot.Talus.Axes0 = 
+Segments.Shank.Axes0*
+Segments.Shank.AnkleJoint.ARel*
 RotMat((-pi/180)*.JointPos.AnklePlantarFlexion ,z)*
-Seg.Foot.Talus.AnkleJoint.ARel';
+Segments.Foot.Talus.AnkleJoint.ARel';
 
 
 //RigidPart
-Seg.Foot.RigidPart.Axes0 = 
-Seg.Foot.Talus.Axes0*
-Seg.Foot.Talus.SubTalarJoint.ARel*
+Segments.Foot.RigidPart.Axes0 = 
+Segments.Foot.Talus.Axes0*
+Segments.Foot.Talus.SubTalarJoint.ARel*
 RotMat((pi/180)*.JointPos.SubTalarEversion ,z)*
-Seg.Foot.SubTalarJoint.ARel';
+Segments.Foot.SubTalarJoint.ARel';

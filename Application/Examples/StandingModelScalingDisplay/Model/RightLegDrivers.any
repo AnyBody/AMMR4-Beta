@@ -5,7 +5,7 @@
   AnyKinEqSimpleDriver RToeGroundConstraint ={
     AnyKinLinear ToePos = {
       AnyFixedRefFrame &Ground = Main.Model.Environment.GlobalRef;
-      AnyRefNode &Ball = Main.Model.HumanModel.Right.Leg.Seg.Foot.Metatarsal1.ToeJoint;
+      AnyRefNode &Ball = Main.Model.HumanModel.Right.Leg.Segments.Foot.Metatarsal1.ToeJoint;
     };
    MeasureOrganizer = {1};  // Only the y coordinate
     DriverPos = {0.0};
@@ -17,7 +17,7 @@
   AnyKinEqSimpleDriver RHeelGroundConstraint ={
     AnyKinLinear HeelPos = {
       AnyFixedRefFrame &Ground = Main.Model.Environment.GlobalRef;
-      AnyRefNode &Ball = Main.Model.HumanModel.Right.Leg.Seg.Foot.HeelJoint;
+      AnyRefNode &Ball = Main.Model.HumanModel.Right.Leg.Segments.Foot.HeelJoint;
     };
     MeasureOrganizer = {1};  // Only the y coordinate
     DriverPos = {0.0};
@@ -30,7 +30,7 @@
   AnyKinEqSimpleDriver RAnkleX = {
     AnyKinLinear AnklePos = {
       AnyFixedRefFrame &Ground = Main.Model.Environment.GlobalRef;
-      AnyRefNode &Ankle = ..LegR.Seg.Foot.AnkleJoint;
+      AnyRefNode &Ankle = ..LegR.Segments.Foot.AnkleJoint;
     };
     MeasureOrganizer = {0};  // Only the x coordinate
     DriverPos = {0.0};
@@ -88,13 +88,13 @@
 
 
     AnyKinRotational rot = {
-      AnySeg &ref1=..LegR.Seg.Foot;
+      AnySeg &ref1=..LegR.Segments.Foot;
       AnyFixedRefFrame &ref2 = ....Environment.GlobalRef;
       Type = RotVector;
     };
 
     AnyKinLinear RightFootLinMeasure = {
-      AnySeg &ref1=..LegR.Seg.Foot;
+      AnySeg &ref1=..LegR.Segments.Foot;
       AnyFixedRefFrame &ref2 = ....Environment.GlobalRef;
     };
 
@@ -105,17 +105,17 @@
   MannequinLoads.Right = {
 
       AnyForce3D Hip = {
-      AnyRefNode &ApplPoint = .rhm.Leg.Seg.Thigh.HipJoint;
+      AnyRefNode &ApplPoint = .rhm.Leg.Segments.Thigh.HipJoint;
       F = .locmql.Hip;
     };
 
     AnyForce3D Knee = {
-      AnyRefNode &ApplPoint = .rhm.Leg.Seg.Thigh.KneeJoint;
+      AnyRefNode &ApplPoint = .rhm.Leg.Segments.Thigh.KneeJoint;
       F = .locmql.Knee;
     };
 
     AnyForce3D Ankle = {
-      AnyRefNode &ApplPoint = .rhm.Leg.Seg.Foot.AnkleJoint;
+      AnyRefNode &ApplPoint = .rhm.Leg.Segments.Foot.AnkleJoint;
       F = .locmql.Ankle;
     };
   };

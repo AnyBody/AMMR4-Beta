@@ -4,7 +4,7 @@ AnyFolder GastrocnemiusCal ={
   AnyFolder &Pelvis = ...HumanFolderRef.Trunk.Segments.PelvisSeg;
   AnyFolder &Sacrum = ...HumanFolderRef.Trunk.Segments.SacrumSeg;
 
-  AnyFolder &LegSegSide = .SideHumanFolderRef.Leg.Seg;
+  AnyFolder &LegSegSide = .SideHumanFolderRef.Leg.Segments;
 
   AnyFolder &LegJointsSide = .SideHumanFolderRef.Leg.Jnt;
   AnyFolder &SacrumPelvisJnt = ...HumanFolderRef.Trunk.Joints.Lumbar.SacrumPelvis;

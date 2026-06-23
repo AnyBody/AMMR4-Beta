@@ -7,18 +7,18 @@ AnyFolder Joints = {
 
   AnySphericalJoint FootPedal = {
     AnyRefNode &Pedal = Main.Model.MyPedal.EnvironmentModel.Pedal.FootNode;
-    AnyRefNode &Foot = Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.ProximalPhalange2.FootBall;
+    AnyRefNode &Foot = Main.HumanModel.BodyModel.Right.Leg.Segments.Foot.ProximalPhalange2.FootBall;
   };
 
   AnySphericalJoint FootFloor = {
     AnyRefNode &Floor = Main.Model.MyPedal.EnvironmentModel.GlobalRef.LeftFoot;
-    AnyRefFrame &Foot = Main.HumanModel.BodyModel.Left.Leg.Seg.Foot.ProximalPhalange2.FootBall;
+    AnyRefFrame &Foot = Main.HumanModel.BodyModel.Left.Leg.Segments.Foot.ProximalPhalange2.FootBall;
   };
 
   AnyKinEq LatSupport = {
     AnyKinLinear KneePos = {
       AnyFixedRefFrame &Ground = Main.Model.MyPedal.EnvironmentModel.GlobalRef;
-      AnyRefNode &Knee = Main.HumanModel.BodyModel.Right.Leg.Seg.Thigh.KneeJoint;
+      AnyRefNode &Knee = Main.HumanModel.BodyModel.Right.Leg.Segments.Thigh.KneeJoint;
     };
     MeasureOrganizer = {2};  // Only the z direction
     Reaction.Type={Off};
@@ -66,7 +66,7 @@ AnyFolder Drivers = {
   AnyKinEqSimpleDriver LeftLatSupport = {
     AnyKinLinear KneePos = {
       AnyFixedRefFrame &Ground = Main.Model.MyPedal.EnvironmentModel.GlobalRef;
-      AnyRefNode &Knee = Main.HumanModel.BodyModel.Left.Leg.Seg.Thigh.KneeJoint;
+      AnyRefNode &Knee = Main.HumanModel.BodyModel.Left.Leg.Segments.Thigh.KneeJoint;
     };
     MeasureOrganizer = {2};  // Only the z direction
     Reaction.Type={Off};

@@ -256,7 +256,7 @@ AnyFolder HumanRefNodes =
       };
    };
 
-   AnyFolder& RightFoot = Main.HumanModel.BodyModel.Right.Leg.Seg.Foot;
+   AnyFolder& RightFoot = Main.HumanModel.BodyModel.Right.Leg.Segments.Foot;
    RightFoot =
    {
      ProximalPhalange2 = {
@@ -294,7 +294,7 @@ AnyFolder HumanRefNodes =
        };
      };
    };
-   AnyFolder& LeftFoot = Main.HumanModel.BodyModel.Left.Leg.Seg.Foot;
+   AnyFolder& LeftFoot = Main.HumanModel.BodyModel.Left.Leg.Segments.Foot;
    LeftFoot =
    {
      ProximalPhalange2 = {

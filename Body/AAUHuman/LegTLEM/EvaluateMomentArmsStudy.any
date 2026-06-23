@@ -12,7 +12,7 @@ AnyFolder Model = {
     AnyFolder &L1 = ......BodyModel.Trunk.Segments.L1Seg;
   };
   AnyFolder &JointsLumberRef = .....BodyModel.Trunk.Joints.Lumbar;
-  AnyFolder &LegSegSideRef = .SideHumanFolderRef.Leg.Seg;
+  AnyFolder &LegSegSideRef = .SideHumanFolderRef.Leg.Segments;
   AnyFolder &LegJntsRef =  .SideHumanFolderRef.Leg.Jnt;
   AnyFolder &LegMusRef = .SideHumanFolderRef.Leg.Mus;
   AnyFolder &SpineMusRef = .SideTrunkMusRef;

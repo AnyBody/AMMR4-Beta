@@ -42,7 +42,7 @@ AnyFolder SymmetryCheck= {
           );
           MirrorMatrix = ...MirrorMatrix;
         };
-        
+
         ComparePtrArrays wraps() = {
           Array1 = ObjSearchRecursive(
             "Main.HumanModel.BodyModel.Right.ShoulderArm.Muscles", "r","AnyFloat", 10
@@ -177,13 +177,13 @@ AnyFolder SymmetryCheck= {
           AnyKinCoM CoMAll ={
             AnyFolder  &ref= Main.HumanModel.BodyModel.Right.Leg;
           };
-          AnyKinCoM Thigh = {AnySeg &ref= Main.HumanModel.BodyModel.Right.Leg.Seg.Thigh;};
-          AnyKinCoM Shank = {AnySeg &ref= Main.HumanModel.BodyModel.Right.Leg.Seg.Shank;};
+          AnyKinCoM Thigh = {AnySeg &ref= Main.HumanModel.BodyModel.Right.Leg.Segments.Thigh;};
+          AnyKinCoM Shank = {AnySeg &ref= Main.HumanModel.BodyModel.Right.Leg.Segments.Shank;};
           //old leg has no talus
           #if BM_LEG_MODEL != _LEG_MODEL_LEG_
-            AnyKinCoM Talus = {AnySeg &ref= Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.Talus;};
+            AnyKinCoM Talus = {AnySeg &ref= Main.HumanModel.BodyModel.Right.Leg.Segments.Foot.Talus;};
           #endif
-          AnyKinCoM Foot = {AnyFolder &ref= Main.HumanModel.BodyModel.Right.Leg.Seg.Foot;};
+          AnyKinCoM Foot = {AnyFolder &ref= Main.HumanModel.BodyModel.Right.Leg.Segments.Foot;};
 
         };
 
@@ -193,12 +193,12 @@ AnyFolder SymmetryCheck= {
             AnyFolder  &ref= Main.HumanModel.BodyModel.Left.Leg;
           };
 
-          AnyKinCoM Thigh ={   AnySeg  &ref= Main.HumanModel.BodyModel.Left.Leg.Seg.Thigh;      };
-          AnyKinCoM Shank={   AnySeg  &ref= Main.HumanModel.BodyModel.Left.Leg.Seg.Shank;      };
+          AnyKinCoM Thigh ={   AnySeg  &ref= Main.HumanModel.BodyModel.Left.Leg.Segments.Thigh;      };
+          AnyKinCoM Shank={   AnySeg  &ref= Main.HumanModel.BodyModel.Left.Leg.Segments.Shank;      };
         #if BM_LEG_MODEL != _LEG_MODEL_LEG_
-            AnyKinCoM Talus={   AnySeg  &ref= Main.HumanModel.BodyModel.Left.Leg.Seg.Foot.Talus;      };
+            AnyKinCoM Talus={   AnySeg  &ref= Main.HumanModel.BodyModel.Left.Leg.Segments.Foot.Talus;      };
         #endif
-          AnyKinCoM Foot={   AnyFolder  &ref= Main.HumanModel.BodyModel.Left.Leg.Seg.Foot;      };
+          AnyKinCoM Foot={   AnyFolder  &ref= Main.HumanModel.BodyModel.Left.Leg.Segments.Foot;      };
         };
 
         AnyFolder Comparison ={

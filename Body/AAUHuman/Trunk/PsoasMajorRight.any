@@ -2,7 +2,7 @@ AnyFolder PsoasMajor = {
   AnyIntVar StringMesh = 15;
 
   #if BM_LEG_MODEL_IS_TLEM & BM_LEG_RIGHT & BM_LEG_MUSCLES_RIGHT
-    AnySeg &PsoasMajorRightSegment = ....Right.Leg.Seg.Thigh;
+    AnySeg &PsoasMajorRightSegment = ....Right.Leg.Segments.Thigh;
   #else
     AnyRefNode &PsoasMajorRightSegment = ...Segments.PelvisSeg.Right;
   #endif

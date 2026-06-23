@@ -47,7 +47,7 @@ AnyFolder SeatSupport = {
     };
   };
 
-//  AnyFolder &ThighR = ...BodyModel.Right.Leg.Seg.Thigh;
+//  AnyFolder &ThighR = ...BodyModel.Right.Leg.Segments.Thigh;
 //  ThighR={
 //    AnyRefNode SupportNodeFront =
 //    {
@@ -61,7 +61,7 @@ AnyFolder SeatSupport = {
 //    };
 //  };
 //
-//  AnyFolder &ThighL = ...BodyModel.Left.Leg.Seg.Thigh;
+//  AnyFolder &ThighL = ...BodyModel.Left.Leg.Segments.Thigh;
 //  ThighL={
 //    AnyRefNode SupportNodeFront =
 //    {
@@ -87,7 +87,7 @@ AnyFolder SeatSupport = {
 
 //  AnyFolder ThighSupportFrontR={
 //    AnyRefFrame &BaseObject = .CC_Base_Frame;
-//    AnyRefFrame &TargetObject =....BodyModel.Right.Leg.Seg.Thigh.SupportNodeFront;
+//    AnyRefFrame &TargetObject =....BodyModel.Right.Leg.Segments.Thigh.SupportNodeFront;
 //
 //    AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 //
@@ -109,7 +109,7 @@ AnyFolder SeatSupport = {
 //
 //  AnyFolder ThighSupportBackR={
 //    AnyRefFrame &BaseObject = .CC_Base_Frame;
-//    AnyRefFrame &TargetObject =....BodyModel.Right.Leg.Seg.Thigh.SupportNodeBack;
+//    AnyRefFrame &TargetObject =....BodyModel.Right.Leg.Segments.Thigh.SupportNodeBack;
 //
 //    AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 //
@@ -131,7 +131,7 @@ AnyFolder SeatSupport = {
 //
 //  AnyFolder ThighSupportFrontL={
 //    AnyRefFrame &BaseObject = .CC_Base_Frame;
-//    AnyRefFrame &TargetObject =....BodyModel.Left.Leg.Seg.Thigh.SupportNodeFront;
+//    AnyRefFrame &TargetObject =....BodyModel.Left.Leg.Segments.Thigh.SupportNodeFront;
 //
 //    AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 //
@@ -153,7 +153,7 @@ AnyFolder SeatSupport = {
 //
 //  AnyFolder ThighSupportBackL={
 //    AnyRefFrame &BaseObject = .CC_Base_Frame;
-//    AnyRefFrame &TargetObject =....BodyModel.Left.Leg.Seg.Thigh.SupportNodeBack;
+//    AnyRefFrame &TargetObject =....BodyModel.Left.Leg.Segments.Thigh.SupportNodeBack;
 //
 //    AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 //

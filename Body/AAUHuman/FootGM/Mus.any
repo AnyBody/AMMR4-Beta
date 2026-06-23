@@ -6,133 +6,133 @@
 MuscleGroup FlexorDigitorumLongus() = {
   AnyMuscleViaPoint FlexorDigitorumLongus1 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.FlexorDigitorumLongus1Par;
-    AnyRefNode &Org = ...Seg.Shank.FlexorDigitorumLongus1Node;
-    AnyRefNode &Via1 = ...Seg.Shank.FlexorDigitorumLongusViaNode1;
-    AnyRefNode &Via2 = ...Seg.Shank.FlexorDigitorumLongusViaNode2;
-    AnyRefNode &Via3 = ...Seg.Shank.FlexorDigitorumLongusViaNode3;
-    AnyRefNode &Via4 = ...Seg.Shank.FlexorDigitorumLongusViaNode4;
-    AnyRefNode &Via5 = ...Seg.Shank.FlexorDigitorumLongusViaNode5;
-    //  AnyRefNode &Via6 = ...Seg.Shank.FlexorDigitorumLongusViaNode6;
-    AnyRefNode &Via7 = ...Seg.Foot.Calcaneus.FlexorDigitorumLongusViaNode7;
+    AnyRefNode &Org = ...Segments.Shank.FlexorDigitorumLongus1Node;
+    AnyRefNode &Via1 = ...Segments.Shank.FlexorDigitorumLongusViaNode1;
+    AnyRefNode &Via2 = ...Segments.Shank.FlexorDigitorumLongusViaNode2;
+    AnyRefNode &Via3 = ...Segments.Shank.FlexorDigitorumLongusViaNode3;
+    AnyRefNode &Via4 = ...Segments.Shank.FlexorDigitorumLongusViaNode4;
+    AnyRefNode &Via5 = ...Segments.Shank.FlexorDigitorumLongusViaNode5;
+    //  AnyRefNode &Via6 = ...Segments.Shank.FlexorDigitorumLongusViaNode6;
+    AnyRefNode &Via7 = ...Segments.Foot.Calcaneus.FlexorDigitorumLongusViaNode7;
     #if (BM_FOOT_MODEL ==_FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL ==_FOOT_MODEL_DETAILED_GM_)
     // In the detailed foot the muscle continues to the via FDL dummy segment
-    AnyRefNode &Via8 = ...Seg.Foot.FDL.FDLDummySeg.FlexorDigitorumLongusViaNode8;
+    AnyRefNode &Via8 = ...Segments.Foot.FDL.FDLDummySeg.FlexorDigitorumLongusViaNode8;
     #endif
     #include "MuscleForceDrawing.any"
     AnyDrawMuscle DrwMus = {#include "<ANYBODY_PATH_BODY>/DrawSettings/MusDrawSettings.any" };
-  }; 
-  
+  };
+
   AnyMuscleViaPoint FlexorDigitorumLongus2 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.FlexorDigitorumLongus2Par;
-    AnyRefNode &Org = ...Seg.Shank.FlexorDigitorumLongus2Node;
-    AnyRefNode &Via1 = ...Seg.Shank.FlexorDigitorumLongusViaNode1;
-    AnyRefNode &Via2 = ...Seg.Shank.FlexorDigitorumLongusViaNode2;
-    AnyRefNode &Via3 = ...Seg.Shank.FlexorDigitorumLongusViaNode3;
-    AnyRefNode &Via4 = ...Seg.Shank.FlexorDigitorumLongusViaNode4;
-    AnyRefNode &Via5 = ...Seg.Shank.FlexorDigitorumLongusViaNode5;
-    //  AnyRefNode &Via6 = ...Seg.Shank.FlexorDigitorumLongusViaNode6;
-    AnyRefNode &Via7 = ...Seg.Foot.Calcaneus.FlexorDigitorumLongusViaNode7;
+    AnyRefNode &Org = ...Segments.Shank.FlexorDigitorumLongus2Node;
+    AnyRefNode &Via1 = ...Segments.Shank.FlexorDigitorumLongusViaNode1;
+    AnyRefNode &Via2 = ...Segments.Shank.FlexorDigitorumLongusViaNode2;
+    AnyRefNode &Via3 = ...Segments.Shank.FlexorDigitorumLongusViaNode3;
+    AnyRefNode &Via4 = ...Segments.Shank.FlexorDigitorumLongusViaNode4;
+    AnyRefNode &Via5 = ...Segments.Shank.FlexorDigitorumLongusViaNode5;
+    //  AnyRefNode &Via6 = ...Segments.Shank.FlexorDigitorumLongusViaNode6;
+    AnyRefNode &Via7 = ...Segments.Foot.Calcaneus.FlexorDigitorumLongusViaNode7;
     #if (BM_FOOT_MODEL ==_FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL ==_FOOT_MODEL_DETAILED_GM_)
     // In the detailed foot the muscle continues to the via FDL dummy segment
-    AnyRefNode &Via8 = ...Seg.Foot.FDL.FDLDummySeg.FlexorDigitorumLongusViaNode8;
+    AnyRefNode &Via8 = ...Segments.Foot.FDL.FDLDummySeg.FlexorDigitorumLongusViaNode8;
     #endif
     #include "MuscleForceDrawing.any"
     AnyDrawMuscle DrwMus = {#include "<ANYBODY_PATH_BODY>/DrawSettings/MusDrawSettings.any" };
-  }; 
-  
+  };
+
   AnyMuscleViaPoint FlexorDigitorumLongus3 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.FlexorDigitorumLongus3Par;
-    AnyRefNode &Org = ...Seg.Shank.FlexorDigitorumLongus3Node;
-    AnyRefNode &Via1 = ...Seg.Shank.FlexorDigitorumLongusViaNode1;
-    AnyRefNode &Via2 = ...Seg.Shank.FlexorDigitorumLongusViaNode2;
-    AnyRefNode &Via3 = ...Seg.Shank.FlexorDigitorumLongusViaNode3;
-    AnyRefNode &Via4 = ...Seg.Shank.FlexorDigitorumLongusViaNode4;
-    AnyRefNode &Via5 = ...Seg.Shank.FlexorDigitorumLongusViaNode5;
-    //  AnyRefNode &Via6 = ...Seg.Shank.FlexorDigitorumLongusViaNode6;
-    AnyRefNode &Via7 = ...Seg.Foot.Calcaneus.FlexorDigitorumLongusViaNode7;
+    AnyRefNode &Org = ...Segments.Shank.FlexorDigitorumLongus3Node;
+    AnyRefNode &Via1 = ...Segments.Shank.FlexorDigitorumLongusViaNode1;
+    AnyRefNode &Via2 = ...Segments.Shank.FlexorDigitorumLongusViaNode2;
+    AnyRefNode &Via3 = ...Segments.Shank.FlexorDigitorumLongusViaNode3;
+    AnyRefNode &Via4 = ...Segments.Shank.FlexorDigitorumLongusViaNode4;
+    AnyRefNode &Via5 = ...Segments.Shank.FlexorDigitorumLongusViaNode5;
+    //  AnyRefNode &Via6 = ...Segments.Shank.FlexorDigitorumLongusViaNode6;
+    AnyRefNode &Via7 = ...Segments.Foot.Calcaneus.FlexorDigitorumLongusViaNode7;
     #if (BM_FOOT_MODEL ==_FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL ==_FOOT_MODEL_DETAILED_GM_)
     // In the detailed foot the muscle continues to the via FDL dummy segment
-    AnyRefNode &Via8 = ...Seg.Foot.FDL.FDLDummySeg.FlexorDigitorumLongusViaNode8;
+    AnyRefNode &Via8 = ...Segments.Foot.FDL.FDLDummySeg.FlexorDigitorumLongusViaNode8;
     #endif
     #include "MuscleForceDrawing.any"
     AnyDrawMuscle DrwMus = {#include "<ANYBODY_PATH_BODY>/DrawSettings/MusDrawSettings.any" };
-  }; 
-  
+  };
+
   AnyMuscleViaPoint FlexorDigitorumLongus4 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.FlexorDigitorumLongus4Par;
-    AnyRefNode &Org = ...Seg.Shank.FlexorDigitorumLongus4Node;
-    AnyRefNode &Via1 = ...Seg.Shank.FlexorDigitorumLongusViaNode1;
-    AnyRefNode &Via2 = ...Seg.Shank.FlexorDigitorumLongusViaNode2;
-    AnyRefNode &Via3 = ...Seg.Shank.FlexorDigitorumLongusViaNode3;
-    AnyRefNode &Via4 = ...Seg.Shank.FlexorDigitorumLongusViaNode4;
-    AnyRefNode &Via5 = ...Seg.Shank.FlexorDigitorumLongusViaNode5;
-    //  AnyRefNode &Via6 = ...Seg.Shank.FlexorDigitorumLongusViaNode6;
-    AnyRefNode &Via7 = ...Seg.Foot.Calcaneus.FlexorDigitorumLongusViaNode7;
+    AnyRefNode &Org = ...Segments.Shank.FlexorDigitorumLongus4Node;
+    AnyRefNode &Via1 = ...Segments.Shank.FlexorDigitorumLongusViaNode1;
+    AnyRefNode &Via2 = ...Segments.Shank.FlexorDigitorumLongusViaNode2;
+    AnyRefNode &Via3 = ...Segments.Shank.FlexorDigitorumLongusViaNode3;
+    AnyRefNode &Via4 = ...Segments.Shank.FlexorDigitorumLongusViaNode4;
+    AnyRefNode &Via5 = ...Segments.Shank.FlexorDigitorumLongusViaNode5;
+    //  AnyRefNode &Via6 = ...Segments.Shank.FlexorDigitorumLongusViaNode6;
+    AnyRefNode &Via7 = ...Segments.Foot.Calcaneus.FlexorDigitorumLongusViaNode7;
     #if (BM_FOOT_MODEL ==_FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL ==_FOOT_MODEL_DETAILED_GM_)
     // In the detailed foot the muscle continues to the via FDL dummy segment
-    AnyRefNode &Via8 = ...Seg.Foot.FDL.FDLDummySeg.FlexorDigitorumLongusViaNode8;
+    AnyRefNode &Via8 = ...Segments.Foot.FDL.FDLDummySeg.FlexorDigitorumLongusViaNode8;
     #endif
     #include "MuscleForceDrawing.any"
     AnyDrawMuscle DrwMus = {#include "<ANYBODY_PATH_BODY>/DrawSettings/MusDrawSettings.any" };
-  }; 
+  };
 };
 
 
 MuscleGroup FlexorHallucisLongus() = {
   AnyMuscleViaPoint FlexorHallucisLongus1 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.FlexorHallucisLongus1Par;
-    AnyRefNode &Org = ...Seg.Shank.FlexorHallucisLongus1Node;
-    //  AnyRefNode &Via1 = ...Seg.Shank.FlexorHallucisLongusViaNode1;
-    //  AnyRefNode &Via2 = ...Seg.Shank.FlexorHallucisLongusViaNode2;
-    //  AnyRefNode &Via3 = ...Seg.Shank.FlexorHallucisLongusViaNode3;
-    //  AnyRefNode &Via4 = ...Seg.Shank.FlexorHallucisLongusViaNode4;
-    //  AnyRefNode &Via5 = ...Seg.Shank.FlexorHallucisLongusViaNode5;
-    //  AnyRefNode &Via6 = ...Seg.Shank.FlexorHallucisLongusViaNode6;
-    AnyRefNode &Via5 = ...Seg.Foot.Talus.FlexorHallucisLongusViaNode1;
-    AnyRefNode &Via6 = ...Seg.Foot.Calcaneus.FlexorHallucisLongusViaNode6;
-    AnyRefNode &Via7 = ...Seg.Foot.Calcaneus.FlexorHallucisLongusViaNode7;
-    //  AnyRefNode &Via8 = ...Seg.Foot.Calcaneus.FlexorHallucisLongusViaNode8;
-    AnyRefNode &Via9 = ...Seg.Foot.Metatarsal1.FlexorHallucisLongusViaNode9;
-    AnyRefNode &Via10 = ...Seg.Foot.ProximalPhalange1.FlexorHallucisLongusViaNode10;
-    AnyRefNode &Ins = ...Seg.Foot.DistalPhalange1.FlexorHallucisLongus1Node;
+    AnyRefNode &Org = ...Segments.Shank.FlexorHallucisLongus1Node;
+    //  AnyRefNode &Via1 = ...Segments.Shank.FlexorHallucisLongusViaNode1;
+    //  AnyRefNode &Via2 = ...Segments.Shank.FlexorHallucisLongusViaNode2;
+    //  AnyRefNode &Via3 = ...Segments.Shank.FlexorHallucisLongusViaNode3;
+    //  AnyRefNode &Via4 = ...Segments.Shank.FlexorHallucisLongusViaNode4;
+    //  AnyRefNode &Via5 = ...Segments.Shank.FlexorHallucisLongusViaNode5;
+    //  AnyRefNode &Via6 = ...Segments.Shank.FlexorHallucisLongusViaNode6;
+    AnyRefNode &Via5 = ...Segments.Foot.Talus.FlexorHallucisLongusViaNode1;
+    AnyRefNode &Via6 = ...Segments.Foot.Calcaneus.FlexorHallucisLongusViaNode6;
+    AnyRefNode &Via7 = ...Segments.Foot.Calcaneus.FlexorHallucisLongusViaNode7;
+    //  AnyRefNode &Via8 = ...Segments.Foot.Calcaneus.FlexorHallucisLongusViaNode8;
+    AnyRefNode &Via9 = ...Segments.Foot.Metatarsal1.FlexorHallucisLongusViaNode9;
+    AnyRefNode &Via10 = ...Segments.Foot.ProximalPhalange1.FlexorHallucisLongusViaNode10;
+    AnyRefNode &Ins = ...Segments.Foot.DistalPhalange1.FlexorHallucisLongus1Node;
     #include "MuscleForceDrawing.any"
     AnyDrawMuscle DrwMus = {#include "<ANYBODY_PATH_BODY>/DrawSettings/MusDrawSettings.any" };
   };
-  
+
   AnyMuscleViaPoint FlexorHallucisLongus2 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.FlexorHallucisLongus2Par;
-    AnyRefNode &Org = ...Seg.Shank.FlexorHallucisLongus2Node;
-    // AnyRefNode &Via1 = ...Seg.Shank.FlexorHallucisLongusViaNode1;
-    //  AnyRefNode &Via2 = ...Seg.Shank.FlexorHallucisLongusViaNode2;
-    //  AnyRefNode &Via3 = ...Seg.Shank.FlexorHallucisLongusViaNode3;
-    //  AnyRefNode &Via4 = ...Seg.Shank.FlexorHallucisLongusViaNode4;
-    //  AnyRefNode &Via5 = ...Seg.Shank.FlexorHallucisLongusViaNode5;
-    //  AnyRefNode &Via6 = ...Seg.Shank.FlexorHallucisLongusViaNode6;
-    AnyRefNode &Via5 = ...Seg.Foot.Talus.FlexorHallucisLongusViaNode1;
-    AnyRefNode &Via6 = ...Seg.Foot.Calcaneus.FlexorHallucisLongusViaNode6;
-    AnyRefNode &Via7 = ...Seg.Foot.Calcaneus.FlexorHallucisLongusViaNode7;
-    AnyRefNode &Via9 = ...Seg.Foot.Metatarsal1.FlexorHallucisLongusViaNode9;
-    AnyRefNode &Via10 = ...Seg.Foot.ProximalPhalange1.FlexorHallucisLongusViaNode10;
-    AnyRefNode &Ins = ...Seg.Foot.DistalPhalange1.FlexorHallucisLongus2Node;
+    AnyRefNode &Org = ...Segments.Shank.FlexorHallucisLongus2Node;
+    // AnyRefNode &Via1 = ...Segments.Shank.FlexorHallucisLongusViaNode1;
+    //  AnyRefNode &Via2 = ...Segments.Shank.FlexorHallucisLongusViaNode2;
+    //  AnyRefNode &Via3 = ...Segments.Shank.FlexorHallucisLongusViaNode3;
+    //  AnyRefNode &Via4 = ...Segments.Shank.FlexorHallucisLongusViaNode4;
+    //  AnyRefNode &Via5 = ...Segments.Shank.FlexorHallucisLongusViaNode5;
+    //  AnyRefNode &Via6 = ...Segments.Shank.FlexorHallucisLongusViaNode6;
+    AnyRefNode &Via5 = ...Segments.Foot.Talus.FlexorHallucisLongusViaNode1;
+    AnyRefNode &Via6 = ...Segments.Foot.Calcaneus.FlexorHallucisLongusViaNode6;
+    AnyRefNode &Via7 = ...Segments.Foot.Calcaneus.FlexorHallucisLongusViaNode7;
+    AnyRefNode &Via9 = ...Segments.Foot.Metatarsal1.FlexorHallucisLongusViaNode9;
+    AnyRefNode &Via10 = ...Segments.Foot.ProximalPhalange1.FlexorHallucisLongusViaNode10;
+    AnyRefNode &Ins = ...Segments.Foot.DistalPhalange1.FlexorHallucisLongus2Node;
     #include "MuscleForceDrawing.any"
     AnyDrawMuscle DrwMus = {#include "<ANYBODY_PATH_BODY>/DrawSettings/MusDrawSettings.any" };
   };
-  
+
   AnyMuscleViaPoint FlexorHallucisLongus3 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.FlexorHallucisLongus3Par;
-    AnyRefNode &Org = ...Seg.Shank.FlexorHallucisLongus3Node;
-    //  AnyRefNode &Via1 = ...Seg.Shank.FlexorHallucisLongusViaNode1;
-    //  AnyRefNode &Via2 = ...Seg.Shank.FlexorHallucisLongusViaNode2;
-    //  AnyRefNode &Via3 = ...Seg.Shank.FlexorHallucisLongusViaNode3;
-    //  AnyRefNode &Via4 = ...Seg.Shank.FlexorHallucisLongusViaNode4;
-    //  AnyRefNode &Via5 = ...Seg.Shank.FlexorHallucisLongusViaNode5;
-    //  AnyRefNode &Via6 = ...Seg.Shank.FlexorHallucisLongusViaNode6;
-    AnyRefNode &Via5 = ...Seg.Foot.Talus.FlexorHallucisLongusViaNode1;
-    AnyRefNode &Via6 = ...Seg.Foot.Calcaneus.FlexorHallucisLongusViaNode6;
-    AnyRefNode &Via7 = ...Seg.Foot.Calcaneus.FlexorHallucisLongusViaNode7;
-    AnyRefNode &Via9 = ...Seg.Foot.Metatarsal1.FlexorHallucisLongusViaNode9;
-    AnyRefNode &Via10 = ...Seg.Foot.ProximalPhalange1.FlexorHallucisLongusViaNode10;
-    AnyRefNode &Ins = ...Seg.Foot.DistalPhalange1.FlexorHallucisLongus3Node;
+    AnyRefNode &Org = ...Segments.Shank.FlexorHallucisLongus3Node;
+    //  AnyRefNode &Via1 = ...Segments.Shank.FlexorHallucisLongusViaNode1;
+    //  AnyRefNode &Via2 = ...Segments.Shank.FlexorHallucisLongusViaNode2;
+    //  AnyRefNode &Via3 = ...Segments.Shank.FlexorHallucisLongusViaNode3;
+    //  AnyRefNode &Via4 = ...Segments.Shank.FlexorHallucisLongusViaNode4;
+    //  AnyRefNode &Via5 = ...Segments.Shank.FlexorHallucisLongusViaNode5;
+    //  AnyRefNode &Via6 = ...Segments.Shank.FlexorHallucisLongusViaNode6;
+    AnyRefNode &Via5 = ...Segments.Foot.Talus.FlexorHallucisLongusViaNode1;
+    AnyRefNode &Via6 = ...Segments.Foot.Calcaneus.FlexorHallucisLongusViaNode6;
+    AnyRefNode &Via7 = ...Segments.Foot.Calcaneus.FlexorHallucisLongusViaNode7;
+    AnyRefNode &Via9 = ...Segments.Foot.Metatarsal1.FlexorHallucisLongusViaNode9;
+    AnyRefNode &Via10 = ...Segments.Foot.ProximalPhalange1.FlexorHallucisLongusViaNode10;
+    AnyRefNode &Ins = ...Segments.Foot.DistalPhalange1.FlexorHallucisLongus3Node;
     #include "MuscleForceDrawing.any"
     AnyDrawMuscle DrwMus = {#include "<ANYBODY_PATH_BODY>/DrawSettings/MusDrawSettings.any" };
   };
@@ -142,36 +142,36 @@ MuscleGroup FlexorHallucisLongus() = {
 MuscleGroup TibialisPosteriorLateralis() = {
   AnyMuscleViaPoint TibialisPosteriorLateralis1 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.TibialisPosteriorLateralis1Par;
-    AnyRefNode &Org = ...Seg.Shank.TibialisPosteriorLateralis1Node;
-    AnyRefNode &Via1 = ...Seg.Shank.TibialisPosteriorViaNode1;
-    //  AnyRefNode &Via2 = ...Seg.Shank.TibialisPosteriorViaNode2;
-    //  AnyRefNode &Via3 = ...Seg.Shank.TibialisPosteriorViaNode3;
-    //AnyRefNode &Via4 = ...Seg.Shank.TibialisPosteriorViaNode4;
-    AnyRefNode &Ins = ...Seg.Foot.Calcaneus.TibialisPosteriorLateralisViaNode8;
+    AnyRefNode &Org = ...Segments.Shank.TibialisPosteriorLateralis1Node;
+    AnyRefNode &Via1 = ...Segments.Shank.TibialisPosteriorViaNode1;
+    //  AnyRefNode &Via2 = ...Segments.Shank.TibialisPosteriorViaNode2;
+    //  AnyRefNode &Via3 = ...Segments.Shank.TibialisPosteriorViaNode3;
+    //AnyRefNode &Via4 = ...Segments.Shank.TibialisPosteriorViaNode4;
+    AnyRefNode &Ins = ...Segments.Foot.Calcaneus.TibialisPosteriorLateralisViaNode8;
     #include "MuscleForceDrawing.any"
     AnyDrawMuscle DrwMus = {#include "<ANYBODY_PATH_BODY>/DrawSettings/MusDrawSettings.any" };
   };
-  
+
   AnyMuscleViaPoint TibialisPosteriorLateralis2 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.TibialisPosteriorLateralis2Par;
-    AnyRefNode &Org = ...Seg.Shank.TibialisPosteriorLateralis2Node;
-    AnyRefNode &Via1 = ...Seg.Shank.TibialisPosteriorViaNode1;
-    //  AnyRefNode &Via2 = ...Seg.Shank.TibialisPosteriorViaNode2;
-    //  AnyRefNode &Via3 = ...Seg.Shank.TibialisPosteriorViaNode3;
-    //AnyRefNode &Via4 = ...Seg.Shank.TibialisPosteriorViaNode4;
-    AnyRefNode &Ins = ...Seg.Foot.Calcaneus.TibialisPosteriorLateralisViaNode8;
+    AnyRefNode &Org = ...Segments.Shank.TibialisPosteriorLateralis2Node;
+    AnyRefNode &Via1 = ...Segments.Shank.TibialisPosteriorViaNode1;
+    //  AnyRefNode &Via2 = ...Segments.Shank.TibialisPosteriorViaNode2;
+    //  AnyRefNode &Via3 = ...Segments.Shank.TibialisPosteriorViaNode3;
+    //AnyRefNode &Via4 = ...Segments.Shank.TibialisPosteriorViaNode4;
+    AnyRefNode &Ins = ...Segments.Foot.Calcaneus.TibialisPosteriorLateralisViaNode8;
     #include "MuscleForceDrawing.any"
     AnyDrawMuscle DrwMus = {#include "<ANYBODY_PATH_BODY>/DrawSettings/MusDrawSettings.any" };
   };
-  
+
   AnyMuscleViaPoint TibialisPosteriorLateralis3 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.TibialisPosteriorLateralis3Par;
-    AnyRefNode &Org = ...Seg.Shank.TibialisPosteriorLateralis3Node;
-    AnyRefNode &Via1 = ...Seg.Shank.TibialisPosteriorViaNode1;
-    //  AnyRefNode &Via2 = ...Seg.Shank.TibialisPosteriorViaNode2;
-    //  AnyRefNode &Via3 = ...Seg.Shank.TibialisPosteriorViaNode3;
-    //AnyRefNode &Via4 = ...Seg.Shank.TibialisPosteriorViaNode4;
-    AnyRefNode &Ins = ...Seg.Foot.Calcaneus.TibialisPosteriorLateralisViaNode8;
+    AnyRefNode &Org = ...Segments.Shank.TibialisPosteriorLateralis3Node;
+    AnyRefNode &Via1 = ...Segments.Shank.TibialisPosteriorViaNode1;
+    //  AnyRefNode &Via2 = ...Segments.Shank.TibialisPosteriorViaNode2;
+    //  AnyRefNode &Via3 = ...Segments.Shank.TibialisPosteriorViaNode3;
+    //AnyRefNode &Via4 = ...Segments.Shank.TibialisPosteriorViaNode4;
+    AnyRefNode &Ins = ...Segments.Foot.Calcaneus.TibialisPosteriorLateralisViaNode8;
     #include "MuscleForceDrawing.any"
     AnyDrawMuscle DrwMus = {#include "<ANYBODY_PATH_BODY>/DrawSettings/MusDrawSettings.any" };
   };
@@ -181,36 +181,36 @@ MuscleGroup TibialisPosteriorLateralis() = {
 MuscleGroup TibialisPosteriorMedialis() = {
   AnyMuscleViaPoint TibialisPosteriorMedialis1 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.TibialisPosteriorMedialis1Par;
-    AnyRefNode &Org = ...Seg.Shank.TibialisPosteriorMedialis1Node;
-    AnyRefNode &Via1 = ...Seg.Shank.TibialisPosteriorViaNode1;
-    //  AnyRefNode &Via2 = ...Seg.Shank.TibialisPosteriorViaNode2;
-    //  AnyRefNode &Via3 = ...Seg.Shank.TibialisPosteriorViaNode3;
-    //AnyRefNode &Via4 = ...Seg.Shank.TibialisPosteriorViaNode4;
-    AnyRefNode &Ins = ...Seg.Foot.Calcaneus.TibialisPosteriorMedialisViaNode9;
+    AnyRefNode &Org = ...Segments.Shank.TibialisPosteriorMedialis1Node;
+    AnyRefNode &Via1 = ...Segments.Shank.TibialisPosteriorViaNode1;
+    //  AnyRefNode &Via2 = ...Segments.Shank.TibialisPosteriorViaNode2;
+    //  AnyRefNode &Via3 = ...Segments.Shank.TibialisPosteriorViaNode3;
+    //AnyRefNode &Via4 = ...Segments.Shank.TibialisPosteriorViaNode4;
+    AnyRefNode &Ins = ...Segments.Foot.Calcaneus.TibialisPosteriorMedialisViaNode9;
     #include "MuscleForceDrawing.any"
     AnyDrawMuscle DrwMus = {#include "<ANYBODY_PATH_BODY>/DrawSettings/MusDrawSettings.any" };
   };
-  
+
   AnyMuscleViaPoint TibialisPosteriorMedialis2 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.TibialisPosteriorMedialis2Par;
-    AnyRefNode &Org = ...Seg.Shank.TibialisPosteriorMedialis2Node;
-    AnyRefNode &Via1 = ...Seg.Shank.TibialisPosteriorViaNode1;
-    AnyRefNode &Via2 = ...Seg.Shank.TibialisPosteriorViaNode2;
-    //  AnyRefNode &Via3 = ...Seg.Shank.TibialisPosteriorViaNode3;
-    //AnyRefNode &Via4 = ...Seg.Shank.TibialisPosteriorViaNode4;
-    AnyRefNode &Ins = ...Seg.Foot.Calcaneus.TibialisPosteriorMedialisViaNode9;
+    AnyRefNode &Org = ...Segments.Shank.TibialisPosteriorMedialis2Node;
+    AnyRefNode &Via1 = ...Segments.Shank.TibialisPosteriorViaNode1;
+    AnyRefNode &Via2 = ...Segments.Shank.TibialisPosteriorViaNode2;
+    //  AnyRefNode &Via3 = ...Segments.Shank.TibialisPosteriorViaNode3;
+    //AnyRefNode &Via4 = ...Segments.Shank.TibialisPosteriorViaNode4;
+    AnyRefNode &Ins = ...Segments.Foot.Calcaneus.TibialisPosteriorMedialisViaNode9;
     #include "MuscleForceDrawing.any"
     AnyDrawMuscle DrwMus = {#include "<ANYBODY_PATH_BODY>/DrawSettings/MusDrawSettings.any" };
   };
-  
+
   AnyMuscleViaPoint TibialisPosteriorMedialis3 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.TibialisPosteriorMedialis3Par;
-    AnyRefNode &Org = ...Seg.Shank.TibialisPosteriorMedialis3Node;
-    AnyRefNode &Via1 = ...Seg.Shank.TibialisPosteriorViaNode1;
-    AnyRefNode &Via2 = ...Seg.Shank.TibialisPosteriorViaNode2;
-    //  AnyRefNode &Via3 = ...Seg.Shank.TibialisPosteriorViaNode3;
-    //AnyRefNode &Via4 = ...Seg.Shank.TibialisPosteriorViaNode4;
-    AnyRefNode &Ins = ...Seg.Foot.Calcaneus.TibialisPosteriorMedialisViaNode9;
+    AnyRefNode &Org = ...Segments.Shank.TibialisPosteriorMedialis3Node;
+    AnyRefNode &Via1 = ...Segments.Shank.TibialisPosteriorViaNode1;
+    AnyRefNode &Via2 = ...Segments.Shank.TibialisPosteriorViaNode2;
+    //  AnyRefNode &Via3 = ...Segments.Shank.TibialisPosteriorViaNode3;
+    //AnyRefNode &Via4 = ...Segments.Shank.TibialisPosteriorViaNode4;
+    AnyRefNode &Ins = ...Segments.Foot.Calcaneus.TibialisPosteriorMedialisViaNode9;
     #include "MuscleForceDrawing.any"
     AnyDrawMuscle DrwMus = {#include "<ANYBODY_PATH_BODY>/DrawSettings/MusDrawSettings.any" };
   };
@@ -220,30 +220,30 @@ MuscleGroup TibialisPosteriorMedialis() = {
 MuscleGroup TibialisAnterior() = {
   AnyMuscleViaPoint TibialisAnterior1 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.TibialisAnterior1Par;
-    AnyRefNode &Org = ...Seg.Shank.TibialisAnterior1Node;
-    AnyRefNode &Via1 = ...Seg.Shank.TibialisAnteriorViaNode1;
-    AnyRefNode &Ins = ...Seg.Foot.Navicular.TibialisAnteriorViaNode2;
-    #include "MuscleForceDrawing.any"     
+    AnyRefNode &Org = ...Segments.Shank.TibialisAnterior1Node;
+    AnyRefNode &Via1 = ...Segments.Shank.TibialisAnteriorViaNode1;
+    AnyRefNode &Ins = ...Segments.Foot.Navicular.TibialisAnteriorViaNode2;
+    #include "MuscleForceDrawing.any"
     AnyDrawMuscle DrwMus = {#include "<ANYBODY_PATH_BODY>/DrawSettings/MusDrawSettings.any"
     };
   };
-  
+
   AnyMuscleViaPoint TibialisAnterior2 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.TibialisAnterior2Par;
-    AnyRefNode &Org = ...Seg.Shank.TibialisAnterior2Node;
-    AnyRefNode &Via1 = ...Seg.Shank.TibialisAnteriorViaNode1;
-    AnyRefNode &Ins = ...Seg.Foot.Navicular.TibialisAnteriorViaNode2;
-    #include "MuscleForceDrawing.any"      
+    AnyRefNode &Org = ...Segments.Shank.TibialisAnterior2Node;
+    AnyRefNode &Via1 = ...Segments.Shank.TibialisAnteriorViaNode1;
+    AnyRefNode &Ins = ...Segments.Foot.Navicular.TibialisAnteriorViaNode2;
+    #include "MuscleForceDrawing.any"
     AnyDrawMuscle DrwMus = {#include "<ANYBODY_PATH_BODY>/DrawSettings/MusDrawSettings.any"
     };
   };
-  
+
   AnyMuscleViaPoint TibialisAnterior3 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.TibialisAnterior3Par;
-    AnyRefNode &Org = ...Seg.Shank.TibialisAnterior3Node;
-    AnyRefNode &Via1 = ...Seg.Shank.TibialisAnteriorViaNode1;
-    AnyRefNode &Ins = ...Seg.Foot.Navicular.TibialisAnteriorViaNode2;
-    #include "MuscleForceDrawing.any"      
+    AnyRefNode &Org = ...Segments.Shank.TibialisAnterior3Node;
+    AnyRefNode &Via1 = ...Segments.Shank.TibialisAnteriorViaNode1;
+    AnyRefNode &Ins = ...Segments.Foot.Navicular.TibialisAnteriorViaNode2;
+    #include "MuscleForceDrawing.any"
     AnyDrawMuscle DrwMus = {#include "<ANYBODY_PATH_BODY>/DrawSettings/MusDrawSettings.any"
     };
   };
@@ -253,40 +253,40 @@ MuscleGroup TibialisAnterior() = {
 MuscleGroup PeroneusBrevis() = {
   AnyMuscleViaPoint PeroneusBrevis1 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.PeroneusBrevis1Par;
-    AnyRefNode &Org = ...Seg.Shank.PeroneusBrevis1Node;
-    AnyRefNode &Via1 = ...Seg.Shank.PeroneusBrevisViaNode1;
-    AnyRefNode &Via2 = ...Seg.Shank.PeroneusBrevisViaNode2;
-    //  AnyRefNode &Via3 = ...Seg.Shank.PeroneusBrevisViaNode3;
-    //  AnyRefNode &Via4 = ...Seg.Foot.Calcaneus.PeroneusBrevisViaNode3;
-    AnyRefNode &Via5 = ...Seg.Foot.Calcaneus.PeroneusBrevisViaNode4;
-    AnyRefNode &Ins = ...Seg.Foot.Metatarsal5.PeroneusBrevis1Node;
-    #include "MuscleForceDrawing.any"      
+    AnyRefNode &Org = ...Segments.Shank.PeroneusBrevis1Node;
+    AnyRefNode &Via1 = ...Segments.Shank.PeroneusBrevisViaNode1;
+    AnyRefNode &Via2 = ...Segments.Shank.PeroneusBrevisViaNode2;
+    //  AnyRefNode &Via3 = ...Segments.Shank.PeroneusBrevisViaNode3;
+    //  AnyRefNode &Via4 = ...Segments.Foot.Calcaneus.PeroneusBrevisViaNode3;
+    AnyRefNode &Via5 = ...Segments.Foot.Calcaneus.PeroneusBrevisViaNode4;
+    AnyRefNode &Ins = ...Segments.Foot.Metatarsal5.PeroneusBrevis1Node;
+    #include "MuscleForceDrawing.any"
     AnyDrawMuscle DrwMus = {#include "<ANYBODY_PATH_BODY>/DrawSettings/MusDrawSettings.any" };
   };
-  
+
   AnyMuscleViaPoint PeroneusBrevis2 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.PeroneusBrevis2Par;
-    AnyRefNode &Org = ...Seg.Shank.PeroneusBrevis2Node;
-    AnyRefNode &Via1 = ...Seg.Shank.PeroneusBrevisViaNode1;
-    AnyRefNode &Via2 = ...Seg.Shank.PeroneusBrevisViaNode2;
-    //  AnyRefNode &Via3 = ...Seg.Shank.PeroneusBrevisViaNode3;
-    //  AnyRefNode &Via4 = ...Seg.Foot.Calcaneus.PeroneusBrevisViaNode3;
-    AnyRefNode &Via5 = ...Seg.Foot.Calcaneus.PeroneusBrevisViaNode4;
-    AnyRefNode &Ins = ...Seg.Foot.Metatarsal5.PeroneusBrevis2Node;
-    #include "MuscleForceDrawing.any"      
+    AnyRefNode &Org = ...Segments.Shank.PeroneusBrevis2Node;
+    AnyRefNode &Via1 = ...Segments.Shank.PeroneusBrevisViaNode1;
+    AnyRefNode &Via2 = ...Segments.Shank.PeroneusBrevisViaNode2;
+    //  AnyRefNode &Via3 = ...Segments.Shank.PeroneusBrevisViaNode3;
+    //  AnyRefNode &Via4 = ...Segments.Foot.Calcaneus.PeroneusBrevisViaNode3;
+    AnyRefNode &Via5 = ...Segments.Foot.Calcaneus.PeroneusBrevisViaNode4;
+    AnyRefNode &Ins = ...Segments.Foot.Metatarsal5.PeroneusBrevis2Node;
+    #include "MuscleForceDrawing.any"
     AnyDrawMuscle DrwMus = {#include "<ANYBODY_PATH_BODY>/DrawSettings/MusDrawSettings.any" };
   };
-  
+
   AnyMuscleViaPoint PeroneusBrevis3 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.PeroneusBrevis3Par;
-    AnyRefNode &Org = ...Seg.Shank.PeroneusBrevis3Node;
-    AnyRefNode &Via1 = ...Seg.Shank.PeroneusBrevisViaNode1;
-    AnyRefNode &Via2 = ...Seg.Shank.PeroneusBrevisViaNode2;
-    //  AnyRefNode &Via3 = ...Seg.Shank.PeroneusBrevisViaNode3;
-    //  AnyRefNode &Via4 = ...Seg.Foot.Calcaneus.PeroneusBrevisViaNode3;
-    AnyRefNode &Via5 = ...Seg.Foot.Calcaneus.PeroneusBrevisViaNode4;
-    AnyRefNode &Ins = ...Seg.Foot.Metatarsal5.PeroneusBrevis3Node;
-    #include "MuscleForceDrawing.any"      
+    AnyRefNode &Org = ...Segments.Shank.PeroneusBrevis3Node;
+    AnyRefNode &Via1 = ...Segments.Shank.PeroneusBrevisViaNode1;
+    AnyRefNode &Via2 = ...Segments.Shank.PeroneusBrevisViaNode2;
+    //  AnyRefNode &Via3 = ...Segments.Shank.PeroneusBrevisViaNode3;
+    //  AnyRefNode &Via4 = ...Segments.Foot.Calcaneus.PeroneusBrevisViaNode3;
+    AnyRefNode &Via5 = ...Segments.Foot.Calcaneus.PeroneusBrevisViaNode4;
+    AnyRefNode &Ins = ...Segments.Foot.Metatarsal5.PeroneusBrevis3Node;
+    #include "MuscleForceDrawing.any"
     AnyDrawMuscle DrwMus = {#include "<ANYBODY_PATH_BODY>/DrawSettings/MusDrawSettings.any" };
   };
 };
@@ -295,46 +295,46 @@ MuscleGroup PeroneusBrevis() = {
 MuscleGroup PeroneusLongus() = {
   AnyMuscleViaPoint PeroneusLongus1 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.PeroneusLongus1Par;
-    AnyRefNode &Org = ...Seg.Shank.PeroneusLongus1Node;
-    AnyRefNode &Via1 = ...Seg.Shank.PeroneusLongusViaNode1;
-    AnyRefNode &Via2 = ...Seg.Shank.PeroneusLongusViaNode2;
-    //  AnyRefNode &Via3 = ...Seg.Shank.PeroneusLongusViaNode3;
-    //  AnyRefNode &Via4 = ...Seg.Shank.PeroneusLongusViaNode4;
-    //  AnyRefNode &Via5 = ...Seg.Foot.Calcaneus.PeroneusLongusViaNode3;
-    AnyRefNode &Via6 = ...Seg.Foot.Calcaneus.PeroneusLongusViaNode4;
-    AnyRefNode &Via7 = ...Seg.Foot.Cuboid.PeroneusLongusViaNode5;
-    AnyRefNode &Ins = ...Seg.Foot.Cuboid.PeroneusLongusViaNode6;
-    #include "MuscleForceDrawing.any"      
+    AnyRefNode &Org = ...Segments.Shank.PeroneusLongus1Node;
+    AnyRefNode &Via1 = ...Segments.Shank.PeroneusLongusViaNode1;
+    AnyRefNode &Via2 = ...Segments.Shank.PeroneusLongusViaNode2;
+    //  AnyRefNode &Via3 = ...Segments.Shank.PeroneusLongusViaNode3;
+    //  AnyRefNode &Via4 = ...Segments.Shank.PeroneusLongusViaNode4;
+    //  AnyRefNode &Via5 = ...Segments.Foot.Calcaneus.PeroneusLongusViaNode3;
+    AnyRefNode &Via6 = ...Segments.Foot.Calcaneus.PeroneusLongusViaNode4;
+    AnyRefNode &Via7 = ...Segments.Foot.Cuboid.PeroneusLongusViaNode5;
+    AnyRefNode &Ins = ...Segments.Foot.Cuboid.PeroneusLongusViaNode6;
+    #include "MuscleForceDrawing.any"
     AnyDrawMuscle DrwMus = {#include "<ANYBODY_PATH_BODY>/DrawSettings/MusDrawSettings.any" };
   };
-  
+
   AnyMuscleViaPoint PeroneusLongus2 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.PeroneusLongus2Par;
-    AnyRefNode &Org = ...Seg.Shank.PeroneusLongus2Node;
-    AnyRefNode &Via1 = ...Seg.Shank.PeroneusLongusViaNode1;
-    AnyRefNode &Via2 = ...Seg.Shank.PeroneusLongusViaNode2;
-    //  AnyRefNode &Via3 = ...Seg.Shank.PeroneusLongusViaNode3;
-    //  AnyRefNode &Via4 = ...Seg.Shank.PeroneusLongusViaNode4;
-    //  AnyRefNode &Via5 = ...Seg.Foot.Calcaneus.PeroneusLongusViaNode3;
-    AnyRefNode &Via6 = ...Seg.Foot.Calcaneus.PeroneusLongusViaNode4;
-    AnyRefNode &Via7 = ...Seg.Foot.Cuboid.PeroneusLongusViaNode5;
-    AnyRefNode &Ins = ...Seg.Foot.Cuboid.PeroneusLongusViaNode6;
-    #include "MuscleForceDrawing.any"   
+    AnyRefNode &Org = ...Segments.Shank.PeroneusLongus2Node;
+    AnyRefNode &Via1 = ...Segments.Shank.PeroneusLongusViaNode1;
+    AnyRefNode &Via2 = ...Segments.Shank.PeroneusLongusViaNode2;
+    //  AnyRefNode &Via3 = ...Segments.Shank.PeroneusLongusViaNode3;
+    //  AnyRefNode &Via4 = ...Segments.Shank.PeroneusLongusViaNode4;
+    //  AnyRefNode &Via5 = ...Segments.Foot.Calcaneus.PeroneusLongusViaNode3;
+    AnyRefNode &Via6 = ...Segments.Foot.Calcaneus.PeroneusLongusViaNode4;
+    AnyRefNode &Via7 = ...Segments.Foot.Cuboid.PeroneusLongusViaNode5;
+    AnyRefNode &Ins = ...Segments.Foot.Cuboid.PeroneusLongusViaNode6;
+    #include "MuscleForceDrawing.any"
     AnyDrawMuscle DrwMus = {#include "<ANYBODY_PATH_BODY>/DrawSettings/MusDrawSettings.any" };
   };
-  
+
   AnyMuscleViaPoint PeroneusLongus3 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.PeroneusLongus3Par;
-    AnyRefNode &Org = ...Seg.Shank.PeroneusLongus3Node;
-    AnyRefNode &Via1 = ...Seg.Shank.PeroneusLongusViaNode1;
-    AnyRefNode &Via2 = ...Seg.Shank.PeroneusLongusViaNode2;
-    //  AnyRefNode &Via3 = ...Seg.Shank.PeroneusLongusViaNode3;
-    //  AnyRefNode &Via4 = ...Seg.Shank.PeroneusLongusViaNode4;
-    //  AnyRefNode &Via5 = ...Seg.Foot.Calcaneus.PeroneusLongusViaNode3;
-    AnyRefNode &Via6 = ...Seg.Foot.Calcaneus.PeroneusLongusViaNode4;
-    AnyRefNode &Via7 = ...Seg.Foot.Cuboid.PeroneusLongusViaNode5;
-    AnyRefNode &Ins = ...Seg.Foot.Cuboid.PeroneusLongusViaNode6;
-    #include "MuscleForceDrawing.any"     
+    AnyRefNode &Org = ...Segments.Shank.PeroneusLongus3Node;
+    AnyRefNode &Via1 = ...Segments.Shank.PeroneusLongusViaNode1;
+    AnyRefNode &Via2 = ...Segments.Shank.PeroneusLongusViaNode2;
+    //  AnyRefNode &Via3 = ...Segments.Shank.PeroneusLongusViaNode3;
+    //  AnyRefNode &Via4 = ...Segments.Shank.PeroneusLongusViaNode4;
+    //  AnyRefNode &Via5 = ...Segments.Foot.Calcaneus.PeroneusLongusViaNode3;
+    AnyRefNode &Via6 = ...Segments.Foot.Calcaneus.PeroneusLongusViaNode4;
+    AnyRefNode &Via7 = ...Segments.Foot.Cuboid.PeroneusLongusViaNode5;
+    AnyRefNode &Ins = ...Segments.Foot.Cuboid.PeroneusLongusViaNode6;
+    #include "MuscleForceDrawing.any"
     AnyDrawMuscle DrwMus = {#include "<ANYBODY_PATH_BODY>/DrawSettings/MusDrawSettings.any" };
   };
 };
@@ -343,49 +343,49 @@ MuscleGroup PeroneusLongus() = {
 MuscleGroup ExtensorDigitorumLongus() = {
   AnyMuscleViaPoint ExtensorDigitorumLongus1 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.ExtensorDigitorumLongus1Par;
-    AnyRefNode &Org = ...Seg.Shank.ExtensorDigitorumLongus1Node;
-    AnyRefNode &Via1 = ...Seg.Shank.ExtensorDigitorumLongusViaNode1;
-    AnyRefNode &Via2 = ...Seg.Shank.ExtensorDigitorumLongusViaNode2;
-    AnyRefNode &Via3 = ...Seg.Shank.ExtensorDigitorumLongusViaNode3;
-    //  AnyRefNode &Via4 = ...Seg.Shank.ExtensorDigitorumLongusViaNode4;
-    AnyRefNode &Ins = ...Seg.Foot.Calcaneus.ExtensorDigitorumLongusViaNode5;
-    #include "MuscleForceDrawing.any"      
+    AnyRefNode &Org = ...Segments.Shank.ExtensorDigitorumLongus1Node;
+    AnyRefNode &Via1 = ...Segments.Shank.ExtensorDigitorumLongusViaNode1;
+    AnyRefNode &Via2 = ...Segments.Shank.ExtensorDigitorumLongusViaNode2;
+    AnyRefNode &Via3 = ...Segments.Shank.ExtensorDigitorumLongusViaNode3;
+    //  AnyRefNode &Via4 = ...Segments.Shank.ExtensorDigitorumLongusViaNode4;
+    AnyRefNode &Ins = ...Segments.Foot.Calcaneus.ExtensorDigitorumLongusViaNode5;
+    #include "MuscleForceDrawing.any"
     AnyDrawMuscle DrwMus = {#include "<ANYBODY_PATH_BODY>/DrawSettings/MusDrawSettings.any" };
   };
-  
+
   AnyMuscleViaPoint ExtensorDigitorumLongus2 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.ExtensorDigitorumLongus2Par;
-    AnyRefNode &Org = ...Seg.Shank.ExtensorDigitorumLongus2Node;
-    AnyRefNode &Via1 = ...Seg.Shank.ExtensorDigitorumLongusViaNode1;
-    AnyRefNode &Via2 = ...Seg.Shank.ExtensorDigitorumLongusViaNode2;
-    AnyRefNode &Via3 = ...Seg.Shank.ExtensorDigitorumLongusViaNode3;
-    //  AnyRefNode &Via4 = ...Seg.Shank.ExtensorDigitorumLongusViaNode4;
-    AnyRefNode &Ins = ...Seg.Foot.Calcaneus.ExtensorDigitorumLongusViaNode5;
-    #include "MuscleForceDrawing.any"      
+    AnyRefNode &Org = ...Segments.Shank.ExtensorDigitorumLongus2Node;
+    AnyRefNode &Via1 = ...Segments.Shank.ExtensorDigitorumLongusViaNode1;
+    AnyRefNode &Via2 = ...Segments.Shank.ExtensorDigitorumLongusViaNode2;
+    AnyRefNode &Via3 = ...Segments.Shank.ExtensorDigitorumLongusViaNode3;
+    //  AnyRefNode &Via4 = ...Segments.Shank.ExtensorDigitorumLongusViaNode4;
+    AnyRefNode &Ins = ...Segments.Foot.Calcaneus.ExtensorDigitorumLongusViaNode5;
+    #include "MuscleForceDrawing.any"
     AnyDrawMuscle DrwMus = {#include "<ANYBODY_PATH_BODY>/DrawSettings/MusDrawSettings.any" };
   };
-  
+
   AnyMuscleViaPoint ExtensorDigitorumLongus3 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.ExtensorDigitorumLongus3Par;
-    AnyRefNode &Org = ...Seg.Shank.ExtensorDigitorumLongus3Node;
-    AnyRefNode &Via1 = ...Seg.Shank.ExtensorDigitorumLongusViaNode1;
-    AnyRefNode &Via2 = ...Seg.Shank.ExtensorDigitorumLongusViaNode2;
-    AnyRefNode &Via3 = ...Seg.Shank.ExtensorDigitorumLongusViaNode3;
-    //  AnyRefNode &Via4 = ...Seg.Shank.ExtensorDigitorumLongusViaNode4;
-    AnyRefNode &Ins = ...Seg.Foot.Calcaneus.ExtensorDigitorumLongusViaNode5;
-    #include "MuscleForceDrawing.any"      
+    AnyRefNode &Org = ...Segments.Shank.ExtensorDigitorumLongus3Node;
+    AnyRefNode &Via1 = ...Segments.Shank.ExtensorDigitorumLongusViaNode1;
+    AnyRefNode &Via2 = ...Segments.Shank.ExtensorDigitorumLongusViaNode2;
+    AnyRefNode &Via3 = ...Segments.Shank.ExtensorDigitorumLongusViaNode3;
+    //  AnyRefNode &Via4 = ...Segments.Shank.ExtensorDigitorumLongusViaNode4;
+    AnyRefNode &Ins = ...Segments.Foot.Calcaneus.ExtensorDigitorumLongusViaNode5;
+    #include "MuscleForceDrawing.any"
     AnyDrawMuscle DrwMus = {#include "<ANYBODY_PATH_BODY>/DrawSettings/MusDrawSettings.any" };
   };
-  
+
   AnyMuscleViaPoint ExtensorDigitorumLongus4 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.ExtensorDigitorumLongus4Par;
-    AnyRefNode &Org = ...Seg.Shank.ExtensorDigitorumLongus4Node;
-    AnyRefNode &Via1 = ...Seg.Shank.ExtensorDigitorumLongusViaNode1;
-    AnyRefNode &Via2 = ...Seg.Shank.ExtensorDigitorumLongusViaNode2;
-    AnyRefNode &Via3 = ...Seg.Shank.ExtensorDigitorumLongusViaNode3;
-    //  AnyRefNode &Via4 = ...Seg.Shank.ExtensorDigitorumLongusViaNode4;
-    AnyRefNode &Ins = ...Seg.Foot.Calcaneus.ExtensorDigitorumLongusViaNode5;
-    #include "MuscleForceDrawing.any"      
+    AnyRefNode &Org = ...Segments.Shank.ExtensorDigitorumLongus4Node;
+    AnyRefNode &Via1 = ...Segments.Shank.ExtensorDigitorumLongusViaNode1;
+    AnyRefNode &Via2 = ...Segments.Shank.ExtensorDigitorumLongusViaNode2;
+    AnyRefNode &Via3 = ...Segments.Shank.ExtensorDigitorumLongusViaNode3;
+    //  AnyRefNode &Via4 = ...Segments.Shank.ExtensorDigitorumLongusViaNode4;
+    AnyRefNode &Ins = ...Segments.Foot.Calcaneus.ExtensorDigitorumLongusViaNode5;
+    #include "MuscleForceDrawing.any"
     AnyDrawMuscle DrwMus = {#include "<ANYBODY_PATH_BODY>/DrawSettings/MusDrawSettings.any" };
   };
 };
@@ -394,45 +394,45 @@ MuscleGroup ExtensorDigitorumLongus() = {
 MuscleGroup ExtensorHallucisLongus() = {
   AnyMuscleViaPoint ExtensorHallucisLongus1 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.ExtensorHallucisLongus1Par;
-    AnyRefNode &Org = ...Seg.Shank.ExtensorHallucisLongus1Node;
-    AnyRefNode &Via1 = ...Seg.Shank.ExtensorHallucisLongusViaNode1;
-    AnyRefNode &Via2 = ...Seg.Shank.ExtensorHallucisLongusViaNode2;
-    //  AnyRefNode &Via3 = ...Seg.Shank.ExtensorHallucisLongusViaNode3;
-    AnyRefNode &Via7 = ...Seg.Foot.Calcaneus.ExtensorHallucisLongusViaNode7;
-    //  AnyRefNode &Via7 = ...Seg.Foot.Navicular.ExtensorHallucisLongusViaNode7;
-    AnyRefNode &Via8 = ...Seg.Foot.MedialCuneiform.ExtensorHallucisLongusViaNode8;
-    AnyRefNode &Ins = ...Seg.Foot.Metatarsal1.ExtensorHallucisLongusViaNode9;
-    #include "MuscleForceDrawing.any"      
+    AnyRefNode &Org = ...Segments.Shank.ExtensorHallucisLongus1Node;
+    AnyRefNode &Via1 = ...Segments.Shank.ExtensorHallucisLongusViaNode1;
+    AnyRefNode &Via2 = ...Segments.Shank.ExtensorHallucisLongusViaNode2;
+    //  AnyRefNode &Via3 = ...Segments.Shank.ExtensorHallucisLongusViaNode3;
+    AnyRefNode &Via7 = ...Segments.Foot.Calcaneus.ExtensorHallucisLongusViaNode7;
+    //  AnyRefNode &Via7 = ...Segments.Foot.Navicular.ExtensorHallucisLongusViaNode7;
+    AnyRefNode &Via8 = ...Segments.Foot.MedialCuneiform.ExtensorHallucisLongusViaNode8;
+    AnyRefNode &Ins = ...Segments.Foot.Metatarsal1.ExtensorHallucisLongusViaNode9;
+    #include "MuscleForceDrawing.any"
     AnyDrawMuscle DrwMus = {#include "<ANYBODY_PATH_BODY>/DrawSettings/MusDrawSettings.any" };
   };
-  
+
   AnyMuscleViaPoint ExtensorHallucisLongus2 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.ExtensorHallucisLongus2Par;
-    AnyRefNode &Org = ...Seg.Shank.ExtensorHallucisLongus2Node;
-    AnyRefNode &Via1 = ...Seg.Shank.ExtensorHallucisLongusViaNode1;
-    AnyRefNode &Via2 = ...Seg.Shank.ExtensorHallucisLongusViaNode2;
-    //  AnyRefNode &Via3 = ...Seg.Shank.ExtensorHallucisLongusViaNode3;
-    AnyRefNode &Via7 = ...Seg.Foot.Calcaneus.ExtensorHallucisLongusViaNode7;
-    //  AnyRefNode &Via7 = ...Seg.Foot.Navicular.ExtensorHallucisLongusViaNode7;
-    AnyRefNode &Via8 = ...Seg.Foot.MedialCuneiform.ExtensorHallucisLongusViaNode8;
-    AnyRefNode &Ins = ...Seg.Foot.Metatarsal1.ExtensorHallucisLongusViaNode9;
-    #include "MuscleForceDrawing.any"      
+    AnyRefNode &Org = ...Segments.Shank.ExtensorHallucisLongus2Node;
+    AnyRefNode &Via1 = ...Segments.Shank.ExtensorHallucisLongusViaNode1;
+    AnyRefNode &Via2 = ...Segments.Shank.ExtensorHallucisLongusViaNode2;
+    //  AnyRefNode &Via3 = ...Segments.Shank.ExtensorHallucisLongusViaNode3;
+    AnyRefNode &Via7 = ...Segments.Foot.Calcaneus.ExtensorHallucisLongusViaNode7;
+    //  AnyRefNode &Via7 = ...Segments.Foot.Navicular.ExtensorHallucisLongusViaNode7;
+    AnyRefNode &Via8 = ...Segments.Foot.MedialCuneiform.ExtensorHallucisLongusViaNode8;
+    AnyRefNode &Ins = ...Segments.Foot.Metatarsal1.ExtensorHallucisLongusViaNode9;
+    #include "MuscleForceDrawing.any"
     AnyDrawMuscle DrwMus = {#include "<ANYBODY_PATH_BODY>/DrawSettings/MusDrawSettings.any" };
   };
-  
+
   AnyMuscleViaPoint ExtensorHallucisLongus3 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.ExtensorHallucisLongus3Par;
-    AnyRefNode &Org = ...Seg.Shank.ExtensorHallucisLongus3Node;
-    AnyRefNode &Via1 = ...Seg.Shank.ExtensorHallucisLongusViaNode1;
-    AnyRefNode &Via2 = ...Seg.Shank.ExtensorHallucisLongusViaNode2;
-    //  AnyRefNode &Via3 = ...Seg.Shank.ExtensorHallucisLongusViaNode3;
-    AnyRefNode &Via7 = ...Seg.Foot.Calcaneus.ExtensorHallucisLongusViaNode7;
-    //  AnyRefNode &Via7 = ...Seg.Foot.Navicular.ExtensorHallucisLongusViaNode7;
-    AnyRefNode &Via8 = ...Seg.Foot.MedialCuneiform.ExtensorHallucisLongusViaNode8;
-    AnyRefNode &Ins = ...Seg.Foot.Metatarsal1.ExtensorHallucisLongusViaNode9;
-    //  AnyRefNode &Via10 = ...Seg.Foot.ProximalPhalange1.ExtensorHallucisLongusViaNode10;
-    //  AnyRefNode &Ins = ...Seg.Foot.DistalPhalange1.ExtensorHallucisLongus3Node;
-    #include "MuscleForceDrawing.any"     
+    AnyRefNode &Org = ...Segments.Shank.ExtensorHallucisLongus3Node;
+    AnyRefNode &Via1 = ...Segments.Shank.ExtensorHallucisLongusViaNode1;
+    AnyRefNode &Via2 = ...Segments.Shank.ExtensorHallucisLongusViaNode2;
+    //  AnyRefNode &Via3 = ...Segments.Shank.ExtensorHallucisLongusViaNode3;
+    AnyRefNode &Via7 = ...Segments.Foot.Calcaneus.ExtensorHallucisLongusViaNode7;
+    //  AnyRefNode &Via7 = ...Segments.Foot.Navicular.ExtensorHallucisLongusViaNode7;
+    AnyRefNode &Via8 = ...Segments.Foot.MedialCuneiform.ExtensorHallucisLongusViaNode8;
+    AnyRefNode &Ins = ...Segments.Foot.Metatarsal1.ExtensorHallucisLongusViaNode9;
+    //  AnyRefNode &Via10 = ...Segments.Foot.ProximalPhalange1.ExtensorHallucisLongusViaNode10;
+    //  AnyRefNode &Ins = ...Segments.Foot.DistalPhalange1.ExtensorHallucisLongus3Node;
+    #include "MuscleForceDrawing.any"
     AnyDrawMuscle DrwMus = {#include "<ANYBODY_PATH_BODY>/DrawSettings/MusDrawSettings.any" };
   };
 };
@@ -443,28 +443,28 @@ MuscleGroup ExtensorHallucisLongus() = {
 MuscleGroup PeroneusTertius() = {
   AnyMuscleViaPoint PeroneusTertius1 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.PeroneusTertius1Par;
-    AnyRefNode &Org = ...Seg.Shank.PeroneusTertius1Node;
-    AnyRefNode &Via1 = ...Seg.Shank.PeroneusTertiusViaNode1;
-    //AnyRefNode &Via3 = ....Seg.Foot.Cuboid.PeroneusTertiusViaNode3;
-    AnyRefNode &Ins = ...Seg.Foot.Metatarsal5.PeroneusTertius1Node;
+    AnyRefNode &Org = ...Segments.Shank.PeroneusTertius1Node;
+    AnyRefNode &Via1 = ...Segments.Shank.PeroneusTertiusViaNode1;
+    //AnyRefNode &Via3 = ....Segments.Foot.Cuboid.PeroneusTertiusViaNode3;
+    AnyRefNode &Ins = ...Segments.Foot.Metatarsal5.PeroneusTertius1Node;
     AnyDrawMuscle DrwMus = {#include "<ANYBODY_PATH_BODY>/drawSettings/MusDrawSettings.any"};
   };
-  
+
   AnyMuscleViaPoint PeroneusTertius2 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.PeroneusTertius2Par;
-    AnyRefNode &Org = ...Seg.Shank.PeroneusTertius2Node;
-    AnyRefNode &Via1 = ...Seg.Shank.PeroneusTertiusViaNode1;
-    //  AnyRefNode &Via3 = ..Seg.Cuboid.PeroneusTertiusViaNode3;
-    AnyRefNode &Ins = ...Seg.Foot.Metatarsal5.PeroneusTertius2Node;
+    AnyRefNode &Org = ...Segments.Shank.PeroneusTertius2Node;
+    AnyRefNode &Via1 = ...Segments.Shank.PeroneusTertiusViaNode1;
+    //  AnyRefNode &Via3 = ..Segments.Cuboid.PeroneusTertiusViaNode3;
+    AnyRefNode &Ins = ...Segments.Foot.Metatarsal5.PeroneusTertius2Node;
     AnyDrawMuscle DrwMus = {#include "<ANYBODY_PATH_BODY>/drawSettings/MusDrawSettings.any"};
   };
-  
+
   AnyMuscleViaPoint PeroneusTertius3 = {
     AnyMuscleModel &MusMdl = ...MuscleModels.PeroneusTertius3Par;
-    AnyRefNode &Org = ...Seg.Shank.PeroneusTertius3Node;
-    AnyRefNode &Via1 = ...Seg.Shank.PeroneusTertiusViaNode1;
-    //  AnyRefNode &Via3 = ..Seg.Cuboid.PeroneusTertiusViaNode3;
-    AnyRefNode &Ins = ...Seg.Foot.Metatarsal5.PeroneusTertius3Node;
+    AnyRefNode &Org = ...Segments.Shank.PeroneusTertius3Node;
+    AnyRefNode &Via1 = ...Segments.Shank.PeroneusTertiusViaNode1;
+    //  AnyRefNode &Via3 = ..Segments.Cuboid.PeroneusTertiusViaNode3;
+    AnyRefNode &Ins = ...Segments.Foot.Metatarsal5.PeroneusTertius3Node;
     AnyDrawMuscle DrwMus = {#include "<ANYBODY_PATH_BODY>/drawSettings/MusDrawSettings.any"};
   };
 };

@@ -71,7 +71,7 @@ FootPlateConditionalContact GRF_Prediction_Right(
     PLATE_BASE_FRAME = Main.EnvironmentModel.GlobalRef
 ) = {
     CreateFootContactNodes25 FootNodes(
-        foot_ref=Main.HumanModel.BodyModel.Right.Leg.Seg.Foot
+        foot_ref=Main.HumanModel.BodyModel.Right.Leg.Segments.Foot
     ) = {};
 };
 ```
@@ -153,7 +153,7 @@ FootPlateConditionalContact GRF_Prediction_Right(
     PLATE_BASE_FRAME = Main.EnvironmentModel.GlobalRef
 ) = {
     CreateFootContactNodes25 FootNodes(
-        foot_ref=Main.HumanModel.BodyModel.Right.Leg.Seg.Foot
+        foot_ref=Main.HumanModel.BodyModel.Right.Leg.Segments.Foot
     ) = {};
 };
 ```

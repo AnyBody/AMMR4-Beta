@@ -11,7 +11,7 @@
   ) =
   {
     CreateFootContactNodes25 FootNodes(
-      foot_ref=Main.HumanModel.BodyModel.Right.Leg.Seg.Foot
+      foot_ref=Main.HumanModel.BodyModel.Right.Leg.Segments.Foot
     ) = {};
 
     // Additional force plate settings
@@ -35,7 +35,7 @@
   ) =
   {
     CreateFootContactNodes25 FootNodes(
-      foot_ref=Main.HumanModel.BodyModel.Left.Leg.Seg.Foot
+      foot_ref=Main.HumanModel.BodyModel.Left.Leg.Segments.Foot
     ) = {};
 
     Settings =

@@ -1,16 +1,16 @@
 // Set the body dimensions to match the source model from Github.
 HumanModel.Anthropometrics.SegmentDimensions = {
-  PelvisHeight = DesignVar(0.108*.BodyHeight/1.75); 
-  PelvisDepth = DesignVar(0.1399611*.SegmentScaleFactors.BodyScale); 
-  
+  PelvisHeight = DesignVar(0.108*.BodyHeight/1.75);
+  PelvisDepth = DesignVar(0.1399611*.SegmentScaleFactors.BodyScale);
+
   HeadWidth = DesignVar(0.1800*.SegmentScaleFactors.BodyScale); ///< Distance from the most lateral point to most medial point on the skull
   HeadDepth = DesignVar(0.2299*.SegmentScaleFactors.BodyScale); ///<  Distance from the most anterior point on the skull to the most posterior point on the skull
-  
+
   TrunkWidth = DesignVar(0.3881839*.SegmentScaleFactors.BodyScale); //< Width between shoulder joints
   TrunkDepth = DesignVar(0.1870*.SegmentScaleFactors.BodyScale); ///< Horizontal distance between (midpoint of LongissimusThoracisT8S3Via3NodeL and LongissimusThoracisT8S3Via3NodeR) and (midpoint of RACP_CO6ViaNodeR and RACP_CO6ViaNodeL)
-  
+
   NeckLength = DesignVar(0.1390*.BodyHeight/1.75); ///< Measured as vertical distance between C7 to C1HatNode on thorax segment
-  
+
   Right ={
     FootHeight = DesignVar(0.0502*..BodyHeight/1.75);
     FootWidth = DesignVar(0.0839*1.001849);
@@ -29,14 +29,14 @@ HumanModel.Scaling.GeometricalScaling = {
 };
 
 
-// Create a reference node in each foot model segment to simulate the segmental frame 
-// from the GM foot model. This reference node is then used in the MarkerProtocol as 
-// the option for PlaceMarkerAt. This ensures that the marker protocol can be used 
+// Create a reference node in each foot model segment to simulate the segmental frame
+// from the GM foot model. This reference node is then used in the MarkerProtocol as
+// the option for PlaceMarkerAt. This ensures that the marker protocol can be used
 // without the need to update sRelOpt and Optimization directions.
-HumanModel.BodyModel.Right.Leg.Seg.Foot = {
+HumanModel.BodyModel.Right.Leg.Segments.Foot = {
   AnyFloat GMFootLegacyFrameOrigin = Scale({0.0,0.0,0.0});
   AnyMat33 GMFootLegacyFrameOrientation = RotMat(Scale({0.0,0.0,0.0}), Scale({0.01,0.0,0.0}), Scale({0.0,0.01,0.0}));
-  
+
   Talus                 = {AnyRefNode GMFootLegacySegmentalFrame = {sRel = ..GMFootLegacyFrameOrigin; ARel = ..GMFootLegacyFrameOrientation;};};
   Calcaneus             = {AnyRefNode GMFootLegacySegmentalFrame = {sRel = ..GMFootLegacyFrameOrigin; ARel = ..GMFootLegacyFrameOrientation;};};
   Cuboid                = {AnyRefNode GMFootLegacySegmentalFrame = {sRel = ..GMFootLegacyFrameOrigin; ARel = ..GMFootLegacyFrameOrientation;};};

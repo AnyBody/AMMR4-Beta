@@ -40,7 +40,7 @@ AnyFolder Drivers = {
   {
     AnyKinLinear TranslationHeel =    {
       AnyRefFrame &ref1 = Main.Model.Environment.GlobalRef.RightFootPoint;
-      AnyRefFrame &ref2 =  Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.Calcaneus.HeelContactNodeLow;
+      AnyRefFrame &ref2 =  Main.HumanModel.BodyModel.Right.Leg.Segments.Foot.Calcaneus.HeelContactNodeLow;
     };
 
     AnyKinMeasureOrg HeelHeight ={
@@ -50,7 +50,7 @@ AnyFolder Drivers = {
 
     AnyKinLinear TranslationMedialFront = {
       AnyRefFrame &ref1 = Main.Model.Environment.GlobalRef.RightFootPoint;
-      AnyRefFrame &ref2 =  Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.ProximalPhalange1.ToeMedialContactNode;
+      AnyRefFrame &ref2 =  Main.HumanModel.BodyModel.Right.Leg.Segments.Foot.ProximalPhalange1.ToeMedialContactNode;
     };
 
     AnyKinMeasureOrg TranslationMedialFrontHeight ={
@@ -60,7 +60,7 @@ AnyFolder Drivers = {
 
     AnyKinLinear TranslationLateralFront = {
       AnyRefFrame &ref1 = Main.Model.Environment.GlobalRef.RightFootPoint;
-      AnyRefFrame &ref2 =  Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.ProximalPhalange5.ToeLateralContactNode;
+      AnyRefFrame &ref2 =  Main.HumanModel.BodyModel.Right.Leg.Segments.Foot.ProximalPhalange5.ToeLateralContactNode;
     };
 
     AnyKinMeasureOrg TranslationLateralFrontHeight ={
@@ -70,7 +70,7 @@ AnyFolder Drivers = {
 
     AnyKinRotational Rotation = {
       AnyRefFrame &ref1 = Main.Model.Environment.GlobalRef.RightFootPoint.RotNode;
-      AnyRefFrame &ref2 = Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.ConditionalContact_Nodes.Node0;
+      AnyRefFrame &ref2 = Main.HumanModel.BodyModel.Right.Leg.Segments.Foot.ConditionalContact_Nodes.Node0;
       Type = RotAxesAngles;
     };
 
@@ -101,7 +101,7 @@ AnyFolder Drivers = {
   {
     AnyKinLinear TranslationHeel =  {
       AnyRefFrame &ref1 = Main.Model.Environment.GlobalRef.LeftFootPoint;
-      AnyRefFrame &ref2 =  Main.HumanModel.BodyModel.Left.Leg.Seg.Foot.Calcaneus.HeelContactNodeLow;
+      AnyRefFrame &ref2 =  Main.HumanModel.BodyModel.Left.Leg.Segments.Foot.Calcaneus.HeelContactNodeLow;
     };
 
     AnyKinMeasureOrg HeelHeight ={
@@ -111,7 +111,7 @@ AnyFolder Drivers = {
 
     AnyKinLinear TranslationMedialFront =    {
       AnyRefFrame &ref1 = Main.Model.Environment.GlobalRef.LeftFootPoint;
-      AnyRefFrame &ref2 =  Main.HumanModel.BodyModel.Left.Leg.Seg.Foot.ProximalPhalange1.ToeMedialContactNode;
+      AnyRefFrame &ref2 =  Main.HumanModel.BodyModel.Left.Leg.Segments.Foot.ProximalPhalange1.ToeMedialContactNode;
     };
 
     AnyKinMeasureOrg TranslationMedialFrontHeight ={
@@ -122,7 +122,7 @@ AnyFolder Drivers = {
     AnyKinLinear TranslationLateralFront =
     {
       AnyRefFrame &ref1 = Main.Model.Environment.GlobalRef.LeftFootPoint;
-      AnyRefFrame &ref2 =  Main.HumanModel.BodyModel.Left.Leg.Seg.Foot.ProximalPhalange5.ToeLateralContactNode;
+      AnyRefFrame &ref2 =  Main.HumanModel.BodyModel.Left.Leg.Segments.Foot.ProximalPhalange5.ToeLateralContactNode;
     };
     AnyKinMeasureOrg TranslationLateralFrontHeight ={
       MeasureOrganizer={2};
@@ -131,7 +131,7 @@ AnyFolder Drivers = {
     AnyKinRotational Rotation =
     {
       AnyRefFrame &ref1 = Main.Model.Environment.GlobalRef.LeftFootPoint.RotNode;
-      AnyRefFrame &ref2 = Main.HumanModel.BodyModel.Left.Leg.Seg.Foot.ConditionalContact_Nodes.Node0;
+      AnyRefFrame &ref2 = Main.HumanModel.BodyModel.Left.Leg.Segments.Foot.ConditionalContact_Nodes.Node0;
 
       Type = RotAxesAngles;
     };

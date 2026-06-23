@@ -69,8 +69,8 @@ Views = {
             ObjSearchRecursive("Main.EnvironmentModel.ForcePlates", "ForcePlate.COP_ball", "AnyDrawObject"),
             ObjSearchRecursive("Main.EnvironmentModel.ForcePlates", "ForcePlate.PlateSurface.COP_ball", "AnyDrawObject"),
             ObjSearchRecursive("Main.EnvironmentModel.ForcePlates", "ForcePlate.PlateSurface.COP_ball", "AnyDrawObject"),
-            ObjSearchRecursive("Main.HumanModel.BodyModel.Left.Leg.Seg.Foot.ConditionalContact_Nodes", "Dr*", "AnyDrawObject"),
-            ObjSearchRecursive("Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.ConditionalContact_Nodes", "Dr*", "AnyDrawObject"),
+            ObjSearchRecursive("Main.HumanModel.BodyModel.Left.Leg.Segments.Foot.ConditionalContact_Nodes", "Dr*", "AnyDrawObject"),
+            ObjSearchRecursive("Main.HumanModel.BodyModel.Right.Leg.Segments.Foot.ConditionalContact_Nodes", "Dr*", "AnyDrawObject"),
             .GRF_Trigger_volume.Objects
         );
       };

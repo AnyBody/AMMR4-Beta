@@ -39,13 +39,13 @@ Main = {
       AnyVec3 KneeMomentInGlobal = LegRef.Jnt.Knee.Constraints.Reaction.RefFrameOutput.M[0];
 
       // We can now express the force and moments in the coordinate system we want.
-      AnyVec3 KneeForceInShank = transf3D(KneeForceInGlobal, &GlobalRef, &LegRef.Seg.Shank.KneeJoint);
-      AnyVec3 KneeMomentInShank = transf3D(KneeMomentInGlobal, &GlobalRef, &LegRef.Seg.Shank.KneeJoint);
+      AnyVec3 KneeForceInShank = transf3D(KneeForceInGlobal, &GlobalRef, &LegRef.Segments.Shank.KneeJoint);
+      AnyVec3 KneeMomentInShank = transf3D(KneeMomentInGlobal, &GlobalRef, &LegRef.Segments.Shank.KneeJoint);
 
       // Note this transformation is most easily done with the transf3D function but the same could have been achieved
       // by simply multiplying the 'Axes' variable (rotation matrix) of the Shank knee joint coordinate system.
       // E.i.
-      // AnyVec3 KneeForceInShank = (LegRef.Seg.Shank.KneeJoint.Axes'*KneeForceInGlobal')';
+      // AnyVec3 KneeForceInShank = (LegRef.Segments.Shank.KneeJoint.Axes'*KneeForceInGlobal')';
 
 
       // We can now calculate two equivalent condyle compression forces which
@@ -76,7 +76,7 @@ Main = {
       // along the knee axis. Inside the nodes we create small
       // vectors representing the forces.
 
-      LegRef.Seg.Shank = {
+      LegRef.Segments.Shank = {
         AnyRefNode LateralKneeContactNode = {
           AnyVec3 uKneeAxis = {0,0,1}*ARel';
           sRel = .KneeJoint.sRel + ....L_lateral *uKneeAxis;

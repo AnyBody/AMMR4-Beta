@@ -1,0 +1,19 @@
+#include "libdef.any"
+
+#define BM_CONFIG_MESSAGES 1
+#define BM_CONFIG_VALUES 1
+
+// disable bodyparts to load faster
+#define BM_ARM_LEFT 0
+#define BM_ARM_RIGHT 0
+#define BM_LEG_RIGHT 0
+#define BM_LEG_LEFT 0
+
+
+/**
+  Load Test to ensure the BM_CONFIG statements work correctly.
+**/
+Main = {
+  // Include the Human model from AMMR
+  #include "<ANYBODY_PATH_BODY>\HumanModel.any"
+};

@@ -9,7 +9,7 @@ AnyFolder HipFlexorCal ={
   AnyFolder &Thorax = ...HumanFolderRef.Trunk.Segments.ThoraxSeg;
 
 
-  AnyFolder &LegSegSide = .SideHumanFolderRef.Leg.Seg;
+  AnyFolder &LegSegSide = .SideHumanFolderRef.Leg.Segments;
   AnyFolder &LegJointsSide = .SideHumanFolderRef.Leg.Jnt;
   AnyFolder &TrunkJoints = ...HumanFolderRef.Trunk.Joints.Lumbar;
 
