@@ -17,6 +17,8 @@ AnyFolder HumanModel=
     AnyFolder Messages = {
       #include "BodyModels\GenericBodyModel\DeprecationMessages.any"
 
+      /// Folder for tool related messages.
+      AnyFolder Tools = {};
     };
 
   };

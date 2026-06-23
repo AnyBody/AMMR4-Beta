@@ -166,7 +166,7 @@
 
 #ifndef ANYBODY_PYTHON_SUPPRESS_NOTICE
 #if ANYBODY_PYTHON_AVAILABLE == 0
-Messages = {
+Messages.Tools = {
   AnyMessage PythonMissing = {
     Type = MSG_Message;
     TriggerPreProcess = On;
