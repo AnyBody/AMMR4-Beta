@@ -29,7 +29,7 @@
     AnyFolder &Talus = Foot.Talus; // for compatibility with TLEM 2.2
   };
 
-  Jnt = {
+  Joints = {
     #if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
       #include "JntRigidToeFlex.any"
     #endif

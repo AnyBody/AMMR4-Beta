@@ -131,9 +131,9 @@ AnyKinMeasureOrg JntDOF = {
   // 3 Hip adduction/abduction
   // 4 Hip rotation externa/internal
   // 5 Hip flexion/extension
-  AnyUniversalJoint &Ankle = .Jnt.Ankle;
-  AnyRevoluteJoint &Knee = .Jnt.Knee;
-  AnySphericalJoint &Hip = .Jnt.Hip;
+  AnyUniversalJoint &Ankle = .Joints.Ankle;
+  AnyRevoluteJoint &Knee = .Joints.Knee;
+  AnySphericalJoint &Hip = .Joints.Hip;
 };
 
 /// Definition of the leg segments
@@ -142,7 +142,7 @@ AnyFolder Segments = {
 };
 
 /// Definition of the joints
-AnyFolder Jnt = {
+AnyFolder Joints = {
   #include "Jnt.any"
 };
 

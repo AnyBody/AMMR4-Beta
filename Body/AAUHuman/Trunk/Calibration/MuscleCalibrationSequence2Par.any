@@ -21,11 +21,11 @@ AnyFolder ThoraxMuscleCalibration={
     AnyFolder& Muscles =  ...BodyModel.Trunk.Muscles;
     #if BM_LEG_MODEL & BM_LEG_RIGHT
     AnyFolder& RightThigh = ...BodyModel.Right.Leg.Segments.Thigh;
-    AnyFolder& RightHipJoint =  ...BodyModel.Right.Leg.Jnt.Hip;
+    AnyFolder& RightHipJoint =  ...BodyModel.Right.Leg.Joints.Hip;
     #endif
     #if BM_LEG_MODEL & BM_LEG_LEFT
     AnyFolder& LeftThigh = ...BodyModel.Left.Leg.Segments.Thigh;
-    AnyFolder& LeftHipJoint =  ...BodyModel.Left.Leg.Jnt.Hip;
+    AnyFolder& LeftHipJoint =  ...BodyModel.Left.Leg.Joints.Hip;
     #endif
 
      AnyFixedRefFrame ground = {

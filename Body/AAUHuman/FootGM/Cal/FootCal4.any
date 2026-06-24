@@ -5,7 +5,7 @@ AnyFolder FootCal4 ={
   AnyFolder &Pelvis = ....HumanModel.BodyModel.Trunk.Segments.PelvisSeg; //This is a reference to the folder which holds the human part of the model
   AnyFolder &LegSegSide = .SideRef.Leg.Segments; //This is a reference to the folder which holds the human part of the model
 
-  AnyFolder &JointsCal3 =  .SideRef.Leg.Jnt;
+  AnyFolder &JointsCal3 =  .SideRef.Leg.Joints;
 
 
 

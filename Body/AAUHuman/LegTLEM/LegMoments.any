@@ -147,7 +147,7 @@ AnyForceMomentMeasure2 KneeNetMomentMuscle =
              ObjSearch("..Segments.Foot.*", "AnySeg"));
 
   AnyObjectPtrArray pArrJntReactions = {
-    &..Jnt.PatellaMovement.Reaction
+    &..Joints.PatellaMovement.Reaction
   };
   IncludeForces = arrcat(
     ObjSearch("..Mus.*.*", "AnyMuscle"),
@@ -211,8 +211,8 @@ AnyForceMomentMeasure2 AnklePlantarFlexionNetMoment =
            ObjSearch("..Segments.Foot.*", "AnySeg"));
 
   AnyObjectPtrArray pArrJntReactions = {
-    &..Jnt.Ankle.Constraints.Reaction,
-    &..Jnt.SubTalar.Constraints.Reaction
+    &..Joints.Ankle.Constraints.Reaction,
+    &..Joints.SubTalar.Constraints.Reaction
   };
   IncludeForces = arrcat(
     ObjSearch("..Mus.*.*", "AnyMuscle"),
@@ -236,7 +236,7 @@ AnyForceMomentMeasure2 SubTalarEversionNetMoment =
                   ObjSearch("..Segments.Foot.Talus", "AnySeg"));
 
   AnyObjectPtrArray pArrJntReactions = {
-    &..Jnt.SubTalar.Constraints.Reaction
+    &..Joints.SubTalar.Constraints.Reaction
   };
   IncludeForces = arrcat(
     ObjSearch("..Mus.*.*", "AnyMuscle"),
@@ -261,10 +261,10 @@ AnyForceMomentMeasure2 KneeNetMoment =
 
   AnyObjectPtrArray pArrJntReactions =
   {
-    &..Jnt.Knee.Constraints.Reaction,
-    &..Jnt.Ankle.Constraints.Reaction,
-    &..Jnt.SubTalar.Constraints.Reaction,
-    &..Jnt.PatellaMovement.Reaction
+    &..Joints.Knee.Constraints.Reaction,
+    &..Joints.Ankle.Constraints.Reaction,
+    &..Joints.SubTalar.Constraints.Reaction,
+    &..Joints.PatellaMovement.Reaction
   };
   #include  "LegMusclePtrArrays.any"
   IncludeForces = arrcat(pArrTargetMuscles,pArrJntReactions);
@@ -285,12 +285,12 @@ AnyForceMomentMeasure2 HipNetMoment =
 
   AnyObjectPtrArray pArrJntReactions =
   {
-    &..Jnt.Hip.Constraints.Reaction,
-    &..Jnt.Knee.Constraints.Reaction,
-    &..Jnt.Ankle.Constraints.Reaction,
-    &..Jnt.SubTalar.Constraints.Reaction,
-    &..Jnt.PatellaFemur.Constraints.Reaction,
-    &..Jnt.PatellaMovement.Reaction
+    &..Joints.Hip.Constraints.Reaction,
+    &..Joints.Knee.Constraints.Reaction,
+    &..Joints.Ankle.Constraints.Reaction,
+    &..Joints.SubTalar.Constraints.Reaction,
+    &..Joints.PatellaFemur.Constraints.Reaction,
+    &..Joints.PatellaMovement.Reaction
   };
   IncludeForces = arrcat(
     ObjSearch("..Mus.*.*", "AnyMuscle"),
@@ -303,7 +303,7 @@ AnyForceMomentMeasure2 HipNetMoment =
 
 AnyForceMomentMeasure AnkleJointReactionMoments =
 {
-  AnyForceBase &Force = ..Jnt.Ankle.Constraints.Reaction;
+  AnyForceBase &Force = ..Joints.Ankle.Constraints.Reaction;
   AnyRefFrame &Shankankle = ..Segments.Shank.AnkleJoint;
   AnyVec3 Mlocal = M*Shankankle.Axes;
 };
@@ -312,7 +312,7 @@ AnyForceMomentMeasure AnkleJointReactionMoments =
 
 AnyForceMomentMeasure2 KneeJointReactionMoments =
 {
-  AnyForceBase &Force = ..Jnt.Knee.Constraints.Reaction;
+  AnyForceBase &Force = ..Joints.Knee.Constraints.Reaction;
   AnyRefFrame &Thighknee = ..Segments.Thigh.KneeJoint;
   IncludeSegments = {&..Segments.Thigh};
   AnyVec3 Mlocal = M*Thighknee.Axes;

@@ -7,18 +7,18 @@ AnyFolder JointReactions = {
 
   AnyReacForce HipJoint={
 
-    AnyKinMeasure& DOF = ..Jnt.Hip;
+    AnyKinMeasure& DOF = ..Joints.Hip;
 
   };
 
   AnyReacForce  KneeJoint={
-    AnyKinMeasure& DOF = ..Jnt.Knee;
+    AnyKinMeasure& DOF = ..Joints.Knee;
 
   };
 
 
   AnyReacForce AnkleJnt={
-    AnyKinMeasure& DOF = ..Jnt.Ankle;
+    AnyKinMeasure& DOF = ..Joints.Ankle;
   };
 
 };// End of JointsLumbar

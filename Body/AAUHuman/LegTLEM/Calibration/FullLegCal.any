@@ -11,7 +11,7 @@ AnyFolder LegCal1 ={
 
   AnyFolder &LegSegSide = .SideHumanFolderRef.Leg.Segments;
 
-  AnyFolder &LegJointsSide = .SideHumanFolderRef.Leg.Jnt;
+  AnyFolder &LegJointsSide = .SideHumanFolderRef.Leg.Joints;
   AnyFolder &SacrumPelvisJnt = ...HumanFolderRef.Trunk.Joints.Lumbar.SacrumPelvis;
 
   AnyFolder &MusCalSide =  .SideHumanFolderRef.Leg.Mus;

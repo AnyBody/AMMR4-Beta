@@ -108,7 +108,7 @@ AnyForceMomentMeasure2 AnkleNetMoment = {
   AnyRefNode &ref1=..Segments.Shank.AnkleJoint.RotNode;
   AnySeg &seg=..Segments.Foot;
   #include  "LegMuscleNames.any"
-  AnyReacForce &jnt2=..Jnt.Ankle.Constraints.Reaction;
+  AnyReacForce &jnt2=..Joints.Ankle.Constraints.Reaction;
 
   //    //Make transformation to the anklejoint.rotnode coordinate system
   //    AnyVec3 Mlocal=M*ref1.Axes;
@@ -134,8 +134,8 @@ AnyForceMomentMeasure2 KneeNetMoment = {
   AnyRefNode &ref1 = ..Segments.Thigh.KneeJoint.RotNode;
   AnySeg &seg1=..Segments.Shank;
   AnySeg &seg2=..Segments.Foot;
-  AnyReacForce &jnt1=..Jnt.Knee.Constraints.Reaction;
-  AnyReacForce &jnt2=..Jnt.Ankle.Constraints.Reaction;
+  AnyReacForce &jnt1=..Joints.Knee.Constraints.Reaction;
+  AnyReacForce &jnt2=..Joints.Ankle.Constraints.Reaction;
   #include  "LegMuscleNames.any"
   //    AnyRefNode &ref2 = ..Segments.Shank.KneeJoint.RotNode;
   //
@@ -163,9 +163,9 @@ AnyForceMomentMeasure2 HipNetMoment = {
   AnySeg &seg2=..Segments.Foot;
   AnySeg &seg3=..Segments.Thigh;
   #include  "LegMuscleNames.any"
-  AnyReacForce &jnt1=..Jnt.Hip.Constraints.Reaction;
-  AnyReacForce &jnt2=..Jnt.Knee.Constraints.Reaction;
-  AnyReacForce &jnt3=..Jnt.Ankle.Constraints.Reaction;
+  AnyReacForce &jnt1=..Joints.Hip.Constraints.Reaction;
+  AnyReacForce &jnt2=..Joints.Knee.Constraints.Reaction;
+  AnyReacForce &jnt3=..Joints.Ankle.Constraints.Reaction;
   //    AnyRefNode &ref2 = ..Segments.Thigh.HipJoint.RotNode;
 
   //    AnyVec3 Mlocal=M*ref2.Axes;
@@ -193,7 +193,7 @@ AnyForceMomentMeasure2 HipNetMoment = {
 
 AnyForceMomentMeasure KneeJointReactionMoments =
 {
-  AnyForceBase &Force = ..Jnt.Knee.Constraints.Reaction;
+  AnyForceBase &Force = ..Joints.Knee.Constraints.Reaction;
   AnyRefFrame &Thighknee = ..Segments.Thigh.KneeJoint;
   AnyVec3 Mlocal = M*Thighknee.Axes;
 };

@@ -34,7 +34,7 @@ AnyFolder Drivers = {
  // If Leg are included then Psoas muscle are attached to the legs.
  // Thus, we need to driver for the hip joint
  #if BM_LEG_RIGHT
- AnySphericalJoint &RHipJoint = .....BodyModel.Right.Leg.Jnt.Hip;
+ AnySphericalJoint &RHipJoint = .....BodyModel.Right.Leg.Joints.Hip;
  AnyKinEq RHipDriver= {
    AnyKinMeasureOrg HipMeasure = {
       AnyKinMeasure& ref1 = .......BodyModel.Interface.Right.HipFlexion;
@@ -44,7 +44,7 @@ AnyFolder Drivers = {
   };
  #endif
  #if BM_LEG_LEFT
- AnySphericalJoint &LHipJoint = .....BodyModel.Left.Leg.Jnt.Hip;
+ AnySphericalJoint &LHipJoint = .....BodyModel.Left.Leg.Joints.Hip;
  AnyKinEq LHipDriver= {
    AnyKinMeasureOrg HipMeasure = {
       AnyKinMeasure& ref1 = .......BodyModel.Interface.Left.HipFlexion;

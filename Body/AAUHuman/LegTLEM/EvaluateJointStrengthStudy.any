@@ -16,7 +16,7 @@ AnyFolder Model = {
 
   AnyFolder &JointsLumberRef = .....BodyModel.Trunk.Joints.Lumbar;
   AnyFolder &LegSegSideRef = .SideBodyModelRef.Leg.Segments; //This is a reference to the folder which holds the human part of the model
-  AnyFolder &LegJntsRef =  .SideBodyModelRef.Leg.Jnt;
+  AnyFolder &LegJntsRef =  .SideBodyModelRef.Leg.Joints;
   AnyFolder &MusRef = .SideBodyModelRef.Leg.EvaluateJointStrengthMusRef ;
 //  AnyFolder &LegMusRef = .SideBodyModelRef.Leg.Mus;
 //  AnyFolder &SpineMusRef = .SideTrunkMusRef;

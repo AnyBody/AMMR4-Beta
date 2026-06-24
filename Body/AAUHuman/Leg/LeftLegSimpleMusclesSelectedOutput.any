@@ -9,19 +9,19 @@ SelectedOutput.Left = {
 
 
       /// Medial positive
-      AnyVar Hip_MediolateralForce = ....Left.Leg.Jnt.Hip.Constraints.Reaction.Fout[2];
+      AnyVar Hip_MediolateralForce = ....Left.Leg.Joints.Hip.Constraints.Reaction.Fout[2];
       /// Proximal positive
-      AnyVar Hip_ProximoDistalForce = ....Left.Leg.Jnt.Hip.Constraints.Reaction.Fout[1];
+      AnyVar Hip_ProximoDistalForce = ....Left.Leg.Joints.Hip.Constraints.Reaction.Fout[1];
       /// Anterior positive
-      AnyVar Hip_AnteroPosteriorForce = ....Left.Leg.Jnt.Hip.Constraints.Reaction.Fout[0];
+      AnyVar Hip_AnteroPosteriorForce = ....Left.Leg.Joints.Hip.Constraints.Reaction.Fout[0];
       // Thigh.HipJoint ref
 
       /// Medial positive
-      AnyVar Knee_MedioLateralForce = ....Left.Leg.Jnt.Knee.Constraints.Reaction.Fout[2];
+      AnyVar Knee_MedioLateralForce = ....Left.Leg.Joints.Knee.Constraints.Reaction.Fout[2];
       /// Proximal positive
-      AnyVar Knee_ProximoDistalForce = ....Left.Leg.Jnt.Knee.Constraints.Reaction.Fout[1];
+      AnyVar Knee_ProximoDistalForce = ....Left.Leg.Joints.Knee.Constraints.Reaction.Fout[1];
       /// Anterior positive
-      AnyVar Knee_AnteroPosteriorForce = ....Left.Leg.Jnt.Knee.Constraints.Reaction.Fout[0];
+      AnyVar Knee_AnteroPosteriorForce = ....Left.Leg.Joints.Knee.Constraints.Reaction.Fout[0];
       /// External positive
       AnyVar Knee_AxialMoment = ....Left.Leg.MomentMeasure.KneeJointReactionMoments.Mlocal[1];
       /// Internal positive
@@ -30,15 +30,15 @@ SelectedOutput.Left = {
 
       #if BM_FOOT_MODEL == _FOOT_MODEL_LEG_FOOT_
       /// Lateral positive
-      AnyVar Ankle_MedioLateralForce = ....Left.Leg.Jnt.Ankle.Constraints.Reaction.Fout[2];
+      AnyVar Ankle_MedioLateralForce = ....Left.Leg.Joints.Ankle.Constraints.Reaction.Fout[2];
       /// Proximal positive
-      AnyVar Ankle_ProximoDistalForce = ....Left.Leg.Jnt.Ankle.Constraints.Reaction.Fout[1];
+      AnyVar Ankle_ProximoDistalForce = ....Left.Leg.Joints.Ankle.Constraints.Reaction.Fout[1];
       /// Anterior positive
-      AnyVar Ankle_AnteroPosteriorForce = ....Left.Leg.Jnt.Ankle.Constraints.Reaction.Fout[0];
+      AnyVar Ankle_AnteroPosteriorForce = ....Left.Leg.Joints.Ankle.Constraints.Reaction.Fout[0];
       // Shank.AnkleJoint ref
 
       /// Internal positive
-      AnyVar Ankle_AxialMoment = ....Left.Leg.Jnt.AnkleAxialRotationMoment.Fout[0];
+      AnyVar Ankle_AxialMoment = ....Left.Leg.Joints.AnkleAxialRotationMoment.Fout[0];
       // Shank.AnkleJoint.RotNode ref
       #endif
 

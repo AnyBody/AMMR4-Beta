@@ -19,7 +19,7 @@ AnyFolder LegCalKnee =
 
   AnyFolder &LegSegSide = .SideHumanFolderRef.Leg.Segments;
 
-  AnyFolder &LegJointsSide = .SideHumanFolderRef.Leg.Jnt;
+  AnyFolder &LegJointsSide = .SideHumanFolderRef.Leg.Joints;
   AnyFolder &TrunkJoints = ...BodyModel.Trunk.Joints.Lumbar;
 
   AnyFolder &MusCalSide =  .SideHumanFolderRef.Leg.Mus;

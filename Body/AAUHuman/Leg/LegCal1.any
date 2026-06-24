@@ -18,7 +18,7 @@ AnyFolder LegCal1 ={
   AnyFolder &Thorax = ...BodyModel.Trunk.Segments.ThoraxSeg;
 
 
-  AnyFolder &JointsSideCal = .SideHumanFolderRef.Leg.Jnt;
+  AnyFolder &JointsSideCal = .SideHumanFolderRef.Leg.Joints;
   AnyFolder &TrunkJoints = ...BodyModel.Trunk.Joints.Lumbar;
 
   AnyFolder &MusCalSide =  .SideHumanFolderRef.Leg.Mus;
