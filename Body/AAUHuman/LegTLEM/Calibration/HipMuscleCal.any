@@ -23,7 +23,7 @@ AnyFolder LegCalHip =
   AnyFolder &LegJointsSide = .SideHumanFolderRef.Leg.Joints;
   AnyFolder &TrunkJoints = ...BodyModel.Trunk.Joints.Lumbar;
 
-  AnyFolder &MusCalSide =  .SideHumanFolderRef.Leg.Mus;
+  AnyFolder &MusCalSide =  .SideHumanFolderRef.Leg.Muscles;
 
 
   // Hip position variables // Flexion - Abduction - internal rotation
@@ -124,7 +124,7 @@ AnyFolder LegCalHip =
   };
   #endif
 
-  AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.Leg.Mus);
+  AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.Leg.Muscles);
 
   AnyObjectPtrArray GluteusMaximusMuscles = ObjSearch(MusPrefix+".*.GluteusMaximus*", "AnyMuscle");
   AnyFloat  GluteusMaximusRmin = repmat(NumElemOf(GluteusMaximusMuscles), ..RMin);

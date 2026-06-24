@@ -71,7 +71,7 @@ AnyFolder LegCal8={
     #endif
   #endif
 
-  AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.Leg.Mus);
+  AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.Leg.Muscles);
 
   AnyObjectPtrArray ObturatorExternusMuscles = ObjSearch(MusPrefix+".*.ObturatorExternus*", "AnyMuscle");
   AnyObjectPtrArray ObturatorInternusMuscles = ObjSearch(MusPrefix+".*.ObturatorInternus*", "AnyMuscle");

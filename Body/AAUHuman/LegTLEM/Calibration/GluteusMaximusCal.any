@@ -74,7 +74,7 @@ AnyFolder GluteusMaximusCal ={
   };
   #endif
 
-  AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.Leg.Mus);
+  AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.Leg.Muscles);
 
   AnyObjectPtrArray GluteusMaximusMuscles = ObjSearch(MusPrefix+".GluteusMaximus*", "AnyMuscle");
   AnyFloat  GluteusMaximusRmin = repmat(NumElemOf(GluteusMaximusMuscles), 0.5);

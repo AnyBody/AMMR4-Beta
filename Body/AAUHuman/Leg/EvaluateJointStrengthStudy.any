@@ -16,7 +16,7 @@ AnyFolder Model = {
 
   AnyFolder &LegSegSideRef = .SideBodyModelRef.Leg.Segments;
   AnyFolder &LegJntsRef =  .SideBodyModelRef.Leg.Joints;
-  AnyFolder &LegMusRef = .SideBodyModelRef.Leg.Mus;
+  AnyFolder &LegMusRef = .SideBodyModelRef.Leg.Muscles;
   AnyFolder &MusRef = .SideBodyModelRef.Leg.EvaluateJointStrengthMusRef ;
 
  AnyFixedRefFrame ground = {

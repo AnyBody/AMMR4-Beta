@@ -75,7 +75,7 @@ AnyFolder PeronealCal ={
   #endif
 
 
-  AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.Leg.Mus);
+  AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.Leg.Muscles);
 
   AnyObjectPtrArray PeroneusBrevisMuscles = ObjSearch(MusPrefix+".PeroneusBrevis*", "AnyMuscle");
   AnyFloat  PeroneusBrevisRmin = repmat(NumElemOf(PeroneusBrevisMuscles), 0.5);

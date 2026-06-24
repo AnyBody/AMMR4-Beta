@@ -219,7 +219,7 @@ AnyFolder Joints = {
 #if LEG_SIMPLE_MUSCLES_LOCAL == 0 & LEG_MUS_3E_LOCAL == 0
   #include "JointMuscles.any"
 #else
-  AnyFolder Mus =
+  AnyFolder Muscles =
   {
     #include "Mus.any"
   };

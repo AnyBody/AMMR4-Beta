@@ -74,7 +74,7 @@ AnyFolder PiriformisCal ={
   };
   #endif
 
-  AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.Leg.Mus);
+  AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.Leg.Muscles);
 
   AnyObjectPtrArray PiriformisMuscles = ObjSearch(MusPrefix+".Piriformis*", "AnyMuscle");
   AnyFloat  PiriformisRmin = repmat(NumElemOf(PiriformisMuscles), 0.5);

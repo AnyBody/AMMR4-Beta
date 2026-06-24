@@ -21,7 +21,7 @@ AnyFolder LegCal1 ={
   AnyFolder &LegJointsSide = .SideHumanFolderRef.Leg.Joints;
   AnyFolder &TrunkJoints = ...BodyModel.Trunk.Joints.Lumbar;
 
-  AnyFolder &MusCalSide =  .SideHumanFolderRef.Leg.Mus;
+  AnyFolder &MusCalSide =  .SideHumanFolderRef.Leg.Muscles;
 
 
 
@@ -99,7 +99,7 @@ AnyBodyCalibrationStudy LegCalibrationStudy1 = {
   InitialConditions.PosAnalysisOnlyOnOff = On;
 #if (ANYBODY_V1 > 7)|(ANYBODY_V1 == 7 & ANYBODY_V2 > 2)|(ANYBODY_V1 == 7 & ANYBODY_V2 == 2 & ANYBODY_V3 >= 2)
   MuscleArr = set_difference(
-      ObjSearchRecursive(CompleteNameOf(&.SideHumanFolderRef.Leg.Mus),"*", "AnyMuscle&"),
+      ObjSearchRecursive(CompleteNameOf(&.SideHumanFolderRef.Leg.Muscles),"*", "AnyMuscle&"),
     arrcat(
       ..CALIBRATION_STUDY_REF(2).MuscleArr,
       ..CALIBRATION_STUDY_REF(3).MuscleArr,
@@ -111,13 +111,13 @@ AnyBodyCalibrationStudy LegCalibrationStudy1 = {
   );
 #else
   MuscleArr = arrcat(
-     ObjSearch(CompleteNameOf(&.SideHumanFolderRef.Leg.Mus)+".BicepsFemorisCaput*", "AnyMuscle"),
-     ObjSearch(CompleteNameOf(&.SideHumanFolderRef.Leg.Mus)+".Iliacus*", "AnyMuscle"),
-     ObjSearch(CompleteNameOf(&.SideHumanFolderRef.Leg.Mus)+".PeroneusBrevis*", "AnyMuscle"),
-     ObjSearch(CompleteNameOf(&.SideHumanFolderRef.Leg.Mus)+".Piriformis*", "AnyMuscle"),
-     ObjSearch(CompleteNameOf(&.SideHumanFolderRef.Leg.Mus)+".Popliteus*", "AnyMuscle"),
-     ObjSearch(CompleteNameOf(&.SideHumanFolderRef.Leg.Mus)+".RectusFemoris*", "AnyMuscle"),
-     ObjSearch(CompleteNameOf(&.SideHumanFolderRef.Leg.Mus)+".Sartorius*", "AnyMuscle"),
+     ObjSearch(CompleteNameOf(&.SideHumanFolderRef.Leg.Muscles)+".BicepsFemorisCaput*", "AnyMuscle"),
+     ObjSearch(CompleteNameOf(&.SideHumanFolderRef.Leg.Muscles)+".Iliacus*", "AnyMuscle"),
+     ObjSearch(CompleteNameOf(&.SideHumanFolderRef.Leg.Muscles)+".PeroneusBrevis*", "AnyMuscle"),
+     ObjSearch(CompleteNameOf(&.SideHumanFolderRef.Leg.Muscles)+".Piriformis*", "AnyMuscle"),
+     ObjSearch(CompleteNameOf(&.SideHumanFolderRef.Leg.Muscles)+".Popliteus*", "AnyMuscle"),
+     ObjSearch(CompleteNameOf(&.SideHumanFolderRef.Leg.Muscles)+".RectusFemoris*", "AnyMuscle"),
+     ObjSearch(CompleteNameOf(&.SideHumanFolderRef.Leg.Muscles)+".Sartorius*", "AnyMuscle"),
      ObjSearch(CompleteNameOf(&.SideHumanFolderRef.Leg.TrunkMuscles.PsoasMajor)+".*", "AnyMuscle")
   );
 #endif

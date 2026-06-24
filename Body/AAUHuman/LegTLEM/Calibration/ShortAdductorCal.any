@@ -74,7 +74,7 @@ AnyFolder ShortAdductorCal ={
   };
   #endif
 
-  AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.Leg.Mus);
+  AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.Leg.Muscles);
 
   AnyObjectPtrArray AdductorMagnusMuscles = ObjSearch(MusPrefix+".AdductorMagnus*", "AnyMuscle");
   AnyFloat  AdductorMagnusRmin = repmat(NumElemOf(AdductorMagnusMuscles), 0.5);

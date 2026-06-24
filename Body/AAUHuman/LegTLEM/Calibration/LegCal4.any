@@ -80,30 +80,30 @@ AnyFolder LegCal4={
   // rectus femoris
   AnyFolder &MuscleParCal4 =.SideHumanFolderRef.Leg.MuscleModels;
 
-  AnyFolder Mus = {
-    AnyMuscleViaPoint &GluteusMinimusAnterior1 =  ..SideHumanFolderRef.Leg.Mus.GluteusMinimusAnterior1;
-    AnyMuscleViaPoint &GluteusMinimusMid1 =  ..SideHumanFolderRef.Leg.Mus.GluteusMinimusMid1;
-    AnyMuscleViaPoint &GluteusMinimusPosterior1 =  ..SideHumanFolderRef.Leg.Mus.GluteusMinimusPosterior1;
-    AnyMuscleViaPoint &GluteusMediusAnterior1 =  ..SideHumanFolderRef.Leg.Mus.GluteusMediusAnterior1;
-    AnyMuscleViaPoint &GluteusMediusAnterior2 =  ..SideHumanFolderRef.Leg.Mus.GluteusMediusAnterior2;
-    AnyMuscleViaPoint &GluteusMediusAnterior3 =  ..SideHumanFolderRef.Leg.Mus.GluteusMediusAnterior3;
-    AnyMuscleViaPoint &GluteusMediusAnterior4 =  ..SideHumanFolderRef.Leg.Mus.GluteusMediusAnterior4;
-    AnyMuscleViaPoint &GluteusMediusAnterior5 =  ..SideHumanFolderRef.Leg.Mus.GluteusMediusAnterior5;
-    AnyMuscleViaPoint &GluteusMediusAnterior6 =  ..SideHumanFolderRef.Leg.Mus.GluteusMediusAnterior6;
-    AnyMuscleViaPoint &GluteusMediusPosterior1 =  ..SideHumanFolderRef.Leg.Mus.GluteusMediusPosterior1;
-    AnyMuscleViaPoint &GluteusMediusPosterior2 =  ..SideHumanFolderRef.Leg.Mus.GluteusMediusPosterior2;
-    AnyMuscleViaPoint &GluteusMediusPosterior3 =  ..SideHumanFolderRef.Leg.Mus.GluteusMediusPosterior3;
-    AnyMuscleViaPoint &GluteusMediusPosterior4 =  ..SideHumanFolderRef.Leg.Mus.GluteusMediusPosterior4;
-    AnyMuscleViaPoint &GluteusMediusPosterior5 =  ..SideHumanFolderRef.Leg.Mus.GluteusMediusPosterior5;
-    AnyMuscleViaPoint &GluteusMediusPosterior6 =  ..SideHumanFolderRef.Leg.Mus.GluteusMediusPosterior6;
+  AnyFolder Muscles = {
+    AnyMuscleViaPoint &GluteusMinimusAnterior1 =  ..SideHumanFolderRef.Leg.Muscles.GluteusMinimusAnterior1;
+    AnyMuscleViaPoint &GluteusMinimusMid1 =  ..SideHumanFolderRef.Leg.Muscles.GluteusMinimusMid1;
+    AnyMuscleViaPoint &GluteusMinimusPosterior1 =  ..SideHumanFolderRef.Leg.Muscles.GluteusMinimusPosterior1;
+    AnyMuscleViaPoint &GluteusMediusAnterior1 =  ..SideHumanFolderRef.Leg.Muscles.GluteusMediusAnterior1;
+    AnyMuscleViaPoint &GluteusMediusAnterior2 =  ..SideHumanFolderRef.Leg.Muscles.GluteusMediusAnterior2;
+    AnyMuscleViaPoint &GluteusMediusAnterior3 =  ..SideHumanFolderRef.Leg.Muscles.GluteusMediusAnterior3;
+    AnyMuscleViaPoint &GluteusMediusAnterior4 =  ..SideHumanFolderRef.Leg.Muscles.GluteusMediusAnterior4;
+    AnyMuscleViaPoint &GluteusMediusAnterior5 =  ..SideHumanFolderRef.Leg.Muscles.GluteusMediusAnterior5;
+    AnyMuscleViaPoint &GluteusMediusAnterior6 =  ..SideHumanFolderRef.Leg.Muscles.GluteusMediusAnterior6;
+    AnyMuscleViaPoint &GluteusMediusPosterior1 =  ..SideHumanFolderRef.Leg.Muscles.GluteusMediusPosterior1;
+    AnyMuscleViaPoint &GluteusMediusPosterior2 =  ..SideHumanFolderRef.Leg.Muscles.GluteusMediusPosterior2;
+    AnyMuscleViaPoint &GluteusMediusPosterior3 =  ..SideHumanFolderRef.Leg.Muscles.GluteusMediusPosterior3;
+    AnyMuscleViaPoint &GluteusMediusPosterior4 =  ..SideHumanFolderRef.Leg.Muscles.GluteusMediusPosterior4;
+    AnyMuscleViaPoint &GluteusMediusPosterior5 =  ..SideHumanFolderRef.Leg.Muscles.GluteusMediusPosterior5;
+    AnyMuscleViaPoint &GluteusMediusPosterior6 =  ..SideHumanFolderRef.Leg.Muscles.GluteusMediusPosterior6;
 
     //Muscle main function: Plantar flexion, different angle w.r.t. LegCal2 due to larger pennation angle
-//    AnyMuscleViaPoint &SoleusMedialis1 =  ..SideHumanFolderRef.Leg.Mus.SoleusMedialis1;
-//    AnyMuscleViaPoint &SoleusMedialis2 =  ..SideHumanFolderRef.Leg.Mus.SoleusMedialis2;
-//    AnyMuscleViaPoint &SoleusMedialis3 =  ..SideHumanFolderRef.Leg.Mus.SoleusMedialis3;
-//    AnyMuscleViaPoint &SoleusLateralis1 =  ..SideHumanFolderRef.Leg.Mus.SoleusLateralis1;
-//    AnyMuscleViaPoint &SoleusLateralis2 =  ..SideHumanFolderRef.Leg.Mus.SoleusLateralis2;
-//    AnyMuscleViaPoint &SoleusLateralis3 =  ..SideHumanFolderRef.Leg.Mus.SoleusLateralis3;
+//    AnyMuscleViaPoint &SoleusMedialis1 =  ..SideHumanFolderRef.Leg.Muscles.SoleusMedialis1;
+//    AnyMuscleViaPoint &SoleusMedialis2 =  ..SideHumanFolderRef.Leg.Muscles.SoleusMedialis2;
+//    AnyMuscleViaPoint &SoleusMedialis3 =  ..SideHumanFolderRef.Leg.Muscles.SoleusMedialis3;
+//    AnyMuscleViaPoint &SoleusLateralis1 =  ..SideHumanFolderRef.Leg.Muscles.SoleusLateralis1;
+//    AnyMuscleViaPoint &SoleusLateralis2 =  ..SideHumanFolderRef.Leg.Muscles.SoleusLateralis2;
+//    AnyMuscleViaPoint &SoleusLateralis3 =  ..SideHumanFolderRef.Leg.Muscles.SoleusLateralis3;
   };
 
 };

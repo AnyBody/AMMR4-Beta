@@ -70,7 +70,7 @@ AnyFolder LegCal7 ={
   #endif
 
 
-AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.Leg.Mus);
+AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.Leg.Muscles);
 
   AnyObjectPtrArray SemiMuscles = ObjSearch(MusPrefix+".*.Semi*", "AnyMuscle");
   AnyObjectPtrArray AdductorLongusMuscles = ObjSearch(MusPrefix+".*.AdductorLongus*", "AnyMuscle");

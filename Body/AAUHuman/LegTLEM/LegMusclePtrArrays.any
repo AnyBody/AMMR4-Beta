@@ -1,6 +1,6 @@
 #ifndef LEG_WITH_JOINT_MUSCLES
 
- AnyObjectPtrArray pArrLegMuscles = ObjSearch("..Mus.*", "AnyMuscle");
+ AnyObjectPtrArray pArrLegMuscles = ObjSearch("..Muscles.*", "AnyMuscle");
  AnyObjectPtrArray pArrPsoasMajorMuscles = ObjSearch("..TrunkMuscles.PsoasMajor.*", "AnyMuscle");
 
  AnyObjectPtrArray pArrTargetMuscles = arrcat(pArrLegMuscles, pArrPsoasMajorMuscles);

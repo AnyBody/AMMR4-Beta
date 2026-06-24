@@ -22,7 +22,7 @@ AnyFolder LegCalKnee =
   AnyFolder &LegJointsSide = .SideHumanFolderRef.Leg.Joints;
   AnyFolder &TrunkJoints = ...BodyModel.Trunk.Joints.Lumbar;
 
-  AnyFolder &MusCalSide =  .SideHumanFolderRef.Leg.Mus;
+  AnyFolder &MusCalSide =  .SideHumanFolderRef.Leg.Muscles;
 
   // Knee position variables // Kneeflexion ??????????????????????????????????????????
   AnyFloat Flexed      = { 155} * pi/180;
@@ -105,7 +105,7 @@ AnyFolder LegCalKnee =
   };
   #endif
 
-  AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.Leg.Mus);
+  AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.Leg.Muscles);
 
   AnyObjectPtrArray VastusMedialisMuscles = ObjSearch(MusPrefix+".*.VastusMedialis*", "AnyMuscle");
   AnyFloat  VastusMedialisRmin = repmat(NumElemOf(VastusMedialisMuscles), ..RMin);
