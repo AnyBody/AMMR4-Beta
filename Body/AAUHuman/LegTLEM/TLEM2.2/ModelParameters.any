@@ -14,7 +14,12 @@ AnyFolder ModelParameters = {
   ///^ This folder contains all hard coded values of the LegTLEM model. This includes
   ///^ joint parameters, muscle origin, and insertion points along with other hardcoded
   ///^ parameter measured during the cadaver study on wich this model is based.
-
+   
+  /// AKHTARUZZAMAN & KUKOŁOWICZ, 2020 - Tbl. 1 states Bone as 1850 kg/m3
+  AnyVar BoneDensity = 1850;
+  /// AKHTARUZZAMAN & KUKOŁOWICZ, 2020 - Tbl. 1 states Adipose tissue as 920 kg/m3
+  AnyVar AdiposeTissueDensity = 920;
+  
   AnyMat33 TF = {{1,0,0},{0,1,0},{0,0,.Sign}};
 
   #include "ModelSegmentParameters.any"

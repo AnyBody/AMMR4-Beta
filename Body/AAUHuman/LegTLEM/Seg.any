@@ -119,10 +119,24 @@ AnySeg Foot =
   AnySeg &DistalPhalange5 = .Foot;
 
   AnyFolder &Data = ..ModelParameters.Foot;
-
-  JaboutCoMOnOff = On;
+  AnyMat33 Mirror = {{..Sign,0,0},{0,1,0},{0,0,1}};
 
   r0 ??= .Talus.SubTalarJoint.sRel*.Talus.Axes0'+.Talus.r0-SubTalarJoint.sRel*Axes0';
+
+  UseInertiaObjects = On;
+
+  AnyInertiaSolid BoneInertiaObject = {
+    BodyMassCorrectionGeneric massCorrection() = {
+      Mass_Scale = ....Data.MassDistribution.mass_scale;
+      DensityTheoretical = ....Data.unscaled.ModelParameters.BoneDensity;
+      // enableMassCorrection = Off;
+    };
+    AnySurfSTL surface = {
+      FileName = ....Data.unscaled.STL.FilenameFoot;
+      AnyFunTransform3D &scale = ..Scale;
+      ScaleXYZ={1,1,1}*..Mirror;
+    };
+  };
 
   /// pUnscaled = {LateralMalleolus, MedialMalleolus, Metatarsal2} //bony landmarks to define orgin and long axis of the foot and three coplanar points to define the
   /// horizontal plane parallel to the ground. These can be on the bones, skin, shoe, etc. and determine the proximal-distal axis of the foot and ankle plantarflexion zero value
@@ -148,11 +162,24 @@ AnySeg Foot =
   AnySeg Talus =
   {
     AnyFolder &Data = ...ModelParameters.Talus;
-
-    JaboutCoMOnOff = On;
-    AnyVar  MassS=...MassScaling.Talus.MassScale;
+    AnyMat33 Mirror = {{..Sign,0,0},{0,1,0},{0,0,1}};
 
     r0 ??= ..Shank.AnkleJoint.sRel*..Shank.Axes0'+..Shank.r0-AnkleJoint.sRel*Axes0';
+
+    UseInertiaObjects = On;
+
+    AnyInertiaSolid BoneInertiaObject = {
+      BodyMassCorrectionGeneric massCorrection() = {
+        Mass_Scale = ....Data.MassDistribution.mass_scale;
+        DensityTheoretical = ....Data.unscaled.ModelParameters.BoneDensity;
+        // enableMassCorrection = Off;
+      };
+      AnySurfSTL surface = {
+        FileName = ....Data.unscaled.STL.FilenameTalus;
+        AnyFunTransform3D &scale = ..Scale;
+        ScaleXYZ={1,1,1}*..Mirror;
+      };
+    };
 
     /// pUnscaled = pUnscaled from foot = {LateralMalleolus, MedialMalleolus, Metatarsal2, Heel, Metatarsal5, Metatarsal1} //bony landmarks to define orgin and long axis of the foot
     /// and three coplanar points to define the horizontal plane parallel to the ground. These can be on the bones, skin, shoe, etc. and
@@ -190,10 +217,12 @@ AnySeg Foot =
       #endif
     };
 
-    sCoM = Scale(Data.sCoM);
-    Mass = MassS*Data.MassStandard;
-    Jii = Data.Jii;
-    Jij = Data.Jij;
+    // JaboutCoMOnOff = On;
+    // AnyVar  MassS=...MassScaling.Talus.MassScale;
+    // sCoM = Scale(Data.sCoM);
+    // Mass = MassS*Data.MassStandard;
+    // Jii = Data.Jii;
+    // Jij = Data.Jij;
 
     AnyRefNode MedialMalleolus =
     {
@@ -227,11 +256,12 @@ AnySeg Foot =
   #undef MACRO_CONSTRUCT_ANATOMICAL_FRAME_A
 
   AnyVar LengthStandard = vnorm(Data.SubTalarJoint-Data.ToeJoint,2);
-  AnyVar MassS = ..MassScaling.Foot.MassScale;
-  Mass = MassS*Data.MassStandard;
-  sCoM = Scale(Data.sCoM);
-  Jii = Data.Jii;
-  Jij = Data.Jij;
+  // JaboutCoMOnOff = On;
+  // AnyVar MassS = ..MassScaling.Foot.MassScale;
+  // Mass = MassS*Data.MassStandard;
+  // sCoM = Scale(Data.sCoM);
+  // Jii = Data.Jii;
+  // Jij = Data.Jij;
 
   AnyRefNode &HeelJoint = HeelContactNodeLow;
 
@@ -621,9 +651,31 @@ AnySeg Foot =
 AnySeg Shank =
 {
   AnyFolder &Data = ..ModelParameters.Shank;
+  AnyMat33 Mirror = {{..Sign,0,0},{0,1,0},{0,0,1}};
 
-  JaboutCoMOnOff = On;
   r0 ??= .Thigh.KneeJoint.sRel*.Thigh.Axes0'+.Thigh.r0-KneeJoint.sRel*Axes0';
+
+  UseInertiaObjects = On;
+
+  AnyInertiaSolid BoneInertiaObject = {
+    BodyMassCorrectionGeneric massCorrection() = {
+      Mass_Scale = ....Data.MassDistribution.mass_scale;
+      DensityTheoretical = ....Data.unscaled.ModelParameters.BoneDensity;
+      // enableMassCorrection = Off;
+    };
+    AnySurfSTL surface = {
+      FileName = ....Data.unscaled.STL.FilenameShank;
+      AnyFunTransform3D &scale = ..Scale;
+      ScaleXYZ={1,1,1}*..Mirror;
+    };
+  };
+  // JaboutCoMOnOff = On;
+  // AnyVar MassS = ..MassScaling.Shank.MassScale;
+
+  // Mass = MassS*Data.MassStandard;
+  // sCoM = Scale(Data.sCoM);
+  // Jii = Data.Jii;
+  // Jij = Data.Jij;
 
   AnyVec3 r01 = .Thigh.KneeJoint.sRel;
   AnyVec3 r02 = .Thigh.KneeJoint.sRel*.Thigh.Axes0';
@@ -666,12 +718,7 @@ AnySeg Shank =
   #undef MACRO_CONSTRUCT_ANATOMICAL_FRAME_s
   #undef MACRO_CONSTRUCT_ANATOMICAL_FRAME_A
 
-  AnyVar MassS = ..MassScaling.Shank.MassScale;
 
-  Mass = MassS*Data.MassStandard;
-  sCoM = Scale(Data.sCoM);
-  Jii = Data.Jii;
-  Jij = Data.Jij;
   /// This coordinate system is placed based on the bony landmarks of tibial plateau.
   /// O: Center of the two tibial epicondyles
   /// Z: A vector going through the lateral and medial tibial epicondyle pointing to the right
@@ -1086,9 +1133,24 @@ AnySeg Shank =
 AnySeg Thigh =
 {
   AnyFolder &Data = ..ModelParameters.Thigh;
+  AnyMat33 Mirror = {{..Sign,0,0},{0,1,0},{0,0,1}};
 
-  JaboutCoMOnOff = On;
   r0 ??= .Pelvis.HipJoint.sRel*....Trunk.Segments.PelvisSeg.Axes0'+    ....Trunk.Segments.PelvisSeg.r0-    HipJoint.sRel*Axes0';
+
+  UseInertiaObjects = On;
+
+  AnyInertiaSolid BoneInertiaObject = {
+    BodyMassCorrectionGeneric massCorrection() = {
+      Mass_Scale = ....Data.MassDistribution.mass_scale;
+      DensityTheoretical = ....Data.unscaled.ModelParameters.BoneDensity;
+      // enableMassCorrection = Off;
+    };
+    AnySurfSTL surface = {
+      FileName = ....Data.unscaled.STL.FilenameThigh;
+      AnyFunTransform3D &scale = ..Scale;
+      ScaleXYZ={1,1,1}*..Mirror;
+    };
+  };
 
   #include "../DrawSettings/Nodes.any"
   #include "../DrawSettings/SegmentAxes.any"
@@ -1114,8 +1176,14 @@ AnySeg Thigh =
   #undef MACRO_CONSTRUCT_ANATOMICAL_FRAME_s
   #undef MACRO_CONSTRUCT_ANATOMICAL_FRAME_A
 
-  AnyVar MassS = ..MassScaling.Thigh.MassScale;
-  Mass = MassS*Data.MassStandard;
+  // JaboutCoMOnOff = On;
+  // AnyVar MassS = ..MassScaling.Thigh.MassScale;
+  // Mass = MassS*Data.MassStandard;
+  // sCoM = Scale(Data.sCoM);
+  // Jii = Data.Jii;
+  // Jij = Data.Jij;
+
+
   AnyVar LengthStandard = vnorm(Data.KneeJoint-Data.HipJoint,2);
 
   /// This coordinate system is placed according the International Society of Biomechanics' (ISB)
@@ -1147,10 +1215,6 @@ AnySeg Thigh =
     sRel = O;
     ARel = {X/vnorm(X),Y/vnorm(Y),Z/vnorm(Z)}';
   };
-
-  sCoM = Scale(Data.sCoM);
-  Jii = Data.Jii;
-  Jij = Data.Jij;
 
 
   AnyRefNode RectusVastiiWrapSurf =
@@ -1565,10 +1629,24 @@ AnySeg Thigh =
 AnySeg Patella =
 {
   AnyFolder &Data = ..ModelParameters.Patella;
-  JaboutCoMOnOff = On;
+  AnyMat33 Mirror = {{..Sign,0,0},{0,1,0},{0,0,1}};
 
   r0 ??= .Thigh.PatellaFemurJoint.sRel*.Thigh.Axes0'+.Thigh.r0-PatellaFemurJoint.sRel*Axes0';
 
+  UseInertiaObjects = On;
+
+  AnyInertiaSolid BoneInertiaObject = {
+    BodyMassCorrectionGeneric massCorrection() = {
+      Mass_Scale = ....Data.MassDistribution.mass_scale;
+      DensityTheoretical = ....Data.unscaled.ModelParameters.BoneDensity;
+      // enableMassCorrection = Off;
+    };
+    AnySurfSTL surface = {
+      FileName = ....Data.unscaled.STL.FilenamePatella;
+      AnyFunTransform3D &scale = ..Scale;
+      ScaleXYZ={1,1,1}*..Mirror;
+    };
+  };
   AnyFloat pUnscaled = {Data.HipJoint, Data.EpicondylusFemorisMedialis, Data.EpicondylusFemorisLateralis};
   #define MACRO_CONSTRUCT_ANATOMICAL_FRAME_s(p, SIGN) p[0]
   #define MACRO_CONSTRUCT_ANATOMICAL_FRAME_A(p, SIGN) RotMat(p[0],0.5*(p[1]+p[2]), p[1]) * RotMat(pi*0.5,x) * RotMat(pi*0.5,z) * RotMat(0.5*(SIGN-1)*pi,y)
@@ -1576,10 +1654,11 @@ AnySeg Patella =
   #undef MACRO_CONSTRUCT_ANATOMICAL_FRAME_s
   #undef MACRO_CONSTRUCT_ANATOMICAL_FRAME_A
 
-  AnyVar MassS = ..MassScaling.Shank.MassScale;
-  Mass = MassS*Data.MassStandard;
-  Jii = Data.Jii;
-  Jij = Data.Jij;
+  // JaboutCoMOnOff = On;
+  // AnyVar MassS = ..MassScaling.Shank.MassScale;
+  // Mass = MassS*Data.MassStandard;
+  // Jii = Data.Jii;
+  // Jij = Data.Jij;
 
   AnyVar Sign = ..Sign;
 
