@@ -51,7 +51,7 @@ AnyFolder Deprecations = {
     #if BM_LEG_RIGHT  ==  ON
       AnyMessageOnObjectUse FoldersLegRight = {
         AnyFolder &ref = Main.HumanModel.BodyModel.Right.Leg;
-        Objects = {&ref.Seg};
+        Objects = {&ref.Seg, &ref.Jnt};
         DeprecationMessage = On;
         Message = strformat("\n"+
         "-------------------------------------------------------------------------------\n"+
