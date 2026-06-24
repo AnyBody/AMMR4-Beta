@@ -2438,8 +2438,8 @@ A compatability switch to add the model tree structure of the muscles from AMMR 
 
 A compatability switch to add the model tree structure of the BodyModel folders from AMMR <4. Use this option to easily load older models.
 
-:Default: OFF
-:Example: `#define BM_COMPATIBILITY_BODYMODEL_STRUCTURE OFF`
+:Default: ON
+:Example: `#define BM_COMPATIBILITY_BODYMODEL_STRUCTURE ON`
 :Options:
   - {any}`ON` -> Switch ON
   - {any}`OFF` -> Switch OFF
