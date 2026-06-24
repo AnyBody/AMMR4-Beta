@@ -337,7 +337,7 @@ CreateMarkerDriver RTHI (
 MarkerName=  RTHI,
 OptX=ON,OptY=ON,OptZ=ON,
 //OptX=OFF,OptY=OFF,OptZ=OFF,
-MarkerPlacement =Right.Leg.Seg.Thigh)= {
+MarkerPlacement =Right.Leg.Segments.Thigh)= {
   sRelOpt = {0.00, -0.15, 0.1};
 };
 #endif
@@ -346,7 +346,7 @@ MarkerPlacement =Right.Leg.Seg.Thigh)= {
 // Marker on the Right Knee
 CreateMarkerDriver RKNE (
 MarkerName= RKNE,
-MarkerPlacement= Right.Leg.Seg.Thigh,
+MarkerPlacement= Right.Leg.Segments.Thigh,
 PlaceMarkerAt = EpicondylusFemorisLateralis,
 OptX=OFF,OptY=OFF,OptZ=OFF,
 WeightX=1.0,WeightY=1.0,WeightZ=1.0
@@ -360,7 +360,7 @@ WeightX=1.0,WeightY=1.0,WeightZ=1.0
 // Marker on the Right Tibia
 CreateMarkerDriver RTIB (
 MarkerName= RTIB,
-MarkerPlacement=Right.Leg.Seg.Shank,
+MarkerPlacement=Right.Leg.Segments.Shank,
 OptX=ON,OptY=ON,OptZ=ON
 //OptX=OFF,OptY=OFF,OptZ=OFF
 ) = {
@@ -372,7 +372,7 @@ OptX=ON,OptY=ON,OptZ=ON
 // Marker on the Right Lateral Ankle
 CreateMarkerDriver RANK (
 MarkerName= RANK ,
-MarkerPlacement=Right.Leg.Seg.Shank,
+MarkerPlacement=Right.Leg.Segments.Shank,
 PlaceMarkerAt = LateralMalleolus,
 OptX=ON,OptY=ON,OptZ=ON
 //OptX=OFF,OptY=OFF,OptZ=OFF
@@ -385,7 +385,7 @@ OptX=ON,OptY=ON,OptZ=ON
 // Marker on the Right Toe
 CreateMarkerDriver RTOE (
 MarkerName= RTOE,
-MarkerPlacement=Right.Leg.Seg.Foot.Metatarsal1,
+MarkerPlacement=Right.Leg.Segments.Foot.Metatarsal1,
 PlaceMarkerAt = MetatarsalJoint1Node,
 OptX=OFF , OptY=OFF , OptZ=OFF,
 WeightX=1.0,WeightY=1.0,WeightZ=1.0
@@ -398,7 +398,7 @@ WeightX=1.0,WeightY=1.0,WeightZ=1.0
 // Marker on the Right Heel
 CreateMarkerDriver RHEE (
 MarkerName= RHEE ,
-MarkerPlacement=Right.Leg.Seg.Foot.Calcaneus,
+MarkerPlacement=Right.Leg.Segments.Foot.Calcaneus,
 PlaceMarkerAt = HeelNode,
 OptX=OFF, OptY=OFF , OptZ=OFF,
 WeightX=1.0,WeightY=1.0,WeightZ=1.0
@@ -411,7 +411,7 @@ WeightX=1.0,WeightY=1.0,WeightZ=1.0
 // Marker on the Right Metatarsal 5
 CreateMarkerDriver RMT5 (
 MarkerName= RMT5,
-MarkerPlacement=Right.Leg.Seg.Foot.Metatarsal5,
+MarkerPlacement=Right.Leg.Segments.Foot.Metatarsal5,
 PlaceMarkerAt = MetatarsalJoint5Node,
 OptX=OFF,OptY=OFF,OptZ=OFF,
 WeightX=1.0,WeightY=1.0,WeightZ=1.0) = {
@@ -423,7 +423,7 @@ WeightX=1.0,WeightY=1.0,WeightZ=1.0) = {
 // Marker on the Left Thigh
 CreateMarkerDriver LTHI (
 MarkerName= LTHI ,
-MarkerPlacement=Left.Leg.Seg.Thigh,
+MarkerPlacement=Left.Leg.Segments.Thigh,
 OptX=ON,OptY=ON,OptZ=ON
 //OptX=OFF,OptY=OFF,OptZ=OFF
 ) = {
@@ -435,7 +435,7 @@ OptX=ON,OptY=ON,OptZ=ON
 // Marker on the Left Knee
 CreateMarkerDriver LKNE (
 MarkerName= LKNE ,
-MarkerPlacement=Left.Leg.Seg.Thigh,
+MarkerPlacement=Left.Leg.Segments.Thigh,
 PlaceMarkerAt = EpicondylusFemorisLateralis,
 OptX=OFF,OptY=OFF,OptZ=OFF
 ) = {
@@ -447,7 +447,7 @@ OptX=OFF,OptY=OFF,OptZ=OFF
 // Marker on the Left Tibia
 CreateMarkerDriver LTIB (
 MarkerName= LTIB,
-MarkerPlacement=Left.Leg.Seg.Shank,
+MarkerPlacement=Left.Leg.Segments.Shank,
 OptX=ON,OptY=ON,OptZ=ON
 //OptX=OFF,OptY=OFF,OptZ=OFF
 ) = {
@@ -459,7 +459,7 @@ OptX=ON,OptY=ON,OptZ=ON
 // Marker on the Left Ankle
 CreateMarkerDriver LANK (
 MarkerName= LANK,
-MarkerPlacement=Left.Leg.Seg.Shank,
+MarkerPlacement=Left.Leg.Segments.Shank,
 PlaceMarkerAt = LateralMalleolus,
 OptX=ON,OptY=ON,OptZ=ON
 //OptX=OFF,OptY=OFF,OptZ=OFF
@@ -472,7 +472,7 @@ OptX=ON,OptY=ON,OptZ=ON
 // Marker on the Left Toe
 CreateMarkerDriver LTOE (
 MarkerName= LTOE,
-MarkerPlacement=Left.Leg.Seg.Foot.Metatarsal1,
+MarkerPlacement=Left.Leg.Segments.Foot.Metatarsal1,
 PlaceMarkerAt = MetatarsalJoint1Node,
 OptX=OFF,OptY=OFF ,OptZ=OFF
 ) = {
@@ -484,7 +484,7 @@ OptX=OFF,OptY=OFF ,OptZ=OFF
 // Marker on the Left Heel
 CreateMarkerDriver LHEE(
 MarkerName= LHEE,
-MarkerPlacement=Left.Leg.Seg.Foot.Calcaneus,
+MarkerPlacement=Left.Leg.Segments.Foot.Calcaneus,
 PlaceMarkerAt = HeelNode,
 OptX=OFF, OptY=OFF, OptZ=OFF,
 WeightX=1.0,WeightY=1.0,WeightZ=1.0
@@ -497,7 +497,7 @@ WeightX=1.0,WeightY=1.0,WeightZ=1.0
 // Marker on the Left Metatarsal 5
 CreateMarkerDriver LMT5 (
 MarkerName= LMT5,
-MarkerPlacement=Left.Leg.Seg.Foot.Metatarsal5,
+MarkerPlacement=Left.Leg.Segments.Foot.Metatarsal5,
 PlaceMarkerAt = MetatarsalJoint5Node,
 OptX=OFF,OptY=OFF,OptZ=OFF,
 WeightX=1.0,WeightY=1.0,WeightZ=1.0) = {

@@ -55,7 +55,7 @@ Main =
       AnyOperation& ref2 = Main.Studies.MarkerTracking.Kinematics;
       AnyOperation& ref3 = Main.Studies.InverseDynamicStudy.InitialConditions;
     };
-    LoadTimeCam.CameraLookAtPoint = 0.5*(Main.HumanModel.BodyModel.Left.Leg.Seg.Foot.Toe1.DistalPhalange1.r+Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.Toe1.DistalPhalange1.r);
+    LoadTimeCam.CameraLookAtPoint = 0.5*(Main.HumanModel.BodyModel.Left.Leg.Segments.Foot.Toe1.DistalPhalange1.r+Main.HumanModel.BodyModel.Right.Leg.Segments.Foot.Toe1.DistalPhalange1.r);
     LoadTimeCam.CameraFieldOfView = DesignVar(1.0);
     LoadTimeCam.CameraDirection  = {-0.0,0.0,1};
   #endif

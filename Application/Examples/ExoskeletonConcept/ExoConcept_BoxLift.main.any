@@ -91,7 +91,7 @@ Main = {
     AnyReacForce Reacs = {
       AnyKinPLine right = {
         AnyRefFrame &p1 = Main.HumanModel.BodyModel.Trunk.Segments.ThoraxSeg.rexo;
-        AnyRefFrame &p2 = Main.HumanModel.BodyModel.Right.Leg.Seg.Shank.exo;
+        AnyRefFrame &p2 = Main.HumanModel.BodyModel.Right.Leg.Segments.Shank.exo;
         AnyDrawPLine drw = {
           Thickness = 0.01;
           RGB = {1,0,0};
@@ -99,7 +99,7 @@ Main = {
       };
       AnyKinPLine left = {
         AnyRefFrame &p1 = Main.HumanModel.BodyModel.Trunk.Segments.ThoraxSeg.lexo;
-        AnyRefFrame &p2 = Main.HumanModel.BodyModel.Left.Leg.Seg.Shank.exo;
+        AnyRefFrame &p2 = Main.HumanModel.BodyModel.Left.Leg.Segments.Shank.exo;
         AnyDrawPLine drw = {
           Thickness = 0.01;
           RGB = {1,0,0};
@@ -113,7 +113,7 @@ Main = {
     AnyForce Springs = {
       AnyKinPLine right = {
         AnyRefFrame &p1 = Main.HumanModel.BodyModel.Trunk.Segments.ThoraxSeg.rexo;
-        AnyRefFrame &p2 = Main.HumanModel.BodyModel.Right.Leg.Seg.Shank.exo;
+        AnyRefFrame &p2 = Main.HumanModel.BodyModel.Right.Leg.Segments.Shank.exo;
         AnyDrawPLine drw = {
           Thickness = 0.01;
           RGB = {1,0,0};
@@ -121,7 +121,7 @@ Main = {
       };
       AnyKinPLine left = {
         AnyRefFrame &p1 = Main.HumanModel.BodyModel.Trunk.Segments.ThoraxSeg.lexo;
-        AnyRefFrame &p2 = Main.HumanModel.BodyModel.Left.Leg.Seg.Shank.exo;
+        AnyRefFrame &p2 = Main.HumanModel.BodyModel.Left.Leg.Segments.Shank.exo;
         AnyDrawPLine drw = {
           Thickness = 0.01;
           RGB = {1,0,0};
@@ -137,7 +137,7 @@ Main = {
 
   #if (EXO_CONCEPT == 3) | (EXO_CONCEPT == 4)
   // Create reference nodes for extensible rods if EXO_CONCEPT is 3 or 4
-  Main.HumanModel.BodyModel.Right.Leg.Seg.Shank = {
+  Main.HumanModel.BodyModel.Right.Leg.Segments.Shank = {
     AnyRefNode exo = {
       sRel = {0.014, 0.057, 0.054};
       AnyDrawNode drw = {
@@ -154,7 +154,7 @@ Main = {
     };
   };
 
-  Main.HumanModel.BodyModel.Left.Leg.Seg.Shank = {
+  Main.HumanModel.BodyModel.Left.Leg.Segments.Shank = {
     AnyRefNode exo = {
       sRel = {0.014, 0.057, -0.054};
       AnyDrawNode drw = {

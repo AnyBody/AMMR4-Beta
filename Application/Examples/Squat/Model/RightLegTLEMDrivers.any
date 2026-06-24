@@ -28,8 +28,8 @@ AnyKinEqFourierDriver KneeFlexionDriverRight =
 //{
 //  AnyKinLinear lin =
 //  {
-//    AnyRefFrame& ref0  = ....BodyModel.Right.Leg.Seg.Patella.Origin_patella_tendon ;
-//    AnyRefFrame& ref1  = ....BodyModel.Right.Leg.Seg.Foot.DistalPhalange1.BigToeNode ;
+//    AnyRefFrame& ref0  = ....BodyModel.Right.Leg.Segments.Patella.Origin_patella_tendon ;
+//    AnyRefFrame& ref1  = ....BodyModel.Right.Leg.Segments.Foot.DistalPhalange1.BigToeNode ;
 //    Ref = -1;
 //  };
 //  MeasureOrganizer = {0};
@@ -56,7 +56,7 @@ AnyKinEqFourierDriver KneeAnteriorPosteriorDriverRight =
       AnyKinLinear lin =
       {
         AnyRefFrame& ref0 = ......Environment.GlobalRef.FootPrintBase_Right.FP1;
-        AnyRefFrame& ref1 = ......BodyModel.Right.Leg.Seg.Patella.Origin_patella_tendon ;
+        AnyRefFrame& ref1 = ......BodyModel.Right.Leg.Segments.Patella.Origin_patella_tendon ;
         Ref = 0;
       };
       MeasureOrganizer = {0}; //x

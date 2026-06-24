@@ -23,13 +23,13 @@ Pelvis = {
   //AnyVar PelvisWidth = 0.1686;
 
   //--> Folowing lines can be used for the definition of width and depth standards
-  //AnyVar WidthStandard = 2*..Seg.Pelvis.Muscles.Data.HipJointTD[2];
-  //AnyVar DepthStandard = vnorm({..Seg.Pelvis.Muscles.Data.AsisIpsilateral[0],..Seg.Pelvis.Muscles.Data.AsisIpsilateral[1],0.0}-{..Seg.Pelvis.Muscles.Data.PsisIpsilateral[0],..Seg.Pelvis.Muscles.Data.PsisIpsilateral[1],0.0});
+  //AnyVar WidthStandard = 2*..Segments.Pelvis.Muscles.Data.HipJointTD[2];
+  //AnyVar DepthStandard = vnorm({..Segments.Pelvis.Muscles.Data.AsisIpsilateral[0],..Segments.Pelvis.Muscles.Data.AsisIpsilateral[1],0.0}-{..Segments.Pelvis.Muscles.Data.PsisIpsilateral[0],..Segments.Pelvis.Muscles.Data.PsisIpsilateral[1],0.0});
   //<--
 
   //-->Following lines can be used for checking values after scaling
-  //AnyVar Width = 2*..Seg.Pelvis.HipJoint.sRel[2];
-  //AnyVar Depth = vnorm({..Seg.Pelvis.Muscles.ASIS.sRel[0],..Seg.Pelvis.Muscles.ASIS.sRel[1],0.0}-{..Seg.Pelvis.Muscles.PSIS.sRel[0],..Seg.Pelvis.Muscles.PSIS.sRel[1],0.0});
+  //AnyVar Width = 2*..Segments.Pelvis.HipJoint.sRel[2];
+  //AnyVar Depth = vnorm({..Segments.Pelvis.Muscles.ASIS.sRel[0],..Segments.Pelvis.Muscles.ASIS.sRel[1],0.0}-{..Segments.Pelvis.Muscles.PSIS.sRel[0],..Segments.Pelvis.Muscles.PSIS.sRel[1],0.0});
   //<--
 
   AnyVar Width = 0.1686071;
@@ -124,16 +124,16 @@ Thigh= {
   /// Based on the mass of TLEM1.2 but corrected with
   /// the ratio TLEM2/TLEM1 segment length ratio
   AnyVar MassStandard = 6.0191; //11.54; // kg, Klein Horsman dataset
-  AnyVar LengthStandard = vnorm(..Seg.Thigh.Data.HipJoint-..Seg.Thigh.Data.KneeJoint);
+  AnyVar LengthStandard = vnorm(..Segments.Thigh.Data.HipJoint-..Segments.Thigh.Data.KneeJoint);
   AnyVar LengthStandardForFibers = 0.4098;//**used for fiber length scaling**
   AnyVar Density = 1000;
 
-  AnyVar Length = vnorm(..Seg.Thigh.KneeJoint.sRel-..Seg.Thigh.HipJoint.sRel);
-  AnyVar Radius = (..Seg.Thigh.Mass/(3.1416*Length*Density))^0.5;
-  AnyVar Ixx = 0.25*..Seg.Thigh.Mass*Radius*Radius + 1/12*..Seg.Thigh.Mass*Length*Length;
-  AnyVar Iyy = 0.5*..Seg.Thigh.Mass*Radius*Radius;
+  AnyVar Length = vnorm(..Segments.Thigh.KneeJoint.sRel-..Segments.Thigh.HipJoint.sRel);
+  AnyVar Radius = (..Segments.Thigh.Mass/(3.1416*Length*Density))^0.5;
+  AnyVar Ixx = 0.25*..Segments.Thigh.Mass*Radius*Radius + 1/12*..Segments.Thigh.Mass*Length*Length;
+  AnyVar Iyy = 0.5*..Segments.Thigh.Mass*Radius*Radius;
   AnyVar Izz = Ixx;
-  AnyMat33 JM=..Seg.Thigh.ScalingNode.ARel*{{Ixx,0,0},{0,Iyy,0},{0,0,Izz}}*..Seg.Thigh.ScalingNode.ARel';
+  AnyMat33 JM=..Segments.Thigh.ScalingNode.ARel*{{Ixx,0,0},{0,Iyy,0},{0,0,Izz}}*..Segments.Thigh.ScalingNode.ARel';
   AnyVec3 Jii = {JM[0][0], JM[1][1], JM[2][2]};
   AnyVec3 Jij = {JM[1][0], JM[2][1], JM[2][0]};
 
@@ -156,17 +156,17 @@ Shank = {
   AnyVar MassStandard = 3.6287;
   AnyVar Density = 1000;
   AnyVar LengthStandardForFibers = 0.4098;//**used for fiber length scaling
-  AnyVar LengthStandard = vnorm(..Seg.Shank.Data.KneeJoint-..Seg.Shank.Data.AnkleJoint);
+  AnyVar LengthStandard = vnorm(..Segments.Shank.Data.KneeJoint-..Segments.Shank.Data.AnkleJoint);
   AnyVec3 sCoM = {-0.0128, 0.2081, 0.0009}*.TF';
 
   AnyVar AnkleWidth =  0.0753;
 
-  AnyVar Length = vnorm(..Seg.Shank.KneeJoint.sRel-..Seg.Shank.AnkleJoint.sRel);
-  AnyVar Radius = (..Seg.Shank.Mass/(3.1416*Length*Density))^0.5;
-  AnyVar Ixx = 0.25*..Seg.Shank.Mass*Radius*Radius + 1/12*..Seg.Shank.Mass*Length*Length;
-  AnyVar Iyy = 0.5*..Seg.Shank.Mass*Radius*Radius;
+  AnyVar Length = vnorm(..Segments.Shank.KneeJoint.sRel-..Segments.Shank.AnkleJoint.sRel);
+  AnyVar Radius = (..Segments.Shank.Mass/(3.1416*Length*Density))^0.5;
+  AnyVar Ixx = 0.25*..Segments.Shank.Mass*Radius*Radius + 1/12*..Segments.Shank.Mass*Length*Length;
+  AnyVar Iyy = 0.5*..Segments.Shank.Mass*Radius*Radius;
   AnyVar Izz = Ixx;
-  AnyMat33 JM=..Seg.Shank.ScalingNode.ARel*{{Ixx,0,0},{0,Iyy,0},{0,0,Izz}}*..Seg.Shank.ScalingNode.ARel';
+  AnyMat33 JM=..Segments.Shank.ScalingNode.ARel*{{Ixx,0,0},{0,Iyy,0},{0,0,Izz}}*..Segments.Shank.ScalingNode.ARel';
   AnyVec3 Jii = {JM[0][0], JM[1][1], JM[2][2]};
   AnyVec3 Jij = {JM[1][0], JM[2][1], JM[2][0]};
 
@@ -184,7 +184,7 @@ Talus = {
   // kg, 20% of Klein Horsman dataset Mass of Foot (% calculated from bone volume ratio);
 
   #if BM_FOOT_MODEL == _FOOT_MODEL_LEG_FOOT_
-  AnyVar Ixx = 2/5 * ..Seg.Talus.Mass * (vnorm(0.5*(..Seg.Talus.AnkleJoint.sRel - ..Seg.Talus.MedialMalleolus.sRel)))^2;
+  AnyVar Ixx = 2/5 * ..Segments.Talus.Mass * (vnorm(0.5*(..Segments.Talus.AnkleJoint.sRel - ..Segments.Talus.MedialMalleolus.sRel)))^2;
   AnyVar Iyy = Ixx;
   AnyVar Izz = Ixx;
   AnyVec3 Jii = {Ixx, Iyy, Izz};
@@ -206,12 +206,12 @@ Foot = {
   AnyVec3 sCoM = { 0.0509 , -0.0161  ,  0.0139  }*.TF';
 
   #if BM_FOOT_MODEL == _FOOT_MODEL_LEG_FOOT_
-  AnyVar Length = vnorm(..Seg.Foot.BigToeNode.sRel-..Seg.Foot.HeelNode.sRel);
-  AnyVar Radius = (..Seg.Foot.Mass/(3.1416*Length*Density))^0.5;
-  AnyVar Ixx = 0.25*..Seg.Foot.Mass*Radius*Radius + 1/12*..Seg.Foot.Mass*Length*Length;
-  AnyVar Iyy = 0.5*..Seg.Foot.Mass*Radius*Radius;
+  AnyVar Length = vnorm(..Segments.Foot.BigToeNode.sRel-..Segments.Foot.HeelNode.sRel);
+  AnyVar Radius = (..Segments.Foot.Mass/(3.1416*Length*Density))^0.5;
+  AnyVar Ixx = 0.25*..Segments.Foot.Mass*Radius*Radius + 1/12*..Segments.Foot.Mass*Length*Length;
+  AnyVar Iyy = 0.5*..Segments.Foot.Mass*Radius*Radius;
   AnyVar Izz = Ixx;
-  AnyMat33 JM=..Seg.Foot.ScalingNode.ARel*{{Iyy,0,0},{0,Ixx,0},{0,0,Izz}}*..Seg.Foot.ScalingNode.ARel';
+  AnyMat33 JM=..Segments.Foot.ScalingNode.ARel*{{Iyy,0,0},{0,Ixx,0},{0,0,Izz}}*..Segments.Foot.ScalingNode.ARel';
   AnyVec3 Jii = {JM[0][0], JM[1][1], JM[2][2]};
   AnyVec3 Jij = {JM[1][0], JM[2][1], JM[2][0]};
   #endif

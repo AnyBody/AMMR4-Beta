@@ -208,7 +208,7 @@ AnyKinMeasureOrg JntDOF = {
 };
 
 // Definition of the leg segments
-AnyFolder Seg = {
+AnyFolder Segments = {
   #include "Seg.any"
 };
 
@@ -245,9 +245,9 @@ AnyFolder Jnt = {
 
 ///Summation of masses in the leg
 AnyFolder MassSummation={
-  AnyVar Mass=.Seg.Thigh.Mass+.Seg.Shank.Mass
+  AnyVar Mass=.Segments.Thigh.Mass+.Segments.Shank.Mass
   #if BM_FOOT_MODEL == _FOOT_MODEL_LEG_FOOT_
-  +.Seg.Foot.Mass
+  +.Segments.Foot.Mass
   #endif
   ;
 };

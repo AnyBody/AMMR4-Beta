@@ -395,7 +395,7 @@ USE_BVH_INPUT = ON
 
 
 CreateMarkerDriver RKJC(
-MarkerPlacement= Right.Leg.Seg.Thigh,
+MarkerPlacement= Right.Leg.Segments.Thigh,
 PlaceMarkerAt =KneeJoint,
 MarkerPlacementBVH= Main.ModelSetup.BVHFileData.Model.Hips.RightHip.RightKnee.Seg,
 OptX=OFF,OptY=OFF,OptZ=OFF,
@@ -411,7 +411,7 @@ USE_BVH_INPUT = ON
 
 
 CreateMarkerDriver RKNE(
-MarkerPlacement= Right.Leg.Seg.Thigh,
+MarkerPlacement= Right.Leg.Segments.Thigh,
 PlaceMarkerAt =KneeJoint,
 MarkerPlacementBVH= Main.ModelSetup.BVHFileData.Model.Hips.RightHip.Seg,
 OptX=OFF,OptY=OFF,OptZ=OFF,
@@ -426,7 +426,7 @@ USE_BVH_INPUT = ON
 
 
 CreateMarkerDriver RAJC(
-MarkerPlacement= Right.Leg.Seg.Shank,
+MarkerPlacement= Right.Leg.Segments.Shank,
 PlaceMarkerAt =AnkleJoint,
 MarkerPlacementBVH= Main.ModelSetup.BVHFileData.Model.Hips.RightHip.RightKnee.RightAnkle.Seg,
 OptX=OFF,OptY=OFF,OptZ=OFF,
@@ -442,7 +442,7 @@ USE_BVH_INPUT = ON
 
 
 CreateMarkerDriver RTOE(
-MarkerPlacement= Right.Leg.Seg.Foot.Metatarsal1,
+MarkerPlacement= Right.Leg.Segments.Foot.Metatarsal1,
 PlaceMarkerAt=AnatomicalFrame,
 MarkerPlacementBVH= Main.ModelSetup.BVHFileData.Model.Hips.RightHip.RightKnee.RightAnkle.RightToe.Seg,
 OptX=OFF,OptY=OFF,OptZ=OFF,
@@ -458,7 +458,7 @@ USE_BVH_INPUT = ON
 
 
 CreateMarkerDriver RTOE2(
-MarkerPlacement= Right.Leg.Seg.Foot.Metatarsal5,
+MarkerPlacement= Right.Leg.Segments.Foot.Metatarsal5,
 PlaceMarkerAt=AnatomicalFrame,
 MarkerPlacementBVH= Main.ModelSetup.BVHFileData.Model.Hips.RightHip.RightKnee.RightAnkle.RightToe.Seg,
 OptX=OFF,OptY=OFF,OptZ=OFF,
@@ -474,7 +474,7 @@ USE_BVH_INPUT = ON
 
 
 CreateMarkerDriver LKJC(
-MarkerPlacement= Left.Leg.Seg.Thigh,
+MarkerPlacement= Left.Leg.Segments.Thigh,
 PlaceMarkerAt=KneeJoint,
 MarkerPlacementBVH= Main.ModelSetup.BVHFileData.Model.Hips.LeftHip.LeftKnee.Seg,
 OptX=OFF,OptY=OFF,OptZ=OFF,
@@ -490,7 +490,7 @@ USE_BVH_INPUT = ON
 
 
 CreateMarkerDriver LKNE(
-MarkerPlacement= Left.Leg.Seg.Thigh,
+MarkerPlacement= Left.Leg.Segments.Thigh,
 PlaceMarkerAt=KneeJoint,
 MarkerPlacementBVH= Main.ModelSetup.BVHFileData.Model.Hips.LeftHip.Seg,
 OptX=OFF,OptY=OFF,OptZ=OFF,
@@ -506,7 +506,7 @@ USE_BVH_INPUT = ON
 
 
 CreateMarkerDriver LAJC(
-MarkerPlacement= Left.Leg.Seg.Shank,
+MarkerPlacement= Left.Leg.Segments.Shank,
 PlaceMarkerAt=AnkleJoint,
 MarkerPlacementBVH= Main.ModelSetup.BVHFileData.Model.Hips.LeftHip.LeftKnee.LeftAnkle.Seg,
 OptX=OFF,OptY=OFF,OptZ=OFF,
@@ -522,7 +522,7 @@ USE_BVH_INPUT = ON
 
 
 CreateMarkerDriver LTOE(
-MarkerPlacement= Left.Leg.Seg.Foot.Metatarsal1,
+MarkerPlacement= Left.Leg.Segments.Foot.Metatarsal1,
 PlaceMarkerAt=AnatomicalFrame,
 MarkerPlacementBVH= Main.ModelSetup.BVHFileData.Model.Hips.LeftHip.LeftKnee.LeftAnkle.LeftToe.Seg,
 OptX=OFF,OptY=OFF,OptZ=OFF,
@@ -538,7 +538,7 @@ USE_BVH_INPUT = ON
 
 
 CreateMarkerDriver LTOE2(
-MarkerPlacement= Left.Leg.Seg.Foot.Metatarsal5,
+MarkerPlacement= Left.Leg.Segments.Foot.Metatarsal5,
 PlaceMarkerAt=AnatomicalFrame,
 MarkerPlacementBVH= Main.ModelSetup.BVHFileData.Model.Hips.LeftHip.LeftKnee.LeftAnkle.LeftToe.Seg,
 OptX=OFF,OptY=OFF,OptZ=OFF,

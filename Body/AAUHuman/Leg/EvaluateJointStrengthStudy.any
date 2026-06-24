@@ -14,7 +14,7 @@ AnyFolder Model = {
 
   AnyFolder &JointsLumberRef = .....BodyModel.Trunk.Joints.Lumbar;
 
-  AnyFolder &LegSegSideRef = .SideBodyModelRef.Leg.Seg;
+  AnyFolder &LegSegSideRef = .SideBodyModelRef.Leg.Segments;
   AnyFolder &LegJntsRef =  .SideBodyModelRef.Leg.Jnt;
   AnyFolder &LegMusRef = .SideBodyModelRef.Leg.Mus;
   AnyFolder &MusRef = .SideBodyModelRef.Leg.EvaluateJointStrengthMusRef ;

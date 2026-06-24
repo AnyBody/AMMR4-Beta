@@ -142,11 +142,11 @@ AnyFolder Drivers =
       AnyKinCoM& human_CoM = Main.Model.Human_CoM.CoM_Full;
       AnyKinLinear lin0 =
       {
-        AnyRefFrame& target =  Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.SubTalarJoint;
+        AnyRefFrame& target =  Main.HumanModel.BodyModel.Right.Leg.Segments.Foot.SubTalarJoint;
       };
       AnyKinLinear lin1 =
       {
-        AnyRefFrame& target =  Main.HumanModel.BodyModel.Left.Leg.Seg.Foot.SubTalarJoint;
+        AnyRefFrame& target =  Main.HumanModel.BodyModel.Left.Leg.Segments.Foot.SubTalarJoint;
       };
       OutDim = 3;
       Coef =

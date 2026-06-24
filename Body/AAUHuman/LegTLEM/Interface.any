@@ -7,8 +7,8 @@ AnyKinMeasureLinComb AnklePlantarFlexion = {
   AnyKinRotational RotMeasure = {
     Type=RotAxesAngles;
     Axis1 = z; Axis2 = x; Axis3 = y;
-    AnyRefNode &ShankNode = ...Seg.Shank.AnkleJoint;
-    AnyRefNode &FootNode  = ...Seg.Talus.AnkleJoint;
+    AnyRefNode &ShankNode = ...Segments.Shank.AnkleJoint;
+    AnyRefNode &FootNode  = ...Segments.Talus.AnkleJoint;
   };
   Coef = {{-1,0,0}};
   OutDim = 1;
@@ -16,13 +16,13 @@ AnyKinMeasureLinComb AnklePlantarFlexion = {
 
 AnyKinMeasureOrg SubTalarEversion={
 
-  AnyFolder &Talus = ..Seg.Talus.SubTalarJoint;
+  AnyFolder &Talus = ..Segments.Talus.SubTalarJoint;
   Talus ={
     AnyRefNode RotNode={
       ARel={{0,....Sign*-1,0},{....Sign*1,0,0},{0,0,1}};
     };
   };
-  AnyFolder &Foot = ..Seg.Foot.SubTalarJoint;
+  AnyFolder &Foot = ..Segments.Foot.SubTalarJoint;
   Foot ={
     AnyRefNode RotNode={
       ARel={{....Sign*1,0,0},{0,....Sign*1,0},{0,0,1}};
@@ -30,8 +30,8 @@ AnyKinMeasureOrg SubTalarEversion={
   };
   AnyKinRotational Ankle = {
     Type=RotAxesAngles;
-    AnyRefNode &TalusNode = ...Seg.Talus.SubTalarJoint;
-    AnyRefNode &SubTalarNode  = ...Seg.Foot.SubTalarJoint;
+    AnyRefNode &TalusNode = ...Segments.Talus.SubTalarJoint;
+    AnyRefNode &SubTalarNode  = ...Segments.Foot.SubTalarJoint;
 
   }; // End of SubTalar
   MeasureOrganizer={0};
@@ -41,21 +41,21 @@ AnyKinMeasureOrg SubTalarEversion={
 
 
 AnyKinMeasureOrg KneeFlexion = {
-  AnyFolder &Thigh = ..Seg.Thigh.KneeJoint;
+  AnyFolder &Thigh = ..Segments.Thigh.KneeJoint;
   Thigh ={
     AnyRefNode RotNode={
       ARel={{....Sign*1,0,0},{0,....Sign*1,0},{0,0,1}};
     };
   };
-  AnyFolder &Shank = ..Seg.Shank.KneeJoint;
+  AnyFolder &Shank = ..Segments.Shank.KneeJoint;
   Shank ={
     AnyRefNode RotNode={
       ARel={{....Sign*1,0,0},{0,....Sign*1,0},{0,0,1}};
     };
   };
   AnyKinRotational KneeRot={
-    AnyRefNode &ShankNode = ...Seg.Shank.KneeJoint.RotNode;
-    AnyRefNode &ThighNode = ...Seg.Thigh.KneeJoint.RotNode;
+    AnyRefNode &ShankNode = ...Segments.Shank.KneeJoint.RotNode;
+    AnyRefNode &ThighNode = ...Segments.Thigh.KneeJoint.RotNode;
     Type=RotAxesAngles;
   };
   MeasureOrganizer={0};
@@ -63,42 +63,42 @@ AnyKinMeasureOrg KneeFlexion = {
 
 
 AnyKinMeasureOrg PatellaFlexion = {
-  AnyFolder &Thigh = ..Seg.Thigh.PatellaFemurJoint;
+  AnyFolder &Thigh = ..Segments.Thigh.PatellaFemurJoint;
   Thigh ={
     AnyRefNode RotNode={
       ARel={{....Sign*1,0,0},{0,....Sign*1,0},{0,0,1}};
     };
   };
-  AnyFolder &Patella = ..Seg.Patella.PatellaFemurJoint;
+  AnyFolder &Patella = ..Segments.Patella.PatellaFemurJoint;
   Patella ={
     AnyRefNode RotNode={
       ARel={{....Sign*1,0,0},{0,....Sign*1,0},{0,0,1}};
     };
   };
   AnyKinRotational PatellaMeasure={
-    AnyRefNode &ThighNode = ...Seg.Thigh.PatellaFemurJoint.RotNode;
-    AnyRefNode &PatellaNode = ...Seg.Patella.PatellaFemurJoint.RotNode;
+    AnyRefNode &ThighNode = ...Segments.Thigh.PatellaFemurJoint.RotNode;
+    AnyRefNode &PatellaNode = ...Segments.Patella.PatellaFemurJoint.RotNode;
     Type=RotAxesAngles;
   };
   MeasureOrganizer={0};
 };
 
 AnyKinMeasureOrg HipFlexion = {
-  AnyFolder &HipJointRef=..Seg.Pelvis.HipJoint;
+  AnyFolder &HipJointRef=..Segments.Pelvis.HipJoint;
   HipJointRef={
     AnyRefNode RotNode={
       ARel= {{....Sign*-1,0,0},{0,....Sign*-1,0},{0,0,1}};
     };
   };
-  AnyFolder &ThighNodeRef = ..Seg.Thigh.HipJoint;
+  AnyFolder &ThighNodeRef = ..Segments.Thigh.HipJoint;
   ThighNodeRef ={
     AnyRefNode RotNode={
       ARel={{....Sign*-1,0,0},{0,....Sign*-1,0},{0,0,1}};
     };
   };
   AnyKinRotational HipMeasure ={
-    AnyRefNode &PelvisNode = ...Seg.Pelvis.HipJoint.RotNode;
-    AnyRefNode &ThighNode = ...Seg.Thigh.HipJoint.RotNode;
+    AnyRefNode &PelvisNode = ...Segments.Pelvis.HipJoint.RotNode;
+    AnyRefNode &ThighNode = ...Segments.Thigh.HipJoint.RotNode;
     PelvisNode={AnyDrawRefFrame drw={RGB={1,0,0};Visible = Off;}; };
     ThighNode={AnyDrawRefFrame drw={RGB={0,1,0};Visible = Off;};  };
     Axis1 = z; Axis2 = x;  Axis3 = y;
@@ -122,15 +122,15 @@ AnyKinMeasureOrg HipExternalRotation ={
 AnyFolder HipISB = {
 
   AnyKinMeasureOrg Flexion = {
-    AnyFolder &HipJointRef=...Seg.Pelvis.HipJoint.ISB;
+    AnyFolder &HipJointRef=...Segments.Pelvis.HipJoint.ISB;
     HipJointRef={
         AnyRefNode RotNode={
           ARel= {{.....Sign*-1,0,0},{0,.....Sign*-1,0},{0,0,1}};
         };
     };
     AnyKinRotational HipMeasure ={
-      AnyRefNode &PelvisNode = ....Seg.Pelvis.HipJoint.ISB.RotNode;
-      AnyRefNode &ThighNode = ....Seg.Thigh.HipJoint.RotNode;
+      AnyRefNode &PelvisNode = ....Segments.Pelvis.HipJoint.ISB.RotNode;
+      AnyRefNode &ThighNode = ....Segments.Thigh.HipJoint.RotNode;
       Axis1 = z; Axis2 = x;  Axis3 = y;
       Type=RotAxesAngles;
     };
@@ -150,8 +150,8 @@ AnyFolder HipISB = {
 
 AnyKinMeasureOrg HipFlexionJntMus = {
   AnyKinRotational HipMeasure ={
-    AnyRefNode &PelvisNode = ...Seg.Pelvis.HipJoint.RotNode;
-    AnyRefNode &ThighNode = ...Seg.Thigh.HipJoint.RotNode;
+    AnyRefNode &PelvisNode = ...Segments.Pelvis.HipJoint.RotNode;
+    AnyRefNode &ThighNode = ...Segments.Thigh.HipJoint.RotNode;
     AngVelOnOff = On; // xyz vector output
     Type=RotAxesAngles;
   };
@@ -169,9 +169,9 @@ AnyKinMeasureOrg HipExternalRotationJntMus ={
 
 
 
-//AnyRefNode &HeelContactNode =.Seg.Foot.Calcaneus.HeelNode;
-//AnyRefNode &ToeMedialContactNode  =.Seg.Foot.ProximalPhalange1.ToeMedialContactNode;
-//AnyRefNode &ToeLateralContactNode =.Seg.Foot.ProximalPhalange5.ToeLateralContactNode;
+//AnyRefNode &HeelContactNode =.Segments.Foot.Calcaneus.HeelNode;
+//AnyRefNode &ToeMedialContactNode  =.Segments.Foot.ProximalPhalange1.ToeMedialContactNode;
+//AnyRefNode &ToeLateralContactNode =.Segments.Foot.ProximalPhalange5.ToeLateralContactNode;
 //
 
 

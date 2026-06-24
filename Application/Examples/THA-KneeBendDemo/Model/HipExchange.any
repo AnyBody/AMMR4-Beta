@@ -3,7 +3,7 @@
 MechObjectExclude =
 arrcat(
   arrcat(
-    ObjSearch("Main.HumanModel.BodyModel.Right.Leg.Seg.Thigh.HipJoint","AnyMechObject"),
+    ObjSearch("Main.HumanModel.BodyModel.Right.Leg.Segments.Thigh.HipJoint","AnyMechObject"),
     ObjSearchRecursive("Main.HumanModel.BodyModel.Right.Leg.Jnt.Hip","*","AnyMechObject")
   ),
   ObjSearchRecursive("Main.Model.ModelEnvironmentConnection.JointsAndDrivers.JntDriverRightLegTD","Hip*","AnyMechObject")
@@ -11,13 +11,13 @@ arrcat(
 
 // New Hip Joint:
 AnyKinRotational Hip ={
-  AnyRefNode &ThighNode = Main.HumanModel.BodyModel.Right.Leg.Seg.Thigh.HipJointAnatomicalFrame.FemImplantNode;
+  AnyRefNode &ThighNode = Main.HumanModel.BodyModel.Right.Leg.Segments.Thigh.HipJointAnatomicalFrame.FemImplantNode;
   AnyRefNode &PelvisNode = Main.HumanModel.BodyModel.Trunk.Segments.PelvisSeg.Right.HipJoint;
   Type=RotVector;
 };
 
 AnyKinLinear HipLin={
-  AnyRefNode &ThighNode = Main.HumanModel.BodyModel.Right.Leg.Seg.Thigh.HipJointAnatomicalFrame.FemImplantNode;
+  AnyRefNode &ThighNode = Main.HumanModel.BodyModel.Right.Leg.Segments.Thigh.HipJointAnatomicalFrame.FemImplantNode;
   AnyRefNode &PelvisNode = Main.HumanModel.BodyModel.Trunk.Segments.PelvisSeg.Right.HipJoint;
   Ref=0;
 };

@@ -8,8 +8,8 @@
 AnyUniversalJoint Ankle = {
   Axis1 = z; //flexion extension
   Axis2  =  y; //abduction adduction
-  AnyRefNode &ShankNode = ..Seg.Shank.AnkleJoint;
-  AnyRefNode &FootNode  = ..Seg.Foot.AnkleJoint;
+  AnyRefNode &ShankNode = ..Segments.Shank.AnkleJoint;
+  AnyRefNode &FootNode  = ..Segments.Foot.AnkleJoint;
   Constraints.Reaction.Type = {On, On, On, Off}; //See reaction force below, AnkleAxialRotationMoment.
 };
 
@@ -22,8 +22,8 @@ AnyKinMeasureOrg AnkleExternalRotation={
     AnyKinRotational Ankle = {
       Type=RotAxesAngles;
       AngVelOnOff = On;
-      AnyRefNode &ShankNode = ....Seg.Shank.AnkleJoint.RotNode;
-      AnyRefNode &FootNode  = ....Seg.Foot.AnkleJoint.RotNode;
+      AnyRefNode &ShankNode = ....Segments.Shank.AnkleJoint.RotNode;
+      AnyRefNode &FootNode  = ....Segments.Foot.AnkleJoint.RotNode;
     };
     MeasureOrganizer={0};
   };
@@ -33,16 +33,16 @@ AnyKinMeasureOrg AnkleExternalRotation={
 /*
 AnyRevoluteJoint Ankle = {
   Axis = z; //flexion extension
-  AnyRefNode &ShankNode = ..Seg.Shank.AnkleJoint;
-  AnyRefNode &FootNode  = ..Seg.Foot.AnkleJoint;
+  AnyRefNode &ShankNode = ..Segments.Shank.AnkleJoint;
+  AnyRefNode &FootNode  = ..Segments.Foot.AnkleJoint;
 }; // End of Ankle
 */
 
 /// Knee joint definition
 AnyRevoluteJoint Knee = {
   Axis = z;
-  AnyRefNode &ThighNode = ..Seg.Thigh.KneeJoint;
-  AnyRefNode &ShankNode = ..Seg.Shank.KneeJoint;
+  AnyRefNode &ThighNode = ..Segments.Thigh.KneeJoint;
+  AnyRefNode &ShankNode = ..Segments.Shank.KneeJoint;
 
 // Constraints.Reaction.Type = {On, On, On, Off,Off};
 
@@ -53,6 +53,6 @@ AnyRevoluteJoint Knee = {
 /// Hip joint definition.
 /// Defined with the femoral node first so reactions are reported in femur based reference frame.
 AnySphericalJoint Hip = {
-  AnyRefNode &ThighNode = ..Seg.Thigh.HipJoint;
+  AnyRefNode &ThighNode = ..Segments.Thigh.HipJoint;
   AnyRefNode &PelvisNode = ..HipNodeRef;
 }; // End of Hip

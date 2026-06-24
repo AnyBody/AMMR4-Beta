@@ -3,22 +3,26 @@
 //
 
 //
-{% set parameters = data.parameters.copy() %}
+{%- set parameters = data.parameters.copy() %}
 {% set _ = parameters.pop("BM_GLOBAL_REFERENCE_FRAME") %}
 #if BM_CONFIG_MESSAGES == ON
-AnyFolder Messages = {
-{%- for name, obj in parameters.items() %}{%- if obj.deprecated is undefined %}
-#ifdef {{name}}
-// {{obj.descr}}
-AnyMessage msg_{{name}} = { TriggerPreProcess = On; Type = MSG_Message; Message = {{'strval('+ name + (', "%5.3f"' if obj.valuetype == "float" else '') +')' if obj.valuetype != 'string' else name}};};
-#endif
-{% endif -%}{% endfor %}
-
-}; // AnyFolder Messages
+Messages = {
+  /// Folder with messages related to the BM configuation statements
+  AnyFolder BM = {
+  {%- for name, obj in parameters.items() %}{%- if obj.deprecated is undefined %}
+  #ifdef {{name}}
+  // {{obj.descr}}
+  AnyMessage msg_{{name}} = { TriggerPreProcess = On; Type = MSG_Message; Message = {{'strval('+ name + (', "%5.3f"' if obj.valuetype == "float" else '') +')' if obj.valuetype != 'string' else name}};};
+  #endif
+  {% endif -%}{% endfor %}
+  
+  }; // AnyFolder Messages
+};
 #endif
 
 #if BM_CONFIG_VALUES == ON
-AnyFolder Values = {
+/// Folder containing the values of each BM configuation statement in the model
+AnyFolder BMValues = {
 {% for name, obj in parameters.items() %}{%- if obj.deprecated is undefined %}
 #ifdef {{name}}
 // {{obj.descr}}
@@ -28,7 +32,3 @@ AnyFolder Values = {
 
 };// AnyFolder Values
 #endif
-
-
-
-

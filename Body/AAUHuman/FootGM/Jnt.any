@@ -1,270 +1,270 @@
 AnyFolder Foot = {
-  
-  
+
+
   //************************************************
   //              JntIntertarsal
   //************************************************
-  
-  
-  
-  
-  AnySphericalJoint TaloNavi = 
-  {                    
-    AnyRefFrame &Talus = ...Seg.Foot.Talus.TaloNavicularJoint;
-    AnyRefFrame &Navicularis = ...Seg.Foot.Navicular.TaloNavicularJoint;
+
+
+
+
+  AnySphericalJoint TaloNavi =
+  {
+    AnyRefFrame &Talus = ...Segments.Foot.Talus.TaloNavicularJoint;
+    AnyRefFrame &Navicularis = ...Segments.Foot.Navicular.TaloNavicularJoint;
     Constraints.Reaction ={#include "DrawForceInJoint.any"};
-    
+
   };
-  
-  
-  AnyUniversalJoint CuneiNaviMed = 
+
+
+  AnyUniversalJoint CuneiNaviMed =
   {
     Axis1 = y;
     Axis2 = z;
-    AnyRefFrame &Navicularis = ...Seg.Foot.Navicular.MedCuneiNaviJoint;
-    AnyRefFrame &MedCunei = ...Seg.Foot.MedialCuneiform.CuneiNaviJoint;
+    AnyRefFrame &Navicularis = ...Segments.Foot.Navicular.MedCuneiNaviJoint;
+    AnyRefFrame &MedCunei = ...Segments.Foot.MedialCuneiform.CuneiNaviJoint;
     Constraints.Reaction ={#include "DrawForceInJoint.any"};
   };
-  
-  
-  AnyUniversalJoint CuneiNaviInt = 
+
+
+  AnyUniversalJoint CuneiNaviInt =
   {
     Axis1 = y;
     Axis2 = z;
-    AnyRefFrame &Navicularis = ...Seg.Foot.Navicular.IntCuneiNaviJoint;
-    AnyRefFrame &IntCunei = ...Seg.Foot.IntermediateCuneiform.CuneiNaviJoint;
+    AnyRefFrame &Navicularis = ...Segments.Foot.Navicular.IntCuneiNaviJoint;
+    AnyRefFrame &IntCunei = ...Segments.Foot.IntermediateCuneiform.CuneiNaviJoint;
     Constraints.Reaction ={#include "DrawForceInJoint.any"};
   };
-  
-  
-  AnyUniversalJoint CuneiNaviLat = 
+
+
+  AnyUniversalJoint CuneiNaviLat =
   {
     Axis1 = y;
     Axis2 = z;
-    AnyRefFrame &Navicularis = ...Seg.Foot.Navicular.LatCuneiNaviJoint;
-    AnyRefFrame &LatCunei = ...Seg.Foot.LateralCuneiform.CuneiNaviJoint;
+    AnyRefFrame &Navicularis = ...Segments.Foot.Navicular.LatCuneiNaviJoint;
+    AnyRefFrame &LatCunei = ...Segments.Foot.LateralCuneiform.CuneiNaviJoint;
     Constraints.Reaction ={#include "DrawForceInJoint.any"};
   };
-  
-  
-  AnySphericalJoint CalCuboid = 
+
+
+  AnySphericalJoint CalCuboid =
   {
-    AnyRefFrame &Calcaneus = ...Seg.Foot.Calcaneus.CalcaneoCuboidJoint;
-    AnyRefFrame &Cuboid = ...Seg.Foot.Cuboid.CalcaneoCuboidJoint;
+    AnyRefFrame &Calcaneus = ...Segments.Foot.Calcaneus.CalcaneoCuboidJoint;
+    AnyRefFrame &Cuboid = ...Segments.Foot.Cuboid.CalcaneoCuboidJoint;
     Constraints.Reaction ={#include "DrawForceInJoint.any"};
   };
-  
-  
+
+
   #include "IntertarsalGlidingJoints.any"
-  
-  
+
+
   //************************************************
   //              JntTarsoMt
   //************************************************
-  
-  
 
-  
-  AnyUniversalJoint MedCuneiMt1 = 
-  {
-    Axis1 = y;
-    Axis2 = z;
-    AnyRefFrame &MedCunei = ...Seg.Foot.MedialCuneiform.TarsoMtJoint;
-    AnyRefFrame &Mt1 = ...Seg.Foot.Metatarsal1.TarsoMtJoint;
-    Constraints.Reaction ={#include "DrawForceInJoint.any"};
-  };
-  
 
-  
-  AnyUniversalJoint IntCuneiMt2 = 
+
+
+  AnyUniversalJoint MedCuneiMt1 =
   {
     Axis1 = y;
     Axis2 = z;
-    AnyRefFrame &IntCunei = ...Seg.Foot.IntermediateCuneiform.TarsoMtJoint;
-    AnyRefFrame &Mt2 = ...Seg.Foot.Metatarsal2.TarsoMtJoint;
+    AnyRefFrame &MedCunei = ...Segments.Foot.MedialCuneiform.TarsoMtJoint;
+    AnyRefFrame &Mt1 = ...Segments.Foot.Metatarsal1.TarsoMtJoint;
     Constraints.Reaction ={#include "DrawForceInJoint.any"};
   };
-  
-  
-  AnyUniversalJoint LatCuneiMt3 = 
+
+
+
+  AnyUniversalJoint IntCuneiMt2 =
   {
     Axis1 = y;
     Axis2 = z;
-    AnyRefFrame &LatCunei = ...Seg.Foot.LateralCuneiform.TarsoMtJoint;
-    AnyRefFrame &Mt3 = ...Seg.Foot.Metatarsal3.TarsoMtJoint;
+    AnyRefFrame &IntCunei = ...Segments.Foot.IntermediateCuneiform.TarsoMtJoint;
+    AnyRefFrame &Mt2 = ...Segments.Foot.Metatarsal2.TarsoMtJoint;
     Constraints.Reaction ={#include "DrawForceInJoint.any"};
   };
-  
-  
-  AnyUniversalJoint CuboidMt4 = 
+
+
+  AnyUniversalJoint LatCuneiMt3 =
   {
     Axis1 = y;
     Axis2 = z;
-    AnyRefFrame &Cuboideum = ...Seg.Foot.Cuboid.TarsoMt4Joint;
-    AnyRefFrame &Mt4 = ...Seg.Foot.Metatarsal4.TarsoMtJoint;
+    AnyRefFrame &LatCunei = ...Segments.Foot.LateralCuneiform.TarsoMtJoint;
+    AnyRefFrame &Mt3 = ...Segments.Foot.Metatarsal3.TarsoMtJoint;
     Constraints.Reaction ={#include "DrawForceInJoint.any"};
   };
-  
-  AnyUniversalJoint CuboidMt5 = 
+
+
+  AnyUniversalJoint CuboidMt4 =
   {
     Axis1 = y;
     Axis2 = z;
-    AnyRefFrame &Cuboideum = ...Seg.Foot.Cuboid.TarsoMt5Joint;
-    AnyRefFrame &Mt5 = ...Seg.Foot.Metatarsal5.TarsoMtJoint;
+    AnyRefFrame &Cuboideum = ...Segments.Foot.Cuboid.TarsoMt4Joint;
+    AnyRefFrame &Mt4 = ...Segments.Foot.Metatarsal4.TarsoMtJoint;
     Constraints.Reaction ={#include "DrawForceInJoint.any"};
   };
-  
+
+  AnyUniversalJoint CuboidMt5 =
+  {
+    Axis1 = y;
+    Axis2 = z;
+    AnyRefFrame &Cuboideum = ...Segments.Foot.Cuboid.TarsoMt5Joint;
+    AnyRefFrame &Mt5 = ...Segments.Foot.Metatarsal5.TarsoMtJoint;
+    Constraints.Reaction ={#include "DrawForceInJoint.any"};
+  };
+
   #include "InterMetatarsalHeadContact.any"
-  
+
   //************************************************
   //              JntMtPhal
   //************************************************
-  
-  
-  
-  
-  
-  AnyUniversalJoint MtProxPh1 = 
+
+
+
+
+
+  AnyUniversalJoint MtProxPh1 =
   {
     Axis1 = y;
     Axis2 = z;
-    AnyRefFrame &MT1 = ...Seg.Foot.Metatarsal1.MtPhalJoint;
-    AnyRefFrame &ProxPhal1 = ...Seg.Foot.ProximalPhalange1.MtPhalJoint;
+    AnyRefFrame &MT1 = ...Segments.Foot.Metatarsal1.MtPhalJoint;
+    AnyRefFrame &ProxPhal1 = ...Segments.Foot.ProximalPhalange1.MtPhalJoint;
     Constraints.Reaction ={#include "DrawForceInJoint.any"};
   };
-  
-  
-  AnyUniversalJoint MtProxPh2 = 
+
+
+  AnyUniversalJoint MtProxPh2 =
   {
     Axis1 = y;
     Axis2 = z;
-    AnyRefFrame &MT2 = ...Seg.Foot.Metatarsal2.MtPhalJoint;
-    AnyRefFrame &ProxPhal2 = ...Seg.Foot.ProximalPhalange2.MtPhalJoint;
+    AnyRefFrame &MT2 = ...Segments.Foot.Metatarsal2.MtPhalJoint;
+    AnyRefFrame &ProxPhal2 = ...Segments.Foot.ProximalPhalange2.MtPhalJoint;
     Constraints.Reaction ={#include "DrawForceInJoint.any"};
   };
-  
-  
-  AnyUniversalJoint MtProxPh3 = 
+
+
+  AnyUniversalJoint MtProxPh3 =
   {
     Axis1 = y;
     Axis2 = z;
-    AnyRefFrame &MT3 = ...Seg.Foot.Metatarsal3.MtPhalJoint;
-    AnyRefFrame &ProxPhal3 = ...Seg.Foot.ProximalPhalange3.MtPhalJoint;
+    AnyRefFrame &MT3 = ...Segments.Foot.Metatarsal3.MtPhalJoint;
+    AnyRefFrame &ProxPhal3 = ...Segments.Foot.ProximalPhalange3.MtPhalJoint;
     Constraints.Reaction ={#include "DrawForceInJoint.any"};
   };
-  
-  
-  AnyUniversalJoint MtProxPh4 = 
+
+
+  AnyUniversalJoint MtProxPh4 =
   {
     Axis1 = y;
     Axis2 = z;
-    AnyRefFrame &MT4 = ...Seg.Foot.Metatarsal4.MtPhalJoint;
-    AnyRefFrame &ProxPhal4 = ...Seg.Foot.ProximalPhalange4.MtPhalJoint;
+    AnyRefFrame &MT4 = ...Segments.Foot.Metatarsal4.MtPhalJoint;
+    AnyRefFrame &ProxPhal4 = ...Segments.Foot.ProximalPhalange4.MtPhalJoint;
     Constraints.Reaction ={#include "DrawForceInJoint.any"};
   };
-  
-  
-  AnyUniversalJoint MtProxPh5 = 
+
+
+  AnyUniversalJoint MtProxPh5 =
   {
     Axis1 = y;
     Axis2 = z;
-    AnyRefFrame &MT5 = ...Seg.Foot.Metatarsal5.MtPhalJoint;
-    AnyRefFrame &ProxPhal5 = ...Seg.Foot.ProximalPhalange5.MtPhalJoint;
+    AnyRefFrame &MT5 = ...Segments.Foot.Metatarsal5.MtPhalJoint;
+    AnyRefFrame &ProxPhal5 = ...Segments.Foot.ProximalPhalange5.MtPhalJoint;
     Constraints.Reaction ={#include "DrawForceInJoint.any"};
   };
-  
-  
-  
-  
+
+
+
+
   //************************************************
   //              JntProxPhal
   //************************************************
-  
-  
-  
-  
-  
-  AnyRevoluteJoint ProxPhDistPh1 = 
+
+
+
+
+
+  AnyRevoluteJoint ProxPhDistPh1 =
   {
     Axis = z;
-    AnyRefFrame &ProxPhal1 = ...Seg.Foot.ProximalPhalange1.DistPhalJoint;
-    AnyRefFrame &DistPhal1 = ...Seg.Foot.DistalPhalange1.DistPhalJoint;
+    AnyRefFrame &ProxPhal1 = ...Segments.Foot.ProximalPhalange1.DistPhalJoint;
+    AnyRefFrame &DistPhal1 = ...Segments.Foot.DistalPhalange1.DistPhalJoint;
     Constraints.Reaction ={#include "DrawForceInJoint.any"};
   };
-  
-  AnyRevoluteJoint ProxPhMidPh2 = 
+
+  AnyRevoluteJoint ProxPhMidPh2 =
   {
     Axis = z;
-    AnyRefFrame &ProxPhal2 = ...Seg.Foot.ProximalPhalange2.ProxPhalJoint;
-    AnyRefFrame &MidPhal2 = ...Seg.Foot.MiddlePhalange2.ProxPhalJoint;
+    AnyRefFrame &ProxPhal2 = ...Segments.Foot.ProximalPhalange2.ProxPhalJoint;
+    AnyRefFrame &MidPhal2 = ...Segments.Foot.MiddlePhalange2.ProxPhalJoint;
     Constraints.Reaction ={#include "DrawForceInJoint.any"};
   };
-  
-  AnyRevoluteJoint ProxPhMidPh3 = 
+
+  AnyRevoluteJoint ProxPhMidPh3 =
   {
     Axis = z;
-    AnyRefFrame &ProxPhal3 = ...Seg.Foot.ProximalPhalange3.ProxPhalJoint;
-    AnyRefFrame &MidPhal3 = ...Seg.Foot.MiddlePhalange3.ProxPhalJoint;
+    AnyRefFrame &ProxPhal3 = ...Segments.Foot.ProximalPhalange3.ProxPhalJoint;
+    AnyRefFrame &MidPhal3 = ...Segments.Foot.MiddlePhalange3.ProxPhalJoint;
     Constraints.Reaction ={#include "DrawForceInJoint.any"};
   };
-  
-  AnyRevoluteJoint ProxPhMidPh4 = 
+
+  AnyRevoluteJoint ProxPhMidPh4 =
   {
     Axis = z;
-    AnyRefFrame &ProxPhal4 = ...Seg.Foot.ProximalPhalange4.ProxPhalJoint;
-    AnyRefFrame &MidPhal4 = ...Seg.Foot.MiddlePhalange4.ProxPhalJoint;
+    AnyRefFrame &ProxPhal4 = ...Segments.Foot.ProximalPhalange4.ProxPhalJoint;
+    AnyRefFrame &MidPhal4 = ...Segments.Foot.MiddlePhalange4.ProxPhalJoint;
     Constraints.Reaction ={#include "DrawForceInJoint.any"};
   };
-  
-  AnyRevoluteJoint ProxPhMidPh5 = 
+
+  AnyRevoluteJoint ProxPhMidPh5 =
   {
     Axis = z;
-    AnyRefFrame &ProxPhal5 = ...Seg.Foot.ProximalPhalange5.ProxPhalJoint;
-    AnyRefFrame &MidPhal5 = ...Seg.Foot.MiddlePhalange5.ProxPhalJoint;
+    AnyRefFrame &ProxPhal5 = ...Segments.Foot.ProximalPhalange5.ProxPhalJoint;
+    AnyRefFrame &MidPhal5 = ...Segments.Foot.MiddlePhalange5.ProxPhalJoint;
     Constraints.Reaction ={#include "DrawForceInJoint.any"};
   };
-  
-  
-  
+
+
+
   //************************************************
   //              JntDistPhal
   //************************************************
-  
-  
-  
-  
-  AnyRevoluteJoint MidPhDistPh2 = 
+
+
+
+
+  AnyRevoluteJoint MidPhDistPh2 =
   {
     Axis = z;
-    AnyRefFrame &MidPhal2 = ...Seg.Foot.MiddlePhalange2.DistPhalJoint;
-    AnyRefFrame &DistPhal2 = ...Seg.Foot.DistalPhalange2.DistPhalJoint;
+    AnyRefFrame &MidPhal2 = ...Segments.Foot.MiddlePhalange2.DistPhalJoint;
+    AnyRefFrame &DistPhal2 = ...Segments.Foot.DistalPhalange2.DistPhalJoint;
     Constraints.Reaction ={#include "DrawForceInJoint.any"};
   };
-  
-  AnyRevoluteJoint MidPhDistPh3 = 
+
+  AnyRevoluteJoint MidPhDistPh3 =
   {
     Axis = z;
-    AnyRefFrame &MidPhal3 = ...Seg.Foot.MiddlePhalange3.DistPhalJoint;
-    AnyRefFrame &DistPhal3 = ...Seg.Foot.DistalPhalange3.DistPhalJoint;
+    AnyRefFrame &MidPhal3 = ...Segments.Foot.MiddlePhalange3.DistPhalJoint;
+    AnyRefFrame &DistPhal3 = ...Segments.Foot.DistalPhalange3.DistPhalJoint;
     Constraints.Reaction ={#include "DrawForceInJoint.any"};
   };
-  
-  AnyRevoluteJoint MidPhDistPh4 = 
+
+  AnyRevoluteJoint MidPhDistPh4 =
   {
     Axis = z;
-    AnyRefFrame &MidPhal4 = ...Seg.Foot.MiddlePhalange4.DistPhalJoint;
-    AnyRefFrame &DistPhal4 = ...Seg.Foot.DistalPhalange4.DistPhalJoint;
+    AnyRefFrame &MidPhal4 = ...Segments.Foot.MiddlePhalange4.DistPhalJoint;
+    AnyRefFrame &DistPhal4 = ...Segments.Foot.DistalPhalange4.DistPhalJoint;
     Constraints.Reaction ={#include "DrawForceInJoint.any"};
   };
-  
-  AnyRevoluteJoint MidPhDistPh5 = 
+
+  AnyRevoluteJoint MidPhDistPh5 =
   {
     Axis = z;
-    AnyRefFrame &MidPhal5 = ...Seg.Foot.MiddlePhalange5.DistPhalJoint;
-    AnyRefFrame &DistPhal5 = ...Seg.Foot.DistalPhalange5.DistPhalJoint;
+    AnyRefFrame &MidPhal5 = ...Segments.Foot.MiddlePhalange5.DistPhalJoint;
+    AnyRefFrame &DistPhal5 = ...Segments.Foot.DistalPhalange5.DistPhalJoint;
     Constraints.Reaction ={#include "DrawForceInJoint.any"};
   };
-  
+
 }; //FootJnt
 
 

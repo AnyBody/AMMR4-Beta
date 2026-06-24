@@ -170,7 +170,7 @@ AnySeg PelvisSeg = {
   #ifdef SKIN
     #if SKIN
       AnyDrawSurf Drw2 = {
-        FileName = .....LEG_MODEL_PARAM_DIRECTION.Leg.Seg.STL.FilenamePelvisSkin;
+        FileName = .....LEG_MODEL_PARAM_DIRECTION.Leg.Segments.STL.FilenamePelvisSkin;
         ScaleXYZ = {1.0, 1.0, 1.0};
         RGB = ....ColorRef.Skin;
         Opacity = Main.DrawSettings.SkinOpacity.Opacity;
@@ -182,7 +182,7 @@ AnySeg PelvisSeg = {
   #ifdef MUSCLETISSUE
     #if MUSCLETISSUE
       AnyDrawSurf Drw1 = {
-        FileName = .....LEG_MODEL_PARAM_DIRECTION.Leg.Seg.STL.FilenamePelvisMuscleTissue;
+        FileName = .....LEG_MODEL_PARAM_DIRECTION.Leg.Segments.STL.FilenamePelvisMuscleTissue;
         ScaleXYZ = {1.0, 1.0, 1.0};
         RGB = ....ColorRef.MuscleTissue;
         Opacity = Main.DrawSettings.MuscleTissueOpacity.Opacity;
@@ -329,21 +329,18 @@ AnySeg PelvisSeg = {
   };
 
   #if (BM_PELVIS_DISPLAY == _PELVIS_DISPLAY_LEGANDTRUNKPELVIS_)
-  AnyDrawSurf Drw_TrunkSacrum =
-  #else
-  AnyDrawSurf DrwSacrum =
+    AnyDrawSurf Drw_TrunkSacrum = {
+      FileName = ...Data.unscaled.STL.FilenameSacrumSeg           ;
+      #if (BM_LEG_LEFT == OFF) & (BM_LEG_RIGHT == OFF)
+        Opacity ??= Main.DrawSettings.BonesOpacity.Pelvis;
+        RGB = ...ColorRef.Segments;
+      #else
+        Opacity ??= Main.DrawSettings.BonesOpacity.Pelvis * 0.5;
+        RGB = ...ColorRef.Segments;
+      #endif
+      AnyFunTransform3D &Scale = .Scale;
+    };
   #endif
-  {
-    FileName = ...Data.unscaled.STL.FilenameSacrumSeg           ;
-    #if (BM_LEG_LEFT == OFF) & (BM_LEG_RIGHT == OFF)
-      Opacity ??= Main.DrawSettings.BonesOpacity.Pelvis;
-      RGB = ...ColorRef.Segments;
-    #else
-      Opacity ??= Main.DrawSettings.BonesOpacity.Pelvis * 0.5;
-      RGB = ...ColorRef.Segments;
-    #endif
-    AnyFunTransform3D &Scale = .Scale;
-  };
 
   #endif
 

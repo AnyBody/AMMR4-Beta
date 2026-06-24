@@ -145,9 +145,9 @@ pointers in their models. That is, it is recommended to work with the foot model
 the following manner: 
 
 ```AnyScriptDoc
-AnyRefNode &MyNode = Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.Calcaneus.HeelNode;
+AnyRefNode &MyNode = Main.HumanModel.BodyModel.Right.Leg.Segments.Foot.Calcaneus.HeelNode;
 // Or
-Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.Calcaneus.HeelNode = {
+Main.HumanModel.BodyModel.Right.Leg.Segments.Foot.Calcaneus.HeelNode = {
   AnyRefNode MyNode = {};
 };
 ```
