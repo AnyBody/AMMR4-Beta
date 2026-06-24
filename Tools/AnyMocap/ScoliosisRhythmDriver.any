@@ -2,7 +2,7 @@ Main.HumanModel.BodyModel.Trunk.Joints = {
 AnyFolder &AngleInputs = Main.ModelSetup.SubjectSpecificData;
 //AnyFolder &JointsFolder = Main.HumanModel.BodyModel.Trunk.Joints;
 //==========================================Angle Driver=================================================
-//  AnyKinEqSimpleDriver SpineRhythm = 
+//  AnyKinEqSimpleDriver SpineRhythm =
 //{
 ////    AnyKinMeasure &SacrumPelvis = .SacrumPelvisRot;
 ////    AnyKinMeasure &L5Sacrum = .L5SacrumRot;
@@ -31,7 +31,7 @@ AnyFolder &AngleInputs = Main.ModelSetup.SubjectSpecificData;
 //  AnyKinMeasure &L2L3 = .Lumbar.L2L3;
 //  AnyKinMeasure &L1L2 = .Lumbar.L1L2;
 //  AnyKinMeasure &T12L1 = .Lumbar.T12L1;
-//  AnyKinMeasure &T11T12 = .Thorax.T11T12;  
+//  AnyKinMeasure &T11T12 = .Thorax.T11T12;
 //  AnyKinMeasure &T10T11 = .Thorax.T10T11;
 //  AnyKinMeasure &T9T10 = .Thorax.T9T10;
 //  AnyKinMeasure &T8T9 = .Thorax.T8T9;
@@ -43,7 +43,7 @@ AnyFolder &AngleInputs = Main.ModelSetup.SubjectSpecificData;
 //  AnyKinMeasure &T2T3 = .Thorax.T2T3;
 //  AnyKinMeasure &T1T2 = .Thorax.T1T2;
 //  AnyKinMeasure &C7T1 = .Cervical.T1C7;
-//  
+//
 //
 //  DriverPos = {
 //   .AngleInputs.SacrumPelvisJntAngle[0],.AngleInputs.SacrumPelvisJntAngle[1] ,.AngleInputs.SacrumPelvisJntAngle[2] ,
@@ -67,7 +67,7 @@ AnyFolder &AngleInputs = Main.ModelSetup.SubjectSpecificData;
 //   0,0,0
 //  }*pi/180;
 //
-//    
+//
 //  DriverVel = repmat(nDim, 0);
 ////  AnyFunConst Weight = {Value = repmat (.nDim,200);};
 ////  WeightFun={&Weight};
@@ -78,7 +78,7 @@ AnyFolder &AngleInputs = Main.ModelSetup.SubjectSpecificData;
 //};
 
 
-AnyKinEqSimpleDriver SpineLateralRhythm = 
+AnyKinEqSimpleDriver SpineLateralRhythm =
 {
 MeasureOrganizer = iarr(2, 3, 56);
   AnyKinMeasure &SacrumPelvis = .Lumbar.SacrumPelvis;
@@ -88,7 +88,7 @@ MeasureOrganizer = iarr(2, 3, 56);
   AnyKinMeasure &L2L3 = .Lumbar.L2L3;
   AnyKinMeasure &L1L2 = .Lumbar.L1L2;
   AnyKinMeasure &T12L1 = .Lumbar.T12L1;
-  AnyKinMeasure &T11T12 = .Thorax.T11T12;  
+  AnyKinMeasure &T11T12 = .Thorax.T11T12;
   AnyKinMeasure &T10T11 = .Thorax.T10T11;
   AnyKinMeasure &T9T10 = .Thorax.T9T10;
   AnyKinMeasure &T8T9 = .Thorax.T8T9;
@@ -100,17 +100,17 @@ MeasureOrganizer = iarr(2, 3, 56);
   AnyKinMeasure &T2T3 = .Thorax.T2T3;
   AnyKinMeasure &T1T2 = .Thorax.T1T2;
   AnyKinMeasure &C7T1 = .Cervical.T1C7;
-  
+
   DriverPos = { .AngleInputs.SacrumPelvisJntAngle[2], .AngleInputs.L5SacrumJntAngle[2], .AngleInputs.L4L5JntAngle[2], .AngleInputs.L3L4JntAngle[2] , .AngleInputs.L2L3JntAngle[2] ,.AngleInputs.L1L2JntAngle[2] ,.AngleInputs.T12L1JntAngle[2] ,.AngleInputs.T11T12JntAngle[2] ,.AngleInputs.T10T11JntAngle[2] ,.AngleInputs.T9T10JntAngle[2] ,.AngleInputs.T8T9JntAngle[2] ,.AngleInputs.T7T8JntAngle[2] ,.AngleInputs.T6T7JntAngle[2] ,.AngleInputs.T5T6JntAngle[2] ,.AngleInputs.T4T5JntAngle[2] ,.AngleInputs.T3T4JntAngle[2] ,.AngleInputs.T2T3JntAngle[2] ,.AngleInputs.T1T2JntAngle[2] ,0}*pi/180 ;
   DriverVel = repmat(nDim, 0);
   Reaction.Type = repmat(nDim, Off);
-  
+
   #ifdef BM_TRUNK_RHYTHM_LATERAL_SOFT_
-  CType= repmat(nDim,Soft);  
+  CType= repmat(nDim,Soft);
   #endif
 };
 
-AnyKinEqSimpleDriver SpineAxialRhythm = 
+AnyKinEqSimpleDriver SpineAxialRhythm =
 {
 MeasureOrganizer = iarr(1, 3, 56);
   AnyKinMeasure &SacrumPelvis = .Lumbar.SacrumPelvis;
@@ -120,7 +120,7 @@ MeasureOrganizer = iarr(1, 3, 56);
   AnyKinMeasure &L2L3 = .Lumbar.L2L3;
   AnyKinMeasure &L1L2 = .Lumbar.L1L2;
   AnyKinMeasure &T12L1 = .Lumbar.T12L1;
-  AnyKinMeasure &T11T12 = .Thorax.T11T12;  
+  AnyKinMeasure &T11T12 = .Thorax.T11T12;
   AnyKinMeasure &T10T11 = .Thorax.T10T11;
   AnyKinMeasure &T9T10 = .Thorax.T9T10;
   AnyKinMeasure &T8T9 = .Thorax.T8T9;
@@ -132,17 +132,17 @@ MeasureOrganizer = iarr(1, 3, 56);
   AnyKinMeasure &T2T3 = .Thorax.T2T3;
   AnyKinMeasure &T1T2 = .Thorax.T1T2;
   AnyKinMeasure &C7T1 = .Cervical.T1C7;
-  
+
   DriverPos = { .AngleInputs.SacrumPelvisJntAngle[1], .AngleInputs.L5SacrumJntAngle[1], .AngleInputs.L4L5JntAngle[1], .AngleInputs.L3L4JntAngle[1] , .AngleInputs.L2L3JntAngle[1] ,.AngleInputs.L1L2JntAngle[1] ,.AngleInputs.T12L1JntAngle[1] ,.AngleInputs.T11T12JntAngle[1] ,.AngleInputs.T10T11JntAngle[1] ,.AngleInputs.T9T10JntAngle[1] ,.AngleInputs.T8T9JntAngle[1] ,.AngleInputs.T7T8JntAngle[1] ,.AngleInputs.T6T7JntAngle[1] ,.AngleInputs.T5T6JntAngle[1] ,.AngleInputs.T4T5JntAngle[1] ,.AngleInputs.T3T4JntAngle[1] ,.AngleInputs.T2T3JntAngle[1] ,.AngleInputs.T1T2JntAngle[1] ,0}*pi/180 ;
   DriverVel = repmat(nDim, 0);
   Reaction.Type = repmat(nDim, Off);
-  
+
   #ifdef BM_TRUNK_RHYTHM_AXIAL_SOFT_
   CType= repmat(nDim,Soft);
   #endif
 };
 
-AnyKinEqSimpleDriver SpineExtensionRhythm = 
+AnyKinEqSimpleDriver SpineExtensionRhythm =
 {
 MeasureOrganizer = iarr(0, 3, 56);
   AnyKinMeasure &SacrumPelvis = .Lumbar.SacrumPelvis;
@@ -152,7 +152,7 @@ MeasureOrganizer = iarr(0, 3, 56);
   AnyKinMeasure &L2L3 = .Lumbar.L2L3;
   AnyKinMeasure &L1L2 = .Lumbar.L1L2;
   AnyKinMeasure &T12L1 = .Lumbar.T12L1;
-  AnyKinMeasure &T11T12 = .Thorax.T11T12;  
+  AnyKinMeasure &T11T12 = .Thorax.T11T12;
   AnyKinMeasure &T10T11 = .Thorax.T10T11;
   AnyKinMeasure &T9T10 = .Thorax.T9T10;
   AnyKinMeasure &T8T9 = .Thorax.T8T9;
@@ -164,13 +164,13 @@ MeasureOrganizer = iarr(0, 3, 56);
   AnyKinMeasure &T2T3 = .Thorax.T2T3;
   AnyKinMeasure &T1T2 = .Thorax.T1T2;
   AnyKinMeasure &C7T1 = .Cervical.T1C7;
-  
+
   DriverPos = { .AngleInputs.SacrumPelvisJntAngle[0], .AngleInputs.L5SacrumJntAngle[0], .AngleInputs.L4L5JntAngle[0], .AngleInputs.L3L4JntAngle[0] , .AngleInputs.L2L3JntAngle[0] ,.AngleInputs.L1L2JntAngle[0] ,.AngleInputs.T12L1JntAngle[0] ,.AngleInputs.T11T12JntAngle[0] ,.AngleInputs.T10T11JntAngle[0] ,.AngleInputs.T9T10JntAngle[0] ,.AngleInputs.T8T9JntAngle[0] ,.AngleInputs.T7T8JntAngle[0] ,.AngleInputs.T6T7JntAngle[0] ,.AngleInputs.T5T6JntAngle[0] ,.AngleInputs.T4T5JntAngle[0] ,.AngleInputs.T3T4JntAngle[0] ,.AngleInputs.T2T3JntAngle[0] ,.AngleInputs.T1T2JntAngle[0] ,0}*pi/180 ;
   DriverVel = repmat(nDim, 0);
   Reaction.Type = repmat(nDim, Off);
-  
+
   #ifdef BM_TRUNK_RHYTHM_EXTENSION_SOFT_
-  CType= repmat(nDim,Soft);  
+  CType= repmat(nDim,Soft);
   #endif
 };
 
@@ -251,20 +251,20 @@ AnyKinEqSimpleDriver PelvisRot_Driver =
 //Main.HumanModel.BodyModel.Trunk.Joints.RibConstraints.Measures.DofDriver = {AnyFunConst Weight = {Value=Main.Studies.ParameterIdentification.KinematicStudyForParameterIdentification.RibcageConstraintWeight*{1,1,1,1,1,1};}; WeightFun = {&Weight}; };
 
 
-//     AnyKinDriver LegDriver = 
+//     AnyKinDriver LegDriver =
 //     {
-//       AnyKinMeasure &RAnkle = Main.HumanModel.BodyModel.Right.Leg.Jnt.Ankle;
-//       AnyKinMeasure &RTalar = Main.HumanModel.BodyModel.Right.Leg.Jnt.SubTalar;
-//       AnyKinMeasure &RKnee = Main.HumanModel.BodyModel.Right.Leg.Jnt.Knee;
-//       AnyKinMeasure &RPatella = Main.HumanModel.BodyModel.Right.Leg.Jnt.PatellaFemur;
-//       AnyKinMeasure &RHip = Main.HumanModel.BodyModel.Right.Leg.Jnt.Hip;
-//       
-//       AnyKinMeasure &LAnkle = Main.HumanModel.BodyModel.Left.Leg.Jnt.Ankle;
-//       AnyKinMeasure &LTalar = Main.HumanModel.BodyModel.Left.Leg.Jnt.SubTalar;
-//       AnyKinMeasure &LKnee = Main.HumanModel.BodyModel.Left.Leg.Jnt.Knee;
-//       AnyKinMeasure &LPatella = Main.HumanModel.BodyModel.Left.Leg.Jnt.PatellaFemur;
-//       AnyKinMeasure &LHip = Main.HumanModel.BodyModel.Left.Leg.Jnt.Hip;
-//       
+//       AnyKinMeasure &RAnkle = Main.HumanModel.BodyModel.Right.Leg.Joints.Ankle;
+//       AnyKinMeasure &RTalar = Main.HumanModel.BodyModel.Right.Leg.Joints.SubTalar;
+//       AnyKinMeasure &RKnee = Main.HumanModel.BodyModel.Right.Leg.Joints.Knee;
+//       AnyKinMeasure &RPatella = Main.HumanModel.BodyModel.Right.Leg.Joints.PatellaFemur;
+//       AnyKinMeasure &RHip = Main.HumanModel.BodyModel.Right.Leg.Joints.Hip;
+//
+//       AnyKinMeasure &LAnkle = Main.HumanModel.BodyModel.Left.Leg.Joints.Ankle;
+//       AnyKinMeasure &LTalar = Main.HumanModel.BodyModel.Left.Leg.Joints.SubTalar;
+//       AnyKinMeasure &LKnee = Main.HumanModel.BodyModel.Left.Leg.Joints.Knee;
+//       AnyKinMeasure &LPatella = Main.HumanModel.BodyModel.Left.Leg.Joints.PatellaFemur;
+//       AnyKinMeasure &LHip = Main.HumanModel.BodyModel.Left.Leg.Joints.Hip;
+//
 //       CType= repmat(nDim, Soft);
 //     };
 
