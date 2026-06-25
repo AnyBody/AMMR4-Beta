@@ -32,7 +32,7 @@ Thigh = {
 
   /// Origninal TLEM 2.0 hip joint center. Found using unloaded functional
   /// articulation of the cadaver specimen
-  AnyVec3 HipJointTLEM20 = {-0,   0.359087741410625,   0}*.TF';
+  AnyVec3 HipJointTLEM20 = {-0, 0.359087741410625, 0}*.TF';
 
   /// This hip joint was reimplemented for the TLEM version 2.1.
   /// This was found by fitting a sphere to the femoral head.
@@ -49,7 +49,6 @@ Patella = {
   AnyFunTransform3D &Scale = ..Segments.Patella.Scale;
   AnyVec3 PatellaFemurJoint = {-0.04425682, -0.001883169, 0.0}*.TF';
   AnyVec3 PatellaFemurJointAxis = ..Sign*normalize({0.09663987, -0.009576935, 0.9952733}) *.TF';
-
 
   AnyVec3 HipJoint = {0.0, 0.0, 0.0}*.TF';
 };
@@ -68,10 +67,6 @@ Shank = {
 };
 
 Talus = {
-//  AnyFunTransform3D &Scale = ..Segments.Talus.Scale;
-//  AnyFunTransform3D &FootScale = ..Segments.Foot.Scale;
-//  AnyFunTransform3D &ShankScale = ..Segments.Shank.Scale;
-
   AnyVec3 SubTalarJoint = .Foot.SubTalarJoint;
   /// Node on Calcaneus at intersection of SubTalar joint axis with Calcaneus.
   AnyVec3 SubTalarJointAxisNode = .Foot.SubTalarJointAxisNode;
@@ -89,19 +84,15 @@ Talus = {
 };
 
 Foot = {
-//  AnyFunTransform3D &Scale = ..Segments.Foot.Scale;
-//  AnyFunTransform3D &ShankScale = ..Segments.Shank.Scale;
-
   AnyVec3 SubTalarJoint = {0,0,0};
   /// Node on Calcaneus at intersection of SubTalar joint axis with Calcaneus.
   AnyVec3 SubTalarJointAxisNode = {-0.037218, -0.019650, -0.004882} *.TF';
 
-  AnyVec3 MetatarsalJoint1Node = {0.1277626, -0.03047019, -0.02127657}*.TF';  ///< Estimated from GM foot dataset using InterfaceMorphingDef.IM_Foot_GM_To_TLEM. Not part of the original TLEM dataset.
-  AnyVec3 MetatarsalJoint2Node = {0.1281903, -0.03179766, 0.001417986}*.TF';   ///< Estimated from GM foot dataset using InterfaceMorphingDef.IM_Foot_GM_To_TLEM. Not part of the original TLEM dataset.
-  AnyVec3 MetatarsalJoint3Node = {0.1250337, -0.03327942, 0.01089106}*.TF';   ///< Estimated from GM foot dataset using InterfaceMorphingDef.IM_Foot_GM_To_TLEM. Not part of the original TLEM dataset.
-  AnyVec3 MetatarsalJoint4Node = {0.1178064, -0.03574987, 0.01918231}*.TF';   ///< Estimated from GM foot dataset using InterfaceMorphingDef.IM_Foot_GM_To_TLEM. Not part of the original TLEM dataset.
-  AnyVec3 MetatarsalJoint5Node = {0.1074721, -0.0374809, 0.03314725}*.TF';   ///< Estimated from GM foot dataset using InterfaceMorphingDef.IM_Foot_GM_To_TLEM. Not part of the original TLEM dataset.
+  AnyVec3 MetatarsalJoint1Node = {0.1277626, -0.03047019, -0.02127657}*.TF'; ///< Estimated from GM foot dataset using InterfaceMorphingDef.IM_Foot_GM_To_TLEM. Not part of the original TLEM dataset.
+  AnyVec3 MetatarsalJoint2Node = {0.1281903, -0.03179766, 0.001417986}*.TF'; ///< Estimated from GM foot dataset using InterfaceMorphingDef.IM_Foot_GM_To_TLEM. Not part of the original TLEM dataset.
+  AnyVec3 MetatarsalJoint3Node = {0.1250337, -0.03327942, 0.01089106}*.TF'; ///< Estimated from GM foot dataset using InterfaceMorphingDef.IM_Foot_GM_To_TLEM. Not part of the original TLEM dataset.
+  AnyVec3 MetatarsalJoint4Node = {0.1178064, -0.03574987, 0.01918231}*.TF'; ///< Estimated from GM foot dataset using InterfaceMorphingDef.IM_Foot_GM_To_TLEM. Not part of the original TLEM dataset.
+  AnyVec3 MetatarsalJoint5Node = {0.1074721, -0.0374809, 0.03314725}*.TF'; ///< Estimated from GM foot dataset using InterfaceMorphingDef.IM_Foot_GM_To_TLEM. Not part of the original TLEM dataset.
 
   AnyVec3 ToeJoint = MetatarsalJoint1Node; //< Estimated point. Not part of the original dataset.
-
 };
