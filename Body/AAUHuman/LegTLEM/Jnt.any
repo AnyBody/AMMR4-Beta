@@ -168,7 +168,7 @@ AnyKinEqSimpleDriver PatellaMovement = {
 
 
 
-  AnyVar TendonLength =  lengthScale *..ModelParameters.Patella.PatellarLigamentLength;
+  AnyVar TendonLength =  lengthScale *..Data.unscaled.ModelParameters.Patella.PatellarLigamentLength;
 
 
 

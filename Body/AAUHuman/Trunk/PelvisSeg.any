@@ -31,7 +31,7 @@ AnySeg PelvisSeg = {
       AnyFolder& Leg_ModelParameters = ...LEG_MODEL_PARAM_DIRECTION.Leg.StandardParameters;
     #endif
     #if BM_LEG_MODEL_IS_TLEM
-      AnyFolder& Leg_ModelParameters = ...LEG_MODEL_PARAM_DIRECTION.Leg.ModelParameters;
+      AnyFolder& Leg_ModelParameters = ...LEG_MODEL_PARAM_DIRECTION.Leg.Data.unscaled.ModelParameters;
     #endif
   #endif
 
@@ -80,10 +80,10 @@ AnySeg PelvisSeg = {
         };
 
         AnyFloat unscaled_points =  {
-          .....LEG_MODEL_PARAM_DIRECTION.Leg.ModelParameters.Pelvis.RASIS,
-          .....LEG_MODEL_PARAM_DIRECTION.Leg.ModelParameters.Pelvis.LASIS,
-          .....LEG_MODEL_PARAM_DIRECTION.Leg.ModelParameters.Pelvis.RPT,
-          .....LEG_MODEL_PARAM_DIRECTION.Leg.ModelParameters.Pelvis.LPT
+          .....LEG_MODEL_PARAM_DIRECTION.Leg.Data.unscaled.ModelParameters.Pelvis.RASIS,
+          .....LEG_MODEL_PARAM_DIRECTION.Leg.Data.unscaled.ModelParameters.Pelvis.LASIS,
+          .....LEG_MODEL_PARAM_DIRECTION.Leg.Data.unscaled.ModelParameters.Pelvis.RPT,
+          .....LEG_MODEL_PARAM_DIRECTION.Leg.Data.unscaled.ModelParameters.Pelvis.LPT
         };
       };
     #else
@@ -248,10 +248,10 @@ AnySeg PelvisSeg = {
 
       // (Trunk to Leg Interface Morphing) -> Use the mass property of pelvis from the Leg
       #if BM_LEG_TRUNK_INTERFACE == _MORPH_TRUNK_TO_LEG_ & ( BM_LEG_MODEL_IS_TLEM )
-        AnyVar MassStandard = ....LEG_MODEL_PARAM_DIRECTION.Leg.ModelParameters.Pelvis.MassStandard;
-        Jii = ....LEG_MODEL_PARAM_DIRECTION.Leg.ModelParameters.Pelvis.Jii;
-        Jij = ....LEG_MODEL_PARAM_DIRECTION.Leg.ModelParameters.Pelvis.Jij;
-        sCoM = .AnatomicalFrameTrunk.Scale_Leg_Pelvis(....LEG_MODEL_PARAM_DIRECTION.Leg.ModelParameters.Pelvis.sCoM);
+        AnyVar MassStandard = ....LEG_MODEL_PARAM_DIRECTION.Leg.Data.unscaled.ModelParameters.Pelvis.MassStandard;
+        Jii = ....LEG_MODEL_PARAM_DIRECTION.Leg.Data.unscaled.ModelParameters.Pelvis.Jii;
+        Jij = ....LEG_MODEL_PARAM_DIRECTION.Leg.Data.unscaled.ModelParameters.Pelvis.Jij;
+        sCoM = .AnatomicalFrameTrunk.Scale_Leg_Pelvis(....LEG_MODEL_PARAM_DIRECTION.Leg.Data.unscaled.ModelParameters.Pelvis.sCoM);
       #else //(Leg to Trunk Interface Morphing) or (No Interface Morphing) -> Use the mass property of pelvis from the Trunk
         AnyVar MassStandard = ...Data.unscaled.StandardParameters.Pelvis.Mass;
         Jii = {0.0221,0.01,0.0221}; //Taken from SimpleSpineModel
