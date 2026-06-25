@@ -18,7 +18,7 @@
  Add Model parameters to TLEM2 used for the coordinate systems
  which define femoral torsion.
 */
-Main.HumanModel.BodyModel._RIGHTLEFT_.Leg.ModelParameters.Thigh  =
+Main.HumanModel.BodyModel._RIGHTLEFT_.Leg.Data.unscaled.ModelParameters.Thigh  =
 {
    AnyVec3 LateralPosteriorCondyle = {-0.02504595, -0.0056740027, ..Sign*0.027797787};
    AnyVec3 MedialPosteriorCondyle = {-0.032076184, -0.0055254665, ..Sign*-0.025188807};
