@@ -4,7 +4,7 @@ MechObjectExclude =
 arrcat(
   arrcat(
     ObjSearch("Main.HumanModel.BodyModel.Right.Leg.Segments.Thigh.HipJoint","AnyMechObject"),
-    ObjSearchRecursive("Main.HumanModel.BodyModel.Right.Leg.Jnt.Hip","*","AnyMechObject")
+    ObjSearchRecursive("Main.HumanModel.BodyModel.Right.Leg.Joints.Hip","*","AnyMechObject")
   ),
   ObjSearchRecursive("Main.Model.ModelEnvironmentConnection.JointsAndDrivers.JntDriverRightLegTD","Hip*","AnyMechObject")
 );

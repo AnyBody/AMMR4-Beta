@@ -91,7 +91,7 @@ AnyFolder Jnt={
       };
 
       AnyKinEqSimpleDriver AnkleDriver ={
-        AnyKinMeasure& ref = ...RefH.Right.Leg.Jnt.SubTalar;
+        AnyKinMeasure& ref = ...RefH.Right.Leg.Joints.SubTalar;
         //MeasureOrganizer = {1};
         DriverPos={0};
         DriverVel={0};
@@ -126,7 +126,7 @@ AnyFolder Jnt={
       };
 
       AnyKinEqSimpleDriver AnkleDriver ={
-        AnyKinMeasure& ref = ...RefH.Left.Leg.Jnt.SubTalar;
+        AnyKinMeasure& ref = ...RefH.Left.Leg.Joints.SubTalar;
         //MeasureOrganizer = {1};
         DriverPos={0};
         DriverVel={0};
@@ -296,8 +296,8 @@ AnyFolder Drivers = {
   AnyKinEq ThoraxThighRhythm = {
     AnyKinMeasureLinComb ThoraxThighRhythmComb = {
       AnyKinMeasureOrg Org = {
-        AnySphericalJoint &rhip1 = Main.Model.BodyModel.Right.Leg.Jnt.Hip;
-        AnySphericalJoint &lhip2 = Main.Model.BodyModel.Left.Leg.Jnt.Hip;
+        AnySphericalJoint &rhip1 = Main.Model.BodyModel.Right.Leg.Joints.Hip;
+        AnySphericalJoint &lhip2 = Main.Model.BodyModel.Left.Leg.Joints.Hip;
         AnyKinRotational PelvisThorax = {
           AnyRefFrame &Thorax = Main.Model.BodyModel.Trunk.Segments.SternalBodySeg;
           AnyRefFrame &Pelvis = Main.Model.BodyModel.Trunk.Segments.PelvisSeg;

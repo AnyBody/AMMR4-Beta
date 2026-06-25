@@ -68,8 +68,8 @@ Main = {
     #if EXO_CONCEPT == 1
     // Idealized forces at the knee using AnyReacForces.
     AnyReacForce Reacs = {
-      AnyKinMeasure &k1 = Main.HumanModel.BodyModel.Right.Leg.Jnt.Knee;
-      AnyKinMeasure &k2 = Main.HumanModel.BodyModel.Left.Leg.Jnt.Knee;
+      AnyKinMeasure &k1 = Main.HumanModel.BodyModel.Right.Leg.Joints.Knee;
+      AnyKinMeasure &k2 = Main.HumanModel.BodyModel.Left.Leg.Joints.Knee;
     };
     #endif
 
@@ -77,11 +77,11 @@ Main = {
     // Spring forces at the knee using position of the knee joints.
     AnyVar k = -89.22;
     AnyForce rSpring = {
-      AnyKinMeasure &k1 = Main.HumanModel.BodyModel.Right.Leg.Jnt.Knee;
+      AnyKinMeasure &k1 = Main.HumanModel.BodyModel.Right.Leg.Joints.Knee;
       F = .k*k1.Pos-24.73;
     };
     AnyForce lSpring = {
-      AnyKinMeasure &k1 = Main.HumanModel.BodyModel.Left.Leg.Jnt.Knee;
+      AnyKinMeasure &k1 = Main.HumanModel.BodyModel.Left.Leg.Joints.Knee;
       F = .k*k1.Pos-24.73;
     };
     #endif
