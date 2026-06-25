@@ -188,7 +188,7 @@ You can [enable backwards compatibility](changes-to-bodymodel-folders) by settin
 
 All the data of the `BodyModel` have a new unified structure. In each bodypart there is a `Data` folder with the following structure:
 
-```txt
+```
 Data: 
   - unscaled: 
     - ModelParameters
