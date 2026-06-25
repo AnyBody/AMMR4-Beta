@@ -31,7 +31,7 @@ AnyVar StrengthMusFoot =DefaultMusPar.PCSAfactor*..StrengthScaling.Foot.Strength
 
 AnyMuscleModel AbductorHallucis =
 {
- AnyFolder& MuscleParameters = ...ModelParameters.Muscles.Foot.AbductorHallucis;
+ AnyFolder& MuscleParameters = ...Data.unscaled.ModelParameters.Muscles.Foot.AbductorHallucis;
  AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
  AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
  F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -48,7 +48,7 @@ AnyMuscleModel AbductorHallucis =
 
 AnyMuscleModel FlexorHallucisBrevisLateralis_1 =
 {
- AnyFolder& MuscleParameters = ...ModelParameters.Muscles.Foot.FlexorHallucisBrevisLateralis_1;
+ AnyFolder& MuscleParameters = ...Data.unscaled.ModelParameters.Muscles.Foot.FlexorHallucisBrevisLateralis_1;
  AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
  AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
  F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -65,7 +65,7 @@ AnyMuscleModel FlexorHallucisBrevisLateralis_1 =
 
 AnyMuscleModel FlexorHallucisBrevisLateralis_2 =
 {
- AnyFolder& MuscleParameters = ...ModelParameters.Muscles.Foot.FlexorHallucisBrevisLateralis_2;
+ AnyFolder& MuscleParameters = ...Data.unscaled.ModelParameters.Muscles.Foot.FlexorHallucisBrevisLateralis_2;
  AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
  AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
  F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -82,7 +82,7 @@ AnyMuscleModel FlexorHallucisBrevisLateralis_2 =
 
 AnyMuscleModel FlexorHallucisBrevisMedialis =
 {
- AnyFolder& MuscleParameters = ...ModelParameters.Muscles.Foot.FlexorHallucisBrevisMedialis;
+ AnyFolder& MuscleParameters = ...Data.unscaled.ModelParameters.Muscles.Foot.FlexorHallucisBrevisMedialis;
  AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
  AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
  F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -99,7 +99,7 @@ AnyMuscleModel FlexorHallucisBrevisMedialis =
 
 AnyMuscleModel AdductorHallucisOblique1 =
 {
- AnyFolder& MuscleParameters = ...ModelParameters.Muscles.Foot.AdductorHallucisOblique1;
+ AnyFolder& MuscleParameters = ...Data.unscaled.ModelParameters.Muscles.Foot.AdductorHallucisOblique1;
  AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
  AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
  F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -116,7 +116,7 @@ AnyMuscleModel AdductorHallucisOblique1 =
 
 AnyMuscleModel AdductorHallucisOblique2 =
 {
- AnyFolder& MuscleParameters = ...ModelParameters.Muscles.Foot.AdductorHallucisOblique2;
+ AnyFolder& MuscleParameters = ...Data.unscaled.ModelParameters.Muscles.Foot.AdductorHallucisOblique2;
  AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
  AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
  F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -133,7 +133,7 @@ AnyMuscleModel AdductorHallucisOblique2 =
 
 AnyMuscleModel AdductorHallucisOblique3 =
 {
- AnyFolder& MuscleParameters = ...ModelParameters.Muscles.Foot.AdductorHallucisOblique3;
+ AnyFolder& MuscleParameters = ...Data.unscaled.ModelParameters.Muscles.Foot.AdductorHallucisOblique3;
  AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
  AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
  F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -150,7 +150,7 @@ AnyMuscleModel AdductorHallucisOblique3 =
 
 AnyMuscleModel AdductorHallucisOblique4 =
 {
- AnyFolder& MuscleParameters = ...ModelParameters.Muscles.Foot.AdductorHallucisOblique4;
+ AnyFolder& MuscleParameters = ...Data.unscaled.ModelParameters.Muscles.Foot.AdductorHallucisOblique4;
  AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
  AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
  F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -167,7 +167,7 @@ AnyMuscleModel AdductorHallucisOblique4 =
 
 AnyMuscleModel AdductorHallucisOblique5 =
 {
- AnyFolder& MuscleParameters = ...ModelParameters.Muscles.Foot.AdductorHallucisOblique5;
+ AnyFolder& MuscleParameters = ...Data.unscaled.ModelParameters.Muscles.Foot.AdductorHallucisOblique5;
  AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
  AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
  F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -184,7 +184,7 @@ AnyMuscleModel AdductorHallucisOblique5 =
 
 AnyMuscleModel AdductorHallucisTransverse1 =
 {
- AnyFolder& MuscleParameters = ...ModelParameters.Muscles.Foot.AdductorHallucisTransverse1;
+ AnyFolder& MuscleParameters = ...Data.unscaled.ModelParameters.Muscles.Foot.AdductorHallucisTransverse1;
  AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
  AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
  F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -201,7 +201,7 @@ AnyMuscleModel AdductorHallucisTransverse1 =
 
 AnyMuscleModel AdductorHallucisTransverse2 =
 {
- AnyFolder& MuscleParameters = ...ModelParameters.Muscles.Foot.AdductorHallucisTransverse2;
+ AnyFolder& MuscleParameters = ...Data.unscaled.ModelParameters.Muscles.Foot.AdductorHallucisTransverse2;
  AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
  AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
  F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -218,7 +218,7 @@ AnyMuscleModel AdductorHallucisTransverse2 =
 
 AnyMuscleModel AdductorHallucisTransverse3 =
 {
- AnyFolder& MuscleParameters = ...ModelParameters.Muscles.Foot.AdductorHallucisTransverse3;
+ AnyFolder& MuscleParameters = ...Data.unscaled.ModelParameters.Muscles.Foot.AdductorHallucisTransverse3;
  AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
  AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
  F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -235,7 +235,7 @@ AnyMuscleModel AdductorHallucisTransverse3 =
 
 AnyMuscleModel ExtensorHallucisBrevis =
 {
- AnyFolder& MuscleParameters = ...ModelParameters.Muscles.Foot.ExtensorHallucisBrevis;
+ AnyFolder& MuscleParameters = ...Data.unscaled.ModelParameters.Muscles.Foot.ExtensorHallucisBrevis;
  AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
  AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
  F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -252,7 +252,7 @@ AnyMuscleModel ExtensorHallucisBrevis =
 
 AnyMuscleModel DorsalInterosseous1Part1 =
 {
- AnyFolder& MuscleParameters = ...ModelParameters.Muscles.Foot.DorsalInterosseous1Part1;
+ AnyFolder& MuscleParameters = ...Data.unscaled.ModelParameters.Muscles.Foot.DorsalInterosseous1Part1;
  AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
  AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
  F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -269,7 +269,7 @@ AnyMuscleModel DorsalInterosseous1Part1 =
 
 AnyMuscleModel DorsalInterosseous1Part2 =
 {
- AnyFolder& MuscleParameters = ...ModelParameters.Muscles.Foot.DorsalInterosseous1Part2;
+ AnyFolder& MuscleParameters = ...Data.unscaled.ModelParameters.Muscles.Foot.DorsalInterosseous1Part2;
  AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
  AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
  F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -286,7 +286,7 @@ AnyMuscleModel DorsalInterosseous1Part2 =
 
 AnyMuscleModel DorsalInterosseous2Part1 =
 {
- AnyFolder& MuscleParameters = ...ModelParameters.Muscles.Foot.DorsalInterosseous2Part1;
+ AnyFolder& MuscleParameters = ...Data.unscaled.ModelParameters.Muscles.Foot.DorsalInterosseous2Part1;
  AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
  AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
  F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -303,7 +303,7 @@ AnyMuscleModel DorsalInterosseous2Part1 =
 
 AnyMuscleModel DorsalInterosseous2Part2 =
 {
- AnyFolder& MuscleParameters = ...ModelParameters.Muscles.Foot.DorsalInterosseous2Part2;
+ AnyFolder& MuscleParameters = ...Data.unscaled.ModelParameters.Muscles.Foot.DorsalInterosseous2Part2;
  AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
  AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
  F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -320,7 +320,7 @@ AnyMuscleModel DorsalInterosseous2Part2 =
 
 AnyMuscleModel DorsalInterosseous3Part1 =
 {
- AnyFolder& MuscleParameters = ...ModelParameters.Muscles.Foot.DorsalInterosseous3Part1;
+ AnyFolder& MuscleParameters = ...Data.unscaled.ModelParameters.Muscles.Foot.DorsalInterosseous3Part1;
  AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
  AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
  F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -337,7 +337,7 @@ AnyMuscleModel DorsalInterosseous3Part1 =
 
 AnyMuscleModel DorsalInterosseous3Part2 =
 {
- AnyFolder& MuscleParameters = ...ModelParameters.Muscles.Foot.DorsalInterosseous3Part2;
+ AnyFolder& MuscleParameters = ...Data.unscaled.ModelParameters.Muscles.Foot.DorsalInterosseous3Part2;
  AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
  AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
  F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -354,7 +354,7 @@ AnyMuscleModel DorsalInterosseous3Part2 =
 
 AnyMuscleModel DorsalInterosseous4Part1 =
 {
- AnyFolder& MuscleParameters = ...ModelParameters.Muscles.Foot.DorsalInterosseous4Part1;
+ AnyFolder& MuscleParameters = ...Data.unscaled.ModelParameters.Muscles.Foot.DorsalInterosseous4Part1;
  AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
  AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
  F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -371,7 +371,7 @@ AnyMuscleModel DorsalInterosseous4Part1 =
 
 AnyMuscleModel DorsalInterosseous4Part2 =
 {
- AnyFolder& MuscleParameters = ...ModelParameters.Muscles.Foot.DorsalInterosseous4Part2;
+ AnyFolder& MuscleParameters = ...Data.unscaled.ModelParameters.Muscles.Foot.DorsalInterosseous4Part2;
  AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
  AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
  F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -388,7 +388,7 @@ AnyMuscleModel DorsalInterosseous4Part2 =
 
 AnyMuscleModel ExtensorDigitoriumBrevis2 =
 {
- AnyFolder& MuscleParameters = ...ModelParameters.Muscles.Foot.ExtensorDigitoriumBrevis2;
+ AnyFolder& MuscleParameters = ...Data.unscaled.ModelParameters.Muscles.Foot.ExtensorDigitoriumBrevis2;
  AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
  AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
  F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -405,7 +405,7 @@ AnyMuscleModel ExtensorDigitoriumBrevis2 =
 
 AnyMuscleModel ExtensorDigitoriumBrevis3 =
 {
- AnyFolder& MuscleParameters = ...ModelParameters.Muscles.Foot.ExtensorDigitoriumBrevis3;
+ AnyFolder& MuscleParameters = ...Data.unscaled.ModelParameters.Muscles.Foot.ExtensorDigitoriumBrevis3;
  AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
  AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
  F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -422,7 +422,7 @@ AnyMuscleModel ExtensorDigitoriumBrevis3 =
 
 AnyMuscleModel ExtensorDigitoriumBrevis4 =
 {
- AnyFolder& MuscleParameters = ...ModelParameters.Muscles.Foot.ExtensorDigitoriumBrevis4;
+ AnyFolder& MuscleParameters = ...Data.unscaled.ModelParameters.Muscles.Foot.ExtensorDigitoriumBrevis4;
  AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
  AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
  F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -439,7 +439,7 @@ AnyMuscleModel ExtensorDigitoriumBrevis4 =
 
 AnyMuscleModel PlantarInterosseous1 =
 {
- AnyFolder& MuscleParameters = ...ModelParameters.Muscles.Foot.PlantarInterosseous1;
+ AnyFolder& MuscleParameters = ...Data.unscaled.ModelParameters.Muscles.Foot.PlantarInterosseous1;
  AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
  AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
  F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -456,7 +456,7 @@ AnyMuscleModel PlantarInterosseous1 =
 
 AnyMuscleModel PlantarInterosseous2Part1 =
 {
- AnyFolder& MuscleParameters = ...ModelParameters.Muscles.Foot.PlantarInterosseous2Part1;
+ AnyFolder& MuscleParameters = ...Data.unscaled.ModelParameters.Muscles.Foot.PlantarInterosseous2Part1;
  AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
  AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
  F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -473,7 +473,7 @@ AnyMuscleModel PlantarInterosseous2Part1 =
 
 AnyMuscleModel PlantarInterosseous2Part2 =
 {
- AnyFolder& MuscleParameters = ...ModelParameters.Muscles.Foot.PlantarInterosseous2Part2;
+ AnyFolder& MuscleParameters = ...Data.unscaled.ModelParameters.Muscles.Foot.PlantarInterosseous2Part2;
  AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
  AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
  F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -490,7 +490,7 @@ AnyMuscleModel PlantarInterosseous2Part2 =
 
 AnyMuscleModel PlantarInterosseous2Part3 =
 {
- AnyFolder& MuscleParameters = ...ModelParameters.Muscles.Foot.PlantarInterosseous2Part3;
+ AnyFolder& MuscleParameters = ...Data.unscaled.ModelParameters.Muscles.Foot.PlantarInterosseous2Part3;
  AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
  AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
  F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -507,7 +507,7 @@ AnyMuscleModel PlantarInterosseous2Part3 =
 
 AnyMuscleModel PlantarInterosseous3Part1 =
 {
- AnyFolder& MuscleParameters = ...ModelParameters.Muscles.Foot.PlantarInterosseous3Part1;
+ AnyFolder& MuscleParameters = ...Data.unscaled.ModelParameters.Muscles.Foot.PlantarInterosseous3Part1;
  AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
  AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
  F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -524,7 +524,7 @@ AnyMuscleModel PlantarInterosseous3Part1 =
 
 AnyMuscleModel PlantarInterosseous3Part2 =
 {
- AnyFolder& MuscleParameters = ...ModelParameters.Muscles.Foot.PlantarInterosseous3Part2;
+ AnyFolder& MuscleParameters = ...Data.unscaled.ModelParameters.Muscles.Foot.PlantarInterosseous3Part2;
  AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
  AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
  F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -541,7 +541,7 @@ AnyMuscleModel PlantarInterosseous3Part2 =
 
 AnyMuscleModel PlantarInterosseous3Part3 =
 {
- AnyFolder& MuscleParameters = ...ModelParameters.Muscles.Foot.PlantarInterosseous3Part3;
+ AnyFolder& MuscleParameters = ...Data.unscaled.ModelParameters.Muscles.Foot.PlantarInterosseous3Part3;
  AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
  AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
  F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -558,7 +558,7 @@ AnyMuscleModel PlantarInterosseous3Part3 =
 
 AnyMuscleModel FlexorDigitorumBrevis2 =
 {
- AnyFolder& MuscleParameters = ...ModelParameters.Muscles.Foot.FlexorDigitorumBrevis2;
+ AnyFolder& MuscleParameters = ...Data.unscaled.ModelParameters.Muscles.Foot.FlexorDigitorumBrevis2;
  AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
  AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
  F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -575,7 +575,7 @@ AnyMuscleModel FlexorDigitorumBrevis2 =
 
 AnyMuscleModel FlexorDigitorumBrevis3 =
 {
- AnyFolder& MuscleParameters = ...ModelParameters.Muscles.Foot.FlexorDigitorumBrevis3;
+ AnyFolder& MuscleParameters = ...Data.unscaled.ModelParameters.Muscles.Foot.FlexorDigitorumBrevis3;
  AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
  AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
  F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -592,7 +592,7 @@ AnyMuscleModel FlexorDigitorumBrevis3 =
 
 AnyMuscleModel FlexorDigitorumBrevis4 =
 {
- AnyFolder& MuscleParameters = ...ModelParameters.Muscles.Foot.FlexorDigitorumBrevis4;
+ AnyFolder& MuscleParameters = ...Data.unscaled.ModelParameters.Muscles.Foot.FlexorDigitorumBrevis4;
  AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
  AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
  F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -609,7 +609,7 @@ AnyMuscleModel FlexorDigitorumBrevis4 =
 
 AnyMuscleModel FlexorDigitorumBrevis5 =
 {
- AnyFolder& MuscleParameters = ...ModelParameters.Muscles.Foot.FlexorDigitorumBrevis5;
+ AnyFolder& MuscleParameters = ...Data.unscaled.ModelParameters.Muscles.Foot.FlexorDigitorumBrevis5;
  AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
  AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
  F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -626,7 +626,7 @@ AnyMuscleModel FlexorDigitorumBrevis5 =
 
 AnyMuscleModel QuadratusPlantarMedialis1 =
 {
- AnyFolder& MuscleParameters = ...ModelParameters.Muscles.Foot.QuadratusPlantarMedialis1;
+ AnyFolder& MuscleParameters = ...Data.unscaled.ModelParameters.Muscles.Foot.QuadratusPlantarMedialis1;
  AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
  AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
  F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -643,7 +643,7 @@ AnyMuscleModel QuadratusPlantarMedialis1 =
 
 AnyMuscleModel QuadratusPlantarMedialis2 =
 {
- AnyFolder& MuscleParameters = ...ModelParameters.Muscles.Foot.QuadratusPlantarMedialis2;
+ AnyFolder& MuscleParameters = ...Data.unscaled.ModelParameters.Muscles.Foot.QuadratusPlantarMedialis2;
  AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
  AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
  F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -660,7 +660,7 @@ AnyMuscleModel QuadratusPlantarMedialis2 =
 
 AnyMuscleModel QuadratusPlantarMedialis3 =
 {
- AnyFolder& MuscleParameters = ...ModelParameters.Muscles.Foot.QuadratusPlantarMedialis3;
+ AnyFolder& MuscleParameters = ...Data.unscaled.ModelParameters.Muscles.Foot.QuadratusPlantarMedialis3;
  AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
  AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
  F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -677,7 +677,7 @@ AnyMuscleModel QuadratusPlantarMedialis3 =
 
 AnyMuscleModel QuadratusPlantarLateralis1 =
 {
- AnyFolder& MuscleParameters = ...ModelParameters.Muscles.Foot.QuadratusPlantarLateralis1;
+ AnyFolder& MuscleParameters = ...Data.unscaled.ModelParameters.Muscles.Foot.QuadratusPlantarLateralis1;
  AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
  AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
  F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -694,7 +694,7 @@ AnyMuscleModel QuadratusPlantarLateralis1 =
 
 AnyMuscleModel QuadratusPlantarLateralis2 =
 {
- AnyFolder& MuscleParameters = ...ModelParameters.Muscles.Foot.QuadratusPlantarLateralis2;
+ AnyFolder& MuscleParameters = ...Data.unscaled.ModelParameters.Muscles.Foot.QuadratusPlantarLateralis2;
  AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
  AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
  F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -711,7 +711,7 @@ AnyMuscleModel QuadratusPlantarLateralis2 =
 
 AnyMuscleModel QuadratusPlantarLateralis3 =
 {
- AnyFolder& MuscleParameters = ...ModelParameters.Muscles.Foot.QuadratusPlantarLateralis3;
+ AnyFolder& MuscleParameters = ...Data.unscaled.ModelParameters.Muscles.Foot.QuadratusPlantarLateralis3;
  AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
  AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
  F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -728,7 +728,7 @@ AnyMuscleModel QuadratusPlantarLateralis3 =
 
 AnyMuscleModel Lumbrical2 =
 {
- AnyFolder& MuscleParameters = ...ModelParameters.Muscles.Foot.Lumbrical2;
+ AnyFolder& MuscleParameters = ...Data.unscaled.ModelParameters.Muscles.Foot.Lumbrical2;
  AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
  AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
  F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -745,7 +745,7 @@ AnyMuscleModel Lumbrical2 =
 
 AnyMuscleModel Lumbrical3 =
 {
- AnyFolder& MuscleParameters = ...ModelParameters.Muscles.Foot.Lumbrical3;
+ AnyFolder& MuscleParameters = ...Data.unscaled.ModelParameters.Muscles.Foot.Lumbrical3;
  AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
  AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
  F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -762,7 +762,7 @@ AnyMuscleModel Lumbrical3 =
 
 AnyMuscleModel Lumbrical4 =
 {
- AnyFolder& MuscleParameters = ...ModelParameters.Muscles.Foot.Lumbrical4;
+ AnyFolder& MuscleParameters = ...Data.unscaled.ModelParameters.Muscles.Foot.Lumbrical4;
  AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
  AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
  F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -779,7 +779,7 @@ AnyMuscleModel Lumbrical4 =
 
 AnyMuscleModel Lumbrical5 =
 {
- AnyFolder& MuscleParameters = ...ModelParameters.Muscles.Foot.Lumbrical5;
+ AnyFolder& MuscleParameters = ...Data.unscaled.ModelParameters.Muscles.Foot.Lumbrical5;
  AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
  AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
  F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -796,7 +796,7 @@ AnyMuscleModel Lumbrical5 =
 
 AnyMuscleModel AbductorDigitiMinimi1 =
 {
- AnyFolder& MuscleParameters = ...ModelParameters.Muscles.Foot.AbductorDigitiMinimi1;
+ AnyFolder& MuscleParameters = ...Data.unscaled.ModelParameters.Muscles.Foot.AbductorDigitiMinimi1;
  AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
  AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
  F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -813,7 +813,7 @@ AnyMuscleModel AbductorDigitiMinimi1 =
 
 AnyMuscleModel AbductorDigitiMinimi2 =
 {
- AnyFolder& MuscleParameters = ...ModelParameters.Muscles.Foot.AbductorDigitiMinimi2;
+ AnyFolder& MuscleParameters = ...Data.unscaled.ModelParameters.Muscles.Foot.AbductorDigitiMinimi2;
  AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
  AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
  F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -830,7 +830,7 @@ AnyMuscleModel AbductorDigitiMinimi2 =
 
 AnyMuscleModel AbductorDigitiMinimi3 =
 {
- AnyFolder& MuscleParameters = ...ModelParameters.Muscles.Foot.AbductorDigitiMinimi3;
+ AnyFolder& MuscleParameters = ...Data.unscaled.ModelParameters.Muscles.Foot.AbductorDigitiMinimi3;
  AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
  AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
  F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length
@@ -847,7 +847,7 @@ AnyMuscleModel AbductorDigitiMinimi3 =
 
 AnyMuscleModel FlexorDigitiMinimiBrevis =
 {
- AnyFolder& MuscleParameters = ...ModelParameters.Muscles.Foot.FlexorDigitiMinimiBrevis;
+ AnyFolder& MuscleParameters = ...Data.unscaled.ModelParameters.Muscles.Foot.FlexorDigitiMinimiBrevis;
  AnyIntVar MuscleElemNo = 1; ///< The number of this element of the muscle
  AnyIntVar MuscleElemAmount = MuscleParameters.MuscleElemAmount; ///< The total amount of elements for this muscle
  F0 ??= .DefaultMusPar.PCSAfactor*PCSA; ///< Maximum force output at optimum fiber length

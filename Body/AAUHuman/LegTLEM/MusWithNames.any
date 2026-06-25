@@ -14,7 +14,7 @@
 // levels.
 // -------------------------------------------------------
 
-AnyFolder &Ref = .MusDrawRef;
+AnyFolder &Ref = Main.DrawSettings.Muscle;
 
 AnyMuscleViaPoint Soleus = {
   AnyMuscleModel &MusMdl = ..MuscleModels.SoleusPar;

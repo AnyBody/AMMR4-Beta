@@ -49,7 +49,7 @@ Foot = {
 //  AnyRefFrame &ToeLateralContactNode = ProximalPhalange5.ToeLateralContactNode;
 
 
-  AnyFolder &Data = ..ModelParameters.FootGM;
+  AnyFolder &Data = ..Data.unscaled.ModelParameters.FootGM;
   AnyVar Sign = ..Sign;
   AnyFloat pUnscaled = {Data.LateralMalleolus, Data.MedialMalleolus, Data.Metatarsal2PlantarNode,Data.HeelPlantarNode, Data.Metatarsal5PlantarNode, Data.Metatarsal1PlantarNode};
   // p={LateralMalleolus, MedialMalleolus, Metatarsal2, Heel, Metatarsal5, Metatarsal1} //bony landmarks to define orgin and long axis of the foot
@@ -164,7 +164,7 @@ Foot = {
     {
       sRel = .Scale(.Data.HeelContactNodeLow);
       ARel = .AnatomicalFrame.ARel;
-    };  
+    };
     AnyRefNode HeelContactNodeLateral =
     {
       sRel = .Scale(.Data.HeelContactNodeLateral);
@@ -893,7 +893,7 @@ Foot = {
       //AnyDrawRefFrame drw={ScaleXYZ={0.005,0.005,0.005};RGB={1.0,0.0,1.0};};
       sRel = .Scale(.Data.ToeMedialContactNode*.FootType.MetaScale);
       ARel = .AnatomicalFrame.ARel;
-    };    
+    };
     //For arch driving
     AnyRefNode MTHeadPlantarNode = {
       sRel = .Scale(.Data.MTHeadPlantarNode)*.FootType.MetaScale;
@@ -918,7 +918,7 @@ Foot = {
       sRel = .MtPhalJoint.sRel;
       ARel = .ScalingNode.ARel;
     };
-    
+
     //***********************
     //Muscles nodes
     //***********************
@@ -2083,7 +2083,7 @@ Foot = {
       sRel = .ToeTip.sRel;
       ARel = .AnatomicalFrame.ARel;
     };
-    
+
     //***********************
     //Muscles nodes
     //***********************

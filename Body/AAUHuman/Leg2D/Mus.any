@@ -6,7 +6,7 @@
 // unchanged and not affected of different directory
 // levels.
 
-AnyFolder &Ref = ..MusDrawRef;
+AnyFolder &Ref = Main.DrawSettings.Muscle;
 
 AnyMuscleViaPoint Ham = {
   AnyMuscleModel &MusMdl = ..MusPar.HamMdl;
