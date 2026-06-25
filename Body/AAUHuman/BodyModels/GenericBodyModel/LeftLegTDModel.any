@@ -11,7 +11,8 @@ Left = {
 
     AnyFolder Data = {
       AnyFolder unscaled = {
-        AnyFolder &ModelParameters = ..ModelParameters;
+        // AnyFolder &ModelParameters = ..ModelParameters;
+        #include "<BM_LEG_DATASET_PATH>\ModelParameters.any"
         AnyFolder &STL = ..Segments.STL;
         AnyFolder &StandardParameters = .....ScalingLaw.StandardParameters.Right;
       };
@@ -22,8 +23,6 @@ Left = {
 
       AnyFolder MassDistribution = {}; ///< To be implemented!
     };
-
-    #include "<BM_LEG_DATASET_PATH>\ModelParameters.any"
 
     #define _LEFT_RIGHT_ "Left"
 
