@@ -70,7 +70,7 @@ AnyKinEq PelvisFix = {
     #endif
   #endif
 
-  AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.Leg.Mus);
+  AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.Leg.Muscles);
 
   AnyObjectPtrArray TibialisPosteriorMuscles = ObjSearch(MusPrefix+".*.TibialisPosterior*", "AnyMuscle");
   AnyObjectPtrArray GastrocnemiusMuscles = ObjSearch(MusPrefix+".*.Gastrocnemius*", "AnyMuscle");

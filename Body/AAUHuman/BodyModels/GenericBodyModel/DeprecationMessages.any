@@ -51,7 +51,7 @@ AnyFolder Deprecations = {
     #if BM_LEG_RIGHT  ==  ON
       AnyMessageOnObjectUse FoldersLegRight = {
         AnyFolder &ref = Main.HumanModel.BodyModel.Right.Leg;
-        Objects = {&ref.Seg, &ref.Jnt};
+        Objects = {&ref.Seg, &ref.Jnt, &ref.Mus};
         DeprecationMessage = On;
         Message = strformat("\n"+
         "-------------------------------------------------------------------------------\n"+
@@ -63,7 +63,7 @@ AnyFolder Deprecations = {
 
     Main.HumanModel.BodyModel.Right.Leg = {
       // AnyFolder &ModelParameters = Data.unscaled.ModelParameters;
-      // AnyFolder &Mus = Muscles;
+      AnyFolder &Mus = Muscles;
       AnyFolder &Jnt = Joints;
       AnyFolder &Seg = Segments;
     };
@@ -72,7 +72,7 @@ AnyFolder Deprecations = {
     #if BM_LEG_LEFT  ==  ON
       AnyMessageOnObjectUse FoldersLegLeft = {
         AnyFolder &ref = Main.HumanModel.BodyModel.Left.Leg;
-        Objects = {&ref.Seg, &ref.Jnt};
+        Objects = {&ref.Seg, &ref.Jnt, &ref.Mus};
         DeprecationMessage = On;
         Message = strformat("\n"+
         "-------------------------------------------------------------------------------\n"+
@@ -84,7 +84,7 @@ AnyFolder Deprecations = {
 
     Main.HumanModel.BodyModel.Left.Leg = {
       // AnyFolder &ModelParameters = Data.unscaled.ModelParameters;
-      // AnyFolder &Mus = Muscles;
+      AnyFolder &Mus = Muscles;
       AnyFolder &Jnt = Joints;
       AnyFolder &Seg = Segments;
     };

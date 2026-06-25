@@ -69,7 +69,7 @@ AnyFolder LegCal5={
     #endif
   #endif
 
-  AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.Leg.Mus);
+  AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.Leg.Muscles);
 
   AnyObjectPtrArray VastusLateralisMuscles = ObjSearch(MusPrefix+".*.VastusLateralis*", "AnyMuscle");
   AnyObjectPtrArray VastusMedialisMuscles = ObjSearch(MusPrefix+".*.VastusMedialis*", "AnyMuscle");

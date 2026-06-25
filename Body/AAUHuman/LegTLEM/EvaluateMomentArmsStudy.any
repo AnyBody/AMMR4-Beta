@@ -14,7 +14,7 @@ AnyFolder Model = {
   AnyFolder &JointsLumberRef = .....BodyModel.Trunk.Joints.Lumbar;
   AnyFolder &LegSegSideRef = .SideHumanFolderRef.Leg.Segments;
   AnyFolder &LegJntsRef =  .SideHumanFolderRef.Leg.Joints;
-  AnyFolder &LegMusRef = .SideHumanFolderRef.Leg.Mus;
+  AnyFolder &LegMusRef = .SideHumanFolderRef.Leg.Muscles;
   AnyFolder &SpineMusRef = .SideTrunkMusRef;
 
 //  AnyFolder &SegLumbarRef = .....HumanFolderRef.Trunk.Segments;

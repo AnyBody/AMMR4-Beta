@@ -45,23 +45,23 @@ AnyFolder LegCal2 ={
 
   AnyFolder MusRight={
     #if BM_FOOT_MODEL == _FOOT_MODEL_LEG_FOOT_
-    AnyMuscleViaPoint &TibialisPosterior = ..SideHumanFolderRef.Leg.Mus.TibialisPosterior; //added
-    AnyMuscleViaPoint &Soleus =  ..SideHumanFolderRef.Leg.Mus.Soleus;
-    AnyMuscleViaPoint &Gastrocnemius =  ..SideHumanFolderRef.Leg.Mus.Gastrocnemius;
+    AnyMuscleViaPoint &TibialisPosterior = ..SideHumanFolderRef.Leg.Muscles.TibialisPosterior; //added
+    AnyMuscleViaPoint &Soleus =  ..SideHumanFolderRef.Leg.Muscles.Soleus;
+    AnyMuscleViaPoint &Gastrocnemius =  ..SideHumanFolderRef.Leg.Muscles.Gastrocnemius;
     #endif
-    AnyMuscleViaPoint &GluteusMaximus2 =  ..SideHumanFolderRef.Leg.Mus.GluteusMaximus2;
-    AnyMuscleViaPoint &Semitendinosus =  ..SideHumanFolderRef.Leg.Mus.Semitendinosus;
-//  AnyMuscleViaPoint &Semimembranosus =  ..SideHumanFolderRef.Leg.Mus.Semimembranosus;
-    AnyMuscleViaPoint &BicepsFemorisCaputLongum =  ..SideHumanFolderRef.Leg.Mus.BicepsFemorisCaputLongum;
-    AnyMuscleViaPoint &Sartorius =  ..SideHumanFolderRef.Leg.Mus.Sartorius;
+    AnyMuscleViaPoint &GluteusMaximus2 =  ..SideHumanFolderRef.Leg.Muscles.GluteusMaximus2;
+    AnyMuscleViaPoint &Semitendinosus =  ..SideHumanFolderRef.Leg.Muscles.Semitendinosus;
+//  AnyMuscleViaPoint &Semimembranosus =  ..SideHumanFolderRef.Leg.Muscles.Semimembranosus;
+    AnyMuscleViaPoint &BicepsFemorisCaputLongum =  ..SideHumanFolderRef.Leg.Muscles.BicepsFemorisCaputLongum;
+    AnyMuscleViaPoint &Sartorius =  ..SideHumanFolderRef.Leg.Muscles.Sartorius;
 
-    AnyMuscleViaPoint &GemmelusSuperior =  ..SideHumanFolderRef.Leg.Mus.GemmelusSuperior;
-    AnyMuscleViaPoint &GemmelusInferior=  ..SideHumanFolderRef.Leg.Mus.GemmelusInferior;
-    AnyMuscleViaPoint &Pictineus=  ..SideHumanFolderRef.Leg.Mus.Pictineus;
-    AnyMuscleViaPoint &ObturatoriusInternus=  ..SideHumanFolderRef.Leg.Mus.ObturatoriusInternus;
-    AnyMuscleViaPoint &ObturatoriusExternus=  ..SideHumanFolderRef.Leg.Mus.ObturatoriusExternus;
+    AnyMuscleViaPoint &GemmelusSuperior =  ..SideHumanFolderRef.Leg.Muscles.GemmelusSuperior;
+    AnyMuscleViaPoint &GemmelusInferior=  ..SideHumanFolderRef.Leg.Muscles.GemmelusInferior;
+    AnyMuscleViaPoint &Pictineus=  ..SideHumanFolderRef.Leg.Muscles.Pictineus;
+    AnyMuscleViaPoint &ObturatoriusInternus=  ..SideHumanFolderRef.Leg.Muscles.ObturatoriusInternus;
+    AnyMuscleViaPoint &ObturatoriusExternus=  ..SideHumanFolderRef.Leg.Muscles.ObturatoriusExternus;
 
-    AnyMuscleViaPoint &QuadratusFemoris = ..SideHumanFolderRef.Leg.Mus.QuadratusFemoris;
+    AnyMuscleViaPoint &QuadratusFemoris = ..SideHumanFolderRef.Leg.Muscles.QuadratusFemoris;
    };
 };
 

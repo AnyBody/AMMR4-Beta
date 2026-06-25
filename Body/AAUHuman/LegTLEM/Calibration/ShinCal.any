@@ -74,7 +74,7 @@ AnyFolder ShinCal ={
   };
   #endif
 
-  AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.Leg.Mus);
+  AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.Leg.Muscles);
 
   AnyObjectPtrArray TibialisAnteriorMuscles = ObjSearch(MusPrefix+".TibialisAnterior*", "AnyMuscle");
   AnyFloat  TibialisAnteriorRmin = repmat(NumElemOf(TibialisAnteriorMuscles), 0.5);

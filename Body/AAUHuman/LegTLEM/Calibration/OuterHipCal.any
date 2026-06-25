@@ -74,7 +74,7 @@ AnyFolder OuterHipCal ={
   };
   #endif
 
-  AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.Leg.Mus);
+  AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.Leg.Muscles);
 
   AnyObjectPtrArray GluteusMediusMuscles = ObjSearch(MusPrefix+".GluteusMedius*", "AnyMuscle");
   AnyFloat  GluteusMediusRmin = repmat(NumElemOf(GluteusMediusMuscles), 0.5);
