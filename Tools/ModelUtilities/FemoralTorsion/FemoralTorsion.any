@@ -43,8 +43,8 @@ THIGH_SEG = {
    {
      AnyRefNode ReferenceNode =
      {
-       AnyVec3 mpc = ....ModelParameters.Thigh.MedialPosteriorCondyle;
-       AnyVec3 lpc = ....ModelParameters.Thigh.LateralPosteriorCondyle;
+       AnyVec3 mpc = ....Data.unscaled.ModelParameters.Thigh.MedialPosteriorCondyle;
+       AnyVec3 lpc = ....Data.unscaled.ModelParameters.Thigh.LateralPosteriorCondyle;
        sRel = .FemoralNeckCenter.sRel;//0.5*(mpc+lpc);
 
        AnyMat33 ARelUnscaled = RotMat(
@@ -69,12 +69,12 @@ THIGH_SEG = {
 
      AnyRefNode FemoralNeckCenter =
      {
-       AnyVec3 sRelUnscaled = mean(....ModelParameters.Thigh.FemoralNeckPoints');
-       sRel = mean(..Scale(....ModelParameters.Thigh.FemoralNeckPoints)');
+       AnyVec3 sRelUnscaled = mean(....Data.unscaled.ModelParameters.Thigh.FemoralNeckPoints');
+       sRel = mean(..Scale(....Data.unscaled.ModelParameters.Thigh.FemoralNeckPoints)');
        AnyMat33 ARelUnscaled = RotMat(
                    {0,0,0.0},
                    ..AnatomicalFrame.ARelUnscaled'[1],
-                   ..Sign*(sRelUnscaled-....ModelParameters.Thigh.HipJoint)
+                   ..Sign*(sRelUnscaled-....Data.unscaled.ModelParameters.Thigh.HipJoint)
                )*RotMat(-pi/2,y);
        ARel = RotMat(
                 {0,0,0.0},
