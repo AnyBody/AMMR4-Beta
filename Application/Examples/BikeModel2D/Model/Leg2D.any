@@ -6,22 +6,14 @@ AnyFolder Leg2D = {
 
   // **********************************************************
   //  This is a reference to where the body parameters are located.
-  //  The model will need the following quantities
-  //  AnyVar BodyMass
-  //  AnyVar BodyHeight
-  //  AnyVar Density
-  //  **********************************************************
   AnyFolder &BodyParRef = ..BodyParameters;
 
   // **********************************************************
   //  This is a reference to where the colors for the model are located
-  //  The model will need the following quantities
-  //  AnyVec3 Nodes
-  //  AnyVec3 Segments
-  //  **********************************************************
   AnyFolder &ColorRef = ..DrawSettings.Colors;
-  AnyVar HipWidth = ..BikeParameters.PedalArmWidth;
   
+  AnyVar HipWidth = ..BikeParameters.PedalArmWidth;
+
   //This is the path to the trunk segments which the legs will attach too
   #include "<ANYBODY_PATH_BODY>\Leg2D\SegmentsTrunk.any"
 
