@@ -18,13 +18,13 @@
  Add Model parameters to TLEM2 used for the coordinate systems
  which define femoral torsion.
 */
-Main.HumanModel.BodyModel._RIGHTLEFT_.Leg.ModelParameters.Thigh  =
+Main.HumanModel.BodyModel._RIGHTLEFT_.Leg.Data.unscaled.ModelParameters.Thigh  =
 {
-   AnyVec3 LateralPosteriorCondyle = {-0.02504595, -0.0056740027, ..Sign*0.027797787};
-   AnyVec3 MedialPosteriorCondyle = {-0.032076184, -0.0055254665, ..Sign*-0.025188807};
+   AnyVec3 LateralPosteriorCondyle = {-0.02504595, -0.0056740027, ....Sign*0.027797787};
+   AnyVec3 MedialPosteriorCondyle = {-0.032076184, -0.0055254665, ....Sign*-0.025188807};
    AnyFloat FemoralNeckPoints = {
-     {0.00962782, 0.339763, ..Sign*0.015402},
-     {-0.015063, 0.347057, ..Sign*0.0212549}
+     {0.00962782, 0.339763, ....Sign*0.015402},
+     {-0.015063, 0.347057, ....Sign*0.0212549}
    };
 };
 
@@ -43,8 +43,8 @@ THIGH_SEG = {
    {
      AnyRefNode ReferenceNode =
      {
-       AnyVec3 mpc = ....ModelParameters.Thigh.MedialPosteriorCondyle;
-       AnyVec3 lpc = ....ModelParameters.Thigh.LateralPosteriorCondyle;
+       AnyVec3 mpc = ....Data.unscaled.ModelParameters.Thigh.MedialPosteriorCondyle;
+       AnyVec3 lpc = ....Data.unscaled.ModelParameters.Thigh.LateralPosteriorCondyle;
        sRel = .FemoralNeckCenter.sRel;//0.5*(mpc+lpc);
 
        AnyMat33 ARelUnscaled = RotMat(
@@ -69,12 +69,12 @@ THIGH_SEG = {
 
      AnyRefNode FemoralNeckCenter =
      {
-       AnyVec3 sRelUnscaled = mean(....ModelParameters.Thigh.FemoralNeckPoints');
-       sRel = mean(..Scale(....ModelParameters.Thigh.FemoralNeckPoints)');
+       AnyVec3 sRelUnscaled = mean(....Data.unscaled.ModelParameters.Thigh.FemoralNeckPoints');
+       sRel = mean(..Scale(....Data.unscaled.ModelParameters.Thigh.FemoralNeckPoints)');
        AnyMat33 ARelUnscaled = RotMat(
                    {0,0,0.0},
                    ..AnatomicalFrame.ARelUnscaled'[1],
-                   ..Sign*(sRelUnscaled-....ModelParameters.Thigh.HipJoint)
+                   ..Sign*(sRelUnscaled-....Data.unscaled.ModelParameters.Thigh.HipJoint)
                )*RotMat(-pi/2,y);
        ARel = RotMat(
                 {0,0,0.0},

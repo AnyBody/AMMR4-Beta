@@ -20,10 +20,10 @@ AnyFolder LegCalAnkle =
 
   AnyFolder &LegSegSide = .SideHumanFolderRef.Leg.Segments;
 
-  AnyFolder &LegJointsSide = .SideHumanFolderRef.Leg.Jnt;
+  AnyFolder &LegJointsSide = .SideHumanFolderRef.Leg.Joints;
   AnyFolder &TrunkJoints = ...BodyModel.Trunk.Joints.Lumbar;
 
-  AnyFolder &MusCalSide =  .SideHumanFolderRef.Leg.Mus;
+  AnyFolder &MusCalSide =  .SideHumanFolderRef.Leg.Muscles;
 
   // Ankle position variables // PlantarFlexion - SubtalarEversion
   AnyFloat PlantarFlexion      = {  45,   0} * pi/180;
@@ -120,7 +120,7 @@ AnyFolder LegCalAnkle =
   };
   #endif
 
-  AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.Leg.Mus);
+  AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.Leg.Muscles);
 
   AnyObjectPtrArray TibialisAnteriorMuscles = ObjSearch(MusPrefix+".*.TibialisAnterior*", "AnyMuscle");
   AnyFloat  TibialisAnteriorRmin = repmat(NumElemOf(TibialisAnteriorMuscles), ..RMin);

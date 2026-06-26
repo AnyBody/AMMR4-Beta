@@ -27,7 +27,7 @@
 //A vector which shows the resulting moment as an arrow, will automatically be shown in the model view the parameters of it can
 //be controlled from the "DrawSettings.any" file typically to be found in the application directory.,
 
-#if (BM_FOOT_MODEL == _FOOT_MODEL_LEG_FOOT_) | (BM_FOOT_MODEL == _FOOT_MODEL_RIGID_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
+#if (BM_FOOT_MODEL != _FOOT_MODEL_NONE_)
 
 AnyForceMomentMeasure2 AnklePlantarFlexionNetMomentMuscle =
 {
@@ -42,7 +42,7 @@ AnyForceMomentMeasure2 AnklePlantarFlexionNetMomentMuscle =
            ObjSearch("..Segments.Foot.*", "AnySeg"));
 
   IncludeForces = arrcat(
-    ObjSearch("..Mus.*.*", "AnyMuscle"),
+    ObjSearch("..Muscles.*.*", "AnyMuscle"),
     ObjSearch("..TrunkMuscles.PsoasMajor.*", "AnyMuscle"),
     ObjSearchRecursive("..JointMuscles", "*", "AnyMuscle")
   );
@@ -64,7 +64,7 @@ AnyForceMomentMeasure2 SubTalarEversionNetMomentMuscle =
                   ObjSearch("..Segments.Foot.Talus", "AnySeg"));
 
   IncludeForces = arrcat(
-    ObjSearch("..Mus.*.*", "AnyMuscle"),
+    ObjSearch("..Muscles.*.*", "AnyMuscle"),
     ObjSearch("..TrunkMuscles.PsoasMajor.*", "AnyMuscle"),
     ObjSearchRecursive("..JointMuscles", "*", "AnyMuscle")
   );
@@ -82,8 +82,8 @@ AnyForceMomentMeasure2 AchillesTendonSubtalarEversion = {
 
   #ifndef LEG_WITH_JOINT_MUSCLES
   IncludeForces = arrcat(
-    ObjSearch("..Mus.*.Soleus*", "AnyMuscle"),
-    ObjSearch("..Mus.*.Gastrocnemius*", "AnyMuscle")
+    ObjSearch("..Muscles.*.Soleus*", "AnyMuscle"),
+    ObjSearch("..Muscles.*.Gastrocnemius*", "AnyMuscle")
   );
   #endif
 
@@ -101,12 +101,12 @@ AnyForceMomentMeasure2 InversionMusclesSubtalarEversion = {
 
   #ifndef LEG_WITH_JOINT_MUSCLES
   IncludeForces = arrcat(
-    ObjSearch("..Mus.*.FlexorDigitorum*", "AnyMuscle"),
-    ObjSearch("..Mus.*.FlexorHallucis*", "AnyMuscle"),
-    ObjSearch("..Mus.*.TibialisPosterior*", "AnyMuscle"),
-    ObjSearch("..Mus.*.TibialisAnterior*", "AnyMuscle"),
-    ObjSearch("..Mus.*.ExtensorDigitorum*", "AnyMuscle"),
-    ObjSearch("..Mus.*.ExtensorHallucis*", "AnyMuscle")
+    ObjSearch("..Muscles.*.FlexorDigitorum*", "AnyMuscle"),
+    ObjSearch("..Muscles.*.FlexorHallucis*", "AnyMuscle"),
+    ObjSearch("..Muscles.*.TibialisPosterior*", "AnyMuscle"),
+    ObjSearch("..Muscles.*.TibialisAnterior*", "AnyMuscle"),
+    ObjSearch("..Muscles.*.ExtensorDigitorum*", "AnyMuscle"),
+    ObjSearch("..Muscles.*.ExtensorHallucis*", "AnyMuscle")
   );
   #endif
 
@@ -124,9 +124,9 @@ AnyForceMomentMeasure2 EversionMusclesSubtalarEversion = {
 
   #ifndef LEG_WITH_JOINT_MUSCLES
   IncludeForces = arrcat(
-    ObjSearch("..Mus.*.PeroneusTertius*", "AnyMuscle"),
-    ObjSearch("..Mus.*.PeroneusBrevis*", "AnyMuscle"),
-    ObjSearch("..Mus.*.PeroneusLongus*", "AnyMuscle")
+    ObjSearch("..Muscles.*.PeroneusTertius*", "AnyMuscle"),
+    ObjSearch("..Muscles.*.PeroneusBrevis*", "AnyMuscle"),
+    ObjSearch("..Muscles.*.PeroneusLongus*", "AnyMuscle")
   );
   #endif
   AnyVec3 Mlocal=M*ref.Axes;
@@ -147,10 +147,10 @@ AnyForceMomentMeasure2 KneeNetMomentMuscle =
              ObjSearch("..Segments.Foot.*", "AnySeg"));
 
   AnyObjectPtrArray pArrJntReactions = {
-    &..Jnt.PatellaMovement.Reaction
+    &..Joints.PatellaMovement.Reaction
   };
   IncludeForces = arrcat(
-    ObjSearch("..Mus.*.*", "AnyMuscle"),
+    ObjSearch("..Muscles.*.*", "AnyMuscle"),
     ObjSearch("..TrunkMuscles.PsoasMajor.*", "AnyMuscle"),
     ObjSearchRecursive("..JointMuscles", "*", "AnyMuscle"),
     pArrJntReactions
@@ -185,7 +185,7 @@ AnyForceMomentMeasure2 HipNetMomentMuscle =
              ObjSearch("..Segments.Foot.*", "AnySeg"));
 
   IncludeForces = arrcat(
-    ObjSearch("..Mus.*.*", "AnyMuscle"),
+    ObjSearch("..Muscles.*.*", "AnyMuscle"),
     ObjSearch("..TrunkMuscles.PsoasMajor.*", "AnyMuscle"),
     ObjSearchRecursive("..JointMuscles", "*", "AnyMuscle")
   );
@@ -211,11 +211,11 @@ AnyForceMomentMeasure2 AnklePlantarFlexionNetMoment =
            ObjSearch("..Segments.Foot.*", "AnySeg"));
 
   AnyObjectPtrArray pArrJntReactions = {
-    &..Jnt.Ankle.Constraints.Reaction,
-    &..Jnt.SubTalar.Constraints.Reaction
+    &..Joints.Ankle.Constraints.Reaction,
+    &..Joints.SubTalar.Constraints.Reaction
   };
   IncludeForces = arrcat(
-    ObjSearch("..Mus.*.*", "AnyMuscle"),
+    ObjSearch("..Muscles.*.*", "AnyMuscle"),
     ObjSearch("..TrunkMuscles.PsoasMajor.*", "AnyMuscle"),
     ObjSearchRecursive("..JointMuscles", "*", "AnyMuscle"),
     pArrJntReactions
@@ -236,10 +236,10 @@ AnyForceMomentMeasure2 SubTalarEversionNetMoment =
                   ObjSearch("..Segments.Foot.Talus", "AnySeg"));
 
   AnyObjectPtrArray pArrJntReactions = {
-    &..Jnt.SubTalar.Constraints.Reaction
+    &..Joints.SubTalar.Constraints.Reaction
   };
   IncludeForces = arrcat(
-    ObjSearch("..Mus.*.*", "AnyMuscle"),
+    ObjSearch("..Muscles.*.*", "AnyMuscle"),
     ObjSearch("..TrunkMuscles.PsoasMajor.*", "AnyMuscle"),
     ObjSearchRecursive("..JointMuscles", "*", "AnyMuscle"),
     pArrJntReactions
@@ -261,10 +261,10 @@ AnyForceMomentMeasure2 KneeNetMoment =
 
   AnyObjectPtrArray pArrJntReactions =
   {
-    &..Jnt.Knee.Constraints.Reaction,
-    &..Jnt.Ankle.Constraints.Reaction,
-    &..Jnt.SubTalar.Constraints.Reaction,
-    &..Jnt.PatellaMovement.Reaction
+    &..Joints.Knee.Constraints.Reaction,
+    &..Joints.Ankle.Constraints.Reaction,
+    &..Joints.SubTalar.Constraints.Reaction,
+    &..Joints.PatellaMovement.Reaction
   };
   #include  "LegMusclePtrArrays.any"
   IncludeForces = arrcat(pArrTargetMuscles,pArrJntReactions);
@@ -285,15 +285,15 @@ AnyForceMomentMeasure2 HipNetMoment =
 
   AnyObjectPtrArray pArrJntReactions =
   {
-    &..Jnt.Hip.Constraints.Reaction,
-    &..Jnt.Knee.Constraints.Reaction,
-    &..Jnt.Ankle.Constraints.Reaction,
-    &..Jnt.SubTalar.Constraints.Reaction,
-    &..Jnt.PatellaFemur.Constraints.Reaction,
-    &..Jnt.PatellaMovement.Reaction
+    &..Joints.Hip.Constraints.Reaction,
+    &..Joints.Knee.Constraints.Reaction,
+    &..Joints.Ankle.Constraints.Reaction,
+    &..Joints.SubTalar.Constraints.Reaction,
+    &..Joints.PatellaFemur.Constraints.Reaction,
+    &..Joints.PatellaMovement.Reaction
   };
   IncludeForces = arrcat(
-    ObjSearch("..Mus.*.*", "AnyMuscle"),
+    ObjSearch("..Muscles.*.*", "AnyMuscle"),
     ObjSearch("..TrunkMuscles.PsoasMajor.*", "AnyMuscle"),
     ObjSearchRecursive("..JointMuscles", "*", "AnyMuscle"),
     pArrJntReactions
@@ -303,7 +303,7 @@ AnyForceMomentMeasure2 HipNetMoment =
 
 AnyForceMomentMeasure AnkleJointReactionMoments =
 {
-  AnyForceBase &Force = ..Jnt.Ankle.Constraints.Reaction;
+  AnyForceBase &Force = ..Joints.Ankle.Constraints.Reaction;
   AnyRefFrame &Shankankle = ..Segments.Shank.AnkleJoint;
   AnyVec3 Mlocal = M*Shankankle.Axes;
 };
@@ -312,7 +312,7 @@ AnyForceMomentMeasure AnkleJointReactionMoments =
 
 AnyForceMomentMeasure2 KneeJointReactionMoments =
 {
-  AnyForceBase &Force = ..Jnt.Knee.Constraints.Reaction;
+  AnyForceBase &Force = ..Joints.Knee.Constraints.Reaction;
   AnyRefFrame &Thighknee = ..Segments.Thigh.KneeJoint;
   IncludeSegments = {&..Segments.Thigh};
   AnyVec3 Mlocal = M*Thighknee.Axes;

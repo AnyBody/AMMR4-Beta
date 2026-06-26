@@ -6,7 +6,7 @@ AnyFolder GastrocnemiusCal ={
 
   AnyFolder &LegSegSide = .SideHumanFolderRef.Leg.Segments;
 
-  AnyFolder &LegJointsSide = .SideHumanFolderRef.Leg.Jnt;
+  AnyFolder &LegJointsSide = .SideHumanFolderRef.Leg.Joints;
   AnyFolder &SacrumPelvisJnt = ...HumanFolderRef.Trunk.Joints.Lumbar.SacrumPelvis;
 
 
@@ -75,7 +75,7 @@ AnyFolder GastrocnemiusCal ={
   #endif
 
 
-  AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.Leg.Mus);
+  AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.Leg.Muscles);
 
   AnyObjectPtrArray GastrocnemiusMuscles = ObjSearch(MusPrefix+".Gastrocnemius*", "AnyMuscle");
   AnyFloat  GastrocnemiusRmin = repmat(NumElemOf(GastrocnemiusMuscles), 0.5);

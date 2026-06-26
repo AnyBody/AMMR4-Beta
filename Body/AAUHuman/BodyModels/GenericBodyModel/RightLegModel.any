@@ -50,7 +50,7 @@ Right =
       #if (BM_LEG_MUSCLES_RIGHT == OFF)
       AnyForceMomentMeasure KneeJointReactionMoments =
       {
-        AnyForceBase &Force = ..Jnt.Knee.Constraints.Reaction;
+        AnyForceBase &Force = ..Joints.Knee.Constraints.Reaction;
         AnyRefFrame &Thighknee = ..Segments.Thigh.KneeJoint;
         AnyVec3 Mlocal = M*Thighknee.Axes;
       };

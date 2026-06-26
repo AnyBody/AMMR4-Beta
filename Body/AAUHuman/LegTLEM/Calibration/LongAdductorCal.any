@@ -6,7 +6,7 @@ AnyFolder LongAdductorCal ={
 
   AnyFolder &LegSegSide = .SideHumanFolderRef.Leg.Segments;
 
-  AnyFolder &LegJointsSide = .SideHumanFolderRef.Leg.Jnt;
+  AnyFolder &LegJointsSide = .SideHumanFolderRef.Leg.Joints;
   AnyFolder &SacrumPelvisJnt = ...HumanFolderRef.Trunk.Joints.Lumbar.SacrumPelvis;
 
 
@@ -74,7 +74,7 @@ AnyFolder LongAdductorCal ={
   };
   #endif
 
-  AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.Leg.Mus);
+  AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.Leg.Muscles);
 
   AnyObjectPtrArray GracilisMuscles = ObjSearch(MusPrefix+".Gracilis*", "AnyMuscle");
   AnyFloat  GracilisRmin = repmat(NumElemOf(GracilisMuscles), 0.5);

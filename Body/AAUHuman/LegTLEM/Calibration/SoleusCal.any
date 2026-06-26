@@ -6,7 +6,7 @@ AnyFolder SoleusCal ={
 
   AnyFolder &LegSegSide = .SideHumanFolderRef.Leg.Segments;
 
-  AnyFolder &LegJointsSide = .SideHumanFolderRef.Leg.Jnt;
+  AnyFolder &LegJointsSide = .SideHumanFolderRef.Leg.Joints;
   AnyFolder &SacrumPelvisJnt = ...HumanFolderRef.Trunk.Joints.Lumbar.SacrumPelvis;
 
 
@@ -74,7 +74,7 @@ AnyFolder SoleusCal ={
   };
   #endif
 
-  AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.Leg.Mus);
+  AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.Leg.Muscles);
 
   AnyObjectPtrArray SoleusMuscles = ObjSearch(MusPrefix+".Soleus*", "AnyMuscle");
   AnyFloat  SoleusRmin = repmat(NumElemOf(SoleusMuscles), 0.5);

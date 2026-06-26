@@ -5,7 +5,7 @@ AnyFolder LegCal3={
   AnyFolder &Pelvis = ...BodyModel.Trunk.Segments.PelvisSeg; //This is a reference to the folder which holds the human part of the model
   AnyFolder &LegSegSide = .SideHumanFolderRef.Leg.Segments; //This is a reference to the folder which holds the human part of the model
 
-  AnyFolder &JointsCal2 = .SideHumanFolderRef.Leg.Jnt;
+  AnyFolder &JointsCal2 = .SideHumanFolderRef.Leg.Joints;
 
   AnyFixedRefFrame ground = {
     AnyRefNode node = {
@@ -41,14 +41,14 @@ AnyFolder LegCal3={
   // Soleus, Gastrocnemius, Hamstrings, Gluteus maximus, Iliopsoas
   AnyFolder &MuscleParCal2 =.SideHumanFolderRef.Leg.MuscleModels;
 
-  AnyFolder Mus = {
+  AnyFolder Muscles = {
     #if BM_FOOT_MODEL == _FOOT_MODEL_LEG_FOOT_
-    AnyMuscleViaPoint &TibialisAnterior = ..SideHumanFolderRef.Leg.Mus.TibialisAnterior;
+    AnyMuscleViaPoint &TibialisAnterior = ..SideHumanFolderRef.Leg.Muscles.TibialisAnterior;
     #endif
-    AnyMuscleViaPoint &VastusLateralis = ..SideHumanFolderRef.Leg.Mus.VastusLateralis;
-    AnyMuscleViaPoint &VastusMedialis =..SideHumanFolderRef.Leg.Mus.VastusMedialis;
-    AnyMuscleViaPoint &VastusIntermedius = ..SideHumanFolderRef.Leg.Mus.VastusIntermedius;
-    AnyMuscleViaPoint &RectusFemoris = ..SideHumanFolderRef.Leg.Mus.RectusFemoris;
+    AnyMuscleViaPoint &VastusLateralis = ..SideHumanFolderRef.Leg.Muscles.VastusLateralis;
+    AnyMuscleViaPoint &VastusMedialis =..SideHumanFolderRef.Leg.Muscles.VastusMedialis;
+    AnyMuscleViaPoint &VastusIntermedius = ..SideHumanFolderRef.Leg.Muscles.VastusIntermedius;
+    AnyMuscleViaPoint &RectusFemoris = ..SideHumanFolderRef.Leg.Muscles.RectusFemoris;
   };
 };
 

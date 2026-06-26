@@ -10,7 +10,7 @@ AnyFolder HipFlexorCal ={
 
 
   AnyFolder &LegSegSide = .SideHumanFolderRef.Leg.Segments;
-  AnyFolder &LegJointsSide = .SideHumanFolderRef.Leg.Jnt;
+  AnyFolder &LegJointsSide = .SideHumanFolderRef.Leg.Joints;
   AnyFolder &TrunkJoints = ...HumanFolderRef.Trunk.Joints.Lumbar;
 
 
@@ -78,7 +78,7 @@ AnyFolder HipFlexorCal ={
   };
   #endif
 
-  AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.Leg.Mus);
+  AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.Leg.Muscles);
 
   AnyObjectPtrArray IliacusMuscles = ObjSearch(MusPrefix+".Iliacus*", "AnyMuscle");
   AnyFloat  IliacusRmin = repmat(NumElemOf(IliacusMuscles), 0.5);

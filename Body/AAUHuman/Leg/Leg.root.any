@@ -201,10 +201,10 @@ AnyKinMeasureOrg JntDOF = {
   // 4 Hip rotation externa/internal
   // 5 Hip flexion/extension
   #if BM_FOOT_MODEL == _FOOT_MODEL_LEG_FOOT_
-  AnyUniversalJoint &Ankle = .Jnt.Ankle;
+  AnyUniversalJoint &Ankle = .Joints.Ankle;
   #endif
-  AnyRevoluteJoint &Knee = .Jnt.Knee;
-  AnySphericalJoint &Hip = .Jnt.Hip;
+  AnyRevoluteJoint &Knee = .Joints.Knee;
+  AnySphericalJoint &Hip = .Joints.Hip;
 };
 
 // Definition of the leg segments
@@ -213,7 +213,7 @@ AnyFolder Segments = {
 };
 
 // Definition of the joints
-AnyFolder Jnt = {
+AnyFolder Joints = {
   #include "Jnt.any"
 };
 
@@ -221,7 +221,7 @@ AnyFolder Jnt = {
 #if ((_LEFT_RIGHT_ == "Right") & (BM_LEG_MUSCLES_RIGHT == OFF)) | ((_LEFT_RIGHT_ == "Left") & (BM_LEG_MUSCLES_LEFT == OFF))
   #include "JointMuscles.any"
 #else
-  AnyFolder Mus =
+  AnyFolder Muscles =
   {
     #include "Mus.any"
   };
@@ -264,7 +264,7 @@ InterfaceFolder ={
 MannequinValuesFolder ={
   #include "MannequinValuesFromModel.any"
 };
-AnyDoc DocLink = {
+AnyDoc Documentation = {
   DocumentationLink = AMMR_PATH_DOC + "/body/leg_model.html";
 };
 

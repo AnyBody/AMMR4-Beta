@@ -6,31 +6,31 @@ SelectedOutput.Right = {
     SelectedOutputGroup JointReactionForce = {
 
       /// Lateral positive
-      AnyVar Hip_MediolateralForce = ....Right.Leg.Jnt.Hip.Constraints.Reaction.Fout[2];
+      AnyVar Hip_MediolateralForce = ....Right.Leg.Joints.Hip.Constraints.Reaction.Fout[2];
       /// Proximal positive
-      AnyVar Hip_ProximoDistalForce = ....Right.Leg.Jnt.Hip.Constraints.Reaction.Fout[1];
+      AnyVar Hip_ProximoDistalForce = ....Right.Leg.Joints.Hip.Constraints.Reaction.Fout[1];
       /// Anterior positive
-      AnyVar Hip_AnteroPosteriorForce = ....Right.Leg.Jnt.Hip.Constraints.Reaction.Fout[0];
+      AnyVar Hip_AnteroPosteriorForce = ....Right.Leg.Joints.Hip.Constraints.Reaction.Fout[0];
       // Thigh.HipJoint ref
 
       #if ((BM_FOOT_MODEL == _FOOT_MODEL_LEG_FOOT_) | (BM_FOOT_MODEL == _FOOT_MODEL_RIGID_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)) & BM_JOINT_TYPE_KNEE_RIGHT == _JOINT_TYPE_DEFAULT_
         /// Lateral positive
-        AnyVar Knee_MedioLateralForce = ....Right.Leg.Jnt.Knee.Constraints.Reaction.Fout[2];
+        AnyVar Knee_MedioLateralForce = ....Right.Leg.Joints.Knee.Constraints.Reaction.Fout[2];
         /// Proximal positive
-        AnyVar Knee_ProximoDistalForce = ....Right.Leg.Jnt.Knee.Constraints.Reaction.Fout[1];
+        AnyVar Knee_ProximoDistalForce = ....Right.Leg.Joints.Knee.Constraints.Reaction.Fout[1];
         /// Anterior positive
-        AnyVar Knee_AnteroPosteriorForce = ....Right.Leg.Jnt.Knee.Constraints.Reaction.Fout[0];
+        AnyVar Knee_AnteroPosteriorForce = ....Right.Leg.Joints.Knee.Constraints.Reaction.Fout[0];
         /// Internal positive
         AnyVar Knee_AxialMoment = ....Right.Leg.MomentMeasure.KneeJointReactionMoments.Mlocal[1];
         /// Internal positive
         AnyVar Knee_LateralMoment = ....Right.Leg.MomentMeasure.KneeJointReactionMoments.Mlocal[0];
         // Thigh.KneeJoint ref
         /// Lateral positive
-        AnyVar Ankle_MedioLateralForce = ....Right.Leg.Jnt.Ankle.Constraints.Reaction.Fout[2];
+        AnyVar Ankle_MedioLateralForce = ....Right.Leg.Joints.Ankle.Constraints.Reaction.Fout[2];
         /// Proximal positive
-        AnyVar Ankle_ProximoDistalForce = ....Right.Leg.Jnt.Ankle.Constraints.Reaction.Fout[1];
+        AnyVar Ankle_ProximoDistalForce = ....Right.Leg.Joints.Ankle.Constraints.Reaction.Fout[1];
         /// Anterior positive
-        AnyVar Ankle_AnteroPosteriorForce = ....Right.Leg.Jnt.Ankle.Constraints.Reaction.Fout[0];
+        AnyVar Ankle_AnteroPosteriorForce = ....Right.Leg.Joints.Ankle.Constraints.Reaction.Fout[0];
         /// Internal positive
         AnyVar Ankle_AxialMoment = ....Right.Leg.MomentMeasure.AnkleJointReactionMoments.Mlocal[1];
         // Shank.AnkleJoint ref
@@ -43,11 +43,11 @@ SelectedOutput.Right = {
         AnyVar Knee_LateralMoment = ....Right.Leg.MomentMeasure.KneeJointReactionMoments.Mlocal[0];
         // Thigh.KneeJoint ref
         /// Lateral positive
-        AnyVar Ankle_MedioLateralForce = ....Right.Leg.Jnt.Ankle.Constraints.Reaction.Fout[2];
+        AnyVar Ankle_MedioLateralForce = ....Right.Leg.Joints.Ankle.Constraints.Reaction.Fout[2];
         /// Proximal positive
-        AnyVar Ankle_ProximoDistalForce = ....Right.Leg.Jnt.Ankle.Constraints.Reaction.Fout[1];
+        AnyVar Ankle_ProximoDistalForce = ....Right.Leg.Joints.Ankle.Constraints.Reaction.Fout[1];
         /// Anterior positive
-        AnyVar Ankle_AnteroPosteriorForce = ....Right.Leg.Jnt.Ankle.Constraints.Reaction.Fout[0];
+        AnyVar Ankle_AnteroPosteriorForce = ....Right.Leg.Joints.Ankle.Constraints.Reaction.Fout[0];
         /// Internal positive
         AnyVar Ankle_AxialMoment = ....Right.Leg.MomentMeasure.AnkleJointReactionMoments.Mlocal[1];
         // Shank.AnkleJoint ref
@@ -55,11 +55,11 @@ SelectedOutput.Right = {
 
       #if ((BM_FOOT_MODEL != _FOOT_MODEL_LEG_FOOT_) & (BM_FOOT_MODEL != _FOOT_MODEL_RIGID_GM_) & (BM_FOOT_MODEL != _FOOT_MODEL_TOE_FLEX_GM_) & (BM_FOOT_MODEL != _FOOT_MODEL_DETAILED_GM_))& BM_JOINT_TYPE_KNEE_RIGHT == _JOINT_TYPE_DEFAULT_
         /// Lateral positive
-        AnyVar Knee_MedioLateralForce = ....Right.Leg.Jnt.Knee.Constraints.Reaction.Fout[2];
+        AnyVar Knee_MedioLateralForce = ....Right.Leg.Joints.Knee.Constraints.Reaction.Fout[2];
         /// Proximal positive
-        AnyVar Knee_ProximoDistalForce = ....Right.Leg.Jnt.Knee.Constraints.Reaction.Fout[1];
+        AnyVar Knee_ProximoDistalForce = ....Right.Leg.Joints.Knee.Constraints.Reaction.Fout[1];
         /// Anterior positive
-        AnyVar Knee_AnteroPosteriorForce = ....Right.Leg.Jnt.Knee.Constraints.Reaction.Fout[0];
+        AnyVar Knee_AnteroPosteriorForce = ....Right.Leg.Joints.Knee.Constraints.Reaction.Fout[0];
         /// Internal positive
         AnyVar Knee_AxialMoment = ....Right.Leg.MomentMeasure.KneeJointReactionMoments.Mlocal[1];
         /// Internal positive
@@ -91,7 +91,7 @@ SelectedOutput.Right = {
         #else
           // Note: first search string finds muscles inside group defs,
           // second search string handles when muscles are created w. templates - those have addtional level
-          Search = {".....Right.Leg.Mus.*.*.Activity", ".....Right.Leg.Mus.*.*.Activity"};
+          Search = {".....Right.Leg.Muscles.*.*.Activity", ".....Right.Leg.Muscles.*.*.Activity"};
         #endif
       };
 
@@ -105,22 +105,22 @@ SelectedOutput.Right = {
 
           // GlutMed
           AnySearchFun GlutMedActivityList =  {
-            Search = "......Right.Leg.Mus.GluteusMed*.*.Activity";
+            Search = "......Right.Leg.Muscles.GluteusMed*.*.Activity";
           };
 
           // GlutMin
           AnySearchFun GlutMinActivityList =  {
-            Search = "......Right.Leg.Mus.GluteusMin*.*.Activity";
+            Search = "......Right.Leg.Muscles.GluteusMin*.*.Activity";
           };
 
           // Sartorius
           AnySearchFun SartoriusActivityList =  {
-            Search = "......Right.Leg.Mus.Sartorius.*.Activity";
+            Search = "......Right.Leg.Muscles.Sartorius.*.Activity";
           };
 
           // Tensor Fasciae Latae
           AnySearchFun TensorFasciaeActivityList =  {
-            Search = "......Right.Leg.Mus.TensorFasciae*.*.Activity";
+            Search = "......Right.Leg.Muscles.TensorFasciae*.*.Activity";
           };
 
           // Psoas Major
@@ -134,79 +134,79 @@ SelectedOutput.Right = {
           //        };
 
           AnySearchFun IliacusActivityList =  {
-            Search = "......Right.Leg.Mus.Iliac*.*.Activity";
+            Search = "......Right.Leg.Muscles.Iliac*.*.Activity";
           };
 
           AnySearchFun VastusActivityList =  {
-            Search = "......Right.Leg.Mus.Vastus*.*.Activity";
+            Search = "......Right.Leg.Muscles.Vastus*.*.Activity";
           };
 
           AnySearchFun RectusFemorisActivityList =  {
-            Search = "......Right.Leg.Mus.RectusF*.*.Activity";
+            Search = "......Right.Leg.Muscles.RectusF*.*.Activity";
           };
 
           AnySearchFun PectineusActivityList =  {
-            Search = "......Right.Leg.Mus.Pect*.*.Activity";
+            Search = "......Right.Leg.Muscles.Pect*.*.Activity";
           };
 
           AnySearchFun GracilisActivityList =  {
-            Search = "......Right.Leg.Mus.Gracili*.*.Activity";
+            Search = "......Right.Leg.Muscles.Gracili*.*.Activity";
           };
 
           AnySearchFun AdductorLongusActivityList =  {
-            Search = "......Right.Leg.Mus.AdductorLongus.*.Activity";
+            Search = "......Right.Leg.Muscles.AdductorLongus.*.Activity";
           };
 
           AnySearchFun AdductorBrevisActivityList =  {
-            Search = "......Right.Leg.Mus.AdductorBr*.*.Activity";
+            Search = "......Right.Leg.Muscles.AdductorBr*.*.Activity";
           };
 
           AnySearchFun AdductorMagnusActivityList =  {
-            Search = "......Right.Leg.Mus.AdductorMag*.*.Activity";
+            Search = "......Right.Leg.Muscles.AdductorMag*.*.Activity";
           };
 
           //        AnySearchFun AdductorMinimusActivityList =  {
-          //          Search = "......Right.Leg.Mus.AdductorMin*.Activity";
+          //          Search = "......Right.Leg.Muscles.AdductorMin*.Activity";
           //        };
 
           AnySearchFun ObturatorExtActivityList =  {
-            Search = "......Right.Leg.Mus.ObturatorExt*.*.Activity";
+            Search = "......Right.Leg.Muscles.ObturatorExt*.*.Activity";
           };
 
           AnySearchFun GluteusMaxActivityList =  {
-            Search = "......Right.Leg.Mus.GluteusMax*.*.Activity";
+            Search = "......Right.Leg.Muscles.GluteusMax*.*.Activity";
           };
 
           AnySearchFun SemimembranosusActivityList =  {
-            Search = "......Right.Leg.Mus.Semimembr*.*.Activity";
+            Search = "......Right.Leg.Muscles.Semimembr*.*.Activity";
           };
 
           AnySearchFun SemimemtendinosusActivityList =  {
-            Search = "......Right.Leg.Mus.Semitend*.*.Activity";
+            Search = "......Right.Leg.Muscles.Semitend*.*.Activity";
           };
 
           AnySearchFun BicepsFemorisCaputBreveActivityList =  {
-            Search = "......Right.Leg.Mus.BicepsFemorisCaputBreve.*.Activity";
+            Search = "......Right.Leg.Muscles.BicepsFemorisCaputBreve.*.Activity";
           };
 
           AnySearchFun BicepsFemorisCaputLongActivityList =  {
-            Search = "......Right.Leg.Mus.BicepsFemorisCaputL*.*.Activity";
+            Search = "......Right.Leg.Muscles.BicepsFemorisCaputL*.*.Activity";
           };
 
           AnySearchFun GastrocActivityList =  {
-            Search = "......Right.Leg.Mus.Gastroc*.*.Activity";
+            Search = "......Right.Leg.Muscles.Gastroc*.*.Activity";
           };
 
           AnySearchFun TibPostActivityList =  {
-            Search = "......Right.Leg.Mus.TibialisPost*.*.Activity";
+            Search = "......Right.Leg.Muscles.TibialisPost*.*.Activity";
           };
 
           AnySearchFun TibAntActivityList =  {
-            Search = "......Right.Leg.Mus.TibialisAnt*.*.Activity";
+            Search = "......Right.Leg.Muscles.TibialisAnt*.*.Activity";
           };
 
           AnySearchFun SoleusActivityList =  {
-            Search = "......Right.Leg.Mus.Soleus*.*.Activity";
+            Search = "......Right.Leg.Muscles.Soleus*.*.Activity";
           };
 
           AnyVar GluteusMaxActivity = max(GluteusMaxActivityList());
@@ -307,22 +307,22 @@ SelectedOutput.Right = {
 
           // GlutMed
           AnySearchFun GlutMedForceList =  {
-            Search = "......Right.Leg.Mus.GluteusMed*.*.Fout";
+            Search = "......Right.Leg.Muscles.GluteusMed*.*.Fout";
           };
 
           // GlutMin
           AnySearchFun GlutMinForceList =  {
-            Search = "......Right.Leg.Mus.GluteusMin*.*.Fout";
+            Search = "......Right.Leg.Muscles.GluteusMin*.*.Fout";
           };
 
           // Sartorius
           AnySearchFun SartoriusForceList =  {
-            Search = "......Right.Leg.Mus.Sartorius.*.Fout";
+            Search = "......Right.Leg.Muscles.Sartorius.*.Fout";
           };
 
           // Tensor Fasciae Latae
           AnySearchFun TensorFasciaeForceList =  {
-            Search = "......Right.Leg.Mus.TensorFasciae*.*.Fout";
+            Search = "......Right.Leg.Muscles.TensorFasciae*.*.Fout";
           };
 
           // Psoas Major
@@ -336,79 +336,79 @@ SelectedOutput.Right = {
           //        };
 
           AnySearchFun IliacusForceList =  {
-            Search = "......Right.Leg.Mus.Iliac*.*.Fout";
+            Search = "......Right.Leg.Muscles.Iliac*.*.Fout";
           };
 
           AnySearchFun RectusFemorisForceList =  {
-            Search = "......Right.Leg.Mus.RectusF*.*.Fout";
+            Search = "......Right.Leg.Muscles.RectusF*.*.Fout";
           };
 
           AnySearchFun PectineusForceList =  {
-            Search = "......Right.Leg.Mus.Pect*.*.Fout";
+            Search = "......Right.Leg.Muscles.Pect*.*.Fout";
           };
 
           AnySearchFun GracilisForceList =  {
-            Search = "......Right.Leg.Mus.Gracili*.*.Fout";
+            Search = "......Right.Leg.Muscles.Gracili*.*.Fout";
           };
 
           AnySearchFun AdductorLongusForceList =  {
-            Search = "......Right.Leg.Mus.AdductorLongus.*.Fout";
+            Search = "......Right.Leg.Muscles.AdductorLongus.*.Fout";
           };
 
           AnySearchFun AdductorBrevisForceList =  {
-            Search = "......Right.Leg.Mus.AdductorBr*.*.Fout";
+            Search = "......Right.Leg.Muscles.AdductorBr*.*.Fout";
           };
 
           AnySearchFun AdductorMagnusForceList =  {
-            Search = "......Right.Leg.Mus.AdductorMag*.*.Fout";
+            Search = "......Right.Leg.Muscles.AdductorMag*.*.Fout";
           };
 
           //                 AnySearchFun AdductorMinimusForceList =  {
-          //          Search = "......Right.Leg.Mus.AdductorMin*.Fout";
+          //          Search = "......Right.Leg.Muscles.AdductorMin*.Fout";
           //        };
 
           AnySearchFun ObturatorExtForceList =  {
-            Search = "......Right.Leg.Mus.ObturatorExt*.*.Fout";
+            Search = "......Right.Leg.Muscles.ObturatorExt*.*.Fout";
           };
 
           AnySearchFun GluteusMaxForceList =  {
-            Search = "......Right.Leg.Mus.GluteusMax*.*.Fout";
+            Search = "......Right.Leg.Muscles.GluteusMax*.*.Fout";
           };
 
           AnySearchFun SemimembranosusForceList =  {
-            Search = "......Right.Leg.Mus.Semimembr*.*.Fout";
+            Search = "......Right.Leg.Muscles.Semimembr*.*.Fout";
           };
 
           AnySearchFun SemimemtendinosusForceList =  {
-            Search = "......Right.Leg.Mus.Semitend*.*.Fout";
+            Search = "......Right.Leg.Muscles.Semitend*.*.Fout";
           };
 
           AnySearchFun BicepsFemorisCaputBreveForceList =  {
-            Search = "......Right.Leg.Mus.BicepsFemorisCaputBreve.*.Fout";
+            Search = "......Right.Leg.Muscles.BicepsFemorisCaputBreve.*.Fout";
           };
 
           AnySearchFun BicepsFemorisCaputLongForceList =  {
-            Search = "......Right.Leg.Mus.BicepsFemorisCaputL*.*.Fout";
+            Search = "......Right.Leg.Muscles.BicepsFemorisCaputL*.*.Fout";
           };
 
           AnySearchFun GastrocForceList =  {
-            Search = "......Right.Leg.Mus.Gastroc*.*.Fout";
+            Search = "......Right.Leg.Muscles.Gastroc*.*.Fout";
           };
 
           AnySearchFun TibPostForceList =  {
-            Search = "......Right.Leg.Mus.TibialisPost*.*.Fout";
+            Search = "......Right.Leg.Muscles.TibialisPost*.*.Fout";
           };
 
           AnySearchFun TibAntForceList =  {
-            Search = "......Right.Leg.Mus.TibialisAnt*.*.Fout";
+            Search = "......Right.Leg.Muscles.TibialisAnt*.*.Fout";
           };
 
           AnySearchFun SoleusForceList =  {
-            Search = "......Right.Leg.Mus.Soleus*.*.Fout";
+            Search = "......Right.Leg.Muscles.Soleus*.*.Fout";
           };
 
           AnySearchFun VastusForceList =  {
-            Search = "......Right.Leg.Mus.Vastus*.*.Fout";
+            Search = "......Right.Leg.Muscles.Vastus*.*.Fout";
           };
 
           AnyVar GluteusMaxForce = sum(GluteusMaxForceList());

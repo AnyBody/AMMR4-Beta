@@ -3,9 +3,9 @@
 //These numbers has to be hardcoded because sometimes they are used for scaling without the leg being present in the model.
 
 #if (BM_LEG_RIGHT == OFF)
-  #define LEG_MODEL_PARAMETERS ....BodyModel.Left.Leg.ModelParameters
+  #define LEG_MODEL_PARAMETERS ....BodyModel.Left.Leg.Data.unscaled.ModelParameters
 #else
-  #define LEG_MODEL_PARAMETERS ....BodyModel.Right.Leg.ModelParameters
+  #define LEG_MODEL_PARAMETERS ....BodyModel.Right.Leg.Data.unscaled.ModelParameters
 #endif
 
 AnyFolder Talus = {
@@ -26,7 +26,7 @@ AnyFolder Foot = {
   // Standard mass depends on foot model. It comes either from GM
   // or TLEM foot model parameters
   #if (BM_FOOT_MODEL == _FOOT_MODEL_RIGID_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
-  /// Standard mass of GM foot EXCLUDING talus. This is done to be 
+  /// Standard mass of GM foot EXCLUDING talus. This is done to be
   /// consistent with the TLEM implementation, where foot mass doesn't
   /// include talus mass. GM foot standard mass includes talus mass.
   AnyVar Mass = LEG_MODEL_PARAMETERS.FootGM.MassStandard - LEG_MODEL_PARAMETERS.FootGM.Talus.MassStandard;

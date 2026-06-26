@@ -6,7 +6,7 @@ AnyFolder ShortAdductorCal ={
 
   AnyFolder &LegSegSide = .SideHumanFolderRef.Leg.Segments;
 
-  AnyFolder &LegJointsSide = .SideHumanFolderRef.Leg.Jnt;
+  AnyFolder &LegJointsSide = .SideHumanFolderRef.Leg.Joints;
   AnyFolder &SacrumPelvisJnt = ...HumanFolderRef.Trunk.Joints.Lumbar.SacrumPelvis;
 
 
@@ -74,7 +74,7 @@ AnyFolder ShortAdductorCal ={
   };
   #endif
 
-  AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.Leg.Mus);
+  AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.Leg.Muscles);
 
   AnyObjectPtrArray AdductorMagnusMuscles = ObjSearch(MusPrefix+".AdductorMagnus*", "AnyMuscle");
   AnyFloat  AdductorMagnusRmin = repmat(NumElemOf(AdductorMagnusMuscles), 0.5);

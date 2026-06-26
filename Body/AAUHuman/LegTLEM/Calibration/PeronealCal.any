@@ -6,7 +6,7 @@ AnyFolder PeronealCal ={
 
   AnyFolder &LegSegSide = .SideHumanFolderRef.Leg.Segments;
 
-  AnyFolder &LegJointsSide = .SideHumanFolderRef.Leg.Jnt;
+  AnyFolder &LegJointsSide = .SideHumanFolderRef.Leg.Joints;
   AnyFolder &SacrumPelvisJnt = ...HumanFolderRef.Trunk.Joints.Lumbar.SacrumPelvis;
 
 
@@ -75,7 +75,7 @@ AnyFolder PeronealCal ={
   #endif
 
 
-  AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.Leg.Mus);
+  AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.Leg.Muscles);
 
   AnyObjectPtrArray PeroneusBrevisMuscles = ObjSearch(MusPrefix+".PeroneusBrevis*", "AnyMuscle");
   AnyFloat  PeroneusBrevisRmin = repmat(NumElemOf(PeroneusBrevisMuscles), 0.5);

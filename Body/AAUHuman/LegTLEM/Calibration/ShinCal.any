@@ -6,7 +6,7 @@ AnyFolder ShinCal ={
 
   AnyFolder &LegSegSide = .SideHumanFolderRef.Leg.Segments;
 
-  AnyFolder &LegJointsSide = .SideHumanFolderRef.Leg.Jnt;
+  AnyFolder &LegJointsSide = .SideHumanFolderRef.Leg.Joints;
   AnyFolder &SacrumPelvisJnt = ...HumanFolderRef.Trunk.Joints.Lumbar.SacrumPelvis;
 
 
@@ -74,7 +74,7 @@ AnyFolder ShinCal ={
   };
   #endif
 
-  AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.Leg.Mus);
+  AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.Leg.Muscles);
 
   AnyObjectPtrArray TibialisAnteriorMuscles = ObjSearch(MusPrefix+".TibialisAnterior*", "AnyMuscle");
   AnyFloat  TibialisAnteriorRmin = repmat(NumElemOf(TibialisAnteriorMuscles), 0.5);

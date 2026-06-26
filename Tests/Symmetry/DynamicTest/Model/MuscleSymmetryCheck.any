@@ -234,10 +234,10 @@ AnyFolder SymmetryCheck= {
 
         AnyFolder Muscle ={
           AnyObjectPtrArray right_muscles = ObjSearchRecursive(
-            "Main.HumanModel.BodyModel.Right.Leg.Mus", "*", "AnyMuscle"
+            "Main.HumanModel.BodyModel.Right.Leg.Muscles", "*", "AnyMuscle"
           );
           AnyObjectPtrArray left_muscles = ObjSearchRecursive(
-            "Main.HumanModel.BodyModel.Left.Leg.Mus", "*", "AnyMuscle"
+            "Main.HumanModel.BodyModel.Left.Leg.Muscles", "*", "AnyMuscle"
           );
 
           ComparePtrArrays lmt()={
@@ -260,8 +260,8 @@ AnyFolder SymmetryCheck= {
 
 
        AnyFolder Wrapping = {
-        AnyObjectPtrArray Array1 = ObjSearchRecursive("Main.HumanModel.BodyModel.Right.Leg.Mus", "*.P");
-        AnyObjectPtrArray Array2 = ObjSearchRecursive("Main.HumanModel.BodyModel.Left.Leg.Mus", "*.P");
+        AnyObjectPtrArray Array1 = ObjSearchRecursive("Main.HumanModel.BodyModel.Right.Leg.Muscles", "*.P");
+        AnyObjectPtrArray Array2 = ObjSearchRecursive("Main.HumanModel.BodyModel.Left.Leg.Muscles", "*.P");
         AnyFloat MirrorMatrix = reshape(repmat(SizesOf(Array1Values)[0] * SizesOf(Array1Values)[1], ..MirrorPlane), SizesOf(Array1Values));
         AnyFloat Array1Values = Obj2Num(Array1);
         AnyFloat Array2Values = mult(Obj2Num(Array2),  MirrorMatrix);

@@ -6,7 +6,7 @@ AnyFolder LegCal7 ={
 
   AnyFolder &LegSegSide = .SideHumanFolderRef.Leg.Segments;
 
-  AnyFolder &LegJointsSide = .SideHumanFolderRef.Leg.Jnt;
+  AnyFolder &LegJointsSide = .SideHumanFolderRef.Leg.Joints;
   AnyFolder &SacrumPelvisJnt = ...BodyModel.Trunk.Joints.Lumbar.SacrumPelvis;
 
 
@@ -70,7 +70,7 @@ AnyFolder LegCal7 ={
   #endif
 
 
-AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.Leg.Mus);
+AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.Leg.Muscles);
 
   AnyObjectPtrArray SemiMuscles = ObjSearch(MusPrefix+".*.Semi*", "AnyMuscle");
   AnyObjectPtrArray AdductorLongusMuscles = ObjSearch(MusPrefix+".*.AdductorLongus*", "AnyMuscle");

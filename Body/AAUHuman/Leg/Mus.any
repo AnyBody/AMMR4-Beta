@@ -14,7 +14,7 @@
 // levels.
 // -------------------------------------------------------
 
-AnyFolder &Ref = .MusDrawRef;
+AnyFolder &Ref = Main.DrawSettings.Muscle;
 
 #if BM_FOOT_MODEL == _FOOT_MODEL_LEG_FOOT_
 AnyMuscleViaPoint Soleus = {

@@ -118,7 +118,7 @@ AnySeg Foot =
   AnySeg &DistalPhalange4 = .Foot;
   AnySeg &DistalPhalange5 = .Foot;
 
-  AnyFolder &Data = ..ModelParameters.Foot;
+  AnyFolder &Data = ..Data.unscaled.ModelParameters.Foot;
 
   JaboutCoMOnOff = On;
 
@@ -147,7 +147,7 @@ AnySeg Foot =
 
   AnySeg Talus =
   {
-    AnyFolder &Data = ...ModelParameters.Talus;
+    AnyFolder &Data = ...Data.unscaled.ModelParameters.Talus;
 
     JaboutCoMOnOff = On;
     AnyVar  MassS=...MassScaling.Talus.MassScale;
@@ -620,7 +620,7 @@ AnySeg Foot =
 
 AnySeg Shank =
 {
-  AnyFolder &Data = ..ModelParameters.Shank;
+  AnyFolder &Data = ..Data.unscaled.ModelParameters.Shank;
 
   JaboutCoMOnOff = On;
   r0 ??= .Thigh.KneeJoint.sRel*.Thigh.Axes0'+.Thigh.r0-KneeJoint.sRel*Axes0';
@@ -1085,7 +1085,7 @@ AnySeg Shank =
 
 AnySeg Thigh =
 {
-  AnyFolder &Data = ..ModelParameters.Thigh;
+  AnyFolder &Data = ..Data.unscaled.ModelParameters.Thigh;
 
   JaboutCoMOnOff = On;
   r0 ??= .Pelvis.HipJoint.sRel*....Trunk.Segments.PelvisSeg.Axes0'+    ....Trunk.Segments.PelvisSeg.r0-    HipJoint.sRel*Axes0';
@@ -1564,7 +1564,7 @@ AnySeg Thigh =
 
 AnySeg Patella =
 {
-  AnyFolder &Data = ..ModelParameters.Patella;
+  AnyFolder &Data = ..Data.unscaled.ModelParameters.Patella;
   JaboutCoMOnOff = On;
 
   r0 ??= .Thigh.PatellaFemurJoint.sRel*.Thigh.Axes0'+.Thigh.r0-PatellaFemurJoint.sRel*Axes0';
@@ -1700,7 +1700,7 @@ SacrumSeg =
     AnyRefNode LegAttachmentNodes =
     {
       /// Folder with cadaver parameters for pelvis in the LegTLEM model
-      AnyFolder &Data = ....ModelParameters.Pelvis;
+      AnyFolder &Data = ....Data.unscaled.ModelParameters.Pelvis;
       AnyFunTransform3D &Scale = ...PelvisSeg.AnatomicalFrameTrunk.Scale_Leg_Pelvis;
       AnyRefNode GluteusMaximusInferior1Node = {sRel = .Scale( .Data.GluteusMaximusInferior1Node );};
       AnyRefNode GluteusMaximusInferior2Node = {sRel = .Scale( .Data.GluteusMaximusInferior2Node );};
@@ -1744,7 +1744,7 @@ PelvisSeg =
     AnyRefNode Muscles =
     {
       /// Folder with cadaver parameters for pelvis in the LegTLEM model
-      AnyFolder &Data = ....ModelParameters.Pelvis;
+      AnyFolder &Data = ....Data.unscaled.ModelParameters.Pelvis;
 
       AnyFunTransform3D &Scale = ..AnatomicalFrameTrunk.Scale_Leg_Pelvis;
 

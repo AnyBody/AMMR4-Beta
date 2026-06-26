@@ -92,10 +92,10 @@ AnyFolder Jnt={
 
       AnyKinEqSimpleDriver AnkleDriver ={
         #if BM_LEG_MODEL == _LEG_MODEL_LEG_
-          AnyJoint &ref = ...RefH.Right.Leg.Jnt.Ankle;
+          AnyJoint &ref = ...RefH.Right.Leg.Joints.Ankle;
           MeasureOrganizer={1};
         #else
-          AnyJoint &ref = ...RefH.Right.Leg.Jnt.SubTalar;
+          AnyJoint &ref = ...RefH.Right.Leg.Joints.SubTalar;
         #endif
         DriverPos={0};
         DriverVel={0};
@@ -132,10 +132,10 @@ AnyFolder Jnt={
 
       AnyKinEqSimpleDriver AnkleDriver ={
         #if BM_LEG_MODEL == _LEG_MODEL_LEG_
-          AnyJoint &ref = ...RefH.Left.Leg.Jnt.Ankle;
+          AnyJoint &ref = ...RefH.Left.Leg.Joints.Ankle;
           MeasureOrganizer={1};
         #else
-          AnyJoint &ref = ...RefH.Left.Leg.Jnt.SubTalar;
+          AnyJoint &ref = ...RefH.Left.Leg.Joints.SubTalar;
         #endif
         DriverPos={0};
         DriverVel={0};
@@ -266,8 +266,8 @@ AnyFolder Drivers = {
   AnyKinEq ThoraxThighRhythm = {
     AnyKinMeasureLinComb ThoraxThighRhythmComb = {
       AnyKinMeasureOrg Org = {
-        AnySphericalJoint &rhip1 = Main.Model.BodyModel.Right.Leg.Jnt.Hip;
-        AnySphericalJoint &lhip2 = Main.Model.BodyModel.Left.Leg.Jnt.Hip;
+        AnySphericalJoint &rhip1 = Main.Model.BodyModel.Right.Leg.Joints.Hip;
+        AnySphericalJoint &lhip2 = Main.Model.BodyModel.Left.Leg.Joints.Hip;
         AnyKinRotational PelvisThorax = {
           AnyRefFrame &Thorax = Main.Model.BodyModel.Trunk.Segments.ThoraxSeg;
           AnyRefFrame &Pelvis = Main.Model.BodyModel.Trunk.Segments.PelvisSeg;

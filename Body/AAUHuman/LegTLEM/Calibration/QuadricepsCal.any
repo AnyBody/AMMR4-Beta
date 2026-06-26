@@ -6,7 +6,7 @@ AnyFolder QuadricepsCal ={
 
   AnyFolder &LegSegSide = .SideHumanFolderRef.Leg.Segments;
 
-  AnyFolder &LegJointsSide = .SideHumanFolderRef.Leg.Jnt;
+  AnyFolder &LegJointsSide = .SideHumanFolderRef.Leg.Joints;
   AnyFolder &SacrumPelvisJnt = ...HumanFolderRef.Trunk.Joints.Lumbar.SacrumPelvis;
 
 
@@ -74,7 +74,7 @@ AnyFolder QuadricepsCal ={
   };
   #endif
 
-  AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.Leg.Mus);
+  AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.Leg.Muscles);
 
   AnyObjectPtrArray RectusFemorisMuscles = ObjSearch(MusPrefix+".RectusFemoris*", "AnyMuscle");
   AnyFloat  RectusFemorisRmin = repmat(NumElemOf(RectusFemorisMuscles), 0.5);

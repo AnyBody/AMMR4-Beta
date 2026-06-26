@@ -35,8 +35,8 @@ Main = {
       // We can get the forces/moments in the knee joint by finding the Contraints.Reactions object in the joint.
       // F[0] or F[1] are the same force vector but with different signs. Depends if we want the force femur inserts on tibia or opposite.
       // Here we chose [0] which is the force the shank inserts on the femur.
-      AnyVec3 KneeForceInGlobal = LegRef.Jnt.Knee.Constraints.Reaction.RefFrameOutput.F[0];
-      AnyVec3 KneeMomentInGlobal = LegRef.Jnt.Knee.Constraints.Reaction.RefFrameOutput.M[0];
+      AnyVec3 KneeForceInGlobal = LegRef.Joints.Knee.Constraints.Reaction.RefFrameOutput.F[0];
+      AnyVec3 KneeMomentInGlobal = LegRef.Joints.Knee.Constraints.Reaction.RefFrameOutput.M[0];
 
       // We can now express the force and moments in the coordinate system we want.
       AnyVec3 KneeForceInShank = transf3D(KneeForceInGlobal, &GlobalRef, &LegRef.Segments.Shank.KneeJoint);
