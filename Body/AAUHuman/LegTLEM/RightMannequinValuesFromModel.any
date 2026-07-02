@@ -1,0 +1,88 @@
+AnyVar AnyVar_HipFlexion = ...Interface.Right.HipFlexion.Pos[0]*180/pi;
+AnyVar AnyVar_HipAbduction = ...Interface.Right.HipAbduction.Pos[0]*180/pi;
+AnyVar AnyVar_HipExternalRotation = ...Interface.Right.HipExternalRotation.Pos[0]*180/pi;
+
+//AnyVar AnyVar_PatellaFlexion = ...Interface.Right.PatellaFlexion.Pos[0]*180/pi;
+//AnyVar AnyVar_PatellaRotation = ...Interface.Right.PatellaRotation.Pos[0]*180/pi;
+
+AnyVar AnyVar_KneeFlexion = ...Interface.Right.KneeFlexion.Pos[0]*180/pi;
+
+#if ((BM_FOOT_MODEL == _FOOT_MODEL_LEG_FOOT_) | (BM_FOOT_MODEL == _FOOT_MODEL_RIGID_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_))
+AnyVar AnyVar_AnklePlantarFlexion =...Interface.Right.AnklePlantarFlexion.Pos[0]*180/pi;
+//AnyVar AnyVar_AnkleEversion =...Interface.Right.AnkleEversion.Pos[0]*180/pi;
+
+AnyVar AnyVar_SubTalarEversion = ...Interface.Right.SubTalarEversion.Pos[0]*180/pi;
+#endif
+
+#if ((BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_))
+
+AnyFolder Foot = {
+  #if BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_
+
+  AnyVar AnyVar_CalcaneoCuboidDorsiFlexion = ....Interface.Right.CalcaneoCuboidDorsiFlexion.Pos[0]*180/pi;
+  AnyVar AnyVar_CalcaneoCuboidAbduction = ....Interface.Right.CalcaneoCuboidAbduction.Pos[0]*180/pi;
+  AnyVar AnyVar_CalcaneoCuboidEversion = ....Interface.Right.CalcaneoCuboidEversion.Pos[0]*180/pi;
+  AnyVar AnyVar_TaloNavicularDorsiFlexion = ....Interface.Right.TaloNavicularDorsiFlexion.Pos[0]*180/pi;
+  AnyVar AnyVar_TaloNavicularAbduction = ....Interface.Right.TaloNavicularAbduction.Pos[0]*180/pi;
+  AnyVar AnyVar_TaloNavicularEversion = ....Interface.Right.TaloNavicularEversion.Pos[0]*180/pi;
+  AnyVar AnyVar_NaviculoMedialCuneiformDorsiFlexion = ....Interface.Right.NaviculoMedialCuneiformDorsiFlexion.Pos[0]*180/pi;
+  AnyVar AnyVar_NaviculoMedialCuneiformAbduction = ....Interface.Right.NaviculoMedialCuneiformAbduction.Pos[0]*180/pi;
+  AnyVar AnyVar_NaviculoIntermediateCuneiformDorsiFlexion = ....Interface.Right.NaviculoIntermediateCuneiformDorsiFlexion.Pos[0]*180/pi;
+  AnyVar AnyVar_NaviculoIntermediateCuneiformAbduction = ....Interface.Right.NaviculoIntermediateCuneiformAbduction.Pos[0]*180/pi;
+  AnyVar AnyVar_NaviculoLateralCuneiformDorsiFlexion = ....Interface.Right.NaviculoLateralCuneiformDorsiFlexion.Pos[0]*180/pi;
+  AnyVar AnyVar_NaviculoLateralCuneiformAbduction = ....Interface.Right.NaviculoLateralCuneiformAbduction.Pos[0]*180/pi;
+  AnyVar AnyVar_TarsoMetatarsal1DorsiFlexion = ....Interface.Right.TarsoMetatarsal1DorsiFlexion.Pos[0]*180/pi;
+  AnyVar AnyVar_TarsoMetatarsal1Abduction = ....Interface.Right.TarsoMetatarsal1Abduction.Pos[0]*180/pi;
+  AnyVar AnyVar_TarsoMetatarsal2DorsiFlexion = ....Interface.Right.TarsoMetatarsal2DorsiFlexion.Pos[0]*180/pi;
+  AnyVar AnyVar_TarsoMetatarsal2Abduction = ....Interface.Right.TarsoMetatarsal2Abduction.Pos[0]*180/pi;
+  AnyVar AnyVar_TarsoMetatarsal3DorsiFlexion = ....Interface.Right.TarsoMetatarsal3DorsiFlexion.Pos[0]*180/pi;
+  AnyVar AnyVar_TarsoMetatarsal3Abduction = ....Interface.Right.TarsoMetatarsal3Abduction.Pos[0]*180/pi;
+  AnyVar AnyVar_TarsoMetatarsal4DorsiFlexion = ....Interface.Right.TarsoMetatarsal4DorsiFlexion.Pos[0]*180/pi;
+  AnyVar AnyVar_TarsoMetatarsal4Abduction = ....Interface.Right.TarsoMetatarsal4Abduction.Pos[0]*180/pi;
+  AnyVar AnyVar_TarsoMetatarsal5SkewDorsiFlexion = ....Interface.Right.TarsoMetatarsal5SkewDorsiFlexion.Pos[0]*180/pi;
+  AnyVar AnyVar_TarsoMetatarsal5Abduction = ....Interface.Right.TarsoMetatarsal5Abduction.Pos[0]*180/pi;
+
+  #endif //BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_
+
+  AnyVar AnyVar_MetatarsoPhalangeal1DorsiFlexion = ....Interface.Right.MetatarsoPhalangeal1DorsiFlexion.Pos[0]*180/pi;
+
+  #if BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_
+  AnyVar AnyVar_MetatarsoPhalangeal1Abduction = ....Interface.Right.MetatarsoPhalangeal1Abduction.Pos[0]*180/pi;
+  #endif
+
+  AnyVar AnyVar_MetatarsoPhalangeal2DorsiFlexion = ....Interface.Right.MetatarsoPhalangeal2DorsiFlexion.Pos[0]*180/pi;
+
+  #if BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_
+  AnyVar AnyVar_MetatarsoPhalangeal2Abduction = ....Interface.Right.MetatarsoPhalangeal2Abduction.Pos[0]*180/pi;
+  #endif
+
+  AnyVar AnyVar_MetatarsoPhalangeal3DorsiFlexion = ....Interface.Right.MetatarsoPhalangeal3DorsiFlexion.Pos[0]*180/pi;
+
+  #if BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_
+  AnyVar AnyVar_MetatarsoPhalangeal3Abduction = ....Interface.Right.MetatarsoPhalangeal3Abduction.Pos[0]*180/pi;
+  #endif
+
+  AnyVar AnyVar_MetatarsoPhalangeal4DorsiFlexion = ....Interface.Right.MetatarsoPhalangeal4DorsiFlexion.Pos[0]*180/pi;
+
+  #if BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_
+  AnyVar AnyVar_MetatarsoPhalangeal4Abduction = ....Interface.Right.MetatarsoPhalangeal4Abduction.Pos[0]*180/pi;
+  #endif
+
+  AnyVar AnyVar_MetatarsoPhalangeal5DorsiFlexion = ....Interface.Right.MetatarsoPhalangeal5DorsiFlexion.Pos[0]*180/pi;
+
+  #if BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_
+  AnyVar AnyVar_MetatarsoPhalangeal5Abduction = ....Interface.Right.MetatarsoPhalangeal5Abduction.Pos[0]*180/pi;
+  AnyVar AnyVar_ProximoDistalPhalange1DorsiFlexion = ....Interface.Right.ProximoDistalPhalange1DorsiFlexion.Pos[0]*180/pi;
+  AnyVar AnyVar_ProximoMedialPhalange2DorsiFlexion = ....Interface.Right.ProximoMedialPhalange2DorsiFlexion.Pos[0]*180/pi;
+  AnyVar AnyVar_ProximoMedialPhalange3DorsiFlexion = ....Interface.Right.ProximoMedialPhalange3DorsiFlexion.Pos[0]*180/pi;
+  AnyVar AnyVar_ProximoMedialPhalange4DorsiFlexion = ....Interface.Right.ProximoMedialPhalange4DorsiFlexion.Pos[0]*180/pi;
+  AnyVar AnyVar_ProximoMedialPhalange5DorsiFlexion = ....Interface.Right.ProximoMedialPhalange5DorsiFlexion.Pos[0]*180/pi;
+  AnyVar AnyVar_MedioDistalPhalange2DorsiFlexion = ....Interface.Right.MedioDistalPhalange2DorsiFlexion.Pos[0]*180/pi;
+  AnyVar AnyVar_MedioDistalPhalange3DorsiFlexion = ....Interface.Right.MedioDistalPhalange3DorsiFlexion.Pos[0]*180/pi;
+  AnyVar AnyVar_MedioDistalPhalange4DorsiFlexion = ....Interface.Right.MedioDistalPhalange4DorsiFlexion.Pos[0]*180/pi;
+  AnyVar AnyVar_MedioDistalPhalange5DorsiFlexion = ....Interface.Right.MedioDistalPhalange5DorsiFlexion.Pos[0]*180/pi;
+
+  #endif  // BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_
+
+};
+#endif // ((BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_))

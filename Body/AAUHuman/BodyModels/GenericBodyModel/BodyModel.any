@@ -160,9 +160,39 @@ AnyFolder BodyModel = {
   #include "LeftFolder.any"
   #endif
 
-
+  /// This folder and all subfolders have been marked as deprecated.
+  /// The content will be removed/relocated/renamed in future versions of AMMR.
   AnyFolder MannequinValuesFromModel = {
     AnyFolder AnyFolder_Posture = {
+      #include "../../Trunk/MannequinValuesFromModel.any"
+
+      AnyFolder AnyFolder_Left = {
+        #if BM_ARM_LEFT != OFF
+          #include "../../Arm/LeftMannequinValuesFromModel.any"
+        #endif
+
+        #if BM_LEG_LEFT
+          #if BM_LEG_MODEL_IS_TLEM
+            #include "<BM_LEG_TLEM_PATH>LeftMannequinValuesFromModel.any"
+          #else
+            #include "../../Leg/LeftMannequinValuesFromModel.any"
+          #endif
+        #endif
+      };
+
+      AnyFolder AnyFolder_Right = {
+        #if BM_ARM_RIGHT != OFF
+          #include "../../Arm/RightMannequinValuesFromModel.any"
+        #endif
+
+        #if BM_LEG_RIGHT
+          #if BM_LEG_MODEL_IS_TLEM
+            #include "<BM_LEG_TLEM_PATH>RightMannequinValuesFromModel.any"
+          #else
+            #include "../../Leg/RightMannequinValuesFromModel.any"
+          #endif
+        #endif
+      };
     };
   };
 
