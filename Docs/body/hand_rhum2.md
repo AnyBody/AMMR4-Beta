@@ -68,4 +68,4 @@ Enabled by:
 
 This is a list of references used in the creation of this model:
 
-[^cite_bmk18]: Barry, A., Murray, W., Kemper, D. (2018). Development of a dynamic index finger and thumb model to study impairment. Journal of Biomechanics ([link](https://doi.org/10.1016/j.jbiomech.2018.06.017))
+- Barry, A., Murray, W., Kemper, D. (2018). Development of a dynamic index finger and thumb model to study impairment. Journal of Biomechanics ([link](https://doi.org/10.1016/j.jbiomech.2018.06.017))
