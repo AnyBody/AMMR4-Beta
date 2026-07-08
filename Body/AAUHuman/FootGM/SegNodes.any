@@ -264,12 +264,20 @@ Foot = {
     };
     AnyRefNode FlexorHallucisLongusViaNode6=
     {
-      AnyDrawRefFrame drw={ScaleXYZ={0.01,0.01,0.01};RGB={0,0,0};};
+      viewRefFrame = {
+        Visible = On;
+        ScaleXYZ = {0.01,0.01,0.01};
+        RGB = {0,0,0};
+      };
       sRel = .Scale(.Data.FlexorHallucisLongusViaNode6);
     };
     AnyRefNode FlexorHallucisLongusViaNode7=
     {
-      AnyDrawRefFrame drw={ScaleXYZ={0.01,0.01,0.01};RGB={0,0,0};};
+      viewRefFrame = {
+        Visible = On;
+        ScaleXYZ = {0.01,0.01,0.01};
+        RGB = {0,0,0};
+      };
       sRel = .Scale(.Data.FlexorHallucisLongusViaNode7);
     };
     AnyRefNode FlexorHallucisLongusViaNode8=
@@ -611,7 +619,11 @@ Foot = {
     };
     AnyRefNode TarsoMtJoint =
     {
-      AnyDrawRefFrame drw={ScaleXYZ={0.005,0.005,0.005};RGB={1,0,1};};
+      viewRefFrame = {
+        Visible = On;
+        ScaleXYZ = {0.005,0.005,0.005};
+        RGB = {1,0,1};
+      };
       sRel = ..Metatarsal1.TarsoMtJoint.sRel;
       ARel = ..Metatarsal1.TarsoMtJoint.ARel;
     };
@@ -793,7 +805,11 @@ Foot = {
     };
     AnyRefNode MtPhalJointTop ={
       sRel = .MtPhalJoint.sRel+({0, 0.02,0})*.MtPhalJoint.ARel';
-      AnyDrawRefFrame drw={ScaleXYZ={0.01,0.01,0.01};RGB={1.0,1.0,0.0};};
+      viewRefFrame = {
+        Visible = On;
+        ScaleXYZ = {0.01,0.01,0.01};
+        RGB = {1.0,1.0,0.0};
+      };
     };
     AnyRefNode ToeMedialContactNode =
     {
@@ -1311,7 +1327,11 @@ Foot = {
     };
     AnyRefNode RefDistTop ={
       sRel = .DistPhalJoint.sRel+({0, 0.01,0})*.DistPhalJoint.ARel';
-      AnyDrawRefFrame drw={ScaleXYZ={0.01,0.01,0.01};RGB={1.0,1.0,0.0};};
+      viewRefFrame = {
+        Visible = On;
+        ScaleXYZ = {0.01,0.01,0.01};
+        RGB = {1.0,1.0,0.0};
+      };
     };
     AnyRefNode ToeMedialContactNode = {
       sRel = .Scale(.Data.ToeMedialContactNode);
@@ -1693,7 +1713,11 @@ Foot = {
 
     AnyRefNode ProxPhalJoint =
     {
-      AnyDrawRefFrame drw={ScaleXYZ={0.005,0.005,0.005};RGB={1,0,0};};
+      viewRefFrame = {
+        Visible = On;
+        ScaleXYZ = {0.005,0.005,0.005};
+        RGB = {1,0,0};
+      };
       sRel = .Scale(.Data.ProxPhalJoint);
       ARel = .CenterNode.ARel;
     };
