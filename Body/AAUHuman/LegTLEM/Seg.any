@@ -1623,7 +1623,7 @@ AnySeg Patella =
   /// This is defined by an AnyKinPLine in the file Jnt.any.
   /// The insertion lies on the Shank segment.
   AnyRefNode Origin_patella_tendon = {
-    sRel = .Scale( .Data.Origin_patella_tendon );//AnyDrawRefFrame drw = {RGB = {0,1,0};};
+    sRel = .Scale( .Data.Origin_patella_tendon );
     ARel = ..Thigh.KneeJoint.ARel;
   };
   #endif
