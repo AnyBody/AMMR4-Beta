@@ -71,32 +71,6 @@ AnyFolder HumanModel=
     #include "<BM_MANNEQUIN_FILE>"
   #endif
 
-
-
-#if BM_DRAWSETTINGS_SKIP == OFF
-
-  Main =
-  {
-  #ifndef BM_DRAWSETTINGS_FILE
-    #include "<ANYBODY_PATH_BODY>/DrawSettings/DrawSettingsDefault.any"
-  #else
-      // The old way of defining drawsettings files
-    AnyInt WARNING_BM_DRAWSETTINGS_FILE_Deprecation = warn(0, strformat("\n"+
-      "----------------------------------------------------------------------------------------------------------------\n"+
-      "    Setting the DrawSettings with `#include` is deprecated. \n"+
-      "    Instead just overwrite the values you need to set directly in your application files: \n"+
-      "     \n"+
-      "     Main.DrawSettings.Colors = {\n"+
-      "       RGB = {0.9, 0.1, 0.1}; \n"+
-      "       ...\n"+
-      "     \n"+
-      "-----------------------------------------------------------------------------------------------------------------"));
-    #include "<BM_DRAWSETTINGS_FILE>"
-  #endif
-  };
-
-#endif
-
   #include  "BodyModels\GenericBodyModel\BodyModel.any"
 
   AnyFolder StrengthParameters={
@@ -106,9 +80,7 @@ AnyFolder HumanModel=
   };
 
 
-
-  AnyFolder ScalingLaw =
-  {
+  AnyFolder ScalingLaw = {
      #include "<ANYBODY_PATH_BODY>/BodyModels/GenericBodyModel/BodyModel.StandardParameters.any"
     // Custom scaling is not enabled; include the scaling law in the traditional way.
     // Include the scaling law selected by the user
@@ -162,5 +134,8 @@ AnyFolder HumanModel=
     AnyFolder &Drivers = .DefaultMannequinDrivers;
   };
 
+  #if BM_DRAWSETTINGS_SKIP  ==  OFF
+    #include "<ANYBODY_PATH_BODY>/DrawSettings/DrawSettingsDefault.any"
+  #endif
 };
 
