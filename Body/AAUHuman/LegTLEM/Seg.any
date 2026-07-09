@@ -205,7 +205,7 @@ AnySeg Foot =
       sRel = .Scale(.Data.LateralMalleolus );
     };
 
-    #include "../DrawSettings/SegmentAxes.any"
+    #include "../DrawSettings/SegmentAxes2.any"
 
     AnyDrawSurf DrwSurf =
     {
@@ -453,7 +453,7 @@ AnySeg Foot =
   AnyRefNode Metatarsal5Contact  = {sRel = .Scale( .Data.Metatarsal5ContactNode );};
   //  AnyRefNode MetatarsalJoint  = {sRel = .Scale( .Data.MetatarsalJoint );};
 
-  #include "../DrawSettings/SegmentAxes.any"
+  #include "../DrawSettings/SegmentAxes2.any"
 
   AnyDrawSurf DrwSurf = {
     FileName ??= ..STL.FilenameFoot;
@@ -1050,7 +1050,7 @@ AnySeg Shank =
     };
   #endif
 
-  #include "../DrawSettings/SegmentAxes.any"
+  #include "../DrawSettings/SegmentAxes2.any"
 
 }; // End of Shank
 
@@ -1062,7 +1062,7 @@ AnySeg Thigh =
   JaboutCoMOnOff = On;
   r0 ??= .Pelvis.HipJoint.sRel*....Trunk.Segments.PelvisSeg.Axes0'+    ....Trunk.Segments.PelvisSeg.r0-    HipJoint.sRel*Axes0';
 
-  #include "../DrawSettings/SegmentAxes.any"
+  #include "../DrawSettings/SegmentAxes2.any"
 
   AnyFloat pUnscaled = {Data.HipJoint, Data.EpicondylusFemorisMedialis, Data.EpicondylusFemorisLateralis};
   Scale = {AnyFunTransform3D& GeomScale = ...GeoScaling.Thigh.ScaleFunction;};
@@ -1592,7 +1592,7 @@ AnySeg Patella =
   };
   #endif
 
-  #include "../DrawSettings/SegmentAxes.any"
+  #include "../DrawSettings/SegmentAxes2.any"
 
   // Patella insertion points
 
