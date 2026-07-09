@@ -140,13 +140,6 @@ ModelSetup =
   AnyFolder Views = {};
 };
 
-
-#ifdef BM_DRAWSETTINGS_FILE
-// Ensure that HumanModel does not
-// include DrawSettings as well.
-#define BM_DRAWSETTINGS_SKIP ON
 #include "<BM_DRAWSETTINGS_FILE>"
-#endif
-
 
 #include "CheckAnyMoCapPostConfiguration.any"

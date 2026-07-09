@@ -89,37 +89,6 @@ Switch for enabling configuration value information in the model tree
 ::::
 
 
-::::{dropdown} `BM_DRAWSETTINGS_FILE`
-:animate: fade-in-slide-down
-:margin: 0 0 3 3
-
-```{ammr:bm_statement} BM_DRAWSETTINGS_FILE
-
-A file with draw settings
-
-
-```
-::::
-
-
-::::{dropdown} `BM_DRAWSETTINGS_SKIP`
-:animate: fade-in-slide-down
-:margin: 0 0 3 3
-
-```{ammr:bm_statement} BM_DRAWSETTINGS_SKIP
-
-A flag to switch on/off inclusion of the draw settings (may be needed in case of two human models)
-
-:Default: OFF
-:Example: `#define BM_DRAWSETTINGS_SKIP OFF`
-:Options:
-  - {any}`ON` -> Switch ON
-  - {any}`OFF` -> Switch OFF
-
-```
-::::
-
-
 ::::{dropdown} `BM_FOOT_MODEL`
 :animate: fade-in-slide-down
 :margin: 0 0 3 3

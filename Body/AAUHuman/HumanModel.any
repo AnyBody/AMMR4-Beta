@@ -1,10 +1,8 @@
 
 #include "../../libdef.any"
 
-AnyFolder HumanModel=
-{
-  AnyDoc Config =
-  {
+AnyFolder HumanModel = {
+  AnyDoc Config = {
     DocumentationLink = AMMR_PATH_DOC + "/index.html";
     DocumentationComment = "Link to the AMMR documentation.";
 
@@ -20,7 +18,6 @@ AnyFolder HumanModel=
       /// Folder for tool related messages.
       AnyFolder Tools = {};
     };
-
   };
 
 
@@ -32,8 +29,7 @@ AnyFolder HumanModel=
   ///
   /// You can also specify your own file with:
   /// #path BM_SCALING_ANTHRO_FILE "My_Own_AnyMan.any"
-  AnyFolder Anthropometrics =
-  {
+  AnyFolder Anthropometrics = {
   #ifdef BM_SCALING_ANTHRO_FILE
      // Include any User overrrides of the anthropometric folder
      #include "<BM_SCALING_ANTHRO_FILE>"
@@ -73,10 +69,10 @@ AnyFolder HumanModel=
 
   #include  "BodyModels\GenericBodyModel\BodyModel.any"
 
-  AnyFolder StrengthParameters={
-    AnyVar SpecificMuscleTensionSpine= BM_TRUNK_STRENGTH_INDEX*90; //N/cm^2
-    AnyVar StrengthIndexLeg= DesignVar(BM_LEG_STRENGTH_INDEX);
-    AnyVar SpecificMuscleTensionShoulderArm= BM_ARM_STRENGTH_INDEX*90; //N/cm^2
+  AnyFolder StrengthParameters = {
+    AnyVar SpecificMuscleTensionSpine = BM_TRUNK_STRENGTH_INDEX*90; //N/cm^2
+    AnyVar StrengthIndexLeg = DesignVar(BM_LEG_STRENGTH_INDEX);
+    AnyVar SpecificMuscleTensionShoulderArm = BM_ARM_STRENGTH_INDEX*90; //N/cm^2
   };
 
 
@@ -134,8 +130,6 @@ AnyFolder HumanModel=
     AnyFolder &Drivers = .DefaultMannequinDrivers;
   };
 
-  #if BM_DRAWSETTINGS_SKIP  ==  OFF
-    #include "<ANYBODY_PATH_BODY>/DrawSettings/DrawSettingsDefault.any"
-  #endif
-};
+  #include "<ANYBODY_PATH_BODY>/DrawSettings/DrawSettingsDefault.any"
 
+};

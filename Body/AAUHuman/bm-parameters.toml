@@ -393,17 +393,6 @@ valuetype = "integer"
 descr = "Switch for enabling configuration value information in the model tree"
 opt = [ "ON", "OFF"]
 
-[parameters.BM_DRAWSETTINGS_FILE]
-type = "#path"
-valuetype = "string"
-descr = "A file with draw settings"
-
-[parameters.BM_DRAWSETTINGS_SKIP]
-default = "OFF"
-valuetype = "integer"
-descr = "A flag to switch on/off inclusion of the draw settings (may be needed in case of two human models)"
-opt = [ "ON", "OFF"]
-
 [parameters.BM_FOOT_MODEL]
 default = "_FOOT_MODEL_RIGID_GM_"
 valuetype = "integer"
