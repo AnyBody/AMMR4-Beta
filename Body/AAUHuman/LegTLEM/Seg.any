@@ -544,7 +544,10 @@ AnySeg Foot =
       ARel = RotMat(0.0*{0,0,0}, .Sign*(LateralControlPoint-MedialControlPoint ),  .AnatomicalFrame.ARel'[1] )*RotMat(pi/2,y);
       #endif
 
-      #include "../DrawSettings/JointAxesDistal.any"
+      viewRefFrame = {
+        ScaleXYZ = ........DrawSettings.JointAxesDistal.ScaleXYZ;
+        RGB = ........DrawSettings.JointAxesDistal.RGB;
+      };
 
       #if DRAWAXES
       AnyDrawLine SJaxis2 =
