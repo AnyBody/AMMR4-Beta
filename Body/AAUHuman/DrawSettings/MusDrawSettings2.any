@@ -1,0 +1,14 @@
+/*
+  Draw settings for muscles that are ...... (6) levels away from the DrawSettings folder. Due
+  to the fact that muscles are on different level in the model hierarchy, the path to the
+  DrawSettings folder is different for some muscles.
+*/
+
+Visible ??= ......DrawSettings.Muscle.Visible;
+RGB ??= ......DrawSettings.Muscle.RGB;
+Bulging ??= ......DrawSettings.Muscle.Bulging;
+ColorScale ??= ......DrawSettings.Muscle.ColorScale;
+RGBColorScale ??= ......DrawSettings.Muscle.RGBColorScale;
+MaxStress ??= ......DrawSettings.Muscle.MaxStress;
+Opacity ??= ......DrawSettings.Muscle.Opacity;
+DrawScaleOnOff ??= ......DrawSettings.Muscle.DrawScaleOnOff;

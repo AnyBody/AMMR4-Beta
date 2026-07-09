@@ -10,9 +10,9 @@
       AnyRefFrame &Via3 = ...Segments.T8Seg.SpinalisT11T6Via3Node;
       AnyRefFrame &Via4 = ...Segments.T7Seg.SpinalisT11T6Via4Node;
       AnyRefFrame &Ins = ...Segments.T6Seg.SpinalisT11T6NodeIns;
-      viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+      viewMuscle = {#include "../DrawSettings/MusDrawSettings2.any"};
     };
-    
+
     AnyMuscleViaPoint SpinalisT12T5 = {
       AnyMuscleModel &MusMdl = ...MuscleModels.Spinalis.SpinalisT12T5;
       AnyRefFrame &Org = ...Segments.T12Seg.SpinalisT12T5NodeOrg;
@@ -23,9 +23,9 @@
       AnyRefFrame &Via5 = ...Segments.T7Seg.SpinalisT12T5Via5Node;
       AnyRefFrame &Via6 = ...Segments.T6Seg.SpinalisT12T5Via6Node;
       AnyRefFrame &Ins = ...Segments.T5Seg.SpinalisT12T5NodeIns;
-      viewMuscle = {#include "../DrawSettings/MusDrawSettings.any" };
+      viewMuscle = {#include "../DrawSettings/MusDrawSettings2.any" };
     };
-    
+
     AnyMuscleViaPoint SpinalisT12T4 = {
       AnyMuscleModel &MusMdl = ...MuscleModels.Spinalis.SpinalisT12T4;
       AnyRefFrame &Org = ...Segments.T12Seg.SpinalisT12T4NodeOrg;
@@ -37,9 +37,9 @@
       AnyRefFrame &Via6 = ...Segments.T6Seg.SpinalisT12T4Via6Node;
       AnyRefFrame &Via7 = ...Segments.T5Seg.SpinalisT12T4Via7Node;
       AnyRefFrame &Ins = ...Segments.T4Seg.SpinalisT12T4NodeIns;
-      viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+      viewMuscle = {#include "../DrawSettings/MusDrawSettings2.any"};
     };
-    
+
     AnyMuscleViaPoint SpinalisL1T3 = {
       AnyMuscleModel &MusMdl = ...MuscleModels.Spinalis.SpinalisL1T3;
       AnyRefFrame &Org = ...Segments.L1Seg.SpinalisL1T3NodeOrg;
@@ -53,9 +53,9 @@
       AnyRefFrame &Via8 = ...Segments.T5Seg.SpinalisL1T3Via8Node;
       AnyRefFrame &Via9 = ...Segments.T4Seg.SpinalisL1T3Via9Node;
       AnyRefFrame &Ins = ...Segments.T3Seg.SpinalisL1T3NodeIns;
-      viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+      viewMuscle = {#include "../DrawSettings/MusDrawSettings2.any"};
     };
-    
+
     AnyMuscleViaPoint SpinalisL1T2 = {
       AnyMuscleModel &MusMdl = ...MuscleModels.Spinalis.SpinalisL1T2;
       AnyRefFrame &Org = ...Segments.L1Seg.SpinalisL1T2NodeOrg;
@@ -70,9 +70,9 @@
       AnyRefFrame &Via9 = ...Segments.T4Seg.SpinalisL1T2Via9Node;
       AnyRefFrame &Via10 = ...Segments.T3Seg.SpinalisL1T2Via10Node;
       AnyRefFrame &Ins = ...Segments.T2Seg.SpinalisL1T2NodeIns;
-      viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+      viewMuscle = {#include "../DrawSettings/MusDrawSettings2.any"};
     };
-    
+
     AnyMuscleViaPoint SpinalisL2T1 = {
       AnyMuscleModel &MusMdl = ...MuscleModels.Spinalis.SpinalisL2T1;
       AnyRefFrame &Org = ...Segments.L2Seg.SpinalisL2T1NodeOrg;
@@ -89,16 +89,16 @@
       AnyRefFrame &Via11 = ...Segments.T3Seg.SpinalisL2T1Via11Node;
       AnyRefFrame &Via12 = ...Segments.T2Seg.SpinalisL2T1Via12Node;
       AnyRefFrame &Ins = ...Segments.T1Seg.SpinalisL2T1NodeIns;
-      viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+      viewMuscle = {#include "../DrawSettings/MusDrawSettings2.any"};
     };
   };
-  
+
   #if BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_BUCKLE_
-    ///Definitions of the different transversus fascicles  
+    ///Definitions of the different transversus fascicles
     MuscleGroup TransversusAbdominis = {
       AnyMuscleViaPoint TransversusAbdominisL1 = {
         AnyMuscleModel &MusMdl = ...MuscleModels.TransversusSingle.TransversusAbdominisL1;
-        
+
         AnyRefNode &Org = ...Segments.L1Seg.TransversusOrgNode;
         AnyRefNode &Via1 = ...Buckle.Disc1.Disc.DiscSeg.node1;
         AnyRefNode &Via2 = ...Buckle.Disc1.Disc.DiscSeg.node2;
@@ -111,12 +111,12 @@
         AnyRefNode &Via9 = ...Buckle.Disc1.Disc.DiscSeg.node6;
         AnyRefNode &Via10 = ...Buckle.Disc1.Disc.DiscSeg.node7;
         AnyRefNode &Ins = ...Segments.L1Seg.TransversusInsNode;
-        viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-      };    
-      
+        viewMuscle = {#include "../DrawSettings/MusDrawSettings2.any"};
+      };
+
       AnyMuscleViaPoint TransversusAbdominisL2 = {
         AnyMuscleModel &MusMdl = ...MuscleModels.TransversusSingle.TransversusAbdominisL2;
-        
+
         AnyRefNode &Org = ...Segments.L2Seg.TransversusOrgNode;
         AnyRefNode &Via1 = ...Buckle.Disc2.Disc.DiscSeg.node1;
         AnyRefNode &Via2 = ...Buckle.Disc2.Disc.DiscSeg.node2;
@@ -129,12 +129,12 @@
         AnyRefNode &Via9 = ...Buckle.Disc2.Disc.DiscSeg.node6;
         AnyRefNode &Via10 = ...Buckle.Disc2.Disc.DiscSeg.node7;
         AnyRefNode &Ins = ...Segments.L2Seg.TransversusInsNode;
-        viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-      }; 
-      
+        viewMuscle = {#include "../DrawSettings/MusDrawSettings2.any"};
+      };
+
       AnyMuscleViaPoint TransversusAbdominisL3 = {
         AnyMuscleModel &MusMdl = ...MuscleModels.TransversusSingle.TransversusAbdominisL3;
-        
+
         AnyRefNode &Org = ...Segments.L3Seg.TransversusOrgNode;
         AnyRefNode &Via1 = ...Buckle.Disc3.Disc.DiscSeg.node1;
         AnyRefNode &Via2 = ...Buckle.Disc3.Disc.DiscSeg.node2;
@@ -147,12 +147,12 @@
         AnyRefNode &Via9 = ...Buckle.Disc3.Disc.DiscSeg.node6;
         AnyRefNode &Via10 = ...Buckle.Disc3.Disc.DiscSeg.node7;
         AnyRefNode &Ins = ...Segments.L3Seg.TransversusInsNode;
-        viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+        viewMuscle = {#include "../DrawSettings/MusDrawSettings2.any"};
       };
-      
+
       AnyMuscleViaPoint TransversusAbdominisL4 = {
         AnyMuscleModel &MusMdl = ...MuscleModels.TransversusSingle.TransversusAbdominisL4;
-        
+
         AnyRefNode &Org = ...Segments.L4Seg.TransversusOrgNode;
         AnyRefNode &Via1 = ...Buckle.Disc4.Disc.DiscSeg.node1;
         AnyRefNode &Via2 = ...Buckle.Disc4.Disc.DiscSeg.node2;
@@ -165,12 +165,12 @@
         AnyRefNode &Via9 = ...Buckle.Disc4.Disc.DiscSeg.node6;
         AnyRefNode &Via10 = ...Buckle.Disc4.Disc.DiscSeg.node7;
         AnyRefNode &Ins = ...Segments.L4Seg.TransversusInsNode;
-        viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-      }; 
-      
+        viewMuscle = {#include "../DrawSettings/MusDrawSettings2.any"};
+      };
+
       AnyMuscleViaPoint TransversusAbdominisL5 = {
         AnyMuscleModel &MusMdl = ...MuscleModels.TransversusSingle.TransversusAbdominisL5;
-        
+
         AnyRefNode &Org = ...Segments.L5Seg.TransversusOrgNode;
         AnyRefNode &Via1 = ...Buckle.Disc5.Disc.DiscSeg.node1;
         AnyRefNode &Via2 = ...Buckle.Disc5.Disc.DiscSeg.node2;
@@ -183,8 +183,8 @@
         AnyRefNode &Via9 = ...Buckle.Disc5.Disc.DiscSeg.node6;
         AnyRefNode &Via10 = ...Buckle.Disc5.Disc.DiscSeg.node7;
         AnyRefNode &Ins = ...Segments.L5Seg.TransversusInsNode;
-        viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
-      }; 
+        viewMuscle = {#include "../DrawSettings/MusDrawSettings2.any"};
+      };
     };
   #endif
 #endif
