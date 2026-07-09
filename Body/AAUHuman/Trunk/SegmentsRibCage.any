@@ -132,7 +132,7 @@ AnySeg SternumSeg = {
 
   AnyDrawSurf Sternum = {
     FileName = ...Data.unscaled.STL.FilenameSternalManubriumSeg;
-    RGB = Main.DrawSettings.Colors.Segments;
+    RGB = .....DrawSettings.Colors.Segments;
     AnyFunTransform3D &Scale = .Scale;
   };
 
@@ -237,7 +237,7 @@ AnySeg SternalBodySeg = {
 
   AnyDrawSurf SternalBody = {
     FileName = ...Data.unscaled.STL.FilenameSternalBodySeg;
-    RGB =Main.DrawSettings.Colors.Segments;
+    RGB =.....DrawSettings.Colors.Segments;
     AnyFunTransform3D &Scale = .Scale;
   };
 

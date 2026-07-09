@@ -318,10 +318,10 @@ AnySeg PelvisSeg = {
   {
     FileName = ...Data.unscaled.STL.FilenamePelvisWOS;
     #if ! BM_LEG_MODEL_IS_TLEM
-      Opacity ??= Main.DrawSettings.BonesOpacity.Pelvis;
+      Opacity ??= .....DrawSettings.BonesOpacity.Pelvis;
       RGB = ...ColorRef.Segments;
     #else
-      Opacity ??= Main.DrawSettings.BonesOpacity.Pelvis * 0.5;
+      Opacity ??= .....DrawSettings.BonesOpacity.Pelvis * 0.5;
       RGB = ...ColorRef.Segments;
     #endif
     AnyFunTransform3D &Scale = .Scale;
@@ -331,10 +331,10 @@ AnySeg PelvisSeg = {
     AnyDrawSurf Drw_TrunkSacrum = {
       FileName = ...Data.unscaled.STL.FilenameSacrumSeg           ;
       #if (BM_LEG_LEFT == OFF) & (BM_LEG_RIGHT == OFF)
-        Opacity ??= Main.DrawSettings.BonesOpacity.Pelvis;
+        Opacity ??= .....DrawSettings.BonesOpacity.Pelvis;
         RGB = ...ColorRef.Segments;
       #else
-        Opacity ??= Main.DrawSettings.BonesOpacity.Pelvis * 0.5;
+        Opacity ??= .....DrawSettings.BonesOpacity.Pelvis * 0.5;
         RGB = ...ColorRef.Segments;
       #endif
       AnyFunTransform3D &Scale = .Scale;

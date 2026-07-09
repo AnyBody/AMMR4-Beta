@@ -27,7 +27,7 @@ AnyFolder Seg={
     };
 
     AnyDrawSurf  BoneSurf = {
-      RGB=Main.DrawSettings.Colors.Segments;
+      RGB = ........DrawSettings.Colors.Segments;
       FileName = "DistalPhalanx1";
       ScaleXYZ=.Scale*{1,1,......Sign*1};
       Opacity = ......BonesOpacity.Hand;
@@ -92,7 +92,7 @@ AnyFolder Seg={
 
 
     AnyDrawSurf  BoneSurf = {
-      RGB=Main.DrawSettings.Colors.Segments;
+      RGB = .......DrawSettings.Colors.Segments;
 
       FileName = "ProximalPhalanx1";
       ScaleXYZ=.Scale*{1,1,......Sign*1};
@@ -166,7 +166,7 @@ AnyFolder Seg={
     AnyVar Scale= ...SegmentLengthTable[0][0]/StdSegmentLength;
 
     AnyDrawSurf  BoneSurf = {
-      RGB=Main.DrawSettings.Colors.Segments;
+      RGB = .......DrawSettings.Colors.Segments;
 
       FileName = "MetacarpalBase1";
       ScaleXYZ=.Scale*{1,1,......Sign*1};
