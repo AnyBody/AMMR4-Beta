@@ -1996,7 +1996,7 @@ PelvisSeg =
       #endif
       {
         FileName ??= ..STL.FilenamePelvis;
-        Opacity ??=  Main.DrawSettings.BonesOpacity.Pelvis;
+        Opacity ??=  ......DrawSettings.BonesOpacity.Pelvis;
         RGB ??= ...ColorRef.Segments;
         AnyFunTransform3D &Scale = .AnatomicalFrameTrunk.Scale_Leg_Pelvis ;
       };
@@ -2004,7 +2004,7 @@ PelvisSeg =
       #if (BM_PELVIS_DISPLAY == _PELVIS_DISPLAY_LEGANDTRUNKPELVIS_)
       AnyDrawSurf Drw_LegSacrum = {
         FileName ??= ..STL.FilenameSacrum;
-        Opacity ??=  Main.DrawSettings.BonesOpacity.Pelvis;
+        Opacity ??=  ......DrawSettings.BonesOpacity.Pelvis;
         RGB ??= ...ColorRef.Segments;
         AnyFunTransform3D &Scale = .AnatomicalFrameTrunk.Scale_Leg_Pelvis ;
       };
