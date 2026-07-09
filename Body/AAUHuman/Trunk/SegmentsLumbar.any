@@ -216,7 +216,7 @@ AnySeg SacrumSeg = {
     // -------- Drawing object section sacrum--------
     #if BM_PELVIS_DISPLAY == _PELVIS_DISPLAY_LEGPELVIS_ONLY_
     AnyDrawSurf DrwSacrum = {
-      Opacity = Main.DrawSettings.BonesOpacity.Sacrum;
+      Opacity = .....DrawSettings.BonesOpacity.Sacrum;
       FileName = ...Data.unscaled.STL.FilenameSacrumSeg;
       RGB = ...ColorRef.Segments;
       AnyFunTransform3D &Scale =.Scale;
