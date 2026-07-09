@@ -1,127 +1,127 @@
 
-Talus = {    
+Talus = {
   AnyDrawSurf DrwSurf = {
     FileName ??= "AnySurfLowQuality/Talus";
     ScaleXYZ ??= {1.0, 1.0, ....Sign*1.0};
-    RGB ??= Main.DrawSettings.Colors.Segments;
-    AnyFunTransform3D &Scale =.Scale; 
-    Opacity ??= 1;      
-  };    
+    RGB ??= .......DrawSettings.Colors.Segments;
+    AnyFunTransform3D &Scale =.Scale;
+    Opacity ??= 1;
+  };
 }; // End of Talus
 
-Calcaneus = {    
+Calcaneus = {
   AnyDrawSurf DrwSurf = {
     FileName ??= "AnySurfLowQuality/Calcaneus";
     ScaleXYZ ??= {1.0, 1.0, ....Sign*1.0};
-    RGB ??= Main.DrawSettings.Colors.Segments;
-    AnyFunTransform3D &Scale =.Scale; 
+    RGB ??= .......DrawSettings.Colors.Segments;
+    AnyFunTransform3D &Scale =.Scale;
     Opacity ??= 1;
-  };    
+  };
 }; // End of Calcaneus
 
-Cuboid = {    
+Cuboid = {
   AnyDrawSurf DrwSurf = {
     FileName ??= "AnySurfLowQuality/Cuboid";
     ScaleXYZ ??= {1.0, 1.0, ....Sign*1.0};
-    RGB ??= Main.DrawSettings.Colors.Segments;
-    AnyFunTransform3D &Scale =.Scale; 
+    RGB ??= .......DrawSettings.Colors.Segments;
+    AnyFunTransform3D &Scale =.Scale;
     Opacity ??= 1;
-  };    
+  };
 }; // End of cuboid
 
-Navicular = {    
+Navicular = {
   AnyDrawSurf DrwSurf = {
     FileName ??= "AnySurfLowQuality/Navicular";
     ScaleXYZ ??= {1.0, 1.0, ....Sign*1.0};
-    RGB ??= Main.DrawSettings.Colors.Segments;
-    AnyFunTransform3D &Scale =.Scale; 
-    Opacity ??= 1;      
-  };    
+    RGB ??= .......DrawSettings.Colors.Segments;
+    AnyFunTransform3D &Scale =.Scale;
+    Opacity ??= 1;
+  };
 }; // End of Navicular
 
-MedialCuneiform = {    
+MedialCuneiform = {
   AnyDrawSurf DrwSurf = {
     FileName ??= "AnySurfLowQuality/MedialCuneiForm";
     ScaleXYZ ??= {1.0, 1.0, ....Sign*1.0};
-    RGB ??= Main.DrawSettings.Colors.Segments;
-    AnyFunTransform3D &Scale =.Scale; 
+    RGB ??= .......DrawSettings.Colors.Segments;
+    AnyFunTransform3D &Scale =.Scale;
     Opacity ??= 1;
-  };    
+  };
 }; // End of MedialCuneiform
 
-IntermediateCuneiform = {    
+IntermediateCuneiform = {
   AnyDrawSurf DrwSurf = {
     FileName ??= "AnySurfLowQuality/IntermediateCuneiForm";
     ScaleXYZ ??= {1.0, 1.0, ....Sign*1.0};
-    RGB ??= Main.DrawSettings.Colors.Segments;
-    AnyFunTransform3D &Scale =.Scale; 
+    RGB ??= .......DrawSettings.Colors.Segments;
+    AnyFunTransform3D &Scale =.Scale;
     Opacity ??= 1;
-  };      
+  };
 }; // End of IntermediateCuneiform
 
-LateralCuneiform = {    
+LateralCuneiform = {
   AnyDrawSurf DrwSurf = {
     FileName ??= "AnySurfLowQuality/LateralCuneiForm";
     ScaleXYZ ??= {1.0, 1.0, ....Sign*1.0};
-    RGB ??= Main.DrawSettings.Colors.Segments;
-    AnyFunTransform3D &Scale =.Scale; 
+    RGB ??= .......DrawSettings.Colors.Segments;
+    AnyFunTransform3D &Scale =.Scale;
     Opacity ??= 1;
-  };      
-}; // End of LateralCuneiform 
+  };
+}; // End of LateralCuneiform
 
 
 //************************************************
 //Metatarsal bones
 //************************************************
 
-Metatarsal1 = {    
+Metatarsal1 = {
   AnyDrawSurf DrwSurf = {
     FileName ??= "AnySurfLowQuality/Metatarsal1";
     ScaleXYZ ??= {1.0, 1.0, ....Sign*1.0}*.FootType.MetaScale;
-    RGB ??= Main.DrawSettings.Colors.Segments;
-    AnyFunTransform3D &Scale =.Scale; 
+    RGB ??= .......DrawSettings.Colors.Segments;
+    AnyFunTransform3D &Scale =.Scale;
     Opacity ??= 1;
-  };    
+  };
 }; // End of Metatarsal1
 
-Metatarsal2 = {    
+Metatarsal2 = {
   AnyDrawSurf DrwSurf = {
     FileName ??= "AnySurfLowQuality/Metatarsal2";
     ScaleXYZ ??= {1.0, 1.0, ....Sign*1.0};
-    RGB ??= Main.DrawSettings.Colors.Segments;
-    AnyFunTransform3D &Scale =.Scale; 
+    RGB ??= .......DrawSettings.Colors.Segments;
+    AnyFunTransform3D &Scale =.Scale;
     Opacity ??= 1;
-  };    
+  };
 }; // End of Metatarsal2
 
-Metatarsal3 = {    
+Metatarsal3 = {
   AnyDrawSurf DrwSurf = {
     FileName ??= "AnySurfLowQuality/Metatarsal3";
     ScaleXYZ ??= {1.0, 1.0, ....Sign*1.0};
-    RGB ??= Main.DrawSettings.Colors.Segments;
-    AnyFunTransform3D &Scale =.Scale; 
+    RGB ??= .......DrawSettings.Colors.Segments;
+    AnyFunTransform3D &Scale =.Scale;
     Opacity ??= 1;
-  };    
+  };
 }; // End of Metatarsal3
 
-Metatarsal4 = {    
+Metatarsal4 = {
   AnyDrawSurf DrwSurf = {
     FileName ??= "AnySurfLowQuality/Metatarsal4";
     ScaleXYZ ??= {1.0, 1.0, ....Sign*1.0};
-    RGB ??= Main.DrawSettings.Colors.Segments;
-    AnyFunTransform3D &Scale =.Scale; 
+    RGB ??= .......DrawSettings.Colors.Segments;
+    AnyFunTransform3D &Scale =.Scale;
     Opacity ??= 1;
-  };    
+  };
 }; // End of Metatarsal4
 
-Metatarsal5 = {    
+Metatarsal5 = {
   AnyDrawSurf DrwSurf = {
     FileName ??= "AnySurfLowQuality/Metatarsal5";
     ScaleXYZ ??= {1.0, 1.0, ....Sign*1.0};
-    RGB ??= Main.DrawSettings.Colors.Segments;
-    AnyFunTransform3D &Scale =.Scale; 
+    RGB ??= .......DrawSettings.Colors.Segments;
+    AnyFunTransform3D &Scale =.Scale;
     Opacity ??= 1;
-  };    
+  };
 }; // End of Metatarsal5
 
 
@@ -129,54 +129,54 @@ Metatarsal5 = {
 //Proximal Phalanges  bones
 //************************************************
 
-ProximalPhalange1 = {    
+ProximalPhalange1 = {
   AnyDrawSurf DrwSurf = {
     FileName ??= "AnySurfLowQuality/ProximalPhalange1";
     ScaleXYZ ??= {1.0, 1.0, ....Sign*1.0}*.FootType.ProxPhalScale;
-    RGB ??= Main.DrawSettings.Colors.Segments;
+    RGB ??= .......DrawSettings.Colors.Segments;
     AnyFunTransform3D &Scale =.Scale;
     Opacity ??= 1;
-  };    
+  };
 }; // End of ProximalPhalanges1
 
-ProximalPhalange2 = {    
+ProximalPhalange2 = {
   AnyDrawSurf DrwSurf = {
     FileName ??= "AnySurfLowQuality/ProximalPhalange2";
-    ScaleXYZ ??= {1.0, 1.0, ....Sign*1.0}; 
-    RGB ??= Main.DrawSettings.Colors.Segments;
-    AnyFunTransform3D &Scale =.Scale; 
-    Opacity ??= 1;      
-  };    
+    ScaleXYZ ??= {1.0, 1.0, ....Sign*1.0};
+    RGB ??= .......DrawSettings.Colors.Segments;
+    AnyFunTransform3D &Scale =.Scale;
+    Opacity ??= 1;
+  };
 }; // End of ProximalPhalanges2
 
-ProximalPhalange3 = {    
+ProximalPhalange3 = {
   AnyDrawSurf DrwSurf = {
     FileName ??= "AnySurfLowQuality/ProximalPhalange3";
-    ScaleXYZ ??= {1.0, 1.0, ....Sign*1.0};  
-    RGB ??= Main.DrawSettings.Colors.Segments;
-    AnyFunTransform3D &Scale =.Scale; 
+    ScaleXYZ ??= {1.0, 1.0, ....Sign*1.0};
+    RGB ??= .......DrawSettings.Colors.Segments;
+    AnyFunTransform3D &Scale =.Scale;
     Opacity ??= 1;
-  };    
+  };
 }; // End of ProximalPhalanges3
 
-ProximalPhalange4 = {    
+ProximalPhalange4 = {
   AnyDrawSurf DrwSurf = {
     FileName ??= "AnySurfLowQuality/ProximalPhalange4";
     ScaleXYZ ??= {1.0, 1.0, ....Sign*1.0};
-    RGB ??= Main.DrawSettings.Colors.Segments;
-    AnyFunTransform3D &Scale =.Scale; 
+    RGB ??= .......DrawSettings.Colors.Segments;
+    AnyFunTransform3D &Scale =.Scale;
     Opacity ??= 1;
-  };    
+  };
 }; // End of ProximalPhalanges4
 
-ProximalPhalange5 = {    
+ProximalPhalange5 = {
   AnyDrawSurf DrwSurf = {
     FileName ??= "AnySurfLowQuality/ProximalPhalange5";
     ScaleXYZ ??= {1.0, 1.0, ....Sign*1.0};
-    RGB ??= Main.DrawSettings.Colors.Segments;
-    AnyFunTransform3D &Scale =.Scale; 
-    Opacity ??= 1;      
-  };      
+    RGB ??= .......DrawSettings.Colors.Segments;
+    AnyFunTransform3D &Scale =.Scale;
+    Opacity ??= 1;
+  };
 }; // End of ProximalPhalanges5
 
 
@@ -184,44 +184,44 @@ ProximalPhalange5 = {
 //Middle Phalanges  bones
 //************************************************
 
-MiddlePhalange2 = {    
+MiddlePhalange2 = {
   AnyDrawSurf DrwSurf = {
     FileName ??= "AnySurfLowQuality/MiddlePhalange2";
     ScaleXYZ ??= {1.0, 1.0, ....Sign*1.0};
-    RGB ??= Main.DrawSettings.Colors.Segments;
-    AnyFunTransform3D &Scale =.Scale; 
+    RGB ??= .......DrawSettings.Colors.Segments;
+    AnyFunTransform3D &Scale =.Scale;
     Opacity ??= 1;
-  };    
+  };
 }; // End of MiddlePhalanges2
 
-MiddlePhalange3 = {    
+MiddlePhalange3 = {
   AnyDrawSurf DrwSurf = {
     FileName ??= "AnySurfLowQuality/MiddlePhalange3";
     ScaleXYZ ??= {1.0, 1.0, ....Sign*1.0};
-    RGB ??= Main.DrawSettings.Colors.Segments;
-    AnyFunTransform3D &Scale =.Scale; 
+    RGB ??= .......DrawSettings.Colors.Segments;
+    AnyFunTransform3D &Scale =.Scale;
     Opacity ??= 1;
-  };    
+  };
 }; // End of MiddlePhalanges3
 
-MiddlePhalange4 = {    
+MiddlePhalange4 = {
   AnyDrawSurf DrwSurf = {
     FileName ??= "AnySurfLowQuality/MiddlePhalange4";
-    ScaleXYZ ??= {1.0, 1.0, ....Sign*1.0};  
-    RGB ??= Main.DrawSettings.Colors.Segments;
-    AnyFunTransform3D &Scale =.Scale; 
-    Opacity ??= 1;      
-  };    
+    ScaleXYZ ??= {1.0, 1.0, ....Sign*1.0};
+    RGB ??= .......DrawSettings.Colors.Segments;
+    AnyFunTransform3D &Scale =.Scale;
+    Opacity ??= 1;
+  };
 }; // End of MiddlePhalanges4
 
 MiddlePhalange5 = {
   AnyDrawSurf DrwSurf = {
     FileName ??= "AnySurfLowQuality/MiddlePhalange5";
     ScaleXYZ ??={1.0, 1.0, ....Sign*1.0};
-    RGB ??= Main.DrawSettings.Colors.Segments;
-    AnyFunTransform3D &Scale =.Scale; 
+    RGB ??= .......DrawSettings.Colors.Segments;
+    AnyFunTransform3D &Scale =.Scale;
     Opacity ??= 1;
-  };    
+  };
 }; // End of MiddlePhalanges5
 
 
@@ -229,53 +229,53 @@ MiddlePhalange5 = {
 //Distal Phalanges  bones
 //************************************************
 
-DistalPhalange1 = {    
+DistalPhalange1 = {
   AnyDrawSurf DrwSurf = {
     FileName ??= "AnySurfLowQuality/DistalPhalange1";
     ScaleXYZ ??= {1.0, 1.0, ....Sign*1.0}*.FootType.DistPhalScale;
-    RGB ??= Main.DrawSettings.Colors.Segments;
-    AnyFunTransform3D &Scale =.Scale; 
+    RGB ??= .......DrawSettings.Colors.Segments;
+    AnyFunTransform3D &Scale =.Scale;
     Opacity ??= 1;
-  };    
+  };
 }; // End of DistalPhalanges1
 
-DistalPhalange2 = {    
+DistalPhalange2 = {
   AnyDrawSurf DrwSurf = {
     FileName ??= "AnySurfLowQuality/DistalPhalange2";
     ScaleXYZ ??= {1.0, 1.0, ....Sign*1.0};
-    RGB ??= Main.DrawSettings.Colors.Segments;
-    AnyFunTransform3D &Scale =.Scale; 
+    RGB ??= .......DrawSettings.Colors.Segments;
+    AnyFunTransform3D &Scale =.Scale;
     Opacity ??= 1;
-  };    
+  };
 }; // End of DistalPhalanges2
 
-DistalPhalange3 = {    
+DistalPhalange3 = {
   AnyDrawSurf DrwSurf = {
     FileName ??= "AnySurfLowQuality/DistalPhalange3";
     ScaleXYZ ??= {1.0, 1.0, ....Sign*1.0};
-    RGB ??= Main.DrawSettings.Colors.Segments;
-    AnyFunTransform3D &Scale =.Scale; 
+    RGB ??= .......DrawSettings.Colors.Segments;
+    AnyFunTransform3D &Scale =.Scale;
     Opacity ??= 1;
-  };    
+  };
 }; // End of DistalPhalanges3
 
 DistalPhalange4 = {
   AnyDrawSurf DrwSurf = {
     FileName ??= "AnySurfLowQuality/DistalPhalange4";
     ScaleXYZ ??= {1.0, 1.0, ....Sign*1.0};
-    RGB ??= Main.DrawSettings.Colors.Segments;
-    AnyFunTransform3D &Scale =.Scale; 
+    RGB ??= .......DrawSettings.Colors.Segments;
+    AnyFunTransform3D &Scale =.Scale;
     Opacity ??= 1;
-  };    
+  };
 }; // End of DistalPhalanges4
 
 DistalPhalange5 = {
   AnyDrawSurf DrwSurf = {
     FileName ??= "AnySurfLowQuality/DistalPhalange5";
     ScaleXYZ ??= {1.0, 1.0, ....Sign*1.0};
-    RGB ??= Main.DrawSettings.Colors.Segments;
-    AnyFunTransform3D &Scale =.Scale; 
+    RGB ??= .......DrawSettings.Colors.Segments;
+    AnyFunTransform3D &Scale =.Scale;
     Opacity ??= 1;
-  };    
+  };
 }; // End of DistalPhalanges5
 
