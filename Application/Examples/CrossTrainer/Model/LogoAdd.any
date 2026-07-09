@@ -8,7 +8,7 @@
            AnyDrawSurf Body =
            {
              FileName = ANYBODY_PATH_MODELUTILS+"/DrawObjects/Body-grey.stl";
-             RGB = Main.DrawSettings.Colors.AnyBodyGrey;
+             RGB = Main.HumanModel.DrawSettings.Colors.AnyBodyGrey;
              Opacity = 1;
              ScaleXYZ= 0.008 *{1,1,1};
              AnyStyleDrawMaterial1 style =
@@ -21,7 +21,7 @@
            AnyDrawSurf AnyTechnology =
            {
              FileName = ANYBODY_PATH_MODELUTILS+"/DrawObjects/AnyTechnology-red.stl";
-             RGB = Main.DrawSettings.Colors.AnyBodyRed;
+             RGB = Main.HumanModel.DrawSettings.Colors.AnyBodyRed;
              Opacity = 1;
              ScaleXYZ= 0.008*{1,1,1};
              AnyStyleDrawMaterial1 style =
@@ -39,7 +39,7 @@
            AnyDrawSurf Body =
            {
              FileName = ANYBODY_PATH_MODELUTILS+"/DrawObjects/Body-grey.stl";
-             RGB = Main.DrawSettings.Colors.AnyBodyGrey;
+             RGB = Main.HumanModel.DrawSettings.Colors.AnyBodyGrey;
              Opacity = 1;
              ScaleXYZ= 0.008*{1,1,1};
              AnyStyleDrawMaterial1 style =
@@ -52,7 +52,7 @@
            AnyDrawSurf AnyTechnology =
            {
              FileName = ANYBODY_PATH_MODELUTILS+"/DrawObjects/AnyTechnology-red.stl";
-             RGB = Main.DrawSettings.Colors.AnyBodyRed;
+             RGB = Main.HumanModel.DrawSettings.Colors.AnyBodyRed;
              Opacity = 1;
              ScaleXYZ= 0.008*{1,1,1};
              AnyStyleDrawMaterial1 style =

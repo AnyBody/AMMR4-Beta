@@ -19,7 +19,7 @@ Main = {
   #include "Model/Mannequin.any"
 
   // Custom drawing settings used by this model
-  #include "Model/DrawSettings.any"
+  HumanModel = { #include "Model/DrawSettings.any" };
 
 
   //--------------- END OF GENERAL CONFIGURATION -------------------

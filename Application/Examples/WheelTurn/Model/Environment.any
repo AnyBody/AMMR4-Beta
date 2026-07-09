@@ -50,7 +50,7 @@ AnyFolder EnvironmentModel = {
      AnyRefNode &ref5=.HandleTip;
      AnyDrawPLine drw={
        Thickness=.015;
-       RGB=Main.DrawSettings.Colors.AnyBodyRed;
+       RGB=Main.HumanModel.DrawSettings.Colors.AnyBodyRed;
      };
    };
    r0 =Main.WheelParameters.Hub;

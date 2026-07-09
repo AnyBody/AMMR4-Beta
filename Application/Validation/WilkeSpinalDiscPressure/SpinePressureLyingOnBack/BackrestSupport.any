@@ -145,7 +145,7 @@ AnyFolder BackrestSupport = {
 
     AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 
-    AnyFolder &DrawRef=Main.DrawSettings; //reference to the folder which contains drawsettings
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings; //reference to the folder which contains drawsettings
     //low limit for the strength measure function, if the distance measured along Direction[0] is below this val. the strength will be zero (negative)
     AnyVar UserDefinedLimitLow=-0.05;
     //high limit for the strength measure function, if the distance measured along Direction[0] is above this val. the strength will be zero
@@ -168,7 +168,7 @@ AnyFolder BackrestSupport = {
 
     AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 
-    AnyFolder &DrawRef=Main.DrawSettings; //reference to the folder which contains drawsettings
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings; //reference to the folder which contains drawsettings
     //low limit for the strength measure function, if the distance measured along Direction[0] is below this val. the strength will be zero (negative)
     AnyVar UserDefinedLimitLow=-0.05;
     //high limit for the strength measure function, if the distance measured along Direction[0] is above this val. the strength will be zero
@@ -190,7 +190,7 @@ AnyFolder BackrestSupport = {
     AnyRefFrame &TargetObject =....BodyModel.Trunk.Segments.T6Seg.T6SupportNode;
     AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 
-    AnyFolder &DrawRef=Main.DrawSettings; //reference to the folder which contains drawsettings
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings; //reference to the folder which contains drawsettings
     //low limit for the strength measure function, if the distance measured along Direction[0] is below this val. the strength will be zero (negative)
     AnyVar UserDefinedLimitLow=-0.05;
     //high limit for the strength measure function, if the distance measured along Direction[0] is above this val. the strength will be zero
@@ -212,7 +212,7 @@ AnyFolder BackrestSupport = {
     AnyRefFrame &TargetObject =....BodyModel.Trunk.Segments.T9Seg.T9SupportNode;
     AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 
-    AnyFolder &DrawRef=Main.DrawSettings; //reference to the folder which contains drawsettings
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings; //reference to the folder which contains drawsettings
     //low limit for the strength measure function, if the distance measured along Direction[0] is below this val. the strength will be zero (negative)
     AnyVar UserDefinedLimitLow=-0.05;
     //high limit for the strength measure function, if the distance measured along Direction[0] is above this val. the strength will be zero
@@ -234,7 +234,7 @@ AnyFolder BackrestSupport = {
     AnyRefFrame &TargetObject =....BodyModel.Trunk.Segments.T10Seg.T10SupportNode;
     AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 
-    AnyFolder &DrawRef=Main.DrawSettings; //reference to the folder which contains drawsettings
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings; //reference to the folder which contains drawsettings
     //low limit for the strength measure function, if the distance measured along Direction[0] is below this val. the strength will be zero (negative)
     AnyVar UserDefinedLimitLow=-0.05;
     //high limit for the strength measure function, if the distance measured along Direction[0] is above this val. the strength will be zero
@@ -256,7 +256,7 @@ AnyFolder BackrestSupport = {
     AnyRefFrame &TargetObject =....BodyModel.Trunk.Segments.T12Seg.T12SupportNode;
     AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 
-    AnyFolder &DrawRef=Main.DrawSettings; //reference to the folder which contains drawsettings
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings; //reference to the folder which contains drawsettings
     //low limit for the strength measure function, if the distance measured along Direction[0] is below this val. the strength will be zero (negative)
     AnyVar UserDefinedLimitLow=-0.05;
     //high limit for the strength measure function, if the distance measured along Direction[0] is above this val. the strength will be zero
@@ -278,7 +278,7 @@ AnyFolder BackrestSupport = {
     AnyRefFrame &TargetObject =....BodyModel.Trunk.Segments.L1Seg.L1SupportNode;
     AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 
-    AnyFolder &DrawRef=Main.DrawSettings; //reference to the folder which contains drawsettings
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings; //reference to the folder which contains drawsettings
     //low limit for the strength measure function, if the distance measured along Direction[0] is below this val. the strength will be zero (negative)
     AnyVar UserDefinedLimitLow=-0.05;
     //high limit for the strength measure function, if the distance measured along Direction[0] is above this val. the strength will be zero
@@ -300,7 +300,7 @@ AnyFolder BackrestSupport = {
     AnyRefFrame &TargetObject =....BodyModel.Trunk.Segments.L2Seg.L2SupportNode;
     AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 
-    AnyFolder &DrawRef=Main.DrawSettings; //reference to the folder which contains drawsettings
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings; //reference to the folder which contains drawsettings
     //low limit for the strength measure function, if the distance measured along Direction[0] is below this val. the strength will be zero (negative)
     AnyVar UserDefinedLimitLow=-0.05;
     //high limit for the strength measure function, if the distance measured along Direction[0] is above this val. the strength will be zero
@@ -322,7 +322,7 @@ AnyFolder BackrestSupport = {
 //    AnyRefFrame &TargetObject =....BodyModel.Trunk.Segments.L3Seg.L3SupportNode;
 //    AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 //
-//    AnyFolder &DrawRef=Main.DrawSettings; //reference to the folder which contains drawsettings
+//    AnyFolder &DrawRef=Main.HumanModel.DrawSettings; //reference to the folder which contains drawsettings
 //    //low limit for the strength measure function, if the distance measured along Direction[0] is below this val. the strength will be zero (negative)
 //    AnyVar UserDefinedLimitLow=-0.05;
 //    //high limit for the strength measure function, if the distance measured along Direction[0] is above this val. the strength will be zero
@@ -344,7 +344,7 @@ AnyFolder BackrestSupport = {
 //    AnyRefFrame &TargetObject =....BodyModel.Trunk.Segments.L4Seg.L4SupportNode;
 //    AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 //
-//    AnyFolder &DrawRef=Main.DrawSettings; //reference to the folder which contains drawsettings
+//    AnyFolder &DrawRef=Main.HumanModel.DrawSettings; //reference to the folder which contains drawsettings
 //    //low limit for the strength measure function, if the distance measured along Direction[0] is below this val. the strength will be zero (negative)
 //    AnyVar UserDefinedLimitLow=-0.05;
 //    //high limit for the strength measure function, if the distance measured along Direction[0] is above this val. the strength will be zero
@@ -366,7 +366,7 @@ AnyFolder BackrestSupport = {
 //    AnyRefFrame &TargetObject =....BodyModel.Trunk.Segments.L5Seg.L5SupportNode;
 //    AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 //
-//    AnyFolder &DrawRef=Main.DrawSettings; //reference to the folder which contains drawsettings
+//    AnyFolder &DrawRef=Main.HumanModel.DrawSettings; //reference to the folder which contains drawsettings
 //    //low limit for the strength measure function, if the distance measured along Direction[0] is below this val. the strength will be zero (negative)
 //    AnyVar UserDefinedLimitLow=-0.05;
 //    //high limit for the strength measure function, if the distance measured along Direction[0] is above this val. the strength will be zero
@@ -388,7 +388,7 @@ AnyFolder BackrestSupport = {
     AnyRefFrame &TargetObject =....BodyModel.Trunk.Segments.SacrumSeg.SacrumSupportNode;
     AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 
-    AnyFolder &DrawRef=Main.DrawSettings; //reference to the folder which contains drawsettings
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings; //reference to the folder which contains drawsettings
     //low limit for the strength measure function, if the distance measured along Direction[0] is below this val. the strength will be zero (negative)
     AnyVar UserDefinedLimitLow=-0.05;
     //high limit for the strength measure function, if the distance measured along Direction[0] is above this val. the strength will be zero

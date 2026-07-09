@@ -14,7 +14,7 @@ AnyFolder SolidModelingOperations =
              *sin(pi/180*(Main.Parameters.DesignParameters.Back_Rest_Tilt_Angle)),
              0};
      RotAnglesInDegree0 = {0, 0, Main.Parameters.DesignParameters.Back_Rest_Tilt_Angle};
-     Color = Main.DrawSettings.Colors.AnyBodyGreen;
+     Color = Main.HumanModel.DrawSettings.Colors.AnyBodyGreen;
      Opacity = 0.3;
      OpacityForLocalFrame = 0;
      OpacityForLocalRefNodes = 0;
@@ -34,7 +34,7 @@ AnyFolder SolidModelingOperations =
              *sin(pi/180*(Main.Parameters.DesignParameters.Hip_Rest_Tilt_Angle)),
              0};
      RotAnglesInDegree0 = {0, 0, Main.Parameters.DesignParameters.Hip_Rest_Tilt_Angle};
-     Color = Main.DrawSettings.Colors.AnyBodyGrey;
+     Color = Main.HumanModel.DrawSettings.Colors.AnyBodyGrey;
      Opacity = 0.3;
      OpacityForLocalFrame = 0;
      OpacityForLocalRefNodes = 0;
@@ -58,7 +58,7 @@ AnyFolder SolidModelingOperations =
               sin(pi/180*(Main.Parameters.DesignParameters.Foot_Rest_Tilt_Angle-90)),
              0};
      RotAnglesInDegree0 = {0, 0, Main.Parameters.DesignParameters.Foot_Rest_Tilt_Angle};
-     Color = Main.DrawSettings.Colors.AnyBodyRed;
+     Color = Main.HumanModel.DrawSettings.Colors.AnyBodyRed;
      Opacity = 0.2;
      OpacityForLocalFrame = 0;
      OpacityForLocalRefNodes = 0;
@@ -83,7 +83,7 @@ AnyFolder SolidModelingOperations =
              {0, 0, Main.Parameters.DesignParameters.Foot_Rest_Width/2 } +
              {0, 0, Main.Parameters.DesignParameters.Barbell_Thick };
        RotAnglesInDegree0 = { 0, 0, 0};
-       Color = Main.DrawSettings.Colors.AnyBodyBlue;
+       Color = Main.HumanModel.DrawSettings.Colors.AnyBodyBlue;
        Opacity = 0.1;
        OpacityForLocalFrame = 0;
        OpacityForLocalRefNodes = 0;
@@ -109,7 +109,7 @@ AnyFolder SolidModelingOperations =
              {0, 0, -Main.Parameters.DesignParameters.Foot_Rest_Width/2 } +
              {0, 0, -Main.Parameters.DesignParameters.Barbell_Thick };
        RotAnglesInDegree0 = { 0, 0, 0};
-       Color = Main.DrawSettings.Colors.AnyBodyBlue;
+       Color = Main.HumanModel.DrawSettings.Colors.AnyBodyBlue;
        Opacity = 1;
        OpacityForLocalFrame = 0;
        OpacityForLocalRefNodes = 0;
@@ -126,7 +126,7 @@ AnyFolder SolidModelingOperations =
      Pos0 = {0, 0, Main.Parameters.DesignParameters.Back_Rest_Width/2} +
             {0, 0, Main.Parameters.DesignParameters.Handle_Dis_Offset};
             RotAnglesInDegree0 = { -90, Main.Parameters.DesignParameters.Back_Rest_Tilt_Angle-90, 0};
-       Color = Main.DrawSettings.Colors.AnyBodyYellow;
+       Color = Main.HumanModel.DrawSettings.Colors.AnyBodyYellow;
        Opacity = 0.2;
        OpacityForLocalFrame = 1;
        OpacityForLocalRefNodes = 0;
@@ -143,7 +143,7 @@ AnyFolder SolidModelingOperations =
      Pos0 = {0, 0, -Main.Parameters.DesignParameters.Back_Rest_Width/2} +
             {0, 0, -Main.Parameters.DesignParameters.Handle_Dis_Offset};
             RotAnglesInDegree0 = { -90, Main.Parameters.DesignParameters.Back_Rest_Tilt_Angle-90, 0};
-       Color = Main.DrawSettings.Colors.AnyBodyYellow;
+       Color = Main.HumanModel.DrawSettings.Colors.AnyBodyYellow;
        Opacity = 1;
        OpacityForLocalFrame = 1;
        OpacityForLocalRefNodes = 0;
@@ -195,7 +195,7 @@ Main.Model.EnvironmentModel.Segs.Back_Rest=
           Length = Main.Parameters.DesignParameters.Back_Rest_Width;
           AnyDrawParamSurf drw =
           {
-              RGB = Main.DrawSettings.Colors.AnyBodyGreen;
+              RGB = Main.HumanModel.DrawSettings.Colors.AnyBodyGreen;
               Opacity = 0.3;
               WireFrameOnOff = On;
           };
@@ -360,7 +360,7 @@ Main.Model.EnvironmentModel.Segs.Barbell_Right =
     AnyDrawSTL Body =
     {
       FileName = ANYBODY_PATH_MODELUTILS +"DrawObjects/Body-grey.stl";
-      RGB = Main.DrawSettings.Colors.AnyBodyGrey;
+      RGB = Main.HumanModel.DrawSettings.Colors.AnyBodyGrey;
 
       Opacity = 1;
       ScaleXYZ=Main.Parameters.DesignParameters.Barbell_Radius*0.04*{1,1,1};
@@ -375,7 +375,7 @@ Main.Model.EnvironmentModel.Segs.Barbell_Right =
     AnyDrawSTL AnyTechnology =
     {
       FileName = ANYBODY_PATH_MODELUTILS +"DrawObjects/AnyTechnology-red.stl";
-      RGB = Main.DrawSettings.Colors.AnyBodyRed;
+      RGB = Main.HumanModel.DrawSettings.Colors.AnyBodyRed;
 
       Opacity = 1;
       ScaleXYZ=Main.Parameters.DesignParameters.Barbell_Radius*0.04*{1,1,1};
@@ -400,7 +400,7 @@ Main.Model.EnvironmentModel.Segs.Barbell_Left =
     AnyDrawSTL Body =
     {
       FileName = ANYBODY_PATH_MODELUTILS +"DrawObjects/Body-grey.stl";
-      RGB = Main.DrawSettings.Colors.AnyBodyGrey;
+      RGB = Main.HumanModel.DrawSettings.Colors.AnyBodyGrey;
 
       Opacity = 1;
       ScaleXYZ=Main.Parameters.DesignParameters.Barbell_Radius*0.04*{1,1,1};
@@ -409,7 +409,7 @@ Main.Model.EnvironmentModel.Segs.Barbell_Left =
     AnyDrawSTL AnyTechnology =
     {
       FileName = ANYBODY_PATH_MODELUTILS +"DrawObjects/AnyTechnology-red.stl";
-      RGB = Main.DrawSettings.Colors.AnyBodyRed;
+      RGB = Main.HumanModel.DrawSettings.Colors.AnyBodyRed;
 
       Opacity = 1;
       ScaleXYZ=Main.Parameters.DesignParameters.Barbell_Radius*0.04*{1,1,1};
