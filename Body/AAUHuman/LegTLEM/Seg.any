@@ -462,8 +462,7 @@ AnySeg Foot =
   #include "../DrawSettings/Nodes.any"
   #include "../DrawSettings/SegmentAxes.any"
 
-  AnyDrawSurf DrwSurf =
-  {
+  AnyDrawSurf DrwSurf = {
     FileName ??= ..STL.FilenameFoot;
     ScaleXYZ ??= {1.0, 1.0, ...Sign*1.0};
     RGB ??= ...ColorRef.Segments;
@@ -472,27 +471,21 @@ AnySeg Foot =
   };
 
   #if SKIN
-  AnyDrawSurf Drw2 =
-  {
-    FileName ??= ..STL.FilenameFootSkin;
-    ScaleXYZ ??= {1.0, 1.0, ...Sign*1.0};
-    RGB ??= ...ColorRef.Skin;
-    Opacity ??= Main.DrawSettings.SkinOpacity.Opacity;
-    AnyFunTransform3D &Scale =.Scale;
-    Face=-1;
-  };
+    AnyDrawSurf Drw2 = {
+      FileName ??= ..STL.FilenameFootSkin;
+      ScaleXYZ ??= {1.0, 1.0, ...Sign*1.0};
+      AnyFunTransform3D &Scale =.Scale;
+      Face=-1;
+    };
   #endif
 
   #if MUSCLETISSUE
-  AnyDrawSurf Drw1 =
-  {
-    FileName ??= ..STL.FilenameFootMuscleTissue;
-    ScaleXYZ ??= {1.0, 1.0, ...Sign*1.0};
-    RGB ??= ...ColorRef.MuscleTissue;
-    Opacity ??= Main.DrawSettings.MuscleTissueOpacity.Opacity;
-    AnyFunTransform3D &Scale =.Scale;
-    Face=-1;
-  };
+    AnyDrawSurf Drw1 = {
+      FileName ??= ..STL.FilenameFootMuscleTissue;
+      ScaleXYZ ??= {1.0, 1.0, ...Sign*1.0};
+      AnyFunTransform3D &Scale =.Scale;
+      Face=-1;
+    };
   #endif
 
 };// End of foot
@@ -1052,27 +1045,21 @@ AnySeg Shank =
   };
 
   #if SKIN
-  AnyDrawSurf Drw2 =
-  {
-    FileName ??= ..STL.FilenameShankSkin;
-    ScaleXYZ ??= {1.0, 1.0, ...Sign*1.0};
-    RGB ??= ...ColorRef.Skin;
-    Opacity ??= Main.DrawSettings.SkinOpacity.Opacity;
-    AnyFunTransform3D &Scale =.Scale;
-    Face=-1;
-  };
+    AnyDrawSurf Drw2 = {
+      FileName ??= ..STL.FilenameShankSkin;
+      ScaleXYZ ??= {1.0, 1.0, ...Sign*1.0};
+      AnyFunTransform3D &Scale =.Scale;
+      Face=-1;
+    };
   #endif
 
   #if MUSCLETISSUE
-  AnyDrawSurf Drw1 =
-  {
-    FileName ??= ..STL.FilenameShankMuscleTissue;
-    ScaleXYZ ??= {1.0, 1.0, ...Sign*1.0};
-    RGB ??= ...ColorRef.MuscleTissue;
-    Opacity ??= Main.DrawSettings.MuscleTissueOpacity.Opacity;
-    AnyFunTransform3D &Scale =.Scale;
-    Face=-1;
-  };
+    AnyDrawSurf Drw1 = {
+      FileName ??= ..STL.FilenameShankMuscleTissue;
+      ScaleXYZ ??= {1.0, 1.0, ...Sign*1.0};
+      AnyFunTransform3D &Scale =.Scale;
+      Face=-1;
+    };
   #endif
 
   #include "../DrawSettings/Nodes.any"
@@ -1524,36 +1511,29 @@ AnySeg Thigh =
 
 
   #if SKIN
-  AnyRefNode SkinsRel  =
-  {
-    sRel = {0,0,0};
-    ARel = RotMat(...Sign*-27*pi/180, y);
-    AnyDrawSurf Drw2 =
-    {
-      FileName ??= ...STL.FilenameThighSkin;
-      ScaleXYZ ??= {1.0, 1.0, ....Sign*1.0};
-      RGB ??= ....ColorRef.Skin;
-      Opacity ??= Main.DrawSettings.SkinOpacity.Opacity;
-      AnyFunTransform3D &Scale =..Scale;
-      Face=-1;
+    AnyRefNode SkinsRel = {
+      sRel = {0,0,0};
+      ARel = RotMat(...Sign*-27*pi/180, y);
+      AnyDrawSurf Drw2 = {
+        FileName ??= ...STL.FilenameThighSkin;
+        ScaleXYZ ??= {1.0, 1.0, ....Sign*1.0};
+        AnyFunTransform3D &Scale =..Scale;
+        Face = -1;
+      };
     };
-  };
   #endif
 
   #if MUSCLETISSUE
-  AnyRefNode MuscleTissuesRel  =
-  {
-    sRel = {0,0,0};
-    ARel = RotMat(...Sign*-27*pi/180, y);
-    AnyDrawSurf Drw2 = {
-      FileName ??= ...STL.FilenameThighMuscleTissue;
-      ScaleXYZ ??= {1.0, 1.0, ....Sign*1.0};
-      RGB ??= ....ColorRef.MuscleTissue;
-      Opacity ??= Main.DrawSettings.MuscleTissueOpacity.Opacity;
-      AnyFunTransform3D &Scale =..Scale;
-      Face=-1;
+    AnyRefNode MuscleTissuesRel = {
+      sRel = {0,0,0};
+      ARel = RotMat(...Sign*-27*pi/180, y);
+      AnyDrawSurf Drw2 = {
+        FileName ??= ...STL.FilenameThighMuscleTissue;
+        ScaleXYZ ??= {1.0, 1.0, ....Sign*1.0};
+        AnyFunTransform3D &Scale =..Scale;
+        Face = -1;
+      };
     };
-  };
   #endif
 
 };

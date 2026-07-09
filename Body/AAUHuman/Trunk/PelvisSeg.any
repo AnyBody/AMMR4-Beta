@@ -172,10 +172,8 @@ AnySeg PelvisSeg = {
       AnyDrawSurf Drw2 = {
         FileName = .....LEG_MODEL_PARAM_DIRECTION.Leg.Segments.STL.FilenamePelvisSkin;
         ScaleXYZ = {1.0, 1.0, 1.0};
-        RGB = ....ColorRef.Skin;
-        Opacity = Main.DrawSettings.SkinOpacity.Opacity;
         AnyFunTransform3D &Scale =..GeomScale;
-        Face=-1;
+        Face = -1;
       };
     #endif
   #endif
@@ -184,10 +182,8 @@ AnySeg PelvisSeg = {
       AnyDrawSurf Drw1 = {
         FileName = .....LEG_MODEL_PARAM_DIRECTION.Leg.Segments.STL.FilenamePelvisMuscleTissue;
         ScaleXYZ = {1.0, 1.0, 1.0};
-        RGB = ....ColorRef.MuscleTissue;
-        Opacity = Main.DrawSettings.MuscleTissueOpacity.Opacity;
         AnyFunTransform3D &Scale =..GeomScale;
-        Face=-1;
+        Face = -1;
       };
     #endif
   #endif
