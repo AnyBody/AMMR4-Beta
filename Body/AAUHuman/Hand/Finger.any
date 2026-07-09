@@ -196,7 +196,6 @@ AnyFolder Seg={
   AnySeg Metacarpal={
     Mass=..Mass1;
     Jii={0,0,0};
-    #include "../DrawSettings/Nodes.any"
     r0= ..InsertationNode.sRel*...Carpals.Axes0'+ ...Carpals.r0-ProximalJointNode.sRel*Axes0';
     Axes0 = ...Carpals.Axes0* ..InsertationNode.ARel*
 //    RotMat((pi/180)*..JntPos.CMCFlexion,z)*

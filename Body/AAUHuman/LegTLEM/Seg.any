@@ -198,16 +198,13 @@ AnySeg Foot =
     AnyRefNode MedialMalleolus =
     {
       sRel = .Scale(.Data.MedialMalleolus );
-      //#include "../DrawSettings/BML.any"
     };
 
     AnyRefNode LateralMalleolus =
     {
       sRel = .Scale(.Data.LateralMalleolus );
-      //#include "../DrawSettings/BML.any"
     };
 
-    #include "../DrawSettings/Nodes.any"
     #include "../DrawSettings/SegmentAxes.any"
 
     AnyDrawSurf DrwSurf =
@@ -255,18 +252,15 @@ AnySeg Foot =
   AnyRefNode MedialMalleolus =
   {
     sRel = .Scale(.Data.MedialMalleolusInNeutralConf );
-    //#include "../DrawSettings/BML.any"
   };
   AnyRefNode LateralMalleolus =
   {
     sRel = .Scale(.Data.LateralMalleolusInNeutralConf );
-    //#include "../DrawSettings/BML.any"
   };
 
   AnyRefNode IntraMallolar =
   {
     sRel =0.5* (.MedialMalleolus.sRel+.LateralMalleolus.sRel);
-    //  #include "../DrawSettings/BML.any"
   };
   AnyRefNode HeelPlantar =
   {
@@ -459,7 +453,6 @@ AnySeg Foot =
   AnyRefNode Metatarsal5Contact  = {sRel = .Scale( .Data.Metatarsal5ContactNode );};
   //  AnyRefNode MetatarsalJoint  = {sRel = .Scale( .Data.MetatarsalJoint );};
 
-  #include "../DrawSettings/Nodes.any"
   #include "../DrawSettings/SegmentAxes.any"
 
   AnyDrawSurf DrwSurf = {
@@ -807,44 +800,36 @@ AnySeg Shank =
   AnyRefNode MedialTibialEpicondyle =
   {
     sRel = .Scale(.Data.MedialTibialEpicondyle);
-    #include "../DrawSettings/BML.any"
   };
   AnyRefNode LateralTibialEpicondyle =
   {
     sRel = .Scale( .Data.LateralTibialEpicondyle );
-    #include "../DrawSettings/BML.any"
   };
   AnyRefNode IntraTibialEpicondyle =
   {
     sRel = (.MedialTibialEpicondyle.sRel+.LateralTibialEpicondyle.sRel)*0.5 ;
-    #include "../DrawSettings/BML.any"
   };
   AnyRefNode TibialTuberosity =
   {
     sRel = .Scale( .Data.TibialTuberosity  );
-    #include "../DrawSettings/BML.any"
   };
   AnyRefNode FibularHead =
   {
     sRel = .Scale( .Data.FibularHead );
-    #include "../DrawSettings/BML.any"
   };
   AnyRefNode MedialMalleolus =
   {
     sRel = .Scale( .Data.MedialMalleolus );
-    #include "../DrawSettings/BML.any"
 
   };
   AnyRefNode LateralMalleolus =
   {
     sRel = .Scale( .Data.LateralMalleolus );
-    #include "../DrawSettings/BML.any"
 
   };
   AnyRefNode IntraMallolar =
   {
     sRel =0.5* (.MedialMalleolus.sRel+.LateralMalleolus.sRel);
-    #include "../DrawSettings/BML.any"
   };
 
   #if TLEM_JOINT_TYPE_PATELLATENDON != _JOINT_TYPE_USERDEFINED_
@@ -1062,7 +1047,6 @@ AnySeg Shank =
     };
   #endif
 
-  #include "../DrawSettings/Nodes.any"
   #include "../DrawSettings/SegmentAxes.any"
 
 }; // End of Shank
@@ -1075,7 +1059,6 @@ AnySeg Thigh =
   JaboutCoMOnOff = On;
   r0 ??= .Pelvis.HipJoint.sRel*....Trunk.Segments.PelvisSeg.Axes0'+    ....Trunk.Segments.PelvisSeg.r0-    HipJoint.sRel*Axes0';
 
-  #include "../DrawSettings/Nodes.any"
   #include "../DrawSettings/SegmentAxes.any"
 
   AnyFloat pUnscaled = {Data.HipJoint, Data.EpicondylusFemorisMedialis, Data.EpicondylusFemorisLateralis};
@@ -1289,12 +1272,10 @@ AnySeg Thigh =
   AnyRefNode EpicondylusFemorisMedialis =
   {
     sRel=.Scale(.Data.EpicondylusFemorisMedialis);// Coordinates of the Medial Femur Epicondyle bony landmark, Klein Horsman
-    #include "../DrawSettings/BML.any"
   };
   AnyRefNode EpicondylusFemorisLateralis =
   {
     sRel = .Scale(.Data.EpicondylusFemorisLateralis );// Coordinates of the lateral Femur Epicondyle bony landmark, Klein Horsman
-    #include "../DrawSettings/BML.any"
   };
   AnyRefNode EpicondylusFemorisMidPoint =
   {
@@ -1608,7 +1589,6 @@ AnySeg Patella =
   };
   #endif
 
-  #include "../DrawSettings/Nodes.any"
   #include "../DrawSettings/SegmentAxes.any"
 
   // Patella insertion points

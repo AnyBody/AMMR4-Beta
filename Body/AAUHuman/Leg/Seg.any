@@ -45,7 +45,6 @@ AnySeg Foot = {
   #undef MACRO_CONSTRUCT_ANATOMICAL_FRAME_A2
 
 
-  #include "../DrawSettings/Nodes.any"
   #include "../DrawSettings/SegmentAxes.any"
 
   //AnyFunTransform3D &Scale =..Scaling.GeometricalScaling.Foot.ScaleFunction;
@@ -195,7 +194,6 @@ AnySeg Shank = {
 
   r0=.Thigh.KneeJoint.sRel*.Thigh.Axes0'+.Thigh.r0-KneeJoint.sRel*Axes0';
 
-  #include "../DrawSettings/Nodes.any"
   #include "../DrawSettings/SegmentAxes.any"
 
   AnyFunTransform3D& Scale = ..GeoScaling.Shank.ScaleFunction;
@@ -331,7 +329,6 @@ AnySeg Thigh = {
 
   r0=..HipNodeRef.sRel*....Trunk.Segments.PelvisSeg.Axes0'+    ....Trunk.Segments.PelvisSeg.r0-    HipJoint.sRel*Axes0';
 
-  #include "../DrawSettings/Nodes.any"
   #include "../DrawSettings/SegmentAxes.any"
 
   AnyFunTransform3D& Scale = ..GeoScaling.Thigh.ScaleFunction;
@@ -390,7 +387,6 @@ AnySeg Thigh = {
   };
 
   AnyRefNode CondylusMedialis = {sRel = .Scale({-0.025, -0.29, ...Sign*-0.028});
-    #include "../DrawSettings/BML.any"
   }; // Guesstimate
 
   AnyRefNode GluteusMinimusNode = {sRel = .Scale({0.003, 0.173, ...Sign*0.037});};
