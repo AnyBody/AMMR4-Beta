@@ -75,7 +75,6 @@ AnySeg Foot = {
 
   AnyRefNode AnkleJoint = {
     sRel = .Scale({0.06, 0.06, ...Sign*0.0});
-    #include "../DrawSettings/JointAxesProximal.any"
   };
 
   AnyRefNode Toetip = {
@@ -140,10 +139,6 @@ AnySeg Foot = {
   AnyRefNode MetatarsalJoint5Node = {sRel = .Scale({-0.005, -0.043, ...Sign*0.05});  };
 
   AnyRefNode MalleousLateralNode = {sRel = .Scale({0.065, 0.053, ...Sign*0.025});};
-
-
-
-
 
 
   AnyRefNode SoleusNode = {sRel = .Scale({0.028, 0.108, ...Sign*-0.001});};
@@ -260,7 +255,6 @@ AnySeg Shank = {
   };
   AnyRefNode KneeJoint = {
     sRel = .Scale({0.0, 0.1992, ...Sign*0.0});
-    #include "../DrawSettings/JointAxesProximal.any"
   };
 
   AnyRefNode QuadricepsNode = {sRel = .Scale({0.032, 0.110, ...Sign*0.01});}; // Node for Vasti and Rectus Femoris.
@@ -391,7 +385,6 @@ AnySeg Thigh = {
   };
 
   AnyRefNode HipJoint = {
-    #include "../DrawSettings/JointAxesProximal.any"
     sRel = .Scale({0.0, 0.197-0.01, ...Sign*-0.038});
 
   };
