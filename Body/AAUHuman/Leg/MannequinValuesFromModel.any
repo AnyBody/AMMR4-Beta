@@ -1,0 +1,9 @@
+AnyVar AnyVar_HipFlexion = ...Interface.SIDE.HipFlexion.Pos[0]*180/pi;
+AnyVar AnyVar_HipAbduction = ...Interface.SIDE.HipAbduction.Pos[0]*180/pi;
+AnyVar AnyVar_HipExternalRotation = ...Interface.SIDE.HipExternalRotation.Pos[0]*180/pi;
+AnyVar AnyVar_KneeFlexion = ...Interface.SIDE.KneeFlexion.Pos[0]*180/pi;
+
+#if BM_FOOT_MODEL == _FOOT_MODEL_LEG_FOOT_
+  AnyVar AnyVar_AnklePlantarFlexion =...Interface.SIDE.AnklePlantarFlexion.Pos[0]*180/pi;
+  AnyVar AnyVar_AnkleEversion =...Interface.SIDE.AnkleEversion.Pos[0]*180/pi;
+#endif

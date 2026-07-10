@@ -1,0 +1,11 @@
+//Arm
+
+AnyVar AnyVar_SternoClavicularProtraction = ...Interface.SIDE.SternoClavicularProtraction.Pos[0]*180/pi;
+AnyVar AnyVar_SternoClavicularElevation = ...Interface.SIDE.SternoClavicularElevation.Pos[0]*180/pi;
+
+AnyVar AnyVar_GlenohumeralFlexion = ...Interface.SIDE.GlenohumeralFlexion.Pos[0]*180/pi;
+AnyVar AnyVar_GlenohumeralAbduction = ...Interface.SIDE.GlenohumeralAbduction.Pos[0]*180/pi;
+AnyVar AnyVar_GlenohumeralExternalRotation = ...Interface.SIDE.GlenohumeralExternalRotation.Pos[0]*180/pi;
+
+AnyVar AnyVar_ElbowFlexion = ...Interface.SIDE.ElbowFlexion.Pos[0]*180/pi;
+AnyVar AnyVar_ElbowPronation = ...Interface.SIDE.ElbowPronation.Pos[0]*180/pi;
