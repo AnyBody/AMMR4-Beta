@@ -1,4 +1,10 @@
-AnyDrawRefFrame DrwRef = {
-  ScaleXYZ = Main.DrawSettings.SegmentAxes.ScaleXYZ;
-  RGB = Main.DrawSettings.SegmentNodes.RGB;
+/*
+  Draw settings for segment axes that are ....... (7) levels away from the DrawSettings
+  folder. Due to the fact that segments are on different level in the model hierarchy,
+  multiple versions of this file exists
+*/
+
+viewRefFrame = {
+  ScaleXYZ = .......DrawSettings.SegmentAxes.ScaleXYZ;
+  RGB = .......DrawSettings.SegmentNodes.RGB;
 };

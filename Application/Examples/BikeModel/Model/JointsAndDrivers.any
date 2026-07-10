@@ -99,7 +99,7 @@ AnyFolder Right={
     AnyRefNode &ref1= ....BikeModel.Crank.RPedal;
     AnyRefNode &ref2 = ...ModelFolder.Right.Leg.Segments.Foot.Metatarsal2.PedalConnectNode;
     #include "<ANYBODY_PATH_MODELUTILS>/JointReactions/DrawJointReactions.any"
-    AnyFolder &DrawRef=Main.DrawSettings;
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings;
   };
   AnySeg& Ref_Foot = ..ModelFolder.Right.Leg.Segments.Foot;
   Ref_Foot =
@@ -238,7 +238,7 @@ AnyFolder Left = {
     AnyRefNode &ref2 = ...ModelFolder.Left.Leg.Segments.Foot.PedalConnectNode;
     //    AnyDrawRefFrame Drw={}; //this lines adds a visible coordinate system in the ref2 node, and since the ref2 node points at the groundjoint at the foot it will display it there .. you could also have inserted it directly where the GroundJointNode was created
     #include "<ANYBODY_PATH_MODELUTILS>/JointReactions/DrawJointReactions.any"
-    AnyFolder &DrawRef=Main.DrawSettings;
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings;
   };
   AnySeg& Ref_Foot = ..ModelFolder.Left.Leg.Segments.Foot;
   Ref_Foot =
@@ -378,7 +378,7 @@ of the knee when the pedal width is increased. */
     AnyRefNode &ref1 = ....BikeModel.BikeFrame.Handlebar.RightHand;
     AnyRefFrame &ref2= ...ModelFolder.Right.ShoulderArm.Segments.Glove;
  #include "<ANYBODY_PATH_MODELUTILS>/JointReactions/DrawJointReactions.any"
-      AnyFolder &DrawRef=Main.DrawSettings;
+      AnyFolder &DrawRef=Main.HumanModel.DrawSettings;
 
   }; //Hand to ground
 
@@ -448,7 +448,7 @@ of the knee when the pedal width is increased. */
     AnyRefNode &ref1 = ....BikeModel.BikeFrame.Handlebar.LeftHand;
    AnyRefFrame &ref2= ...ModelFolder.Left.ShoulderArm.Segments.Glove;
         #include "<ANYBODY_PATH_MODELUTILS>/JointReactions/DrawJointReactions.any"
-  AnyFolder &DrawRef=Main.DrawSettings;
+  AnyFolder &DrawRef=Main.HumanModel.DrawSettings;
    }; //Hand to bike
 
   AnyKinRotational HandToBikeRot = {

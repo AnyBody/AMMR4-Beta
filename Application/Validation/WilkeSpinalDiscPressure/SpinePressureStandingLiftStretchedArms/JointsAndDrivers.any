@@ -53,7 +53,7 @@ AnyFolder Joints = {
     AnySeg &EndNode = Main.Model.BodyModel.Left.ShoulderArm.Segments.Glove;    //The terms push and pull are determined wrt. the coordinate system of the StartNode!
 
     AnyVector StrengthOfReactionsLin = {.FrictionStrength,.FrictionStrength,.Strength,.FrictionStrength,.FrictionStrength,.FrictionStrength}; //List of strengths for the linear muscles
-    AnyFolder &DrawRef=Main.DrawSettings;
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings;
     AnyVar ScaleFactor =0.5;
     #include "<ANYBODY_PATH_MODELUTILS>/Reactions/XPush.any"
     #include "<ANYBODY_PATH_MODELUTILS>/Reactions/XPull.any"
@@ -70,7 +70,7 @@ AnyFolder Joints = {
     AnySeg &EndNode = Main.Model.BodyModel.Right.ShoulderArm.Segments.Glove;    //The terms push and pull are determined wrt. the coordinate system of the StartNode!
 
     AnyVector StrengthOfReactionsLin = {.FrictionStrength,.FrictionStrength,.Strength,.FrictionStrength,.FrictionStrength,.FrictionStrength}; //List of strengths for the linear muscles
-    AnyFolder &DrawRef=Main.DrawSettings;
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings;
     AnyVar ScaleFactor =0.5;
     #include "<ANYBODY_PATH_MODELUTILS>/Reactions/XPush.any"
     #include "<ANYBODY_PATH_MODELUTILS>/Reactions/XPull.any"
@@ -411,7 +411,7 @@ AnyFolder Drivers = {
       AnyRefFrame &BaseObject=Main.Model.EnvironmentModel.GlobalRef; //Object which delivers the forces
       AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 
-      AnyFolder &DrawRef=Main.DrawSettings; //reference to the folder which contains drawsettings
+      AnyFolder &DrawRef=Main.HumanModel.DrawSettings; //reference to the folder which contains drawsettings
       //low limit for the strength measure function, if the distance measured along Direction[0] is below this val. the strength will be zero (negative)
       AnyVar UserDefinedLimitLow=-0.05;
       //high limit for the strength measure function, if the distance measured along Direction[0] is above this val. the strength will be zero
@@ -435,7 +435,7 @@ AnyFolder Drivers = {
       AnyRefFrame &BaseObject=Main.Model.EnvironmentModel.GlobalRef; //Object which delivers the forces
       AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 
-      AnyFolder &DrawRef=Main.DrawSettings; //reference to the folder which contains drawsettings
+      AnyFolder &DrawRef=Main.HumanModel.DrawSettings; //reference to the folder which contains drawsettings
       //low limit for the strength measure function, if the distance measured along Direction[0] is below this val. the strength will be zero (negative)
       AnyVar UserDefinedLimitLow=-0.05;
       //high limit for the strength measure function, if the distance measured along Direction[0] is above this val. the strength will be zero
@@ -460,7 +460,7 @@ AnyFolder Drivers = {
       AnyRefFrame &BaseObject=Main.Model.EnvironmentModel.GlobalRef; //Object which delivers the forces
       AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 
-      AnyFolder &DrawRef=Main.DrawSettings; //reference to the folder which contains drawsettings
+      AnyFolder &DrawRef=Main.HumanModel.DrawSettings; //reference to the folder which contains drawsettings
       //low limit for the strength measure function, if the distance measured along Direction[0] is below this val. the strength will be zero (negative)
       AnyVar UserDefinedLimitLow=-0.05;
       //high limit for the strength measure function, if the distance measured along Direction[0] is above this val. the strength will be zero
@@ -484,7 +484,7 @@ AnyFolder Drivers = {
       AnyRefFrame &BaseObject=Main.Model.EnvironmentModel.GlobalRef; //Object which delivers the forces
       AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 
-      AnyFolder &DrawRef=Main.DrawSettings; //reference to the folder which contains drawsettings
+      AnyFolder &DrawRef=Main.HumanModel.DrawSettings; //reference to the folder which contains drawsettings
       //low limit for the strength measure function, if the distance measured along Direction[0] is below this val. the strength will be zero (negative)
       AnyVar UserDefinedLimitLow=-0.05;
       //high limit for the strength measure function, if the distance measured along Direction[0] is above this val. the strength will be zero
@@ -507,7 +507,7 @@ AnyFolder Drivers = {
       AnyRefFrame &BaseObject=Main.Model.EnvironmentModel.GlobalRef; //Object which delivers the forces
       AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 
-      AnyFolder &DrawRef=Main.DrawSettings; //reference to the folder which contains drawsettings
+      AnyFolder &DrawRef=Main.HumanModel.DrawSettings; //reference to the folder which contains drawsettings
       //low limit for the strength measure function, if the distance measured along Direction[0] is below this val. the strength will be zero (negative)
       AnyVar UserDefinedLimitLow=-0.05;
       //high limit for the strength measure function, if the distance measured along Direction[0] is above this val. the strength will be zero
@@ -533,7 +533,7 @@ AnyFolder Drivers = {
       AnyRefFrame &BaseObject=Main.Model.EnvironmentModel.GlobalRef; //Object which delivers the forces
       AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 
-      AnyFolder &DrawRef=Main.DrawSettings; //reference to the folder which contains drawsettings
+      AnyFolder &DrawRef=Main.HumanModel.DrawSettings; //reference to the folder which contains drawsettings
       //low limit for the strength measure function, if the distance measured along Direction[0] is below this val. the strength will be zero (negative)
       AnyVar UserDefinedLimitLow=-0.05;
       //high limit for the strength measure function, if the distance measured along Direction[0] is above this val. the strength will be zero

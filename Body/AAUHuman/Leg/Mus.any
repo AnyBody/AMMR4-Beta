@@ -9,19 +9,19 @@
 
 // -------------------------------------------------------
 // This is an interface reference to make sure that the
-// include file MusDrawSettings.any always can be left
+// include file MusDrawSettings2.any always can be left
 // unchanged and not affected by different directory
 // levels.
 // -------------------------------------------------------
 
-AnyFolder &Ref = Main.DrawSettings.Muscle;
+AnyFolder &Ref = ....DrawSettings.Muscle;
 
 #if BM_FOOT_MODEL == _FOOT_MODEL_LEG_FOOT_
 AnyMuscleViaPoint Soleus = {
   AnyMuscleModel &MusMdl = ..MuscleModels.SoleusPar;
   AnyRefNode &Org = ..Segments.Shank.SoleusNode;
   AnyRefNode &Ins = ..Segments.Foot.SoleusNode;
-  viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+  viewMuscle = {#include "../DrawSettings/MusDrawSettings2.any"};
 };
 
 AnyMuscleViaPoint Gastrocnemius = {
@@ -29,7 +29,7 @@ AnyMuscleViaPoint Gastrocnemius = {
   AnyRefNode &Org = ..Segments.Thigh.GastrocnemiusNode;
   AnyRefNode &Via = ..Segments.Shank.GastrocnemiusViaNode;
   AnyRefNode &Ins = ..Segments.Foot.GastrocnemiusNode;
-  viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+  viewMuscle = {#include "../DrawSettings/MusDrawSettings2.any"};
 };
 
 AnyMuscleViaPoint FlexorDigitorumLongus = {
@@ -37,7 +37,7 @@ AnyMuscleViaPoint FlexorDigitorumLongus = {
   AnyRefNode &Org = ..Segments.Shank.FlexorDigitorumLongusNode;
   AnyRefNode &Via = ..Segments.Foot.FlexorDigitorumLongusViaNode;
   AnyRefNode &Ins = ..Segments.Foot.FlexorDigitorumLongusNode;
-  viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"
+  viewMuscle = {#include "../DrawSettings/MusDrawSettings2.any"
   };
 };
 
@@ -46,7 +46,7 @@ AnyMuscleViaPoint FlexorHallucisLongus = {
   AnyRefNode &Org = ..Segments.Shank.FlexorHallucisLongusNode;
   AnyRefNode &Via = ..Segments.Foot.FlexorHallucisLongusViaNode;
   AnyRefNode &Ins = ..Segments.Foot.FlexorHallucisLongusNode;
-  viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+  viewMuscle = {#include "../DrawSettings/MusDrawSettings2.any"};
 };
 
 AnyMuscleViaPoint TibialisPosterior = {
@@ -54,7 +54,7 @@ AnyMuscleViaPoint TibialisPosterior = {
   AnyRefNode &Org = ..Segments.Shank.TibialisPosteriorNode;
   AnyRefNode &Via = ..Segments.Foot.TibialisPosteriorViaNode;
   AnyRefNode &Ins = ..Segments.Foot.TibialisPosteriorNode;
-  viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+  viewMuscle = {#include "../DrawSettings/MusDrawSettings2.any"};
 
 };
 
@@ -63,7 +63,7 @@ AnyMuscleViaPoint PeroneusBrevis = {
   AnyRefNode &Org = ..Segments.Shank.PeroneusBrevisNode;
   AnyRefNode &Via = ..Segments.Foot.PeroneusBrevisViaNode;
   AnyRefNode &Ins = ..Segments.Foot.PeroneusBrevisNode;
-  viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+  viewMuscle = {#include "../DrawSettings/MusDrawSettings2.any"};
 };
 
 AnyMuscleViaPoint TibialisAnterior = {
@@ -71,7 +71,7 @@ AnyMuscleViaPoint TibialisAnterior = {
   AnyRefNode &Org = ..Segments.Shank.TibialisAnteriorNode;
   AnyRefNode &Via = ..Segments.Foot.TibialisAnteriorViaNode;
   AnyRefNode &Ins = ..Segments.Foot.TibialisAnteriorNode;
-  viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+  viewMuscle = {#include "../DrawSettings/MusDrawSettings2.any"};
 };
 
 AnyMuscleViaPoint ExtensorDigitorumLongus = {
@@ -79,7 +79,7 @@ AnyMuscleViaPoint ExtensorDigitorumLongus = {
   AnyRefNode &Org = ..Segments.Shank.ExtensorDigitorumLongusNode;
   AnyRefNode &Via = ..Segments.Foot.ExtensorDigitorumViaNode;
   AnyRefNode &Ins = ..Segments.Foot.ExtensorDigitorumLongusNode;
-  viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+  viewMuscle = {#include "../DrawSettings/MusDrawSettings2.any"};
 };
 
 AnyMuscleViaPoint ExtensorHallucisLongus = {
@@ -87,7 +87,7 @@ AnyMuscleViaPoint ExtensorHallucisLongus = {
   AnyRefNode &Org = ..Segments.Shank.ExtensorHallucisLongusNode;
   AnyRefNode &Via = ..Segments.Foot.ExtensorHallucisViaNode;
   AnyRefNode &Ins = ..Segments.Foot.ExtensorHallucisLongusNode;
-  viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+  viewMuscle = {#include "../DrawSettings/MusDrawSettings2.any"};
 };
 #endif
 
@@ -98,7 +98,7 @@ AnyMuscleViaPoint VastusLateralis = {
   AnyRefNode &Via1 = ..Segments.Thigh.QuadricepsViaNode1;
   AnyRefNode &Via2 = ..Segments.Thigh.QuadricepsViaNode2;
   AnyRefNode &Ins = ..Segments.Shank.QuadricepsNode;
-  viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+  viewMuscle = {#include "../DrawSettings/MusDrawSettings2.any"};
 };
 
 AnyMuscleViaPoint VastusMedialis = {
@@ -107,7 +107,7 @@ AnyMuscleViaPoint VastusMedialis = {
   AnyRefNode &Via1 = ..Segments.Thigh.QuadricepsViaNode1;
   AnyRefNode &Via2 = ..Segments.Thigh.QuadricepsViaNode2;
   AnyRefNode &Ins = ..Segments.Shank.QuadricepsNode;
-  viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+  viewMuscle = {#include "../DrawSettings/MusDrawSettings2.any"};
 };
 
 AnyMuscleViaPoint VastusIntermedius = {
@@ -116,7 +116,7 @@ AnyMuscleViaPoint VastusIntermedius = {
   AnyRefNode &Via1 = ..Segments.Thigh.QuadricepsViaNode1;
   AnyRefNode &Via2 = ..Segments.Thigh.QuadricepsViaNode2;
   AnyRefNode &Ins = ..Segments.Shank.QuadricepsNode;
-  viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+  viewMuscle = {#include "../DrawSettings/MusDrawSettings2.any"};
 };
 
 AnyMuscleViaPoint RectusFemoris = {
@@ -125,7 +125,7 @@ AnyMuscleViaPoint RectusFemoris = {
   AnyRefNode &Via1 = ..Segments.Thigh.QuadricepsViaNode1;
   AnyRefNode &Via2 = ..Segments.Thigh.QuadricepsViaNode2;
   AnyRefNode &Ins = ..Segments.Shank.QuadricepsNode;
-  viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+  viewMuscle = {#include "../DrawSettings/MusDrawSettings2.any"};
 };
 // End Quadriceps.
 
@@ -136,7 +136,7 @@ AnyMuscleViaPoint Semitendinosus = {
   AnyRefNode &Org = ..HipNodeRef.SemitendinosusNode;
   AnyRefNode &Via = ..Segments.Shank.SemitendinosusViaNode;
   AnyRefNode &Ins = ..Segments.Shank.SemitendinosusNode;
-  viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+  viewMuscle = {#include "../DrawSettings/MusDrawSettings2.any"};
 };
 
 AnyMuscleViaPoint Semimembranosus = {
@@ -144,7 +144,7 @@ AnyMuscleViaPoint Semimembranosus = {
   AnyRefNode &Org = ..HipNodeRef.SemimembranosusNode;
   AnyRefNode &Via = ..Segments.Shank.SemimembranosusViaNode;
   AnyRefNode &Ins = ..Segments.Shank.SemimembranosusNode;
-  viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+  viewMuscle = {#include "../DrawSettings/MusDrawSettings2.any"};
 };
 
 AnyMuscleViaPoint BicepsFemorisCaputLongum = {
@@ -152,7 +152,7 @@ AnyMuscleViaPoint BicepsFemorisCaputLongum = {
   AnyRefNode &Org = ..HipNodeRef.BicepsFemorisCaputLongumNode;
   AnyRefNode &Via = ..Segments.Shank.BicepsFemorisCaputLongumViaNode;
   AnyRefNode &Ins = ..Segments.Shank.BicepsFemorisCaputLongumNode;
-  viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+  viewMuscle = {#include "../DrawSettings/MusDrawSettings2.any"};
 };
 
 AnyMuscleViaPoint BicepsFemorisCaputBreve = {
@@ -160,7 +160,7 @@ AnyMuscleViaPoint BicepsFemorisCaputBreve = {
   AnyRefNode &Org = ..Segments.Thigh.BicepsFemorisCaputBreveNode;
   AnyRefNode &Via = ..Segments.Shank.BicepsFemorisCaputBreveViaNode;
   AnyRefNode &Ins = ..Segments.Shank.BicepsFemorisCaputBreveNode;
-  viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+  viewMuscle = {#include "../DrawSettings/MusDrawSettings2.any"};
 };
 //
 AnyMuscleViaPoint Sartorius = {
@@ -170,7 +170,7 @@ AnyMuscleViaPoint Sartorius = {
   AnyRefNode &Via2 = ..Segments.Shank.SartoriusViaNode2;
   AnyRefNode &Via3 = ..Segments.Shank.SartoriusViaNode3;
   AnyRefNode &Ins = ..Segments.Shank.SartoriusNode;
-  viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+  viewMuscle = {#include "../DrawSettings/MusDrawSettings2.any"};
 };
 
 AnyMuscleViaPoint Gracilis = {
@@ -179,7 +179,7 @@ AnyMuscleViaPoint Gracilis = {
   AnyRefNode &Via = ..Segments.Shank.GracilisViaNode;
   AnyRefNode &Via1 = ..Segments.Shank.GracilisViaNode1;
   AnyRefNode &Ins = ..Segments.Shank.GracilisNode;
-  viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+  viewMuscle = {#include "../DrawSettings/MusDrawSettings2.any"};
 };
 // End of Hamstrings
 
@@ -190,7 +190,7 @@ AnyMuscleShortestPath Iliopsoas = {
   AnyRefNode &Org = ..HipNodeRef.IliopsoasNode;
   //AnyRefNode &Via1 = ..HipNodeRef.IliopsoasViaNode1;
   AnyRefNode &Ins = ..Segments.Thigh.IliopsoasNode;
-  viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+  viewMuscle = {#include "../DrawSettings/MusDrawSettings2.any"};
   SPLine.StringMesh = 50;
   AnySurfCylinder &Surf1 =..HipNodeRef.pecent_ossis_pubis.cyl;
   SPLine.InitWrapPosVectors = {    {0.04,0.03,0.0*..Sign}, {0.1,..Sign*0.0,0.0}  };
@@ -203,49 +203,49 @@ AnyMuscleViaPoint Iliopsoas = {
   AnyRefNode &Org = ..HipNodeRef.IliopsoasNode;
   AnyRefNode &Via1 = ..HipNodeRef.IliopsoasViaNode1;
   AnyRefNode &Ins = ..Segments.Thigh.IliopsoasNode;
-  viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+  viewMuscle = {#include "../DrawSettings/MusDrawSettings2.any"};
 };*/
 
 AnyMuscleViaPoint GluteusMinimus1 = {
   AnyMuscleModel &MusMdl = ..MuscleModels.GluteusMinimus1Par;
   AnyRefNode &Org = ..HipNodeRef.GluteusMinimus1Node;
   AnyRefNode &Ins = ..Segments.Thigh.GluteusMinimusNode;
-  viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+  viewMuscle = {#include "../DrawSettings/MusDrawSettings2.any"};
 };
 
 AnyMuscleViaPoint GluteusMinimus2 = {
   AnyMuscleModel &MusMdl = ..MuscleModels.GluteusMinimus2Par;
   AnyRefNode &Org = ..HipNodeRef.GluteusMinimus2Node;
   AnyRefNode &Ins = ..Segments.Thigh.GluteusMinimusNode;
-  viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+  viewMuscle = {#include "../DrawSettings/MusDrawSettings2.any"};
 };
 
 AnyMuscleViaPoint GluteusMinimus3 = {
   AnyMuscleModel &MusMdl = ..MuscleModels.GluteusMinimus3Par;
   AnyRefNode &Org = ..HipNodeRef.GluteusMinimus3Node;
   AnyRefNode &Ins = ..Segments.Thigh.GluteusMinimusNode;
-  viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+  viewMuscle = {#include "../DrawSettings/MusDrawSettings2.any"};
 };
 
 AnyMuscleViaPoint GluteusMedius1 = {
   AnyMuscleModel &MusMdl = ..MuscleModels.GluteusMedius1Par;
   AnyRefNode &Org = ..HipNodeRef.GluteusMedius1Node;
   AnyRefNode &Ins = ..Segments.Thigh.GluteusMediusNode;
-  viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+  viewMuscle = {#include "../DrawSettings/MusDrawSettings2.any"};
 };
 
 AnyMuscleViaPoint GluteusMedius2 = {
   AnyMuscleModel &MusMdl = ..MuscleModels.GluteusMedius2Par;
   AnyRefNode &Org = ..HipNodeRef.GluteusMedius2Node;
   AnyRefNode &Ins = ..Segments.Thigh.GluteusMediusNode;
-  viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+  viewMuscle = {#include "../DrawSettings/MusDrawSettings2.any"};
 };
 
 AnyMuscleViaPoint GluteusMedius3 = {
   AnyMuscleModel &MusMdl = ..MuscleModels.GluteusMedius3Par;
   AnyRefNode &Org = ..HipNodeRef.GluteusMedius3Node;
   AnyRefNode &Ins = ..Segments.Thigh.GluteusMediusNode;
-  viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+  viewMuscle = {#include "../DrawSettings/MusDrawSettings2.any"};
 };
 
 AnyMuscleViaPoint GluteusMaximus1 = {
@@ -254,7 +254,7 @@ AnyMuscleViaPoint GluteusMaximus1 = {
   AnyRefNode &Via1 = ..HipNodeRef.GluteusMaximus1ViaNode1;
   AnyRefNode &Via2 = ..Segments.Thigh.GluteusMaximus1ViaNode2;
   AnyRefNode &Ins = ..Segments.Shank.GluteusMaximus1Node;
-  viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+  viewMuscle = {#include "../DrawSettings/MusDrawSettings2.any"};
 };
 
 AnyMuscleViaPoint GluteusMaximus2 = {
@@ -264,7 +264,7 @@ AnyMuscleViaPoint GluteusMaximus2 = {
   AnyRefNode &Via2 = ..HipNodeRef.GluteusMaximus2ViaNode2;
   AnyRefNode &Via3 = ..Segments.Thigh.GluteusMaximus2ViaNode3;
   AnyRefNode &Ins = ..Segments.Shank.GluteusMaximus2Node;
-  viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"  };
+  viewMuscle = {#include "../DrawSettings/MusDrawSettings2.any"  };
 };
 
 AnyMuscleViaPoint GluteusMaximus3 = {
@@ -272,7 +272,7 @@ AnyMuscleViaPoint GluteusMaximus3 = {
   AnyRefNode &Org = ..HipNodeRef.GluteusMaximus3Node;
   AnyRefNode &Via1 = ..HipNodeRef.GluteusMaximus3ViaNode1;
   AnyRefNode &Ins = ..Segments.Thigh.GluteusMaximus3Node;
-  viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"  };
+  viewMuscle = {#include "../DrawSettings/MusDrawSettings2.any"  };
 };
 
 AnyMuscleViaPoint TensorFasciaeLatae = {
@@ -280,7 +280,7 @@ AnyMuscleViaPoint TensorFasciaeLatae = {
   AnyRefNode &Org = ..HipNodeRef.TensorFasciaeLataeNode;
   AnyRefNode &Via2 = ..Segments.Thigh.TensorFasciaeLataeViaNode2;
   AnyRefNode &Ins = ..Segments.Shank.TensorFasciaeLataeNode;
-  viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+  viewMuscle = {#include "../DrawSettings/MusDrawSettings2.any"};
 };
 
 AnyMuscleViaPoint Piriformis = {
@@ -288,35 +288,35 @@ AnyMuscleViaPoint Piriformis = {
   AnyRefNode &Org = ..HipNodeRef.PiriformisNode;
   AnyRefNode &Via = ..HipNodeRef.PiriformisViaNode;
   AnyRefNode &Ins = ..Segments.Thigh.PiriformisNode;
-  viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+  viewMuscle = {#include "../DrawSettings/MusDrawSettings2.any"};
 };
 
 AnyMuscleViaPoint AdductorLongus = {
   AnyMuscleModel &MusMdl = ..MuscleModels.AdductorLongusPar;
   AnyRefNode &Org = ..HipNodeRef.AdductorLongusNode;
   AnyRefNode &Ins = ..Segments.Thigh.AdductorLongusNode;
-  viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+  viewMuscle = {#include "../DrawSettings/MusDrawSettings2.any"};
 };
 
 AnyMuscleViaPoint AdductorMagnus1 = {
   AnyMuscleModel &MusMdl = ..MuscleModels.AdductorMagnus1Par;
   AnyRefNode &Org = ..HipNodeRef.AdductorMagnusNode;
   AnyRefNode &Ins = ..Segments.Thigh.AdductorMagnus1Node;
-  viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+  viewMuscle = {#include "../DrawSettings/MusDrawSettings2.any"};
 };
 
 AnyMuscleViaPoint AdductorMagnus2 = {
   AnyMuscleModel &MusMdl = ..MuscleModels.AdductorMagnus2Par;
   AnyRefNode &Org = ..HipNodeRef.AdductorMagnusNode;
   AnyRefNode &Ins = ..Segments.Thigh.AdductorMagnus2Node;
-  viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+  viewMuscle = {#include "../DrawSettings/MusDrawSettings2.any"};
 };
 
 AnyMuscleViaPoint AdductorMagnus3 = {
   AnyMuscleModel &MusMdl = ..MuscleModels.AdductorMagnus3Par;
   AnyRefNode &Org = ..HipNodeRef.AdductorMagnusNode;
   AnyRefNode &Ins = ..Segments.Thigh.AdductorMagnus3Node;
-  viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+  viewMuscle = {#include "../DrawSettings/MusDrawSettings2.any"};
 };
 
 
@@ -326,13 +326,13 @@ AnyMuscleViaPoint QuadratusFemoris = {
   AnyMuscleModel &MusMdl = ..MuscleModels.QuadratusFemorisPar;
   AnyRefNode &Org = ..HipNodeRef.QuadratusFemorisNode;
   AnyRefNode &Ins = ..Segments.Thigh.QuadratusFemorisNode;
-  viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+  viewMuscle = {#include "../DrawSettings/MusDrawSettings2.any"};
 };
 AnyMuscleViaPoint AbductorBrevis = {
   AnyMuscleModel &MusMdl = ..MuscleModels.AbductorBrevisPar;
   AnyRefNode &Org = ..HipNodeRef.AbductorBrevisNode;
   AnyRefNode &Ins = ..Segments.Thigh.AbductorBrevisNode;
-  viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+  viewMuscle = {#include "../DrawSettings/MusDrawSettings2.any"};
 
 };
 
@@ -343,7 +343,7 @@ AnyMuscleViaPoint ObturatoriusInternus  = {
   AnyRefNode &Org = ..HipNodeRef.ObturatoriusInternusNode;
   AnyRefNode &Via =..HipNodeRef.ObturatoriusInternusViaNode;
   AnyRefNode &Ins = ..Segments.Thigh.ObturatoriusInternusNode;
-  viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+  viewMuscle = {#include "../DrawSettings/MusDrawSettings2.any"};
 
 
 };
@@ -352,7 +352,7 @@ AnyMuscleViaPoint ObturatoriusInternus  = {
     AnyMuscleModel &MusMdl = ..MuscleModels.ObturatoriusExternusPar;
     AnyRefNode &Org = ..HipNodeRef.ObturatoriusExternusNode;
     AnyRefNode &Ins = ..Segments.Thigh.ObturatoriusExternusNode;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings2.any"};
 
 
 };
@@ -361,21 +361,21 @@ AnyMuscleViaPoint Pictineus  = {
     AnyMuscleModel &MusMdl = ..MuscleModels.PictineusPar;
     AnyRefNode &Org = ..HipNodeRef.PictineusNode;
     AnyRefNode &Ins = ..Segments.Thigh.PectineusNode ;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings2.any"};
 };
 
 AnyMuscleViaPoint GemmelusInferior  = {
     AnyMuscleModel &MusMdl = ..MuscleModels.GemellusInferiorPar;
     AnyRefNode &Org = ..HipNodeRef.GemellusInferiorNode;
     AnyRefNode &Ins = ..Segments.Thigh.GemellusInferiorNode ;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings2.any"};
 };
 
 AnyMuscleViaPoint GemmelusSuperior  = {
     AnyMuscleModel &MusMdl = ..MuscleModels.GemellusSuperiorPar;
     AnyRefNode &Org = ..HipNodeRef.GemellusSuperiorNode;
     AnyRefNode &Ins = ..Segments.Thigh.GemellusSuperiorNode ;
-    viewMuscle = {#include "../DrawSettings/MusDrawSettings.any"};
+    viewMuscle = {#include "../DrawSettings/MusDrawSettings2.any"};
 };
 
 

@@ -38,9 +38,13 @@ Segments.Ulna = {
     {0.02257921, 0.2679321, -0.001825629}
   };
 
-  AnyRefNode PalmarCylNode1           = {
-    sRel=.Scale(.DistalCyl[1])*.Mirror;
-    AnyDrawRefFrame rf={ScaleXYZ={1,1,1}*0.1;RGB={1,1,0};};
+  AnyRefNode PalmarCylNode1 = {
+    sRel = .Scale(.DistalCyl[1])*.Mirror;
+    viewRefFrame = {
+      Visible = On;
+      ScaleXYZ = {1,1,1}*0.1;
+      RGB = {1,1,0};
+    };
     AnyRefNode cylNode = {
       ARel = RotMat(..Mirror[1][1]*pi/2,x);
       AnySurfCylinder PalmarLigWrapping = {

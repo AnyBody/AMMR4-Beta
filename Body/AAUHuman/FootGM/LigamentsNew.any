@@ -153,71 +153,51 @@ AnyFolder CollateralMedial = {
 
 
   //L0 is length at 0deg flexion and 0deg eversion.
-  AnyLigamentViaPoint TibioTalarPosterior =
-  {
-   AnyFolder &LigParms=..LigParams.TibioTalarPosterior;
+  AnyLigamentViaPoint TibioTalarPosterior = {
+    AnyFolder &LigParms=..LigParams.TibioTalarPosterior;
 
-   AnyVar StiffScale=..FootLigStiffnessScale;
-  #include "LigParms.any"
-   #include "LigDriver.any"
+    AnyVar StiffScale=..FootLigStiffnessScale;
+    #include "LigParms.any"
+    #include "LigDriver.any"
 
     AnyRefFrame &ref1 = ...Segments.Shank.LigTibioTalarPosterior;
     AnyRefFrame &ref2 = ...Segments.Foot.Talus.LigTibioTalarPosterior;
-    //    AnyDrawPLine DrawLig =
-    //    {
-    //      Thickness = 0.0015;
-    //      RGB = Main.DrawSettings.Colors.Ligaments;
-    //    };
     AnyVar Eps = (Line.Pos[0] - LigMdl.L0)/LigMdl.L0;
-
   };
 
-  AnyLigamentViaPoint TibioTalarAnterior =
-  {
-   AnyFolder &LigParms=..LigParams.TibioTalarAnterior;
+  AnyLigamentViaPoint TibioTalarAnterior = {
+    AnyFolder &LigParms=..LigParams.TibioTalarAnterior;
 
-   AnyVar StiffScale=..FootLigStiffnessScale;
-  #include "LigParms.any"
+    AnyVar StiffScale=..FootLigStiffnessScale;
+    #include "LigParms.any"
     #include "LigDriver.any"
-
 
     AnyRefFrame &ref1 = ...Segments.Shank.LigTibioTalarAnterior;
     AnyRefFrame &ref2 = ...Segments.Foot.Talus.LigTibioTalarAnterior;
-    //    AnyDrawPLine DrawLig =
-    //    {
-    //      Thickness = 0.0015;
-    //      RGB = Main.DrawSettings.Colors.Ligaments;
-    //    };
     AnyVar Eps = (Line.Pos[0] - LigMdl.L0)/LigMdl.L0;
-
-
   };
 
 
-  AnyLigamentViaPoint TibioCalcaneal =
-  {
-   AnyFolder &LigParms=..LigParams.TibioCalcaneal;
+  AnyLigamentViaPoint TibioCalcaneal = {
+    AnyFolder &LigParms=..LigParams.TibioCalcaneal;
 
-     AnyVar StiffScale=..FootLigStiffnessScale;
- #include "LigParms.any"
-   #include "LigDriver.any"
+    AnyVar StiffScale=..FootLigStiffnessScale;
+    #include "LigParms.any"
+    #include "LigDriver.any"
 
     AnyRefFrame &ref1 = ...Segments.Shank.LigTibioCalcaneal;
     AnyRefFrame &ref2 = ...Segments.Foot.Calcaneus.LigTibioCalcaneal;
 
     AnyVar Eps = (Line.Pos[0] - LigMdl.L0)/LigMdl.L0;
 
-
   };
 
-  AnyLigamentViaPoint TibioNavicular =
-  {
-   AnyFolder &LigParms=..LigParams.TibioNavicular;
+  AnyLigamentViaPoint TibioNavicular = {
+    AnyFolder &LigParms=..LigParams.TibioNavicular;
 
     AnyVar StiffScale=..FootLigStiffnessScale;
-  #include "LigParms.any"
-   #include "LigDriver.any"
-
+    #include "LigParms.any"
+    #include "LigDriver.any"
 
     AnyRefFrame &ref1 = ...Segments.Shank.LigTibioNavicular;
     AnyRefFrame &ref2 = ...Segments.Foot.Navicular.LigTibioNavicular;

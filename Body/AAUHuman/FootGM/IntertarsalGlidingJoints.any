@@ -28,23 +28,19 @@ AnyFolder IntertarsalGlidingJoints = {
 
     AnyRefNode EllipsoidNodeDorsal = {
       sRel = .Scale({0.03726055, -0.006417992, ......Sign*-0.00888518});
-      //AnyDrawRefFrame drw={ScaleXYZ={0.01,0.01,0.01};RGB={1,0,0};};
     };
 
     AnyRefNode EllipsoidNodeProximal = {
       sRel = .Scale({0.02454242, 0.01431341, ......Sign*-0.01097702});
-      //AnyDrawRefFrame drw={ScaleXYZ={0.01,0.01,0.01};RGB={1,0,0};};
     };
 
     AnyRefNode EllipsoidNodeLateral = {
       sRel = .Scale({0.0243125, -0.002428305, ......Sign*-0.0010772021});
-      //AnyDrawRefFrame drw={ScaleXYZ={0.01,0.01,0.01};RGB={1,0,0};};
     };
 
     AnyRefNode EllipsoidNode = {
       sRel = .Scale({0.02374927, -0.002738375, ......Sign*-0.007224994});
       ARel = RotMat(sRel, .EllipsoidNodeDorsal.sRel, .EllipsoidNodeProximal.sRel);
-      //AnyDrawRefFrame drw={ScaleXYZ={0.01,0.01,0.01};RGB={1,0,0};};
       AnySurfEllipsoid ContactEllipsoid =
       {
         AnyVar Rx = vnorm(..EllipsoidNodeDorsal.sRel - .sRel);
@@ -66,23 +62,19 @@ AnyFolder IntertarsalGlidingJoints = {
 
     AnyRefNode EllipsoidNodeDorsal1 = {
       sRel = .Scale({0.03838044, -0.0020309633, ......Sign*-0.003424041});
-      //AnyDrawRefFrame drw={ScaleXYZ={0.01,0.01,0.01};RGB={1,0,0};};
     };
 
     AnyRefNode EllipsoidNodeProximal1 = {
       sRel = .Scale({0.02902985, 0.01286101, ......Sign*-0.004094043});
-      //AnyDrawRefFrame drw={ScaleXYZ={0.01,0.01,0.01};RGB={1,0,0};};
     };
 
     AnyRefNode EllipsoidNodeLateral1 = {
       sRel = .Scale({0.02850497, 0.002148111, ......Sign*0.001578479});
-      //AnyDrawRefFrame drw={ScaleXYZ={0.01,0.01,0.01};RGB={1,0,0};};
     };
 
     AnyRefNode EllipsoidNode1 = {
       sRel = .Scale({0.02750497, 0.001148111, ......Sign*-0.000078479});
       ARel = RotMat(sRel, .EllipsoidNodeDorsal1.sRel, .EllipsoidNodeProximal1.sRel);
-      //AnyDrawRefFrame drw={ScaleXYZ={0.01,0.01,0.01};RGB={1,0,0};};
       AnySurfEllipsoid ContactEllipsoid =
       {
         AnyVar Rx = vnorm(..EllipsoidNodeDorsal1.sRel - .sRel);
@@ -100,23 +92,19 @@ AnyFolder IntertarsalGlidingJoints = {
 
     AnyRefNode EllipsoidNodeDorsal2 = {
       sRel = .Scale({0.03801409, 0.002696922, ......Sign*0.01409074});
-      //AnyDrawRefFrame drw={ScaleXYZ={0.01,0.01,0.01};RGB={1,0,0};};
     };
 
     AnyRefNode EllipsoidNodeProximal2 = {
       sRel = .Scale({0.03301353, 0.01377631, ......Sign*0.008561723});
-      //AnyDrawRefFrame drw={ScaleXYZ={0.01,0.01,0.01};RGB={1,0,0};};
     };
 
     AnyRefNode EllipsoidNodeLateral2 = {
       sRel = .Scale({0.0261944, 0.004923853, ......Sign*0.011191541});
-      //AnyDrawRefFrame drw={ScaleXYZ={0.01,0.01,0.01};RGB={1,0,0};};
     };
 
     AnyRefNode EllipsoidNode2 = {
       sRel = .Scale({0.0271944, 0.003923853, ......Sign*0.009191541});
       ARel = RotMat(sRel, .EllipsoidNodeDorsal2.sRel, .EllipsoidNodeProximal2.sRel);
-      //AnyDrawRefFrame drw={ScaleXYZ={0.01,0.01,0.01};RGB={1,0,0};};
       AnySurfEllipsoid ContactEllipsoid =
       {
         AnyVar Rx = vnorm(..EllipsoidNodeDorsal2.sRel - .sRel);
@@ -141,23 +129,19 @@ AnyFolder IntertarsalGlidingJoints = {
 
     AnyRefNode EllipsoidNodeDorsal = {
       sRel = .Scale({0.0354965, 0.005603182, ......Sign*0.01801589});
-      //AnyDrawRefFrame drw={ScaleXYZ={0.01,0.01,0.01};RGB={1,0,0};};
     };
 
     AnyRefNode EllipsoidNodeProximal = {
       sRel = .Scale({0.02778995, 0.02006792, ......Sign*0.009332976});
-      //AnyDrawRefFrame drw={ScaleXYZ={0.01,0.01,0.01};RGB={1,0,0};};
     };
 
     AnyRefNode EllipsoidNodeLateral = {
       sRel = .Scale({0.02295879, 0.008831586, ......Sign*0.01601319});
-      //AnyDrawRefFrame drw={ScaleXYZ={0.01,0.01,0.01};RGB={1,0,0};};
     };
 
     AnyRefNode EllipsoidNode = {
       sRel = .Scale({0.02355879, 0.007831586, ......Sign*0.01301319});
       ARel = RotMat(sRel, .EllipsoidNodeDorsal.sRel, .EllipsoidNodeProximal.sRel);
-      //AnyDrawRefFrame drw={ScaleXYZ={0.01,0.01,0.01};RGB={1,0,0};};
       AnySurfEllipsoid ContactEllipsoid =
       {
         AnyVar Rx = vnorm(..EllipsoidNodeDorsal.sRel - .sRel);
@@ -174,16 +158,9 @@ AnyFolder IntertarsalGlidingJoints = {
     };
 
     AnyRefNode EllipsoidNode2 = {
-      //AnyDrawRefFrame drw={ScaleXYZ={0.01,0.01,0.01};RGB={1,0,0};};
       sRel = .Scale({0.01524647, 0.008693984, ......Sign*0.01752757});
     };
   };
-
-
-
-
-
-
 
 
   AnySeg ContactSeg1 =
@@ -197,18 +174,14 @@ AnyFolder IntertarsalGlidingJoints = {
 
     AnyRefNode n1={
       sRel={-0.5*.L*sin(60*pi/180),0.5*.L,0};
-      //         AnyDrawRefFrame  drw={RGB={0,1,0};ScaleXYZ=0.2*{0.05,0.05,0.05};};
     };
     AnyRefNode n2={
       sRel={0.5*.L*sin(60*pi/180),0,0};
-      //         AnyDrawRefFrame  drw={RGB={0,1,0};ScaleXYZ=0.2*{0.05,0.05,0.05};};
     };
     AnyRefNode n3={
       sRel={-0.5*.L*sin(60*pi/180),-0.5*.L,0};
-      //          AnyDrawRefFrame  drw={RGB={0,1,0};ScaleXYZ=0.2*{0.05,0.05,0.05};};
     };
   };
-
 
 
   AnyKinEqSimpleDriver ContactSeg1Driver = {
@@ -345,15 +318,12 @@ AnyFolder IntertarsalGlidingJoints = {
 
     AnyRefNode n1={
       sRel={-0.5*.L*sin(60*pi/180),0.5*.L,0};
-      //         AnyDrawRefFrame  drw={RGB={0,1,0};ScaleXYZ=0.2*{0.05,0.05,0.05};};
     };
     AnyRefNode n2={
       sRel={0.5*.L*sin(60*pi/180),0,0};
-      //         AnyDrawRefFrame  drw={RGB={0,1,0};ScaleXYZ=0.2*{0.05,0.05,0.05};};
     };
     AnyRefNode n3={
       sRel={-0.5*.L*sin(60*pi/180),-0.5*.L,0};
-      //          AnyDrawRefFrame  drw={RGB={0,1,0};ScaleXYZ=0.2*{0.05,0.05,0.05};};
     };
   };
 
@@ -476,7 +446,6 @@ AnyFolder IntertarsalGlidingJoints = {
 
   AnySeg NaviCuneiEllipsoidDummySeg =
   {
-    //AnyDrawRefFrame drw = {ScaleXYZ = 0.02*{1,1,1};};
     AnyFunTransform3D &Scale = ....Segments.Foot.Scale;
     //    r0 = .Segments.Navicular.r0 + .Segments.Navicular.EllipsoidNode.sRel *.Segments.Navicular.Axes0' - JointNode.sRel*Axes0';
     //    Axes0 = RotMat(.Segments.Navicular.r0 + .Segments.Navicular.EllipsoidNode.sRel *.Segments.Navicular.Axes0', .Segments.Navicular.r0 + .Segments.Navicular.EllipsoidNode.sRel *.Segments.Navicular.Axes0'+{1,0,0}*.Segments.Navicular.Axes0', .Segments.LateralCuneiform.r0 + .Segments.LateralCuneiform.EllipsoidNode2.sRel *.Segments.LateralCuneiform.Axes0') * RotMat(pi,x);
@@ -488,28 +457,23 @@ AnyFolder IntertarsalGlidingJoints = {
     AnyRefNode JointNode = {
       sRel = ..Segments.Navicular.EllipsoidNode.sRel;
       ARel = .EllipsoidNode.ARel;
-      //AnyDrawRefFrame drw = {ScaleXYZ = 0.02*{1,1,1};};
     };
 
     AnyRefNode EllipsoidNodeProximal = {
       sRel = .Scale({0.028, 0.028, .....Sign*0.014});
-      //AnyDrawRefFrame drw = {ScaleXYZ = 0.02*{1,1,1};};
     };
 
     AnyRefNode EllipsoidNodeLateral = {
       sRel = .Scale({0.018, 0.016, .....Sign*0.018});
-      //AnyDrawRefFrame drw = {ScaleXYZ = 0.02*{1,1,1};};
     };
 
     AnyRefNode EllipsoidNodeDorsal = {
       sRel = .Scale({0.025, 0.012, .....Sign*0.027});
-      //AnyDrawRefFrame drw = {ScaleXYZ = 0.02*{1,1,1};};
     };
 
     AnyRefNode EllipsoidNode = {
       sRel = .Scale({0.02, 0.015, .....Sign*0.017});
       ARel = RotMat(sRel, .EllipsoidNodeDorsal.sRel, .EllipsoidNodeProximal.sRel);
-      //AnyDrawRefFrame drw = {ScaleXYZ = 0.02*{1,1,1};};
       AnySurfEllipsoid ContactEllipsoid =
       {
         AnyVar Rx = vnorm(..EllipsoidNodeDorsal.sRel - .sRel);
@@ -558,23 +522,19 @@ AnyFolder IntertarsalGlidingJoints = {
 
     AnyRefNode EllipsoidNodeDorsal = {
       sRel = .Scale({0.02428825, 0.02301223, ......Sign*0.02806874});
-      //AnyDrawRefFrame drw={ScaleXYZ={0.01,0.01,0.01};RGB={1,0,0};};
     };
 
     AnyRefNode EllipsoidNodeProximal = {
       sRel = .Scale({0.02148359, 0.03896137, ......Sign*0.01760742});
-      //AnyDrawRefFrame drw={ScaleXYZ={0.01,0.01,0.01};RGB={1,0,0};};
     };
 
     AnyRefNode EllipsoidNodeLateral = {
       sRel = .Scale({0.01304376, 0.03204903, ......Sign*0.03281608});
-      //AnyDrawRefFrame drw={ScaleXYZ={0.01,0.01,0.01};RGB={1,0,0};};
     };
 
     AnyRefNode EllipsoidNode = {
       sRel = .Scale({0.01445013, 0.02682298, ......Sign*0.02383074});
       ARel = RotMat(sRel, .EllipsoidNodeDorsal.sRel, .EllipsoidNodeProximal.sRel);
-      //AnyDrawRefFrame drw={ScaleXYZ={0.01,0.01,0.01};RGB={1,0,0};};
       AnySurfEllipsoid ContactEllipsoid =
       {
         AnyVar Rx = vnorm(..EllipsoidNodeDorsal.sRel - .sRel);
@@ -606,15 +566,27 @@ AnyFolder IntertarsalGlidingJoints = {
 
     AnyRefNode n1={
       sRel={-0.5*.L*sin(60*pi/180),0.5*.L,0};
-      AnyDrawRefFrame  drw={RGB={0,1,0};ScaleXYZ=0.2*{0.05,0.05,0.05};};
+      viewRefFrame = {
+        Visible = On;
+        RGB = {0,1,0};
+        ScaleXYZ = 0.2*{0.05,0.05,0.05};
+      };
     };
     AnyRefNode n2={
       sRel={0.5*.L*sin(60*pi/180),0,0};
-      AnyDrawRefFrame  drw={RGB={0,1,0};ScaleXYZ=0.2*{0.05,0.05,0.05};};
+      viewRefFrame = {
+        Visible = On;
+        RGB = {0,1,0};
+        ScaleXYZ = 0.2*{0.05,0.05,0.05};
+      };
     };
     AnyRefNode n3={
       sRel={-0.5*.L*sin(60*pi/180),-0.5*.L,0};
-      AnyDrawRefFrame  drw={RGB={0,1,0};ScaleXYZ=0.2*{0.05,0.05,0.05};};
+      viewRefFrame = {
+        Visible = On;
+        RGB = {0,1,0};
+        ScaleXYZ = 0.2*{0.05,0.05,0.05};
+      };
     };
   };
 

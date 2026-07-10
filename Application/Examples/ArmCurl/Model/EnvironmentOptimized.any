@@ -347,7 +347,7 @@ AnyFolder EnvironmentModel = {
 
         AnyDrawSTL Body = {
           FileName = ANYBODY_PATH_MODELUTILS+"DrawObjects/Body-grey.stl";
-          RGB = Main.DrawSettings.Colors.AnyBodyGrey;
+          RGB = Main.HumanModel.DrawSettings.Colors.AnyBodyGrey;
 
           Opacity = 1;
           ScaleXYZ={0.005,0.005,0.005};
@@ -355,7 +355,7 @@ AnyFolder EnvironmentModel = {
 
         AnyDrawSTL AnyTechnology = {
           FileName = ANYBODY_PATH_MODELUTILS+"DrawObjects/AnyTechnology-red.stl";
-          RGB = Main.DrawSettings.Colors.AnyBodyRed;
+          RGB = Main.HumanModel.DrawSettings.Colors.AnyBodyRed;
 
           Opacity = 1;
           ScaleXYZ={0.005,0.005,0.005};
@@ -601,7 +601,7 @@ Reaction.Type={Off};
         ARel = RotMat(pi, y);
         AnyDrawSTL Body = {
           FileName = ANYBODY_PATH_MODELUTILS+"DrawObjects/Body-grey.stl";
-          RGB = Main.DrawSettings.Colors.AnyBodyGrey;
+          RGB = Main.HumanModel.DrawSettings.Colors.AnyBodyGrey;
 
           Opacity = 1;
           ScaleXYZ={0.005,0.005,0.005};
@@ -609,7 +609,7 @@ Reaction.Type={Off};
 
         AnyDrawSTL AnyTechnology = {
           FileName = ANYBODY_PATH_MODELUTILS+"DrawObjects/AnyTechnology-red.stl";
-          RGB = Main.DrawSettings.Colors.AnyBodyRed;
+          RGB = Main.HumanModel.DrawSettings.Colors.AnyBodyRed;
 
           Opacity = 1;
           ScaleXYZ={0.005,0.005,0.005};

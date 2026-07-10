@@ -76,7 +76,7 @@ AnyFolder SeatSupport = {
     AnyRefNode &StartNode = Main.Model.BikeModel.BikeFrame.SaddlePos;
     AnyRefFrame &EndNode =..BodyModel.Trunk.Segments.PelvisSeg.Seat_contact2Mid;
     AnyVector StrengthOfReactionsLin = {.Strength,.FrictionStrength,.Strength,0,.Strength,.Strength}; //List of strengths for the linear muscles
-    AnyFolder &DrawRef=Main.DrawSettings;
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings;
     AnyVar ScaleFactor =.1;
     #include "<ANYBODY_PATH_MODELUTILS>/Reactions/XPush.any"
     #include "<ANYBODY_PATH_MODELUTILS>/Reactions/XPull.any"

@@ -69,7 +69,7 @@
       FileName = ...Data.unscaled.STL.FilenameSkull;
       RGB = ...ColorRef.Segments;
       AnyFunTransform3D &Scale =.Scale;
-      Opacity = Main.DrawSettings.BonesOpacity.Skull;
+      Opacity = .....DrawSettings.BonesOpacity.Skull;
     };
 
     AnyRefNode TopOfHead = {sRel = .Scale(.Data.TopOfHead_pos);};

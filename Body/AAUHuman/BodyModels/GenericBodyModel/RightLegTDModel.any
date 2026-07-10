@@ -50,11 +50,11 @@ Right = {
     AnyFolder &StrengthScaling = ...Scaling.StrengthScaling.Right;
 
     AnyFolder BonesOpacity = {
-      AnyVar Foot = Main.DrawSettings.BonesOpacity.RightFoot;
-      AnyVar Shank = Main.DrawSettings.BonesOpacity.RightShank;
-      AnyVar Thigh = Main.DrawSettings.BonesOpacity.RightThigh;
-      AnyVar Talus = Main.DrawSettings.BonesOpacity.RightTalus;
-      AnyVar Patella = Main.DrawSettings.BonesOpacity.RightPatella;
+      AnyVar Foot = ....DrawSettings.BonesOpacity.RightFoot;
+      AnyVar Shank = ....DrawSettings.BonesOpacity.RightShank;
+      AnyVar Thigh = ....DrawSettings.BonesOpacity.RightThigh;
+      AnyVar Talus = ....DrawSettings.BonesOpacity.RightTalus;
+      AnyVar Patella = ....DrawSettings.BonesOpacity.RightPatella;
     };
 
     #if BM_LEG_MUSCLES_RIGHT  | BM_TRUNK_MUSCLES

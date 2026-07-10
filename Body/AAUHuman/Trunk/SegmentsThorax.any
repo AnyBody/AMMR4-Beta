@@ -82,7 +82,7 @@ AnySeg ThoraxSeg = {
     FileName = ...Data.unscaled.STL.FilenameThoraxSegWithoutNeck;
     RGB = ...ColorRef.Segments;
     ScaleXYZ={1.0,1.0,1.0};
-    Opacity = Main.DrawSettings.BonesOpacity.Thorax;
+    Opacity = .....DrawSettings.BonesOpacity.Thorax;
     AnyFunTransform3D &Scale =.Scale;
   };
 

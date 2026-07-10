@@ -98,7 +98,7 @@ AnyFolder FootSupport =
     AnyDrawLine Line =
     {
         p0 = {.Vx, .Vy, .Vz};
-        p1 = p0 + Main.DrawSettings.Support.Lin.ScaleFactor* {.fx, .fy, .fz};
+        p1 = p0 + Main.HumanModel.DrawSettings.Support.Lin.ScaleFactor* {.fx, .fy, .fz};
         AnyRefFrame& ref = .ref_VFPlate;
         Line.RGB ={1,0,0};
         Line.Thickness = 0.01;
@@ -142,7 +142,7 @@ AnyFolder FootSupport =
     AnyDrawLine Line =
     {
         p0 = {.Vx, .Vy, .Vz};
-        p1 = p0 + Main.DrawSettings.Support.Lin.ScaleFactor* {.fx, .fy, .fz};
+        p1 = p0 + Main.HumanModel.DrawSettings.Support.Lin.ScaleFactor* {.fx, .fy, .fz};
         AnyRefFrame& ref = .ref_VFPlate;
         Line.RGB ={1,0,0};
         Line.Thickness = 0.01;
@@ -182,7 +182,7 @@ AnyFolder FootSupport =
     };
 
     AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
-    AnyFolder &DrawRef=Main.DrawSettings; //reference to the folder which contains drawsettings
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings; //reference to the folder which contains drawsettings
     AnyVar UserDefinedLimitLow=.CC_LimitLow ;
     AnyVar UserDefinedLimitHigh=.CC_LimitHigh ;
     AnyVar UserDefinedRadiusLimit=.CC_Radius ;
@@ -208,7 +208,7 @@ AnyFolder FootSupport =
     };
 
     AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
-    AnyFolder &DrawRef=Main.DrawSettings; //reference to the folder which contains drawsettings
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings; //reference to the folder which contains drawsettings
     AnyVar UserDefinedLimitLow=.CC_LimitLow ;
     AnyVar UserDefinedLimitHigh=.CC_LimitHigh ;
     AnyVar UserDefinedRadiusLimit=.CC_Radius ;
@@ -236,7 +236,7 @@ AnyFolder FootSupport =
 
     AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 
-    AnyFolder &DrawRef=Main.DrawSettings; //reference to the folder which contains drawsettings
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings; //reference to the folder which contains drawsettings
     AnyVar UserDefinedLimitLow=.CC_LimitLow ;
     AnyVar UserDefinedLimitHigh=.CC_LimitHigh ;
     AnyVar UserDefinedRadiusLimit=.CC_Radius ;
@@ -266,7 +266,7 @@ AnyFolder FootSupport =
 
     AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 
-    AnyFolder &DrawRef=Main.DrawSettings; //reference to the folder which contains drawsettings
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings; //reference to the folder which contains drawsettings
     AnyVar UserDefinedLimitLow=.CC_LimitLow ;
     AnyVar UserDefinedLimitHigh=.CC_LimitHigh ;
     AnyVar UserDefinedRadiusLimit=.CC_Radius ;
@@ -285,7 +285,7 @@ AnyFolder FootSupport =
 
     AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 
-    AnyFolder &DrawRef=Main.DrawSettings; //reference to the folder which contains drawsettings
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings; //reference to the folder which contains drawsettings
     AnyVar UserDefinedLimitLow=.CC_LimitLow ;
     AnyVar UserDefinedLimitHigh=.CC_LimitHigh ;
     AnyVar UserDefinedRadiusLimit=.CC_Radius ;
@@ -314,7 +314,7 @@ AnyFolder FootSupport =
 
     AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 
-    AnyFolder &DrawRef=Main.DrawSettings; //reference to the folder which contains drawsettings
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings; //reference to the folder which contains drawsettings
     AnyVar UserDefinedLimitLow=.CC_LimitLow ;
     AnyVar UserDefinedLimitHigh=.CC_LimitHigh ;
     AnyVar UserDefinedRadiusLimit=.CC_Radius ;
@@ -343,7 +343,7 @@ AnyFolder FootSupport =
 
     AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 
-    AnyFolder &DrawRef=Main.DrawSettings; //reference to the folder which contains drawsettings
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings; //reference to the folder which contains drawsettings
     AnyVar UserDefinedLimitLow=.CC_LimitLow ;
     AnyVar UserDefinedLimitHigh=.CC_LimitHigh ;
     AnyVar UserDefinedRadiusLimit=.CC_Radius ;
@@ -372,7 +372,7 @@ AnyFolder FootSupport =
 
     AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 
-    AnyFolder &DrawRef=Main.DrawSettings; //reference to the folder which contains drawsettings
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings; //reference to the folder which contains drawsettings
     AnyVar UserDefinedLimitLow=.CC_LimitLow ;
     AnyVar UserDefinedLimitHigh=.CC_LimitHigh ;
     AnyVar UserDefinedRadiusLimit=.CC_Radius ;
@@ -401,7 +401,7 @@ AnyFolder FootSupport =
 
     AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 
-    AnyFolder &DrawRef=Main.DrawSettings; //reference to the folder which contains drawsettings
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings; //reference to the folder which contains drawsettings
     AnyVar UserDefinedLimitLow=.CC_LimitLow ;
     AnyVar UserDefinedLimitHigh=.CC_LimitHigh ;
     AnyVar UserDefinedRadiusLimit=.CC_Radius ;
@@ -430,7 +430,7 @@ AnyFolder FootSupport =
 
     AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 
-    AnyFolder &DrawRef=Main.DrawSettings; //reference to the folder which contains drawsettings
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings; //reference to the folder which contains drawsettings
     AnyVar UserDefinedLimitLow=.CC_LimitLow ;
     AnyVar UserDefinedLimitHigh=.CC_LimitHigh ;
     AnyVar UserDefinedRadiusLimit=.CC_Radius ;
@@ -460,7 +460,7 @@ AnyFolder FootSupport =
 
     AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 
-    AnyFolder &DrawRef=Main.DrawSettings; //reference to the folder which contains drawsettings
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings; //reference to the folder which contains drawsettings
     AnyVar UserDefinedLimitLow=.CC_LimitLow ;
     AnyVar UserDefinedLimitHigh=.CC_LimitHigh ;
     AnyVar UserDefinedRadiusLimit=.CC_Radius ;
@@ -489,7 +489,7 @@ AnyFolder FootSupport =
 
     AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 
-    AnyFolder &DrawRef=Main.DrawSettings; //reference to the folder which contains drawsettings
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings; //reference to the folder which contains drawsettings
     AnyVar UserDefinedLimitLow=.CC_LimitLow ;
     AnyVar UserDefinedLimitHigh=.CC_LimitHigh ;
     AnyVar UserDefinedRadiusLimit=.CC_Radius ;
@@ -509,7 +509,7 @@ AnyFolder FootSupport =
 
     AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 
-    AnyFolder &DrawRef=Main.DrawSettings; //reference to the folder which contains drawsettings
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings; //reference to the folder which contains drawsettings
     AnyVar UserDefinedLimitLow=.CC_LimitLow ;
     AnyVar UserDefinedLimitHigh=.CC_LimitHigh ;
     AnyVar UserDefinedRadiusLimit=.CC_Radius ;
@@ -539,7 +539,7 @@ AnyFolder FootSupport =
 
     AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 
-    AnyFolder &DrawRef=Main.DrawSettings; //reference to the folder which contains drawsettings
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings; //reference to the folder which contains drawsettings
     AnyVar UserDefinedLimitLow=.CC_LimitLow ;
     AnyVar UserDefinedLimitHigh=.CC_LimitHigh ;
     AnyVar UserDefinedRadiusLimit=.CC_Radius ;
@@ -568,7 +568,7 @@ AnyFolder FootSupport =
 
     AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 
-    AnyFolder &DrawRef=Main.DrawSettings; //reference to the folder which contains drawsettings
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings; //reference to the folder which contains drawsettings
     AnyVar UserDefinedLimitLow=.CC_LimitLow ;
     AnyVar UserDefinedLimitHigh=.CC_LimitHigh ;
     AnyVar UserDefinedRadiusLimit=.CC_Radius ;
@@ -597,7 +597,7 @@ AnyFolder FootSupport =
 
     AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 
-    AnyFolder &DrawRef=Main.DrawSettings; //reference to the folder which contains drawsettings
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings; //reference to the folder which contains drawsettings
     AnyVar UserDefinedLimitLow=.CC_LimitLow ;
     AnyVar UserDefinedLimitHigh=.CC_LimitHigh ;
     AnyVar UserDefinedRadiusLimit=.CC_Radius ;
@@ -626,7 +626,7 @@ AnyFolder FootSupport =
 
     AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 
-    AnyFolder &DrawRef=Main.DrawSettings; //reference to the folder which contains drawsettings
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings; //reference to the folder which contains drawsettings
     AnyVar UserDefinedLimitLow=.CC_LimitLow ;
     AnyVar UserDefinedLimitHigh=.CC_LimitHigh ;
     AnyVar UserDefinedRadiusLimit=.CC_Radius ;
@@ -655,7 +655,7 @@ AnyFolder FootSupport =
 
     AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 
-    AnyFolder &DrawRef=Main.DrawSettings; //reference to the folder which contains drawsettings
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings; //reference to the folder which contains drawsettings
     AnyVar UserDefinedLimitLow=.CC_LimitLow ;
     AnyVar UserDefinedLimitHigh=.CC_LimitHigh ;
     AnyVar UserDefinedRadiusLimit=.CC_Radius ;

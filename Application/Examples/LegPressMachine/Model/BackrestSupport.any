@@ -669,7 +669,7 @@ AnyFolder BackrestSupport = {
     AnyRefFrame &TargetObject =....BodyModel.Trunk.Segments.SkullSeg.SkullSupportNode;
     AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 
-    AnyFolder &DrawRef=Main.DrawSettings; //reference to the folder which contains drawsettings
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings; //reference to the folder which contains drawsettings
     AnyVar UserDefinedLimitLow=.CC_LimitLow;
     AnyVar UserDefinedLimitHigh=.CC_LimitHigh;
     AnyVar UserDefinedRadiusLimit=.CC_Radius;
@@ -687,7 +687,7 @@ AnyFolder BackrestSupport = {
     AnyRefFrame &TargetObject =....BodyModel.Trunk.Segments.T2Seg.T2SupportNode;
     AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 
-    AnyFolder &DrawRef=Main.DrawSettings; //reference to the folder which contains drawsettings
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings; //reference to the folder which contains drawsettings
     AnyVar UserDefinedLimitLow=.CC_LimitLow;
     AnyVar UserDefinedLimitHigh=.CC_LimitHigh;
     AnyVar UserDefinedRadiusLimit=.CC_Radius;
@@ -705,7 +705,7 @@ AnyFolder BackrestSupport = {
     AnyRefFrame &TargetObject =....BodyModel.Trunk.Segments.T6Seg.T6SupportNode;
     AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 
-    AnyFolder &DrawRef=Main.DrawSettings; //reference to the folder which contains drawsettings
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings; //reference to the folder which contains drawsettings
     AnyVar UserDefinedLimitLow=.CC_LimitLow;
     AnyVar UserDefinedLimitHigh=.CC_LimitHigh;
     AnyVar UserDefinedRadiusLimit=.CC_Radius;
@@ -723,7 +723,7 @@ AnyFolder BackrestSupport = {
     AnyRefFrame &TargetObject =....BodyModel.Trunk.Segments.T9Seg.T9SupportNode;
     AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 
-    AnyFolder &DrawRef=Main.DrawSettings; //reference to the folder which contains drawsettings
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings; //reference to the folder which contains drawsettings
     AnyVar UserDefinedLimitLow=.CC_LimitLow;
     AnyVar UserDefinedLimitHigh=.CC_LimitHigh;
     AnyVar UserDefinedRadiusLimit=.CC_Radius;
@@ -741,7 +741,7 @@ AnyFolder BackrestSupport = {
     AnyRefFrame &TargetObject =....BodyModel.Trunk.Segments.T10Seg.T10SupportNode;
     AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 
-    AnyFolder &DrawRef=Main.DrawSettings; //reference to the folder which contains drawsettings
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings; //reference to the folder which contains drawsettings
     AnyVar UserDefinedLimitLow=.CC_LimitLow;
     AnyVar UserDefinedLimitHigh=.CC_LimitHigh;
     AnyVar UserDefinedRadiusLimit=.CC_Radius;
@@ -759,7 +759,7 @@ AnyFolder BackrestSupport = {
     AnyRefFrame &TargetObject =....BodyModel.Trunk.Segments.T12Seg.T12SupportNode;
     AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 
-    AnyFolder &DrawRef=Main.DrawSettings; //reference to the folder which contains drawsettings
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings; //reference to the folder which contains drawsettings
     AnyVar UserDefinedLimitLow=.CC_LimitLow;
     AnyVar UserDefinedLimitHigh=.CC_LimitHigh;
     AnyVar UserDefinedRadiusLimit=.CC_Radius;
@@ -778,7 +778,7 @@ AnyFolder BackrestSupport = {
     AnyRefFrame &TargetObject =....BodyModel.Trunk.Segments.SacrumSeg.SacrumSupportNode;
     AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 
-    AnyFolder &DrawRef=Main.DrawSettings; //reference to the folder which contains drawsettings
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings; //reference to the folder which contains drawsettings
     AnyVar UserDefinedLimitLow=.CC_LimitLow;
     AnyVar UserDefinedLimitHigh=.CC_LimitHigh;
     AnyVar UserDefinedRadiusLimit=.CC_Radius;
@@ -797,7 +797,7 @@ AnyFolder BackrestSupport = {
     AnyRefFrame &TargetObject = .ref_Thorax_EllipNode.add_node_1L ;
     AnyRefFrame &StrengthObject=TargetObject;
 
-    AnyFolder &DrawRef=Main.DrawSettings;
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings;
     AnyVar UserDefinedLimitLow=.CC_LimitLow;
     AnyVar UserDefinedLimitHigh=.CC_LimitHigh;
     AnyVar UserDefinedRadiusLimit=.CC_Radius;
@@ -814,7 +814,7 @@ AnyFolder BackrestSupport = {
     AnyRefFrame &TargetObject = .ref_Thorax_EllipNode.add_node_1R ;
     AnyRefFrame &StrengthObject=TargetObject;
 
-    AnyFolder &DrawRef=Main.DrawSettings;
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings;
     AnyVar UserDefinedLimitLow=.CC_LimitLow;
     AnyVar UserDefinedLimitHigh=.CC_LimitHigh;
     AnyVar UserDefinedRadiusLimit=.CC_Radius;
@@ -831,7 +831,7 @@ AnyFolder BackrestSupport = {
     AnyRefFrame &TargetObject = .ref_Thorax_EllipNode.add_node_2L ;
     AnyRefFrame &StrengthObject=TargetObject;
 
-    AnyFolder &DrawRef=Main.DrawSettings;
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings;
     AnyVar UserDefinedLimitLow=.CC_LimitLow;
     AnyVar UserDefinedLimitHigh=.CC_LimitHigh;
     AnyVar UserDefinedRadiusLimit=.CC_Radius;
@@ -848,7 +848,7 @@ AnyFolder BackrestSupport = {
     AnyRefFrame &TargetObject = .ref_Thorax_EllipNode.add_node_2R ;
     AnyRefFrame &StrengthObject=TargetObject;
 
-    AnyFolder &DrawRef=Main.DrawSettings;
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings;
     AnyVar UserDefinedLimitLow=.CC_LimitLow;
     AnyVar UserDefinedLimitHigh=.CC_LimitHigh;
     AnyVar UserDefinedRadiusLimit=.CC_Radius;
@@ -865,7 +865,7 @@ AnyFolder BackrestSupport = {
     AnyRefFrame &TargetObject = .ref_Thorax_EllipNode.add_node_3L ;
     AnyRefFrame &StrengthObject=TargetObject;
 
-    AnyFolder &DrawRef=Main.DrawSettings;
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings;
     AnyVar UserDefinedLimitLow=.CC_LimitLow;
     AnyVar UserDefinedLimitHigh=.CC_LimitHigh;
     AnyVar UserDefinedRadiusLimit=.CC_Radius;
@@ -882,7 +882,7 @@ AnyFolder BackrestSupport = {
     AnyRefFrame &TargetObject = .ref_Thorax_EllipNode.add_node_3R ;
     AnyRefFrame &StrengthObject=TargetObject;
 
-    AnyFolder &DrawRef=Main.DrawSettings;
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings;
     AnyVar UserDefinedLimitLow=.CC_LimitLow;
     AnyVar UserDefinedLimitHigh=.CC_LimitHigh;
     AnyVar UserDefinedRadiusLimit=.CC_Radius;
@@ -899,7 +899,7 @@ AnyFolder BackrestSupport = {
     AnyRefFrame &TargetObject = .ref_Thorax_EllipNode.add_node_4L ;
     AnyRefFrame &StrengthObject=TargetObject;
 
-    AnyFolder &DrawRef=Main.DrawSettings;
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings;
     AnyVar UserDefinedLimitLow=.CC_LimitLow;
     AnyVar UserDefinedLimitHigh=.CC_LimitHigh;
     AnyVar UserDefinedRadiusLimit=.CC_Radius;
@@ -916,7 +916,7 @@ AnyFolder BackrestSupport = {
     AnyRefFrame &TargetObject = .ref_Thorax_EllipNode.add_node_4R ;
     AnyRefFrame &StrengthObject=TargetObject;
 
-    AnyFolder &DrawRef=Main.DrawSettings;
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings;
     AnyVar UserDefinedLimitLow=.CC_LimitLow;
     AnyVar UserDefinedLimitHigh=.CC_LimitHigh;
     AnyVar UserDefinedRadiusLimit=.CC_Radius;
@@ -933,7 +933,7 @@ AnyFolder BackrestSupport = {
     AnyRefFrame &TargetObject = .ref_Thorax_EllipNode.add_node_5L ;
     AnyRefFrame &StrengthObject=TargetObject;
 
-    AnyFolder &DrawRef=Main.DrawSettings;
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings;
     AnyVar UserDefinedLimitLow=.CC_LimitLow;
     AnyVar UserDefinedLimitHigh=.CC_LimitHigh;
     AnyVar UserDefinedRadiusLimit=.CC_Radius;
@@ -950,7 +950,7 @@ AnyFolder BackrestSupport = {
     AnyRefFrame &TargetObject = .ref_Thorax_EllipNode.add_node_5R ;
     AnyRefFrame &StrengthObject=TargetObject;
 
-    AnyFolder &DrawRef=Main.DrawSettings;
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings;
     AnyVar UserDefinedLimitLow=.CC_LimitLow;
     AnyVar UserDefinedLimitHigh=.CC_LimitHigh;
     AnyVar UserDefinedRadiusLimit=.CC_Radius;
@@ -967,7 +967,7 @@ AnyFolder BackrestSupport = {
     AnyRefFrame &TargetObject = .ref_Thorax_EllipNode.add_node_6L ;
     AnyRefFrame &StrengthObject=TargetObject;
 
-    AnyFolder &DrawRef=Main.DrawSettings;
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings;
     AnyVar UserDefinedLimitLow=.CC_LimitLow;
     AnyVar UserDefinedLimitHigh=.CC_LimitHigh;
     AnyVar UserDefinedRadiusLimit=.CC_Radius;
@@ -984,7 +984,7 @@ AnyFolder BackrestSupport = {
     AnyRefFrame &TargetObject = .ref_Thorax_EllipNode.add_node_6R ;
     AnyRefFrame &StrengthObject=TargetObject;
 
-    AnyFolder &DrawRef=Main.DrawSettings;
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings;
     AnyVar UserDefinedLimitLow=.CC_LimitLow;
     AnyVar UserDefinedLimitHigh=.CC_LimitHigh;
     AnyVar UserDefinedRadiusLimit=.CC_Radius;
@@ -1001,7 +1001,7 @@ AnyFolder BackrestSupport = {
     AnyRefFrame &TargetObject = .ref_Thorax_EllipNode.add_node_7L ;
     AnyRefFrame &StrengthObject=TargetObject;
 
-    AnyFolder &DrawRef=Main.DrawSettings;
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings;
     AnyVar UserDefinedLimitLow=.CC_LimitLow;
     AnyVar UserDefinedLimitHigh=.CC_LimitHigh;
     AnyVar UserDefinedRadiusLimit=.CC_Radius;
@@ -1018,7 +1018,7 @@ AnyFolder BackrestSupport = {
     AnyRefFrame &TargetObject = .ref_Thorax_EllipNode.add_node_7R ;
     AnyRefFrame &StrengthObject=TargetObject;
 
-    AnyFolder &DrawRef=Main.DrawSettings;
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings;
     AnyVar UserDefinedLimitLow=.CC_LimitLow;
     AnyVar UserDefinedLimitHigh=.CC_LimitHigh;
     AnyVar UserDefinedRadiusLimit=.CC_Radius;
@@ -1035,7 +1035,7 @@ AnyFolder BackrestSupport = {
     AnyRefFrame &TargetObject = .ref_Thorax_EllipNode.add_node_8L ;
     AnyRefFrame &StrengthObject=TargetObject;
 
-    AnyFolder &DrawRef=Main.DrawSettings;
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings;
     AnyVar UserDefinedLimitLow=.CC_LimitLow;
     AnyVar UserDefinedLimitHigh=.CC_LimitHigh;
     AnyVar UserDefinedRadiusLimit=.CC_Radius;
@@ -1052,7 +1052,7 @@ AnyFolder BackrestSupport = {
     AnyRefFrame &TargetObject = .ref_Thorax_EllipNode.add_node_8R ;
     AnyRefFrame &StrengthObject=TargetObject;
 
-    AnyFolder &DrawRef=Main.DrawSettings;
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings;
     AnyVar UserDefinedLimitLow=.CC_LimitLow;
     AnyVar UserDefinedLimitHigh=.CC_LimitHigh;
     AnyVar UserDefinedRadiusLimit=.CC_Radius;
@@ -1069,7 +1069,7 @@ AnyFolder BackrestSupport = {
     AnyRefFrame &TargetObject = .ref_Thorax_EllipNode.add_node_9L ;
     AnyRefFrame &StrengthObject=TargetObject;
 
-    AnyFolder &DrawRef=Main.DrawSettings;
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings;
     AnyVar UserDefinedLimitLow=.CC_LimitLow;
     AnyVar UserDefinedLimitHigh=.CC_LimitHigh;
     AnyVar UserDefinedRadiusLimit=.CC_Radius;
@@ -1086,7 +1086,7 @@ AnyFolder BackrestSupport = {
     AnyRefFrame &TargetObject = .ref_Thorax_EllipNode.add_node_9R ;
     AnyRefFrame &StrengthObject=TargetObject;
 
-    AnyFolder &DrawRef=Main.DrawSettings;
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings;
     AnyVar UserDefinedLimitLow=.CC_LimitLow;
     AnyVar UserDefinedLimitHigh=.CC_LimitHigh;
     AnyVar UserDefinedRadiusLimit=.CC_Radius;
@@ -1103,7 +1103,7 @@ AnyFolder BackrestSupport = {
     AnyRefFrame &TargetObject = .ref_Thorax_EllipNode.add_node_10L ;
     AnyRefFrame &StrengthObject=TargetObject;
 
-    AnyFolder &DrawRef=Main.DrawSettings;
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings;
     AnyVar UserDefinedLimitLow=.CC_LimitLow;
     AnyVar UserDefinedLimitHigh=.CC_LimitHigh;
     AnyVar UserDefinedRadiusLimit=.CC_Radius;
@@ -1120,7 +1120,7 @@ AnyFolder BackrestSupport = {
     AnyRefFrame &TargetObject = .ref_Thorax_EllipNode.add_node_10R ;
     AnyRefFrame &StrengthObject=TargetObject;
 
-    AnyFolder &DrawRef=Main.DrawSettings;
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings;
     AnyVar UserDefinedLimitLow=.CC_LimitLow;
     AnyVar UserDefinedLimitHigh=.CC_LimitHigh;
     AnyVar UserDefinedRadiusLimit=.CC_Radius;
@@ -1138,7 +1138,7 @@ AnyFolder BackrestSupport = {
     AnyRefFrame &TargetObject = .ref_Pelvis_EllipNode.add_node_1L ;
     AnyRefFrame &StrengthObject=TargetObject;
 
-    AnyFolder &DrawRef=Main.DrawSettings;
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings;
     AnyVar UserDefinedLimitLow=.CC_LimitLow;
     AnyVar UserDefinedLimitHigh=.CC_LimitHigh;
     AnyVar UserDefinedRadiusLimit=.CC_Radius;
@@ -1155,7 +1155,7 @@ AnyFolder BackrestSupport = {
     AnyRefFrame &TargetObject = .ref_Pelvis_EllipNode.add_node_1R ;
     AnyRefFrame &StrengthObject=TargetObject;
 
-    AnyFolder &DrawRef=Main.DrawSettings;
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings;
     AnyVar UserDefinedLimitLow=.CC_LimitLow;
     AnyVar UserDefinedLimitHigh=.CC_LimitHigh;
     AnyVar UserDefinedRadiusLimit=.CC_Radius;
@@ -1172,7 +1172,7 @@ AnyFolder BackrestSupport = {
     AnyRefFrame &TargetObject = .ref_Pelvis_EllipNode.add_node_2L ;
     AnyRefFrame &StrengthObject=TargetObject;
 
-    AnyFolder &DrawRef=Main.DrawSettings;
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings;
     AnyVar UserDefinedLimitLow=.CC_LimitLow;
     AnyVar UserDefinedLimitHigh=.CC_LimitHigh;
     AnyVar UserDefinedRadiusLimit=.CC_Radius;
@@ -1189,7 +1189,7 @@ AnyFolder BackrestSupport = {
     AnyRefFrame &TargetObject = .ref_Pelvis_EllipNode.add_node_2R ;
     AnyRefFrame &StrengthObject=TargetObject;
 
-    AnyFolder &DrawRef=Main.DrawSettings;
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings;
     AnyVar UserDefinedLimitLow=.CC_LimitLow;
     AnyVar UserDefinedLimitHigh=.CC_LimitHigh;
     AnyVar UserDefinedRadiusLimit=.CC_Radius;
@@ -1206,7 +1206,7 @@ AnyFolder BackrestSupport = {
     AnyRefFrame &TargetObject = .ref_Pelvis_EllipNode.add_node_3L ;
     AnyRefFrame &StrengthObject=TargetObject;
 
-    AnyFolder &DrawRef=Main.DrawSettings;
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings;
     AnyVar UserDefinedLimitLow=.CC_LimitLow;
     AnyVar UserDefinedLimitHigh=.CC_LimitHigh;
     AnyVar UserDefinedRadiusLimit=.CC_Radius;
@@ -1223,7 +1223,7 @@ AnyFolder BackrestSupport = {
     AnyRefFrame &TargetObject = .ref_Pelvis_EllipNode.add_node_3R ;
     AnyRefFrame &StrengthObject=TargetObject;
 
-    AnyFolder &DrawRef=Main.DrawSettings;
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings;
     AnyVar UserDefinedLimitLow=.CC_LimitLow;
     AnyVar UserDefinedLimitHigh=.CC_LimitHigh;
     AnyVar UserDefinedRadiusLimit=.CC_Radius;
@@ -1240,7 +1240,7 @@ AnyFolder BackrestSupport = {
     AnyRefFrame &TargetObject = .ref_Pelvis_EllipNode.add_node_4L ;
     AnyRefFrame &StrengthObject=TargetObject;
 
-    AnyFolder &DrawRef=Main.DrawSettings;
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings;
     AnyVar UserDefinedLimitLow=.CC_LimitLow;
     AnyVar UserDefinedLimitHigh=.CC_LimitHigh;
     AnyVar UserDefinedRadiusLimit=.CC_Radius;
@@ -1257,7 +1257,7 @@ AnyFolder BackrestSupport = {
     AnyRefFrame &TargetObject = .ref_Pelvis_EllipNode.add_node_4R ;
     AnyRefFrame &StrengthObject=TargetObject;
 
-    AnyFolder &DrawRef=Main.DrawSettings;
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings;
     AnyVar UserDefinedLimitLow=.CC_LimitLow;
     AnyVar UserDefinedLimitHigh=.CC_LimitHigh;
     AnyVar UserDefinedRadiusLimit=.CC_Radius;
@@ -1274,7 +1274,7 @@ AnyFolder BackrestSupport = {
     AnyRefFrame &TargetObject = .ref_Pelvis_EllipNode.add_node_5L ;
     AnyRefFrame &StrengthObject=TargetObject;
 
-    AnyFolder &DrawRef=Main.DrawSettings;
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings;
     AnyVar UserDefinedLimitLow=.CC_LimitLow;
     AnyVar UserDefinedLimitHigh=.CC_LimitHigh;
     AnyVar UserDefinedRadiusLimit=.CC_Radius;
@@ -1291,7 +1291,7 @@ AnyFolder BackrestSupport = {
     AnyRefFrame &TargetObject = .ref_Pelvis_EllipNode.add_node_5R ;
     AnyRefFrame &StrengthObject=TargetObject;
 
-    AnyFolder &DrawRef=Main.DrawSettings;
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings;
     AnyVar UserDefinedLimitLow=.CC_LimitLow;
     AnyVar UserDefinedLimitHigh=.CC_LimitHigh;
     AnyVar UserDefinedRadiusLimit=.CC_Radius;
@@ -1308,7 +1308,7 @@ AnyFolder BackrestSupport = {
     AnyRefFrame &TargetObject =....BodyModel.Trunk.Segments.L1Seg.L1SupportNode;
     AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 
-    AnyFolder &DrawRef=Main.DrawSettings; //reference to the folder which contains drawsettings
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings; //reference to the folder which contains drawsettings
     //low limit for the strength measure function, if the distance measured along Direction[0] is below this val. the strength will be zero (negative)
     AnyVar UserDefinedLimitLow=.CC_LimitLow;
     //high limit for the strength measure function, if the distance measured along Direction[0] is above this val. the strength will be zero
@@ -1329,7 +1329,7 @@ AnyFolder BackrestSupport = {
     AnyRefFrame &TargetObject =....BodyModel.Trunk.Segments.L2Seg.L2SupportNode;
     AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 
-    AnyFolder &DrawRef=Main.DrawSettings; //reference to the folder which contains drawsettings
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings; //reference to the folder which contains drawsettings
     //low limit for the strength measure function, if the distance measured along Direction[0] is below this val. the strength will be zero (negative)
     AnyVar UserDefinedLimitLow=.CC_LimitLow;
     //high limit for the strength measure function, if the distance measured along Direction[0] is above this val. the strength will be zero
@@ -1350,7 +1350,7 @@ AnyFolder BackrestSupport = {
     AnyRefFrame &TargetObject =....BodyModel.Trunk.Segments.L3Seg.L3SupportNode;
     AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 
-    AnyFolder &DrawRef=Main.DrawSettings; //reference to the folder which contains drawsettings
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings; //reference to the folder which contains drawsettings
     //low limit for the strength measure function, if the distance measured along Direction[0] is below this val. the strength will be zero (negative)
     AnyVar UserDefinedLimitLow=.CC_LimitLow;
     //high limit for the strength measure function, if the distance measured along Direction[0] is above this val. the strength will be zero
@@ -1371,7 +1371,7 @@ AnyFolder BackrestSupport = {
     AnyRefFrame &TargetObject =....BodyModel.Trunk.Segments.L4Seg.L4SupportNode;
     AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 
-    AnyFolder &DrawRef=Main.DrawSettings; //reference to the folder which contains drawsettings
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings; //reference to the folder which contains drawsettings
     //low limit for the strength measure function, if the distance measured along Direction[0] is below this val. the strength will be zero (negative)
     AnyVar UserDefinedLimitLow=.CC_LimitLow;
     //high limit for the strength measure function, if the distance measured along Direction[0] is above this val. the strength will be zero
@@ -1392,7 +1392,7 @@ AnyFolder BackrestSupport = {
     AnyRefFrame &TargetObject =....BodyModel.Trunk.Segments.L5Seg.L5SupportNode;
     AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 
-    AnyFolder &DrawRef=Main.DrawSettings; //reference to the folder which contains drawsettings
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings; //reference to the folder which contains drawsettings
     //low limit for the strength measure function, if the distance measured along Direction[0] is below this val. the strength will be zero (negative)
     AnyVar UserDefinedLimitLow=.CC_LimitLow;
     //high limit for the strength measure function, if the distance measured along Direction[0] is above this val. the strength will be zero

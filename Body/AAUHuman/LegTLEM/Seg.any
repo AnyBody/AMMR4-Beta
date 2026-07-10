@@ -198,17 +198,14 @@ AnySeg Foot =
     AnyRefNode MedialMalleolus =
     {
       sRel = .Scale(.Data.MedialMalleolus );
-      //#include "../DrawSettings/BML.any"
     };
 
     AnyRefNode LateralMalleolus =
     {
       sRel = .Scale(.Data.LateralMalleolus );
-      //#include "../DrawSettings/BML.any"
     };
 
-    #include "../DrawSettings/Nodes.any"
-    #include "../DrawSettings/SegmentAxes.any"
+    #include "../DrawSettings/SegmentAxes2.any"
 
     AnyDrawSurf DrwSurf =
     {
@@ -255,18 +252,15 @@ AnySeg Foot =
   AnyRefNode MedialMalleolus =
   {
     sRel = .Scale(.Data.MedialMalleolusInNeutralConf );
-    //#include "../DrawSettings/BML.any"
   };
   AnyRefNode LateralMalleolus =
   {
     sRel = .Scale(.Data.LateralMalleolusInNeutralConf );
-    //#include "../DrawSettings/BML.any"
   };
 
   AnyRefNode IntraMallolar =
   {
     sRel =0.5* (.MedialMalleolus.sRel+.LateralMalleolus.sRel);
-    //  #include "../DrawSettings/BML.any"
   };
   AnyRefNode HeelPlantar =
   {
@@ -459,11 +453,9 @@ AnySeg Foot =
   AnyRefNode Metatarsal5Contact  = {sRel = .Scale( .Data.Metatarsal5ContactNode );};
   //  AnyRefNode MetatarsalJoint  = {sRel = .Scale( .Data.MetatarsalJoint );};
 
-  #include "../DrawSettings/Nodes.any"
-  #include "../DrawSettings/SegmentAxes.any"
+  #include "../DrawSettings/SegmentAxes2.any"
 
-  AnyDrawSurf DrwSurf =
-  {
+  AnyDrawSurf DrwSurf = {
     FileName ??= ..STL.FilenameFoot;
     ScaleXYZ ??= {1.0, 1.0, ...Sign*1.0};
     RGB ??= ...ColorRef.Segments;
@@ -472,27 +464,21 @@ AnySeg Foot =
   };
 
   #if SKIN
-  AnyDrawSurf Drw2 =
-  {
-    FileName ??= ..STL.FilenameFootSkin;
-    ScaleXYZ ??= {1.0, 1.0, ...Sign*1.0};
-    RGB ??= ...ColorRef.Skin;
-    Opacity ??= Main.DrawSettings.SkinOpacity.Opacity;
-    AnyFunTransform3D &Scale =.Scale;
-    Face=-1;
-  };
+    AnyDrawSurf Drw2 = {
+      FileName ??= ..STL.FilenameFootSkin;
+      ScaleXYZ ??= {1.0, 1.0, ...Sign*1.0};
+      AnyFunTransform3D &Scale =.Scale;
+      Face=-1;
+    };
   #endif
 
   #if MUSCLETISSUE
-  AnyDrawSurf Drw1 =
-  {
-    FileName ??= ..STL.FilenameFootMuscleTissue;
-    ScaleXYZ ??= {1.0, 1.0, ...Sign*1.0};
-    RGB ??= ...ColorRef.MuscleTissue;
-    Opacity ??= Main.DrawSettings.MuscleTissueOpacity.Opacity;
-    AnyFunTransform3D &Scale =.Scale;
-    Face=-1;
-  };
+    AnyDrawSurf Drw1 = {
+      FileName ??= ..STL.FilenameFootMuscleTissue;
+      ScaleXYZ ??= {1.0, 1.0, ...Sign*1.0};
+      AnyFunTransform3D &Scale =.Scale;
+      Face=-1;
+    };
   #endif
 
 };// End of foot
@@ -514,8 +500,6 @@ AnySeg Foot =
 
       sRel = .Scale(.Data.SubTalarJoint);
       ARel = RotMat({0.0, 0.0, 0.0 }, ....Sign*(SubTalarJointAxisNode-sRel), .AnatomicalFrame.ARel'[1])*RotMat(pi/2,y);
-
-      #include "../DrawSettings/JointAxesProximal.any"
 
       #if DRAWAXES
       AnyDrawLine SJaxis2 =
@@ -560,7 +544,10 @@ AnySeg Foot =
       ARel = RotMat(0.0*{0,0,0}, .Sign*(LateralControlPoint-MedialControlPoint ),  .AnatomicalFrame.ARel'[1] )*RotMat(pi/2,y);
       #endif
 
-      #include "../DrawSettings/JointAxesDistal.any"
+      viewRefFrame = {
+        ScaleXYZ = ........DrawSettings.JointAxesDistal.ScaleXYZ;
+        RGB = ........DrawSettings.JointAxesDistal.RGB;
+      };
 
       #if DRAWAXES
       AnyDrawLine SJaxis2 =
@@ -816,44 +803,36 @@ AnySeg Shank =
   AnyRefNode MedialTibialEpicondyle =
   {
     sRel = .Scale(.Data.MedialTibialEpicondyle);
-    #include "../DrawSettings/BML.any"
   };
   AnyRefNode LateralTibialEpicondyle =
   {
     sRel = .Scale( .Data.LateralTibialEpicondyle );
-    #include "../DrawSettings/BML.any"
   };
   AnyRefNode IntraTibialEpicondyle =
   {
     sRel = (.MedialTibialEpicondyle.sRel+.LateralTibialEpicondyle.sRel)*0.5 ;
-    #include "../DrawSettings/BML.any"
   };
   AnyRefNode TibialTuberosity =
   {
     sRel = .Scale( .Data.TibialTuberosity  );
-    #include "../DrawSettings/BML.any"
   };
   AnyRefNode FibularHead =
   {
     sRel = .Scale( .Data.FibularHead );
-    #include "../DrawSettings/BML.any"
   };
   AnyRefNode MedialMalleolus =
   {
     sRel = .Scale( .Data.MedialMalleolus );
-    #include "../DrawSettings/BML.any"
 
   };
   AnyRefNode LateralMalleolus =
   {
     sRel = .Scale( .Data.LateralMalleolus );
-    #include "../DrawSettings/BML.any"
 
   };
   AnyRefNode IntraMallolar =
   {
     sRel =0.5* (.MedialMalleolus.sRel+.LateralMalleolus.sRel);
-    #include "../DrawSettings/BML.any"
   };
 
   #if TLEM_JOINT_TYPE_PATELLATENDON != _JOINT_TYPE_USERDEFINED_
@@ -1054,31 +1033,24 @@ AnySeg Shank =
   };
 
   #if SKIN
-  AnyDrawSurf Drw2 =
-  {
-    FileName ??= ..STL.FilenameShankSkin;
-    ScaleXYZ ??= {1.0, 1.0, ...Sign*1.0};
-    RGB ??= ...ColorRef.Skin;
-    Opacity ??= Main.DrawSettings.SkinOpacity.Opacity;
-    AnyFunTransform3D &Scale =.Scale;
-    Face=-1;
-  };
+    AnyDrawSurf Drw2 = {
+      FileName ??= ..STL.FilenameShankSkin;
+      ScaleXYZ ??= {1.0, 1.0, ...Sign*1.0};
+      AnyFunTransform3D &Scale =.Scale;
+      Face=-1;
+    };
   #endif
 
   #if MUSCLETISSUE
-  AnyDrawSurf Drw1 =
-  {
-    FileName ??= ..STL.FilenameShankMuscleTissue;
-    ScaleXYZ ??= {1.0, 1.0, ...Sign*1.0};
-    RGB ??= ...ColorRef.MuscleTissue;
-    Opacity ??= Main.DrawSettings.MuscleTissueOpacity.Opacity;
-    AnyFunTransform3D &Scale =.Scale;
-    Face=-1;
-  };
+    AnyDrawSurf Drw1 = {
+      FileName ??= ..STL.FilenameShankMuscleTissue;
+      ScaleXYZ ??= {1.0, 1.0, ...Sign*1.0};
+      AnyFunTransform3D &Scale =.Scale;
+      Face=-1;
+    };
   #endif
 
-  #include "../DrawSettings/Nodes.any"
-  #include "../DrawSettings/SegmentAxes.any"
+  #include "../DrawSettings/SegmentAxes2.any"
 
 }; // End of Shank
 
@@ -1090,8 +1062,7 @@ AnySeg Thigh =
   JaboutCoMOnOff = On;
   r0 ??= .Pelvis.HipJoint.sRel*....Trunk.Segments.PelvisSeg.Axes0'+    ....Trunk.Segments.PelvisSeg.r0-    HipJoint.sRel*Axes0';
 
-  #include "../DrawSettings/Nodes.any"
-  #include "../DrawSettings/SegmentAxes.any"
+  #include "../DrawSettings/SegmentAxes2.any"
 
   AnyFloat pUnscaled = {Data.HipJoint, Data.EpicondylusFemorisMedialis, Data.EpicondylusFemorisLateralis};
   Scale = {AnyFunTransform3D& GeomScale = ...GeoScaling.Thigh.ScaleFunction;};
@@ -1265,7 +1236,6 @@ AnySeg Thigh =
     sRel = .Scale(sRelUnscaled);
     ARel = RotMat({0.0,0,0}, .Scale(sRelUnscaled)-.Scale(.KneeJoint.sRelUnscaled), .AnatomicalFrame.ARel'[2])*RotMat(-pi/2,x)*RotMat(-pi/2,z);
 
-    #include "../DrawSettings/JointAxesProximal.any"
   };
   #endif
 
@@ -1305,12 +1275,10 @@ AnySeg Thigh =
   AnyRefNode EpicondylusFemorisMedialis =
   {
     sRel=.Scale(.Data.EpicondylusFemorisMedialis);// Coordinates of the Medial Femur Epicondyle bony landmark, Klein Horsman
-    #include "../DrawSettings/BML.any"
   };
   AnyRefNode EpicondylusFemorisLateralis =
   {
     sRel = .Scale(.Data.EpicondylusFemorisLateralis );// Coordinates of the lateral Femur Epicondyle bony landmark, Klein Horsman
-    #include "../DrawSettings/BML.any"
   };
   AnyRefNode EpicondylusFemorisMidPoint =
   {
@@ -1527,36 +1495,29 @@ AnySeg Thigh =
 
 
   #if SKIN
-  AnyRefNode SkinsRel  =
-  {
-    sRel = {0,0,0};
-    ARel = RotMat(...Sign*-27*pi/180, y);
-    AnyDrawSurf Drw2 =
-    {
-      FileName ??= ...STL.FilenameThighSkin;
-      ScaleXYZ ??= {1.0, 1.0, ....Sign*1.0};
-      RGB ??= ....ColorRef.Skin;
-      Opacity ??= Main.DrawSettings.SkinOpacity.Opacity;
-      AnyFunTransform3D &Scale =..Scale;
-      Face=-1;
+    AnyRefNode SkinsRel = {
+      sRel = {0,0,0};
+      ARel = RotMat(...Sign*-27*pi/180, y);
+      AnyDrawSurf Drw2 = {
+        FileName ??= ...STL.FilenameThighSkin;
+        ScaleXYZ ??= {1.0, 1.0, ....Sign*1.0};
+        AnyFunTransform3D &Scale =..Scale;
+        Face = -1;
+      };
     };
-  };
   #endif
 
   #if MUSCLETISSUE
-  AnyRefNode MuscleTissuesRel  =
-  {
-    sRel = {0,0,0};
-    ARel = RotMat(...Sign*-27*pi/180, y);
-    AnyDrawSurf Drw2 = {
-      FileName ??= ...STL.FilenameThighMuscleTissue;
-      ScaleXYZ ??= {1.0, 1.0, ....Sign*1.0};
-      RGB ??= ....ColorRef.MuscleTissue;
-      Opacity ??= Main.DrawSettings.MuscleTissueOpacity.Opacity;
-      AnyFunTransform3D &Scale =..Scale;
-      Face=-1;
+    AnyRefNode MuscleTissuesRel = {
+      sRel = {0,0,0};
+      ARel = RotMat(...Sign*-27*pi/180, y);
+      AnyDrawSurf Drw2 = {
+        FileName ??= ...STL.FilenameThighMuscleTissue;
+        ScaleXYZ ??= {1.0, 1.0, ....Sign*1.0};
+        AnyFunTransform3D &Scale =..Scale;
+        Face = -1;
+      };
     };
-  };
   #endif
 
 };
@@ -1626,13 +1587,12 @@ AnySeg Patella =
   /// This is defined by an AnyKinPLine in the file Jnt.any.
   /// The insertion lies on the Shank segment.
   AnyRefNode Origin_patella_tendon = {
-    sRel = .Scale( .Data.Origin_patella_tendon );//AnyDrawRefFrame drw = {RGB = {0,1,0};};
+    sRel = .Scale( .Data.Origin_patella_tendon );
     ARel = ..Thigh.KneeJoint.ARel;
   };
   #endif
 
-  #include "../DrawSettings/Nodes.any"
-  #include "../DrawSettings/SegmentAxes.any"
+  #include "../DrawSettings/SegmentAxes2.any"
 
   // Patella insertion points
 
@@ -1728,7 +1688,6 @@ PelvisSeg =
     AnyRefNode HipJoint = {
       AnyVec3 sRelUnscaled = .Muscles.Data.HipJoint;
       sRel = ..AnatomicalFrameTrunk.Scale_Leg_Pelvis(sRelUnscaled );
-      #include "../DrawSettings/JointAxesProximal.any"
       AnyRefNode ISB = {
          ARel = ...AnatomicalFrameISB.ARel;
       };
@@ -2040,7 +1999,7 @@ PelvisSeg =
       #endif
       {
         FileName ??= ..STL.FilenamePelvis;
-        Opacity ??=  Main.DrawSettings.BonesOpacity.Pelvis;
+        Opacity ??=  ......DrawSettings.BonesOpacity.Pelvis;
         RGB ??= ...ColorRef.Segments;
         AnyFunTransform3D &Scale = .AnatomicalFrameTrunk.Scale_Leg_Pelvis ;
       };
@@ -2048,7 +2007,7 @@ PelvisSeg =
       #if (BM_PELVIS_DISPLAY == _PELVIS_DISPLAY_LEGANDTRUNKPELVIS_)
       AnyDrawSurf Drw_LegSacrum = {
         FileName ??= ..STL.FilenameSacrum;
-        Opacity ??=  Main.DrawSettings.BonesOpacity.Pelvis;
+        Opacity ??=  ......DrawSettings.BonesOpacity.Pelvis;
         RGB ??= ...ColorRef.Segments;
         AnyFunTransform3D &Scale = .AnatomicalFrameTrunk.Scale_Leg_Pelvis ;
       };

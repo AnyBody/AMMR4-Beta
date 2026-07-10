@@ -17,11 +17,6 @@
 #define BM_CONFIG_VALUES OFF
 #endif
 
-// A flag to switch on/off inclusion of the draw settings (may be needed in case of two human models)
-#ifndef BM_DRAWSETTINGS_SKIP
-#define BM_DRAWSETTINGS_SKIP OFF
-#endif
-
 // Parameter defining the foot model used.
 #ifndef BM_FOOT_MODEL
 #define BM_FOOT_MODEL _FOOT_MODEL_RIGID_GM_

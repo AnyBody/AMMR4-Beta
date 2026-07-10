@@ -172,10 +172,8 @@ AnySeg PelvisSeg = {
       AnyDrawSurf Drw2 = {
         FileName = .....LEG_MODEL_PARAM_DIRECTION.Leg.Segments.STL.FilenamePelvisSkin;
         ScaleXYZ = {1.0, 1.0, 1.0};
-        RGB = ....ColorRef.Skin;
-        Opacity = Main.DrawSettings.SkinOpacity.Opacity;
         AnyFunTransform3D &Scale =..GeomScale;
-        Face=-1;
+        Face = -1;
       };
     #endif
   #endif
@@ -184,10 +182,8 @@ AnySeg PelvisSeg = {
       AnyDrawSurf Drw1 = {
         FileName = .....LEG_MODEL_PARAM_DIRECTION.Leg.Segments.STL.FilenamePelvisMuscleTissue;
         ScaleXYZ = {1.0, 1.0, 1.0};
-        RGB = ....ColorRef.MuscleTissue;
-        Opacity = Main.DrawSettings.MuscleTissueOpacity.Opacity;
         AnyFunTransform3D &Scale =..GeomScale;
-        Face=-1;
+        Face = -1;
       };
     #endif
   #endif
@@ -267,7 +263,10 @@ AnySeg PelvisSeg = {
     AnyRefNode HipJointsCenter = { sRel = .Scale({0.05002253, -0.1149108, 0});ARel=.AnatomicalFrame.ARel;};
   #endif
 
-  #include "../DrawSettings/SegmentAxes.any"
+  viewRefFrame = {
+    ScaleXYZ = .....DrawSettings.SegmentAxes.ScaleXYZ;
+    RGB = .....DrawSettings.SegmentNodes.RGB;
+  };
   AnyRefNode GroundPelvisJntNode = {sRel = .Scale(.Data.GroundPelvisJntNode_pos);};
   AnyRefNode PelvisSacrumJntNode = {sRel = .Scale(.Data.PelvisSacrumJntNode_pos);};
   AnyRefNode Seat2MidContactNode={sRel=0.5*(.Right.Seat2ContactNode.sRel+.Left.Seat2ContactNode.sRel);};
@@ -319,10 +318,10 @@ AnySeg PelvisSeg = {
   {
     FileName = ...Data.unscaled.STL.FilenamePelvisWOS;
     #if ! BM_LEG_MODEL_IS_TLEM
-      Opacity ??= Main.DrawSettings.BonesOpacity.Pelvis;
+      Opacity ??= .....DrawSettings.BonesOpacity.Pelvis;
       RGB = ...ColorRef.Segments;
     #else
-      Opacity ??= Main.DrawSettings.BonesOpacity.Pelvis * 0.5;
+      Opacity ??= .....DrawSettings.BonesOpacity.Pelvis * 0.5;
       RGB = ...ColorRef.Segments;
     #endif
     AnyFunTransform3D &Scale = .Scale;
@@ -332,10 +331,10 @@ AnySeg PelvisSeg = {
     AnyDrawSurf Drw_TrunkSacrum = {
       FileName = ...Data.unscaled.STL.FilenameSacrumSeg           ;
       #if (BM_LEG_LEFT == OFF) & (BM_LEG_RIGHT == OFF)
-        Opacity ??= Main.DrawSettings.BonesOpacity.Pelvis;
+        Opacity ??= .....DrawSettings.BonesOpacity.Pelvis;
         RGB = ...ColorRef.Segments;
       #else
-        Opacity ??= Main.DrawSettings.BonesOpacity.Pelvis * 0.5;
+        Opacity ??= .....DrawSettings.BonesOpacity.Pelvis * 0.5;
         RGB = ...ColorRef.Segments;
       #endif
       AnyFunTransform3D &Scale = .Scale;

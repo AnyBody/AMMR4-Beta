@@ -1,19 +1,19 @@
 AnyFolder DrawSettings  = {
-  //^ The values in this DrawSettings file are initialized with "??=" which allows
-  //^ the values to be overrriden in the user application.
-  //^ Hence, all values in this files behaves as default values if not set by
-  //^ the user.
-  //^
-  //^ It is good practice not to edit this file, but instead set the values directly
-  //^ in your applicaiton:
-  //^
-  //^ .. code_block:: AnyScript
-  //^
-  //^    Main.DrawSettings.Muscle ??=
-  //^    {
-  //^      RGB ??= {0.9, 0.1, 0.1};
-  //^    };
-  //^
+  ///^ The values in this DrawSettings file are initialized with "??=" which allows
+  ///^ the values to be overrriden in the user application.
+  ///^ Hence, all values in this files behaves as default values if not set by
+  ///^ the user.
+  ///^
+  ///^ It is good practice not to edit this file, but instead set the values directly
+  ///^ in your applicaiton:
+  ///^
+  ///^ .. code_block:: AnyScript
+  ///^
+  ///^    Main.HumanModel.DrawSettings.Muscle ??=
+  ///^    {
+  ///^      RGB ??= {0.9, 0.1, 0.1};
+  ///^    };
+  ///^
 
 
   /// This is the color definitions of the nodes and segments
@@ -56,24 +56,24 @@ AnyFolder DrawSettings  = {
   };
 
   AnyFolder Ligament ={
-     AnyVec3 RGB ??= .Colors.AnyBodyRed;
-     AnySwitch DrawScaleOnOff ??= Off;
-     AnyVar Bulging ??= 5;
-     AnyVar ColorScale ??= 1.0;
-     AnyVec3 RGBColorScale ??= {0.957031, 0.785156,0.785156};
-     AnyVar MaxStress ??= 1500000.000000; //N/m^2 //This number is for graphics only!
-     AnyVar Opacity ??= 1.0;
+    AnyVec3 RGB ??= .Colors.AnyBodyRed;
+    AnySwitch DrawScaleOnOff ??= Off;
+    AnyVar Bulging ??= 5;
+    AnyVar ColorScale ??= 1.0;
+    AnyVec3 RGBColorScale ??= {0.957031, 0.785156,0.785156};
+    AnyVar MaxStress ??= 1500000.000000; //N/m^2 //This number is for graphics only!
+    AnyVar Opacity ??= 1.0;
     AnyFolder DrawScale =
-      {
-         AnySwitchVar EnableCreasing ??= Off;
-         AnyVar CreasingAngle ??= 0.524;
-         AnySwitchVar EnableWireframe ??= Off;
-         AnySwitchVar EnableSmoothing ??= On;
-         AnyVar Param ??= 0.0;
-         AnyVector ParamArray ??= {0.0, 0.167, 0.333, 0.5, 0.667, 0.833, 1.0};
-         AnyFloat RGBArray ??= {{0.0, 0.0, 0.6}, {0.0, 0.0, 1.0}, {0.0, 1.0, 1.0}, {0.0, 1.0, 0.0}, {1.0, 1.0, 0.0}, {1.0, 0.0, 0.0}, {0.6, 0.0, 0.0}};
-         AnyVector OpacityArray ??= {1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0};
-      };
+    {
+      AnySwitchVar EnableCreasing ??= Off;
+      AnyVar CreasingAngle ??= 0.524;
+      AnySwitchVar EnableWireframe ??= Off;
+      AnySwitchVar EnableSmoothing ??= On;
+      AnyVar Param ??= 0.0;
+      AnyVector ParamArray ??= {0.0, 0.167, 0.333, 0.5, 0.667, 0.833, 1.0};
+      AnyFloat RGBArray ??= {{0.0, 0.0, 0.6}, {0.0, 0.0, 1.0}, {0.0, 1.0, 1.0}, {0.0, 1.0, 0.0}, {1.0, 1.0, 0.0}, {1.0, 0.0, 0.0}, {0.6, 0.0, 0.0}};
+      AnyVector OpacityArray ??= {1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0};
+    };
   };
 
 
@@ -94,6 +94,19 @@ AnyFolder DrawSettings  = {
     AnyVar L3 ??= 1*GlobalCoef;
     AnyVar L2 ??= 1*GlobalCoef;
     AnyVar L1 ??= 1*GlobalCoef;
+
+    AnyVar T12 ??= 1*GlobalCoef;
+    AnyVar T11 ??= 1*GlobalCoef;
+    AnyVar T10 ??= 1*GlobalCoef;
+    AnyVar T9 ??= 1*GlobalCoef;
+    AnyVar T8 ??= 1*GlobalCoef;
+    AnyVar T7 ??= 1*GlobalCoef;
+    AnyVar T6 ??= 1*GlobalCoef;
+    AnyVar T5 ??= 1*GlobalCoef;
+    AnyVar T4 ??= 1*GlobalCoef;
+    AnyVar T3 ??= 1*GlobalCoef;
+    AnyVar T2 ??= 1*GlobalCoef;
+    AnyVar T1 ??= 1*GlobalCoef;
 
     AnyVar RightFoot ??= 1*GlobalCoef;
     AnyVar RightShank ??= 1*GlobalCoef;
@@ -160,10 +173,10 @@ AnyFolder DrawSettings  = {
   };
 
   AnyFolder InertiaSolids = {
-     AnySwitchVar Visible ??= Off;
-     AnyInt RGB ??= {0,1,0};
-     AnyInt PickableZOrdering ??= -1;
-     AnyVar Opacity ??= 0.5;
+    AnySwitchVar Visible ??= Off;
+    AnyInt RGB ??= {0,1,0};
+    AnyInt PickableZOrdering ??= -1;
+    AnyVar Opacity ??= 0.5;
   };
 
   AnyFolder KinematicVolume = {

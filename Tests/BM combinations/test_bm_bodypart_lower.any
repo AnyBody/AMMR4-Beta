@@ -16,6 +16,9 @@
 //
 #include "libdef.any"
 
+#ifndef TEST_NAME
+  #define BM_LEG_MODEL 3
+#endif
 
 Main =
 {

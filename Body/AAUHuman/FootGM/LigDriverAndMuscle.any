@@ -23,7 +23,7 @@ AnyMuscleGeneric LigMusclePull = {
   Type = NonPositive;
   AnyMuscleModelUsr1 &musmdl=.MusMdlPull;
   AnyKinMeasure &measure=.Line;
-  AnyDrawMuscle DrwMus = { RGB = {0,1,0}; Bulging=1; MaxStress=4000000; Opacity =Main.DrawSettings.Ligament.Opacity;
+  AnyDrawMuscle DrwMus = { RGB = {0,1,0}; Bulging = 1; MaxStress = 4000000; Opacity = ........DrawSettings.Ligament.Opacity;
 };
 
 #ifdef FORCE_VIEW 
@@ -41,7 +41,7 @@ AnyMuscleGeneric LigMusclePush = {
   Type = NonNegative;
   AnyMuscleModelUsr1 &musmdl=.MusMdlPush;
   AnyKinMeasure &measure=.Line;
-  AnyDrawMuscle DrwMus = { RGB = {1,0,0}; Bulging=1; MaxStress=4000000; Opacity =Main.DrawSettings.Ligament.Opacity;
+  AnyDrawMuscle DrwMus = { RGB = {1,0,0}; Bulging = 1; MaxStress = 4000000; Opacity = ........DrawSettings.Ligament.Opacity;
 };
 #ifdef FORCE_VIEW 
 

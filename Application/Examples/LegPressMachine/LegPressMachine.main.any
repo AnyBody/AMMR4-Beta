@@ -9,7 +9,7 @@ Main =
   // ----------------------------------------------------------
   // Path to draw settings
   // ----------------------------------------------------------
-  #include "Model/DrawSettings.any"
+  HumanModel = { #include "Model/DrawSettings.any" };
 
   // ----------------------------------------------------------
   // Body Model Configuration
@@ -49,7 +49,7 @@ Main =
               AnyDrawSurf surf =
               {
                   FileName = "Input/box";
-                  RGB = Main.DrawSettings.Colors.AnyBodyPaleYellow;
+                  RGB = Main.HumanModel.DrawSettings.Colors.AnyBodyPaleYellow;
                   ScaleXYZ = {1, Main.Parameters.DesignParameters.Back_Rest_Thick/2, 1}/0.15;
                   Opacity = 0.2;
               };

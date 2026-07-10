@@ -6,7 +6,7 @@ Main = {
   // ----------------------------------------------------------
   // Path to draw settings
   // ----------------------------------------------------------
-  #include "Model/DrawSettings.any"
+  HumanModel = { #include "Model/DrawSettings.any" };
 
   // ----------------------------------------------------------
   // Model configuration:

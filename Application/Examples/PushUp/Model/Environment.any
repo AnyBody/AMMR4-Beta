@@ -7,7 +7,7 @@ AnyFolder Environment={
     AnyDrawSurf Floor ={
       FileName = "../Input/floor";
       ScaleXYZ={1,1,1};
-      RGB = Main.DrawSettings.Colors.AnyBodyBlue;
+      RGB = Main.HumanModel.DrawSettings.Colors.AnyBodyBlue;
       Opacity=1.0;
     };
 
@@ -33,7 +33,7 @@ AnyFolder Environment={
            AnyDrawSurf Body =
            {
              FileName = "../Input/Body-grey";
-             RGB = Main.DrawSettings.Colors.AnyBodyGrey;
+             RGB = Main.HumanModel.DrawSettings.Colors.AnyBodyGrey;
              Opacity = 1;
              ScaleXYZ= 0.005 * {1,1,1};
              AnyStyleDrawMaterial1 style =
@@ -45,7 +45,7 @@ AnyFolder Environment={
            AnyDrawSurf AnyTechnology =
            {
              FileName = "../Input/AnyTechnology-red";
-             RGB = Main.DrawSettings.Colors.AnyBodyRed;
+             RGB = Main.HumanModel.DrawSettings.Colors.AnyBodyRed;
              Opacity = 1;
              ScaleXYZ= 0.005*{1,1,1};
              AnyStyleDrawMaterial1 style =
@@ -62,7 +62,7 @@ AnyFolder Environment={
            AnyDrawSurf Body =
            {
              FileName = "../Input/Body-grey";
-             RGB = Main.DrawSettings.Colors.AnyBodyGrey;
+             RGB = Main.HumanModel.DrawSettings.Colors.AnyBodyGrey;
              Opacity = 1;
              ScaleXYZ= 0.005*{1,1,1};
              AnyStyleDrawMaterial1 style =
@@ -74,7 +74,7 @@ AnyFolder Environment={
            AnyDrawSurf AnyTechnology =
            {
              FileName = "../Input/AnyTechnology-red";
-             RGB = Main.DrawSettings.Colors.AnyBodyRed;
+             RGB = Main.HumanModel.DrawSettings.Colors.AnyBodyRed;
              Opacity = 1;
              ScaleXYZ= 0.005*{1,1,1};
              AnyStyleDrawMaterial1 style =

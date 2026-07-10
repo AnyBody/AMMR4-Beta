@@ -70,10 +70,10 @@ This allows the density to be variable to make the overall Mass of the body corr
     TriangleDirection = iffun(gtfun(...Sign, 0), RotCounterclockwise, RotClockwise);
 
     viewSurface = {
-      Visible ??= Main.DrawSettings.InertiaSolids.Visible;
-      PickableZOrdering ??= Main.DrawSettings.InertiaSolids.PickableZOrdering;
-      RGB ??= {0.8, 0, 0};
-      Opacity ??= Main.DrawSettings.InertiaSolids.Opacity;
+      Visible ??= ........DrawSettings.InertiaSolids.Visible;
+      PickableZOrdering ??= ........DrawSettings.InertiaSolids.PickableZOrdering;
+      RGB ??= ........DrawSettings.InertiaSolids.RGB;
+      Opacity ??= ........DrawSettings.InertiaSolids.Opacity;
     };
 
     // Handle left-right mirroring

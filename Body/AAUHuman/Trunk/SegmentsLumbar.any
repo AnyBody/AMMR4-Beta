@@ -216,7 +216,7 @@ AnySeg SacrumSeg = {
     // -------- Drawing object section sacrum--------
     #if BM_PELVIS_DISPLAY == _PELVIS_DISPLAY_LEGPELVIS_ONLY_
     AnyDrawSurf DrwSacrum = {
-      Opacity = Main.DrawSettings.BonesOpacity.Sacrum;
+      Opacity = .....DrawSettings.BonesOpacity.Sacrum;
       FileName = ...Data.unscaled.STL.FilenameSacrumSeg;
       RGB = ...ColorRef.Segments;
       AnyFunTransform3D &Scale =.Scale;
@@ -423,7 +423,7 @@ AnySeg L5Seg = {
   AnyDrawSurf BoneDraw = {
     FileName = ...Data.unscaled.STL.FilenameL5Seg;
     RGB = ...ColorRef.Segments;
-    Opacity = Main.DrawSettings.BonesOpacity.L5;
+    Opacity = .....DrawSettings.BonesOpacity.L5;
     AnyFunTransform3D &Scale =.Scale;
   };
 
@@ -659,7 +659,7 @@ AnySeg L4Seg = {
   AnyDrawSurf BoneDraw = {
     FileName = ...Data.unscaled.STL.FilenameL4Seg;
     RGB = ...ColorRef.Segments;
-    Opacity = Main.DrawSettings.BonesOpacity.L4;
+    Opacity = .....DrawSettings.BonesOpacity.L4;
     AnyFunTransform3D &Scale =.Scale;
   };
 
@@ -927,7 +927,7 @@ AnySeg L3Seg = {
   AnyDrawSurf BoneDraw = {
     FileName = ...Data.unscaled.STL.FilenameL3Seg;
     RGB = ...ColorRef.Segments;
-    Opacity = Main.DrawSettings.BonesOpacity.L3;
+    Opacity = .....DrawSettings.BonesOpacity.L3;
     AnyFunTransform3D &Scale =.Scale;
   };
 
@@ -1198,7 +1198,7 @@ AnySeg L2Seg = {
   AnyDrawSurf BoneDraw = {
     FileName = ...Data.unscaled.STL.FilenameL2Seg;
     RGB = ...ColorRef.Segments;
-    Opacity = Main.DrawSettings.BonesOpacity.L2;
+    Opacity = .....DrawSettings.BonesOpacity.L2;
     AnyFunTransform3D &Scale =.Scale;
   };
   #if BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
@@ -1451,7 +1451,7 @@ AnySeg L1Seg = {
     AnyDrawSurf BoneDraw = {
       FileName = ...Data.unscaled.STL.FilenameL1Seg;
       RGB = ...ColorRef.Segments;
-      Opacity = Main.DrawSettings.BonesOpacity.L1;
+      Opacity = .....DrawSettings.BonesOpacity.L1;
       AnyFunTransform3D &Scale =.Scale;
     };
 

@@ -21,11 +21,7 @@ r0  ??=  .Radius.RadioCarpal.sRel*.Radius.Axes0'+.Radius.r0-Ref.RadioCarpalFlexi
 
   UseInertiaObjects = On;
 
-  #include "../DrawSettings/Nodes.any"
-
   AnyFolder &Data = ..Data.unscaled.ModelParameters.HandSeg.SimpleHandSeg;
-
-
 
 AnyInertiaSolid BoneInertiaObject = {
     BodyMassCorrectionGeneric massCorrection() = {

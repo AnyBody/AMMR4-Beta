@@ -5,7 +5,7 @@
     AnyComponentDefinition obj = {};
     AnyRefFrame &StrengthObject=TargetObject; //Node used for strength measurement, occasionally this is different from the target object
 
-    AnyFolder &DrawRef=Main.DrawSettings; //reference to the folder which contains drawsettings
+    AnyFolder &DrawRef=Main.HumanModel.DrawSettings; //reference to the folder which contains drawsettings
     //low limit for the strength measure function, if the distance measured along Direction[0] is below this val. the strength will be zero (negative)
     #var AnyVar UserDefinedDistLimitLow;
     //high limit for the strength measure function, if the distance measured along Direction[0] is above this val. the strength will be zero

@@ -72,7 +72,6 @@ AnyFloat Points0 = {
 
   AnyFunTransform3D& GeomScale = Scale;
 
-  #include "../DrawSettings/Nodes.any"
 
 
 
@@ -93,7 +92,7 @@ AnyFloat Points0 = {
   AnyRefNode ac = {sRel = .Scale(.Data.ac_pos*.Mirror);};
 
   AnyRefNode acj = {    sRel = .Scale(.Data.acj_pos*.Mirror);    #include "../DrawSettings/JointAxesDistal.any"    };
-  AnyRefNode scj = {    sRel = .Scale(.Data.scj_pos*.Mirror);    #include "../DrawSettings/JointAxesProximal.any"  };
+  AnyRefNode scj = {    sRel = .Scale(.Data.scj_pos*.Mirror);};
 
   AnyRefNode conoid = {sRel = .Scale(.Data.conoid_pos*.Mirror);};
   AnyRefNode trapezoid = {sRel = .Scale(.Data.trapezoid_pos*.Mirror);};
@@ -173,8 +172,7 @@ AnySeg Scapula ={
    AnyFunTransform3D& GeomScale = Scale;
 
 
-  #include "../DrawSettings/Nodes.any"
-  #include "../DrawSettings/SegmentAxes.any"
+  #include "../DrawSettings/SegmentAxes2.any"
 
 
 
@@ -204,9 +202,6 @@ AnySeg Scapula ={
 
   AnyRefNode ac = {
     sRel = .Scale(.Data.ac_pos*.Mirror);
-    #include "../DrawSettings/BML.any"
-    #include "../DrawSettings/JointAxesProximal.any"
-
   };
 
   AnyRefNode acj = {sRel = .Scale(.Data.acj_pos*.Mirror);};
@@ -215,38 +210,31 @@ AnySeg Scapula ={
   /// when BM_ARM_THORAX_SCAPULA_CONTACT == _ELLIPSOID_CONTACT_
   AnyRefNode ScapulaSlidingTS = {
     sRel = .Scale((.Data.ts_pos+ {0,0,-0.015})*.Mirror);
-    #include "../DrawSettings/BML.any"
   };
 
   AnyRefNode ScapulaSlidingAI = {
     sRel = .Scale((.Data.ai_pos +{-0.00,0.000,-0.008})*.Mirror);
-    #include "../DrawSettings/BML.any"
   };
 
   AnyRefNode ts = {
     sRel = .Scale(.Data.ts_pos*.Mirror);
-    #include "../DrawSettings/BML.any"
   };
 
   AnyRefNode ai= {
     sRel = .Scale(.Data.ai_pos*.Mirror);
-    #include "../DrawSettings/BML.any"
   };
   AnyRefNode aa = {
     sRel = .Scale(.Data.aa_pos*.Mirror);
-    #include "../DrawSettings/BML.any"
   };
 
   #if BM_ARM_DELTOID_WRAPPING
   AnyRefNode coronoid= {
     //^ Node used for the anterior deltoid wrapping surface scaling
     sRel = .Scale(.Data.coronoid_pos*.Mirror);
-    #include "../DrawSettings/BML.any"
   };
   #endif
   AnyRefNode gh = {
     sRel = .Scale(.Data.gh_pos*.Mirror);
-    #include "../DrawSettings/BML.any"
     #include "../DrawSettings/JointAxesDistal.any"
   };
 
@@ -266,7 +254,6 @@ AnySeg Humerus ={
   AnyMat33 Mirror={{..Sign,0,0},{0,1,0},{0,0,1}};
   r0 ??=.Scapula.gh.sRel*.Scapula.Axes0'+.Scapula.r0;
 
-  #include "../DrawSettings/Nodes.any"
 
   UseInertiaObjects = On;
 
@@ -354,22 +341,16 @@ AnyFloat pUnscaled= {Data.gh_pos, Data.EpicondylusHumerusMedialis_pos, Data.Epic
 
   AnyRefNode gh = {
     sRel = .Scale(.Data.gh_pos*.Mirror);
-    #include "../DrawSettings/BML.any"
-    #include "../DrawSettings/JointAxesProximal.any"
   };
   AnyRefNode em = {sRel = .Scale(.Data.em_pos*.Mirror);
-    #include "../DrawSettings/BML.any"
   };
   AnyRefNode el = {sRel = .Scale(.Data.el_pos*.Mirror);
-    #include "../DrawSettings/BML.any"
   };
 
 
   AnyRefNode EpicondylusHumerusMedialis = {sRel = .Scale(.Data.EpicondylusHumerusMedialis_pos*.Mirror);
-    #include "../DrawSettings/BML.any"
   };
   AnyRefNode EpicondylusHumerusLateralis = {sRel = .Scale(.Data.EpicondylusHumerusLateralis_pos*.Mirror);
-    #include "../DrawSettings/BML.any"
   };
 
   //Axis for flexion extension joint data
@@ -413,7 +394,6 @@ AnySeg Ulna ={
 
   r0 ??=.Humerus.HumeroUlnar.sRel*.Humerus.Axes0'+.Humerus.r0-HumeroUlnar.sRel*Axes0';
 
-  #include "../DrawSettings/Nodes.any"
 
   UseInertiaObjects = On;
 
@@ -470,13 +450,10 @@ AnySeg Ulna ={
   };
 
   AnyRefNode MedialHumerusCondyleInNeutralConf = {sRel = .Scale(.Data.MedialHumerusCondyleInNeutralConf_pos*.Mirror);
-    #include "../DrawSettings/BML.any"
   };
   AnyRefNode LateralHumerusCondyleInNeutralConf = {sRel = .Scale(.Data.LateralHumerusCondyleInNeutralConf_pos*.Mirror);
-    #include "../DrawSettings/BML.any"
   };
   AnyRefNode RadioStyloInNeutralConf = {sRel = .Scale(.Data.RadioStyloInNeutralConf_pos*.Mirror);
-    #include "../DrawSettings/BML.any"
   };
 
 
@@ -537,7 +514,6 @@ AnySeg Ulna ={
 
   AnyRefNode UlnaStylo = {
     sRel = .Scale(.Data.us_pos*.Mirror);
-    #include "../DrawSettings/BML.any"
   };
 
 
@@ -563,9 +539,7 @@ AnySeg Ulna ={
 
 
   //Deprecated nodes
-  AnyRefNode fe = { sRel=.Scale(.Data.fe_pos*.Mirror);
-    #include "../DrawSettings/JointAxesProximal.any"
-  };
+  AnyRefNode fe = { sRel=.Scale(.Data.fe_pos*.Mirror);};
 
   // Node used for defining proximal ps joint
   AnyRefNode ps2 = {
@@ -582,11 +556,9 @@ AnySeg Ulna ={
   };
   AnyRefNode us = {
     sRel = .Scale(.Data.us_pos*.Mirror);
-    #include "../DrawSettings/BML.any"
   };
   AnyRefNode ol = {
     sRel = .Scale(.Data.ol_pos*.Mirror);
-    #include "../DrawSettings/BML.any"
   };
   //This is the nodes was  used for the definiton of the pronation supination axis.
   AnyRefNode ps = {
@@ -605,7 +577,6 @@ AnySeg Radius ={
 
   r0 ??=.Ulna.r0+.Ulna.ProximalRadioUlnar.sRel*.Ulna.Axes0'-ProximalRadioUlnar.sRel*Axes0';
 
-  #include "../DrawSettings/Nodes.any"
 
   UseInertiaObjects = On;
 
@@ -698,7 +669,6 @@ AnySeg Radius ={
 
 
   AnyRefNode PointHumeralRadioJoint = {
-    #include "../DrawSettings/JointAxesProximal.any"
     sRel = .Scale(.Data.PointHumeroRadioJoint_pos*.Mirror);
     ARel =.ProximalRadioUlnar.ARel;
   };
@@ -730,14 +700,12 @@ AnySeg Radius ={
 
   AnyRefNode RadiusStylo = {
     sRel = .Scale(.Data.rs_pos*.Mirror);
-    #include "../DrawSettings/BML.any"
   };
 
    //This is a node located on ulna but here created in radius coordinate system
    //It can be used e.g. for wrist marker placements
    AnyRefNode UlnaStylo = {
     sRel = .Scale(.Data.UlnaStyloNeutralConf_pos*.Mirror);
-    #include "../DrawSettings/BML.any"
   };
 
 
@@ -754,7 +722,6 @@ AnySeg Radius ={
 
   ///Deprecated node use PointHumeralRadioJoint instead
   AnyRefNode PointPS2 = {
-    #include "../DrawSettings/JointAxesProximal.any"
     sRel = .Scale(.Data.PointPS2_pos*.Mirror);
   };
 
@@ -767,21 +734,17 @@ AnySeg Radius ={
   ///Deprecated node use RadiusStylo instead
   AnyRefNode rs = {
     sRel = .Scale(.Data.rs_pos*.Mirror);
-    #include "../DrawSettings/BML.any"
   };
 
   ///Deprecated node ProximalRadioUlnar
   AnyRefNode PS = {
-    #include "../DrawSettings/JointAxesProximal.any"
     sRel = .Scale(.Data.PS_pos*.Mirror);
-    #include "../DrawSettings/BML.any"
     //AnyMessageOnObjectUse Message={Objects = {  &..PS}; Message = "This message is triggered when `PS` is used consider to use ProximalRadioUlnar instead";};
   };
    ///Deprecated node use  RadioCarpal instead
   AnyRefNode wj = {
     ARel=RotMat(...Sign*.Data.wj_rot,z);
     sRel = .Scale(.Data.wj_pos*.Mirror);
-    #include "../DrawSettings/BML.any"
   };
 
 
