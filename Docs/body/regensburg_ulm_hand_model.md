@@ -1,10 +1,11 @@
 # Regensburg-Ulm Hand Model (RUHM)
 
-:::{admonition} **Unreleased model:** 
+:::{admonition} **Unreleased and deprecated model:**
 :class: caution
-The model is under development and not yet included in the managed model repository.
-The model is used in various research projects and access to the development version
+The model is not included in the managed model repository.
+The model has been used in various research projects and access to the development version
 can be given on request.
+{doc}`hand_rhum2` is included in AMMR 4.0. This should be used instead of this version.
 :::
 
 The Regensburg-Ulm hand model (RUHM) is a detailed

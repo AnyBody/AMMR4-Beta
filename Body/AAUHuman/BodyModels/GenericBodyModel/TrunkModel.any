@@ -10,9 +10,6 @@ AnyFolder Trunk = {
   //Reference to folder which contains the interface of the trunk
   AnyFolder &InterfaceFolder = .Interface.Trunk;
 
-  //Reference to folder
-  AnyFolder &MannequinValuesFolder = .MannequinValuesFromModel.AnyFolder_Posture;
-
   #include "../Include/SettingsTrunk.any"
 
 }; //Trunk
