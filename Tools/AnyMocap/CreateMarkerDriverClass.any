@@ -221,6 +221,9 @@ AnyMessage TestMarkerExist ={
 
   #var AnyObjectPtrVar MarkerWeightsPtr = &MarkerWeightsFun;
 
+  // CreateMarkerDriver
+  /// Threshold to detect if error between raw and filtered marker data is too large.
+  #var AnyVar MarkerFilterErrorThreshold = Main.ModelSetup.LabSpecificData.LowPassFilterSettings.MarkerFilterErrorThreshold;
 
 
   // CreateMarkerDriver
@@ -417,11 +420,20 @@ AnyMessage TestMarkerExist ={
             Data = .LowPassFilter(.MarkerDataRef.Pos');
           };
 
+        AnyFloat PosDiff_Filt_NoFilt= FilteredPosInterpol.Data'-MarkerDataRef.Pos;
+
         #else
 
         AnyParamFun &InterpolRef = MarkerDataRef.PosInterpol;
 
+        AnyFloat PosDiff_Filt_NoFilt= MarkerDataRef.PosFiltered-MarkerDataRef.Pos;
+
         #endif
+        
+        AnyFloat Norm_PosDiff_Filt_NoFilt= vnorm(PosDiff_Filt_NoFilt);
+        AnyFloat Max_Norm_PosDiff_Filt_NoFilt= max(Norm_PosDiff_Filt_NoFilt);
+        AnyInt Warn_Filt_Freq = warn(ltfun(Max_Norm_PosDiff_Filt_NoFilt,.MarkerFilterErrorThreshold),
+                                "Check marker filter cut-off frequency. It may be too low. Error between raw data and filtered data is "+strval(Max_Norm_PosDiff_Filt_NoFilt,"%.4f"));
 
         WeightFun={.MarkerWeightsPtr};
       };
