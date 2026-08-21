@@ -10,17 +10,16 @@ Talus = {
     AnyVar MassS = ....MassScaling.Talus.MassScale;
     AnyVar MassStandard = .Data.MassStandard;
     Mass = MassS*MassStandard;
-    
+
     //AnyDrawSeg Draw = {};
-    //AnyDrawRefFrame Drw = {ScaleXYZ={1,1,1}*0.1;};
     //AnyDrawNodes Draw = {ScaleXYZ = 0.004*{1,1,1};};
     sCoM = .MedialMalleolus.sRel+0.5*(.LateralMalleolus.sRel - .MedialMalleolus.sRel);
     JaboutCoMOnOff = On;
-    
+
     AnyVar Ixx = 2/5 * Mass * (vnorm(0.5*(.LateralMalleolus.sRel - .MedialMalleolus.sRel)))^2;
     AnyVar Iyy = Ixx;
     AnyVar Izz = Ixx;
-    
+
     Jii={Ixx, Iyy, Izz};
   };
 }; // End of Talus
@@ -30,15 +29,14 @@ Calcaneus = {
     AnyVar MassS = ....MassScaling.Foot.MassScale;
     AnyVar MassStandard = .Data.MassStandard;
     Mass = MassS*MassStandard;
-    
+
     sCoM = .Scale({0.01294929, 0.08385631, ....Sign*0.002736367});
     JaboutCoMOnOff = On;
-    
+
     AnyVar Ixx = 2/5 * Mass * (vnorm(0.5*(.SubTalarJoint.sRel - .HeelNode.sRel)))^2;
     AnyVar Iyy = Ixx;
     AnyVar Izz = Ixx;
-    
-    //AnyDrawRefFrame Drw = {ScaleXYZ={1,1,1}*0.1;};
+
     //AnyDrawSeg Draw = {};
     //AnyDrawNodes Draw = {ScaleXYZ = 0.004*{1,1,1};};
     Jii={Ixx, Iyy, Izz};
@@ -50,16 +48,15 @@ Cuboid = {
     AnyVar MassS = ....MassScaling.Foot.MassScale;
     AnyVar MassStandard = .Data.MassStandard;
     Mass = MassS*MassStandard;
-    
-    //AnyDrawRefFrame Drw = {ScaleXYZ={1,1,1}*0.1;};
+
     //AnyDrawSeg Draw = {};
     sCoM = 0.5*(.RefDist.sRel + .RefProx.sRel);
     JaboutCoMOnOff = On;
-    
+
     AnyVar Ixx = 2/5 * Mass * (vnorm(0.5*(.RefDist.sRel - .RefProx.sRel)))^2;
     AnyVar Iyy = Ixx;
     AnyVar Izz = Ixx;
-    
+
     Jii={Ixx, Iyy, Izz};
   };
 }; // End of cuboid
@@ -69,16 +66,15 @@ Navicular = {
     AnyVar MassS = ....MassScaling.Foot.MassScale;
     AnyVar MassStandard = .Data.MassStandard;
     Mass = MassS*MassStandard;
-    
-    //AnyDrawRefFrame Drw = {ScaleXYZ={1,1,1}*0.1;};
+
     //AnyDrawSeg Draw = {};
     sCoM = 0.5*(.RefDist.sRel + .RefProx.sRel);
     JaboutCoMOnOff = On;
-    
+
     AnyVar Ixx = 2/5 * Mass * (vnorm(0.7*(.RefDist.sRel - .RefProx.sRel)))^2; //Radius adjusted slightly because not round.
     AnyVar Iyy = Ixx;
     AnyVar Izz = Ixx;
-    
+
     Jii={Ixx, Iyy, Izz};
   };
 }; // End of Navicular
@@ -88,16 +84,15 @@ MedialCuneiform = {
     AnyVar MassS = ....MassScaling.Foot.MassScale;
     AnyVar MassStandard = .Data.MassStandard;
     Mass = MassS*MassStandard;
-    
-    //AnyDrawRefFrame Drw = {ScaleXYZ={1,1,1}*0.1;};
+
     //AnyDrawSeg Draw = {};
     sCoM = 0.5*(.RefDist.sRel + .RefProx.sRel);
     JaboutCoMOnOff = On;
-    
+
     AnyVar Ixx = 2/5 * Mass * (vnorm(0.5*(.RefDist.sRel - .RefProx.sRel)))^2;
     AnyVar Iyy = Ixx;
     AnyVar Izz = Ixx;
-    
+
     Jii={Ixx, Iyy, Izz};
   };
 }; // End of MedialCuneiform
@@ -107,16 +102,15 @@ IntermediateCuneiform = {
     AnyVar MassS = ....MassScaling.Foot.MassScale;
     AnyVar MassStandard = .Data.MassStandard;
     Mass = MassS*MassStandard;
-    
-    //AnyDrawRefFrame Drw = {ScaleXYZ={1,1,1}*0.1;};
+
     //AnyDrawSeg Draw = {};
     sCoM = 0.5*(.RefDist.sRel + .RefProx.sRel);
     JaboutCoMOnOff = On;
-    
+
     AnyVar Ixx = 2/5 * Mass * (vnorm(0.5*(.RefDist.sRel - .RefProx.sRel)))^2;
     AnyVar Iyy = Ixx;
     AnyVar Izz = Ixx;
-    
+
     Jii={Ixx, Iyy, Izz};
   };
 }; // End of IntermediateCuneiform
@@ -126,19 +120,18 @@ LateralCuneiform = {
     AnyVar MassS = ....MassScaling.Foot.MassScale;
     AnyVar MassStandard = .Data.MassStandard;
     Mass = MassS*MassStandard;
-    
-    //AnyDrawRefFrame Drw = {ScaleXYZ={1,1,1}*0.1;};
+
     //AnyDrawSeg Draw = {};
     sCoM = 0.5*(.RefDist.sRel + .RefProx.sRel);
     JaboutCoMOnOff = On;
-    
+
     AnyVar Ixx = 2/5 * Mass * (vnorm(0.5*(.RefDist.sRel - .RefProx.sRel)))^2;
     AnyVar Iyy = Ixx;
     AnyVar Izz = Ixx;
-    
+
     Jii={Ixx, Iyy, Izz};
   };
-}; // End of LateralCuneiform 
+}; // End of LateralCuneiform
 
 
 //************************************************
@@ -150,19 +143,18 @@ Metatarsal1 = {
     AnyVar MassS = ....MassScaling.Foot.MassScale;
     AnyVar MassStandard = .Data.MassStandard;
     Mass = MassS*MassStandard;
-    
-    //AnyDrawRefFrame Drw = {ScaleXYZ={1,1,1}*0.1;};
+
     //AnyDrawSeg Draw = {};
     sCoM = 0.5*(.RefDist.sRel + .RefProx.sRel);
     JaboutCoMOnOff = On;
-    
+
     AnyVar Length = vnorm(.RefDist.sRel - .RefProx.sRel);
     AnyVar Radius = (Mass/(3.1416*Length*....Data.unscaled.StandardParameters.Foot.Density))^0.5;
-    
+
     AnyVar Ixx = 1/12 * Mass * (3*Radius^2 + Length^2);
     AnyVar Iyy = 0.5 * Mass * Radius^2;
     AnyVar Izz = Ixx;
-    
+
     AnyMat33 JM = .CenterNode.ARel*{{Iyy,0,0},{0,Ixx,0},{0,0,Izz}}*.CenterNode.ARel';
     Jii = {JM[0][0], JM[1][1], JM[2][2]};
     Jij = {JM[1][0], JM[2][1], JM[2][0]};
@@ -174,19 +166,18 @@ Metatarsal2 = {
     AnyVar MassS = ....MassScaling.Foot.MassScale;
     AnyVar MassStandard = .Data.MassStandard;
     Mass = MassS*MassStandard;
-    
-    //AnyDrawRefFrame Drw = {ScaleXYZ={1,1,1}*0.1;};
+
     //AnyDrawSeg Draw = {};
     sCoM = 0.5*(.RefDist.sRel + .RefProx.sRel);
     JaboutCoMOnOff = On;
-    
+
     AnyVar Length = vnorm(.RefDist.sRel - .RefProx.sRel);
     AnyVar Radius = (Mass/(3.1416*Length*....Data.unscaled.StandardParameters.Foot.Density))^0.5;
-    
+
     AnyVar Ixx = 1/12 * Mass * (3*Radius^2 + Length^2);
     AnyVar Iyy = 0.5 * Mass * Radius^2;
     AnyVar Izz = Ixx;
-    
+
     AnyMat33 JM = .CenterNode.ARel*{{Iyy,0,0},{0,Ixx,0},{0,0,Izz}}*.CenterNode.ARel';
     Jii = {JM[0][0], JM[1][1], JM[2][2]};
     Jij = {JM[1][0], JM[2][1], JM[2][0]};
@@ -198,18 +189,18 @@ Metatarsal3 = {
     AnyVar MassS = ....MassScaling.Foot.MassScale;
     AnyVar MassStandard = .Data.MassStandard;
     Mass = MassS*MassStandard;
-    
+
     //AnyDrawSeg Draw = {};
     sCoM = 0.5*(.RefDist.sRel + .RefProx.sRel);
     JaboutCoMOnOff = On;
-    
+
     AnyVar Length = vnorm(.RefDist.sRel - .RefProx.sRel);
     AnyVar Radius = (Mass/(3.1416*Length*....Data.unscaled.StandardParameters.Foot.Density))^0.5;
-    
+
     AnyVar Ixx = 1/12 * Mass * (3*Radius^2 + Length^2);
     AnyVar Iyy = 0.5 * Mass * Radius^2;
     AnyVar Izz = Ixx;
-    
+
     AnyMat33 JM = .CenterNode.ARel*{{Iyy,0,0},{0,Ixx,0},{0,0,Izz}}*.CenterNode.ARel';
     Jii = {JM[0][0], JM[1][1], JM[2][2]};
     Jij = {JM[1][0], JM[2][1], JM[2][0]};
@@ -221,18 +212,18 @@ Metatarsal4 = {
     AnyVar MassS = ....MassScaling.Foot.MassScale;
     AnyVar MassStandard = .Data.MassStandard;
     Mass = MassS*MassStandard;
-    
+
     //AnyDrawSeg Draw = {};
     sCoM = 0.5*(.RefDist.sRel + .RefProx.sRel);
     JaboutCoMOnOff = On;
-    
+
     AnyVar Length = vnorm(.RefDist.sRel - .RefProx.sRel);
     AnyVar Radius = (Mass/(3.1416*Length*....Data.unscaled.StandardParameters.Foot.Density))^0.5;
-    
+
     AnyVar Ixx = 1/12 * Mass * (3*Radius^2 + Length^2);
     AnyVar Iyy = 0.5 * Mass * Radius^2;
     AnyVar Izz = Ixx;
-    
+
     AnyMat33 JM = .CenterNode.ARel*{{Iyy,0,0},{0,Ixx,0},{0,0,Izz}}*.CenterNode.ARel';
     Jii = {JM[0][0], JM[1][1], JM[2][2]};
     Jij = {JM[1][0], JM[2][1], JM[2][0]};
@@ -244,18 +235,18 @@ Metatarsal5 = {
     AnyVar MassS = ....MassScaling.Foot.MassScale;
     AnyVar MassStandard = .Data.MassStandard;
     Mass = MassS*MassStandard;
-    
+
     //AnyDrawSeg Draw = {};
     sCoM = 0.5*(.RefDist2.sRel + .RefProx.sRel);
     JaboutCoMOnOff = On;
-    
+
     AnyVar Length = vnorm(.RefDist2.sRel - .RefProx.sRel);
     AnyVar Radius = (Mass/(3.1416*Length*....Data.unscaled.StandardParameters.Foot.Density))^0.5;
-    
+
     AnyVar Ixx = 1/12 * Mass * (3*Radius^2 + Length^2);
     AnyVar Iyy = 0.5 * Mass * Radius^2;
     AnyVar Izz = Ixx;
-    
+
     AnyMat33 JM = .CenterNode2.ARel*{{Iyy,0,0},{0,Ixx,0},{0,0,Izz}}*.CenterNode2.ARel';
     Jii = {JM[0][0], JM[1][1], JM[2][2]};
     Jij = {JM[1][0], JM[2][1], JM[2][0]};
@@ -272,18 +263,18 @@ ProximalPhalange1 = {
     AnyVar MassS = ....MassScaling.Foot.MassScale;
     AnyVar MassStandard = .Data.MassStandard;
     Mass = MassS*MassStandard;
-    
+
     //AnyDrawSeg Draw = {};
     sCoM = 0.5*(.RefDist.sRel + .MtPhalJoint.sRel);
     JaboutCoMOnOff = On;
-    
+
     AnyVar Length = vnorm(.RefDist.sRel - .MtPhalJoint.sRel);
     AnyVar Radius = (Mass/(3.1416*Length*....Data.unscaled.StandardParameters.Foot.Density))^0.5;
-    
+
     AnyVar Ixx = 1/12 * Mass * (3*Radius^2 + Length^2);
     AnyVar Iyy = 0.5 * Mass * Radius^2;
     AnyVar Izz = Ixx;
-    
+
     AnyMat33 JM = .CenterNode.ARel*{{Iyy,0,0},{0,Ixx,0},{0,0,Izz}}*.CenterNode.ARel';
     Jii = {JM[0][0], JM[1][1], JM[2][2]};
     Jij = {JM[1][0], JM[2][1], JM[2][0]};
@@ -295,18 +286,18 @@ ProximalPhalange2 = {
     AnyVar MassS = ....MassScaling.Foot.MassScale;
     AnyVar MassStandard = .Data.MassStandard;
     Mass = MassS*MassStandard;
-    
+
     //AnyDrawSeg Draw = {};
     sCoM = 0.5*(.RefDist.sRel + .MtPhalJoint.sRel);
     JaboutCoMOnOff = On;
-    
+
     AnyVar Length = vnorm(.RefDist.sRel - .MtPhalJoint.sRel);
     AnyVar Radius = (Mass/(3.1416*Length*....Data.unscaled.StandardParameters.Foot.Density))^0.5;
-    
+
     AnyVar Ixx = 1/12 * Mass * (3*Radius^2 + Length^2);
     AnyVar Iyy = 0.5 * Mass * Radius^2;
     AnyVar Izz = Ixx;
-    
+
     AnyMat33 JM = .CenterNode.ARel*{{Iyy,0,0},{0,Ixx,0},{0,0,Izz}}*.CenterNode.ARel';
     Jii = {JM[0][0], JM[1][1], JM[2][2]};
     Jij = {JM[1][0], JM[2][1], JM[2][0]};
@@ -318,18 +309,18 @@ ProximalPhalange3 = {
     AnyVar MassS = ....MassScaling.Foot.MassScale;
     AnyVar MassStandard = .Data.MassStandard;
     Mass = MassS*MassStandard;
-    
+
     //AnyDrawSeg Draw = {};
     sCoM = 0.5*(.RefDist.sRel + .MtPhalJoint.sRel);
     JaboutCoMOnOff = On;
-    
+
     AnyVar Length = vnorm(.RefDist.sRel - .MtPhalJoint.sRel);
     AnyVar Radius = (Mass/(3.1416*Length*....Data.unscaled.StandardParameters.Foot.Density))^0.5;
-    
+
     AnyVar Ixx = 1/12 * Mass * (3*Radius^2 + Length^2);
     AnyVar Iyy = 0.5 * Mass * Radius^2;
     AnyVar Izz = Ixx;
-    
+
     AnyMat33 JM = .CenterNode.ARel*{{Iyy,0,0},{0,Ixx,0},{0,0,Izz}}*.CenterNode.ARel';
     Jii = {JM[0][0], JM[1][1], JM[2][2]};
     Jij = {JM[1][0], JM[2][1], JM[2][0]};
@@ -341,45 +332,45 @@ ProximalPhalange4 = {
     AnyVar MassS = ....MassScaling.Foot.MassScale;
     AnyVar MassStandard = .Data.MassStandard;
     Mass = MassS*MassStandard;
-    
+
     //AnyDrawSeg Draw = {};
     sCoM = 0.5*(.RefDist.sRel + .MtPhalJoint.sRel);
     JaboutCoMOnOff = On;
-    
+
     AnyVar Length = vnorm(.RefDist.sRel - .MtPhalJoint.sRel);
     AnyVar Radius = (Mass/(3.1416*Length*....Data.unscaled.StandardParameters.Foot.Density))^0.5;
-    
+
     AnyVar Ixx = 1/12 * Mass * (3*Radius^2 + Length^2);
     AnyVar Iyy = 0.5 * Mass * Radius^2;
     AnyVar Izz = Ixx;
-    
+
     AnyMat33 JM = .CenterNode.ARel*{{Iyy,0,0},{0,Ixx,0},{0,0,Izz}}*.CenterNode.ARel';
     Jii = {JM[0][0], JM[1][1], JM[2][2]};
     Jij = {JM[1][0], JM[2][1], JM[2][0]};
-  };  
+  };
 }; // End of ProximalPhalanges4
 
 ProximalPhalange5 = {
-  AnyInertiaMatrix Inertia = {    
+  AnyInertiaMatrix Inertia = {
     AnyVar MassS = ....MassScaling.Foot.MassScale;
     AnyVar MassStandard = .Data.MassStandard;
     Mass = MassS*MassStandard;
-    
+
     //AnyDrawSeg Draw = {};
     sCoM = 0.5*(.RefDist.sRel + .MtPhalJoint.sRel);
     JaboutCoMOnOff = On;
-    
+
     AnyVar Length = vnorm(.RefDist.sRel - .MtPhalJoint.sRel);
     AnyVar Radius = (Mass/(3.1416*Length*....Data.unscaled.StandardParameters.Foot.Density))^0.5;
-    
+
     AnyVar Ixx = 1/12 * Mass * (3*Radius^2 + Length^2);
     AnyVar Iyy = 0.5 * Mass * Radius^2;
     AnyVar Izz = Ixx;
-    
+
     AnyMat33 JM = .CenterNode.ARel*{{Iyy,0,0},{0,Ixx,0},{0,0,Izz}}*.CenterNode.ARel';
     Jii = {JM[0][0], JM[1][1], JM[2][2]};
     Jij = {JM[1][0], JM[2][1], JM[2][0]};
-  };  
+  };
 }; // End of ProximalPhalanges5
 
 
@@ -388,22 +379,22 @@ ProximalPhalange5 = {
 //************************************************
 
 MiddlePhalange2 = {
-  AnyInertiaMatrix Inertia = {    
+  AnyInertiaMatrix Inertia = {
     AnyVar MassS = ....MassScaling.Foot.MassScale;
     AnyVar MassStandard = .Data.MassStandard;
     Mass = MassS*MassStandard;
-    
+
     //AnyDrawSeg Draw = {};
     sCoM = 0.5*(.RefDist.sRel + .ProxPhalJoint.sRel);
     JaboutCoMOnOff = On;
-    
+
     AnyVar Length = vnorm(.RefDist.sRel - .ProxPhalJoint.sRel);
     AnyVar Radius = (Mass/(3.1416*Length*....Data.unscaled.StandardParameters.Foot.Density))^0.5;
-    
+
     AnyVar Ixx = 1/12 * Mass * (3*Radius^2 + Length^2);
     AnyVar Iyy = 0.5 * Mass * Radius^2;
     AnyVar Izz = Ixx;
-    
+
     AnyMat33 JM = .CenterNode.ARel*{{Iyy,0,0},{0,Ixx,0},{0,0,Izz}}*.CenterNode.ARel';
     Jii = {JM[0][0], JM[1][1], JM[2][2]};
     Jij = {JM[1][0], JM[2][1], JM[2][0]};
@@ -415,18 +406,18 @@ MiddlePhalange3 = {
     AnyVar MassS = ....MassScaling.Foot.MassScale;
     AnyVar MassStandard = .Data.MassStandard;
     Mass = MassS*MassStandard;
-    
+
     //AnyDrawSeg Draw = {};
     sCoM = 0.5*(.RefDist.sRel + .ProxPhalJoint.sRel);
     JaboutCoMOnOff = On;
-    
+
     AnyVar Length = vnorm(.RefDist.sRel - .ProxPhalJoint.sRel);
     AnyVar Radius = (Mass/(3.1416*Length*....Data.unscaled.StandardParameters.Foot.Density))^0.5;
-    
+
     AnyVar Ixx = 1/12 * Mass * (3*Radius^2 + Length^2);
     AnyVar Iyy = 0.5 * Mass * Radius^2;
     AnyVar Izz = Ixx;
-    
+
     AnyMat33 JM = .CenterNode.ARel*{{Iyy,0,0},{0,Ixx,0},{0,0,Izz}}*.CenterNode.ARel';
     Jii = {JM[0][0], JM[1][1], JM[2][2]};
     Jij = {JM[1][0], JM[2][1], JM[2][0]};
@@ -438,18 +429,18 @@ MiddlePhalange4 = {
     AnyVar MassS = ....MassScaling.Foot.MassScale;
     AnyVar MassStandard = .Data.MassStandard;
     Mass = MassS*MassStandard;
-    
+
     //AnyDrawSeg Draw = {};
     sCoM = 0.5*(.RefDist.sRel + .ProxPhalJoint.sRel);
     JaboutCoMOnOff = On;
-    
+
     AnyVar Length = vnorm(.RefDist.sRel - .ProxPhalJoint.sRel);
     AnyVar Radius = (Mass/(3.1416*Length*....Data.unscaled.StandardParameters.Foot.Density))^0.5;
-    
+
     AnyVar Ixx = 1/12 * Mass * (3*Radius^2 + Length^2);
     AnyVar Iyy = 0.5 * Mass * Radius^2;
     AnyVar Izz = Ixx;
-    
+
     AnyMat33 JM = .CenterNode.ARel*{{Iyy,0,0},{0,Ixx,0},{0,0,Izz}}*.CenterNode.ARel';
     Jii = {JM[0][0], JM[1][1], JM[2][2]};
     Jij = {JM[1][0], JM[2][1], JM[2][0]};
@@ -461,18 +452,18 @@ MiddlePhalange5 = {
     AnyVar MassS = ....MassScaling.Foot.MassScale;
     AnyVar MassStandard = .Data.MassStandard;
     Mass = MassS*MassStandard;
-    
+
     //AnyDrawSeg Draw = {};
     sCoM = 0.5*(.RefDist.sRel + .ProxPhalJoint.sRel);
     JaboutCoMOnOff = On;
-    
+
     AnyVar Length = vnorm(.RefDist.sRel - .ProxPhalJoint.sRel);
     AnyVar Radius = (Mass/(3.1416*Length*....Data.unscaled.StandardParameters.Foot.Density))^0.5;
-    
+
     AnyVar Ixx = 1/12 * Mass * (3*Radius^2 + Length^2);
     AnyVar Iyy = 0.5 * Mass * Radius^2;
     AnyVar Izz = Ixx;
-    
+
     AnyMat33 JM = .CenterNode.ARel*{{Iyy,0,0},{0,Ixx,0},{0,0,Izz}}*.CenterNode.ARel';
     Jii = {JM[0][0], JM[1][1], JM[2][2]};
     Jij = {JM[1][0], JM[2][1], JM[2][0]};
@@ -489,18 +480,18 @@ DistalPhalange1 = {
     AnyVar MassS = ....MassScaling.Foot.MassScale;
     AnyVar MassStandard = .Data.MassStandard;
     Mass = MassS*MassStandard;
-    
+
     //AnyDrawSeg Draw = {};
     sCoM = 0.5*(.RefDist.sRel + .DistPhalJoint.sRel);
     JaboutCoMOnOff = On;
-    
+
     AnyVar Length = vnorm(.RefDist.sRel - .DistPhalJoint.sRel);
     AnyVar Radius = (Mass/(3.1416*Length*....Data.unscaled.StandardParameters.Foot.Density))^0.5;
-    
+
     AnyVar Ixx = 1/12 * Mass * (3*Radius^2 + Length^2);
     AnyVar Iyy = 0.5 * Mass * Radius^2;
     AnyVar Izz = Ixx;
-    
+
     AnyMat33 JM = .CenterNode.ARel*{{Iyy,0,0},{0,Ixx,0},{0,0,Izz}}*.CenterNode.ARel';
     Jii = {JM[0][0], JM[1][1], JM[2][2]};
     Jij = {JM[1][0], JM[2][1], JM[2][0]};
@@ -512,18 +503,18 @@ DistalPhalange2 = {
     AnyVar MassS = ....MassScaling.Foot.MassScale;
     AnyVar MassStandard = .Data.MassStandard;
     Mass = MassS*MassStandard;
-    
+
     //AnyDrawSeg Draw = {};
     sCoM = 0.5*(.RefDist.sRel + .DistPhalJoint.sRel);
     JaboutCoMOnOff = On;
-    
+
     AnyVar Length = vnorm(.RefDist.sRel - .DistPhalJoint.sRel);
     AnyVar Radius = (Mass/(3.1416*Length*....Data.unscaled.StandardParameters.Foot.Density))^0.5;
-    
+
     AnyVar Ixx = 1/12 * Mass * (3*Radius^2 + Length^2);
     AnyVar Iyy = 0.5 * Mass * Radius^2;
     AnyVar Izz = Ixx;
-    
+
     AnyMat33 JM = .CenterNode.ARel*{{Iyy,0,0},{0,Ixx,0},{0,0,Izz}}*.CenterNode.ARel';
     Jii = {JM[0][0], JM[1][1], JM[2][2]};
     Jij = {JM[1][0], JM[2][1], JM[2][0]};
@@ -535,18 +526,18 @@ DistalPhalange3 = {
     AnyVar MassS = ....MassScaling.Foot.MassScale;
     AnyVar MassStandard = .Data.MassStandard;
     Mass = MassS*MassStandard;
-    
+
     //AnyDrawSeg Draw = {};
     sCoM = 0.5*(.RefDist.sRel + .DistPhalJoint.sRel);
     JaboutCoMOnOff = On;
-    
+
     AnyVar Length = vnorm(.RefDist.sRel - .DistPhalJoint.sRel);
     AnyVar Radius = (Mass/(3.1416*Length*....Data.unscaled.StandardParameters.Foot.Density))^0.5;
-    
+
     AnyVar Ixx = 1/12 * Mass * (3*Radius^2 + Length^2);
     AnyVar Iyy = 0.5 * Mass * Radius^2;
     AnyVar Izz = Ixx;
-    
+
     AnyMat33 JM = .CenterNode.ARel*{{Iyy,0,0},{0,Ixx,0},{0,0,Izz}}*.CenterNode.ARel';
     Jii = {JM[0][0], JM[1][1], JM[2][2]};
     Jij = {JM[1][0], JM[2][1], JM[2][0]};
@@ -558,22 +549,22 @@ DistalPhalange4 = {
     AnyVar MassS = ....MassScaling.Foot.MassScale;
     AnyVar MassStandard = .Data.MassStandard;
     Mass = MassS*MassStandard;
-    
+
     //AnyDrawSeg Draw = {};
     sCoM = 0.5*(.RefDist.sRel + .DistPhalJoint.sRel);
     JaboutCoMOnOff = On;
-    
+
     AnyVar Length = vnorm(.RefDist.sRel - .DistPhalJoint.sRel);
     AnyVar Radius = (Mass/(3.1416*Length*....Data.unscaled.StandardParameters.Foot.Density))^0.5;
-    
+
     AnyVar Ixx = 1/12 * Mass * (3*Radius^2 + Length^2);
     AnyVar Iyy = 0.5 * Mass * Radius^2;
     AnyVar Izz = Ixx;
-    
+
     AnyMat33 JM = .CenterNode.ARel*{{Iyy,0,0},{0,Ixx,0},{0,0,Izz}}*.CenterNode.ARel';
     Jii = {JM[0][0], JM[1][1], JM[2][2]};
     Jij = {JM[1][0], JM[2][1], JM[2][0]};
-  };  
+  };
 }; // End of DistalPhalanges4
 
 DistalPhalange5 = {
@@ -581,18 +572,18 @@ DistalPhalange5 = {
     AnyVar MassS = ....MassScaling.Foot.MassScale;
     AnyVar MassStandard = .Data.MassStandard;
     Mass = MassS*MassStandard;
-    
+
     //AnyDrawSeg Draw = {};
     sCoM = 0.5*(.RefDist.sRel + .DistPhalJoint.sRel);
     JaboutCoMOnOff = On;
-    
+
     AnyVar Length = vnorm(.RefDist.sRel - .DistPhalJoint.sRel);
     AnyVar Radius = (Mass/(3.1416*Length*....Data.unscaled.StandardParameters.Foot.Density))^0.5;
-    
+
     AnyVar Ixx = 1/12 * Mass * (3*Radius^2 + Length^2);
     AnyVar Iyy = 0.5 * Mass * Radius^2;
     AnyVar Izz = Ixx;
-    
+
     AnyMat33 JM = .CenterNode.ARel*{{Iyy,0,0},{0,Ixx,0},{0,0,Izz}}*.CenterNode.ARel';
     Jii = {JM[0][0], JM[1][1], JM[2][2]};
     Jij = {JM[1][0], JM[2][1], JM[2][0]};
