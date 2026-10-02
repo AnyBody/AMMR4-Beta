@@ -10,7 +10,10 @@ Main.ModelSetup.LabSpecificData = {
    AnyFolder LowPassFilterSettings =
    {
      AnyVar MarkerFilterCutOffFrequency ??= 5.0;
-
+     /// The model will raise a warning if the error between raw marker
+     /// data and filtered marker data is larger than the threshold.
+     AnyVar MarkerFilterErrorThreshold ??= 0.03;
+     
      /// The filter order used when low pass filtering the marker data.
      /// Note: Since the filter is applied as a zero phase filter
      /// (filtfilt or forward/backward filter) the effective filter order is the
