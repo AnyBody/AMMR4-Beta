@@ -70,39 +70,33 @@ AnyRefNode IliopubicEminenceEndNode = {
 AnyRefNode P1 ={
   sRel=0.01*{ -1.27,	0.97,..Sign*-1.75};
   ARel=RotMat(sRel,.P2.sRel,{0.0,0.0,0.0})*RotMat(0.5*pi,y);
-  //    AnyDrawRefFrame drw={RGB={1,0,0};};
 };
 
 //unscaled second point on cyl axis
 AnyRefNode P2 ={
   sRel= (0.1*{0.21,	-0.14	,..Sign*-0.79})+.P1.sRel;
-  //    AnyDrawRefFrame drw={RGB={1,0,0};};
 };
 
 //unscaled point on cyl surf
 AnyRefNode P3={
   sRel = .P1.sRel+{0.0,0.04,..Sign*0.0}*.P1.ARel';//*RotMat(pi*0.5,x);
-  //    AnyDrawRefFrame drw={RGB={1,0,0};};
 };
 
 //Scale cyl center
 AnyRefNode P1_scaled ={
   sRel=.Scale(.P1.sRel);
   ARel= RotMat(sRel,.P2_scaled.sRel,{0.0,0.0,0.0})*RotMat(0.5*pi,y);
-  //    AnyDrawRefFrame drw={RGB={1,0,1};};
 };
 
 //unscaled second point on cyl axis
 AnyRefNode P2_scaled ={
   sRel= .Scale(.P2.sRel);
-  //    AnyDrawRefFrame drw={RGB={1,0,1};};
 };
 
 
 //unscaled point on cyl surf
 AnyRefNode P3_scaled={
   sRel =.Scale(.P3.sRel);
-  //   AnyDrawRefFrame drw={RGB={1,0,1};};
 };
 
 
@@ -116,9 +110,6 @@ AnyRefNode IliacusWrapSurf = {
   AnyVar Z_rotation =0;
 
   #include "<ANYBODY_PATH_MODELUTILS>/WrappingSurfaces/WrappingCylinder5PointFit.any"
-  cyl = {
-    //AnyDrawParamSurf drw={RGB={1,0,0};};
-  };
 };
 
 AnyRefNode pecent_ossis_pubis={
@@ -343,7 +334,6 @@ AnyRefNode IschioFemOrig = {sRel = .Scale( .Data.IschioFemOrig );};
 
 //  AnyRefNode GluteusCylSuperior = {
 //    sRel = .Scale({-0.05, -0.06, ..Sign*-0.10});
-//    AnyDrawRefFrame drws = {};
 //    ARel = RotMat(..Sign*-25*pi/180,x)*RotMat(..Sign*20*pi/180,y);
 //
 //    AnySurfCylinder cyl = {
@@ -355,11 +345,11 @@ AnyRefNode IschioFemOrig = {sRel = .Scale( .Data.IschioFemOrig );};
 //    };
 //  };
 
-//  AnyRefNode Q1 = { sRel = .Scale({-0.05, -0.06, 0.10}); AnyDrawRefFrame drws = {}; };
-//  AnyRefNode Q2 = { sRel = .Q1.sRel + {0, 0, -0.3}*.GluteusCylSuperior.ARel'; AnyDrawRefFrame drws = {}; };
-//  AnyRefNode Q3 = { sRel = .Q1.sRel + {0, 0.065, -0.3}*.GluteusCylSuperior.ARel'; AnyDrawRefFrame drws = {}; };
-//  AnyRefNode Q4 = { sRel = .Q1.sRel + {0.065, 0, -0.3}*.GluteusCylSuperior.ARel'; AnyDrawRefFrame drws = {}; };
-//  AnyRefNode Q5 = { sRel = .Q1.sRel + {0, -0.065, -0.15}*.GluteusCylSuperior.ARel'; AnyDrawRefFrame drws = {}; };
+//  AnyRefNode Q1 = { sRel = .Scale({-0.05, -0.06, 0.10});};
+//  AnyRefNode Q2 = { sRel = .Q1.sRel + {0, 0, -0.3}*.GluteusCylSuperior.ARel';};
+//  AnyRefNode Q3 = { sRel = .Q1.sRel + {0, 0.065, -0.3}*.GluteusCylSuperior.ARel';};
+//  AnyRefNode Q4 = { sRel = .Q1.sRel + {0.065, 0, -0.3}*.GluteusCylSuperior.ARel';};
+//  AnyRefNode Q5 = { sRel = .Q1.sRel + {0, -0.065, -0.15}*.GluteusCylSuperior.ARel';};
 
 
 
@@ -390,7 +380,6 @@ AnyRefNode IschioFemOrig = {sRel = .Scale( .Data.IschioFemOrig );};
 
 //    AnyRefNode GluteusCylInferior = {
 //    sRel = .Scale({-0.01, -0.06, ..Sign*-0.10});
-//    AnyDrawRefFrame drws = {};
 //    ARel = RotMat(..Sign*-20*pi/180,x);
 //
 //    AnySurfCylinder cyl = {
@@ -402,11 +391,11 @@ AnyRefNode IschioFemOrig = {sRel = .Scale( .Data.IschioFemOrig );};
 //    };
 //  };
 
-//  AnyRefNode Q1 = { sRel = .Scale({-0.01, -0.06, 0.10}); AnyDrawRefFrame drws = {}; };
-//  AnyRefNode Q2 = { sRel = .Q1.sRel + {0, 0, -0.3}*.GluteusCylInferior.ARel'; AnyDrawRefFrame drws = {}; };
-//  AnyRefNode Q3 = { sRel = .Q1.sRel + {0, 0.065, -0.3}*.GluteusCylInferior.ARel'; AnyDrawRefFrame drws = {}; };
-//  AnyRefNode Q4 = { sRel = .Q1.sRel + {0.065, 0, -0.3}*.GluteusCylInferior.ARel'; AnyDrawRefFrame drws = {}; };
-//  AnyRefNode Q5 = { sRel = .Q1.sRel + {0, -0.065, -0.15}*.GluteusCylInferior.ARel'; AnyDrawRefFrame drws = {}; };
+//  AnyRefNode Q1 = { sRel = .Scale({-0.01, -0.06, 0.10}); };
+//  AnyRefNode Q2 = { sRel = .Q1.sRel + {0, 0, -0.3}*.GluteusCylInferior.ARel'; };
+//  AnyRefNode Q3 = { sRel = .Q1.sRel + {0, 0.065, -0.3}*.GluteusCylInferior.ARel'; };
+//  AnyRefNode Q4 = { sRel = .Q1.sRel + {0.065, 0, -0.3}*.GluteusCylInferior.ARel'; };
+//  AnyRefNode Q5 = { sRel = .Q1.sRel + {0, -0.065, -0.15}*.GluteusCylInferior.ARel'; };
 
 
 

@@ -38,18 +38,15 @@ AnyFolder Seg={
 
     AnyRefNode ProximalJointNode={
       sRel=.Scale*{0.0,0.012+0,......Sign*0};
-      //        AnyDrawRefFrame drw={        ScaleXYZ={0.05,0.05,0.05}; RGB={1,0,0};      };
     };
 
     AnyRefNode ProximalJointSurfaceNode={
       sRel=.Scale*{0.0,0.008,......Sign*0};
-      //        AnyDrawRefFrame drw={        ScaleXYZ={0.05,0.05,0.05}; RGB={1,0,0};      };
     };
 
     //Na
     AnyRefNode DistalJointSurfaceNode={
       sRel=.Scale*{0.0,-0.01,......Sign*0};
-      //        AnyDrawRefFrame drw={        ScaleXYZ={0.05,0.05,0.05}; RGB={1,0,0};      };
 
     };
     //Flexion extension axis for Interphalangeal joint
@@ -57,7 +54,6 @@ AnyFolder Seg={
 
       sRel=.Scale*{0,0.0132,......Sign*0};
       ARel=RotMat(......Sign*-(90-83)*pi/180,x);
-      //        AnyDrawRefFrame drw={};
     };
 
 
@@ -70,7 +66,6 @@ AnyFolder Seg={
     Mass=..Mass2;
     Jii={0,0,0};
 
-    //    AnyDrawRefFrame drw={};
     r0=.MCPJointSeg.r0+.MCPJointSeg.AbductionAdductionAxis.sRel*.MCPJointSeg.Axes0'-MCPAbductionAdductionAxis.sRel*Axes0';
     Axes0=.MCPJointSeg.Axes0*.MCPJointSeg.AbductionAdductionAxis.ARel*
     RotMat((.....Sign*pi/180)*..JntPos.MCPDeviation,x)*MCPAbductionAdductionAxis.ARel';
@@ -108,28 +103,23 @@ AnyFolder Seg={
     //O6
     AnyRefNode ProximalJointNode={
       sRel=.Scale*{0.0,0.019,......Sign*0};
-      //        AnyDrawRefFrame drw={        ScaleXYZ={0.05,0.05,0.05}; RGB={1,0,0};      };
     };
     //O5
     AnyRefNode ProximalJointSurfaceNode={
       sRel=.Scale*{0.0,0.015,......Sign*0};
-      //        AnyDrawRefFrame drw={        ScaleXYZ={0.05,0.05,0.05}; RGB={1,0,0};      };
     };
     //O4
     AnyRefNode DistalJointNode={
       sRel=.Scale*{0.00,-0.015,......Sign*0};
-      //                AnyDrawRefFrame drw={        ScaleXYZ={0.05,0.05,0.05}; RGB={1,0,0};      };
     };
     AnyRefNode DistalJointSurfaceNode={
       sRel=.Scale*{0.00,-0.017,......Sign*0};
-      //                AnyDrawRefFrame drw={        ScaleXYZ={0.05,0.05,0.05}; RGB={1,0,0};      };
     };
 
     //This is the Abduction adduction axis for the MCP joint
     AnyRefNode MCPAbductionAdductionAxis={
       sRel=.Scale*{0.00,0.02172,......Sign*0.000};
       ARel=RotMat(-0.175,z)*RotMat(......Sign*-0.087,y); //these numbers are taken from measures...
-      //AnyDrawRefFrame drw={RGB={1,1,1};ScaleXYZ={0.13,0.131,0.13};};
     };
 
     //Bone lenght
@@ -140,7 +130,6 @@ AnyFolder Seg={
 
       sRel=.ProximalJointSurfaceNode.sRel-{0,0.9*.BL,......Sign*0};
       ARel=RotMat(......Sign*-(90-83)*pi/180,x);
-      //        AnyDrawRefFrame drw={};
     };
 
   }; //ProximalPhalanx Seg definition (Thumb Middle part)
@@ -148,7 +137,6 @@ AnyFolder Seg={
   AnySeg Metacarpal={
     Mass=..Mass1;
     Jii={0,0,0};
-  //      AnyDrawRefFrame drw={ScaleXYZ={1,1,1}*0.15;};
     r0=.CMCJointSeg.r0 +.CMCJointSeg.AbductionAdductionJointNode.sRel*.CMCJointSeg.Axes0'+-CMCAbductionAdductionAxis.sRel*Axes0';
 
 //    Axes0=.CMCJointSeg.Axes0'*.CMCJointSeg.AbductionAdductionJointNode.ARel*
@@ -187,24 +175,20 @@ AnyFolder Seg={
 
     AnyRefNode ProximalJointNode={
       sRel=.Scale*{0.00,0.023+0.005,......Sign*0};
-      //        AnyDrawRefFrame drw={        ScaleXYZ={0.05,0.05,0.05}; RGB={1,0,0};      };
     };
 
     AnyRefNode ProximalSurfaceNode={
       sRel=.Scale*{-0.004,0.023,......Sign*0};
-      //        AnyDrawRefFrame drw={        ScaleXYZ={0.05,0.05,0.05}; RGB={1,0,0};      };
     };
 
     //node on the ulna side of the bone used onluy for the location of the abduction/adduction axis
     AnyRefNode ProximalSurfaceUlnaSide={
       sRel=.Scale*{-0.00,0.02,......Sign*-0.006};
-      //        AnyDrawRefFrame drw={        ScaleXYZ={0.015,0.015,0.015}; RGB={1,0,0};      };
     };
 
     //node on the ulna side of the bone used onluy for the location of the abduction/adduction axis
     AnyRefNode ProximalSurfaceRadialSide={
       sRel=.Scale*{-0.00,0.02,......Sign*0.006};
-      //        AnyDrawRefFrame drw={        ScaleXYZ={0.015,0.015,0.015}; RGB={1,0,0};      };
     };
 
 
@@ -212,12 +196,10 @@ AnyFolder Seg={
     //06
     AnyRefNode DistalJointNode={
       sRel=.Scale*{0.00,-0.021,......Sign*0};
-      //        AnyDrawRefFrame drw={           ScaleXYZ={0.05,0.05,0.05}; RGB={1,1,0};      };
     };
 
     AnyRefNode DistalSurfaceNode={
       sRel=.Scale*{0.00,-0.025,......Sign*0};
-      //        AnyDrawRefFrame drw={    ScaleXYZ={0.15,0.15,0.15}; RGB={1,1,0};      };
     };
 
 
@@ -234,22 +216,16 @@ AnyFolder Seg={
 
       ARel=RotMat((-90+86)*pi/180,z)*RotMat(......Sign*(90-78.3)*pi/180,y); //Hollister1992 fig.5
 
-//              AnyDrawRefFrame drw={
-//                ScaleXYZ={0.15,0.15,0.15}; RGB={1,1,1};
-//              };
-
     };
 
 
     //Definition of MCP Flexion extension axis    using Hollister1995 fig 2b
     AnyRefNode DistalDorsalNode = {
       sRel=.DistalSurfaceNode.sRel+.Scale*{-0.005,0,......Sign*0};
-      //AnyDrawRefFrame drw={};
     };
 
     AnyRefNode DistalVolarNode = {
       sRel=.DistalSurfaceNode.sRel+.Scale*{0.006,0,......Sign*0};
-      //AnyDrawRefFrame drw={};
     };
 
     AnyVar TDistal=vnorm(DistalVolarNode.sRel-DistalDorsalNode.sRel,2);
@@ -260,18 +236,12 @@ AnyFolder Seg={
       sRel={.DistalDorsalNode.sRel[0]+0.44*.TDistal,0.10*.BL+.DistalSurfaceNode.sRel[1],......Sign*0};//hollister1992 fig. 2b and table 1
 
       ARel=RotMat(......Sign*(-90+101)*pi/180,x); //Hollister1995 fig.2b
-
-      //AnyDrawRefFrame drw={
-      //        ScaleXYZ={0.05,0.05,0.05}; RGB={1,1,1};
-      //      };
     };
 
   }; //Metacarpal seg definition (Thumb's base)
 
   //this is segment connects the flexion and the abduction/adduction axis in the CMC joint.
   AnySeg CMCJointSeg ={
-    //AnyDrawRefFrame drw={ScaleXYZ={0.19,0.19,0.19};RGB={1,0,0};};
-   // AnyDrawRefFrame drws = {RGB= {1,0,0};ScaleXYZ={1,1,1}*0.15;};
 
     r0= ...Carpals.CMC1.sRel* ...Carpals.Axes0'+...Carpals.r0;
     Axes0 = ...Carpals.Axes0*...Carpals.CMC1.ARel* RotMat((pi/180)*..JntPos.CMCFlexion,z);
@@ -288,7 +258,6 @@ AnyFolder Seg={
     AnyRefNode AbductionAdductionJointNode={
       sRel=..Metacarpal.Scale*{-0.004000001, -0.01076, ......Sign*-0.00114};
       ARel=RotMat(-0.06981316,z)*RotMat(......Sign*0.2042035,y);
-     // AnyDrawRefFrame drw={ScaleXYZ={0.1,0.1,0.1};};
 
     };
   };
@@ -338,10 +307,6 @@ AnyFolder Seg={
       //for the y position subtract the y position used by the flexion extension axis
       sRel=..Metacarpal.Scale*{0,(0.87-0.83),0}*..Metacarpal.BL+{0,0,......Sign*0};//hollister1995 fig. 2a and 2b and table 1
       ARel=RotMat(-(90-80)*pi/180,z)*RotMat(......Sign*-5*pi/180,y); //Hollister1995 fig.c
-
-      //AnyDrawRefFrame drw={
-      //  ScaleXYZ={0.05,0.05,0.05}; RGB={0,0,0};
-      //};
     };
   };
 
@@ -408,9 +373,6 @@ AnyFolder Jnt ={
     AnyRefNode &ref1=...Carpals.CMC1;
 
     AnyRefNode &ref2=..Seg.CMCJointSeg.FlexionExtensionJointNode;
-    //
-//        ref1={AnyDrawRefFrame drw= {};};
-//       ref2={AnyDrawRefFrame drw= {};};
     Axis=z;
     #include "DrawJointAxisZ.any"
   };
@@ -421,8 +383,6 @@ AnyFolder Jnt ={
   AnyRevoluteJoint CMCAbduction={
     AnyRefNode &ref1=..Seg.CMCJointSeg.AbductionAdductionJointNode; //oMetacarpal.ProximalJointNode;
     AnyRefNode &ref2=..Seg.Metacarpal.CMCAbductionAdductionAxis;
-      //ref1={AnyDrawRefFrame drw3={RGB={1,0,1};};};
-     //ref2={AnyDrawRefFrame drw= {};};
     Axis=x;
     #include "DrawJointAxisX.any"
   };
@@ -441,10 +401,6 @@ AnyFolder Jnt ={
     AnyRefNode &ref2=..Seg.MCPJointSeg.FlexionExtensionAxis;
     Axis=z;
     #include "DrawJointAxisZ.any"
-    //ref1={AnyDrawRefFrame drw= {};};
-      // ref2={AnyDrawRefFrame drw= {};};
-
-
   };
 
 

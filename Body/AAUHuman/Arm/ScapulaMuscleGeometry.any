@@ -202,22 +202,13 @@ Scapula = {
 
   };
 
-
-  //AnyRefNode P1 ={sRel=.coracoid_cyl2.P3;AnyDrawRefFrame  Drw={RGB={0,0,1};};};
-  //AnyRefNode P2 ={sRel=.coracoid_cyl2.P2; AnyDrawRefFrame Drw={RGB={0,1,0};};};
-                                                                                // TO DO: to be deleted
-
-
-
-
-     // Definition of cylinder used for wrapping of subscapularis muscles
-  // the cylinder replicates the shape of the  coracoid process.
+  /// Definition of cylinder used for wrapping of subscapularis muscles
+  /// the cylinder replicates the shape of the  coracoid process.
   AnyRefNode coracoid_cyl={
 
     AnyVec3 P2 =.Scale(.Data.coracoid_cyl_P2_pos*.Mirror);
     AnyVec3 P3 =.Scale(.Data.coracoid_cyl_P3_pos*.Mirror);//sRel+VX*Radius;
 
-    //AnyDrawRefFrame drw={};
     sRel=.Scale(.Data.coracoid_cyl_pos*.Mirror);
 
     //Calculate rot matrix for cylinder using three points
@@ -227,7 +218,6 @@ Scapula = {
 
      AnyMat33  Mat = RotMat(sRel,P2,P3);
 
-     //AnyDrawRefFrame drw={RGB={0.2,0.2,0.2};};
     //Switch around the on the columns to compensate that the cylinder has
     //main axis along the zaxis
 
@@ -241,7 +231,6 @@ Scapula = {
       Radius=vnorm(.sRel-.P3);
       Length= vnorm(.sRel-.P2);
       CapRatio=1.0;
-//      AnyDrawParamSurf drw={RGB={0,1,0};};
     };
 
   };

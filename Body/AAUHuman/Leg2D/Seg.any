@@ -95,7 +95,7 @@ AnySeg Foot = {
   AnyRefNode GroundJoint = {
     sRel = {0.0,0.0,...Sign*0.0};
     ARel = {{0,1,0},{-1,0,0},{0,0,1}};
-    AnyDrawRefFrame DrwNode = {RGB = {0,1,0};};
+    viewRefFrame = {RGB = {0,1,0};};
   };
 
   AnyRefNode ToeJoint = {sRel = {-0.019,-0.0671,0};};

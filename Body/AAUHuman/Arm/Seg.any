@@ -93,7 +93,7 @@ AnyFloat Points0 = {
   AnyRefNode ac = {sRel = .Scale(.Data.ac_pos*.Mirror);};
 
   AnyRefNode acj = {    sRel = .Scale(.Data.acj_pos*.Mirror);    #include "../DrawSettings/JointAxesDistal.any"    };
-  AnyRefNode scj = {    sRel = .Scale(.Data.scj_pos*.Mirror);    #include "../DrawSettings/JointAxesProximal.any"  };
+  AnyRefNode scj = {    sRel = .Scale(.Data.scj_pos*.Mirror);};
 
   AnyRefNode conoid = {sRel = .Scale(.Data.conoid_pos*.Mirror);};
   AnyRefNode trapezoid = {sRel = .Scale(.Data.trapezoid_pos*.Mirror);};
@@ -205,8 +205,6 @@ AnySeg Scapula ={
   AnyRefNode ac = {
     sRel = .Scale(.Data.ac_pos*.Mirror);
     #include "../DrawSettings/BML.any"
-    #include "../DrawSettings/JointAxesProximal.any"
-
   };
 
   AnyRefNode acj = {sRel = .Scale(.Data.acj_pos*.Mirror);};
@@ -355,7 +353,6 @@ AnyFloat pUnscaled= {Data.gh_pos, Data.EpicondylusHumerusMedialis_pos, Data.Epic
   AnyRefNode gh = {
     sRel = .Scale(.Data.gh_pos*.Mirror);
     #include "../DrawSettings/BML.any"
-    #include "../DrawSettings/JointAxesProximal.any"
   };
   AnyRefNode em = {sRel = .Scale(.Data.em_pos*.Mirror);
     #include "../DrawSettings/BML.any"
@@ -563,9 +560,7 @@ AnySeg Ulna ={
 
 
   //Deprecated nodes
-  AnyRefNode fe = { sRel=.Scale(.Data.fe_pos*.Mirror);
-    #include "../DrawSettings/JointAxesProximal.any"
-  };
+  AnyRefNode fe = { sRel=.Scale(.Data.fe_pos*.Mirror);};
 
   // Node used for defining proximal ps joint
   AnyRefNode ps2 = {
@@ -698,7 +693,6 @@ AnySeg Radius ={
 
 
   AnyRefNode PointHumeralRadioJoint = {
-    #include "../DrawSettings/JointAxesProximal.any"
     sRel = .Scale(.Data.PointHumeroRadioJoint_pos*.Mirror);
     ARel =.ProximalRadioUlnar.ARel;
   };
@@ -754,7 +748,6 @@ AnySeg Radius ={
 
   ///Deprecated node use PointHumeralRadioJoint instead
   AnyRefNode PointPS2 = {
-    #include "../DrawSettings/JointAxesProximal.any"
     sRel = .Scale(.Data.PointPS2_pos*.Mirror);
   };
 
@@ -772,7 +765,6 @@ AnySeg Radius ={
 
   ///Deprecated node ProximalRadioUlnar
   AnyRefNode PS = {
-    #include "../DrawSettings/JointAxesProximal.any"
     sRel = .Scale(.Data.PS_pos*.Mirror);
     #include "../DrawSettings/BML.any"
     //AnyMessageOnObjectUse Message={Objects = {  &..PS}; Message = "This message is triggered when `PS` is used consider to use ProximalRadioUlnar instead";};
