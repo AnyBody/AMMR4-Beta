@@ -94,10 +94,13 @@ SelectedOutput.Right = {
       AnyVar HipExternalRotation = ....Interface.Right.HipExternalRotation.Pos[0] * 180/pi;
       /// Knee Flexion angle in degrees
       AnyVar KneeFlexion = ....Interface.Right.KneeFlexion.Pos[0] * 180/pi;
-      /// Ankle Plantar Flexion angle in degrees
-      AnyVar AnklePlantarFlexion = ....Interface.Right.AnklePlantarFlexion.Pos[0] * 180/pi;
-      /// Sub-Talar Eversion angle in degrees
-      AnyVar SubTalarEversion = ....Interface.Right.SubTalarEversion.Pos[0] * 180/pi;
+
+      #if BM_FOOT_MODEL != _FOOT_MODEL_NONE_
+        /// Ankle Plantar Flexion angle in degrees
+        AnyVar AnklePlantarFlexion = ....Interface.Right.AnklePlantarFlexion.Pos[0] * 180/pi;
+        /// Sub-Talar Eversion angle in degrees
+        AnyVar SubTalarEversion = ....Interface.Right.SubTalarEversion.Pos[0] * 180/pi;
+      #endif
     };
 
     AnyFolder Muscles = {
