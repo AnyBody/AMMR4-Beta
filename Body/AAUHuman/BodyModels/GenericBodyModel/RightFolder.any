@@ -1,21 +1,8 @@
+AnyFolder Right = {
+  /// Reference to folder containing joint angles used for initial positions
+  AnyFolder &JointPos = ..Mannequin.Posture.Right;
+};
 
+Interface = { AnyFolder Right = { AnyFolder RotVectorMeasures = {}; }; };
 
-  AnyFolder Right={
-    //Reference to folder containing joint angles used for initial positions
-    AnyFolder &JointPos=..Mannequin.Posture.Right;
-  };//Right
-
-  Interface = {
-    AnyFolder Right ={};
-    Right = {AnyFolder RotVectorMeasures = {};};
-  };
-
-
-  MannequinValuesFromModel.AnyFolder_Posture = {
-    AnyFolder AnyFolder_Right = {};
-  };
-
-
-  SelectedOutput = {
-    AnyFolder Right = {};
-  };
+SelectedOutput = { AnyFolder Right = {}; };

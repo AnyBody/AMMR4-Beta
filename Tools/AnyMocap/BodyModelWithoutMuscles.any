@@ -57,13 +57,10 @@ Main.HumanModel = {
       #endif
     };
 
-    AnyFolder& MannequinValuesFromModel = Main.HumanModel.BodyModel.MannequinValuesFromModel;
     AnyFolder &Interface = Main.HumanModel.BodyModel.Interface;
     AnyFolder& IndividualMasses= Main.HumanModel.BodyModel.IndividualMasses;
     AnyFolder& ScalingRef = .ScalingLaw;
     AnyVar TotalBodyMass = Main.HumanModel.BodyModel.TotalBodyMass;
-
   };
-
 };
 

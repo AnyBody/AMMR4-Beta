@@ -8,7 +8,7 @@ AnyFolder Deprecations = {
     #if BM_ARM_LEFT  ==  ON
       AnyMessageOnObjectUse FoldersArmLeft = {
         AnyFolder &ref = Main.HumanModel.BodyModel.Left.ShoulderArm;
-        Objects = {&ref.ModelParameters, &ref.Mus, &ref.Jnt, &ref.Seg};
+        Objects = {&ref.ModelParameters, &ref.Mus, &ref.Jnt, &ref.Seg, &ref.MannequinValuesFolder};
         DeprecationMessage = On;
         Message = strformat("\n"+
         "-------------------------------------------------------------------------------\n"+
@@ -19,18 +19,19 @@ AnyFolder Deprecations = {
         "--------------------------------------------------------------------------------\n");
       };
 
-    Main.HumanModel.BodyModel.Left.ShoulderArm = {
-      AnyFolder &ModelParameters = Data.unscaled.ModelParameters;
-      AnyFolder &Mus = Muscles;
-      AnyFolder &Jnt = Joints;
-      AnyFolder &Seg = Segments;
-    };
+      Main.HumanModel.BodyModel.Left.ShoulderArm = {
+        AnyFolder &ModelParameters = Data.unscaled.ModelParameters;
+        AnyFolder &Mus = Muscles;
+        AnyFolder &Jnt = Joints;
+        AnyFolder &Seg = Segments;
+        AnyFolder &MannequinValuesFolder = ..MannequinValuesFromModel.AnyFolder_Posture.AnyFolder_Left;
+      };
     #endif
 
     #if BM_ARM_RIGHT  ==  ON
       AnyMessageOnObjectUse FoldersArmRight = {
         AnyFolder &ref = Main.HumanModel.BodyModel.Right.ShoulderArm;
-        Objects = {&ref.ModelParameters, &ref.Mus, &ref.Jnt, &ref.Seg};
+        Objects = {&ref.ModelParameters, &ref.Mus, &ref.Jnt, &ref.Seg, &ref.MannequinValuesFolder};
         DeprecationMessage = On;
         Message = strformat("\n"+
         "-------------------------------------------------------------------------------\n"+
@@ -40,18 +41,19 @@ AnyFolder Deprecations = {
         "--------------------------------------------------------------------------------\n");
       };
 
-    Main.HumanModel.BodyModel.Right.ShoulderArm = {
-      AnyFolder &ModelParameters = Data.unscaled.ModelParameters;
-      AnyFolder &Mus = Muscles;
-      AnyFolder &Jnt = Joints;
-      AnyFolder &Seg = Segments;
-    };
+      Main.HumanModel.BodyModel.Right.ShoulderArm = {
+        AnyFolder &ModelParameters = Data.unscaled.ModelParameters;
+        AnyFolder &Mus = Muscles;
+        AnyFolder &Jnt = Joints;
+        AnyFolder &Seg = Segments;
+        AnyFolder &MannequinValuesFolder = ..MannequinValuesFromModel.AnyFolder_Posture.AnyFolder_Right;
+      };
     #endif
 
     #if BM_LEG_RIGHT  ==  ON
       AnyMessageOnObjectUse FoldersLegRight = {
         AnyFolder &ref = Main.HumanModel.BodyModel.Right.Leg;
-        Objects = {&ref.Seg, &ref.Jnt, &ref.Mus, &ref.ModelParameters};
+        Objects = {&ref.Seg, &ref.Jnt, &ref.Mus, &ref.ModelParameters, &ref.MannequinValuesFolder};
         DeprecationMessage = On;
         Message = strformat("\n"+
         "-------------------------------------------------------------------------------\n"+
@@ -61,18 +63,19 @@ AnyFolder Deprecations = {
         "--------------------------------------------------------------------------------\n");
       };
 
-    Main.HumanModel.BodyModel.Right.Leg = {
-      AnyFolder &ModelParameters = Data.unscaled.ModelParameters;
-      AnyFolder &Mus = Muscles;
-      AnyFolder &Jnt = Joints;
-      AnyFolder &Seg = Segments;
-    };
+      Main.HumanModel.BodyModel.Right.Leg = {
+        AnyFolder &ModelParameters = Data.unscaled.ModelParameters;
+        AnyFolder &Mus = Muscles;
+        AnyFolder &Jnt = Joints;
+        AnyFolder &Seg = Segments;
+        AnyFolder &MannequinValuesFolder = ..MannequinValuesFromModel.AnyFolder_Posture.AnyFolder_Right;
+      };
     #endif
 
     #if BM_LEG_LEFT  ==  ON
       AnyMessageOnObjectUse FoldersLegLeft = {
         AnyFolder &ref = Main.HumanModel.BodyModel.Left.Leg;
-        Objects = {&ref.Seg, &ref.Jnt, &ref.Mus, &ref.ModelParameters};
+        Objects = {&ref.Seg, &ref.Jnt, &ref.Mus, &ref.ModelParameters, &ref.MannequinValuesFolder};
         DeprecationMessage = On;
         Message = strformat("\n"+
         "-------------------------------------------------------------------------------\n"+
@@ -82,21 +85,21 @@ AnyFolder Deprecations = {
         "--------------------------------------------------------------------------------\n");
       };
 
-    Main.HumanModel.BodyModel.Left.Leg = {
-      AnyFolder &ModelParameters = Data.unscaled.ModelParameters;
-      AnyFolder &Mus = Muscles;
-      AnyFolder &Jnt = Joints;
-      AnyFolder &Seg = Segments;
-    };
+      Main.HumanModel.BodyModel.Left.Leg = {
+        AnyFolder &ModelParameters = Data.unscaled.ModelParameters;
+        AnyFolder &Mus = Muscles;
+        AnyFolder &Jnt = Joints;
+        AnyFolder &Seg = Segments;
+        AnyFolder &MannequinValuesFolder = ..MannequinValuesFromModel.AnyFolder_Posture.AnyFolder_Left;
+      };
     #endif
 
-    #if BM_COMPATIBILITY_BODYMODEL_STRUCTURE    ==    ON
     AnyMessageOnObjectUse FoldersTrunk = {
       AnyFolder &ref = Main.HumanModel.BodyModel.Trunk;
       Objects = {
         &ref.ModelParameters, &ref.MusclesSpineRight, &ref.MusclesSpineLeft,
         &ref.MusclesSpine, &ref.JointsLumbar, &ref.SegmentsLumbar, &ref.JointsCervicalSpine,
-        &ref.SegmentsCervicalSpine, &ref.SegmentsRibCage, &ref.SegmentsThorax
+        &ref.SegmentsCervicalSpine, &ref.SegmentsRibCage, &ref.SegmentsThorax, &ref.MannequinValuesFolder
       };
       DeprecationMessage = On;
       Message = strformat("\n"+
@@ -118,8 +121,33 @@ AnyFolder Deprecations = {
       AnyFolder &SegmentsCervicalSpine = Segments;
       AnyFolder &SegmentsRibCage = Segments;
       AnyFolder &SegmentsThorax = Segments;
+      AnyFolder &MannequinValuesFolder = .MannequinValuesFromModel.AnyFolder_Posture;
     };
-    #endif
 
+  #endif
+
+  #if BM_COMPATIBILITY_BODYMODEL_STRUCTURE == OFF
+    // There is no need to enable this message below when the compatibility mode is ON,
+    // The old structure uses them and thereby creates warnings for the user.
+
+
+    /// Mark the old mannequin values folder structure as deprecated, and inform the user
+    /// to update their model to the new structure.
+    AnyMessageOnObjectUse FoldersMannequinValues = {
+      AnyFolder &ref = ....BodyModel;
+      Objects = {
+        &ref.MannequinValuesFromModel,
+        &ref.MannequinValuesFromModel.AnyFolder_Posture,
+        &ref.MannequinValuesFromModel.AnyFolder_Posture.AnyFolder_Right,
+        &ref.MannequinValuesFromModel.AnyFolder_Posture.AnyFolder_Left
+      };
+      DeprecationMessage = On;
+      Message = strformat("\n"+
+      "-------------------------------------------------------------------------------\n"+
+      "    The folder structure of the mannequin values from the model changed from AMMR version 3 to 4.\n"+
+      "    Please update your model to use the new structure.\n"+
+      "    See the changelog and AMMR4 migration guide for more information.\n"+
+      "---------------------------------------------------------------------------- ---\n");
+    };
   #endif
 };

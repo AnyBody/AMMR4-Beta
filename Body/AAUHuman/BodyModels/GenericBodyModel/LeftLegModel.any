@@ -10,9 +10,6 @@ Left =
     #undef _LEFT_RIGHT_
 
     AnyFolder &InterfaceFolder =..Interface.Left;
-    //Reference to folder
-    AnyFolder &MannequinValuesFolder = ..MannequinValuesFromModel.AnyFolder_Posture.AnyFolder_Left;
-
 
     #include "../Include/SettingsLeg.any"
     AnyFolder &Scaling = ...Scaling;
