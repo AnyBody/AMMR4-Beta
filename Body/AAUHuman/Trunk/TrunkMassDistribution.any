@@ -46,6 +46,7 @@ AnyFolder MassDistribution = {
     );
   #endif
   // mass after applying mass_scale
+  AnyFloat allMasses = Obj2Num(DesignVar(ObjGetMember(inertia_objects, "Mass")));
   AnyFloat corrected_mass = sum(Obj2Num(DesignVar(ObjGetMember(inertia_objects, "Mass"))));
 
   AnyFloat mass_diff_after_corr = required_mass - corrected_mass;
