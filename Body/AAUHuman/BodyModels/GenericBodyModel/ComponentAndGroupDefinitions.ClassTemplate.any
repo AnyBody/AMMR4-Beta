@@ -8,7 +8,8 @@ Component/Group objects
   // Define some variables that are useful for muscle groups
   #define MUSCLE_GRP_VARS \
     AnyVar MaxActivity = max(Obj2Num( ObjGetMember(Objects,"Activity"))); \
-    AnyVar AvgActivity = mean(Obj2Num( ObjGetMember(Objects,"Activity")));
+    AnyVar AvgActivity = mean(Obj2Num( ObjGetMember(Objects,"Activity"))); \
+    AnyVar Pmet = sum(Obj2Num( ObjGetMember(Objects,"Pmet")));
 
 
   /*
@@ -43,5 +44,5 @@ Component/Group objects
   // By default all these templates create AnyFolder objects
   #class_template MuscleGroup(__CLASS__ = AnyFolder, searchString = "") {};
   #class_template SelectedOutputGroup(__CLASS__ = AnyFolder, searchString = "") {};
-  
+
 #endif

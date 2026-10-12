@@ -1,12 +1,9 @@
 
-
 SelectedOutput.Left = {
 
   AnyFolder Leg = {
 
-
     SelectedOutputGroup JointReactionForce = {
-
 
       /// Medial positive
       AnyVar Hip_MediolateralForce = ....Left.Leg.Joints.Hip.Constraints.Reaction.Fout[2];
@@ -70,47 +67,47 @@ SelectedOutput.Left = {
       // Thigh.KneeJoint ref
       #endif
 
-      //****************************************************
-
-
-
-
     }; //End JointReactionForce
-
-
-
 
     #if ((BM_FOOT_MODEL == _FOOT_MODEL_LEG_FOOT_) | (BM_FOOT_MODEL == _FOOT_MODEL_RIGID_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_))
     SelectedOutputGroup JointMomentMeasure = {
-
 
       AnyVar HipAbduction = ....Left.Leg.MomentMeasure.HipNetMomentMuscle.MHipAbduction;
 
       AnyVar HipFlexion = ....Left.Leg.MomentMeasure.HipNetMomentMuscle.MHipFlexion;
 
       AnyVar HipExternalRotation = ....Left.Leg.MomentMeasure.HipNetMomentMuscle.MHipExternalRotation;
-      // HipNodeRef.RotNode ref
 
       AnyVar KneeFlexion = -....Left.Leg.MomentMeasure.KneeNetMomentMuscle.MKneeFlexion;
-      // Shank.KneeJoint.RotNode ref
 
       AnyVar AnklePlantarFlexion = ....Left.Leg.MomentMeasure.AnklePlantarFlexionNetMomentMuscle.MPlantarFlexion;
-      // Shank.AnkleJoint ref
 
       AnyVar SubTalarEversion = ....Left.Leg.MomentMeasure.SubTalarEversionNetMomentMuscle.MSubTalarEversion;
-      // Talus.SubTalarJoint ref
-
 
     }; //End JointMomentMeasure
     #endif
 
+    /// Joint angles in degrees
+    SelectedOutputGroup JointAngles = {
+      /// Hip Abduction angle in degrees
+      AnyVar HipAbduction = ....Interface.Left.HipAbduction.Pos[0] * 180/pi;
+      /// Hip Flexion angle in degrees
+      AnyVar HipFlexion = ....Interface.Left.HipFlexion.Pos[0] * 180/pi;
+      /// Hip External Rotation angle in degrees
+      AnyVar HipExternalRotation = ....Interface.Left.HipExternalRotation.Pos[0] * 180/pi;
+      /// Knee Flexion angle in degrees
+      AnyVar KneeFlexion = ....Interface.Left.KneeFlexion.Pos[0] * 180/pi;
 
+      #if BM_FOOT_MODEL != _FOOT_MODEL_NONE_
+        /// Ankle Plantar Flexion angle in degrees
+        AnyVar AnklePlantarFlexion = ....Interface.Left.AnklePlantarFlexion.Pos[0] * 180/pi;
+        /// Sub-Talar Eversion angle in degrees
+        AnyVar SubTalarEversion = ....Interface.Left.SubTalarEversion.Pos[0] * 180/pi;
+      #endif
+    };
 
-
-    AnyFolder Muscles =
-    {
-      AnySearchFun MuscleList =
-      {
+    AnyFolder Muscles = {
+      AnySearchFun MuscleList = {
         #if (BM_LEG_MUSCLES_LEFT == OFF)
           Search = ".....Left.Leg.JointMuscles.*.*.dof0.Muscle.*.Activity";
         #else
@@ -122,23 +119,13 @@ SelectedOutput.Left = {
 
       AnyVar Envelope = max(MuscleList());
 
-
-
       #if (BM_LEG_MUSCLES_LEFT != OFF)
 
-      //********************************************************************************
-
-
-
       AnyFolder MuscleActivity = {
-
-
 
         AnySearchFun GluteusMaxActivityList =  {
           Search = "......Left.Leg.Muscles.GluteusMax*.*.Activity";
         };
-
-
 
         // GlutMed
         AnySearchFun GlutMedActivityList =  {
@@ -166,11 +153,6 @@ SelectedOutput.Left = {
           Search = "......Trunk.Muscles.Left.PsoasMajor.*.Activity";
         };
 
-        //        // Psoas Minor
-        //        AnySearchFun PsoasMinorActivityList =  {
-        //          Search = "......Trunk.Leg.Muscles.Left.PsoasMinor.*.Activity";
-        //        };
-
         AnySearchFun IliacusActivityList =  {
           Search = "......Left.Leg.Muscles.Iliac*.*.Activity";
         };
@@ -178,7 +160,6 @@ SelectedOutput.Left = {
         AnySearchFun VastusActivityList =  {
           Search = "......Left.Leg.Muscles.Vastus*.*.Activity";
         };
-
 
         AnySearchFun RectusFemorisActivityList =  {
           Search = "......Left.Leg.Muscles.RectusF*.*.Activity";
@@ -205,18 +186,9 @@ SelectedOutput.Left = {
           Search = "......Left.Leg.Muscles.AdductorMag*.*.Activity";
         };
 
-        //                 AnySearchFun AdductorMinimusActivityList =  {
-        //          Search = "......Left.Leg.Muscles.AdductorMin*.Activity";
-        //        };
-
-
         AnySearchFun ObturatorExtActivityList =  {
           Search = "......Left.Leg.Muscles.ObturatorExt*.*.Activity";
         };
-
-
-
-
 
         AnySearchFun SemimembranosusActivityList =  {
           Search = "......Left.Leg.Muscles.Semimembr*.*.Activity";
@@ -239,11 +211,9 @@ SelectedOutput.Left = {
           Search = "......Left.Leg.Muscles.Gastroc*.*.Activity";
         };
 
-
-          AnySearchFun TibPostActivityList =  {
+        AnySearchFun TibPostActivityList =  {
           Search = "......Left.Leg.Muscles.TibialisPost*.*.Activity";
         };
-
 
         AnySearchFun TibAntActivityList =  {
           Search = "......Left.Leg.Muscles.TibialisAnt*.*.Activity";
@@ -253,15 +223,12 @@ SelectedOutput.Left = {
           Search = "......Left.Leg.Muscles.Soleus*.*.Activity";
         };
 
-
-
         AnyVar GluteusMaxActivity = max(GluteusMaxActivityList());
         AnyVar GluteusMedActivity = max(GlutMedActivityList());
         AnyVar GluteusMinActivity = max(GlutMinActivityList());
         AnyVar SartoriusActivity = max(SartoriusActivityList());
         AnyVar TensorFasciaeActivity = max(TensorFasciaeActivityList());
         AnyVar PsoasMajorActivity = max(PsoasMajorActivityList());
-        //        AnyVar PsoasMinorActivity = max(PsoasMinorActivityList());
         AnyVar IliacusActivity = max(IliacusActivityList());
         AnyVar VastusActivity = max(VastusActivityList());
         AnyVar RectusFemorisActivity = max(RectusFemorisActivityList());
@@ -270,7 +237,6 @@ SelectedOutput.Left = {
         AnyVar AdductorLongusActivity = max(AdductorLongusActivityList());
         AnyVar AdductorBrevisActivity = max(AdductorBrevisActivityList());
         AnyVar AdductorMagnusActivity = max(AdductorMagnusActivityList());
-        //        AnyVar AdductorMinimusActivity = max(AdductorMinimusActivityList());
         AnyVar ObturatorExtActivity = max(ObturatorExtActivityList());
         AnyVar SemimembranosusActivity = max(SemimembranosusActivityList());
         AnyVar SemitendinosusActivity = max(SemimemtendinosusActivityList());
@@ -282,24 +248,15 @@ SelectedOutput.Left = {
         AnyVar TibialisPosteriorActivity = max(TibPostActivityList());
         AnyVar SoleusActivity = max(SoleusActivityList());
         #endif
-
-
-
-
       };
-       //*************************************************
 
-
-        /*   Hip Abductors
-      o	Gluteus medius
-      o	Gluteus minimus
-      o	Sartorius
-      o	Tensor fasciae latae
+      /*   Hip Abductors
+        o	Gluteus medius
+        o	Gluteus minimus
+        o	Sartorius
+        o	Tensor fasciae latae
       */
-
       AnyFloat HipAbductorMuscleActivity = {MuscleActivity.GluteusMedActivity, MuscleActivity.GluteusMinActivity, MuscleActivity.SartoriusActivity, MuscleActivity.TensorFasciaeActivity};
-
-
 
       /* Hip Flexors:
       o	Psoas major
@@ -313,13 +270,9 @@ SelectedOutput.Left = {
       o	Adductor brevis
       o	Gracilis
       */
-
       AnyFloat HipFlexorMuscleActivity = {MuscleActivity.PsoasMajorActivity, MuscleActivity.IliacusActivity, MuscleActivity.RectusFemorisActivity,
         MuscleActivity.SartoriusActivity, MuscleActivity.TensorFasciaeActivity, MuscleActivity.PectineusActivity,
-        MuscleActivity.AdductorLongusActivity, MuscleActivity.AdductorBrevisActivity, MuscleActivity.GracilisActivity};
-//      AnyVar HipFlexorMuscleActivity = MuscleActivity.PsoasMajorActivity + MuscleActivity.IliacusActivity + MuscleActivity.RectusFemorisActivity + MuscleActivity.SartoriusActivity + MuscleActivity.TensorFasciaeActivity
-//      + MuscleActivity.PectineusActivity
-//      + MuscleActivity.AdductorLongusActivity + MuscleActivity.AdductorBrevisActivity + MuscleActivity.GracilisActivity;
+      MuscleActivity.AdductorLongusActivity, MuscleActivity.AdductorBrevisActivity, MuscleActivity.GracilisActivity};
 
       /*  Hip adductors:
       o	Adductor brevis
@@ -330,12 +283,8 @@ SelectedOutput.Left = {
       o	gracilis
       o	Obturator externus
       */
-
       AnyFloat HipAdductorMuscleActivity = {MuscleActivity.ObturatorExtActivity, MuscleActivity.PectineusActivity, MuscleActivity.AdductorMagnusActivity, // + AdductorMinimusActivity
-                                            MuscleActivity.AdductorLongusActivity, MuscleActivity.AdductorBrevisActivity, MuscleActivity.GracilisActivity};
-//      AnyVar HipAdductorMuscleActivity = MuscleActivity.ObturatorExtActivity + MuscleActivity.PectineusActivity + MuscleActivity.AdductorMagnusActivity // + AdductorMinimusActivity
-//      + MuscleActivity.AdductorLongusActivity + MuscleActivity.AdductorBrevisActivity + MuscleActivity.GracilisActivity;
-
+      MuscleActivity.AdductorLongusActivity, MuscleActivity.AdductorBrevisActivity, MuscleActivity.GracilisActivity};
 
       /* Hip extensors:
       o	Gluteus maximus
@@ -343,10 +292,7 @@ SelectedOutput.Left = {
       "	Long head of biceps femoris, short head is not a hip extensor, only a knee flexor
       "	Semimembranosus muscle
       "	Semitendinosus muscle
-
       */
-
-
       AnyFloat HipExtensorMuscleActivity = {MuscleActivity.GluteusMaxActivity, MuscleActivity.BicepsFemorisCaputLongActivity, MuscleActivity.SemimembranosusActivity, MuscleActivity.SemitendinosusActivity};
 
       /* Knee flexors:
@@ -359,30 +305,14 @@ SelectedOutput.Left = {
       o	sartorius (also hip flexor/abductor/lateral rotator)
       */
 
-
       #if ((BM_FOOT_MODEL == _FOOT_MODEL_LEG_FOOT_) | (BM_FOOT_MODEL == _FOOT_MODEL_RIGID_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_))
       AnyFloat KneeFlexorMuscleActivity = {MuscleActivity.BicepsFemorisCaputLongActivity,MuscleActivity.BicepsFemorisCaputBreveActivity, MuscleActivity.SemimembranosusActivity, MuscleActivity.SemitendinosusActivity, MuscleActivity.GastrocActivity, MuscleActivity.GracilisActivity, MuscleActivity.SartoriusActivity};
       #endif
 
-      // ********************************************************
-
-
-
-
-
-       //*************************************************
-
-      // Search Functions:
-
       AnyFolder MuscleForces = {
-
-
         AnySearchFun GluteusMaxForceList =  {
           Search = "......Left.Leg.Muscles.GluteusMax*.*.Fout";
         };
-
-
-
 
         // GlutMed
         AnySearchFun GlutMedForceList =  {
@@ -410,12 +340,6 @@ SelectedOutput.Left = {
           Search = "......Trunk.Muscles.Left.PsoasMajor.*.Fout";
         };
 
-
-        //        // Psoas Minor
-        //        AnySearchFun PsoasMinorForceList =  {
-        //          Search = "......Trunk.Leg.Muscles.Left.PsoasMinor.*.Fout";
-        //        };
-
         AnySearchFun IliacusForceList =  {
           Search = "......Left.Leg.Muscles.Iliac*.*.Fout";
         };
@@ -440,22 +364,13 @@ SelectedOutput.Left = {
           Search = "......Left.Leg.Muscles.AdductorBr*.*.Fout";
         };
 
-
         AnySearchFun AdductorMagnusForceList =  {
           Search = "......Left.Leg.Muscles.AdductorMag*.*.Fout";
         };
 
-        //                 AnySearchFun AdductorMinimusForceList =  {
-        //          Search = "......Left.Leg.Muscles.AdductorMin*.Fout";
-        //        };
-
-
         AnySearchFun ObturatorExtForceList =  {
           Search = "......Left.Leg.Muscles.ObturatorExt*.*.Fout";
         };
-
-
-
 
         AnySearchFun SemimembranosusForceList =  {
           Search = "......Left.Leg.Muscles.Semimembr*.*.Fout";
@@ -469,12 +384,9 @@ SelectedOutput.Left = {
           Search = "......Left.Leg.Muscles.BicepsFemorisCaputBreve.*.Fout";
         };
 
-
-
         AnySearchFun BicepsFemorisCaputLongForceList =  {
           Search = "......Left.Leg.Muscles.BicepsFemorisCaputL*.*.Fout";
         };
-
 
         AnySearchFun GastrocForceList =  {
           Search = "......Left.Leg.Muscles.Gastroc*.*.Fout";
@@ -482,7 +394,6 @@ SelectedOutput.Left = {
         AnySearchFun TibPostForceList =  {
           Search = "......Left.Leg.Muscles.TibialisPost*.*.Fout";
         };
-
 
         AnySearchFun TibAntForceList =  {
           Search = "......Left.Leg.Muscles.TibialisAnt*.*.Fout";
@@ -495,14 +406,13 @@ SelectedOutput.Left = {
         AnySearchFun VastusForceList =  {
           Search = "......Left.Leg.Muscles.Vastus*.*.Fout";
         };
-//*****
+
         AnyVar GluteusMaxForce = sum(GluteusMaxForceList());
         AnyVar GluteusMedForce = sum(GlutMedForceList());
         AnyVar GluteusMinForce = sum(GlutMinForceList());
         AnyVar SartoriusForce = sum(SartoriusForceList());
         AnyVar TensorFasciaeForce = sum(TensorFasciaeForceList());
         AnyVar PsoasMajorForce = sum(PsoasMajorForceList());
-        //        AnyVar PsoasMinorForce = sum(PsoasMinorForceList());
         AnyVar IliacusForce = sum(IliacusForceList());
         AnyVar VastusForce = sum(VastusForceList());
         AnyVar RectusFemorisForce = sum(RectusFemorisForceList());
@@ -511,7 +421,6 @@ SelectedOutput.Left = {
         AnyVar AdductorLongusForce = sum(AdductorLongusForceList());
         AnyVar AdductorBrevisForce = sum(AdductorBrevisForceList());
         AnyVar AdductorMagnusForce = sum(AdductorMagnusForceList());
-        //        AnyVar AdductorMinimusForce = sum(AdductorMinimusForceList());
         AnyVar ObturatorExtForce = sum(ObturatorExtForceList());
         AnyVar SemimembranosusForce = sum(SemimembranosusForceList());
         AnyVar SemitendinosusForce = sum(SemimemtendinosusForceList());
@@ -523,12 +432,7 @@ SelectedOutput.Left = {
         AnyVar TibialisPosteriorForce= sum(TibPostForceList());
         AnyVar SoleusForce = sum(SoleusForceList());
         #endif
-
       };
-
-
-
-
 
       /*   Hip Abductors
       o	Gluteus medius
@@ -536,9 +440,7 @@ SelectedOutput.Left = {
       o	Sartorius
       o	Tensor fasciae latae
       */
-
       AnyVar HipAbductorMuscleForce = MuscleForces.GluteusMedForce + MuscleForces.GluteusMinForce + MuscleForces.SartoriusForce + MuscleForces.TensorFasciaeForce;
-
 
       /* Hip Flexors:
       o	Psoas major
@@ -552,7 +454,6 @@ SelectedOutput.Left = {
       o	Adductor brevis
       o	Gracilis
       */
-
       AnyVar HipFlexorMuscleForce = MuscleForces.PsoasMajorForce + MuscleForces.IliacusForce + MuscleForces.RectusFemorisForce + MuscleForces.SartoriusForce + MuscleForces.TensorFasciaeForce
       + MuscleForces.PectineusForce
       + MuscleForces.AdductorLongusForce + MuscleForces.AdductorBrevisForce + MuscleForces.GracilisForce;
@@ -566,10 +467,8 @@ SelectedOutput.Left = {
       o	gracilis
       o	Obturator externus
       */
-
       AnyVar HipAdductorMuscleForce = MuscleForces.ObturatorExtForce + MuscleForces.PectineusForce + MuscleForces.AdductorMagnusForce // + AdductorMinimusForce
       + MuscleForces.AdductorLongusForce + MuscleForces.AdductorBrevisForce + MuscleForces.GracilisForce;
-
 
       /* Hip extensors:
       o	Gluteus maximus
@@ -579,9 +478,9 @@ SelectedOutput.Left = {
       "	Semitendinosus muscle
 
       */
+      AnyVar HipExtensorMuscleForce = MuscleForces.GluteusMaxForce + MuscleForces.BicepsFemorisCaputLongForce + MuscleForces.SemimembranosusForce + MuscleForces.SemitendinosusForce;
 
-     AnyVar HipExtensorMuscleForce = MuscleForces.GluteusMaxForce + MuscleForces.BicepsFemorisCaputLongForce + MuscleForces.SemimembranosusForce + MuscleForces.SemitendinosusForce;
-
+      #if ((BM_FOOT_MODEL == _FOOT_MODEL_LEG_FOOT_) | (BM_FOOT_MODEL == _FOOT_MODEL_RIGID_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_))
       /* Knee flexors:
       o	hamstrings (also hip extensors):
       "	biceps femoris (short head does not extend hip)
@@ -591,26 +490,11 @@ SelectedOutput.Left = {
       o	gracilis (also hip flexor/adductor)
       o	sartorius (also hip flexor/abductor/lateral rotator)
       */
-      #if ((BM_FOOT_MODEL == _FOOT_MODEL_LEG_FOOT_) | (BM_FOOT_MODEL == _FOOT_MODEL_RIGID_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_))
       AnyVar KneeFlexorMuscleForce = MuscleForces.BicepsFemorisCaputLongForce + MuscleForces.BicepsFemorisCaputBreveForce + MuscleForces.SemimembranosusForce + MuscleForces.SemitendinosusForce + MuscleForces.GastrocForce + MuscleForces.GracilisForce + MuscleForces.SartoriusForce;
       #endif
 
-
-
-
-
-
-#endif
-
-
-}; //End Muscles
-
-
-  }; //End Leg
-
-
-}; //End Left
-
-
-
+      #endif
+    };
+  };
+};
 
