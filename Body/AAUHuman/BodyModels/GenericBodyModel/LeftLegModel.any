@@ -10,9 +10,6 @@ Left =
     #undef _LEFT_RIGHT_
 
     AnyFolder &InterfaceFolder =..Interface.Left;
-    //Reference to folder
-    AnyFolder &MannequinValuesFolder = ..MannequinValuesFromModel.AnyFolder_Posture.AnyFolder_Left;
-
 
     #include "../Include/SettingsLeg.any"
     AnyFolder &Scaling = ...Scaling;
@@ -45,8 +42,8 @@ Left =
       #if (BM_LEG_MUSCLES_LEFT == OFF)
         AnyForceMomentMeasure KneeJointReactionMoments =
         {
-          AnyForceBase &Force = ..Jnt.Knee.Constraints.Reaction;
-          AnyRefFrame &Thighknee = ..Seg.Thigh.KneeJoint;
+          AnyForceBase &Force = ..Joints.Knee.Constraints.Reaction;
+          AnyRefFrame &Thighknee = ..Segments.Thigh.KneeJoint;
           AnyVec3 Mlocal = M*Thighknee.Axes;
         };
       #else
@@ -63,7 +60,7 @@ Left =
 
 Trunk =
 {
-  AnyRefFrame &PsoasMajorLeftReference=.Left.Leg.Seg.Thigh;
+  AnyRefFrame &PsoasMajorLeftReference=.Left.Leg.Segments.Thigh;
 };
 
 

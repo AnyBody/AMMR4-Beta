@@ -80,9 +80,9 @@ Main = {
     //Output from the Vastus Muscles
     #if BM_TRUNK_CERVICAL_MUSCLES == _MUSCLES_SIMPLE_
     AnyVar VastiAct =
-    max({Main.Model.BodyModel.Right.Leg.Mus.VastusMedialis.Activity,
-      Main.Model.BodyModel.Right.Leg.Mus.VastusIntermedius.Activity,
-      Main.Model.BodyModel.Right.Leg.Mus.VastusLateralis.Activity});
+    max({Main.Model.BodyModel.Right.Leg.Muscles.VastusMedialis.Activity,
+      Main.Model.BodyModel.Right.Leg.Muscles.VastusIntermedius.Activity,
+      Main.Model.BodyModel.Right.Leg.Muscles.VastusLateralis.Activity});
 
     //Size of total force in the L5 Sacrum joint
     AnyVar L5SacrumReac = (Main.Model.BodyModel.Trunk.Joints.Lumbar.L5Sacrum.Constraints.Reaction.Fout[0]^2+

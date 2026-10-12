@@ -164,7 +164,7 @@ AnyFolder JointsAndDrivers = {
   AnyKinEqSimpleDriver KneeRDrv  = {
     AnyKinLinear KneeR ={
       Ref=0;
-      AnyRefFrame &ref1=Main.Model.BodyModel.Right.Leg.Seg.Thigh.KneeMarker;
+      AnyRefFrame &ref1=Main.Model.BodyModel.Right.Leg.Segments.Thigh.KneeMarker;
       AnyRefFrame &ref2=Main.Model.Markers.p5.Seg;
       AnyDrawPLine drw={RGB={1,0,0};Thickness=0.005;    };
     };
@@ -178,7 +178,7 @@ AnyFolder JointsAndDrivers = {
   AnyKinEqSimpleDriver KneeLDrv  = {
     AnyKinLinear KneeR ={
       Ref=0;
-      AnyRefFrame &ref1=Main.Model.BodyModel.Left.Leg.Seg.Thigh.KneeMarker;
+      AnyRefFrame &ref1=Main.Model.BodyModel.Left.Leg.Segments.Thigh.KneeMarker;
 
       AnyRefFrame &ref2=Main.Model.Markers.p12.Seg;
       AnyDrawPLine drw={RGB={1,0,0};Thickness=0.005;    };
@@ -196,7 +196,7 @@ AnyFolder JointsAndDrivers = {
     AnyKinLinear MalleolusR ={
       Ref=0;
 
-      AnyRefFrame &ref1=Main.Model.BodyModel.Right.Leg.Seg.Shank.MalleolusMarker;
+      AnyRefFrame &ref1=Main.Model.BodyModel.Right.Leg.Segments.Shank.MalleolusMarker;
       AnyRefFrame &ref2=Main.Model.Markers.p3.Seg;
       //AnyDrawPLine drw={RGB={1,0,0};Thickness=0.005;    };
     };
@@ -210,7 +210,7 @@ AnyFolder JointsAndDrivers = {
   AnyKinEqSimpleDriver MalleolusLDrv  = {
     AnyKinLinear MalleolusL ={
       Ref=0;
-      AnyRefFrame &ref1=Main.Model.BodyModel.Left.Leg.Seg.Shank.MalleolusMarker;
+      AnyRefFrame &ref1=Main.Model.BodyModel.Left.Leg.Segments.Shank.MalleolusMarker;
       AnyRefFrame &ref2=Main.Model.Markers.p10.Seg;
       //AnyDrawPLine drw={RGB={1,0,0};Thickness=0.005;    };
     };
@@ -226,7 +226,7 @@ AnyFolder JointsAndDrivers = {
 
   AnyKinEqSimpleDriver MetatarsalYRDrv={
     AnyKinLinear lin={
-      AnyRefFrame &ref1=Main.Model.BodyModel.Right.Leg.Seg.Foot.MetatarsalMarker;
+      AnyRefFrame &ref1=Main.Model.BodyModel.Right.Leg.Segments.Foot.MetatarsalMarker;
       AnyRefFrame &ref2=Main.Model.Markers.p1.Seg;
       Ref=0;
     };
@@ -240,7 +240,7 @@ AnyFolder JointsAndDrivers = {
 
   AnyKinEqSimpleDriver MetatarsalYLDrv={
     AnyKinLinear lin={
-      AnyRefFrame &ref1=Main.Model.BodyModel.Left.Leg.Seg.Foot.MetatarsalMarker;
+      AnyRefFrame &ref1=Main.Model.BodyModel.Left.Leg.Segments.Foot.MetatarsalMarker;
       AnyRefFrame &ref2=Main.Model.Markers.p8.Seg;
       Ref=0;
     };
@@ -252,7 +252,7 @@ AnyFolder JointsAndDrivers = {
 
   AnyKinEqSimpleDriver HeelYRDrv={
     AnyKinLinear lin={
-      AnyRefFrame &ref1=Main.Model.BodyModel.Right.Leg.Seg.Foot.HeelMarker;
+      AnyRefFrame &ref1=Main.Model.BodyModel.Right.Leg.Segments.Foot.HeelMarker;
       AnyRefFrame &ref2=Main.Model.Markers.p2.Seg;
     };
     DriverPos={0,0,0};
@@ -264,7 +264,7 @@ AnyFolder JointsAndDrivers = {
   AnyKinEqSimpleDriver HeelYLDrv={
     AnyKinLinear lin={
       Ref=0;
-      AnyRefFrame &ref1=Main.Model.BodyModel.Left.Leg.Seg.Foot.HeelMarker;
+      AnyRefFrame &ref1=Main.Model.BodyModel.Left.Leg.Segments.Foot.HeelMarker;
       AnyRefFrame &ref2=Main.Model.Markers.p9.Seg;
     };
     DriverPos={0,0,0};

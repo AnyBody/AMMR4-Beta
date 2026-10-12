@@ -3,7 +3,6 @@
 //fatal_warnings = True
 //pytest_markers=["slow"]
 //save_study=[
-//  "Main.Studies.ParameterIdentification",
 //  "Main.Studies.MarkerTracking",
 //  "Main.Studies.InverseDynamicStudy",
 //]
@@ -20,11 +19,8 @@
 #define N_STEP_KINEMATICS 20
 #define N_STEP 20
 
-#ifdef TEST_NAME
-#define  MOCAP_TEST_FILENAME_PREFIX  TEST_NAME + "_"
-#else
-#define  MOCAP_TEST_FILENAME_PREFIX  "GUI_"
-#define BM_LEG_MODEL _LEG_MODEL_TLEM_
+#ifndef TEST_NAME
+
 #endif
 
 
@@ -42,7 +38,6 @@ Main =
   
   AnyOperationSequence  TestRunApplication = 
   {
-    AnyOperation& ParameterId =  Main.GMFoot_RunParamOptimization;
     AnyOperation& LoadParam = Main.GMFoot_RunMarkerTrackingAndInverse.LoadParameters;
     AnyOperation& LigCal = Main.GMFoot_RunMarkerTrackingAndInverse.LigamentCal; 
     AnyOperation& MarkerTracking = Main.GMFoot_RunMarkerTrackingAndInverse.MarkerTracking;

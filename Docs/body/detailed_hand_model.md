@@ -1,5 +1,11 @@
 # Detailed hand model
 
+:::{admonition} **Deprecated Model:**
+:class: warning
+The detailed hand model is deprecated in AMMR version 4.0.
+It is superseeded by the new {doc}`hand_rhum2` hand models
+:::
+
 The  detailed hand model is a model of the carpal bones with 17 DOFs. The model
 has no muscles, but the joints are equiped with joint actuators, so the model can
 be used for dynamic analysis.

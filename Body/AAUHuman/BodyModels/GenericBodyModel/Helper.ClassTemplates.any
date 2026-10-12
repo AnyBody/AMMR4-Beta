@@ -218,9 +218,9 @@ creates a string represenation of the values.
 
 E.g.:
 
- {"Main.HumanModel.BodyModel.Right.Leg.Mus.VastusIntermedius6.Activity", "0.10421"},
- {"Main.HumanModel.BodyModel.Right.Leg.Mus.VastusIntermedius5.Activity", "0.03122"},
- {"Main.HumanModel.BodyModel.Right.Leg.Mus.VastusIntermedius4.Activity", "0.01232"},
+ {"Main.HumanModel.BodyModel.Right.Leg.Muscles.VastusIntermedius6.Activity", "0.10421"},
+ {"Main.HumanModel.BodyModel.Right.Leg.Muscles.VastusIntermedius5.Activity", "0.03122"},
+ {"Main.HumanModel.BodyModel.Right.Leg.Muscles.VastusIntermedius4.Activity", "0.01232"},
 
  This template is useful for attaching names to values which are searched out using functions
  such as ObjectSearch or ObjectSearch recursive.
@@ -263,7 +263,7 @@ E.g.:
  Examples:
 
   NameValueMap RightLegActivity() = {
-     ValuePtrs = ObjSearchRecursive("Main.HumanModel.BodyModel.Right.Leg.Mus", "Activity", "AnyVar");
+     ValuePtrs = ObjSearchRecursive("Main.HumanModel.BodyModel.Right.Leg.Muscles", "Activity", "AnyVar");
   };
 
 

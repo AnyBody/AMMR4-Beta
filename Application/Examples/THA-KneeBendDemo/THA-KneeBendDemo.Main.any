@@ -100,14 +100,14 @@ Main = {
                                           + Main.Study.FSurf.Fslave[1]^2
                                           + Main.Study.FSurf.Fslave[2]^2)^0.5;
       #else
-      AnyFloat RightHipReactionForce = (Main.HumanModel.BodyModel.Right.Leg.Jnt.Hip.Constraints.Reaction.Fout[0]^2
-                                       + Main.HumanModel.BodyModel.Right.Leg.Jnt.Hip.Constraints.Reaction.Fout[1]^2
-                                       + Main.HumanModel.BodyModel.Right.Leg.Jnt.Hip.Constraints.Reaction.Fout[2]^2)^0.5;
+      AnyFloat RightHipReactionForce = (Main.HumanModel.BodyModel.Right.Leg.Joints.Hip.Constraints.Reaction.Fout[0]^2
+                                       + Main.HumanModel.BodyModel.Right.Leg.Joints.Hip.Constraints.Reaction.Fout[1]^2
+                                       + Main.HumanModel.BodyModel.Right.Leg.Joints.Hip.Constraints.Reaction.Fout[2]^2)^0.5;
       #endif
 
-      AnyFloat LeftHipReactionForce = (Main.HumanModel.BodyModel.Left.Leg.Jnt.Hip.Constraints.Reaction.Fout[0]^2
-                                       + Main.HumanModel.BodyModel.Left.Leg.Jnt.Hip.Constraints.Reaction.Fout[1]^2
-                                     + Main.HumanModel.BodyModel.Left.Leg.Jnt.Hip.Constraints.Reaction.Fout[2]^2)^0.5;
+      AnyFloat LeftHipReactionForce = (Main.HumanModel.BodyModel.Left.Leg.Joints.Hip.Constraints.Reaction.Fout[0]^2
+                                       + Main.HumanModel.BodyModel.Left.Leg.Joints.Hip.Constraints.Reaction.Fout[1]^2
+                                     + Main.HumanModel.BodyModel.Left.Leg.Joints.Hip.Constraints.Reaction.Fout[2]^2)^0.5;
     };
 
     #if USE_FDK

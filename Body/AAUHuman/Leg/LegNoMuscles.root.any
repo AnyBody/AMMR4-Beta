@@ -31,13 +31,13 @@ AnyKinMeasureOrg JntDOF = {
   // 3 Hip adduction/abduction
   // 4 Hip rotation externa/internal
   // 5 Hip flexion/extension
-  AnyUniversalJoint &Ankle = .Jnt.Ankle;
-  AnyRevoluteJoint &Knee = .Jnt.Knee;
-  AnySphericalJoint &Hip = .Jnt.Hip;
+  AnyUniversalJoint &Ankle = .Joints.Ankle;
+  AnyRevoluteJoint &Knee = .Joints.Knee;
+  AnySphericalJoint &Hip = .Joints.Hip;
 };
 
 /// Definition of the leg segments
-AnyFolder Seg = {
+AnyFolder Segments = {
   #include "Seg.any"
 };
 
@@ -46,7 +46,7 @@ AnyFolder Seg = {
 //#include "JointReactions.any"
 
 /// Definition of the joints
-AnyFolder Jnt = {
+AnyFolder Joints = {
   #include "Jnt.any"
   //#include "JointMuscles.any" joint reactions made as artificial muscles
 };
@@ -54,7 +54,7 @@ AnyFolder Jnt = {
 
 /// Summation of masses in the leg
 AnyFolder MassSummation={
-  AnyVar Mass=.Seg.Thigh.Mass+.Seg.Shank.Mass+.Seg.Foot.Mass;
+  AnyVar Mass=.Segments.Thigh.Mass+.Segments.Shank.Mass+.Segments.Foot.Mass;
 };
 
 #ifdef DONT_USE_INITIAL_POSITION_FROM_MANNEQUIN
@@ -66,6 +66,3 @@ InterfaceFolder ={
   #include "Interface.any"
 };
 
-MannequinValuesFolder ={
-  #include "MannequinValuesFromModel.any"
-};

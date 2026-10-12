@@ -496,7 +496,7 @@ See the individual classes for more information.
 
     #if CREATE_ALL_DESVARS | RIGHT_TIBIAL_TORSION
     AnyDesVar RightTibialTorsionOffset = {
-      Val = HUMAN_MODEL_FOLDER.BodyModel.Right.Leg.Seg.Shank.AnkleJoint.TibialTorsionOffset;
+      Val = HUMAN_MODEL_FOLDER.BodyModel.Right.Leg.Segments.Shank.AnkleJoint.TibialTorsionOffset;
       Min = -pi/4;
       Max = pi/4;
     };
@@ -507,7 +507,7 @@ See the individual classes for more information.
 
     #if CREATE_ALL_DESVARS | LEFT_TIBIAL_TORSION
     AnyDesVar LeftTibialTorsionOffset = {
-      Val = HUMAN_MODEL_FOLDER.BodyModel.Left.Leg.Seg.Shank.AnkleJoint.TibialTorsionOffset;
+      Val = HUMAN_MODEL_FOLDER.BodyModel.Left.Leg.Segments.Shank.AnkleJoint.TibialTorsionOffset;
       Min = -pi/4;
       Max = pi/4;
     };
@@ -529,7 +529,7 @@ See the individual classes for more information.
 
     #if CREATE_ALL_DESVARS | RIGHT_VARUS_VALGUS
     AnyDesVar RightVarusValgusOffset = {
-      Val = HUMAN_MODEL_FOLDER.BodyModel.Right.Leg.Seg.Thigh.KneeJoint.VarusValgusRotation;
+      Val = HUMAN_MODEL_FOLDER.BodyModel.Right.Leg.Segments.Thigh.KneeJoint.VarusValgusRotation;
       Min = -pi/4;
       Max = pi/4;
     };
@@ -540,7 +540,7 @@ See the individual classes for more information.
 
     #if CREATE_ALL_DESVARS | LEFT_VARUS_VALGUS
     AnyDesVar LeftVarusValgusOffset = {
-      Val = HUMAN_MODEL_FOLDER.BodyModel.Left.Leg.Seg.Thigh.KneeJoint.VarusValgusRotation;
+      Val = HUMAN_MODEL_FOLDER.BodyModel.Left.Leg.Segments.Thigh.KneeJoint.VarusValgusRotation;
       Min = -pi/4;
       Max = pi/4;
     };

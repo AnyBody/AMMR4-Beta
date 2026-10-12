@@ -14,9 +14,6 @@ Right = {
     //Reference to folder which contains the interface of the right side
     AnyFolder &InterfaceFolder =..Interface.Right;
 
-    //Reference to folder
-    AnyFolder &MannequinValuesFolder = ..MannequinValuesFromModel.AnyFolder_Posture.AnyFolder_Right;
-
     #include "../Include/SettingsShoulderArm.any"
 
     //-------------------------------------------------------

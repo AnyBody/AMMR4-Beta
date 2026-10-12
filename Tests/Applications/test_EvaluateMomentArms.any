@@ -30,30 +30,58 @@
 
 #include "../../Application/Validation/EvaluateMomentArms/EvaluateMomentArms.main.any"
 
-Main =
-{
-#ifndef CREATE_IMAGE
-  AnyOperation& RunTest = Main.RunApplication;
-#else
-  #include "../Cameras.any"
-  #if BM_LEG_MODEL
-  // Use a a spical time for the initial position picture.
-  AnyOperationSequence CameraInitPos =
-  {
-     AnyOperationSetValue setTime =
-     {
-       AnyFloat t_custom  = 0.8;
-       Source = {&t_custom};
-       Target = {&Main.HumanModel.EvaluateMomentArms.Right.Leg.HipFlexion.Study.tStart};
-     };
-  AnyOperation& CameraInitPos = Main.HumanModel.EvaluateMomentArms.Right.Leg.HipFlexion.Study.InitialConditions;
-  };
+Main = {
+
+  // If we could search through references then this could maybe be simpler
+  AnyObjectPtr MomentArmStudies = ObjSearchRecursive(&Main.HumanModel.EvaluateMomentArms, "*", "AnyStudy");
+  AnyObjectPtr ModelFoldersInStudies = ObjGetMember(MomentArmStudies, "Model");
+  // Slightly britle search pattern - we search for folders that have "Mus" in the name
+  // and then resolve the references to get the actual muscle folders.
+  AnyObjectPtr MuscleRefFolders = ObjSelect(ModelFoldersInStudies, "*Mus*");
+  AnyObjectPtr MuscleFoldersResolved = unique(ObjRefResolve(MuscleRefFolders));
+
+  AnyObjectPtr MusclesInMomentArmStudies = ObjSearchRecursive(MuscleFoldersResolved, "*", "AnyMuscle");
+  AnyObjectPtr MusclesInBodyModelAll = ObjSearchRecursive(&Main.HumanModel.BodyModel, "*", "AnyMuscle");
+
+  #if BM_ARM_THORAX_SCAPULA_CONTACT == _ELLIPSOID_CONTACT_
+    /// Exclude ligaments made as muscles since they are not part of the momentarm studies
+    AnyObjectPtr LigamentMusclesToExclude = ObjSearchRecursive(&Main.HumanModel.BodyModel, "*LigamentReaction", "AnyMuscle");
+    AnyObjectPtr MusclesInBodyModel = set_difference(MusclesInBodyModelAll, LigamentMusclesToExclude);
   #else
-  AnyOperation& CameraInitPos = Main.HumanModel.EvaluateMomentArms.Right.Arm.GHFlexion.Study.InitialConditions;
+    AnyObjectPtr MusclesInBodyModel = MusclesInBodyModelAll;
   #endif
-//
-  LoadTimeCam.CameraLookAtPoint = {0,1,0};
-  LoadTimeCam.CameraFieldOfView = DesignVar(2);
-  LoadTimeCam.CameraDirection  = {0,0,1};
-#endif
+
+  AnyObjectPtr diff = set_difference(MusclesInBodyModel,MusclesInMomentArmStudies);
+  AnyInt test_all_muscles_in_studies_are_in_body_model = expect(
+    eqfun(
+      NumElemOf(MusclesInMomentArmStudies),
+      NumElemOf(MusclesInBodyModel)
+    ),
+    "The number of muscles in the moment arm studies do not match the number of muscles in the body model!"
+  );
+
+  #ifndef CREATE_IMAGE
+    AnyOperation& RunTest = Main.RunApplication;
+  #else
+    #include "../Cameras.any"
+    #if BM_LEG_MODEL
+    // Use a a special time for the initial position picture.
+    AnyOperationSequence CameraInitPos =
+    {
+      AnyOperationSetValue setTime =
+      {
+        AnyFloat t_custom  = 0.8;
+        Source = {&t_custom};
+        Target = {&Main.HumanModel.EvaluateMomentArms.Right.Leg.HipFlexion.Study.tStart};
+      };
+    AnyOperation& CameraInitPos = Main.HumanModel.EvaluateMomentArms.Right.Leg.HipFlexion.Study.InitialConditions;
+    };
+    #else
+    AnyOperation& CameraInitPos = Main.HumanModel.EvaluateMomentArms.Right.Arm.GHFlexion.Study.InitialConditions;
+    #endif
+
+    LoadTimeCam.CameraLookAtPoint = {0,1,0};
+    LoadTimeCam.CameraFieldOfView = DesignVar(2);
+    LoadTimeCam.CameraDirection  = {0,0,1};
+  #endif
 };

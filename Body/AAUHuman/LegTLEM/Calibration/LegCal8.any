@@ -4,9 +4,9 @@ AnyFolder LegCal8={
   AnyFolder &Pelvis = ...BodyModel.Trunk.Segments.PelvisSeg;
   AnyFolder &Sacrum = ...BodyModel.Trunk.Segments.SacrumSeg;
 
-  AnyFolder &LegSegSide = .SideHumanFolderRef.Leg.Seg;
+  AnyFolder &LegSegSide = .SideHumanFolderRef.Leg.Segments;
 
-  AnyFolder &LegJointsSide = .SideHumanFolderRef.Leg.Jnt;
+  AnyFolder &LegJointsSide = .SideHumanFolderRef.Leg.Joints;
   AnyFolder &SacrumPelvisJnt = ...BodyModel.Trunk.Joints.Lumbar.SacrumPelvis;
 
 
@@ -52,7 +52,7 @@ AnyFolder LegCal8={
     Reaction.Type = {Off};
   };
 
-  #if ((BM_FOOT_MODEL == _FOOT_MODEL_DEFAULT_) | (BM_FOOT_MODEL == _FOOT_MODEL_RIGID_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_))
+  #if BM_FOOT_MODEL != _FOOT_MODEL_NONE_
   AnyKinEqSimpleDriver Ankle = {
     AnyKinMeasure& Hinge = ..SideInterfaceFolderRef.AnklePlantarFlexion;
     DriverPos = {-10*pi/180}; // 10 degrees dorsi flexion
@@ -71,7 +71,7 @@ AnyFolder LegCal8={
     #endif
   #endif
 
-  AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.Leg.Mus);
+  AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.Leg.Muscles);
 
   AnyObjectPtrArray ObturatorExternusMuscles = ObjSearch(MusPrefix+".*.ObturatorExternus*", "AnyMuscle");
   AnyObjectPtrArray ObturatorInternusMuscles = ObjSearch(MusPrefix+".*.ObturatorInternus*", "AnyMuscle");

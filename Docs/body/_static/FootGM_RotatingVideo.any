@@ -31,12 +31,12 @@ Main = {
   #define VIDEO_NAME "FootDetailedGM"
   #endif
 
-  
+
   #ifndef VIDEO_NAME
   #define VIDEO_NAME "Foot"
   #endif
-  
-  
+
+
 //  VideoLookAtCamera SnapShot1(UP_DIRECTION=y, _AUTO_OPEN_PREVIEW_=0) =
 //  {
 //    VideoName = VIDEO_NAME + "_closeupSN";
@@ -47,13 +47,13 @@ Main = {
 //    CameraDistance = 1.04;
 //    VideoInputScale = 5;
 //    VideoResolution = {600,600};
-//    CameraLookAtPoint = Main.HumanModel.BodyModel.Right.Leg.Seg.Talus.r+{0.1,0,0};
+//    CameraLookAtPoint = Main.HumanModel.BodyModel.Right.Leg.Segments.Talus.r+{0.1,0,0};
 //    CameraFieldOfView = DesignVar(0.2);
 //    CameraDirection  = {1,0.8,0.0};
 //    BackgroundColor = DesignVar({1,1,1});
 //    Preview.FileName = VideoName + ".jpg";
-//  };   
-  
+//  };
+
   HumanModel.Mannequin.Posture.Right = {
     ElbowPronation = -70;
     WristAbduction = 15;
@@ -63,26 +63,26 @@ Main = {
   VideoLookAtCamera RotatingVideo(UP_DIRECTION=y , _AUTO_PLAY_VIDEOS=OFF) =
   {
     VideoName = VIDEO_NAME + "_rotating_model";
-    
+
     Analysis = {
       AnyOperation &ref = Main.study.Kinematics;
     };
     VideoInputScale = 5;
     VideoResolution = {600,600};
-    VideoInputFrameRate = 30; 
+    VideoInputFrameRate = 30;
     VideoOutputFrameRate = 30;
-    CameraLookAtPoint = Main.HumanModel.BodyModel.Right.Leg.Seg.Talus.r+{0.1,0,0};
+    CameraLookAtPoint = Main.HumanModel.BodyModel.Right.Leg.Segments.Talus.r+{0.1,0,0};
     CameraFieldOfView = DesignVar(0.4);
     CameraDirection  = {cos(2*pi*Main.study.t),0.3,sin(2*pi*Main.study.t) };
     BackgroundColor = DesignVar({1,1,1});
     Counter = Main.study.iStep;
-  }; 
-   
-  
+  };
+
+
   #include "<ANYBODY_PATH_BODY>\HumanModel.any"
 
-   
-  AnyBodyStudy study = 
+
+  AnyBodyStudy study =
   {
     AnyFolder& CameraRef1 = Main.RotatingVideo;
     AnyFolder& Model = Main.HumanModel.BodyModelWithDefaultDrivers;
@@ -95,19 +95,19 @@ Main = {
       ObjSearch("Main.HumanModel.BodyModel.*.Leg.Ligaments.*.LigamentDriver.Driver","AnyKinEqSimpleDriver"),
       ObjSearch("Main.HumanModel.BodyModel.*.Leg.Ligaments.*.*.*.LigamentDriver.Driver.*","AnyReacForce"),
       ObjSearch("Main.HumanModel.BodyModel.*.Leg.Ligaments.*.*.LigamentDriver.Driver.*","AnyReacForce"),
-      ObjSearch("Main.HumanModel.BodyModel.*.Leg.Ligaments.*.LigamentDriver.Driver.*","AnyReacForce")    
+      ObjSearch("Main.HumanModel.BodyModel.*.Leg.Ligaments.*.LigamentDriver.Driver.*","AnyReacForce")
      );
    };
  };
-  
-  
-  AnyOperationSequence RunApplication = 
+
+
+  AnyOperationSequence RunApplication =
   {
 //     AnyOperation& initpos = Main.study.InitialConditions;
 //     AnyOperation& SnapShot1 = Main.SnapShot1.Preview;
      AnyOperation& RotatingVideo = Main.RotatingVideo.Create_Video;
   };
-  
+
 };
 
 
@@ -124,17 +124,17 @@ study = {
 //************************
 //Right foot drivers
 //************************
-  AnyFolder &JntPos=Main.HumanModel.Mannequin.Posture;  
+  AnyFolder &JntPos=Main.HumanModel.Mannequin.Posture;
   AnyFolder &JntVel=Main.HumanModel.Mannequin.PostureVel;
-  
+
   #if BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_
 
   //************************************************
   //              DriverIntertarsal
   //************************************************
-  
 
-    AnyKinEqSimpleDriver JntTaloNaviRight = 
+
+    AnyKinEqSimpleDriver JntTaloNaviRight =
     { // 0: Rot, 1: Ad/Ab 2: Df/Pf
       AnyKinMeasure &ref1 = Main.HumanModel.BodyModel.Interface.Right.TaloNavicularEversion;
       AnyKinMeasure &ref2 = Main.HumanModel.BodyModel.Interface.Right.TaloNavicularAbduction;
@@ -152,8 +152,8 @@ study = {
       }*pi/180;
       Reaction.Type = {Off,Off,Off};
     };
-    
-     AnyKinEqSimpleDriver JntNaviCuneiMedRight = 
+
+     AnyKinEqSimpleDriver JntNaviCuneiMedRight =
     {  // 0: Rot, 1: Ad/Ab 2: Df/Pf
      // AnyKinMeasure &ref1 = Main.HumanModel.BodyModel.Interface.Right.NaviculoMedialCuneiformEversion;
       AnyKinMeasure &ref2 = Main.HumanModel.BodyModel.Interface.Right.NaviculoMedialCuneiformAbduction;
@@ -172,8 +172,8 @@ study = {
       Reaction.Type = {Off,Off};
       //{Off,Off,Off};
     };
-    
-    AnyKinEqSimpleDriver JntNaviCuneiIntRight = 
+
+    AnyKinEqSimpleDriver JntNaviCuneiIntRight =
     { // 0: Ad/Ab 1: Df/Pf
       //AnyKinMeasure &ref1 = Main.HumanModel.BodyModel.Interface.Right.NaviculoIntermediateCuneiformAbduction; //Replaced by intertarsal contact
       AnyKinMeasure &ref2 = Main.HumanModel.BodyModel.Interface.Right.NaviculoIntermediateCuneiformDorsiFlexion;
@@ -185,10 +185,10 @@ study = {
       //.JntVel.Right.Foot.NaviculoIntermediateCuneiformAbduction,
       .JntVel.Right.Foot.NaviculoIntermediateCuneiformDorsiFlexion
       }*pi/180;
-      Reaction.Type = {Off};   
+      Reaction.Type = {Off};
     };
-    
-    AnyKinEqSimpleDriver JntNaviCuneiLatRight = 
+
+    AnyKinEqSimpleDriver JntNaviCuneiLatRight =
     {// 0: Ad/Ab 1: Df/Pf
       //AnyKinMeasure &ref1 = Main.HumanModel.BodyModel.Interface.Right.NaviculoLateralCuneiformAbduction; //Replaced by intertarsal contact
       AnyKinMeasure &ref2 = Main.HumanModel.BodyModel.Interface.Right.NaviculoLateralCuneiformDorsiFlexion;
@@ -200,10 +200,10 @@ study = {
       //.JntVel.Right.Foot.NaviculoLateralCuneiformAbduction,
       .JntVel.Right.Foot.NaviculoLateralCuneiformDorsiFlexion
       }*pi/180;
-      Reaction.Type = {Off};    
+      Reaction.Type = {Off};
 };
-    
-    AnyKinEqSimpleDriver JntCalCuboidRight = 
+
+    AnyKinEqSimpleDriver JntCalCuboidRight =
     {
       AnyKinMeasure &ref1 = Main.HumanModel.BodyModel.Interface.Right.CalcaneoCuboidEversion;
       //AnyKinMeasure &ref2 = Main.HumanModel.BodyModel.Interface.Right.CalcaneoCuboidAbduction; //Replaced by intertarsal contact
@@ -219,16 +219,16 @@ study = {
       .JntVel.Right.Foot.CalcaneoCuboidDorsiFlexion
       }*pi/180;
       Reaction.Type = {Off, Off};
-    };    
-    
-    
-    
+    };
+
+
+
   //************************************************
   //              DriverTarsoMt
   //************************************************
-  
-    
-    AnyKinEqSimpleDriver JntTarsoMt1Right = 
+
+
+    AnyKinEqSimpleDriver JntTarsoMt1Right =
     { // 0: Rot, 1: Ad/Ab 2: Df/Pf
      // AnyKinMeasure &ref1 = Main.HumanModel.BodyModel.Interface.Right.TarsoMetatarsal1Eversion;
       AnyKinMeasure &ref2 = Main.HumanModel.BodyModel.Interface.Right.TarsoMetatarsal1Abduction;
@@ -248,9 +248,9 @@ study = {
       Reaction.Type = {Off,Off};
 
     };
-    
-    
-    AnyKinEqSimpleDriver JntTarsoMt2Right = 
+
+
+    AnyKinEqSimpleDriver JntTarsoMt2Right =
     {
       //AnyKinMeasure &ref1 = Main.HumanModel.BodyModel.Interface.Right.TarsoMetatarsal2Abduction; //Replaced by metatarsal head contact
       AnyKinMeasure &ref2 = Main.HumanModel.BodyModel.Interface.Right.TarsoMetatarsal2DorsiFlexion;
@@ -264,9 +264,9 @@ study = {
       }*pi/180;
       Reaction.Type = {Off};
     };
-    
-    
-    AnyKinEqSimpleDriver JntTarsoMt3Right = 
+
+
+    AnyKinEqSimpleDriver JntTarsoMt3Right =
     {
       //AnyKinMeasure &ref1 = Main.HumanModel.BodyModel.Interface.Right.TarsoMetatarsal3Abduction; //Replaced by metatarsal head contact
       AnyKinMeasure &ref2 = Main.HumanModel.BodyModel.Interface.Right.TarsoMetatarsal3DorsiFlexion;
@@ -280,9 +280,9 @@ study = {
       }*pi/180;
       Reaction.Type = {Off};
     };
-    
-    
-    AnyKinEqSimpleDriver JntTarsoMt4Right = 
+
+
+    AnyKinEqSimpleDriver JntTarsoMt4Right =
     {
       //AnyKinMeasure &ref1 = Main.HumanModel.BodyModel.Interface.Right.TarsoMetatarsal4Abduction; //Replaced by metatarsal head contact
       AnyKinMeasure &ref2 = Main.HumanModel.BodyModel.Interface.Right.TarsoMetatarsal4DorsiFlexion;
@@ -296,9 +296,9 @@ study = {
       }*pi/180;
       Reaction.Type = {Off};
     };
-    
-    
-    AnyKinEqSimpleDriver JntTarsoMt5Right = 
+
+
+    AnyKinEqSimpleDriver JntTarsoMt5Right =
     {
     //  AnyKinMeasure &ref1 = Main.HumanModel.BodyModel.Interface.Right.TarsoMetatarsal5SkewEversion;
       //AnyKinMeasure &ref2 = Main.HumanModel.BodyModel.Interface.Right.TarsoMetatarsal5Abduction; //Replaced by metatarsal head contact
@@ -317,14 +317,14 @@ study = {
       Reaction.Type = {Off};
 
     };
-    
+
 
   //************************************************
   //              DriverJntMtPhal
   //************************************************
-  
-    
-    AnyKinEqSimpleDriver JntMtPhal1Right = 
+
+
+    AnyKinEqSimpleDriver JntMtPhal1Right =
     {
       AnyKinMeasure &ref1 = Main.HumanModel.BodyModel.Interface.Right.MetatarsoPhalangeal1Abduction;
       AnyKinMeasure &ref2 = Main.HumanModel.BodyModel.Interface.Right.MetatarsoPhalangeal1DorsiFlexion;
@@ -338,11 +338,11 @@ study = {
       }*pi/180;
       Reaction.Type = {Off, Off};
     };
-    
+
    #endif
-   
+
    #if BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_
-    AnyKinEqSimpleDriver JntMtPhal1Right = 
+    AnyKinEqSimpleDriver JntMtPhal1Right =
     {
       AnyKinMeasure &ref2 = Main.HumanModel.BodyModel.Interface.Right.MetatarsoPhalangeal1DorsiFlexion;
       DriverPos = {
@@ -353,11 +353,11 @@ study = {
       }*pi/180;
       Reaction.Type = {Off};
     };
-   #endif    
-    
+   #endif
+
    #if BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_
 
-    AnyKinEqSimpleDriver JntMtPhal2Right = 
+    AnyKinEqSimpleDriver JntMtPhal2Right =
     {
       AnyKinMeasure &ref1 = Main.HumanModel.BodyModel.Interface.Right.MetatarsoPhalangeal2Abduction;
       AnyKinMeasure &ref2 = Main.HumanModel.BodyModel.Interface.Right.MetatarsoPhalangeal2DorsiFlexion;
@@ -370,9 +370,9 @@ study = {
       .JntVel.Right.Foot.MetatarsoPhalangeal2DorsiFlexion
       }*pi/180;
       Reaction.Type = {Off, Off};
-    };    
-    
-    AnyKinEqSimpleDriver JntMtPhal3Right = 
+    };
+
+    AnyKinEqSimpleDriver JntMtPhal3Right =
     {
       AnyKinMeasure &ref1 = Main.HumanModel.BodyModel.Interface.Right.MetatarsoPhalangeal3Abduction;
       AnyKinMeasure &ref2 = Main.HumanModel.BodyModel.Interface.Right.MetatarsoPhalangeal3DorsiFlexion;
@@ -386,9 +386,9 @@ study = {
       }*pi/180;
       Reaction.Type = {Off, Off};
     };
-    
-    
-    AnyKinEqSimpleDriver JntMtPhal4Right = 
+
+
+    AnyKinEqSimpleDriver JntMtPhal4Right =
     {
       AnyKinMeasure &ref1 = Main.HumanModel.BodyModel.Interface.Right.MetatarsoPhalangeal4Abduction;
       AnyKinMeasure &ref2 = Main.HumanModel.BodyModel.Interface.Right.MetatarsoPhalangeal4DorsiFlexion;
@@ -402,9 +402,9 @@ study = {
       }*pi/180;
       Reaction.Type = {Off, Off};
     };
-    
-    
-    AnyKinEqSimpleDriver JntMtPhal5Right = 
+
+
+    AnyKinEqSimpleDriver JntMtPhal5Right =
     {
       AnyKinMeasure &ref1 = Main.HumanModel.BodyModel.Interface.Right.MetatarsoPhalangeal5Abduction;
       AnyKinMeasure &ref2 = Main.HumanModel.BodyModel.Interface.Right.MetatarsoPhalangeal5DorsiFlexion;
@@ -418,102 +418,102 @@ study = {
       }*pi/180;
       Reaction.Type = {Off, Off};
     };
-    
-  
+
+
   //************************************************
   //              DriverJntProxPhal
   //************************************************
-  
-    
-    AnyKinEqSimpleDriver JntProxPhal1Right = 
+
+
+    AnyKinEqSimpleDriver JntProxPhal1Right =
     {
       AnyKinMeasure &ref1 = Main.HumanModel.BodyModel.Interface.Right.ProximoDistalPhalange1DorsiFlexion;
       DriverPos = {.JntPos.Right.Foot.ProximoDistalPhalange1DorsiFlexion}*pi/180;
       DriverVel = {.JntVel.Right.Foot.ProximoDistalPhalange1DorsiFlexion}*pi/180;
       Reaction.Type = {Off};
     };
-    
-    
-    AnyKinEqSimpleDriver JntProxPhal2Right = 
+
+
+    AnyKinEqSimpleDriver JntProxPhal2Right =
     {
       AnyKinMeasure &ref1 = Main.HumanModel.BodyModel.Interface.Right.ProximoMedialPhalange2DorsiFlexion;
       DriverPos = {.JntPos.Right.Foot.ProximoMedialPhalange2DorsiFlexion}*pi/180;
       DriverVel = {.JntVel.Right.Foot.ProximoMedialPhalange2DorsiFlexion}*pi/180;
       Reaction.Type = {Off};
     };
-    
-    
-    AnyKinEqSimpleDriver JntProxPhal3Right = 
+
+
+    AnyKinEqSimpleDriver JntProxPhal3Right =
     {
       AnyKinMeasure &ref1 = Main.HumanModel.BodyModel.Interface.Right.ProximoMedialPhalange3DorsiFlexion;
       DriverPos = {.JntPos.Right.Foot.ProximoMedialPhalange3DorsiFlexion}*pi/180;
       DriverVel = {.JntVel.Right.Foot.ProximoMedialPhalange3DorsiFlexion}*pi/180;
       Reaction.Type = {Off};
     };
-    
-    
-    AnyKinEqSimpleDriver JntProxPhal4Right = 
+
+
+    AnyKinEqSimpleDriver JntProxPhal4Right =
     {
       AnyKinMeasure &ref1 = Main.HumanModel.BodyModel.Interface.Right.ProximoMedialPhalange4DorsiFlexion;
       DriverPos = {.JntPos.Right.Foot.ProximoMedialPhalange4DorsiFlexion}*pi/180;
       DriverVel = {.JntVel.Right.Foot.ProximoMedialPhalange4DorsiFlexion}*pi/180;
       Reaction.Type = {Off};
     };
-    
-    
-    AnyKinEqSimpleDriver JntProxPhal5Right = 
+
+
+    AnyKinEqSimpleDriver JntProxPhal5Right =
     {
       AnyKinMeasure &ref1 = Main.HumanModel.BodyModel.Interface.Right.ProximoMedialPhalange5DorsiFlexion;
       DriverPos = {.JntPos.Right.Foot.ProximoMedialPhalange5DorsiFlexion}*pi/180;
       DriverVel = {.JntVel.Right.Foot.ProximoMedialPhalange5DorsiFlexion}*pi/180;
       Reaction.Type = {Off};
     };
-    
-  
+
+
   //************************************************
   //              DriverJntDistPhal
   //************************************************
-  
-  
-    
-   
-    AnyKinEqSimpleDriver JntDistPhal2Right = 
+
+
+
+
+    AnyKinEqSimpleDriver JntDistPhal2Right =
     {
       AnyKinMeasure &ref1 = Main.HumanModel.BodyModel.Interface.Right.MedioDistalPhalange2DorsiFlexion;
       DriverPos = {.JntPos.Right.Foot.MedioDistalPhalange2DorsiFlexion}*pi/180;
       DriverVel = {.JntVel.Right.Foot.MedioDistalPhalange2DorsiFlexion}*pi/180;
       Reaction.Type = {Off};
     };
-    
-    
-    AnyKinEqSimpleDriver JntDistPhal3Right = 
+
+
+    AnyKinEqSimpleDriver JntDistPhal3Right =
     {
       AnyKinMeasure &ref1 = Main.HumanModel.BodyModel.Interface.Right.MedioDistalPhalange3DorsiFlexion;
       DriverPos = {.JntPos.Right.Foot.MedioDistalPhalange3DorsiFlexion}*pi/180;
       DriverVel = {.JntVel.Right.Foot.MedioDistalPhalange3DorsiFlexion}*pi/180;
       Reaction.Type = {Off};
     };
-    
-    
-    AnyKinEqSimpleDriver JntDistPhal4Right = 
+
+
+    AnyKinEqSimpleDriver JntDistPhal4Right =
     {
       AnyKinMeasure &ref1 = Main.HumanModel.BodyModel.Interface.Right.MedioDistalPhalange4DorsiFlexion;
       DriverPos = {.JntPos.Right.Foot.MedioDistalPhalange4DorsiFlexion}*pi/180;
       DriverVel = {.JntVel.Right.Foot.MedioDistalPhalange4DorsiFlexion}*pi/180;
       Reaction.Type = {Off};
     };
-    
-    
-    AnyKinEqSimpleDriver JntDistPhal5Right = 
+
+
+    AnyKinEqSimpleDriver JntDistPhal5Right =
     {
       AnyKinMeasure &ref1 = Main.HumanModel.BodyModel.Interface.Right.MedioDistalPhalange5DorsiFlexion;
       DriverPos = {.JntPos.Right.Foot.MedioDistalPhalange5DorsiFlexion}*pi/180;
       DriverVel = {.JntVel.Right.Foot.MedioDistalPhalange5DorsiFlexion}*pi/180;
       Reaction.Type = {Off};
     };
-    
+
    #endif
-    
+
   };
 };
 };

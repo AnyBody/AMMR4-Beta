@@ -56,6 +56,7 @@ abdominal_model
 :maxdepth: 1
 
 shoulder_arm_model
+hand_rhum2
 detailed_hand_model
 Regensburg-Ulm hand model <regensburg_ulm_hand_model>
 ```

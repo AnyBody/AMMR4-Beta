@@ -18,12 +18,12 @@ AnyFolder LegCalHip =
 
   AnyFolder &Thorax = ...BodyModel.Trunk.Segments.ThoraxSeg;
 
-  AnyFolder &LegSegSide = .SideHumanFolderRef.Leg.Seg;
+  AnyFolder &LegSegSide = .SideHumanFolderRef.Leg.Segments;
 
-  AnyFolder &LegJointsSide = .SideHumanFolderRef.Leg.Jnt;
+  AnyFolder &LegJointsSide = .SideHumanFolderRef.Leg.Joints;
   AnyFolder &TrunkJoints = ...BodyModel.Trunk.Joints.Lumbar;
 
-  AnyFolder &MusCalSide =  .SideHumanFolderRef.Leg.Mus;
+  AnyFolder &MusCalSide =  .SideHumanFolderRef.Leg.Muscles;
 
 
   // Hip position variables // Flexion - Abduction - internal rotation
@@ -104,7 +104,7 @@ AnyFolder LegCalHip =
     Reaction.Type = {Off};
   };
 
-  #if BM_FOOT_MODEL == _FOOT_MODEL_DEFAULT_
+  #if BM_FOOT_MODEL != _FOOT_MODEL_NONE_
   AnyKinEqInterPolDriver Ankle =
   {
     AnyKinMeasure& Hinge = ..SideInterfaceFolderRef.AnklePlantarFlexion;
@@ -124,7 +124,7 @@ AnyFolder LegCalHip =
   };
   #endif
 
-  AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.Leg.Mus);
+  AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.Leg.Muscles);
 
   AnyObjectPtrArray GluteusMaximusMuscles = ObjSearch(MusPrefix+".*.GluteusMaximus*", "AnyMuscle");
   AnyFloat  GluteusMaximusRmin = repmat(NumElemOf(GluteusMaximusMuscles), ..RMin);

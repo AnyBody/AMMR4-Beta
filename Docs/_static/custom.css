@@ -3,6 +3,15 @@
     margin: 0px !important;
 }
 
+:root {
+    --sd-color-danger: #953337;
+}
+
+
+.no-image-click {
+    pointer-events: none;
+    cursor: default;
+}
 
 /* th > p:first-child,
 td > p:first-child,

@@ -32,8 +32,8 @@ See below for more details
 //
 // ForcePlateAutoDetection Plate1(
 //   PLATE_NO=1,
-//   LIMB1 = Main.HumanModel.BodyModel.Right.Leg.Seg.Foot,
-//   LIMB2 = Main.HumanModel.BodyModel.Left.Leg.Seg.Foot,
+//   LIMB1 = Main.HumanModel.BodyModel.Right.Leg.Segments.Foot,
+//   LIMB2 = Main.HumanModel.BodyModel.Left.Leg.Segments.Foot,
 //   HeightTolerance = 0.07,
 //   VelThreshold = 2.2,
 //   FORCEPLATE_TYPE = 4,
@@ -48,8 +48,8 @@ See below for more details
 #class_template ForcePlateAutoDetection (
     PLATE_NO,
     FORCEPLATE_TYPE,
-    LIMB1 = Main.HumanModel.BodyModel.Right.Leg.Seg.Foot,
-    LIMB2 = Main.HumanModel.BodyModel.Left.Leg.Seg.Foot,
+    LIMB1 = Main.HumanModel.BodyModel.Right.Leg.Segments.Foot,
+    LIMB2 = Main.HumanModel.BodyModel.Left.Leg.Segments.Foot,
     VerticalDirection = "Automatic",
     HeightTolerance = 0.07,
     VelThreshold = 2.2,
@@ -71,9 +71,9 @@ See below for more details
   // ForcePlateAutoDetection#FORCEPLATE_TYPE
   //   The type of force plate (from the C3D spec.) (1..4)
   // ForcePlateAutoDetection#LIMB1
-  //   Location of the limb 1 (defaults to: Main.HumanModel.BodyModel.Right.Leg.Seg.Foot)
+  //   Location of the limb 1 (defaults to: Main.HumanModel.BodyModel.Right.Leg.Segments.Foot)
   // ForcePlateAutoDetection#LIMB2
-  //   Location of the limb 2 (defaults to: Main.HumanModel.BodyModel.Left.Leg.Seg.Foot)
+  //   Location of the limb 2 (defaults to: Main.HumanModel.BodyModel.Left.Leg.Segments.Foot)
   // ForcePlateAutoDetection#VerticalDirection
   //   The vertical direction of the force plate.
   //   Possible values are "X", "Y", "Z", "Automatic".

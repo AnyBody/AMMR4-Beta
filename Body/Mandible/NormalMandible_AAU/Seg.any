@@ -81,31 +81,27 @@ AnySeg Skull = {
   #endif
 
     AnySurfSTL SurfContactRight = {
-      FileName = "Smoothed_ThickHead_High_RightContact2";
+      FileName = "Smoothed_ThickHead_High_RightContact3";
       AnyFunTransform3D &Scale =..Scale;
-       ScaleXYZ = {1.0,1.0,1.0}/1000;
 
 
       AnyDrawSurf DrwSurf = {
         FileName = .FileName;
         RGB = .......DrawSettings.Colors.AnyBodyPaleYellow;
         Opacity = 0.9;
-        ScaleXYZ = {1.0,1.0,1.0}/1000;
         AnyFunTransform3D &Scale =...Scale;
       };
     };
 
     AnySurfSTL SurfContactLeft = {
-      FileName = "Smoothed_ThickHead_High_LeftContact2";
-      ScaleXYZ = {1.0,1.0,1.0}/1000;
+      FileName = "Smoothed_ThickHead_High_LeftContact3";
       AnyFunTransform3D &Scale =..Scale;
 
      AnyDrawSurf DrwSurf = {
         FileName = .FileName;
         RGB = .......DrawSettings.Colors.AnyBodyPaleYellow;
         Opacity = 0.9;
-        ScaleXYZ = {1.0,1.0,1.0}/1000;
-        AnyFunTransform3D &Scale =...Scale;
+       AnyFunTransform3D &Scale =...Scale;
       };
 
     };
@@ -201,30 +197,26 @@ AnySeg Mandible = {
 
 
    AnySurfSTL SurfContactLeft = {
-      FileName = "Smoothed_Mandible_LeftContact";
-      ScaleXYZ = {1.0,1.0,1.0}/1000;
+      FileName = "Smoothed_Mandible_LeftContact3";
       AnyFunTransform3D &Scale =..Scale;
 
      AnyDrawSurf DrwSurf = {
         FileName = .FileName;
         RGB = .......DrawSettings.Colors.AnyBodyPaleYellow;
         Opacity = 0.9;
-        ScaleXYZ = {1.0,1.0,1.0}/1000;
         AnyFunTransform3D &Scale =...Scale;
       };
 
     };
 
    AnySurfSTL SurfContactRight = {
-      FileName = "Smoothed_Mandible_RightContact2";
-      ScaleXYZ = {1.0,1.0,1.0}/1000;
+      FileName = "Smoothed_Mandible_RightContact3";
       AnyFunTransform3D &Scale =..Scale;
 
      AnyDrawSurf DrwSurf = {
         FileName = .FileName;
         RGB = .......DrawSettings.Colors.AnyBodyPaleYellow;
         Opacity = 0.9;
-        ScaleXYZ = {1.0,1.0,1.0}/1000;
         AnyFunTransform3D &Scale =...Scale;
       };
 

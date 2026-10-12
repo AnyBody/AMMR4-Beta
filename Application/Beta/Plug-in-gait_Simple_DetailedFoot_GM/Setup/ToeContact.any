@@ -1,38 +1,38 @@
 
 
 AnyFolder ToeContact = {
-  
-  AnyFolder &SegRef = Main.HumanModel.BodyModel.Right.Leg.Seg.Foot;
-  
+
+  AnyFolder &SegRef = Main.HumanModel.BodyModel.Right.Leg.Segments.Foot;
+
   SegRef = {
-    
+
     DistalPhalange1 = {
       AnyRefNode ToeContactNode = {
         sRel = .Scale({-0.002, -0.11, 0.005});
 //        AnyDrawRefFrame drw = {ScaleXYZ = 0.01*{1,1,1};};
       };
     };
-  
+
     MiddlePhalange2 = {
       AnyRefNode ToeContactNodeMed = {
         sRel = .Scale({-0.003, -0.11, 0.013});
 //        AnyDrawRefFrame drw = {ScaleXYZ = 0.01*{1,1,1};};
       };
-      
+
       AnyRefNode ToeContactNodeLat = {
         sRel = .Scale({-0.005, -0.11, 0.025});
         ARel = RotMat(-10*pi/180,x);
 //        AnyDrawRefFrame drw = {ScaleXYZ = 0.01*{1,1,1};};
       };
     };
-    
+
     DistalPhalange3 = {
       AnyRefNode ToeContactNode = {
         sRel = .Scale({-0.008, -0.11, 0.032});
 //        AnyDrawRefFrame drw = {ScaleXYZ = 0.01*{1,1,1};};
       };
     };
-    
+
     MiddlePhalange3 = {
       AnyRefNode ToeContactNode = {
         sRel = .Scale({-0.007, -0.095, 0.039});
@@ -40,14 +40,14 @@ AnyFolder ToeContact = {
 //        AnyDrawRefFrame drw = {ScaleXYZ = 0.01*{1,1,1};};
       };
     };
-    
+
     DistalPhalange4 = {
       AnyRefNode ToeContactNode = {
         sRel = .Scale({-0.012, -0.093, 0.042});
 //        AnyDrawRefFrame drw = {ScaleXYZ = 0.01*{1,1,1};};
       };
     };
-    
+
     MiddlePhalange4 = {
       AnyRefNode ToeContactNode = {
         sRel = .Scale({-0.007, -0.078, 0.052});
@@ -55,17 +55,17 @@ AnyFolder ToeContact = {
 //        AnyDrawRefFrame drw = {ScaleXYZ = 0.01*{1,1,1};};
       };
     };
-    
+
     DistalPhalange5 = {
       AnyRefNode ToeContactNode = {
         sRel = .Scale({-0.012, -0.075, 0.055});
 //        AnyDrawRefFrame drw = {ScaleXYZ = 0.01*{1,1,1};};
       };
     };
-    
+
   };
-  
-  
+
+
   ConditionalContactClass Toe1Toe2Contact (
   BaseObject = .SegRef.DistalPhalange1.ToeContactNode,
   TargetObject = .SegRef.MiddlePhalange2.ToeContactNodeMed,
@@ -82,8 +82,8 @@ AnyFolder ToeContact = {
     FrictionDirection1 = Y;
     FrictionDirection2 = X;
   };
-  
-  
+
+
   ConditionalContactClass Toe2Toe3Contact (
   BaseObject = .SegRef.MiddlePhalange2.ToeContactNodeLat,
   TargetObject = .SegRef.DistalPhalange3.ToeContactNode,
@@ -100,8 +100,8 @@ AnyFolder ToeContact = {
     FrictionDirection1 = Y;
     FrictionDirection2 = X;
   };
-  
-  
+
+
   ConditionalContactClass Toe3Toe4Contact (
   BaseObject = .SegRef.MiddlePhalange3.ToeContactNode,
   TargetObject = .SegRef.DistalPhalange4.ToeContactNode,
@@ -118,8 +118,8 @@ AnyFolder ToeContact = {
     FrictionDirection1 = Y;
     FrictionDirection2 = X;
   };
-  
-  
+
+
   ConditionalContactClass Toe4Toe5Contact (
   BaseObject = .SegRef.MiddlePhalange4.ToeContactNode,
   TargetObject = .SegRef.DistalPhalange5.ToeContactNode,
@@ -136,7 +136,7 @@ AnyFolder ToeContact = {
     FrictionDirection1 = Y;
     FrictionDirection2 = X;
   };
-  
+
 };
 
 

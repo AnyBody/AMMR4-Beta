@@ -200,20 +200,20 @@ AnyKinMeasureOrg JntDOF = {
   // 3 Hip adduction/abduction
   // 4 Hip rotation externa/internal
   // 5 Hip flexion/extension
-  #if BM_FOOT_MODEL == _FOOT_MODEL_DEFAULT_
-  AnyUniversalJoint &Ankle = .Jnt.Ankle;
+  #if BM_FOOT_MODEL == _FOOT_MODEL_LEG_FOOT_
+  AnyUniversalJoint &Ankle = .Joints.Ankle;
   #endif
-  AnyRevoluteJoint &Knee = .Jnt.Knee;
-  AnySphericalJoint &Hip = .Jnt.Hip;
+  AnyRevoluteJoint &Knee = .Joints.Knee;
+  AnySphericalJoint &Hip = .Joints.Hip;
 };
 
 // Definition of the leg segments
-AnyFolder Seg = {
+AnyFolder Segments = {
   #include "Seg.any"
 };
 
 // Definition of the joints
-AnyFolder Jnt = {
+AnyFolder Joints = {
   #include "Jnt.any"
 };
 
@@ -221,7 +221,7 @@ AnyFolder Jnt = {
 #if ((_LEFT_RIGHT_ == "Right") & (BM_LEG_MUSCLES_RIGHT == OFF)) | ((_LEFT_RIGHT_ == "Left") & (BM_LEG_MUSCLES_LEFT == OFF))
   #include "JointMuscles.any"
 #else
-  AnyFolder Mus =
+  AnyFolder Muscles =
   {
     #include "Mus.any"
   };
@@ -245,9 +245,9 @@ AnyFolder Jnt = {
 
 ///Summation of masses in the leg
 AnyFolder MassSummation={
-  AnyVar Mass=.Seg.Thigh.Mass+.Seg.Shank.Mass
-  #if BM_FOOT_MODEL == _FOOT_MODEL_DEFAULT_
-  +.Seg.Foot.Mass
+  AnyVar Mass=.Segments.Thigh.Mass+.Segments.Shank.Mass
+  #if BM_FOOT_MODEL == _FOOT_MODEL_LEG_FOOT_
+  +.Segments.Foot.Mass
   #endif
   ;
 };
@@ -261,10 +261,7 @@ InterfaceFolder ={
   #include "Interface.any"
 };
 
-MannequinValuesFolder ={
-  #include "MannequinValuesFromModel.any"
-};
-AnyDoc DocLink = {
+AnyDoc Documentation = {
   DocumentationLink = AMMR_PATH_DOC + "/body/leg_model.html";
 };
 

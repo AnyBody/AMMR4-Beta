@@ -11,8 +11,8 @@ Right = {
 
     AnyFolder Data = {
       AnyFolder unscaled = {
-        AnyFolder &ModelParameters = ..ModelParameters;
-        AnyFolder &STL = ..Seg.STL;
+        #include "<BM_LEG_DATASET_PATH>/ModelParameters.any"
+        AnyFolder &STL = ..Segments.STL;
         AnyFolder &StandardParameters = .....ScalingLaw.StandardParameters.Right;
       };
 
@@ -23,14 +23,12 @@ Right = {
       AnyFolder MassDistribution = {}; ///< To be implemented!
     };
 
-    #include "<BM_LEG_DATASET_PATH>/ModelParameters.any"
-
     #define _LEFT_RIGHT_ "Right"
 
     #include "<BM_LEG_TLEM_PATH>\Leg.root.any"
 
     #if (BM_FOOT_MODEL == _FOOT_MODEL_RIGID_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_TOE_FLEX_GM_) | (BM_FOOT_MODEL == _FOOT_MODEL_DETAILED_GM_)
-      #include "<ANYBODY_PATH_BODY>/FootGM/GM_Foot_ModelParameters.any"
+      Data.unscaled = { #include "<ANYBODY_PATH_BODY>/FootGM/GM_Foot_ModelParameters.any" };
       #include "<ANYBODY_PATH_BODY>/FootGM/GM_foot.root.any"
     #endif
 
@@ -38,9 +36,6 @@ Right = {
 
     //Reference to folder which contains the interface of the right side
     AnyFolder &InterfaceFolder = ..Interface.Right;
-
-    //Reference to mannequin value from model folder
-    AnyFolder &MannequinValuesFolder = ..MannequinValuesFromModel.AnyFolder_Posture.AnyFolder_Right;
 
     #include "../Include/SettingsLeg.any"
 

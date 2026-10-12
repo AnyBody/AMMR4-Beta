@@ -66,13 +66,13 @@ AnyFolder Jnt={
 
       AnyKinLinear FootRestFootLinMeasure = {
         AnyRefFrame &FootRestRef = ...RefP.Seg.FootRest.FootRestFootJntNodeRight;
-        AnyRefFrame &FootRef = ...RefH.Right.Leg.Seg.Foot.FootFootRestJntNode;
+        AnyRefFrame &FootRef = ...RefH.Right.Leg.Segments.Foot.FootFootRestJntNode;
         Ref = 0;
       };
 
       AnyKinRotational FootRestFootRotMeasure = {
         AnyRefFrame &FootRestRef = ...RefP.Seg.FootRest.FootRestFootJntNodeRight;
-        AnyRefFrame &FootRef = ...RefH.Right.Leg.Seg.Foot.FootFootRestJntNode;
+        AnyRefFrame &FootRef = ...RefH.Right.Leg.Segments.Foot.FootFootRestJntNode;
         Type = RotVector;
       };
 
@@ -91,7 +91,7 @@ AnyFolder Jnt={
       };
 
       AnyKinEqSimpleDriver AnkleDriver ={
-        AnyUniversalJoint &ref = ...RefH.Right.Leg.Jnt.Ankle;
+        AnyUniversalJoint &ref = ...RefH.Right.Leg.Joints.Ankle;
         MeasureOrganizer={1};
         DriverPos={0};
         DriverVel={0};
@@ -102,13 +102,13 @@ AnyFolder Jnt={
 
       AnyKinLinear FootRestFootLinMeasure = {
         AnyRefFrame &FootRestRef = ...RefP.Seg.FootRest.FootRestFootJntNodeLeft;
-        AnyRefFrame &FootRef = ...RefH.Left.Leg.Seg.Foot.FootFootRestJntNode;
+        AnyRefFrame &FootRef = ...RefH.Left.Leg.Segments.Foot.FootFootRestJntNode;
         Ref = 0;
       };
 
       AnyKinRotational FootRestFootRotMeasure = {
         AnyRefFrame &FootRestRef = ...RefP.Seg.FootRest.FootRestFootJntNodeLeft;
-        AnyRefFrame &FootRef = ...RefH.Left.Leg.Seg.Foot.FootFootRestJntNode;
+        AnyRefFrame &FootRef = ...RefH.Left.Leg.Segments.Foot.FootFootRestJntNode;
         Type = RotVector;
       };
       AnyKinEqSimpleDriver FootRestFootEq = {
@@ -126,7 +126,7 @@ AnyFolder Jnt={
       };
 
       AnyKinEqSimpleDriver AnkleDriver ={
-        AnyUniversalJoint &ref = ...RefH.Left.Leg.Jnt.Ankle;
+        AnyUniversalJoint &ref = ...RefH.Left.Leg.Joints.Ankle;
         MeasureOrganizer={1};
         DriverPos={0};
         DriverVel={0};
@@ -300,8 +300,8 @@ AnyFolder Drivers = {
   AnyKinEq ThoraxThighRhythm = {
     AnyKinMeasureLinComb ThoraxThighRhythmComb = {
       AnyKinMeasureOrg Org = {
-        AnySphericalJoint &rhip1 = Main.Model.BodyModel.Right.Leg.Jnt.Hip;
-        AnySphericalJoint &lhip2 = Main.Model.BodyModel.Left.Leg.Jnt.Hip;
+        AnySphericalJoint &rhip1 = Main.Model.BodyModel.Right.Leg.Joints.Hip;
+        AnySphericalJoint &lhip2 = Main.Model.BodyModel.Left.Leg.Joints.Hip;
         AnyKinRotational PelvisThorax = {
           AnyRefFrame &Thorax = Main.Model.BodyModel.Trunk.Segments.ThoraxSeg;
           AnyRefFrame &Pelvis = Main.Model.BodyModel.Trunk.Segments.PelvisSeg;

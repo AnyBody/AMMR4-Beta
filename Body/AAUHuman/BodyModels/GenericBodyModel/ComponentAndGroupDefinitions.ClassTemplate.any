@@ -1,4 +1,4 @@
-/* 
+/*
 Class templates to create either regular folder objects in AMS versions before 8.2 or new
 Component/Group objects
 */
@@ -11,7 +11,7 @@ Component/Group objects
     AnyVar AvgActivity = mean(Obj2Num( ObjGetMember(Objects,"Activity")));
 
 
-  /* 
+  /*
     Template for a muscle group. By default collects all muscle objects in the folder. The
     searchString argument can specify a subset of muscles from outside the folder
   */
@@ -25,9 +25,23 @@ Component/Group objects
     MUSCLE_GRP_VARS
   };
 
-#else 
+
+  /*
+    Template for selected output
+  */
+  #class_template SelectedOutputGroup(__CLASS__ = AnyComponentGroup, searchString = "") {
+    #if searchString == ""
+      Objects = ObjSearch("*", Class);
+    #else
+      Objects = ObjSearch(searchString, Class);
+    #endif
+  };
+
+
+#else
 
   // By default all these templates create AnyFolder objects
   #class_template MuscleGroup(__CLASS__ = AnyFolder, searchString = "") {};
+  #class_template SelectedOutputGroup(__CLASS__ = AnyFolder, searchString = "") {};
   
 #endif

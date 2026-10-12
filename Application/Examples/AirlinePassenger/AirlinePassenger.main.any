@@ -98,7 +98,7 @@ Main = {
     This is because seats with slippery surfaces reduce the shear force on the
     buttocks but in return require vasti muscle acitivity to prevent the body
     from sliding forward on the seat pan.*/
-    AnySearchFun Vastus_Act={ Search = "Main.HumanModel.BodyModel.Right.Leg.Mus.Vastus*.*.Activity";    };
+    AnySearchFun Vastus_Act = { Search = "Main.HumanModel.BodyModel.Right.Leg.Muscles.Vastus*.*.Activity"; };
     AnyFloat Activity = max(Vastus_Act());
 
     /** This variable collects the shear force between the buttocks and the seat
@@ -109,7 +109,7 @@ Main = {
     /** The maximum muscle activity is the percentage of maximum voluntary
     contraction necessary to maintain the posture. You cannot sleep unless
     this is very low. */
-    AnyOutputFun MaxAct = {      Val = .MaxMuscleActivity;   };
+    AnyOutputFun MaxAct = { Val = .MaxMuscleActivity; };
 
   };
 

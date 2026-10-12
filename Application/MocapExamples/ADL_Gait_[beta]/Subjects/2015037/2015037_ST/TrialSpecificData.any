@@ -9,17 +9,13 @@ Main.ModelSetup.TrialSpecificData =
   // Special configuration/exception for this trial
   #define EXCLUDE_L_HLE
   Main.Studies.ParameterIdentification = {
-      AnyDesMeasure Constrain_L_HME_Y = {
-        Type = EqualToZero;
-        Val = .L_HME_Y.Val;
+    AnyDesMeasure Constrain_L_HME_Y = {
+      Type = EqualToZero;
+      Val = .L_HME_Y.Val;
     };
-      AnyDesMeasure Constrain_L_HME_X = {
-        Type = EqualToZero;
-        Val = .L_HME_X.Val;
-    };
-      AnyDesMeasure Constrain_L_HME_Z = {
-        Type = EqualToZero;
-        Val = .L_HME_Z.Val;
+    AnyDesMeasure Constrain_L_UOA_Y = {
+      Type = EqualToZero;
+      Val = .L_UOA_Y.Val;
     };
   };
 
@@ -31,7 +27,7 @@ Main.ModelSetup.TrialSpecificData =
   // We need to manually set all these things since the reference files does not
   // contain exactly one frame.
   nStep = 1;
-  Main.ModelSetup.C3DFileData.MarkerFilterIndex = -1;
+  Main.ModelSetup.C3DFileData.MarkerFilter = None;
   #define N_STEP_KINEMATICS 1
 
 

@@ -19,9 +19,7 @@ defines motions of the scapula and clavicle as mathematical functions of the
 glenohumeral joint angles, also known as a "Shoulder rhythms".
 
 The AnyBody shoulder model's rhythm can be switched on
-and off, the full details of which can be seen in this report
-[Shoulder Rhythm
-Report](https://paperpile.com/shared/sQXLyvQsQRfauvB5T9lxyqg).
+and off, more details of which can be seen in {ref}`Shoulder Rhythm <ShoulderRhythm>`.
 
 ```{raw} html
 <video width="45%" style="display:block; margin: 0 auto;" controls autoplay loop>
@@ -142,11 +140,57 @@ Wrist joint                                               Two successive revolut
 ```
 
 
+## Anatomical frames
+The anatomical frames are defined using bony landmarks. The images below display the definitions of these frames.
+For each bone, the anatomical frame is shown as a coordinate system with X-Y-Z vectors colored red, green, and blue. Black spheres represent the locations of the bony landmarks, labels displays name of bonylandmark. The thick blue lines indicate the direction of the first axis, and the thin blue line represents a vector in the plane.
+
+| Bone      | Anatomical Frame Image                                                 | Bony Landmarks                        |
+|-----------|------------------------------------------------------------------------|---------------------------------------|
+| Clavicula | ![Clavicula anatomical frame](_static/Clavicula_anatomical.png)        | ACJ: Acromion clavicular joint<br>SCJ: Sterno clavicular joint<br>SCJ_y: SCJ translated in thorax y direction  |
+| Scapula   | ![Scapula anatomical frame](_static/Scapula_anatomical.png)            | AA: Angulus Acromialis<br>AI: Angulus Inferior<br>TS: Trigonum Spinae    |
+| Humerus   | ![Humerus anatomical frame](_static/Humerus_anatomical.png)            | GH: Glenohumeral joint<br>EM: Medial epicondyle<br>EL: Lateral epicondyle |
+| Ulna      | ![Ulna anatomical frame](_static/Ulna_anatomical.png)                  | RS: Radial styloid<br>US: Ulna styloid<br>EM: Medial epicondyle<br>EL: Lateral epicondyle |
+| Radius    | ![Radius anatomical frame](_static/Radius_anatomical.png)              | EM: Medial epicondyle<br>EL: Lateral epicondyle |
+| Hand      | ![Hand anatomical frame](_static/Hand_anatomical.png)                  | WJ: wrist joint<br>MCP2: MCP2 joint<br>MCP5: MCP5 joint                                      |
+
+
+(ShoulderRhythm)=
+## Shoulder rhythm
+
+The shoulder rhythm is a set of kinematic constraints that can be used to reduce
+the number of independent degrees of freedom in the shoulder model. When
+enabled, the rhythm drives clavicula elevation and clavicula protraction as
+functions of the humerus orientation relative to the thorax.
+
+The shoulder rhythm is controlled by the body model parameter:
+
+```AnyScriptDoc
+#define BM_ARM_SHOULDER_RHYTHM ON
+```
+
+The parameter can be set to `OFF`, `ON`, or `_RHYTHM_SOFT_`. With `ON`, the rhythm is
+applied as a hard kinematic constraint. With `_RHYTHM_SOFT_`, the rhythm is
+applied as a soft kinematic constraint.
+
+The implementation is based on the shoulder rhythm described by De Groot (1998),
+and is controlled based on the plane of elevation and humerus elevation
+from the `ThoraxHumerus` measures in the interface folder
+
+The scapula is not directly driven by the shoulder rhythm. Instead, the scapula
+position is determined by the Conoideum ligament driver. This makes the scapular
+kinematics consistent with the model configuration used without the shoulder
+rhythm.
+
 ## Resources
 
 More details on the ShoulderArm model can be found online:
 
 - Webcast: [Validation of the AnyBody version of the Dutch Shoulder Model by the in-vivo measurement of GH contact forces by Bergmann et al.](https://www.anybodytech.com/webcasts/validation-of-the-anybody-version-of-the-dutch-shoulder-model-by-the-in-vivo-measurement-of-gh-contact-forces-by-bergmann-et-al/)
+
+## Rhythm References
+
+- De Groot, J. H., The shoulder: a kinematic and dynamic analysis of motion and
+  loading. Delft University of Technology, 1998.
 
 ## Anatomy References
 

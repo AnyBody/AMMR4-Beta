@@ -33,7 +33,7 @@ AnyFolder Markers ={
     };
   };
 
-  AnyFolder &ThighL= .BodyModel.Left.Leg.Seg.Thigh;
+  AnyFolder &ThighL= .BodyModel.Left.Leg.Segments.Thigh;
 
   //ThighL={
   //  AnyRefNode TrochanterMajor = {
@@ -45,7 +45,7 @@ AnyFolder Markers ={
   //  };
   //};
 
-  AnyFolder &KneeMarkerL= .BodyModel.Left.Leg.Seg.Thigh;
+  AnyFolder &KneeMarkerL= .BodyModel.Left.Leg.Segments.Thigh;
 
   KneeMarkerL={
     // FemoralEpicondyleMarker
@@ -58,7 +58,7 @@ AnyFolder Markers ={
     };
   };
 
-  AnyFolder &ShankL= .BodyModel.Left.Leg.Seg.Shank;
+  AnyFolder &ShankL= .BodyModel.Left.Leg.Segments.Shank;
 
   ShankL={
     AnyRefNode MalleolusMarker = {
@@ -77,7 +77,7 @@ AnyFolder Markers ={
     //};
   };
 
-  AnyFolder &FootL= .BodyModel.Left.Leg.Seg.Foot;
+  AnyFolder &FootL= .BodyModel.Left.Leg.Segments.Foot;
   FootL={
     AnyRefNode HeelMarker = {
       sRel = {0.02484364, 0.1291856, 0};
@@ -95,7 +95,7 @@ AnyFolder Markers ={
     };
   };
 
-  AnyFolder &ThighR= .BodyModel.Right.Leg.Seg.Thigh;
+  AnyFolder &ThighR= .BodyModel.Right.Leg.Segments.Thigh;
 
   //ThighR={
   //  AnyRefNode TrochanterMajor = {
@@ -107,7 +107,7 @@ AnyFolder Markers ={
   //  };
   //};
 
-  AnyFolder &KneeMarkerR= .BodyModel.Right.Leg.Seg.Thigh;
+  AnyFolder &KneeMarkerR= .BodyModel.Right.Leg.Segments.Thigh;
   KneeMarkerR={
     // FemoralEpicondyleMarker
     AnyRefNode KneeMarker = {
@@ -121,7 +121,7 @@ AnyFolder Markers ={
 
 
 
-  AnyFolder &ShankR= .BodyModel.Right.Leg.Seg.Shank;
+  AnyFolder &ShankR= .BodyModel.Right.Leg.Segments.Shank;
 
   ShankR={
     AnyRefNode MalleolusMarker = {
@@ -139,7 +139,7 @@ AnyFolder Markers ={
     //  };
     //};
   };
-  AnyFolder &FootR= .BodyModel.Right.Leg.Seg.Foot;
+  AnyFolder &FootR= .BodyModel.Right.Leg.Segments.Foot;
   FootR={
     AnyRefNode HeelMarker = {
       sRel = {0.02484364, 0.1291856, 0};

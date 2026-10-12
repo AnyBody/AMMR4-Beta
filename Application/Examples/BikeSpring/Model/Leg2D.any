@@ -22,11 +22,6 @@ AnyFolder Leg2D = {
   AnyFolder &ColorRef = ..DrawSettings.Colors;
   AnyVar HipWidth = ..BikeParameters.PedalArmWidth;
 
-  // **********************************************************
-  // This is a reference to the folder which contains the drawing settings for the muscles
-  // **********************************************************
-  AnyFolder &MusDrawRef = ..DrawSettings.Muscle;
-
   //This is the path to the trunk segments which the legs will attach too
   #include "<ANYBODY_PATH_BODY>\Leg2D\SegmentsTrunk.any"
 

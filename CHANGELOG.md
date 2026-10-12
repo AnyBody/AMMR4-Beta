@@ -7,80 +7,95 @@
 
 ## AMMR 4.0 beta
 
-:::{admonition} Default pelvis changed. 
-:class: warning
-The default pelvis morphology now comes from trunk pelvis. The topology remain unchanged as the leg model pelvis is morphed to match the Trunk. See [below how to control this behaviour](changes-to-default-pelvis-morphology).
-:::
+### Summary
 
-:::{admonition} Muscles locations restructured
-:class: warning
-Muscles elements are now grouped into folders representing the physiological muscles. 
-You can [enable backwards compatibility](changes-to-muscles-locations) by setting:
+AMMR 4.0 is a major release introducing several significant model improvements
+across the full body. The headline additions are a new **detailed thoracic model**
+with individual ribs and a two-part sternum, and a new **abdominal pressure model**
+with updated oblique, rectus, and transversus muscles — replacing the older buckle
+implementation. The **Glasgow-Maastricht (GM) foot model** is now fully integrated
+and becomes the default foot for the TLEM leg, bringing a richer muscle dataset in
+rigid, toe-flexion, and detailed 26-segment configurations. A new **whole-body
+inertia and mass-scaling system** based on `AnyInertia` subclasses provides more
+accurate mass distribution and geometry-based inertia for the new thoracic and
+abdominal models.
+
+Beyond new features, the whole bodymodel received anatomical frame, scaling, and inertia
+updates. Muscle elements in the whole body have been regrouped into folders representing
+physiological muscles — backward compatibility switches are available mor migrating from
+AMMR3. The bodymodel folder structure have been unified across each bodypart for easier overview and aggregations. The **default pelvis morphology** now comes from the trunk model.The deprecated
+**TLEM 1 model** has been removed; TLEM 2.2 is now the only available leg model.
+
+### New Features
+
+#### New Detailed Thoracic Model
+
+A new detailed thoracic model was added. This model consists of the thoracic vertebral
+column and the ribcage, including individual ribs and a two-part sternum. The many
+segments interconnected by joints replicates the physiological connection and load
+transfer mechanisms.
+
+The detailed thoracic model can be enabled with the switch {bm_statement}`BM_TRUNK_THORACIC_MODEL`:
+
 ```AnyScriptDoc
-#define BM_COMPATIBILITY_MUSCLE_STRUCTURE ON
-```
-
-:::
-:::{admonition} Folder locations restructured
-:class: warning
-Many folders inside the Leg and Arm models have been renamed and/or moved to ensure a consistent BodyModel structure.
-You can [enable backwards compatibility](changes-to-bodymodel-folders) by setting:
-```AnyScriptDoc
-#define BM_COMPATIBILITY_BODYMODEL_STRUCTURE ON
-```
-:::
-
-**Fixed:**
-
-* Fixed the inclusion of the buckle segmental masses in the calculation of the TotalBodyMass variable.
-* Fixed the cervical spine axial rotation rhythm coefficients. The distribution between C2C1 and the rest of cervical spine was incorrect.
-
-**Added:**
-
-* A new detailed thoracic model was added. This model consists of the thoracic vertebral column and the
-  ribcage, including individual ribs and a two-part sternum. The many segments interconnected by joints
-  replicates the physiological connection and load transfer mechanisms.
-
-  The detailed thoracic model can be enabled with the switch {bm_statement}`BM_TRUNK_THORACIC_MODEL`: 
-
-  ```
-  #define BM_TRUNK_THORACIC_MODEL _THORACIC_MODEL_FLEXIBLE_
+#define BM_TRUNK_THORACIC_MODEL _THORACIC_MODEL_FLEXIBLE_
   ```
 
-  :::{note} The detailed thoracic model is not enabled by default. It adds many more segments to the body model so 
-  only use this new model if you need the added complexity. 
-  :::
+:::{note} The detailed thoracic model is not enabled by default. It adds many more segments to the body model so
+only use this new model if you need the added complexity.
+:::
 
-  The model is based on the work of Ignasiak, D (2016) and Shayestehpour (2021 and 2024). See the {ref}`documentation page <Ribcage and Thoracic Spine Model>` for more info. 
+The model is based on the work of Ignasiak, D (2016) and Shayestehpour (2021 and 2024). See the {ref}`documentation page <Ribcage and Thoracic Spine Model>` for more info.
 
-* A new abdominal model was added to replace the old 'buckle' model. 
-  It uses a new kinematic volume measure from AnyBody 7.5 to model the abdominal pressure 
-  and includes new oblique, rectus and transversus muscles. The new abdominal model is 
-  more robust and allows a bigger range of motion of the trunk. See the {ref}`documentation page <Abdominal Pressure Model>` 
-  for more info about the abdominal model. 
+#### New Abdominal Model
 
-  It is possible to revert to the old buckle implementation with switch {bm_statement}`_CAVITY_MODEL_BUCKLE_`. 
+A new abdominal model was added to replace the old 'buckle' model.
+It uses a new kinematic volume measure from AnyBody 7.5 to model the abdominal pressure
+and includes new oblique, rectus and transversus muscles. The new abdominal model is
+more robust and allows a bigger range of motion of the trunk. See the {ref}`documentation page <Abdominal Pressure Model>`
+for more info about the abdominal model.
 
-* The Glasgow-Maastricht (GM) foot model is now integrated into the AMMR in a beta state currently. 
-  The GM foot has been morphed to the TLEM foot and uses the same reference system and ankle and subtalar joint 
-  parameters as the TLEM foot. The muscle parameters of the foot instead come from the GM foot. The GM foot models are available 
-  in multiple configurations: rigid foot (which will eventually become the default foot), toe flexion configuration 
-  (which has linked flexion extension degree of freedom for all toes), and the full-blown detailed foot model with 
-  26 segments. The GM foot model is also accompanied by new switches, for example, {bm_statement}`BM_FOOT_MUSCLES_BOTH` to 
-  control the muscle behavior in GM foot model. See the {ref}`documentation page <GM Foot Model>` for more info.
+It is possible to revert to the old buckle implementation with switch {bm_statement}`_CAVITY_MODEL_BUCKLE_`.
 
-* A new system for handling mass and inertia calculation for segments in the
-  Trunk. Now we utilize the new inertia classes derived from `AnyInertia`. The
-  new Abdominal and Thoracic model uses geometry-based inertia. The old models
-  keep the standard mass and inertia properties. The system also controls how
-  mass is scaled when setting `Main.HumanModel.Anthropometrics.BodyMass`. It
-  will distribute the mass to the different segments based on whether they are
-  marked as being part of the distribution.
+#### New Hand Model
+
+A new hand model is introduced.
+More detail to come.
+
+#### Integrated Glasgow-Maastricht (GM) Foot Model
+
+The Glasgow-Maastricht (GM) foot model is now integrated into the AMMR.
+The GM foot has been morphed to the TLEM foot and uses the same reference system and ankle and subtalar joint
+parameters as the TLEM foot. The muscle parameters of the foot instead come from the GM foot. The GM foot models
+are available in multiple configurations: rigid foot (which is now the default foot model for the TLEM leg
+in AMMR), toe flexion configuration (which has linked flexion extension degree of freedom for all toes), and the
+full-blown detailed foot model with 26 segments. The GM foot model is also accompanied by new switches, for
+example, {bm_statement}`BM_FOOT_MUSCLES_LEFT` to control the muscle behavior in GM foot model.
+See the {ref}`documentation page <GM Foot Model>` for more info.
+
+#### New Fullbody Inertia and Mass-scaling calculations
+
+A new system for handling mass and inertia calculation for segments in the whole human
+model. Now we utilize the new inertia classes derived from `AnyInertia`. The new Abdominal
+and Thoracic model uses geometry-based inertia. The old models keep the standard mass and
+inertia properties. The system also controls how mass is scaled when setting
+`Main.HumanModel.Anthropometrics.BodyMass`. It will distribute the mass to the different
+segments based on whether they are marked as being part of the distribution.
+
+### ➕ Added
+
+* New morphing tools:
+* New environment tools:
+* New Postural reference frames:
+
+### 🩹 Fixed
 
 * The cervical model now has linear stiffness coefficients. These can be enabled with the switch {bm_statement}`BM_TRUNK_CERVICAL_DISC_STIFFNESS`:
-  ```
+  
+  ```AnyScriptDoc
   #define BM_TRUNK_CERVICAL_DISC_STIFFNESS _DISC_STIFFNESS_LINEAR_
   ```
+
   Only linear stiffness function is available for cervical discs currently.
 
 * New muscles are added in the neck region. These include iliocostalis cervicis, longus colli superior and inferior obliques, and additional fibers
@@ -91,66 +106,251 @@ You can [enable backwards compatibility](changes-to-bodymodel-folders) by settin
 
 * The force plates now support slopped surface offsets.  This enables the force
   plate class template to calculate the COP on sloped offset surface. Like if
-  you added a sloped wedge on top of the force plate. 
+  you added a sloped wedge on top of the force plate.
+
+* Improved biceps wrapping for large elbow flexion angles.
 
 * Type 4 and type 2 now has the option to set a baseline offset to the measured
   force channels
   (`Plate.ForcePlate.BaselineOffset.Fx`/`Fy`/`Fz`/`Mx`/`My`/`Mz`). This can be
-  usefull if baseline correction needs to be done. 
+  usefull if baseline correction needs to be done.
 
-**Changed:**
+  * Fixed the inclusion of the buckle segmental masses in the calculation of the TotalBodyMass variable.
+
+  * Fixed the cervical spine axial rotation rhythm coefficients. The distribution between C2C1 and the rest of cervical spine was incorrect.
+  
+  * The BM statement BM_TRUNK_THORACIC_RHYTHM_RHYTHM_SOFT did not previously have any effect, this has been fixed
+
+### 🔧 Changed
+
+(changes-to-shoulder-arm model)=
+
+* {doc}`/body/shoulder_arm_model` has been updated in terms of anatomical frames, scaling, and mass properties:
+  * Anatomical frames are now explicitly defined using bony landmarks, replacing previous implicit definitions. The new definitions ensure consistency throughout the body: in a standing posture, the Y-axis points upward, the X-axis points forward,and the Z-axis points laterally (to the right). This update affects models with nodes referenced to the anatomical frame, such as MoCap models, which may require updated marker protocols. A migration guide is available.
+  * Scaling of the scapula and clavicle now uses the thorax trunk `ScalingNode`. While this was previously the case, the new implementation is more precise. The conoid ligament length is also scaled more accurately, resulting in improved initialpositioning of the clavicle and scapula across all scaling scenarios.
+  * Inertia calculations are now based on approximate skin surfaces and bone geometries, providing greater accuracy.
+  * Postural frames have been introduced in the shoulder girdle to enhance anatomical representation.
+
+:::{admonition} Default pelvis changed.
+:class: warning
+The default pelvis morphology now comes from trunk pelvis. The topology remain unchanged as the leg model pelvis is morphed to match the `Trunk`. See [below how to control this behaviour](changes-to-default-pelvis-morphology).
+:::
 
 (changes-to-default-pelvis-morphology)=
 
-* The default pelvis morphology is now the one from the trunk model, as opposed to the pelvis belonging
+* The default pelvis morphology is now the one from the `Trunk` model, as opposed to the pelvis belonging
   to whatever leg model has been selected. This was done to get a consistent
-  trunk model and considering all the recent improvements to the trunk. This option can be controlled with: 
+  trunk model and considering all the recent improvements to the trunk. This option can be controlled with:
 
-  ```
+  ```AnyScriptDoc
   #define BM_LEG_TRUNK_INTERFACE _MORPH_LEG_TO_TRUNK_
   ```
 
   In practice, this means that the morphology of the leg pelvis is morphed to match the Trunk pelvis.
   Using `_MORPH_TRUNK_TO_LEG_` instead will revert to the old behaviour.
 
+:::{admonition} Muscles locations restructured
+:class: warning
+Muscles elements are now grouped into folders representing the physiological muscles.
+You can [enable backwards compatibility](changes-to-muscles-locations) by setting:
+
+```AnyScriptDoc
+#define BM_COMPATIBILITY_MUSCLE_STRUCTURE ON
+```
+
+:::
+
 (changes-to-muscles-locations)=
 
-* The muscles of the arm and TLEM2 leg models have been reorganized in the body model. The
-  individual muscle elements are grouped into folders that represent the physiological
+* The muscles of the arm and TLEM2 leg models have been reorganized in the `BodyModel`.
+  The individual muscle elements are grouped into folders that represent the physiological
   muscles (e.g., all Soleus Medial elements are collected in a Soleus Medial folder). This
   change affects the path to the actual muscle elements throughout the model. The complete
   AMMR has been updated to support this. To allow users a smooth transition to the new
-  structure, a `BM_COMPATIBILITY_MUSCLE_STRUCTURE` switch has been temporarily
-  introduced. This switch will create backward-compatible references to the muscles as
-  they are defined in AMMR 3.x. This BM switch will be deprecated in a future AMMR
-  version.
+  structure, a `BM_COMPATIBILITY_MUSCLE_STRUCTURE` switch has been temporarily introduced.
+  This switch will create backward-compatible references to the muscles as they are
+  defined in AMMR 3.x. This BM switch will be deprecated in a future AMMR version.
+
+:::{admonition} Folder locations restructured
+:class: warning
+Many folders inside the `Leg` and `ShoulderArm` models have been renamed and/or moved to ensure a consistent `BodyModel` structure.
+You can [enable backwards compatibility](changes-to-bodymodel-folders) by setting:
+
+```AnyScriptDoc
+#define BM_COMPATIBILITY_BODYMODEL_STRUCTURE ON
+```
+
+:::
 
 (changes-to-bodymodel-folders)=
 
-* Many of the key folders inside the Leg and Arm models have been renamed to create a unified structure across the full BodyModel. To bring back the old structure we have temporarily included a backward compatibility switch `BM_COMPATIBILITY_BODYMODEL_STRUCTURE` To ensure a smooth transition.
+* Many of the key folders inside the `BodyModel` have been renamed to create a unified structure across the full `BodyModel`. To bring back the old structure we have temporarily included a backward compatibility switch `BM_COMPATIBILITY_BODYMODEL_STRUCTURE` To ensure a smooth transition. The switch re-introduces the old folders as references to the new ones and with a deprecation warning emitted when used. A detailed migration guide can be found in the AMMR4 documentation.
+
+All the data of the `BodyModel` have a new unified structure. In each bodypart there is a `Data` folder with the following structure:
+
+```
+Data: 
+  - unscaled: 
+    - ModelParameters
+    - STL
+    - StandardParameters
+  - ...
+```
+
+:::{admonition} Default foot model changed.
+:class: warning
+The default foot model for the TLEM leg has been switched to the rigid configuration of the
+{ref}`Glasgow-Maastricht (GM) foot model<GM Foot Model>`. See below [implications of this change](changes-to-default-foot-model).
+You can revert to the TLEM foot model by setting:
+
+```AnyScriptDoc
+#define BM_FOOT_MODEL _FOOT_MODEL_LEG_FOOT_
+```
+
+:::
+
+(changes-to-default-foot-model)=
+
+* The default foot model for the TLEM leg is now changed to the rigid variant of the
+  {ref}`GM foot model <GM Foot Model>` instead of the default TLEM foot. This is done to
+  use the detailed dataset available in the GM foot model. This change might
+  lead to `Unresolved object` errors in objects referring to the foot model. See this
+  {ref}`guide<Foot Unresolved Objects>` on how to resolve these errors. Corresponding to
+  this change, the switch `_FOOT_MODEL_DEFAULT_` is now deprecated. The TLEM foot model
+  can be selected with:
+
+  ```AnyScriptDoc
+  #define BM_FOOT_MODEL _FOOT_MODEL_LEG_FOOT_
+  ```  
+
+* The metatarsal joint nodes in the TLEM foot model have been updated to be consistent with the GM foot model.
+  The joint nodes are now located at joint centers instead of the contact between the bone surfaces. 
+  This change will affect position of markers located relative to the metatarsal joint nodes in the  
+  TLEM foot model. MoCap examples in the AMMR affected by this change have been updated accordingly.
 
 * The color of force plates in C3D-based MoCap models has been adjusted to better distinguish between 
   when the foot is in contact with the force plate and when it is not.
 
-### Removed:
+* The SubTalar joint axis definition has been refactored. It is now defined vertically below the midpoint 
+  of the tendon calcaneus nodes, replacing the previous fixed value. This update makes the joint axis 
+  more reliable in scaled models and ensures accurate alignment between the medial and lateral fibres 
+  of gastrocnemius and soleus muscles. The change causes a minor shift in the joint axis, but it should 
+  not significantly impact results.
 
-* The deprecated TLEM 1 model has been removed from the AMMR. The TLEM 2.2 model is now the only TLEM based model 
-  available in the AMMR. It is activated by default or by setting: 
+(changes-to-mandible-model)=
+
+* The NormalMandible_AAU model has been updated to use more cleaned-up surfaces for contact in FDK models. This helps FDK models to converge. Most importantly the backside of the contact surfaces has been removed.
+
+### ❌ Removed
+
+* The deprecated deltoid wrapping method `_DELTOID_WRAPPING_RAKE_` has been
+  removed. The deltoid wrapping implementation now only uses the cylinder
+  or ellipsoid wrapping methods.
+
+* The deprecated TLEM 1 model has been removed from the AMMR. The TLEM 2.2 model is now the only TLEM based model
+  available in the AMMR. It is activated by default or by setting:
+
   ``` AnyScriptDoc
   #define BM_LEG_MODEL _LEG_MODEL_TLEM_
   ```
 
-(ammr-3.1.4-changelog)=
-## AMMR 3.1.4 (2025-??-??)
-[![AnyBody link](https://img.shields.io/badge/Included_with_AnyBody-8.1.4-yellowgreen)](https://www.anybodytech.com/resources/customer-downloads/)
+* Remove a number of previously deprecated `BM_XXX` switches and constants.
+
+* The AMS Plugins based on the `ANyGUIPlugin` class has been deprecated and removed. A new
+  AnyBody Studio Extensions platform will take over and re-implement the funtionality with
+  the new `AnyAppExtensionStudio` class.
+
+(ammr-3-2-1-changelog)=
+## AMMR 3.2.1 (2026-05-21)
+[![Zenodo link](https://zenodo.org/badge/DOI/10.5281/zenodo.20321946.svg)](https://doi.org/10.5281/zenodo.20321946)
+[![AnyBody link](https://img.shields.io/badge/Included_with_AnyBody-8.2.1-yellowgreen)](https://www.anybodytech.com/resources/customer-downloads/)
+
+### 🩹 Fixed
+
+* Fixed use of deprecated members of AnyInputC3D in the AnyMoCap framework.
+
+### 🔧 Changed
+
+* AnyMoCap/CreateMarkerDriver class-template is extended for working
+  with virtual markers associated with moving reference frames given
+  by ROTATION data in C3D files.
+
+
+(ammr-3-2-0-changelog)=
+
+## AMMR 3.2.0 (2026-05-08)
+[![Zenodo link](https://zenodo.org/badge/DOI/10.5281/zenodo.20082156.svg)](https://doi.org/10.5281/zenodo.20082156)
+[![AnyBody link](https://img.shields.io/badge/Included_with_AnyBody-8.2.0-yellowgreen)](https://www.anybodytech.com/resources/customer-downloads/)
+
+:::{note} This version of AMMR was not properly released on Zenodo due to issues in the release process. 
+Version 3.2.1 was released as replacement shortly after, containing fixes and improvements of these and other issues (see above).
+:::
+
+
+### 🩹 Fixed
+
+* Fixed the SLA link and updated the copyright year in the repository license text.
+
+### 🔧 Changed
+
+* This AMMR provides necessary updates to optimally use AnyBody 8.2.
+  These updates target the AnyMoCap models and tools.
+  Updates are related to improvements of the 'AnyInputC3D' class used for MoCap data import.
+  AnyBody 8.2 cause several deprecation warnings with AMMR 3.1.x MoCap models,
+  and it will run in a special compatibility mode.
+  AMMR 3.2 eliminates these warnings and the less efficient compatibility mode.  
+* Updated documentation link checking to use a dedicated user agent and longer timeout for slow pages.
+* Updated CI workflow action dependencies across the test and documentation pipelines.
+
+### ➕ Added
+
+* Added a pixi command and workflow step for generating an AMMR zip package.
+
+(ammr-3.1.5-changelog)=
+## AMMR 3.1.5 (2026-03-31)
+[![Zenodo link](https://zenodo.org/badge/DOI/10.5281/zenodo.18388854.svg)](https://doi.org/10.5281/zenodo.18388854)
+[![AnyBody link](https://img.shields.io/badge/Included_with_AnyBody-8.1.5-yellowgreen)](https://www.anybodytech.com/resources/customer-downloads/)
+
 
 ### 🩹 Fixed:
-*  Refactored the references in the hand model, so the BVH MoCap models can
-   share the same marker protocol irrespectively of if the detailed or simple
-   hand is enabled. 
-*  Fixed arm rest asymmetry in various sitting model application examples. 
+* The BVH marker protocol have been improved to better handling scaling of
+  people which are very different from a standard size. Now the pelvis height
+  follows the scaling of the rest of the trunk, and neck-length head-height are
+  linked. 
+* Asymmetric ground reaction force in the {ref}`Squat model <example_squat>` have 
+  been fixed.
 
 
+### 🔧 Changed:
+* The implementation of the wrapping muscles which also have via points have
+  been optimized. This speeds up most models with many wrapping muscles 10-20%
+  since the alogithm only doesn't have to consider all muscle segments when
+  solving the wrapping problems.
+
+
+(ammr-3.1.4-changelog)=
+## AMMR 3.1.4 (2025-09-03)
+[![Zenodo link](https://zenodo.org/badge/DOI/10.5281/zenodo.17043944.svg)](https://doi.org/10.5281/zenodo.17043944)
+[![AnyBody link](https://img.shields.io/badge/Included_with_AnyBody-8.1.4-yellowgreen)](https://www.anybodytech.com/resources/customer-downloads/)
+
+
+### 🩹 Fixed:
+* Refactored references in the hand model so BVH MoCap models can share the same
+  marker protocol regardless of whether the detailed or simple hand is enabled.
+* Updated the subscapularis insertion to the lesser tuberosity, improving its
+  moment arms during humerus internal rotation. Special thanks to researcher
+  Margaux Peixoto (Laboratoire d'Innovation ETS, Montreal) for contributing this
+  enhancement to the shoulder model.
+* Fixed contact thresholds in the {ref}`Leg Press Machine example
+  <example_legpressmachinemodel>` to ensure contact with all nodes.
+* The {ref}`joint strength evaluation
+  <sphx_glr_auto_examples_Validation_plot_EvaluateJointStrength.py>` models now
+  use the "MinMaxAux" muscle recruitment solver, improving robustness without
+  changing results.
+
+### ➕ Added:
+* Refactored the implementation of the pelvis rotation vector measure in the
+  interface folder to allow overriding the global reference frame.
 
 (ammr-3.1.3-changelog)=
 ## AMMR 3.1.3 (2025-06-16)
@@ -162,6 +362,7 @@ You can [enable backwards compatibility](changes-to-bodymodel-folders) by settin
 *   Fixed a regression in the `VideoLookAtCamera` VideoTool that prevented
     animated GIFs from being created when the video source was not an `.mp4`
     file. It now supports any video format compatible with the ffmpeg library.
+*   Correct spelling of 'EvaluateJointStrength' in multiple files
 
 ### 🔧 Changed:
 
@@ -809,7 +1010,7 @@ The `HumeroUlnarJoint` is the elbow flexion extension, and together
   <sphx_glr_auto_examples_Orthopedics_and_rehab_plot_KneeForcesExample.py>`>
 - A new box lifting motion capture model has been added. The model is based on
   data from an inertial measurement unit based suit
-  ([Xsens](https://www.movella.com/products/wearables/xsens-mtw-awinda)), and
+  ([Xsens](https://www.xsens.com/wearables/xsens-mtw-awinda)), and
   illustrates how to connect MoCap models with objects in the environment.
   <{ref}`See more <sphx_glr_auto_examples_mocap_plot_bvh_boxlift.py>`>
 
@@ -1318,11 +1519,11 @@ requested body height.
   the Inverse Dynamics simulations.
 - Fixed a problem with the Body Model configurator plugin showing reporting: "No
   Human Model" when a configuration file already exists.
-- Corrected the location of via points of Flexor_Digitorum_Superficialis_Digit2
+- Corrected the location of via points of FlexorDigitorumSuperficialisDigit2
   to avoid wrapping surface collisions in certain hand positions.
-- Corrected the location of via points of Flexor_Digitorum_Superficialis_Digit3
-  and 4, Palmaris_Longus, Extensor_Carpi_Radialis_Brevis and
-  Extensor_Digitorum_Digit2 to avoid wrapping surface collisions in certain hand
+- Corrected the location of via points of FlexorDigitorumSuperficialisDigit3
+  and 4, PalmarisLongus, ExtensorCarpiRadialisBrevis and
+  ExtensorDigitorumDigit2 to avoid wrapping surface collisions in certain hand
   positions.
 - The muscle via point representing the bicipital groove have been adjusted to
   ensure the Biceps Caput Longum wraps the humeral head correctly in
@@ -1735,7 +1936,7 @@ requested body height.
   rhythm is enabled.
 - Fixed the initial wrapping guess for Teres Minor to prevent incorrect wrapping
   when starting model in postures which are close to range of motion.
-- Fixed typo in `Flexor_Digitorum_Profundus_Digit5` name.
+- Fixed typo in `FlexorDigitorumProfundusDigit5` name.
 - Fixed an interpolation issue with BVH based AnyMoCap models when the models
   were using all frames in a BVH file.
 - Added missing hand length/breadth values needed by Detailed Hand to the
@@ -1961,7 +2162,7 @@ the driver values are updated.
     is enabled.
   - Fixed problems with via points of the wrist extensor muscles colliding with
     the wrist wrapping surface in normal range of motion. The via point of
-    Extensor indicis `Via_Extensor_Indicis_pos` has been slightly adjusted and
+    Extensor indicis `Via_ExtensorIndicis_pos` has been slightly adjusted and
     the location of the wrist wrapping cylinder `MedialExtensorCyl` has been
     improved.
 

@@ -15,10 +15,10 @@ AnyFolder Model = {
 
 
   AnyFolder &JointsLumberRef = .....BodyModel.Trunk.Joints.Lumbar;
-  AnyFolder &LegSegSideRef = .SideBodyModelRef.Leg.Seg; //This is a reference to the folder which holds the human part of the model
-  AnyFolder &LegJntsRef =  .SideBodyModelRef.Leg.Jnt;
+  AnyFolder &LegSegSideRef = .SideBodyModelRef.Leg.Segments; //This is a reference to the folder which holds the human part of the model
+  AnyFolder &LegJntsRef =  .SideBodyModelRef.Leg.Joints;
   AnyFolder &MusRef = .SideBodyModelRef.Leg.EvaluateJointStrengthMusRef ;
-//  AnyFolder &LegMusRef = .SideBodyModelRef.Leg.Mus;
+//  AnyFolder &LegMusRef = .SideBodyModelRef.Leg.Muscles;
 //  AnyFolder &SpineMusRef = .SideTrunkMusRef;
 
   AnyFixedRefFrame ground =
@@ -89,8 +89,12 @@ AnyBodyStudy Study = {
   Kinematics.PosAnalysisOnlyOnOff = On;
   InitialConditions.PosAnalysisOnlyOnOff = On;
 
-  InverseDynamics.Criterion.Type = MR_MinMaxStrict;
+  InverseDynamics.Criterion.Type = MR_MinMaxAux;
+  InverseDynamics.Criterion.AuxLinearTerm.Weight = 1e-4;
+
   InverseDynamics.Criterion.UpperBoundOnOff = Off;
+
+
 
   AnyFolder &Model = .Model;
 
@@ -100,7 +104,7 @@ AnyBodyStudy Study = {
      };
      AnyVar JointStrength = max(abs(.Model.JointLoad.F))/(.MaxMuscleActivity+0.00000001);
 
-     //AnyVar PsoasMajorT12I = -1*.Model.SpineMusRef.PsoasMajor.PMT12I_TM.LmtDot/.Model.Drivers.AngularVelocity;
+     //AnyVar PsoasMajorT12I = -1*.Model.SpineMusRef.PsoasMajor.PsoasMajorT12.LmtDot/.Model.Drivers.AngularVelocity;
   };
   #if ((BM_LEG_MUSCLES_RIGHT != OFF) & (BM_LEG_MUSCLES_LEFT != OFF) & (BM_TRUNK_MUSCLES != OFF))
 

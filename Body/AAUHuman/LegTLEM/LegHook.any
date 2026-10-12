@@ -14,7 +14,7 @@ AnyFolder LegHook ={
 
 
   AnyFolder ThighHook = {
-    AnySeg &SegToBeHold =..Seg.Thigh;
+    AnySeg &SegToBeHold =..Segments.Thigh;
     AnyFixedRefFrame &ForceProvider =.GlobalRef;
     AnyVar Strength =.Strength;
     AnyVar RotStrength =.RotStrength;
@@ -23,7 +23,7 @@ AnyFolder LegHook ={
 
 
   AnyFolder ShankHook = {
-    AnySeg &SegToBeHold =..Seg.Shank;
+    AnySeg &SegToBeHold =..Segments.Shank;
     AnyFixedRefFrame &ForceProvider =.GlobalRef;
     AnyVar Strength =.Strength;
     AnyVar RotStrength =.RotStrength;
@@ -32,7 +32,7 @@ AnyFolder LegHook ={
 
 
   AnyFolder FootHook = {
-    AnySeg &SegToBeHold =..Seg.Foot;
+    AnySeg &SegToBeHold =..Segments.Foot;
     AnyFixedRefFrame &ForceProvider =.GlobalRef;
     AnyVar Strength =.Strength;
     AnyVar RotStrength =.RotStrength;

@@ -1,18 +1,5 @@
-// **********************************************************
-//  This is a reference to where the body parameters are located
-//  the model will need the following quantities
-//  AnyVar BodyMass
-//  AnyVar BodyHeigth
-//  AnyVar Density
-// **********************************************************
-
-// **********************************************************
 // This is a reference to the folder which contains the scaling settings for the segments
-// **********************************************************
 AnyFolder &Scaling = ..Scaling;
 
-
 //This is a reference to where the colors for the model are located, the leg needs
-//  AnyVec3 Nodes
-//  AnyVec3 Segments
 AnyFolder &ColorRef = Main.DrawSettings.Colors;

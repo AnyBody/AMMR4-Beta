@@ -12,10 +12,6 @@ Right =
     //Reference to folder which contains the interface of the right side
     AnyFolder &InterfaceFolder =..Interface.Right;
 
-    //Reference to mannequin value from model folder
-    AnyFolder &MannequinValuesFolder = ..MannequinValuesFromModel.AnyFolder_Posture.AnyFolder_Right;
-
-
     #include "../Include/SettingsLeg.any"
     AnyFolder &Scaling = ...Scaling;
     AnyFolder &StandardParameters =...Scaling.StandardParameters.Right;
@@ -50,8 +46,8 @@ Right =
       #if (BM_LEG_MUSCLES_RIGHT == OFF)
       AnyForceMomentMeasure KneeJointReactionMoments =
       {
-        AnyForceBase &Force = ..Jnt.Knee.Constraints.Reaction;
-        AnyRefFrame &Thighknee = ..Seg.Thigh.KneeJoint;
+        AnyForceBase &Force = ..Joints.Knee.Constraints.Reaction;
+        AnyRefFrame &Thighknee = ..Segments.Thigh.KneeJoint;
         AnyVec3 Mlocal = M*Thighknee.Axes;
       };
       #else
@@ -68,7 +64,7 @@ Right =
 
 Trunk =
 {
-  AnyRefFrame &PsoasMajorRightReference=.Right.Leg.Seg.Thigh;
+  AnyRefFrame &PsoasMajorRightReference=.Right.Leg.Segments.Thigh;
 };
 
 #if (BM_LEG_MUSCLES_RIGHT == OFF)

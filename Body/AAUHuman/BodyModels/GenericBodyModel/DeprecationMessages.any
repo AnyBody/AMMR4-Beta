@@ -1,0 +1,153 @@
+
+/// Folder containing deprecation messages for the BodyModel.
+AnyFolder Deprecations = {
+  ///^ Deprecation messages for the AMMR 3 bodymodel folder structure. These messages will be
+  ///^ triggered when the old folder structure is used, and will inform the user about the
+  ///^ deprecation and guide them to update their model to the new structure.
+  #if BM_COMPATIBILITY_BODYMODEL_STRUCTURE  ==  ON
+    #if BM_ARM_LEFT  ==  ON
+      AnyMessageOnObjectUse FoldersArmLeft = {
+        AnyFolder &ref = Main.HumanModel.BodyModel.Left.ShoulderArm;
+        Objects = {&ref.ModelParameters, &ref.Mus, &ref.Jnt, &ref.Seg, &ref.MannequinValuesFolder};
+        DeprecationMessage = On;
+        Message = strformat("\n"+
+        "-------------------------------------------------------------------------------\n"+
+        "    The folder structure of the arm model has been changed from AMMR version 3 to 4.\n"+
+        "    You have used some of the old version 3 structure, which is not deprecated.\n"+
+        "    Please update your model to use the new structure.\n"+
+        "    See the changelog and AMMR4 migration guide for more information.\n"+
+        "--------------------------------------------------------------------------------\n");
+      };
+
+      Main.HumanModel.BodyModel.Left.ShoulderArm = {
+        AnyFolder &ModelParameters = Data.unscaled.ModelParameters;
+        AnyFolder &Mus = Muscles;
+        AnyFolder &Jnt = Joints;
+        AnyFolder &Seg = Segments;
+        AnyFolder &MannequinValuesFolder = ..MannequinValuesFromModel.AnyFolder_Posture.AnyFolder_Left;
+      };
+    #endif
+
+    #if BM_ARM_RIGHT  ==  ON
+      AnyMessageOnObjectUse FoldersArmRight = {
+        AnyFolder &ref = Main.HumanModel.BodyModel.Right.ShoulderArm;
+        Objects = {&ref.ModelParameters, &ref.Mus, &ref.Jnt, &ref.Seg, &ref.MannequinValuesFolder};
+        DeprecationMessage = On;
+        Message = strformat("\n"+
+        "-------------------------------------------------------------------------------\n"+
+        "    The folder structure of the arm model changed from AMMR version 3 to 4.\n"+
+        "    Please update your model to use the new structure.\n"+
+        "    See the changelog and AMMR4 migration guide for more information.\n"+
+        "--------------------------------------------------------------------------------\n");
+      };
+
+      Main.HumanModel.BodyModel.Right.ShoulderArm = {
+        AnyFolder &ModelParameters = Data.unscaled.ModelParameters;
+        AnyFolder &Mus = Muscles;
+        AnyFolder &Jnt = Joints;
+        AnyFolder &Seg = Segments;
+        AnyFolder &MannequinValuesFolder = ..MannequinValuesFromModel.AnyFolder_Posture.AnyFolder_Right;
+      };
+    #endif
+
+    #if BM_LEG_RIGHT  ==  ON
+      AnyMessageOnObjectUse FoldersLegRight = {
+        AnyFolder &ref = Main.HumanModel.BodyModel.Right.Leg;
+        Objects = {&ref.Seg, &ref.Jnt, &ref.Mus, &ref.ModelParameters, &ref.MannequinValuesFolder};
+        DeprecationMessage = On;
+        Message = strformat("\n"+
+        "-------------------------------------------------------------------------------\n"+
+        "    The folder structure of the leg model changed from AMMR version 3 to 4.\n"+
+        "    Please update your model to use the new structure.\n"+
+        "    See the changelog and AMMR4 migration guide for more information.\n"+
+        "--------------------------------------------------------------------------------\n");
+      };
+
+      Main.HumanModel.BodyModel.Right.Leg = {
+        AnyFolder &ModelParameters = Data.unscaled.ModelParameters;
+        AnyFolder &Mus = Muscles;
+        AnyFolder &Jnt = Joints;
+        AnyFolder &Seg = Segments;
+        AnyFolder &MannequinValuesFolder = ..MannequinValuesFromModel.AnyFolder_Posture.AnyFolder_Right;
+      };
+    #endif
+
+    #if BM_LEG_LEFT  ==  ON
+      AnyMessageOnObjectUse FoldersLegLeft = {
+        AnyFolder &ref = Main.HumanModel.BodyModel.Left.Leg;
+        Objects = {&ref.Seg, &ref.Jnt, &ref.Mus, &ref.ModelParameters, &ref.MannequinValuesFolder};
+        DeprecationMessage = On;
+        Message = strformat("\n"+
+        "-------------------------------------------------------------------------------\n"+
+        "    The folder structure of the leg model changed from AMMR version 3 to 4.\n"+
+        "    Please update your model to use the new structure.\n"+
+        "    See the changelog and AMMR4 migration guide for more information.\n"+
+        "--------------------------------------------------------------------------------\n");
+      };
+
+      Main.HumanModel.BodyModel.Left.Leg = {
+        AnyFolder &ModelParameters = Data.unscaled.ModelParameters;
+        AnyFolder &Mus = Muscles;
+        AnyFolder &Jnt = Joints;
+        AnyFolder &Seg = Segments;
+        AnyFolder &MannequinValuesFolder = ..MannequinValuesFromModel.AnyFolder_Posture.AnyFolder_Left;
+      };
+    #endif
+
+    AnyMessageOnObjectUse FoldersTrunk = {
+      AnyFolder &ref = Main.HumanModel.BodyModel.Trunk;
+      Objects = {
+        &ref.ModelParameters, &ref.MusclesSpineRight, &ref.MusclesSpineLeft,
+        &ref.MusclesSpine, &ref.JointsLumbar, &ref.SegmentsLumbar, &ref.JointsCervicalSpine,
+        &ref.SegmentsCervicalSpine, &ref.SegmentsRibCage, &ref.SegmentsThorax, &ref.MannequinValuesFolder
+      };
+      DeprecationMessage = On;
+      Message = strformat("\n"+
+      "-------------------------------------------------------------------------------\n"+
+      "    The folder structure of the trunk model changed from AMMR version 3 to 4.\n"+
+      "    Please update your model to use the new structure.\n"+
+      "    See the changelog and AMMR4 migration guide for more information.\n"+
+      "---------------------------------------------------------------------------- ---\n");
+    };
+
+    Main.HumanModel.BodyModel.Trunk = {
+      AnyFolder &ModelParameters = Data.unscaled.ModelParameters;
+      AnyFolder &MusclesSpineRight = Muscles.Right;
+      AnyFolder &MusclesSpineLeft = Muscles.Left;
+      AnyFolder &MusclesSpine = Muscles;
+      AnyFolder &JointsLumbar = Joints;
+      AnyFolder &JointsCervicalSpine = Joints;
+      AnyFolder &SegmentsLumbar = Segments;
+      AnyFolder &SegmentsCervicalSpine = Segments;
+      AnyFolder &SegmentsRibCage = Segments;
+      AnyFolder &SegmentsThorax = Segments;
+      AnyFolder &MannequinValuesFolder = .MannequinValuesFromModel.AnyFolder_Posture;
+    };
+
+  #endif
+
+  #if BM_COMPATIBILITY_BODYMODEL_STRUCTURE == OFF
+    // There is no need to enable this message below when the compatibility mode is ON,
+    // The old structure uses them and thereby creates warnings for the user.
+
+
+    /// Mark the old mannequin values folder structure as deprecated, and inform the user
+    /// to update their model to the new structure.
+    AnyMessageOnObjectUse FoldersMannequinValues = {
+      AnyFolder &ref = ....BodyModel;
+      Objects = {
+        &ref.MannequinValuesFromModel,
+        &ref.MannequinValuesFromModel.AnyFolder_Posture,
+        &ref.MannequinValuesFromModel.AnyFolder_Posture.AnyFolder_Right,
+        &ref.MannequinValuesFromModel.AnyFolder_Posture.AnyFolder_Left
+      };
+      DeprecationMessage = On;
+      Message = strformat("\n"+
+      "-------------------------------------------------------------------------------\n"+
+      "    The folder structure of the mannequin values from the model changed from AMMR version 3 to 4.\n"+
+      "    Please update your model to use the new structure.\n"+
+      "    See the changelog and AMMR4 migration guide for more information.\n"+
+      "---------------------------------------------------------------------------- ---\n");
+    };
+  #endif
+};

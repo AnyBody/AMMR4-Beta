@@ -1,8 +1,8 @@
 
 AnyFolder ModelOutputQA ={
-  
+
   AnyFolder Ligaments ={
-    
+
     AnyFolder OutputPhasia  ={
       AnyFloat PhasiaTotal =
       Main.HumanModel.BodyModel.Right.Leg.Ligaments.PlantarFascia.PlantarFascia1Ph.LigMuscleAndTendonTogther+
@@ -16,38 +16,38 @@ AnyFolder ModelOutputQA ={
       Main.HumanModel.BodyModel.Right.Leg.Ligaments.PlantarFascia.PlantarFascia5Ph.LigMuscleAndTendonTogther+
       Main.HumanModel.BodyModel.Right.Leg.Ligaments.PlantarFascia.PlantarFascia5Mt.LigMuscleAndTendonTogther;
       AnyFloat PlantarPhasiaBW=-PhasiaTotal/(Main.HumanModel.Anthropometrics.BodyMass*9.81);
-    }; 
-    
-    
+    };
+
+
     AnyFolder AchillesTendon  ={
       AnyFloat AchillesTendonTotal =
-      Main.HumanModel.BodyModel.Right.Leg.Mus.SoleusMedialis.SoleusMedialis1.Ft+
-      Main.HumanModel.BodyModel.Right.Leg.Mus.SoleusMedialis.SoleusMedialis2.Ft+
-      Main.HumanModel.BodyModel.Right.Leg.Mus.SoleusMedialis.SoleusMedialis3.Ft+
-      Main.HumanModel.BodyModel.Right.Leg.Mus.SoleusLateralis.SoleusLateralis1.Ft+
-      Main.HumanModel.BodyModel.Right.Leg.Mus.SoleusLateralis.SoleusLateralis2.Ft+
-      Main.HumanModel.BodyModel.Right.Leg.Mus.SoleusLateralis.SoleusLateralis3.Ft+
-      Main.HumanModel.BodyModel.Right.Leg.Mus.GastrocnemiusLateralis.GastrocnemiusLateralis1.Ft+
-      Main.HumanModel.BodyModel.Right.Leg.Mus.GastrocnemiusMedialis.GastrocnemiusMedialis1.Ft;
+      Main.HumanModel.BodyModel.Right.Leg.Muscles.SoleusMedialis.SoleusMedialis1.Ft+
+      Main.HumanModel.BodyModel.Right.Leg.Muscles.SoleusMedialis.SoleusMedialis2.Ft+
+      Main.HumanModel.BodyModel.Right.Leg.Muscles.SoleusMedialis.SoleusMedialis3.Ft+
+      Main.HumanModel.BodyModel.Right.Leg.Muscles.SoleusLateralis.SoleusLateralis1.Ft+
+      Main.HumanModel.BodyModel.Right.Leg.Muscles.SoleusLateralis.SoleusLateralis2.Ft+
+      Main.HumanModel.BodyModel.Right.Leg.Muscles.SoleusLateralis.SoleusLateralis3.Ft+
+      Main.HumanModel.BodyModel.Right.Leg.Muscles.GastrocnemiusLateralis.GastrocnemiusLateralis1.Ft+
+      Main.HumanModel.BodyModel.Right.Leg.Muscles.GastrocnemiusMedialis.GastrocnemiusMedialis1.Ft;
       AnyFloat AchillesTendonBW=AchillesTendonTotal/(Main.HumanModel.Anthropometrics.BodyMass*9.81);
-    }; 
+    };
   };
-  
-  
+
+
   AnyFolder Joints ={
-    
-    AnyVar CalCuboid = vnorm(Main.HumanModel.BodyModel.Right.Leg.Jnt.Foot.CalCuboid.Constraints.Reaction.Fout,2);
+
+    AnyVar CalCuboid = vnorm(Main.HumanModel.BodyModel.Right.Leg.Joints.Foot.CalCuboid.Constraints.Reaction.Fout,2);
     AnyVar CalCuboid_BW= CalCuboid/(Main.HumanModel.Anthropometrics.BodyMass*9.81);
-    
-    AnyVar SubTalar=vnorm(Main.HumanModel.BodyModel.Right.Leg.Jnt.SubTalar.Constraints.Reaction.Fout,2);
+
+    AnyVar SubTalar=vnorm(Main.HumanModel.BodyModel.Right.Leg.Joints.SubTalar.Constraints.Reaction.Fout,2);
     AnyVar SubTalar_BW= SubTalar/(Main.HumanModel.Anthropometrics.BodyMass*9.81);
-    
-    
-    AnyVar MtProxPh1= vnorm(Main.HumanModel.BodyModel.Right.Leg.Jnt.Foot.MtProxPh1.Constraints.Reaction.Fout,2);
+
+
+    AnyVar MtProxPh1= vnorm(Main.HumanModel.BodyModel.Right.Leg.Joints.Foot.MtProxPh1.Constraints.Reaction.Fout,2);
     AnyVar MtProxPh1_BW= MtProxPh1/(Main.HumanModel.Anthropometrics.BodyMass*9.81);
-    
-    
+
+
   };
-  
-  
+
+
 };

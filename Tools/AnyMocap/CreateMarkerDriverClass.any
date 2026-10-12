@@ -35,6 +35,8 @@ See below for more details
 #class_template CreateMarkerDriver (
   MarkerName=_NOT_DEFINED_,
   MarkerPlacement,
+  PlaceMarkerAt = ScalingNode,
+  AlignMarkerWith=ScalingNode,
   WeightX=1, WeightY=1, WeightZ=1,
   OptX=0, OptY=0, OptZ=0,
   ScaleMarkerPosOnOff = 1,
@@ -44,13 +46,14 @@ See below for more details
   PARAMETER_OPT_STUDY = Main.Studies.ParameterIdentification,
   C3D_OBJECT = Main.ModelSetup.C3DFileData,
   BODY_MODEL_FOLDER = Main.HumanModel.BodyModel,
-  PlaceMarkerAt = MoCapMarkerFrameAMMR24,
   USE_BVH_INPUT = 0,
   BVH_OBJECT = Main.ModelSetup.BVHFileData,
   MarkerPlacementBVH = REQUIRED_FOR_BVH_INPUT,
   DRAW_SCALE = 1,
   _MARKER_NODE_POSTFIX = _Marker,
   SKIP_MARKER_EXIST_CHECK = 0,
+  USE_C3D_ROTATION_INPUT = 0,
+  MarkerPlacementC3DRotation = REQUIRED_FOR_C3D_ROTATION_INPUT
 )
 {
 
@@ -61,6 +64,9 @@ See below for more details
 // CreateMarkerDriver#PlaceMarkerAt
 //    Specifies which coordinate system on the segment the marker is place.
 //    This is used when placing markers relative to bony landmarks. (Defaults to `AnatomicalFrame`)
+// CreateMarkerDriver#AlignMarkerWith
+//    Specifies which coordinate system for the marker. This influences what how the inputs
+//    in sRelOpt are interpreted. Defaults is to align with the Scaling Frame.
 // CreateMarkerDriver#WeightX
 //     The weight of soft driver for the marker in X direction
 // CreateMarkerDriver#WeightY
@@ -115,6 +121,12 @@ See below for more details
 //     Disable the check if the marker exists in the C3D file. This switch must be
 //     enabled if you model is structured so markers are created
 //     before the AnyInputC3D file have been defined. (Defaults to 0)
+// CreateMarkerDriver#USE_C3D_ROTATION_INPUT
+//     Switch to specify if Rotations input from C3D file should be used. This may be
+//     required for newer marker-less optical systems.
+// CreateMarkerDriver#MarkerPlacementC3DRotation
+//     Specifies the C3D model segment on which the virtual marker is placed when 
+//     using C3D file with Rotations input.
 
 
 //  #if  MarkerName != _NOT_DEFINED_
@@ -143,8 +155,23 @@ See below for more details
 #endif
 #endif
 
+#if  USE_C3D_ROTATION_INPUT
+#if MarkerName != _NOT_DEFINED_
+#if MarkerName != __NAME__
+  AnyMessage NotSupported_MarkerName_argument = {
+    TriggerPreProcess = On;
+    Type = MSG_ErrorFatal;
+    Message = strformat("\n"+
+         "------------------------------------------------------------------------------------------------------\n"+
+         "    The "MarkerName" can't be specified for the C3D Rotations based models. \n"+
+         "    Just remove the MarkerName argument to the class template. \n"+
+         "-------------------------------------------------------------------------------------------------------\n");
+  };
+#endif
+#endif
+#endif
 
-#if  USE_BVH_INPUT == 0
+#if  (USE_BVH_INPUT == 0) & (USE_C3D_ROTATION_INPUT == 0)
 #if SKIP_MARKER_EXIST_CHECK == 0
 AnyMessage TestMarkerExist ={
 #if MarkerName == _NOT_DEFINED_
@@ -168,15 +195,14 @@ AnyMessage TestMarkerExist ={
   #var AnyVar ConstMarkerWeightY = WeightY;
   #var AnyVar ConstMarkerWeightZ = WeightZ;
 
-  #if (UseC3DWeightResiduals == 1) & (USE_BVH_INPUT == 0)
+  #if (UseC3DWeightResiduals == 1) & (USE_BVH_INPUT == 0) & (USE_C3D_ROTATION_INPUT == 0)
     AnyFunSquareWaveThreshold MarkerWeightsFun =
     {
       #var dT = {C3D_OBJECT.WeightTransitionTime};
+      T = C3D_OBJECT.Points.Abscissa.t;
       #if MarkerName == _NOT_DEFINED_
-      T = C3D_OBJECT.Points.Markers.__NAME__.PosInterpol.T;
       #var Data = C3D_OBJECT.Points.Markers.__NAME__.Residual;
       #else
-      T = C3D_OBJECT.Points.Markers.MarkerName.PosInterpol.T;
       #var Data = C3D_OBJECT.Points.Markers.MarkerName.Residual;
       #endif
       OutputValues =
@@ -208,6 +234,13 @@ AnyMessage TestMarkerExist ={
   #var AnyVec3 sRelOnBVH = {0,0,0};
   #endif
 
+  #if USE_C3D_ROTATION_INPUT
+  // CreateMarkerDriver
+  /// Position of the marker on the C3D Rotation stick figure model. This is only
+  /// used when using C3D Rotation input.
+  #var AnyVec3 sRelOnC3DRotation = {0,0,0};
+  #endif
+  
   #var AnyVec3 sRelOptDelta = {0, 0, 0};
 
   #if OptX ==0 & OptY == 0 & OptZ == 0
@@ -249,14 +282,38 @@ AnyMessage TestMarkerExist ={
   AnyFolder &MarkerPlacementSegment = BODY_MODEL_FOLDER.MarkerPlacement;
   MarkerPlacementSegment = {
     AnyRefNode __NAME__##_MARKER_NODE_POSTFIX  ={
-      #if ScaleMarkerPosOnOff == 1
-        AnyVec3 MarkerOffset = (.Scale.GeomScale(..sRelOpt) + ..sRelOptEdit )*.ScalingNode.ARel' ;
+       #if ScaleMarkerPosOnOff == 1
+        AnySwitchVar scale_offset_allowed = bool(prod(eqfun(.Scale.GeomScale({0,0,0.0}), {0,0,0.0})));
+        AnyVec3 MarkerOffset = iffun(scale_offset_allowed,
+            (.Scale.GeomScale(..sRelOpt) + ..sRelOptEdit )*ARel',
+            (..sRelOpt + ..sRelOptEdit )*ARel',
+        );
+       #else
+        AnyVec3 MarkerOffset = (..sRelOpt + ..sRelOptEdit )*ARel';
+       #endif
+
         sRel = .PlaceMarkerAt.sRel + MarkerOffset;
-        ARel= .ScalingNode.ARel;
-      #else
-        sRel = .PlaceMarkerAt.sRel + (..sRelOpt + ..sRelOptEdit )*.PlaceMarkerAt.ARel';
-        ARel= .PlaceMarkerAt.ARel;
-      #endif
+        ARel= .AlignMarkerWith.ARel;
+
+
+        #if (ScaleMarkerPosOnOff == 1) & (PlaceMarkerAt != ScalingNode & PlaceMarkerAt != AnatomicalFrameTrunk)
+        AnyMessage WarnIfScalingDisabled_##__NAME__##_marker = {
+          Type = MSG_Warning;
+          TriggerRuntime = andfun(not(.scale_offset_allowed), not(System.LoadedModel.LoadComplete));
+          AnyStringVar SegmentName = NameOf(ObjGetParent(2));
+          AnyStringVar RefName = NameOf(&..PlaceMarkerAt);
+          Message =strformat("\n"+
+          "-------------------------------------------------------------------------------------------------------------------\n"+
+          "    The scale function for the '" + SegmentName + "' segment does not support scaling the marker offset (sRelOpt)   \n"+
+          "    when the marker is placed relative to a reframe, i.e. when using 'PlaceMarkerAt=" + RefName +"'  \n" +
+          " \n" +
+          "    Note: \n"+
+          "    This only affects the offset. The position (" + SegmentName + "." + RefName +") where the marker is located, is still scaled.\n"+
+          "    Set `ScaleMarkerPosOnOff = OFF` to suppress this warning.  \n" +
+          "-------------------------------------------------------------------------------------------------------------------\n"
+          );
+        };
+        #endif
 
 //      This was an attempt to allow PlaceMarkerAt to be anywhere and not only
 //      a RefNode on the segments.
@@ -325,8 +382,12 @@ AnyMessage TestMarkerExist ={
 
         AnyRefFrame &MarkerRef = BODY_MODEL_FOLDER.MarkerPlacement.__NAME__##_MARKER_NODE_POSTFIX;
 
-        #if USE_BVH_INPUT
+        #if (USE_BVH_INPUT == 1) | (USE_C3D_ROTATION_INPUT == 1) 
+          #if USE_BVH_INPUT
           AnyFolder &MarkerDataRef = BVH_OBJECT.Markers.__NAME__;
+          #else
+          AnyFolder &MarkerDataRef = C3D_OBJECT.Rotations.Markers.__NAME__;
+          #endif
         #else
           #if MarkerName == _NOT_DEFINED_
           AnyFolder &MarkerDataRef = C3D_OBJECT.Points.Markers.__NAME__;
@@ -352,7 +413,7 @@ AnyMessage TestMarkerExist ={
             #var Type = Bspline;
             BsplineOrder =4;
 
-            T = .MarkerDataRef.PosInterpol.T;
+            TPtr = .MarkerDataRef.PosInterpol.TPtr;
             Data = .LowPassFilter(.MarkerDataRef.Pos');
           };
 
@@ -384,7 +445,7 @@ AnyMessage TestMarkerExist ={
 #if USE_BVH_INPUT
 
    BVH_OBJECT.Markers = {
-      AnyVirtualMarkerBVH __NAME__ = {
+      AnyDataMarkerVirtual __NAME__ = {
         RefFramePtr = &MarkerPlacementBVH.__NAME__;
       };
    };
@@ -415,6 +476,36 @@ AnyMessage TestMarkerExist ={
 
 #endif
 
+#if USE_C3D_ROTATION_INPUT
+
+   C3D_OBJECT.Rotations.Markers = {
+      AnyDataMarkerVirtual __NAME__ = {
+        RefFramePtr = &MarkerPlacementC3DRotation.__NAME__;
+      };
+   };
+
+
+  MarkerPlacementC3DRotation =
+  {
+    AnyRefNode __NAME__ = {
+      //sRel = ..sRelOnBVH;
+      #if MarkerName == _NOT_DEFINED_
+      sRel = Main.ModelSetup.MocapDrivers.__NAME__.sRelOnC3DRotation ;
+      #else
+      sRel = Main.ModelSetup.MocapDrivers.MarkerName.sRelOnRotation ;
+      #endif
+      AnyDrawNode drw_node =
+      {
+        #var RGB = {0, 1, 0};
+        #var ScaleXYZ = 0.015*{1, 1, 1};
+        Visible = C3D_OBJECT.Model.MarkerVisible;
+      };
+    };
+  };//
+
+
+
+#endif
 
 
 

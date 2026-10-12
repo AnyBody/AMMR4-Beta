@@ -3,9 +3,9 @@ LegCalibrationStudy LegCalibration1Right(
   Side=Right,
 ) = {
   nStep = nPos;
-  
+
   MuscleArr = ObjSearch(
-    &..BodyModel.Right.Leg.Mus,
+    &..BodyModel.Right.Leg.Muscles,
     {
       "AdductorMagnus*.*",
       "AdductorLong*.*",
@@ -13,13 +13,13 @@ LegCalibrationStudy LegCalibration1Right(
       "Pectineus.*",
       "Gracilis.*",
       "TensorFasciaeLatae.*",
-    }, 
+    },
     "AnyMuscle"
   );
-  
+
   RminMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMinDefault);
   RmaxMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMaxDefault);
-  
+
   AnyInt nPos = NumElemOf(HipPositions);
   AnyObjectPtrArray HipPositions = repmat(2,{
     &.RangeOfMotion.Right.Leg.Hip.InternallyRotated,
@@ -30,9 +30,9 @@ LegCalibrationStudy LegCalibration1Right(
     &.RangeOfMotion.Right.Leg.Hip.FlexedAndAbducted,
     &.RangeOfMotion.Right.Leg.Hip.ExtendedAndAdducted,
   });
-  
+
   AnyObjectPtrArray KneePositions = flatten({
-    repmat(round(nPos/2), &.RangeOfMotion.Right.Leg.Knee.MaxFlexionAngle), 
+    repmat(round(nPos/2), &.RangeOfMotion.Right.Leg.Knee.MaxFlexionAngle),
     repmat(round(nPos/2), &.RangeOfMotion.Right.Leg.Knee.MaxExtensionAngle)
   });
   AnyObjectPtrArray AnklePositions = repmat(nPos, &.RangeOfMotion.Right.Leg.Ankle.Neutral);
@@ -44,22 +44,22 @@ LegCalibrationStudy LegCalibration2Right(
   Side=Right,
 ) = {
   nStep = nPos;
-  
+
   MuscleArr = ObjSearch(
-    &..BodyModel.Right.Leg.Mus,
+    &..BodyModel.Right.Leg.Muscles,
     {
       "Gluteus*.*",
       "Piriformis.*",
       "Gemellus.*",
       "Obturator*.*",
       "QuadratusFem*.*",
-    }, 
+    },
     "AnyMuscle"
   );
-  
+
   RminMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMinDefault);
   RmaxMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMaxDefault);
-  
+
   AnyInt nPos = NumElemOf(HipPositions);
   AnyObjectPtrArray HipPositions = repmat(2,{
     &.RangeOfMotion.Right.Leg.Hip.InternallyRotated,
@@ -85,19 +85,19 @@ LegCalibrationStudy LegCalibration3Right(
   Side=Right,
 ) = {
   nStep = nPos;
-  
+
   MuscleArr = ObjSearch(
-  {&..BodyModel.Right.Leg.Mus, &..BodyModel.Trunk.Muscles.Right,},
+  {&..BodyModel.Right.Leg.Muscles, &..BodyModel.Trunk.Muscles.Right,},
     {
       "Iliacus*.*",
       "Psoas*.*",
-    }, 
+    },
     "AnyMuscle"
   );
-  
+
   RminMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMinDefault);
   RmaxMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMaxDefault);
-  
+
   AnyInt nPos = NumElemOf(HipPositions);
   AnyObjectPtrArray HipPositions = repmat(2,{
     &.RangeOfMotion.Right.Leg.Hip.FlexedAndAdducted,
@@ -118,22 +118,22 @@ LegCalibrationStudy LegCalibration4Right(
   Side=Right,
 ) = {
   nStep = nPos;
-  
+
   MuscleArr = ObjSearch(
-    &..BodyModel.Right.Leg.Mus,
+    &..BodyModel.Right.Leg.Muscles,
     {
       "RectusFem*.*",
       "BicepsFem*.*",
       "Semitend*.*",
       "Semimem*.*",
       "Sartorius.*",
-    }, 
+    },
     "AnyMuscle"
   );
-  
+
   RminMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMinDefault);
   RmaxMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMaxDefault);
-  
+
   AnyInt nPos = NumElemOf(HipPositions);
   AnyObjectPtrArray HipPositions = repmat(2,{
     &.RangeOfMotion.Right.Leg.Hip.FlexedAndAdducted,
@@ -156,19 +156,19 @@ LegCalibrationStudy LegCalibration5Right(
   Side=Right,
 ) = {
   nStep = nPos;
-  
+
   MuscleArr = ObjSearch(
-    &..BodyModel.Right.Leg.Mus,
+    &..BodyModel.Right.Leg.Muscles,
     {
       "Vastus*.*",
       "Popliteus.*",
-    }, 
+    },
     "AnyMuscle"
   );
-  
+
   RminMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMinDefault);
   RmaxMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMaxDefault);
-  
+
   AnyInt nPos = NumElemOf(HipPositions);
   AnyObjectPtrArray HipPositions = repmat(2,{
     &.RangeOfMotion.Right.Leg.Hip.Neutral,
@@ -188,9 +188,9 @@ LegCalibrationStudy LegCalibration6Right(
   Side=Right,
 ) = {
   nStep = nPos;
-  
+
   MuscleArr = ObjSearch(
-    &..BodyModel.Right.Leg.Mus,
+    &..BodyModel.Right.Leg.Muscles,
     {
       "TibialisAnt*.*",
       "TibialisPosteriorMed*.*",
@@ -201,13 +201,13 @@ LegCalibrationStudy LegCalibration6Right(
       "Peroneus*.*",
       "Plantaris.*",
       "Gastroc*.*",
-    }, 
+    },
     "AnyMuscle"
   );
-  
+
   RminMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMinDefault);
   RmaxMuscleFiber = repmat(NumElemOf(MuscleArr), .RValues.RMaxDefault);
-  
+
   AnyInt nPos = NumElemOf(AnklePositions);
   AnyObjectPtrArray HipPositions = repmat(nPos, &.RangeOfMotion.Right.Leg.Hip.Neutral);
   AnyObjectPtrArray KneePositions = flatten({
@@ -233,19 +233,19 @@ LegCalibrationStudy LegCalibration7Right(
   Side=Right,
 ) = {
   nStep = nPos;
-  
+
   MuscleArr = ObjSearch(
-    &..BodyModel.Right.Leg.Mus,
+    &..BodyModel.Right.Leg.Muscles,
     {
       "TibialisPosteriorLat*.*",
       "Soleus*.*",
-    }, 
+    },
     "AnyMuscle"
   );
-  
+
   RminMuscleFiber = repmat(NumElemOf(MuscleArr), 1.0);
   RmaxMuscleFiber = repmat(NumElemOf(MuscleArr), 1.2);
-  
+
   AnyInt nPos = NumElemOf(AnklePositions);
   AnyObjectPtrArray HipPositions = repmat(nPos, &.RangeOfMotion.Right.Leg.Hip.Neutral);
   AnyObjectPtrArray KneePositions = flatten({
@@ -273,5 +273,5 @@ CalibrationSequence = {
   AnyOperation &Cal4Right = .LegCalibration4Right.FiberAndTendonLengthAdjustment;
   AnyOperation &Cal5Right = .LegCalibration5Right.FiberAndTendonLengthAdjustment;
   AnyOperation &Cal6Right = .LegCalibration6Right.FiberAndTendonLengthAdjustment;
-  AnyOperation &Cal7Right = .LegCalibration7Right.FiberAndTendonLengthAdjustment;  
+  AnyOperation &Cal7Right = .LegCalibration7Right.FiberAndTendonLengthAdjustment;
 };

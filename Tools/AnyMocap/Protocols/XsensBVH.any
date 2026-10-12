@@ -4,11 +4,11 @@
 
 CreateMarkerDriver  HEAD(
 MarkerPlacement=Trunk.Segments.SkullSeg,
-PlaceMarkerAt=AnatomicalFrame,
+PlaceMarkerAt=ScalingNode,
 MarkerPlacementBVH= Main.ModelSetup.BVHFileData.Model.Hips.Chest.Chest2.Chest3.Chest4.Neck.Head.Seg,
 OptX=OFF,OptY=OFF,OptZ=OFF,
 WeightX=0.3,WeightY=0.3,WeightZ=0.3,
-ScaleMarkerPosOnOff =OFF,
+ScaleMarkerPosOnOff =ON,
 USE_BVH_INPUT = ON) =
 {
   sRelOpt =  {0.05, 0.16, 0};
@@ -18,11 +18,11 @@ USE_BVH_INPUT = ON) =
 
 CreateMarkerDriver  HEAD_R(
 MarkerPlacement=Trunk.Segments.SkullSeg,
-PlaceMarkerAt=AnatomicalFrame,
+PlaceMarkerAt=ScalingNode,
 MarkerPlacementBVH= Main.ModelSetup.BVHFileData.Model.Hips.Chest.Chest2.Chest3.Chest4.Neck.Head.Seg,
 OptX=OFF,OptY=OFF,OptZ=OFF,
 WeightX=0.3,WeightY=0.3,WeightZ=0.3,
-ScaleMarkerPosOnOff =OFF,
+ScaleMarkerPosOnOff =ON,
 USE_BVH_INPUT = ON
 ) =
 {
@@ -34,11 +34,11 @@ USE_BVH_INPUT = ON
 
 CreateMarkerDriver  HEAD_L(
 MarkerPlacement=Trunk.Segments.SkullSeg,
-PlaceMarkerAt=AnatomicalFrame,
+PlaceMarkerAt=ScalingNode,
 MarkerPlacementBVH= Main.ModelSetup.BVHFileData.Model.Hips.Chest.Chest2.Chest3.Chest4.Neck.Head.Seg,
 OptX=OFF,OptY=OFF,OptZ=OFF,
 WeightX=0.3,WeightY=0.3,WeightZ=0.3,
-ScaleMarkerPosOnOff =OFF,
+ScaleMarkerPosOnOff =ON,
 USE_BVH_INPUT = ON
 ) =
 {
@@ -147,6 +147,7 @@ USE_BVH_INPUT = ON
 CreateMarkerDriver CHEST(
 MarkerPlacement= Trunk.Segments.SternumSeg,
 PlaceMarkerAt=ij,
+AlignMarkerWith=ij,
 MarkerPlacementBVH= Main.ModelSetup.BVHFileData.Model.Hips.Chest.Chest2.Chest3.Chest4.Seg,
 OptX=OFF,OptY=OFF,OptZ=OFF,
 WeightX=2,WeightY=2,WeightZ=2,
@@ -202,7 +203,7 @@ ScaleMarkerPosOnOff =OFF,
 USE_BVH_INPUT = ON
 ) =
 {
-  sRelOpt =  {-0.1, 0, 0};
+  sRelOpt =  {0, 0, 0.1};
   sRelOnBVH = {0.0, 0.1, 0}+Main.ModelSetup.BVHFileData.Model.Hips.Chest.Chest2.Chest3.Chest4.RightCollar.RightShoulder.Seg.RightElbow.sRel;
 };
 
@@ -211,6 +212,7 @@ USE_BVH_INPUT = ON
 CreateMarkerDriver RWRB(
 MarkerPlacement= Right.ShoulderArm.Segments.Radius,
 PlaceMarkerAt=wj,
+AlignMarkerWith=wj,
 MarkerPlacementBVH= Main.ModelSetup.BVHFileData.Model.Hips.Chest.Chest2.Chest3.Chest4.RightCollar.RightShoulder.RightElbow.Seg,
 OptX=OFF,OptY=OFF,OptZ=OFF,
 WeightX=1,WeightY=1,WeightZ=1,
@@ -225,8 +227,9 @@ USE_BVH_INPUT = ON
 
 
 CreateMarkerDriver RWJC(
-MarkerPlacement= Right.ShoulderArm.Segments.Hand.Carpals,
+MarkerPlacement= Right.ShoulderArm.Segments.Radius,
 PlaceMarkerAt =wj,
+AlignMarkerWith=wj,
 MarkerPlacementBVH= Main.ModelSetup.BVHFileData.Model.Hips.Chest.Chest2.Chest3.Chest4.RightCollar.RightShoulder.RightElbow.RightWrist.Seg,
 OptX=OFF,OptY=OFF,OptZ=OFF,
 WeightX=1,WeightY=1,WeightZ=1,
@@ -243,6 +246,7 @@ USE_BVH_INPUT = ON
 CreateMarkerDriver RHT1(
 MarkerPlacement= Right.ShoulderArm.Segments.Hand.Carpals,
 PlaceMarkerAt =wj,
+AlignMarkerWith=wj,
 MarkerPlacementBVH= Main.ModelSetup.BVHFileData.Model.Hips.Chest.Chest2.Chest3.Chest4.RightCollar.RightShoulder.RightElbow.RightWrist.Seg,
 OptX=OFF,OptY=OFF,OptZ=OFF,
 WeightX=1,WeightY=1,WeightZ=1,
@@ -259,6 +263,7 @@ USE_BVH_INPUT = ON
 CreateMarkerDriver RHT2(
 MarkerPlacement= Right.ShoulderArm.Segments.Hand.Carpals,
 PlaceMarkerAt =wj,
+AlignMarkerWith=wj,
 MarkerPlacementBVH= Main.ModelSetup.BVHFileData.Model.Hips.Chest.Chest2.Chest3.Chest4.RightCollar.RightShoulder.RightElbow.RightWrist.Seg,
 OptX=OFF,OptY=OFF,OptZ=OFF,
 WeightX=1,WeightY=1,WeightZ=1,
@@ -314,7 +319,7 @@ ScaleMarkerPosOnOff =OFF,
 USE_BVH_INPUT = ON
 ) =
 {
- sRelOpt =  {-0.1, 0, 0};
+ sRelOpt =  {0, 0, -0.1};
  sRelOnBVH = {0.0, 0.1, 0}+Main.ModelSetup.BVHFileData.Model.Hips.Chest.Chest2.Chest3.Chest4.LeftCollar.LeftShoulder.Seg.LeftElbow.sRel;
 };
 
@@ -323,6 +328,7 @@ USE_BVH_INPUT = ON
 CreateMarkerDriver LWRB(
 MarkerPlacement= Left.ShoulderArm.Segments.Radius,
 PlaceMarkerAt=wj,
+AlignMarkerWith=wj,
 MarkerPlacementBVH= Main.ModelSetup.BVHFileData.Model.Hips.Chest.Chest2.Chest3.Chest4.LeftCollar.LeftShoulder.LeftElbow.Seg,
 OptX=OFF,OptY=OFF,OptZ=OFF,
 WeightX=1,WeightY=1,WeightZ=1,
@@ -337,8 +343,9 @@ USE_BVH_INPUT = ON
 
 
 CreateMarkerDriver LWJC(
-MarkerPlacement= Left.ShoulderArm.Segments.Hand.Carpals,
+MarkerPlacement= Left.ShoulderArm.Segments.Radius,
 PlaceMarkerAt =wj,
+AlignMarkerWith=wj,
 MarkerPlacementBVH= Main.ModelSetup.BVHFileData.Model.Hips.Chest.Chest2.Chest3.Chest4.LeftCollar.LeftShoulder.LeftElbow.LeftWrist.Seg,
 OptX=OFF,OptY=OFF,OptZ=OFF,
 WeightX=1,WeightY=1,WeightZ=1,
@@ -355,6 +362,7 @@ USE_BVH_INPUT = ON
 CreateMarkerDriver LHT1(
 MarkerPlacement= Left.ShoulderArm.Segments.Hand.Carpals,
 PlaceMarkerAt =wj,
+AlignMarkerWith=wj,
 MarkerPlacementBVH= Main.ModelSetup.BVHFileData.Model.Hips.Chest.Chest2.Chest3.Chest4.LeftCollar.LeftShoulder.LeftElbow.LeftWrist.Seg,
 OptX=OFF,OptY=OFF,OptZ=OFF,
 WeightX=1,WeightY=1,WeightZ=1,
@@ -372,8 +380,7 @@ USE_BVH_INPUT = ON
 CreateMarkerDriver LHT2(
 MarkerPlacement= Left.ShoulderArm.Segments.Hand.Carpals,
 PlaceMarkerAt =wj,
-//MarkerPlacement= Left.ShoulderArm.Seg.Hand,
-//PlaceMarkerAt = Ref.wj,
+AlignMarkerWith=wj,
 MarkerPlacementBVH= Main.ModelSetup.BVHFileData.Model.Hips.Chest.Chest2.Chest3.Chest4.LeftCollar.LeftShoulder.LeftElbow.LeftWrist.Seg,
 OptX=OFF,OptY=OFF,OptZ=OFF,
 WeightX=1,WeightY=1,WeightZ=1,
@@ -388,7 +395,7 @@ USE_BVH_INPUT = ON
 
 
 CreateMarkerDriver RKJC(
-MarkerPlacement= Right.Leg.Seg.Thigh,
+MarkerPlacement= Right.Leg.Segments.Thigh,
 PlaceMarkerAt =KneeJoint,
 MarkerPlacementBVH= Main.ModelSetup.BVHFileData.Model.Hips.RightHip.RightKnee.Seg,
 OptX=OFF,OptY=OFF,OptZ=OFF,
@@ -404,7 +411,7 @@ USE_BVH_INPUT = ON
 
 
 CreateMarkerDriver RKNE(
-MarkerPlacement= Right.Leg.Seg.Thigh,
+MarkerPlacement= Right.Leg.Segments.Thigh,
 PlaceMarkerAt =KneeJoint,
 MarkerPlacementBVH= Main.ModelSetup.BVHFileData.Model.Hips.RightHip.Seg,
 OptX=OFF,OptY=OFF,OptZ=OFF,
@@ -419,7 +426,7 @@ USE_BVH_INPUT = ON
 
 
 CreateMarkerDriver RAJC(
-MarkerPlacement= Right.Leg.Seg.Shank,
+MarkerPlacement= Right.Leg.Segments.Shank,
 PlaceMarkerAt =AnkleJoint,
 MarkerPlacementBVH= Main.ModelSetup.BVHFileData.Model.Hips.RightHip.RightKnee.RightAnkle.Seg,
 OptX=OFF,OptY=OFF,OptZ=OFF,
@@ -435,7 +442,7 @@ USE_BVH_INPUT = ON
 
 
 CreateMarkerDriver RTOE(
-MarkerPlacement= Right.Leg.Seg.Foot.Metatarsal1,
+MarkerPlacement= Right.Leg.Segments.Foot.Metatarsal1,
 PlaceMarkerAt=AnatomicalFrame,
 MarkerPlacementBVH= Main.ModelSetup.BVHFileData.Model.Hips.RightHip.RightKnee.RightAnkle.RightToe.Seg,
 OptX=OFF,OptY=OFF,OptZ=OFF,
@@ -451,7 +458,7 @@ USE_BVH_INPUT = ON
 
 
 CreateMarkerDriver RTOE2(
-MarkerPlacement= Right.Leg.Seg.Foot.Metatarsal5,
+MarkerPlacement= Right.Leg.Segments.Foot.Metatarsal5,
 PlaceMarkerAt=AnatomicalFrame,
 MarkerPlacementBVH= Main.ModelSetup.BVHFileData.Model.Hips.RightHip.RightKnee.RightAnkle.RightToe.Seg,
 OptX=OFF,OptY=OFF,OptZ=OFF,
@@ -467,7 +474,7 @@ USE_BVH_INPUT = ON
 
 
 CreateMarkerDriver LKJC(
-MarkerPlacement= Left.Leg.Seg.Thigh,
+MarkerPlacement= Left.Leg.Segments.Thigh,
 PlaceMarkerAt=KneeJoint,
 MarkerPlacementBVH= Main.ModelSetup.BVHFileData.Model.Hips.LeftHip.LeftKnee.Seg,
 OptX=OFF,OptY=OFF,OptZ=OFF,
@@ -483,7 +490,7 @@ USE_BVH_INPUT = ON
 
 
 CreateMarkerDriver LKNE(
-MarkerPlacement= Left.Leg.Seg.Thigh,
+MarkerPlacement= Left.Leg.Segments.Thigh,
 PlaceMarkerAt=KneeJoint,
 MarkerPlacementBVH= Main.ModelSetup.BVHFileData.Model.Hips.LeftHip.Seg,
 OptX=OFF,OptY=OFF,OptZ=OFF,
@@ -499,7 +506,7 @@ USE_BVH_INPUT = ON
 
 
 CreateMarkerDriver LAJC(
-MarkerPlacement= Left.Leg.Seg.Shank,
+MarkerPlacement= Left.Leg.Segments.Shank,
 PlaceMarkerAt=AnkleJoint,
 MarkerPlacementBVH= Main.ModelSetup.BVHFileData.Model.Hips.LeftHip.LeftKnee.LeftAnkle.Seg,
 OptX=OFF,OptY=OFF,OptZ=OFF,
@@ -515,7 +522,7 @@ USE_BVH_INPUT = ON
 
 
 CreateMarkerDriver LTOE(
-MarkerPlacement= Left.Leg.Seg.Foot.Metatarsal1,
+MarkerPlacement= Left.Leg.Segments.Foot.Metatarsal1,
 PlaceMarkerAt=AnatomicalFrame,
 MarkerPlacementBVH= Main.ModelSetup.BVHFileData.Model.Hips.LeftHip.LeftKnee.LeftAnkle.LeftToe.Seg,
 OptX=OFF,OptY=OFF,OptZ=OFF,
@@ -531,7 +538,7 @@ USE_BVH_INPUT = ON
 
 
 CreateMarkerDriver LTOE2(
-MarkerPlacement= Left.Leg.Seg.Foot.Metatarsal5,
+MarkerPlacement= Left.Leg.Segments.Foot.Metatarsal5,
 PlaceMarkerAt=AnatomicalFrame,
 MarkerPlacementBVH= Main.ModelSetup.BVHFileData.Model.Hips.LeftHip.LeftKnee.LeftAnkle.LeftToe.Seg,
 OptX=OFF,OptY=OFF,OptZ=OFF,

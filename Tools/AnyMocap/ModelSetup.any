@@ -25,9 +25,11 @@ ModelSetup = {
  };
 
  #if MOCAP_INPUT_DATA_TYPE == "C3D"
+ #ifndef MOCAP_INPUT_EMULATE_C3D_DATA
  AnyInputC3D C3DFileData =  {
     AnyComponentDefinition obj = {};
  };
+ #endif
  #include "<MOCAP_C3DSETTINGS>"
  #endif
 

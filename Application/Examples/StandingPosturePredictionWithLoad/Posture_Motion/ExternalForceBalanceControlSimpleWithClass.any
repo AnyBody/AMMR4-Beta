@@ -104,17 +104,17 @@ Main.HumanModel.BodyModel.Left.ShoulderArm.Segments.Ulna.Mass+
 Main.HumanModel.BodyModel.Left.ShoulderArm.Segments.Radius.Mass+
 Main.HumanModel.BodyModel.Left.ShoulderArm.Segments.Hand.Mass+
 //right leg
-Main.HumanModel.BodyModel.Right.Leg.Seg.Thigh.Mass+
-Main.HumanModel.BodyModel.Right.Leg.Seg.Shank.Mass+
-Main.HumanModel.BodyModel.Right.Leg.Seg.Patella.Mass+
-Main.HumanModel.BodyModel.Right.Leg.Seg.Talus.Mass+
-Main.HumanModel.BodyModel.Right.Leg.Seg.Foot.Mass+
+Main.HumanModel.BodyModel.Right.Leg.Segments.Thigh.Mass+
+Main.HumanModel.BodyModel.Right.Leg.Segments.Shank.Mass+
+Main.HumanModel.BodyModel.Right.Leg.Segments.Patella.Mass+
+Main.HumanModel.BodyModel.Right.Leg.Segments.Talus.Mass+
+Main.HumanModel.BodyModel.Right.Leg.Segments.Foot.Mass+
 //left leg
-Main.HumanModel.BodyModel.Left.Leg.Seg.Thigh.Mass+
-Main.HumanModel.BodyModel.Left.Leg.Seg.Shank.Mass+
-Main.HumanModel.BodyModel.Left.Leg.Seg.Patella.Mass+
-Main.HumanModel.BodyModel.Left.Leg.Seg.Talus.Mass+
-Main.HumanModel.BodyModel.Left.Leg.Seg.Foot.Mass;
+Main.HumanModel.BodyModel.Left.Leg.Segments.Thigh.Mass+
+Main.HumanModel.BodyModel.Left.Leg.Segments.Shank.Mass+
+Main.HumanModel.BodyModel.Left.Leg.Segments.Patella.Mass+
+Main.HumanModel.BodyModel.Left.Leg.Segments.Talus.Mass+
+Main.HumanModel.BodyModel.Left.Leg.Segments.Foot.Mass;
 
 
 AnyVar MassOfSegmentsAboveSacrum =
@@ -148,7 +148,7 @@ AnyVar MassOfSegmentsAboveSacrum =
 
 
 AnyVar MassOfSegmentsAboveKnee =
-    Main.HumanModel.BodyModel.Right.Leg.Seg.Thigh.Mass+
+    Main.HumanModel.BodyModel.Right.Leg.Segments.Thigh.Mass+
     Main.HumanModel.BodyModel.Trunk.Segments.PelvisSeg.Mass+
     Main.HumanModel.BodyModel.Trunk.Segments.SacrumSeg.Mass+
     Main.HumanModel.BodyModel.Trunk.Segments.L5Seg.Mass+
@@ -271,10 +271,10 @@ TargetPointForZeroMoment=Main.HumanModel.BodyModel.Trunk.Segments.SacrumSeg.Sacr
 CreateTorqueDriver  MinMomentOnRightKnee(
 CreateZeroMomentPointAsExtraSeg=0,
 ForceApplicationPoint=Main.Model.Environment.HandSeg,
-LevelForMeasurePlane=Main.HumanModel.BodyModel.Right.Leg.Seg.Thigh.KneeJoint,
-TargetPointForZeroMoment=Main.HumanModel.BodyModel.Right.Leg.Seg.Thigh.KneeJoint) ={
+LevelForMeasurePlane=Main.HumanModel.BodyModel.Right.Leg.Segments.Thigh.KneeJoint,
+TargetPointForZeroMoment=Main.HumanModel.BodyModel.Right.Leg.Segments.Thigh.KneeJoint) ={
 
-  InitialPositionForPointWithZeroMoment=Main.HumanModel.BodyModel.Right.Leg.Seg.Thigh.r0;
+  InitialPositionForPointWithZeroMoment=Main.HumanModel.BodyModel.Right.Leg.Segments.Thigh.r0;
   WeightOnSoftDriver=.Settings.MinMomentOnKneeJnt.WeightOnSoftDriver/.MassOfSegmentsAboveKnee;
   WeightOnEqFunction=.Settings.MinMomentOnKneeJnt.WeightOnEqFunction;
   GravityVector=Main.Study.Gravity ;
@@ -282,7 +282,7 @@ TargetPointForZeroMoment=Main.HumanModel.BodyModel.Right.Leg.Seg.Thigh.KneeJoint
     ExternalForce_Data=.HandForceRight+.HandForceLeft+.HandWeightRight+.HandWeightLeft;
   MassOfHumanSegments= .MassOfSegmentsAboveKnee;
   HumanSegs ={
-    AnyFolder &ref0=     Main.HumanModel.BodyModel.Right.Leg.Seg.Thigh;
+    AnyFolder &ref0=     Main.HumanModel.BodyModel.Right.Leg.Segments.Thigh;
     AnyFolder &ref1=    Main.HumanModel.BodyModel.Trunk.Segments.PelvisSeg;
     AnyFolder &ref2=    Main.HumanModel.BodyModel.Trunk.Segments.SacrumSeg;
     AnyFolder &ref3=    Main.HumanModel.BodyModel.Trunk.Segments.L5Seg;
@@ -319,10 +319,10 @@ TargetPointForZeroMoment=Main.HumanModel.BodyModel.Right.Leg.Seg.Thigh.KneeJoint
 CreateTorqueDriver  MinMomentOnLeftKnee(
 CreateZeroMomentPointAsExtraSeg=0,
 ForceApplicationPoint=Main.Model.Environment.HandSeg,
-LevelForMeasurePlane=Main.HumanModel.BodyModel.Left.Leg.Seg.Thigh.KneeJoint,
-TargetPointForZeroMoment=Main.HumanModel.BodyModel.Left.Leg.Seg.Thigh.KneeJoint) ={
+LevelForMeasurePlane=Main.HumanModel.BodyModel.Left.Leg.Segments.Thigh.KneeJoint,
+TargetPointForZeroMoment=Main.HumanModel.BodyModel.Left.Leg.Segments.Thigh.KneeJoint) ={
 
-  InitialPositionForPointWithZeroMoment=Main.HumanModel.BodyModel.Left.Leg.Seg.Thigh.r0;
+  InitialPositionForPointWithZeroMoment=Main.HumanModel.BodyModel.Left.Leg.Segments.Thigh.r0;
   WeightOnSoftDriver=.Settings.MinMomentOnKneeJnt.WeightOnSoftDriver/.MassOfSegmentsAboveKnee;
   WeightOnEqFunction=.Settings.MinMomentOnKneeJnt.WeightOnEqFunction;
   GravityVector=Main.Study.Gravity ;
@@ -330,7 +330,7 @@ TargetPointForZeroMoment=Main.HumanModel.BodyModel.Left.Leg.Seg.Thigh.KneeJoint)
     ExternalForce_Data=.HandForceRight+.HandForceLeft+.HandWeightRight+.HandWeightLeft;
   MassOfHumanSegments= .MassOfSegmentsAboveKnee;
   HumanSegs ={
-    AnyFolder &ref0=     Main.HumanModel.BodyModel.Left.Leg.Seg.Thigh;
+    AnyFolder &ref0=     Main.HumanModel.BodyModel.Left.Leg.Segments.Thigh;
     AnyFolder &ref1=    Main.HumanModel.BodyModel.Trunk.Segments.PelvisSeg;
     AnyFolder &ref2=    Main.HumanModel.BodyModel.Trunk.Segments.SacrumSeg;
     AnyFolder &ref3=    Main.HumanModel.BodyModel.Trunk.Segments.L5Seg;

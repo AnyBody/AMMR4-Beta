@@ -5,7 +5,7 @@ AnyFolder Hip_Plate2_GRF_Driver =
     AnyKinLinear lin =
     {
       AnyRefFrame& ref1 = Main.EnvironmentModel.ForcePlates.Plate2.Kinematic_GRF.Frame;
-      AnyRefFrame& ref2 = Main.HumanModel.BodyModel.Left.Leg.Seg.Thigh.HipJoint;
+      AnyRefFrame& ref2 = Main.HumanModel.BodyModel.Left.Leg.Segments.Thigh.HipJoint;
       Ref = 0;
    };
    MeasureOrganizer = {1};
@@ -15,7 +15,7 @@ AnyFolder Hip_Plate2_GRF_Driver =
     AnyKinLinear lin =
     {
       AnyRefFrame& ref1 = Main.EnvironmentModel.ForcePlates.Plate2.Kinematic_GRF.Frame;
-      AnyRefFrame& ref2 = Main.HumanModel.BodyModel.Right.Leg.Seg.Thigh.HipJoint;
+      AnyRefFrame& ref2 = Main.HumanModel.BodyModel.Right.Leg.Segments.Thigh.HipJoint;
       Ref = 0;
    };
    MeasureOrganizer = {1};
@@ -45,7 +45,7 @@ AnyFolder Hip_Plate1_GRF_Driver =
     AnyKinLinear lin =
     {
       AnyRefFrame& ref1 = Main.EnvironmentModel.ForcePlates.Plate1.Kinematic_GRF.Frame;
-      AnyRefFrame& ref2 = Main.HumanModel.BodyModel.Left.Leg.Seg.Thigh.HipJoint;
+      AnyRefFrame& ref2 = Main.HumanModel.BodyModel.Left.Leg.Segments.Thigh.HipJoint;
       Ref = 0;
    };
    MeasureOrganizer = {1};
@@ -55,7 +55,7 @@ AnyFolder Hip_Plate1_GRF_Driver =
     AnyKinLinear lin =
     {
       AnyRefFrame& ref1 = Main.EnvironmentModel.ForcePlates.Plate1.Kinematic_GRF.Frame;
-      AnyRefFrame& ref2 = Main.HumanModel.BodyModel.Right.Leg.Seg.Thigh.HipJoint;
+      AnyRefFrame& ref2 = Main.HumanModel.BodyModel.Right.Leg.Segments.Thigh.HipJoint;
       Ref = 0;
    };
    MeasureOrganizer = {1};

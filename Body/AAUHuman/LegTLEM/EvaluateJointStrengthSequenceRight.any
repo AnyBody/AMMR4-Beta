@@ -3,20 +3,16 @@ BodyModelRef.Right.Leg = {
   // Create a folder with references to the necessary muscles.
   AnyFolder EvaluateJointStrengthMusRef = {
     #if BM_LEG_MUSCLES_RIGHT
-      AnyFolder &LegMuscles = .Mus;
-      #if BM_TRUNK_MUSCLES
+      AnyFolder &LegMuscles = .Muscles;
       AnyFolder &SpineMuscles = ...Trunk.Muscles.Right.PsoasMajor;
-      #else
-      AnyFolder &SpineMuscles = ...Trunk.JointMuscles;
-      #endif
     #else
       AnyFolder &LegMuscles = .JointMuscles;
       #if BM_TRUNK_MUSCLES != OFF
       AnyFolder &SpineMuscles = ...Trunk.Muscles.Right.PsoasMajor;
       #else
-      AnyFolder &SpineMuscles = ...Trunk.JointMuscles;
+      AnyFolder SpineMuscles = {};
       #endif
-     #endif
+    #endif
   };
 };
 

@@ -7,8 +7,6 @@ Main.ModelSetup.TrialSpecificData =
   AnyStringVar WalkingCondition = "ST";
 
   // Special configuration/exception for this trial
-  Main.HumanModel.Mannequin.Posture.Left.GlenohumeralAbduction = 40;
-  Main.HumanModel.Mannequin.Posture.Right.GlenohumeralAbduction = 40;
 
 
   TrialFileName = MOCAP_NAME_MAINFILEDIR;
@@ -18,7 +16,7 @@ Main.ModelSetup.TrialSpecificData =
   // We need to manually set all these things since the reference files does not
   // contain exactly one frame.
   nStep = 1;
-  Main.ModelSetup.C3DFileData.MarkerFilterIndex = -1;
+  Main.ModelSetup.C3DFileData.MarkerFilter = None;
   #define N_STEP_KINEMATICS 1
 
 

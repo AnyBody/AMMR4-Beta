@@ -4,9 +4,9 @@ AnyFolder HamstringCal ={
   AnyFolder &Pelvis = ...HumanFolderRef.Trunk.Segments.PelvisSeg;
   AnyFolder &Sacrum = ...HumanFolderRef.Trunk.Segments.SacrumSeg;
 
-  AnyFolder &LegSegSide = .SideHumanFolderRef.Leg.Seg;
+  AnyFolder &LegSegSide = .SideHumanFolderRef.Leg.Segments;
 
-  AnyFolder &LegJointsSide = .SideHumanFolderRef.Leg.Jnt;
+  AnyFolder &LegJointsSide = .SideHumanFolderRef.Leg.Joints;
   AnyFolder &SacrumPelvisJnt = ...HumanFolderRef.Trunk.Joints.Lumbar.SacrumPelvis;
 
 
@@ -56,7 +56,7 @@ AnyFolder HamstringCal ={
     Reaction.Type = {Off};
   };
 
-
+  #if BM_FOOT_MODEL != _FOOT_MODEL_NONE_
   AnyKinEqInterPolDriver Ankle = {
     AnyKinMeasure& Hinge = ..SideInterfaceFolderRef.AnklePlantarFlexion;
     Type = PiecewiseLinear;
@@ -72,8 +72,9 @@ AnyFolder HamstringCal ={
     Data = {{0,0}}*pi/180;
     Reaction.Type = {Off};
   };
+  #endif
 
-  AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.Leg.Mus);
+  AnyString MusPrefix = CompleteNameOf(&.SideHumanFolderRef.Leg.Muscles);
 
   AnyObjectPtrArray BicepsFemorisMuscles = ObjSearch(MusPrefix+".BicepsFemoris*", "AnyMuscle");
   AnyFloat  BicepsFemorisRmin = repmat(NumElemOf(BicepsFemorisMuscles), 0.5);

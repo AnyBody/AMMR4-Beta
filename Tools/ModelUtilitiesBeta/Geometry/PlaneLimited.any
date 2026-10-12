@@ -1,0 +1,150 @@
+/*
+///This class construct a nodegroup using points, it works for 3 to 7 points
+*/
+#class_template PlaneLimited (
+NAME=Plane,
+PointsCount=4,
+__CLASS__ = AnyRefNodeGroup 
+)
+{
+  
+  #var AnyFloat PlaneCorners = {{0.5,0.5,0},{-0.5,0.5,0},{-0.5,-0.5,0},{0.5,-0.5,0}};
+  #var AnyVec3  DirectionVector = {0,0,-9.81};  
+  #var AnySwitchVar DirectionCorrection =On; 
+  
+  CreateMotionOutput.r=On;
+  NodeDefaults.CreateMotionOutput.r=On;
+  CreateMotionOutput.rDot=On;
+  NodeDefaults.CreateMotionOutput.rDot=On;
+  CreateMotionOutput.rDDot=On;
+  NodeDefaults.CreateMotionOutput.rDDot=On;
+
+  
+  
+  NodeAmount = (PointsCount); 
+  NodeName = "CCC"; // base name for nodes in node group
+
+  AnyFolder Calculations ={
+  //detect if direction of nodes are correct according to Direction vector  
+  AnyFloat Plane_RotMatrix_initial=  RotMat(.PlaneCorners[0],.PlaneCorners[1],.PlaneCorners[2]);
+  AnyFloat Normal_Vector= {Plane_RotMatrix_initial[0][2],Plane_RotMatrix_initial[1][2],Plane_RotMatrix_initial[2][2]};
+  
+  AnyFloat Normal_Vector_dot_DirectionVector=sum(mult(.DirectionVector,Normal_Vector));
+  AnySwitchVar FlipDir_temp = iffun(gtfun(Normal_Vector_dot_DirectionVector,0),On,Off);  
+  AnySwitchVar FlipDir = iffun(.DirectionCorrection,FlipDir_temp,Off);  
+
+  AnyFloat CornerX=iffun(FlipDir,flip(.PlaneCorners'[0]),.PlaneCorners'[0]);  //pick x vals then flip if needed
+  AnyFloat CornerY=iffun(FlipDir,flip(.PlaneCorners'[1]),.PlaneCorners'[1]); //pick y vals then flip if needed
+  AnyFloat CornerZ=iffun(FlipDir,flip(.PlaneCorners'[2]),.PlaneCorners'[2]); //pick z vals then flip if needed
+};
+ Node_sRels = {Calculations.CornerX,Calculations.CornerY,Calculations.CornerZ}';
+  
+  AnyRefNode MidNode = {
+    sRel = mean(.Node_sRels');
+    ARel = .Node_ARels[0];
+    AnyDrawRefFrame drw ={ScaleXYZ=0.1*{1,1,1};};
+  };
+  
+  //draw outline
+  AnyDrawPointCloud DrawVector = {
+    
+    Points = .Node_sRels;
+    Points3D = On;
+    RGB={0,0,1};
+    PointStyle.Size=2.5*0.001;
+    
+    AnyIntArray bump = arrcat( iarr(1,.NodeAmount-1),0);
+    VectorFields =take(.Node_sRels,bump,0)-.Node_sRels;
+  };
+  
+  #if PointsCount ==3
+  Node_ARels = {
+    RotMat(Node_sRels[0],Node_sRels[1],Node_sRels[2]),
+    RotMat(Node_sRels[1],Node_sRels[2],Node_sRels[0]),
+    RotMat(Node_sRels[2],Node_sRels[0],Node_sRels[1]),
+  };
+  AnySurfTriMesh PlaneVisual = {
+    viewSurface.Visible = On;
+    viewSurface.Opacity = 0.7;
+    Points = (.Node_sRels);
+    Triangles = { {0,1,2}};
+  };
+  
+  #endif
+  
+  #if PointsCount ==4
+  Node_ARels = {
+    RotMat(Node_sRels[0],Node_sRels[1],Node_sRels[2]),
+    RotMat(Node_sRels[1],Node_sRels[2],Node_sRels[3]),
+    RotMat(Node_sRels[2],Node_sRels[3],Node_sRels[0]),
+    RotMat(Node_sRels[3],Node_sRels[0],Node_sRels[1])
+    
+  };
+  AnySurfTriMesh PlaneVisual = {
+    viewSurface.Visible = On;
+    viewSurface.Opacity = 0.7;
+    Points = arrcat({.MidNode.sRel},.Node_sRels);
+    Triangles = { {0,1,2},{0,2,3},{0,3,4},{0,4,1}};
+  };
+  
+  
+  #endif
+  
+  #if PointsCount ==5
+  Node_ARels = {
+    
+    RotMat(Node_sRels[0],Node_sRels[1],Node_sRels[2]),
+    RotMat(Node_sRels[1],Node_sRels[2],Node_sRels[3]),
+    RotMat(Node_sRels[2],Node_sRels[3],Node_sRels[4]),
+    RotMat(Node_sRels[3],Node_sRels[4],Node_sRels[0]),
+    RotMat(Node_sRels[4],Node_sRels[0],Node_sRels[1])
+  };
+  AnySurfTriMesh PlaneVisual = {
+    viewSurface.Visible = On;
+    viewSurface.Opacity = 0.7;
+    Points = arrcat({.MidNode.sRel},.Node_sRels);
+    Triangles = { {0,1,2},{0,2,3},{0,3,4},{0,4,5},{0,5,1}};
+  };
+  
+  #endif
+  
+  #if PointsCount ==6
+  Node_ARels = {
+    RotMat(Node_sRels[0],Node_sRels[1],Node_sRels[2]),
+    RotMat(Node_sRels[1],Node_sRels[2],Node_sRels[3]),
+    RotMat(Node_sRels[2],Node_sRels[3],Node_sRels[4]),
+    RotMat(Node_sRels[3],Node_sRels[4],Node_sRels[5]),
+    RotMat(Node_sRels[4],Node_sRels[5],Node_sRels[0]),
+    RotMat(Node_sRels[5],Node_sRels[0],Node_sRels[1])
+    
+  };
+  AnySurfTriMesh PlaneVisual = {
+    viewSurface.Visible = On;
+    viewSurface.Opacity = 0.7;
+    Points = arrcat({.MidNode.sRel},.Node_sRels);
+    Triangles = { {0,1,2},{0,2,3},{0,3,4},{0,4,5},{0,5,6},{0,6,1}};
+  };
+  
+  
+  #endif
+  
+  #if PointsCount ==7
+  Node_ARels = {
+    RotMat(Node_sRels[0],Node_sRels[1],Node_sRels[2]),
+    RotMat(Node_sRels[1],Node_sRels[2],Node_sRels[3]),
+    RotMat(Node_sRels[2],Node_sRels[3],Node_sRels[4]),
+    RotMat(Node_sRels[3],Node_sRels[4],Node_sRels[5]),
+    RotMat(Node_sRels[4],Node_sRels[5],Node_sRels[6]),
+    RotMat(Node_sRels[5],Node_sRels[6],Node_sRels[0]),
+    RotMat(Node_sRels[6],Node_sRels[0],Node_sRels[1])
+  };
+  
+  AnySurfTriMesh PlaneVisual = {
+    viewSurface.Visible = On;
+    viewSurface.Opacity = 0.7;
+    Points = arrcat({.MidNode.sRel},.Node_sRels);
+    Triangles = { {0,1,2},{0,2,3},{0,3,4},{0,4,5},{0,5,6},{0,6,7},{0,7,1}};
+  };
+  #endif
+};
+

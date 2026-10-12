@@ -81,33 +81,33 @@ ref.Trunk.Segments.SkullSeg.NeckNode.ARel';
 
 
 //Right leg
-ref.Right.Leg.Seg.Thigh.Axes0 =
+ref.Right.Leg.Segments.Thigh.Axes0 =
 ref.Trunk.Segments.PelvisSeg.Axes0*ref.Trunk.Segments.PelvisSeg.HipJointRight.RotNode.ARel*
 RotMat((pi/180)*JointPos.Right.HipFlexion,z)*
 RotMat((pi/180)*JointPos.Right.HipExternalRotation,y)*
 RotMat((pi/180)*JointPos.Right.HipAbduction,x)*
-ref.Right.Leg.Seg.Thigh.HipJoint.RotNode.ARel';
+ref.Right.Leg.Segments.Thigh.HipJoint.RotNode.ARel';
 
 
 //shank
-ref.Right.Leg.Seg.Shank.Axes0 =
-ref.Right.Leg.Seg.Thigh.Axes0*
-ref.Right.Leg.Seg.Thigh.KneeJoint.ARel*
-ref.Right.Leg.Seg.Thigh.KneeJoint.RotNode.ARel*
+ref.Right.Leg.Segments.Shank.Axes0 =
+ref.Right.Leg.Segments.Thigh.Axes0*
+ref.Right.Leg.Segments.Thigh.KneeJoint.ARel*
+ref.Right.Leg.Segments.Thigh.KneeJoint.RotNode.ARel*
 RotMat((-pi/180)*JointPos.Right.KneeFlexion,z)*
 //RotMat(pi,y)*
-ref.Right.Leg.Seg.Shank.KneeJoint.RotNode.ARel'*
-ref.Right.Leg.Seg.Shank.KneeJoint.ARel';
+ref.Right.Leg.Segments.Shank.KneeJoint.RotNode.ARel'*
+ref.Right.Leg.Segments.Shank.KneeJoint.ARel';
 
 //Foot
-ref.Right.Leg.Seg.Foot.Axes0 =
-ref.Right.Leg.Seg.Shank.Axes0*
-ref.Right.Leg.Seg.Shank.AnkleJoint.ARel*
-ref.Right.Leg.Seg.Shank.AnkleJoint.RotNode.ARel*
+ref.Right.Leg.Segments.Foot.Axes0 =
+ref.Right.Leg.Segments.Shank.Axes0*
+ref.Right.Leg.Segments.Shank.AnkleJoint.ARel*
+ref.Right.Leg.Segments.Shank.AnkleJoint.RotNode.ARel*
 RotMat((pi/180)*JointPos.Right.AnklePlantarFlexion ,z)*
 RotMat((pi/180)*JointPos.Right.AnkleEversion ,y)*
-ref.Right.Leg.Seg.Foot.AnkleJoint.RotNode.ARel'*
-ref.Right.Leg.Seg.Foot.AnkleJoint.ARel';
+ref.Right.Leg.Segments.Foot.AnkleJoint.RotNode.ARel'*
+ref.Right.Leg.Segments.Foot.AnkleJoint.ARel';
 
 //right humerus
 ref.Right.ShoulderArm.Segments.Humerus.Axes0 =
@@ -155,31 +155,31 @@ ref.Right.ShoulderArm.Segments.Hand.wj.ARel';
 
 
 //Left hip
-ref.Left.Leg.Seg.Thigh.Axes0 =ref.Trunk.Segments.PelvisSeg.Axes0*ref.Trunk.Segments.PelvisSeg.HipJointLeft.RotNode.ARel*
+ref.Left.Leg.Segments.Thigh.Axes0 =ref.Trunk.Segments.PelvisSeg.Axes0*ref.Trunk.Segments.PelvisSeg.HipJointLeft.RotNode.ARel*
 RotMat((pi/180)*JointPos.Left.HipFlexion,z)*
 RotMat((pi/180)*JointPos.Left.HipExternalRotation,y)*
 RotMat((pi/180)*JointPos.Left.HipAbduction,x)*
-ref.Left.Leg.Seg.Thigh.HipJoint.RotNode.ARel';
+ref.Left.Leg.Segments.Thigh.HipJoint.RotNode.ARel';
 
 //left shank
-ref.Left.Leg.Seg.Shank.Axes0 =
-ref.Left.Leg.Seg.Thigh.Axes0*
-ref.Left.Leg.Seg.Thigh.KneeJoint.ARel*
-ref.Left.Leg.Seg.Thigh.KneeJoint.RotNode.ARel*
+ref.Left.Leg.Segments.Shank.Axes0 =
+ref.Left.Leg.Segments.Thigh.Axes0*
+ref.Left.Leg.Segments.Thigh.KneeJoint.ARel*
+ref.Left.Leg.Segments.Thigh.KneeJoint.RotNode.ARel*
 RotMat((-pi/180)*JointPos.Left.KneeFlexion,z)*
 //RotMat(pi,y)*
-ref.Left.Leg.Seg.Shank.KneeJoint.RotNode.ARel'*
-ref.Left.Leg.Seg.Shank.KneeJoint.ARel';
+ref.Left.Leg.Segments.Shank.KneeJoint.RotNode.ARel'*
+ref.Left.Leg.Segments.Shank.KneeJoint.ARel';
 
 //left foot
-ref.Left.Leg.Seg.Foot.Axes0 =
-ref.Left.Leg.Seg.Shank.Axes0*
-ref.Left.Leg.Seg.Shank.AnkleJoint.ARel*
-ref.Left.Leg.Seg.Shank.AnkleJoint.RotNode.ARel*
+ref.Left.Leg.Segments.Foot.Axes0 =
+ref.Left.Leg.Segments.Shank.Axes0*
+ref.Left.Leg.Segments.Shank.AnkleJoint.ARel*
+ref.Left.Leg.Segments.Shank.AnkleJoint.RotNode.ARel*
 RotMat((pi/180)*JointPos.Left.AnklePlantarFlexion ,z)*
 RotMat((pi/180)*JointPos.Left.AnkleEversion,y)*
-ref.Left.Leg.Seg.Foot.AnkleJoint.RotNode.ARel'*
-ref.Left.Leg.Seg.Foot.AnkleJoint.ARel';
+ref.Left.Leg.Segments.Foot.AnkleJoint.RotNode.ARel'*
+ref.Left.Leg.Segments.Foot.AnkleJoint.ARel';
 
 //left humerus
 ref.Left.ShoulderArm.Segments.Humerus.Axes0 =

@@ -203,10 +203,10 @@
 
     #if KneeAxisOnOff =="On"
     AnyDesVar KneeAxisLeft = {
-           Val = Main.Studies.HumanModel.BodyModel.Left.Leg.Seg.Thigh.KneeJoint.AxisRot.Val;
+           Val = Main.Studies.HumanModel.BodyModel.Left.Leg.Segments.Thigh.KneeJoint.AxisRot.Val;
     };
     AnyDesVar KneeAxisRight = {
-           Val = Main.Studies.HumanModel.BodyModel.Right.Leg.Seg.Thigh.KneeJoint.AxisRot.Val;
+           Val = Main.Studies.HumanModel.BodyModel.Right.Leg.Segments.Thigh.KneeJoint.AxisRot.Val;
     };
     #endif
 
@@ -283,10 +283,10 @@
 
     #if KneeAxisOnOff =="On"
     AnyDesVar KneeAxisLeft = {
-      Val = Main.Studies.HumanModel.BodyModel.Left.Leg.Seg.Thigh.KneeJoint.AxisRot.Val;
+      Val = Main.Studies.HumanModel.BodyModel.Left.Leg.Segments.Thigh.KneeJoint.AxisRot.Val;
     };
     AnyDesVar KneeAxisRight = {
-      Val = Main.Studies.HumanModel.BodyModel.Right.Leg.Seg.Thigh.KneeJoint.AxisRot.Val;
+      Val = Main.Studies.HumanModel.BodyModel.Right.Leg.Segments.Thigh.KneeJoint.AxisRot.Val;
     };
     #endif
 

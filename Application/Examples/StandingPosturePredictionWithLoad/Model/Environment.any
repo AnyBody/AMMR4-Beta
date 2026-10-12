@@ -136,7 +136,7 @@ AnyFolder Environment = {
       ForceVectorDrawScaleFactor = 0.0005;
     };
 
-    CreateFootContactNodes25 FootNodes(foot_ref = Main.HumanModel.BodyModel.Right.Leg.Seg.Foot) =
+    CreateFootContactNodes25 FootNodes(foot_ref = Main.HumanModel.BodyModel.Right.Leg.Segments.Foot) =
     {
 
     };
@@ -167,7 +167,7 @@ AnyFolder Environment = {
       ForceVectorDrawScaleFactor = 0.0005;
     };
 
-    CreateFootContactNodes25 FootNodes(foot_ref = Main.HumanModel.BodyModel.Left.Leg.Seg.Foot) =
+    CreateFootContactNodes25 FootNodes(foot_ref = Main.HumanModel.BodyModel.Left.Leg.Segments.Foot) =
     {
 
     };

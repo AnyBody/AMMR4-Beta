@@ -1,5 +1,6 @@
 //define = [
 //    {'BM_COMPATIBILITY_MUSCLE_STRUCTURE':'ON'},
+//    {'BM_COMPATIBILITY_BODYMODEL_STRUCTURE':'ON'},
 //    {'BM_COMPATIBILITY_24_TRUNK_SELECTED_OUTPUTS_JRF':'ON'},
 //]
 
@@ -7,7 +8,8 @@
 
 #ifndef TEST_NAME
 // #define BM_COMPATIBILITY_24_TRUNK_SELECTED_OUTPUTS_JRF ON
- #define BM_COMPATIBILITY_MUSCLE_STRUCTURE ON
+ #define BM_COMPATIBILITY_MUSCLE_STRUCTURE OFF
+ #define BM_COMPATIBILITY_BODYMODEL_STRUCTURE ON
 #endif
 
 
@@ -34,7 +36,14 @@ Main = {
   // This allows us to check if any references (that points to muscles) exist in the folder
 
   // NB. could have been cool if ObjSearch could resolve references when applying class filter as argument...
-  AnyObjectPtr arm_muscles_30_location = ObjFilterByClass(ObjRefResolve(ObjFilterByClass(ObjSearch("Main.HumanModel.BodyModel.Right.ShoulderArm.Muscles.*"), "AnyRefObject")), "AnyMuscle");
+  AnyObjectPtr arm_muscles_30_location = ObjFilterByClass(
+    ObjRefResolve(
+      ObjFilterByClass(
+        ObjSearch("Main.HumanModel.BodyModel.Right.ShoulderArm.Muscles.*"), "AnyRefObject"
+      )
+    ),
+    "AnyMuscle"
+  );
   AnyInt OldStructure = bool(NumElemOf(arm_muscles_30_location));
 
   #if BM_COMPATIBILITY_MUSCLE_STRUCTURE == ON
@@ -43,4 +52,21 @@ Main = {
     AnyInt testOldStructureNotFound = assert(not(OldStructure));
   #endif
 
+
+  #if BM_COMPATIBILITY_BODYMODEL_STRUCTURE == ON
+    // check that both the old and new structure exists (not complete check)
+    AnyFolder &bm = Main.HumanModel.BodyModel;
+    AnyFolder &trunk = bm.Trunk;
+    AnyFolder &rArm = bm.Right.ShoulderArm;
+    AnyFolder &rLeg = bm.Right.Leg;
+
+    // Segments folder
+    AnyFolder &seg_trunk_old = trunk.SegmentsThorax;
+    AnyFolder &seg_rArm_old = rArm.Seg;
+    AnyFolder &seg_rLeg_old = rLeg.Seg;
+
+    AnyFolder &seg_trunk_new = trunk.Segments;
+    AnyFolder &seg_rArm_new = rArm.Segments;
+    AnyFolder &seg_rLeg_new = rLeg.Segments;
+  #endif
 };
