@@ -1,9 +1,38 @@
 
-# Geometrical and kinematical concepts
+# Geometrical and Kinematical Concepts
 
 
 <!-- ================================================================== -->
-## Key reference frames
+## Reference Frames
+
+
+<!-- ------------------------------------------------------------------ -->
+### Concepts and erminolgy
+
+Data frames
+- **Data Frames:**
+- **Lab. Frames**, or Laboratory frames, are a special kind of Data Frames; typically used in connection with measured motion data. 
+
+Model implementation related
+- **Bone Frames** are attached rigidly to bones, either to generally capture the bone position or to specific features of the bone.
+- **Segmental Frames:**
+- **Joint Frames:**
+
+- **Anatomical Frames:**
+  - Bone Frames that aims to describe segments features by the relevant bone orientation.
+  - Body part  ?????????????
+
+- **Postural Frames** serve the special purpose of being part of the defining the body models `neutral posture`.
+
+
+Output related
+- **ISB Frames:** Frames propose by International Society of Biomechcanics (ISB).
+
+
+
+
+
+
 
 <!-- ------------------------------------------------------------------ -->
 ### Data and Segmental Frames
