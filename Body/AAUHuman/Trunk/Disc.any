@@ -6,9 +6,7 @@ AnyFolder Disc ={
   AnyKinLinear ControlMeasureRight ={
     Ref=0;
     AnySeg &ref1=...JointsAndDrivers.MeasuringSegmentRight.Seg;
-    //ref1={AnyDrawRefFrame drw={ScaleXYZ={0.12,0.12,0.12};RGB={0,0,1};};};
     AnyRefNode &ref2=.DiscSeg.node5;
-    //ref2={AnyDrawRefFrame drw={ScaleXYZ={0.12,0.12,0.12};RGB={1,0,0};};};
     //AnyDrawPLine drw={Thickness=0.00375;RGB={0,0,1};};
   };
 
@@ -42,10 +40,8 @@ AnyFolder Disc ={
   AnyKinLinear ControlMeasureLeft ={
     Ref=0;
     AnySeg &ref1=...JointsAndDrivers.MeasuringSegmentLeft.Seg;
-    //ref1={AnyDrawRefFrame drw={ScaleXYZ={0.12,0.12,0.12};RGB={0,0,1};};};
 
     AnyRefNode &ref2=.DiscSeg.node3;
-    //ref2={AnyDrawRefFrame drw={ScaleXYZ={0.12,0.12,0.12};RGB={1,0,0};};};
     //AnyDrawPLine drw={Thickness=0.00375;RGB={0,0,1};};
   };
 
@@ -79,10 +75,8 @@ AnyFolder Disc ={
   AnyKinLinear ControlMeasureMid ={
     Ref=0;
     AnyRefNode &ref1=...PelvisRef.BuckleNodeBottomCenter;
-    //ref1={AnyDrawRefFrame drw={ScaleXYZ={0.12,0.12,0.12};RGB={0,0,1};};};
 
     AnyRefNode &ref2=.DiscSeg.node4;
-    //ref2={AnyDrawRefFrame drw={ScaleXYZ={0.12,0.12,0.12};RGB={1,0,0};};};
     //AnyDrawPLine drw={Thickness=0.00375;RGB={0,0,1};};
   };
   AnyKinMeasureOrg    ControlMeasureMidZ={
@@ -161,14 +155,7 @@ AnyFolder Disc ={
 
     AnyRefNode SupportNodeLeft={
       sRel= .Scale({...L1,0,-0.05});
-//      AnyDrawRefFrame drw={};
     };
-
-//    AnyDrawRefFrame drw =
-//    {
-//      RGB = {0, 0, 0};
-//      ScaleXYZ = 0.05 * {1, 1, 1};
-//    };
   };
 
 
@@ -191,8 +178,6 @@ AnyFolder Disc ={
     AnyRefNode NodeRight={sRel= .Scale({0,0,-0.01});};
     AnyRefNode NodeLeft={sRel= .Scale({0,0,0.01});};
     AnyRefNode node0={sRel= .Scale({0,0,0.0});};
-
-//    AnyDrawRefFrame drw={ScaleXYZ={0.1,0.1,0.1};RGB={0,1,0};};
   };
 
 
@@ -217,8 +202,6 @@ AnyFolder Disc ={
     Ref=0;
     AnyRefNode &ref1=.DiscSeg.node4;
     AnySeg &ref2=.VirtuelSeg;
-//    ref1={AnyDrawRefFrame drw={RGB={1,0,0};ScaleXYZ={0.1,0.1,0.1};};};
-//    ref2={AnyDrawRefFrame drw={RGB={0,1,0};ScaleXYZ={0.15,0.15,0.15};};};
     Axis=x;  //this is the plane of the disc...
   };
 

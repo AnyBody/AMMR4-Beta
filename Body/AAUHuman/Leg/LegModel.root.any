@@ -59,7 +59,6 @@ HipNodeRef = {
   AnyRefNode ObturatoriusInternusNode = {sRel = .Scale(-.T+{-0.03, -0.17, ..Sign*0.04});};
   AnyRefNode ObturatoriusInternusViaNode = {
     sRel=0.5*(.GemellusSuperiorNode.sRel+.GemellusInferiorNode.sRel);
-    //    AnyDrawRefFrame drw={RGB={1,0,0};};
   };
 
   AnyRefNode PictineusNode = { sRel = .Scale(-.T+{0.065, -0.15, ..Sign*0.045});};

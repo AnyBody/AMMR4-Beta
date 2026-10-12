@@ -27,27 +27,24 @@ AnyFolder GHReactions={
   //Add extra nodes on the gh cavitas edge
   AnySeg &Scapula = ..Segments.Scapula;
 
-  Scapula={
+  Scapula = {
 
-    AnyRefNode    GHReactionCenterNode = {
-      sRel=.Scale({  -0.001,-0.048,-0.030}*.Mirror);
-      //AnyDrawRefFrame drw={ScaleXYZ={0.05,0.05,0.05};};
+    AnyRefNode GHReactionCenterNode = {
+      sRel = .Scale({-0.001,-0.048,-0.030}*.Mirror);
     };
 
-    AnyRefNode    EdgeNode1 = {
-      sRel=.Scale({  0.001,-0.050863,-0.013}*.Mirror);
-      //AnyDrawRefFrame drw={ScaleXYZ={0.05,0.05,0.05};};
+    AnyRefNode EdgeNode1 = {
+      sRel = .Scale({0.001,-0.050863,-0.013}*.Mirror);
     };
 
-    AnyRefNode    EdgeNode2 = {
-      sRel=.Scale({  0.001,-0.035,-0.03}*.Mirror);
-      //AnyDrawRefFrame drw={ScaleXYZ={0.05,0.05,0.05};};
+    AnyRefNode EdgeNode2 = {
+      sRel = .Scale({0.001,-0.035,-0.03}*.Mirror);
     };
 
     // this node is located at the center of glenohumeral cavitas and orientated in accrodance to the
     //overall cavitas plane using the three points defined abover
-    AnyRefNode    GHReactionCenterNodeRotated = {
-      sRel=.GHReactionCenterNode.sRel;
+    AnyRefNode GHReactionCenterNodeRotated = {
+      sRel = .GHReactionCenterNode.sRel;
 
       //Calculate rot matrix for cylinder using three points
       AnyMat33  Mat = RotMat(sRel,.EdgeNode1.sRel,.EdgeNode2.sRel);
