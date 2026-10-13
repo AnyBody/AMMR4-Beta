@@ -1,29 +1,20 @@
 ---
-gallery_title: "Pedel demo"
+gallery_title: "Pedal Demo (conditional)"
 gallery_image: "/Applications/images/PedalDemoConditional.webp"
 anylink: Application/Examples/PedalDemoConditional/PedalDemoConditional.Main.any
 ---
 
 (sphx-glr-auto-examples-adls-and-ergonomics-plot-pedaldemoconditional-py)=
 
-# Pedel demo
+# Pedal Demo (conditional)
 
 :::{anylink-gallery}
 :margin:
 :::
 
-A leg pressing down a pedal. This
-demonstrates conditional contact between the foot and the
-pedal.
+This model is a variant of the <a href="PedalDemo.html" target="_blank" rel="noopener">simple pedal demo</a> for designing a pedal for a seated operator. Its foot-pedal contact is conditional: contact becomes active only when the foot and pedal are sufficiently close to each other.
 
-
-This model is for design of a pedal that is comfortable to use
-for a seated operator depending on the stiffness of the embedded
-spring and the distance of the seat from the pedal. The model is
-a copy of the PedalDemo example with the exception that this model
-has conditional contact between the foot and the pedal, such that
-the contact becomes active when the two elements are in proximity
-with each other
+The model uses the same pedal environment, spring, seat position, and seated posture as the simple pedal demo, while adding a proximity-based contact condition through `ConditionalContactClass`.
 
 
 :::{admonition} In Model Repository:

@@ -24,6 +24,8 @@ of this spring on the results.
 */
 Main = {
 
+  #define USE_FDK
+  
   // Switches to include AnyDrawWidgets to change the positions and orientation of the hip implants.
 
   // Widget to rotate the femoral component
@@ -32,7 +34,7 @@ Main = {
   #define FEM_STEM_LIN 0
   // Widget to rotate the Acetabular cup
   #define PELVIS_CUP_ROT 0
-
+  
   // Switch to use an ideal spherical joint, or force dependent kinematics for the right hip joint.
   #ifndef USE_FDK
     #define USE_FDK 1
