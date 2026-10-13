@@ -27,7 +27,7 @@ The remaining parts of the model are equivalent to other {ref}`MoCap model <anym
 
 
 
-:::{versionadded} 2.2.3 The example uses features added in v.7.2.3 of the AnyBody Modeling system. It fixes the problems which can occur in some BVH files due to gimbal locks and multiple solutions ($N2\pi$) to the Euler angle equations. See the section below on how to update old examples.
+:::{versionadded} 2.2.3 The example uses features added in v.7.2.3 of the AnyBody Modeling system. It fixes the problems which can occur in some BVH files due to gimbal locks and multiple solutions ($N2\pi$) to the Euler angle equations. Information on how to update old examples can be found on the AnyScript reference page of the `AnyInputBVH` class.
 :::
 
 
