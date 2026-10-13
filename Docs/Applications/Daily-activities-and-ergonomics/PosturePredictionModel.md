@@ -1,5 +1,5 @@
 ---
-gallery_title: "Posture Prediction Model"
+gallery_title: "Posture Prediction"
 gallery_image: "/Applications/images/StandingPosturePredictionModel.webp"
 anylink: Application/Examples/StandingPosturePredictionWithLoad/StandingPosturePrediction.main.any
 ---
@@ -7,7 +7,7 @@ anylink: Application/Examples/StandingPosturePredictionWithLoad/StandingPostureP
 
 (sphx_glr_auto_examples_adls_and_ergonomics_plot_PosturePredictionModel.py)=
 (example_posture_prediction)=
-# Posture Prediction Model
+# Posture Prediction
 
 :::{anylink-gallery}
 :margin:
@@ -31,12 +31,6 @@ The model is driven by a combination of the following drivers:
 
 
 Two type of loads can be applied, either a fixed weight of the object and/or a force vector.
-
-:::{admonition} In Model Repository:
-:class: seealso
-
-{anylink-file}` `
-:::
 
 
 ## Usage
@@ -97,4 +91,9 @@ Your browser does not support the video tag.
 
 **Please note the speed of the video was increased for viewing purposes.**
 
+:::{admonition} In Model Repository:
+:class: seealso
+
+{anylink-file}` `
+:::
 

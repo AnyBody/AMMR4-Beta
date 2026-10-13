@@ -1,32 +1,31 @@
 ---
-gallery_title: "Arm curl"
+gallery_title: "Arm Curl"
 gallery_image: "/Applications/images/ArmCurl.webp"
 anylink: Application/Examples/ArmCurl/ArmCurl.Main.any
 ---
 
 (sphx_glr_auto_examples_Sports_plot_ArmCurl.py)=
 
-# Arm curl
+# Arm Curl
 
 :::{anylink-gallery}
 :margin:
 :::
 
 
-Example of an Arm Curl fitness machine.
+This example uses the full-body model to simulate an arm curl on a fitness
+machine. It compares an adjusted cable-wheel eccentricity with a
+zero-eccentricity configuration to show how wheel geometry can account for
+changing arm-muscle moment arms during elbow flexion.
 
-The objective of this example is to adjust the eccentricity of the cable wheel
-such that the arm muscles experience a constant effort throughout the elbow
-flexion taking the change of moment arms of the muscles into account.
+The default setup includes `Model/EnvironmentOptimized.any`. Replacing it with
+`Model/Environment.any` selects the zero-eccentricity configuration.
 
-It is not possible to obtain a completely constant muscle effort with only the
-eccentricity as parameter. However, if more parameters were introduced into an
-actual design optimization, then it is likely that an almost completely uniform
-effort profile could be obtained.
+:::{note}
+The adjusted wheel geometry is preconfigured; the repository does not include
+the optimization procedure used to obtain it. It is not possible to obtain a completely constant muscle effort with only the eccentricity as parameter. However, if more parameters were introduced into an actual design optimization, then it is likely that an almost completely uniform effort profile could be obtained.
+:::
 
-By chaning between the files "EnvironmentOptimized.any" and "Environment.any" it
-is possible to to see the machine with adjusted eccentricity and the one with
-zero eccentricity
 
 :::{admonition} In Model Repository:
 :class: seealso

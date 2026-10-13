@@ -1,36 +1,76 @@
 ---
-gallery_title: "Wilke Spine Disc Pressure"
+gallery_title: "Spine Disc Pressure"
 gallery_image: "/Applications/images/SpinePressureStanding.webp"
 anylink: Application/Validation/WilkeSpinalDiscPressure/SpinePressureSeatingRelaxed/SpinePressureSeatingRelaxed.main.any
 ---
 
 (sphx_glr_auto_examples_Validation_plot_WilkeSpinePressure.py)=
 (example_wilkespinepressure)=
-# Wilke Spine Disc Pressure Model
+# Spine Disc Pressure
 
 :::{anylink-gallery}
 :margin:
 :::
 
 
-The Wilke Spine Pressure models are eight models that compare intradiscal pressure measured between L4 and L5 discs in different postures.
+This validation application compares intradiscal pressure at the L4–L5 disc across eight postures with in vivo measurements from the same trial.[^wilke1999] [^wilke2001]
 
+The models use a uniformly scaled human model with the TLEM leg model. Each main file defines a posture-specific environment and runs muscle calibration followed by inverse dynamics. The study exposes reaction-force magnitudes at the L5–sacrum and L4–L5 joints for comparison with the measured data.
 
+## Posture variants
 
-For the comparison, all data is normalized (100 %) to the forces from *'SpinePressureStanding.Main.any'*  and *'Relaxed Standing'* to show trend validity between the various postures.
+The variants cover standing, sitting, lying, and lifting conditions. The images below show the corresponding model configurations; use the repository entry point to open the individual `.any` files.
 
-<img src="/Applications/Validation/wilke.svg" align="center">
+::::{grid} 1 2 3 4
+:gutter: 3
 
+:::{grid-item-card} **Relaxed standing**
+![Relaxed standing](/Applications/images/SpinePressureStanding.webp)
+:::
 
-Both papers refer to the same trial, but supplements each other with study information.
+:::{grid-item-card} **Lying on the back**
+![Lying on the back](/Applications/images/SpinePressureLyingOnBack.webp)
+:::
 
-- Wilke, H.J., Neef, P., Caimi, M., Hoogland, T., Claes, L.E., 1999. New in vivo measurements of pressures in the intervertebral disc in daily life. Spine 24, 755–762.
-- Wilke, H., Neef, P., Hinz, B., Seidel, H., Claes, L., 2001. Intradiscal pressure together with anthropometric data--a data set for the validation of models. Clin. Biomech. 16 Suppl 1, S111–26.
+:::{grid-item-card} **Relaxed sitting**
+![Relaxed sitting](/Applications/images/SpinePressureSeatingRelaxed.webp)
+:::
+
+:::{grid-item-card} **Erect sitting without back support**
+![Erect sitting without back support](/Applications/images/SpinePressureSeatingStraitNoSupport.webp)
+:::
+
+:::{grid-item-card} **Standing, flexed forward**
+![Standing, flexed forward](/Applications/images/SpinePressureStandingFlexed.webp)
+:::
+
+:::{grid-item-card} **Standing while holding a load close**
+![Standing while holding a load close](/Applications/images/SpinePressureStandingLiftClose.webp)
+:::
+
+:::{grid-item-card} **Lifting with a flexed back**
+![Lifting with a flexed back](/Applications/images/SpinePressureStandingLiftFlexed.webp)
+:::
+
+:::{grid-item-card} **Lifting with the arms extended**
+![Lifting with the arms extended](/Applications/images/SpinePressureStandingLiftStretchedArms.webp)
+:::
+
+::::
+
+The comparison is normalized to the reaction forces from `SpinePressureStanding.Main.any` in the relaxed-standing condition to show trends across postures.
+
+```{figure} /Applications/Validation/wilke.svg
+:alt: Comparison of measured and modelled intradiscal pressure across the Wilke postures
+:width: 100%
+
+Comparison of the Wilke intradiscal-pressure measurements and model results across the posture variants.
+```
 
 
 :::{admonition} In Model Repository:
 :class: seealso
-{menuselection}`Application --> Validation --> WilkeSpinalDiscPressure`
+`Application/Validation/WilkeSpinalDiscPressure`
 
 * {anylink-file}`SpinePressureSeatingRelaxed.main.any <Application/Validation/WilkeSpinalDiscPressure/SpinePressureSeatingRelaxed/SpinePressureSeatingRelaxed.main.any>`
 
@@ -50,44 +90,10 @@ Both papers refer to the same trial, but supplements each other with study infor
 
 :::
 
-::::{grid} 1 2 3 4
-:gutter: 3
+## Bibliography
 
-:::{grid-item-card} **Relaxed Standing**
-![Relaxed Standing](/Applications/images/SpinePressureStanding.webp)
-:::
-
-
-:::{grid-item-card} **Lying in prone**
-![Relaxed Standing](/Applications/images/SpinePressureLyingOnBack.webp)
-:::
-
-:::{grid-item-card} **Seating relaxed**
-![Relaxed Standing](/Applications/images/SpinePressureSeatingRelaxed.webp)
-:::
-
-:::{grid-item-card} **Relaxed Erect Sitting**
-![Relaxed Standing](/Applications/images/SpinePressureSeatingStraitNoSupport.webp)
-:::
-
-:::{grid-item-card} **Standing flexed foward**
-![Relaxed Standing](/Applications/images/SpinePressureStandingFlexed.webp)
-:::
-
-
-:::{grid-item-card} **Crate of beer held close at chest level**
-![Relaxed Standing](/Applications/images/SpinePressureStandingLiftClose.webp)
-:::
-
-:::{grid-item-card} **Lifting bent over with round back**
-![Relaxed Standing](/Applications/images/SpinePressureStandingLiftFlexed.webp)
-:::
-
-:::{grid-item-card} **Held away about 60 cm**
-![Relaxed Standing](/Applications/images/SpinePressureStandingLiftStretchedArms.webp)
-:::
-
-::::
+[^wilke1999]: Wilke, H.-J., et al. (1999). New in vivo measurements of pressures in the intervertebral disc in daily life. *Spine*, *24*, 755–762. <a href="https://doi.org/10.1097/00007632-199904150-00005" target="_blank" rel="noopener">https://doi.org/10.1097/00007632-199904150-00005</a>
+[^wilke2001]: Wilke, H.-J., et al. (2001). Intradiscal pressure together with anthropometric data: A data set for the validation of models. *Clinical Biomechanics*, *16*(Suppl. 1), S111–S126. <a href="https://doi.org/10.1016/S0268-0033(00)00103-0" target="_blank" rel="noopener">https://doi.org/10.1016/S0268-0033(00)00103-0</a>
 
 
 

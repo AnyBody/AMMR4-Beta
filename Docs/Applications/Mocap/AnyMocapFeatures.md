@@ -12,21 +12,26 @@ anylink: Application/MocapExamples/SpecialFeatures/ForcePlateSurfaceOffset.main.
 :margin:
 :::
 
-A collection of small models that show-off special features of the
-*AnyMoCap* framework.
+A collection of small models that demonstrate selected features of the
+*AnyMoCap* framework. The examples in `Application/MocapExamples/SpecialFeatures`
+show how to adjust common MoCap workflows without creating a full custom model.
 
-This includes:
+The folder includes examples for:
 
-* {ref}`Different ways to drive toe flexion. <example_mocap_bvh_toe_flexion>`
-* Offset to forceplates.
-* Individual cutoff frequencies for markers.
-* Normalization with respect to gait cycle events.
-* Using time-varying weight for markers.
-* Much more.
+* driving toe flexion in a BVH-based model using either a marker or a soft-contact driver (`BVH_Xsens_ToeFlexion.main.any`)
+* offsetting the effective surface of a force plate to represent stepped or elevated floor geometry (`ForcePlateSurfaceOffset.main.any`)
+* assigning individual marker cutoff frequencies and filter orders (`IndividualMarkerCutoffFrequency.main.any`)
+* normalizing output data to gait-cycle events using `Normalized_Abscissa` (`GaitCycleNormalization.main.any`)
+* assigning time-varying or custom marker weights to handle dropout or trial-specific reliability (`MarkerWeightsExample.main.any`)
+* estimating the initial posture from marker positions (`InitialPosExample.any`)
+* customizing external design variables during parameter identification (`ExternalDesVars.main.any`)
+
+These examples are meant to be read as compact starting points for adapting a standard
+MoCap workflow to a specific movement, dataset, or analysis requirement.
 
 :::{admonition} In Model Repository:
 :class: seealso
-The files are all located in `Application/MocapExamples/SpecialFeatures`: 
+`Application/MocapExamples/SpecialFeatures`
 
 * {anylink-file}`BVH_Xsens_ToeFlexion.main.any <Application/MocapExamples/SpecialFeatures/BVH_Xsens_ToeFlexion.main.any>` 
 * {anylink-file}`ExternalDesVars.main.any <Application/MocapExamples/SpecialFeatures/ExternalDesVars.main.any>` 
