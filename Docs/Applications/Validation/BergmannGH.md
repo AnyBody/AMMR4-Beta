@@ -1,12 +1,12 @@
 ---
-gallery_title: "Shoulder Model"
+gallery_title: "Shoulder Model (Bergmann)"
 gallery_image: "/Applications/images/BergmannGH.webp"
 anylink: Application/Validation/BergmannGH/BergmannGH.Main.any
 ---
 
 (sphx_glr_auto_examples_Validation_plot_BergmannGH.py)=
 
-# Shoulder Model
+# Shoulder Model (Bergmann)
 
 :::{anylink-gallery}
 :margin:

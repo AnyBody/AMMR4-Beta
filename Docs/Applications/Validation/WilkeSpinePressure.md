@@ -1,12 +1,12 @@
 ---
-gallery_title: "Spine Disc Pressure"
+gallery_title: "Spine Disc Pressure (Wilke)"
 gallery_image: "/Applications/images/SpinePressureStanding.webp"
 anylink: Application/Validation/WilkeSpinalDiscPressure/SpinePressureSeatingRelaxed/SpinePressureSeatingRelaxed.main.any
 ---
 
 (sphx_glr_auto_examples_Validation_plot_WilkeSpinePressure.py)=
 (example_wilkespinepressure)=
-# Spine Disc Pressure
+# Spine Disc Pressure (Wilke)
 
 :::{anylink-gallery}
 :margin:
