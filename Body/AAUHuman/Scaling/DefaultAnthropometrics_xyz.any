@@ -122,7 +122,9 @@ AnyFolder SegmentScaleFactors =
   };
   AnyFolder Thorax =
   {
-    AnyFloat LengthScale ??= ..SegmentDimensions.TrunkHeight / ...Scaling.StandardParameters.Trunk.Height;
+    AnyFloat LengthScale ??=
+      (..SegmentDimensions.TrunkHeight - ..SegmentDimensions.NeckLength) /
+      (...Scaling.StandardParameters.Trunk.Height -  ...Scaling.StandardParameters.Neck.Length);
     AnyFloat DepthScale ??= ..SegmentDimensions.TrunkDepth / ...Scaling.StandardParameters.Trunk.Depth;
     AnyFloat WidthScale ??= ..SegmentDimensions.TrunkWidth / ...Scaling.StandardParameters.Trunk.Width;
   };
@@ -141,7 +143,9 @@ AnyFolder SegmentScaleFactors =
   };
 
   AnyFolder Lumbar = {
-    AnyFloat LengthScale ??= ..SegmentDimensions.TrunkHeight / ...Scaling.StandardParameters.Trunk.Height;
+    AnyFloat LengthScale ??=
+      (..SegmentDimensions.TrunkHeight - ..SegmentDimensions.NeckLength) /
+      (...Scaling.StandardParameters.Trunk.Height -  ...Scaling.StandardParameters.Neck.Length);
     AnyFloat DepthScale ??= ..SegmentDimensions.TrunkDepth / ...Scaling.StandardParameters.Trunk.Depth;
     AnyFloat WidthScale ??= ..SegmentDimensions.TrunkWidth / ...Scaling.StandardParameters.Trunk.Width;
   };
