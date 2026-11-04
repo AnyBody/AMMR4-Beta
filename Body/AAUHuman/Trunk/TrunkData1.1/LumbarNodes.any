@@ -387,6 +387,9 @@ AnyFolder Sacrum = {
     AnyFloat  Disc7Center_pos ={0.0,-0.03-0.05,0};
   #endif
 
+  AnyFloat SuperiorEndplateAnteriorNode_pos = {0.053000, -0.014000, 0.000000};
+  AnyFloat SuperiorEndplatePosteriorNode_pos = {0.032264, 0.004383, 0.000000};
+
   AnyFloat SacrumBaseAnteriorNode_pos = {0.053000, -0.014000, 0.000000};
   AnyFloat SacrumBasePosteriorNode_pos = {0.032264, 0.004383, 0.000000};
 
@@ -434,6 +437,7 @@ AnyFolder Sacrum = {
     AnyVec3 LongissimusThoracisR12S3ViaNode_pos = {-0.0308891+0.0, -0.0388656+0.03, 0.03019510+0.0025};
     AnyFloat LongissimusThoracisL5IliumNode_pos   = {0.006000, 0.01300000, 0.02100000}+{0,-0.005,0.015};
     AnyFloat SacrumBaseNode_pos = 0.5*(.SacrumBaseAnteriorNode_pos + .SacrumBasePosteriorNode_pos) + {0,0.002000,0.019800}; // Offset added manually to match the base surface
+    AnyFloat SuperiorEndplateNode_pos  = 0.5*(.SacrumBaseAnteriorNode_pos + .SacrumBasePosteriorNode_pos) + {0,0.002000,0.019800}; // Offset added manually to match the base surface
   };
 
   AnyFolder Left = {
@@ -483,6 +487,7 @@ AnyFolder Sacrum = {
     AnyFloat LongissimusThoracisR12S3ViaNode_pos = .Right.LongissimusThoracisR12S3ViaNode_pos* ..MirrorTransform;
     AnyFloat LongissimusThoracisL5IliumNode_pos = .Right.LongissimusThoracisL5IliumNode_pos * ..MirrorTransform;
     AnyFloat SacrumBaseNode_pos = .Right.SacrumBaseNode_pos * MirrorTransform;
+    AnyFloat SuperiorEndplateNode_pos  = .Right.SuperiorEndplateNode_pos * MirrorTransform;
   };
 };
 

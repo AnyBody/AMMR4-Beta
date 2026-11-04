@@ -1,0 +1,131 @@
+#ifndef AAU_TRUNK_SEGMENT_CLASS_TEMPLATES_ANY
+#define AAU_TRUNK_SEGMENT_CLASS_TEMPLATES_ANY
+
+#class_template TrunkSegmentBase(
+  AnyFolder &DATA,
+  CAUDAL_NEIGHBOUR=None,
+  LEVEL=None,
+  CRANIAL_NEIGHBOUR=None,
+  _VOLUMETRIC_CAVITY = 1,
+  DEF_SCALING = 1,
+  DEF_CONTACTS = 1,
+  DEF_DRAWING = 1,
+  PelvisSeg,
+  __CLASS__= AnySeg
+){
+
+  // Inertia properties for the segment
+  UseInertiaObjects = On;
+  AnyFolder &Data = DATA.ModelParameters.LEVEL;
+  AnyFolder &ModelParameters = DATA.ModelParameters;
+  AnyFolder &StdParameters = DATA.StandardParameters;
+
+  AnyRefNode Endplates = {
+    AnyRefNode Superior = {
+      AnyRefNode Anterior = {sRel = ...Scale(...ModelParameters.LEVEL.SuperiorEndplateAnteriorNode_pos);};
+      AnyRefNode Posterior = {sRel = ...Scale(...ModelParameters.LEVEL.SuperiorEndplatePosteriorNode_pos);};
+      AnyRefNode Left = {sRel = ...Scale(...ModelParameters.LEVEL.Left.SuperiorEndplateNode_pos);};
+      AnyRefNode Right = {sRel = ...Scale(...ModelParameters.LEVEL.Right.SuperiorEndplateNode_pos);};
+      /// Instantaneous Center of Rotation according to Pearcy and Bogduk
+      AnyRefNode ICR = {
+        #var AnyFloat APRatio = 0.6;
+        sRel = .Anterior.sRel + APRatio * (.Posterior.sRel - .Anterior.sRel);
+      };
+    };
+    // AnyRefNode Inferior = {
+    //   AnyRefNode Anterior = {sRel = ...Scale(.Data.InferiorEndplateAnteriorNode_pos);};
+    //   AnyRefNode Posterior = {sRel = ...Scale(.Data.InferiorEndplatePosteriorNode_pos);};
+    //   AnyRefNode Left = {sRel = ...Scale(.Data.Left.InferiorEndplateNode_pos);};
+    //   AnyRefNode Right = {sRel = ...Scale(.Data.Right.InferiorEndplateNode_pos);};
+    // };
+  };
+
+
+
+  // Joint nodes
+  #if CAUDAL_NEIGHBOUR != None
+  AnyRefNode LEVEL##CAUDAL_NEIGHBOUR##JntNode = {
+    sRel = .Scale(.ModelParameters.LEVEL.LEVEL##CAUDAL_NEIGHBOUR##JntNode_pos);
+  };
+  #endif
+
+  #if CRANIAL_NEIGHBOUR != None
+  AnyRefNode CRANIAL_NEIGHBOUR##LEVEL##JntNode = {
+    sRel = .Scale(.ModelParameters.LEVEL.CRANIAL_NEIGHBOUR##LEVEL##JntNode_pos);
+    /// Rotated node with x axis parallel to the sacrum base surface
+    AnyRefNode RotNode = {
+        ARel = RotMat(0.5*(..Endplates.Superior.Anterior.sRel + ..Endplates.Superior.Posterior.sRel),
+                      ..Endplates.Superior.Anterior.sRel,
+                      0.5*(..Endplates.Superior.Anterior.sRel + ..Endplates.Superior.Posterior.sRel) + (..Endplates.Superior.Left.sRel - ..Endplates.Superior.Right.sRel))*RotMat(pi/2,x);
+    };
+  };
+  #endif
+
+  #if DEF_SCALING
+    // This file includes the trunk specifc scaling function
+    // and anatomical reference system
+    #include "TrunkAnatomicalFrame.any"
+
+    TrunkScaleWithInterfaceMorphing Scale(
+      GeomScale = ...Scaling.GeometricalScaling.__NAME__.ScaleFunction,
+      PelvisSeg = PelvisSeg,
+    ) = {};
+
+
+    TrunkScaleWithInterfaceMorphing ScaleAbdominal(
+      GeomScale = ...Scaling.GeometricalScaling.Lumbar.ScaleFunction,
+      PelvisSeg = PelvisSeg,
+    ) = {};
+  #endif
+
+  #if (_VOLUMETRIC_CAVITY == 1)
+    AnyInertiaSolid BoneInertiaObject = {
+      Density ??= 0; // should be overwritten
+      BodyMassCorrection massCorrection() = {
+        DensityTheoretical = ..ModelParameters.BoneDensity;
+        enableMassCorrection = Off;
+      };
+      AnySurfSTL surface = {
+        FileName = ..BoneDraw.FileName;
+        AnyFunTransform3D &scale = ..Scale;
+        viewSurface.RGB = {0,0,1};
+        ScaleXYZ = ..BoneDraw.ScaleXYZ;
+      };
+    };
+  #else
+    AnyInertiaMatrix InertiaObject = {
+      BodyMassCorrectionCompatibility massCorrection() = {
+        DensityTheoretical = ..StandardParameters.Lumbar.LEVEL##Mass;
+      };
+      Jii = {0.001,0.001,0.001};
+      JaboutCoMOnOff = On;
+      sCoM = .Scale(..ModelParameters.LEVEL.sCoM_pos);
+    };
+  #endif
+
+  // These nodes are used for adding extra nodes used by other body parts to the right
+  // and left side of the segment
+  AnyRefNode Right = {AnyFunTransform3D&Scale=.Scale;};
+  AnyRefNode Left = {AnyFunTransform3D&Scale=.Scale;};
+
+  #if DEF_CONTACTS == 1
+    AnyRefNode MidPoint = {sRel = (.LEVEL##CAUDAL_NEIGHBOUR##JntNode.sRel+.CRANIAL_NEIGHBOUR##LEVEL##JntNode.sRel)*0.5;};
+    AnyRefNode &SupportNode = MidPoint;
+
+    AnyRefNode BuckleContactNode = {sRel= .ScaleAbdominal(.Data.BuckleContactNode_pos);};
+
+    AnyRefNode LEVEL##RContactNode = {sRel= .Scale(.Data.Right.ContactNode_pos);};
+    AnyRefNode LEVEL##LContactNode = {sRel= .Scale(.Data.Left.ContactNode_pos);};
+  #endif
+
+  #if DEF_DRAWING == 1
+    AnyDrawSurf BoneDraw = {
+      FileName = .DATA.STL.Filename##LEVEL##Seg;
+      RGB = ...ColorRef.Segments;
+      Opacity = Main.DrawSettings.BonesOpacity.LEVEL;
+      AnyFunTransform3D &Scale =.Scale;
+    };
+  #endif
+};
+
+#endif
