@@ -144,7 +144,7 @@ AnySeg PelvisSeg = {
       );
 
       AnyVec3 Lumbar = (
-        ..InterfaceMorphingDef.IM_Trunk_To_Leg_AboveSacrum(....Data.unscaled.ModelParameters.Sacrum.SacrumL5JntNode_pos)
+        ..InterfaceMorphingDef.IM_Trunk_To_Leg_AboveSacrum(....Data.unscaled.ModelParameters.Sacrum.L5SacrumJntNode_pos)
         - Pelvis
       );
 
@@ -269,7 +269,7 @@ AnySeg PelvisSeg = {
 
   #include "../DrawSettings/SegmentAxes.any"
   AnyRefNode GroundPelvisJntNode = {sRel = .Scale(.Data.GroundPelvisJntNode_pos);};
-  AnyRefNode PelvisSacrumJntNode = {sRel = .Scale(.Data.PelvisSacrumJntNode_pos);};
+  AnyRefNode SacrumPelvisJntNode = {sRel = .Scale(.Data.SacrumPelvisJntNode_pos);};
   AnyRefNode Seat2MidContactNode={sRel=0.5*(.Right.Seat2ContactNode.sRel+.Left.Seat2ContactNode.sRel);};
   AnyRefNode PelvicLayer1_JntNode={sRel=.Scale(.Data.PelvicLayer1_JntNode_pos);};
   AnyRefNode PelvicLayer2_JntNode={sRel=.Scale(.Data.PelvicLayer2_JntNode_pos);};

@@ -51,7 +51,7 @@ USE_BVH_INPUT = ON
 
 CreateMarkerDriver SACR(
 MarkerPlacement=Trunk.Segments.PelvisSeg,
-PlaceMarkerAt=PelvisSacrumJntNode,
+PlaceMarkerAt=SacrumPelvisJntNode,
 MarkerPlacementBVH=Main.ModelSetup.BVHFileData.Model.Hips.Seg,
 OptX=OFF, OptY=OFF, OptZ=OFF,
 WeightX=1,WeightY=1,WeightZ=1,

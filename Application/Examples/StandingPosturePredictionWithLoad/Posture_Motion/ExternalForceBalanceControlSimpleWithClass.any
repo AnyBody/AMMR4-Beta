@@ -219,8 +219,8 @@ TargetPointForZeroMoment=Main.Model.Environment.GlobalRef.FootCenterPoint) ={
 CreateTorqueDriver  MinMomentOnL5SacrumJnt(
 CreateZeroMomentPointAsExtraSeg=0,
 ForceApplicationPoint=Main.Model.Environment.HandSeg,
-LevelForMeasurePlane=Main.HumanModel.BodyModel.Trunk.Segments.SacrumSeg.SacrumL5JntNode,
-TargetPointForZeroMoment=Main.HumanModel.BodyModel.Trunk.Segments.SacrumSeg.SacrumL5JntNode) ={
+LevelForMeasurePlane=Main.HumanModel.BodyModel.Trunk.Segments.SacrumSeg.L5SacrumJntNode,
+TargetPointForZeroMoment=Main.HumanModel.BodyModel.Trunk.Segments.SacrumSeg.L5SacrumJntNode) ={
 
   InitialPositionForPointWithZeroMoment=Main.HumanModel.BodyModel.Trunk.Segments.SacrumSeg.r0;
   WeightOnSoftDriver=.Settings.MinMomentOnL5SacrumJnt.WeightOnSoftDriver/.MassOfSegmentsAboveSacrum;

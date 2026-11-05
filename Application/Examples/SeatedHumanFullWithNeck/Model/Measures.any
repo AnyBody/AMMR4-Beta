@@ -10,7 +10,7 @@ AnyFolder Measures = {
   AnyFolder &Seg = Main.Model.HumanModel.Trunk.Seg;
 
   AnyKinPLine SacrumLength = {
-    AnyRefFrame &Upper = .Seg.Sacrum.SacrumL5JntNode;
+    AnyRefFrame &Upper = .Seg.Sacrum.L5SacrumJntNode;
     AnyRefFrame &Lower = .Seg.Sacrum.SacrumPelvisJntNode;
   }; // PelvisLength
 

@@ -170,7 +170,7 @@ AnyFolder AngularVelocityMeasures = {
   {
     Type = RotAxesAngles;
     AngVelOnOff = On;
-    AnyRefFrame &SacrumNode = ....Trunk.Segments.SacrumSeg.SacrumL5JntNode;
+    AnyRefFrame &SacrumNode = ....Trunk.Segments.SacrumSeg.L5SacrumJntNode;
     AnyRefFrame &L5Node = ....Trunk.Segments.L5Seg.L5SacrumJntNode;
   };
 

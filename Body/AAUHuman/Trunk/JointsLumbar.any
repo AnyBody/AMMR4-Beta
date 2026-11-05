@@ -2,7 +2,7 @@
 Definitions of the Joints in the lumbar spine. From PelvisL5 to T12L1
 */
 AnySphericalJoint SacrumPelvis = {
-  AnyRefNode &PelvisNode = ...Segments.PelvisSeg.PelvisSacrumJntNode;
+  AnyRefNode &PelvisNode = ...Segments.PelvisSeg.SacrumPelvisJntNode;
   AnyRefNode &SacrumNode = ...Segments.SacrumSeg.SacrumPelvisJntNode;
 
 };
@@ -12,7 +12,7 @@ AnyReacForce SacrumPelvisReaction = {
 };
 
 AnySphericalJoint L5Sacrum = {
-  AnyRefNode &SacrumNode = ...Segments.SacrumSeg.SacrumL5JntNode;
+  AnyRefNode &SacrumNode = ...Segments.SacrumSeg.L5SacrumJntNode;
   AnyRefNode &L5Node = ...Segments.L5Seg.L5SacrumJntNode;
   //Joint reaction force transformed to the rotated reference node aligned with the vertebral body.
   AnyForceMomentMeasure2 ReactionForceRotated = {

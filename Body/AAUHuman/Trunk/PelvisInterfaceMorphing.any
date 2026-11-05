@@ -146,7 +146,7 @@ AnyFolder InterfaceMorphingDef = {
   AnyFunTransform3DLin IM_Trunk_To_Leg_AboveSacrum = {
     ScaleMat = eye(3,3);
     /// We find the joint point where sacrum joins L5
-    AnyFloat sacrum_unscaled = ....Data.unscaled.ModelParameters.Sacrum.SacrumL5JntNode_pos;
+    AnyFloat sacrum_unscaled = ....Data.unscaled.ModelParameters.Sacrum.L5SacrumJntNode_pos;
     AnyFloat sacrum_im = .IM_Trunk_To_Leg_Unscaled(sacrum_unscaled);
     /// The offset is the difference from unscaled to IM scaled of the point
     Offset = sacrum_im - sacrum_unscaled;

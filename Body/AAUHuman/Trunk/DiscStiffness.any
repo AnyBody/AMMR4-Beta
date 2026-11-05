@@ -108,7 +108,7 @@
       };
       AnyFloat Angle = rot.Pos*180/pi;  // Z,Y,X (FlexExt,AxRot,LatBend)
       AnyKinRotational rot = {
-        AnyRefNode &rf0 = ....Segments.SacrumSeg.SacrumL5JntNode;
+        AnyRefNode &rf0 = ....Segments.SacrumSeg.L5SacrumJntNode;
         AnyRefNode &rf1 = ....Segments.L5Seg.L5SacrumJntNode;
         Type=RotAxesAngles;
       };
