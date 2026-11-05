@@ -31,21 +31,14 @@ S = Sacral segment
 
 AnySeg T12Seg = {
 
-  AnyFolder &Data = ..Data.unscaled.ModelParameters;
-
-  //initial position found as a function of pelvis pos and orientation
-  r0 ??= ..Segments.L1Seg.T12L1JntNode.sRel*..Segments.L1Seg.Axes0'+..Segments.L1Seg.r0-T12L1JntNode.sRel*Axes0';
-
-  // This file includes the trunk specifc scaling function
-  // and anatomical reference system
-  #include "TrunkAnatomicalFrame.any"
-
-  TrunkScaleWithInterfaceMorphing Scale(
+  TrunkSegmentBase(
+    ModelParameters = ..Data.unscaled.ModelParameters,
     GeomScale = ...Scaling.GeometricalScaling.Thorax.ScaleFunction,
     PelvisSeg = ...Segments.PelvisSeg,
   ) = {};
 
-
+  //initial position found as a function of pelvis pos and orientation
+  r0 ??= ..Segments.L1Seg.T12L1JntNode.sRel*..Segments.L1Seg.Axes0'+..Segments.L1Seg.r0-T12L1JntNode.sRel*Axes0';
 
   // Inertia properties for the segment
   UseInertiaObjects = On;

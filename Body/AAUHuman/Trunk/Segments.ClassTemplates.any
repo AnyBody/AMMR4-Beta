@@ -14,31 +14,50 @@
   __CLASS__= AnySeg
 ){
 
+  r0 ??= .CAUDAL_NEIGHBOUR##Seg.LEVEL##CAUDAL_NEIGHBOUR##JntNode.sRel*.CAUDAL_NEIGHBOUR##Seg.Axes0'+.CAUDAL_NEIGHBOUR##Seg.r0-LEVEL##CAUDAL_NEIGHBOUR##JntNode.sRel*Axes0';
+
   // Inertia properties for the segment
   UseInertiaObjects = On;
   AnyFolder &Data = DATA.ModelParameters.LEVEL;
   AnyFolder &ModelParameters = DATA.ModelParameters;
   AnyFolder &StdParameters = DATA.StandardParameters;
 
-  AnyRefNode Endplates = {
     AnyRefNode Superior = {
-      AnyRefNode Anterior = {sRel = ...Scale(...ModelParameters.LEVEL.SuperiorEndplateAnteriorNode_pos);};
-      AnyRefNode Posterior = {sRel = ...Scale(...ModelParameters.LEVEL.SuperiorEndplatePosteriorNode_pos);};
-      AnyRefNode Left = {sRel = ...Scale(...ModelParameters.LEVEL.Left.SuperiorEndplateNode_pos);};
-      AnyRefNode Right = {sRel = ...Scale(...ModelParameters.LEVEL.Right.SuperiorEndplateNode_pos);};
+      AnyRefNode Endplate = {
+        AnyRefNode AnatomicalFrame = {
+          sRel = 0.5 * (.AnteriorNode.sRel + .PosteriorNode.sRel);
+          ARel = RotMat(0.5*(.AnteriorNode.sRel + .PosteriorNode.sRel),
+                        .AnteriorNode.sRel,
+                        0.5*(.AnteriorNode.sRel + .PosteriorNode.sRel) + (.LeftNode.sRel - .RightNode.sRel))*RotMat(pi/2,x);
+        };    
+        AnyRefNode AnteriorNode = {sRel = ...Scale(...ModelParameters.LEVEL.SuperiorEndplateAnteriorNode_pos); ARel = .AnatomicalFrame.ARel;};
+        AnyRefNode PosteriorNode = {sRel = ...Scale(...ModelParameters.LEVEL.SuperiorEndplatePosteriorNode_pos); ARel = .AnatomicalFrame.ARel;};
+        AnyRefNode LeftNode = {sRel = ...Scale(...ModelParameters.LEVEL.Left.SuperiorEndplateNode_pos); ARel = .AnatomicalFrame.ARel;};
+        AnyRefNode RightNode = {sRel = ...Scale(...ModelParameters.LEVEL.Right.SuperiorEndplateNode_pos); ARel = .AnatomicalFrame.ARel;};
+      };
       /// Instantaneous Center of Rotation according to Pearcy and Bogduk
-      AnyRefNode ICR = {
+      AnyRefNode ICR_PearcyBogduk = {
         #var AnyFloat APRatio = 0.6;
-        sRel = .Anterior.sRel + APRatio * (.Posterior.sRel - .Anterior.sRel);
+        sRel = .Endplate.AnteriorNode.sRel + APRatio * (.Endplate.PosteriorNode.sRel - .Endplate.AnteriorNode.sRel);
+        ARel = .Endplate.AnatomicalFrame.ARel;
+      };
+
+      AnyRefNode PosturalFrames = {
+        AnyRefNode ICR_PearcyBogduk = {sRel = ..ICR_PearcyBogduk.sRel; ARel = eye(3);};
+        AnyRefNode DiscCenter = {ARel = eye(3);}; // compute sRel
+      };    
+    
+    };
+
+    AnyRefNode Inferior = {
+      AnyRefNode Endplate = {
+        AnyRefNode AnteriorNode = {sRel = ...Scale(...ModelParameters.LEVEL.InferiorEndplateAnteriorNode_pos);AnyDrawRefFrame Draw = {RGB={1,0,0};ScaleXYZ={1,1,1}*0.01;};};
+        AnyRefNode PosteriorNode = {sRel = ...Scale(...ModelParameters.LEVEL.InferiorEndplatePosteriorNode_pos);AnyDrawRefFrame Draw = {RGB={1,0,0};ScaleXYZ={1,1,1}*0.01;};};
+        AnyRefNode LeftNode = {sRel = ...Scale(...ModelParameters.LEVEL.Left.InferiorEndplateNode_pos);AnyDrawRefFrame Draw = {RGB={1,0,0};ScaleXYZ={1,1,1}*0.01;};};
+        AnyRefNode RightNode = {sRel = ...Scale(...ModelParameters.LEVEL.Right.InferiorEndplateNode_pos);AnyDrawRefFrame Draw = {RGB={1,0,0};ScaleXYZ={1,1,1}*0.01;};};
       };
     };
-    // AnyRefNode Inferior = {
-    //   AnyRefNode Anterior = {sRel = ...Scale(.Data.InferiorEndplateAnteriorNode_pos);};
-    //   AnyRefNode Posterior = {sRel = ...Scale(.Data.InferiorEndplatePosteriorNode_pos);};
-    //   AnyRefNode Left = {sRel = ...Scale(.Data.Left.InferiorEndplateNode_pos);};
-    //   AnyRefNode Right = {sRel = ...Scale(.Data.Right.InferiorEndplateNode_pos);};
-    // };
-  };
+  
 
 
 
@@ -54,9 +73,9 @@
     sRel = .Scale(.ModelParameters.LEVEL.CRANIAL_NEIGHBOUR##LEVEL##JntNode_pos);
     /// Rotated node with x axis parallel to the sacrum base surface
     AnyRefNode RotNode = {
-        ARel = RotMat(0.5*(..Endplates.Superior.Anterior.sRel + ..Endplates.Superior.Posterior.sRel),
-                      ..Endplates.Superior.Anterior.sRel,
-                      0.5*(..Endplates.Superior.Anterior.sRel + ..Endplates.Superior.Posterior.sRel) + (..Endplates.Superior.Left.sRel - ..Endplates.Superior.Right.sRel))*RotMat(pi/2,x);
+        ARel = RotMat(0.5*(..Superior.Endplate.AnteriorNode.sRel + ..Superior.Endplate.PosteriorNode.sRel),
+                      ..Superior.Endplate.AnteriorNode.sRel,
+                      0.5*(..Superior.Endplate.AnteriorNode.sRel + ..Superior.Endplate.PosteriorNode.sRel) + (..Superior.Endplate.LeftNode.sRel - ..Superior.Endplate.RightNode.sRel))*RotMat(pi/2,x);
     };
   };
   #endif

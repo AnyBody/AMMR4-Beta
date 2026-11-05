@@ -43,6 +43,7 @@ AnyFolder Pelvis = {
   AnyFloat HipJointsCenterTD_pos = {0.050000, -0.1150000, 0};
   AnyFloat GroundPelvisJntNode_pos = {0.015000, -9.911979e-034, 0};
   AnyFloat PelvisSacrumJntNode_pos = {0.02700000, -0.03000000, 0} ;
+  AnyFloat SacrumPelvisJntNode_pos = {0.02700000, -0.03000000, 0} ;
   AnyFloat ALLNodeSuperior_pos = {0.073000, -0.01800000, 0};
   AnyFloat PLLNodeSuperior_pos = {0.047000, 0, 0};
 
@@ -375,6 +376,7 @@ AnyFolder Pelvis = {
 
 AnyFolder Sacrum = {
   AnyFloat ScalingNode_pos = {0.0000000, 0.0000000, 0.0000000};
+  AnyFloat L5SacrumJntNode_pos = {0.04300000, -0.005000000, 0.0000000};
   AnyFloat SacrumL5JntNode_pos = {0.04300000, -0.005000000, 0.0000000};
   AnyFloat SacrumPelvisJntNode_pos = {0.02700000, -0.03000000, 0.0000000};
   AnyFloat SacrumContactNode_pos = {-0.006000000, -0.02500000, 0.0000000};
@@ -389,6 +391,8 @@ AnyFolder Sacrum = {
 
   AnyFloat SuperiorEndplateAnteriorNode_pos = {0.053000, -0.014000, 0.000000};
   AnyFloat SuperiorEndplatePosteriorNode_pos = {0.032264, 0.004383, 0.000000};
+  AnyFloat InferiorEndplateAnteriorNode_pos = {0.048894, -0.022049, 0.000000};
+  AnyFloat InferiorEndplatePosteriorNode_pos = {0.023596, -0.019944, 0.000000};
 
   AnyFloat SacrumBaseAnteriorNode_pos = {0.053000, -0.014000, 0.000000};
   AnyFloat SacrumBasePosteriorNode_pos = {0.032264, 0.004383, 0.000000};
@@ -438,6 +442,7 @@ AnyFolder Sacrum = {
     AnyFloat LongissimusThoracisL5IliumNode_pos   = {0.006000, 0.01300000, 0.02100000}+{0,-0.005,0.015};
     AnyFloat SacrumBaseNode_pos = 0.5*(.SacrumBaseAnteriorNode_pos + .SacrumBasePosteriorNode_pos) + {0,0.002000,0.019800}; // Offset added manually to match the base surface
     AnyFloat SuperiorEndplateNode_pos  = 0.5*(.SacrumBaseAnteriorNode_pos + .SacrumBasePosteriorNode_pos) + {0,0.002000,0.019800}; // Offset added manually to match the base surface
+    AnyFloat InferiorEndplateNode_pos = {0.034197, -0.018805, 0.020860};
   };
 
   AnyFolder Left = {
@@ -488,6 +493,7 @@ AnyFolder Sacrum = {
     AnyFloat LongissimusThoracisL5IliumNode_pos = .Right.LongissimusThoracisL5IliumNode_pos * ..MirrorTransform;
     AnyFloat SacrumBaseNode_pos = .Right.SacrumBaseNode_pos * MirrorTransform;
     AnyFloat SuperiorEndplateNode_pos  = .Right.SuperiorEndplateNode_pos * MirrorTransform;
+    AnyFloat InferiorEndplateNode_pos = .Right.InferiorEndplateNode_pos * MirrorTransform;
   };
 };
 
@@ -500,6 +506,8 @@ AnyFolder L5 = {
   AnyFloat BuckleContactNode_pos = {0.1190000, 0.006000000, 0.0000000};
   AnyFloat SuperiorEndplateAnteriorNode_pos = {0.068000, 0.020200, 0.000000};
   AnyFloat SuperiorEndplatePosteriorNode_pos = {0.044000, 0.025700, 0.000000};
+  AnyFloat InferiorEndplateAnteriorNode_pos = {0.062102, -0.008197, 0.000000};
+  AnyFloat InferiorEndplatePosteriorNode_pos = {0.036041, 0.002016, 0.000000};
 
   AnyFolder Right = {
     // Erector Spinae Nodes
@@ -548,6 +556,7 @@ AnyFolder L5 = {
     AnyFloat PsoasMajorL3_2Via2Node_pos  = {0.041                         ,-0.005,(..L3.Right.PsoasMajorL3_2Node_pos[2]      - ..L2.PsoasMajorL3_2Z*(..L3.Right.PsoasMajorL3_2Node_pos[1]           - 0.008))};
     AnyFloat PsoasMajorL4_2Via1Node_pos  = {0.041                         ,-0.005,(..L4.Right.PsoasMajorL4_2Node_pos[2]      - ..L2.PsoasMajorL4_2Z*(..L4.Right.PsoasMajorL4_2Node_pos[1]           - 0.008))};
     AnyFloat SuperiorEndplateNode_pos = 0.5*(.SuperiorEndplateAnteriorNode_pos + .SuperiorEndplatePosteriorNode_pos) + {0,-0.000900,0.019800}; // Offset added manually to match the vertebra surface
+    AnyFloat InferiorEndplateNode_pos = {0.049903, -0.001576, 0.022571};
   };
 
   AnyFolder Left = {
@@ -593,6 +602,7 @@ AnyFolder L5 = {
     AnyFloat MultifidusThoracisL5T12Node_pos = .Right.MultifidusThoracisL5T12Node_pos * ..MirrorTransform;
     AnyFloat MultifidusLumborumL5S3Node_pos = .Right.MultifidusLumborumL5S3Node_pos * ..MirrorTransform;
     AnyFloat SuperiorEndplateNode_pos = .Right.SuperiorEndplateNode_pos * ..MirrorTransform;
+    AnyFloat InferiorEndplateNode_pos = .Right.InferiorEndplateNode_pos * ..MirrorTransform;
 
     #if BM_TRUNK_CAVITY_MODEL == _CAVITY_MODEL_VOLUME_
       AnyFloat Transversus_Ins_pos = .Right.Transversus_Ins_pos * ..MirrorTransform;
@@ -615,6 +625,8 @@ AnyFolder L4 = {
   AnyFloat BuckleContactNode_pos = {0.07400000, 0.04400000, 0.0000000};
   AnyFloat SuperiorEndplateAnteriorNode_pos = {0.068000, 0.058500, 0.000000};
   AnyFloat SuperiorEndplatePosteriorNode_pos = {0.044000, 0.058600, 0.000000};
+  AnyFloat InferiorEndplateAnteriorNode_pos = {0.070368, 0.028049, 0.000000};
+  AnyFloat InferiorEndplatePosteriorNode_pos = {0.039516, 0.032388, 0.000000};
 
 
   AnyFolder Right = {
@@ -668,6 +680,7 @@ AnyFolder L4 = {
       AnyFloat Transversus_Ins_pos= {0.03100000, 0.05000000, 0.03300000};
     #endif
     AnyFloat SuperiorEndplateNode_pos = 0.5*(.SuperiorEndplateAnteriorNode_pos + .SuperiorEndplatePosteriorNode_pos) + {0,-0.000700,0.019600}; // Offset added manually to match the vertebra surface
+    AnyFloat InferiorEndplateNode_pos = {0.053471, 0.032829, 0.022381};
   };
 
   AnyFolder Left = {
@@ -720,6 +733,7 @@ AnyFolder L4 = {
       AnyFloat Transversus_Ins_pos= .Right.Transversus_Ins_pos * ..MirrorTransform;
     #endif
     AnyFloat SuperiorEndplateNode_pos = .Right.SuperiorEndplateNode_pos * ..MirrorTransform;
+    AnyFloat InferiorEndplateNode_pos = .Right.InferiorEndplateNode_pos * ..MirrorTransform;
   };
 };
 
@@ -745,6 +759,8 @@ AnyFolder L3 = {
   AnyFloat BuckleContactNode_pos = {0.06700000, 0.08250000, 0.0000000};
   AnyFloat SuperiorEndplateAnteriorNode_pos = {0.060000, 0.095900, 0.000000};
   AnyFloat SuperiorEndplatePosteriorNode_pos = {0.038000, 0.090800, 0.000000};
+  AnyFloat InferiorEndplateAnteriorNode_pos = {0.067233, 0.066233, 0.000000};
+  AnyFloat InferiorEndplatePosteriorNode_pos = {0.036959, 0.063789, 0.000000};
 
 
   AnyFolder Right = {
@@ -805,6 +821,7 @@ AnyFolder L3 = {
       AnyFloat Transversus_Ins_pos = {0.02600000, 0.07900000, 0.03300000};
     #endif
     AnyFloat SuperiorEndplateNode_pos = 0.5*(.SuperiorEndplateAnteriorNode_pos + .SuperiorEndplatePosteriorNode_pos) + {0,-0.000800,0.019600}; // Offset added manually to match the vertebra surface
+    AnyFloat InferiorEndplateNode_pos = {0.050543, 0.067534, 0.022487};
   };
 
   AnyFolder Left = {
@@ -868,6 +885,7 @@ AnyFolder L3 = {
       AnyFloat Transversus_Ins_pos = .Right.Transversus_Ins_pos * ..MirrorTransform;
     #endif
     AnyFloat SuperiorEndplateNode_pos = .Right.SuperiorEndplateNode_pos * ..MirrorTransform;
+    AnyFloat InferiorEndplateNode_pos = .Right.InferiorEndplateNode_pos * ..MirrorTransform;
   };
 };
 
@@ -893,6 +911,8 @@ AnyFolder L2 = {
   AnyFloat BuckleContactNode_pos = {0.05900000, 0.1160000, 0.0000000};
   AnyFloat SuperiorEndplateAnteriorNode_pos = {0.050000, 0.127800, 0.000000};
   AnyFloat SuperiorEndplatePosteriorNode_pos = {0.028200, 0.118700, 0.000000};
+  AnyFloat InferiorEndplateAnteriorNode_pos = {0.061111, 0.101067, 0.000000};
+  AnyFloat InferiorEndplatePosteriorNode_pos = {0.033377, 0.093237, 0.000000};
 
   AnyFolder Right = {
     AnyFloat MultifidusLumborumL2L4Node_pos = {0.01100000, 0.07900000, 0.005000000};
@@ -956,6 +976,7 @@ AnyFolder L2 = {
       AnyFloat Transversus_Ins_pos = {0.01900000, 0.1050000, 0.03200000};
     #endif
     AnyFloat SuperiorEndplateNode_pos = 0.5*(.SuperiorEndplateAnteriorNode_pos + .SuperiorEndplatePosteriorNode_pos) + {0,-0.000800,0.019000}; // Offset added manually to match the vertebra surface
+    AnyFloat InferiorEndplateNode_pos = {0.044785, 0.098792, 0.021756};
   };
 
   AnyFolder Left = {
@@ -1020,6 +1041,7 @@ AnyFolder L2 = {
       AnyFloat Transversus_Ins_pos = .Right.Transversus_Ins_pos * ..MirrorTransform;
     #endif
     AnyFloat SuperiorEndplateNode_pos = .Right.SuperiorEndplateNode_pos * ..MirrorTransform;
+    AnyFloat InferiorEndplateNode_pos = .Right.InferiorEndplateNode_pos * ..MirrorTransform;
   };
 };
 
@@ -1036,6 +1058,8 @@ AnyFolder L1 = {
   AnyFloat BuckleContactNode_pos = {0.04800000, 0.1460000, 0.0000000};
   AnyFloat SuperiorEndplateAnteriorNode_pos = {0.039000, 0.157900, 0.000000};
   AnyFloat SuperiorEndplatePosteriorNode_pos = {0.017094, 0.149706, 0.000000};
+  AnyFloat InferiorEndplateAnteriorNode_pos = {0.049638, 0.132982, 0.000000};
+  AnyFloat InferiorEndplatePosteriorNode_pos = {0.021313, 0.120145, 0.000000};
 
   AnyFloat SpinalisL2T1Node_pos = {-0.019+0.005,0.106,0};
   AnyFloat SpinalisL1T2Node_pos = {-0.018+0.005,0.108,0};
@@ -1095,6 +1119,7 @@ AnyFolder L1 = {
     AnyFloat ContactNode_pos = {-0.02000000, 0.1000000, 0.05000000};
     AnyFloat O_LatissimusDorsi3_pos = {-0.02000000, 0.1385000, 0.0000000};
     AnyFloat SuperiorEndplateNode_pos = 0.5*(.SuperiorEndplateAnteriorNode_pos + .SuperiorEndplatePosteriorNode_pos) + {0,-0.000900,0.018800}; // Offset added manually to match the vertebra surface
+    AnyFloat InferiorEndplateNode_pos = {0.033096, 0.129084, 0.021837};
     AnyFloat O_serratus_posterior_inferior_pos = {-0.02, 0.105 , 0.0};
     AnyFloat O_serratus_posterior_inferior_L1R11ViaNodepos = {-0.035, 0.14, 0.04};
 
@@ -1169,6 +1194,7 @@ AnyFolder L1 = {
     #endif
     AnyFloat ICSpringSupNode_pos = .Right.ICSpringSupNode_pos * ..MirrorTransform;
     AnyFloat SuperiorEndplateNode_pos = .Right.SuperiorEndplateNode_pos * ..MirrorTransform;
+    AnyFloat InferiorEndplateNode_pos = .Right.InferiorEndplateNode_pos * ..MirrorTransform;
   };
 };
 

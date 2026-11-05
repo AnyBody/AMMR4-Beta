@@ -32,6 +32,7 @@ S = Sacral segment
 
 TrunkSegmentBase SacrumSeg(
   DATA = ..Data.unscaled,
+  CRANIAL_NEIGHBOUR = L5,
   LEVEL = Sacrum,
   CAUDAL_NEIGHBOUR = Pelvis,
   DEF_SCALING = 0,  // reusing pelvis
@@ -40,12 +41,10 @@ TrunkSegmentBase SacrumSeg(
   _VOLUMETRIC_CAVITY = BM_TRUNK_CAVITY_MODEL,
   PelvisSeg=..PelvisSeg
   ) = {
-
   //initial position found as a function of pelvis pos and orientation
-  r0 ??= .PelvisSeg.PelvisSacrumJntNode.sRel*.PelvisSeg.Axes0'+.PelvisSeg.r0-SacrumPelvisJntNode.sRel*Axes0';
   Axes0=.PelvisSeg.Axes0;
 
-  // Sacrum is part of the pelvis so they scales together
+  // Sacrum is part of the pelvis so they scale together
   AnyRefNode& ScalingNode = AnatomicalFrameTrunk;
   AnyRefNode AnatomicalFrameTrunk = {
     sRel = ..PelvisSeg.AnatomicalFrameTrunk.sRel;
@@ -53,17 +52,6 @@ TrunkSegmentBase SacrumSeg(
   };
   AnyFunTransform3D& Scale = .PelvisSeg.Scale;
 
-  // Joint nodes
-  AnyRefNode SacrumL5JntNode = {
-    sRel = .Scale(.Data.SacrumL5JntNode_pos);
-    /// Rotated node with x axis parallel to the sacrum base surface
-    AnyRefNode RotNode = {
-        ARel = RotMat(0.5*(..Endplates.Superior.Anterior.sRel + ..Endplates.Superior.Posterior.sRel),
-                      ..Endplates.Superior.Anterior.sRel,
-                      0.5*(..Endplates.Superior.Anterior.sRel + ..Endplates.Superior.Posterior.sRel) + (..Endplates.Superior.Left.sRel - ..Endplates.Superior.Right.sRel))*RotMat(pi/2,x);
-    };
-  };
-  //AnyRefNode SacrumPelvisJntNode = {sRel = .Scale(.Data.SacrumPelvisJntNode_pos);};
   AnyRefNode SacrumContactNode = {sRel= .Scale(.Data.SacrumContactNode_pos);};
 
   AnyRefNode SacrumBonyTip ={sRel= .Scale(.Data.SacrumBonyTip_pos);};
@@ -91,10 +79,6 @@ TrunkSegmentBase L5Seg(
   _VOLUMETRIC_CAVITY = BM_TRUNK_CAVITY_MODEL,
   PelvisSeg=..PelvisSeg
   ) = {
-
-  //initial position found as a function of pelvis pos and orientation
-  r0 ??= .SacrumSeg.SacrumL5JntNode.sRel*.SacrumSeg.Axes0'+.SacrumSeg.r0-L5SacrumJntNode.sRel*Axes0';
-
 }; // End of L5Seg
 
 TrunkSegmentBase L4Seg(
@@ -105,9 +89,6 @@ TrunkSegmentBase L4Seg(
   _VOLUMETRIC_CAVITY = BM_TRUNK_CAVITY_MODEL,
   PelvisSeg=..PelvisSeg
   ) = {
-  //initial position found as a function of pelvis pos and orientation
-  r0 ??= .L5Seg.L4L5JntNode.sRel*.L5Seg.Axes0'+.L5Seg.r0-L4L5JntNode.sRel*Axes0';
-
 }; // End of L4Seg
 
 TrunkSegmentBase L3Seg(
@@ -118,8 +99,6 @@ TrunkSegmentBase L3Seg(
   _VOLUMETRIC_CAVITY = BM_TRUNK_CAVITY_MODEL,
   PelvisSeg=..PelvisSeg
   ) = {
-  //initial position found as a function of pelvis pos and orientation
-  r0 ??= .L4Seg.L3L4JntNode.sRel*.L4Seg.Axes0'+.L4Seg.r0-L3L4JntNode.sRel*Axes0';
 }; // End of L3Seg
 
 TrunkSegmentBase L2Seg(
@@ -130,8 +109,6 @@ TrunkSegmentBase L2Seg(
   _VOLUMETRIC_CAVITY = BM_TRUNK_CAVITY_MODEL,
   PelvisSeg=..PelvisSeg
   ) = {
-  //initial position found as a function of pelvis pos and orientation
-  r0 ??= .L3Seg.L2L3JntNode.sRel*.L3Seg.Axes0'+.L3Seg.r0-L2L3JntNode.sRel*Axes0';
 }; // End of L2Seg
 
 TrunkSegmentBase L1Seg(
@@ -142,6 +119,4 @@ TrunkSegmentBase L1Seg(
   _VOLUMETRIC_CAVITY = BM_TRUNK_CAVITY_MODEL,
   PelvisSeg=..PelvisSeg
   ) = {
-  //initial position found as a function of pelvis pos and orientation
-  r0 ??= .L2Seg.L1L2JntNode.sRel*.L2Seg.Axes0'+.L2Seg.r0-L1L2JntNode.sRel*Axes0';
 }; // End of L1Seg
