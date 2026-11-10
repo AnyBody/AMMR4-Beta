@@ -221,11 +221,30 @@ HUMAN_MODEL = Main.HumanModel
     // Define values for drawing the HUMAN_SEG at the target point and orientation.
     TargetFrameRef.NAME_PARA_OPT##_Node0 = {
       AnyFileVar STLFilename = HUMAN_MODEL.BodyModel.Left.Leg.Segments.STL.FilenameFoot;
-      AnyFloat STLPos = -..BVHSeg.NAME_PARA_OPT##_Node0.sRel + {0,HUMAN_MODEL.BodyModel.Left.Leg.Segments.Talus.SubTalarJoint.sRel[1],0};
-      AnyMat33 STLOrientation = RotMat(-pi/2,y);
+      AnyFloat STLPos ??= {0,0,0};
+      AnyMat33 STLOrientation ??= RotMat(0,y);
       AnyFloat STLScale = {1,1,-1};
-      AnyFunTransform3D &STLTransform = HUMAN_MODEL.BodyModel.Left.Leg.Segments.Foot.Scale;
-    };
+      AnyFunTransform3D STLTransform = {
+        PreTransforms = {
+          &HUMAN_MODEL.Scaling.GeometricalScaling.Left.Foot.ScaleFunction,
+          &FootRigidBody,
+        };
+        // Transformation function using 3 points to align the foot stl with target points.
+        AnyFunTransform3DLin2 FootRigidBody = {
+          Points0 = { 
+                      HUMAN_MODEL.BodyModel.Left.Leg.Segments.Foot.Talus.AnkleJoint.sRel,
+                      HUMAN_MODEL.BodyModel.Left.Leg.Segments.Foot.Metatarsal1.LTOE_Marker.sRel,
+                      HUMAN_MODEL.BodyModel.Left.Leg.Segments.Foot.Metatarsal5.LTOE2_Marker.sRel,
+                    };
+          Points1 = {
+                      -....BVHSeg.NAME_PARA_OPT##_Node0.sRel,
+                      ....BVHSeg.NAME_PARA_OPT##_Node0.Node1.sRel,
+                      ....BVHSeg.NAME_PARA_OPT##_Node0.Node2.sRel,
+                    };
+          Mode = VTK_LANDMARK_RIGIDBODY;
+        };          
+      }; // STLTransform
+    }; // Node0
     #endif
 
     #if HUMAN_SEG == "RFOOT"
@@ -250,11 +269,30 @@ HUMAN_MODEL = Main.HumanModel
     TargetFrameRef.NAME_PARA_OPT##_Node0 = {
       AnyFolder &HumRef = HUMAN_MODEL.BodyModel.Right.Leg.Segments;
       AnyFileVar STLFilename = HUMAN_MODEL.BodyModel.Right.Leg.Segments.STL.FilenameFoot;
-      AnyFloat STLPos = -..BVHSeg.NAME_PARA_OPT##_Node0.sRel + {0,HUMAN_MODEL.BodyModel.Right.Leg.Segments.Talus.SubTalarJoint.sRel[1],0};
-      AnyMat33 STLOrientation = RotMat(-pi/2,y);
+      AnyFloat STLPos ??= {0,0,0};
+      AnyMat33 STLOrientation ??= RotMat(0,y);
       AnyFloat STLScale = {1,1,1};
-      AnyFunTransform3D &STLTransform = HUMAN_MODEL.BodyModel.Right.Leg.Segments.Foot.Scale;
-    };
+      AnyFunTransform3D STLTransform = {
+        PreTransforms = {
+          &HUMAN_MODEL.Scaling.GeometricalScaling.Right.Foot.ScaleFunction,
+          &FootRigidBody,
+        };
+        // Transformation function using 3 points to align the foot stl with target points.
+        AnyFunTransform3DLin2 FootRigidBody = {
+          Points0 = { 
+                      HUMAN_MODEL.BodyModel.Right.Leg.Segments.Foot.Talus.AnkleJoint.sRel,
+                      HUMAN_MODEL.BodyModel.Right.Leg.Segments.Foot.Metatarsal1.RTOE_Marker.sRel,
+                      HUMAN_MODEL.BodyModel.Right.Leg.Segments.Foot.Metatarsal5.RTOE2_Marker.sRel,
+                    };
+          Points1 = {
+                      -....BVHSeg.NAME_PARA_OPT##_Node0.sRel,
+                      ....BVHSeg.NAME_PARA_OPT##_Node0.Node1.sRel,
+                      ....BVHSeg.NAME_PARA_OPT##_Node0.Node2.sRel,
+                    };
+          Mode = VTK_LANDMARK_RIGIDBODY;
+        };          
+      }; // STLTransform
+    }; // Node0
     #endif
 
     #if HUMAN_SEG == "LHAND"
@@ -278,11 +316,30 @@ HUMAN_MODEL = Main.HumanModel
     // Define values for drawing the HUMAN_SEG at the target point and orientation.
     TargetFrameRef.NAME_PARA_OPT##_Node0 = {
       AnyFileVar STLFilename = HUMAN_MODEL.BodyModel.Left.ShoulderArm.Data.unscaled.STL.FileNameHand;
-      AnyFloat STLPos = -..BVHSeg.NAME_PARA_OPT##_Node0.sRel+HUMAN_MODEL.BodyModel.Left.ShoulderArm.Segments.Hand.Ref.wj.sRel;
-      AnyMat33 STLOrientation = RotMat(-pi/2,x)*RotMat(-pi,y);
+      AnyFloat STLPos ??= {0,0,0};
+      AnyMat33 STLOrientation ??= RotMat(0,y);
       AnyFloat STLScale = {1,1,-1};
-      AnyFunTransform3D &STLTransform = HUMAN_MODEL.Scaling.GeometricalScaling.Left.Hand.ScaleFunction;
-    };
+      AnyFunTransform3D STLTransform = {
+        PreTransforms = {
+          &HUMAN_MODEL.Scaling.GeometricalScaling.Left.Hand.ScaleFunction,
+          &HandRigidBody,
+        };
+        // Transformation function using 3 points to align the hand stl with target points.
+        AnyFunTransform3DLin2 HandRigidBody = {
+          Points0 = { 
+                      HUMAN_MODEL.BodyModel.Left.ShoulderArm.Segments.Hand.Ref.wj.sRel,
+                      HUMAN_MODEL.BodyModel.Left.ShoulderArm.Segments.Hand.Ref.LHT1_Marker.sRel,
+                      HUMAN_MODEL.BodyModel.Left.ShoulderArm.Segments.Hand.Ref.LHT2_Marker.sRel,
+                    };
+          Points1 = {
+                      -....BVHSeg.NAME_PARA_OPT##_Node0.sRel,
+                      ....BVHSeg.NAME_PARA_OPT##_Node0.Node1.sRel,
+                      ....BVHSeg.NAME_PARA_OPT##_Node0.Node2.sRel,
+                    };
+          Mode = VTK_LANDMARK_RIGIDBODY;
+        };          
+      }; // STLTransform
+    }; // Node 0
     #endif
 
     #if HUMAN_SEG == "RHAND"
@@ -306,11 +363,30 @@ HUMAN_MODEL = Main.HumanModel
     // Define values for drawing the HUMAN_SEG at the target point and orientation.
     TargetFrameRef.NAME_PARA_OPT##_Node0 = {
       AnyFileVar STLFilename = HUMAN_MODEL.BodyModel.Right.ShoulderArm.Data.unscaled.STL.FileNameHand;
-      AnyFloat STLPos = -..BVHSeg.NAME_PARA_OPT##_Node0.sRel-HUMAN_MODEL.BodyModel.Right.ShoulderArm.Segments.Hand.Ref.wj.sRel;
-      AnyMat33 STLOrientation = RotMat(-pi/2,x);
+      AnyFloat STLPos ??= {0,0,0};
+      AnyMat33 STLOrientation ??= RotMat(0,y);
       AnyFloat STLScale = {1,1,1};
-      AnyFunTransform3D &STLTransform = HUMAN_MODEL.Scaling.GeometricalScaling.Right.Hand.ScaleFunction;
-    };
+      AnyFunTransform3D STLTransform = {
+        PreTransforms = {
+          &HUMAN_MODEL.Scaling.GeometricalScaling.Right.Hand.ScaleFunction,
+          &HandRigidBody,
+        };
+        // Transformation function using 3 points to align the hand stl with target points.
+        AnyFunTransform3DLin2 HandRigidBody = {
+          Points0 = { 
+                      HUMAN_MODEL.BodyModel.Right.ShoulderArm.Segments.Hand.Ref.wj.sRel,
+                      HUMAN_MODEL.BodyModel.Right.ShoulderArm.Segments.Hand.Ref.RHT1_Marker.sRel,
+                      HUMAN_MODEL.BodyModel.Right.ShoulderArm.Segments.Hand.Ref.RHT2_Marker.sRel,
+                    };
+          Points1 = {
+                      -....BVHSeg.NAME_PARA_OPT##_Node0.sRel,
+                      ....BVHSeg.NAME_PARA_OPT##_Node0.Node1.sRel,
+                      ....BVHSeg.NAME_PARA_OPT##_Node0.Node2.sRel,
+                    };
+          Mode = VTK_LANDMARK_RIGIDBODY;
+        };          
+      }; // STLTransform
+    }; // Node 0
     #endif
 
     // Create Target nodes corresponding to the nodes defined on the BVH model
@@ -327,7 +403,6 @@ HUMAN_MODEL = Main.HumanModel
           RelRotMat = .STLOrientation;
           ScaleXYZ = .STLScale;
           Opacity = 0.3 + ....Functions.WeightFun(.t)[0]*0.5;
-//          RGB ={....Functions.WeightFun(.t)[0]*0.5,(....Settings.Weight-....Functions.WeightFun(.t)[0])*0.7,0.7*....Settings.Weight}/....Settings.Weight;
           RGB = iffun(gtfun(....Functions.WeightFun(.t)[0],0),{0.2,0.8,0.2},{0.65,0.65,0.65});
           AnyFunTransform3D &Scale = .STLTransform;
         };
