@@ -54,14 +54,16 @@ Main = {
     AnyOperationSequence SaveOutput =
     {
       OPERATION_DISPLAY_PRIORITY(PriorityHigh);
-      AnyOperation& SaveHDF5= Main.ModelSetup.Macros.SaveOutputToHDF;
+      AnyOperation& SaveHDF5MarkerTracking = Main.ModelSetup.Macros.SaveOutputToHDFMarkerTracking;
+      AnyOperation& SaveHDF5InverseDynamicStudy = Main.ModelSetup.Macros.SaveOutputToHDFInverseDynamicStudy;
     };
   };
 
   AnyOperationSequence LoadAndReplay=
   {
       AnyOperation& LoadParameters=  Main.ModelSetup.Macros.Load_parameters;
-      AnyOperation& LoadHDF5= Main.ModelSetup.Macros.LoadOutputFromHDF;
+      AnyOperation& LoadHDF5MarkerTracking = Main.ModelSetup.Macros.LoadOutputFromHDFMarkerTracking;
+      AnyOperation& LoadHDF5InverseDynamicStudy = Main.ModelSetup.Macros.LoadOutputFromHDFInverseDynamicStudy;
       AnyOperation& Replay= Main.Studies.InverseDynamicStudy.Replay;
   };
 };

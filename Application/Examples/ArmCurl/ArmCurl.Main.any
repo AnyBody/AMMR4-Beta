@@ -65,6 +65,7 @@ Main = {
   #include "Model/CreateVideo.any"
 
   // Include an operation sequence to run all required steps of your application (see Operations tab)
+    #define AutoSaveOption 1
     #include "<ANYBODY_PATH_MODELUTILS>\Operations\RunAppSequence.any"
 
 }; //Main

@@ -87,7 +87,7 @@ ModelSetup = {
 
   #endif
 
- // Study for saving a loading the parameters from calibration trials
+ // Study for saving and loading the parameters from calibration trials
  //(dynamic or standing refereces)
  #include "SaveLoadParameters.any"
 
@@ -96,36 +96,53 @@ ModelSetup = {
 
  //markers adds macros automatically into this folder
  AnyFolder Macros =
- {
-
-    AnyOperationMacro SaveOutputToHDF =
-    {
+ {    
+     AnyOperationClassOpr SaveOutputToHDFMarkerTracking = 
+     {
        OPERATION_DISPLAY_PRIORITY(PriorityLow);
-       MacroStr = {
-         "classoperation Main.Studies.MarkerTracking.Output" + strquote("Save data")
-         + "--type= " + strquote("Deep")
-         + "--file= " + strquote(ANYBODY_PATH_OUTPUT + "/" + MOCAP_TEST_FILENAME_PREFIX +  MOCAP_OUTPUT_FILENAME_PREFIX
-         + Main.ModelSetup.TrialSpecificData.TrialFileName + "_MarkerTracking.anydata.h5"),
-
-         "classoperation Main.Studies.InverseDynamicStudy.Output" + strquote("Save data")
-         + "--type= " + strquote("Deep")
-         + "--file= " + strquote(ANYBODY_PATH_OUTPUT + "/" + MOCAP_TEST_FILENAME_PREFIX  +  MOCAP_OUTPUT_FILENAME_PREFIX
-         + Main.ModelSetup.TrialSpecificData.TrialFileName + "_InverseDynamicStudy.anydata.h5")
-      };
-    };
-    AnyOperationMacro LoadOutputFromHDF =
-    {
-       OPERATION_DISPLAY_PRIORITY(PriorityLow);
-       MacroStr = {
-         "classoperation Main.Studies.MarkerTracking.Output" + strquote("Load data")
-         + "--file= " + strquote(ANYBODY_PATH_OUTPUT + "/" + MOCAP_TEST_FILENAME_PREFIX +  MOCAP_OUTPUT_FILENAME_PREFIX
-         + Main.ModelSetup.TrialSpecificData.TrialFileName + "_MarkerTracking.anydata.h5"),
-
-         "classoperation Main.Studies.InverseDynamicStudy.Output" + strquote("Load data")
-         + "--file= " + strquote(ANYBODY_PATH_OUTPUT + "/" + MOCAP_TEST_FILENAME_PREFIX +  MOCAP_OUTPUT_FILENAME_PREFIX
-         + Main.ModelSetup.TrialSpecificData.TrialFileName + "_InverseDynamicStudy.anydata.h5")
+       Object = &Main.Studies.MarkerTracking.Output;
+       OperationName = "Save data";
+       ArgList = {
+         AnyStringVar file = ANYBODY_PATH_OUTPUT + "/" + MOCAP_TEST_FILENAME_PREFIX + MOCAP_OUTPUT_FILENAME_PREFIX
+          + Main.ModelSetup.TrialSpecificData.TrialFileName + "_MarkerTracking.anydata.h5";       
+         AnyStringVar type = "Deep";
        };
-    };
+     };
+     
+     AnyOperationClassOpr SaveOutputToHDFInverseDynamicStudy =
+     {
+       OPERATION_DISPLAY_PRIORITY(PriorityLow);
+       Object = &Main.Studies.InverseDynamicStudy.Output;
+       OperationName = "Save data";
+       ArgList = {
+         AnyStringVar file = ANYBODY_PATH_OUTPUT + "/" + MOCAP_TEST_FILENAME_PREFIX + MOCAP_OUTPUT_FILENAME_PREFIX
+          + Main.ModelSetup.TrialSpecificData.TrialFileName + "_InverseDynamicStudy.anydata.h5";       
+         AnyStringVar type = "Deep";
+       };
+     };
+          
+     AnyOperationClassOpr LoadOutputFromHDFMarkerTracking = 
+     {
+       OPERATION_DISPLAY_PRIORITY(PriorityLow);
+       Object = &Main.Studies.MarkerTracking.Output;
+       OperationName = "Load data";
+       ArgList = {
+         AnyStringVar file = ANYBODY_PATH_OUTPUT + "/" + MOCAP_TEST_FILENAME_PREFIX + MOCAP_OUTPUT_FILENAME_PREFIX
+          + Main.ModelSetup.TrialSpecificData.TrialFileName + "_MarkerTracking.anydata.h5";
+       };
+     };  
+       
+     AnyOperationClassOpr LoadOutputFromHDFInverseDynamicStudy = 
+     {
+       OPERATION_DISPLAY_PRIORITY(PriorityLow);
+       Object = &Main.Studies.InverseDynamicStudy.Output;
+       OperationName = "Load data";
+       ArgList = {
+         AnyStringVar file = ANYBODY_PATH_OUTPUT + "/" + MOCAP_TEST_FILENAME_PREFIX + MOCAP_OUTPUT_FILENAME_PREFIX
+          + Main.ModelSetup.TrialSpecificData.TrialFileName + "_InverseDynamicStudy.anydata.h5";
+       };
+     };
+
  }; // Macros
 
 

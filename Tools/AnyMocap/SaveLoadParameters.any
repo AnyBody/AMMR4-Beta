@@ -5,12 +5,17 @@
    #endif
 
    #if (ANYBODY_V1 > 7)|(ANYBODY_V1 == 7 & ANYBODY_V2 > 2)
-   AnyOperationMacro Save_parameters = {
-     AnyFileVar SavePath = TEMP_PATH;
-     MacroStr  = {"classoperation Main" + strquote("Save Values") +"--file=" +
-       strquote(FilePathCompleteOf(SavePath) +"/"+  MOCAP_PARAMETER_FILE_PREFIX + Main.ModelSetup.TrialSpecificData.TrialFileName +".anyset" )
+   
+   AnyOperationClassOpr Save_parameters = 
+   {
+     OPERATION_DISPLAY_PRIORITY(PriorityLow);
+     Object = &Main;
+     OperationName = "Save Values";
+     ArgList = {
+       AnyStringVar file = ANYBODY_PATH_OUTPUT + "/"+  MOCAP_PARAMETER_FILE_PREFIX + Main.ModelSetup.TrialSpecificData.TrialFileName +".anyset";
      };
    };
+   
    #else
    AnyOperationSequence Save_parameters= {
      OPERATION_DISPLAY_PRIORITY(PriorityLow);
@@ -42,12 +47,17 @@
         Target = Source;
       };
 
-      AnyOperationMacro SaveToFile = {
-        AnyFileVar SavePath = TEMP_PATH;
-        MacroStr  = {"classoperation Main" + strquote("Save Values") +"--file=" +
-          strquote(FilePathCompleteOf(SavePath) +"/"+  MOCAP_PARAMETER_FILE_PREFIX + Main.ModelSetup.TrialSpecificData.TrialFileName +".anyset" )
+      AnyOperationClassOpr SaveToFile = 
+      {
+        OPERATION_DISPLAY_PRIORITY(PriorityLow);
+        Object = &Main;
+        OperationName = "Save Values";
+        ArgList = {
+          AnyStringVar file = ANYBODY_PATH_OUTPUT + "/"+  MOCAP_PARAMETER_FILE_PREFIX + Main.ModelSetup.TrialSpecificData.TrialFileName +".anyset";
         };
       };
+
+
     };
     #endif
 

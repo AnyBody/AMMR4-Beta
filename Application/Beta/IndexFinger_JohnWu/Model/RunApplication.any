@@ -16,8 +16,13 @@ AnyOperationSequence RunApplication = {
 
   #if AutoSaveOption
   /// This operation saves the output of the study to an h5 file in the Output folder
-  AnyOperationMacro save = {
-    MacroStr={ "classoperation Main.Study.Output " + strquote("Save data") + " --file="+ "Output/" + ANYBODY_NAME_MAINFILE + ".anydata.h5 " + "--type=Deep"};
+  AnyOperationClassOpr save = {
+        Object = &Main.Study.Output;
+        OperationName = "Save data";
+        ArgList = {
+          AnyStringVar file = ANYBODY_PATH_OUTPUT + ANYBODY_NAME_MAINFILE + ".anydata.h5";
+          AnyStringVar type = "Deep";
+        };
   };
   #endif
 };
