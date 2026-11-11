@@ -12,7 +12,7 @@
 #define VIDEO_ANALYSIS InverseDynamics
 
 VIDEO_STUDY = {
-VideoLookAtCamera VideoTool (UP_DIRECTION = y) =
+VideoLookAtCamera VideoTool (UP_DIRECTION = y, ENABLE_SAVE_SETTINGS = 1) =
 {
      // Change this to give the created video a different filename.
      VideoName = ANYBODY_NAME_MAINFILEDIR;

@@ -157,3 +157,14 @@ AnyOperationMacro Save =
   };
 };
 #endif
+
+// This operation saves the output of the study to an h5 file in the Output folder
+//AnyOperationClassOpr Save = {
+//      Object = CompleteNameOf(&.Study.Output);
+//      OperationName = "Save data";
+//      ArgList = {
+//        AnyStringVar file = ANYBODY_PATH_OUTPUT + .OutputFileName + ".anydata.h5";
+//        AnyStringVar type = "Deep";
+//      };
+//};
+//#endif

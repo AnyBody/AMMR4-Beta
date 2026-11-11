@@ -1,10 +1,16 @@
 Views = {
     AnyFolder SetViewMacros = {
       AnyOperationSequence KinematicView= {
-        AnyOperationMacro mcr = {
-          OPERATION_DISPLAY_PRIORITY(PriorityLow);
-          MacroStr = {"classoperation "+ CompleteNameOf(&Main.ModelSetup.Views.KinematicView) + strquote("Set View") };
+//        AnyOperationMacro mcr = {
+//          OPERATION_DISPLAY_PRIORITY(PriorityLow);
+//          MacroStr = {"classoperation "+ CompleteNameOf(&Main.ModelSetup.Views.KinematicView) + strquote("Set View") };
+//        };
+        
+        AnyOperationClassOpr SetKinematicView = {
+              Object = &Main.ModelSetup.Views.KinematicView;
+              OperationName = "Set View";
         };
+        
       };
       AnyOperationSequence InverseDynamicView = {
          AnyOperationMacro mcr = {
@@ -92,7 +98,8 @@ Views = {
       Hide = DesignVar({Off});
       Reset = {On};
       HideAllFirst = Off;
-      AnyOperationSequence HideView = { AnyOperationMacro mcr = { OPERATION_DISPLAY_PRIORITY(PriorityLow); MacroStr = {"classoperation " + CompleteNameOf(&...MarkerArrowsView) + ".Hide " +strquote("Set Value") +" --value=" + "{On}", "classoperation "+ CompleteNameOf(&...MarkerArrowsView) + strquote("Set View"), "classoperation " + CompleteNameOf(&...MarkerArrowsView) + ".Hide " +strquote("Reset Value") };};};
+//      AnyOperationSequence HideView = { AnyOperationMacro mcr = { OPERATION_DISPLAY_PRIORITY(PriorityLow); MacroStr = {"classoperation " + CompleteNameOf(&...MarkerArrowsView) + ".Hide " +strquote("Set Value") +" --value=" + "{On}", "classoperation "+ CompleteNameOf(&...MarkerArrowsView) + strquote("Set View"), "classoperation " + CompleteNameOf(&...MarkerArrowsView) + ".Hide " +strquote("Reset Value") };};};
+      AnyOperationSequence HideView = {OPERATION_DISPLAY_PRIORITY(PriorityLow); AnyOperationClassOpr MarkerArrowsViewHideView1 = {Object = &Main.ModelSetup.Views.MarkerArrowsView.Hide; OperationName = "Set Value"; ArgList = {AnySwitchVar value = On;};}; AnyOperationClassOpr MarkerArrowsViewHideView2 = {Object = &Main.ModelSetup.Views.MarkerArrowsView; OperationName = "Set View";}; AnyOperationClassOpr MarkerArrowsViewHideView3 = {Object = &Main.ModelSetup.Views.MarkerArrowsView.Hide; OperationName = "Reset Value";};};
       AnyOperationSequence ShowView = { AnyOperationMacro mcr = { OPERATION_DISPLAY_PRIORITY(PriorityLow); MacroStr = {"classoperation " + CompleteNameOf(&...MarkerArrowsView) + ".Hide " +strquote("Set Value") +" --value=" + "{Off}", "classoperation "+ CompleteNameOf(&...MarkerArrowsView) + strquote("Set View"), "classoperation " + CompleteNameOf(&...MarkerArrowsView) + ".Hide " +strquote("Reset Value") };};};
     };
     AnyStandardModelViewDefinition MarkerView ={
