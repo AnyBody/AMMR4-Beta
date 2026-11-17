@@ -1,10 +1,9 @@
 ---
-name: "Proofread AMMR model documentation"
+name: proofread-ammr-model-documentation
 description: "Correct grammar, spelling, and flow of one or more AMMR model description pages under Docs/Applications without changing information."
+disable-model-invocation: true
 argument-hint: "Change TARGET_MODELS below, then run this prompt"
-agent: "agent"
 ---
-
 Proofread the AMMR model documentation for each model listed below.
 
 `TARGET_MODELS`: `FreePosture`
