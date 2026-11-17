@@ -1,0 +1,42 @@
+/*
+  Basic Model template for the AMMR Models
+*/
+
+// libdef files are often included at the top of the file to define library dependencies
+#include "libdef.any"
+
+
+Main = {
+  ///^ The Main folder is auto generated and required for all AnyScript models
+  ///^ The top section of a model typically begins with an "Input" section - often named "Parameters"
+  ///^ This section is used to define all the input parameters for the model that are intended to be set by the user by modifying the values in the Parameters folder
+
+  /// The Parameters folder is where all user-modifiable input parameters are defined
+  AnyFolder Parameters = {};
+
+
+  // Models that use the AMMR body model will have this include statement
+  #include "<ANYBODY_PATH_BODY>/HumanModel.any"
+
+  /// The HumanModel folder comes from AMMR src code and contains the bodymodel code.
+  HumanModel = {};
+
+  /// The Environment folder is used to define all environmental elements such as ground, obstacles, and other external objects.
+  /// The folder might be omitted for some models if no environmental elements are needed or if the Environment is just one other folder e.g. "Bike"
+  AnyFolder Environment = {};
+
+  /// The Model folder is used to define what elements make up the model. It typiclly include the HumanModel and Environment folders.
+  /// connections between model components are typically defined within this folder.
+  /// Older models might use the name "ModelEnvironmentConnection" instead of "Model" for this folder.
+  /// Older models might define the "Environment" folder inside the "Model" folder instead of having it as a separate top-level folder.
+  AnyFolder Model = {};
+
+  /// The Output folder is used to define all output elements such as results, logs, and visualizations.
+  /// For some models the folder is not required or named "Output" - it may be omitted or replaced with a different name depending on the model structure.
+  AnyFolder Output = {};
+
+  /// The Studies folder is used to define all study elements such as simulations, analyses, and experiments.
+  /// For simple models this folder might not exist and the AnyStudy derived objects are located directly inside the Main folder.
+  AnyFolder Studies = {};
+
+};
