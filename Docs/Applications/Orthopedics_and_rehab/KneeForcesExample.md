@@ -1,12 +1,12 @@
 ---
-gallery_title: "Simple Knee force estimation"
+gallery_title: "Estimation of Knee Forces"
 gallery_image: "/Applications/images/KneeForceExample.webp"
 anylink: Application/Examples/KneeForcesExample/Knee_force_example.main.any
 ---
 
 (sphx_glr_auto_examples_Orthopedics_and_rehab_plot_KneeForcesExample.py)=
 (example_knee_forces_estimate)=
-# Knee forces example
+# Estimation of Knee Forces
 
 :::{anylink-gallery}
 :margin:
@@ -15,35 +15,25 @@ anylink: Application/Examples/KneeForcesExample/Knee_force_example.main.any
 
 Example of calculating the medial/lateral knee force from the total force and moment.
 
-Most musculoskeletal models uses a simplified knee joint (revolute joint). But we can still estimate
-what the medial and lateral femoral condyle contact forces are on the tibial plateau.
-
+Most musculoskeletal models represent the knee joint as a simplified revolute joint. However, the medial and lateral femoral condyle contact forces acting on the tibial plateau can still be estimated.
 
 :::{caution}
 The medial and lateral knee forces calculated here are only crude
-estimate for the actual knee condyle contact force.
+estimates of the actual knee condyle contact force.
 :::
 
-This example shows how to find the knee reaction forces and moments and decompose them into
-two equivalent forces which represent the medial and lateral knee force components acting from the
-femur to the tibial tray.
+This example demonstrates how to determine the knee reaction forces and moments and resolve them into two equivalent forces representing the medial and lateral knee force components acting from the femur onto the tibial tray.
 
-:::{admonition} In Model Repository:
-:class: seealso
-
-{anylink-file}` `
 :::
-
-
-
 :::{figure} /Applications/Orthopedics_and_rehab/knee_forces.svg
 :align: center
 :width: 50%
+The vertical knee force with regards to the shank and the knee moment in the shank frontal plane is decomposed into a lateral and medial force component.
 :::
 
 The vertical knee force with regards to the shank and the knee moment in the
 shank frontal plane is decomposed into a lateral and medial force component.
-These forces can be thought as a representation of the knee condyle forces on
+These forces can be thought of as a representation of the knee condyle forces on
 the tibial plateau.
 
 The figure above shows the concept. The relationship between the forces and moment can be expressed as:
@@ -64,7 +54,8 @@ $$
 
 The model shows how this can be added to any model and walks through the AnyScript code.
 
-> :::{figure} /Applications/Orthopedics_and_rehab/KneeForces2.png
-> :align: center
-> :width: 50%
-> :::
+:::{admonition} In Model Repository:
+:class: seealso
+
+{anylink-file}` `
+:::

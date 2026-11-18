@@ -16,7 +16,7 @@ anylink: Application/MocapExamples/ADL_Gait_[beta]/Subjects/2014001/2014001_C1_0
 
 
 Fullbody MoCap model with multiple subjects and trials based on the 
-"Rehazenter Adult Walking Dataset" by [Schreiber and Moissenet (2019)](https://doi.org/10.1038/s41597-019-0124-4).
+"Rehazenter Adult Walking Dataset" by Schreiber and Moissenet (2019). [^schreiber2019]
 
 
 
@@ -35,7 +35,7 @@ standing reference trial is used to identify a number parameters:
 These parameters are then loaded in the matching dynamic trials. 
 
 :::{warning} The model is a starting point for analysing the 
-[Rehazenter adult walking dataset](https://doi.org/10.1038/s41597-019-0124-4). 
+Rehazenter adult walking dataset. 
 The model has not been through *any* kind of validation or publication. It is likely that 
 some results will not be correct without further adjustments.
 :::
@@ -43,30 +43,17 @@ some results will not be correct without further adjustments.
 Choices of model parameters are in some cases arbitrary as this model is a work in progress. If you come up 
 with improvements to the model please share them back. 
 
-The model was created by [Enrico De Pieri](https://www.linkedin.com/in/enrico-de-pieri-13096a7a), 
-[Anderson de Souza Castelo Oliveira](https://vbn.aau.dk/en/persons/oliveira), and [Morten Enemark Lund](https://www.linkedin.com/in/biomedical) but has not yet been used for publication.
-
-
-
-:::{admonition} In Model Repository:
-:class: seealso
-
-The model is located at: `Application/MocapExamples/ADL_Gait_[beta]`
-
-Dynamic trial: {anylink-file}`Subjects/2014001/2014001_C1_01/Main.any <Application/MocapExamples/ADL_Gait_[beta]/Subjects/2014001/2014001_C1_01/Main.any>`
-
-Standing reference: {anylink-file}`Subjects/2014001/2014001_ST/Main.any <Application/MocapExamples/ADL_Gait_[beta]/Subjects/2014001/2014001_ST/Main.any>`
-
-:::
+The model was created by <a href="https://www.linkedin.com/in/enrico-de-pieri-13096a7a" target="_blank" rel="noopener">Enrico De Pieri</a>,
+<a href="https://vbn.aau.dk/en/persons/oliveira" target="_blank" rel="noopener">Anderson de Souza Castelo Oliveira</a>, and <a href="https://www.linkedin.com/in/biomedical" target="_blank" rel="noopener">Morten Enemark Lund</a> but has not yet been used for publication.
 
 ## Dataset
 
-The full "Rehazenter adult walking dataset" is not distributed with the model. Schreiber and Moissenet (2019) has
-released the data under a Creative Commons license (CC BY 4.0). 
+The full "Rehazenter adult walking dataset" is not distributed with the model. The dataset is
+released under a Creative Commons license (CC BY 4.0). 
 
 You must download the data sepearately from this model:
 
-* [Rehazenter adult walking dataset](https://figshare.com/articles/dataset/A_multimodal_dataset_of_human_gait_at_different_walking_speeds/7734767)
+* <a href="https://figshare.com/articles/dataset/A_multimodal_dataset_of_human_gait_at_different_walking_speeds/7734767" target="_blank" rel="noopener">Rehazenter adult walking dataset</a>
 
 After downloading extract the data into the `C3DFiles` sub folder. 
 
@@ -131,10 +118,10 @@ The model is structured as outlined below:
 The model also contains a batch processing Python script for running all models. The script 
 `batchprocess.py` is located in the top-level folder. 
 
-To use the scirpt install the [Anaconda Python Distribution](https://www.anaconda.com/download). 
+To use the script, install the <a href="https://www.anaconda.com/download" target="_blank" rel="noopener">Anaconda Python Distribution</a>.
 
-The script uses the [AnyPyTools](https://github.com/AnyBody-Research-Group/AnyPyTools) library for working with the
-AnyBody Model System ( [Lund 2019](https://doi.org/10.21105/joss.01108) ). 
+The script uses the <a href="https://github.com/AnyBody-Research-Group/AnyPyTools" target="_blank" rel="noopener">AnyPyTools</a> library for working with the
+AnyBody Model System (Lund et al., 2019 [^lund2019]).
 
 Then run the following command in the model folder:
 
@@ -143,13 +130,23 @@ python batchprocess.py
 ```
 
 :::{note} You may need to modify the script to output the variables you are interested in. It may also 
-    be necessary to modify the number parallel AnyBody instances to match the number of licenses you have. 
+    be necessary to modify the number of parallel AnyBody instances to match the number of licenses you have. 
 :::    
+
+:::{admonition} In Model Repository:
+:class: seealso
+
+`Application/MocapExamples/ADL_Gait_[beta]`
+
+* Dynamic trial: {anylink-file}`Subjects/2014001/2014001_C1_01/Main.any <Application/MocapExamples/ADL_Gait_[beta]/Subjects/2014001/2014001_C1_01/Main.any>`
+* Standing reference: {anylink-file}`Subjects/2014001/2014001_ST/Main.any <Application/MocapExamples/ADL_Gait_[beta]/Subjects/2014001/2014001_ST/Main.any>`
+
+:::
 
 ## Bibliography
 
-Please cite the following paper when using the data. 
+[^schreiber2019]: Schreiber, C., & Moissenet, F. (2019). A multimodal dataset of human gait at different walking speeds established on injury-free adult participants. *Scientific Data*, *6*, 111. <a href="https://doi.org/10.1038/s41597-019-0124-4" target="_blank" rel="noopener">https://doi.org/10.1038/s41597-019-0124-4</a>
 
-> Schreiber, C., Moissenet, F. A multimodal dataset of human gait at different walking speeds established on injury-free adult participants. Sci Data 6, 111 (2019). https://doi.org/10.1038/s41597-019-0124-4
+[^lund2019]: Lund, M. E., et al. (2019). AnyPyTools: A Python package for reproducible research in musculoskeletal biomechanics. *Journal of Open Source Software*, *4*(42), 1108. <a href="https://doi.org/10.21105/joss.01108" target="_blank" rel="noopener">https://doi.org/10.21105/joss.01108</a>
 
 

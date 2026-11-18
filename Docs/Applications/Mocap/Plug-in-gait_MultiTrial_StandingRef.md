@@ -1,5 +1,5 @@
 ---
-gallery_title: "Multi trial MoCap model"
+gallery_title: "Multi-Trial MoCap"
 gallery_image: "/Applications/images/Plug-in-gait_Squat_Flywheel.webp"
 anylink: Application/MocapExamples/Plug-in-gait_MultiTrial_StandingRef/Subjects/S1/S1_FlywheelSquat/Main.any
 ---
@@ -7,7 +7,7 @@ anylink: Application/MocapExamples/Plug-in-gait_MultiTrial_StandingRef/Subjects/
 (sphx_glr_auto_examples_Mocap_plot_Plug-in-gait_MultiTrial_StandingRef.py)=
 (example_mocap_multitrial)=
 
-# Multi trial MoCap model
+# Multi-Trial MoCap
 
 :::{anylink-gallery}
 :margin:
@@ -18,27 +18,13 @@ and trials. This special structure makes it much easier to work with large
 datasets with multiple subjects and trials. Hence, this model is the best
 starting point for analyzing bigger MoCap experiments.
 
-This example shows the {doc}`AnyMoCap framework </anymocap/index>` applied to a set
-of squatting trials.
-The subject specific scaling and marker optimization is done on a standing
-reference recording, and the values are then applied to a squatting trial.
-
-The data is provided by Maria Jönsson from KTH (Royal Institute of Technology
-School of Technology and Health) in Sweden.
+This example shows the <a href="../../anymocap/index.html" target="_blank" rel="noopener">AnyMoCap framework</a> applied to a set of squatting trials. The subject-specific scaling and marker optimization is done on a standing reference recording, and the values are then applied to a squatting trial.
 
 The files are structured so each trial has its own folder with a main file
-(`Main.any`) and a file with trial specific data (`TrialSpecificData.any`).
+(`Main.any`) and a file with trial-specific data (`TrialSpecificData.any`).
 The C3D files are placed together in a separate folder.
 
-:::{admonition} In Model Repository:
-:class: seealso
-{file}`Application/MocapExamples/Plug-in-gait_MultiTrial_StandingRef`
-
-**Dynamic trial:** {anylink-file}`Subjects/S1/S1_FlywheelSquat/Main.any <Application/MocapExamples/Plug-in-gait_MultiTrial_StandingRef/Subjects/S1/S1_FlywheelSquat/Main.any>`
-
-**Standing reference:** {anylink-file}`Subjects/S1/S1_FlywheelSquat/Main.any <Application/MocapExamples/Plug-in-gait_MultiTrial_StandingRef/Subjects/S1/S1_StandingRef/Main.any>`
-
-:::
+The data was provided by Maria Jönsson from KTH (Royal Institute of Technology, School of Technology and Health) in Sweden.
 
 ## Model structure
 
@@ -89,3 +75,11 @@ Application/MocapExamples/Plug-in-gait_MultiTrial_StandingRef
                 TrialSpecificData.any
 ```
 
+:::{admonition} In Model Repository:
+:class: seealso
+`Application/MocapExamples/Plug-in-gait_MultiTrial_StandingRef`
+
+* Standing reference: {anylink-file}`Subjects/S1/S1_StandingRef/Main.any <Application/MocapExamples/Plug-in-gait_MultiTrial_StandingRef/Subjects/S1/S1_StandingRef/Main.any>`
+* Dynamic trial: {anylink-file}`Subjects/S1/S1_FlywheelSquat/Main.any <Application/MocapExamples/Plug-in-gait_MultiTrial_StandingRef/Subjects/S1/S1_FlywheelSquat/Main.any>`
+
+:::

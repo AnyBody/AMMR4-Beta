@@ -1,9 +1,3 @@
-
-
-
-
-
-
 AnyFolder EnvironmentModel = {
 
   AnyVec3 HandleRGB={0.3,0.3,0.3};
@@ -346,7 +340,7 @@ AnyFolder EnvironmentModel = {
         sRel={0,0.0,0.1};
 
         AnyDrawSTL Body = {
-          FileName = "Body-grey.stl";
+          FileName = ANYBODY_PATH_MODELUTILS+"DrawObjects/Body-grey.stl";
           RGB = Main.DrawSettings.Colors.AnyBodyGrey;
 
           Opacity = 1;
@@ -354,7 +348,7 @@ AnyFolder EnvironmentModel = {
         };
 
         AnyDrawSTL AnyTechnology = {
-          FileName = "AnyTechnology-red.stl";
+          FileName = ANYBODY_PATH_MODELUTILS+"DrawObjects/AnyTechnology-red.stl";
           RGB = Main.DrawSettings.Colors.AnyBodyRed;
 
           Opacity = 1;
@@ -368,7 +362,7 @@ AnyFolder EnvironmentModel = {
 
     AnyPrismaticJoint MassJnt = {
       Axis = y;
-      Ref = 0.000000;
+      Ref = 0;
       AnyRefFrame &ref1=..GlobalRef.RightMassNode;
       AnyRefFrame &ref2=.Mass;
     };
@@ -579,7 +573,7 @@ AnyFolder EnvironmentModel = {
         sRel={0,0.0,0.1};
 
         AnyDrawSTL Body = {
-          FileName = "Body-grey.stl";
+          FileName = ANYBODY_PATH_MODELUTILS+"DrawObjects/Body-grey.stl";
           RGB = Main.DrawSettings.Colors.AnyBodyGrey;
 
           Opacity = 1;
@@ -587,7 +581,7 @@ AnyFolder EnvironmentModel = {
         };
 
         AnyDrawSTL AnyTechnology = {
-          FileName = "AnyTechnology-red.stl";
+          FileName = ANYBODY_PATH_MODELUTILS+"DrawObjects/AnyTechnology-red.stl";
           RGB = Main.DrawSettings.Colors.AnyBodyRed;
 
           Opacity = 1;
@@ -601,7 +595,7 @@ AnyFolder EnvironmentModel = {
 
     AnyPrismaticJoint MassJnt = {
       Axis = y;
-      Ref = 0.000000;
+      Ref = 0;
       AnyRefFrame &ref1=..GlobalRef.LeftMassNode;
       AnyRefFrame &ref2=.Mass;
     };

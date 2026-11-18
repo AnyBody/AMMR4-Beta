@@ -38,6 +38,13 @@ to the normal force and the user can supply a friction
 coefficient for each surface such that the effect of different
 surface fabrics can be investigated.
 
+The contact elements expose separate normal and friction force
+measures for each support surface. The study also provides the
+resultant reaction force at the L5-sacrum joint through
+`Study.L5SacrumReac`. These outputs can be compared while changing
+the chair configuration or support settings; the model does not
+calculate a separate comfort score.
+
 
 :::{admonition} In Model Repository:
 :class: seealso
