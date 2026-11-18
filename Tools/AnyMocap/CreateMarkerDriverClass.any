@@ -350,7 +350,7 @@ AnyMessage TestMarkerExist ={
     }; //MarkerName
   };// InsertionNode
 
-
+      AnyFloat MarkerError = vnorm(Driver.Pos);
       AnyKinDriverMarker Driver = {
         AnyDrawKinMeasure Draw = {
           #if UseC3DWeightResiduals
