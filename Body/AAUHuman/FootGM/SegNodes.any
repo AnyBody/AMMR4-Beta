@@ -1500,6 +1500,8 @@ Foot = {
       sRel = .Scale(.Data.ToeMedialContactNode);
       ARel = .AnatomicalFrame.ARel;
     };
+    AnyRefFrame &MetatarsalJoint1Node = MtPhalJoint;
+
     //***********************
     //Muscles nodes
     //***********************
@@ -1564,6 +1566,7 @@ Foot = {
       sRel = ..MiddlePhalange2.ProxPhalJoint.sRel;
       ARel = ..MiddlePhalange2.ProxPhalJoint.ARel;
     };
+    AnyRefFrame &MetatarsalJoint2Node = MtPhalJoint;
 
     //***********************
     //Muscles nodes
@@ -1629,6 +1632,7 @@ Foot = {
       sRel = ..MiddlePhalange3.ProxPhalJoint.sRel;
       ARel = ..MiddlePhalange3.ProxPhalJoint.ARel;
     };
+    AnyRefFrame &MetatarsalJoint3Node = MtPhalJoint;
 
     //***********************
     //Muscles nodes
@@ -1694,6 +1698,7 @@ Foot = {
       sRel = ..MiddlePhalange4.ProxPhalJoint.sRel;
       ARel = ..MiddlePhalange4.ProxPhalJoint.ARel;
     };
+    AnyRefFrame &MetatarsalJoint4Node = MtPhalJoint;
 
     //***********************
     //Muscles nodes
@@ -1763,6 +1768,7 @@ Foot = {
       sRel = .Scale(.Data.ToeLateralContactNode);
       ARel = .AnatomicalFrame.ARel;
     };
+    AnyRefFrame &MetatarsalJoint5Node = MtPhalJoint;
 
     //***********************
     //Muscles nodes
