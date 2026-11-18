@@ -1,10 +1,9 @@
 ---
-name: "Update AMMR model documentation"
+name: update-ammr-model-documentation
 description: "Update one or more AMMR model description pages under Docs/Applications using the repository documentation rules and verified model sources."
+disable-model-invocation: true
 argument-hint: "Change TARGET_MODELS below, then run this prompt"
-agent: "agent"
 ---
-
 Update the AMMR model documentation for each model listed below.
 
 `TARGET_MODELS`: `LegPressMachine`
