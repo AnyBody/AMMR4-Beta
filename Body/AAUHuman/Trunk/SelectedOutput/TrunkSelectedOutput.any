@@ -1,5 +1,4 @@
 
-
 SelectedOutput.Trunk = {
 
   /// The joint reaction force is expressed in the local reference frame on the proximal segment in the joint.
@@ -229,19 +228,35 @@ SelectedOutput.Trunk = {
     AnyVar C0C1LateralMoment = -1*(...Trunk.Joints.Cervical.C1C0.Constraints.Reaction.RefFrameOutput.M[0]*...Trunk.Joints.Cervical.C1C0.C1Node.RotNode.Axes)[0];
     //C1 ref
 
-
   }; //End JointReactionForce
 
-
-
   SelectedOutputGroup JointMomentMeasure = {
-
     AnyVar SacrumPelvisFlexionExtensionMoment = ...Trunk.Joints.Lumbar.SacrumPelvisReaction.Fout[2];
     AnyVar SacrumPelvisAxialMoment = ...Trunk.Joints.Lumbar.SacrumPelvisReaction.Fout[1];
     AnyVar SacrumPelvisLateralMoment = ...Trunk.Joints.Lumbar.SacrumPelvisReaction.Fout[0];
-
   }; //End JointMomentMeasure
 
+  /// Joint angles in degrees
+  SelectedOutputGroup JointAngles = {
+    /// Sacrum-Pelvis Flexion angle in degrees
+    AnyVar SacrumPelvisFlexion = ...Interface.Trunk.PelvisThoraxExtension.Pos[0] * 180/pi;
+    /// Sacrum-Pelvis Lateral Bending angle in degrees
+    AnyVar SacrumPelvisLateralBending = ...Interface.Trunk.PelvisThoraxLateralBending.Pos[0] * 180/pi;
+    /// Sacrum-Pelvis Axial Rotation angle in degrees
+    AnyVar SacrumPelvisAxialRotation = ...Interface.Trunk.PelvisThoraxRotation.Pos[0] * 180/pi;
+    /// Skull-Thorax Flexion angle in degrees
+    AnyVar SkullThoraxFlexion = ...Interface.Trunk.SkullThoraxFlexion.Pos[0] * 180/pi;
+    /// Skull-Thorax Lateral Bending angle in degrees
+    AnyVar SkullThoraxLateralBending = ...Interface.Trunk.SkullThoraxLateralBending.Pos[0] * 180/pi;
+    /// Skull-Thorax Axial Rotation angle in degrees
+    AnyVar SkullThoraxAxialRotation = ...Interface.Trunk.SkullThoraxRotation.Pos[0] * 180/pi;
+    /// Pelvis-T12 Extension angle in degrees
+    AnyVar PelvisT12Extension = ...Interface.Trunk.PelvisT12Extension.Pos[0] * 180/pi;
+    /// Pelvis-T12 Lateral Bending angle in degrees
+    AnyVar PelvisT12LateralBending = ...Interface.Trunk.PelvisT12LateralBending.Pos[0] * 180/pi;
+    /// Pelvis-T12 Axial Rotation angle in degrees
+    AnyVar PelvisT12AxialRotation = ...Interface.Trunk.PelvisT12Rotation.Pos[0] * 180/pi;
+  };
 
   AnyFolder Muscles = {}; //End Muscles
 

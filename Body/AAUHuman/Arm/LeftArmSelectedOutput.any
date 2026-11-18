@@ -1,9 +1,7 @@
 
-
 SelectedOutput.Left = {
 
   AnyFolder ShoulderArm = {
-
 
     SelectedOutputGroup JointReactionForce = {
 
@@ -13,7 +11,6 @@ SelectedOutput.Left = {
       AnyVar SternoClavicular_InferoSuperiorForce = ....Left.ShoulderArm.Joints.SternoClavicularJoint.Constraints.Reaction.Fout[1];
       /// Posterior positive
       AnyVar SternoClavicular_AnteroPosteriorForce = ....Left.ShoulderArm.Joints.SternoClavicularJoint.Constraints.Reaction.Fout[2];
-      // Thorax scj ref, warning : rotated regarding to thorax ref
 
       /// Lateral positive
       AnyVar AcromioClavicular_MedioLateralForce = ....Left.ShoulderArm.Joints.AcromioClavicularJoint.Constraints.Reaction.Fout[0];
@@ -23,13 +20,6 @@ SelectedOutput.Left = {
       AnyVar AcromioClavicular_AnteroPosteriorForce = ....Left.ShoulderArm.Joints.AcromioClavicularJoint.Constraints.Reaction.Fout[2];
       // Clavicula acj ref
 
-      // include 3 reaction point of scapula
-//      AnyVar ScapulaAIPushForce = ....Left.ShoulderArm.Joints.ScapulaAIThoraxNodeReaction.Ft;
-//      AnyVar ScapulaTSPushForce = ....Left.ShoulderArm.Joints.ScapulaTSThoraxNodeReaction.Ft;
-//      AnyVar ConoidLigamentPullForce = ....Left.ShoulderArm.Joints.ConoidLigamentReaction.Ft;
-//      AnyVar TrapezoidLigamentPullForce = ....Left.ShoulderArm.Joints.TrapezoidLigamentReaction.Ft;
-
-
       /// Distraction positive
       AnyVar GlenoHumeral_DistractionForce = (1)*....Left.ShoulderArm.Joints.GHReactions.ResultantForce.FTotalLocal[2];
       /// Inferior positive
@@ -37,7 +27,6 @@ SelectedOutput.Left = {
       /// Posterior positive
       AnyVar GlenoHumeral_AnteroPosteriorForce = ....Left.ShoulderArm.Joints.GHReactions.ResultantForce.FTotalLocal[0];
       // scapula gh ref
-
 
       /// Medial positive
       AnyVar ElbowHumeroUlnar_MedioLateralForce = ....Left.ShoulderArm.Joints.HumeroUlnarJoint.Constraints.Reaction.Fout[0];
@@ -67,7 +56,7 @@ SelectedOutput.Left = {
       AnyVar DistalRadioUlnar_DorsoVolarForce = ....Left.ShoulderArm.Joints.DistalRadioUlnarJoint.Constraints.Reaction.Fout[1];
       // ulna us ref
 
-    #ifndef WRIST_EXPERIMENTAL
+      #ifndef WRIST_EXPERIMENTAL
       // Radial positive
       AnyVar WristRadioCarpal_RadialForce = ....Left.ShoulderArm.Joints.WristJointFlexion.Constraints.Reaction.Fout[1];
       /// Proximal positive
@@ -78,17 +67,9 @@ SelectedOutput.Left = {
       AnyVar WristRadioCarpal_AxialMoment = ....Left.ShoulderArm.MomentMeasure.WristJointReactionMoments.Mlocal[0];
       // radius wj ref
       #endif
-
-
-    }; //End JointReactionForce
-
-
-
-
+    };
 
     SelectedOutputGroup JointMomentMeasure = {
-
-
       AnyVar GlenoHumeralAbduction = ....Left.ShoulderArm.MomentMeasure.GHNetMomentMuscles.GHAbduction;
       // Scapula.gh.Rotnode ref
       AnyVar GlenoHumeralFlexion = ....Left.ShoulderArm.MomentMeasure.GHNetMomentMuscles.GHFlexion;
@@ -107,16 +88,34 @@ SelectedOutput.Left = {
 
       AnyVar WristAbduction = ....Left.ShoulderArm.MomentMeasure.WristAbductionNetMomentMuscles.WristAbduction;
       // WristJointSeg.RadialUlnarDeviation.Rotnode ref
+    };
 
-
-    }; //End JointMomentMeasure
-
-
-
+    /// Joint angles in degrees
+    SelectedOutputGroup JointAngles = {
+      /// Sterno Clavicular Protraction angle in degrees
+      AnyVar SternoClavicularProtraction = ....Interface.Left.SternoClavicularProtraction.Pos[0] * 180/pi;
+      /// Sterno Clavicular Elevation angle in degrees
+      AnyVar SternoClavicularElevation = ....Interface.Left.SternoClavicularElevation.Pos[0] * 180/pi;
+      /// Sterno Clavicular Rotation angle in degrees
+      AnyVar SternoClavicularAxialRotation = ....Interface.Left.SternoClavicularAxialRotation.Pos[0] * 180/pi;
+      /// Glenohumeral Flexion angle in degrees
+      AnyVar GlenohumeralFlexion = ....Interface.Left.GlenohumeralFlexion.Pos[0] * 180/pi;
+      /// Glenohumeral Abduction angle in degrees
+      AnyVar GlenohumeralAbduction = ....Interface.Left.GlenohumeralAbduction.Pos[0] * 180/pi;
+      /// Glenohumeral External Rotation angle in degrees
+      AnyVar GlenohumeralExternalRotation = ....Interface.Left.GlenohumeralExternalRotation.Pos[0] * 180/pi;
+      /// Elbow Flexion angle in degrees
+      AnyVar ElbowFlexion = ....Interface.Left.ElbowFlexion.Pos[0] * 180/pi;
+      /// Elbow Pronation angle in degrees
+      AnyVar ElbowPronation = ....Interface.Left.ElbowPronation.Pos[0] * 180/pi;
+      /// Wrist Flexion angle in degrees
+      AnyVar WristFlexion = ....Interface.Left.WristFlexion.Pos[0] * 180/pi;
+      /// Wrist Abduction angle in degrees
+      AnyVar WristAbduction = ....Interface.Left.WristAbduction.Pos[0] * 180/pi;
+    };
 
 
     AnyFolder Muscles = {
-
       AnySearchFun MuscleList = {
         Search =
         #if BM_ARM_MUSCLES_LEFT == OFF
@@ -128,15 +127,6 @@ SelectedOutput.Left = {
 
       AnyVar Envelope = max(MuscleList());
 
-
-    }; //End Muscles
-
-
-  }; //End Arm
-
-
-}; //End Left
-
-
-
-
+    };
+  };
+};

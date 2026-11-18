@@ -134,9 +134,9 @@ ModelViews = {
 
 AnyOperationSequence Run =
 {
-    AnyOperationMacro SetView =
-    {
-      MacroStr = { "classoperation " + CompleteNameOf(&..ModelViews.Views.SelectedView) + strquote("Set View") };
+    AnyOperationClassOpr SetView = {
+     Object = &..ModelViews.Views.SelectedView;
+     OperationName = "Set View";
     };
     AnyOperation &Study = .Study.Kinematics;
 };

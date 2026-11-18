@@ -2,11 +2,11 @@
 AnyOperationSequence LigamentCalibrationSequence = {
   AnyOperation& EvaluateLigamentLength = Main.EvaluateLigamentLength.UpdateDesign;
   /// This operation updates the values based on the dependancies.
-  AnyOperationMacro UpdateValues = {
-    MacroStr = {
-      "classoperation Main" + strquote("Update Values")
-    };
-  };
+  AnyOperationClassOpr UpdateValues = {
+        Object = &Main;
+        OperationName = "Update Values";
+  };  
+  
 };
 #endif
 
