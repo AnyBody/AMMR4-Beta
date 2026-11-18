@@ -26,7 +26,6 @@ AnyFolder FootSupportOneSurface={
       AnyVec3  Color= Main.DrawSettings.Colors.AnyBodyBlue; //box color
       AnyVar   Opacity=1; //box transparency
       AnyVec3 Size={0.3,0.01,0.1};
-      //AnyDrawRefFrame drw ={};
       #include"<ANYBODY_PATH_MODELUTILS>/DrawObjects/Box.any" //include file which will draw a box
     };
   };

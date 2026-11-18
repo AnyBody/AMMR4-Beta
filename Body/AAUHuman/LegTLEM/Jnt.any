@@ -12,7 +12,6 @@ AnyRevoluteJoint Ankle = {
   //Axis2  =  x; //abduction adduction
   AnyRefNode &ShankNode = ..Segments.Shank.AnkleJoint;
   AnyRefNode &FootNode  = ..Segments.Foot.Talus.AnkleJoint;
-  //ShankNode ={AnyDrawRefFrame drw={RGB={0,1,0};};};
   //AnyDrawStdJoint Ankle = {  };
   viewJoint = {
     D ??= 0.005; L ??= 0.04; L1 ??= 0.03; L2 ??= 0.03;
@@ -26,7 +25,6 @@ AnyRevoluteJoint SubTalar = {
   Axis =  z; //inversion eversion
   AnyRefNode &TalusNode = ..Segments.Talus.SubTalarJoint;
   AnyRefNode &FootNode  = ..Segments.Foot.Calcaneus.SubTalarJoint;
-  //TalusNode ={AnyDrawRefFrame drw={RGB={1,0,0};};};
   //AnyDrawStdJoint SubTalar = {  };
   viewJoint = {
     D ??= 0.005; L ??= 0.04; L1 ??= 0.03; L2 ??= 0.03;
@@ -63,7 +61,6 @@ AnyRevoluteJoint PatellaFemur = {
 //  Axis1 = z;
 //  Axis2 = x;
 //  AnyRefNode &ThighNode = ..Segments.Thigh.PatellaFemurJoint;
-// // ThighNode ={AnyDrawRefFrame drw={RGB={0,1,0};};};
 //  AnyRefNode &PatellaNode = ..Segments.Patella.PatellaFemurJoint;
 //
 //};
