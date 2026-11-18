@@ -148,23 +148,12 @@ AnyOperationSequence Run =
 };
 
 #ifdef ANYBODY_PATH_OUTPUT
-AnyOperationMacro Save =
-{
-  MacroStr = {
-    "classoperation " + CompleteNameOf(&.Study.Output) + strquote("Save data")
-    + " --type=" + strquote("Deep") +" --file=" + strquote(
-    ANYBODY_PATH_OUTPUT + .OutputFileName + ".anydata.h5")
-  };
+AnyOperationClassOpr Save = {
+     Object = &.Study.Output;
+     OperationName = "Save data";
+     ArgList = {
+       AnyStringVar file = ANYBODY_PATH_OUTPUT + ..OutputFileName + ".anydata.h5";
+       AnyStringVar type = "Deep";
+     };
 };
 #endif
-
-// This operation saves the output of the study to an h5 file in the Output folder
-//AnyOperationClassOpr Save = {
-//      Object = CompleteNameOf(&.Study.Output);
-//      OperationName = "Save data";
-//      ArgList = {
-//        AnyStringVar file = ANYBODY_PATH_OUTPUT + .OutputFileName + ".anydata.h5";
-//        AnyStringVar type = "Deep";
-//      };
-//};
-//#endif

@@ -17,7 +17,7 @@ AnyOperationSequence RunApplication = {
   #if AutoSaveOption
   /// This operation saves the output of the study to an h5 file in the Output folder
   AnyOperationClassOpr save = {
-        Object = &Main.Study.Output;
+        Object = &..Study.Output;
         OperationName = "Save data";
         ArgList = {
           AnyStringVar file = ANYBODY_PATH_OUTPUT + ANYBODY_NAME_MAINFILE + ".anydata.h5";

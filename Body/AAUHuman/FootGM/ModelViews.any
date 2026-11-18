@@ -1,25 +1,31 @@
 ModelSetup ={
   Views = {
     SetViewMacros = {
+            
+      AnyOperationClassOpr PlantarMuscleLayer1 = {
+            OPERATION_DISPLAY_PRIORITY(PriorityLow);
+            Object = &..PlantarMuscleLayer1;
+            OperationName = "Set View";
+      };
+           
+      AnyOperationClassOpr PlantarMuscleLayer2 = {
+            OPERATION_DISPLAY_PRIORITY(PriorityLow);
+            Object = &..PlantarMuscleLayer2;
+            OperationName = "Set View";
+      };
+            
+      AnyOperationClassOpr PlantarMuscleLayer3 = {
+            OPERATION_DISPLAY_PRIORITY(PriorityLow);
+            Object = &..PlantarMuscleLayer3;
+            OperationName = "Set View";
+      };
+            
+      AnyOperationClassOpr PlantarMuscleLayer4 = {
+            OPERATION_DISPLAY_PRIORITY(PriorityLow);
+            Object = &..PlantarMuscleLayer4;
+            OperationName = "Set View";
+      };
       
-      AnyOperationMacro PlantarMuscleLayer1= {
-        OPERATION_DISPLAY_PRIORITY(PriorityLow);
-        MacroStr = {"classoperation "+ CompleteNameOf(&Main.ModelSetup.Views.PlantarMuscleLayer1) + strquote("Set View") };
-      }; 
-      AnyOperationMacro PlantarMuscleLayer2= {
-        OPERATION_DISPLAY_PRIORITY(PriorityLow);
-        MacroStr = {"classoperation "+ CompleteNameOf(&Main.ModelSetup.Views.PlantarMuscleLayer2) + strquote("Set View") };
-      };    
-      
-      AnyOperationMacro PlantarMuscleLayer3= {
-        OPERATION_DISPLAY_PRIORITY(PriorityLow);
-        MacroStr = {"classoperation "+ CompleteNameOf(&Main.ModelSetup.Views.PlantarMuscleLayer3) + strquote("Set View") };
-      }; 
-      
-      AnyOperationMacro PlantarMuscleLayer4= {
-        OPERATION_DISPLAY_PRIORITY(PriorityLow);
-        MacroStr = {"classoperation "+ CompleteNameOf(&Main.ModelSetup.Views.PlantarMuscleLayer4) + strquote("Set View") };
-      }; 
     };
     DrawGroups = {
       
