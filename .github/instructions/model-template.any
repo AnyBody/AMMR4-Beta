@@ -1,0 +1,101 @@
+/*
+  Basic Model template for the AMMR Models
+*/
+
+// libdef files are often included at the top of the file to define library dependencies
+#include "libdef.any"
+
+
+Main = {
+  ///^ The Main folder is auto generated and required for all AnyScript models
+  ///^ The top section of a model typically begins with an "Input" section - often named "Parameters"
+  ///^ This section is used to define all the input parameters for the model that are intended to be set by the user by modifying the values in the Parameters folder
+  // Instructions: This template provides a basic structure for AMMR models. Follow the guidelines below to define the main components of your model, including input parameters, human model, environment, model connections, outputs, and study setup.
+
+
+  // ******************************************************
+  ///^ # Parameters Section
+  // Instructions: Define all user-modifiable input parameters for the model in this section.
+  // Typically organized in a folder called "Parameters" or "Inputs" or even multiple folders with different categories of parameters.
+  // ******************************************************
+
+  /// The Parameters folder is where all user-modifiable input parameters are defined
+  AnyFolder Parameters = {};
+
+  // ******************************************************
+  ///^ # Operations Section
+  // Instructions: Define all operation sequences for the model in this section.
+  // Typically organized as a single operation named "RunApplication"
+  // ******************************************************
+
+  AnyOperationSequence &RunApplication = Study.InverseDynamics;
+
+  //******************************************************
+  ///^ # Output Section
+  // Instructions: Define all output elements for the model in this section.
+  // Typically organized in a folder called "Output" or similar.
+  //******************************************************
+
+  /// The Output folder is used to define all output elements such as results, logs, and visualizations.
+  /// For some models the folder is not required or named "Output" - it may be omitted or replaced with a different name depending on the model structure.
+  AnyFolder Output = {};
+
+
+  // ******************************************************
+  ///^ # Model Section
+  // Instructions: Define all model components for the model in this section.
+  // Typically organized in a folder called "Model" or similar.
+  // ******************************************************
+
+  // --------------------------------
+  ///^ ## Body Model Section
+  // Instructions: Define the body model for the model in this section by including it from the AMMR source code.
+  // 
+  // --------------------------------
+
+  // Models that use the AMMR body model will have this include statement
+  #include "<ANYBODY_PATH_BODY>/HumanModel.any"
+
+  // --------------------------------
+  ///^ ## Environment Section
+  // Instructions: Define all environmental elements for the model in this section.
+  // Typically organized in a folder called "Environment" or similar.
+  // --------------------------------
+
+  /// The Environment folder is used to define all environmental elements such as ground, obstacles, and other external objects.
+  /// The folder might be omitted for some models if no environmental elements are needed or if the Environment is just one other folder e.g. "Bike"
+  AnyFolder Environment = {};
+
+  // --------------------------------
+  ///^ ## Model Assembly Section
+  // Instructions: Define the assembly of the model components in this section.
+  // Typically organized in a folder called "Model" or similar.
+  // --------------------------------
+
+  /// The Model folder is used to define what elements make up the model. It typiclly include the HumanModel and Environment folders.
+  /// connections between model components are typically defined within this folder.
+  /// Older models might use the name "ModelEnvironmentConnection" instead of "Model" for this folder.
+  /// Older models might define the "Environment" folder inside the "Model" folder instead of having it as a separate top-level folder.
+  AnyFolder Model = {
+    AnyFolder &BodyModel = .HumanModel.BodyModel;
+    AnyFolder &Environment = .Environment;
+    AnyFolder Connections = {
+      /// Define connections between the body model and the environment here.
+      /// For example, joint constraints, contact points, or other interaction elements.
+    };
+  };
+
+  // --------------------------------
+  ///^ ## Study Section
+  // Instructions: Define the main study for the model in this section.
+  // Typically organized in a folder called "Study" or similar.
+  // --------------------------------
+
+  /// The Study object is used to define the main study for the model, such as simulations, analyses, and experiments.
+  /// For simple models this object is located directly inside the Main folder.
+  /// For some models the Study object might be located inside a "Studies" folder instead of directly in the Main folder.
+  AnyBodyStudy Study = {
+    AnyFolder &Model = .Model;
+  };
+
+};
