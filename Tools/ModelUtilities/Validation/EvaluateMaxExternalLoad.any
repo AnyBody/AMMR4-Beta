@@ -41,7 +41,10 @@
 
   AnyFolder Operations = {
      AnyOperation& RunStudy = STUDY.InverseDynamics;
-     AnyOperationMacro UpdateValues = {MacroStr = {"classoperation Main " + strquote("Update Values")}; };
+     AnyOperationClassOpr UpdateValues = {
+       Object = &Main;
+       OperationName = "Update Values";
+     };
      AnyOperationSetValue SetLoad1 = {
        Source = {&..Calculations.Load1};
        Target = {..LoadPtr};
@@ -94,8 +97,13 @@
             Target = {&.testTrigger, ...LoadPtr};
         };
      };
+     
+     AnyOperationClassOpr PrintMaxLoad = {
+       Object = &..MaxLoad;
+       OperationName = "Dump";
+     };
 
-     AnyOperationMacro PrintMaxLoad = {MacroStr = {"classoperation " + CompleteNameOf(&..MaxLoad) +" "+ strquote("Dump")}; };
+     
   };
   AnyOperationSequence PreAnalysis = {
     AnyOperationDummy NoOp = {};

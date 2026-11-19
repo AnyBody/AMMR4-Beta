@@ -23,8 +23,6 @@ To use the class template.
 #define _ANYBODY_OVERLAY_LOGO_ ANYBODY_PATH_INSTALLDIR + "\Assist\video_overlay.png"
 #endif
 
-
-
 // Class creating a video camera for video recording of AnyBody simulations.
 //
 // :::{rubric} Usage
@@ -251,11 +249,12 @@ To use the class template.
     AnyOperation &StopTrigger = .Operations.StopTrigger;
     #if _AUTO_OPEN_PREVIEW_
     AnyOperation& OpenPreview = .Operations.OpenPreview;
-    #endif
-    AnyOperationMacro ResetFilename =
-    {
-      MacroStr = {"classoperation "+CompleteNameOf(..Camera.Recorder.F) + "ileName " + strquote("Reset Value")};
+    #endif    
+    AnyOperationClassOpr ResetFilename = {
+     Object = ObjSelect(CompleteNameOf(..Camera.Recorder.F) + "ileName")[0];
+     OperationName = "Reset Value";
     };
+    
   };
 
 
@@ -378,15 +377,25 @@ To use the class template.
         };
         Target = Source;
       };
-      AnyOperationMacro SaveValues =
-      {
-        MacroStr = {"classoperation Main "+strquote("Save Values")+ " --file=" + strquote(...VideoName+"_Camera_Settings.anyset") };
+      
+      AnyOperationClassOpr SaveValues = {
+           Object = &Main;
+           OperationName = "Save Values";
+           ArgList = {
+             AnyStringVar file = ....VideoName + "_Camera_Settings.anyset";
+           };
       };
+
     };
-    AnyOperationMacro Load_Settings  =
-    {
-      MacroStr = {"classoperation Main "+strquote("Load Values")+ " --file=" + strquote(..VideoName+"_Camera_Settings.anyset") };
+    
+    AnyOperationClassOpr Load_Settings = {
+     Object = &Main;
+     OperationName = "Load Values";
+     ArgList = {
+       AnyStringVar file = ...VideoName + "_Camera_Settings.anyset";
+     };
     };
+    
 #endif
 
 

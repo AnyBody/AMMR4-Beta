@@ -500,9 +500,12 @@ HUMAN_MODEL = Main.HumanModel
     AnyOperationSequence RunBVH_Origin_Optimization =
     {
       AnyOperation& ParameterOptimization = PARAMETER_OPT_STUDY.ParameterOptimization;
-      AnyOperationMacro UpdateValues = {
-        MacroStr = {"classoperation Main " + strquote("Update Values")};
+      
+      AnyOperationClassOpr UpdateValues = {
+            Object = &Main;
+            OperationName = "Update Values";
       };
+      
       AnyOperation& SaveParameters = Main.ModelSetup.Macros.Save_parameters;
     };
   };

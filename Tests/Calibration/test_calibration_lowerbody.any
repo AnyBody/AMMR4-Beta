@@ -135,10 +135,13 @@ Main =
   
   
   #if (BM_CALIBRATION_TYPE == 3) & (BM_LEG_MODEL == _LEG_MODEL_TLEM_)
-  AnyInt TestTrigger = DesignVar(0);  
-  AnyOperationMacro UpdateValues = {
-      MacroStr = {"classoperation Main " + strquote("Update Values")};
+  AnyInt TestTrigger = DesignVar(0);
+  
+  AnyOperationClassOpr UpdateValues = {
+    Object = &Main;
+    OperationName = "Update Values";
     };
+    
     AnyOperationSetValue SetTestTrigger = {
       AnyInt dummy = 1;
       Source = {&dummy};
