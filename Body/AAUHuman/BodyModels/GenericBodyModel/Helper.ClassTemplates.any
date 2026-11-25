@@ -178,21 +178,20 @@
         Source = .ObjectsMarkedAsModified;
         Target = .ObjectsMarkedAsModified;
      };
-
-  AnyOperationMacro SaveValuesToFile = {
-     MacroStr = {
-       ("classoperation "
-        + CompleteNameOf(.Folder)
-        + strquote("Save Values")
-        + " --file="
-        + strquote(FilePathCompleteOf(.FileName))
-       )
-     };
-   };
+   
+  AnyOperationClassOpr SaveValuesToFile = {
+       Object = .Folder;
+       OperationName = "Save Values";
+       ArgList = {
+         AnyStringVar file = FilePathCompleteOf(..FileName);
+       };
+  };
+   
 };
 
-#class_template Template_OperationUpdateValues(__CLASS__= AnyOperationMacro) {
-     MacroStr = {"classoperation Main " + strquote("Update Values") };
+#class_template Template_OperationUpdateValues(__CLASS__= AnyOperationClassOpr) {
+     Object = &Main;
+     OperationName = "Update Values";
 };
 
 
@@ -201,10 +200,15 @@
    #if _REDEFINE_INPUTS == Off
    #var AnyFileVar FileName;
    #endif
-
-  AnyOperationMacro LoadValuesFromFile = {
-     MacroStr = {"classoperation Main " + strquote("Load Values") + " --file=" + strquote(FilePathCompleteOf(.FileName) };
+   
+   AnyOperationClassOpr LoadValuesFromFile = {
+        Object = &Main;
+        OperationName = "Load Values";
+        ArgList = {
+          AnyStringVar file = FilePathCompleteOf(..FileName);         
+        };
    };
+   
 };
 
 

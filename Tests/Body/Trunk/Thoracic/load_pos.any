@@ -4,8 +4,10 @@ AnyOperationSequence RunTest = {
 };
 
 AnyFolder Operations = {
-  AnyOperationMacro UpdateValues = {
-    MacroStr = {"classoperation Main " + strquote("Update Values")};
+  
+  AnyOperationClassOpr UpdateValues = {
+    Object = &Main;
+    OperationName = "Update Values";
   };
   
   AnyOperationSetValue SetLoadTestTrigger = {

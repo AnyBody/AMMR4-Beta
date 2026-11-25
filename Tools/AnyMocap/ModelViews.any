@@ -1,15 +1,17 @@
 Views = {
     AnyFolder SetViewMacros = {
-      AnyOperationSequence KinematicView= {
-        AnyOperationMacro mcr = {
-          OPERATION_DISPLAY_PRIORITY(PriorityLow);
-          MacroStr = {"classoperation "+ CompleteNameOf(&Main.ModelSetup.Views.KinematicView) + strquote("Set View") };
+      AnyOperationSequence KinematicView= {        
+        AnyOperationClassOpr SetKinematicView = {
+              OPERATION_DISPLAY_PRIORITY(PriorityLow);
+              Object = &...KinematicView;
+              OperationName = "Set View";
         };
       };
-      AnyOperationSequence InverseDynamicView = {
-         AnyOperationMacro mcr = {
-         OPERATION_DISPLAY_PRIORITY(PriorityLow);
-         MacroStr = {"classoperation "+ CompleteNameOf(&Main.ModelSetup.Views.InverseDynamicView) + strquote("Set View") };
+      AnyOperationSequence InverseDynamicView = {       
+        AnyOperationClassOpr SetInverseDynamicView = {
+              OPERATION_DISPLAY_PRIORITY(PriorityLow);
+              Object = &...InverseDynamicView;
+              OperationName = "Set View";
        };
      };
     };
@@ -82,9 +84,8 @@ Views = {
       Reset = {On};
       ShowModelDefined = {Off};
       HideAllFirst = On;
-      AnyOperationSequence HideView = { AnyOperationMacro mcr = { OPERATION_DISPLAY_PRIORITY(PriorityLow); MacroStr = {"classoperation " + CompleteNameOf(&...AllView) + ".Hide " +strquote("Set Value") +" --value=" + "{On}", "classoperation "+ CompleteNameOf(&...AllView) + strquote("Set View"), "classoperation " + CompleteNameOf(&...AllView) + ".Hide " +strquote("Reset Value") };};};
-      AnyOperationSequence ShowView = { AnyOperationMacro mcr = { OPERATION_DISPLAY_PRIORITY(PriorityLow); MacroStr = {"classoperation " + CompleteNameOf(&...AllView) + ".Hide " +strquote("Set Value") +" --value=" + "{Off}", "classoperation "+ CompleteNameOf(&...AllView) + strquote("Set View"), "classoperation " + CompleteNameOf(&...AllView) + ".Hide " +strquote("Reset Value") };};};
-
+      AnyOperationSequence HideView = {OPERATION_DISPLAY_PRIORITY(PriorityLow); AnyOperationClassOpr AllViewHideOn = {Object = &...AllView.Hide; OperationName = "Set Value"; ArgList = {AnySwitchVar value = On;};}; AnyOperationClassOpr AllViewSetView = {Object = &...AllView; OperationName = "Set View";}; AnyOperationClassOpr AllViewHideResetValue = {Object = &...AllView.Hide; OperationName = "Reset Value";};};
+      AnyOperationSequence ShowView = {OPERATION_DISPLAY_PRIORITY(PriorityLow); AnyOperationClassOpr AllViewHideOff = {Object = &...AllView.Hide; OperationName = "Set Value"; ArgList = {AnySwitchVar value = Off;};}; AnyOperationClassOpr AllViewSetView = {Object = &...AllView; OperationName = "Set View";}; AnyOperationClassOpr AllViewHideResetValue = {Object = &...AllView.Hide; OperationName = "Reset Value";};};
     };
     AnyStandardModelViewDefinition MarkerArrowsView ={
       ViewName = "AnyMoCap View Marker Arrows";
@@ -92,8 +93,8 @@ Views = {
       Hide = DesignVar({Off});
       Reset = {On};
       HideAllFirst = Off;
-      AnyOperationSequence HideView = { AnyOperationMacro mcr = { OPERATION_DISPLAY_PRIORITY(PriorityLow); MacroStr = {"classoperation " + CompleteNameOf(&...MarkerArrowsView) + ".Hide " +strquote("Set Value") +" --value=" + "{On}", "classoperation "+ CompleteNameOf(&...MarkerArrowsView) + strquote("Set View"), "classoperation " + CompleteNameOf(&...MarkerArrowsView) + ".Hide " +strquote("Reset Value") };};};
-      AnyOperationSequence ShowView = { AnyOperationMacro mcr = { OPERATION_DISPLAY_PRIORITY(PriorityLow); MacroStr = {"classoperation " + CompleteNameOf(&...MarkerArrowsView) + ".Hide " +strquote("Set Value") +" --value=" + "{Off}", "classoperation "+ CompleteNameOf(&...MarkerArrowsView) + strquote("Set View"), "classoperation " + CompleteNameOf(&...MarkerArrowsView) + ".Hide " +strquote("Reset Value") };};};
+      AnyOperationSequence HideView = {OPERATION_DISPLAY_PRIORITY(PriorityLow); AnyOperationClassOpr MarkerArrowsViewHideOn = {Object = &...MarkerArrowsView.Hide; OperationName = "Set Value"; ArgList = {AnySwitchVar value = On;};}; AnyOperationClassOpr MarkerArrowsViewSetView = {Object = &...MarkerArrowsView; OperationName = "Set View";}; AnyOperationClassOpr MarkerArrowsViewHideResetValue = {Object = &...MarkerArrowsView.Hide; OperationName = "Reset Value";};};
+      AnyOperationSequence ShowView = {OPERATION_DISPLAY_PRIORITY(PriorityLow); AnyOperationClassOpr MarkerArrowsViewHideOff = {Object = &...MarkerArrowsView.Hide; OperationName = "Set Value"; ArgList = {AnySwitchVar value = Off;};}; AnyOperationClassOpr MarkerArrowsViewSetView = {Object = &...MarkerArrowsView; OperationName = "Set View";}; AnyOperationClassOpr MarkerArrowsViewHideResetValue = {Object = &...MarkerArrowsView.Hide; OperationName = "Reset Value";};};
     };
     AnyStandardModelViewDefinition MarkerView ={
       ViewName = "AnyMoCap View Markers";
@@ -101,26 +102,26 @@ Views = {
       Hide = DesignVar({Off});
       Reset = {On};
       HideAllFirst = Off;
-      AnyOperationSequence HideView = { AnyOperationMacro mcr = { OPERATION_DISPLAY_PRIORITY(PriorityLow); MacroStr = {"classoperation " + CompleteNameOf(&...MarkerView) + ".Hide " +strquote("Set Value") +" --value=" + "{On}", "classoperation "+ CompleteNameOf(&...MarkerView) + strquote("Set View"), "classoperation " + CompleteNameOf(&...MarkerView) + ".Hide " +strquote("Reset Value") };};};
-      AnyOperationSequence ShowView = { AnyOperationMacro mcr = { OPERATION_DISPLAY_PRIORITY(PriorityLow); MacroStr = {"classoperation " + CompleteNameOf(&...MarkerView) + ".Hide " +strquote("Set Value") +" --value=" + "{Off}", "classoperation "+ CompleteNameOf(&...MarkerView) + strquote("Set View"), "classoperation " + CompleteNameOf(&...MarkerView) + ".Hide " +strquote("Reset Value") };};};
+      AnyOperationSequence HideView = {OPERATION_DISPLAY_PRIORITY(PriorityLow); AnyOperationClassOpr MarkerViewHideOn = {Object = &...MarkerView.Hide; OperationName = "Set Value"; ArgList = {AnySwitchVar value = On;};}; AnyOperationClassOpr MarkerViewSetView = {Object = &...MarkerView; OperationName = "Set View";}; AnyOperationClassOpr MarkerViewHideResetValue = {Object = &...MarkerView.Hide; OperationName = "Reset Value";};};
+      AnyOperationSequence ShowView = {OPERATION_DISPLAY_PRIORITY(PriorityLow); AnyOperationClassOpr MarkerViewHideOff = {Object = &...MarkerView.Hide; OperationName = "Set Value"; ArgList = {AnySwitchVar value = Off;};}; AnyOperationClassOpr MarkerViewSetView = {Object = &...MarkerView; OperationName = "Set View";}; AnyOperationClassOpr MarkerViewHideResetValue = {Object = &...MarkerView.Hide; OperationName = "Reset Value";};};
     };
     AnyStandardModelViewDefinition HumanView ={
       ViewName = "AnyMoCap View Human";
       DrawGroupSequence = {&.DrawGroups.All_Human};
       Hide = DesignVar({Off});
       Reset = {On};
-      HideAllFirst = Off;
-      AnyOperationSequence HideView = { AnyOperationMacro mcr = { OPERATION_DISPLAY_PRIORITY(PriorityLow); MacroStr = {"classoperation " + CompleteNameOf(&...HumanView) + ".Hide " +strquote("Set Value") +" --value=" + "{On}", "classoperation "+ CompleteNameOf(&...HumanView) + strquote("Set View"), "classoperation " + CompleteNameOf(&...HumanView) + ".Hide " +strquote("Reset Value") };};};
-      AnyOperationSequence ShowView = { AnyOperationMacro mcr = { OPERATION_DISPLAY_PRIORITY(PriorityLow); MacroStr = {"classoperation " + CompleteNameOf(&...HumanView) + ".Hide " +strquote("Set Value") +" --value=" + "{Off}", "classoperation "+ CompleteNameOf(&...HumanView) + strquote("Set View"), "classoperation " + CompleteNameOf(&...HumanView) + ".Hide " +strquote("Reset Value") };};};
+      HideAllFirst = Off;      
+      AnyOperationSequence HideView = {OPERATION_DISPLAY_PRIORITY(PriorityLow); AnyOperationClassOpr HumanViewHideOn = {Object = &...HumanView.Hide; OperationName = "Set Value"; ArgList = {AnySwitchVar value = On;};}; AnyOperationClassOpr HumanViewSetView = {Object = &...HumanView; OperationName = "Set View";}; AnyOperationClassOpr HumanViewHideResetValue = {Object = &...HumanView.Hide; OperationName = "Reset Value";};};
+      AnyOperationSequence ShowView = {OPERATION_DISPLAY_PRIORITY(PriorityLow); AnyOperationClassOpr HumanViewHideOff = {Object = &...HumanView.Hide; OperationName = "Set Value"; ArgList = {AnySwitchVar value = Off;};}; AnyOperationClassOpr HumanViewSetView = {Object = &...HumanView; OperationName = "Set View";}; AnyOperationClassOpr HumanViewHideResetValue = {Object = &...HumanView.Hide; OperationName = "Reset Value";};};
     };
     AnyStandardModelViewDefinition Muscles ={
       ViewName = "AnyMoCap View Muscles";
       DrawGroupSequence = {&.DrawGroups.All_Muscles};
       Hide = DesignVar({Off});
       Reset = {On};
-      HideAllFirst = Off;
-      AnyOperationSequence HideView = { AnyOperationMacro mcr = { OPERATION_DISPLAY_PRIORITY(PriorityLow); MacroStr = {"classoperation " + CompleteNameOf(&...Muscles) + ".Hide " +strquote("Set Value") +" --value=" + "{On}", "classoperation "+ CompleteNameOf(&...Muscles) + strquote("Set View"), "classoperation " + CompleteNameOf(&...Muscles) + ".Hide " +strquote("Reset Value") };};};
-      AnyOperationSequence ShowView = { AnyOperationMacro mcr = { OPERATION_DISPLAY_PRIORITY(PriorityLow); MacroStr = {"classoperation " + CompleteNameOf(&...Muscles) + ".Hide " +strquote("Set Value") +" --value=" + "{Off}", "classoperation "+ CompleteNameOf(&...Muscles) + strquote("Set View"), "classoperation " + CompleteNameOf(&...Muscles) + ".Hide " +strquote("Reset Value") };};};
+      HideAllFirst = Off;      
+      AnyOperationSequence HideView = {OPERATION_DISPLAY_PRIORITY(PriorityLow); AnyOperationClassOpr MusclesHideOn = {Object = &...Muscles.Hide; OperationName = "Set Value"; ArgList = {AnySwitchVar value = On;};}; AnyOperationClassOpr MusclesSetView = {Object = &...Muscles; OperationName = "Set View";}; AnyOperationClassOpr MusclesHideResetValue = {Object = &...Muscles.Hide; OperationName = "Reset Value";};};
+      AnyOperationSequence ShowView = {OPERATION_DISPLAY_PRIORITY(PriorityLow); AnyOperationClassOpr MusclesHideOff = {Object = &...Muscles.Hide; OperationName = "Set Value"; ArgList = {AnySwitchVar value = Off;};}; AnyOperationClassOpr MusclesSetView = {Object = &...Muscles; OperationName = "Set View";}; AnyOperationClassOpr MusclesHideResetValue = {Object = &...Muscles.Hide; OperationName = "Reset Value";};};
     };
  #if MOCAP_INPUT_DATA_TYPE == "BVH"
     AnyStandardModelViewDefinition BVHStickFigure ={
@@ -128,9 +129,9 @@ Views = {
       DrawGroupSequence = {&.DrawGroups.All_StickFigure};
       Hide = DesignVar({Off});
       Reset = {On};
-      HideAllFirst = Off;
-      AnyOperationSequence HideView = { AnyOperationMacro mcr = { OPERATION_DISPLAY_PRIORITY(PriorityLow); MacroStr = {"classoperation " + CompleteNameOf(&...BVHStickFigure) + ".Hide " +strquote("Set Value") +" --value=" + "{On}", "classoperation "+ CompleteNameOf(&...BVHStickFigure) + strquote("Set View"), "classoperation " + CompleteNameOf(&...BVHStickFigure) + ".Hide " +strquote("Reset Value") };};};
-      AnyOperationSequence ShowView = { AnyOperationMacro mcr = { OPERATION_DISPLAY_PRIORITY(PriorityLow); MacroStr = {"classoperation " + CompleteNameOf(&...BVHStickFigure) + ".Hide " +strquote("Set Value") +" --value=" + "{Off}", "classoperation "+ CompleteNameOf(&...BVHStickFigure) + strquote("Set View"), "classoperation " + CompleteNameOf(&...BVHStickFigure) + ".Hide " +strquote("Reset Value") };};};
+      HideAllFirst = Off;      
+      AnyOperationSequence HideView = {OPERATION_DISPLAY_PRIORITY(PriorityLow); AnyOperationClassOpr BVHStickFigureHideOn = {Object = &...BVHStickFigure.Hide; OperationName = "Set Value"; ArgList = {AnySwitchVar value = On;};}; AnyOperationClassOpr BVHStickFigureSetView = {Object = &...BVHStickFigure; OperationName = "Set View";}; AnyOperationClassOpr BVHStickFigureHideResetValue = {Object = &...BVHStickFigure.Hide; OperationName = "Reset Value";};};
+      AnyOperationSequence ShowView = {OPERATION_DISPLAY_PRIORITY(PriorityLow); AnyOperationClassOpr BVHStickFigureHideOff = {Object = &...BVHStickFigure.Hide; OperationName = "Set Value"; ArgList = {AnySwitchVar value = Off;};}; AnyOperationClassOpr BVHStickFigureSetView = {Object = &...BVHStickFigure; OperationName = "Set View";}; AnyOperationClassOpr BVHStickFigureHideResetValue = {Object = &...BVHStickFigure.Hide; OperationName = "Reset Value";};};
     };
 #endif
     AnyStandardModelViewDefinition ForcePlates ={
@@ -138,9 +139,9 @@ Views = {
       DrawGroupSequence = {&.DrawGroups.ForceRelatedObjects};
       Hide = DesignVar({Off});
       Reset = {On};
-      HideAllFirst = Off;
-      AnyOperationSequence HideView = { AnyOperationMacro mcr = { OPERATION_DISPLAY_PRIORITY(PriorityLow); MacroStr = {"classoperation " + CompleteNameOf(&...ForcePlates) + ".Hide " +strquote("Set Value") +" --value=" + "{On}", "classoperation "+ CompleteNameOf(&...ForcePlates) + strquote("Set View"), "classoperation " + CompleteNameOf(&...ForcePlates) + ".Hide " +strquote("Reset Value") };};};
-      AnyOperationSequence ShowView = { AnyOperationMacro mcr = { OPERATION_DISPLAY_PRIORITY(PriorityLow); MacroStr = {"classoperation " + CompleteNameOf(&...ForcePlates) + ".Hide " +strquote("Set Value") +" --value=" + "{Off}", "classoperation "+ CompleteNameOf(&...ForcePlates) + strquote("Set View"), "classoperation " + CompleteNameOf(&...ForcePlates) + ".Hide " +strquote("Reset Value") };};};
+      HideAllFirst = Off;      
+      AnyOperationSequence HideView = {OPERATION_DISPLAY_PRIORITY(PriorityLow); AnyOperationClassOpr ForcePlatesHideOn = {Object = &...ForcePlates.Hide; OperationName = "Set Value"; ArgList = {AnySwitchVar value = On;};}; AnyOperationClassOpr ForcePlatesSetView = {Object = &...ForcePlates; OperationName = "Set View";}; AnyOperationClassOpr ForcePlatesHideResetValue = {Object = &...ForcePlates.Hide; OperationName = "Reset Value";};};
+      AnyOperationSequence ShowView = {OPERATION_DISPLAY_PRIORITY(PriorityLow); AnyOperationClassOpr ForcePlatesHideOff = {Object = &...ForcePlates.Hide; OperationName = "Set Value"; ArgList = {AnySwitchVar value = Off;};}; AnyOperationClassOpr ForcePlatesSetView = {Object = &...ForcePlates; OperationName = "Set View";}; AnyOperationClassOpr ForcePlatesHideResetValue = {Object = &...ForcePlates.Hide; OperationName = "Reset Value";};};  
     };
 
     AnyStandardModelViewDefinition KinematicView ={
@@ -150,7 +151,7 @@ Views = {
       Hide = {Off, On, On,On};
       ShowModelDefined = {Off,Off, Off, Off};
       ShowAutoGenerated = {Off,Off, Off, Off};
-      AnyOperationSequence ShowView = { AnyOperationMacro mcr = { OPERATION_DISPLAY_PRIORITY(PriorityLow); MacroStr = {"classoperation "+ CompleteNameOf(&...KinematicView) + strquote("Set View") };};};
+      AnyOperationSequence ShowView = {OPERATION_DISPLAY_PRIORITY(PriorityLow); AnyOperationClassOpr KinematicViewSetView = {Object = &...KinematicView; OperationName = "Set View";};};  
     };
     AnyStandardModelViewDefinition InverseDynamicView = {
       ViewName = "AnyMoCap InverseDynamic View";
@@ -159,10 +160,7 @@ Views = {
       Hide = {Off, On,On, On, Off};
       ShowModelDefined = {Off,Off,Off,Off,Off};
       ShowAutoGenerated = {Off,Off,Off,Off,Off};
-      AnyOperationSequence ShowView = { AnyOperationMacro mcr = { OPERATION_DISPLAY_PRIORITY(PriorityLow); MacroStr = {"classoperation "+ CompleteNameOf(&...InverseDynamicView) + strquote("Set View") };};};
+      AnyOperationSequence ShowView = {OPERATION_DISPLAY_PRIORITY(PriorityLow); AnyOperationClassOpr InverseDynamicViewSetView = {Object = &...InverseDynamicView; OperationName = "Set View";};};  
     };
 
-
-
 };
-

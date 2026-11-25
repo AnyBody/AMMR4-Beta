@@ -28,12 +28,15 @@
 Main =
 {
   AnyOperationSequence  RunTest =
-  {
-    AnyOperationMacro LoadParam = {
-
-       MacroStr = {"classoperation Main " + strquote("Load Values") +" --file="
-       + strquote("..\..\Application\MocapExamples\Plug-in-gait_Simple\Output\FullBody_GaitNormal_1.anyset")};
+  {    
+    AnyOperationClassOpr LoadParam = {
+         Object = &Main;
+         OperationName = "Load Values";
+         ArgList = {
+           AnyStringVar file = "..\..\Application\MocapExamples\Plug-in-gait_Simple\Output\FullBody_GaitNormal_1.anyset";         
+         };
     };
+    
     Template_OperationUpdateValues UpdateValues() = {};
     AnyOperation& MarkerTracking = Main.RunAnalysis.MarkerTracking;
     AnyOperation& InverseDyn = Main.RunAnalysis.InverseDynamics;
