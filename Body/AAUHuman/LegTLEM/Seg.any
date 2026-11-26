@@ -515,8 +515,6 @@ AnySeg Foot =
       sRel = .Scale(.Data.SubTalarJoint);
       ARel = RotMat({0.0, 0.0, 0.0 }, ....Sign*(SubTalarJointAxisNode-sRel), .AnatomicalFrame.ARel'[1])*RotMat(pi/2,y);
 
-      #include "../DrawSettings/JointAxesProximal.any"
-
       #if DRAWAXES
       AnyDrawLine SJaxis2 =
       {
@@ -1265,7 +1263,6 @@ AnySeg Thigh =
     sRel = .Scale(sRelUnscaled);
     ARel = RotMat({0.0,0,0}, .Scale(sRelUnscaled)-.Scale(.KneeJoint.sRelUnscaled), .AnatomicalFrame.ARel'[2])*RotMat(-pi/2,x)*RotMat(-pi/2,z);
 
-    #include "../DrawSettings/JointAxesProximal.any"
   };
   #endif
 
@@ -1626,7 +1623,7 @@ AnySeg Patella =
   /// This is defined by an AnyKinPLine in the file Jnt.any.
   /// The insertion lies on the Shank segment.
   AnyRefNode Origin_patella_tendon = {
-    sRel = .Scale( .Data.Origin_patella_tendon );//AnyDrawRefFrame drw = {RGB = {0,1,0};};
+    sRel = .Scale( .Data.Origin_patella_tendon );
     ARel = ..Thigh.KneeJoint.ARel;
   };
   #endif
@@ -1728,7 +1725,6 @@ PelvisSeg =
     AnyRefNode HipJoint = {
       AnyVec3 sRelUnscaled = .Muscles.Data.HipJoint;
       sRel = ..AnatomicalFrameTrunk.Scale_Leg_Pelvis(sRelUnscaled );
-      #include "../DrawSettings/JointAxesProximal.any"
       AnyRefNode ISB = {
          ARel = ...AnatomicalFrameISB.ARel;
       };

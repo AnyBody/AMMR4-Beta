@@ -99,8 +99,8 @@ AnyKinMeasureOrg HipFlexion = {
   AnyKinRotational HipMeasure ={
     AnyRefNode &PelvisNode = ...Segments.Pelvis.HipJoint.RotNode;
     AnyRefNode &ThighNode = ...Segments.Thigh.HipJoint.RotNode;
-    PelvisNode={AnyDrawRefFrame drw={RGB={1,0,0};Visible = Off;}; };
-    ThighNode={AnyDrawRefFrame drw={RGB={0,1,0};Visible = Off;};  };
+    PelvisNode = {viewRefFrame = { RGB = {1,0,0}; Visible = Off;}; };
+    ThighNode = {viewRefFrame = { RGB = {0,1,0}; Visible = Off;}; };
     Axis1 = z; Axis2 = x;  Axis3 = y;
     Type=RotAxesAngles;
   };

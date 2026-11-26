@@ -54,7 +54,6 @@ AnyFolder &Ref= Carpals;
 CarpalsRef = {
   //It is used for wrapping of the flexor muscles.
   AnyFunTransform3D &Scale=.GScaling.Hand.ScaleFunction;
-  //AnyDrawRefFrame drws={RGB={0,0,1};ScaleXYZ={1,1,1}*0.2;};
 
   AnyRefNode FlexorMuscleCyl = {
 
@@ -83,7 +82,6 @@ AnyFunTransform3D &Scale= GScaling.Hand.ScaleFunction;
 
 Finger1MetaRef = {
   AnyRefNode I_AbductorPollicisLongus = {
-//     AnyDrawRefFrame drw={RGB={1,0,0};};
     sRel = ..Scale({-0.01, 0.007, ....Sign*0}); //guesstimate
 
   };
@@ -91,32 +89,26 @@ Finger1MetaRef = {
 
 
   AnyRefNode I_ExtensorPollicisBrevis = {
-    //   AnyDrawRefFrame drw={};
     sRel = ..Scale({-0.01, -0.02, 0}); //guesstimate
   };
 
   AnyRefNode Via1_ExtensorPollicisBrevis = {
-    //   AnyDrawRefFrame drw={};
     sRel = ..Scale({-0.01, 0.0, 0}); //guesstimate
   };
 
 
   AnyRefNode Via1_ExtensorPollicisLongus= {
-    //   AnyDrawRefFrame drw={};
     sRel = ..Scale({-0.01, 0.0, 0}); //guesstimate
   };
   AnyRefNode I_ExtensorPollicisLongus= {
-    //   AnyDrawRefFrame drw={};
     sRel = ..Scale({-0.01, -0.02, 0}); //guesstimate
   };
 
   AnyRefNode Via_FlexorPollicisLongus = {
-    // AnyDrawRefFrame drw={};
     sRel = ..Scale({0.008, 0.0, 0}); //guesstimate
     ARel = RotMat(-....Sign*pi/2,x)*RotMat(-....Sign*pi/2,y);  // used for the SPLine.InitWrapPosVectors
   };
   AnyRefNode I_FlexorPollicisLongus = {
-    // AnyDrawRefFrame drw={};
     sRel = ..Scale({0.008, -0.015, 0}); //guesstimate
   };
 
@@ -125,54 +117,44 @@ Finger1MetaRef = {
 
 Finger2MetaRef = {
   AnyRefNode Via1_ExtensorIndicis = {
-    //AnyDrawRefFrame drw={RGB={0,1,1};};
     sRel = ..Scale({-0.007,0.02,0.0}); //guesstimate
   };
 
 
   AnyRefNode I_ExtensorIndicis = {
-    //AnyDrawRefFrame drw={RGB={0,1,1};};
     sRel = ..Scale({-0.01,-0.02,0.0}); //guesstimate
   };
 
   AnyRefNode I_ExtensorCarpiRadialisLongus= {
-    //AnyDrawRefFrame drw={RGB={0,1,1};};
     sRel = ..Scale({-0.006,-0.01,0.0}); //guesstimate
   };
 
   AnyRefNode I_FlexorCarpiRadialis= {
-    //AnyDrawRefFrame drw={RGB={0,1,1};};
     sRel = ..Scale({0.006,0.03,0.0}); //guesstimate
   };
 
   AnyRefNode Via_FlexorDigitorumSuperficialisDigit2 = {
-    //AnyDrawRefFrame drw={RGB={0,1,1};};
     sRel = ..Scale({0.008,0.01,0.0}); //guesstimate
     ARel = RotMat(-....Sign*pi/2,x)*RotMat(-....Sign*pi/2,y);  // used for the SPLine.InitWrapPosVectors
   };
 
   AnyRefNode I_FlexorDigitorumSuperficialisDigit2 = {
-    //AnyDrawRefFrame drw={RGB={0,1,1};};
     sRel = ..Scale({0.007,-0.025,0.0}); //guesstimate
   };
 
   AnyRefNode Via_FlexorDigitorumProfundusDigit2 = {
-    //AnyDrawRefFrame drw={RGB={0,1,1};};
     sRel = ..Scale({0.009,0.01,0.0}); //guesstimate
     ARel = RotMat(-....Sign*pi/2,x)*RotMat(-....Sign*pi/2,y);  // used for the SPLine.InitWrapPosVectors
   };
 
   AnyRefNode I_FlexorDigitorumProfundusDigit2 = {
-    //AnyDrawRefFrame drw={RGB={0,1,1};};
     sRel = ..Scale({0.009,-0.02,0.0}); //guesstimate
   };
   AnyRefNode Via_ExtensorDigitorumDigit2 = {
-    //AnyDrawRefFrame drw={RGB={0,1,1};};
     sRel = ..Scale({-0.009,0.01,0.0}); //guesstimate
   };
 
   AnyRefNode I_ExtensorDigitorumDigit2 = {
-    //AnyDrawRefFrame drw={RGB={0,1,1};};
     sRel = ..Scale({-0.009,-0.02,0.0}); //guesstimate
   };
 
@@ -182,43 +164,35 @@ Finger2MetaRef = {
 Finger3MetaRef={
 
   AnyRefNode Via_ExtensorCarpiRadialisBrevis = {
-    //AnyDrawRefFrame drw={RGB={0,1,1};};
     sRel = ..Scale({-0.006,0.027,0.0}); //guesstimate
   };
 
   AnyRefNode I_ExtensorCarpiRadialisBrevis = {
-    //AnyDrawRefFrame drw={RGB={0,1,1};};
     sRel = ..Scale({-0.006,0.025,0.0}); //guesstimate
   };
 
   AnyRefNode Via_FlexorDigitorumSuperficialisDigit3 = {
-    //AnyDrawRefFrame drw={RGB={0,1,1};};
     sRel = ..Scale({0.008,0.01,0.0}); //guesstimate
     ARel = RotMat(-....Sign*pi/2,x)*RotMat(-....Sign*pi/2,y);  // used for the SPLine.InitWrapPosVectors
   };
 
   AnyRefNode I_FlexorDigitorumSuperficialisDigit3 = {
-    //AnyDrawRefFrame drw={RGB={0,1,1};};
     sRel = ..Scale({0.007,-0.025,0.0}); //guesstimate
   };
 
   AnyRefNode Via_FlexorDigitorumProfundusDigit3 = {
-    //AnyDrawRefFrame drw={RGB={0,1,1};};
     sRel = ..Scale({0.009,0.01,0.0}); //guesstimate
     ARel = RotMat(-....Sign*pi/2,x)*RotMat(-....Sign*pi/2,y);  // used for the SPLine.InitWrapPosVectors
   };
 
   AnyRefNode I_FlexorDigitorumProfundusDigit3 = {
-    //AnyDrawRefFrame drw={RGB={0,1,1};};
     sRel = ..Scale({0.009,-0.02,0.0}); //guesstimate
   };
   AnyRefNode Via_ExtensorDigitorumDigit3 = {
-    //AnyDrawRefFrame drw={RGB={0,1,1};};
     sRel = ..Scale({-0.009,0.01,0.0}); //guesstimate
   };
 
   AnyRefNode I_ExtensorDigitorumDigit3 = {
-    //AnyDrawRefFrame drw={RGB={0,1,1};};
     sRel = ..Scale({-0.009,-0.02,0.0}); //guesstimate
   };
 
@@ -229,39 +203,32 @@ Finger3MetaRef={
 Finger4MetaRef = {
 
   AnyRefNode I_PalmarisLongus= {
-    //AnyDrawRefFrame drw={RGB={0,1,1};};
     sRel = ..Scale({0.004,0.02,0.0}); //guesstimate
   };
 
   AnyRefNode Via_FlexorDigitorumSuperficialisDigit4 = {
-    //AnyDrawRefFrame drw={RGB={0,1,1};};
     sRel = ..Scale({0.008,0.01,0.0}); //guesstimate
     ARel = RotMat(-....Sign*pi/2,x)*RotMat(-....Sign*pi/2,y);  // used for the SPLine.InitWrapPosVectors
   };
 
   AnyRefNode I_FlexorDigitorumSuperficialisDigit4 = {
-    //AnyDrawRefFrame drw={RGB={0,1,1};};
     sRel = ..Scale({0.007,-0.025,0.0}); //guesstimate
   };
 
 
   AnyRefNode Via_FlexorDigitorumProfundusDigit4 = {
-    //AnyDrawRefFrame drw={RGB={0,1,1};};
     sRel = ..Scale({0.009,0.01,0.0}); //guesstimate
     ARel = RotMat(-....Sign*pi/2,x)*RotMat(-....Sign*pi/2,y);  // used for the SPLine.InitWrapPosVectors
   };
 
   AnyRefNode I_FlexorDigitorumProfundusDigit4 = {
-    //AnyDrawRefFrame drw={RGB={0,1,1};};
     sRel = ..Scale({0.009,-0.02,0.0}); //guesstimate
   };
   AnyRefNode Via_ExtensorDigitorumDigit4 = {
-    //AnyDrawRefFrame drw={RGB={0,1,1};};
     sRel = ..Scale({-0.009,0.01,0.0}); //guesstimate
   };
 
   AnyRefNode I_ExtensorDigitorumDigit4 = {
-    //AnyDrawRefFrame drw={RGB={0,1,1};};
     sRel = ..Scale({-0.009,-0.02,0.0}); //guesstimate
   };
 
@@ -271,58 +238,48 @@ Finger4MetaRef = {
 Finger5MetaRef = {
 
   AnyRefNode I_ExtensorCarpiUlnaris = {
-    //AnyDrawRefFrame drw={RGB={0,1,1};};
     sRel = ..Scale({-0.002,0.02,....Sign*-0.007}); //guesstimate
   };
 
   AnyRefNode I_FlexorCarpiUlnaris = {
-    //AnyDrawRefFrame drw={RGB={0,1,1};};
     sRel = ..Scale({0.009,0.02,....Sign*0.007}); //guesstimate
     ARel = RotMat(-....Sign*pi/2,x)*RotMat(-....Sign*pi/2,y);  // used for the SPLine.InitWrapPosVectors
   };
 
 
   AnyRefNode Via_FlexorDigitorumSuperficialisDigit5 = {
-    //AnyDrawRefFrame drw={RGB={0,1,1};};
     sRel = ..Scale({0.009,0.01,0.0}); //guesstimate
     ARel = RotMat(-....Sign*pi/2,x)*RotMat(-....Sign*pi/2,y);  // used for the SPLine.InitWrapPosVectors
   };
 
   AnyRefNode I_FlexorDigitorumSuperficialisDigit5 = {
-    //AnyDrawRefFrame drw={RGB={0,1,1};};
     sRel = ..Scale({0.009,-0.02,0.0}); //guesstimate
   };
 
 
 
   AnyRefNode Via_FlexorDigitorumProfundusDigit5 = {
-    //AnyDrawRefFrame drw={RGB={0,1,1};};
     sRel = ..Scale({0.009,0.01,0.0}); //guesstimate
     ARel = RotMat(-....Sign*pi/2,x)*RotMat(-....Sign*pi/2,y);  // used for the SPLine.InitWrapPosVectors
   };
 
   AnyRefNode I_FlexorDigitorumProfundusDigit5 = {
-    //AnyDrawRefFrame drw={RGB={0,1,1};};
     sRel = ..Scale({0.009,-0.02,0.0}); //guesstimate
   };
 
   AnyRefNode Via_ExtensorDigitorumDigit5 = {
-    //AnyDrawRefFrame drw={RGB={0,1,1};};
     sRel = ..Scale({-0.009,0.01,0.0}); //guesstimate
   };
 
   AnyRefNode I_ExtensorDigitorumDigit5 = {
-    //AnyDrawRefFrame drw={RGB={0,1,1};};
     sRel = ..Scale({-0.009,-0.02,0.0}); //guesstimate
   };
 
   AnyRefNode Via_ExtensorDigitiMinimi= {
-    //AnyDrawRefFrame drw={RGB={0,1,1};};
     sRel = ..Scale({-0.009,0.01,0.0}); //guesstimate
   };
 
   AnyRefNode I_ExtensorDigitiMinimi= {
-    //AnyDrawRefFrame drw={RGB={0,1,1};};
     sRel = ..Scale({-0.009,-0.02,0.0}); //guesstimate
   };
 
@@ -346,7 +303,6 @@ Finger5MetaRef = {
  AnyMat33 Mirror={{1,0,0},{0,1,0},{0,0,...Sign}};
 
 //      Axes0 = .WristJointSeg.Axes0*RotMat(90/180*pi,x)*RotMat(..Sign*15/180*pi,y)*RotMat(-90/180*pi,z);
-      //AnyDrawRefFrame drw1={RGB={0,0,1}; ScaleXYZ={0.15,0.15,0.15};};
 
 //       AnyVar Scale=..Scaling.GeometricalScaling.Hand.LengthScale;
        AnyFunTransform3D Scale= {
@@ -359,8 +315,6 @@ Finger5MetaRef = {
          sRel = .Scale({-0.015,-0.075,0.0});
        };
 
-
-//      AnyDrawRefFrame drw2={RGB={1,0,0};};
       AnyDrawSurf      carpals = {
         FileName = "Carpals";
         Opacity = ....BonesOpacity.Hand;
@@ -393,7 +347,6 @@ Finger5MetaRef = {
         //      {0,...Sign*1,0},
         //      {0,0,...Sign*1}
         //    };
-      // AnyDrawRefFrame drw = {RGB={0,0,1};};
       };
 
 
@@ -407,19 +360,16 @@ Finger5MetaRef = {
         ARel=RotMat(-90/180*pi,x)*RotMat(....Sign*-90/180*pi,y)*RotMat(-15/180*pi,z)*RotMat(L*pi,z);
 
         //ARel = ....WristJointSeg.Axes0*RotMat(90/180*pi,x)*RotMat(-15/180*pi,y)*RotMat(180/180*pi,z)*RotMat(-90/180*pi,y);
-        //AnyDrawRefFrame drw ={RGB={0,0,1};};
 
       };
 
       AnyRefNode CarpometacarpalJointNode1={
         sRel=.Scale({0.0,-0.015,....Sign*0.015});
-        //                    AnyDrawRefFrame drw={          ScaleXYZ={0.1,0.1,0.1};        };
       };
 
       AnyRefNode HandCylRotNode ={
         sRel=.Scale({0,0,0.0});
         ARel=RotMat(-65*pi/180,z)*RotMat(....Sign*30*pi/180,x)*RotMat(....Sign*20*pi/180,y);
-         //AnyDrawRefFrame drw = {RGB={1,0,1};};
       };
 
 
@@ -429,7 +379,6 @@ Finger5MetaRef = {
 
         ARel=RotMat(....Sign*(-90+30)*pi/180,x)*RotMat(....Sign*3*14.7*pi/180,y);
 
-           //AnyDrawRefFrame drw1={RGB={0,0,1}; ScaleXYZ={0.15,0.15,0.15};};
       };
 
       AnyRefNode CMC2={
@@ -437,7 +386,6 @@ Finger5MetaRef = {
         AnyVar Angle =-atan((sRel[0]-.MCP2.sRel[0])/(sRel[1]-.MCP2.sRel[1]));
         ARel =RotMat(sRel,sRel+{cos(Angle),sin(Angle),0},.MCP2.sRel)*RotMat(pi,x);
         sRel=.Scale({-0.004,-0.016,....Sign*0.006});
-               //AnyDrawRefFrame drw={RGB={0,1,1}; ScaleXYZ={0.15,0.15,0.15};};
       };
 
 
@@ -445,45 +393,37 @@ Finger5MetaRef = {
         AnyVar Angle =-atan((sRel[0]-.MCP3.sRel[0])/(sRel[1]-.MCP3.sRel[1]));
         ARel =RotMat(sRel,sRel+{cos(Angle),sin(Angle),0},.MCP3.sRel)*RotMat(pi,x);
         sRel=.Scale({-0.003,-0.020,-....Sign*0.008});
-        //        AnyDrawRefFrame drw={RGB={0,1,1}; ScaleXYZ={0.05,0.05,0.05};};
       };
 
       AnyRefNode CMC4={
         AnyVar Angle =-atan((sRel[0]-.MCP4.sRel[0])/(sRel[1]-.MCP4.sRel[1]));
         ARel =RotMat(sRel,sRel+{cos(Angle),sin(Angle),0},.MCP4.sRel)*RotMat(pi,x);
         sRel=.Scale({-0.00,-0.020,....Sign*-0.02});
-        //        AnyDrawRefFrame drw={RGB={0,1,1}; ScaleXYZ={0.5,0.5,0.5};};
       };
 
       AnyRefNode CMC5={
         AnyVar Angle =-atan((sRel[0]-.MCP5.sRel[0])/(sRel[1]-.MCP5.sRel[1]));
         ARel =RotMat(sRel,sRel+{cos(Angle),sin(Angle),0},.MCP5.sRel)*RotMat(pi,x);
         sRel=.Scale({0.004,-0.018,....Sign*-0.025});
-        //        AnyDrawRefFrame drw={RGB={0,1,0}; ScaleXYZ={0.5,0.5,0.5};};
       };
 
 
 
       AnyRefNode MCP2 ={
-        //        AnyDrawRefFrame drw={};
         sRel=.Scale({0,..JointPositions[1][0],....Sign*..JointPositions[1][1]});
-        //        AnyDrawRefFrame drw1={RGB={0,0,1}; ScaleXYZ={0.15,0.15,0.15};};
       };
 
       AnyRefNode MCP3 ={
         sRel=.Scale({0,..JointPositions[2][0],....Sign*..JointPositions[2][1]});
-        //        AnyDrawRefFrame drw1={RGB={0,0,1}; ScaleXYZ={0.15,0.15,0.15};};
       };
 
 
       AnyRefNode MCP4 ={
         sRel=.Scale({0,..JointPositions[3][0],....Sign*..JointPositions[3][1]});
-        //        AnyDrawRefFrame drw1={RGB={0,0,1}; ScaleXYZ={0.15,0.15,0.15};};
       };
 
       AnyRefNode MCP5 ={
         sRel=.Scale({0,..JointPositions[4][0],....Sign*..JointPositions[4][1]});
-        //        AnyDrawRefFrame drw1={RGB={0,1,0}; ScaleXYZ={0.15,0.15,0.15};};
       };
       AnyKinPLine HandBreadthTest={
         AnyDrawPLine drw={RGB={0,1,0}; Thickness=0.0005;};
