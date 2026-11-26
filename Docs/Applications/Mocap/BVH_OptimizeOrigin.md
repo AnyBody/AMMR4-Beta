@@ -1,5 +1,5 @@
 ---
-gallery_title: "Optimize BVH Origin"
+gallery_title: "BVH Origin Optimization"
 gallery_image: "/Applications/images/BVH_OptimizeOrigin_Merged.jpg"
 anylink: Application/MocapExamples/BVH_Xsens_OptimizeOrigin/Subjects/S01/S01_Trial01/Main.any
 ---
@@ -8,7 +8,7 @@ anylink: Application/MocapExamples/BVH_Xsens_OptimizeOrigin/Subjects/S01/S01_Tri
 
 (examples_mocap_bvhorigin)=
 
-# Optimize BVH Origin example
+# BVH Origin Optimization
 
 
 :::{anylink-gallery}

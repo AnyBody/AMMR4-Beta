@@ -13,13 +13,12 @@ anylink: Application/Examples/BenchPress/BenchPress.Main.any
 :::
 
 
-A full-body model doing push-ups with assumed drivers.
+This full-body model demonstrates a bench press exercise. It is developed from
+the free posture model, with both hands connected to a barbell whose
+vertical movement is prescribed.
 
-
-The model of a bench press exercise is developed from the free posture model.
-The bench is simulated by reaction forces between the head, thorax, pelvis,
-feet and the ground.
-
+The barbell's mass and motion as well as the position of the hands can be configured in `Model/Environment.any`. The bench support is represented by reaction forces at the head, scapulae, pelvis, and feet rather
+than by modeled contact with the bench surface.
 
 :::{admonition} In Model Repository:
 :class: seealso
