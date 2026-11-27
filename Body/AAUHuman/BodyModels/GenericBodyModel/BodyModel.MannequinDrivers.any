@@ -136,7 +136,7 @@ AnyFolder DefaultMannequinDrivers =
       #else
         AnyFixedRefFrame &ref1 = GLOBAL_REFERENCE_FRAME;
       #endif
-      AnyRefFrame &ref2 =...BodyModel.Trunk.Segments.PelvisSeg.AnatomicalFrameTrunk;
+      AnyRefFrame &ref2 =...BodyModel.Trunk.Segments.PelvisSeg.AnatomicalFrameTrunkCorrected;
       Type=RotAxesAngles;
     };
     MeasureOrganizer = {0};

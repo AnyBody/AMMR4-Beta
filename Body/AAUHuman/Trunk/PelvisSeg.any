@@ -44,6 +44,11 @@ AnySeg PelvisSeg = {
   #undef MACRO_CONSTRUCT_ANATOMICAL_FRAME_A
 
 
+  AnyRefNode AnatomicalFrameTrunkCorrected = {
+    sRel = .AnatomicalFrameTrunk.definition.sRel;
+    ARel = .AnatomicalFrameTrunk.definition.ARel * RotMat(...Data.AlignmentParameters.PelvicTilt.deltaValueRad, z);
+  };
+  
   /// This is the anatomical frame that has axes aligned with the global coordinate system
   /// of the trunk dataset. This frame defines the neutral orientation of the pelvis
   /// segment.

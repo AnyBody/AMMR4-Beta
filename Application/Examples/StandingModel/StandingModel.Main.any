@@ -1,7 +1,6 @@
 #include "libdef.any"
 Main =
 {
-
   // BodyModel configuration:
   #include "Model/BodyModelConfiguration.any"
 
@@ -58,6 +57,30 @@ Main =
     Gravity={0.0, -9.81, 0.0};
     nStep = 1;
 
+    AnyMechObjectExcluder ExcludeSpineRhythm = {
+      Objects = {
+        &Main.HumanModel.BodyModel.Trunk.Joints.Lumbar.SpineRhythmDrvFlexion,
+        &Main.HumanModel.BodyModel.Trunk.Joints.Lumbar.SpineRhythmDrvRotation,
+        &Main.HumanModel.BodyModel.Trunk.Joints.Lumbar.SpineRhythmDrvLatBending,
+        &Main.HumanModel.DefaultMannequinDrivers.PostureDriverBending,
+        &Main.HumanModel.DefaultMannequinDrivers.PostureDriverRotation,
+        &Main.HumanModel.DefaultMannequinDrivers.PostureDriverExtension
+        };
+    };
+    
+    Main.HumanModel.BodyModel.Trunk.Data.AlignmentParameters.LumbarLordosis.userValue = 75;
+    Main.HumanModel.BodyModel.Trunk.Data.AlignmentParameters.PelvicTilt.userValue = 15;
+    Main.HumanModel.DefaultMannequinDrivers.PelvisGroundDriverRotZ.CType = {Hard};
+    Main.HumanModel.BodyModel.Trunk.Segments.PelvisSeg.AnatomicalFrameTrunkCorrected = {AnyDrawRefFrame Draw={ScaleXYZ={1,1,1}*0.1;RGB={1,0,0};};};
+    AnyKinEq FixLumbar = {
+      AnyJoint &jntT12L1 = Main.HumanModel.BodyModel.Trunk.Joints.Lumbar.T12L1;
+      AnyJoint &jntL1L2 = Main.HumanModel.BodyModel.Trunk.Joints.Lumbar.L1L2;
+      AnyJoint &jntL2L3 = Main.HumanModel.BodyModel.Trunk.Joints.Lumbar.L2L3;
+      AnyJoint &jntL3L4 = Main.HumanModel.BodyModel.Trunk.Joints.Lumbar.L3L4;
+      AnyJoint &jntL4L5 = Main.HumanModel.BodyModel.Trunk.Joints.Lumbar.L4L5;
+      AnyJoint &jntL5Sacrum = Main.HumanModel.BodyModel.Trunk.Joints.Lumbar.L5Sacrum;
+      AnyJoint &jntSacrumPelvis = Main.HumanModel.BodyModel.Trunk.Joints.Lumbar.SacrumPelvis;
+    };
     // Overdeterminate solver is needed while using the
     // soft default mannequin drivers.
     Kinematics.SolverType = KinSolOverDeterminate;
