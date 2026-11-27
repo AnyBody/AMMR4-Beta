@@ -68,8 +68,8 @@ Main =
         };
     };
     
-    Main.HumanModel.BodyModel.Trunk.Data.AlignmentParameters.LumbarLordosis.userValue = 75;
-    Main.HumanModel.BodyModel.Trunk.Data.AlignmentParameters.PelvicTilt.userValue = 15;
+    Main.HumanModel.BodyModel.Trunk.Data.AlignmentParameters.LumbarLordosis.userValue = 95;
+    Main.HumanModel.BodyModel.Trunk.Data.AlignmentParameters.PelvicTilt.userValue = 25;
     Main.HumanModel.DefaultMannequinDrivers.PelvisGroundDriverRotZ.CType = {Hard};
     Main.HumanModel.BodyModel.Trunk.Segments.PelvisSeg.AnatomicalFrameTrunkCorrected = {AnyDrawRefFrame Draw={ScaleXYZ={1,1,1}*0.1;RGB={1,0,0};};};
     AnyKinEq FixLumbar = {

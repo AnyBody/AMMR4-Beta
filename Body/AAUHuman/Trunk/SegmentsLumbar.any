@@ -53,9 +53,9 @@ TrunkSegmentBase SacrumSeg(
   };
   AnyFunTransform3D& Scale = .PelvisSeg.Scale;
 
-  AnyRefNode SacrumPelvisJntNode = {
-    sRel = .Scale(.ModelParameters.Sacrum.SacrumPelvisJntNode_pos);
-  };
+//  AnyRefNode SacrumPelvisJntNode = {
+//    sRel = .Scale(.ModelParameters.Sacrum.SacrumPelvisJntNode_pos);
+//  };
   
   AnyRefNode SacrumContactNode = {sRel= .Scale(.Data.SacrumContactNode_pos);};
 

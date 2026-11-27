@@ -32,6 +32,11 @@
             0.5*(.AnteriorNode.sRel + .PosteriorNode.sRel),
             .AnteriorNode.sRel,
             0.5*(.AnteriorNode.sRel + .PosteriorNode.sRel) + (.LeftNode.sRel - .RightNode.sRel))*RotMat(pi/2,x);
+          viewRefFrame = {
+            ScaleXYZ=Main.DrawSettings.Frame.Anatomical.ScaleXYZ;
+            RGB=Main.DrawSettings.Frame.Anatomical.RGB;
+            Visible = Main.DrawSettings.Frame.Anatomical.DefaultVisibility;
+          };             
         };
         AnyRefNode AnteriorNode  = {sRel = ...Scale(...ModelParameters.LEVEL.SuperiorEndplateAnteriorNode_pos);  ARel = .AnatomicalFrame.ARel;};
         AnyRefNode PosteriorNode = {sRel = ...Scale(...ModelParameters.LEVEL.SuperiorEndplatePosteriorNode_pos); ARel = .AnatomicalFrame.ARel;};
@@ -47,10 +52,20 @@
           AnyRefNode Postural = {
             sRel = ...Endplate.AnteriorNode.sRel + .APRatio * (...Endplate.PosteriorNode.sRel - ...Endplate.AnteriorNode.sRel);
             ARel = ....AnatomicalFrameTrunk.ARel;
+            viewRefFrame = {
+              ScaleXYZ=Main.DrawSettings.Frame.Postural.ScaleXYZ;
+              RGB=Main.DrawSettings.Frame.Postural.RGB;
+              Visible = Main.DrawSettings.Frame.Postural.DefaultVisibility;
+            };             
           };
           AnyRefNode Anatomical = {
             sRel = ...Endplate.AnteriorNode.sRel + .APRatio * (...Endplate.PosteriorNode.sRel - ...Endplate.AnteriorNode.sRel);
             ARel = ...Endplate.AnatomicalFrame.ARel;
+            viewRefFrame = {
+              ScaleXYZ=Main.DrawSettings.Frame.Anatomical.ScaleXYZ;
+              RGB=Main.DrawSettings.Frame.Anatomical.RGB;
+              Visible = Main.DrawSettings.Frame.Anatomical.DefaultVisibility;
+            };             
           };
         };
         
@@ -59,10 +74,20 @@
           AnyRefNode Postural = {
             sRel = ....Scale(....ModelParameters.LEVEL.CRANIAL_NEIGHBOUR##LEVEL##JntNode_pos);
             ARel = ....AnatomicalFrameTrunk.ARel;
+            viewRefFrame = {
+              ScaleXYZ=Main.DrawSettings.Frame.Postural.ScaleXYZ;
+              RGB=Main.DrawSettings.Frame.Postural.RGB;
+              Visible = Main.DrawSettings.Frame.Postural.DefaultVisibility;
+            };             
           };
           AnyRefNode Anatomical = {
             sRel = .Postural.sRel;
             ARel = ...Endplate.AnatomicalFrame.ARel;
+            viewRefFrame = {
+              ScaleXYZ=Main.DrawSettings.Frame.Anatomical.ScaleXYZ;
+              RGB=Main.DrawSettings.Frame.Anatomical.RGB;
+              Visible = Main.DrawSettings.Frame.Anatomical.DefaultVisibility;
+            };             
           };
         };
         
@@ -82,6 +107,11 @@
           ARel = RotMat(0.5*(.AnteriorNode.sRel + .PosteriorNode.sRel),
                         .AnteriorNode.sRel,
                         0.5*(.AnteriorNode.sRel + .PosteriorNode.sRel) + (.LeftNode.sRel - .RightNode.sRel))*RotMat(pi/2,x);
+          viewRefFrame = {
+            ScaleXYZ=Main.DrawSettings.Frame.Anatomical.ScaleXYZ;
+            RGB=Main.DrawSettings.Frame.Anatomical.RGB;
+            Visible = Main.DrawSettings.Frame.Anatomical.DefaultVisibility;
+          };             
         };
       };
       
@@ -90,21 +120,41 @@
         AnyRefNode deZee = {
           AnyRefNode Postural = {
               sRel = .....CAUDAL_NEIGHBOUR##Seg.Superior.ICR.deZee.Postural.sRel;
-              ARel = ....AnatomicalFrameTrunk.ARel * RotMat(....SAG_CORRECTION_FACTOR, z);
+              ARel = ....AnatomicalFrameTrunk.ARel * RotMat(-1*....SAG_CORRECTION_FACTOR, z);
+              viewRefFrame = {
+                ScaleXYZ=Main.DrawSettings.Frame.Postural.ScaleXYZ;
+                RGB=Main.DrawSettings.Frame.Postural.RGB;
+                Visible = Main.DrawSettings.Frame.Postural.DefaultVisibility;
+              };             
           };
           AnyRefNode Anatomical = {
             sRel = .....CAUDAL_NEIGHBOUR##Seg.Superior.ICR.deZee.Anatomical.sRel;
-            ARel = .....CAUDAL_NEIGHBOUR##Seg.Superior.ICR.deZee.Anatomical.ARel * RotMat(....SAG_CORRECTION_FACTOR, z);
+            ARel = .....CAUDAL_NEIGHBOUR##Seg.Superior.ICR.deZee.Anatomical.ARel * RotMat(-1*....SAG_CORRECTION_FACTOR, z);
+            viewRefFrame = {
+              ScaleXYZ=Main.DrawSettings.Frame.Anatomical.ScaleXYZ;
+              RGB=Main.DrawSettings.Frame.Anatomical.RGB;
+              Visible = Main.DrawSettings.Frame.Anatomical.DefaultVisibility;
+            };             
           };
         };        
         AnyRefNode PearcyBogduk = {
           AnyRefNode Postural = {
             sRel = .....CAUDAL_NEIGHBOUR##Seg.Superior.ICR.PearcyBogduk.Postural.sRel;
-            ARel = ....AnatomicalFrameTrunk.ARel * RotMat(....SAG_CORRECTION_FACTOR, z);
+            ARel = ....AnatomicalFrameTrunk.ARel * RotMat(-1*....SAG_CORRECTION_FACTOR, z);
+            viewRefFrame = {
+              ScaleXYZ=Main.DrawSettings.Frame.Postural.ScaleXYZ;
+              RGB=Main.DrawSettings.Frame.Postural.RGB;
+              Visible = Main.DrawSettings.Frame.Postural.DefaultVisibility;
+            };             
           };
           AnyRefNode Anatomical = {
             sRel = .....CAUDAL_NEIGHBOUR##Seg.Superior.ICR.PearcyBogduk.Anatomical.sRel;
-            ARel = .....CAUDAL_NEIGHBOUR##Seg.Superior.ICR.PearcyBogduk.Anatomical.ARel * RotMat(....SAG_CORRECTION_FACTOR, z);
+            ARel = .....CAUDAL_NEIGHBOUR##Seg.Superior.ICR.PearcyBogduk.Anatomical.ARel * RotMat(-1*....SAG_CORRECTION_FACTOR, z);
+            viewRefFrame = {
+              ScaleXYZ=Main.DrawSettings.Frame.Anatomical.ScaleXYZ;
+              RGB=Main.DrawSettings.Frame.Anatomical.RGB;
+              Visible = Main.DrawSettings.Frame.Anatomical.DefaultVisibility;
+            };             
           };
         };  
       };
@@ -113,27 +163,27 @@
 
 
 // TODO: extract into separate file
-//  // Joint nodes 
-//  #if CAUDAL_NEIGHBOUR != None
-//  AnyRefNode LEVEL##CAUDAL_NEIGHBOUR##JntNode = {
-//    sRel = .Scale(.ModelParameters.LEVEL.LEVEL##CAUDAL_NEIGHBOUR##JntNode_pos);
-//    //AnyDrawRefFrame Draw = {RGB={1,1,0};ScaleXYZ={1,1,1}*0.03;};
-//  };
-//  #endif
-//
-//  #if CRANIAL_NEIGHBOUR != None
-//  AnyRefNode CRANIAL_NEIGHBOUR##LEVEL##JntNode = {
-//    sRel = .Scale(.ModelParameters.LEVEL.CRANIAL_NEIGHBOUR##LEVEL##JntNode_pos);
-//    ARel = RotMat(.SAG_CORRECTION_FACTOR, z);
-//    AnyDrawRefFrame Draw = {RGB={0,1,0};ScaleXYZ={1,1,1}*0.03;};
-//    /// Rotated node with x axis parallel to the sacrum base surface
-//    AnyRefNode RotNode = {
-//        ARel = RotMat(0.5*(..Superior.Endplate.AnteriorNode.sRel + ..Superior.Endplate.PosteriorNode.sRel),
-//                      ..Superior.Endplate.AnteriorNode.sRel,
-//                      0.5*(..Superior.Endplate.AnteriorNode.sRel + ..Superior.Endplate.PosteriorNode.sRel) + (..Superior.Endplate.LeftNode.sRel - ..Superior.Endplate.RightNode.sRel))*RotMat(pi/2,x);
-//    };
-//  };
-//  #endif
+  // Joint nodes 
+  #if CAUDAL_NEIGHBOUR != None
+  AnyRefNode LEVEL##CAUDAL_NEIGHBOUR##JntNode = {
+    sRel = .Scale(.ModelParameters.LEVEL.LEVEL##CAUDAL_NEIGHBOUR##JntNode_pos);
+    AnyDrawRefFrame Draw = {RGB={1,1,0};ScaleXYZ={1,1,1}*0.05;};
+  };
+  #endif
+
+  #if CRANIAL_NEIGHBOUR != None
+  AnyRefNode CRANIAL_NEIGHBOUR##LEVEL##JntNode = {
+    sRel = .Scale(.ModelParameters.LEVEL.CRANIAL_NEIGHBOUR##LEVEL##JntNode_pos);
+    ARel = RotMat(.SAG_CORRECTION_FACTOR, z);
+    AnyDrawRefFrame Draw = {RGB={0,1,0};ScaleXYZ={1,1,1}*0.05;};
+    /// Rotated node with x axis parallel to the sacrum base surface
+    AnyRefNode RotNode = {
+        ARel = RotMat(0.5*(..Superior.Endplate.AnteriorNode.sRel + ..Superior.Endplate.PosteriorNode.sRel),
+                      ..Superior.Endplate.AnteriorNode.sRel,
+                      0.5*(..Superior.Endplate.AnteriorNode.sRel + ..Superior.Endplate.PosteriorNode.sRel) + (..Superior.Endplate.LeftNode.sRel - ..Superior.Endplate.RightNode.sRel))*RotMat(pi/2,x);
+    };
+  };
+  #endif
 
   #if DEF_SCALING
     // This file includes the trunk specifc scaling function
