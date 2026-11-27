@@ -170,8 +170,8 @@ AnyFolder AngularVelocityMeasures = {
   {
     Type = RotAxesAngles;
     AngVelOnOff = On;
-    AnyRefFrame &SacrumNode = ....Trunk.Segments.SacrumSeg.L5SacrumJntNode;
-    AnyRefFrame &L5Node = ....Trunk.Segments.L5Seg.L5SacrumJntNode;
+    AnyRefFrame &CaudalNode = ....Trunk.Joints.Lumbar.L5Sacrum.CaudalNode; //sacrum node
+    AnyRefFrame &CranialNode= ....Trunk.Joints.Lumbar.L5Sacrum.CranialNode;//l5 node
   };
 
 
@@ -179,8 +179,8 @@ AnyFolder AngularVelocityMeasures = {
   {
     Type = RotAxesAngles;
     AngVelOnOff = On;
-    AnyRefFrame &L5Node = ....Trunk.Segments.L5Seg.L4L5JntNode;
-    AnyRefFrame &L4Node = ....Trunk.Segments.L4Seg.L4L5JntNode;
+    AnyRefFrame &CaudalNode = ....Trunk.Joints.Lumbar.L4L5.CaudalNode; //l5 node
+    AnyRefFrame &CranialNode= ....Trunk.Joints.Lumbar.L4L5.CranialNode;//l4 node
   };
 
 
@@ -188,8 +188,8 @@ AnyFolder AngularVelocityMeasures = {
   {
     Type = RotAxesAngles;
     AngVelOnOff = On;
-    AnyRefFrame &L4Node = ....Trunk.Segments.L4Seg.L3L4JntNode;
-    AnyRefFrame &L3Node = ....Trunk.Segments.L3Seg.L3L4JntNode;
+    AnyRefFrame &CaudalNode = ....Trunk.Joints.Lumbar.L3L4.CaudalNode; //l4 node
+    AnyRefFrame &CranialNode= ....Trunk.Joints.Lumbar.L3L4.CranialNode;//l3 node
   };
 
 
@@ -197,8 +197,8 @@ AnyFolder AngularVelocityMeasures = {
   {
     Type = RotAxesAngles;
     AngVelOnOff = On;
-    AnyRefFrame &L3Node = ....Trunk.Segments.L3Seg.L2L3JntNode;
-    AnyRefFrame &L2Node = ....Trunk.Segments.L2Seg.L2L3JntNode;
+    AnyRefFrame &CaudalNode = ....Trunk.Joints.Lumbar.L2L3.CaudalNode; //l3 node
+    AnyRefFrame &CranialNode= ....Trunk.Joints.Lumbar.L2L3.CranialNode;//l2 node
   };
 
 
@@ -206,8 +206,8 @@ AnyFolder AngularVelocityMeasures = {
   {
     Type = RotAxesAngles;
     AngVelOnOff = On;
-    AnyRefFrame &L2Node = ....Trunk.Segments.L2Seg.L1L2JntNode;
-    AnyRefFrame &L1Node = ....Trunk.Segments.L1Seg.L1L2JntNode;
+    AnyRefFrame &CaudalNode = ....Trunk.Joints.Lumbar.L1L2.CaudalNode; //l2 node
+    AnyRefFrame &CranialNode= ....Trunk.Joints.Lumbar.L1L2.CranialNode;//l1 node
   };
 
 
@@ -215,8 +215,8 @@ AnyFolder AngularVelocityMeasures = {
   {
     Type = RotAxesAngles;
     AngVelOnOff = On;
-    AnyRefFrame &L1Node = ....Trunk.Segments.L1Seg.T12L1JntNode;
-    AnyRefFrame &T12Node = ....Trunk.Segments.T12Seg.T12L1JntNode;
+    AnyRefFrame &CaudalNode = ....Trunk.Joints.Lumbar.T12L1.CaudalNode; //l1 node
+    AnyRefFrame &CranialNode= ....Trunk.Joints.Lumbar.T12L1.CranialNode;//t12 node
   };
 
 

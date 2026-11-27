@@ -1,0 +1,23 @@
+#ifndef AAU_TRUNK_DISCSTIFFNESS_CLASS_TEMPLATES_ANY
+#define AAU_TRUNK_DISCSTIFFNESS_CLASS_TEMPLATES_ANY
+
+#class_template TrunkIVDiscMoment(
+  JNT,
+  __CLASS__= AnyForce
+){
+  // find out where it is flexion or extension
+  AnyFloat A = iffun(gtfun(rot.Pos[0],0), 0, 1);
+  AnyFloat B = iffun(gtfun(rot.Pos[1],0), 0, 1);
+  F = {
+    (A*.Flexfun(Angle[0])[0] + (1-A)*.Extfun(Angle[0])[0]),
+    .ARfun(  Angle[1])[0],
+    (B*.LBfun_L(Angle[2])[0] + (1-B)*.LBfun_R(Angle[2])[0])
+  };
+  AnyFloat Angle = rot.Pos*180/pi;  // Z,Y,X (FlexExt,AxRot,LatBend)
+  AnyKinRotational rot = {
+    AnyRefNode &rf0 = .JNT.CaudalNode;
+    AnyRefNode &rf1 = .JNT.CranialNode;
+    Type=RotAxesAngles;
+  };
+};
+#endif

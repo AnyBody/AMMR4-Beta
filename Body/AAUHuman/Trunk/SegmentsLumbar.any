@@ -35,11 +35,12 @@ TrunkSegmentBase SacrumSeg(
   CRANIAL_NEIGHBOUR = L5,
   LEVEL = Sacrum,
   CAUDAL_NEIGHBOUR = Pelvis,
-  DEF_SCALING = 0,  // reusing pelvis
+  DEF_SCALING = 0,  // reusing pelvic
   DEF_CONTACTS = 0,
   DEF_DRAWING = 0,
+  SAG_CORRECTION_FACTOR=..Data.AlignmentParameters.LumbarLordosis.deltaValueRadPerLevel,
   _VOLUMETRIC_CAVITY = BM_TRUNK_CAVITY_MODEL,
-  PelvisSeg=..PelvisSeg
+  PelvisSeg=.PelvisSeg
   ) = {
   //initial position found as a function of pelvis pos and orientation
   Axes0=.PelvisSeg.Axes0;
@@ -52,6 +53,10 @@ TrunkSegmentBase SacrumSeg(
   };
   AnyFunTransform3D& Scale = .PelvisSeg.Scale;
 
+  AnyRefNode SacrumPelvisJntNode = {
+    sRel = .Scale(.ModelParameters.Sacrum.SacrumPelvisJntNode_pos);
+  };
+  
   AnyRefNode SacrumContactNode = {sRel= .Scale(.Data.SacrumContactNode_pos);};
 
   AnyRefNode SacrumBonyTip ={sRel= .Scale(.Data.SacrumBonyTip_pos);};
@@ -76,6 +81,7 @@ TrunkSegmentBase L5Seg(
   CRANIAL_NEIGHBOUR = L4,
   LEVEL = L5,
   CAUDAL_NEIGHBOUR = Sacrum,
+  SAG_CORRECTION_FACTOR=..Data.AlignmentParameters.LumbarLordosis.deltaValueRadPerLevel,
   _VOLUMETRIC_CAVITY = BM_TRUNK_CAVITY_MODEL,
   PelvisSeg=..PelvisSeg
   ) = {
@@ -86,6 +92,7 @@ TrunkSegmentBase L4Seg(
   CRANIAL_NEIGHBOUR = L3,
   LEVEL = L4,
   CAUDAL_NEIGHBOUR = L5,
+  SAG_CORRECTION_FACTOR=..Data.AlignmentParameters.LumbarLordosis.deltaValueRadPerLevel,
   _VOLUMETRIC_CAVITY = BM_TRUNK_CAVITY_MODEL,
   PelvisSeg=..PelvisSeg
   ) = {
@@ -96,6 +103,7 @@ TrunkSegmentBase L3Seg(
   CRANIAL_NEIGHBOUR = L2,
   LEVEL = L3,
   CAUDAL_NEIGHBOUR = L4,
+  SAG_CORRECTION_FACTOR=..Data.AlignmentParameters.LumbarLordosis.deltaValueRadPerLevel,
   _VOLUMETRIC_CAVITY = BM_TRUNK_CAVITY_MODEL,
   PelvisSeg=..PelvisSeg
   ) = {
@@ -106,6 +114,7 @@ TrunkSegmentBase L2Seg(
   CRANIAL_NEIGHBOUR = L1,
   LEVEL = L2,
   CAUDAL_NEIGHBOUR = L3,
+  SAG_CORRECTION_FACTOR=..Data.AlignmentParameters.LumbarLordosis.deltaValueRadPerLevel,
   _VOLUMETRIC_CAVITY = BM_TRUNK_CAVITY_MODEL,
   PelvisSeg=..PelvisSeg
   ) = {
@@ -116,6 +125,7 @@ TrunkSegmentBase L1Seg(
   CRANIAL_NEIGHBOUR = T12,
   LEVEL = L1,
   CAUDAL_NEIGHBOUR = L2,
+  SAG_CORRECTION_FACTOR=..Data.AlignmentParameters.LumbarLordosis.deltaValueRadPerLevel,
   _VOLUMETRIC_CAVITY = BM_TRUNK_CAVITY_MODEL,
   PelvisSeg=..PelvisSeg
   ) = {

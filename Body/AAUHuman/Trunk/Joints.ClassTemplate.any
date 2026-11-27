@@ -1,0 +1,31 @@
+#ifndef AAU_TRUNK_IVD_CLASS_TEMPLATES_ANY
+#define AAU_TRUNK_IVD_CLASS_TEMPLATES_ANY
+
+#class_template TrunkIVJointSpherical(
+  CAUDAL_SEG = NONE,
+  CRANIAL_SEG = NONE,
+  TYPE = Postural,
+  VERSION = deZee,
+  RECALC = 1,
+  __CLASS__= AnySphericalJoint
+){
+  #if CAUDAL_SEG != NONE
+    AnyRefNode &CaudalNode = ...Segments.CAUDAL_SEG##Seg.Superior.ICR.VERSION.TYPE;
+  #endif
+  #if CRANIAL_SEG != NONE
+    AnyRefNode &CranialNode = ...Segments.CRANIAL_SEG##Seg.Inferior.ICR.VERSION.TYPE;
+  #endif
+  
+  #if RECALC == 1 & CAUDAL_SEG != NONE
+  /// IVJ recomputed in anatomical frame
+  AnyForceMomentMeasure2 ReactionForceRotated = {
+    RefPoint = &....Segments.CAUDAL_SEG##Seg.Superior.ICR.VERSION.Anatomical;
+    IncludeForces = {&.Constraints.Reaction};
+    IncludeSegments = {&....Segments.CAUDAL_SEG##Seg};
+    AnyFloat Flocal = -F * ....Segments.CAUDAL_SEG##Seg.Superior.ICR.VERSION.Anatomical.Axes;
+  };
+  #endif
+  
+};
+
+#endif

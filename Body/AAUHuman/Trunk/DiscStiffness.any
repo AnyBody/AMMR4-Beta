@@ -94,115 +94,24 @@
       };
     #endif
 
+    TrunkIVDiscMoment L5SacrumMoment(
+      JNT=...Joints.Lumbar.L5Sacrum,
+      ) = {};
+    TrunkIVDiscMoment L4L5Moment(
+      JNT=...Joints.Lumbar.L4L5,
+      ) = {};
+    TrunkIVDiscMoment L3L4Moment(
+      JNT=...Joints.Lumbar.L3L4,
+      ) = {};
+    TrunkIVDiscMoment L2L3Moment(
+      JNT=...Joints.Lumbar.L2L3,
+      ) = {};
+    TrunkIVDiscMoment L1L2Moment(
+      JNT=...Joints.Lumbar.L1L2,
+      ) = {};
+    TrunkIVDiscMoment T12L1Moment(
+      JNT=...Joints.Lumbar.T12L1,
+      ) = {};
 
-
-    //L5Sacrum
-    AnyForce L5SacrumDiscMoment = {
-      // find out where it is flexion or extension
-      AnyFloat A = iffun(gtfun(rot.Pos[0],0), 0, 1);
-      AnyFloat B = iffun(gtfun(rot.Pos[1],0), 0, 1);
-      F = {
-        (A*.Flexfun(Angle[0])[0] + (1-A)*.Extfun(Angle[0])[0]),
-           .ARfun(  Angle[1])[0],
-        (B*.LBfun_L(Angle[2])[0] + (1-B)*.LBfun_R(Angle[2])[0])
-      };
-      AnyFloat Angle = rot.Pos*180/pi;  // Z,Y,X (FlexExt,AxRot,LatBend)
-      AnyKinRotational rot = {
-        AnyRefNode &rf0 = ....Segments.SacrumSeg.L5SacrumJntNode;
-        AnyRefNode &rf1 = ....Segments.L5Seg.L5SacrumJntNode;
-        Type=RotAxesAngles;
-      };
-    };
-
-    //L4L5
-    AnyForce L4L5DiscMoment = {
-      // find out where it is flexion or extension
-      AnyFloat A = iffun(gtfun(rot.Pos[0],0), 0, 1);
-      AnyFloat B = iffun(gtfun(rot.Pos[1],0), 0, 1);
-      F = {
-        (A*.Flexfun(Angle[0])[0] + (1-A)*.Extfun(Angle[0])[0]),
-           .ARfun(  Angle[1])[0],
-        (B*.LBfun_L(Angle[2])[0] + (1-B)*.LBfun_R(Angle[2])[0])
-      };
-      AnyFloat Angle = rot.Pos*180/pi;  // Z,Y,X (FlexExt,AxRot,LatBend)
-      AnyKinRotational rot = {
-        AnyRefNode &rf0 = ....Segments.L5Seg.L4L5JntNode;
-        AnyRefNode &rf1 = ....Segments.L4Seg.L4L5JntNode;
-        Type=RotAxesAngles;
-      };
-    };
-
-    //L3L4
-    AnyForce L3L4DiscMoment = {
-      // find out where it is flexion or extension
-      AnyFloat A = iffun(gtfun(rot.Pos[0],0), 0, 1);
-      AnyFloat B = iffun(gtfun(rot.Pos[1],0), 0, 1);
-      F = {
-        (A*.Flexfun(Angle[0])[0] + (1-A)*.Extfun(Angle[0])[0]),
-           .ARfun(  Angle[1])[0],
-        (B*.LBfun_L(Angle[2])[0] + (1-B)*.LBfun_R(Angle[2])[0])
-      };
-      AnyFloat Angle = rot.Pos*180/pi;  // Z,Y,X (FlexExt,AxRot,LatBend)
-      AnyKinRotational rot = {
-        AnyRefNode &rf0 = ....Segments.L4Seg.L3L4JntNode;
-        AnyRefNode &rf1 = ....Segments.L3Seg.L3L4JntNode;
-        Type=RotAxesAngles;
-      };
-    };
-
-
-    //L2L3
-    AnyForce L2L3DiscMoment = {
-      // find out where it is flexion or extension
-      AnyFloat A = iffun(gtfun(rot.Pos[0],0), 0, 1);
-      AnyFloat B = iffun(gtfun(rot.Pos[1],0), 0, 1);
-      F = {
-        (A*.Flexfun(Angle[0])[0] + (1-A)*.Extfun(Angle[0])[0]),
-           .ARfun(  Angle[1])[0],
-        (B*.LBfun_L(Angle[2])[0] + (1-B)*.LBfun_R(Angle[2])[0])
-      };
-      AnyFloat Angle = rot.Pos*180/pi;  // Z,Y,X (FlexExt,AxRot,LatBend)
-      AnyKinRotational rot = {
-        AnyRefNode &rf0 = ....Segments.L3Seg.L2L3JntNode;
-        AnyRefNode &rf1 = ....Segments.L2Seg.L2L3JntNode;
-        Type=RotAxesAngles;
-      };
-    };
-
-    //L1L2
-    AnyForce L1L2DiscMoment = {
-      // find out where it is flexion or extension
-      AnyFloat A = iffun(gtfun(rot.Pos[0],0), 0, 1);
-      AnyFloat B = iffun(gtfun(rot.Pos[1],0), 0, 1);
-      F = {
-        (A*.Flexfun(Angle[0])[0] + (1-A)*.Extfun(Angle[0])[0]),
-           .ARfun(  Angle[1])[0],
-        (B*.LBfun_L(Angle[2])[0] + (1-B)*.LBfun_R(Angle[2])[0])
-      };
-      AnyFloat Angle = rot.Pos*180/pi;  // Z,Y,X (FlexExt,AxRot,LatBend)
-      AnyKinRotational rot = {
-        AnyRefNode &rf0 = ....Segments.L2Seg.L1L2JntNode;
-        AnyRefNode &rf1 = ....Segments.L1Seg.L1L2JntNode;
-        Type=RotAxesAngles;
-      };
-    };
-
-    //T12L1
-    AnyForce T12L1DiscMoment = {
-      // find out where it is flexion or extension
-      AnyFloat A = iffun(gtfun(rot.Pos[0],0), 0, 1);
-      AnyFloat B = iffun(gtfun(rot.Pos[1],0), 0, 1);
-      F = {
-        (A*.Flexfun(Angle[0])[0] + (1-A)*.Extfun(Angle[0])[0]),
-           .ARfun(  Angle[1])[0],
-        (B*.LBfun_L(Angle[2])[0] + (1-B)*.LBfun_R(Angle[2])[0])
-      };
-      AnyFloat Angle = rot.Pos*180/pi;  // Z,Y,X (FlexExt,AxRot,LatBend)
-      AnyKinRotational rot = {
-        AnyRefNode &rf0 = ....Segments.L1Seg.T12L1JntNode;
-        AnyRefNode &rf1 = ....Segments.T12Seg.T12L1JntNode;
-        Type=RotAxesAngles;
-      };
-    };
   };
 

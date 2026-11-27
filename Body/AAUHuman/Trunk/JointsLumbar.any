@@ -2,84 +2,66 @@
 Definitions of the Joints in the lumbar spine. From PelvisL5 to T12L1
 */
 AnySphericalJoint SacrumPelvis = {
-  AnyRefNode &PelvisNode = ...Segments.PelvisSeg.SacrumPelvisJntNode;
-  AnyRefNode &SacrumNode = ...Segments.SacrumSeg.SacrumPelvisJntNode;
-
+  AnyRefNode &CaudalNode = ...Segments.PelvisSeg.SacrumPelvisJntNode;
+  AnyRefNode &CranialNode = ...Segments.SacrumSeg.SacrumPelvisJntNode;
 };
 //There are no muscles attached to sacrum
 AnyReacForce SacrumPelvisReaction = {
   AnySphericalJoint &ref=.SacrumPelvis;
 };
 
-AnySphericalJoint L5Sacrum = {
-  AnyRefNode &SacrumNode = ...Segments.SacrumSeg.L5SacrumJntNode;
-  AnyRefNode &L5Node = ...Segments.L5Seg.L5SacrumJntNode;
-  //Joint reaction force transformed to the rotated reference node aligned with the vertebral body.
-  AnyForceMomentMeasure2 ReactionForceRotated = {
-    RefPoint = &.SacrumNode.RotNode;
-    IncludeForces = {&.Constraints.Reaction};
-    IncludeSegments = {&....Segments.SacrumSeg};
-    AnyFloat Flocal = -F * .SacrumNode.RotNode.Axes;
-  };
-};
+TrunkIVJointSpherical L5Sacrum(
+  CRANIAL_SEG=L5,
+  CAUDAL_SEG=Sacrum,
+  TYPE = Postural,
+  VERSION = deZee
+) =  {};
 
-AnySphericalJoint L4L5 = {
-  AnyRefNode &L5Node = ...Segments.L5Seg.L4L5JntNode;
-  AnyRefNode &L4Node = ...Segments.L4Seg.L4L5JntNode;
-  //Joint reaction force transformed to the rotated reference node aligned with the vertebral body.
-  AnyForceMomentMeasure2 ReactionForceRotated = {
-    RefPoint = &.L5Node.RotNode;
-    IncludeForces = {&.Constraints.Reaction};
-    IncludeSegments = {&....Segments.L5Seg};
-    AnyFloat Flocal = -F * .L5Node.RotNode.Axes;
-  };
-};
+TrunkIVJointSpherical L4L5(
+  CRANIAL_SEG=L4,
+  CAUDAL_SEG=L5,
+  TYPE = Postural,
+  VERSION = deZee,
+) =  {};
 
-AnySphericalJoint L3L4 = {
-  AnyRefNode &L4Node = ...Segments.L4Seg.L3L4JntNode;
-  AnyRefNode &L3Node = ...Segments.L3Seg.L3L4JntNode;
-  //Joint reaction force transformed to the rotated reference node aligned with the vertebral body.
-  AnyForceMomentMeasure2 ReactionForceRotated = {
-    RefPoint = &.L4Node.RotNode;
-    IncludeForces = {&.Constraints.Reaction};
-    IncludeSegments = {&....Segments.L4Seg};
-    AnyFloat Flocal = -F * .L4Node.RotNode.Axes;
-  };
-};
+TrunkIVJointSpherical L3L4(
+  CRANIAL_SEG=L3,
+  CAUDAL_SEG=L4,
+  TYPE = Postural,
+  VERSION = deZee,
+) =  {};
 
-AnySphericalJoint L2L3 = {
-  AnyRefNode &L3Node = ...Segments.L3Seg.L2L3JntNode;
-  AnyRefNode &L2Node = ...Segments.L2Seg.L2L3JntNode;
-  //Joint reaction force transformed to the rotated reference node aligned with the vertebral body.
-  AnyForceMomentMeasure2 ReactionForceRotated = {
-    RefPoint = &.L3Node.RotNode;
-    IncludeForces = {&.Constraints.Reaction};
-    IncludeSegments = {&....Segments.L3Seg};
-    AnyFloat Flocal = -F * .L3Node.RotNode.Axes;
-  };
-};
+TrunkIVJointSpherical L2L3(
+  CRANIAL_SEG=L2,
+  CAUDAL_SEG=L3,
+  TYPE = Postural,
+  VERSION = deZee,
+) =  {};
 
-AnySphericalJoint L1L2 = {
-  AnyRefNode &L2Node = ...Segments.L2Seg.L1L2JntNode;
-  AnyRefNode &L1Node = ...Segments.L1Seg.L1L2JntNode;
-  //Joint reaction force transformed to the rotated reference node aligned with the vertebral body.
-  AnyForceMomentMeasure2 ReactionForceRotated = {
-    RefPoint = &.L2Node.RotNode;
-    IncludeForces = {&.Constraints.Reaction};
-    IncludeSegments = {&....Segments.L2Seg};
-    AnyFloat Flocal = -F * .L2Node.RotNode.Axes;
-  };
-};
+TrunkIVJointSpherical L1L2(
+  CRANIAL_SEG=L4,
+  CAUDAL_SEG=L5,
+  TYPE = Postural,
+  VERSION = deZee,
+) =  {};
+
+//TrunkIVJointSpherical T12L1(
+//  CRANIAL_SEG=T12,
+//  CAUDAL_SEG=L1,
+//  TYPE = Postural,
+//  VERSION = deZee,
+//) =  {};
+
 
 AnySphericalJoint T12L1 = {
-  AnyRefNode &L1Node = ...Segments.L1Seg.T12L1JntNode;
-  AnyRefNode &T12Node = ...Segments.T12Seg.T12L1JntNode;
+  AnyRefNode &CaudalNode = ...Segments.L1Seg.Superior.ICR.deZee.Postural;
+  AnyRefNode &CranialNode = ...Segments.T12Seg.T12L1JntNode;
   //Joint reaction force transformed to the rotated reference node aligned with the vertebral body.
   AnyForceMomentMeasure2 ReactionForceRotated = {
-    RefPoint = &.L1Node.RotNode;
+    RefPoint = &.CaudalNode;
     IncludeForces = {&.Constraints.Reaction};
     IncludeSegments = {&....Segments.L1Seg};
-    AnyFloat Flocal = -F * .L1Node.RotNode.Axes;
+    AnyFloat Flocal = -F * ....Segments.L1Seg.Superior.ICR.deZee.Anatomical.Axes;
   };
 };
 

@@ -1,0 +1,67 @@
+AnyFolder AlignmentParameters = {
+  
+  // AnyFolder TK = {
+  //  AnyFolder Calc = {
+  //       AnyFloat vec0 ??= {0.1,0,0}*...Segments.T1Seg.Superior.Endplate.AnatomicalFrame.ARel';
+  //       AnyFloat vec1 ??= {0.1,0,0}*...Segments.T12Seg.Superior.Endplate.AnatomicalFrame.ARel';
+  //       AnyFloat Value  ??=  acos(sum(mult(vec0,vec1))/(vnorm(vec0)*vnorm(vec1))) * 180 / pi; // in degrees
+  //   };
+  //    AnyFloat userValue  ??= Calc.Value;  // in degrees for user info
+  //    AnyFloat deltaValue = userValue - Calc.Value; // in degrees for user info
+  //    AnyFloat deltaValueRad = deltaValue * pi / 180; // in radians
+  // };
+
+  /// Lumbar lordosis: computed as an angle between L1 and S1 endplates
+  AnyFolder LumbarLordosis = {
+    AnyFolder Calc = {
+      AnyFloat vec0  ??=  {0.1,0,0}*....Segments.L1Seg.Superior.Endplate.AnatomicalFrame.ARel';
+      AnyFloat vec1 ??= {0.1,0,0}*....Segments.SacrumSeg.Superior.Endplate.AnatomicalFrame.ARel';
+      AnyFloat Value  ??=  acos(sum(mult(vec0,vec1))/(vnorm(vec0)*vnorm(vec1))) * 180 / pi; // in degrees
+    };
+    AnyFloat userValue  ??= Calc.Value;  // in degrees for user info
+    AnyFloat deltaValue = userValue - Calc.Value; // in degrees for user info
+    AnyFloat deltaValueRad = deltaValue * pi / 180; // in radians
+    AnyFloat deltaValueRadPerLevel = deltaValue * pi / 180 / 5.0; // in radians
+  };
+  
+  /// Sacral slope: computed as an angle between horizontal axis of ISB anat. frame of pelvis and superior sacral enplate
+  AnyFolder SacralSlope = {
+    AnyFolder Calc = {
+      AnyFloat vec0  ??=  {0.1,0,0}*....Segments.PelvisSeg.AnatomicalFrameTrunk.ARel';      
+      AnyFloat vec1 ??= {0.1,0,0}*....Segments.SacrumSeg.Superior.Endplate.AnatomicalFrame.ARel';
+      AnyFloat Value  ??=  acos(sum(mult(vec0,vec1))/(vnorm(vec0)*vnorm(vec1))) * 180 / pi; // in degrees
+    };
+    AnyFloat userValue  ??= Calc.Value;  // in degrees for user info
+    AnyFloat deltaValue = userValue - Calc.Value; // in degrees for user info
+    AnyFloat deltaValueRad = deltaValue * pi / 180; // in radians
+  };
+  
+  /// Pelvic tilt: computed as an angle between vertical axis of ISB anat. frame of pelvis and a vector from 
+  /// midpoint of hip joints and sacral endplate center / anat. frame.
+  AnyFolder PelvicTilt = {
+    AnyFolder Calc = {
+      AnyFloat vec0  ??=  {0,0.1,0}*....Segments.PelvisSeg.AnatomicalFrameTrunk.ARel';      
+      AnyFloat vec1 ??= ....Segments.SacrumSeg.Superior.Endplate.AnatomicalFrame.sRel - 0.5 * (....Segments.PelvisSeg.Right.HipJoint.sRel + ....Segments.PelvisSeg.Left.HipJoint.sRel);
+      AnyFloat Value  ??=  acos(sum(mult(vec0,vec1))/(vnorm(vec0)*vnorm(vec1))) * 180 / pi; // in degrees
+    };
+    AnyFloat userValue  ??= Calc.Value;  // in degrees for user info
+    AnyFloat deltaValue = userValue - Calc.Value; // in degrees for user info
+    AnyFloat deltaValueRad = deltaValue * pi / 180; // in radians
+  };
+  
+  /// Pelvic incidence: PT + SS
+  AnyFolder PelvicIncidence = {
+    AnyFolder Calc = {
+      AnyFloat Value = ..PelvicTilt.userValue + ..SacralSlope.userValue;
+    };
+    AnyFloat userValue = Calc.Value; // Choice is not change this value
+    AnyFloat deltaValue = 0; // in degrees for user info
+    AnyFloat deltaValueRad = 0; // in radians
+  };
+  
+  
+  // approx.ranges: Pelvic tilt (PT)	 5–25°	       13–15°
+  //                Sacral slope (SS)	 30–50°	40°
+  //                Pelvic incidence (PI)	 40–65°	50–55°  
+  
+};
